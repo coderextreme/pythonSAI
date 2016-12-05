@@ -1,7 +1,7 @@
 Python SAI for X3D concrete classes
 
-Install X3DJSONLD
-Install pyjnius
+Install X3DJSONLD https://github.com/coderextreme/X3DJSONLD
+Install pyjnius https://github.com/kivy/pyjnius
 
 Configure per your environment for Python 3 and node.js in profile.sh
 
