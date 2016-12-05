@@ -1,0 +1,11 @@
+{
+  "name": "pythoncode",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "xmldom": "*"
+  },
+  "scripts": {
+    "start": "python om.py; python X3Dpackage.py; node json2x3d.js HelloWorld.json; python HelloWorld.py"
+  }
+}

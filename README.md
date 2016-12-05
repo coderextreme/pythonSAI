@@ -1,0 +1,10 @@
+Python SAI for X3D concrete classes
+
+Install X3DJSONLD
+Install pyjnius
+
+Configure per your environment for Python 3 and node.js in profile.sh
+
+Run make.sh
+
+Retrieve results in pyjnius/X3DJSONLD
