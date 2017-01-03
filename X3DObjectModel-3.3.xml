@@ -2,7 +2,7 @@
 <!-- X3D Object Model X3DObjectModel-3.3.xml-->
 <!-- Online at http://www.web3d.org/specifications/X3DObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2016-11-28-08:00 21:48:30.637-08:00 -->
+<!-- Generated 2016-12-26-08:00 22:14:08.482-08:00 -->
 <X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" version="3.3"
                 xsd:noNamespaceSchemaLocation="../../specifications/x3dObjectModel.xsd">
    <SimpleTypeEnumerations>
@@ -6247,7 +6247,7 @@
                    default="0 0 1 0"/>
             <field type="MFInt32" accessType="inputOutput" name="skinCoordIndex" minInclusive="0"/>
             <field type="MFFloat" accessType="inputOutput" name="skinCoordWeight"/>
-            <field type="MFFloat" accessType="inputOutput" name="stiffness" default="0 0 0"
+            <field type="MFFloat" accessType="inputOutput" name="stiffness" default="1 1 1"
                    minInclusive="0"
                    maxInclusive="1"/>
             <field type="SFVec3f" accessType="inputOutput" name="translation" default="0 0 0"/>
@@ -6429,7 +6429,99 @@
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="SFString" accessType="inputOutput" name="name"/>
+            <field type="SFString" accessType="inputOutput" name="name" baseType="siteNames">
+               <enumeration value="cervicale"/>
+               <enumeration value="crotch"/>
+               <enumeration value="l_acromion"/>
+               <enumeration value="l_asis"/>
+               <enumeration value="l_axilla_ant"/>
+               <enumeration value="l_axilla_post"/>
+               <enumeration value="l_calcaneous_post"/>
+               <enumeration value="l_clavicale"/>
+               <enumeration value="l_dactylion"/>
+               <enumeration value="l_digit2"/>
+               <enumeration value="l_femoral_lateral_epicn"/>
+               <enumeration value="l_femoral_medial_epicn"/>
+               <enumeration value="l_forefoot_tip"/>
+               <enumeration value="l_gonion"/>
+               <enumeration value="l_hand_tip"/>
+               <enumeration value="l_humeral_lateral_epicn"/>
+               <enumeration value="l_humeral_medial_epicn"/>
+               <enumeration value="l_iliocristale"/>
+               <enumeration value="l_index_distal_tip"/>
+               <enumeration value="l_infraorbitale"/>
+               <enumeration value="l_knee_crease"/>
+               <enumeration value="l_lateral_malleolus"/>
+               <enumeration value="l_medial_malleolus"/>
+               <enumeration value="l_metacarpal_pha2"/>
+               <enumeration value="l_metacarpal_pha5"/>
+               <enumeration value="l_metatarsal_pha1"/>
+               <enumeration value="l_metatarsal_pha5"/>
+               <enumeration value="l_middle_distal_tip"/>
+               <enumeration value="l_neck_base"/>
+               <enumeration value="l_olecranon"/>
+               <enumeration value="l_pinky_distal_tip"/>
+               <enumeration value="l_psis"/>
+               <enumeration value="l_radial_styloid"/>
+               <enumeration value="l_radiale"/>
+               <enumeration value="l_rib10"/>
+               <enumeration value="l_ring_distal_tip"/>
+               <enumeration value="l_sphyrion"/>
+               <enumeration value="l_thelion"/>
+               <enumeration value="l_thumb_distal_tip"/>
+               <enumeration value="l_tragion"/>
+               <enumeration value="l_trochanterion"/>
+               <enumeration value="l_ulnar_styloid"/>
+               <enumeration value="navel"/>
+               <enumeration value="nuchale"/>
+               <enumeration value="r_acromion"/>
+               <enumeration value="r_asis"/>
+               <enumeration value="r_axilla_ant"/>
+               <enumeration value="r_axilla_post"/>
+               <enumeration value="r_calcaneous_post"/>
+               <enumeration value="r_clavicale"/>
+               <enumeration value="r_dactylion"/>
+               <enumeration value="r_digit2"/>
+               <enumeration value="r_femoral_lateral_epicn"/>
+               <enumeration value="r_femoral_medial_epicn"/>
+               <enumeration value="r_forefoot_tip"/>
+               <enumeration value="r_gonion"/>
+               <enumeration value="r_hand_tip"/>
+               <enumeration value="r_humeral_lateral_epicn"/>
+               <enumeration value="r_humeral_medial_epicn"/>
+               <enumeration value="r_iliocristale"/>
+               <enumeration value="r_index_distal_tip"/>
+               <enumeration value="r_infraorbitale"/>
+               <enumeration value="r_knee_crease"/>
+               <enumeration value="r_lateral_malleolus"/>
+               <enumeration value="r_medial_malleolus"/>
+               <enumeration value="r_metacarpal_pha2"/>
+               <enumeration value="r_metacarpal_pha5"/>
+               <enumeration value="r_metatarsal_pha1"/>
+               <enumeration value="r_metatarsal_pha5"/>
+               <enumeration value="r_middle_distal_tip"/>
+               <enumeration value="r_neck_base"/>
+               <enumeration value="r_olecranon"/>
+               <enumeration value="r_pinky_distal_tip"/>
+               <enumeration value="r_psis"/>
+               <enumeration value="r_radial_styloid"/>
+               <enumeration value="r_radiale"/>
+               <enumeration value="r_rib10"/>
+               <enumeration value="r_ring_distal_tip"/>
+               <enumeration value="r_sphyrion"/>
+               <enumeration value="r_thelion"/>
+               <enumeration value="r_thumb_distal_tip"/>
+               <enumeration value="r_tragion"/>
+               <enumeration value="r_trochanterion"/>
+               <enumeration value="r_ulnar_styloid"/>
+               <enumeration value="rib10_midspine"/>
+               <enumeration value="sellion"/>
+               <enumeration value="skull_tip"/>
+               <enumeration value="substernale"/>
+               <enumeration value="supramenton"/>
+               <enumeration value="suprasternale"/>
+               <enumeration value="waist_preferred_post"/>
+            </field>
             <field type="MFNode" accessType="inputOnly" name="removeChildren"
                    acceptableNodeTypes="X3DChildNode"
                    inheritedFrom="X3DGroupingNode">
