@@ -12,5 +12,10 @@ do
 	cd ../pyjnius
 	mkdir -p X3DJSONLD/`dirname $i`
 	cp ${PYJHOME}/X3DJSONLD/$i X3DJSONLD/`dirname $i`
-	${PYTHON} X3DJSONLD/`dirname $i`/`basename $i` && echo "$i passed"
+	if ${PYTHON} X3DJSONLD/`dirname $i`/`basename $i`
+	then
+		tar -rf GoodPython.tar X3DJSONLD/`dirname $i`/`basename $i`
+	else
+		tar -rf BadPython.tar X3DJSONLD/`dirname $i`/`basename $i`
+	fi
 done
