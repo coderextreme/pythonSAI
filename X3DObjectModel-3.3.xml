@@ -2,7 +2,7 @@
 <!-- X3D Object Model X3DObjectModel-3.3.xml-->
 <!-- Online at http://www.web3d.org/specifications/X3DObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2016-12-26-08:00 22:14:08.482-08:00 -->
+<!-- Generated 2017-03-01-08:00 02:50:40.058-08:00 -->
 <X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" version="3.3"
                 xsd:noNamespaceSchemaLocation="../../specifications/x3dObjectModel.xsd">
    <SimpleTypeEnumerations>
@@ -19,7 +19,7 @@
                       appinfo="A field with accessType inputOutput can be initialized, and can also send or receive events."/>
       </SimpleType>
       <SimpleType name="alignValues" baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the align field in the Layout node"
+                  appinfo="Permitted combinations of horizontal and vertical values for the align field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
          <enumeration value="&#34;CENTER&#34;"/>
          <enumeration value="&#34;LEFT&#34; &#34;BOTTOM&#34;"/>
@@ -68,7 +68,7 @@
          <enumeration value="EnvironmentalSensor"
                       appinfo="The Environment Sensor nodes emit events indicating activity in the scene environment, usually based on interactions between the viewer and the world."/>
          <enumeration value="EventUtilities"
-                      appinfo="The Event Utility nodes provide the capability to gate, convert, or sequence numerous event-types for common interactive applications without the use of a Script node."/>
+                      appinfo="The Event Utility nodes provide the capability to filter, trigger, convert, or sequence numerous event-types for common interactive applications without the use of a Script node."/>
          <enumeration value="Followers"
                       appinfo="The Follower nodes (Chasers and Dampers) support dynamic creation of smooth parameter transitions at run time."/>
          <enumeration value="Geometry2D"
@@ -212,7 +212,7 @@
          <enumeration value="GEOMETRY"/>
       </SimpleType>
       <SimpleType name="justifyValues" baseType="MFString"
-                  appinfo="justifyValues are allowed enumeration values for FontStyle node justify attribute."
+                  appinfo="justifyValues are allowed enumeration values for FontStyle node justify attribute. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Directionandjustification">
          <enumeration value="&#34;MIDDLE&#34;"/>
          <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
@@ -338,7 +338,7 @@
          <enumeration value="networkWriter"/>
       </SimpleType>
       <SimpleType name="offsetUnitsValues" baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the offsetUnits field in the Layout node"
+                  appinfo="Permitted combinations of horizontal and vertical values for the offsetUnits field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
          <enumeration value="&#34;WORLD&#34;"/>
          <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
@@ -396,7 +396,7 @@
                       appinfo="The Full Profile corresponds to all Immersive X3D nodes plus all approved/implemented extensions. Full may get renamed Integrated."/>
       </SimpleType>
       <SimpleType name="scaleModeValues" baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the scaleMode field in the Layout node"
+                  appinfo="Permitted combinations of horizontal and vertical values for the scaleMode field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
          <enumeration value="&#34;NONE&#34;"/>
          <enumeration value="&#34;NONE&#34; &#34;NONE&#34;"/>
@@ -433,7 +433,7 @@
          <enumeration value="FRAGMENT"/>
       </SimpleType>
       <SimpleType name="sizeUnitsValues" baseType="MFString"
-                  appinfo="sizeUnitsValues are permitted combinations of horizontal and vertical values for the sizeUnits field in the Layout node."
+                  appinfo="sizeUnitsValues are permitted combinations of horizontal and vertical values for the sizeUnits field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
          <enumeration value="&#34;WORLD&#34;"/>
          <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
@@ -7578,6 +7578,7 @@
                               appinfo="The metadata provided by this node is contained in the Boolean values of the value field.">
             <componentInfo name="Core" level="1"/>
             <Inheritance baseType="X3DMetadataObject"/>
+            <AdditionalInheritance baseType="X3DNode"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -7601,6 +7602,7 @@
                               appinfo="The metadata provided by this node is contained in the double-precision floating point numbers of the value field.">
             <componentInfo name="Core" level="1"/>
             <Inheritance baseType="X3DMetadataObject"/>
+            <AdditionalInheritance baseType="X3DNode"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -7624,6 +7626,7 @@
                               appinfo="The metadata provided by this node is contained in the single-precision floating point numbers of the value field.">
             <componentInfo name="Core" level="1"/>
             <Inheritance baseType="X3DMetadataObject"/>
+            <AdditionalInheritance baseType="X3DNode"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -7647,6 +7650,7 @@
                               appinfo="The metadata provided by this node is contained in the integer numbers of the value field.">
             <componentInfo name="Core" level="1"/>
             <Inheritance baseType="X3DMetadataObject"/>
+            <AdditionalInheritance baseType="X3DNode"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -7693,6 +7697,7 @@
                               appinfo="The metadata provided by this node is contained in the strings of the value field.">
             <componentInfo name="Core" level="1"/>
             <Inheritance baseType="X3DMetadataObject"/>
+            <AdditionalInheritance baseType="X3DNode"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -8574,14 +8579,10 @@
             <Inheritance baseType="X3DShaderNode"/>
             <AdditionalInheritance baseType="X3DUrlObject"/>
             <AdditionalInheritance baseType="X3DProgrammableShaderObject"/>
-            <field type="SFBool" accessType="inputOnly" name="activate"
-                   inheritedFrom="X3DShaderNode"/>
-            <field type="SFBool" accessType="outputOnly" name="isSelected"
-                   inheritedFrom="X3DShaderNode"/>
-            <field type="SFBool" accessType="outputOnly" name="isValid"
-                   inheritedFrom="X3DShaderNode"/>
+            <field type="SFBool" accessType="inputOnly" name="activate"/>
+            <field type="SFBool" accessType="outputOnly" name="isSelected"/>
+            <field type="SFBool" accessType="outputOnly" name="isValid"/>
             <field type="SFString" accessType="initializeOnly" name="language"
-                   inheritedFrom="X3DShaderNode"
                    additionalEnumerationValuesAllowed="true"
                    baseType="shaderLanguageValues">
                <enumeration value="Cg"/>
@@ -8589,8 +8590,7 @@
                <enumeration value="HLSL"/>
             </field>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
-                   acceptableNodeTypes="X3DMetadataObject"
-                   inheritedFrom="X3DNode"/>
+                   acceptableNodeTypes="X3DMetadataObject"/>
             <field type="MFString" accessType="inputOutput" name="url">
                <componentInfo name="Networking" level="4"/>
             </field>
@@ -8600,6 +8600,7 @@
                    inheritedFrom="globalAttributes"/>
             <containerField name="shaders"/>
             <ContentModel>
+               <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
          </InterfaceDefinition>
@@ -9367,7 +9368,7 @@
       </ConcreteNode>
       <ConcreteNode name="ProtoInstance">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19776-1/V3.3/Part01/concepts.html#ProtoInstanceAndFieldValueStatement"
-                              appinfo="Nested ProtoDeclares, ProtoInstances are allowed by specification. ProtoInstance contained content normally captured via fieldValue initializations.">
+                              appinfo="ProtoInstance can override field default values via fieldValue initializations. Non-recursive nested ProtoInstance and ProtoDeclare statements are allowed within a ProtoDeclare.">
             <componentInfo name="Core" level="2"/>
             <Inheritance baseType="X3DPrototypeInstance"/>
             <AdditionalInheritance baseType="X3DChildNode"/>
@@ -9951,8 +9952,8 @@
                               appinfo="ShaderProgram can contain field declarations and a CDATA section of plain-text source code.">
             <componentInfo name="Shaders" level="1"/>
             <Inheritance baseType="X3DNode"/>
-            <AdditionalInheritance baseType="X3DProgrammableShaderObject"/>
             <AdditionalInheritance baseType="X3DUrlObject"/>
+            <AdditionalInheritance baseType="X3DProgrammableShaderObject"/>
             <field type="SFNode" accessType="inputOutput" name="metadata" default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
@@ -9970,6 +9971,7 @@
                    inheritedFrom="globalAttributes"/>
             <containerField name="programs"/>
             <ContentModel>
+               <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <SourceText/>
             </ContentModel>
