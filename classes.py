@@ -32,7 +32,7 @@ class ClassPrinter:
         package = re.sub(r"-", "", package)
         superpackage = "sai"
         if self.metaInfo == "Object":
-                superpackage = "java"
+                superpackage = "jsail"
         str += self.node['name'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['name'] + self.metaInfo + "')\n"
         self.printed = True
         return str
