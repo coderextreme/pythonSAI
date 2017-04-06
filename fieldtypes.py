@@ -31,7 +31,7 @@ class ClassPrinter:
         self.printed = True
         return str
 
-code = "module.exports = {"
+code = "var fieldTypes = {"
 
 soup = BeautifulSoup(open("X3DObjectModel-3.3.xml"), "xml")
 
@@ -57,6 +57,8 @@ for k,v in classes.items():
     code += v.print()
 
 code += "};"
+
+code += "module.exports = fieldTypes;"
 
 f = open("fieldTypes.js", "w")
 f.write(code)
