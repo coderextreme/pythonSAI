@@ -2,7 +2,7 @@
 <!-- X3D Object Model X3DObjectModel-3.3.xml-->
 <!-- Online at http://www.web3d.org/specifications/X3DObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2017-03-01-08:00 02:50:40.058-08:00 -->
+<!-- Generated 2017-04-04-07:00 19:53:47.914-07:00 -->
 <X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" version="3.3"
                 xsd:noNamespaceSchemaLocation="../../specifications/x3dObjectModel.xsd">
    <SimpleTypeEnumerations>
@@ -5538,7 +5538,7 @@
             <field type="SFNode" accessType="inputOutput" name="color" default="NULL"
                    acceptableNodeTypes="X3DColorNode"/>
             <field type="SFBool" accessType="initializeOnly" name="colorPerVertex" default="true"/>
-            <field type="SFFloat" accessType="initializeOnly" name="creaseAngle" default="0"
+            <field type="SFDouble" accessType="initializeOnly" name="creaseAngle" default="0"
                    minInclusive="0"/>
             <field type="SFVec3d" accessType="initializeOnly" name="geoGridOrigin" default="0 0 0"/>
             <field type="SFNode" accessType="initializeOnly" name="geoOrigin" default="NULL"
