@@ -58,7 +58,9 @@ for k,v in classes.items():
 
 code += "};"
 
-code += "module.exports = fieldTypes;"
+code  += "if (typeof module === 'object')  {\n";
+code  += "    module.exports = fieldTypes;\n";
+code  += "}\n";
 
 f = open("fieldTypes.js", "w")
 f.write(code)

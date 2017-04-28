@@ -96,7 +96,7 @@ class ClassPrinter:
         self.printed = True
         return str
 
-code = "module.exports = {"
+code = "var mapToMethod = {"
 
 soup = BeautifulSoup(open("X3DObjectModel-3.3.xml"), "xml")
 
@@ -135,6 +135,10 @@ for k,v in classes.items():
     code += v.print()
 
 code += "};"
+
+code  += "if (typeof module === 'object')  {\n";
+code  += "    module.exports = mapToMethod;\n";
+code  += "}\n";
 
 f = open("mapToMethod.js", "w")
 f.write(code)
