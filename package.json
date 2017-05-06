@@ -1,0 +1,12 @@
+{
+  "name": "pythonSAI",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "node-mkdirp": "*",
+    "ajv": "*",
+    "xmldom": "*",
+    "java": "*",
+    "jsonlint": "*"
+  }
+}

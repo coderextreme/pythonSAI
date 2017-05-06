@@ -1,0 +1,10 @@
+#!/bin/bash
+export PYSAIHOME=../pythonSAI
+export X3DJSONLD=../X3DJSONLD
+export CLASSPATH=".;${PYSAIHOME}/X3DJSAIL.3.3.full.jar;${PYSAIHOME}/saxon9he.jar"
+# NASHORN DOES NOT TAKE C:
+export PYTHONSAI=..\\pythonSAI
+export NASHORN_CLASSPATH=".;${PYTHONSAI}\\X3DJSAIL.3.3.full.jar;${PYTHONSAI}\\saxon9he.jar"
+export PYTHON=python.exe
+export PIP=pip.exe
+export NODE=node.exe
