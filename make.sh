@@ -8,20 +8,14 @@ ${PIP} install lxml
 ${PYTHON} classes.py
 ${PYTHON} fieldtypes.py
 ${PYTHON} parseom.py
-cp X3Dautoclass.py fieldTypes.js mapToMethod.js ../X3DJSONLD
+echo did not cp X3Dautoclass.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 
+sh x3d2py.sh
 
-
-for i in `sh ${X3DJSONLD}/runjson.sh`
+for i in *.py 
 do
-	FILE=${X3DJSONLD}/$i
+	FILE=$i
 	echo ========================================$FILE
 	${PYTHON} $FILE
-	#if ${PYTHON} $FILE
-	#then
-	#	tar -rf GoodPython.tar $FILE
-	#else
-	#	tar -rf BadPython.tar  $FILE
-	#fi
 done
