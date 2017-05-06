@@ -5,6 +5,11 @@ For a simple test, set your environment in profile.sh, then run the two commands
 python abox.py
 ```
 
+```cmd
+profile.bat
+python abox.py
+```
+
 For more complex stuff, like installing pyjnius, see below
 
 To install pyjnius, see:
