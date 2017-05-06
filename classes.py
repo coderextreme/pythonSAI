@@ -76,9 +76,6 @@ for k,v in classes.items():
         code +=  cls
 
 f = open("X3Dautoclass.py", "w")
-f.write('#import os, sys\n')
-f.write('#CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))\n')
-f.write('#sys.path.append(os.path.dirname(CURRENT_DIR))\n')
 f.write('from jnius import autoclass\n')
 f.write(code)
 f.close()
