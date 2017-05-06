@@ -20,9 +20,11 @@ set NODE=node.exe
 echo did not cp X3Dautoclass.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 
-javac -classpath "./saxon9he.jar" *.java
+javac RunSaxon.java
 
-x3d2py
+java RunSaxon ---overwrite *.x3d
+FOR %%i IN ("*.json") DO %NODE% json2py.js %%i
+
 
 FOR %%i IN ("*.py") DO %PYTHON% %%i
 
