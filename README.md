@@ -1,8 +1,16 @@
-For a simple test, set your environment in profile.sh, then run the two commands:  You should probably use Python 2.7
+This program reads X3D files (provided) and generates python files.
+For a simple smoke test, set your environment in profile.sh, then run the two commands:  You should probably use Python 2.7
 
 ```bash
 . ./profile.sh
 python abox.py
+```
+Then run these for comparison
+```bash
+python MFString.py
+python sphere.py
+python text.py
+
 ```
 
 ```cmd
