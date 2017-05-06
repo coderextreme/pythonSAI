@@ -14,13 +14,13 @@ class ClassPrinter:
         self.metaInfo = metaInfo
         self.printed = False
 
-    def print(self):
+    def printClass(self):
         str = ""
         if self.printed:
             return str
         for parent in self.parents:
             try:
-                str += classes[parent].print()
+                str += classes[parent].printClass()
             except:
                 pass
         str += '"'+self.node['name']+'" : {\n'
@@ -54,7 +54,7 @@ for st in sts:
     classes[st['name']] = ClassPrinter(st, "Object")
 
 for k,v in classes.items():
-    code += v.print()
+    code += v.printClass()
 
 code += "};"
 

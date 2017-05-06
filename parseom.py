@@ -74,13 +74,13 @@ class ClassPrinter:
                str += classes[parent].listParents(fieldName, fieldType)
             return str;
 
-    def print(self):
+    def printClass(self):
         str = ""
         if self.printed:
             return str
         for parent in self.parents:
             try:
-                str += classes[parent].print()
+                str += classes[parent].printClass()
             except:
                 pass
         str += '"'+self.name+'" : {\n'
@@ -132,7 +132,7 @@ for k,v in classes.items():
     v.findParents()
 
 for k,v in classes.items():
-    code += v.print()
+    code += v.printClass()
 
 code += "};"
 

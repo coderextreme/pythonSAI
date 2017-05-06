@@ -135,13 +135,13 @@ class ClassPrinter:
         str += self.getter(field, fn)
         return str
 
-    def print(self):
+    def printClass(self):
         str = ""
         if self.printed:
             return str
         for parent in self.parents:
             try:
-                str += classes[parent].print()
+                str += classes[parent].printClass()
             except:
                 pass
         str += 'class ' + self.node['name'] + "("
@@ -198,7 +198,7 @@ for st in sts:
     classes[st['name']] = ClassPrinter(st)
 
 for k,v in classes.items():
-    code += v.print()
+    code += v.printClass()
 
 f = open("X3Dpackage.py", "w")
 f.write(code)

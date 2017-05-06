@@ -19,25 +19,32 @@ class ClassPrinter:
         self.printed = False
 
 
-    def print(self):
+    def printClass(self):
         str = ""
         if self.printed:
             return str
         for parent in self.parents:
             try:
-                str += classes[parent].print()
+                str += classes[parent].printClass()
             except:
                 pass
-        package = self.componentInfo['name']
+        try:
+            package = self.componentInfo['name']
+        except:
+            package = "fields"
         package = re.sub(r"-", "", package)
         superpackage = "sai"
         if self.metaInfo == "Object":
                 superpackage = "jsail"
-        str += self.node['name'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['name'] + self.metaInfo + "')\n"
-        self.printed = True
-        return str
+                try:
+                    str += self.node['name'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['name'] + self.metaInfo + "')\n"
+                except:
+                    str += self.node['type'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['type'] + self.metaInfo + "')\n"
+                self.printed = True
+                return str
 
 code = ""
+code += "CommentsBlock = autoclass('org.web3d.x3d.jsail.Core.CommentsBlock')\n"
 
 soup = BeautifulSoup(open("X3DObjectModel-3.3.xml"), "xml")
 
@@ -59,13 +66,19 @@ sts = soup.find_all("Statement")
 for st in sts:
     classes[st['name']] = ClassPrinter(st, "Object")
 
+fts = soup.find_all("FieldType")
+for ft in fts:
+    classes[ft['type']] = ClassPrinter(ft, "Object")
+
 for k,v in classes.items():
-    code += v.print()
+    cls = v.printClass()
+    if cls != None:
+        code +=  cls
 
 f = open("X3Dautoclass.py", "w")
-f.write('import os, sys\n')
-f.write('CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))\n')
-f.write('sys.path.append(os.path.dirname(CURRENT_DIR))\n')
+f.write('#import os, sys\n')
+f.write('#CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))\n')
+f.write('#sys.path.append(os.path.dirname(CURRENT_DIR))\n')
 f.write('from jnius import autoclass\n')
 f.write(code)
 f.close()
