@@ -11,3 +11,7 @@ Retrieve results in ../X3DJSONLD
 SAI found in X3Dautoclass.py
 
 SAI generator in classes.py
+
+X3DJSAIL documentation, source, and jars are found here:
+
+http://www.web3d.org/specifications/java/X3dJavaSceneAuthoringInterface.html
