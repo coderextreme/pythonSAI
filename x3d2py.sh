@@ -5,7 +5,7 @@
 # accepts files with .x3d extension
 export PROCESSORS=${PROCESSORS-8}
 
-. ./classpath
+. ./profile.sh
 
 javac RunSaxon.java
 
