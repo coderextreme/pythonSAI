@@ -11,7 +11,7 @@ To install pyjnius, see:
 
 https://pyjnius.readthedocs.io/
 
-Python SAI testing harness for X3D concrete classes
+Python SAI testing harness for X3DJSAIL concrete classes
 
 Install X3DJSONLD https://github.com/coderextreme/X3DJSONLD in sibling folder to pythonSAI
 
