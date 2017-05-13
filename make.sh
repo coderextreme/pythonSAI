@@ -1,5 +1,6 @@
 #!/bin/sh
 . ./profile.sh
+npm install
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PIP} install pyjnius
