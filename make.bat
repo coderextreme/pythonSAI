@@ -9,6 +9,7 @@ set PIP=pip.exe
 set NODE=node.exe
 @ECHO ON
 
+npm install
 %PYTHON% -m pip install --upgrade pip setuptools
 %PYTHON% -m pip install --upgrade Cython
 %PIP% install pyjnius
