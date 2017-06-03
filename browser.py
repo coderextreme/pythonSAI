@@ -10,31 +10,24 @@ meta4 = metaObject().setName("generator").setContent("manual")
 head1.addMeta(meta4)
 meta5 = metaObject().setName("identifier").setContent("http://coderextreme.net/X3DJSONLD/browser.x3d")
 head1.addMeta(meta5)
-meta6 = metaObject().setName("description").setContent("a script test with embedded \\\n between single quotes")
+meta6 = metaObject().setName("description").setContent("a script test with embedded \\n between single quotes")
 head1.addMeta(meta6)
-meta7 = metaObject().setName("translated").setContent("17 May 2017")
-head1.addMeta(meta7)
-meta8 = metaObject().setName("generator").setContent("X3dToJson.xslt, http://www.web3d.org/x3d/stylesheets/X3dToJson.html")
-head1.addMeta(meta8)
-meta9 = metaObject().setName("reference").setContent("X3D JSON encoding: http://www.web3d.org/wiki/index.php/X3D_JSON_Encoding")
-head1.addMeta(meta9)
-meta10 = metaObject().setName("translated").setContent("17 May 2017")
-head1.addMeta(meta10)
-meta11 = metaObject().setName("generator").setContent("X3DJSONLD: https://github.com/coderextreme/X3DJSONLD")
-head1.addMeta(meta11)
 X3D0.setHead(head1)
-Scene12 = SceneObject()
-Script13 = ScriptObject().setDEF("Browser")
+Scene7 = SceneObject()
+Script8 = ScriptObject().setDEF("Browser")
 
-Script13.setSourceCode("ecmascript:\n"+
+Script8.setSourceCode("\n"+
+"ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
 "                }\n"+
 "")
-Scene12.addChild(Script13)
-Script14 = ScriptObject().setDEF("Clouds")
+Scene7.addChild(Script8)
+Script9 = ScriptObject().setDEF("Clouds")
 
-Script14.setSourceCode("ecmascript:\n"+
+Script9.setSourceCode("\n"+
+"        \n"+
+"ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -45,7 +38,7 @@ Script14.setSourceCode("ecmascript:\n"+
 "\n"+
 "}\n"+
 "")
-Scene12.addChild(Script14)
-X3D0.setScene(Scene12)
+Scene7.addChild(Script9)
+X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("browser.new.x3d")
+X3D0.toFileX3D("./browser.new.x3d")

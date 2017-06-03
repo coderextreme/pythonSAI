@@ -16,8 +16,8 @@ if (typeof Browser === 'undefined') {
 				return JSON.parse('['+obj+']');
 			}
 		},
-		appendTo : function(element, json) {
-			 return ConvertToX3DOM(json, "", element, 'foo.json');
+		appendTo : function(element, jsobj) {
+			 return ConvertToX3DOM(jsobj, "", element, 'foo.json');
 		},
 		getDocument : function() {
 			return document;
@@ -25,8 +25,13 @@ if (typeof Browser === 'undefined') {
 	};
 }
 
+/**
+ * processURLs and make them more kosher for the X3DJSONLD user inteferface to
+ * deal with.  Pass an array of URLs and a path for the main JSON file you are
+ * loading.
+ */
 function processURLs(localArray, path) {
-	console.log("Process URLs", path, localArray);
+	// console.error("Process URLs", path, localArray);
 	var url;
 	// No longer need to split
 	for (url in localArray) {
@@ -39,10 +44,16 @@ function processURLs(localArray, path) {
 			}
 
 		} else {
+			/*
 			var s = localArray[url].indexOf('/');
+			*/
 			var p = localArray[url].indexOf('#');
 			var pe = path.lastIndexOf('/');
-			var pc = path.substring(0, pe);
+			var pc = path;
+			if (pe >= 0) {
+				pc = path.substring(0, pe);
+			}
+			/*
 			if (s != 0 && p != 0) {
 				if (localArray[url].indexOf(pc) != 0) {
 					 localArray[url] = pc+'/'+localArray[url];
@@ -52,6 +63,21 @@ function processURLs(localArray, path) {
 					localArray[url] = localArray[url].substring(1);
 				}
 			}
+			*/
+			while (localArray[url].startsWith("../")) {
+				localArray[url] = localArray[url].substr(3);
+				var pe = pc.lastIndexOf('/');
+				if (pe >= 0) {
+					pc = pc.substring(0, pe);
+				} else {
+					pc = "";
+				}
+			}
+			if (p == 0) {
+				localArray[url] = path+localArray[url];
+			} else {
+				localArray[url] = pc+"/"+localArray[url];
+			}
 		}
 		// for server side
 		var h = localArray[url].lastIndexOf("#") ;
@@ -60,12 +86,12 @@ function processURLs(localArray, path) {
 			hash = localArray[url].substring(h);
 			localArray[url] = localArray[url].substring(0, h);
 		}
-/*
+		/*
 		var x3d = localArray[url].lastIndexOf(".x3d") ;
 		if (x3d === localArray[url].length - 4) {
 			localArray[url] = localArray[url].substring(0, x3d)+".json" + hash;
 		}
-*/
+		*/
 		var wrl = localArray[url].lastIndexOf(".wrl") ;
 		if (wrl === localArray[url].length - 4) {
 			localArray[url] = localArray[url].substring(0, wrl)+".json" + hash;
@@ -87,9 +113,16 @@ if (typeof require === 'function') {
 	var runAndSend = require("./runAndSend");
 }
 	
-function loadURLs(loadpath, urls, loadedCallback) {
+/**
+ * Use almost any method possible to load a set of URLs.  The loadpath is the
+ * original URL the main JSON got laoded from, Urls is the se of urls, and
+ * the loadedCallback returns the data and the URL it was loaded from.
+ */
+function loadURLs(loadpath, urls, loadedCallback, protoexp, done, externProtoDeclare, obj) {
 	if (typeof urls !== 'undefined') {
+		console.error("Preprocessed", urls)
 		urls = processURLs(urls, loadpath);
+		console.error("Postprocessed", urls)
 		for (var u in urls) {
 			try {
 				var url = urls[u];
@@ -109,7 +142,7 @@ function loadURLs(loadpath, urls, loadedCallback) {
 						console.error("Loading HTTP URL", url);
 						if (typeof $ !== 'undefined' && typeof $.get === 'function') {
 							$.get(url, function(data) {
-								loadedCallback(data, url);
+								loadedCallback(data, url, protoexp, done, externProtoDeclare, obj);
 							});
 						} else {
 							http.get({ host: host, path: path}, function(res) {
@@ -118,7 +151,7 @@ function loadURLs(loadpath, urls, loadedCallback) {
 									data += d;
 								});
 								res.on('end', function() {
-									loadedCallback(data, url);
+									loadedCallback(data, url, protoexp, done, externProtoDeclare, obj);
 								});
 							});
 					
@@ -127,7 +160,7 @@ function loadURLs(loadpath, urls, loadedCallback) {
 						console.error("Loading HTTPS URL", url);
 						if (typeof $ !== 'undefined' && typeof $.get === 'function') {
 							$.get(url, function(data) {
-								loadedCallback(data, url);
+								loadedCallback(data, url, protoexp, done, externProtoDeclare, obj);
 							});
 						} else {
 							https.get({ host: host, path: path}, function(res) {
@@ -136,7 +169,7 @@ function loadURLs(loadpath, urls, loadedCallback) {
 									data += d;
 								});
 								res.on('end', function() {
-									loadedCallback(data, url);
+									loadedCallback(data, url, protoexp, done, externProtoDeclare, obj);
 								});
 							});
 					
@@ -150,22 +183,24 @@ function loadURLs(loadpath, urls, loadedCallback) {
 						}
 						try {
 							var data = fs.readFileSync(url);
-							loadedCallback(data.toString(), url);
+							loadedCallback(data.toString(), url, protoexp, done, externProtoDeclare, obj);
 						} catch (e) {
 							var filename = url;
-							filename = filename.substring(0, filename.lastIndexOf("."))+".x3d";
-							console.error("converting "+filename);
-							if (typeof runAndSend === 'function') {
-								runAndSend(['---silent', filename], function(json) {
-									data = JSON.stringify(json);
-									loadedCallback(data, filename);
-								});
+							if (filename.endsWith(".json")) {
+								filename = filename.substring(0, filename.lastIndexOf("."))+".x3d";
+								console.error("converting possible X3D to JSON", filename);
+								if (typeof runAndSend === 'function') {
+									runAndSend(['---silent', filename], function(jsobj) {
+										data = JSON.stringify(jsobj);
+										loadedCallback(data, filename, protoexp, done, externProtoDeclare, obj);
+									});
+								}
 							}
 						}
 					} else if (typeof $ !== 'undefined' && typeof $.get === 'function') {
 						console.error("Loading Relative URL", url);
 						$.get(url, function(data) {
-							loadedCallback(data, url);
+							loadedCallback(data, url, protoexp, done, externProtoDeclare, obj);
 						});
 					} else {
 						console.error("Didn't load", url, ".  No JQuery $.get() or file system");
@@ -182,9 +217,13 @@ var x3djsonNS;
 
 // 'http://www.web3d.org/specifications/x3d-namespace'
 
-// Load X3D JSON into web page
+// Load X3D JavaScript object into web page
 
 
+/**
+ * Yet another way to set an attribute on an element.  does not allow you to
+ * set JSON schema or encoding.
+ */
 function elementSetAttribute(element, key, value) {
 	if (key === 'SON schema') {
 		// JSON Schema
@@ -197,6 +236,9 @@ function elementSetAttribute(element, key, value) {
 	}
 }
 
+/**
+ * converts children of object to DOM.
+ */
 function ConvertChildren(parentkey, object, element, path) {
 	var key;
 
@@ -211,6 +253,10 @@ function ConvertChildren(parentkey, object, element, path) {
 	}
 }
 
+/**
+ * a method to create and element with tagnam key to DOM in a namespace.  If
+ * containerField is set, then the containerField is set in the elemetn.
+ */
 function CreateElement(key, x3djsonNS, containerField) {
 	var child = null;
 	if (typeof x3djsonNS === 'undefined') {
@@ -228,13 +274,21 @@ function CreateElement(key, x3djsonNS, containerField) {
 	return child;
 }
 
+/**
+ * a way to create a CDATA function or script in HTML, by using a DOM parser.
+ */
 function CDATACreateFunction(document, element, str) {
-	var y = str
-		.replace(/'([^'\r]*)\n([^']*)'/g, "'$1\\n$2'")
+	var y = str.replace(/\\"/g, "\\\"")
 		.replace(/&lt;/g, "<")
 		.replace(/&gt;/g, ">")
-		.replace(/&amp;/g, "&")
-	;
+		.replace(/&amp;/g, "&");
+	do {
+		str = y;
+		y = str.replace(/'([^'\r\n]*)\n([^']*)'/g, "'$1\\n$2'");
+		if (str !== y) {
+			console.error("CDATA Replacing",str,"with",y);
+		}
+	} while (y != str);
 	var domParser = new DOMParser();
 	var cdataStr = '<script> <![CDATA[ ' + y + ' ]]> </script>'; // has to be wrapped into an element
 	var scriptDoc = domParser .parseFromString (cdataStr, 'application/xml');
@@ -242,10 +296,16 @@ function CDATACreateFunction(document, element, str) {
 	element .appendChild(cdata);
 }
 
+/**
+ * set the CDATA create function.
+ */
 function setCDATACreateFunction(fnc) {
 	CDATACreateFunction = fnc;
 }
 
+/**
+ * convert the object at object[key] to DOM.
+ */
 function ConvertObject(key, object, element, path, containerField) {
 	if (object !== null && typeof object[key] === 'object') {
 		if (key.substr(0,1) === '@') {
@@ -257,16 +317,16 @@ function ConvertObject(key, object, element, path, containerField) {
 				var child = document.createComment(CommentStringToXML(object[key][c]));
 				element.appendChild(child);
 			}
-		/*
+			/*
 		} else if (key === 'Inline') {
 			var localArray = object[key]["@url"];
-			// console.error("Loading", localArray, "into", key);
-			loadURLs(path, localArray, function(json, path) {
-				// console.error("Read", json);
+			console.error("Loading", localArray, "at", path, "into", key);
+			loadURLs(path, localArray, function(jsobj, path) {
+				// console.error("Read", jsobj);
 				try {
-					// console.error("Loading", json, "into inline");
+					// console.error("Loading", jsobj, "into inline");
 					var child = document.createDocumentFragment();
-					ConvertToX3DOM(json, "-children", child, path);
+					ConvertToX3DOM(jsobj, "-children", child, path);
 					element.appendChild(child);
 					element.appendChild(document.createTextNode("\n"));
 				} catch(e) {
@@ -278,11 +338,12 @@ function ConvertObject(key, object, element, path, containerField) {
 					element.appendChild(document.createTextNode("\n"));
 				}
 			});
-		*/
+			*/
 		} else if (key === '#sourceText') {
 			CDATACreateFunction(document, element, object[key].join("\r\n")+"\r\n");
 		} else {
 			if (key === 'connect' || key === 'fieldValue' || key === 'field' || key === 'meta' || key === 'component') {
+				/*
 				if (key === 'meta') {
 					// Add meta information for X3DJSONLD
 					var months = [
@@ -312,12 +373,15 @@ function ConvertObject(key, object, element, path, containerField) {
 					};
 							
 				}
+				*/
 				for (var childkey in object[key]) {  // for each field
-					if (typeof object[key][childkey] === 'object') {
-						var child = CreateElement(key, x3djsonNS, containerField);
-						ConvertToX3DOM(object[key][childkey], childkey, child, path);
-						element.appendChild(child);
-						element.appendChild(document.createTextNode("\n"));
+					if (key !== 'meta' || childkey < object[key].length - 3) {
+						if (typeof object[key][childkey] === 'object') {
+							var child = CreateElement(key, x3djsonNS, containerField);
+							ConvertToX3DOM(object[key][childkey], childkey, child, path);
+							element.appendChild(child);
+							element.appendChild(document.createTextNode("\n"));
+						}
 					}
 				}
 			} else {
@@ -330,33 +394,53 @@ function ConvertObject(key, object, element, path, containerField) {
 	}
 }
 
+/**
+ * convert a comment string in JavaScript to XML.  Pass the string
+ */
 function CommentStringToXML(str) {
 	str = str.replace(/\\\\/g, '\\');
 	return str;
 }
 
+/**
+ * convert an SFString to XML.
+ */
 function SFStringToXML(str) {
 	var y = str;
-	str = str.replace(/\\\\/g, '\\\\');
+	/*
+	str = (""+str).replace(/\\\\/g, '\\\\');
 	str = str.replace(/\\\\\\\\/g, '\\\\');
-	str = str.replace(/\\/g, '\\\\');
 	str = str.replace(/(\\+)"/g, '\\"');
+	*/
+	str = str.replace(/\\/g, '\\\\');
+	str = str.replace(/"/g, '\\\"');
 	if (y !== str) {
-		// console.log("X3DJSON [] replacing", y, "with", str);
+		console.error("X3DJSONLD [] replacing", y, "with", str);
 	}
 	return str;
 }
 
+/**
+ * convert a JSON String to XML.
+ */
 function JSONStringToXML(str) {
 	var y = str;
 	str = str.replace(/\\/g, '\\\\');
 	str = str.replace(/\n/g, '\\n');
 	if (y !== str) {
-		// console.log("X3DJSON replacing", y, "with", str);
+		console.error("X3DJSONLD replacing", y, "with", str);
 	}
 	return str;
 }
 
+/**
+ * main routine for converting a JavaScript object to DOM.
+ * object is the object to convert.
+ * parentkey is the key of the object in the parent.
+ * element is the parent element.
+ * path is the path the JSON was loaded from.
+ * containerField is a possible containerField.
+ */
 function ConvertToX3DOM(object, parentkey, element, path, containerField) {
 	var key;
 	var localArray = [];
@@ -420,7 +504,10 @@ function ConvertToX3DOM(object, parentkey, element, path, containerField) {
 					localArray[str] = SFStringToXML(localArray[str]);
 				}
                                 if (parentkey === '@url' || parentkey.indexOf("Url") === parentkey.length - 3) {
-					// processURLs(localArray, path);
+					// console.error("Load array  is",localArray);
+					// console.error("Path is",path);
+					processURLs(localArray, path);
+					// console.error("Processed Load array  is",localArray);
 				}
 				elementSetAttribute(element, parentkey.substr(1),'"'+localArray.join('" "')+'"');
 			} else {
@@ -433,6 +520,36 @@ function ConvertToX3DOM(object, parentkey, element, path, containerField) {
 	return element;
 }
 
+/**
+ * Load X3D JSON into an element.
+ * jsobj - the JavaScript object to convert to XML and DOM.
+ * path - the path of the JSON file.
+ * xml - the output xml string array (optional).
+ * NS - a namespace for cobweb (optional) -- stripped out.
+ * returns an element in callback or null if error - the element
+ * to append or insert into the DOM.
+ */
+function loadX3DJS(jsobj, path, xml, NS, loadSchema, doValidate, callback) {
+	console.error("Invoking client side loader");
+	loadSchema(jsobj, path, doValidate, function() {
+		x3djsonNS = NS;
+		var child = CreateElement('X3D', NS);
+		ConvertToX3DOM(jsobj, "", child, path);
+		if (typeof xml !== 'undefined' && typeof xml.push === 'function') {
+			xml.push(serializeDOM(jsobj, child, true));
+		}
+		console.error("Returning with", child);
+		callback(child);
+	}, function(e) {
+		console.error(e);
+		callback(null);
+	});
+}
+
+/**
+ * fixXML
+ * Fix XML after it has been serialized.
+ */
 function fixXML(xmlstr) {
 	// get rid of self-closing tags
 	xmlstr = xmlstr.replace(/(<[ \t]*)([A-Za-z0-9]+)([^>]*)\/>/g, "$1$2$3></$2>");
@@ -465,10 +582,21 @@ function fixXML(xmlstr) {
 	return xmlstr;
 }
 
-function serializeDOM(json, element) {
-	var version = json.X3D["@version"];
-	var xml = '<?xml version="1.0" encoding="'+json.X3D["encoding"]+'"?>\n';
-	xml += '<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D '+version+'//EN" "http://www.web3d.org/specifications/x3d-'+version+'.dtd">\n';
+/**
+ * Serialize an element to XML and add an XML header.
+ */
+function serializeDOM(json, element, appendDocType) {
+	var version = "3.3";
+	var encoding = "UTF-8";
+	if (typeof json !== 'undefined') {
+		version = json.X3D["@version"];
+		encoding = json.X3D["encoding"];
+	}
+	var xml = '';
+	if (appendDocType) {
+		xml += '<?xml version="1.0" encoding="'+encoding+'"?>\n';
+		xml += '<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D '+version+'//EN" "http://www.web3d.org/specifications/x3d-'+version+'.dtd">\n';
+	}
 	if (typeof element === 'string') {
 		xml += element;
 	} else {
@@ -480,29 +608,32 @@ function serializeDOM(json, element) {
 }
 
 
-/*
- * Load X3D JSON into an element
- * json - the JSON to convert to XML and DOM
- * path - the path of the JSON file
- * xml - the output xml string array (optional)
- * NS - a namespace for cobweb (optional) -- stripped out
- * returns an element - the element to append or insert into the DOM
+/**
+ * selectObjectFromJSObj() --  get an object in a node internally.
+ * The node is the javascript object tree to get an object out of.
+ * selectorField is a " > " separated list of properties in node.
+ *
  */
-function loadX3DJS(json, path, xml, NS, loadSchema, doValidate, callback) {
-	console.log("Invoking client side loader");
-	loadSchema(json, path, doValidate, function() {
-		x3djsonNS = NS;
-		var child = CreateElement('X3D', NS);
-		ConvertToX3DOM(json, "", child, path);
-		if (typeof xml !== 'undefined' && typeof xml.push === 'function') {
-			xml.push(serializeDOM(json, child));
+function selectObjectFromJSObj(node, selectorField) {
+	var skipDescendants = 0; // number of descendents to skip
+	var selectedValue = node;
+	var higherValue = selectedValue;
+	var selector  = selectorField.split(/ > /);
+	var depth = (selector.length - skipDescendants);
+	for (var index = 0; index < depth - 0; index++) {
+		higherValue = selectedValue;
+		selectedValue = selectedValue[selector[index]];
+		if (typeof selectedValue === 'undefined') {
+			// not sure how we got here, but let's bail
+			console.error("Error: I think we went down too far: "+selectorField+" is unavailable.");
+			return true;
 		}
-		console.log("Returning with", child);
-		callback(child);
-	}, function(e) {
-		console.error(e);
-		callback(null);
-	});
+	}
+	return selectedValue;
+}
+
+function setProcessURLs(func) {
+	processURLs = func;
 }
 
 if (typeof module === 'object')  {
@@ -511,7 +642,9 @@ if (typeof module === 'object')  {
 		Browser : Browser,
 		ConvertToX3DOM : ConvertToX3DOM,
 		setCDATACreateFunction : setCDATACreateFunction,
+		setProcessURLs : setProcessURLs,
 		loadURLs : loadURLs,
+		selectObjectFromJSObj : selectObjectFromJSObj,
 		setDocument : function(doc) {
 			document = doc;
 		}

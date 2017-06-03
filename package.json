@@ -5,6 +5,7 @@
   "dependencies": {
     "node-mkdirp": "*",
     "ajv": "*",
+    "ajv-i18n": "*",
     "xmldom": "*",
     "java": "*",
     "jsonlint": "*"

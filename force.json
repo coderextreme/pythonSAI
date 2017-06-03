@@ -32,7 +32,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 May 2017"
+            "@content":"03 June 2017"
           },
           {
             "@name":"generator",
@@ -166,6 +166,8 @@
                           }
                         ],
                         "#sourceText":[
+"",
+"",
 "ecmascript:",
 "\t\t\t\t\tfunction set_cycle(value) {",
 "                                                old = translation;",
@@ -296,6 +298,8 @@
                             ]
                         },
                         "#sourceText":[
+"",
+"",
 "ecmascript:",
 "",
 "                function set_endA(value) {",
@@ -467,7 +471,6 @@
                 },
                 {
                   "@name":"ModifiableNode",
-                  "@id":"MN",
                   "@type":"SFNode",
                   "@accessType":"initializeOnly",
                   "-children":[
@@ -480,6 +483,8 @@
                 }
               ],
               "#sourceText":[
+"",
+"\t",
 "ecmascript:",
 "\tfunction add_node(value) {",
 "                // Browser.print('hey ', counter);",

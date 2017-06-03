@@ -1,4 +1,5 @@
 var runsaxon = require('./allsaxon');
+var config = require('./config');
 var fs = require("fs");
 
 function runAndSend(args, callback) {
@@ -9,13 +10,12 @@ function runAndSend(args, callback) {
 	}
 	var infile = args[0];
 	console.error("converted", infile);
+	if (infile.startsWith("https://")) {
+		infile = config.x3dcode+infile.substr(8);
+	} else if (infile.startsWith("http://")) {
+		infile = config.x3dcode+infile.substr(7);
+	}
 	var outfile = infile.substr(0, infile.lastIndexOf("."))+".json";
-	if (outfile.lastIndexOf("savage.nps.edu") >= 0) {
-		outfile = "examples"+outfile.substring(outfile.lastIndexOf("savage.nps.edu")+14);
-	}
-	if (outfile.lastIndexOf("www.web3d.org") >= 0) {
-		outfile = outfile.substring(outfile.lastIndexOf("www.web3d.org"));
-	}
 	var content;
 	/*
 	try {
@@ -27,7 +27,7 @@ function runAndSend(args, callback) {
 			console.error("read", outfile);
 				// content = content.toString();
 				content = JSON.parse(content);
-				console.error('sending back', content);
+				console.error('sending back', JSON.stringify(content));
 				callback(content);
 			console.error("async read", outfile);
 		} else {

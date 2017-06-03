@@ -24,11 +24,11 @@
           },
           {
             "@name":"description",
-            "@content":"a script test with embedded \\n between single quotes"
+            "@content":"a script test with embedded \n between single quotes"
           },
           {
             "@name":"translated",
-            "@content":"17 May 2017"
+            "@content":"03 June 2017"
           },
           {
             "@name":"generator",
@@ -46,9 +46,10 @@
             {
               "@DEF":"Browser",
               "#sourceText":[
+"",
 "ecmascript:",
 "                function initialize() {",
-"\t\t    Browser.print('DUDES\\n'+'\"DUDETTES');",
+"\t\t    Browser.print('DUDES\n'+'\"DUDETTES');",
 "                }"
 ]
             }
@@ -57,14 +58,16 @@
             {
               "@DEF":"Clouds",
               "#sourceText":[
+"",
+"        ",
 "ecmascript:",
 "",
 "",
 "function cumulustranslation() // These values designate the boundary location of the cloud",
 "{",
 "var xxx = ' '+' '+",
-"'\tTransform\t\t\\n'+",
-"'    ' + '               \t\\n';",
+"'\tTransform\t\t\n'+",
+"'    ' + '               \t\n';",
 "",
 "}"
 ]

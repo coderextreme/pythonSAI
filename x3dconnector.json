@@ -28,7 +28,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 May 2017"
+            "@content":"03 June 2017"
           },
           {
             "@name":"generator",
@@ -236,7 +236,8 @@
                 }
               ],
               "#sourceText":[
-"ecmascript:",
+"",
+"        ecmascript:",
 "        function recompute(startpoint,endpoint){",
 "            var dif = endpoint.subtract(startpoint);",
 "            var dist = dif.length()*.5;",
