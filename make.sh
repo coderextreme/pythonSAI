@@ -3,9 +3,9 @@
 npm install
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
-${PIP} install pyjnius
-${PIP} install bs4
-${PIP} install lxml
+${PYTHON} -m pip install --upgrade pyjnius
+${PYTHON} -m pip install --upgrade bs4
+${PYTHON} -m pip install --upgrade lxml
 ${PYTHON} classes.py
 ${PYTHON} fieldtypes.py
 ${PYTHON} parseom.py
