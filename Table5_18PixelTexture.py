@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -215,7 +216,7 @@ Shape49 = ShapeObject()
 Appearance50 = AppearanceObject()
 
 PixelTexture51 = PixelTextureObject()
-PixelTexture51.setImage([3,2,4,4278190335,16711935,65535,4278190207,16711807,65407])
+PixelTexture51.setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407])
 
 Appearance50.setTexture(PixelTexture51)
 Shape49.setAppearance(Appearance50)

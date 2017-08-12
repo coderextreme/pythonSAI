@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -117,7 +118,7 @@ Material26 = MaterialObject()
 Appearance25.setMaterial(Material26)
 PixelTexture27 = PixelTextureObject()
 PixelTexture27.setDEF("RgbOpacityCheckerboard")
-PixelTexture27.setImage([2,2,4,4278190335,4294901760,4294901760,4278190335])
+PixelTexture27.setImage([2,2,4,-16776961,-65536,-65536,-16776961])
 
 Appearance25.setTexture(PixelTexture27)
 Shape24.setAppearance(Appearance25)

@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -247,7 +248,7 @@ Appearance61 = AppearanceObject()
 Appearance61.addComments(CommentsBlock("Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127"))
 PixelTexture62 = PixelTextureObject()
 PixelTexture62.setDEF("FourComponents")
-PixelTexture62.setImage([3,2,4,4278190335,16711935,65535,4278190207,16711807,65407])
+PixelTexture62.setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407])
 
 Appearance61.setTexture(PixelTexture62)
 Shape60.setAppearance(Appearance61)

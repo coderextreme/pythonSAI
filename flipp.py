@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()

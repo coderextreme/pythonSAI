@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -125,7 +126,7 @@ Material26 = MaterialObject()
 
 Appearance25.setMaterial(Material26)
 PixelTexture27 = PixelTextureObject()
-PixelTexture27.setImage([2,2,4,4278190335,16711935,4294967295,4294902015])
+PixelTexture27.setImage([2,2,4,-16776961,16711935,-1,-65281])
 PixelTexture27.setRepeatS(False)
 PixelTexture27.setRepeatT(False)
 
