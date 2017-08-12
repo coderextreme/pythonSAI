@@ -11,6 +11,8 @@ ${PYTHON} fieldtypes.py
 ${PYTHON} parseom.py
 echo did not cp X3Dautoclass.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
+rm *new*
+
 
 sh x3d2py.sh
 
