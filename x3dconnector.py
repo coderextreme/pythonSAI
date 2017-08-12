@@ -186,8 +186,7 @@ field40.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script31.addField(field40)
 
-Script31.setSourceCode("\n"+
-"        ecmascript:\n"+
+Script31.setSourceCode("ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "            var dif = endpoint.subtract(startpoint);\n"+
 "            var dist = dif.length()*.5;\n"+

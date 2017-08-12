@@ -96,8 +96,6 @@
                       }
                     ],
                     "#sourceText":[
-"",
-"",
 "ecmascript:",
 "",
 "                function set_cycle(value) {",

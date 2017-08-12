@@ -115,8 +115,7 @@ field23.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 
 Script18.addField(field23)
 
-Script18.setSourceCode("\n"+
-"ecmascript:\n"+
+Script18.setSourceCode("ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+

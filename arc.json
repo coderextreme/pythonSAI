@@ -137,8 +137,6 @@
                                 }
                               ],
                               "#sourceText":[
-"",
-"",
 "ecmascript:",
 "\t\tfunction set_location(value) {",
 "                    old = translation;",
@@ -333,8 +331,7 @@
                                   ]
                               },
                               "#sourceText":[
-"",
-"            ecmascript:",
+"ecmascript:",
 "        function recompute(startpoint,endpoint){",
 "\t    if (typeof endpoint === 'undefined') {",
 "\t\treturn;",

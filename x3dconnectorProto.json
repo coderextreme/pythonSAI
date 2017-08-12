@@ -400,8 +400,7 @@
                             ]
                         },
                         "#sourceText":[
-"",
-"            ecmascript:",
+"ecmascript:",
 "            function recompute(startpoint,endpoint){",
 "\t        if (typeof endpoint === 'undefined') {",
 "\t\t\treturn;",

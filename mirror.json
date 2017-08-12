@@ -372,8 +372,6 @@
                       }
                     ],
                     "#sourceText":[
-" ",
-"",
 "ecmascript:",
 "        function set_fraction( f, tm ) {",
 "\t    var side = Math.floor(f*frontUrls.length);",

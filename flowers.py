@@ -241,8 +241,7 @@ field46.setValue("0.5")
 
 Script35.addField(field46)
 
-Script35.setSourceCode("\n"+
-"ecmascript:\n"+
+Script35.setSourceCode("ecmascript:\n"+
 "			function set_translation(value) {\n"+
 "				translation = value;\n"+
 "			}\n"+

@@ -39,8 +39,7 @@ Script8 = ScriptObject()
 Script8.setDEF("Browser")
 
 
-Script8.setSourceCode("\n"+
-"ecmascript:\n"+
+Script8.setSourceCode("ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
 "                }\n"+
@@ -50,9 +49,7 @@ Script9 = ScriptObject()
 Script9.setDEF("Clouds")
 
 
-Script9.setSourceCode("\n"+
-"        \n"+
-"ecmascript:\n"+
+Script9.setSourceCode("ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+

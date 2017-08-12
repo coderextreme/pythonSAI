@@ -276,8 +276,7 @@ field62.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script60.addField(field62)
 
-Script60.setSourceCode("\n"+
-"ecmascript:\n"+
+Script60.setSourceCode("ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	rightlines = new MFString(\"\");\n"+
@@ -304,8 +303,7 @@ field65.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script63.addField(field65)
 
-Script63.setSourceCode("\n"+
-"ecmascript:\n"+
+Script63.setSourceCode("ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	uplines = new MFString(\"\");\n"+
@@ -332,8 +330,7 @@ field68.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script66.addField(field68)
 
-Script66.setSourceCode("\n"+
-"ecmascript:\n"+
+Script66.setSourceCode("ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	centerlines = new MFString(\"\");\n"+

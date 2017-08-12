@@ -182,8 +182,6 @@
                       }
                     ],
                     "#sourceText":[
-"",
-"",
 "ecmascript:",
 "",
 "var e = 5;",
@@ -280,8 +278,6 @@
                       }
                     ],
                     "#sourceText":[
-"",
-"",
 "ecmascript:",
 "",
 "var e = 5;",

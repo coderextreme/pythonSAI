@@ -317,8 +317,6 @@
                 }
               ],
               "#sourceText":[
-"",
-"",
 "ecmascript:",
 "        function set_fraction( f, tm ) {",
 "            var side = Math.floor(f*frontUrls.length);",
@@ -533,8 +531,6 @@
                 }
               ],
               "#sourceText":[
-"",
-"",
 "ecmascript:",
 "",
 "function set_a(value) {",

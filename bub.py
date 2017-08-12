@@ -183,8 +183,7 @@ field37.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 
 Script34.addField(field37)
 
-Script34.setSourceCode("\n"+
-"ecmascript:\n"+
+Script34.setSourceCode("ecmascript:\n"+
 "			function set_translation(value) {\n"+
 "				translation = value;\n"+
 "			}\n"+

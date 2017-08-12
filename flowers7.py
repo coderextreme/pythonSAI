@@ -296,9 +296,7 @@ field51.setValue("-1")
 
 Script37.addField(field51)
 
-Script37.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script37.setSourceCode("ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "            var side = Math.floor(f*frontUrls.length);\n"+
 "            if (side > frontUrls.length-1) {\n"+
@@ -508,9 +506,7 @@ field79.setValue("0")
 
 Script66.addField(field79)
 
-Script66.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script66.setSourceCode("ecmascript:\n"+
 "\n"+
 "function set_a(value) {\n"+
 "	a = value;\n"+

@@ -126,9 +126,7 @@ field25.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script21.addField(field25)
 
-Script21.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script21.setSourceCode("ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
@@ -246,9 +244,7 @@ connect46.setProtoField("positionB")
 IS44.addConnect(connect46)
 Script40.setIS(IS44)
 
-Script40.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script40.setSourceCode("ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+

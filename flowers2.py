@@ -149,9 +149,7 @@ field32.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script29.addField(field32)
 
-Script29.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script29.setSourceCode("ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -247,9 +245,7 @@ field36.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script33.addField(field36)
 
-Script33.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script33.setSourceCode("ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+

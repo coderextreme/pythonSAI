@@ -150,8 +150,6 @@
                           }
                         ],
                         "#sourceText":[
-"",
-"",
 "ecmascript:",
 "\t\t\t\t\tfunction set_cycle(value) {",
 "                                                old = translation;",
@@ -282,8 +280,6 @@
                             ]
                         },
                         "#sourceText":[
-"",
-"",
 "ecmascript:",
 "",
 "                function set_endA(value) {",
