@@ -25,7 +25,7 @@ Group5 = GroupObject()
 Shape6 = ShapeObject()
 
 Text7 = TextObject()
-Text7.setString(["Locked","FIRE!..\"\"FIRE!"])
+Text7.setString(["Locked","","FIRE!..FIRE!"])
 
 Shape6.setGeometry(Text7)
 Appearance8 = AppearanceObject()

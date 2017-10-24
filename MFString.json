@@ -38,7 +38,7 @@
                     "-geometry":
                       { "Text":
                         {
-                          "@string":["Locked","FIRE!..\"\"FIRE!"]
+                          "@string":["Locked","","FIRE!..FIRE!"]
                         }
                       },
                     "-appearance":
