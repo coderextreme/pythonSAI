@@ -1,10 +1,5 @@
 This program reads X3D files (provided) and generates python files.
-For a simple smoke test, set your environment in profile.sh, then run the two commands:  You should probably use Python 2.7
-
-```bash
-. ./profile.sh
-python abox.py
-```
+For a simple smoke test, set your environment in profile.sh, then run the two commands:  You should probably use Python 3.6 with Java 9
 Then run these for comparison
 ```bash
 python MFString.py
@@ -28,7 +23,7 @@ Python SAI testing harness for X3DJSAIL concrete classes
 
 Install X3DJSONLD https://github.com/coderextreme/X3DJSONLD in sibling folder to pythonSAI
 
-Configure per your environment for Python 2.7 and node.js in profile.sh
+Configure per your environment for Python 3.6 and node.js in profile.sh
 
 Run;
 ```

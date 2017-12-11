@@ -20,7 +20,7 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/abox.x3d"
+            "@content":"https://coderextreme.net/X3DJSONLD/abox.x3d"
           },
           {
             "@name":"description",
@@ -28,7 +28,7 @@
           },
           {
             "@name":"translated",
-            "@content":"12 August 2017"
+            "@content":"11 December 2017"
           },
           {
             "@name":"generator",
@@ -143,7 +143,7 @@
                         "-geometry":
                           { "Box":
                             {
-                              "@size":[1,1,1]
+                              "@size":[140,140,140]
                             }
                           }
                       }

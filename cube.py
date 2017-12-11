@@ -39,7 +39,7 @@ meta7.setContent("../license.html")
 head1.addMeta(meta7)
 meta8 = metaObject()
 meta8.setName("identifier")
-meta8.setContent("http://coderextreme.net/X3DJSONLD/cube.x3d")
+meta8.setContent("https://coderextreme.net/X3DJSONLD/cube.x3d")
 
 head1.addMeta(meta8)
 X3D0.setHead(head1)

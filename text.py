@@ -24,12 +24,12 @@ meta4.setContent("text.x3d")
 head1.addMeta(meta4)
 meta5 = metaObject()
 meta5.setName("identifier")
-meta5.setContent("http://coderextreme.net/X3DJSONLD/text.x3d")
+meta5.setContent("https://coderextreme.net/X3DJSONLD/text.x3d")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
 meta6.setName("description")
-meta6.setContent("test text")
+meta6.setContent("test \\n text")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
@@ -48,19 +48,62 @@ Text11 = TextObject()
 Text11.setString(["Node\"\"\""])
 
 FontStyle12 = FontStyleObject()
-FontStyle12.setJustify(["MIDDLE","MIDDLE"])
-FontStyle12.setSize(5)
 
 Text11.setFontStyle(FontStyle12)
 Shape10.setGeometry(Text11)
 Appearance13 = AppearanceObject()
 
 Material14 = MaterialObject()
-Material14.setDiffuseColor([0,0,1])
 
 Appearance13.setMaterial(Material14)
 Shape10.setAppearance(Appearance13)
 Transform9.addChild(Shape10)
+Shape15 = ShapeObject()
+
+Text16 = TextObject()
+Text16.setString(["Node2","\\","\\\\","Node2"])
+
+FontStyle17 = FontStyleObject()
+
+Text16.setFontStyle(FontStyle17)
+Shape15.setGeometry(Text16)
+Appearance18 = AppearanceObject()
+
+Material19 = MaterialObject()
+
+Appearance18.setMaterial(Material19)
+Shape15.setAppearance(Appearance18)
+Transform9.addChild(Shape15)
+Shape20 = ShapeObject()
+
+Text21 = TextObject()
+Text21.setString(["Node3 \\\\ \\","Node3\"\"\""])
+
+FontStyle22 = FontStyleObject()
+
+Text21.setFontStyle(FontStyle22)
+Shape20.setGeometry(Text21)
+Appearance23 = AppearanceObject()
+
+Material24 = MaterialObject()
+
+Appearance23.setMaterial(Material24)
+Shape20.setAppearance(Appearance23)
+Transform9.addChild(Shape20)
+Script25 = ScriptObject()
+
+field26 = fieldObject()
+field26.setType(fieldObject.TYPE_MFSTRING)
+field26.setName("frontUrls")
+field26.setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY)
+field26.setValue("\"rnl_front.png\" \"uffizi_front.png\"")
+
+Script25.addField(field26)
+
+Script25.setSourceCode("ecmascript:\n"+
+"			    var me = '\"1\" \"\"2\" \"\\n3\"';\n"+
+"")
+Transform9.addChild(Script25)
 Scene8.addChild(Transform9)
 X3D0.setScene(Scene8)
 

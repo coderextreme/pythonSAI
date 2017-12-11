@@ -17,7 +17,9 @@ if (typeof Browser === 'undefined') {
 			}
 		},
 		appendTo : function(element, jsobj) {
-			 return ConvertToX3DOM(jsobj, "", element, 'foo.json');
+			 if (element != null) {
+				 return ConvertToX3DOM(jsobj, "", element, 'foo.json');
+		         }
 		},
 		getDocument : function() {
 			return document;
@@ -106,7 +108,7 @@ function processURLs(localArray, path) {
 	return localArray;
 }
 
-if (typeof require === 'function') {
+if (typeof require === 'function' && typeof load !== 'function') {
 	var fs = require("fs");
 	var http = require("http");
 	var https = require("https");
@@ -342,7 +344,7 @@ function ConvertObject(key, object, element, path, containerField) {
 		} else if (key === '#sourceText') {
 			CDATACreateFunction(document, element, object[key].join("\r\n")+"\r\n");
 		} else {
-			if (key === 'connect' || key === 'fieldValue' || key === 'field' || key === 'meta' || key === 'component') {
+			if (key === 'connect' || key === 'fieldValue' || key === 'field' || key === 'meta' || key === 'component' || key === 'unit') {
 				/*
 				if (key === 'meta') {
 					// Add meta information for X3DJSONLD

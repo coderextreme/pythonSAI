@@ -20,15 +20,15 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/browser.x3d"
+            "@content":"https://coderextreme.net/X3DJSONLD/browser.x3d"
           },
           {
             "@name":"description",
-            "@content":"a script test with embedded \n between single quotes"
+            "@content":"a script test with embedded \n between single quotes, a double backslash \\\\ a backslash \\ and a closing quote \""
           },
           {
             "@name":"translated",
-            "@content":"12 August 2017"
+            "@content":"11 December 2017"
           },
           {
             "@name":"generator",

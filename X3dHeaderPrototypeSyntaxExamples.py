@@ -3,7 +3,7 @@ from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
 X3D0.setProfile("Immersive")
-X3D0.setVersion("3.2")
+X3D0.setVersion("3.3")
 
 head1 = headObject()
 
@@ -49,7 +49,7 @@ meta9.setContent("14 October 2002")
 head1.addMeta(meta9)
 meta10 = metaObject()
 meta10.setName("modified")
-meta10.setContent("26 November 2015")
+meta10.setContent("7 May 2017")
 
 head1.addMeta(meta10)
 meta11 = metaObject()
@@ -254,12 +254,14 @@ Collision54 = CollisionObject()
 
 Shape55 = ShapeObject()
 
+
+Shape55.addComments(CommentsBlock("note that Collision proxy Shape is not rendered"))
+
+Shape55.addComments(CommentsBlock("alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'"))
 Text56 = TextObject()
 Text56.setString(["He said, \"Immel did it!\""])
 
 Shape55.setGeometry(Text56)
-
-Shape55.addComments(CommentsBlock("alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'"))
 Appearance57 = AppearanceObject()
 
 Material58 = MaterialObject()

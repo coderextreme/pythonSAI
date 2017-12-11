@@ -63,6 +63,7 @@ protected static class ExitException extends SecurityException
 			String extension = "json";
 			boolean overwrite = false;
 			boolean silent = false;
+			String outdir = "./";
 			System.setSecurityManager(new NoExitSecurityManager());
 			for (int a = 0; a < args.length; a++) {
 				String source = args[a];
@@ -72,6 +73,10 @@ protected static class ExitException extends SecurityException
 				}
 				if (source.startsWith("---silent")) {
 					silent = true;
+					continue;
+				}
+				if (source.startsWith("---")) {
+					outdir = source.substring(3);
 					continue;
 				}
 				if (source.startsWith("--")) {
@@ -102,18 +107,22 @@ protected static class ExitException extends SecurityException
 						
 						*/
 
+						System.err.println("URL is "+source);
 						URL u = new URL(source);
-						if (source.lastIndexOf("savage.nps.edu") >= 0) {
-							source = "examples"+source.substring(source.lastIndexOf("savage.nps.edu")+14);
-						}
-						if (source.lastIndexOf("www.web3d.org") >= 0) {
-							source = source.substring(source.lastIndexOf("www.web3d.org"));
+						if (source.indexOf("https://") == 0) {
+							source = "C:/x3d-code/"+source.substring(8);
+						} else if (source.indexOf("http://") == 0) {
+							source = "C:/x3d-code/"+source.substring(7);
 						}
 						BufferedReader br = null;
 						PrintWriter bw = null;
 						try {
 							br = new BufferedReader(new InputStreamReader(u.openStream()));
 							System.err.println("Downloading URL to "+source);
+							if (source.lastIndexOf("/") > 0) {
+								File dir = new File(source.substring(0, source.lastIndexOf("/")));
+								dir.mkdirs();
+							}
 							bw = new PrintWriter(new FileWriter(source));
 							String line = null;
 							while ((line = br.readLine()) != null) {
@@ -131,22 +140,21 @@ protected static class ExitException extends SecurityException
 						}
 					}
 					out = source;
-					if ((out.startsWith("http://") || out.startsWith("https://")) && out.lastIndexOf("www.web3d.org") >= 0) {
-						out = out.substring(out.lastIndexOf("www.web3d.org"));
-					}
-					out = out.substring(0, out.lastIndexOf("."))+"."+extension;
+					out = outdir+out.substring(0, out.lastIndexOf("."))+"."+extension;
 					if (overwrite) {
-						System.err.println("BEGIN "+source);
+						System.err.println("BEGIN "+source+" > "+extension);
 						if (out.lastIndexOf("/") > 0) {
 							File dir = new File(out.substring(0, out.lastIndexOf("/")));
 							dir.mkdirs();
 						}
 						net.sf.saxon.Transform.main(new String[] {
-
 									"-warnings:recover",
 									"-o:"+out,
 									"-s:"+source,
-									"-xsl:"+stylesheet });
+									"-xsl:"+stylesheet,
+									"packageName=net.x3djsonld.data",
+									"className="+out.substring(out.lastIndexOf("/")+1, out.lastIndexOf(".")).replace(".", "_")
+						});
 						// -t  #timing -c # compiled
 						System.err.println("END "+source);
 						if (!silent) {
@@ -159,11 +167,13 @@ protected static class ExitException extends SecurityException
 							dir.mkdirs();
 						}
 						net.sf.saxon.Transform.main(new String[] {
-
 									"-warnings:recover",
 									"-o:"+out,
 									"-s:"+source,
-									"-xsl:"+stylesheet });
+									"-xsl:"+stylesheet,
+									"packageName=net.x3djsonld.data",
+									"className="+out.substring(out.lastIndexOf("/")+1, out.lastIndexOf(".")).replace(".", "_")
+						});
 						// -t  #timing -c # compiled
 						System.err.println("END "+source);
 						if (!silent) {
@@ -177,7 +187,7 @@ protected static class ExitException extends SecurityException
 					}
 				} catch (Throwable e) {
 					System.err.println("FATAL "+source+" > "+out);
-					System.err.println(e.getMessage());
+					e.printStackTrace();
 				}
 			}
 			System.setSecurityManager(null); // or save and restore original

@@ -29,7 +29,7 @@ meta5.setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit")
 head1.addMeta(meta5)
 meta6 = metaObject()
 meta6.setName("identifier")
-meta6.setContent("http://coderextreme.net/X3DJSONLD/geo.x3d")
+meta6.setContent("https://coderextreme.net/X3DJSONLD/geo.x3d")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
@@ -56,12 +56,12 @@ Viewpoint11.setDescription("Bubbles in action")
 
 Scene9.addChild(Viewpoint11)
 Background12 = BackgroundObject()
-Background12.setBackUrl(["cubemap/BK.png","http://coderextreme.net/X3DJSONLD/cubemap/BK.png"])
-Background12.setBottomUrl(["cubemap/BT.png","http://coderextreme.net/X3DJSONLD/cubemap/BT.png"])
-Background12.setFrontUrl(["cubemap/FR.png","http://coderextreme.net/X3DJSONLD/cubemap/FR.png"])
-Background12.setLeftUrl(["cubemap/LF.png","http://coderextreme.net/X3DJSONLD/cubemap/LF.png"])
-Background12.setRightUrl(["cubemap/RT.png","http://coderextreme.net/X3DJSONLD/cubemap/RT.png"])
-Background12.setTopUrl(["cubemap/TP.png","http://coderextreme.net/X3DJSONLD/cubemap/TP.png"])
+Background12.setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"])
+Background12.setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"])
+Background12.setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"])
+Background12.setLeftUrl(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"])
+Background12.setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"])
+Background12.setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"])
 
 Scene9.addChild(Background12)
 ProtoDeclare13 = ProtoDeclareObject()
@@ -132,44 +132,48 @@ Script20.setSourceCode("ecmascript:\n"+
 "    scalvel = new SFVec3f(Math.random() * 0.4, Math.random() * 0.4, Math.random() * 0.4);\n"+
 "}\n"+
 "\n"+
-"function set_translation(value) {\n"+
-"   translation = value;\n"+
-"}\n"+
-"\n"+
-"function set_scale(value) {\n"+
-"   scale = value;\n"+
-"}\n"+
-"\n"+
-"function translation_changed() {\n"+
-"	return translation;\n"+
-"}\n"+
-"\n"+
 "function set_fraction(value) {\n"+
 "    if (typeof translation === 'undefined') {\n"+
-"		translation = [0, 0, 0];\n"+
+"		translation = new SFVec3f(0, 0, 0);\n"+
 "    }\n"+
 "    if (typeof velocity === 'undefined') {\n"+
-"		velocity = [0, 0, 0];\n"+
+"		velocity = new SFVec3f(0, 0, 0);\n"+
 "    }\n"+
 "    if (typeof scalevel === 'undefined') {\n"+
-"		scalevel = [0, 0, 0];\n"+
+"		scalevel = new SFVec3f(0, 0, 0);\n"+
 "    }\n"+
 "    if (typeof scale === 'undefined') {\n"+
-"		scale = [1, 1, 1];\n"+
+"		scale = new SFVec3f(1, 1, 1);\n"+
 "    }\n"+
-"    translation = new SFVec3f(	translation[0] + velocity[0], translation[1] + velocity[1], translation[2] + velocity[2]);\n"+
-"    scale = new SFVec3f(scale[0] + scalvel[0], scale[1] + scalvel[1], scale[2] + scalvel[2]);\n"+
-"    for (var j = 0; j < 3; j++) {\n"+
-"	    // if you get to far away or too big, explode\n"+
-"	    if ( Math.abs(translation[j]) > 256) {\n"+
-"		translation[j] = 0;\n"+
-"		initialize();\n"+
-"	    }\n"+
-"	    if (Math.abs(scale[j]) > 20) {\n"+
-"		scale[j] = scale[j]/2;\n"+
-"		translation[j] = 0;\n"+
-"		initialize();\n"+
-"	    }\n"+
+"    translation = new SFVec3f(	translation.x + velocity.x, translation.y + velocity.y, translation.z + velocity.z);\n"+
+"    scale = new SFVec3f(scale.x + scalvel.x, scale.y + scalvel.y, scale.z + scalvel.z);\n"+
+"    // if you get to far away or too big, explode\n"+
+"    if ( Math.abs(translation.x) > 256) {\n"+
+"	translation.x = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if ( Math.abs(translation.y) > 256) {\n"+
+"	translation.y = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if ( Math.abs(translation.z) > 256) {\n"+
+"	translation.z = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.x) > 20) {\n"+
+"	scale.x = scale.x/20;\n"+
+"	translation.x = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.y) > 20) {\n"+
+"	scale.y = scale.y/20;\n"+
+"	translation.y = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.z) > 20) {\n"+
+"	scale.z = scale.z/20;\n"+
+"	translation.z = 0;\n"+
+"	initialize();\n"+
 "    }\n"+
 "}\n"+
 "")
@@ -181,63 +185,49 @@ TimeSensor26.setLoop(True)
 
 Transform15.addChild(TimeSensor26)
 ROUTE27 = ROUTEObject()
-ROUTE27.setFromNode("transform")
+ROUTE27.setFromNode("bounce")
 ROUTE27.setFromField("translation_changed")
-ROUTE27.setToNode("bounce")
+ROUTE27.setToNode("transform")
 ROUTE27.setToField("set_translation")
 
 Transform15.addChild(ROUTE27)
 ROUTE28 = ROUTEObject()
-ROUTE28.setFromNode("transform")
+ROUTE28.setFromNode("bounce")
 ROUTE28.setFromField("scale_changed")
-ROUTE28.setToNode("bounce")
+ROUTE28.setToNode("transform")
 ROUTE28.setToField("set_scale")
 
 Transform15.addChild(ROUTE28)
 ROUTE29 = ROUTEObject()
-ROUTE29.setFromNode("bounce")
-ROUTE29.setFromField("translation_changed")
-ROUTE29.setToNode("transform")
-ROUTE29.setToField("set_translation")
+ROUTE29.setFromNode("bubbleClock")
+ROUTE29.setFromField("fraction_changed")
+ROUTE29.setToNode("bounce")
+ROUTE29.setToField("set_fraction")
 
 Transform15.addChild(ROUTE29)
-ROUTE30 = ROUTEObject()
-ROUTE30.setFromNode("bounce")
-ROUTE30.setFromField("scale_changed")
-ROUTE30.setToNode("transform")
-ROUTE30.setToField("set_scale")
-
-Transform15.addChild(ROUTE30)
-ROUTE31 = ROUTEObject()
-ROUTE31.setFromNode("bubbleClock")
-ROUTE31.setFromField("fraction_changed")
-ROUTE31.setToNode("bounce")
-ROUTE31.setToField("set_fraction")
-
-Transform15.addChild(ROUTE31)
 ProtoBody14.addChild(Transform15)
 ProtoDeclare13.setProtoBody(ProtoBody14)
 Scene9.addChild(ProtoDeclare13)
+ProtoInstance30 = ProtoInstanceObject()
+ProtoInstance30.setName("Bubble")
+ProtoInstance30.setDEF("bubbleA")
+
+Scene9.addChild(ProtoInstance30)
+ProtoInstance31 = ProtoInstanceObject()
+ProtoInstance31.setName("Bubble")
+ProtoInstance31.setDEF("bubbleB")
+
+Scene9.addChild(ProtoInstance31)
 ProtoInstance32 = ProtoInstanceObject()
 ProtoInstance32.setName("Bubble")
-ProtoInstance32.setDEF("bubbleA")
+ProtoInstance32.setDEF("bubbleC")
 
 Scene9.addChild(ProtoInstance32)
 ProtoInstance33 = ProtoInstanceObject()
 ProtoInstance33.setName("Bubble")
-ProtoInstance33.setDEF("bubbleB")
+ProtoInstance33.setDEF("bubbleD")
 
 Scene9.addChild(ProtoInstance33)
-ProtoInstance34 = ProtoInstanceObject()
-ProtoInstance34.setName("Bubble")
-ProtoInstance34.setDEF("bubbleC")
-
-Scene9.addChild(ProtoInstance34)
-ProtoInstance35 = ProtoInstanceObject()
-ProtoInstance35.setName("Bubble")
-ProtoInstance35.setDEF("bubbleD")
-
-Scene9.addChild(ProtoInstance35)
 X3D0.setScene(Scene9)
 
 X3D0.toFileX3D("./cobweb2.new.x3d")

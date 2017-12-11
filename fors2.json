@@ -24,7 +24,7 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/fors2.x3d"
+            "@content":"https://coderextreme.net/X3DJSONLD/fors2.x3d"
           },
           {
             "@name":"description",
@@ -36,7 +36,7 @@
           },
           {
             "@name":"translated",
-            "@content":"12 August 2017"
+            "@content":"11 December 2017"
           },
           {
             "@name":"generator",
@@ -158,7 +158,7 @@
 "\t\t\t\t\tfunction set_cycle(value) {",
 "                                                old = translation;",
 "\t\t\t\t\t\ttranslation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);",
-"                                                keyValue = new MFVec3f(old, translation);",
+"                                                keyValue = new MFVec3f([old, translation]);",
 "\t\t\t\t\t\t// Browser.println(translation);",
 "\t\t\t\t\t}"
 ]
@@ -288,17 +288,17 @@
 "",
 "                function set_endA(value) {",
 "\t\t    if (typeof spine === \"undefined\") {",
-"\t\t        spine = new MFVec3f(value, value);",
+"\t\t        spine = new MFVec3f([value, value]);",
 "\t\t    } else {",
-"\t\t        spine = new MFVec3f(value, spine[1]);",
+"\t\t        spine = new MFVec3f([value, spine[1]]);",
 "\t\t    }",
 "                }",
 "                ",
 "                function set_endB(value) {",
 "\t\t    if (typeof spine === \"undefined\") {",
-"\t\t        spine = new MFVec3f(value, value);",
+"\t\t        spine = new MFVec3f([value, value]);",
 "\t\t    } else {",
-"\t\t        spine = new MFVec3f(spine[0], value);",
+"\t\t        spine = new MFVec3f([spine[0], value]);",
 "\t\t    }",
 "                }",
 "                ",

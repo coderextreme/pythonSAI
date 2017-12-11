@@ -24,7 +24,7 @@ meta4.setContent("manual")
 head1.addMeta(meta4)
 meta5 = metaObject()
 meta5.setName("identifier")
-meta5.setContent("http://coderextreme.net/X3DJSONLD/abox.x3d")
+meta5.setContent("https://coderextreme.net/X3DJSONLD/abox.x3d")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
@@ -114,7 +114,7 @@ fieldValue28.setName("myShape")
 Shape29 = ShapeObject()
 
 Box30 = BoxObject()
-Box30.setSize([1,1,1])
+Box30.setSize([140,140,140])
 
 Shape29.setGeometry(Box30)
 fieldValue28.addChild(Shape29)

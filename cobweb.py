@@ -29,7 +29,7 @@ meta5.setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit")
 head1.addMeta(meta5)
 meta6 = metaObject()
 meta6.setName("identifier")
-meta6.setContent("http://coderextreme.net/X3DJSONLD/cobweb.x3d")
+meta6.setContent("https://coderextreme.net/X3DJSONLD/cobweb.x3d")
 
 head1.addMeta(meta6)
 X3D0.setHead(head1)
@@ -46,12 +46,12 @@ Viewpoint9.setDescription("Bubbles in action")
 
 Scene7.addChild(Viewpoint9)
 Background10 = BackgroundObject()
-Background10.setBackUrl(["cubemap/BK.png","http://coderextreme.net/X3DJSONLD/cubemap/BK.png"])
-Background10.setBottomUrl(["cubemap/BT.png","http://coderextreme.net/X3DJSONLD/cubemap/BT.png"])
-Background10.setFrontUrl(["cubemap/FR.png","http://coderextreme.net/X3DJSONLD/cubemap/FR.png"])
-Background10.setLeftUrl(["cubemap/LF.png","http://coderextreme.net/X3DJSONLD/cubemap/LF.png"])
-Background10.setRightUrl(["cubemap/RT.png","http://coderextreme.net/X3DJSONLD/cubemap/RT.png"])
-Background10.setTopUrl(["cubemap/TP.png","http://coderextreme.net/X3DJSONLD/cubemap/TP.png"])
+Background10.setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"])
+Background10.setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"])
+Background10.setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"])
+Background10.setLeftUrl(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"])
+Background10.setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"])
+Background10.setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"])
 
 Scene7.addChild(Background10)
 ProtoDeclare11 = ProtoDeclareObject()
@@ -122,32 +122,36 @@ Script18.setSourceCode("ecmascript:\n"+
 "    scalvel = new SFVec3f(Math.random() * 0.4, Math.random() * 0.4, Math.random() * 0.4);\n"+
 "}\n"+
 "\n"+
-"function set_translation(value) {\n"+
-"   translation = value;\n"+
-"}\n"+
-"\n"+
-"function set_scale(value) {\n"+
-"   scale = value;\n"+
-"}\n"+
-"\n"+
-"function translation_changed() {\n"+
-"	return translation;\n"+
-"}\n"+
-"\n"+
 "function set_fraction(value) {\n"+
-"    translation = new SFVec3f(	translation[0] + velocity[0], translation[1] + velocity[1], translation[2] + velocity[2]);\n"+
-"    scale = new SFVec3f(scale[0] + scalvel[0], scale[1] + scalvel[1], scale[2] + scalvel[2]);\n"+
-"    for (var j = 0; j < 3; j++) {\n"+
-"	    // if you get to far away or too big, explode\n"+
-"	    if ( Math.abs(translation[j]) > 256) {\n"+
-"		translation[j] = 0;\n"+
-"		initialize();\n"+
-"	    }\n"+
-"	    if (Math.abs(scale[j]) > 20) {\n"+
-"		scale[j] = scale[j]/2;\n"+
-"		translation[j] = 0;\n"+
-"		initialize();\n"+
-"	    }\n"+
+"    translation = new SFVec3f(	translation.x + velocity.x, translation.y + velocity.y, translation.z + velocity.z);\n"+
+"    scale = new SFVec3f(scale.x + scalvel.x, scale.y + scalvel.y, scale.z + scalvel.z);\n"+
+"    // if you get to far away or too big, explode\n"+
+"    if ( Math.abs(translation.x) > 256) {\n"+
+"	translation.x = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if ( Math.abs(translation.y) > 256) {\n"+
+"	translation.y = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if ( Math.abs(translation.z) > 256) {\n"+
+"	translation.z = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.x) > 20) {\n"+
+"	scale.x = scale.x/20;\n"+
+"	translation.x = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.y) > 20) {\n"+
+"	scale.y = scale.y/20;\n"+
+"	translation.y = 0;\n"+
+"	initialize();\n"+
+"    }\n"+
+"    if (Math.abs(scale.z) > 20) {\n"+
+"	scale.z = scale.z/20;\n"+
+"	translation.z = 0;\n"+
+"	initialize();\n"+
 "    }\n"+
 "}\n"+
 "")

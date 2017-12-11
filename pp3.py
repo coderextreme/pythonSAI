@@ -28,8 +28,8 @@ meta5.setContent("5 May 2015")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setName("revised")
-meta6.setContent("2 Dec 2015")
+meta6.setName("modified")
+meta6.setContent("05 May 2017")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
@@ -39,7 +39,7 @@ meta7.setContent("A process pipeline between three spheres (try typing on sphere
 head1.addMeta(meta7)
 meta8 = metaObject()
 meta8.setName("identifier")
-meta8.setContent("http://coderextreme.net/x3d/pp3.x3d")
+meta8.setContent("https://coderextreme.net/x3d/pp3.x3d")
 
 head1.addMeta(meta8)
 meta9 = metaObject()

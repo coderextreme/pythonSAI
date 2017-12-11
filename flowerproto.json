@@ -5,6 +5,16 @@
     "@xsd:noNamespaceSchemaLocation":"http://www.web3d.org/specifications/x3d-3.3.xsd",
     "JSON schema":"http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
     "head": {
+        "component": [
+          {
+            "@name":"Shaders",
+            "@level":1
+          },
+          {
+            "@name":"CubeMapTexturing",
+            "@level":1
+          }
+        ],
         "meta": [
           {
             "@name":"title",
@@ -24,11 +34,11 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/flowerproto.x3d"
+            "@content":"https://coderextreme.net/X3DJSONLD/flowerproto.x3d"
           },
           {
             "@name":"translated",
-            "@content":"12 August 2017"
+            "@content":"11 December 2017"
           },
           {
             "@name":"generator",
@@ -51,13 +61,13 @@
                       "@name":"vertex",
                       "@accessType":"inputOutput",
                       "@type":"MFString",
-                      "@value":["gl_flowers_chromatic.vs"]
+                      "@value":["../shaders/gl_flowers_chromatic.vs"]
                     },
                     {
                       "@name":"fragment",
                       "@accessType":"inputOutput",
                       "@type":"MFString",
-                      "@value":["pc_flowers.fs"]
+                      "@value":["../shaders/pc_flowers.fs"]
                     }
                   ]
               },
@@ -85,37 +95,37 @@
                                           "-back":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_back.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_back.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]
                                               }
                                             },
                                           "-bottom":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_bottom.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_bottom.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]
                                               }
                                             },
                                           "-front":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_front.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_front.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
                                               }
                                             },
                                           "-left":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_left.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_left.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
                                               }
                                             },
                                           "-right":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_right.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_right.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
                                               }
                                             },
                                           "-top":
                                             { "ImageTexture":
                                               {
-                                                "@url":["cubemap/all_probes/stpeters_cross/stpeters_top.png","http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_top.png"]
+                                                "@url":["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]
                                               }
                                             }
                                         }
@@ -298,12 +308,6 @@
                               ],
                               "#sourceText":[
 "ecmascript:",
-"\t\t\tfunction set_translation(value) {",
-"\t\t\t\ttranslation = value;",
-"\t\t\t}",
-"\t\t\tfunction translation_changed() {",
-"\t\t\t\treturn translation;",
-"\t\t\t}",
 "\t\t\tfunction initialize() {",
 "\t\t\t    translation = new SFVec3f(0, 0, 0);",
 "\t\t\t    velocity = new SFVec3f(",
@@ -313,16 +317,20 @@
 "\t\t\t}",
 "\t\t\tfunction set_fraction() {",
 "\t\t\t    translation = new SFVec3f(",
-"\t\t\t    \ttranslation[0] + velocity[0],",
-"\t\t\t\ttranslation[1] + velocity[1],",
-"\t\t\t\ttranslation[2] + velocity[2]);",
+"\t\t\t    \ttranslation.x + velocity.x,",
+"\t\t\t\ttranslation.y + velocity.y,",
+"\t\t\t\ttranslation.z + velocity.z);",
 "\t\t\t    for (var j = 0; j <= 2; j++) {",
-"\t\t\t\t    if (Math.abs(translation[j]) > 10) {",
+"\t\t\t\t    if (Math.abs(translation.x) > 10) {",
+"\t\t\t\t\tinitialize();",
+"\t\t\t\t    } else if (Math.abs(translation.y) > 10) {",
+"\t\t\t\t\tinitialize();",
+"\t\t\t\t    } else if (Math.abs(translation.z) > 10) {",
 "\t\t\t\t\tinitialize();",
 "\t\t\t\t    } else {",
-"\t\t\t\t\tvelocity[0] += Math.random() * 0.2 - 0.1;",
-"\t\t\t\t\tvelocity[1] += Math.random() * 0.2 - 0.1;",
-"\t\t\t\t\tvelocity[2] += Math.random() * 0.2 - 0.1;",
+"\t\t\t\t\tvelocity.x += Math.random() * 0.2 - 0.1;",
+"\t\t\t\t\tvelocity.y += Math.random() * 0.2 - 0.1;",
+"\t\t\t\t\tvelocity.z += Math.random() * 0.2 - 0.1;",
 "\t\t\t\t    }",
 "\t\t\t    }",
 "\t\t\t    animate_flowers();",

@@ -24,7 +24,7 @@ meta4.setContent("force.x3d")
 head1.addMeta(meta4)
 meta5 = metaObject()
 meta5.setName("identifier")
-meta5.setContent("http://coderextreme.net/X3DJSONLD/force.x3d")
+meta5.setContent("https://coderextreme.net/X3DJSONLD/force.x3d")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
@@ -85,12 +85,9 @@ Script15.setSourceCode("ecmascript:\n"+
 "\n"+
 "                function set_cycle(value) {\n"+
 "                        Browser.print(value);\n"+
-"                        var endA = new SFVec3f(spine[0][0]*Math.random()*2, spine[0][1]*Math.random()*2, spine[0][2]*Math.random()*2);\n"+
-"                        var endB = new SFVec3f(spine[1][0]*Math.random()*2, spine[1][1]*Math.random()*2, spine[1][2]*Math.random()*2);\n"+
-"		        spine = new MFVec3f(endA, endB);\n"+
-"                }\n"+
-"                function set_spine(value) {\n"+
-"                    spine = value;\n"+
+"                        var endA = new SFVec3f(spine[0].x*Math.random()*2, spine[0].y*Math.random()*2, spine[0].z*Math.random()*2);\n"+
+"                        var endB = new SFVec3f(spine[1].x*Math.random()*2, spine[1].y*Math.random()*2, spine[1].z*Math.random()*2);\n"+
+"		        spine = new MFVec3f([endA, endB]);\n"+
 "                }\n"+
 "")
 Group9.addChild(Script15)
@@ -103,9 +100,9 @@ ROUTE18.setToField("set_cycle")
 Group9.addChild(ROUTE18)
 ROUTE19 = ROUTEObject()
 ROUTE19.setFromNode("MoveCylinder")
-ROUTE19.setFromField("spine")
+ROUTE19.setFromField("spine_changed")
 ROUTE19.setToNode("extrusion")
-ROUTE19.setToField("set_spine")
+ROUTE19.setToField("spine")
 
 Group9.addChild(ROUTE19)
 Scene8.addChild(Group9)

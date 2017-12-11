@@ -2,21 +2,23 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Immersive" version="3.3" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
 	<head>
+	      <component name='Shaders' level='1'></component>
+	      <component name='CubeMapTexturing' level='1'></component>
 		<meta name="title" content="bub.x3d"></meta>
 		<meta name="creator" content="John Carlson"></meta>
 		<meta name="description" content="3 prismatic spheres"></meta>
 		<meta name="generator" content="X3D-Edit, https://savage.nps.edu/X3D-Edit"></meta>
-		<meta name="identifier" content="http://coderextreme.net/X3DJSONLD/bub.x3d"></meta>
+		<meta name="identifier" content="https://coderextreme.net/X3DJSONLD/bub.x3d"></meta>
 	</head>
 	<Scene>
 		<NavigationInfo type="&quot;EXAMINE&quot; &quot;ANY&quot;"/>
 		<Background
-			backUrl='"cubemap/all_probes/stpeters_cross/stpeters_back.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_back.png"'
-			bottomUrl='"cubemap/all_probes/stpeters_cross/stpeters_bottom.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_bottom.png"'
-			frontUrl='"cubemap/all_probes/stpeters_cross/stpeters_front.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_front.png"'
-			leftUrl='"cubemap/all_probes/stpeters_cross/stpeters_left.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_left.png"'
-			rightUrl='"cubemap/all_probes/stpeters_cross/stpeters_right.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_right.png"'
-			topUrl='"cubemap/all_probes/stpeters_cross/stpeters_top.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_top.png"'
+			backUrl='"../resources/images/all_probes/stpeters_cross/stpeters_back.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"'
+			bottomUrl='"../resources/images/all_probes/stpeters_cross/stpeters_bottom.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"'
+			frontUrl='"../resources/images/all_probes/stpeters_cross/stpeters_front.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"'
+			leftUrl='"../resources/images/all_probes/stpeters_cross/stpeters_left.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"'
+			rightUrl='"../resources/images/all_probes/stpeters_cross/stpeters_right.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"'
+			topUrl='"../resources/images/all_probes/stpeters_cross/stpeters_top.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"'
 			/>
 		<Viewpoint position='0 0 20' description="Look at the bubbles flying"/>
 		<ProtoDeclare name="Bubble">
@@ -26,12 +28,12 @@
 				<Appearance>
 					<Material diffuseColor=".7 .7 .7" specularColor=".5 .5 .5" />
 					<ComposedCubeMapTexture DEF="texture">
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_back.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_back.png"' containerField="back"/>
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_bottom.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_bottom.png"' containerField="bottom"/>
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_front.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_front.png"' containerField="front"/>
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_left.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_left.png"' containerField="left"/>
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_right.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_right.png"' containerField="right"/>
-						<ImageTexture url='"cubemap/all_probes/stpeters_cross/stpeters_top.png" "http://coderextreme.net/X3DJSONLD/cubemap/all_probes/stpeters_cross/stpeters_top.png"' containerField="top"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_back.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"' containerField="back"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_bottom.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"' containerField="bottom"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_front.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"' containerField="front"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_left.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"' containerField="left"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_right.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"' containerField="right"/>
+						<ImageTexture url='"../resources/images/all_probes/stpeters_cross/stpeters_top.png" "https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"' containerField="top"/>
 					</ComposedCubeMapTexture>
 					<!--
 					<ComposedShader DEF='gl' language="GLSL">
@@ -41,8 +43,8 @@
 					  <field name='scale' type='SFFloat' accessType="inputOutput" value='0.5'/>
 					  <field name='power' type='SFFloat' accessType="inputOutput" value='2.0'/>
 
-					  <ShaderPart url='"gl.vs" "http://coderextreme.net/X3DJSONLD/gl.vs"' type='VERTEX'></ShaderPart>
-					  <ShaderPart url='"pc_bubbles.fs" "http://coderextreme.net/X3DJSONLD/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
+					  <ShaderPart url='"../shaders/gl.vs" "https://coderextreme.net/X3DJSONLD/shaders/gl.vs"' type='VERTEX'></ShaderPart>
+					  <ShaderPart url='"../shaders/pc_bubbles.fs" "https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
 					</ComposedShader>
 					<ComposedShader DEF='freewrl' language="GLSL">
 					  <field name='fw_textureCoodGenType' type='SFInt32' accessType="inputOutput" value='0'/>
@@ -51,9 +53,10 @@
 					  <field name='scale' type='SFFloat' accessType="inputOutput" value='0.5'/>
 					  <field name='power' type='SFFloat' accessType="inputOutput" value='2.0'/>
 
-					  <ShaderPart url='"freewrl.vs" "http://coderextreme.net/X3DJSONLD/freewrl.vs"' type='VERTEX'></ShaderPart>
-					  <ShaderPart url='"pc_bubbles.fs" "http://coderextreme.net/X3DJSONLD/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
+					  <ShaderPart url='"../shaders/freewrl.vs" "https://coderextreme.net/X3DJSONLD/shaders/freewrl.vs"' type='VERTEX'></ShaderPart>
+					  <ShaderPart url='"../shaders/pc_bubbles.fs" "https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
 					</ComposedShader>
+					-->
 					<ComposedShader DEF='x3dom' language="GLSL">
 					  <field name='cube' type='SFInt32' accessType="inputOutput" value='0'/>
 					  <field name='chromaticDispertion' type='SFVec3f' accessType="inputOutput" value='0.98 1.0 1.033'/>
@@ -61,9 +64,10 @@
 					  <field name='scale' type='SFFloat' accessType="inputOutput" value='0.5'/>
 					  <field name='power' type='SFFloat' accessType="inputOutput" value='2.0'/>
 
-					  <ShaderPart url='"x3dom.vs" "http://coderextreme.net/X3DJSONLD/x3dom.vs"' type='VERTEX'></ShaderPart>
-					  <ShaderPart url='"pc_bubbles.fs" "http://coderextreme.net/X3DJSONLD/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
+					  <ShaderPart url='"../shaders/x3dom.vs" "https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"' type='VERTEX'></ShaderPart>
+					  <ShaderPart url='"../shaders/pc_bubbles.fs" "https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
 					</ComposedShader>
+					<!--
 					<ComposedShader DEF='instant' language="GLSL">
 					  <field name='cube' type='SFInt32' accessType="inputOutput" value='0'/>
 					  <field name='chromaticDispertion' type='SFVec3f' accessType="inputOutput" value='0.98 1.0 1.033'/>
@@ -71,8 +75,8 @@
 					  <field name='scale' type='SFFloat' accessType="inputOutput" value='0.5'/>
 					  <field name='power' type='SFFloat' accessType="inputOutput" value='2.0'/>
 
-                              <ShaderPart url='"instant.vs" "http://coderextreme.net/X3DJSONLD/instant.vs"' type='VERTEX'></ShaderPart>
-                              <ShaderPart url='"pc_bubbles.fs" "http://coderextreme.net/X3DJSONLD/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
+                              <ShaderPart url='"../shaders/instant.vs" "https://coderextreme.net/X3DJSONLD/shaders/instant.vs"' type='VERTEX'></ShaderPart>
+                              <ShaderPart url='"../shaders/pc_bubbles.fs" "https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"' type='FRAGMENT'></ShaderPart>
                             </ComposedShader>
                             -->
                             <ComposedShader DEF='cobweb' language="GLSL">
@@ -83,9 +87,9 @@
                                 <field name='bias' type='SFFloat' accessType="inputOutput" value='0.5'/>
                                 <field name='scale' type='SFFloat' accessType="inputOutput" value='0.5'/>
                                 <field name='power' type='SFFloat' accessType="inputOutput" value='2.0'/>
-                                <ShaderPart url='"cobweb.vs" "http://coderextreme.net/X3DJSONLD/cobweb.vs"' type='VERTEX'>
+                                <ShaderPart url='"../shaders/cobweb.vs" "https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"' type='VERTEX'>
                                 </ShaderPart>
-                                <ShaderPart url='"pc_bubbles.fs" "http://coderextreme.net/X3DJSONLD/pc.fs"' type='FRAGMENT'>
+                                <ShaderPart url='"../shaders/pc_bubbles.fs" "https://coderextreme.net/X3DJSONLD/shaders/pc.fs"' type='FRAGMENT'>
                                 </ShaderPart>
                             </ComposedShader>
                         </Appearance>
@@ -97,12 +101,6 @@
                     <field name="velocity" accessType="inputOutput" type="SFVec3f" value="0 0 0"></field>
                     <field name="set_fraction" accessType="inputOnly" type="SFTime"></field>
 <![CDATA[ecmascript:
-			function set_translation(value) {
-				translation = value;
-			}
-			function translation_changed() {
-				return translation;
-			}
 			function initialize() {
 			    translation = new SFVec3f(0, 0, 0);
 			    velocity = new SFVec3f(
@@ -112,17 +110,19 @@
 			}
 			function set_fraction() {
 			    translation = new SFVec3f(
-			    	translation[0] + velocity[0],
-				translation[1] + velocity[1],
-				translation[2] + velocity[2]);
-			    for (var j = 0; j <= 2; j++) {
-				    if (Math.abs(translation[j]) > 10) {
-					initialize();
-				    } else {
-					velocity[0] += Math.random() * 0.2 - 0.1;
-					velocity[1] += Math.random() * 0.2 - 0.1;
-					velocity[2] += Math.random() * 0.2 - 0.1;
-				    }
+			    	translation.x + velocity.x,
+				translation.y + velocity.y,
+				translation.z + velocity.z);
+			    if (Math.abs(translation.x) > 10) {
+				initialize();
+			    } else if (Math.abs(translation.y) > 10) {
+				initialize();
+			    } else if (Math.abs(translation.z) > 10) {
+				initialize();
+			    } else {
+				velocity.x += Math.random() * 0.2 - 0.1;
+				velocity.y += Math.random() * 0.2 - 0.1;
+				velocity.z += Math.random() * 0.2 - 0.1;
 			    }
 			}
                ]]>

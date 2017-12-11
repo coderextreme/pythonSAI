@@ -29,7 +29,7 @@ meta5.setContent("fors2.x3d")
 head1.addMeta(meta5)
 meta6 = metaObject()
 meta6.setName("identifier")
-meta6.setContent("http://coderextreme.net/X3DJSONLD/fors2.x3d")
+meta6.setContent("https://coderextreme.net/X3DJSONLD/fors2.x3d")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
@@ -135,7 +135,7 @@ Script22.setSourceCode("ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
-"                                                keyValue = new MFVec3f(old, translation);\n"+
+"                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
 "					}\n"+
 "")
@@ -253,17 +253,17 @@ Script41.setSourceCode("ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
-"		        spine = new MFVec3f(value, value);\n"+
+"		        spine = new MFVec3f([value, value]);\n"+
 "		    } else {\n"+
-"		        spine = new MFVec3f(value, spine[1]);\n"+
+"		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
 "                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
-"		        spine = new MFVec3f(value, value);\n"+
+"		        spine = new MFVec3f([value, value]);\n"+
 "		    } else {\n"+
-"		        spine = new MFVec3f(spine[0], value);\n"+
+"		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
 "                \n"+

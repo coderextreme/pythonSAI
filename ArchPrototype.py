@@ -244,7 +244,7 @@ ProtoBody30.addComments(CommentsBlock("Subsequent nodes do not render, but still
 ProtoBody30.addComments(CommentsBlock("This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs"))
 Script40 = ScriptObject()
 Script40.setDEF("ArchPrototypeScript")
-Script40.setUrl(["ArchPrototypeScript.js"])
+Script40.setUrl(["../node/ArchPrototypeScript.js"])
 
 
 Script40.addComments(CommentsBlock("INPUT PARAMETERS"))
@@ -495,7 +495,7 @@ Scene13.addChild(ProtoInstance72)
 Scene13.addComments(CommentsBlock("Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)"))
 Inline81 = InlineObject()
 Inline81.setDEF("CoordinateAxes")
-Inline81.setUrl(["CoordinateAxes.x3d"])
+Inline81.setUrl(["../data/CoordinateAxes.x3d"])
 
 Scene13.addChild(Inline81)
 X3D0.setScene(Scene13)

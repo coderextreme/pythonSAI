@@ -24,7 +24,7 @@ meta4.setContent("manual")
 head1.addMeta(meta4)
 meta5 = metaObject()
 meta5.setName("identifier")
-meta5.setContent("http://coderextreme.net/X3DJSONLD/box.x3d")
+meta5.setContent("https://coderextreme.net/X3DJSONLD/box.x3d")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
