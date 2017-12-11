@@ -30,7 +30,7 @@ Run;
 sh make.sh
 ```
 
-Retrieve python source code in ../X3DJSONLD
+Python source code is in local folder.
 
 SAI found in X3Dautoclass.py
 
