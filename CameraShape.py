@@ -119,7 +119,7 @@ Material24.setShininess(0.02)
 Material24.setSpecularColor([0.890909,0.887832,0.890909])
 
 
-Material24.addComments(CommentsBlock("Universal Media Library: Metals 30"))
+Material24.addComments(CommentsBlock("""Universal Media Library: Metals 30"""))
 Appearance23.setMaterial(Material24)
 Shape22.setAppearance(Appearance23)
 Switch21.addChild(Shape22)
@@ -274,4 +274,4 @@ Transform20.addChild(Group41)
 Scene13.addChild(Transform20)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("./CameraShape.new.x3d")
+X3D0.toFileX3D("././CameraShape.new.x3d")

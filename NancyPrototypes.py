@@ -107,7 +107,7 @@ ProtoDeclare21.setDocumentation("http://H-Anim.org/Specifications/H-Anim2001/par
 ProtoInterface22 = ProtoInterfaceObject()
 
 
-ProtoInterface22.addComments(CommentsBlock("H-Anim v1.1 field definitions"))
+ProtoInterface22.addComments(CommentsBlock("""H-Anim v1.1 field definitions"""))
 field23 = fieldObject()
 field23.setType(fieldObject.TYPE_SFSTRING)
 field23.setName("name")
@@ -768,7 +768,7 @@ ProtoBody127.addChild(Transform128)
 ProtoDeclare114.setProtoBody(ProtoBody127)
 Scene13.addChild(ProtoDeclare114)
 
-Scene13.addComments(CommentsBlock("Start scene graph."))
+Scene13.addComments(CommentsBlock("""Start scene graph."""))
 ProtoInstance140 = ProtoInstanceObject()
 ProtoInstance140.setName("Humanoid")
 ProtoInstance140.setDEF("Humanoid")
@@ -3798,4 +3798,4 @@ ROUTE698.setToNode("hanim_HumanoidRoot")
 Scene13.addChild(ROUTE698)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("./NancyPrototypes.new.x3d")
+X3D0.toFileX3D("././NancyPrototypes.new.x3d")

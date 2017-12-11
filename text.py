@@ -107,4 +107,4 @@ Transform9.addChild(Script25)
 Scene8.addChild(Transform9)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("./text.new.x3d")
+X3D0.toFileX3D("././text.new.x3d")

@@ -144,4 +144,4 @@ ROUTE21.setToField("set_translation")
 Scene6.addChild(ROUTE21)
 X3D0.setScene(Scene6)
 
-X3D0.toFileX3D("./SFVec3f.new.x3d")
+X3D0.toFileX3D("././SFVec3f.new.x3d")

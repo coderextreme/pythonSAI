@@ -190,4 +190,4 @@ Group22.addChild(Transform41)
 Scene20.addChild(Group22)
 X3D0.setScene(Scene20)
 
-X3D0.toFileX3D("./rgb_alpha.new.x3d")
+X3D0.toFileX3D("././rgb_alpha.new.x3d")

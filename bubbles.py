@@ -360,4 +360,4 @@ ROUTE61.setToField("set_position")
 Scene11.addChild(ROUTE61)
 X3D0.setScene(Scene11)
 
-X3D0.toFileX3D("./bubbles.new.x3d")
+X3D0.toFileX3D("././bubbles.new.x3d")

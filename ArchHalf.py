@@ -64,7 +64,7 @@ Shape13 = ShapeObject()
 Shape13.setDEF("Arch")
 
 
-Shape13.addComments(CommentsBlock("note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly"))
+Shape13.addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly"""))
 IndexedFaceSet14 = IndexedFaceSetObject()
 IndexedFaceSet14.setDEF("ArchIndex")
 IndexedFaceSet14.setConvex(False)
@@ -88,4 +88,4 @@ Shape13.setAppearance(Appearance16)
 Scene12.addChild(Shape13)
 X3D0.setScene(Scene12)
 
-X3D0.toFileX3D("./ArchHalf.new.x3d")
+X3D0.toFileX3D("././ArchHalf.new.x3d")

@@ -416,7 +416,7 @@ field78.setValue("false")
 
 Script75.addField(field78)
 
-Script75.addComments(CommentsBlock("<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>"))
+Script75.addComments(CommentsBlock("""<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>"""))
 
 Script75.setSourceCode("ecmascript:\n"+
 "	function add_node(value) {\n"+
@@ -489,4 +489,4 @@ ROUTE85.setToField("set_positionB")
 Scene8.addChild(ROUTE85)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("./force.new.x3d")
+X3D0.toFileX3D("././force.new.x3d")

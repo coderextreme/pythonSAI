@@ -137,7 +137,7 @@ ComposedShader30.setDEF("x3dom")
 ComposedShader30.setLanguage("GLSL")
 
 
-ComposedShader30.addComments(CommentsBlock("http://hypertextbook.com/facts/2005/JustinChe.shtml"))
+ComposedShader30.addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml"""))
 field31 = fieldObject()
 field31.setType(fieldObject.TYPE_SFVEC3F)
 field31.setName("chromaticDispertion")
@@ -189,7 +189,7 @@ ComposedShader38.setDEF("cobweb")
 ComposedShader38.setLanguage("GLSL")
 
 
-ComposedShader38.addComments(CommentsBlock("http://hypertextbook.com/facts/2005/JustinChe.shtml"))
+ComposedShader38.addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml"""))
 field39 = fieldObject()
 field39.setType(fieldObject.TYPE_SFVEC3F)
 field39.setName("chromaticDispertion")
@@ -457,4 +457,4 @@ Transform19.addChild(ROUTE75)
 Scene10.addChild(Transform19)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("./mirror.new.x3d")
+X3D0.toFileX3D("././mirror.new.x3d")

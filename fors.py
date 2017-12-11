@@ -352,4 +352,4 @@ ROUTE64.setToField("set_positionB")
 Scene8.addChild(ROUTE64)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("./fors.new.x3d")
+X3D0.toFileX3D("././fors.new.x3d")

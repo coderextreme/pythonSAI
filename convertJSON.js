@@ -153,8 +153,6 @@ function convertJSON(options) {
 			*/
 			// console.error("basefile0", basefile);
 			basefile = basefile.replace(/^C:\//, "")
-			basefile = basefile.replace(/^\.\.\//, "")
-			basefile = basefile.replace(/-|\.| /g, "_")
 			// handle filenames with leading zeros and java keywords
 			basefile = basefile.replace(/^(.*[\\\/])([0-9].*|default|switch|for)$/, "$1_$2")
 
