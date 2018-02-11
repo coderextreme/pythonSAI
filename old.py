@@ -24,11 +24,21 @@ class ClassPrinter:
         self.printed = False
 
 
-    def initialize(self, field, fn):
+    def initialize(self, field, func):
         str = ""
-        str += self.settervalidation(field, fn)
-        setfield = '        self.'+ fn + '_ = '
-        str += setfield + 'kwargs.pop("' + fn + '"'
+        if re.search(r"^add", func):
+            fld = func[3:]
+        elif re.search(r"^remove", func):
+            fld = func[6:]
+        elif re.search(r"^is", func):
+            fld = func[2:]
+        elif re.search(r"^set", func):
+            fld = func[3:]
+        else:
+            fld = func
+        str += self.settervalidation(field, fld)
+        setfield = '        self.'+ fld + '_ = '
+        str += setfield + 'kwargs.pop("' + fld + '"'
         try:
             if field['type'] == 'SFString':
                 str += ', "'+field['default']+'"'
@@ -47,18 +57,18 @@ class ClassPrinter:
         str += ')\n'
         return str
 
-    def settervalidation(self, field, fn):
+    def settervalidation(self, field, fld):
         str = ""
         inex = { 'minInclusive':" < ",
                  'maxInclusive':" > ",
                  'minExclusive':" <= ",
                  'maxExclusive':" >= "}
-        str += '        if type('+fn+"_" + ') is not ' + field['type'] + ":" + """
+        str += '        if type('+fld+"_" + ') is not ' + field['type'] + ":" + """
             raise InvalidFieldTypeException()
 """
         for k,v in inex.items():
             try:
-                str += """        if """ +fn+"_" + v + field[k] + ":" + """
+                str += """        if """ +fld+"_" + v + field[k] + ":" + """
                 raise InvalidFieldValueException()
 """
             except KeyError:
@@ -68,11 +78,11 @@ class ClassPrinter:
         efound = 0
         for enum in enumerations:
             if efound == 0:
-                str += "        if " + "'"+enum['value']+"'" + ' == ' + fn +"_:\n"
+                str += "        if " + "'"+enum['value']+"'" + ' == ' + fld +"_:\n"
                 str += "            pass\n"
                 efound = 1
             else:
-                str += "        elif " + "'"+enum['value']+"'" + ' == ' + fn +"_:\n"
+                str += "        elif " + "'"+enum['value']+"'" + ' == ' + fld +"_:\n"
                 str += "            pass\n"
         if efound == 1:
             str += """        else:
@@ -80,24 +90,26 @@ class ClassPrinter:
 """
         return str
 
-    def setterbody(self, field, fn):
+    def setterbody(self, field, fld):
         str = ""
-        str += '        self.'+ fn + '_ = ' + fn + "_\n"
+        str += '        self.'+ fld + '_ = ' + fld + "_\n"
         return str
 
-    def setter(self, field, fn):
+    def setter(self, field, func):
         str = ""
-        if fn == 'addChildren':
-            fn = 'add_children'
-        elif fn == 'removeChildren':
-            fn = 'remove_children'
-        elif re.search(r"^remove", fn):
-            fn = fn 
-        elif re.search(r"^set_", fn):
-            fn = fn 
+        if re.search(r"^add", func):
+            fld = func[3:]
+        elif re.search(r"^remove", func):
+            fld = func[6:]
+        elif re.search(r"^is", func):
+            fld = func[2:]
+            func = 'set' + func[2:]
+        elif re.search(r"^set", func):
+            fld = func[3:]
         else:
-            fn = 'set_'+ fn 
-        str += '    def ' + fn + '(self, ' + fn +"_"
+            fld = func
+            func = 'set'+ func[:1].upper() + func[1:]
+        str += '    def ' + func + '(self, ' + fld +"_"
         try:
             if field['type'] == 'SFString':
                 str += ' = ' + '"'+field['default']+'"'
@@ -115,24 +127,32 @@ class ClassPrinter:
             pass
         str += "):\n"
         if self.parents != []:
-            str += "        super("+self.node['name']+", self)."+fn+"("+fn+"_)\n"
-        str += self.settervalidation(field, fn)
-        str += self.setterbody(field, fn)
+            str += "        super("+self.node['name']+", self)."+func+"("+fld+"_)\n"
+        str += self.settervalidation(field, fld)
+        str += self.setterbody(field, fld)
         return str
 
-    def getter(self, field, fn):
+    def getter(self, field, func):
         str = "\n"
-        str += '    def get_'+ fn + '(self):\n'
-        str += '        if type(self.' +  fn + "_" + ') is not ' + field['type'] + ":" + """
+        if re.search(r"^is", func):
+            fld = func[2:]
+            str += '    def is'+ func[2:] + '(self):\n'
+        elif field['type'] == 'SFBool':
+            fld = func
+            str += '    def is'+ func[:1].upper() + func[1:] + '(self):\n'
+        else:
+            fld = func
+            str += '    def get'+ func[:1].upper() + func[1:] + '(self):\n'
+        str += '        if type(self.' +  fld + "_" + ') is not ' + field['type'] + ":" + """
             raise InvalidFieldTypeException()
 """
-        str += '        return self.' + fn + "_\n\n"
+        str += '        return self.' + fld + "_\n\n"
         return str
 
-    def settergetter(self, field, fn):
+    def settergetter(self, field, func):
         str = ""
-        str += self.setter(field, fn)
-        str += self.getter(field, fn)
+        str += self.setter(field, func)
+        str += self.getter(field, func)
         return str
 
     def printClass(self):
