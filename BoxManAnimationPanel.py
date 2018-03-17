@@ -589,7 +589,7 @@ HAnimJoint107.addChild(HAnimJoint111)
 HAnimJoint103.addChild(HAnimJoint107)
 HAnimJoint79.addChild(HAnimJoint103)
 HAnimJoint33.addChild(HAnimJoint79)
-HAnimHumanoid32.addSkin(HAnimJoint33)
+HAnimHumanoid32.addJoints(HAnimJoint33)
 
 HAnimHumanoid32.addComments(CommentsBlock("""# sacrum (12) # l_thigh (28) # l_calf (24) # l_hindfoot (8) # l_middistal (8) # r_thigh (28) # r_calf (24) # r_hindfoot (8) # r_middistal (8) # l5 (20) # skull (8) # l_upperarm (8) # l_forearm (8) # l_hand (8) # r_upperarm (8) # r_forearm (8) # r_hand (8)"""))
 
@@ -720,139 +720,139 @@ HAnimHumanoid32.addSkin(Group118)
 HAnimJoint144 = HAnimJointObject()
 HAnimJoint144.setUSE("hanim_r_wrist")
 
-HAnimHumanoid32.addSkin(HAnimJoint144)
+HAnimHumanoid32.addJoints(HAnimJoint144)
 HAnimJoint145 = HAnimJointObject()
 HAnimJoint145.setUSE("hanim_r_elbow")
 
-HAnimHumanoid32.addSkin(HAnimJoint145)
+HAnimHumanoid32.addJoints(HAnimJoint145)
 HAnimJoint146 = HAnimJointObject()
 HAnimJoint146.setUSE("hanim_r_shoulder")
 
-HAnimHumanoid32.addSkin(HAnimJoint146)
+HAnimHumanoid32.addJoints(HAnimJoint146)
 HAnimJoint147 = HAnimJointObject()
 HAnimJoint147.setUSE("hanim_l_wrist")
 
-HAnimHumanoid32.addSkin(HAnimJoint147)
+HAnimHumanoid32.addJoints(HAnimJoint147)
 HAnimJoint148 = HAnimJointObject()
 HAnimJoint148.setUSE("hanim_l_elbow")
 
-HAnimHumanoid32.addSkin(HAnimJoint148)
+HAnimHumanoid32.addJoints(HAnimJoint148)
 HAnimJoint149 = HAnimJointObject()
 HAnimJoint149.setUSE("hanim_l_shoulder")
 
-HAnimHumanoid32.addSkin(HAnimJoint149)
+HAnimHumanoid32.addJoints(HAnimJoint149)
 HAnimJoint150 = HAnimJointObject()
 HAnimJoint150.setUSE("hanim_skullbase")
 
-HAnimHumanoid32.addSkin(HAnimJoint150)
+HAnimHumanoid32.addJoints(HAnimJoint150)
 HAnimJoint151 = HAnimJointObject()
 HAnimJoint151.setUSE("hanim_vl5")
 
-HAnimHumanoid32.addSkin(HAnimJoint151)
+HAnimHumanoid32.addJoints(HAnimJoint151)
 HAnimJoint152 = HAnimJointObject()
 HAnimJoint152.setUSE("hanim_r_midtarsal")
 
-HAnimHumanoid32.addSkin(HAnimJoint152)
+HAnimHumanoid32.addJoints(HAnimJoint152)
 HAnimJoint153 = HAnimJointObject()
 HAnimJoint153.setUSE("hanim_r_ankle")
 
-HAnimHumanoid32.addSkin(HAnimJoint153)
+HAnimHumanoid32.addJoints(HAnimJoint153)
 HAnimJoint154 = HAnimJointObject()
 HAnimJoint154.setUSE("hanim_r_knee")
 
-HAnimHumanoid32.addSkin(HAnimJoint154)
+HAnimHumanoid32.addJoints(HAnimJoint154)
 HAnimJoint155 = HAnimJointObject()
 HAnimJoint155.setUSE("hanim_r_hip")
 
-HAnimHumanoid32.addSkin(HAnimJoint155)
+HAnimHumanoid32.addJoints(HAnimJoint155)
 HAnimJoint156 = HAnimJointObject()
 HAnimJoint156.setUSE("hanim_l_midtarsal")
 
-HAnimHumanoid32.addSkin(HAnimJoint156)
+HAnimHumanoid32.addJoints(HAnimJoint156)
 HAnimJoint157 = HAnimJointObject()
 HAnimJoint157.setUSE("hanim_l_ankle")
 
-HAnimHumanoid32.addSkin(HAnimJoint157)
+HAnimHumanoid32.addJoints(HAnimJoint157)
 HAnimJoint158 = HAnimJointObject()
 HAnimJoint158.setUSE("hanim_l_knee")
 
-HAnimHumanoid32.addSkin(HAnimJoint158)
+HAnimHumanoid32.addJoints(HAnimJoint158)
 HAnimJoint159 = HAnimJointObject()
 HAnimJoint159.setUSE("hanim_l_hip")
 
-HAnimHumanoid32.addSkin(HAnimJoint159)
+HAnimHumanoid32.addJoints(HAnimJoint159)
 HAnimJoint160 = HAnimJointObject()
 HAnimJoint160.setUSE("hanim_HumanoidRoot")
 
-HAnimHumanoid32.addSkin(HAnimJoint160)
+HAnimHumanoid32.addJoints(HAnimJoint160)
 HAnimSegment161 = HAnimSegmentObject()
 HAnimSegment161.setUSE("hanim_sacrum")
 
-HAnimHumanoid32.addSkin(HAnimSegment161)
+HAnimHumanoid32.addSegments(HAnimSegment161)
 HAnimSegment162 = HAnimSegmentObject()
 HAnimSegment162.setUSE("hanim_l_thigh")
 
-HAnimHumanoid32.addSkin(HAnimSegment162)
+HAnimHumanoid32.addSegments(HAnimSegment162)
 HAnimSegment163 = HAnimSegmentObject()
 HAnimSegment163.setUSE("hanim_l_calf")
 
-HAnimHumanoid32.addSkin(HAnimSegment163)
+HAnimHumanoid32.addSegments(HAnimSegment163)
 HAnimSegment164 = HAnimSegmentObject()
 HAnimSegment164.setUSE("hanim_l_hindfoot")
 
-HAnimHumanoid32.addSkin(HAnimSegment164)
+HAnimHumanoid32.addSegments(HAnimSegment164)
 HAnimSegment165 = HAnimSegmentObject()
 HAnimSegment165.setUSE("hanim_l_middistal")
 
-HAnimHumanoid32.addSkin(HAnimSegment165)
+HAnimHumanoid32.addSegments(HAnimSegment165)
 HAnimSegment166 = HAnimSegmentObject()
 HAnimSegment166.setUSE("hanim_r_thigh")
 
-HAnimHumanoid32.addSkin(HAnimSegment166)
+HAnimHumanoid32.addSegments(HAnimSegment166)
 HAnimSegment167 = HAnimSegmentObject()
 HAnimSegment167.setUSE("hanim_r_calf")
 
-HAnimHumanoid32.addSkin(HAnimSegment167)
+HAnimHumanoid32.addSegments(HAnimSegment167)
 HAnimSegment168 = HAnimSegmentObject()
 HAnimSegment168.setUSE("hanim_r_hindfoot")
 
-HAnimHumanoid32.addSkin(HAnimSegment168)
+HAnimHumanoid32.addSegments(HAnimSegment168)
 HAnimSegment169 = HAnimSegmentObject()
 HAnimSegment169.setUSE("hanim_r_middistal")
 
-HAnimHumanoid32.addSkin(HAnimSegment169)
+HAnimHumanoid32.addSegments(HAnimSegment169)
 HAnimSegment170 = HAnimSegmentObject()
 HAnimSegment170.setUSE("hanim_l5")
 
-HAnimHumanoid32.addSkin(HAnimSegment170)
+HAnimHumanoid32.addSegments(HAnimSegment170)
 HAnimSegment171 = HAnimSegmentObject()
 HAnimSegment171.setUSE("hanim_skull")
 
-HAnimHumanoid32.addSkin(HAnimSegment171)
+HAnimHumanoid32.addSegments(HAnimSegment171)
 HAnimSegment172 = HAnimSegmentObject()
 HAnimSegment172.setUSE("hanim_l_upperarm")
 
-HAnimHumanoid32.addSkin(HAnimSegment172)
+HAnimHumanoid32.addSegments(HAnimSegment172)
 HAnimSegment173 = HAnimSegmentObject()
 HAnimSegment173.setUSE("hanim_l_forearm")
 
-HAnimHumanoid32.addSkin(HAnimSegment173)
+HAnimHumanoid32.addSegments(HAnimSegment173)
 HAnimSegment174 = HAnimSegmentObject()
 HAnimSegment174.setUSE("hanim_l_hand")
 
-HAnimHumanoid32.addSkin(HAnimSegment174)
+HAnimHumanoid32.addSegments(HAnimSegment174)
 HAnimSegment175 = HAnimSegmentObject()
 HAnimSegment175.setUSE("hanim_r_upperarm")
 
-HAnimHumanoid32.addSkin(HAnimSegment175)
+HAnimHumanoid32.addSegments(HAnimSegment175)
 HAnimSegment176 = HAnimSegmentObject()
 HAnimSegment176.setUSE("hanim_r_forearm")
 
-HAnimHumanoid32.addSkin(HAnimSegment176)
+HAnimHumanoid32.addSegments(HAnimSegment176)
 HAnimSegment177 = HAnimSegmentObject()
 HAnimSegment177.setUSE("hanim_r_hand")
 
-HAnimHumanoid32.addSkin(HAnimSegment177)
+HAnimHumanoid32.addSegments(HAnimSegment177)
 HAnimSite178 = HAnimSiteObject()
 HAnimSite178.setUSE("hanim_l_middistal_tip")
 
