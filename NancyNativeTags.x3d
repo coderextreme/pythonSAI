@@ -7,7 +7,7 @@
     <meta content='Cindy Ballreich' name='creator'/>
     <meta content='Tom Miller and Don Brutzman, NPS' name='translators'/>
     <meta content='9 July 2000' name='created'/>
-    <meta content='16 July 2016' name='modified'/>
+    <meta content='6 January 2018' name='modified'/>
     <meta content='need height, weight. not sure if we should ask a lady her age.' name='info'/>
     <meta content='Canonical H-Anim 1.1 specification example, using native X3D tags instead of ProtoDeclaration/ExternProtoDeclaration and ProtoInstance.' name='description'/>
     <meta content='http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyNativeTags.x3d' name='identifier'/>
@@ -15,7 +15,7 @@
     <meta content='../license.html' name='license'/>
   </head>
   <Scene>
-    <HAnimHumanoid DEF='Humanoid' info='"humanoidVersion=Nancy V1.2b" "authorEmail=cindy@ballreich.net" "authorName=Cindy Ballreich" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "gender=female" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo http://www.ballreich.net/vrml/h-anim/small_logo.gif is present and proper credit is given."' name='nancy' version='2.0'>
+    <HAnimHumanoid DEF='Humanoid' info='"humanoidVersion=Nancy V1.2b" "authorEmail=cindy@ballreich.net" "authorName=Cindy Ballreich" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "gender=female" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo http://www.ballreich.net/vrml/h-anim/small_logo.gif is present and proper credit is given."' name='nancy' version='2.2'>
       <HAnimJoint DEF='hanim_HumanoidRoot' center='-0.00405 0.855 -0.000113' containerField='skeleton' name='HumanoidRoot'>
         <HAnimJoint DEF='hanim_sacroiliac' center='0 1.01 -0.0204' name='sacroiliac'>
           <HAnimSegment DEF='hanim_pelvis' name='pelvis'>

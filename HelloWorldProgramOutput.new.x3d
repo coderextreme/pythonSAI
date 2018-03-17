@@ -39,7 +39,6 @@
         <WorldInfo DEF='WorldInfoDEF' title='HelloWorldProgram produced by X3D Java SAI Library (X3DJSAIL)'/>
         <WorldInfo USE='WorldInfoDEF'/>
         <WorldInfo USE='WorldInfoDEF'/>
-        <MetadataString DEF='scene.addChildMetadata' name='test' value='"Top-level root Metadata node beneath Scene needs to be one of &apos;-children&apos; in JSON encoding"'/>
         <LayerSet DEF='scene.addChildLayerSetTest' order='0'/>
         <Transform DEF='LogoGeometryTransform' translation='0 1.5 0'>
             <Anchor description='select for X3D Java SAI Library (X3DJSAIL) description' url='"../X3DJSAIL.html" "http://www.web3d.org/specifications/java/X3DJSAIL.html"'>
@@ -60,7 +59,7 @@
                 <Coordinate point='0 1.5 0 2 1.5 0 2 1.5 -2 -2 1.5 -2 -2 1.5 0 0 1.5 0'/>
             </IndexedLineSet>
         </Shape>
-        <PositionInterpolator DEF='BoxPathAnimator' key='0 0.125 0.375 0.625 0.875 1' keyValue='0 1.5 0 2 1.5 0 2 1.5 -2 -2 1.5 -2 -2 1.5 0 0 1.5 0'/>
+        <PositionInterpolator DEF='BoxPathAnimator' key='0 0 0 0 0 1' keyValue='0 1.5 0 2 1.5 0 2 1.5 -2 -2 1.5 -2 -2 1.5 0 0 1.5 0'/>
         <TimeSensor DEF='OrbitClock' cycleInterval='8.0' loop='true'/>
         <ROUTE fromField='fraction_changed' fromNode='OrbitClock' toField='set_fraction' toNode='BoxPathAnimator'/>
         <ROUTE fromField='value_changed' fromNode='BoxPathAnimator' toField='set_translation' toNode='LogoGeometryTransform'/>
@@ -94,7 +93,7 @@
             <!-- https://en.wikipedia.org/wiki/Beautiful_World_(Devo_song) -->
         </Transform>
         <!-- repeatedly spin 180 degrees as a readable special effect -->
-        <OrientationInterpolator DEF='SpinInterpolator' key='0 0.5 1' keyValue='0 1 0 4.712389 0 1 0 0 0 1 0 1.5707964'/>
+        <OrientationInterpolator DEF='SpinInterpolator' key='0 0 1' keyValue='0 1 0 4.712389 0 1 0 0 0 1 0 1.5707964'/>
         <TimeSensor DEF='SpinClock' cycleInterval='5.0' loop='true'/>
         <ROUTE fromField='fraction_changed' fromNode='SpinClock' toField='set_fraction' toNode='SpinInterpolator'/>
         <ROUTE fromField='value_changed' fromNode='SpinInterpolator' toField='rotation' toNode='TextTransform'/>
@@ -111,9 +110,10 @@ function colorInput (eventValue) // Example source code
    colorsOutput = new MFColor(eventValue); // assigning value sends output event
 // Browser.print('colorInput=' + eventValue + ', colorsOutput=' + colorsOutput + '\n');
 }
+
 ]]>
             </Script>
-            <ColorInterpolator DEF='ColorAnimator' key='0 0.5 1' keyValue='0.9411765 1 1 0.29411766 0 0.50980395 0.9411765 1 1'>
+            <ColorInterpolator DEF='ColorAnimator' key='0 0 1' keyValue='0.9411765 1 1 0.29411766 0 0.50980395 0.9411765 1 1'>
                 <!-- AZURE to INDIGO and back again -->
             </ColorInterpolator>
             <TimeSensor DEF='ColorClock' cycleInterval='60.0' loop='true'/>
@@ -229,6 +229,7 @@ function clockTrigger (timeValue)
 		Browser.print ('diffuseColor=(' + red + ',' + green + ',' + blue + ') newColor=' + newColor.toString() + '\n');
 	}
 }
+
 ]]>
                 </Script>
             </ProtoBody>
