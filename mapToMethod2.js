@@ -144,6 +144,7 @@ var mapToMethod2 = {
 	},
 	"HAnimHumanoid" : {
 		"HAnimJoint" : "addJoints"
+		"HAnimSegment" : "addSegments"
 	}
 };
 
