@@ -141,5 +141,10 @@ var mapToMethod2 = {
 	},
 	"Scene" : {
 		"LayerSet" : "addLayerSet"
+	},
+	"HAnimHumanoid" : {
+		"HAnimJoint" : "addJoints"
 	}
 };
+
+module.exports = mapToMethod2;
