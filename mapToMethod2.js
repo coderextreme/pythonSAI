@@ -5,6 +5,9 @@ var mapToMethod2 = {
 	"HAnimJoint" : {
 		"Transform" : "addChild"
 	},
+	"Appearance" : {
+		"ProtoInstance" : "setMaterial"
+	},
 	"ComposedShader" : {
 		"field" : "addField",
 	},
@@ -135,5 +138,8 @@ var mapToMethod2 = {
 	},
 	"GeoLOD" : {
 		"GeoOrigin" : "setGeoOrigin"
+	},
+	"Scene" : {
+		"LayerSet" : "addLayerSet"
 	}
 };
