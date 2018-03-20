@@ -32,7 +32,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"19 March 2018"
           },
           {
             "@name":"generator",
@@ -104,7 +104,7 @@
                     "-geometry":
                       { "Text":
                         {
-                          "@string":["Node3 \\\\ \\","Node3\"\"\""],
+                          "@string":["Node3 \\\\ \\ ","Node3\"\"\""],
                           "-fontStyle":
                             { "FontStyle":
                               {
@@ -135,8 +135,11 @@
                       }
                     ],
                     "#sourceText":[
-"ecmascript:",
-"\t\t\t    var me = '\"1\" \"\"2\" \"\n3\"';"
+"",
+"\t\t\t    ecmascript:",
+"\t\t\t    var me = '\"1\" \"\"2\" \"\n3\"';",
+"\t\t\t    ",
+"\t\t\t"
 ]
                   }
                 }
