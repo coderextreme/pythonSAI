@@ -36,7 +36,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -154,13 +154,15 @@
                           }
                         ],
                         "#sourceText":[
-"ecmascript:",
+"",
+" ecmascript:",
 "\t\t\t\t\tfunction set_cycle(value) {",
 "                                                old = translation;",
 "\t\t\t\t\t\ttranslation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);",
 "                                                keyValue = new MFVec3f([old, translation]);",
 "\t\t\t\t\t\t// Browser.println(translation);",
-"\t\t\t\t\t}"
+"\t\t\t\t\t}",
+""
 ]
                       }
                     },
@@ -284,7 +286,8 @@
                             ]
                         },
                         "#sourceText":[
-"ecmascript:",
+"",
+" ecmascript:",
 "",
 "                function set_endA(value) {",
 "\t\t    if (typeof spine === \"undefined\") {",
@@ -293,7 +296,7 @@
 "\t\t        spine = new MFVec3f([value, spine[1]]);",
 "\t\t    }",
 "                }",
-"                ",
+"",
 "                function set_endB(value) {",
 "\t\t    if (typeof spine === \"undefined\") {",
 "\t\t        spine = new MFVec3f([value, value]);",
@@ -301,11 +304,12 @@
 "\t\t        spine = new MFVec3f([spine[0], value]);",
 "\t\t    }",
 "                }",
-"                ",
+"",
 "                function set_spine(value) {",
 "\t\t    Browser.print('\n'+'\"');",
 "                    spine = value;",
-"                }"
+"                }",
+""
 ]
                       }
                     },

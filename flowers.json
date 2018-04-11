@@ -38,7 +38,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -415,6 +415,7 @@
                           }
                         ],
                         "#sourceText":[
+"",
 "ecmascript:",
 "\t\t\tfunction newBubble() {",
 "\t\t\t    translation = new SFVec3f(0, 0, 0);",
@@ -517,7 +518,10 @@
 "\t\t\t\t}",
 "\t\t\t\tresolution = 100;",
 "\t\t\t\tupdateCoordinates(resolution);",
-"\t\t\t}"
+"\t\t\t}",
+"",
+"",
+""
 ]
                       }
                     },

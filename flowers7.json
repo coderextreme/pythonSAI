@@ -38,7 +38,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -426,6 +426,8 @@
                 }
               ],
               "#sourceText":[
+"",
+"",
 "ecmascript:",
 "        function set_fraction( f, tm ) {",
 "            var side = Math.floor(f*frontUrls.length);",
@@ -441,7 +443,9 @@
 "                    top[0] = topUrls[side];",
 "                    bottom[0] = bottomUrls[side];",
 "            }",
-"        }"
+"        }",
+"",
+""
 ]
             }
           },
@@ -496,6 +500,9 @@
                 }
               ],
               "#sourceText":[
+"",
+"",
+"",
 "ecmascript:",
 "",
 "function set_fraction() {",
@@ -529,7 +536,9 @@
 "\tif (d > 20) {",
 "\t\td = 4;",
 "\t}",
-"}"
+"}",
+"",
+""
 ]
             }
           },

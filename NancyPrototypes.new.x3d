@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
-<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
     <head>
         <meta name='title' content='NancyPrototypes.x3d'/>
         <meta name='creator' content='Cindy Ballreich'/>
         <meta name='translators' content='Tom Miller and Don Brutzman, NPS'/>
         <meta name='created' content='9 July 2000'/>
-        <meta name='modified' content='19 January 2014'/>
+        <meta name='modified' content='6 January 2018'/>
         <meta name='description' content='Canonical H-Anim 1.1 specification example, using ProtoDeclaration and ProtoInstance instead of native X3D tags. Prototype definitions are a compatible combination of version 1.0 and 2.0 prototype interfaces.'/>
         <meta name='warning' content='using ProtoDeclare is only for developmental experimentation, use X3D native tags for Humanoids instead'/>
         <meta name='reference' content='NancyNativeTags.x3d'/>
+        <meta name='TODO' content='Material color of neck and arms is ignored/incorrect in Xj3D, possily DEF/USE problem.'/>
         <meta name='identifier' content='http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyPrototypes.x3d'/>
         <meta name='generator' content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit'/>
         <meta name='license' content='../license.html'/>
@@ -27,6 +28,7 @@
         </ProtoDeclare>
         <ProtoDeclare name='Humanoid' appinfo='The Humanoid node serves as overall container for the Joint Segment Site and Viewpoint nodes which define the skeleton geometry and landmarks of the humanoid figure. Additionally the node provides a means for defining information about the author copyright and usage restrictions of the model.' documentation='http://H-Anim.org/Specifications/H-Anim2001/part1/Humanoid.html'>
             <ProtoInterface>
+                <!-- H-Anim v1.1 field definitions -->
                 <field name='name' accessType='inputOutput' type='SFString'/>
                 <field name='version' accessType='inputOutput' appinfo='legal values: 1.1 or 2.0' type='SFString' value='1.1'/>
                 <field name='humanoidVersion' accessType='inputOutput' appinfo='Version of the humanoid being modeled. Hint: H-anim version 2.0' type='SFString'/>
@@ -46,7 +48,6 @@
                 <field name='viewpoints' accessType='inputOutput' appinfo='Container field for Viewpoint nodes' type='MFNode'/>
                 <field name='skinCoord' accessType='inputOutput' appinfo='Hint: H-anim version 2.0' type='SFNode'/>
                 <field name='skinNormal' accessType='inputOutput' appinfo='Hint: H-anim version 2.0' type='SFNode'/>
-                <!-- H-Anim v1.1 field definitions -->
             </ProtoInterface>
             <ProtoBody>
                 <Transform DEF='HumanoidTransform'>

@@ -40,7 +40,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -376,6 +376,7 @@
                           }
                         ],
                         "#sourceText":[
+"",
 "ecmascript:",
 "",
 "function initialize() {",
@@ -384,7 +385,8 @@
 "",
 "function set_rightstring(rightstr) {",
 "\trightlines = new MFString(rightstr);",
-"}"
+"}",
+""
 ]
                       }
                     },
@@ -404,6 +406,7 @@
                           }
                         ],
                         "#sourceText":[
+"",
 "ecmascript:",
 "",
 "function initialize() {",
@@ -412,7 +415,8 @@
 "",
 "function set_upstring(upstr) {",
 "\tuplines = new MFString(upstr);",
-"}"
+"}",
+""
 ]
                       }
                     },
@@ -432,6 +436,7 @@
                           }
                         ],
                         "#sourceText":[
+"",
 "ecmascript:",
 "",
 "function initialize() {",
@@ -440,7 +445,8 @@
 "",
 "function set_centerstring(centerstr) {",
 "\tcenterlines = new MFString(centerstr);",
-"}"
+"}",
+""
 ]
                       }
                     },

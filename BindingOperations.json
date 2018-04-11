@@ -68,7 +68,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -428,6 +428,8 @@
                       }
                     ],
                     "#sourceText":[
+"",
+"",
 "ecmascript:",
 "",
 "function initialize ()",
@@ -444,7 +446,7 @@
 "    // new value provided",
 "    priorInputvalue = inputValue;",
 "    // Browser.print ('\ntimeEvent inputValue=' + inputValue);",
-"        ",
+"",
 "    // mimics user execution of Figure 4.1 steps t_0 through t_8",
 "    if (inputValue == 0)",
 "    {",
@@ -515,7 +517,9 @@
 "function view5Bound (inputValue)",
 "{",
 "    Browser.print (', view5Bound ' + (inputValue));",
-"}"
+"}",
+"",
+""
 ]
                   }
                 },

@@ -40,7 +40,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -181,6 +181,8 @@
                       }
                     ],
                     "#sourceText":[
+"",
+"",
 "ecmascript:",
 "",
 "var e = 5;",
@@ -251,7 +253,8 @@
 "\t}",
 "\tresolution = 100;",
 "\tgenerateCoordinates(resolution);",
-"}"
+"}",
+""
 ]
                   }
                 },
@@ -276,6 +279,8 @@
                       }
                     ],
                     "#sourceText":[
+"",
+"",
 "ecmascript:",
 "",
 "var e = 5;",
@@ -316,7 +321,7 @@
 "\t}",
 "\tphi += delta;",
 "     }",
-"     ",
+"",
 "     coordinates = new MFVec3f(localc);",
 "}",
 "",
@@ -347,7 +352,8 @@
 "\t}",
 "\tresolution = 100;",
 "\tgenerateCoordinates(resolution);",
-"}"
+"}",
+""
 ]
                   }
                 }

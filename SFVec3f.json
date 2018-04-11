@@ -24,7 +24,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -105,6 +105,7 @@
                 }
               ],
               "#sourceText":[
+"",
 "ecmascript:",
 "\t\t\tfunction newBubble() {",
 "\t\t\t    translation = new SFVec3f(0, 0, 0);",
@@ -135,7 +136,10 @@
 "",
 "\t\t\tfunction initialize() {",
 "\t\t\t     newBubble();",
-"\t\t\t}"
+"\t\t\t}",
+"",
+"",
+""
 ]
             }
           },

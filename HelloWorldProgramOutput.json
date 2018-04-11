@@ -124,7 +124,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -173,6 +173,13 @@
           { "WorldInfo":
             {
               "@USE":"WorldInfoDEF"
+            }
+          },
+          { "MetadataString":
+            {
+              "@name":"test",
+              "@DEF":"scene.addChildMetadata",
+              "@value":["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
             }
           },
           { "LayerSet":
@@ -365,7 +372,7 @@
                               "#comment":"alternative XML encoding: Text string='\"One, Two, Quote\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'"
                             },
                             {
-                              "#comment":"alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"Immel did it!\\\"\"})"
+                              "#comment":"alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"
                             },
                             {
                               "#comment":"reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html"
@@ -451,13 +458,17 @@
                       }
                     ],
                     "#sourceText":[
+"",
+"",
 "ecmascript:",
 "",
 "function colorInput (eventValue) // Example source code",
 "{",
 "   colorsOutput = new MFColor(eventValue); // assigning value sends output event",
 "// Browser.print('colorInput=' + eventValue + ', colorsOutput=' + colorsOutput + '\n');",
-"}"
+"}",
+"",
+""
 ]
                   }
                 },
@@ -846,6 +857,8 @@
                             ]
                         },
                         "#sourceText":[
+"",
+"",
 "ecmascript:",
 "function initialize ()",
 "{",
@@ -861,14 +874,16 @@
 "    red   = newColor.r;",
 "    green = newColor.g;",
 "    blue  = newColor.b;",
-"    ",
+"",
 "    // note different modulation rates for each color component, % is modulus operator",
 "    newColor = new SFColor ((red + 0.02) % 1, (green + 0.03) % 1, (blue + 0.04) % 1);",
 "\tif (enabled)",
 "\t{",
 "\t\tBrowser.print ('diffuseColor=(' + red + ',' + green + ',' + blue + ') newColor=' + newColor.toString() + '\n');",
 "\t}",
-"}"
+"}",
+"",
+""
 ]
                       }
                     }

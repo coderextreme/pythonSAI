@@ -28,7 +28,7 @@
           },
           {
             "@name":"translated",
-            "@content":"17 March 2018"
+            "@content":"11 April 2018"
           },
           {
             "@name":"generator",
@@ -130,6 +130,7 @@
                                 }
                               ],
                               "#sourceText":[
+"",
 "ecmascript:",
 "function initialize() {",
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);",
@@ -168,7 +169,9 @@
 "\ttranslation.z = 0;",
 "\tinitialize();",
 "    }",
-"}"
+"}",
+"",
+"\t\t\t"
 ]
                             }
                           },
