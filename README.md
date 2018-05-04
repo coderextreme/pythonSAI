@@ -1,3 +1,8 @@
+First checkout from github (get git, if not on your system
+```bash
+git clone https://github.com/coderextreme/pythonSAI
+cd pythonSAI
+```
 This program reads X3D files (provided) and generates python files.
 For a simple smoke test, set your environment in profile.sh, then run the two commands:  You should probably use Python 3.6 with Java 9
 Then run these for comparison
