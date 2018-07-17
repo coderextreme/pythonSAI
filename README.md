@@ -44,3 +44,29 @@ SAI generator in classes.py
 X3DJSAIL documentation, source, and jars are found here:
 
 http://www.web3d.org/specifications/java/X3dJavaSceneAuthoringInterface.html
+
+classes.py generates X3Dautoclass.py, The PyJNIus interface to X3DJSAIL
+
+The next two are for the PythonSerializer.js:
+
+fieldtypes.py generates fieldTypes.js -- a way to look up info on fields
+parseom.py generates mapToMethod.js -- a way to map fields to methods
+
+old.py generates X3Dpackage.py, the old Python SAI, to be replaced by a full SAI
+
+allsaxon.js  -- for Saxon
+config.js -- configuration
+convertJSON.js -- main convert script
+fieldTypes.js – a way to look up info on fields -- generated
+json2py.js – calls python serializer
+mapToMethod.js – a way to map fields to methods -- generated
+mapToMethod2.js – supplemental map to above
+moverride.js -- IDK
+PythonSerializer.js – main DOM to Python serializer
+runAndSend.js -- for Saxon
+X3DJSONLD.js -- JSON to DOM converter
+
+Make.sh – main build script
+Profile.sh – environment
+X3d2py.sh – converts X3D files to JSON
+
