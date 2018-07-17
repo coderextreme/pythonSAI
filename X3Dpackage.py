@@ -7811,11 +7811,19 @@ class ColorChaser(X3DChaserNode):
         super(ColorChaser, self).set_destination(_destination_)
         if type(_destination_) is not SFColor:
             raise InvalidFieldTypeException()
+        if _destination_ < 0:
+                raise InvalidFieldValueException()
+        if _destination_ > 1:
+                raise InvalidFieldValueException()
         self._destination_ = _destination_
     def set_value(self, _value_):
         super(ColorChaser, self).set_value(_value_)
         if type(_value_) is not SFColor:
             raise InvalidFieldTypeException()
+        if _value_ < 0:
+                raise InvalidFieldValueException()
+        if _value_ > 1:
+                raise InvalidFieldValueException()
         self._value_ = _value_
 
     def getValue_changed(self):
@@ -7906,11 +7914,19 @@ class ColorDamper(X3DDamperNode):
         super(ColorDamper, self).set_destination(_destination_)
         if type(_destination_) is not SFColor:
             raise InvalidFieldTypeException()
+        if _destination_ < 0:
+                raise InvalidFieldValueException()
+        if _destination_ > 1:
+                raise InvalidFieldValueException()
         self._destination_ = _destination_
     def set_value(self, _value_):
         super(ColorDamper, self).set_value(_value_)
         if type(_value_) is not SFColor:
             raise InvalidFieldTypeException()
+        if _value_ < 0:
+                raise InvalidFieldValueException()
+        if _value_ > 1:
+                raise InvalidFieldValueException()
         self._value_ = _value_
     def setTau(self, tau_ = 0.3):
         super(ColorDamper, self).setTau(tau_)
@@ -11602,6 +11618,8 @@ class EspduTransform(X3DGroupingNode, X3DNetworkSensorNode):
         super(EspduTransform, self).setReadInterval(readInterval_)
         if type(readInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if readInterval_ < 0:
+                raise InvalidFieldValueException()
         self.readInterval_ = readInterval_
 
     def getReadInterval(self):
@@ -11730,6 +11748,8 @@ class EspduTransform(X3DGroupingNode, X3DNetworkSensorNode):
         super(EspduTransform, self).setWriteInterval(writeInterval_)
         if type(writeInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if writeInterval_ < 0:
+                raise InvalidFieldValueException()
         self.writeInterval_ = writeInterval_
 
     def getWriteInterval(self):
@@ -14247,6 +14267,39 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.info_
 
+    def setJointBindingPositions(self, jointBindingPositions_ = [0, 0, 0]):
+        super(HAnimHumanoid, self).setJointBindingPositions(jointBindingPositions_)
+        if type(jointBindingPositions_) is not MFVec3f:
+            raise InvalidFieldTypeException()
+        self.jointBindingPositions_ = jointBindingPositions_
+
+    def getJointBindingPositions(self):
+        if type(self.jointBindingPositions_) is not MFVec3f:
+            raise InvalidFieldTypeException()
+        return self.jointBindingPositions_
+
+    def setJointBindingRotations(self, jointBindingRotations_ = [0, 0, 1, 0]):
+        super(HAnimHumanoid, self).setJointBindingRotations(jointBindingRotations_)
+        if type(jointBindingRotations_) is not MFRotation:
+            raise InvalidFieldTypeException()
+        self.jointBindingRotations_ = jointBindingRotations_
+
+    def getJointBindingRotations(self):
+        if type(self.jointBindingRotations_) is not MFRotation:
+            raise InvalidFieldTypeException()
+        return self.jointBindingRotations_
+
+    def setJointBindingScales(self, jointBindingScales_ = [0, 0, 0]):
+        super(HAnimHumanoid, self).setJointBindingScales(jointBindingScales_)
+        if type(jointBindingScales_) is not MFVec3f:
+            raise InvalidFieldTypeException()
+        self.jointBindingScales_ = jointBindingScales_
+
+    def getJointBindingScales(self):
+        if type(self.jointBindingScales_) is not MFVec3f:
+            raise InvalidFieldTypeException()
+        return self.jointBindingScales_
+
     def setJoints(self, joints_):
         super(HAnimHumanoid, self).setJoints(joints_)
         if type(joints_) is not MFNode:
@@ -14258,6 +14311,21 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.joints_
 
+    def setLoa(self, loa_ = -1):
+        super(HAnimHumanoid, self).setLoa(loa_)
+        if type(loa_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        if loa_ < -1:
+                raise InvalidFieldValueException()
+        if loa_ > 4:
+                raise InvalidFieldValueException()
+        self.loa_ = loa_
+
+    def getLoa(self):
+        if type(self.loa_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.loa_
+
     def setMetadata(self, metadata_ = None):
         super(HAnimHumanoid, self).setMetadata(metadata_)
         if type(metadata_) is not SFNode:
@@ -14268,6 +14336,17 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
         if type(self.metadata_) is not SFNode:
             raise InvalidFieldTypeException()
         return self.metadata_
+
+    def setMotions(self, motions_):
+        super(HAnimHumanoid, self).setMotions(motions_)
+        if type(motions_) is not MFNode:
+            raise InvalidFieldTypeException()
+        self.motions_ = motions_
+
+    def getMotions(self):
+        if type(self.motions_) is not MFNode:
+            raise InvalidFieldTypeException()
+        return self.motions_
 
     def setName(self, name_):
         super(HAnimHumanoid, self).setName(name_)
@@ -14337,6 +14416,17 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.sites_
 
+    def setSkeletalConfiguration(self, skeletalConfiguration_ = "BASIC"):
+        super(HAnimHumanoid, self).setSkeletalConfiguration(skeletalConfiguration_)
+        if type(skeletalConfiguration_) is not SFString:
+            raise InvalidFieldTypeException()
+        self.skeletalConfiguration_ = skeletalConfiguration_
+
+    def getSkeletalConfiguration(self):
+        if type(self.skeletalConfiguration_) is not SFString:
+            raise InvalidFieldTypeException()
+        return self.skeletalConfiguration_
+
     def setSkeleton(self, skeleton_):
         super(HAnimHumanoid, self).setSkeleton(skeleton_)
         if type(skeleton_) is not MFNode:
@@ -14358,6 +14448,28 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
         if type(self.skin_) is not MFNode:
             raise InvalidFieldTypeException()
         return self.skin_
+
+    def setSkinBindingCoords(self, skinBindingCoords_):
+        super(HAnimHumanoid, self).setSkinBindingCoords(skinBindingCoords_)
+        if type(skinBindingCoords_) is not MFNode:
+            raise InvalidFieldTypeException()
+        self.skinBindingCoords_ = skinBindingCoords_
+
+    def getSkinBindingCoords(self):
+        if type(self.skinBindingCoords_) is not MFNode:
+            raise InvalidFieldTypeException()
+        return self.skinBindingCoords_
+
+    def setSkinBindingNormals(self, skinBindingNormals_):
+        super(HAnimHumanoid, self).setSkinBindingNormals(skinBindingNormals_)
+        if type(skinBindingNormals_) is not MFNode:
+            raise InvalidFieldTypeException()
+        self.skinBindingNormals_ = skinBindingNormals_
+
+    def getSkinBindingNormals(self):
+        if type(self.skinBindingNormals_) is not MFNode:
+            raise InvalidFieldTypeException()
+        return self.skinBindingNormals_
 
     def setSkinCoord(self, skinCoord_ = None):
         super(HAnimHumanoid, self).setSkinCoord(skinCoord_)
@@ -14392,13 +14504,15 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.translation_
 
-    def setVersion(self, version_ = "2.2"):
+    def setVersion(self, version_ = "2.0"):
         super(HAnimHumanoid, self).setVersion(version_)
         if type(version_) is not SFString:
             raise InvalidFieldTypeException()
-        if '2.0' == version_:
+        if '1.0' == version_:
             pass
-        elif '2.2' == version_:
+        elif '1.1' == version_:
+            pass
+        elif '2.0' == version_:
             pass
         else:
             raise InvalidFieldValueException()
@@ -14516,14 +14630,14 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.limitOrientation_
 
-    def setLlimit(self, llimit_):
+    def setLlimit(self, llimit_ = [0, 0, 0]):
         super(HAnimJoint, self).setLlimit(llimit_)
-        if type(llimit_) is not MFFloat:
+        if type(llimit_) is not SFVec3f:
             raise InvalidFieldTypeException()
         self.llimit_ = llimit_
 
     def getLlimit(self):
-        if type(self.llimit_) is not MFFloat:
+        if type(self.llimit_) is not SFVec3f:
             raise InvalidFieldTypeException()
         return self.llimit_
 
@@ -14730,6 +14844,102 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
             pass
         elif 'r_pinky3' == name_:
             pass
+        elif 'l_carpometacarpal_joint_2' == name_:
+            pass
+        elif 'l_metacarpophalangeal_joint_2' == name_:
+            pass
+        elif 'l_carpal_proximal_interphalangeal_joint_2' == name_:
+            pass
+        elif 'l_carpal_distal_interphalangeal_joint_2' == name_:
+            pass
+        elif 'l_midcarpal_joint_3' == name_:
+            pass
+        elif 'l_carpometacarpal_joint_3' == name_:
+            pass
+        elif 'l_metacarpophalangeal_joint_3' == name_:
+            pass
+        elif 'l_carpal_proximal_interphalangeal_joint_3' == name_:
+            pass
+        elif 'l_carpal_distal_interphalangeal_joint_3' == name_:
+            pass
+        elif 'l_midcarpal_joint_45' == name_:
+            pass
+        elif 'l_carpometacarpal_joint_4' == name_:
+            pass
+        elif 'l_metacarpophalangeal_joint_4' == name_:
+            pass
+        elif 'l_carpal_proximal_interphalangeal_joint_4' == name_:
+            pass
+        elif 'l_carpal_distal_interphalangeal_joint_4' == name_:
+            pass
+        elif 'l_carpometacarpal_joint_5' == name_:
+            pass
+        elif 'l_metacarpophalangeal_joint_5' == name_:
+            pass
+        elif 'l_carpal_proximal_interphalangeal_joint_5' == name_:
+            pass
+        elif 'l_carpal_distal_interphalangeal_joint_5' == name_:
+            pass
+        elif 'r_radiocarpal_joint' == name_:
+            pass
+        elif 'r_midcarpal_joint_12' == name_:
+            pass
+        elif 'r_carpometacarpal_joint_1' == name_:
+            pass
+        elif 'r_metacarpophalangeal_joint_1' == name_:
+            pass
+        elif 'r_carpal_interphalangeal_joint_1' == name_:
+            pass
+        elif 'r_carpometacarpal_joint_2' == name_:
+            pass
+        elif 'r_metacarpophalangeal_joint_2' == name_:
+            pass
+        elif 'r_carpal_proximal_interphalangeal_joint_2' == name_:
+            pass
+        elif 'r_carpal_distal_interphalangeal_joint_2' == name_:
+            pass
+        elif 'r_midcarpal_joint_3' == name_:
+            pass
+        elif 'r_carpometacarpal_joint_3' == name_:
+            pass
+        elif 'r_metacarpophalangeal_joint_3' == name_:
+            pass
+        elif 'r_carpal_proximal_interphalangeal_joint_3' == name_:
+            pass
+        elif 'r_carpal_distal_interphalangeal_joint_3' == name_:
+            pass
+        elif 'r_midcarpal_joint_45' == name_:
+            pass
+        elif 'r_carpometacarpal_joint_4' == name_:
+            pass
+        elif 'r_metacarpophalangeal_joint_4' == name_:
+            pass
+        elif 'r_carpal_proximal_interphalangeal_joint_4' == name_:
+            pass
+        elif 'r_carpal_distal_interphalangeal_joint_4' == name_:
+            pass
+        elif 'r_carpometacarpal_joint_5' == name_:
+            pass
+        elif 'r_metacarpophalangeal_joint_5' == name_:
+            pass
+        elif 'r_carpal_proximal_interphalangeal_joint_5' == name_:
+            pass
+        elif 'r_carpal_distal_interphalangeal_joint_5' == name_:
+            pass
+        elif 'l_tarsometatarsal_joint' == name_:
+            pass
+        elif 'l_metatarsophalangeal_joint' == name_:
+            pass
+        elif 'l_tarsal_interphalangeal_joint' == name_:
+            pass
+        elif 'r_talocrural_joint' == name_:
+            pass
+        elif 'r_tarsometatarsal_joint' == name_:
+            pass
+        elif 'r_metatarsophalangeal_joint' == name_:
+            pass
+        elif 'r_tarsal_interphalangeal_joint' == name_:
+            pass
         else:
             raise InvalidFieldValueException()
         self.name_ = name_
@@ -14805,7 +15015,7 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
 
     def setStiffness(self, stiffness_ = [1, 1, 1]):
         super(HAnimJoint, self).setStiffness(stiffness_)
-        if type(stiffness_) is not MFFloat:
+        if type(stiffness_) is not SFVec3f:
             raise InvalidFieldTypeException()
         if stiffness_ < 0:
                 raise InvalidFieldValueException()
@@ -14814,7 +15024,7 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
         self.stiffness_ = stiffness_
 
     def getStiffness(self):
-        if type(self.stiffness_) is not MFFloat:
+        if type(self.stiffness_) is not SFVec3f:
             raise InvalidFieldTypeException()
         return self.stiffness_
 
@@ -14829,14 +15039,14 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
             raise InvalidFieldTypeException()
         return self.translation_
 
-    def setUlimit(self, ulimit_):
+    def setUlimit(self, ulimit_ = [0, 0, 0]):
         super(HAnimJoint, self).setUlimit(ulimit_)
-        if type(ulimit_) is not MFFloat:
+        if type(ulimit_) is not SFVec3f:
             raise InvalidFieldTypeException()
         self.ulimit_ = ulimit_
 
     def getUlimit(self):
-        if type(self.ulimit_) is not MFFloat:
+        if type(self.ulimit_) is not SFVec3f:
             raise InvalidFieldTypeException()
         return self.ulimit_
 
@@ -14864,6 +15074,231 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
 
     def setClass(self, class_):
         super(HAnimJoint, self).setClass(class_)
+        if type(class_) is not SFString:
+            raise InvalidFieldTypeException()
+        self.class_ = class_
+
+    def getClass(self):
+        if type(self.class_) is not SFString:
+            raise InvalidFieldTypeException()
+        return self.class_
+
+    pass
+
+
+class HAnimMotion(X3DChildNode):
+    def __init__(self, **kwargs):
+        super().__init__()
+        return
+
+    def setChannels(self, channels_):
+        super(HAnimMotion, self).setChannels(channels_)
+        if type(channels_) is not MFString:
+            raise InvalidFieldTypeException()
+        self.channels_ = channels_
+
+    def getChannels(self):
+        if type(self.channels_) is not MFString:
+            raise InvalidFieldTypeException()
+        return self.channels_
+
+    def setChannelsEnabled(self, channelsEnabled_):
+        super(HAnimMotion, self).setChannelsEnabled(channelsEnabled_)
+        if type(channelsEnabled_) is not MFBool:
+            raise InvalidFieldTypeException()
+        self.channelsEnabled_ = channelsEnabled_
+
+    def getChannelsEnabled(self):
+        if type(self.channelsEnabled_) is not MFBool:
+            raise InvalidFieldTypeException()
+        return self.channelsEnabled_
+
+
+    def getCycleTime(self):
+        if type(self.cycleTime_) is not SFTime:
+            raise InvalidFieldTypeException()
+        return self.cycleTime_
+
+    def setDescription(self, description_):
+        super(HAnimMotion, self).setDescription(description_)
+        if type(description_) is not SFString:
+            raise InvalidFieldTypeException()
+        self.description_ = description_
+
+    def getDescription(self):
+        if type(self.description_) is not SFString:
+            raise InvalidFieldTypeException()
+        return self.description_
+
+
+    def getElapsedTime(self):
+        if type(self.elapsedTime_) is not SFTime:
+            raise InvalidFieldTypeException()
+        return self.elapsedTime_
+
+    def setEnabled(self, enabled_ = False):
+        super(HAnimMotion, self).setEnabled(enabled_)
+        if type(enabled_) is not SFBool:
+            raise InvalidFieldTypeException()
+        self.enabled_ = enabled_
+
+    def isEnabled(self):
+        if type(self.enabled_) is not SFBool:
+            raise InvalidFieldTypeException()
+        return self.enabled_
+
+    def setEndFrame(self, endFrame_ = -1):
+        super(HAnimMotion, self).setEndFrame(endFrame_)
+        if type(endFrame_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        if endFrame_ < -1:
+                raise InvalidFieldValueException()
+        self.endFrame_ = endFrame_
+
+    def getEndFrame(self):
+        if type(self.endFrame_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.endFrame_
+
+
+    def getFrameCount(self):
+        if type(self.frameCount_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.frameCount_
+
+    def setFrameDuration(self, frameDuration_ = 0.1):
+        super(HAnimMotion, self).setFrameDuration(frameDuration_)
+        if type(frameDuration_) is not SFTime:
+            raise InvalidFieldTypeException()
+        if frameDuration_ <= 0:
+                raise InvalidFieldValueException()
+        self.frameDuration_ = frameDuration_
+
+    def getFrameDuration(self):
+        if type(self.frameDuration_) is not SFTime:
+            raise InvalidFieldTypeException()
+        return self.frameDuration_
+
+    def setFrameIncrement(self, frameIncrement_ = 1):
+        super(HAnimMotion, self).setFrameIncrement(frameIncrement_)
+        if type(frameIncrement_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        self.frameIncrement_ = frameIncrement_
+
+    def getFrameIncrement(self):
+        if type(self.frameIncrement_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.frameIncrement_
+
+    def setFrameIndex(self, frameIndex_ = 0):
+        super(HAnimMotion, self).setFrameIndex(frameIndex_)
+        if type(frameIndex_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        if frameIndex_ < 0:
+                raise InvalidFieldValueException()
+        self.frameIndex_ = frameIndex_
+
+    def getFrameIndex(self):
+        if type(self.frameIndex_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.frameIndex_
+
+    def setJoints(self, joints_):
+        super(HAnimMotion, self).setJoints(joints_)
+        if type(joints_) is not MFString:
+            raise InvalidFieldTypeException()
+        self.joints_ = joints_
+
+    def getJoints(self):
+        if type(self.joints_) is not MFString:
+            raise InvalidFieldTypeException()
+        return self.joints_
+
+    def setLoa(self, loa_ = -1):
+        super(HAnimMotion, self).setLoa(loa_)
+        if type(loa_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        if loa_ < -1:
+                raise InvalidFieldValueException()
+        if loa_ > 4:
+                raise InvalidFieldValueException()
+        self.loa_ = loa_
+
+    def getLoa(self):
+        if type(self.loa_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.loa_
+
+    def setLoop(self, loop_ = False):
+        super(HAnimMotion, self).setLoop(loop_)
+        if type(loop_) is not SFBool:
+            raise InvalidFieldTypeException()
+        self.loop_ = loop_
+
+    def isLoop(self):
+        if type(self.loop_) is not SFBool:
+            raise InvalidFieldTypeException()
+        return self.loop_
+
+    def setMetadata(self, metadata_ = None):
+        super(HAnimMotion, self).setMetadata(metadata_)
+        if type(metadata_) is not SFNode:
+            raise InvalidFieldTypeException()
+        self.metadata_ = metadata_
+
+    def getMetadata(self):
+        if type(self.metadata_) is not SFNode:
+            raise InvalidFieldTypeException()
+        return self.metadata_
+
+    def setStartFrame(self, startFrame_ = 0):
+        super(HAnimMotion, self).setStartFrame(startFrame_)
+        if type(startFrame_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        if startFrame_ < 0:
+                raise InvalidFieldValueException()
+        self.startFrame_ = startFrame_
+
+    def getStartFrame(self):
+        if type(self.startFrame_) is not SFInt32:
+            raise InvalidFieldTypeException()
+        return self.startFrame_
+
+    def setValues(self, values_):
+        super(HAnimMotion, self).setValues(values_)
+        if type(values_) is not MFFloat:
+            raise InvalidFieldTypeException()
+        self.values_ = values_
+
+    def getValues(self):
+        if type(self.values_) is not MFFloat:
+            raise InvalidFieldTypeException()
+        return self.values_
+
+    def setDEF(self, DEF_):
+        super(HAnimMotion, self).setDEF(DEF_)
+        if type(DEF_) is not SFString:
+            raise InvalidFieldTypeException()
+        self.DEF_ = DEF_
+
+    def getDEF(self):
+        if type(self.DEF_) is not SFString:
+            raise InvalidFieldTypeException()
+        return self.DEF_
+
+    def setUSE(self, USE_):
+        super(HAnimMotion, self).setUSE(USE_)
+        if type(USE_) is not SFString:
+            raise InvalidFieldTypeException()
+        self.USE_ = USE_
+
+    def getUSE(self):
+        if type(self.USE_) is not SFString:
+            raise InvalidFieldTypeException()
+        return self.USE_
+
+    def setClass(self, class_):
+        super(HAnimMotion, self).setClass(class_)
         if type(class_) is not SFString:
             raise InvalidFieldTypeException()
         self.class_ = class_
@@ -15164,6 +15599,114 @@ class HAnimSegment(X3DGroupingNode):
         elif 'r_pinky_middle' == name_:
             pass
         elif 'r_pinky_distal' == name_:
+            pass
+        elif 'l_carpal' == name_:
+            pass
+        elif 'l_trapezoid' == name_:
+            pass
+        elif 'l_metacarpal_1' == name_:
+            pass
+        elif 'l_carpal_proximal_phalanx_1' == name_:
+            pass
+        elif 'l_carpal_distal_phalanx_1' == name_:
+            pass
+        elif 'l_metacarpal_2' == name_:
+            pass
+        elif 'l_carpal_proximal_phalanx_2' == name_:
+            pass
+        elif 'l_carpal_middle_phalanx_2' == name_:
+            pass
+        elif 'l_carpal_distal_phalanx_2' == name_:
+            pass
+        elif 'l_capitate' == name_:
+            pass
+        elif 'l_metacarpal_3' == name_:
+            pass
+        elif 'l_carpal_proximal_phalanx_3' == name_:
+            pass
+        elif 'l_carpal_middle_phalanx_3' == name_:
+            pass
+        elif 'l_carpal_distal_phalanx_3' == name_:
+            pass
+        elif 'l_hamate' == name_:
+            pass
+        elif 'l_metacarpal_4' == name_:
+            pass
+        elif 'l_carpal_proximal_phalanx_4' == name_:
+            pass
+        elif 'l_carpal_middle_phalanx_4' == name_:
+            pass
+        elif 'l_carpal_distal_phalanx_4' == name_:
+            pass
+        elif 'l_metacarpal_5' == name_:
+            pass
+        elif 'l_carpal_proximal_phalanx_5' == name_:
+            pass
+        elif 'l_carpal_middle_phalanx_5' == name_:
+            pass
+        elif 'l_carpal_distal_phalanx_5' == name_:
+            pass
+        elif 'r_carpal' == name_:
+            pass
+        elif 'r_trapezoid' == name_:
+            pass
+        elif 'r_metacarpal_1' == name_:
+            pass
+        elif 'r_carpal_proximal_phalanx_1' == name_:
+            pass
+        elif 'r_carpal_distal_phalanx_1' == name_:
+            pass
+        elif 'r_metacarpal_2' == name_:
+            pass
+        elif 'r_carpal_proximal_phalanx_2' == name_:
+            pass
+        elif 'r_carpal_middle_phalanx_2' == name_:
+            pass
+        elif 'r_carpal_distal_phalanx_2' == name_:
+            pass
+        elif 'r_capitate' == name_:
+            pass
+        elif 'r_metacarpal_3' == name_:
+            pass
+        elif 'r_carpal_proximal_phalanx_3' == name_:
+            pass
+        elif 'r_carpal_middle_phalanx_3' == name_:
+            pass
+        elif 'r_carpal_distal_phalanx_3' == name_:
+            pass
+        elif 'r_hamate' == name_:
+            pass
+        elif 'r_metacarpal_4' == name_:
+            pass
+        elif 'r_carpal_proximal_phalanx_4' == name_:
+            pass
+        elif 'r_carpal_middle_phalanx_4' == name_:
+            pass
+        elif 'r_carpal_distal_phalanx_4' == name_:
+            pass
+        elif 'r_metacarpal_5' == name_:
+            pass
+        elif 'r_carpal_proximal_phalanx_5' == name_:
+            pass
+        elif 'r_carpal_middle_phalanx_5' == name_:
+            pass
+        elif 'r_carpal_distal_phalanx_5' == name_:
+            pass
+        elif 'l_talus' == name_:
+            pass
+        elif 'l_metatarsal' == name_:
+            pass
+        elif 'l_tarsal_proximal_phalanx' == name_:
+            pass
+        elif 'l_tarsal_distal_phalanx' == name_:
+            pass
+        elif 'r_talus' == name_:
+            pass
+        elif 'r_metatarsal' == name_:
+            pass
+        elif 'r_tarsal_proximal_phalanx' == name_:
+            pass
+        elif 'r_tarsal_distal_phalanx' == name_:
             pass
         else:
             raise InvalidFieldValueException()
@@ -15874,21 +16417,29 @@ class IndexedFaceSet(X3DComposedGeometryNode):
         super(IndexedFaceSet, self).set_colorIndex(_colorIndex_)
         if type(_colorIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _colorIndex_ < -1:
+                raise InvalidFieldValueException()
         self._colorIndex_ = _colorIndex_
     def set_coordIndex(self, _coordIndex_):
         super(IndexedFaceSet, self).set_coordIndex(_coordIndex_)
         if type(_coordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _coordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._coordIndex_ = _coordIndex_
     def set_normalIndex(self, _normalIndex_):
         super(IndexedFaceSet, self).set_normalIndex(_normalIndex_)
         if type(_normalIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _normalIndex_ < -1:
+                raise InvalidFieldValueException()
         self._normalIndex_ = _normalIndex_
     def set_texCoordIndex(self, _texCoordIndex_):
         super(IndexedFaceSet, self).set_texCoordIndex(_texCoordIndex_)
         if type(_texCoordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _texCoordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._texCoordIndex_ = _texCoordIndex_
     def setTexCoord(self, texCoord_ = None):
         super(IndexedFaceSet, self).setTexCoord(texCoord_)
@@ -16014,11 +16565,15 @@ class IndexedLineSet(X3DGeometryNode):
         super(IndexedLineSet, self).set_colorIndex(_colorIndex_)
         if type(_colorIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _colorIndex_ < -1:
+                raise InvalidFieldValueException()
         self._colorIndex_ = _colorIndex_
     def set_coordIndex(self, _coordIndex_):
         super(IndexedLineSet, self).set_coordIndex(_coordIndex_)
         if type(_coordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _coordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._coordIndex_ = _coordIndex_
     def setDEF(self, DEF_):
         super(IndexedLineSet, self).setDEF(DEF_)
@@ -16148,6 +16703,8 @@ class IndexedQuadSet(X3DComposedGeometryNode):
         super(IndexedQuadSet, self).set_index(_index_)
         if type(_index_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _index_ < 0:
+                raise InvalidFieldValueException()
         self._index_ = _index_
     def setTexCoord(self, texCoord_ = None):
         super(IndexedQuadSet, self).setTexCoord(texCoord_)
@@ -16288,6 +16845,8 @@ class IndexedTriangleFanSet(X3DComposedGeometryNode):
         super(IndexedTriangleFanSet, self).set_index(_index_)
         if type(_index_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _index_ < -1:
+                raise InvalidFieldValueException()
         self._index_ = _index_
     def setTexCoord(self, texCoord_ = None):
         super(IndexedTriangleFanSet, self).setTexCoord(texCoord_)
@@ -16428,6 +16987,8 @@ class IndexedTriangleSet(X3DComposedGeometryNode):
         super(IndexedTriangleSet, self).set_index(_index_)
         if type(_index_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _index_ < 0:
+                raise InvalidFieldValueException()
         self._index_ = _index_
     def setTexCoord(self, texCoord_ = None):
         super(IndexedTriangleSet, self).setTexCoord(texCoord_)
@@ -16568,6 +17129,8 @@ class IndexedTriangleStripSet(X3DComposedGeometryNode):
         super(IndexedTriangleStripSet, self).set_index(_index_)
         if type(_index_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _index_ < -1:
+                raise InvalidFieldValueException()
         self._index_ = _index_
     def setTexCoord(self, texCoord_ = None):
         super(IndexedTriangleStripSet, self).setTexCoord(texCoord_)
@@ -23386,6 +23949,8 @@ class PolylineEmitter(X3DParticleEmitterNode):
         super(PolylineEmitter, self).set_coordIndex(_coordIndex_)
         if type(_coordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _coordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._coordIndex_ = _coordIndex_
     def setSpeed(self, speed_ = 0):
         super(PolylineEmitter, self).setSpeed(speed_)
@@ -24918,6 +25483,8 @@ class ReceiverPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(ReceiverPdu, self).setReadInterval(readInterval_)
         if type(readInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if readInterval_ < 0:
+                raise InvalidFieldValueException()
         self.readInterval_ = readInterval_
 
     def getReadInterval(self):
@@ -25023,6 +25590,8 @@ class ReceiverPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(ReceiverPdu, self).setWriteInterval(writeInterval_)
         if type(writeInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if writeInterval_ < 0:
+                raise InvalidFieldValueException()
         self.writeInterval_ = writeInterval_
 
     def getWriteInterval(self):
@@ -25212,6 +25781,8 @@ class RigidBody(X3DNode):
         super(RigidBody, self).setDisableTime(disableTime_)
         if type(disableTime_) is not SFTime:
             raise InvalidFieldTypeException()
+        if disableTime_ < 0:
+                raise InvalidFieldValueException()
         self.disableTime_ = disableTime_
 
     def getDisableTime(self):
@@ -25509,6 +26080,8 @@ class RigidBodyCollection(X3DChildNode):
         super(RigidBodyCollection, self).setDisableTime(disableTime_)
         if type(disableTime_) is not SFTime:
             raise InvalidFieldTypeException()
+        if disableTime_ < 0:
+                raise InvalidFieldValueException()
         self.disableTime_ = disableTime_
 
     def getDisableTime(self):
@@ -26901,6 +27474,8 @@ class SignalPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(SignalPdu, self).setReadInterval(readInterval_)
         if type(readInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if readInterval_ < 0:
+                raise InvalidFieldValueException()
         self.readInterval_ = readInterval_
 
     def getReadInterval(self):
@@ -26973,6 +27548,8 @@ class SignalPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(SignalPdu, self).setWriteInterval(writeInterval_)
         if type(writeInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if writeInterval_ < 0:
+                raise InvalidFieldValueException()
         self.writeInterval_ = writeInterval_
 
     def getWriteInterval(self):
@@ -28647,6 +29224,8 @@ class SurfaceEmitter(X3DParticleEmitterNode):
         super(SurfaceEmitter, self).set_coordIndex(_coordIndex_)
         if type(_coordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _coordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._coordIndex_ = _coordIndex_
     def setSpeed(self, speed_ = 0):
         super(SurfaceEmitter, self).setSpeed(speed_)
@@ -30139,7 +30718,7 @@ class TimeSensor(X3DTimeDependentNode, X3DSensorNode):
         super(TimeSensor, self).setCycleInterval(cycleInterval_)
         if type(cycleInterval_) is not SFTime:
             raise InvalidFieldTypeException()
-        if cycleInterval_ <= 0:
+        if cycleInterval_ < 0:
                 raise InvalidFieldValueException()
         self.cycleInterval_ = cycleInterval_
 
@@ -31217,6 +31796,8 @@ class TransmitterPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(TransmitterPdu, self).setReadInterval(readInterval_)
         if type(readInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if readInterval_ < 0:
+                raise InvalidFieldValueException()
         self.readInterval_ = readInterval_
 
     def getReadInterval(self):
@@ -31289,6 +31870,8 @@ class TransmitterPdu(X3DNetworkSensorNode, X3DBoundedObject):
         super(TransmitterPdu, self).setWriteInterval(writeInterval_)
         if type(writeInterval_) is not SFTime:
             raise InvalidFieldTypeException()
+        if writeInterval_ < 0:
+                raise InvalidFieldValueException()
         self.writeInterval_ = writeInterval_
 
     def getWriteInterval(self):
@@ -32881,6 +33464,8 @@ class VolumeEmitter(X3DParticleEmitterNode):
         super(VolumeEmitter, self).set_coordIndex(_coordIndex_)
         if type(_coordIndex_) is not MFInt32:
             raise InvalidFieldTypeException()
+        if _coordIndex_ < -1:
+                raise InvalidFieldValueException()
         self._coordIndex_ = _coordIndex_
     def setSpeed(self, speed_ = 0):
         super(VolumeEmitter, self).setSpeed(speed_)
@@ -34218,6 +34803,8 @@ class X3D():
         elif '3.2' == version_:
             pass
         elif '3.3' == version_:
+            pass
+        elif '4.0' == version_:
             pass
         else:
             raise InvalidFieldValueException()

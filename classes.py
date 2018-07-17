@@ -46,7 +46,8 @@ class ClassPrinter:
 code = ""
 code += "CommentsBlock = autoclass('org.web3d.x3d.jsail.Core.CommentsBlock')\n"
 
-soup = BeautifulSoup(open("X3DObjectModel-3.3.xml"), "xml")
+soup = BeautifulSoup(open("X3dUnifiedObjectModel-4.0.xml"), "xml")
+
 
 classes = {}
 

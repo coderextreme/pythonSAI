@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- X3D Object Model X3DObjectModel-3.3.xml-->
-<!-- Online at http://www.web3d.org/specifications/X3DObjectModel-3.3.xml -->
+<!-- X3D Object Model X3dUnifiedObjectModel-3.3.xml-->
+<!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2017-10-01-07:00 16:15:02.247-07:00 -->
+<!-- Generated 2018-06-17-07:00 06:20:39.592-07:00 -->
 <X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                 version="3.3"
-                xsd:noNamespaceSchemaLocation="x3dObjectModel.xsd">
+                xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
    <SimpleTypeEnumerations>
       <SimpleType name="accessTypeNames"
                   baseType="SFString"
@@ -81,7 +81,7 @@
          <enumeration value="Geometry2D"
                       appinfo="The Geometry2D component defines how two-dimensional geometry is specified and what shapes are available."/>
          <enumeration value="Geometry3D"
-                      appinfo="The Geometry3D component defines how three-dimensional geometry is specified and what shapes are available."/>
+                      appinfo="The Geometry3D component describes how three-dimensional geometry is specified and defines ElevationGrid, Extrusion, IndexedFaceSet, and most primitive geometry nodes (Box, Cone, Cylinder, Sphere)."/>
          <enumeration value="Geospatial"
                       appinfo="The Geospatial component defines how to associate real-world locations in an X3D scene and specifies nodes particularly tuned for geospatial applications."/>
          <enumeration value="Grouping"
@@ -133,9 +133,9 @@
          <enumeration value="VolumeRendering"
                       appinfo="The Volume Rendering component provides the ability to specify and render volumetric data sets."/>
       </SimpleType>
-      <SimpleType name="fieldTypeName"
+      <SimpleType name="fieldTypeNames"
                   baseType="SFString"
-                  appinfo="fieldTypeName contains the names of all X3DField types."
+                  appinfo="fieldTypeNames contains the names of all X3DField types."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html">
          <enumeration value="SFBool"/>
          <enumeration value="MFBool"/>
@@ -211,13 +211,24 @@
          <enumeration value="&#34;ALL&#34;"/>
          <enumeration value="&#34;NONE&#34;"/>
       </SimpleType>
+      <SimpleType name="generatedCubeMapTextureUpdateValues"
+                  baseType="SFString"
+                  appinfo="generatedCubeMapTextureUpdateValues are allowed enumeration values for GeneratedCubeMapTexture field named 'update'."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/env_texture.html#GeneratedCubeMapTexture">
+         <enumeration value="NONE"/>
+         <enumeration value="NEXT_FRAME_ONLY"/>
+         <enumeration value="ALWAYS"/>
+      </SimpleType>
       <SimpleType name="hanimVersionValues"
                   baseType="SFString"
-                  appinfo="hanimVersionValues enumeration constants are used to identify the allowed versions for an HAnimHumanoid node. Note that HAnim version 2.0 is approved, while versions 1.0/1.1 are incompatible and version 2.2 is experimental."
+                  appinfo="hanimVersionValues enumeration constants are used to identify the allowed versions for an HAnimHumanoid node. Note that HAnim version 2.0 is under review, while versions 1.0/1.1 include small incompatibilities."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/hanim.html#HAnimHumanoid">
-         <enumeration value="2.0" appinfo="HAnim 19774 V1.0 approved by ISO in 2006."/>
-         <enumeration value="2.2"
-                      appinfo="Experimental HAnim 19774 V1.0 approved by ISO in 2006."/>
+         <enumeration value="1.0"
+                      appinfo="International standard HAnim 19774 version 1 approved by ISO in 2006."/>
+         <enumeration value="1.1"
+                      appinfo="International standard HAnim 19774 version 1 amendment."/>
+         <enumeration value="2.0"
+                      appinfo="Draft revision standard HAnim 19774 version 2 under review by ISO in 2018."/>
       </SimpleType>
       <SimpleType name="intersectionTypeValues"
                   baseType="SFString"
@@ -1032,6 +1043,31 @@
          <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
          <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
          <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
+      </SimpleType>
+      <SimpleType name="pickSensorMatchCriterionValues"
+                  baseType="SFString"
+                  appinfo="pickSensorMatchCriterionValues are allowed enumeration values for X3DPickSensorNode node matchCriterion attribute. Bounded, no additional values are possible."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
+         <enumeration value="MATCH_ANY"/>
+         <enumeration value="MATCH_EVERY"/>
+         <enumeration value="MATCH_ONLY_ONE"/>
+      </SimpleType>
+      <SimpleType name="pickSensorSortOrderValues"
+                  baseType="SFString"
+                  appinfo="pickSensorSortOrderValues are allowed enumeration values for X3DPickSensorNode node sortOrder attribute. Unbounded, additional values are possible."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
+         <enumeration value="ANY"/>
+         <enumeration value="CLOSEST"/>
+         <enumeration value="ALL"/>
+         <enumeration value="ALL_SORTED"/>
+      </SimpleType>
+      <SimpleType name="projectionVolumeStyleTypeValues"
+                  baseType="SFString"
+                  appinfo="projectionVolumeStyleTypeValues are allowed enumeration values for ProjectionVolumeStyle field named 'type'."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/volume.html#ProjectionVolumeStyle">
+         <enumeration value="MAX"/>
+         <enumeration value="MIN"/>
+         <enumeration value="AVERAGE"/>
       </SimpleType>
       <SimpleType name="textureBoundaryModeValues"
                   baseType="SFString"
@@ -2181,173 +2217,202 @@
       </SimpleType>
    </SimpleTypeEnumerations>
    <FieldTypes>
-      <FieldType type="SFBool">
+      <FieldType type="SFBool" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFBoolAndMFBool"
-                              appinfo="SFBool is a logical type with possible values (true|false) to match the XML boolean type. Hint: X3D SFBool values are lower case (true|false) in order to maintain compatibility with other XML documents."/>
+                              appinfo="SFBool is a logical type with possible values (true|false) to match the XML boolean type. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents."/>
       </FieldType>
-      <FieldType type="MFBool">
+      <FieldType type="MFBool" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFBoolAndMFBool"
-                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype."/>
+                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents."/>
       </FieldType>
-      <FieldType type="SFColor">
+      <FieldType type="SFColor"
+                 regex="((((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFColorAndMFColor"
-                              appinfo="The SFColor field specifies one RGB (red-green-blue) color triple. Each color value is an RGB triple of floating point numbers in the range 0.0 to 1.0. The default value of an uninitialized SFColor field is (0 0 0)."/>
+                              appinfo="The SFColor field specifies one RGB (red-green-blue) color triple. Each color value is an RGB triple of floating point numbers in the range 0.0 to 1.0. The default value of an uninitialized SFColor field is (0 0 0). Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFColor">
+      <FieldType type="MFColor"
+                 regex="((((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+)))( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFColorAndMFColor"
                               appinfo="MFColor specifies zero or more SFColor RGB triples. Each color value is an RGB triple of floating point numbers in the range 0.0 to 1.0. The default value of an uninitialized MFColor field is the empty list. Individual SFColor array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFColorRGBA">
+      <FieldType type="SFColorRGBA"
+                 regex="((((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFColorRGBAAndMFColorRGBA"
-                              appinfo="The SFColorRGBA field specifies one RGBA (red-green-blue-alpha) color 4-tuple. Each color value is an RGBA 4-tuple of floating point numbers in the range 0.0 to 1.0. Alpha (opacity) values = (1 - transparency). The default value of an uninitialized SFColorRGBA field is (0 0 0 0)."/>
+                              appinfo="The SFColorRGBA field specifies one RGBA (red-green-blue-alpha) color 4-tuple. Each color value is an RGBA 4-tuple of floating point numbers in the range 0.0 to 1.0. Alpha (opacity) values = (1 - transparency). The default value of an uninitialized SFColorRGBA field is (0 0 0 0). Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFColorRGBA">
+      <FieldType type="MFColorRGBA"
+                 regex="((((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+)))( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFColorRGBAAndMFColorRGBA"
                               appinfo="MFColorRGBA specifies zero or more SFColorRGBA 4-tuples. Each color value is an RGBA 4-tuple of floating point numbers in the range 0.0 to 1.0. Alpha (opacity) values = (1 - transparency). The default value of an uninitialized MFColor field is the empty list. Individual SFColorRGBA array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFDouble">
+      <FieldType type="SFDouble" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFDoubleAndMFDouble"
                               appinfo="SFDouble is a double-precision floating-point type. Array values are optionally separated by commas. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale."/>
       </FieldType>
-      <FieldType type="MFDouble">
+      <FieldType type="MFDouble"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFDoubleAndMFDouble"
                               appinfo="MFDouble is an array of Double values, i.e. a double-precision floating-point array type. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale. SFDouble/MFDouble are analagous to SFDouble/MFDouble. Array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFFloat">
+      <FieldType type="SFFloat" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFFloatAndMFFloat"
                               appinfo="SFFloat is a single-precision floating-point type."/>
       </FieldType>
-      <FieldType type="MFFloat">
+      <FieldType type="MFFloat"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFFloatAndMFFloat"
                               appinfo="MFFloat is an array of SFFloat values, i.e. a single-precision floating-point array type. Array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFImage">
+      <FieldType type="SFImage" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFImageAndMFImage"
                               appinfo="The SFImage field specifies a single uncompressed 2-dimensional pixel image. SFImage fields contain three integers representing the width, height and number of components in the image, followed by (width x height) hexadecimal or integer values representing the pixels in the image."/>
       </FieldType>
-      <FieldType type="MFImage">
+      <FieldType type="MFImage" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFImageAndMFImage"
                               appinfo="MFImage is an array of SFImage values."/>
       </FieldType>
-      <FieldType type="SFInt32">
+      <FieldType type="SFInt32" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFInt32AndMFInt32"
                               appinfo="An SFInt32 field specifies one 32-bit signed integer."/>
       </FieldType>
-      <FieldType type="MFInt32">
+      <FieldType type="MFInt32" regex="((\+|\-)?(0|[1-9][0-9]*)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFInt32AndMFInt32"
                               appinfo="An MFInt32 field defines an array of 32-bit signed integers. Array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFMatrix3d">
+      <FieldType type="SFMatrix3d"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){8}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix3dAndMFMatrix3d"
-                              appinfo="SFMatrix3d specifies a 3x3 matrix of double-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="SFMatrix3d specifies a 3x3 matrix of double-precision floating point numbers, organized in row-major fashion. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFMatrix3d">
+      <FieldType type="MFMatrix3d"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){8}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix3dAndMFMatrix3d"
-                              appinfo="MFMatrix3d specifies zero or more 3x3 matrices of double-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="MFMatrix3d specifies zero or more 3x3 matrices of double-precision floating point numbers, organized in row-major fashion. Warning: comma characters can only appear between singleton 9-tuple values."/>
       </FieldType>
-      <FieldType type="SFMatrix3f">
+      <FieldType type="SFMatrix3f"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){8}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix3fAndMFMatrix3f"
-                              appinfo="SFMatrix3f specifies a 3x3 matrix of single-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="SFMatrix3f specifies a 3x3 matrix of single-precision floating point numbers, organized in row-major fashion. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFMatrix3f">
+      <FieldType type="MFMatrix3f"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){8}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix3fAndMFMatrix3f"
-                              appinfo="MFMatrix3f specifies zero or more 3x3 matrices of single-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="MFMatrix3f specifies zero or more 3x3 matrices of single-precision floating point numbers, organized in row-major fashion. Warning: comma characters can only appear between singleton 9-tuple values."/>
       </FieldType>
-      <FieldType type="SFMatrix4d">
+      <FieldType type="SFMatrix4d"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){15}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix4dAndMFMatrix4d"
-                              appinfo="SFMatrix4d specifies a 4x4 matrix of double-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="SFMatrix4d specifies a 4x4 matrix of double-precision floating point numbers, organized in row-major fashion. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFMatrix4d">
+      <FieldType type="MFMatrix4d"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){15}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix4dAndMFMatrix4d"
-                              appinfo="MFMatrix4d specifies zero or more 4x4 matrices of double-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="MFMatrix4d specifies zero or more 4x4 matrices of double-precision floating point numbers, organized in row-major fashion. Warning: comma characters can only appear between singleton 16-tuple values."/>
       </FieldType>
-      <FieldType type="SFMatrix4f">
+      <FieldType type="SFMatrix4f"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){15}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?))?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix4fAndMFMatrix4f"
-                              appinfo="SFMatrix4f specifies a 4x4 matrix of single-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="SFMatrix4f specifies a 4x4 matrix of single-precision floating point numbers, organized in row-major fashion. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFMatrix4f">
+      <FieldType type="MFMatrix4f"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? ){15}((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFMatrix4fAndMFMatrix4f"
-                              appinfo="MFMatrix4f specifies zero or more 4x4 matrices of single-precision floating point numbers, organized in row-major fashion."/>
+                              appinfo="MFMatrix4f specifies zero or more 4x4 matrices of single-precision floating point numbers, organized in row-major fashion. Warning: comma characters can only appear between singleton 16-tuple values."/>
       </FieldType>
-      <FieldType type="SFNode">
+      <FieldType type="SFNode" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFNodeAndMFNode"
                               appinfo="The SFNode field specifies an X3D node; the default value of an uninitialized SFNode field is NULL."/>
       </FieldType>
-      <FieldType type="MFNode">
+      <FieldType type="MFNode" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFNodeAndMFNode"
                               appinfo="The MFNode field specifies zero or more nodes; the default value of an MFNode field is the empty list."/>
       </FieldType>
-      <FieldType type="SFRotation">
+      <FieldType type="SFRotation"
+                 regex="((\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFRotationAndMFRotation"
-                              appinfo="SFRotation is an axis-angle 4-tuple, indicating X-Y-Z direction axis plus angle orientation about that axis. The first three values specify a normalized axis vector about which the rotation takes place, so the first three values shall be within the range [-1..+1] in order to represent a normalized unit vector. The fourth value specifies the amount of right-handed rotation about that axis in radians."/>
+                              appinfo="SFRotation is an axis-angle 4-tuple, indicating X-Y-Z direction axis plus angle orientation about that axis. The first three values specify a normalized axis vector about which the rotation takes place, so the first three values shall be within the range [-1..+1] in order to represent a normalized unit vector. The fourth value specifies the amount of right-handed rotation about that axis in radians. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFRotation">
+      <FieldType type="MFRotation"
+                 regex="((\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(((\.[0-9]+|0(\.[0-9]*)?)((E|e)(\+|\-)?[0-9]+)?)|(1(\.[0]*)?((E|e)\-[0-9]+)?)|([1-9](\.[0-9]*)((E|e)\-[0-9]+))) (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFRotationAndMFRotation"
-                              appinfo="MFRotation is an array of SFRotation values. Individual SFRotation array values are optionally separated by commas."/>
+                              appinfo="MFRotation is an array of SFRotation values. Individual singleton SFRotation array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFString">
+      <FieldType type="SFString" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFStringAndMFString"
                               appinfo="SFString defines a single string encoded with the UTF-8 universal character set."/>
       </FieldType>
-      <FieldType type="MFString">
+      <FieldType type="MFString" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFStringAndMFString"
                               appinfo="MFString is an array of SFString values, each &#34;quoted&#34; and separated by whitespace. Individual SFString array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFTime">
+      <FieldType type="SFTime" regex="">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFTimeAndMFTime"
                               appinfo="The SFTime field specifies a single time value. Time values are specified as a double-precision floating point number. Typically, SFTime fields represent the number of seconds since Jan 1, 1970, 00:00:00 GMT."/>
       </FieldType>
-      <FieldType type="MFTime">
+      <FieldType type="MFTime"
+                 regex="(((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFTimeAndMFTime"
                               appinfo="MFTime is an array of SFTime values. Array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFVec2d">
+      <FieldType type="SFVec2d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec2dAndMFVec2d"
-                              appinfo="SFVec2d is a 2-tuple pair of SFDouble values. Hint: SFVec2d can be used to specify a 2D double-precision coordinate."/>
+                              appinfo="SFVec2d is a 2-tuple pair of SFDouble values. Hint: SFVec2d can be used to specify a 2D double-precision coordinate. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec2d">
+      <FieldType type="MFVec2d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec2dAndMFVec2d"
-                              appinfo="MFVec2d is an array of SFVec2d values. Individual SFVec2d array values are optionally separated by commas."/>
+                              appinfo="MFVec2d is an array of SFVec2d values. Individual singleton SFVec2d array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFVec2f">
+      <FieldType type="SFVec2f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec2fAndMFVec2f"
-                              appinfo="SFVec2f is a 2-tuple pair of SFFloat values. Hint: SFVec2f can be used to specify a 2D single-precision coordinate."/>
+                              appinfo="SFVec2f is a 2-tuple pair of SFFloat values. Hint: SFVec2f can be used to specify a 2D single-precision coordinate. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec2f">
+      <FieldType type="MFVec2f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec2fAndMFVec2f"
-                              appinfo="MFVec2f is an array of SFVec2f values. Individual SFVec2f array values are optionally separated by commas."/>
+                              appinfo="MFVec2f is an array of SFVec2f values. Individual singleton SFVec2f array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFVec3d">
+      <FieldType type="SFVec3d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec3dAndMFVec3d"
-                              appinfo="SFVec3d is a 3-tuple triplet of SFDouble values. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision. Hint: SFVec3d can be used to specify a georeferenced 3D coordinate."/>
+                              appinfo="SFVec3d is a 3-tuple triplet of SFDouble values. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision. Hint: SFVec3d can be used to specify a georeferenced 3D coordinate. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec3d">
+      <FieldType type="MFVec3d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec3dAndMFVec3d"
-                              appinfo="MFVec3d is an array of SFVec3d values. Individual SFVec3d array values are optionally separated by commas. Original rationale for inclusion: GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision. Hint: MFVec3d can be used to specify a list of georeferenced 3D coordinates."/>
+                              appinfo="MFVec3d is an array of SFVec3d values. Individual singleton SFVec3d array values are optionally separated by commas. Original rationale for inclusion: GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision. Hint: MFVec3d can be used to specify a list of georeferenced 3D coordinates."/>
       </FieldType>
-      <FieldType type="SFVec3f">
+      <FieldType type="SFVec3f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec3fAndMFVec3f"
-                              appinfo="SFVec3f is a 3-tuple triplet of SFFloat values. Hint: SFVec3f can be used to specify a 3D coordinate or a 3D scale value."/>
+                              appinfo="SFVec3f is a 3-tuple triplet of SFFloat values. Hint: SFVec3f can be used to specify a 3D coordinate or a 3D scale value. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec3f">
+      <FieldType type="MFVec3f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec3fAndMFVec3f"
-                              appinfo="MFVec3f is an array of SFVec3f values. Individual SFVec3f array values are optionally separated by commas."/>
+                              appinfo="MFVec3f is an array of SFVec3f values. Individual singleton SFVec3f array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFVec4d">
+      <FieldType type="SFVec4d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec4dAndMFVec4d"
-                              appinfo="SFVec4d is a 4-tuple set of double-precision floating-point values, specifying a 3D homogeneous vector."/>
+                              appinfo="SFVec4d is a 4-tuple set of double-precision floating-point values, specifying a 3D homogeneous vector. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec4d">
+      <FieldType type="MFVec4d"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec4dAndMFVec4d"
-                              appinfo="MFVec4d is zero or more SFVec4d values. Individual SFVec4d array values are optionally separated by commas."/>
+                              appinfo="MFVec4d is zero or more SFVec4d values. Individual singleton SFVec4d array values are optionally separated by commas."/>
       </FieldType>
-      <FieldType type="SFVec4f">
+      <FieldType type="SFVec4f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?)?">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec4fAndMFVec4f"
-                              appinfo="SFVec4f is a 4-tuple set of single-precision floating-point values, specifying a 3D homogeneous vector."/>
+                              appinfo="SFVec4f is a 4-tuple set of single-precision floating-point values, specifying a 3D homogeneous vector. Warning: comma characters in attribute values do not pass strict XML validation."/>
       </FieldType>
-      <FieldType type="MFVec4f">
+      <FieldType type="MFVec4f"
+                 regex="((\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)? (\+|\-)?(0|[1-9][0-9]*)?(\.[0-9]*)?((E|e)(\+|\-)?[0-9]+)?( )?(,)?( )?)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFVec4fAndMFVec4f"
-                              appinfo="MFVec4f is zero or more SFVec4f values. Individual SFVec4f array values are optionally separated by commas."/>
+                              appinfo="MFVec4f is zero or more SFVec4f values. Individual singleton SFVec4f array values are optionally separated by commas."/>
       </FieldType>
    </FieldTypes>
    <AbstractObjectTypes>
@@ -3820,7 +3885,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="matchCriterion"
-                   default="MATCH_ANY">
+                   default="MATCH_ANY"
+                   baseType="pickSensorMatchCriterionValues">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -3857,7 +3923,9 @@
             <field type="SFString"
                    accessType="initializeOnly"
                    name="sortOrder"
-                   default="CLOSEST">
+                   default="CLOSEST"
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="pickSensorSortOrderValues">
                <enumeration value="ANY"/>
                <enumeration value="CLOSEST"/>
                <enumeration value="ALL"/>
@@ -4229,10 +4297,14 @@
             <componentInfo name="Sound" level="1"/>
             <Inheritance baseType="X3DTimeDependentNode"/>
             <field type="SFString" accessType="inputOutput" name="description"/>
-            <field type="SFTime" accessType="outputOnly" name="duration_changed"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="duration_changed"
+                   minInclusive="-1"/>
             <field type="SFTime"
                    accessType="outputOnly"
                    name="elapsedTime"
+                   minInclusive="0"
                    inheritedFrom="X3DTimeDependentNode"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -4478,7 +4550,10 @@
                               appinfo="Base type from which all time-dependent nodes are derived.">
             <componentInfo name="Time" level="1"/>
             <Inheritance baseType="X3DChildNode"/>
-            <field type="SFTime" accessType="outputOnly" name="elapsedTime"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="elapsedTime"
+                   minInclusive="0"/>
             <field type="SFBool" accessType="outputOnly" name="isActive"/>
             <field type="SFBool" accessType="outputOnly" name="isPaused">
                <componentInfo name="Time" level="2"/>
@@ -4882,7 +4957,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -4948,7 +5023,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="appearance"/>
+            <containerField default="appearance" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="AppearanceChildContentModel"
                                   minOccurs="0"
@@ -4996,7 +5071,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5053,7 +5128,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5071,10 +5146,12 @@
             <field type="SFTime"
                    accessType="outputOnly"
                    name="duration_changed"
+                   minInclusive="-1"
                    inheritedFrom="X3DSoundSourceNode"/>
             <field type="SFTime"
                    accessType="outputOnly"
                    name="elapsedTime"
+                   minInclusive="0"
                    inheritedFrom="X3DTimeDependentNode"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -5142,7 +5219,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="source"/>
+            <containerField default="source" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5245,7 +5322,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5301,7 +5378,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -5364,7 +5441,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -5454,7 +5531,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture2DContentModel"/>
@@ -5490,7 +5567,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5536,7 +5613,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5569,7 +5646,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5599,7 +5676,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5649,7 +5726,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5687,7 +5764,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="physics"/>
+            <containerField default="physics" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="GeometryContentModel"/>
@@ -5725,7 +5802,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -5785,7 +5862,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -5833,7 +5910,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Shape"/>
@@ -5897,7 +5974,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -5972,7 +6049,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="CADFace"/>
@@ -6030,7 +6107,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel"/>
@@ -6065,7 +6142,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6103,7 +6180,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6162,7 +6239,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="CollidableOffset"/>
@@ -6224,7 +6301,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Shape"/>
@@ -6296,7 +6373,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -6385,7 +6462,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="collider"/>
+            <containerField default="collider" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="CollidableOffset"/>
@@ -6441,7 +6518,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="CollisionCollection"/>
@@ -6495,7 +6572,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="CollidableOffset"/>
@@ -6532,7 +6609,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="color"/>
+            <containerField default="color" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6570,9 +6647,21 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="SFColor" accessType="inputOnly" name="set_destination"/>
-            <field type="SFColor" accessType="inputOnly" name="set_value"/>
-            <field type="SFColor" accessType="outputOnly" name="value_changed"/>
+            <field type="SFColor"
+                   accessType="inputOnly"
+                   name="set_destination"
+                   minInclusive="0"
+                   maxInclusive="1"/>
+            <field type="SFColor"
+                   accessType="inputOnly"
+                   name="set_value"
+                   minInclusive="0"
+                   maxInclusive="1"/>
+            <field type="SFColor"
+                   accessType="outputOnly"
+                   name="value_changed"
+                   minInclusive="0"
+                   maxInclusive="1"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -6585,7 +6674,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6624,8 +6713,16 @@
                    minInclusive="0"
                    maxInclusive="5"
                    inheritedFrom="X3DDamperNode"/>
-            <field type="SFColor" accessType="inputOnly" name="set_destination"/>
-            <field type="SFColor" accessType="inputOnly" name="set_value"/>
+            <field type="SFColor"
+                   accessType="inputOnly"
+                   name="set_destination"
+                   minInclusive="0"
+                   maxInclusive="1"/>
+            <field type="SFColor"
+                   accessType="inputOnly"
+                   name="set_value"
+                   minInclusive="0"
+                   maxInclusive="1"/>
             <field type="SFTime"
                    accessType="inputOutput"
                    name="tau"
@@ -6637,7 +6734,11 @@
                    name="tolerance"
                    default="-1"
                    inheritedFrom="X3DDamperNode"/>
-            <field type="SFColor" accessType="outputOnly" name="value_changed"/>
+            <field type="SFColor"
+                   accessType="outputOnly"
+                   name="value_changed"
+                   minInclusive="0"
+                   maxInclusive="1"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -6650,7 +6751,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6679,7 +6780,11 @@
                    accessType="inputOnly"
                    name="set_fraction"
                    inheritedFrom="X3DInterpolatorNode"/>
-            <field type="SFColor" accessType="outputOnly" name="value_changed"/>
+            <field type="SFColor"
+                   accessType="outputOnly"
+                   name="value_changed"
+                   minInclusive="0"
+                   maxInclusive="1"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -6692,7 +6797,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6727,7 +6832,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="color"/>
+            <containerField default="color" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -6785,7 +6890,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="ImageTexture"/>
@@ -6834,7 +6939,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="shaders"/>
+            <containerField default="shaders" type="xs:NMTOKEN"/>
             <ContentModel>
                <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -6890,7 +6995,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -6932,7 +7037,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="VolumeRenderStyleContentModel"/>
@@ -6984,7 +7089,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7052,7 +7157,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7168,7 +7273,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="contacts"/>
+            <containerField default="contacts" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="RigidBody"/>
@@ -7212,7 +7317,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="trimmingContour"/>
+            <containerField default="trimmingContour" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="NurbsCurve2D"/>
@@ -7247,7 +7352,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7276,7 +7381,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="coord"/>
+            <containerField default="coord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7325,7 +7430,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7386,7 +7491,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7415,7 +7520,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="coord"/>
+            <containerField default="coord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7453,7 +7558,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7491,7 +7596,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7545,7 +7650,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7626,7 +7731,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7691,7 +7796,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7744,7 +7849,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="DISEntityTypeMapping"/>
@@ -7820,7 +7925,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="mapping"/>
+            <containerField default="mapping" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7862,7 +7967,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -7976,7 +8081,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -8011,7 +8116,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8061,7 +8166,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel"/>
@@ -8163,7 +8268,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="FloatVertexAttribute"/>
@@ -8438,7 +8543,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="readInterval"
-                   default="0.1"/>
+                   default="0.1"
+                   minInclusive="0"/>
             <field type="MFNode"
                    accessType="inputOnly"
                    name="removeChildren"
@@ -8490,7 +8596,10 @@
                    accessType="inputOutput"
                    name="siteID"
                    default="0"/>
-            <field type="SFTime" accessType="outputOnly" name="timestamp"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="timestamp"
+                   minInclusive="0"/>
             <field type="SFVec3f"
                    accessType="inputOutput"
                    name="translation"
@@ -8502,7 +8611,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="writeInterval"
-                   default="1.0"/>
+                   default="1.0"
+                   minInclusive="0"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -8515,7 +8625,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -8572,7 +8682,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8645,7 +8755,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8691,7 +8801,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="fillProperties"/>
+            <containerField default="fillProperties" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8730,7 +8840,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="attrib"/>
+            <containerField default="attrib" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8790,7 +8900,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8823,7 +8933,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="fogCoord"/>
+            <containerField default="fogCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8920,7 +9030,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="fontStyle"/>
+            <containerField default="fontStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8957,7 +9067,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="physics"/>
+            <containerField default="physics" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -8986,7 +9096,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="update"
-                   default="NONE">
+                   default="NONE"
+                   baseType="generatedCubeMapTextureUpdateValues">
                <enumeration value="NONE"/>
                <enumeration value="NEXT_FRAME_ONLY"/>
                <enumeration value="ALWAYS"/>
@@ -9003,7 +9114,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -9044,7 +9155,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="coord"/>
+            <containerField default="coord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoOrigin"/>
@@ -9153,7 +9264,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ColorNormalTexCoordContentModel" minOccurs="0"/>
@@ -9227,7 +9338,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -9278,7 +9389,11 @@
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
                    baseType="geoSystemType"/>
-            <field type="SFInt32" accessType="outputOnly" name="level_changed"/>
+            <field type="SFInt32"
+                   accessType="outputOnly"
+                   name="level_changed"
+                   minInclusive="0"
+                   maxInclusive="1"/>
             <field type="SFNode"
                    accessType="inputOutput"
                    name="metadata"
@@ -9309,7 +9424,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
@@ -9347,7 +9462,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoCoordinate"/>
@@ -9400,7 +9515,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geoOrigin"/>
+            <containerField default="geoOrigin" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -9449,7 +9564,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoOrigin"/>
@@ -9521,7 +9636,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoOrigin"/>
@@ -9585,7 +9700,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoOrigin"/>
@@ -9675,7 +9790,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -9768,7 +9883,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="GeoOrigin"/>
@@ -9827,7 +9942,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -9946,7 +10061,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="displacers"/>
+            <containerField default="displacers" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -10010,7 +10125,7 @@
             <field type="MFNode"
                    accessType="inputOutput"
                    name="skin"
-                   acceptableNodeTypes="X3DChildNode"/>
+                   acceptableNodeTypes="Group|Transform|Shape|IndexedFaceSet"/>
             <field type="SFNode"
                    accessType="inputOutput"
                    name="skinCoord"
@@ -10028,11 +10143,11 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="version"
-                   default="2.2"
-                   additionalEnumerationValuesAllowed="true"
+                   default="2.0"
                    baseType="hanimVersionValues">
+               <enumeration value="1.0"/>
+               <enumeration value="1.1"/>
                <enumeration value="2.0"/>
-               <enumeration value="2.2"/>
             </field>
             <field type="MFNode"
                    accessType="inputOutput"
@@ -10050,13 +10165,20 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
-               <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
+               <NodeContentModel name="HAnimJoint" minOccurs="0" maxOccurs="unbounded"/>
+               <NodeContentModel name="HAnimSegment" minOccurs="0" maxOccurs="unbounded"/>
+               <NodeContentModel name="HAnimSite" minOccurs="0" maxOccurs="unbounded"/>
+               <NodeContentModel name="Group"/>
+               <NodeContentModel name="Transform"/>
+               <NodeContentModel name="Shape"/>
+               <NodeContentModel name="IndexedFaceSet"/>
                <NodeContentModel name="Coordinate"/>
                <NodeContentModel name="CoordinateDouble"/>
-               <NodeContentModel name="Normal" minOccurs="0"/>
+               <NodeContentModel name="Normal" minOccurs="0" maxOccurs="1"/>
+               <NodeContentModel name="ProtoInstance" minOccurs="0" maxOccurs="unbounded"/>
             </ContentModel>
          </InterfaceDefinition>
       </ConcreteNode>
@@ -10068,7 +10190,7 @@
             <field type="MFNode"
                    accessType="inputOnly"
                    name="addChildren"
-                   acceptableNodeTypes="HAnimJoint|HAnimSegment"/>
+                   acceptableNodeTypes="HAnimJoint|HAnimSegment|HAnimSite"/>
             <field type="SFVec3f"
                    accessType="initializeOnly"
                    name="bboxCenter"
@@ -10085,7 +10207,7 @@
             <field type="MFNode"
                    accessType="inputOutput"
                    name="children"
-                   acceptableNodeTypes="HAnimJoint|HAnimSegment"/>
+                   acceptableNodeTypes="HAnimJoint|HAnimSegment|HAnimSite"/>
             <field type="MFNode"
                    accessType="inputOutput"
                    name="displacers"
@@ -10203,7 +10325,7 @@
             <field type="MFNode"
                    accessType="inputOnly"
                    name="removeChildren"
-                   acceptableNodeTypes="HAnimJoint|HAnimSegment"/>
+                   acceptableNodeTypes="HAnimJoint|HAnimSegment|HAnimSite"/>
             <field type="SFRotation"
                    accessType="inputOutput"
                    name="rotation"
@@ -10245,12 +10367,14 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="HAnimJoint"/>
                <NodeContentModel name="HAnimSegment"/>
+               <NodeContentModel name="HAnimSite"/>
                <NodeContentModel name="HAnimDisplacer"/>
+               <NodeContentModel name="ProtoInstance"/>
             </ContentModel>
          </InterfaceDefinition>
       </ConcreteNode>
@@ -10428,7 +10552,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -10605,7 +10729,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -10643,7 +10767,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -10693,7 +10817,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -10748,7 +10872,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -10837,14 +10961,26 @@
                    name="normalPerVertex"
                    default="true"
                    inheritedFrom="X3DComposedGeometryNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_colorIndex">
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_colorIndex"
+                   minInclusive="-1">
                <componentInfo name="Geometry3D" level="4"/>
             </field>
-            <field type="MFInt32" accessType="inputOnly" name="set_coordIndex"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_normalIndex">
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_coordIndex"
+                   minInclusive="-1"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_normalIndex"
+                   minInclusive="-1">
                <componentInfo name="Geometry3D" level="4"/>
             </field>
-            <field type="MFInt32" accessType="inputOnly" name="set_texCoordIndex"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_texCoordIndex"
+                   minInclusive="-1"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="solid"
@@ -10872,7 +11008,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -10922,10 +11058,16 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_colorIndex">
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_colorIndex"
+                   minInclusive="-1">
                <componentInfo name="Rendering" level="3"/>
             </field>
-            <field type="MFInt32" accessType="inputOnly" name="set_coordIndex">
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_coordIndex"
+                   minInclusive="-1">
                <componentInfo name="Rendering" level="3"/>
             </field>
             <field type="SFString"
@@ -10940,7 +11082,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ColorCoordinateContentModel" minOccurs="0"/>
@@ -11006,7 +11148,10 @@
                    name="normalPerVertex"
                    default="true"
                    inheritedFrom="X3DComposedGeometryNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_index"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_index"
+                   minInclusive="0"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="solid"
@@ -11030,7 +11175,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -11097,7 +11242,10 @@
                    name="normalPerVertex"
                    default="true"
                    inheritedFrom="X3DComposedGeometryNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_index"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_index"
+                   minInclusive="-1"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="solid"
@@ -11121,7 +11269,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -11188,7 +11336,10 @@
                    name="normalPerVertex"
                    default="true"
                    inheritedFrom="X3DComposedGeometryNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_index"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_index"
+                   minInclusive="0"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="solid"
@@ -11212,7 +11363,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -11279,7 +11430,10 @@
                    name="normalPerVertex"
                    default="true"
                    inheritedFrom="X3DComposedGeometryNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_index"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_index"
+                   minInclusive="-1"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="solid"
@@ -11303,7 +11457,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -11354,7 +11508,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -11400,7 +11554,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -11434,7 +11588,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -11503,7 +11657,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel" minOccurs="0"/>
@@ -11550,7 +11704,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -11601,7 +11755,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="layers"/>
+            <containerField default="layers" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
@@ -11645,7 +11799,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Layer"/>
@@ -11764,7 +11918,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="layout"/>
+            <containerField default="layout" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -11824,7 +11978,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="LayoutGroupContentModel"/>
@@ -11881,7 +12035,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="layers"/>
+            <containerField default="layers" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="LayoutGroupContentModel"/>
@@ -11915,7 +12069,8 @@
                    accessType="inputOutput"
                    name="matchCriterion"
                    default="MATCH_ANY"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   baseType="pickSensorMatchCriterionValues">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -11962,7 +12117,9 @@
                    accessType="initializeOnly"
                    name="sortOrder"
                    default="CLOSEST"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="pickSensorSortOrderValues">
                <enumeration value="ANY"/>
                <enumeration value="CLOSEST"/>
                <enumeration value="ALL"/>
@@ -11980,7 +12137,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="PickSensorGroupingNodeContentModel"/>
@@ -12026,7 +12183,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="lineProperties"/>
+            <containerField default="lineProperties" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12077,7 +12234,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ColorCoordinateContentModel" minOccurs="0"/>
@@ -12127,7 +12284,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="LoadSensorChildContentModel"
@@ -12182,7 +12339,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12223,7 +12380,10 @@
                    accessType="initializeOnly"
                    name="forceTransitions"
                    default="false"/>
-            <field type="SFInt32" accessType="outputOnly" name="level_changed"/>
+            <field type="SFInt32"
+                   accessType="outputOnly"
+                   name="level_changed"
+                   minInclusive="0"/>
             <field type="SFNode"
                    accessType="inputOutput"
                    name="metadata"
@@ -12250,7 +12410,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -12328,7 +12488,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="material"/>
+            <containerField default="material" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12361,7 +12521,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="attrib"/>
+            <containerField default="attrib" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12394,7 +12554,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="attrib"/>
+            <containerField default="attrib" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12433,7 +12593,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="metadataContainerFieldValues"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12472,7 +12632,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="metadataContainerFieldValues"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12511,7 +12671,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="metadataContainerFieldValues"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12550,7 +12710,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="metadataContainerFieldValues"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12585,7 +12745,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0" maxOccurs="unbounded"/>
                <NodeContentModel name="ProtoInstance" minOccurs="0" maxOccurs="unbounded"/>
@@ -12625,7 +12785,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="metadata"/>
+            <containerField default="metadata" type="metadataContainerFieldValues"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12751,7 +12911,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -12771,10 +12931,12 @@
             <field type="SFTime"
                    accessType="outputOnly"
                    name="duration_changed"
+                   minInclusive="-1"
                    inheritedFrom="X3DSoundSourceNode"/>
             <field type="SFTime"
                    accessType="outputOnly"
                    name="elapsedTime"
+                   minInclusive="0"
                    inheritedFrom="X3DTimeDependentNode"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -12859,7 +13021,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -12946,7 +13108,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="ImageTexture"/>
@@ -12982,7 +13144,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureCoordinate"/>
@@ -13017,7 +13179,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="textureTransform"/>
+            <containerField default="textureTransform" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureTransform"/>
@@ -13114,7 +13276,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -13147,7 +13309,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="normal"/>
+            <containerField default="normal" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -13185,7 +13347,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -13236,7 +13398,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -13289,7 +13451,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -13331,7 +13493,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -13436,7 +13598,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -13484,7 +13646,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -13542,7 +13704,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="NurbsPatchSurface"/>
@@ -13606,7 +13768,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -13655,7 +13817,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="ContourPolyline2D"/>
@@ -13705,7 +13867,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="ContourPolyline2D"/>
@@ -13763,7 +13925,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -13877,7 +14039,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Contour2D"/>
@@ -13924,7 +14086,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="TextureContentModel"/>
@@ -13975,7 +14137,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14036,7 +14198,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14074,7 +14236,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14149,7 +14311,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14194,7 +14356,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="shaders"/>
+            <containerField default="shaders" type="xs:NMTOKEN"/>
             <ContentModel>
                <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -14323,7 +14485,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ShapeChildContentModel" minOccurs="0"/>
@@ -14410,7 +14572,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -14464,7 +14626,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -14519,7 +14681,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texture"/>
+            <containerField default="texture" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="TextureProperties"/>
@@ -14592,7 +14754,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14652,7 +14814,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14729,7 +14891,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14762,7 +14924,8 @@
                    accessType="inputOutput"
                    name="matchCriterion"
                    default="MATCH_ANY"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   baseType="pickSensorMatchCriterionValues">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -14805,7 +14968,9 @@
                    accessType="initializeOnly"
                    name="sortOrder"
                    default="CLOSEST"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="pickSensorSortOrderValues">
                <enumeration value="ANY"/>
                <enumeration value="CLOSEST"/>
                <enumeration value="ALL"/>
@@ -14823,7 +14988,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="PickSensorGroupingNodeContentModel"/>
@@ -14874,7 +15039,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ColorCoordinateContentModel" minOccurs="0"/>
@@ -14904,7 +15069,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -14942,7 +15107,10 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_coordIndex"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_coordIndex"
+                   minInclusive="-1"/>
             <field type="SFFloat"
                    accessType="inputOutput"
                    name="speed"
@@ -14973,7 +15141,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -15005,7 +15173,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15054,7 +15222,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15103,7 +15271,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15164,7 +15332,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15225,7 +15393,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15263,7 +15431,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15301,7 +15469,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15335,7 +15503,8 @@
                    accessType="inputOutput"
                    name="matchCriterion"
                    default="MATCH_ANY"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   baseType="pickSensorMatchCriterionValues">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -15377,7 +15546,9 @@
                    accessType="initializeOnly"
                    name="sortOrder"
                    default="CLOSEST"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="pickSensorSortOrderValues">
                <enumeration value="ANY"/>
                <enumeration value="CLOSEST"/>
                <enumeration value="ALL"/>
@@ -15395,7 +15566,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="PickSensorGroupingNodeContentModel"/>
@@ -15457,7 +15628,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="shaders"/>
+            <containerField default="shaders" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="ShaderProgram"/>
@@ -15488,7 +15659,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="type"
-                   default="MAX">
+                   default="MAX"
+                   baseType="projectionVolumeStyleTypeValues">
                <enumeration value="MAX"/>
                <enumeration value="MIN"/>
                <enumeration value="AVERAGE"/>
@@ -15505,7 +15677,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15540,7 +15712,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="fieldValue" minOccurs="0" maxOccurs="unbounded"/>
@@ -15601,7 +15773,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15685,7 +15857,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -15770,7 +15942,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="readInterval"
-                   default="0.1"/>
+                   default="0.1"
+                   minInclusive="0"/>
             <field type="SFFloat"
                    accessType="inputOutput"
                    name="receivedPower"
@@ -15787,7 +15960,10 @@
                    accessType="inputOutput"
                    name="siteID"
                    default="0"/>
-            <field type="SFTime" accessType="outputOnly" name="timestamp"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="timestamp"
+                   minInclusive="0"/>
             <field type="SFInt32"
                    accessType="inputOutput"
                    name="transmitterApplicationID"
@@ -15811,7 +15987,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="writeInterval"
-                   default="1.0"/>
+                   default="1.0"
+                   minInclusive="0"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -15824,7 +16001,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15861,7 +16038,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -15902,7 +16079,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="disableTime"
-                   default="0"/>
+                   default="0"
+                   minInclusive="0"/>
             <field type="SFBool"
                    accessType="inputOutput"
                    name="enabled"
@@ -15973,11 +16151,11 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="bodies">
-               <enumeration value="body1"/>
-               <enumeration value="body2"/>
-               <enumeration value="bodies"/>
-            </containerFieldDefault>
+            <containerField default="bodies" type="">
+               <enumeration value="body1" appinfo=""/>
+               <enumeration value="body2" appinfo=""/>
+               <enumeration value="bodies" appinfo=""/>
+            </containerField>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidBodyContentModel" minOccurs="0"/>
@@ -16020,7 +16198,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="disableTime"
-                   default="0"/>
+                   default="0"
+                   minInclusive="0"/>
             <field type="SFBool"
                    accessType="inputOutput"
                    name="enabled"
@@ -16071,7 +16250,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidBodyCollectionContentModel" minOccurs="0"/>
@@ -16121,7 +16300,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -16182,7 +16361,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -16220,7 +16399,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -16317,7 +16496,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="fontStyle"/>
+            <containerField default="fontStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -16375,7 +16554,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -16418,7 +16597,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -16480,7 +16659,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel" minOccurs="0"/>
@@ -16544,7 +16723,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel"/>
@@ -16569,6 +16748,7 @@
                    accessType="inputOutput"
                    name="type"
                    default="VERTEX"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="shaderPartTypeValues">
                <enumeration value="VERTEX"/>
                <enumeration value="FRAGMENT"/>
@@ -16588,7 +16768,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="parts"/>
+            <containerField default="parts" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <SourceText/>
@@ -16612,6 +16792,7 @@
                    accessType="inputOutput"
                    name="type"
                    default="VERTEX"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="shaderPartTypeValues">
                <enumeration value="VERTEX"/>
                <enumeration value="FRAGMENT"/>
@@ -16631,7 +16812,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="programs"/>
+            <containerField default="programs" type="xs:NMTOKEN"/>
             <ContentModel>
                <FieldDeclaration minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -16684,7 +16865,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ShapeChildContentModel" minOccurs="0"/>
@@ -16776,7 +16957,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="readInterval"
-                   default="0.1"/>
+                   default="0.1"
+                   minInclusive="0"/>
             <field type="SFBool"
                    accessType="initializeOnly"
                    name="rtpHeaderExpected"
@@ -16797,7 +16979,10 @@
                    accessType="inputOutput"
                    name="tdlType"
                    default="0"/>
-            <field type="SFTime" accessType="outputOnly" name="timestamp"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="timestamp"
+                   minInclusive="0"/>
             <field type="SFInt32"
                    accessType="inputOutput"
                    name="whichGeometry"
@@ -16805,7 +16990,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="writeInterval"
-                   default="1.0"/>
+                   default="1.0"
+                   minInclusive="0"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -16818,7 +17004,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -16873,7 +17059,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel"/>
@@ -16954,7 +17140,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -17032,7 +17218,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -17112,7 +17298,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="SoundChildContentModel" minOccurs="0"/>
@@ -17150,7 +17336,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17209,7 +17395,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17256,7 +17442,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17303,7 +17489,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17350,7 +17536,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17445,7 +17631,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17487,7 +17673,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17530,7 +17716,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
@@ -17574,7 +17760,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17601,7 +17787,10 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_coordIndex"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_coordIndex"
+                   minInclusive="-1"/>
             <field type="SFFloat"
                    accessType="inputOutput"
                    name="speed"
@@ -17637,7 +17826,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="GeometryContentModel"/>
@@ -17702,7 +17891,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -17748,7 +17937,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17805,7 +17994,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -17855,7 +18044,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="TextChildContentModel"/>
@@ -17965,7 +18154,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="TextureBackgroundChildContentModel"
@@ -17997,7 +18186,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18026,7 +18215,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18055,7 +18244,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18101,7 +18290,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="texCoord"/>
+            <containerField default="texCoord" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18226,7 +18415,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="textureProperties"/>
+            <containerField default="textureProperties" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18270,7 +18459,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="textureTransform"/>
+            <containerField default="textureTransform" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18314,7 +18503,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="textureTransform"/>
+            <containerField default="textureTransform" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18346,7 +18535,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="textureTransform"/>
+            <containerField default="textureTransform" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18361,11 +18550,15 @@
                    accessType="inputOutput"
                    name="cycleInterval"
                    default="1.0"
-                   minExclusive="0"/>
-            <field type="SFTime" accessType="outputOnly" name="cycleTime"/>
+                   minInclusive="0"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="cycleTime"
+                   minInclusive="0"/>
             <field type="SFTime"
                    accessType="outputOnly"
                    name="elapsedTime"
+                   minInclusive="0"
                    inheritedFrom="X3DTimeDependentNode"/>
             <field type="SFBool"
                    accessType="inputOutput"
@@ -18417,7 +18610,10 @@
                    name="stopTime"
                    default="0"
                    inheritedFrom="X3DTimeDependentNode"/>
-            <field type="SFTime" accessType="outputOnly" name="time"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="time"
+                   minInclusive="0"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -18430,7 +18626,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18460,7 +18656,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18510,7 +18706,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="renderStyle"/>
+            <containerField default="renderStyle" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="Texture3DContentModel"/>
@@ -18564,7 +18760,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -18642,7 +18838,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -18701,7 +18897,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Anchor"/>
@@ -18883,7 +19079,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="readInterval"
-                   default="0.1"/>
+                   default="0.1"
+                   minInclusive="0"/>
             <field type="SFVec3f"
                    accessType="inputOutput"
                    name="relativeAntennaLocation"
@@ -18896,7 +19093,10 @@
                    accessType="inputOutput"
                    name="siteID"
                    default="0"/>
-            <field type="SFTime" accessType="outputOnly" name="timestamp"/>
+            <field type="SFTime"
+                   accessType="outputOnly"
+                   name="timestamp"
+                   minInclusive="0"/>
             <field type="SFFloat"
                    accessType="inputOutput"
                    name="transmitFrequencyBandwidth"
@@ -18912,7 +19112,8 @@
             <field type="SFTime"
                    accessType="inputOutput"
                    name="writeInterval"
-                   default="1.0"/>
+                   default="1.0"
+                   minInclusive="0"/>
             <field type="SFString"
                    accessType="inputOutput"
                    name="DEF"
@@ -18925,7 +19126,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19012,7 +19213,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -19098,7 +19299,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -19134,7 +19335,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19221,7 +19422,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="geometry"/>
+            <containerField default="geometry" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ComposedGeometryContentModel"
                                   minOccurs="0"
@@ -19334,7 +19535,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="material"/>
+            <containerField default="material" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19424,7 +19625,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="joints"/>
+            <containerField default="joints" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="RigidJointNodeContentModel" minOccurs="0"/>
@@ -19504,7 +19705,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19553,7 +19754,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Viewpoint"/>
@@ -19622,7 +19823,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="viewport"/>
+            <containerField default="viewport" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModel" minOccurs="0" maxOccurs="unbounded"/>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
@@ -19672,7 +19873,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19727,7 +19928,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="VolumeRenderStyleContentModel"/>
@@ -19772,7 +19973,10 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
-            <field type="MFInt32" accessType="inputOnly" name="set_coordIndex"/>
+            <field type="MFInt32"
+                   accessType="inputOnly"
+                   name="set_coordIndex"
+                   minInclusive="-1"/>
             <field type="SFFloat"
                    accessType="inputOutput"
                    name="speed"
@@ -19803,7 +20007,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="emitter"/>
+            <containerField default="emitter" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <NodeContentModel name="Coordinate"/>
@@ -19839,7 +20043,8 @@
                    accessType="inputOutput"
                    name="matchCriterion"
                    default="MATCH_ANY"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   baseType="pickSensorMatchCriterionValues">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -19881,7 +20086,9 @@
                    accessType="initializeOnly"
                    name="sortOrder"
                    default="CLOSEST"
-                   inheritedFrom="X3DPickSensorNode">
+                   inheritedFrom="X3DPickSensorNode"
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="pickSensorSortOrderValues">
                <enumeration value="ANY"/>
                <enumeration value="CLOSEST"/>
                <enumeration value="ALL"/>
@@ -19899,7 +20106,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
                <GroupContentModel name="GeometryContentModel"/>
@@ -19956,7 +20163,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="physics"/>
+            <containerField default="physics" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -19987,7 +20194,7 @@
                    accessType="inputOutput"
                    name="class"
                    inheritedFrom="globalAttributes"/>
-            <containerFieldDefault name="children"/>
+            <containerField default="children" type="xs:NMTOKEN"/>
             <ContentModel>
                <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
             </ContentModel>
@@ -20125,7 +20332,7 @@
                    accessType="inputOutput"
                    name="type"
                    use="required"
-                   baseType="fieldTypeName">
+                   baseType="fieldTypeNames">
                <enumeration value="SFBool"/>
                <enumeration value="MFBool"/>
                <enumeration value="SFColor"/>

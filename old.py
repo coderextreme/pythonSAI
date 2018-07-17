@@ -197,7 +197,7 @@ class InvalidFieldTypeException (BaseException):
         return
 """
 
-soup = BeautifulSoup(open("X3DObjectModel-3.3.xml"), "xml")
+soup = BeautifulSoup(open("X3dUnifiedObjectModel-4.0.xml"), "xml")
 
 classes = {}
 
