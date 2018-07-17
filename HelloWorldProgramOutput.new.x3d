@@ -147,7 +147,7 @@ function colorInput (eventValue) // Example source code
         <Shape DEF='TestShape1'>
             <Appearance DEF='TestAppearance1'>
                 <!-- ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java -->
-                <ProtoInstance name='ArtDeco01Material' containerField='material'>
+                <ProtoInstance name='ArtDeco01Material'>
                     <!-- [HelloWorldProgram diagnostic] ArtDeco01ProtoInstance.getNodeType()="Material" -->
                     <fieldValue name='description' value='ArtDeco01Material can substitute for a Material node'/>
                 </ProtoInstance>
@@ -157,7 +157,7 @@ function colorInput (eventValue) // Example source code
         <Shape DEF='TestShape2'>
             <Appearance DEF='TestAppearance2'>
                 <!-- ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java -->
-                <ProtoInstance DEF='ArtDeco02MaterialDEF' name='ArtDeco02Material' containerField='material'>
+                <ProtoInstance DEF='ArtDeco02MaterialDEF' name='ArtDeco02Material'>
                     <!-- [HelloWorldProgram diagnostic] ArtDeco02ProtoInstance.getNodeType()="ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time, TODO X3DJSAIL needs to add further capability." -->
                     <fieldValue name='description' value='ArtDeco02Material can substitute for another Material node'/>
                 </ProtoInstance>
@@ -167,7 +167,7 @@ function colorInput (eventValue) // Example source code
         <Shape DEF='TestShape3'>
             <Appearance DEF='TestAppearance3'>
                 <!-- ArtDeco02Material ProtoInstance USE goes here... -->
-                <ProtoInstance USE='ArtDeco02MaterialDEF' containerField='material'/>
+                <ProtoInstance USE='ArtDeco02MaterialDEF'/>
             </Appearance>
             <Cylinder height='0.001' radius='0.001'/>
         </Shape>
@@ -240,7 +240,7 @@ function clockTrigger (timeValue)
                 <MetadataString DEF='FindableMetadataStringTest' name='findThisNameValue' value='"test case"'/>
                 <Appearance DEF='DeclarativeAppearanceExample'>
                     <!-- DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance -->
-                    <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator' containerField='material'/>
+                    <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator'/>
                 </Appearance>
                 <Cone bottom='false' bottomRadius='0.05' height='0.1'/>
             </Shape>
