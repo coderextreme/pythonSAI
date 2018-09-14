@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+
+<!--
+  Copyright (c) 2000-2018 held by the author(s).  All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer
+      in the documentation and/or other materials provided with the
+      distribution.
+    * Neither the names of the Naval Postgraduate School (NPS)
+      Modeling Virtual Environments and Simulation (MOVES) Institute
+      (http://www.nps.edu and http://www.MovesInstitute.org)
+      nor the names of its contributors may be used to endorse or
+      promote products derived from this software without specific
+      prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<project name="Python SAI build" default="default" basedir=".">
+    <description>Builds, tests, and runs the X3D Python SAI Library project.</description>
+	
+    <property name="java.dir"                value=".."/>
+    <!-- java jvmarg parameters ignored on server unless forked -->
+    <property name="fork"                value="true"/>    <!-- note that Netbeans default path is built in and has to be overridden by going to     -->
+    
+    <property name="javac.verbose"           value="-verbose"/>
+    <property name="java.classes.dir"        value="${java.dir}/classes"/>
+    <property name="java.examples.dir"       value="${java.dir}/examples"/>
+    <property name="java.jars.dir"           value="${java.dir}/jars"/>
+    <property name="java.lib.dir"            location="${java.dir}/lib"/>
+    <property name="java.src.dir"            value="${java.dir}/src"/>
+    <property name="java.coderextreme.dir"       value="${java.src.dir}/net/coderextreme"/>
+    <property name="nashorn.dir"             value="${java.dir}/nashorn"/>
+    <property name="nashorn.examples.dir"       value="${nashorn.dir}/examples"/>
+    <property name="java.jars.dir"           value="${java.dir}/jars"/>
+    <property name="src.org.web3d.x3d.jsail" value="${java.src.dir}/org/web3d/x3d/jsail"/><!-- concretes  -->
+    <property name="src.org.web3d.x3d.sai"   value="${java.src.dir}/org/web3d/x3d/sai"/>  <!-- interfaces -->
+    <property name="jsai.classes.archive.jar.name" value="X3DJSAIL.3.3.classes.jar"/>
+    <property name=   "jsai.full.archive.jar.name" value="X3DJSAIL.3.3.full.jar"/>
+    <property name=   "saxon.jar.name" value="saxon9he.jar"/>
+    <property name=   "node" value="node.exe"/>
+	
+    <target name="all" depends="build.all"/>
+
+    <target name="build.all" description="Test Python output">
+		<exec executable="node">
+			<arg value="json2py.js"/>
+			<arg value="abox.json"/>
+			<arg value="arc.json"/>
+			<arg value="arc1.json"/>
+			<arg value="arc3.json"/>
+			<arg value="ArchHalf.json"/>
+			<arg value="ArchPrototype.json"/>
+			<arg value="arcold.json"/>
+			<arg value="asmallbox.json"/>
+			<arg value="ball.json"/>
+			<arg value="BindingOperations.json"/>
+			<arg value="Box.json"/>
+			<arg value="BoxManAnimationPanel.json"/>
+			<arg value="browser.json"/>
+			<arg value="bub.json"/>
+			<arg value="bubble.json"/>
+			<arg value="bubbles.json"/>
+			<arg value="CameraExamples.json"/>
+			<arg value="CameraPrototypes.json"/>
+			<arg value="CameraShape.json"/>
+			<arg value="CloudsProcedural4.json"/>
+			<arg value="cobweb.json"/>
+			<arg value="cobweb2.json"/>
+			<arg value="CoordinateAxes.json"/>
+			<arg value="cube.json"/>
+			<arg value="extrusion.json"/>
+			<arg value="ExtrusionHeart.json"/>
+			<arg value="flipp.json"/>
+			<arg value="flipper.json"/>
+			<arg value="flower.json"/>
+			<arg value="flowerproto.json"/>
+			<arg value="flowers.json"/>
+			<arg value="flowers2.json"/>
+			<arg value="flowers4.json"/>
+			<arg value="flowers7.json"/>
+			<arg value="force.json"/>
+			<arg value="fors.json"/>
+			<arg value="fors2.json"/>
+			<arg value="freewrlflowers.json"/>
+			<arg value="gears.json"/>
+			<arg value="geo.json"/>
+			<arg value="geobubbles.json"/>
+			<arg value="glflowers.json"/>
+			<arg value="gridBack.json"/>
+			<arg value="HeadsUpDisplayExample.json"/>
+			<arg value="HelloWorld.json"/>
+			<arg value="HelloWorldProgramOutput.json"/>
+			<arg value="IcosahedronSubdivisionLevel5.json"/>
+			<arg value="ifscube.json"/>
+			<arg value="ifscubeworks.json"/>
+			<arg value="indexedfaceset_pixeltexture_entire.json"/>
+			<arg value="indexedfaceset_pixeltexture_part.json"/>
+			<arg value="indexedfaceset_pixeltexture_plus.json"/>
+			<arg value="indexedfaceset_pixeltexture_whole.json"/>
+			<arg value="john.json"/>
+			<arg value="john2.json"/>
+			<arg value="john3.json"/>
+			<arg value="MFString.json"/>
+			<arg value="mirror.json"/>
+			<arg value="mirror2.json"/>
+			<arg value="NancyNativeTags.json"/>
+			<arg value="NancyPrototypes.json"/>
+			<arg value="ObliqueStrategies.json"/>
+			<arg value="PixelTextureComponentExamples.json"/>
+			<arg value="plainflowers.json"/>
+			<arg value="pp3.json"/>
+			<arg value="qq3.json"/>
+			<arg value="rgb_alpha.json"/>
+			<arg value="rubik.json"/>
+			<arg value="rubikFurnace.json"/>
+			<arg value="rubikOnFire.json"/>
+			<arg value="SFVec3f.json"/>
+			<arg value="sphere.json"/>
+			<arg value="sphereflowers.json"/>
+			<arg value="StringArrayEncodingExamples.json"/>
+			<arg value="Table5_18PixelTexture.json"/>
+			<arg value="Teapot.json"/>
+			<arg value="text.json"/>
+			<arg value="TextExamples.json"/>
+			<arg value="TextSpecialCharacters.json"/>
+			<arg value="x3dconnector.json"/>
+			<arg value="x3dconnectorProto.json"/>
+			<arg value="X3dHeaderPrototypeSyntaxExamples.json"/>
+			<arg value="x3domflowers.json"/>
+		</exec>
+		<exec executable="python">
+			<arg value="abox.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="arc.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="arc1.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="arc3.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ArchHalf.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ArchPrototype.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="arcold.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="asmallbox.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ball.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="BindingOperations.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="Box.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="BoxManAnimationPanel.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="browser.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="bub.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="bubble.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="bubbles.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="CameraExamples.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="CameraPrototypes.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="CameraShape.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="CloudsProcedural4.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="cobweb.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="cobweb2.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="CoordinateAxes.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="cube.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="extrusion.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ExtrusionHeart.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flipp.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flipper.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flower.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flowerproto.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flowers.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flowers2.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flowers4.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="flowers7.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="force.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="fors.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="fors2.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="freewrlflowers.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="gears.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="geo.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="geobubbles.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="glflowers.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="gridBack.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="HeadsUpDisplayExample.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="HelloWorld.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="HelloWorldProgramOutput.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="IcosahedronSubdivisionLevel5.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ifscube.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ifscubeworks.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="indexedfaceset_pixeltexture_entire.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="indexedfaceset_pixeltexture_part.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="indexedfaceset_pixeltexture_plus.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="indexedfaceset_pixeltexture_whole.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="john.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="john2.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="john3.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="MFString.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="mirror.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="mirror2.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="NancyNativeTags.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="NancyPrototypes.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="ObliqueStrategies.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="PixelTextureComponentExamples.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="plainflowers.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="pp3.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="qq3.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="rgb_alpha.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="rubik.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="rubikFurnace.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="rubikOnFire.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="SFVec3f.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="sphere.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="sphereflowers.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="StringArrayEncodingExamples.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="Table5_18PixelTexture.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="Teapot.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="text.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="TextExamples.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="TextSpecialCharacters.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="x3dconnector.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="x3dconnectorProto.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="X3dHeaderPrototypeSyntaxExamples.py"/>
+		</exec>
+		<exec executable="python">
+			<arg value="x3domflowers.py"/>
+		</exec>
+    </target>
+	
+</project>
