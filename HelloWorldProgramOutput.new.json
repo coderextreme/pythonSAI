@@ -64,7 +64,7 @@
           },
           {
             "@name":"modified",
-            "@content":"10 September 2018"
+            "@content":"16 March 2018"
           },
           {
             "@name":"generator",
@@ -175,13 +175,6 @@
               "@USE":"WorldInfoDEF"
             }
           },
-          { "MetadataString":
-            {
-              "@name":"test",
-              "@DEF":"scene.addChildMetadata",
-              "@value":["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
-            }
-          },
           { "LayerSet":
             {
               "@DEF":"scene.addChildLayerSetTest"
@@ -253,11 +246,6 @@
                 { "IndexedLineSet":
                   {
                     "@coordIndex":[0,1,2,3,4,0],
-                    "-children":[
-                      {
-                        "#comment":"Coordinate 3-tuple point count: 6"
-                      }
-                    ],
                     "-coord":
                       { "Coordinate":
                         {
@@ -271,7 +259,7 @@
           { "PositionInterpolator":
             {
               "@DEF":"BoxPathAnimator",
-              "@key":[0,0.125,0.375,0.625,0.875,1],
+              "@key":[0,0,0,0,0,1],
               "@keyValue":[0,1.5,0,2,1.5,0,2,1.5,-2,-2,1.5,-2,-2,1.5,0,0,1.5,0]
             }
           },
@@ -371,13 +359,13 @@
                           "@DEF":"ProxyShape",
                           "-children":[
                             {
-                              "#comment":"alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'"
+                              "#comment":"alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'"
                             },
                             {
-                              "#comment":"alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'"
+                              "#comment":"alternative XML encoding: Text string='\"One, Two, Quote\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'"
                             },
                             {
-                              "#comment":"alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"
+                              "#comment":"alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"
                             },
                             {
                               "#comment":"reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html"
@@ -386,7 +374,7 @@
                           "-geometry":
                             { "Text":
                               {
-                                "@string":["One, Two, Text","","He said, \"Immel did it!\" \"\""]
+                                "@string":["One, Two, Quote","","He said, \"Immel did it!\", \"\""]
                               }
                             }
                         }
@@ -411,7 +399,7 @@
           { "OrientationInterpolator":
             {
               "@DEF":"SpinInterpolator",
-              "@key":[0,0.5,1],
+              "@key":[0,0,1],
               "@keyValue":[0,1,0,4.712389,0,1,0,0,0,1,0,1.5707964]
             }
           },
@@ -473,6 +461,7 @@
 "// Browser.print('colorInput=' + eventValue + ', colorsOutput=' + colorsOutput + '\n');",
 "}",
 "",
+"",
 ""
 ]
                   }
@@ -480,7 +469,7 @@
                 { "ColorInterpolator":
                   {
                     "@DEF":"ColorAnimator",
-                    "@key":[0,0.5,1],
+                    "@key":[0,0,1],
                     "@keyValue":[0.9411765,1,1,0.29411766,0,0.50980395,0.9411765,1,1],
                     "-children":[
                       {
@@ -617,9 +606,7 @@
                     "-children":[
                       {
                         "#comment":"ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java"
-                      }
-                    ],
-                    "-material":
+                      },
                       { "ProtoInstance":
                         {
                           "@name":"ArtDeco01Material",
@@ -636,6 +623,7 @@
                           ]
                         }
                       }
+                    ]
                   }
                 },
               "-geometry":
@@ -656,9 +644,7 @@
                     "-children":[
                       {
                         "#comment":"ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java"
-                      }
-                    ],
-                    "-material":
+                      },
                       { "ProtoInstance":
                         {
                           "@name":"ArtDeco02Material",
@@ -676,6 +662,7 @@
                           ]
                         }
                       }
+                    ]
                   }
                 },
               "-geometry":
@@ -697,14 +684,13 @@
                     "-children":[
                       {
                         "#comment":"ArtDeco02Material ProtoInstance USE goes here..."
-                      }
-                    ],
-                    "-material":
+                      },
                       { "ProtoInstance":
                         {
                           "@USE":"ArtDeco02MaterialDEF"
                         }
                       }
+                    ]
                   }
                 },
               "-geometry":
@@ -888,6 +874,7 @@
 "\t}",
 "}",
 "",
+"",
 ""
 ]
                       }
@@ -920,15 +907,14 @@
                           "-children":[
                             {
                               "#comment":"DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance"
-                            }
-                          ],
-                          "-material":
+                            },
                             { "ProtoInstance":
                               {
                                 "@name":"MaterialModulator",
                                 "@DEF":"MyMaterialModulator"
                               }
                             }
+                          ]
                         }
                       },
                     "-geometry":
@@ -988,10 +974,7 @@
                   "#comment":"... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear="
                 },
                 {
-                  "#comment":"SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true"
-                },
-                {
-                  "#comment":"regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value"
+                  "#comment":"SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344"
                 }
               ]
             }
@@ -1036,7 +1019,7 @@
                         "#comment":"Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d"
                       },
                       {
-                        "#comment":"Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\""
+                        "#comment":"Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\""
                       }
                     ]
                   }

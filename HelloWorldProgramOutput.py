@@ -66,7 +66,7 @@ meta10.setContent("6 September 2016")
 head1.addMeta(meta10)
 meta11 = metaObject()
 meta11.setName("modified")
-meta11.setContent("16 March 2018")
+meta11.setContent("10 September 2018")
 
 head1.addMeta(meta11)
 meta12 = metaObject()
@@ -227,6 +227,8 @@ Shape42.setAppearance(Appearance43)
 IndexedLineSet45 = IndexedLineSetObject()
 IndexedLineSet45.setCoordIndex([0,1,2,3,4,0])
 
+
+IndexedLineSet45.addComments(CommentsBlock("""Coordinate 3-tuple point count: 6"""))
 Coordinate46 = CoordinateObject()
 Coordinate46.setPoint([0,1.5,0,2,1.5,0,2,1.5,-2,-2,1.5,-2,-2,1.5,0,0,1.5,0])
 
@@ -307,15 +309,15 @@ Shape61 = ShapeObject()
 Shape61.setDEF("ProxyShape")
 
 
-Shape61.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'"""))
+Shape61.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'"""))
 
-Shape61.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Quote\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'"""))
+Shape61.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'"""))
 
-Shape61.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"""))
+Shape61.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"""))
 
 Shape61.addComments(CommentsBlock("""reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html"""))
 Text62 = TextObject()
-Text62.setString(["One, Two, Quote","","He said, \"Immel did it!\", \"\""])
+Text62.setString(["One, Two, Text","","He said, \"Immel did it!\" \"\""])
 
 Shape61.setGeometry(Text62)
 Collision60.setProxy(Shape61)
@@ -809,7 +811,9 @@ Group138.addComments(CommentsBlock("""MFFloat default=, initial=1 2 3, append(5)
 
 Group138.addComments(CommentsBlock("""... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear="""))
 
-Group138.addComments(CommentsBlock("""SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344"""))
+Group138.addComments(CommentsBlock("""SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true"""))
+
+Group138.addComments(CommentsBlock("""regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value"""))
 Scene26.addChild(Group138)
 Sound139 = SoundObject()
 Sound139.setLocation([0,1.6,0])
@@ -836,7 +840,7 @@ MovieTexture142.setUrl(["mpgsys.mpg","http://www.web3d.org/x3d/content/examples/
 
 MovieTexture142.addComments(CommentsBlock("""Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d"""))
 
-MovieTexture142.addComments(CommentsBlock("""Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\""""))
+MovieTexture142.addComments(CommentsBlock("""Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\""""))
 Sound141.setSource(MovieTexture142)
 Scene26.addChild(Sound141)
 
@@ -873,4 +877,4 @@ Shape143.setGeometry(Extrusion146)
 Scene26.addChild(Shape143)
 X3D0.setScene(Scene26)
 
-X3D0.toFileX3D("./HelloWorldProgramOutput.new.x3d")
+X3D0.toFileX3D("././HelloWorldProgramOutput.new.x3d")

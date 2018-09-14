@@ -9,6 +9,8 @@ X3D0.setVersion("3.3")
 
 head1 = headObject()
 
+
+head1.addComments(CommentsBlock("""Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON"""))
 meta2 = metaObject()
 meta2.setName("title")
 meta2.setContent("HelloWorld.x3d")
@@ -124,8 +126,6 @@ meta24.setName("reference")
 meta24.setContent("HelloWorld.json")
 
 head1.addMeta(meta24)
-
-head1.addComments(CommentsBlock("""Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON"""))
 X3D0.setHead(head1)
 Scene25 = SceneObject()
 
@@ -149,22 +149,22 @@ Transform29.setRotation([0,1,0,3])
 
 Shape30 = ShapeObject()
 
-Sphere31 = SphereObject()
+Appearance31 = AppearanceObject()
 
-Shape30.setGeometry(Sphere31)
-Appearance32 = AppearanceObject()
+Material32 = MaterialObject()
+Material32.setDEF("MaterialLightBlue")
+Material32.setDiffuseColor([0.1,0.5,1])
 
-Material33 = MaterialObject()
-Material33.setDEF("MaterialLightBlue")
-Material33.setDiffuseColor([0.1,0.5,1])
+Appearance31.setMaterial(Material32)
+ImageTexture33 = ImageTextureObject()
+ImageTexture33.setDEF("ImageCloudlessEarth")
+ImageTexture33.setUrl(["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"])
 
-Appearance32.setMaterial(Material33)
-ImageTexture34 = ImageTextureObject()
-ImageTexture34.setDEF("ImageCloudlessEarth")
-ImageTexture34.setUrl(["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"])
+Appearance31.setTexture(ImageTexture33)
+Shape30.setAppearance(Appearance31)
+Sphere34 = SphereObject()
 
-Appearance32.setTexture(ImageTexture34)
-Shape30.setAppearance(Appearance32)
+Shape30.setGeometry(Sphere34)
 Transform29.addChild(Shape30)
 Group27.addChild(Transform29)
 Transform35 = TransformObject()
@@ -172,25 +172,25 @@ Transform35.setTranslation([0,-2,0])
 
 Shape36 = ShapeObject()
 
-Text37 = TextObject()
-Text37.setDEF("TextMessage")
-Text37.setString(["Hello","world!"])
+Appearance37 = AppearanceObject()
 
-FontStyle38 = FontStyleObject()
-FontStyle38.setJustify(["MIDDLE","MIDDLE"])
+Material38 = MaterialObject()
+Material38.setUSE("MaterialLightBlue")
 
-Text37.setFontStyle(FontStyle38)
-Shape36.setGeometry(Text37)
-Appearance39 = AppearanceObject()
+Appearance37.setMaterial(Material38)
+Shape36.setAppearance(Appearance37)
+Text39 = TextObject()
+Text39.setDEF("TextMessage")
+Text39.setString(["Hello","world!"])
 
-Material40 = MaterialObject()
-Material40.setUSE("MaterialLightBlue")
+FontStyle40 = FontStyleObject()
+FontStyle40.setJustify(["MIDDLE","MIDDLE"])
 
-Appearance39.setMaterial(Material40)
-Shape36.setAppearance(Appearance39)
+Text39.setFontStyle(FontStyle40)
+Shape36.setGeometry(Text39)
 Transform35.addChild(Shape36)
 Group27.addChild(Transform35)
 Scene25.addChild(Group27)
 X3D0.setScene(Scene25)
 
-X3D0.toFileX3D("././HelloWorld.new.x3d")
+X3D0.toFileX3D("././HelloWorld.new.new.x3d")
