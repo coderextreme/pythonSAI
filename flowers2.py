@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -218,8 +220,7 @@ Script29.setSourceCode("ecmascript:\n"+
 "	}\n"+
 "	resolution = 100;\n"+
 "	generateCoordinates(resolution);\n"+
-"}\n"+
-"")
+"}")
 Group13.addChild(Script29)
 Script33 = ScriptObject()
 Script33.setDEF("OrbitScript2")
@@ -283,7 +284,7 @@ Script33.setSourceCode("ecmascript:\n"+
 "	}\n"+
 "	phi += delta;\n"+
 "     }\n"+
-"     \n"+
+"\n"+
 "     coordinates = new MFVec3f(localc);\n"+
 "}\n"+
 "\n"+
@@ -314,8 +315,7 @@ Script33.setSourceCode("ecmascript:\n"+
 "	}\n"+
 "	resolution = 100;\n"+
 "	generateCoordinates(resolution);\n"+
-"}\n"+
-"")
+"}")
 Group13.addChild(Script33)
 Scene10.addChild(Group13)
 ROUTE37 = ROUTEObject()
@@ -383,4 +383,4 @@ ROUTE45.setToNode("OrbitTransform2")
 Scene10.addChild(ROUTE45)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("././flowers2.new.x3d")
+X3D0.toFileX3D("./flowers2.new.x3d")

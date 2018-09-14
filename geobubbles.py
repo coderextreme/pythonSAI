@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -136,8 +138,7 @@ Script18.setSourceCode("ecmascript:\n"+
 "                        position = new MFVec3d();\n"+
 "                        position[0] = new SFVec3d(positions[ov][0],positions[ov][1],positions[ov][2]);\n"+
 "                        position[1] = new SFVec3d(positions[vc][0],positions[vc][1],positions[vc][2]);\n"+
-"               }\n"+
-"")
+"               }")
 Scene8.addChild(Script18)
 ROUTE23 = ROUTEObject()
 ROUTE23.setFromNode("TourTime")
@@ -169,4 +170,4 @@ ROUTE26.setToField("set_position")
 Scene8.addChild(ROUTE26)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././geobubbles.new.x3d")
+X3D0.toFileX3D("./geobubbles.new.x3d")

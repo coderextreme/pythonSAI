@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -233,4 +235,4 @@ Transform15.addChild(Shape16)
 Scene11.addChild(Transform15)
 X3D0.setScene(Scene11)
 
-X3D0.toFileX3D("././ball.new.x3d")
+X3D0.toFileX3D("./ball.new.x3d")

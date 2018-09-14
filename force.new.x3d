@@ -51,7 +51,6 @@ ecmascript:
                                                 keyValue = new MFVec3f([old, translation]);
 						// Browser.println(translation);
 					}
-
 ]]>
                     </Script>
                     <TimeSensor DEF='nodeClock' cycleInterval='3.0' loop='true'/>
@@ -93,7 +92,7 @@ ecmascript:
 		        spine = new MFVec3f([value, spine[1]]);
 		    }
                 }
-                
+
                 function set_endB(value) {
 		    if (typeof spine === 'undefined') {
 		        spine = new MFVec3f([value, value]);
@@ -101,11 +100,10 @@ ecmascript:
 		        spine = new MFVec3f([spine[0], value]);
 		    }
                 }
-                
+
                 function set_spine(value) {
                     spine = value;
                 }
-
 ]]>
                     </Script>
                     <ROUTE fromField='spine' fromNode='MoveCylinder' toField='set_spine' toNode='extrusion'/>
@@ -161,9 +159,8 @@ ecmascript:
 				  ]
 				}
 			});
-                
-        }
 
+        }
 ]]>
         </Script>
         <ROUTE fromField='isActive' fromNode='clickGenerator' toField='add_node' toNode='clickHandler'/>

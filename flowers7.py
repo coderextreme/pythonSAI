@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -418,8 +420,7 @@ Script54.setSourceCode("ecmascript:\n"+
 "                    top[0] = topUrls[side];\n"+
 "                    bottom[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }\n"+
-"")
+"        }")
 Scene9.addChild(Script54)
 
 Scene9.addComments(CommentsBlock("""<TimeSensor DEF=\"Clock\" cycleInterval=\"45\" loop='true'/> <ROUTE fromNode='Clock' fromField='fraction_changed' toNode='UrlSelector' toField='set_fraction'/> <ROUTE fromNode='UrlSelector' fromField='front' toNode='background' toField='frontUrl'/> <ROUTE fromNode='UrlSelector' fromField='back' toNode='background' toField='backUrl'/> <ROUTE fromNode='UrlSelector' fromField='left' toNode='background' toField='leftUrl'/> <ROUTE fromNode='UrlSelector' fromField='right' toNode='background' toField='rightUrl'/> <ROUTE fromNode='UrlSelector' fromField='top' toNode='background' toField='topUrl'/> <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='background' toField='bottomUrl'/> <ROUTE fromNode='UrlSelector' fromField='front' toNode='frontShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='back' toNode='backShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='left' toNode='leftShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='right' toNode='rightShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='top' toNode='topShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='bottomShader' toField='url'/>"""))
@@ -509,8 +510,7 @@ Script69.setSourceCode("ecmascript:\n"+
 "	if (d > 20) {\n"+
 "		d = 4;\n"+
 "	}\n"+
-"}\n"+
-"")
+"}")
 Scene9.addChild(Script69)
 TimeSensor77 = TimeSensorObject()
 TimeSensor77.setDEF("TourTime")
@@ -611,4 +611,4 @@ ROUTE90.setToField("tdelta")
 Scene9.addChild(ROUTE90)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././flowers7.new.x3d")
+X3D0.toFileX3D("./flowers7.new.x3d")

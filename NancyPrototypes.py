@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -3770,4 +3772,4 @@ ROUTE699.setToNode("hanim_HumanoidRoot")
 Scene14.addChild(ROUTE699)
 X3D0.setScene(Scene14)
 
-X3D0.toFileX3D("././NancyPrototypes.new.x3d")
+X3D0.toFileX3D("./NancyPrototypes.new.x3d")

@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -42,8 +44,7 @@ Script8.setDEF("Browser")
 Script8.setSourceCode("ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
-"                }\n"+
-"")
+"                }")
 Scene7.addChild(Script8)
 Script9 = ScriptObject()
 Script9.setDEF("Clouds")
@@ -58,9 +59,8 @@ Script9.setSourceCode("ecmascript:\n"+
 "'	Transform		\\n'+\n"+
 "'    ' + '               	\\n';\n"+
 "\n"+
-"}\n"+
-"")
+"}")
 Scene7.addChild(Script9)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././browser.new.x3d")
+X3D0.toFileX3D("./browser.new.x3d")

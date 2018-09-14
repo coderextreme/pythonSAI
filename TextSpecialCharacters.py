@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -87,14 +89,14 @@ Shape16.addComments(CommentsBlock("""ampersand & is &amp; and needs to be escape
 
 Shape16.addComments(CommentsBlock("""quotation \" is &quot; and isn't needed if single-quote delimiters used for string='value' attribute"""))
 
-Shape16.addComments(CommentsBlock("""quotation \" can be used within an X3D string if escaped with backslash \\ as \\\""""))
+Shape16.addComments(CommentsBlock("""quotation \" can be used within an X3D string if escaped with backslash \\ as \\\"\""""))
 
 Shape16.addComments(CommentsBlock("""backslash \\ is used as escape character for \" (and itself) in X3D"""))
 
 Shape16.addComments(CommentsBlock("""character entities are listed in HTML specification and are good for any XML"""))
 Text17 = TextObject()
 Text17.setDEF("DefaultText")
-Text17.setString(["Character entity substitutions:","empty string \"\" skips a line:","","apostrophe ' is &apos;","ampersand & is &amp;","quote mark \" is &quot;","backslash \\ is X3D escape character","double backslash \\\\ is X3D backslash \\ character","Pi Π is &#928; XML character entity"])
+Text17.setString(["Character entity substitutions:","empty string \"\" skips a line:","","apostrophe ' is &apos;","ampersand & is &amp;","quote mark \" is &quot;","backslash \\\\ is X3D escape character","double backslash \\\\\\\\ is X3D backslash \\\\ character","Pi Π is &#928; XML character entity"])
 
 FontStyle18 = FontStyleObject()
 FontStyle18.setDEF("CenteredFontStyle")
@@ -113,4 +115,4 @@ Shape16.setAppearance(Appearance19)
 Scene13.addChild(Shape16)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("././TextSpecialCharacters.new.x3d")
+X3D0.toFileX3D("./TextSpecialCharacters.new.x3d")

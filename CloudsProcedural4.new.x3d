@@ -431,7 +431,6 @@ cumulus();
 
 cirrus();
 }
-
 ]]>
             </Script>
             <DirectionalLight ambientIntensity='1.0' color='1 0 0' direction='-1 -1 0' global='true'/>

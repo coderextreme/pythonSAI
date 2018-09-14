@@ -32,7 +32,6 @@ ecmascript:
                     keyValue = new MFVec3f([old, translation]);
 		    // Browser.println(keyValue);
 		}
-
 ]]>
             </Script>
             <TimeSensor DEF='DECLpoint_G1_CL1' cycleInterval='3.0' loop='true'/>
@@ -62,7 +61,6 @@ ecmascript:
                     keyValue = new MFVec3f([old, translation]);
 		    // Browser.println(keyValue);
 		}
-
 ]]>
             </Script>
             <TimeSensor DEF='DECLpoint_G2_CL1' cycleInterval='3.0' loop='true'/>
@@ -142,7 +140,6 @@ ecmascript:
         function set_endpoint(val,t){
             recompute_and_route(startnode.translation,val);
         }
-
 ]]>
             </Script>
         </Group>

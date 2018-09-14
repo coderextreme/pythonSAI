@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -374,7 +376,7 @@ Script63.setSourceCode("ecmascript:\n"+
 "    // new value provided\n"+
 "    priorInputvalue = inputValue;\n"+
 "    // Browser.print ('\\ntimeEvent inputValue=' + inputValue);\n"+
-"        \n"+
+"\n"+
 "    // mimics user execution of Figure 4.1 steps t_0 through t_8\n"+
 "    if (inputValue == 0)\n"+
 "    {\n"+
@@ -445,8 +447,7 @@ Script63.setSourceCode("ecmascript:\n"+
 "function view5Bound (inputValue)\n"+
 "{\n"+
 "    Browser.print (', view5Bound ' + (inputValue));\n"+
-"}\n"+
-"")
+"}")
 Transform47.addChild(Script63)
 
 Transform47.addComments(CommentsBlock("""drive Script with TimeSensor clock"""))
@@ -527,4 +528,4 @@ Transform47.addChild(ROUTE84)
 Scene17.addChild(Transform47)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././BindingOperations.new.x3d")
+X3D0.toFileX3D("./BindingOperations.new.x3d")

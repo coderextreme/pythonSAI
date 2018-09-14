@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -145,8 +147,7 @@ Script27.setSourceCode("ecmascript:\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}\n"+
-"")
+"					}")
 ProtoBody12.addChild(Script27)
 TimeSensor32 = TimeSensorObject()
 TimeSensor32.setDEF("nodeClock")
@@ -266,7 +267,7 @@ Script46.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"                \n"+
+"\n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -274,11 +275,10 @@ Script46.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"                \n"+
+"\n"+
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
-"                }\n"+
-"")
+"                }")
 ProtoBody41.addChild(Script46)
 ROUTE53 = ROUTEObject()
 ROUTE53.setFromNode("MoveCylinder")
@@ -352,4 +352,4 @@ ROUTE64.setToField("set_positionB")
 Scene8.addChild(ROUTE64)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././fors.new.x3d")
+X3D0.toFileX3D("./fors.new.x3d")

@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -78,7 +80,7 @@ field15.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 Script12.addField(field15)
 
 Script12.setSourceCode("ecmascript:\n"+
-"    \n"+
+"\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
 "var g = 5;\n"+
@@ -163,8 +165,7 @@ Script12.setSourceCode("ecmascript:\n"+
 "		h = 4;\n"+
 "	}\n"+
 "	updateCoordinates(resolution);\n"+
-"}\n"+
-"")
+"}")
 Scene1.addChild(Script12)
 TimeSensor16 = TimeSensorObject()
 TimeSensor16.setDEF("Clock")
@@ -195,4 +196,4 @@ ROUTE19.setToField("set_fraction")
 Scene1.addChild(ROUTE19)
 X3D0.setScene(Scene1)
 
-X3D0.toFileX3D("././flower.new.x3d")
+X3D0.toFileX3D("./flower.new.x3d")

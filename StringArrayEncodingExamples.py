@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -102,7 +104,7 @@ Text21.setString(["One, Two, Three","","He said, \"Immel did it!\""])
 
 Text21.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'"""))
 
-Text21.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"Immel did it!\\\"\"})"""))
+Text21.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})"""))
 FontStyle22 = FontStyleObject()
 FontStyle22.setJustify(["MIDDLE","MIDDLE"])
 FontStyle22.setStyle("BOLD")
@@ -119,4 +121,4 @@ Shape20.setAppearance(Appearance23)
 Scene17.addChild(Shape20)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././StringArrayEncodingExamples.new.x3d")
+X3D0.toFileX3D("./StringArrayEncodingExamples.new.x3d")

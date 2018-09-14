@@ -84,7 +84,6 @@ ecmascript:
 				velocity.z += Math.random() * 0.2 - 0.1;
 			    }
 			}
-
 ]]>
                 </Script>
                 <TimeSensor DEF='TourTime' cycleInterval='0.15' loop='true'/>

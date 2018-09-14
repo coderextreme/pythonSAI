@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -1101,8 +1103,7 @@ Script70.setSourceCode("ecmascript:\n"+
 "         Browser.print ('[Camera: ' + description + '] ' + outputString + '\\n');\n"+
 "    else\n"+
 "         Browser.print ('[Camera] ' + outputString + '\\n');\n"+
-"}\n"+
-"")
+"}")
 ProtoBody42.addChild(Script70)
 ROUTE126 = ROUTEObject()
 ROUTE126.setFromField("position")
@@ -1514,8 +1515,7 @@ Script146.setSourceCode("ecmascript:\n"+
 "         Browser.print ('[CameraShot: ' + description + '] ' + outputString + '\\n');\n"+
 "    else\n"+
 "         Browser.print ('[CameraShot] ' + outputString + '\\n');\n"+
-"}\n"+
-"")
+"}")
 ProtoBody145.addChild(Script146)
 
 ProtoBody145.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody"""))
@@ -1874,8 +1874,7 @@ Script190.setSourceCode("ecmascript:\n"+
 "         Browser.print ('[CameraMovement: ' + description + '] ' + outputString + '\\n');\n"+
 "    else\n"+
 "         Browser.print ('[CameraMovement] ' + outputString + '\\n');\n"+
-"}\n"+
-"")
+"}")
 ProtoBody189.addChild(Script190)
 
 ProtoBody189.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody"""))
@@ -2175,8 +2174,7 @@ Script230.setSourceCode("ecmascript:\n"+
 "         Browser.print ('[OfflineRender: ' + description + '] ' + outputString + '\\n');\n"+
 "    else\n"+
 "         Browser.print ('[OfflineRender] ' + outputString + '\\n');\n"+
-"}\n"+
-"")
+"}")
 ProtoBody229.addChild(Script230)
 
 ProtoBody229.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody"""))
@@ -2216,4 +2214,4 @@ Anchor255.addChild(Transform256)
 Scene16.addChild(Anchor255)
 X3D0.setScene(Scene16)
 
-X3D0.toFileX3D("././CameraPrototypes.new.x3d")
+X3D0.toFileX3D("./CameraPrototypes.new.x3d")

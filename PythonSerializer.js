@@ -19,6 +19,9 @@ PythonSerializer.prototype = {
 
 		var str = "";
 		str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
+
+              	str += "import jnius_config\n";
+		str += "jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')\n";
 		str += "from jnius import autoclass\n";
 		str += "from X3Dautoclass import *\n";
 

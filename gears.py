@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -34,7 +36,7 @@ meta6.setContent("4 April 2017")
 head1.addMeta(meta6)
 meta7 = metaObject()
 meta7.setName("generator")
-meta7.setContent("convertStlToJson.js: https://github.com/coderextreme/X3DJSONLD/convertStlToJson.js")
+meta7.setContent("convertStlToJson.js:  https://github.com/coderextreme/X3DJSONLD/convertStlToJson.js")
 
 head1.addMeta(meta7)
 meta8 = metaObject()
@@ -94,4 +96,4 @@ Group14.addChild(Shape15)
 Scene12.addChild(Group14)
 X3D0.setScene(Scene12)
 
-X3D0.toFileX3D("././gears.new.x3d")
+X3D0.toFileX3D("./gears.new.x3d")

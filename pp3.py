@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -284,8 +286,7 @@ Script60.setSourceCode("ecmascript:\n"+
 "\n"+
 "function set_rightstring(rightstr) {\n"+
 "	rightlines = new MFString(rightstr);\n"+
-"}\n"+
-"")
+"}")
 ProtoBody12.addChild(Script60)
 Script63 = ScriptObject()
 Script63.setDEF("UpSingleToMultiString")
@@ -311,8 +312,7 @@ Script63.setSourceCode("ecmascript:\n"+
 "\n"+
 "function set_upstring(upstr) {\n"+
 "	uplines = new MFString(upstr);\n"+
-"}\n"+
-"")
+"}")
 ProtoBody12.addChild(Script63)
 Script66 = ScriptObject()
 Script66.setDEF("CenterSingleToMultiString")
@@ -338,8 +338,7 @@ Script66.setSourceCode("ecmascript:\n"+
 "\n"+
 "function set_centerstring(centerstr) {\n"+
 "	centerlines = new MFString(centerstr);\n"+
-"}\n"+
-"")
+"}")
 ProtoBody12.addChild(Script66)
 ROUTE69 = ROUTEObject()
 ROUTE69.setFromField("enteredText")
@@ -440,4 +439,4 @@ Transform84.addChild(ProtoInstance85)
 Scene10.addChild(Transform84)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("././pp3.new.x3d")
+X3D0.toFileX3D("./pp3.new.x3d")

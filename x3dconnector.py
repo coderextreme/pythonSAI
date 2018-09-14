@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -284,8 +286,7 @@ Script39.setSourceCode("ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }\n"+
-"")
+"        }")
 ProtoBody38.addChild(Script39)
 ProtoDeclare30.setProtoBody(ProtoBody38)
 Scene7.addChild(ProtoDeclare30)
@@ -350,4 +351,4 @@ ROUTE65.setToField("set_endpoint")
 Scene7.addChild(ROUTE65)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././x3dconnector.new.x3d")
+X3D0.toFileX3D("./x3dconnector.new.x3d")

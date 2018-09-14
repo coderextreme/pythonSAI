@@ -67,7 +67,6 @@ function set_fraction(value) {
 	initialize();
     }
 }
-
 ]]>
                     </Script>
                     <TimeSensor DEF='bubbleClock' cycleInterval='10.0' loop='true'/>

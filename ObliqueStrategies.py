@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -524,4 +526,4 @@ Transform96.addChild(Anchor97)
 Scene28.addChild(Transform96)
 X3D0.setScene(Scene28)
 
-X3D0.toFileX3D("././ObliqueStrategies.new.x3d")
+X3D0.toFileX3D("./ObliqueStrategies.new.x3d")

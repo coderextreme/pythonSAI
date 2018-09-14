@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -354,8 +356,7 @@ Script47.setSourceCode("ecmascript:\n"+
 "		    top_changed[0] = topUrls[side];\n"+
 "		    bottom_changed[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }\n"+
-"")
+"        }")
 Transform19.addChild(Script47)
 TimeSensor62 = TimeSensorObject()
 TimeSensor62.setDEF("Clock")
@@ -457,4 +458,4 @@ Transform19.addChild(ROUTE75)
 Scene10.addChild(Transform19)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("././mirror.new.x3d")
+X3D0.toFileX3D("./mirror.new.x3d")

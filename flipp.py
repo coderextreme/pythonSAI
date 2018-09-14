@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -147,4 +149,4 @@ ROUTE27.setToField("set_fraction")
 Scene9.addChild(ROUTE27)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././flipp.new.x3d")
+X3D0.toFileX3D("./flipp.new.x3d")

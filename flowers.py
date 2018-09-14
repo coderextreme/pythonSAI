@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -474,8 +476,7 @@ Script57.setSourceCode("ecmascript:\n"+
 "				}\n"+
 "				resolution = 100;\n"+
 "				updateCoordinates(resolution);\n"+
-"			}\n"+
-"")
+"			}")
 ProtoBody13.addChild(Script57)
 TimeSensor69 = TimeSensorObject()
 TimeSensor69.setDEF("TourTime")
@@ -537,4 +538,4 @@ Transform76.addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <Proto
 Scene9.addChild(Transform76)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././flowers.new.x3d")
+X3D0.toFileX3D("./flowers.new.x3d")

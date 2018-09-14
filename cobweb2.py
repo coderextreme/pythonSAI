@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -175,8 +177,7 @@ Script20.setSourceCode("ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}\n"+
-"")
+"}")
 Transform15.addChild(Script20)
 TimeSensor26 = TimeSensorObject()
 TimeSensor26.setDEF("bubbleClock")
@@ -230,4 +231,4 @@ ProtoInstance33.setDEF("bubbleD")
 Scene9.addChild(ProtoInstance33)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././cobweb2.new.x3d")
+X3D0.toFileX3D("./cobweb2.new.x3d")

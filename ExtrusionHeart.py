@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -80,4 +82,4 @@ Transform12.addChild(Shape13)
 Scene10.addChild(Transform12)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("././ExtrusionHeart.new.x3d")
+X3D0.toFileX3D("./ExtrusionHeart.new.x3d")

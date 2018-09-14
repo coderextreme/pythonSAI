@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -382,4 +384,4 @@ ProtoInstance87.addFieldValue(fieldValue89)
 Scene7.addChild(ProtoInstance87)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././rubikOnFire.new.x3d")
+X3D0.toFileX3D("./rubikOnFire.new.x3d")

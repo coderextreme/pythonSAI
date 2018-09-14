@@ -106,7 +106,6 @@ function initialize() {
 function set_rightstring(rightstr) {
 	rightlines = new MFString(rightstr);
 }
-
 ]]>
                 </Script>
                 <Script DEF='UpSingleToMultiString'>
@@ -122,7 +121,6 @@ function initialize() {
 function set_upstring(upstr) {
 	uplines = new MFString(upstr);
 }
-
 ]]>
                 </Script>
                 <Script DEF='CenterSingleToMultiString'>
@@ -138,7 +136,6 @@ function initialize() {
 function set_centerstring(centerstr) {
 	centerlines = new MFString(centerstr);
 }
-
 ]]>
                 </Script>
                 <ROUTE fromField='enteredText' fromNode='CenterSensor' toField='set_centerstring' toNode='CenterSingleToMultiString'/>

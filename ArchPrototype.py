@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -500,4 +502,4 @@ Inline81.setUrl(["../data/CoordinateAxes.x3d"])
 Scene13.addChild(Inline81)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("././ArchPrototype.new.x3d")
+X3D0.toFileX3D("./ArchPrototype.new.x3d")

@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -560,8 +562,7 @@ Script32.setSourceCode("ecmascript:\n"+
 "cumulus();\n"+
 "\n"+
 "cirrus();\n"+
-"}\n"+
-"")
+"}")
 Group28.addChild(Script32)
 DirectionalLight38 = DirectionalLightObject()
 DirectionalLight38.setAmbientIntensity(1)
@@ -573,4 +574,4 @@ Group28.addChild(DirectionalLight38)
 Scene11.addChild(Group28)
 X3D0.setScene(Scene11)
 
-X3D0.toFileX3D("././CloudsProcedural4.new.x3d")
+X3D0.toFileX3D("./CloudsProcedural4.new.x3d")

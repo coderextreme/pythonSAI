@@ -499,7 +499,6 @@ function alwaysPrint (outputValue)
     else
          Browser.print ('[Camera] ' + outputString + '\n');
 }
-
 ]]>
                 </Script>
                 <ROUTE fromField='position' fromNode='CameraScript' toField='position' toNode='CameraViewpoint'/>
@@ -654,7 +653,6 @@ function alwaysPrint (outputValue)
     else
          Browser.print ('[CameraShot] ' + outputString + '\n');
 }
-
 ]]>
                 </Script>
                 <!-- Add any ROUTEs here, going from Script to other nodes within ProtoBody -->
@@ -798,7 +796,6 @@ function alwaysPrint (outputValue)
     else
          Browser.print ('[CameraMovement] ' + outputString + '\n');
 }
-
 ]]>
                 </Script>
                 <!-- Add any ROUTEs here, going from Script to other nodes within ProtoBody -->
@@ -903,7 +900,6 @@ function alwaysPrint (outputValue)
     else
          Browser.print ('[OfflineRender] ' + outputString + '\n');
 }
-
 ]]>
                 </Script>
                 <!-- Add any ROUTEs here, going from Script to other nodes within ProtoBody -->

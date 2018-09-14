@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -192,8 +194,7 @@ Script40.setSourceCode("ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(translation);\n"+
-"		}\n"+
-"")
+"		}")
 Transform32.addChild(Script40)
 TimeSensor45 = TimeSensorObject()
 TimeSensor45.setDEF("CL1")
@@ -393,8 +394,7 @@ Script59.setSourceCode("ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val || endnode.translation);\n"+
-"        }\n"+
-"")
+"        }")
 ProtoBody58.addChild(Script59)
 ProtoDeclare50.setProtoBody(ProtoBody58)
 Scene7.addChild(ProtoDeclare50)
@@ -573,4 +573,4 @@ ROUTE109.setToField("set_endpoint")
 Scene7.addChild(ROUTE109)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././arcold.new.x3d")
+X3D0.toFileX3D("./arcold.new.x3d")

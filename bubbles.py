@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -298,7 +300,7 @@ Script47.setSourceCode("ecmascript:\n"+
 "                            lastKey = Math.round(Math.random()*(positions.length-1));\n"+
 "                        } while (lastKey === ov);\n"+
 "                        var vc = lastKey;\n"+
-"                        \n"+
+"\n"+
 "                        orientation_changed = new MFRotation();\n"+
 "                        orientation_changed[0] = new SFRotation(orientations[ov].x, orientations[ov].y, orientations[ov].z, orientations[ov].w);\n"+
 "                        orientation_changed[1] = new SFRotation(orientations[vc].x, orientations[vc].y, orientations[vc].z, orientations[vc].w);\n"+
@@ -306,8 +308,7 @@ Script47.setSourceCode("ecmascript:\n"+
 "                        position_changed[0] = new SFVec3f(positions[ov].x,positions[ov].y,positions[ov].z);\n"+
 "                        position_changed[1] = new SFVec3f(positions[vc].x,positions[vc].y,positions[vc].z);\n"+
 "                    // }\n"+
-"               }\n"+
-"")
+"               }")
 Scene11.addChild(Script47)
 ROUTE55 = ROUTEObject()
 ROUTE55.setFromNode("TourTime")
@@ -360,4 +361,4 @@ ROUTE61.setToField("set_position")
 Scene11.addChild(ROUTE61)
 X3D0.setScene(Scene11)
 
-X3D0.toFileX3D("././bubbles.new.x3d")
+X3D0.toFileX3D("./bubbles.new.x3d")

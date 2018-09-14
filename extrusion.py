@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -88,8 +90,7 @@ Script15.setSourceCode("ecmascript:\n"+
 "                        var endA = new SFVec3f(spine[0].x*Math.random()*2, spine[0].y*Math.random()*2, spine[0].z*Math.random()*2);\n"+
 "                        var endB = new SFVec3f(spine[1].x*Math.random()*2, spine[1].y*Math.random()*2, spine[1].z*Math.random()*2);\n"+
 "		        spine = new MFVec3f([endA, endB]);\n"+
-"                }\n"+
-"")
+"                }")
 Group9.addChild(Script15)
 ROUTE18 = ROUTEObject()
 ROUTE18.setFromNode("TourTime")
@@ -108,4 +109,4 @@ Group9.addChild(ROUTE19)
 Scene8.addChild(Group9)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././extrusion.new.x3d")
+X3D0.toFileX3D("./extrusion.new.x3d")

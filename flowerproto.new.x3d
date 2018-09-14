@@ -139,7 +139,6 @@ ecmascript:
 					d = 4;
 				}
 			}
-
 ]]>
                     </Script>
                     <TimeSensor DEF='TourTime' cycleInterval='0.15' loop='true'/>

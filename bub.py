@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -269,8 +271,7 @@ Script44.setSourceCode("ecmascript:\n"+
 "				velocity.y += Math.random() * 0.2 - 0.1;\n"+
 "				velocity.z += Math.random() * 0.2 - 0.1;\n"+
 "			    }\n"+
-"			}\n"+
-"")
+"			}")
 ProtoBody14.addChild(Script44)
 TimeSensor48 = TimeSensorObject()
 TimeSensor48.setDEF("TourTime")
@@ -308,4 +309,4 @@ ProtoInstance53.setName("Bubble")
 Scene9.addChild(ProtoInstance53)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././bub.new.x3d")
+X3D0.toFileX3D("./bub.new.x3d")

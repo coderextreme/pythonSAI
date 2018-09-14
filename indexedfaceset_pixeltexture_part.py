@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -182,4 +184,4 @@ Shape30.setGeometry(IndexedFaceSet34)
 Scene22.addChild(Shape30)
 X3D0.setScene(Scene22)
 
-X3D0.toFileX3D("././indexedfaceset_pixeltexture_part.new.x3d")
+X3D0.toFileX3D("./indexedfaceset_pixeltexture_part.new.x3d")

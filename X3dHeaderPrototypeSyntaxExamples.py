@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -370,4 +372,4 @@ ROUTE77.setToNode("someInlineRoot")
 Scene17.addChild(ROUTE77)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././X3dHeaderPrototypeSyntaxExamples.new.x3d")
+X3D0.toFileX3D("./X3dHeaderPrototypeSyntaxExamples.new.x3d")

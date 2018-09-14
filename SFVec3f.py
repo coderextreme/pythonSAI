@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -119,8 +121,7 @@ Script13.setSourceCode("ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			     newBubble();\n"+
-"			}\n"+
-"")
+"			}")
 Scene6.addChild(Script13)
 TimeSensor19 = TimeSensorObject()
 TimeSensor19.setDEF("TourTime")
@@ -144,4 +145,4 @@ ROUTE21.setToField("set_translation")
 Scene6.addChild(ROUTE21)
 X3D0.setScene(Scene6)
 
-X3D0.toFileX3D("././SFVec3f.new.x3d")
+X3D0.toFileX3D("./SFVec3f.new.x3d")

@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
 X3D0 =  X3DObject()
@@ -104,8 +106,7 @@ Script16.setSourceCode("ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}\n"+
-"")
+"		}")
 Transform10.addChild(Script16)
 TimeSensor21 = TimeSensorObject()
 TimeSensor21.setDEF("DECLpoint_G1_CL1")
@@ -202,8 +203,7 @@ Script32.setSourceCode("ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}\n"+
-"")
+"		}")
 Transform26.addChild(Script32)
 TimeSensor37 = TimeSensorObject()
 TimeSensor37.setDEF("DECLpoint_G2_CL1")
@@ -364,8 +364,7 @@ Script49.setSourceCode("ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }\n"+
-"")
+"        }")
 Group42.addChild(Script49)
 Scene7.addChild(Group42)
 ROUTE60 = ROUTEObject()
@@ -384,4 +383,4 @@ ROUTE61.setToField("set_endpoint")
 Scene7.addChild(ROUTE61)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././arc3.new.x3d")
+X3D0.toFileX3D("./arc3.new.x3d")
