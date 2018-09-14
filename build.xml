@@ -69,6 +69,94 @@ POSSIBILITY OF SUCH DAMAGE.
     <target name="all" depends="build.all"/>
 
     <target name="build.all" description="Test Python output">
+	    <!-- convert X3D XML files to X3D JSON files -->
+	    <java classname="RunSaxon" classpath=".;${saxon.jar.name}" fork="${fork}">
+			<arg value="---overwrite"/>
+			<arg value="abox.x3d"/>
+			<arg value="arc.x3d"/>
+			<arg value="arc1.x3d"/>
+			<arg value="arc3.x3d"/>
+			<arg value="ArchHalf.x3d"/>
+			<arg value="ArchPrototype.x3d"/>
+			<arg value="arcold.x3d"/>
+			<arg value="asmallbox.x3d"/>
+			<arg value="ball.x3d"/>
+			<arg value="BindingOperations.x3d"/>
+			<arg value="Box.x3d"/>
+			<arg value="BoxManAnimationPanel.x3d"/>
+			<arg value="browser.x3d"/>
+			<arg value="bub.x3d"/>
+			<arg value="bubble.x3d"/>
+			<arg value="bubbles.x3d"/>
+			<arg value="CameraExamples.x3d"/>
+			<arg value="CameraPrototypes.x3d"/>
+			<arg value="CameraShape.x3d"/>
+			<arg value="CloudsProcedural4.x3d"/>
+			<arg value="cobweb.x3d"/>
+			<arg value="cobweb2.x3d"/>
+			<arg value="CoordinateAxes.x3d"/>
+			<arg value="cube.x3d"/>
+			<arg value="extrusion.x3d"/>
+			<arg value="ExtrusionHeart.x3d"/>
+			<arg value="flipp.x3d"/>
+			<arg value="flipper.x3d"/>
+			<arg value="flower.x3d"/>
+			<arg value="flowerproto.x3d"/>
+			<arg value="flowers.x3d"/>
+			<arg value="flowers2.x3d"/>
+			<arg value="flowers4.x3d"/>
+			<arg value="flowers7.x3d"/>
+			<arg value="force.x3d"/>
+			<arg value="fors.x3d"/>
+			<arg value="fors2.x3d"/>
+			<arg value="freewrlflowers.x3d"/>
+			<arg value="gears.x3d"/>
+			<arg value="geo.x3d"/>
+			<arg value="geobubbles.x3d"/>
+			<arg value="glflowers.x3d"/>
+			<arg value="gridBack.x3d"/>
+			<arg value="HeadsUpDisplayExample.x3d"/>
+			<arg value="HelloWorld.x3d"/>
+			<arg value="HelloWorldProgramOutput.x3d"/>
+			<arg value="IcosahedronSubdivisionLevel5.x3d"/>
+			<arg value="ifscube.x3d"/>
+			<arg value="ifscubeworks.x3d"/>
+			<arg value="indexedfaceset_pixeltexture_entire.x3d"/>
+			<arg value="indexedfaceset_pixeltexture_part.x3d"/>
+			<arg value="indexedfaceset_pixeltexture_plus.x3d"/>
+			<arg value="indexedfaceset_pixeltexture_whole.x3d"/>
+			<arg value="john.x3d"/>
+			<arg value="john2.x3d"/>
+			<arg value="john3.x3d"/>
+			<arg value="MFString.x3d"/>
+			<arg value="mirror.x3d"/>
+			<arg value="mirror2.x3d"/>
+			<arg value="NancyNativeTags.x3d"/>
+			<arg value="NancyPrototypes.x3d"/>
+			<arg value="ObliqueStrategies.x3d"/>
+			<arg value="PixelTextureComponentExamples.x3d"/>
+			<arg value="plainflowers.x3d"/>
+			<arg value="pp3.x3d"/>
+			<arg value="qq3.x3d"/>
+			<arg value="rgb_alpha.x3d"/>
+			<arg value="rubik.x3d"/>
+			<arg value="rubikFurnace.x3d"/>
+			<arg value="rubikOnFire.x3d"/>
+			<arg value="SFVec3f.x3d"/>
+			<arg value="sphere.x3d"/>
+			<arg value="sphereflowers.x3d"/>
+			<arg value="StringArrayEncodingExamples.x3d"/>
+			<arg value="Table5_18PixelTexture.x3d"/>
+			<arg value="Teapot.x3d"/>
+			<arg value="text.x3d"/>
+			<arg value="TextExamples.x3d"/>
+			<arg value="TextSpecialCharacters.x3d"/>
+			<arg value="x3dconnector.x3d"/>
+			<arg value="x3dconnectorProto.x3d"/>
+			<arg value="X3dHeaderPrototypeSyntaxExamples.x3d"/>
+			<arg value="x3domflowers.x3d"/>
+		</java>
+		<!-- convert JSON files to Python files -->
 		<exec executable="node">
 			<arg value="json2py.js"/>
 			<arg value="abox.json"/>
@@ -155,6 +243,7 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="X3dHeaderPrototypeSyntaxExamples.json"/>
 			<arg value="x3domflowers.json"/>
 		</exec>
+		<!-- run Python files Begin -->
 		<exec executable="python">
 			<arg value="abox.py"/>
 		</exec>
@@ -404,6 +493,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<exec executable="python">
 			<arg value="x3domflowers.py"/>
 		</exec>
+		<!-- run Python files End -->
     </target>
 	
 </project>
