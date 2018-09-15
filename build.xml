@@ -69,6 +69,51 @@ POSSIBILITY OF SUCH DAMAGE.
     <target name="all" depends="build.all"/>
 
     <target name="build.all" description="Test Python output">
+	<exec executable="python">
+		<arg value="-m"/>
+		<arg value="pip"/>
+		<arg value="install"/>
+		<arg value="--upgrade"/>
+		<arg value="pip"/>
+		<arg value="setuptools"/>
+	</exec>
+	<exec executable="python">
+		<arg value="-m"/>
+		<arg value="pip"/>
+		<arg value="install"/>
+		<arg value="--upgrade"/>
+		<arg value="Cython"/>
+	</exec>
+	<exec executable="python">
+		<arg value="-m"/>
+		<arg value="pip"/>
+		<arg value="install"/>
+		<arg value="--upgrade"/>
+		<arg value="pyjnius"/>
+	</exec>
+	<exec executable="python">
+		<arg value="-m"/>
+		<arg value="pip"/>
+		<arg value="install"/>
+		<arg value="--upgrade"/>
+		<arg value="bs4"/>
+	</exec>
+	<exec executable="python">
+		<arg value="-m"/>
+		<arg value="pip"/>
+		<arg value="install"/>
+		<arg value="--upgrade"/>
+		<arg value="lxml"/>
+	</exec>
+	<exec executable="python">
+		<arg value="classes.py"/>
+	</exec>
+	<exec executable="python">
+		<arg value="fieldtypes.py"/>
+	</exec>
+	<exec executable="python">
+		<arg value="parseom.py"/>
+	</exec>
 	    <!-- convert X3D XML files to X3D JSON files -->
 	    <java classname="RunSaxon" classpath=".;${saxon.jar.name}" fork="${fork}">
 			<arg value="---overwrite"/>
