@@ -14656,7 +14656,7 @@ class HAnimJoint(X3DChildNode, X3DBoundedObject):
         super(HAnimJoint, self).setName(name_)
         if type(name_) is not SFString:
             raise InvalidFieldTypeException()
-        if 'HumanoidRoot' == name_:
+        if 'humanoidroot' == name_:
             pass
         elif 'sacroiliac' == name_:
             pass
