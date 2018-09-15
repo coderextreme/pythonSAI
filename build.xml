@@ -69,6 +69,9 @@ POSSIBILITY OF SUCH DAMAGE.
     <target name="all" depends="build.all"/>
 
     <target name="build.all" description="Test Python output">
+	<exec executable="npm.cmd">
+		<arg value="install"/>
+	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
 		<arg value="pip"/>
