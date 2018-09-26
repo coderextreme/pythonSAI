@@ -204,6 +204,8 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="X3dHeaderPrototypeSyntaxExamples.x3d"/>
 			<arg value="x3domflowers.x3d"/>
 		</java>
+    </target>
+    <target name="build.python" description="Test Python output">
 		<!-- convert JSON files to Python files -->
 		<exec executable="node">
 			<arg value="json2py.js"/>
