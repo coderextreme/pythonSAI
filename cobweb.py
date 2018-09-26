@@ -209,4 +209,4 @@ ProtoInstance31.setDEF("bubbleD")
 Scene7.addChild(ProtoInstance31)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("./cobweb.new.x3d")
+X3D0.toFileX3D("././cobweb.new.x3d")

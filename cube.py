@@ -75,4 +75,4 @@ Group10.addChild(Shape11)
 Scene9.addChild(Group10)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("./cube.new.x3d")
+X3D0.toFileX3D("././cube.new.x3d")

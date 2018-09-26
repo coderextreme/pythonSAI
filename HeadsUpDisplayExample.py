@@ -168,4 +168,4 @@ Inline31.setUrl(["../HelloWorld.x3d","http://X3dGraphics.com/examples/X3dForWebA
 Scene15.addChild(Inline31)
 X3D0.setScene(Scene15)
 
-X3D0.toFileX3D("./HeadsUpDisplayExample.new.x3d")
+X3D0.toFileX3D("././HeadsUpDisplayExample.new.x3d")
