@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <property name=   "saxon.jar.name" value="saxon9he.jar"/>
     <property name=   "node" value="node.exe"/>
 	
-    <target name="all" depends="build.all"/>
+    <target name="default" depends="build.all,build.python"/>
 
     <target name="build.all" description="Test Python output">
 	<exec executable="npm.cmd">
