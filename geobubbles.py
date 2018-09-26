@@ -170,4 +170,4 @@ ROUTE26.setToField("set_position")
 Scene8.addChild(ROUTE26)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././geobubbles.new.x3d")
+X3D0.toFileX3D("./geobubbles.new.x3d")

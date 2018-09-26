@@ -502,4 +502,4 @@ Inline81.setUrl(["../data/CoordinateAxes.x3d"])
 Scene13.addChild(Inline81)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("././ArchPrototype.new.x3d")
+X3D0.toFileX3D("./ArchPrototype.new.x3d")

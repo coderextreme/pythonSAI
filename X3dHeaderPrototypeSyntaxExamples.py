@@ -372,4 +372,4 @@ ROUTE77.setToNode("someInlineRoot")
 Scene17.addChild(ROUTE77)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././X3dHeaderPrototypeSyntaxExamples.new.x3d")
+X3D0.toFileX3D("./X3dHeaderPrototypeSyntaxExamples.new.x3d")

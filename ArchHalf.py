@@ -90,4 +90,4 @@ Shape13.setAppearance(Appearance16)
 Scene12.addChild(Shape13)
 X3D0.setScene(Scene12)
 
-X3D0.toFileX3D("././ArchHalf.new.x3d")
+X3D0.toFileX3D("./ArchHalf.new.x3d")

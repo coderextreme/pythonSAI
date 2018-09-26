@@ -495,4 +495,4 @@ ROUTE90.setToField("set_endpoint")
 Scene7.addChild(ROUTE90)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././arc.new.x3d")
+X3D0.toFileX3D("./arc.new.x3d")

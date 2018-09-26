@@ -276,4 +276,4 @@ Transform20.addChild(Group41)
 Scene13.addChild(Transform20)
 X3D0.setScene(Scene13)
 
-X3D0.toFileX3D("././CameraShape.new.x3d")
+X3D0.toFileX3D("./CameraShape.new.x3d")

@@ -1061,4 +1061,4 @@ Scene17.addChild(ROUTE205)
 Scene17.addComments(CommentsBlock("""TODO fix type, add filter"""))
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././MFString.new.x3d")
+X3D0.toFileX3D("./MFString.new.x3d")
