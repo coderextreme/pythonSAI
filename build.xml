@@ -173,14 +173,9 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="indexedfaceset_pixeltexture_part.x3d"/>
 			<arg value="indexedfaceset_pixeltexture_plus.x3d"/>
 			<arg value="indexedfaceset_pixeltexture_whole.x3d"/>
-			<arg value="john.x3d"/>
-			<arg value="john2.x3d"/>
-			<arg value="john3.x3d"/>
 			<arg value="MFString.x3d"/>
 			<arg value="mirror.x3d"/>
 			<arg value="mirror2.x3d"/>
-			<arg value="NancyNativeTags.x3d"/>
-			<arg value="NancyPrototypes.x3d"/>
 			<arg value="ObliqueStrategies.x3d"/>
 			<arg value="PixelTextureComponentExamples.x3d"/>
 			<arg value="plainflowers.x3d"/>
@@ -262,14 +257,9 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="indexedfaceset_pixeltexture_part.json"/>
 			<arg value="indexedfaceset_pixeltexture_plus.json"/>
 			<arg value="indexedfaceset_pixeltexture_whole.json"/>
-			<arg value="john.json"/>
-			<arg value="john2.json"/>
-			<arg value="john3.json"/>
 			<arg value="MFString.json"/>
 			<arg value="mirror.json"/>
 			<arg value="mirror2.json"/>
-			<arg value="NancyNativeTags.json"/>
-			<arg value="NancyPrototypes.json"/>
 			<arg value="ObliqueStrategies.json"/>
 			<arg value="PixelTextureComponentExamples.json"/>
 			<arg value="plainflowers.json"/>
@@ -454,15 +444,6 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="indexedfaceset_pixeltexture_whole.py"/>
 		</exec>
 		<exec executable="python">
-			<arg value="john.py"/>
-		</exec>
-		<exec executable="python">
-			<arg value="john2.py"/>
-		</exec>
-		<exec executable="python">
-			<arg value="john3.py"/>
-		</exec>
-		<exec executable="python">
 			<arg value="MFString.py"/>
 		</exec>
 		<exec executable="python">
@@ -470,12 +451,6 @@ POSSIBILITY OF SUCH DAMAGE.
 		</exec>
 		<exec executable="python">
 			<arg value="mirror2.py"/>
-		</exec>
-		<exec executable="python">
-			<arg value="NancyNativeTags.py"/>
-		</exec>
-		<exec executable="python">
-			<arg value="NancyPrototypes.py"/>
 		</exec>
 		<exec executable="python">
 			<arg value="ObliqueStrategies.py"/>
