@@ -717,71 +717,71 @@ HAnimHumanoid32.addComments(CommentsBlock(""" top-level joint references """))
 HAnimJoint144 = HAnimJointObject()
 HAnimJoint144.setUSE("hanim_r_wrist")
 
-HAnimHumanoid32.setJoints(HAnimJoint144)
+HAnimHumanoid32.addJoints(HAnimJoint144)
 HAnimJoint145 = HAnimJointObject()
 HAnimJoint145.setUSE("hanim_r_elbow")
 
-HAnimHumanoid32.setJoints(HAnimJoint145)
+HAnimHumanoid32.addJoints(HAnimJoint145)
 HAnimJoint146 = HAnimJointObject()
 HAnimJoint146.setUSE("hanim_r_shoulder")
 
-HAnimHumanoid32.setJoints(HAnimJoint146)
+HAnimHumanoid32.addJoints(HAnimJoint146)
 HAnimJoint147 = HAnimJointObject()
 HAnimJoint147.setUSE("hanim_l_wrist")
 
-HAnimHumanoid32.setJoints(HAnimJoint147)
+HAnimHumanoid32.addJoints(HAnimJoint147)
 HAnimJoint148 = HAnimJointObject()
 HAnimJoint148.setUSE("hanim_l_elbow")
 
-HAnimHumanoid32.setJoints(HAnimJoint148)
+HAnimHumanoid32.addJoints(HAnimJoint148)
 HAnimJoint149 = HAnimJointObject()
 HAnimJoint149.setUSE("hanim_l_shoulder")
 
-HAnimHumanoid32.setJoints(HAnimJoint149)
+HAnimHumanoid32.addJoints(HAnimJoint149)
 HAnimJoint150 = HAnimJointObject()
 HAnimJoint150.setUSE("hanim_skullbase")
 
-HAnimHumanoid32.setJoints(HAnimJoint150)
+HAnimHumanoid32.addJoints(HAnimJoint150)
 HAnimJoint151 = HAnimJointObject()
 HAnimJoint151.setUSE("hanim_vl5")
 
-HAnimHumanoid32.setJoints(HAnimJoint151)
+HAnimHumanoid32.addJoints(HAnimJoint151)
 HAnimJoint152 = HAnimJointObject()
 HAnimJoint152.setUSE("hanim_r_midtarsal")
 
-HAnimHumanoid32.setJoints(HAnimJoint152)
+HAnimHumanoid32.addJoints(HAnimJoint152)
 HAnimJoint153 = HAnimJointObject()
 HAnimJoint153.setUSE("hanim_r_ankle")
 
-HAnimHumanoid32.setJoints(HAnimJoint153)
+HAnimHumanoid32.addJoints(HAnimJoint153)
 HAnimJoint154 = HAnimJointObject()
 HAnimJoint154.setUSE("hanim_r_knee")
 
-HAnimHumanoid32.setJoints(HAnimJoint154)
+HAnimHumanoid32.addJoints(HAnimJoint154)
 HAnimJoint155 = HAnimJointObject()
 HAnimJoint155.setUSE("hanim_r_hip")
 
-HAnimHumanoid32.setJoints(HAnimJoint155)
+HAnimHumanoid32.addJoints(HAnimJoint155)
 HAnimJoint156 = HAnimJointObject()
 HAnimJoint156.setUSE("hanim_l_midtarsal")
 
-HAnimHumanoid32.setJoints(HAnimJoint156)
+HAnimHumanoid32.addJoints(HAnimJoint156)
 HAnimJoint157 = HAnimJointObject()
 HAnimJoint157.setUSE("hanim_l_ankle")
 
-HAnimHumanoid32.setJoints(HAnimJoint157)
+HAnimHumanoid32.addJoints(HAnimJoint157)
 HAnimJoint158 = HAnimJointObject()
 HAnimJoint158.setUSE("hanim_l_knee")
 
-HAnimHumanoid32.setJoints(HAnimJoint158)
+HAnimHumanoid32.addJoints(HAnimJoint158)
 HAnimJoint159 = HAnimJointObject()
 HAnimJoint159.setUSE("hanim_l_hip")
 
-HAnimHumanoid32.setJoints(HAnimJoint159)
+HAnimHumanoid32.addJoints(HAnimJoint159)
 HAnimJoint160 = HAnimJointObject()
 HAnimJoint160.setUSE("hanim_HumanoidRoot")
 
-HAnimHumanoid32.setJoints(HAnimJoint160)
+HAnimHumanoid32.addJoints(HAnimJoint160)
 
 HAnimHumanoid32.addComments(CommentsBlock(""" top-level segment references """))
 HAnimSegment161 = HAnimSegmentObject()

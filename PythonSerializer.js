@@ -109,6 +109,10 @@ PythonSerializer.prototype = {
 			method = "setIS";
 			addpre = "";
 		}
+		if (method === "setJoints") {
+			method = "addJoints"
+			addpre = "";
+		}
 		return prepre+addpre+method;
 	},
 	subSerializeToString : function(element, mapToMethod, fieldTypes, n, stack) {
