@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- X3D Object Model X3dUnifiedObjectModel-3.3.xml-->
+<!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-3.3.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2018-09-26-07:00 20:03:05.239-07:00 -->
-<X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-                version="3.3"
-                xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
+<!-- Generated 2018-10-13-07:00 21:12:51.943-07:00 -->
+<X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+                       version="3.3"
+                       xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
    <SimpleTypeEnumerations>
       <SimpleType name="accessTypeNames"
                   baseType="SFString"
@@ -2735,7 +2735,8 @@
          </InterfaceDefinition>
       </AbstractObjectType>
       <AbstractObjectType name="X3DProgrammableShaderObject">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#X3DProgrammableShaderObject">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#X3DProgrammableShaderObject"
+                              appinfo="Base type for all nodes that specify arbitrary fields for interfacing with per-object attribute values.">
             <componentInfo name="Shaders" level="1"/>
             <field type="SFString"
                    accessType="inputOutput"
@@ -3695,7 +3696,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DMaterialNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shape.html#X3DMaterialNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shape.html#X3DMaterialNode"
+                              appinfo="Base type for all Material nodes.">
             <componentInfo name="Shape" level="1"/>
             <Inheritance baseType="X3DAppearanceChildNode"/>
             <field type="SFNode"
@@ -4341,7 +4343,7 @@
       </AbstractNodeType>
       <AbstractNodeType name="X3DScriptNode">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/scripting.html#X3DScriptNode"
-                              appinfo="This abstract node type is the base type for all scripting nodes.">
+                              appinfo="Base type for scripting nodes (but not shader nodes).">
             <componentInfo name="Scripting" level="1"/>
             <Inheritance baseType="X3DChildNode"/>
             <AdditionalInheritance baseType="X3DUrlObject"/>
@@ -4635,7 +4637,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DTexture2DNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTexture2DNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTexture2DNode"
+                              appinfo="Base type for all nodes which specify 2D sources for texture images.">
             <componentInfo name="Texturing" level="1"/>
             <Inheritance baseType="X3DTextureNode"/>
             <field type="SFNode"
@@ -4752,7 +4755,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DTextureNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTextureNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTextureNode"
+                              appinfo="Base type for all nodes which specify sources for texture images.">
             <componentInfo name="Texturing" level="1"/>
             <Inheritance baseType="X3DAppearanceChildNode"/>
             <field type="SFNode"
@@ -20939,4 +20943,4 @@
          </InterfaceDefinition>
       </Statement>
    </Statements>
-</X3DObjectModel>
+</X3dUnifiedObjectModel>

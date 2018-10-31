@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- X3D Object Model X3dUnifiedObjectModel-4.0.xml-->
+<!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-4.0.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 4.0 of X3D -->
-<!-- Generated 2018-09-26-07:00 20:04:45.24-07:00 -->
-<X3DObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-                version="4.0"
-                xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
+<!-- Generated 2018-10-20-07:00 23:07:11.953-07:00 -->
+<X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+                       version="4.0"
+                       xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
    <SimpleTypeEnumerations>
-      <SimpleType name="accessTypeNames"
+      <!-- For schema xs:simpleType with contained xs:enumeration definitions, follow naming convention of name ending in 'Type', 'Choices' (for strict enumeration set) or 'Values' (for suggested tokens). -->
+      <SimpleType name="accessTypeChoices"
                   baseType="SFString"
-                  appinfo="accessTypeNames are allowed enumeration values for accessType. Prior names in VRML 97 were eventIn, eventOut, field, exposedField respectively."
+                  appinfo="accessTypeChoices are allowed enumeration values for accessType. Prior names in VRML 97 were eventIn, eventOut, field, exposedField respectively."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/concepts.html#FieldSemantics">
          <enumeration value="initializeOnly"
                       appinfo="A field with accessType initializeOnly can be initialized, but cannot send or receive events."/>
@@ -20,24 +21,9 @@
          <enumeration value="inputOutput"
                       appinfo="A field with accessType inputOutput can be initialized, and can also send or receive events."/>
       </SimpleType>
-      <SimpleType name="alignValues"
+      <SimpleType name="appliedParametersChoices"
                   baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the align field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
-         <enumeration value="&#34;CENTER&#34;"/>
-         <enumeration value="&#34;LEFT&#34; &#34;BOTTOM&#34;"/>
-         <enumeration value="&#34;LEFT&#34; &#34;CENTER&#34;"/>
-         <enumeration value="&#34;LEFT&#34; &#34;TOP&#34;"/>
-         <enumeration value="&#34;CENTER&#34; &#34;BOTTOM&#34;"/>
-         <enumeration value="&#34;CENTER&#34; &#34;CENTER&#34;"/>
-         <enumeration value="&#34;CENTER&#34; &#34;TOP&#34;"/>
-         <enumeration value="&#34;RIGHT&#34; &#34;BOTTOM&#34;"/>
-         <enumeration value="&#34;RIGHT&#34; &#34;CENTER&#34;"/>
-         <enumeration value="&#34;RIGHT&#34; &#34;TOP&#34;"/>
-      </SimpleType>
-      <SimpleType name="appliedParametersValues"
-                  baseType="MFString"
-                  appinfo="Default global parameters for collision outputs of rigid body physics system. Contact node can override parent CollisionCollection node. Multiple optional values, but cannot be extended."
+                  appinfo="Default global parameters for collision outputs of rigid body physics system. Contact node can override parent CollisionCollection node. Multiple optional values, but appliedParameters enumerations cannot be extended."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/rigid_physics.html#t-AppliedParametersValidValues">
          <enumeration value="&#34;BOUNCE&#34;" appinfo="The bounce field value is used."/>
          <enumeration value="&#34;USER_FRICTION&#34;"
@@ -51,22 +37,22 @@
          <enumeration value="&#34;SLIP1&#34;" appinfo="Apply first component of slipFactors array"/>
          <enumeration value="&#34;SLIP2&#34;" appinfo="Apply second component of slipFactors array"/>
       </SimpleType>
-      <SimpleType name="ArcClose2dTypeValues"
-                  baseType="SFString"
-                  appinfo="ArcClose2dTypeValues are allowed enumeration values for ArcClose2D closureType."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html#ArcClose2D">
-         <enumeration value="PIE"/>
-         <enumeration value="CHORD"/>
-      </SimpleType>
       <SimpleType name="bboxSizeType"
                   baseType="SFVec3f"
                   defaultValue="-1 -1 -1"
                   regex="\s*((([+]?(((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s+){2}([+]?((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s*)|((\-1(\.(0)*)?([Ee][+-]?[0]+)?\s+){2}\-1(\.(0)*)?([Ee][+-]?[0]+)?)\s*)?"
                   appinfo="bboxSizeType dimensions are non-negative values, default value (-1 -1 -1) indicates that no bounding box size has been computed."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/group.html#Boundingboxes"/>
-      <SimpleType name="componentNames"
+      <SimpleType name="closureTypeChoices"
                   baseType="SFString"
-                  appinfo="componentNames are enumeration constants used to identify the profile for each scene-graph node, and also utilized by X3D element to identify the components required by the contained Scene."
+                  appinfo="closureTypeChoices are allowed enumeration values for ArcClose2D closureType."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html#ArcClose2D">
+         <enumeration value="PIE"/>
+         <enumeration value="CHORD"/>
+      </SimpleType>
+      <SimpleType name="componentNameChoices"
+                  baseType="SFString"
+                  appinfo="componentNameChoices are enumeration constants used to identify the profile for each scene-graph node, and also utilized by X3D element to identify the components required by the contained Scene."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/concepts.html#Components">
          <enumeration value="Core"
                       appinfo="The Core component supplies the base functionality for the X3D run-time system, including the abstract base node type, field types, the event model, and routing."/>
@@ -290,9 +276,9 @@
          <enumeration value="rightTexture" appinfo="parent node is TextureBackground"/>
          <enumeration value="topTexture" appinfo="parent node is TextureBackground"/>
       </SimpleType>
-      <SimpleType name="featurePointNames"
+      <SimpleType name="featurePointNameValues"
                   baseType="SFString"
-                  appinfo="CAESAR feature point names, index and description for use by HAnimDisplacer nodes."
+                  appinfo="CAESAR feature point names, index and description for use by HAnimDisplacer nodes as defined in the HAnim Architecture specification. Alternate names are also allowed."
                   documentation="http://www.web3d.org/documents/specifications/19774/V1.0/HAnim/FeaturePoints.html">
          <enumeration value="sellion"/>
          <enumeration value="r_infraorbitale"/>
@@ -371,9 +357,9 @@
          <enumeration value="l_neck_base"/>
          <enumeration value="navel"/>
       </SimpleType>
-      <SimpleType name="fieldTypeNames"
+      <SimpleType name="fieldTypeChoices"
                   baseType="SFString"
-                  appinfo="fieldTypeNames contains the names of all X3DField types."
+                  appinfo="fieldTypeChoices are enumerations for all allowed names of X3DField types."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html">
          <enumeration value="SFBool"/>
          <enumeration value="MFBool"/>
@@ -418,9 +404,9 @@
          <enumeration value="SFMatrix4f"/>
          <enumeration value="MFMatrix4f"/>
       </SimpleType>
-      <SimpleType name="fogTypeValues"
+      <SimpleType name="fogTypeChoices"
                   baseType="SFString"
-                  appinfo="fogTypeValues are allowed enumeration values for Fog node fogType attribute."
+                  appinfo="fogTypeChoices are allowed enumeration values for Fog node fogType attribute."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/enveffects.html#Fog">
          <enumeration value="LINEAR"/>
          <enumeration value="EXPONENTIAL"/>
@@ -433,9 +419,9 @@
          <enumeration value="&#34;SERIF&#34;"/>
          <enumeration value="&#34;TYPEWRITER&#34;"/>
       </SimpleType>
-      <SimpleType name="fontStyleValues"
+      <SimpleType name="fontStyleChoices"
                   baseType="SFString"
-                  appinfo="fontStyleValues are allowed enumeration values for FontStyle/ScreenFontStyle node style attribute."
+                  appinfo="fontStyleChoices are allowed enumeration values for FontStyle/ScreenFontStyle node style attribute."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Fontfamilyandstyle">
          <enumeration value="PLAIN"/>
          <enumeration value="BOLD"/>
@@ -444,14 +430,14 @@
       </SimpleType>
       <SimpleType name="forceOutputValues"
                   baseType="MFString"
-                  appinfo="forceOutputValues are allowed enumeration values for X3DRigidJointNode type forceOutput attribute. Uunbounded, additional values are possible."
+                  appinfo="forceOutputValues are suggested values for X3DRigidJointNode type forceOutput attribute. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/rigid_physics.html#X3DRigidJointNode">
          <enumeration value="&#34;ALL&#34;"/>
          <enumeration value="&#34;NONE&#34;"/>
       </SimpleType>
-      <SimpleType name="generatedCubeMapTextureUpdateValues"
+      <SimpleType name="generatedCubeMapTextureUpdateChoices"
                   baseType="SFString"
-                  appinfo="generatedCubeMapTextureUpdateValues are allowed enumeration values for GeneratedCubeMapTexture field named 'update'."
+                  appinfo="generatedCubeMapTextureUpdateChoices are allowed enumeration values for GeneratedCubeMapTexture field named 'update'."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/env_texture.html#GeneratedCubeMapTexture">
          <enumeration value="NONE"/>
          <enumeration value="NEXT_FRAME_ONLY"/>
@@ -526,9 +512,9 @@
          <enumeration value="height"/>
          <enumeration value="weight"/>
       </SimpleType>
-      <SimpleType name="hanimVersionValues"
+      <SimpleType name="hanimVersionChoices"
                   baseType="SFString"
-                  appinfo="hanimVersionValues enumeration constants are used to identify the allowed versions for an HAnimHumanoid node. Note that HAnim version 2.0 is under review, while versions 1.0/1.1 include small incompatibilities."
+                  appinfo="hanimVersionChoices enumeration constants are used to identify the allowed versions for an HAnimHumanoid node. Note that HAnim version 2.0 is under review, while versions 1.0/1.1 include small incompatibilities."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/hanim.html#HAnimHumanoid">
          <enumeration value="1.0"
                       appinfo="International standard HAnim 19774 version 1 approved by ISO in 2006."/>
@@ -1051,14 +1037,14 @@
                   documentation="_Evaluating the X3D Schema with semantic web tools_, Web3D 2012 Conference, Petit, Marc (EDF), Henry Boccon-Gibod (EDF), Mouton, Christophe (EDF)"/>
       <SimpleType name="intersectionTypeValues"
                   baseType="SFString"
-                  appinfo="intersectionTypeValues are allowed enumeration values for X3DPickSensorNode type intersectionType attribute. Unbounded, additional values are possible."
+                  appinfo="intersectionTypeValues are suggested values for X3DPickSensorNode type intersectionType attribute. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="BOUNDS"/>
          <enumeration value="GEOMETRY"/>
       </SimpleType>
-      <SimpleType name="jointNames"
+      <SimpleType name="jointNameValues"
                   baseType="SFString"
-                  appinfo="CAESAR joint names for identification of HAnimJoint nodes."
+                  appinfo="CAESAR joint names for identification of HAnimJoint nodes as defined in the HAnim Architecture specification. Alternate names are also allowed."
                   documentation="http://www.web3d.org/documents/specifications/19774/V1.0/HAnim/concepts.html#Hierarchy">
          <enumeration value="humanoidroot"/>
          <enumeration value="sacroiliac"/>
@@ -1203,9 +1189,9 @@
          <enumeration value="r_metatarsophalangeal_joint"/>
          <enumeration value="r_tarsal_interphalangeal_joint"/>
       </SimpleType>
-      <SimpleType name="justifyValues"
+      <SimpleType name="justifyChoices"
                   baseType="MFString"
-                  appinfo="justifyValues are allowed enumeration values for FontStyle node justify attribute. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  appinfo="justifyChoices are allowed enumeration values for FontStyle node justify attribute. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Directionandjustification">
          <enumeration value="&#34;MIDDLE&#34;"/>
          <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
@@ -1228,16 +1214,65 @@
          <enumeration value="&#34;FIRST&#34; &#34;FIRST&#34;"/>
          <enumeration value="&#34;FIRST&#34; &#34;MIDDLE&#34;"/>
       </SimpleType>
-      <SimpleType name="metaDirectionValues"
+      <SimpleType name="layoutAlignChoices"
+                  baseType="MFString"
+                  appinfo="Permitted combinations of horizontal and vertical values for the align field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
+         <enumeration value="&#34;LEFT&#34; &#34;BOTTOM&#34;"/>
+         <enumeration value="&#34;LEFT&#34; &#34;CENTER&#34;"/>
+         <enumeration value="&#34;LEFT&#34; &#34;TOP&#34;"/>
+         <enumeration value="&#34;CENTER&#34; &#34;BOTTOM&#34;"/>
+         <enumeration value="&#34;CENTER&#34; &#34;CENTER&#34;"/>
+         <enumeration value="&#34;CENTER&#34; &#34;TOP&#34;"/>
+         <enumeration value="&#34;RIGHT&#34; &#34;BOTTOM&#34;"/>
+         <enumeration value="&#34;RIGHT&#34; &#34;CENTER&#34;"/>
+         <enumeration value="&#34;RIGHT&#34; &#34;TOP&#34;"/>
+      </SimpleType>
+      <SimpleType name="layoutScaleModeChoices"
+                  baseType="MFString"
+                  appinfo="Permitted combinations of horizontal and vertical values for the scaleMode field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
+         <enumeration value="&#34;NONE&#34; &#34;NONE&#34;"/>
+         <enumeration value="&#34;NONE&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;NONE&#34; &#34;STRETCH&#34;"/>
+         <enumeration value="&#34;NONE&#34; &#34;PIXEL&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;NONE&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;STRETCH&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
+         <enumeration value="&#34;STRETCH&#34; &#34;NONE&#34;"/>
+         <enumeration value="&#34;STRETCH&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;STRETCH&#34; &#34;STRETCH&#34;"/>
+         <enumeration value="&#34;STRETCH&#34; &#34;PIXEL&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;NONE&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;STRETCH&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
+      </SimpleType>
+      <SimpleType name="layoutUnitsChoices"
+                  baseType="MFString"
+                  appinfo="Permitted combinations of horizontal and vertical values for the offsetUnits field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
+         <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
+         <enumeration value="&#34;WORLD&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;WORLD&#34; &#34;PIXEL&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;WORLD&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
+         <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
+      </SimpleType>
+      <SimpleType name="metaDirectionChoices"
                   baseType="SFString"
-                  appinfo="metaDirectionValues are allowed enumeration values for meta element direction attribute."
+                  appinfo="metaDirectionChoices are allowed enumeration values for meta element direction attribute."
                   documentation="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir">
          <enumeration value="rtl" appinfo="right-to-left"/>
          <enumeration value="ltr" appinfo="left-to-right"/>
       </SimpleType>
       <SimpleType name="metaNameValues"
                   baseType="SFString"
-                  appinfo="metaNameValues are suggested enumeration values for meta element name attribute."
+                  appinfo="metaNameValues are suggested values for meta element name attribute."
                   documentation="http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#metaTags">
          <enumeration value="accessRights"
                       appinfo="permission required to access resource or security status"/>
@@ -1289,14 +1324,15 @@
       </SimpleType>
       <SimpleType name="multiTextureFunctionValues"
                   baseType="MFString"
-                  appinfo="multiTextureFunctionValues are allowed enumeration values for the MultiTexture node function attribute. Multiple optional values, but cannot be extended."
+                  appinfo="multiTextureFunctionValues are allowed values for the MultiTexture node function attribute, one per each texture. An empty string indicates no function is applied. Multiple optional values, but cannot be extended."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-ValuesForFunctionField">
+         <enumeration value="&#34;&#34;"/>
          <enumeration value="&#34;COMPLEMENT&#34;"/>
          <enumeration value="&#34;ALPHAREPLICATE&#34;"/>
       </SimpleType>
       <SimpleType name="multiTextureModeValues"
                   baseType="MFString"
-                  appinfo="multiTextureModeValues are allowed enumeration values for the MultiTexture mode attribute. Multiple optional values, but cannot be extended."
+                  appinfo="multiTextureModeValues are allowed values for the MultiTexture mode attribute, one per each texture. Multiple optional values, but cannot be extended."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-MultitextureModes">
          <enumeration value="&#34;ADD&#34;"/>
          <enumeration value="&#34;ADDSIGNED&#34;"/>
@@ -1321,35 +1357,40 @@
       </SimpleType>
       <SimpleType name="multiTextureSourceValues"
                   baseType="MFString"
-                  appinfo="multiTextureSourceValues are allowed enumeration values for the MultiTexture node source attribute. Multiple optional values, but cannot be extended."
+                  appinfo="multiTextureSourceValues are allowed values for the MultiTexture node source attribute, one per each texture. Multiple optional values, but cannot be extended."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-ValuesForSourceField">
+         <enumeration value="&#34;&#34;"/>
          <enumeration value="&#34;DIFFUSE&#34;"/>
          <enumeration value="&#34;FACTOR&#34;"/>
          <enumeration value="&#34;SPECULAR&#34;"/>
       </SimpleType>
-      <SimpleType name="networkModeValues"
+      <SimpleType name="navigationTransitionTypeValues"
+                  baseType="MFString"
+                  appinfo="Permitted values for the transitionType field in the NavigationInfo node. Unbounded, additional values are possible."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#NavigationInfo">
+         <enumeration value="&#34;TELEPORT&#34;"/>
+         <enumeration value="&#34;LINEAR&#34;"/>
+         <enumeration value="&#34;ANIMATE&#34;"/>
+      </SimpleType>
+      <SimpleType name="navigationTypeValues"
+                  baseType="MFString"
+                  appinfo="Permitted values for the type field in the NavigationInfo node. Unbounded, additional values are possible."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#NavigationInfo">
+         <enumeration value="&#34;ANY&#34;"/>
+         <enumeration value="&#34;WALK&#34;"/>
+         <enumeration value="&#34;EXAMINE&#34;"/>
+         <enumeration value="&#34;FLY&#34;"/>
+         <enumeration value="&#34;LOOKAT&#34;"/>
+         <enumeration value="&#34;NONE&#34;"/>
+         <enumeration value="&#34;EXPLORE&#34;"/>
+      </SimpleType>
+      <SimpleType name="networkModeChoices"
                   baseType="SFString"
-                  appinfo="networkModeValues are allowed enumeration values for DIS field networkMode."
+                  appinfo="networkModeChoices are allowed enumeration values for DIS field networkMode."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/dis.html#CommonDISfields">
          <enumeration value="standAlone"/>
          <enumeration value="networkReader"/>
          <enumeration value="networkWriter"/>
-      </SimpleType>
-      <SimpleType name="offsetUnitsValues"
-                  baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the offsetUnits field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
-         <enumeration value="&#34;WORLD&#34;"/>
-         <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;WORLD&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
       </SimpleType>
       <SimpleType name="outputOnlyAccessTypes"
                   baseType="SFString"
@@ -1471,15 +1512,15 @@
       </SimpleType>
       <SimpleType name="pickableObjectTypeValues"
                   baseType="MFString"
-                  appinfo="object type values for the objectType field in the abstract types X3DPickableObject and X3DPickSensorNode. Unbounded, additional values are possible."
+                  appinfo="Suggested values for the objectType field in the abstract types X3DPickableObject and X3DPickSensorNode. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickableObject">
          <enumeration value="&#34;ALL&#34;"/>
          <enumeration value="&#34;NONE&#34;"/>
          <enumeration value="&#34;TERRAIN&#34;"/>
       </SimpleType>
-      <SimpleType name="pickSensorMatchCriterionValues"
+      <SimpleType name="pickSensorMatchCriterionChoices"
                   baseType="SFString"
-                  appinfo="pickSensorMatchCriterionValues are allowed enumeration values for X3DPickSensorNode node matchCriterion attribute. Bounded, no additional values are possible."
+                  appinfo="pickSensorMatchCriterionChoices are allowed enumeration values for X3DPickSensorNode node matchCriterion attribute. Bounded, no additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="MATCH_ANY"/>
          <enumeration value="MATCH_EVERY"/>
@@ -1494,609 +1535,38 @@
          <enumeration value="ALL"/>
          <enumeration value="ALL_SORTED"/>
       </SimpleType>
-      <SimpleType name="profileNames"
+      <SimpleType name="profileNameChoices"
                   baseType="SFString"
-                  appinfo="profileName enumeration constants are used to identify the profile for each scene-graph node, and also utilized by X3D element to identify the profile of a contained Scene."
+                  appinfo="profileNameChoices enumeration constants are used to identify the profile for each scene-graph node, and also utilized by X3D element to identify the profile of a contained Scene. Profiles correspond primarily to subsets of allowed X3D nodes. Some nodes in Interchange profile include fields that are ignored unless Immersive or Full profile is active."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/concepts.html#Profiles">
          <enumeration value="Core"
-                      appinfo="Core Profile includes no nodes and is provided as the basis for custom componentization. Allowed X3D statements for all profiles are: connect ExternProtoDeclare EXPORT field fieldValue IMPORT IS ProtoBody ProtoDeclare ProtoInterface ProtoInstance ROUTE X3D. Allowed X3D nodes for this profile are: MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString.">
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="Core Profile includes no nodes and is provided as the basis for custom componentization. Allowed X3D statements for all profiles are: connect ExternProtoDeclare EXPORT field fieldValue IMPORT IS ProtoBody ProtoDeclare ProtoInterface ProtoInstance ROUTE X3D. Allowed X3D nodes for this profile are: MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString."/>
          <enumeration value="Interchange"
-                      appinfo="Interchange Profile equals the minimum subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Appearance Background Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder DirectionalLight Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PointSet PositionInterpolator ScalarInterpolator Shape Sphere TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint WorldInfo.">
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>Background</allowedElement>
-            <allowedElement>Box</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorInterpolator</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>Cone</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>CoordinateInterpolator</allowedElement>
-            <allowedElement>Cylinder</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>IndexedFaceSet</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>IndexedTriangleFanSet</allowedElement>
-            <allowedElement>IndexedTriangleSet</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>PositionInterpolator</allowedElement>
-            <allowedElement>ScalarInterpolator</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>Sphere</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureCoordinateGenerator</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>TimeSensor</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>TriangleFanSet</allowedElement>
-            <allowedElement>TriangleSet</allowedElement>
-            <allowedElement>TriangleStripSet</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="Interchange Profile equals the minimum subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Appearance Background Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder DirectionalLight Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PointSet PositionInterpolator ScalarInterpolator Shape Sphere TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint WorldInfo."/>
          <enumeration value="CADInterchange"
-                      appinfo="CADInterchange Profile adds support for CADGeometry component nodes to Interchange Profile. Allowed X3D nodes for this profile are: Anchor Appearance CADAssembly CADFace CADLayer CADPart Billboard Collision Color ColorRGBA Coordinate DirectionalLight FragmentShader Group ImageTexture IndexedLineSet IndexedQuadSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline LineProperties LineSet LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiShader MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal PixelTexture PointSet QuadSet Shader ShaderAppearance Shape TextureCoordinate TextureCoordinateGenerator TextureTransform Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint VertexShader WorldInfo.">
-            <allowedElement>Anchor</allowedElement>
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>CADAssembly</allowedElement>
-            <allowedElement>CADFace</allowedElement>
-            <allowedElement>CADLayer</allowedElement>
-            <allowedElement>CADPart</allowedElement>
-            <allowedElement>Billboard</allowedElement>
-            <allowedElement>Collision</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>FragmentShader</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>IndexedQuadSet</allowedElement>
-            <allowedElement>IndexedTriangleFanSet</allowedElement>
-            <allowedElement>IndexedTriangleSet</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>LineProperties</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>LOD</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MultiShader</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>QuadSet</allowedElement>
-            <allowedElement>Shader</allowedElement>
-            <allowedElement>ShaderAppearance</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureCoordinateGenerator</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>TriangleFanSet</allowedElement>
-            <allowedElement>TriangleSet</allowedElement>
-            <allowedElement>TriangleStripSet</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>VertexShader</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="CADInterchange Profile adds support for CADGeometry component nodes to Interchange Profile. Allowed X3D nodes for this profile are: Anchor Appearance CADAssembly CADFace CADLayer CADPart Billboard Collision Color ColorRGBA Coordinate DirectionalLight FragmentShader Group ImageTexture IndexedLineSet IndexedQuadSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline LineProperties LineSet LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiShader MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal PixelTexture PointSet QuadSet Shader ShaderAppearance Shape TextureCoordinate TextureCoordinateGenerator TextureTransform Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint VertexShader WorldInfo."/>
          <enumeration value="Interactive"
-                      appinfo="Interactive Profile adds interaction nodes (Anchor, KeySensor) to the minimum subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Anchor Appearance Background BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet PositionInterpolator ProximitySensor ScalarInterpolator Shape Sphere SphereSensor SpotLight StringSensor Switch TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor TimeTrigger TouchSensor Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint VisibilitySensor WorldInfo.">
-            <allowedElement>Anchor</allowedElement>
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>Background</allowedElement>
-            <allowedElement>BooleanFilter</allowedElement>
-            <allowedElement>BooleanSequencer</allowedElement>
-            <allowedElement>BooleanToggle</allowedElement>
-            <allowedElement>BooleanTrigger</allowedElement>
-            <allowedElement>Box</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorInterpolator</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>Cone</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>CoordinateInterpolator</allowedElement>
-            <allowedElement>Cylinder</allowedElement>
-            <allowedElement>CylinderSensor</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>ElevationGrid</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>IndexedFaceSet</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>IndexedTriangleFanSet</allowedElement>
-            <allowedElement>IndexedTriangleSet</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>IntegerSequencer</allowedElement>
-            <allowedElement>IntegerTrigger</allowedElement>
-            <allowedElement>KeySensor</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>IntegerSequencer</allowedElement>
-            <allowedElement>IntegerTrigger</allowedElement>
-            <allowedElement>KeySensor</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PlaneSensor</allowedElement>
-            <allowedElement>PointLight</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>PositionInterpolator</allowedElement>
-            <allowedElement>ProximitySensor</allowedElement>
-            <allowedElement>ScalarInterpolator</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>Sphere</allowedElement>
-            <allowedElement>SphereSensor</allowedElement>
-            <allowedElement>SpotLight</allowedElement>
-            <allowedElement>StringSensor</allowedElement>
-            <allowedElement>Switch</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureCoordinateGenerator</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>TimeSensor</allowedElement>
-            <allowedElement>TimeTrigger</allowedElement>
-            <allowedElement>TouchSensor</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>TriangleFanSet</allowedElement>
-            <allowedElement>TriangleSet</allowedElement>
-            <allowedElement>TriangleStripSet</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>VisibilitySensor</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="Interactive Profile adds interaction nodes (Anchor, KeySensor) to the minimum subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Anchor Appearance Background BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet PositionInterpolator ProximitySensor ScalarInterpolator Shape Sphere SphereSensor SpotLight StringSensor Switch TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor TimeTrigger TouchSensor Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint VisibilitySensor WorldInfo."/>
          <enumeration value="Immersive"
-                      appinfo="Immersive Profile equals all of the nodes in the VRML 97 Specification, plus various X3D node additions including KeySensor, StringSensor and Scene. Allowed X3D nodes for this profile are: Anchor Appearance AudioClip Background Billboard BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger Box Collision Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Extrusion Fog FontStyle Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFan IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineProperties LineSet LoadSensor LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MovieTexture MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet Polyline2D Polypoint2D PositionInterpolator ProximitySensor Rectangle2D ScalarInterpolator Script Shape Sound Sphere SphereSensor SpotLight StringSensor Switch Text TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor TimeTrigger TouchSensor TriangleFanSet TriangleSet TriangleSet2D TriangleStripSet Transform Viewpoint VisibilitySensor WorldInfo.">
-            <allowedElement>Anchor</allowedElement>
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>AudioClip</allowedElement>
-            <allowedElement>Background</allowedElement>
-            <allowedElement>Billboard</allowedElement>
-            <allowedElement>BooleanFilter</allowedElement>
-            <allowedElement>BooleanSequencer</allowedElement>
-            <allowedElement>BooleanToggle</allowedElement>
-            <allowedElement>BooleanTrigger</allowedElement>
-            <allowedElement>Box</allowedElement>
-            <allowedElement>Collision</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorInterpolator</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>Cone</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>CoordinateInterpolator</allowedElement>
-            <allowedElement>Cylinder</allowedElement>
-            <allowedElement>CylinderSensor</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>ElevationGrid</allowedElement>
-            <allowedElement>Extrusion</allowedElement>
-            <allowedElement>Fog</allowedElement>
-            <allowedElement>FontStyle</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>IndexedFaceSet</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>IndexedTriangleFan</allowedElement>
-            <allowedElement>IndexedTriangleSet</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>IntegerSequencer</allowedElement>
-            <allowedElement>IntegerTrigger</allowedElement>
-            <allowedElement>KeySensor</allowedElement>
-            <allowedElement>LineProperties</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>LoadSensor</allowedElement>
-            <allowedElement>LOD</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MovieTexture</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PlaneSensor</allowedElement>
-            <allowedElement>PointLight</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>Polyline2D</allowedElement>
-            <allowedElement>Polypoint2D</allowedElement>
-            <allowedElement>PositionInterpolator</allowedElement>
-            <allowedElement>ProximitySensor</allowedElement>
-            <allowedElement>Rectangle2D</allowedElement>
-            <allowedElement>ScalarInterpolator</allowedElement>
-            <allowedElement>Script</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>Sound</allowedElement>
-            <allowedElement>Sphere</allowedElement>
-            <allowedElement>SphereSensor</allowedElement>
-            <allowedElement>SpotLight</allowedElement>
-            <allowedElement>StringSensor</allowedElement>
-            <allowedElement>Switch</allowedElement>
-            <allowedElement>Text</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureCoordinateGenerator</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>TimeSensor</allowedElement>
-            <allowedElement>TimeTrigger</allowedElement>
-            <allowedElement>TouchSensor</allowedElement>
-            <allowedElement>TriangleFanSet</allowedElement>
-            <allowedElement>TriangleSet</allowedElement>
-            <allowedElement>TriangleSet2D</allowedElement>
-            <allowedElement>TriangleStripSet</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>VisibilitySensor</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="Immersive Profile equals all of the nodes in the VRML 97 Specification, plus various X3D node additions including KeySensor, StringSensor and Scene. Allowed X3D nodes for this profile are: Anchor Appearance AudioClip Background Billboard BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger Box Collision Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Extrusion Fog FontStyle Group ImageTexture IndexedFaceSet IndexedLineSet IndexedTriangleFan IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger KeySensor LineProperties LineSet LoadSensor LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MovieTexture MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet Polyline2D Polypoint2D PositionInterpolator ProximitySensor Rectangle2D ScalarInterpolator Script Shape Sound Sphere SphereSensor SpotLight StringSensor Switch Text TextureCoordinate TextureCoordinateGenerator TextureTransform TimeSensor TimeTrigger TouchSensor TriangleFanSet TriangleSet TriangleSet2D TriangleStripSet Transform Viewpoint VisibilitySensor WorldInfo."/>
          <enumeration value="MedicalInterchange"
-                      appinfo="The MedicalInterchange profile adds support for VolumeRendering component to Interchange profile. Allowed X3D nodes for this profile are: Anchor Arc2D ArcClose2D Appearance Background Billboard BlendedVolumeStyle BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger BoundaryEnhancementVolumeStyle Box CartoonVolumeStyle Circle2D ClipPlane Collision Color ColorInterpolator ColorRGBA ComposedVolumeStyle CompositeTexture3D Cone Coordinate CoordinateDouble CoordinateInterpolator Cylinder DirectionalLight Disk2D EdgeEnhancementVolumeStyle FillProperties FontStyle Group ImageTexture ImageTexture3D IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger IsoSurfaceVolumeData LineProperties LineSet LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OctTree OpacityMapVolumeStyle OrientationInterpolator OrthoViewpoint PixelTexture PixelTexture3D PointSet Polyline2D Polypoint2D PositionInterpolator ProjectionVolumeStyle Rectangle2D ScalarInterpolator SegmentedVolumeData ShadedVolumeStyle Shape SilhouetteEnhancementVolumeStyle Sphere StaticGroup Switch Text TextureCoordinate TextureCoordinate3D TextureCoordinate4D TextureCoordinateGenerator TextureMatrixTransform TextureProperties TextureTransform TextureTransform3D TimeSensor TimeTrigger ToneMappedVolumeStyle Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint ViewpointGroup VolumeData WorldInfo.">
-            <allowedElement>Anchor</allowedElement>
-            <allowedElement>Arc2D</allowedElement>
-            <allowedElement>ArcClose2D</allowedElement>
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>Background</allowedElement>
-            <allowedElement>Billboard</allowedElement>
-            <allowedElement>BlendedVolumeStyle</allowedElement>
-            <allowedElement>BooleanFilter</allowedElement>
-            <allowedElement>BooleanSequencer</allowedElement>
-            <allowedElement>BooleanToggle</allowedElement>
-            <allowedElement>BooleanTrigger</allowedElement>
-            <allowedElement>BoundaryEnhancementVolumeStyle</allowedElement>
-            <allowedElement>Box</allowedElement>
-            <allowedElement>CartoonVolumeStyle</allowedElement>
-            <allowedElement>Circle2D</allowedElement>
-            <allowedElement>ClipPlane</allowedElement>
-            <allowedElement>Collision</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorInterpolator</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>ComposedVolumeStyle</allowedElement>
-            <allowedElement>CompositeTexture3D</allowedElement>
-            <allowedElement>Cone</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>CoordinateDouble</allowedElement>
-            <allowedElement>CoordinateInterpolator</allowedElement>
-            <allowedElement>Cylinder</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>Disk2D</allowedElement>
-            <allowedElement>EdgeEnhancementVolumeStyle</allowedElement>
-            <allowedElement>FillProperties</allowedElement>
-            <allowedElement>FontStyle</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>ImageTexture3D</allowedElement>
-            <allowedElement>IndexedFaceSet</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>IndexedTriangleFanSet</allowedElement>
-            <allowedElement>IndexedTriangleSet</allowedElement>
-            <allowedElement>IndexedTriangleStripSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>IntegerSequencer</allowedElement>
-            <allowedElement>IntegerTrigger</allowedElement>
-            <allowedElement>IsoSurfaceVolumeData</allowedElement>
-            <allowedElement>LineProperties</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>LOD</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>MultiTexture</allowedElement>
-            <allowedElement>MultiTextureCoordinate</allowedElement>
-            <allowedElement>MultiTextureTransform</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>Normal</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OctTree</allowedElement>
-            <allowedElement>OpacityMapVolumeStyle</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>OrthoViewpoint</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PixelTexture3D</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>Polyline2D</allowedElement>
-            <allowedElement>Polypoint2D</allowedElement>
-            <allowedElement>PositionInterpolator</allowedElement>
-            <allowedElement>ProjectionVolumeStyle</allowedElement>
-            <allowedElement>Rectangle2D</allowedElement>
-            <allowedElement>ScalarInterpolator</allowedElement>
-            <allowedElement>SegmentedVolumeData</allowedElement>
-            <allowedElement>ShadedVolumeStyle</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>SilhouetteEnhancementVolumeStyle</allowedElement>
-            <allowedElement>Sphere</allowedElement>
-            <allowedElement>StaticGroup</allowedElement>
-            <allowedElement>Switch</allowedElement>
-            <allowedElement>Text</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureCoordinate3D</allowedElement>
-            <allowedElement>TextureCoordinate4D</allowedElement>
-            <allowedElement>TextureCoordinateGenerator</allowedElement>
-            <allowedElement>TextureMatrixTransform</allowedElement>
-            <allowedElement>TextureProperties</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>TextureTransform3D</allowedElement>
-            <allowedElement>TimeSensor</allowedElement>
-            <allowedElement>TimeTrigger</allowedElement>
-            <allowedElement>ToneMappedVolumeStyle</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>TriangleFanSet</allowedElement>
-            <allowedElement>TriangleSet</allowedElement>
-            <allowedElement>TriangleStripSet</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>ViewpointGroup</allowedElement>
-            <allowedElement>VolumeData</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="The MedicalInterchange profile adds support for VolumeRendering component to Interchange profile. Allowed X3D nodes for this profile are: Anchor Arc2D ArcClose2D Appearance Background Billboard BlendedVolumeStyle BooleanFilter BooleanSequencer BooleanToggle BooleanTrigger BoundaryEnhancementVolumeStyle Box CartoonVolumeStyle Circle2D ClipPlane Collision Color ColorInterpolator ColorRGBA ComposedVolumeStyle CompositeTexture3D Cone Coordinate CoordinateDouble CoordinateInterpolator Cylinder DirectionalLight Disk2D EdgeEnhancementVolumeStyle FillProperties FontStyle Group ImageTexture ImageTexture3D IndexedFaceSet IndexedLineSet IndexedTriangleFanSet IndexedTriangleSet IndexedTriangleStripSet Inline IntegerSequencer IntegerTrigger IsoSurfaceVolumeData LineProperties LineSet LOD Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString MultiTexture MultiTextureCoordinate MultiTextureTransform NavigationInfo Normal NormalInterpolator OctTree OpacityMapVolumeStyle OrientationInterpolator OrthoViewpoint PixelTexture PixelTexture3D PointSet Polyline2D Polypoint2D PositionInterpolator ProjectionVolumeStyle Rectangle2D ScalarInterpolator SegmentedVolumeData ShadedVolumeStyle Shape SilhouetteEnhancementVolumeStyle Sphere StaticGroup Switch Text TextureCoordinate TextureCoordinate3D TextureCoordinate4D TextureCoordinateGenerator TextureMatrixTransform TextureProperties TextureTransform TextureTransform3D TimeSensor TimeTrigger ToneMappedVolumeStyle Transform TriangleFanSet TriangleSet TriangleStripSet Viewpoint ViewpointGroup VolumeData WorldInfo."/>
          <enumeration value="MPEG4Interactive"
-                      appinfo="MPEGInteractive Profile defines base interoperability with MPEG4 standards to a small subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Anchor Appearance Background Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Group ImageTexture IndexedFaceSet IndexedLineSet Inline LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString NavigationInfo NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet PositionInterpolator ProximitySensor ScalarInterpolator Shape Sphere SphereSensor SpotLight Switch TextureCoordinate TextureTransform TimeSensor TouchSensor Transform Viewpoint WorldInfo.">
-            <allowedElement>Anchor</allowedElement>
-            <allowedElement>Appearance</allowedElement>
-            <allowedElement>Background</allowedElement>
-            <allowedElement>Box</allowedElement>
-            <allowedElement>Color</allowedElement>
-            <allowedElement>ColorInterpolator</allowedElement>
-            <allowedElement>ColorRGBA</allowedElement>
-            <allowedElement>Cone</allowedElement>
-            <allowedElement>Coordinate</allowedElement>
-            <allowedElement>CoordinateInterpolator</allowedElement>
-            <allowedElement>Cylinder</allowedElement>
-            <allowedElement>CylinderSensor</allowedElement>
-            <allowedElement>DirectionalLight</allowedElement>
-            <allowedElement>ElevationGrid</allowedElement>
-            <allowedElement>Group</allowedElement>
-            <allowedElement>ImageTexture</allowedElement>
-            <allowedElement>IndexedFaceSet</allowedElement>
-            <allowedElement>IndexedLineSet</allowedElement>
-            <allowedElement>Inline</allowedElement>
-            <allowedElement>LineSet</allowedElement>
-            <allowedElement>Material</allowedElement>
-            <allowedElement>MetadataBoolean</allowedElement>
-            <allowedElement>MetadataDouble</allowedElement>
-            <allowedElement>MetadataFloat</allowedElement>
-            <allowedElement>MetadataInteger</allowedElement>
-            <allowedElement>MetadataSet</allowedElement>
-            <allowedElement>MetadataString</allowedElement>
-            <allowedElement>NavigationInfo</allowedElement>
-            <allowedElement>NormalInterpolator</allowedElement>
-            <allowedElement>OrientationInterpolator</allowedElement>
-            <allowedElement>PixelTexture</allowedElement>
-            <allowedElement>PlaneSensor</allowedElement>
-            <allowedElement>PointLight</allowedElement>
-            <allowedElement>PointSet</allowedElement>
-            <allowedElement>PositionInterpolator</allowedElement>
-            <allowedElement>ProximitySensor</allowedElement>
-            <allowedElement>ScalarInterpolator</allowedElement>
-            <allowedElement>Shape</allowedElement>
-            <allowedElement>Sphere</allowedElement>
-            <allowedElement>SphereSensor</allowedElement>
-            <allowedElement>SpotLight</allowedElement>
-            <allowedElement>Switch</allowedElement>
-            <allowedElement>TextureCoordinate</allowedElement>
-            <allowedElement>TextureTransform</allowedElement>
-            <allowedElement>TimeSensor</allowedElement>
-            <allowedElement>TouchSensor</allowedElement>
-            <allowedElement>Transform</allowedElement>
-            <allowedElement>Viewpoint</allowedElement>
-            <allowedElement>WorldInfo</allowedElement>
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="MPEGInteractive Profile defines base interoperability with MPEG4 standards to a small subset of nodes needed to display lightweight compelling content. Allowed X3D nodes for this profile are: Anchor Appearance Background Box Color ColorInterpolator ColorRGBA Cone Coordinate CoordinateInterpolator Cylinder CylinderSensor DirectionalLight ElevationGrid Group ImageTexture IndexedFaceSet IndexedLineSet Inline LineSet Material MetadataBoolean MetadataDouble MetadataFloat MetadataInteger MetadataSet MetadataString NavigationInfo NormalInterpolator OrientationInterpolator PixelTexture PlaneSensor PointLight PointSet PositionInterpolator ProximitySensor ScalarInterpolator Shape Sphere SphereSensor SpotLight Switch TextureCoordinate TextureTransform TimeSensor TouchSensor Transform Viewpoint WorldInfo."/>
          <enumeration value="Full"
-                      appinfo="The Full Profile corresponds to all Immersive X3D nodes plus all approved/implemented extensions. All X3D nodes and statements are allowed in this profile.">
-            <allowedElement>connect</allowedElement>
-            <allowedElement>ExternProtoDeclare</allowedElement>
-            <allowedElement>EXPORT</allowedElement>
-            <allowedElement>field</allowedElement>
-            <allowedElement>fieldValue</allowedElement>
-            <allowedElement>IMPORT</allowedElement>
-            <allowedElement>IS</allowedElement>
-            <allowedElement>ProtoBody</allowedElement>
-            <allowedElement>ProtoDeclare</allowedElement>
-            <allowedElement>ProtoInterface</allowedElement>
-            <allowedElement>ProtoInstance</allowedElement>
-            <allowedElement>ROUTE</allowedElement>
-            <allowedElement>X3D</allowedElement>
-         </enumeration>
+                      appinfo="The Full Profile corresponds to all Immersive X3D nodes plus all approved/implemented extensions. All X3D nodes and statements are allowed in this profile."/>
       </SimpleType>
-      <SimpleType name="projectionVolumeStyleTypeValues"
+      <SimpleType name="projectionVolumeStyleTypeChoices"
                   baseType="SFString"
-                  appinfo="projectionVolumeStyleTypeValues are allowed enumeration values for ProjectionVolumeStyle field named 'type'."
+                  appinfo="projectionVolumeStyleTypeChoices are allowed enumeration values for ProjectionVolumeStyle field named 'type'."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/volume.html#ProjectionVolumeStyle">
          <enumeration value="MAX"/>
          <enumeration value="MIN"/>
          <enumeration value="AVERAGE"/>
       </SimpleType>
-      <SimpleType name="scaleModeValues"
-                  baseType="MFString"
-                  appinfo="Permitted combinations of horizontal and vertical values for the scaleMode field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
-         <enumeration value="&#34;NONE&#34;"/>
-         <enumeration value="&#34;NONE&#34; &#34;NONE&#34;"/>
-         <enumeration value="&#34;NONE&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;NONE&#34; &#34;STRETCH&#34;"/>
-         <enumeration value="&#34;NONE&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;NONE&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;STRETCH&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;STRETCH&#34;"/>
-         <enumeration value="&#34;STRETCH&#34; &#34;NONE&#34;"/>
-         <enumeration value="&#34;STRETCH&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;STRETCH&#34; &#34;STRETCH&#34;"/>
-         <enumeration value="&#34;STRETCH&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;NONE&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;STRETCH&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
-      </SimpleType>
-      <SimpleType name="segmentNames"
+      <SimpleType name="segmentNameValues"
                   baseType="SFString"
-                  appinfo="CAESAR segment names for identification of HAnimSegment nodes."
+                  appinfo="CAESAR segment names for identification of HAnimSegment nodes as defined in the HAnim Architecture specification. Alternate names are also allowed."
                   documentation="http://www.web3d.org/documents/specifications/19774/V1.0/HAnim/concepts.html#Hierarchy">
          <enumeration value="sacrum"/>
          <enumeration value="pelvis"/>
@@ -2257,14 +1727,14 @@
       </SimpleType>
       <SimpleType name="shaderPartTypeValues"
                   baseType="SFString"
-                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart node type attribute. Unbounded, additional values are possible."
+                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart type attribute. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#ShaderPart">
          <enumeration value="VERTEX"/>
          <enumeration value="FRAGMENT"/>
       </SimpleType>
-      <SimpleType name="siteNames"
+      <SimpleType name="siteNameValues"
                   baseType="SFString"
-                  appinfo="CAESAR site names for identification of HAnimSite nodes. HAnimSite name fields can also include name=&#34;somelocation_view&#34; and so siteNames validation is turned off by default."
+                  appinfo="CAESAR site names for identification of HAnimSite nodes as defined in the HAnim Architecture specification. Alternate names are also allowed. HAnimSite name fields can also include name=&#34;somelocation_view&#34; and so siteNameValues validation is turned off by default."
                   documentation="http://www.web3d.org/documents/specifications/19774/V1.0/HAnim/BodyDimensionsAndLOAs.html#LOA3DefaultSiteTranslations">
          <enumeration value="cervicale"/>
          <enumeration value="crotch"/>
@@ -2358,26 +1828,9 @@
          <enumeration value="suprasternale"/>
          <enumeration value="waist_preferred_post"/>
       </SimpleType>
-      <SimpleType name="sizeUnitsValues"
-                  baseType="MFString"
-                  appinfo="sizeUnitsValues are permitted combinations of horizontal and vertical values for the sizeUnits field in the Layout node. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/layout.html#Layout">
-         <enumeration value="&#34;WORLD&#34;"/>
-         <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;WORLD&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;WORLD&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
-         <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
-      </SimpleType>
-      <SimpleType name="textureBoundaryModeValues"
+      <SimpleType name="textureBoundaryModeChoices"
                   baseType="SFString"
-                  appinfo="textureBoundaryModeValues are allowed enumeration values for TextureProperties boundaryMode* fields."
+                  appinfo="textureBoundaryModeChoices are allowed enumeration values for TextureProperties boundaryMode* fields."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-TextureBoundaryModes">
          <enumeration value="CLAMP"/>
          <enumeration value="CLAMP_TO_EDGE"/>
@@ -2385,9 +1838,9 @@
          <enumeration value="MIRRORED_REPEAT"/>
          <enumeration value="REPEAT"/>
       </SimpleType>
-      <SimpleType name="textureCompressionModeValues"
+      <SimpleType name="textureCompressionModeChoices"
                   baseType="SFString"
-                  appinfo="textureCompressionModeValues are allowed enumeration values for TextureProperties field textureCompression."
+                  appinfo="textureCompressionModeChoices are allowed enumeration values for TextureProperties field textureCompression."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-TextureCompressionModes">
          <enumeration value="DEFAULT"/>
          <enumeration value="FASTEST"/>
@@ -2396,9 +1849,9 @@
          <enumeration value="MEDIUM"/>
          <enumeration value="NICEST"/>
       </SimpleType>
-      <SimpleType name="textureCoordinateGeneratorModeValues"
+      <SimpleType name="textureCoordinateGeneratorModeChoices"
                   baseType="SFString"
-                  appinfo="textureCoordinateGeneratorModeValues are allowed enumeration values for TextureCoordinateGenerator mode field."
+                  appinfo="textureCoordinateGeneratorModeChoices are allowed enumeration values for TextureCoordinateGenerator mode field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-Texturecoordgeneration">
          <enumeration value="SPHERE"/>
          <enumeration value="CAMERASPACENORMAL"/>
@@ -2412,9 +1865,9 @@
          <enumeration value="SPHEREREFLECT"/>
          <enumeration value="SPHEREREFLECTLOCAL"/>
       </SimpleType>
-      <SimpleType name="textureMagnificationModeValues"
+      <SimpleType name="textureMagnificationModeChoices"
                   baseType="SFString"
-                  appinfo="textureMagnificationModeValues are allowed enumeration values for TextureProperties field magnificationFilter."
+                  appinfo="textureMagnificationModeChoices are allowed enumeration values for TextureProperties field magnificationFilter."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-TextureMagnificationModes">
          <enumeration value="AVG_PIXEL"/>
          <enumeration value="DEFAULT"/>
@@ -2422,9 +1875,9 @@
          <enumeration value="NEAREST_PIXEL"/>
          <enumeration value="NICEST"/>
       </SimpleType>
-      <SimpleType name="textureMinificationModeValues"
+      <SimpleType name="textureMinificationModeChoices"
                   baseType="SFString"
-                  appinfo="textureMinificationModeValues are allowed enumeration values for TextureProperties field minificationFilter."
+                  appinfo="textureMinificationModeChoices are allowed enumeration values for TextureProperties field minificationFilter."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#t-TextureMinificationModes">
          <enumeration value="AVG_PIXEL"/>
          <enumeration value="AVG_PIXEL_AVG_MIPMAP"/>
@@ -2436,38 +1889,18 @@
          <enumeration value="NEAREST_PIXEL_NEAREST_MIPMAP"/>
          <enumeration value="NICEST"/>
       </SimpleType>
-      <SimpleType name="transitionTypeValues"
-                  baseType="MFString"
-                  appinfo="Permitted values for the transitionType field in the NavigationInfo node. Unbounded, additional values are possible."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#NavigationInfo">
-         <enumeration value="&#34;TELEPORT&#34;"/>
-         <enumeration value="&#34;LINEAR&#34;"/>
-         <enumeration value="&#34;ANIMATE&#34;"/>
-      </SimpleType>
-      <SimpleType name="typeValues"
-                  baseType="MFString"
-                  appinfo="Permitted values for the type field in the NavigationInfo node. Unbounded, additional values are possible."
-                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/navigation.html#NavigationInfo">
-         <enumeration value="&#34;ANY&#34;"/>
-         <enumeration value="&#34;WALK&#34;"/>
-         <enumeration value="&#34;EXAMINE&#34;"/>
-         <enumeration value="&#34;FLY&#34;"/>
-         <enumeration value="&#34;LOOKAT&#34;"/>
-         <enumeration value="&#34;NONE&#34;"/>
-         <enumeration value="&#34;EXPLORE&#34;"/>
-      </SimpleType>
-      <SimpleType name="unitCategories"
+      <SimpleType name="unitCategoryChoices"
                   baseType="SFString"
-                  appinfo="unitValues are allowed enumeration values for standard and derived units for the UNIT statement."
+                  appinfo="unitCategoryChoices are allowed enumeration values for standard units in the UNIT statement."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/concepts.html#t-Standardunits">
          <enumeration value="angle"/>
          <enumeration value="force"/>
          <enumeration value="length"/>
          <enumeration value="mass"/>
       </SimpleType>
-      <SimpleType name="volumeRenderingWeightFunctionTypes"
+      <SimpleType name="volumeRenderingWeightFunctionChoices"
                   baseType="SFString"
-                  appinfo="volumeRenderingWeightFunctionTypes are allowed enumeration values for BlendedVolumeStyle weightFunction* fields."
+                  appinfo="volumeRenderingWeightFunctionChoices are allowed enumeration values for BlendedVolumeStyle weightFunction* fields."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/volume.html#t-WeightFunctionTypes">
          <enumeration value="CONSTANT"/>
          <enumeration value="ALPHA1"/>
@@ -2476,9 +1909,9 @@
          <enumeration value="ONE_MINUS_ALPHA2"/>
          <enumeration value="TABLE"/>
       </SimpleType>
-      <SimpleType name="x3dVersion"
+      <SimpleType name="x3dVersionChoices"
                   baseType="SFString"
-                  appinfo="x3dVersion enumeration string constants are used to identify the allowed versions for an X3D scene graph."
+                  appinfo="x3dVersionChoices enumeration string constants are used to identify the allowed versions for an X3D scene graph."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/concepts.html#Profiles">
          <enumeration value="3.0" appinfo="X3D v3.0 approved by ISO in 2004."/>
          <enumeration value="3.1"
@@ -2825,7 +2258,8 @@
                    accessType="inputOutput"
                    name="fogType"
                    default="LINEAR"
-                   baseType="fogTypeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fogTypeChoices">
                <enumeration value="LINEAR"/>
                <enumeration value="EXPONENTIAL"/>
             </field>
@@ -2854,7 +2288,8 @@
          </InterfaceDefinition>
       </AbstractObjectType>
       <AbstractObjectType name="X3DProgrammableShaderObject">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#X3DProgrammableShaderObject">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#X3DProgrammableShaderObject"
+                              appinfo="Base type for all nodes that specify arbitrary fields for interfacing with per-object attribute values.">
             <componentInfo name="Shaders" level="1"/>
             <field type="SFString"
                    accessType="inputOutput"
@@ -3814,7 +3249,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DMaterialNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shape.html#X3DMaterialNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shape.html#X3DMaterialNode"
+                              appinfo="Base type for all Material nodes.">
             <componentInfo name="Shape" level="1"/>
             <Inheritance baseType="X3DAppearanceChildNode"/>
             <field type="SFNode"
@@ -4266,7 +3702,8 @@
                    accessType="inputOutput"
                    name="matchCriterion"
                    default="MATCH_ANY"
-                   baseType="pickSensorMatchCriterionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="pickSensorMatchCriterionChoices">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -4460,7 +3897,7 @@
       </AbstractNodeType>
       <AbstractNodeType name="X3DScriptNode">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/scripting.html#X3DScriptNode"
-                              appinfo="This abstract node type is the base type for all scripting nodes.">
+                              appinfo="Base type for scripting nodes (but not shader nodes).">
             <componentInfo name="Scripting" level="1"/>
             <Inheritance baseType="X3DChildNode"/>
             <AdditionalInheritance baseType="X3DUrlObject"/>
@@ -4754,7 +4191,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DTexture2DNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTexture2DNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTexture2DNode"
+                              appinfo="Base type for all nodes which specify 2D sources for texture images.">
             <componentInfo name="Texturing" level="1"/>
             <Inheritance baseType="X3DTextureNode"/>
             <field type="SFNode"
@@ -4871,7 +4309,8 @@
          </InterfaceDefinition>
       </AbstractNodeType>
       <AbstractNodeType name="X3DTextureNode">
-         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTextureNode">
+         <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/texturing.html#X3DTextureNode"
+                              appinfo="Base type for all nodes which specify sources for texture images.">
             <componentInfo name="Texturing" level="1"/>
             <Inheritance baseType="X3DAppearanceChildNode"/>
             <field type="SFNode"
@@ -5465,7 +4904,8 @@
                    accessType="initializeOnly"
                    name="closureType"
                    default="PIE"
-                   baseType="ArcClose2dTypeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="closureTypeChoices">
                <enumeration value="PIE"/>
                <enumeration value="CHORD"/>
             </field>
@@ -5869,7 +5309,8 @@
                    accessType="inputOutput"
                    name="weightFunction1"
                    default="CONSTANT"
-                   baseType="volumeRenderingWeightFunctionTypes">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="volumeRenderingWeightFunctionChoices">
                <enumeration value="CONSTANT"/>
                <enumeration value="ALPHA1"/>
                <enumeration value="ALPHA2"/>
@@ -5881,7 +5322,8 @@
                    accessType="inputOutput"
                    name="weightFunction2"
                    default="CONSTANT"
-                   baseType="volumeRenderingWeightFunctionTypes">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="volumeRenderingWeightFunctionChoices">
                <enumeration value="CONSTANT"/>
                <enumeration value="ALPHA1"/>
                <enumeration value="ALPHA2"/>
@@ -6768,8 +6210,8 @@
                    accessType="inputOutput"
                    name="appliedParameters"
                    default="&#34;BOUNCE&#34;"
-                   additionalEnumerationValuesAllowed="true"
-                   baseType="appliedParametersValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="appliedParametersChoices">
                <enumeration value="&#34;BOUNCE&#34;"/>
                <enumeration value="&#34;USER_FRICTION&#34;"/>
                <enumeration value="&#34;FRICTION_COEFFICIENT-2&#34;"/>
@@ -7551,8 +6993,8 @@
                    accessType="inputOutput"
                    name="appliedParameters"
                    default="&#34;BOUNCE&#34;"
-                   additionalEnumerationValuesAllowed="true"
-                   baseType="appliedParametersValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="appliedParametersChoices">
                <enumeration value="&#34;BOUNCE&#34;"/>
                <enumeration value="&#34;USER_FRICTION&#34;"/>
                <enumeration value="&#34;FRICTION_COEFFICIENT-2&#34;"/>
@@ -8858,6 +8300,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFBool" accessType="outputOnly" name="isActive"/>
             <field type="SFBool" accessType="outputOnly" name="isCollided"/>
@@ -8914,7 +8357,8 @@
                    accessType="inputOutput"
                    name="networkMode"
                    default="standAlone"
-                   baseType="networkModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="networkModeChoices">
                <enumeration value="standAlone"/>
                <enumeration value="networkReader"/>
                <enumeration value="networkWriter"/>
@@ -9245,7 +8689,8 @@
                    accessType="inputOutput"
                    name="fogType"
                    default="LINEAR"
-                   baseType="fogTypeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fogTypeChoices">
                <enumeration value="LINEAR"/>
                <enumeration value="EXPONENTIAL"/>
             </field>
@@ -9341,7 +8786,8 @@
                    accessType="initializeOnly"
                    name="justify"
                    default="&#34;BEGIN&#34;"
-                   baseType="justifyValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="justifyChoices">
                <enumeration value="&#34;MIDDLE&#34;"/>
                <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
                <enumeration value="&#34;MIDDLE&#34; &#34;END&#34;"/>
@@ -9388,7 +8834,8 @@
                    accessType="initializeOnly"
                    name="style"
                    default="PLAIN"
-                   baseType="fontStyleValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fontStyleChoices">
                <enumeration value="PLAIN"/>
                <enumeration value="BOLD"/>
                <enumeration value="ITALIC"/>
@@ -9477,7 +8924,8 @@
                    accessType="inputOutput"
                    name="update"
                    default="NONE"
-                   baseType="generatedCubeMapTextureUpdateValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="generatedCubeMapTextureUpdateChoices">
                <enumeration value="NONE"/>
                <enumeration value="NEXT_FRAME_ONLY"/>
                <enumeration value="ALWAYS"/>
@@ -9515,6 +8963,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFNode"
                    accessType="inputOutput"
@@ -9577,6 +9026,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="MFDouble"
                    accessType="initializeOnly"
@@ -9692,6 +9142,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFNode"
                    accessType="inputOutput"
@@ -9768,6 +9219,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFInt32"
                    accessType="outputOnly"
@@ -9872,6 +9324,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFNode"
                    accessType="inputOutput"
@@ -9914,6 +9367,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFVec3d" accessType="outputOnly" name="geovalue_changed"/>
             <field type="MFFloat"
@@ -9983,6 +9437,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -10045,6 +9500,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFVec3d" accessType="outputOnly" name="hitGeoCoord_changed"/>
             <field type="SFVec3f" accessType="outputOnly" name="hitNormal_changed"/>
@@ -10127,6 +9583,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFNode"
                    accessType="inputOutput"
@@ -10210,6 +9667,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -10347,7 +9805,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="name"
-                   baseType="featurePointNames">
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="featurePointNameValues">
                <enumeration value="sellion"/>
                <enumeration value="r_infraorbitale"/>
                <enumeration value="l_infraorbitale"/>
@@ -10558,7 +10017,8 @@
                    accessType="inputOutput"
                    name="version"
                    default="2.0"
-                   baseType="hanimVersionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="hanimVersionChoices">
                <enumeration value="1.0"/>
                <enumeration value="1.1"/>
                <enumeration value="2.0"/>
@@ -10643,7 +10103,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="name"
-                   baseType="jointNames">
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="jointNameValues">
                <enumeration value="humanoidroot"/>
                <enumeration value="sacroiliac"/>
                <enumeration value="l_hip"/>
@@ -10989,7 +10450,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="name"
-                   baseType="segmentNames">
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="segmentNameValues">
                <enumeration value="sacrum"/>
                <enumeration value="pelvis"/>
                <enumeration value="l_thigh"/>
@@ -11206,7 +10668,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="name"
-                   baseType="siteNames">
+                   additionalEnumerationValuesAllowed="true"
+                   baseType="siteNameValues">
                <enumeration value="cervicale"/>
                <enumeration value="crotch"/>
                <enumeration value="l_acromion"/>
@@ -12422,8 +11885,8 @@
                    accessType="inputOutput"
                    name="align"
                    default="&#34;CENTER&#34; &#34;CENTER&#34;"
-                   baseType="alignValues">
-               <enumeration value="&#34;CENTER&#34;"/>
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="layoutAlignChoices">
                <enumeration value="&#34;LEFT&#34; &#34;BOTTOM&#34;"/>
                <enumeration value="&#34;LEFT&#34; &#34;CENTER&#34;"/>
                <enumeration value="&#34;LEFT&#34; &#34;TOP&#34;"/>
@@ -12448,15 +11911,14 @@
                    accessType="inputOutput"
                    name="offsetUnits"
                    default="&#34;WORLD&#34; &#34;WORLD&#34;"
-                   baseType="offsetUnitsValues">
-               <enumeration value="&#34;WORLD&#34;"/>
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="layoutUnitsChoices">
                <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
+               <enumeration value="&#34;WORLD&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;WORLD&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;WORLD&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;PIXEL&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
@@ -12466,23 +11928,20 @@
                    accessType="inputOutput"
                    name="scaleMode"
                    default="&#34;NONE&#34; &#34;NONE&#34;"
-                   baseType="scaleModeValues">
-               <enumeration value="&#34;NONE&#34;"/>
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="layoutScaleModeChoices">
                <enumeration value="&#34;NONE&#34; &#34;NONE&#34;"/>
                <enumeration value="&#34;NONE&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;NONE&#34; &#34;STRETCH&#34;"/>
                <enumeration value="&#34;NONE&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;NONE&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;STRETCH&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;STRETCH&#34;"/>
                <enumeration value="&#34;STRETCH&#34; &#34;NONE&#34;"/>
                <enumeration value="&#34;STRETCH&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;STRETCH&#34; &#34;STRETCH&#34;"/>
                <enumeration value="&#34;STRETCH&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;PIXEL&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;NONE&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;STRETCH&#34;"/>
@@ -12497,16 +11956,14 @@
                    accessType="inputOutput"
                    name="sizeUnits"
                    default="&#34;WORLD&#34; &#34;WORLD&#34;"
-                   baseType="sizeUnitsValues">
-               <enumeration value="&#34;WORLD&#34;"/>
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="layoutUnitsChoices">
                <enumeration value="&#34;WORLD&#34; &#34;WORLD&#34;"/>
                <enumeration value="&#34;WORLD&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;WORLD&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;WORLD&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;FRACTION&#34; &#34;PIXEL&#34;"/>
-               <enumeration value="&#34;PIXEL&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;WORLD&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;FRACTION&#34;"/>
                <enumeration value="&#34;PIXEL&#34; &#34;PIXEL&#34;"/>
@@ -12676,7 +12133,8 @@
                    name="matchCriterion"
                    default="MATCH_ANY"
                    inheritedFrom="X3DPickSensorNode"
-                   baseType="pickSensorMatchCriterionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="pickSensorMatchCriterionChoices">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -12918,7 +12376,8 @@
                    accessType="inputOutput"
                    name="fogType"
                    default="LINEAR"
-                   baseType="fogTypeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fogTypeChoices">
                <enumeration value="LINEAR"/>
                <enumeration value="EXPONENTIAL"/>
             </field>
@@ -13654,6 +13113,7 @@
                    name="function"
                    additionalEnumerationValuesAllowed="true"
                    baseType="multiTextureFunctionValues">
+               <enumeration value="&#34;&#34;"/>
                <enumeration value="&#34;COMPLEMENT&#34;"/>
                <enumeration value="&#34;ALPHAREPLICATE&#34;"/>
             </field>
@@ -13694,6 +13154,7 @@
                    name="source"
                    additionalEnumerationValuesAllowed="true"
                    baseType="multiTextureSourceValues">
+               <enumeration value="&#34;&#34;"/>
                <enumeration value="&#34;DIFFUSE&#34;"/>
                <enumeration value="&#34;FACTOR&#34;"/>
                <enumeration value="&#34;SPECULAR&#34;"/>
@@ -13844,7 +13305,7 @@
                    name="transitionType"
                    default="&#34;LINEAR&#34;"
                    additionalEnumerationValuesAllowed="true"
-                   baseType="transitionTypeValues">
+                   baseType="navigationTransitionTypeValues">
                <enumeration value="&#34;TELEPORT&#34;"/>
                <enumeration value="&#34;LINEAR&#34;"/>
                <enumeration value="&#34;ANIMATE&#34;"/>
@@ -13854,7 +13315,7 @@
                    name="type"
                    default="&#34;EXAMINE&#34; &#34;ANY&#34;"
                    additionalEnumerationValuesAllowed="true"
-                   baseType="typeValues">
+                   baseType="navigationTypeValues">
                <enumeration value="&#34;ANY&#34;"/>
                <enumeration value="&#34;WALK&#34;"/>
                <enumeration value="&#34;EXAMINE&#34;"/>
@@ -15029,6 +14490,7 @@
                    accessType="initializeOnly"
                    name="geometryType"
                    default="QUAD"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="particleSystemGeometryTypeValues">
                <enumeration value="LINE"/>
                <enumeration value="POINT"/>
@@ -15531,7 +14993,8 @@
                    name="matchCriterion"
                    default="MATCH_ANY"
                    inheritedFrom="X3DPickSensorNode"
-                   baseType="pickSensorMatchCriterionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="pickSensorMatchCriterionChoices">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -16110,7 +15573,8 @@
                    name="matchCriterion"
                    default="MATCH_ANY"
                    inheritedFrom="X3DPickSensorNode"
-                   baseType="pickSensorMatchCriterionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="pickSensorMatchCriterionChoices">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -16266,7 +15730,8 @@
                    accessType="inputOutput"
                    name="type"
                    default="MAX"
-                   baseType="projectionVolumeStyleTypeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="projectionVolumeStyleTypeChoices">
                <enumeration value="MAX"/>
                <enumeration value="MIN"/>
                <enumeration value="AVERAGE"/>
@@ -16511,6 +15976,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -16535,7 +16001,8 @@
                    accessType="inputOutput"
                    name="networkMode"
                    default="standAlone"
-                   baseType="networkModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="networkModeChoices">
                <enumeration value="standAlone"/>
                <enumeration value="networkReader"/>
                <enumeration value="networkWriter"/>
@@ -17033,7 +16500,8 @@
                    accessType="initializeOnly"
                    name="justify"
                    default="&#34;BEGIN&#34;"
-                   baseType="justifyValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="justifyChoices">
                <enumeration value="&#34;MIDDLE&#34;"/>
                <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
                <enumeration value="&#34;MIDDLE&#34; &#34;END&#34;"/>
@@ -17080,7 +16548,8 @@
                    accessType="initializeOnly"
                    name="style"
                    default="PLAIN"
-                   baseType="fontStyleValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fontStyleChoices">
                <enumeration value="PLAIN"/>
                <enumeration value="BOLD"/>
                <enumeration value="ITALIC"/>
@@ -17526,6 +16995,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFBool"
                    accessType="outputOnly"
@@ -17550,7 +17020,8 @@
                    accessType="inputOutput"
                    name="networkMode"
                    default="standAlone"
-                   baseType="networkModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="networkModeChoices">
                <enumeration value="standAlone"/>
                <enumeration value="networkReader"/>
                <enumeration value="networkWriter"/>
@@ -18870,7 +18341,8 @@
                    accessType="inputOutput"
                    name="mode"
                    default="SPHERE"
-                   baseType="textureCoordinateGeneratorModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureCoordinateGeneratorModeChoices">
                <enumeration value="SPHERE"/>
                <enumeration value="CAMERASPACENORMAL"/>
                <enumeration value="CAMERASPACEPOSITION"/>
@@ -18926,7 +18398,8 @@
                    accessType="inputOutput"
                    name="boundaryModeR"
                    default="REPEAT"
-                   baseType="textureBoundaryModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureBoundaryModeChoices">
                <enumeration value="CLAMP"/>
                <enumeration value="CLAMP_TO_EDGE"/>
                <enumeration value="CLAMP_TO_BOUNDARY"/>
@@ -18937,7 +18410,8 @@
                    accessType="inputOutput"
                    name="boundaryModeS"
                    default="REPEAT"
-                   baseType="textureBoundaryModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureBoundaryModeChoices">
                <enumeration value="CLAMP"/>
                <enumeration value="CLAMP_TO_EDGE"/>
                <enumeration value="CLAMP_TO_BOUNDARY"/>
@@ -18948,7 +18422,8 @@
                    accessType="inputOutput"
                    name="boundaryModeT"
                    default="REPEAT"
-                   baseType="textureBoundaryModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureBoundaryModeChoices">
                <enumeration value="CLAMP"/>
                <enumeration value="CLAMP_TO_EDGE"/>
                <enumeration value="CLAMP_TO_BOUNDARY"/>
@@ -18963,7 +18438,8 @@
                    accessType="inputOutput"
                    name="magnificationFilter"
                    default="FASTEST"
-                   baseType="textureMagnificationModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureMagnificationModeChoices">
                <enumeration value="AVG_PIXEL"/>
                <enumeration value="DEFAULT"/>
                <enumeration value="FASTEST"/>
@@ -18980,7 +18456,8 @@
                    accessType="inputOutput"
                    name="minificationFilter"
                    default="FASTEST"
-                   baseType="textureMinificationModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureMinificationModeChoices">
                <enumeration value="AVG_PIXEL"/>
                <enumeration value="AVG_PIXEL_AVG_MIPMAP"/>
                <enumeration value="AVG_PIXEL_NEAREST_MIPMAP"/>
@@ -18995,7 +18472,8 @@
                    accessType="inputOutput"
                    name="textureCompression"
                    default="FASTEST"
-                   baseType="textureCompressionModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="textureCompressionModeChoices">
                <enumeration value="DEFAULT"/>
                <enumeration value="FASTEST"/>
                <enumeration value="HIGH"/>
@@ -19596,6 +19074,7 @@
                    accessType="initializeOnly"
                    name="geoSystem"
                    default="&#34;GD&#34; &#34;WE&#34;"
+                   additionalEnumerationValuesAllowed="true"
                    baseType="geoSystemType"/>
             <field type="SFInt32"
                    accessType="inputOutput"
@@ -19644,7 +19123,8 @@
                    accessType="inputOutput"
                    name="networkMode"
                    default="standAlone"
-                   baseType="networkModeValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="networkModeChoices">
                <enumeration value="standAlone"/>
                <enumeration value="networkReader"/>
                <enumeration value="networkWriter"/>
@@ -20650,7 +20130,8 @@
                    name="matchCriterion"
                    default="MATCH_ANY"
                    inheritedFrom="X3DPickSensorNode"
-                   baseType="pickSensorMatchCriterionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="pickSensorMatchCriterionChoices">
                <enumeration value="MATCH_ANY"/>
                <enumeration value="MATCH_EVERY"/>
                <enumeration value="MATCH_ONLY_ONE"/>
@@ -20823,7 +20304,8 @@
                    accessType="inputOutput"
                    name="name"
                    use="required"
-                   baseType="componentNames">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="componentNameChoices">
                <enumeration value="Core"/>
                <enumeration value="CADGeometry"/>
                <enumeration value="CubeMapTexturing"/>
@@ -20918,7 +20400,8 @@
                    accessType="inputOutput"
                    name="accessType"
                    use="required"
-                   baseType="accessTypeNames">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="accessTypeChoices">
                <enumeration value="initializeOnly"/>
                <enumeration value="inputOnly"/>
                <enumeration value="outputOnly"/>
@@ -20938,7 +20421,8 @@
                    accessType="inputOutput"
                    name="type"
                    use="required"
-                   baseType="fieldTypeNames">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="fieldTypeChoices">
                <enumeration value="SFBool"/>
                <enumeration value="MFBool"/>
                <enumeration value="SFColor"/>
@@ -21068,7 +20552,8 @@
             <field type="SFString"
                    accessType="inputOutput"
                    name="dir"
-                   baseType="metaDirectionValues">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="metaDirectionChoices">
                <enumeration value="rtl"/>
                <enumeration value="ltr"/>
             </field>
@@ -21213,7 +20698,8 @@
                    accessType="initializeOnly"
                    name="category"
                    use="required"
-                   baseType="unitCategories">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="unitCategoryChoices">
                <enumeration value="angle"/>
                <enumeration value="force"/>
                <enumeration value="length"/>
@@ -21245,7 +20731,8 @@
                    name="profile"
                    default="Immersive"
                    use="required"
-                   baseType="profileNames">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="profileNameChoices">
                <enumeration value="Core"/>
                <enumeration value="Interchange"/>
                <enumeration value="CADInterchange"/>
@@ -21265,7 +20752,8 @@
                    name="version"
                    default="3.3"
                    use="required"
-                   baseType="x3dVersion">
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="x3dVersionChoices">
                <enumeration value="3.0"/>
                <enumeration value="3.1"/>
                <enumeration value="3.2"/>
@@ -21279,4 +20767,4 @@
          </InterfaceDefinition>
       </Statement>
    </Statements>
-</X3DObjectModel>
+</X3dUnifiedObjectModel>
