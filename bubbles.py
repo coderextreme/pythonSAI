@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -166,13 +165,13 @@ ShaderPart34 = ShaderPartObject()
 ShaderPart34.setType("VERTEX")
 ShaderPart34.setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])
 
-ComposedShader28.addParts(ShaderPart34)
+ComposedShader28.setParts(ShaderPart34)
 ShaderPart35 = ShaderPartObject()
 ShaderPart35.setType("FRAGMENT")
 ShaderPart35.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])
 
-ComposedShader28.addParts(ShaderPart35)
-Appearance19.addShaders(ComposedShader28)
+ComposedShader28.setParts(ShaderPart35)
+Appearance19.setShaders(ComposedShader28)
 ComposedShader36 = ComposedShaderObject()
 ComposedShader36.setDEF("x3dom")
 ComposedShader36.setLanguage("GLSL")
@@ -216,13 +215,13 @@ ShaderPart42 = ShaderPartObject()
 ShaderPart42.setType("VERTEX")
 ShaderPart42.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
 
-ComposedShader36.addParts(ShaderPart42)
+ComposedShader36.setParts(ShaderPart42)
 ShaderPart43 = ShaderPartObject()
 ShaderPart43.setType("FRAGMENT")
 ShaderPart43.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])
 
-ComposedShader36.addParts(ShaderPart43)
-Appearance19.addShaders(ComposedShader36)
+ComposedShader36.setParts(ShaderPart43)
+Appearance19.setShaders(ComposedShader36)
 Shape17.setAppearance(Appearance19)
 Transform16.addChild(Shape17)
 Scene11.addChild(Transform16)
@@ -300,7 +299,7 @@ Script47.setSourceCode("ecmascript:\n"+
 "                            lastKey = Math.round(Math.random()*(positions.length-1));\n"+
 "                        } while (lastKey === ov);\n"+
 "                        var vc = lastKey;\n"+
-"\n"+
+"                        \n"+
 "                        orientation_changed = new MFRotation();\n"+
 "                        orientation_changed[0] = new SFRotation(orientations[ov].x, orientations[ov].y, orientations[ov].z, orientations[ov].w);\n"+
 "                        orientation_changed[1] = new SFRotation(orientations[vc].x, orientations[vc].y, orientations[vc].z, orientations[vc].w);\n"+

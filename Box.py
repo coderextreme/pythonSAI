@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass

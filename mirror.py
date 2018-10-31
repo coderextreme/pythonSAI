@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -97,8 +96,8 @@ Shape20 = ShapeObject()
 Appearance21 = AppearanceObject()
 
 Material22 = MaterialObject()
-Material22.setDiffuseColor([0.7,0.7,0.7])
-Material22.setSpecularColor([0.5,0.5,0.5])
+Material22.setDiffuseColor([.7,.7,.7])
+Material22.setSpecularColor([.5,.5,.5])
 
 Appearance21.setMaterial(Material22)
 ComposedCubeMapTexture23 = ComposedCubeMapTextureObject()
@@ -340,7 +339,8 @@ field61.setValue("-1")
 
 Script47.addField(field61)
 
-Script47.setSourceCode("ecmascript:\n"+
+Script47.setSourceCode("\n"+
+"ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+
@@ -356,7 +356,8 @@ Script47.setSourceCode("ecmascript:\n"+
 "		    top_changed[0] = topUrls[side];\n"+
 "		    bottom_changed[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }")
+"        }\n"+
+"")
 Transform19.addChild(Script47)
 TimeSensor62 = TimeSensorObject()
 TimeSensor62.setDEF("Clock")

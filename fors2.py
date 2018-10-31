@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -133,13 +132,14 @@ field26.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script22.addField(field26)
 
-Script22.setSourceCode("ecmascript:\n"+
+Script22.setSourceCode(" ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}")
+"					}\n"+
+" ")
 ProtoBody13.addChild(Script22)
 TimeSensor27 = TimeSensorObject()
 TimeSensor27.setDEF("nodeClock")
@@ -250,7 +250,7 @@ connect47.setProtoField("positionB")
 IS45.addConnect(connect47)
 Script41.setIS(IS45)
 
-Script41.setSourceCode("ecmascript:\n"+
+Script41.setSourceCode(" ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
@@ -259,7 +259,7 @@ Script41.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -267,11 +267,12 @@ Script41.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "		    Browser.print('\\n'+'\"');\n"+
 "                    spine = value;\n"+
-"                }")
+"                }\n"+
+" ")
 ProtoBody36.addChild(Script41)
 ROUTE48 = ROUTEObject()
 ROUTE48.setFromNode("MoveCylinder")

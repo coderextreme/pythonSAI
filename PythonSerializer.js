@@ -18,7 +18,7 @@ PythonSerializer.prototype = {
 		var stack = [];
 
 		var str = "";
-		str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
+		// str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
 
               	str += "import jnius_config\n";
 		str += "jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')\n";
@@ -340,10 +340,11 @@ PythonSerializer.prototype = {
 				}
 			} else if (element.childNodes.hasOwnProperty(cn) && node.nodeType == 4) {
 				str += "\n"+element.nodeName+stack[0];
-				str += ".setSourceCode(\""+node.nodeValue.split("\r\n").map(function(x) {
+				str += ".setSourceCode(\""+node.nodeValue.split(/\r?\n/).map(function(x) {
 					return x.
 					        replace(/\\/g, '\\\\').
 						replace(/"/g, '\\"')
+						replace(/$/g, '\\')
 						/*
 						.replace(/\\n/g, "\\\\n")
 						*/

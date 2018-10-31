@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -54,15 +53,15 @@ ProtoInterface11 = ProtoInterfaceObject()
 
 field12 = fieldObject()
 field12.setType(fieldObject.TYPE_MFSTRING)
-field12.setName("vertex")
 field12.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
+field12.setName("vertex")
 field12.setValue("\"../shaders/gl_flowers_chromatic.vs\"")
 
 ProtoInterface11.addField(field12)
 field13 = fieldObject()
 field13.setType(fieldObject.TYPE_MFSTRING)
-field13.setName("fragment")
 field13.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
+field13.setName("fragment")
 field13.setValue("\"../shaders/pc_flowers.fs\"")
 
 ProtoInterface11.addField(field13)
@@ -71,13 +70,14 @@ ProtoBody14 = ProtoBodyObject()
 
 Transform15 = TransformObject()
 Transform15.setDEF("transform")
+Transform15.setTranslation([0,0,0])
 
 Shape16 = ShapeObject()
 
 Appearance17 = AppearanceObject()
 
 Material18 = MaterialObject()
-Material18.setDiffuseColor([0.7,0.7,0.7])
+Material18.setDiffuseColor([.7,.7,.7])
 
 Appearance17.setMaterial(Material18)
 ComposedCubeMapTexture19 = ComposedCubeMapTextureObject()
@@ -119,11 +119,17 @@ field27.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
 field27.setValue("0")
 
 ComposedShader26.addField(field27)
+
+ComposedShader26.addComments(CommentsBlock("""
+                                <field name='cube' type='SFNode' accessType=\"inputOutput\">
+                                    <ComposedCubeMapTexture USE=\"texture\"/>
+                                </field>
+				"""))
 field28 = fieldObject()
 field28.setType(fieldObject.TYPE_SFVEC3F)
 field28.setName("chromaticDispertion")
 field28.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field28.setValue("0.98 1 1.033")
+field28.setValue("0.98 1.0 1.033")
 
 ComposedShader26.addField(field28)
 field29 = fieldObject()
@@ -144,7 +150,7 @@ field31 = fieldObject()
 field31.setType(fieldObject.TYPE_SFFLOAT)
 field31.setName("power")
 field31.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field31.setValue("2")
+field31.setValue("2.0")
 
 ComposedShader26.addField(field31)
 field32 = fieldObject()
@@ -189,8 +195,6 @@ field37.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
 field37.setValue("0.5")
 
 ComposedShader26.addField(field37)
-
-ComposedShader26.addComments(CommentsBlock("""<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>"""))
 ShaderPart38 = ShaderPartObject()
 ShaderPart38.setType("VERTEX")
 
@@ -352,11 +356,13 @@ Script45.setSourceCode("ecmascript:\n"+
 "				if (d > 10) {\n"+
 "					d = 4;\n"+
 "				}\n"+
-"			}")
+"			}\n"+
+"\n"+
+"")
 Transform15.addChild(Script45)
 TimeSensor55 = TimeSensorObject()
 TimeSensor55.setDEF("TourTime")
-TimeSensor55.setCycleInterval(0.15)
+TimeSensor55.setCycleInterval(0.150)
 TimeSensor55.setLoop(True)
 
 Transform15.addChild(TimeSensor55)

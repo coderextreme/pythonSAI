@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -30,8 +29,8 @@ meta5.setContent("5 May 2015")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setName("modified")
 meta6.setContent("05 May 2017")
+meta6.setName("modified")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
@@ -129,6 +128,7 @@ Transform19.addChild(Transform24)
 StringSensor29 = StringSensorObject()
 StringSensor29.setDEF("RightSensor")
 StringSensor29.setEnabled(False)
+StringSensor29.setDeletionAllowed(True)
 
 Transform19.addChild(StringSensor29)
 TouchSensor30 = TouchSensorObject()
@@ -181,6 +181,7 @@ Transform31.addChild(Transform36)
 StringSensor41 = StringSensorObject()
 StringSensor41.setDEF("UpSensor")
 StringSensor41.setEnabled(False)
+StringSensor41.setDeletionAllowed(True)
 
 Transform31.addChild(StringSensor41)
 TouchSensor42 = TouchSensorObject()
@@ -253,6 +254,7 @@ Transform48.addChild(Transform53)
 StringSensor58 = StringSensorObject()
 StringSensor58.setDEF("CenterSensor")
 StringSensor58.setEnabled(False)
+StringSensor58.setDeletionAllowed(True)
 
 Transform48.addChild(StringSensor58)
 TouchSensor59 = TouchSensorObject()

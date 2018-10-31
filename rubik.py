@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -55,13 +54,14 @@ field12 = fieldObject()
 field12.setType(fieldObject.TYPE_SFVEC3F)
 field12.setName("xtranslation")
 field12.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field12.setValue("0 0 0")
+field12.setValue("0.0 0.0 0.0")
 
 ProtoInterface11.addField(field12)
 ProtoDeclare10.setProtoInterface(ProtoInterface11)
 ProtoBody13 = ProtoBodyObject()
 
 Transform14 = TransformObject()
+Transform14.setTranslation([0,0,0])
 
 IS15 = ISObject()
 
@@ -96,13 +96,14 @@ field23 = fieldObject()
 field23.setType(fieldObject.TYPE_SFVEC3F)
 field23.setName("ytranslation")
 field23.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field23.setValue("0 0 0")
+field23.setValue("0.0 0.0 0.0")
 
 ProtoInterface22.addField(field23)
 ProtoDeclare21.setProtoInterface(ProtoInterface22)
 ProtoBody24 = ProtoBodyObject()
 
 Transform25 = TransformObject()
+Transform25.setTranslation([0,0,0])
 
 IS26 = ISObject()
 
@@ -151,13 +152,14 @@ field36 = fieldObject()
 field36.setType(fieldObject.TYPE_SFVEC3F)
 field36.setName("ztranslation")
 field36.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field36.setValue("0 0 0")
+field36.setValue("0.0 0.0 0.0")
 
 ProtoInterface35.addField(field36)
 ProtoDeclare34.setProtoInterface(ProtoInterface35)
 ProtoBody37 = ProtoBodyObject()
 
 Transform38 = TransformObject()
+Transform38.setTranslation([0,0,0])
 
 IS39 = ISObject()
 
@@ -206,13 +208,14 @@ field49 = fieldObject()
 field49.setType(fieldObject.TYPE_SFVEC3F)
 field49.setName("ttranslation")
 field49.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field49.setValue("0 0 0")
+field49.setValue("0.0 0.0 0.0")
 
 ProtoInterface48.addField(field49)
 ProtoDeclare47.setProtoInterface(ProtoInterface48)
 ProtoBody50 = ProtoBodyObject()
 
 Transform51 = TransformObject()
+Transform51.setTranslation([0,0,0])
 
 IS52 = ISObject()
 

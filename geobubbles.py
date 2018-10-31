@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -10,8 +9,8 @@ X3D0.setVersion("3.3")
 head1 = headObject()
 
 component2 = componentObject()
-component2.setName("Geospatial")
 component2.setLevel(1)
+component2.setName("Geospatial")
 
 head1.addComponent(component2)
 meta3 = metaObject()
@@ -51,8 +50,9 @@ GeoViewpoint9.setDEF("Tour")
 GeoViewpoint9.setPosition([0,0,4])
 GeoViewpoint9.setOrientation([1,0,0,0])
 GeoViewpoint9.setDescription("Tour Views")
+GeoViewpoint9.setRetainUserOffsets(False)
 
-Scene8.addChild(GeoViewpoint9)
+Scene8.setChildren(GeoViewpoint9)
 Background10 = BackgroundObject()
 Background10.setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"])
 Background10.setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"])

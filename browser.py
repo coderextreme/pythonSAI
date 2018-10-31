@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -44,13 +43,15 @@ Script8.setDEF("Browser")
 Script8.setSourceCode("ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
-"                }")
+"                }\n"+
+"")
 Scene7.addChild(Script8)
 Script9 = ScriptObject()
 Script9.setDEF("Clouds")
 
 
-Script9.setSourceCode("ecmascript:\n"+
+Script9.setSourceCode("\n"+
+"ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -59,7 +60,8 @@ Script9.setSourceCode("ecmascript:\n"+
 "'	Transform		\\n'+\n"+
 "'    ' + '               	\\n';\n"+
 "\n"+
-"}")
+"}\n"+
+"")
 Scene7.addChild(Script9)
 X3D0.setScene(Scene7)
 

@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -10,6 +9,7 @@ X3D0.setVersion("3.3")
 Scene1 = SceneObject()
 
 NavigationInfo2 = NavigationInfoObject()
+NavigationInfo2.setType(["EXAMINE","ANY"])
 
 Scene1.addChild(NavigationInfo2)
 DirectionalLight3 = DirectionalLightObject()
@@ -18,7 +18,7 @@ DirectionalLight3.setIntensity(0.5)
 
 Scene1.addChild(DirectionalLight3)
 Background4 = BackgroundObject()
-Background4.setSkyColor([1,1,1])
+Background4.setSkyColor([1.000,1.000,1.000])
 
 Scene1.addChild(Background4)
 Viewpoint5 = ViewpointObject()
@@ -47,7 +47,9 @@ IndexedFaceSet10 = IndexedFaceSetObject()
 IndexedFaceSet10.setCcw(False)
 IndexedFaceSet10.setConvex(False)
 IndexedFaceSet10.setCoordIndex([0,1,2,-1])
+IndexedFaceSet10.setCreaseAngle(0)
 IndexedFaceSet10.setDEF("ifs")
+IndexedFaceSet10.setSolid(True)
 
 Coordinate11 = CoordinateObject()
 Coordinate11.setDEF("crd")
@@ -62,25 +64,25 @@ Script12.setDEF("FlowerScript")
 
 field13 = fieldObject()
 field13.setType(fieldObject.TYPE_SFFLOAT)
-field13.setName("set_fraction")
 field13.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
+field13.setName("set_fraction")
 
 Script12.addField(field13)
 field14 = fieldObject()
 field14.setType(fieldObject.TYPE_MFVEC3F)
-field14.setName("coordinates")
 field14.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
+field14.setName("coordinates")
 
 Script12.addField(field14)
 field15 = fieldObject()
 field15.setType(fieldObject.TYPE_MFINT32)
-field15.setName("coordIndexes")
 field15.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
+field15.setName("coordIndexes")
 
 Script12.addField(field15)
 
 Script12.setSourceCode("ecmascript:\n"+
-"\n"+
+"    \n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
 "var g = 5;\n"+
@@ -165,7 +167,8 @@ Script12.setSourceCode("ecmascript:\n"+
 "		h = 4;\n"+
 "	}\n"+
 "	updateCoordinates(resolution);\n"+
-"}")
+"}\n"+
+"")
 Scene1.addChild(Script12)
 TimeSensor16 = TimeSensorObject()
 TimeSensor16.setDEF("Clock")

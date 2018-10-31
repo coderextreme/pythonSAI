@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -55,7 +54,7 @@ field12 = fieldObject()
 field12.setType(fieldObject.TYPE_SFVEC3F)
 field12.setName("xtranslation")
 field12.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field12.setValue("0 0 0")
+field12.setValue("0.0 0.0 0.0")
 
 ProtoInterface11.addField(field12)
 field13 = fieldObject()
@@ -81,6 +80,7 @@ ProtoDeclare10.setProtoInterface(ProtoInterface11)
 ProtoBody18 = ProtoBodyObject()
 
 Transform19 = TransformObject()
+Transform19.setTranslation([0,0,0])
 
 IS20 = ISObject()
 
@@ -107,7 +107,7 @@ field25 = fieldObject()
 field25.setType(fieldObject.TYPE_SFVEC3F)
 field25.setName("ytranslation")
 field25.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field25.setValue("0 0 0")
+field25.setValue("0.0 0.0 0.0")
 
 ProtoInterface24.addField(field25)
 field26 = fieldObject()
@@ -133,6 +133,7 @@ ProtoDeclare23.setProtoInterface(ProtoInterface24)
 ProtoBody31 = ProtoBodyObject()
 
 Transform32 = TransformObject()
+Transform32.setTranslation([0,0,0])
 
 IS33 = ISObject()
 
@@ -205,7 +206,7 @@ field49 = fieldObject()
 field49.setType(fieldObject.TYPE_SFVEC3F)
 field49.setName("ztranslation")
 field49.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field49.setValue("0 0 0")
+field49.setValue("0.0 0.0 0.0")
 
 ProtoInterface48.addField(field49)
 field50 = fieldObject()
@@ -231,6 +232,7 @@ ProtoDeclare47.setProtoInterface(ProtoInterface48)
 ProtoBody55 = ProtoBodyObject()
 
 Transform56 = TransformObject()
+Transform56.setTranslation([0,0,0])
 
 IS57 = ISObject()
 
@@ -303,7 +305,7 @@ field73 = fieldObject()
 field73.setType(fieldObject.TYPE_SFVEC3F)
 field73.setName("ttranslation")
 field73.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field73.setValue("0 0 0")
+field73.setValue("0.0 0.0 0.0")
 
 ProtoInterface72.addField(field73)
 field74 = fieldObject()
@@ -329,6 +331,7 @@ ProtoDeclare71.setProtoInterface(ProtoInterface72)
 ProtoBody79 = ProtoBodyObject()
 
 Transform80 = TransformObject()
+Transform80.setTranslation([0,0,0])
 
 IS81 = ISObject()
 

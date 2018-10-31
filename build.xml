@@ -66,7 +66,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <property name=   "saxon.jar.name" value="saxon9he.jar"/>
     <property name=   "node" value="node.exe"/>
 	
-    <target name="default" depends="build.all,build.python"/>
+    <target name="default" depends="build.all"/>
 
     <target name="build.all" description="Test Python output">
 	<exec executable="npm.cmd">
@@ -117,9 +117,9 @@ POSSIBILITY OF SUCH DAMAGE.
 	<exec executable="python">
 		<arg value="parseom.py"/>
 	</exec>
-	    <!-- convert X3D XML files to X3D JSON files -->
-	    <java classname="RunSaxon" classpath=".;${saxon.jar.name}" fork="${fork}">
-			<arg value="---overwrite"/>
+		<!-- convert X3D XML files to X3D Python files -->
+		<exec executable="node">
+			<arg value="xml2all.js"/>
 			<arg value="abox.x3d"/>
 			<arg value="arc.x3d"/>
 			<arg value="arc1.x3d"/>
@@ -198,90 +198,6 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="x3dconnectorProto.x3d"/>
 			<arg value="X3dHeaderPrototypeSyntaxExamples.x3d"/>
 			<arg value="x3domflowers.x3d"/>
-		</java>
-    </target>
-    <target name="build.python" description="Test Python output">
-		<!-- convert JSON files to Python files -->
-		<exec executable="node">
-			<arg value="json2py.js"/>
-			<arg value="abox.json"/>
-			<arg value="arc.json"/>
-			<arg value="arc1.json"/>
-			<arg value="arc3.json"/>
-			<arg value="ArchHalf.json"/>
-			<arg value="ArchPrototype.json"/>
-			<arg value="arcold.json"/>
-			<arg value="asmallbox.json"/>
-			<arg value="ball.json"/>
-			<arg value="BindingOperations.json"/>
-			<arg value="Box.json"/>
-			<arg value="BoxManAnimationPanel.json"/>
-			<arg value="browser.json"/>
-			<arg value="bub.json"/>
-			<arg value="bubble.json"/>
-			<arg value="bubbles.json"/>
-			<arg value="CameraExamples.json"/>
-			<arg value="CameraPrototypes.json"/>
-			<arg value="CameraShape.json"/>
-			<arg value="CloudsProcedural4.json"/>
-			<arg value="cobweb.json"/>
-			<arg value="cobweb2.json"/>
-			<arg value="CoordinateAxes.json"/>
-			<arg value="cube.json"/>
-			<arg value="extrusion.json"/>
-			<arg value="ExtrusionHeart.json"/>
-			<arg value="flipp.json"/>
-			<arg value="flipper.json"/>
-			<arg value="flower.json"/>
-			<arg value="flowerproto.json"/>
-			<arg value="flowers.json"/>
-			<arg value="flowers2.json"/>
-			<arg value="flowers4.json"/>
-			<arg value="flowers7.json"/>
-			<arg value="force.json"/>
-			<arg value="fors.json"/>
-			<arg value="fors2.json"/>
-			<arg value="freewrlflowers.json"/>
-			<arg value="gears.json"/>
-			<arg value="geo.json"/>
-			<arg value="geobubbles.json"/>
-			<arg value="glflowers.json"/>
-			<arg value="gridBack.json"/>
-			<arg value="HeadsUpDisplayExample.json"/>
-			<arg value="HelloWorld.json"/>
-			<arg value="HelloWorldProgramOutput.json"/>
-			<arg value="IcosahedronSubdivisionLevel5.json"/>
-			<arg value="ifscube.json"/>
-			<arg value="ifscubeworks.json"/>
-			<arg value="indexedfaceset_pixeltexture_entire.json"/>
-			<arg value="indexedfaceset_pixeltexture_part.json"/>
-			<arg value="indexedfaceset_pixeltexture_plus.json"/>
-			<arg value="indexedfaceset_pixeltexture_whole.json"/>
-			<arg value="MFString.json"/>
-			<arg value="mirror.json"/>
-			<arg value="mirror2.json"/>
-			<arg value="ObliqueStrategies.json"/>
-			<arg value="PixelTextureComponentExamples.json"/>
-			<arg value="plainflowers.json"/>
-			<arg value="pp3.json"/>
-			<arg value="qq3.json"/>
-			<arg value="rgb_alpha.json"/>
-			<arg value="rubik.json"/>
-			<arg value="rubikFurnace.json"/>
-			<arg value="rubikOnFire.json"/>
-			<arg value="SFVec3f.json"/>
-			<arg value="sphere.json"/>
-			<arg value="sphereflowers.json"/>
-			<arg value="StringArrayEncodingExamples.json"/>
-			<arg value="Table5_18PixelTexture.json"/>
-			<arg value="Teapot.json"/>
-			<arg value="text.json"/>
-			<arg value="TextExamples.json"/>
-			<arg value="TextSpecialCharacters.json"/>
-			<arg value="x3dconnector.json"/>
-			<arg value="x3dconnectorProto.json"/>
-			<arg value="X3dHeaderPrototypeSyntaxExamples.json"/>
-			<arg value="x3domflowers.json"/>
 		</exec>
 		<!-- run Python files Begin -->
 		<exec executable="python">

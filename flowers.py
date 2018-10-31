@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -48,6 +47,7 @@ X3D0.setHead(head1)
 Scene9 = SceneObject()
 
 NavigationInfo10 = NavigationInfoObject()
+NavigationInfo10.setType(["EXAMINE","ANY"])
 
 Scene9.addChild(NavigationInfo10)
 Background11 = BackgroundObject()
@@ -66,14 +66,15 @@ ProtoBody13 = ProtoBodyObject()
 
 Transform14 = TransformObject()
 Transform14.setDEF("transform")
+Transform14.setTranslation([0,0,0])
 
 Shape15 = ShapeObject()
 
 Appearance16 = AppearanceObject()
 
 Material17 = MaterialObject()
-Material17.setDiffuseColor([0.7,0.7,0.7])
-Material17.setSpecularColor([0.5,0.5,0.5])
+Material17.setDiffuseColor([.7,.7,.7])
+Material17.setSpecularColor([.5,.5,.5])
 
 Appearance16.setMaterial(Material17)
 ComposedCubeMapTexture18 = ComposedCubeMapTextureObject()
@@ -128,7 +129,7 @@ field29 = fieldObject()
 field29.setType(fieldObject.TYPE_SFVEC3F)
 field29.setName("chromaticDispertion")
 field29.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field29.setValue("0.98 1 1.033")
+field29.setValue("0.98 1.0 1.033")
 
 ComposedShader25.addField(field29)
 field30 = fieldObject()
@@ -149,7 +150,7 @@ field32 = fieldObject()
 field32.setType(fieldObject.TYPE_SFFLOAT)
 field32.setName("power")
 field32.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field32.setValue("2")
+field32.setValue("2.0")
 
 ComposedShader25.addField(field32)
 ShaderPart33 = ShaderPartObject()
@@ -187,7 +188,7 @@ field39 = fieldObject()
 field39.setType(fieldObject.TYPE_SFVEC3F)
 field39.setName("chromaticDispertion")
 field39.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field39.setValue("0.98 1 1.033")
+field39.setValue("0.98 1.0 1.033")
 
 ComposedShader35.addField(field39)
 field40 = fieldObject()
@@ -208,7 +209,7 @@ field42 = fieldObject()
 field42.setType(fieldObject.TYPE_SFFLOAT)
 field42.setName("power")
 field42.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field42.setValue("2")
+field42.setValue("2.0")
 
 ComposedShader35.addField(field42)
 ShaderPart43 = ShaderPartObject()
@@ -247,7 +248,7 @@ field49 = fieldObject()
 field49.setType(fieldObject.TYPE_SFVEC3F)
 field49.setName("chromaticDispertion")
 field49.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field49.setValue("0.98 1 1.033")
+field49.setValue("0.98 1.0 1.033")
 
 ComposedShader45.addField(field49)
 field50 = fieldObject()
@@ -268,7 +269,7 @@ field52 = fieldObject()
 field52.setType(fieldObject.TYPE_SFFLOAT)
 field52.setName("power")
 field52.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field52.setValue("2")
+field52.setValue("2.0")
 
 ComposedShader45.addField(field52)
 ShaderPart53 = ShaderPartObject()
@@ -284,10 +285,13 @@ ComposedShader45.addParts(ShaderPart54)
 Appearance16.addShaders(ComposedShader45)
 Shape15.setAppearance(Appearance16)
 
-Shape15.addComments(CommentsBlock("""<Sphere></Sphere>"""))
+Shape15.addComments(CommentsBlock("""
+			<Sphere></Sphere>
+			"""))
 IndexedFaceSet55 = IndexedFaceSetObject()
 IndexedFaceSet55.setConvex(False)
 IndexedFaceSet55.setDEF("Orbit")
+IndexedFaceSet55.setCreaseAngle(0)
 
 Coordinate56 = CoordinateObject()
 Coordinate56.setDEF("OrbitCoordinates")
@@ -321,14 +325,14 @@ field60.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 Script57.addField(field60)
 field61 = fieldObject()
 field61.setType(fieldObject.TYPE_MFVEC3F)
-field61.setName("coordinates")
 field61.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
+field61.setName("coordinates")
 
 Script57.addField(field61)
 field62 = fieldObject()
 field62.setType(fieldObject.TYPE_MFINT32)
-field62.setName("coordIndexes")
 field62.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
+field62.setName("coordIndexes")
 
 Script57.addField(field62)
 field63 = fieldObject()
@@ -476,11 +480,13 @@ Script57.setSourceCode("ecmascript:\n"+
 "				}\n"+
 "				resolution = 100;\n"+
 "				updateCoordinates(resolution);\n"+
-"			}")
+"			}\n"+
+"\n"+
+"")
 ProtoBody13.addChild(Script57)
 TimeSensor69 = TimeSensorObject()
 TimeSensor69.setDEF("TourTime")
-TimeSensor69.setCycleInterval(0.15)
+TimeSensor69.setCycleInterval(0.150)
 TimeSensor69.setLoop(True)
 
 ProtoBody13.addChild(TimeSensor69)
@@ -524,7 +530,10 @@ ROUTE75.setToField("set_translation")
 
 ProtoBody13.addChild(ROUTE75)
 
-ProtoBody13.addComments(CommentsBlock("""<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/> <ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>"""))
+ProtoBody13.addComments(CommentsBlock("""
+		<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/>
+		<ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>
+		"""))
 ProtoDeclare12.setProtoBody(ProtoBody13)
 Scene9.addChild(ProtoDeclare12)
 Transform76 = TransformObject()
@@ -534,7 +543,10 @@ ProtoInstance77.setName("flower")
 
 Transform76.addChild(ProtoInstance77)
 
-Transform76.addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <ProtoInstance name=\"flower\"/>"""))
+Transform76.addComments(CommentsBlock("""
+            <ProtoInstance name=\"flower\"/>
+            <ProtoInstance name=\"flower\"/>
+	    """))
 Scene9.addChild(Transform76)
 X3D0.setScene(Scene9)
 

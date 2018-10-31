@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -48,6 +47,7 @@ X3D0.setHead(head1)
 Scene9 = SceneObject()
 
 NavigationInfo10 = NavigationInfoObject()
+NavigationInfo10.setType(["EXAMINE","ANY"])
 
 Scene9.addChild(NavigationInfo10)
 Background11 = BackgroundObject()
@@ -67,8 +67,8 @@ Shape13 = ShapeObject()
 Appearance14 = AppearanceObject()
 
 Material15 = MaterialObject()
-Material15.setDiffuseColor([0.7,0.7,0.7])
-Material15.setSpecularColor([0.5,0.5,0.5])
+Material15.setDiffuseColor([.7,.7,.7])
+Material15.setSpecularColor([.5,.5,.5])
 
 Appearance14.setMaterial(Material15)
 ComposedCubeMapTexture16 = ComposedCubeMapTextureObject()
@@ -113,7 +113,7 @@ field25 = fieldObject()
 field25.setType(fieldObject.TYPE_SFVEC3F)
 field25.setName("chromaticDispertion")
 field25.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field25.setValue("0.98 1 1.033")
+field25.setValue("0.98 1.0 1.033")
 
 ComposedShader23.addField(field25)
 field26 = fieldObject()
@@ -150,10 +150,13 @@ ComposedShader23.addParts(ShaderPart30)
 Appearance14.addShaders(ComposedShader23)
 Shape13.setAppearance(Appearance14)
 
-Shape13.addComments(CommentsBlock("""<Sphere>"""))
+Shape13.addComments(CommentsBlock("""
+                <Sphere>
+		"""))
 IndexedFaceSet31 = IndexedFaceSetObject()
 IndexedFaceSet31.setConvex(False)
 IndexedFaceSet31.setDEF("Orbit")
+IndexedFaceSet31.setCreaseAngle(0)
 
 Coordinate32 = CoordinateObject()
 Coordinate32.setDEF("OrbitCoordinates")
@@ -167,24 +170,26 @@ Script33.setDEF("OrbitScript")
 
 field34 = fieldObject()
 field34.setType(fieldObject.TYPE_SFFLOAT)
-field34.setName("set_fraction")
 field34.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
+field34.setName("set_fraction")
 
 Script33.addField(field34)
 field35 = fieldObject()
 field35.setType(fieldObject.TYPE_MFVEC3F)
-field35.setName("coordinates")
 field35.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
+field35.setName("coordinates")
 
 Script33.addField(field35)
 field36 = fieldObject()
 field36.setType(fieldObject.TYPE_MFINT32)
-field36.setName("coordIndexes")
 field36.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
+field36.setName("coordIndexes")
 
 Script33.addField(field36)
 
-Script33.setSourceCode("ecmascript:\n"+
+Script33.setSourceCode("\n"+
+"\n"+
+"ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -254,7 +259,8 @@ Script33.setSourceCode("ecmascript:\n"+
 "	}\n"+
 "	resolution = 100;\n"+
 "	updateCoordinates(resolution);\n"+
-"}")
+"}\n"+
+"      ")
 Scene9.addChild(Script33)
 TimeSensor37 = TimeSensorObject()
 TimeSensor37.setDEF("Clock")

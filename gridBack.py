@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -10,58 +9,58 @@ X3D0.setVersion("3.0")
 head1 = headObject()
 
 meta2 = metaObject()
-meta2.setName("title")
 meta2.setContent("gridBack.x3d")
+meta2.setName("title")
 
 head1.addMeta(meta2)
 meta3 = metaObject()
-meta3.setName("description")
 meta3.setContent("Checkerboard grid background for X3D/VRML materials selection.")
+meta3.setName("description")
 
 head1.addMeta(meta3)
 meta4 = metaObject()
-meta4.setName("creator")
 meta4.setContent("David Roussel")
+meta4.setName("creator")
 
 head1.addMeta(meta4)
 meta5 = metaObject()
-meta5.setName("translator")
 meta5.setContent("James Harney, Don Brutzman NPS")
+meta5.setName("translator")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setName("created")
 meta6.setContent("8 April 2002")
+meta6.setName("created")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
-meta7.setName("modified")
 meta7.setContent("12 January 2014")
+meta7.setName("modified")
 
 head1.addMeta(meta7)
 meta8 = metaObject()
-meta8.setName("reference")
 meta8.setContent("http://vrmlstuff.free.fr/materials")
+meta8.setName("reference")
 
 head1.addMeta(meta8)
 meta9 = metaObject()
-meta9.setName("subject")
 meta9.setContent("Universal Media Material Library")
+meta9.setName("subject")
 
 head1.addMeta(meta9)
 meta10 = metaObject()
-meta10.setName("identifier")
 meta10.setContent("http://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d")
+meta10.setName("identifier")
 
 head1.addMeta(meta10)
 meta11 = metaObject()
-meta11.setName("generator")
 meta11.setContent("Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html")
+meta11.setName("generator")
 
 head1.addMeta(meta11)
 meta12 = metaObject()
-meta12.setName("license")
 meta12.setContent("../license.html")
+meta12.setName("license")
 
 head1.addMeta(meta12)
 X3D0.setHead(head1)
@@ -73,7 +72,7 @@ Appearance15 = AppearanceObject()
 
 Material16 = MaterialObject()
 Material16.setAmbientIntensity(0.01)
-Material16.setDiffuseColor([1,1,1])
+Material16.setDiffuseColor([1.0,1.0,1.0])
 Material16.setShininess(0.05)
 
 Appearance15.setMaterial(Material16)
@@ -85,7 +84,7 @@ IndexedFaceSet17.setCoordIndex([0,8,9,1,-1,1,9,10,2,-1,2,10,11,3,-1,3,11,12,4,-1
 IndexedFaceSet17.setNormalPerVertex(False)
 
 Coordinate18 = CoordinateObject()
-Coordinate18.setPoint([-5.25,5.25,0,-3.75,5.25,0,-2.25,5.25,0,-0.75,5.25,0,0.75,5.25,0,2.25,5.25,0,3.75,5.25,0,5.25,5.25,0,-5.25,3.75,0,-3.75,3.75,0,-2.25,3.75,0,-0.75,3.75,0,0.75,3.75,0,2.25,3.75,0,3.75,3.75,0,5.25,3.75,0,-5.25,2.25,0,-3.75,2.25,0,-2.25,2.25,0,-0.75,2.25,0,0.75,2.25,0,2.25,2.25,0,3.75,2.25,0,5.25,2.25,0,-5.25,0.75,0,-3.75,0.75,0,-2.25,0.75,0,-0.75,0.75,0,0.75,0.75,0,2.25,0.75,0,3.75,0.75,0,5.25,0.75,0,-5.25,-0.75,0,-3.75,-0.75,0,-2.25,-0.75,0,-0.75,-0.75,0,0.75,-0.75,0,2.25,-0.75,0,3.75,-0.75,0,5.25,-0.75,0,-5.25,-2.25,0,-3.75,-2.25,0,-2.25,-2.25,0,-0.75,-2.25,0,0.75,-2.25,0,2.25,-2.25,0,3.75,-2.25,0,5.25,-2.25,0,-5.25,-3.75,0,-3.75,-3.75,0,-2.25,-3.75,0,-0.75,-3.75,0,0.75,-3.75,0,2.25,-3.75,0,3.75,-3.75,0,5.25,-3.75,0,-5.25,-5.25,0,-3.75,-5.25,0,-2.25,-5.25,0,-0.75,-5.25,0,0.75,-5.25,0,2.25,-5.25,0,3.75,-5.25,0,5.25,-5.25,0])
+Coordinate18.setPoint([-5.25,5.25,0.0,-3.75,5.25,0.0,-2.25,5.25,0.0,-0.75,5.25,0.0,0.75,5.25,0.0,2.25,5.25,0.0,3.75,5.25,0.0,5.25,5.25,0.0,-5.25,3.75,0.0,-3.75,3.75,0.0,-2.25,3.75,0.0,-0.75,3.75,0.0,0.75,3.75,0.0,2.25,3.75,0.0,3.75,3.75,0.0,5.25,3.75,0.0,-5.25,2.25,0.0,-3.75,2.25,0.0,-2.25,2.25,0.0,-0.75,2.25,0.0,0.75,2.25,0.0,2.25,2.25,0.0,3.75,2.25,0.0,5.25,2.25,0.0,-5.25,0.75,0.0,-3.75,0.75,0.0,-2.25,0.75,0.0,-0.75,0.75,0.0,0.75,0.75,0.0,2.25,0.75,0.0,3.75,0.75,0.0,5.25,0.75,0.0,-5.25,-0.75,0.0,-3.75,-0.75,0.0,-2.25,-0.75,0.0,-0.75,-0.75,0.0,0.75,-0.75,0.0,2.25,-0.75,0.0,3.75,-0.75,0.0,5.25,-0.75,0.0,-5.25,-2.25,0.0,-3.75,-2.25,0.0,-2.25,-2.25,0.0,-0.75,-2.25,0.0,0.75,-2.25,0.0,2.25,-2.25,0.0,3.75,-2.25,0.0,5.25,-2.25,0.0,-5.25,-3.75,0.0,-3.75,-3.75,0.0,-2.25,-3.75,0.0,-0.75,-3.75,0.0,0.75,-3.75,0.0,2.25,-3.75,0.0,3.75,-3.75,0.0,5.25,-3.75,0.0,-5.25,-5.25,0.0,-3.75,-5.25,0.0,-2.25,-5.25,0.0,-0.75,-5.25,0.0,0.75,-5.25,0.0,2.25,-5.25,0.0,3.75,-5.25,0.0,5.25,-5.25,0.0])
 
 IndexedFaceSet17.setCoord(Coordinate18)
 Color19 = ColorObject()

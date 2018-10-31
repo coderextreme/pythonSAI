@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -10,78 +9,78 @@ X3D0.setVersion("3.1")
 head1 = headObject()
 
 meta2 = metaObject()
-meta2.setName("title")
 meta2.setContent("IcosahedronSubdivisionLevel5.x3d")
+meta2.setName("title")
 
 head1.addMeta(meta2)
 meta3 = metaObject()
-meta3.setName("reference")
 meta3.setContent("IcosahedronSubdivisionLevel5.ply")
+meta3.setName("reference")
 
 head1.addMeta(meta3)
 meta4 = metaObject()
-meta4.setName("description")
 meta4.setContent("Icosahedron is a polyhedron with twenty faces, subdivided to level 5, where all 10242 vertices and 20480 faces produce regular (equilateral) triangles.")
+meta4.setName("description")
 
 head1.addMeta(meta4)
 meta5 = metaObject()
-meta5.setName("created")
 meta5.setContent("13 September 2014")
+meta5.setName("created")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setName("modified")
 meta6.setContent("27 September 2014")
+meta6.setName("modified")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
-meta7.setName("creator")
 meta7.setContent("Don Brutzman")
+meta7.setName("creator")
 
 head1.addMeta(meta7)
 meta8 = metaObject()
-meta8.setName("reference")
 meta8.setContent("Icosahedron.x3d")
+meta8.setName("reference")
 
 head1.addMeta(meta8)
 meta9 = metaObject()
-meta9.setName("reference")
 meta9.setContent("https://en.wikipedia.org/wiki/Icosahedron")
+meta9.setName("reference")
 
 head1.addMeta(meta9)
 meta10 = metaObject()
-meta10.setName("reference")
 meta10.setContent("https://en.wiktionary.org/wiki/icosahedron")
+meta10.setName("reference")
 
 head1.addMeta(meta10)
 meta11 = metaObject()
-meta11.setName("reference")
 meta11.setContent("https://en.wikipedia.org/wiki/Platonic_solid")
+meta11.setName("reference")
 
 head1.addMeta(meta11)
 meta12 = metaObject()
-meta12.setName("reference")
 meta12.setContent("https://en.wikipedia.org/wiki/Geodesic_grid")
+meta12.setName("reference")
 
 head1.addMeta(meta12)
 meta13 = metaObject()
-meta13.setName("identifier")
 meta13.setContent("http://x3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel5.x3d")
+meta13.setName("identifier")
 
 head1.addMeta(meta13)
 meta14 = metaObject()
-meta14.setName("generator")
 meta14.setContent("Meshlab X3D Exported, http://meshlab.sourceforge.net")
+meta14.setName("generator")
 
 head1.addMeta(meta14)
 meta15 = metaObject()
-meta15.setName("generator")
 meta15.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+meta15.setName("generator")
 
 head1.addMeta(meta15)
 meta16 = metaObject()
-meta16.setName("license")
 meta16.setContent("../license.html")
+meta16.setName("license")
 
 head1.addMeta(meta16)
 X3D0.setHead(head1)

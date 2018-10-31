@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -39,19 +38,20 @@ Scene7 = SceneObject()
 
 Collision8 = CollisionObject()
 Collision8.setDEF("DoNotCollideWithVisualizationWidget")
+Collision8.setEnabled(True)
 
 
-Collision8.addComments(CommentsBlock("""Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph."""))
+Collision8.addComments(CommentsBlock(""" Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph. """))
 
-Collision8.addComments(CommentsBlock("""This NavigationInfo allows examine mode and will be overridden by any parent scene."""))
+Collision8.addComments(CommentsBlock(""" This NavigationInfo allows examine mode and will be overridden by any parent scene. """))
 
-Collision8.addComments(CommentsBlock("""Each arrow goes from +1m to -1m to allow linear scaling to fit a scene"""))
+Collision8.addComments(CommentsBlock(""" Each arrow goes from +1m to -1m to allow linear scaling to fit a scene """))
 
-Collision8.addComments(CommentsBlock("""Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user"""))
+Collision8.addComments(CommentsBlock(""" Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user """))
 Group9 = GroupObject()
 
 
-Group9.addComments(CommentsBlock("""Vertical Y arrow and label"""))
+Group9.addComments(CommentsBlock(""" Vertical Y arrow and label """))
 Group10 = GroupObject()
 Group10.setDEF("ArrowGreen")
 
@@ -59,7 +59,7 @@ Shape11 = ShapeObject()
 
 Cylinder12 = CylinderObject()
 Cylinder12.setDEF("ArrowCylinder")
-Cylinder12.setRadius(0.025)
+Cylinder12.setRadius(.025)
 Cylinder12.setTop(False)
 
 Shape11.setGeometry(Cylinder12)
@@ -67,8 +67,8 @@ Appearance13 = AppearanceObject()
 Appearance13.setDEF("Green")
 
 Material14 = MaterialObject()
-Material14.setDiffuseColor([0.1,0.6,0.1])
-Material14.setEmissiveColor([0.05,0.2,0.05])
+Material14.setDiffuseColor([.1,.6,.1])
+Material14.setEmissiveColor([.05,.2,.05])
 
 Appearance13.setMaterial(Material14)
 Shape11.setAppearance(Appearance13)
@@ -80,8 +80,8 @@ Shape16 = ShapeObject()
 
 Cone17 = ConeObject()
 Cone17.setDEF("ArrowCone")
-Cone17.setBottomRadius(0.05)
-Cone17.setHeight(0.1)
+Cone17.setBottomRadius(.05)
+Cone17.setHeight(.1)
 
 Shape16.setGeometry(Cone17)
 Appearance18 = AppearanceObject()
@@ -102,8 +102,8 @@ Appearance22 = AppearanceObject()
 Appearance22.setDEF("LABEL_APPEARANCE")
 
 Material23 = MaterialObject()
-Material23.setDiffuseColor([1,1,0.3])
-Material23.setEmissiveColor([0.33,0.33,0.1])
+Material23.setDiffuseColor([1,1,.3])
+Material23.setEmissiveColor([.33,.33,.1])
 
 Appearance22.setMaterial(Material23)
 Shape21.setAppearance(Appearance22)
@@ -114,7 +114,7 @@ FontStyle25 = FontStyleObject()
 FontStyle25.setDEF("LABEL_FONT")
 FontStyle25.setFamily(["SANS"])
 FontStyle25.setJustify(["MIDDLE","MIDDLE"])
-FontStyle25.setSize(0.2)
+FontStyle25.setSize(.2)
 
 Text24.setFontStyle(FontStyle25)
 Shape21.setGeometry(Text24)
@@ -126,7 +126,7 @@ Transform26 = TransformObject()
 Transform26.setRotation([0,0,1,-1.57079])
 
 
-Transform26.addComments(CommentsBlock("""Horizontal X arrow and label"""))
+Transform26.addComments(CommentsBlock(""" Horizontal X arrow and label """))
 Group27 = GroupObject()
 
 Group28 = GroupObject()
@@ -142,8 +142,8 @@ Appearance31 = AppearanceObject()
 Appearance31.setDEF("Red")
 
 Material32 = MaterialObject()
-Material32.setDiffuseColor([0.7,0.1,0.1])
-Material32.setEmissiveColor([0.33,0,0])
+Material32.setDiffuseColor([.7,.1,.1])
+Material32.setEmissiveColor([.33,0,0])
 
 Appearance31.setMaterial(Material32)
 Shape29.setAppearance(Appearance31)
@@ -166,10 +166,10 @@ Group28.addChild(Transform33)
 Group27.addChild(Group28)
 Transform37 = TransformObject()
 Transform37.setRotation([0,0,1,1.57079])
-Transform37.setTranslation([0.072,1.1,0])
+Transform37.setTranslation([.072,1.1,0])
 
 
-Transform37.addComments(CommentsBlock("""note label rotated back to original coordinate frame"""))
+Transform37.addComments(CommentsBlock(""" note label rotated back to original coordinate frame """))
 Billboard38 = BillboardObject()
 
 Shape39 = ShapeObject()
@@ -195,7 +195,7 @@ Transform43 = TransformObject()
 Transform43.setRotation([1,0,0,1.57079])
 
 
-Transform43.addComments(CommentsBlock("""Perpendicular Z arrow and label, note right-hand rule"""))
+Transform43.addComments(CommentsBlock(""" Perpendicular Z arrow and label, note right-hand rule """))
 Group44 = GroupObject()
 
 Group45 = GroupObject()
@@ -211,8 +211,8 @@ Appearance48 = AppearanceObject()
 Appearance48.setDEF("Blue")
 
 Material49 = MaterialObject()
-Material49.setDiffuseColor([0.3,0.3,1])
-Material49.setEmissiveColor([0.1,0.1,0.33])
+Material49.setDiffuseColor([.3,.3,1])
+Material49.setEmissiveColor([.1,.1,.33])
 
 Appearance48.setMaterial(Material49)
 Shape46.setAppearance(Appearance48)
@@ -235,10 +235,10 @@ Group45.addChild(Transform50)
 Group44.addChild(Group45)
 Transform54 = TransformObject()
 Transform54.setRotation([1,0,0,-1.57079])
-Transform54.setTranslation([0,1.1,0.072])
+Transform54.setTranslation([0,1.1,.072])
 
 
-Transform54.addComments(CommentsBlock("""note label rotated back to original coordinate frame"""))
+Transform54.addComments(CommentsBlock(""" note label rotated back to original coordinate frame """))
 Billboard55 = BillboardObject()
 
 Shape56 = ShapeObject()

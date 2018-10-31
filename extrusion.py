@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -50,7 +49,7 @@ Extrusion11 = ExtrusionObject()
 Extrusion11.setDEF("extrusion")
 Extrusion11.setSpine([-50,-50,0,50,50,0])
 Extrusion11.setCreaseAngle(0.785)
-Extrusion11.setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0])
+Extrusion11.setCrossSection([1.00,0.00,0.92,-0.38,0.71,-0.71,0.38,-0.92,0.00,-1.00,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1.00,-0.00,-0.92,0.38,-0.71,0.71,-0.38,0.92,0.00,1.00,0.38,0.92,0.71,0.71,0.92,0.38,1.00,0.00])
 
 Shape10.setGeometry(Extrusion11)
 Appearance12 = AppearanceObject()
@@ -83,14 +82,16 @@ field17.setValue("-50 -50 0 50 50 0")
 
 Script15.addField(field17)
 
-Script15.setSourceCode("ecmascript:\n"+
+Script15.setSourceCode("\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_cycle(value) {\n"+
 "                        Browser.print(value);\n"+
 "                        var endA = new SFVec3f(spine[0].x*Math.random()*2, spine[0].y*Math.random()*2, spine[0].z*Math.random()*2);\n"+
 "                        var endB = new SFVec3f(spine[1].x*Math.random()*2, spine[1].y*Math.random()*2, spine[1].z*Math.random()*2);\n"+
 "		        spine = new MFVec3f([endA, endB]);\n"+
-"                }")
+"                }\n"+
+"")
 Group9.addChild(Script15)
 ROUTE18 = ROUTEObject()
 ROUTE18.setFromNode("TourTime")

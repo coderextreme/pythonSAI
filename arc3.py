@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -48,6 +47,7 @@ Background9.setSkyColor([0.4,0.4,0.4])
 Scene7.addChild(Background9)
 Transform10 = TransformObject()
 Transform10.setDEF("DECLpoint_G1_node")
+Transform10.setTranslation([0,0,0])
 
 Shape11 = ShapeObject()
 
@@ -106,7 +106,8 @@ Script16.setSourceCode("ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}")
+"		}\n"+
+"")
 Transform10.addChild(Script16)
 TimeSensor21 = TimeSensorObject()
 TimeSensor21.setDEF("DECLpoint_G1_CL1")
@@ -145,6 +146,7 @@ Transform10.addChild(ROUTE25)
 Scene7.addChild(Transform10)
 Transform26 = TransformObject()
 Transform26.setDEF("DECLpoint_G2_node")
+Transform26.setTranslation([0,0,0])
 
 Shape27 = ShapeObject()
 
@@ -203,7 +205,8 @@ Script32.setSourceCode("ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}")
+"		}\n"+
+"")
 Transform26.addChild(Script32)
 TimeSensor37 = TimeSensorObject()
 TimeSensor37.setDEF("DECLpoint_G2_CL1")
@@ -364,7 +367,8 @@ Script49.setSourceCode("ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }")
+"        }\n"+
+"")
 Group42.addChild(Script49)
 Scene7.addChild(Group42)
 ROUTE60 = ROUTEObject()

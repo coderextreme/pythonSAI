@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -92,6 +91,7 @@ Text23 = TextObject()
 Text23.setString(["Node"])
 
 FontStyle24 = FontStyleObject()
+FontStyle24.setFamily(["SERIF"])
 FontStyle24.setJustify(["MIDDLE","MIDDLE"])
 FontStyle24.setSize(5)
 
@@ -143,13 +143,15 @@ field32.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script28.addField(field32)
 
-Script28.setSourceCode("ecmascript:\n"+
+Script28.setSourceCode("\n"+
+"ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}")
+"					}\n"+
+"")
 Group13.addChild(Script28)
 TimeSensor33 = TimeSensorObject()
 TimeSensor33.setDEF("nodeClock")
@@ -215,7 +217,7 @@ Shape44 = ShapeObject()
 Extrusion45 = ExtrusionObject()
 Extrusion45.setDEF("extrusion")
 Extrusion45.setCreaseAngle(0.785)
-Extrusion45.setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0])
+Extrusion45.setCrossSection([1.00,0.00,0.92,-0.38,0.71,-0.71,0.38,-0.92,0.00,-1.00,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1.00,-0.00,-0.92,0.38,-0.71,0.71,-0.38,0.92,0.00,1.00,0.38,0.92,0.71,0.71,0.92,0.38,1.00,0.00])
 Extrusion45.setSpine([0,-50,0,0,50,0])
 
 Shape44.setGeometry(Extrusion45)
@@ -263,7 +265,8 @@ connect54.setProtoField("set_positionB")
 IS52.addConnect(connect54)
 Script48.setIS(IS52)
 
-Script48.setSourceCode("ecmascript:\n"+
+Script48.setSourceCode("\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -272,7 +275,7 @@ Script48.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -280,10 +283,11 @@ Script48.setSourceCode("ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
-"                }")
+"                }\n"+
+"")
 Group43.addChild(Script48)
 ROUTE55 = ROUTEObject()
 ROUTE55.setFromNode("MoveCylinder")
@@ -301,54 +305,55 @@ Transform56.setScale([0.1,0.1,0.1])
 
 PlaneSensor57 = PlaneSensorObject()
 PlaneSensor57.setDEF("clickGenerator")
+PlaneSensor57.setEnabled(True)
 PlaneSensor57.setMinPosition([-50,-50])
 PlaneSensor57.setMaxPosition([50,50])
 PlaneSensor57.setDescription("click on background to add nodes, click on nodes to add links")
 
 Transform56.addChild(PlaneSensor57)
 ProtoInstance58 = ProtoInstanceObject()
-ProtoInstance58.setName("node")
 ProtoInstance58.setDEF("nodeA")
+ProtoInstance58.setName("node")
 
 fieldValue59 = fieldValueObject()
 fieldValue59.setName("position")
-fieldValue59.setValue("0 0 0")
+fieldValue59.setValue("0.0 0.0 0.0")
 
 ProtoInstance58.addFieldValue(fieldValue59)
 Transform56.addChild(ProtoInstance58)
 ProtoInstance60 = ProtoInstanceObject()
-ProtoInstance60.setName("node")
 ProtoInstance60.setDEF("nodeB")
+ProtoInstance60.setName("node")
 
 fieldValue61 = fieldValueObject()
 fieldValue61.setName("position")
-fieldValue61.setValue("50 50 50")
+fieldValue61.setValue("50.0 50.0 50.0")
 
 ProtoInstance60.addFieldValue(fieldValue61)
 Transform56.addChild(ProtoInstance60)
 ProtoInstance62 = ProtoInstanceObject()
-ProtoInstance62.setName("node")
 ProtoInstance62.setDEF("nodeC")
+ProtoInstance62.setName("node")
 
 fieldValue63 = fieldValueObject()
 fieldValue63.setName("position")
-fieldValue63.setValue("-50 -50 -50")
+fieldValue63.setValue("-50.0 -50.0 -50.0")
 
 ProtoInstance62.addFieldValue(fieldValue63)
 Transform56.addChild(ProtoInstance62)
 ProtoInstance64 = ProtoInstanceObject()
-ProtoInstance64.setName("node")
 ProtoInstance64.setDEF("nodeD")
+ProtoInstance64.setName("node")
 
 fieldValue65 = fieldValueObject()
 fieldValue65.setName("position")
-fieldValue65.setValue("50 50 -50")
+fieldValue65.setValue("50.0 50.0 -50.0")
 
 ProtoInstance64.addFieldValue(fieldValue65)
 Transform56.addChild(ProtoInstance64)
 ProtoInstance66 = ProtoInstanceObject()
-ProtoInstance66.setName("cylinder")
 ProtoInstance66.setDEF("linkA")
+ProtoInstance66.setName("cylinder")
 
 fieldValue67 = fieldValueObject()
 fieldValue67.setName("set_positionA")
@@ -362,8 +367,8 @@ fieldValue68.setValue("50 50 50")
 ProtoInstance66.addFieldValue(fieldValue68)
 Transform56.addChild(ProtoInstance66)
 ProtoInstance69 = ProtoInstanceObject()
-ProtoInstance69.setName("cylinder")
 ProtoInstance69.setDEF("linkB")
+ProtoInstance69.setName("cylinder")
 
 fieldValue70 = fieldValueObject()
 fieldValue70.setName("set_positionA")
@@ -377,8 +382,8 @@ fieldValue71.setValue("-50 -50 -50")
 ProtoInstance69.addFieldValue(fieldValue71)
 Transform56.addChild(ProtoInstance69)
 ProtoInstance72 = ProtoInstanceObject()
-ProtoInstance72.setName("cylinder")
 ProtoInstance72.setDEF("linkC")
+ProtoInstance72.setName("cylinder")
 
 fieldValue73 = fieldValueObject()
 fieldValue73.setName("set_positionA")
@@ -397,28 +402,33 @@ Script75.setDEF("clickHandler")
 
 field76 = fieldObject()
 field76.setType(fieldObject.TYPE_SFINT32)
-field76.setName("counter")
 field76.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
+field76.setName("counter")
 field76.setValue("0")
 
 Script75.addField(field76)
 field77 = fieldObject()
 field77.setType(fieldObject.TYPE_SFNODE)
-field77.setName("node_changed")
 field77.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
+field77.setName("node_changed")
 
 Script75.addField(field77)
 field78 = fieldObject()
 field78.setType(fieldObject.TYPE_SFBOOL)
-field78.setName("add_node")
 field78.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
+field78.setName("add_node")
 field78.setValue("false")
 
 Script75.addField(field78)
 
-Script75.addComments(CommentsBlock("""<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>"""))
+Script75.addComments(CommentsBlock("""
+            <field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\">
+                <Transform USE=\"HoldsContent\"/>
+            </field>
+	    """))
 
-Script75.setSourceCode("ecmascript:\n"+
+Script75.setSourceCode("\n"+
+"ecmascript:\n"+
 "	function add_node(value) {\n"+
 "                // Browser.print('hey ', counter);\n"+
 "                counter = counter++;\n"+
@@ -434,8 +444,9 @@ Script75.setSourceCode("ecmascript:\n"+
 "				  ]\n"+
 "				}\n"+
 "			});\n"+
-"\n"+
-"        }")
+"                \n"+
+"        }\n"+
+"	")
 Scene8.addChild(Script75)
 ROUTE79 = ROUTEObject()
 ROUTE79.setFromNode("clickGenerator")

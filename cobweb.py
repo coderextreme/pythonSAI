@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -155,7 +154,8 @@ Script18.setSourceCode("ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}")
+"}\n"+
+"")
 Transform13.addChild(Script18)
 TimeSensor24 = TimeSensorObject()
 TimeSensor24.setDEF("bubbleClock")

@@ -1,4 +1,3 @@
-# -*- coding: UTF-8 -*-
 import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
@@ -154,13 +153,13 @@ ShaderPart32 = ShaderPartObject()
 ShaderPart32.setType("VERTEX")
 ShaderPart32.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
 
-ComposedShader25.addParts(ShaderPart32)
+ComposedShader25.setParts(ShaderPart32)
 ShaderPart33 = ShaderPartObject()
 ShaderPart33.setType("FRAGMENT")
 ShaderPart33.setDEF("common")
 ShaderPart33.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"])
 
-ComposedShader25.addParts(ShaderPart33)
+ComposedShader25.setParts(ShaderPart33)
 Appearance16.addShaders(ComposedShader25)
 ComposedShader34 = ComposedShaderObject()
 ComposedShader34.setLanguage("GLSL")
@@ -207,7 +206,7 @@ ShaderPart41 = ShaderPartObject()
 ShaderPart41.setType("VERTEX")
 ShaderPart41.setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])
 
-ComposedShader34.addParts(ShaderPart41)
+ComposedShader34.setParts(ShaderPart41)
 ShaderPart42 = ShaderPartObject()
 ShaderPart42.setUSE("common")
 
