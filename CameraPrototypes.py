@@ -2214,4 +2214,3 @@ Anchor255.addChild(Transform256)
 Scene16.addChild(Anchor255)
 X3D0.setScene(Scene16)
 
-X3D0.toFileX3D("././CameraPrototypes.new.x3d")

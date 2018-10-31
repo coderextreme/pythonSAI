@@ -538,4 +538,3 @@ Transform76.addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <Proto
 Scene9.addChild(Transform76)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././flowers.new.x3d")

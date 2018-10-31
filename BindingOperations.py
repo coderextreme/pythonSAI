@@ -528,4 +528,3 @@ Transform47.addChild(ROUTE84)
 Scene17.addChild(Transform47)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././BindingOperations.new.x3d")

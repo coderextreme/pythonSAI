@@ -526,4 +526,3 @@ Transform96.addChild(Anchor97)
 Scene28.addChild(Transform96)
 X3D0.setScene(Scene28)
 
-X3D0.toFileX3D("././ObliqueStrategies.new.x3d")

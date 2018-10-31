@@ -351,4 +351,3 @@ ROUTE65.setToField("set_endpoint")
 Scene7.addChild(ROUTE65)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././x3dconnector.new.x3d")

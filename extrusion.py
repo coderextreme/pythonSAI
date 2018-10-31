@@ -109,4 +109,3 @@ Group9.addChild(ROUTE19)
 Scene8.addChild(Group9)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././extrusion.new.x3d")

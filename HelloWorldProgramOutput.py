@@ -877,4 +877,3 @@ Shape143.setGeometry(Extrusion146)
 Scene26.addChild(Shape143)
 X3D0.setScene(Scene26)
 
-X3D0.toFileX3D("././HelloWorldProgramOutput.new.x3d")

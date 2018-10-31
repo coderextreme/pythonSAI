@@ -119,4 +119,3 @@ Group10.addChild(ProtoInstance25)
 Scene7.addChild(Group10)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././plainflowers.new.x3d")

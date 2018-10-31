@@ -65,4 +65,3 @@ Group8.addChild(Shape9)
 Scene7.addChild(Group8)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././ifscubeworks.new.x3d")

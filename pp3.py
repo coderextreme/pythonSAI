@@ -439,4 +439,3 @@ Transform84.addChild(ProtoInstance85)
 Scene10.addChild(Transform84)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("././pp3.new.x3d")

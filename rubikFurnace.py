@@ -421,4 +421,3 @@ ProtoInstance95.addFieldValue(fieldValue97)
 Scene7.addChild(ProtoInstance95)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././rubikFurnace.new.x3d")

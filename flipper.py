@@ -139,4 +139,3 @@ ROUTE25.setToField("set_fraction")
 Scene7.addChild(ROUTE25)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././flipper.new.x3d")

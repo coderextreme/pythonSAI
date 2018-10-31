@@ -263,4 +263,3 @@ ProtoInstance60.addFieldValue(fieldValue61)
 Scene7.addChild(ProtoInstance60)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././rubik.new.x3d")

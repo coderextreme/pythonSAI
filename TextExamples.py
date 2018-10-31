@@ -127,4 +127,3 @@ Transform24.addChild(Shape25)
 Scene12.addChild(Transform24)
 X3D0.setScene(Scene12)
 
-X3D0.toFileX3D("././TextExamples.new.x3d")

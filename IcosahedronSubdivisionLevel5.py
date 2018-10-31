@@ -118,4 +118,3 @@ Shape20.setAppearance(Appearance23)
 Scene17.addChild(Shape20)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././IcosahedronSubdivisionLevel5.new.x3d")

@@ -399,4 +399,3 @@ ROUTE70.setToField("set_endpoint")
 Scene7.addChild(ROUTE70)
 X3D0.setScene(Scene7)
 
-X3D0.toFileX3D("././arc1.new.x3d")

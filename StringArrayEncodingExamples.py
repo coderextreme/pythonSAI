@@ -121,4 +121,3 @@ Shape20.setAppearance(Appearance23)
 Scene17.addChild(Shape20)
 X3D0.setScene(Scene17)
 
-X3D0.toFileX3D("././StringArrayEncodingExamples.new.x3d")

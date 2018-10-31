@@ -218,4 +218,3 @@ Transform13.addChild(Shape14)
 Scene9.addChild(Transform13)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("././geo.new.x3d")

@@ -488,4 +488,3 @@ ROUTE85.setToField("set_positionB")
 Scene8.addChild(ROUTE85)
 X3D0.setScene(Scene8)
 
-X3D0.toFileX3D("././force.new.x3d")
