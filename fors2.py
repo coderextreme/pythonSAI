@@ -337,4 +337,4 @@ ROUTE58.setToField("positionB")
 Scene9.addChild(ROUTE58)
 X3D0.setScene(Scene9)
 
-X3D0.toFileX3D("./fors2.new.x3d")
+X3D0.toFileX3D("././fors2.new.x3d")

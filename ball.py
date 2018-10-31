@@ -235,4 +235,4 @@ Transform15.addChild(Shape16)
 Scene11.addChild(Transform15)
 X3D0.setScene(Scene11)
 
-X3D0.toFileX3D("./ball.new.x3d")
+X3D0.toFileX3D("././ball.new.x3d")

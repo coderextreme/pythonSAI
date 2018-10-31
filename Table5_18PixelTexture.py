@@ -230,4 +230,4 @@ Transform48.addChild(Shape49)
 Scene14.addChild(Transform48)
 X3D0.setScene(Scene14)
 
-X3D0.toFileX3D("./Table5_18PixelTexture.new.x3d")
+X3D0.toFileX3D("././Table5_18PixelTexture.new.x3d")

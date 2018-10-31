@@ -17866,9 +17866,7 @@ class Layout(X3DLayoutNode):
         super(Layout, self).setAlign(align_)
         if type(align_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"CENTER"' == align_:
-            pass
-        elif '"LEFT" "BOTTOM"' == align_:
+        if '"LEFT" "BOTTOM"' == align_:
             pass
         elif '"LEFT" "CENTER"' == align_:
             pass
@@ -17921,21 +17919,17 @@ class Layout(X3DLayoutNode):
         super(Layout, self).setOffsetUnits(offsetUnits_)
         if type(offsetUnits_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"WORLD"' == offsetUnits_:
+        if '"WORLD" "WORLD"' == offsetUnits_:
             pass
-        elif '"WORLD" "WORLD"' == offsetUnits_:
+        elif '"WORLD" "FRACTION"' == offsetUnits_:
             pass
         elif '"WORLD" "PIXEL"' == offsetUnits_:
-            pass
-        elif '"FRACTION"' == offsetUnits_:
             pass
         elif '"FRACTION" "WORLD"' == offsetUnits_:
             pass
         elif '"FRACTION" "FRACTION"' == offsetUnits_:
             pass
         elif '"FRACTION" "PIXEL"' == offsetUnits_:
-            pass
-        elif '"PIXEL"' == offsetUnits_:
             pass
         elif '"PIXEL" "WORLD"' == offsetUnits_:
             pass
@@ -17956,17 +17950,13 @@ class Layout(X3DLayoutNode):
         super(Layout, self).setScaleMode(scaleMode_)
         if type(scaleMode_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"NONE"' == scaleMode_:
-            pass
-        elif '"NONE" "NONE"' == scaleMode_:
+        if '"NONE" "NONE"' == scaleMode_:
             pass
         elif '"NONE" "FRACTION"' == scaleMode_:
             pass
         elif '"NONE" "STRETCH"' == scaleMode_:
             pass
         elif '"NONE" "PIXEL"' == scaleMode_:
-            pass
-        elif '"FRACTION"' == scaleMode_:
             pass
         elif '"FRACTION" "NONE"' == scaleMode_:
             pass
@@ -17976,8 +17966,6 @@ class Layout(X3DLayoutNode):
             pass
         elif '"FRACTION" "PIXEL"' == scaleMode_:
             pass
-        elif '"STRETCH"' == scaleMode_:
-            pass
         elif '"STRETCH" "NONE"' == scaleMode_:
             pass
         elif '"STRETCH" "FRACTION"' == scaleMode_:
@@ -17985,8 +17973,6 @@ class Layout(X3DLayoutNode):
         elif '"STRETCH" "STRETCH"' == scaleMode_:
             pass
         elif '"STRETCH" "PIXEL"' == scaleMode_:
-            pass
-        elif '"PIXEL"' == scaleMode_:
             pass
         elif '"PIXEL" "NONE"' == scaleMode_:
             pass
@@ -18009,23 +17995,17 @@ class Layout(X3DLayoutNode):
         super(Layout, self).setSizeUnits(sizeUnits_)
         if type(sizeUnits_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"WORLD"' == sizeUnits_:
-            pass
-        elif '"WORLD" "WORLD"' == sizeUnits_:
+        if '"WORLD" "WORLD"' == sizeUnits_:
             pass
         elif '"WORLD" "FRACTION"' == sizeUnits_:
             pass
         elif '"WORLD" "PIXEL"' == sizeUnits_:
-            pass
-        elif '"FRACTION"' == sizeUnits_:
             pass
         elif '"FRACTION" "WORLD"' == sizeUnits_:
             pass
         elif '"FRACTION" "FRACTION"' == sizeUnits_:
             pass
         elif '"FRACTION" "PIXEL"' == sizeUnits_:
-            pass
-        elif '"PIXEL"' == sizeUnits_:
             pass
         elif '"PIXEL" "WORLD"' == sizeUnits_:
             pass
@@ -20304,7 +20284,9 @@ class MultiTexture(X3DTextureNode):
         super(MultiTexture, self).setFunction(function_)
         if type(function_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"COMPLEMENT"' == function_:
+        if '""' == function_:
+            pass
+        elif '"COMPLEMENT"' == function_:
             pass
         elif '"ALPHAREPLICATE"' == function_:
             pass
@@ -20385,7 +20367,9 @@ class MultiTexture(X3DTextureNode):
         super(MultiTexture, self).setSource(source_)
         if type(source_) is not MFString:
             raise InvalidFieldTypeException()
-        if '"DIFFUSE"' == source_:
+        if '""' == source_:
+            pass
+        elif '"DIFFUSE"' == source_:
             pass
         elif '"FACTOR"' == source_:
             pass

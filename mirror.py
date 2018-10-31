@@ -458,4 +458,4 @@ Transform19.addChild(ROUTE75)
 Scene10.addChild(Transform19)
 X3D0.setScene(Scene10)
 
-X3D0.toFileX3D("./mirror.new.x3d")
+X3D0.toFileX3D("././mirror.new.x3d")

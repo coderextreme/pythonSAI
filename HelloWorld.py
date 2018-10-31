@@ -193,4 +193,4 @@ Group27.addChild(Transform35)
 Scene25.addChild(Group27)
 X3D0.setScene(Scene25)
 
-X3D0.toFileX3D("./HelloWorld.new.x3d")
+X3D0.toFileX3D("././HelloWorld.new.x3d")
