@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import re
 
 class ClassPrinter:
-    def __init__(self, node):
+    def __init__(self, node, meta = ""):
         self.__choice_table = \
         {
             "initializeOnly": self.initialize,
@@ -13,6 +13,7 @@ class ClassPrinter:
         }
         self.node = node
         self.parents = []
+        self.metaInfo = meta
 
         addinhers = self.node.find_all("AdditionalInheritance")
         for addinher in addinhers:
@@ -128,7 +129,7 @@ class ClassPrinter:
             pass
         str += "):\n"
         if self.parents != []:
-            str += "        super("+self.node['name']+", self)."+func+"("+fld+"_)\n"
+            str += "        super("+self.node['name']+self.metaInfo+", self)."+func+"("+fld+"_)\n"
         str += self.settervalidation(field, fld)
         str += self.setterbody(field, fld)
         return str
@@ -165,12 +166,12 @@ class ClassPrinter:
                 str += classes[parent].printClass()
             except:
                 pass
-        str += 'class ' + self.node['name'] + "("
+        str += 'class ' + self.node['name'] + self.metaInfo + "("
 
         str += ", ".join(self.parents)
         str += "):\n"
         str += "    def __init__(self, **kwargs):\n"
-        str += "        super()."+"__init__()\n"
+        # str += "        super()."+"__init__()\n"
         getsetstr = ""
         fields = self.node.find_all("field")
         for field in fields:
@@ -212,11 +213,11 @@ for aot in aots:
 
 cns = soup.find_all("ConcreteNode")
 for cn in cns:
-    classes[cn['name']] = ClassPrinter(cn)
+    classes[cn['name']] = ClassPrinter(cn, "Object")
 
 sts = soup.find_all("Statement")
 for st in sts:
-    classes[st['name']] = ClassPrinter(st)
+    classes[st['name']] = ClassPrinter(st, "Object")
 
 for k,v in classes.items():
     code += v.printClass()

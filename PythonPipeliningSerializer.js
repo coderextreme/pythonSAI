@@ -332,6 +332,7 @@ PythonSerializer.prototype = {
 				str += ch;
 				stack.shift();
 			} else if (element.childNodes.hasOwnProperty(cn) && node.nodeType == 8) {
+				str += " ".repeat(n);
 				var y = node.nodeValue.
 					replace(/\\/g, '\\\\').
 					replace(/"/g, '\\"');
@@ -341,6 +342,7 @@ PythonSerializer.prototype = {
 					// console.error("Java Comment Replacing "+node.nodeValue+" with "+y);
 				}
 			} else if (element.childNodes.hasOwnProperty(cn) && node.nodeType == 4) {
+				str += " ".repeat(n);
 				// str += "\n"+element.nodeName+stack[0];
 				str += ".setSourceCode('''"+node.nodeValue.split("\r\n").map(function(x) {
 					return x.
