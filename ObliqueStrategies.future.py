@@ -166,8 +166,8 @@ X3D0 = X3DObject() \
     .addChild(ScriptObject() \
      .setDEF("TextScript") \
      .setUrl(["./ObliqueStrategiesScript.js"]) \
-.addComments(CommentsBlock("""initialize() method includes unit test to printAllStrategies() to console""")) \
-.addComments(CommentsBlock("""TODO insert field definitions here (index string_changed previous next random) and then animate!""")) \
+     .addComments(CommentsBlock("""initialize() method includes unit test to printAllStrategies() to console""")) \
+     .addComments(CommentsBlock("""TODO insert field definitions here (index string_changed previous next random) and then animate!""")) \
      .addField(fieldObject() \
       .setType(fieldObject.TYPE_SFINT32) \
       .setName("index") \
@@ -247,10 +247,10 @@ X3D0 = X3DObject() \
       .setMaxFront(100) \
       .setMinBack(20) \
       .setMinFront(20) \
-.addComments(CommentsBlock("""Make sure the sound source AudioClip is audible at the user location""")) \
-.addComments(CommentsBlock("""Not all X3D players seem to use the .mp3""")) \
-.addComments(CommentsBlock("""&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players""")) \
-.addComments(CommentsBlock("""%20 is space character used in uri/url encoding""")) \
+      .addComments(CommentsBlock("""Make sure the sound source AudioClip is audible at the user location""")) \
+      .addComments(CommentsBlock("""Not all X3D players seem to use the .mp3""")) \
+      .addComments(CommentsBlock("""&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players""")) \
+      .addComments(CommentsBlock("""%20 is space character used in uri/url encoding""")) \
       .setSource(AudioClipObject() \
        .setDEF("TextToSpeechAudioClip") \
        .setDescription("sends strategy text google translate") \
@@ -301,7 +301,7 @@ X3D0 = X3DObject() \
       .setScale([2,0.6,1]) \
       .addChild(ShapeObject() \
        .setDEF("TransparentClickSurface") \
-.addComments(CommentsBlock("""support Selectable Text with a scalable IFS""")) \
+       .addComments(CommentsBlock("""support Selectable Text with a scalable IFS""")) \
        .setGeometry(IndexedFaceSetObject() \
         .setCoordIndex([0,1,2,3,-1]) \
         .setSolid(False) \

@@ -78,8 +78,8 @@ X3D0 = X3DObject() \
     .addChild(ShapeObject() \
      .setGeometry(TextObject() \
       .setString(["One, Two, Three","","He said, \"Immel did it!\""]) \
-.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
-.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})""")) \
+      .addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
+      .addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})""")) \
       .setFontStyle(FontStyleObject() \
        .setJustify(["MIDDLE","MIDDLE"]) \
        .setStyle("BOLD") \

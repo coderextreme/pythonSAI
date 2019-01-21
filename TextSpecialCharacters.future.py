@@ -60,14 +60,14 @@ X3D0 = X3DObject() \
      .setPosition([0,0,15]) \
     ) \
     .addChild(ShapeObject() \
-.addComments(CommentsBlock("""Empty string \"\" means to skip a line""")) \
-.addComments(CommentsBlock("""The ampersand escape characters are based on XML rules""")) \
-.addComments(CommentsBlock("""apostrophe ' is &apos; and needs to be escaped in single-quote delimiters used for string='value' attribute""")) \
-.addComments(CommentsBlock("""ampersand & is &amp; and needs to be escaped""")) \
-.addComments(CommentsBlock("""quotation \" is &quot; and isn't needed if single-quote delimiters used for string='value' attribute""")) \
-.addComments(CommentsBlock("""quotation \" can be used within an X3D string if escaped with backslash \\ as \\\"\"""")) \
-.addComments(CommentsBlock("""backslash \\ is used as escape character for \" (and itself) in X3D""")) \
-.addComments(CommentsBlock("""character entities are listed in HTML specification and are good for any XML""")) \
+     .addComments(CommentsBlock("""Empty string \"\" means to skip a line""")) \
+     .addComments(CommentsBlock("""The ampersand escape characters are based on XML rules""")) \
+     .addComments(CommentsBlock("""apostrophe ' is &apos; and needs to be escaped in single-quote delimiters used for string='value' attribute""")) \
+     .addComments(CommentsBlock("""ampersand & is &amp; and needs to be escaped""")) \
+     .addComments(CommentsBlock("""quotation \" is &quot; and isn't needed if single-quote delimiters used for string='value' attribute""")) \
+     .addComments(CommentsBlock("""quotation \" can be used within an X3D string if escaped with backslash \\ as \\\"\"""")) \
+     .addComments(CommentsBlock("""backslash \\ is used as escape character for \" (and itself) in X3D""")) \
+     .addComments(CommentsBlock("""character entities are listed in HTML specification and are good for any XML""")) \
      .setGeometry(TextObject() \
       .setDEF("DefaultText") \
       .setString(["Character entity substitutions:","empty string \"\" skips a line:","","apostrophe ' is &apos;","ampersand & is &amp;","quote mark \" is &quot;","backslash \\\\ is X3D escape character","double backslash \\\\\\\\ is X3D backslash \\\\ character","Pi Π is &#928; XML character entity"]) \

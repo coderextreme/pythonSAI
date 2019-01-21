@@ -44,7 +44,7 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""A png image file for the cloud texture must be designated in the ecmascript node.""")) \
+    .addComments(CommentsBlock("""A png image file for the cloud texture must be designated in the ecmascript node.""")) \
     .addChild(ViewpointObject() \
      .setDescription("Main") \
      .setJump(False) \
@@ -141,7 +141,7 @@ X3D0 = X3DObject() \
        .setName("Fog") \
        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+

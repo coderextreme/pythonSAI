@@ -124,10 +124,10 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-.addComments(CommentsBlock("""Override default diffuseColor value 0.8 0.8 0.8""")) \
+      .addComments(CommentsBlock("""Override default diffuseColor value 0.8 0.8 0.8""")) \
       .addChild(MaterialObject() \
        .setDiffuseColor([0,0,0]) \
-.addComments(CommentsBlock("""Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare.""")) \
+       .addComments(CommentsBlock("""Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare.""")) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("emissiveColor") \
@@ -147,7 +147,7 @@ X3D0 = X3DObject() \
        .addChild(GroupObject() \
         .setDEF("DefaultNodeValue") \
         .setBboxSize([2,2,2]) \
-.addComments(CommentsBlock("""Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\"""")) \
+        .addComments(CommentsBlock("""Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\"""")) \
        ) \
       ) \
      ) \
@@ -168,7 +168,7 @@ X3D0 = X3DObject() \
     .addChild(ProtoInstanceObject() \
      .setName("ShiftGroupUp2m") \
     ) \
-.addComments(CommentsBlock("""====================""")) \
+    .addComments(CommentsBlock("""====================""")) \
     .addChild(ViewpointObject() \
      .setDEF("ExampleSingleElement") \
      .setDescription("Hello syntax") \
@@ -195,8 +195,8 @@ X3D0 = X3DObject() \
     ) \
     .addChild(CollisionObject() \
      .setProxy(ShapeObject() \
-.addComments(CommentsBlock("""note that Collision proxy Shape is not rendered""")) \
-.addComments(CommentsBlock("""alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
+      .addComments(CommentsBlock("""note that Collision proxy Shape is not rendered""")) \
+      .addComments(CommentsBlock("""alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
       .setGeometry(TextObject() \
        .setString(["He said, \"Immel did it!\""]) \
       ) \

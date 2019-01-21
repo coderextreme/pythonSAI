@@ -150,7 +150,7 @@ X3D0 = X3DObject() \
            .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
            .setValue("0.5") \
           ) \
-.addComments(CommentsBlock("""<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>""")) \
+          .addComments(CommentsBlock("""<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>""")) \
           .addParts(ShaderPartObject() \
            .setType("VERTEX") \
            .setIS(ISObject() \
@@ -229,7 +229,7 @@ X3D0 = X3DObject() \
          .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
          .setValue("0.5") \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+

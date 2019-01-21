@@ -60,7 +60,7 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""Simple Heads-Up Display (HUD) Prototype\\n \\n Manages the display of a HUD and maintains its position on the screen.\\n Changes to fieldOfView (in Viewpoint node) will change screen position\\n \\n Fields:\\n hudSize Size of HUD (initializeOnly - SFVec3f) default=\"1 1 .01\"\\n hudColor Color of HUD (inputOutput - SFColor) default=\"1 1 1\"\\n screenOffset Offset of HUD. This field positions the HUD on the display screen (inputOutput - SFVec3f) default=\"0 0 0\"\\n hudGeometry Geometry to be placed on the HUD. Origin is center of HUD. (inputOutput - MFNode) default = []\\n position_changed Current viewer location (outputOnly - SFVec3f)\\n orientation_changed Current viewer orientation (outputOnly - SFRotation)\\n \\n \\n""")) \
+    .addComments(CommentsBlock("""Simple Heads-Up Display (HUD) Prototype\\n \\n Manages the display of a HUD and maintains its position on the screen.\\n Changes to fieldOfView (in Viewpoint node) will change screen position\\n \\n Fields:\\n hudSize Size of HUD (initializeOnly - SFVec3f) default=\"1 1 .01\"\\n hudColor Color of HUD (inputOutput - SFColor) default=\"1 1 1\"\\n screenOffset Offset of HUD. This field positions the HUD on the display screen (inputOutput - SFVec3f) default=\"0 0 0\"\\n hudGeometry Geometry to be placed on the HUD. Origin is center of HUD. (inputOutput - MFNode) default = []\\n position_changed Current viewer location (outputOnly - SFVec3f)\\n orientation_changed Current viewer orientation (outputOnly - SFRotation)\\n \\n \\n""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("HeadsUpDisplay") \
      .setAppinfo("Heads-up display (HUD) keeps child geometry aligned on screen in a consistent location") \
@@ -100,11 +100,11 @@ X3D0 = X3DObject() \
     .addChild(ViewpointObject() \
      .setDescription("Heads-up display (HUD)") \
     ) \
-.addComments(CommentsBlock("""ProtoDeclare is the \"cookie cutter\" template, ProtoInstance creates an actual occurrence""")) \
+    .addComments(CommentsBlock("""ProtoDeclare is the \"cookie cutter\" template, ProtoInstance creates an actual occurrence""")) \
     .addChild(ProtoInstanceObject() \
      .setName("HeadsUpDisplay") \
      .setDEF("HeadsUpDisplayInstance") \
-.addComments(CommentsBlock("""example: upper left-hand corner of screen (x=-2, y=1) and set back z=-5 from user view""")) \
+     .addComments(CommentsBlock("""example: upper left-hand corner of screen (x=-2, y=1) and set back z=-5 from user view""")) \
      .addFieldValue(fieldValueObject() \
       .setName("screenOffset") \
       .setValue("-0.75 1 -5") \

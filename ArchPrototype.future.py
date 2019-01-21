@@ -56,10 +56,10 @@ X3D0 = X3DObject() \
      .setName("ArchPrototype") \
      .setAppinfo("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. - Possibility to create shapes related to an arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.js.") \
      .setProtoInterface(ProtoInterfaceObject() \
-.addComments(CommentsBlock("""COLOR OF ARCH""")) \
-.addComments(CommentsBlock("""INPUT PARAMETERS""")) \
-.addComments(CommentsBlock("""General parameters: measures in meters""")) \
-.addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
+      .addComments(CommentsBlock("""COLOR OF ARCH""")) \
+      .addComments(CommentsBlock("""INPUT PARAMETERS""")) \
+      .addComments(CommentsBlock("""General parameters: measures in meters""")) \
+      .addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("diffuseColor") \
@@ -160,13 +160,13 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-.addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-.addComments(CommentsBlock("""IndexedFaceset creates arch""")) \
+      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
+      .addComments(CommentsBlock("""IndexedFaceset creates arch""")) \
       .addChild(TransformObject() \
        .setDEF("ArchTransform") \
        .addChild(ShapeObject() \
         .setDEF("Arch") \
-.addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly""")) \
+        .addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly""")) \
         .setGeometry(IndexedFaceSetObject() \
          .setDEF("ArchIndex") \
          .setConvex(False) \
@@ -192,15 +192,15 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-.addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
-.addComments(CommentsBlock("""This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs""")) \
+      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
+      .addComments(CommentsBlock("""This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs""")) \
       .addChild(ScriptObject() \
        .setDEF("ArchPrototypeScript") \
        .setUrl(["../node/ArchPrototypeScript.js"]) \
-.addComments(CommentsBlock("""INPUT PARAMETERS""")) \
-.addComments(CommentsBlock("""General parameters""")) \
-.addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
-.addComments(CommentsBlock("""OUTPUT PARAMETERS""")) \
+       .addComments(CommentsBlock("""INPUT PARAMETERS""")) \
+       .addComments(CommentsBlock("""General parameters""")) \
+       .addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
+       .addComments(CommentsBlock("""OUTPUT PARAMETERS""")) \
        .addField(fieldObject() \
         .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("clearSpanWidth") \
@@ -398,7 +398,7 @@ X3D0 = X3DObject() \
       .setValue("2") \
      ) \
     ) \
-.addComments(CommentsBlock("""Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)""")) \
+    .addComments(CommentsBlock("""Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)""")) \
     .addChild(InlineObject() \
      .setDEF("CoordinateAxes") \
      .setUrl(["../data/CoordinateAxes.x3d"]) \

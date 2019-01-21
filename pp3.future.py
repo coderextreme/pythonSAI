@@ -44,7 +44,7 @@ X3D0 = X3DObject() \
      .setName("Process") \
      .setProtoBody(ProtoBodyObject() \
       .addChild(GroupObject() \
-.addComments(CommentsBlock("""left""")) \
+       .addComments(CommentsBlock("""left""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -60,9 +60,9 @@ X3D0 = X3DObject() \
           .setSpine([-2.5,0,0,-1.5,0,0]) \
          ) \
         ) \
-.addComments(CommentsBlock("""<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>""")) \
+        .addComments(CommentsBlock("""<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>""")) \
        ) \
-.addComments(CommentsBlock("""right""")) \
+       .addComments(CommentsBlock("""right""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -102,7 +102,7 @@ X3D0 = X3DObject() \
          .setDEF("RightTouch") \
         ) \
        ) \
-.addComments(CommentsBlock("""up""")) \
+       .addComments(CommentsBlock("""up""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -141,7 +141,7 @@ X3D0 = X3DObject() \
          .setDEF("UpTouch") \
         ) \
        ) \
-.addComments(CommentsBlock("""down""")) \
+       .addComments(CommentsBlock("""down""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -157,9 +157,9 @@ X3D0 = X3DObject() \
           .setSpine([0,-2.5,0,0,-1.5,0]) \
          ) \
         ) \
-.addComments(CommentsBlock("""<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>""")) \
+        .addComments(CommentsBlock("""<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>""")) \
        ) \
-.addComments(CommentsBlock("""center""")) \
+       .addComments(CommentsBlock("""center""")) \
        .addChild(TransformObject() \
         .addChild(ShapeObject() \
          .setAppearance(AppearanceObject() \
@@ -206,7 +206,7 @@ X3D0 = X3DObject() \
         .setName("rightlines") \
         .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	rightlines = new MFString(\"\");\n"+
@@ -228,7 +228,7 @@ X3D0 = X3DObject() \
         .setName("uplines") \
         .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	uplines = new MFString(\"\");\n"+
@@ -250,7 +250,7 @@ X3D0 = X3DObject() \
         .setName("centerlines") \
         .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	centerlines = new MFString(\"\");\n"+

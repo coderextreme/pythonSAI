@@ -82,15 +82,15 @@ X3D0 = X3DObject() \
      .setName("license") \
      .setContent("../license.html") \
     ) \
-.addComments(CommentsBlock("""TODO warn if more than one identifier present""")) \
+    .addComments(CommentsBlock("""TODO warn if more than one identifier present""")) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""=============== Camera ==============""")) \
+    .addComments(CommentsBlock("""=============== Camera ==============""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("Camera") \
      .setAppinfo("Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images") \
      .setUrl(["CameraPrototypes.x3d#Camera","http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#Camera","CameraPrototypes.wrl#Camera","http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#Camera"]) \
-.addComments(CommentsBlock("""Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields""")) \
+     .addComments(CommentsBlock("""Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields""")) \
      .addField(fieldObject() \
       .setType(fieldObject.TYPE_SFSTRING) \
       .setName("description") \
@@ -230,7 +230,7 @@ X3D0 = X3DObject() \
       .setAppinfo("enable console output to trace script computations and prototype progress") \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== CameraShot ==============""")) \
+    .addComments(CommentsBlock("""=============== CameraShot ==============""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("CameraShot") \
      .setAppinfo("CameraShot collects a specific set of CameraMovement animations that make up an individual shot") \
@@ -252,7 +252,7 @@ X3D0 = X3DObject() \
       .setName("moves") \
       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
       .setAppinfo("Set of CameraMovement nodes") \
-.addComments(CommentsBlock("""initializing CameraMovement nodes are inserted here by scene author using ProtoInstance""")) \
+      .addComments(CommentsBlock("""initializing CameraMovement nodes are inserted here by scene author using ProtoInstance""")) \
      ) \
      .addField(fieldObject() \
       .setType(fieldObject.TYPE_SFVEC3F) \
@@ -309,7 +309,7 @@ X3D0 = X3DObject() \
       .setAppinfo("enable console output to trace script computations and prototype progress") \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== CameraMovement ==============""")) \
+    .addComments(CommentsBlock("""=============== CameraMovement ==============""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("CameraMovement") \
      .setAppinfo("CameraMovement defines a single camera movement animation") \
@@ -387,12 +387,12 @@ X3D0 = X3DObject() \
       .setAppinfo("enable console output to trace script computations and prototype progress") \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== OfflineRender ==============""")) \
+    .addComments(CommentsBlock("""=============== OfflineRender ==============""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("OfflineRender") \
      .setAppinfo("OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot)") \
      .setUrl(["CameraPrototypes.x3d#OfflineRender","http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#OfflineRender","CameraPrototypes.wrl#OfflineRender","http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#OfflineRender"]) \
-.addComments(CommentsBlock("""TODO non-photorealistic rendering (NPR) parameters""")) \
+     .addComments(CommentsBlock("""TODO non-photorealistic rendering (NPR) parameters""")) \
      .addField(fieldObject() \
       .setType(fieldObject.TYPE_SFSTRING) \
       .setName("description") \
@@ -460,7 +460,7 @@ X3D0 = X3DObject() \
       .setAppinfo("enable console output to trace script computations and prototype progress") \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== Lights, camera, action! ==============""")) \
+    .addComments(CommentsBlock("""=============== Lights, camera, action! ==============""")) \
     .addChild(DirectionalLightObject() \
      .setDirection([0,-1,0]) \
      .setGlobal(True) \
@@ -478,9 +478,9 @@ X3D0 = X3DObject() \
      .setOrientation([1,0,0,-1.57079]) \
      .setPosition([0,150,0]) \
     ) \
-.addComments(CommentsBlock("""Keep prototype instances in same file while developing, then move later""")) \
-.addComments(CommentsBlock("""We will create examples matching those in the paper""")) \
-.addComments(CommentsBlock("""=============== Camera.SimpleShotsTest ==============""")) \
+    .addComments(CommentsBlock("""Keep prototype instances in same file while developing, then move later""")) \
+    .addComments(CommentsBlock("""We will create examples matching those in the paper""")) \
+    .addComments(CommentsBlock("""=============== Camera.SimpleShotsTest ==============""")) \
     .addChild(ProtoInstanceObject() \
      .setName("Camera") \
      .setDEF("Camera.SimpleShotsTest") \
@@ -994,14 +994,14 @@ X3D0 = X3DObject() \
      .addChild(TimeSensorObject() \
       .setDEF("CameraTimer.SimpleShots") \
      ) \
-.addComments(CommentsBlock("""initialize clock to match totalDuration of combined Shot Moves""")) \
+     .addComments(CommentsBlock("""initialize clock to match totalDuration of combined Shot Moves""")) \
      .addChild(ROUTEObject() \
       .setFromField("totalDuration") \
       .setFromNode("Camera.SimpleShotsTest") \
       .setToField("cycleInterval") \
       .setToNode("CameraTimer.SimpleShots") \
      ) \
-.addComments(CommentsBlock("""TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator""")) \
+     .addComments(CommentsBlock("""TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator""")) \
      .addChild(ROUTEObject() \
       .setFromField("fraction_changed") \
       .setFromNode("CameraTimer.SimpleShots") \
@@ -1050,11 +1050,11 @@ X3D0 = X3DObject() \
          .setDiffuseColor([0.945455,0.318988,0.321717]) \
          .setShininess(0.01) \
          .setSpecularColor([0.072727,0.021705,0.010732]) \
-.addComments(CommentsBlock("""Universal Media Library: ArtDeco 5""")) \
+         .addComments(CommentsBlock("""Universal Media Library: ArtDeco 5""")) \
         ) \
        ) \
       ) \
-.addComments(CommentsBlock("""Simplify intersection test for user selecting text""")) \
+      .addComments(CommentsBlock("""Simplify intersection test for user selecting text""")) \
       .addChild(ShapeObject() \
        .setDEF("TransparentBox") \
        .setAppearance(AppearanceObject() \
@@ -1221,7 +1221,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== Camera.AimPointTest ==============""")) \
+    .addComments(CommentsBlock("""=============== Camera.AimPointTest ==============""")) \
     .addChild(ProtoInstanceObject() \
      .setName("Camera") \
      .setDEF("Camera.AimPointTest") \
@@ -1271,7 +1271,7 @@ X3D0 = X3DObject() \
           .setName("goalPosition") \
           .setValue("6 6 10") \
          ) \
-.addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
+         .addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
         ) \
         .addChild(ProtoInstanceObject() \
          .setName("CameraMovement") \
@@ -1292,7 +1292,7 @@ X3D0 = X3DObject() \
           .setName("goalPosition") \
           .setValue("40 6 12") \
          ) \
-.addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
+         .addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
         ) \
         .addChild(ProtoInstanceObject() \
          .setName("CameraMovement") \
@@ -1313,7 +1313,7 @@ X3D0 = X3DObject() \
           .setName("goalPosition") \
           .setValue("40 20 13") \
          ) \
-.addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
+         .addComments(CommentsBlock("""goalAimPoint modified by ROUTE to match moving Box""")) \
         ) \
         .addChild(ProtoInstanceObject() \
          .setName("CameraMovement") \
@@ -1342,7 +1342,7 @@ X3D0 = X3DObject() \
           .setName("goalOrientation") \
           .setValue("0 1 0 0") \
          ) \
-.addComments(CommentsBlock("""can test tracking or not using following values""")) \
+         .addComments(CommentsBlock("""can test tracking or not using following values""")) \
         ) \
        ) \
       ) \
@@ -1353,14 +1353,14 @@ X3D0 = X3DObject() \
      .addChild(TimeSensorObject() \
       .setDEF("CameraTimer.AimPointTest") \
      ) \
-.addComments(CommentsBlock("""initialize clock to match totalDuration of combined Shot Moves""")) \
+     .addComments(CommentsBlock("""initialize clock to match totalDuration of combined Shot Moves""")) \
      .addChild(ROUTEObject() \
       .setFromField("totalDuration") \
       .setFromNode("Camera.AimPointTest") \
       .setToField("cycleInterval") \
       .setToNode("CameraTimer.AimPointTest") \
      ) \
-.addComments(CommentsBlock("""TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator""")) \
+     .addComments(CommentsBlock("""TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator""")) \
      .addChild(ROUTEObject() \
       .setFromField("fraction_changed") \
       .setFromNode("CameraTimer.AimPointTest") \
@@ -1413,15 +1413,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""TODO build a test once implemented""")) \
+    .addComments(CommentsBlock("""TODO build a test once implemented""")) \
     .addChild(ProtoInstanceObject() \
      .setName("OfflineRender") \
     ) \
-.addComments(CommentsBlock("""=============== animate a camera shape to visualize view changes ==============""")) \
+    .addComments(CommentsBlock("""=============== animate a camera shape to visualize view changes ==============""")) \
     .addChild(TransformObject() \
      .setDEF("CameraShapeTransform") \
      .setTranslation([0,0.5,0]) \
-.addComments(CommentsBlock("""move CameraShape using active Camera""")) \
+     .addComments(CommentsBlock("""move CameraShape using active Camera""")) \
      .addChild(ROUTEObject() \
       .setFromField("position_changed") \
       .setFromNode("Camera.SimpleShotsTest") \
@@ -1471,7 +1471,7 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-.addComments(CommentsBlock("""Display frustum to show camera view within the scene, toggled by user selecting CameraShape""")) \
+     .addComments(CommentsBlock("""Display frustum to show camera view within the scene, toggled by user selecting CameraShape""")) \
      .addChild(ExternProtoDeclareObject() \
       .setName("ViewFrustum") \
       .setAppinfo("Display view frustum associated with a given pair of Viewpoint NavigationInfo nodes") \
@@ -1577,7 +1577,7 @@ X3D0 = X3DObject() \
       .setToNode("ViewFrustumNode") \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== add checkerboard, axes and other things to look at while animating ==============""")) \
+    .addComments(CommentsBlock("""=============== add checkerboard, axes and other things to look at while animating ==============""")) \
     .addChild(BackgroundObject() \
      .setSkyColor([0.282353,0.380392,0.470588]) \
     ) \
@@ -1669,7 +1669,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""================ CrossHair visualization for center of screen ================""")) \
+    .addComments(CommentsBlock("""================ CrossHair visualization for center of screen ================""")) \
     .addChild(ExternProtoDeclareObject() \
      .setName("CrossHair") \
      .setAppinfo("CrossHair prototype provides a heads-up display (HUD) crosshair at the view center, which is useful for assessing NavigationInfo lookAt point") \
@@ -1725,7 +1725,7 @@ X3D0 = X3DObject() \
       .setValue("0 0 -6") \
      ) \
     ) \
-.addComments(CommentsBlock("""turn on CrossHairInstance when animated camera viewpoints are bound""")) \
+    .addComments(CommentsBlock("""turn on CrossHairInstance when animated camera viewpoints are bound""")) \
     .addChild(ROUTEObject() \
      .setFromField("isBound") \
      .setFromNode("Camera.SimpleShotsTest") \
@@ -1738,8 +1738,8 @@ X3D0 = X3DObject() \
      .setToField("set_enabled") \
      .setToNode("CrossHairInstance") \
     ) \
-.addComments(CommentsBlock("""turn off CrossHairInstance when animated camera viewpoints are unbound <BooleanFilter DEF='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.SimpleShotsTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.AimPointTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='inputNegate' fromNode='NegateCrossHair' toField='set_enabled' toNode='CrossHairInstance'/>""")) \
-.addComments(CommentsBlock("""=============== TODO Launch Prototype Example ==============""")) \
+    .addComments(CommentsBlock("""turn off CrossHairInstance when animated camera viewpoints are unbound <BooleanFilter DEF='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.SimpleShotsTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.AimPointTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='inputNegate' fromNode='NegateCrossHair' toField='set_enabled' toNode='CrossHairInstance'/>""")) \
+    .addComments(CommentsBlock("""=============== TODO Launch Prototype Example ==============""")) \
     .addChild(AnchorObject() \
      .setDescription("launch CameraExample scene") \
      .setParameter(["target=_blank"]) \

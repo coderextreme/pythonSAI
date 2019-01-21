@@ -94,7 +94,7 @@ X3D0 = X3DObject() \
          .setDiffuseColor([0.372322,0.371574,0.373173]) \
          .setShininess(0.02) \
          .setSpecularColor([0.890909,0.887832,0.890909]) \
-.addComments(CommentsBlock("""Universal Media Library: Metals 30""")) \
+         .addComments(CommentsBlock("""Universal Media Library: Metals 30""")) \
         ) \
        ) \
       ) \

@@ -32,8 +32,8 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/""")) \
-.addComments(CommentsBlock("""PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/""")) \
+    .addComments(CommentsBlock("""Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/""")) \
+    .addComments(CommentsBlock("""PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/""")) \
     .addChild(GeoViewpointObject() \
      .setDEF("Tour") \
      .setPosition([0,0,4]) \
@@ -95,7 +95,7 @@ X3D0 = X3DObject() \
       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
       .setValue("0.0015708 0 4 0 0.0015708 4") \
      ) \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "\n"+
 "               function set_cycle(value) {\n"+
 "                        var cartesianMult = -150;  // -150 if cartesian, 1 if geo\n"+

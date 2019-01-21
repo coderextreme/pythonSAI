@@ -30,12 +30,12 @@ X3D0 = X3DObject() \
    .setScene(SceneObject() \
     .addChild(CollisionObject() \
      .setDEF("DoNotCollideWithVisualizationWidget") \
-.addComments(CommentsBlock("""Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.""")) \
-.addComments(CommentsBlock("""This NavigationInfo allows examine mode and will be overridden by any parent scene.""")) \
-.addComments(CommentsBlock("""Each arrow goes from +1m to -1m to allow linear scaling to fit a scene""")) \
-.addComments(CommentsBlock("""Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user""")) \
+     .addComments(CommentsBlock("""Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.""")) \
+     .addComments(CommentsBlock("""This NavigationInfo allows examine mode and will be overridden by any parent scene.""")) \
+     .addComments(CommentsBlock("""Each arrow goes from +1m to -1m to allow linear scaling to fit a scene""")) \
+     .addComments(CommentsBlock("""Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user""")) \
      .addChild(GroupObject() \
-.addComments(CommentsBlock("""Vertical Y arrow and label""")) \
+      .addComments(CommentsBlock("""Vertical Y arrow and label""")) \
       .addChild(GroupObject() \
        .setDEF("ArrowGreen") \
        .addChild(ShapeObject() \
@@ -92,7 +92,7 @@ X3D0 = X3DObject() \
      ) \
      .addChild(TransformObject() \
       .setRotation([0,0,1,-1.57079]) \
-.addComments(CommentsBlock("""Horizontal X arrow and label""")) \
+      .addComments(CommentsBlock("""Horizontal X arrow and label""")) \
       .addChild(GroupObject() \
        .addChild(GroupObject() \
         .setDEF("ArrowRed") \
@@ -123,7 +123,7 @@ X3D0 = X3DObject() \
        .addChild(TransformObject() \
         .setRotation([0,0,1,1.57079]) \
         .setTranslation([0.072,1.1,0]) \
-.addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
+        .addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
         .addChild(BillboardObject() \
          .addChild(ShapeObject() \
           .setAppearance(AppearanceObject() \
@@ -142,7 +142,7 @@ X3D0 = X3DObject() \
      ) \
      .addChild(TransformObject() \
       .setRotation([1,0,0,1.57079]) \
-.addComments(CommentsBlock("""Perpendicular Z arrow and label, note right-hand rule""")) \
+      .addComments(CommentsBlock("""Perpendicular Z arrow and label, note right-hand rule""")) \
       .addChild(GroupObject() \
        .addChild(GroupObject() \
         .setDEF("ArrowBlue") \
@@ -173,7 +173,7 @@ X3D0 = X3DObject() \
        .addChild(TransformObject() \
         .setRotation([1,0,0,-1.57079]) \
         .setTranslation([0,1.1,0.072]) \
-.addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
+        .addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
         .addChild(BillboardObject() \
          .addChild(ShapeObject() \
           .setAppearance(AppearanceObject() \

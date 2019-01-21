@@ -85,7 +85,7 @@ X3D0 = X3DObject() \
        .addShaders(ComposedShaderObject() \
         .setDEF("cobweb") \
         .setLanguage("GLSL") \
-.addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
+        .addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
         .addField(fieldObject() \
          .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
@@ -128,7 +128,7 @@ X3D0 = X3DObject() \
        .addShaders(ComposedShaderObject() \
         .setDEF("x3dom") \
         .setLanguage("GLSL") \
-.addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
+        .addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
         .addField(fieldObject() \
          .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
@@ -253,7 +253,7 @@ X3D0 = X3DObject() \
        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
        .setValue("-1") \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+

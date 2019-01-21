@@ -193,7 +193,7 @@ X3D0 = X3DObject() \
          .setProtoField("set_endpoint") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+

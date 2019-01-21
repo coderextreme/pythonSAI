@@ -236,7 +236,7 @@ X3D0 = X3DObject() \
       .setName("orientation_changed") \
       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
      ) \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "               function set_cycle(value) {\n"+
 "                        var ov = lastKey;\n"+
 "                        do {\n"+

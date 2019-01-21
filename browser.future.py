@@ -30,14 +30,14 @@ X3D0 = X3DObject() \
    .setScene(SceneObject() \
     .addChild(ScriptObject() \
      .setDEF("Browser") \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
 "                }''')
     ) \
     .addChild(ScriptObject() \
      .setDEF("Clouds") \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+

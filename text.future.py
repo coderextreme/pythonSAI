@@ -73,7 +73,7 @@ X3D0 = X3DObject() \
        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
        .setValue("\"rnl_front.png\" \"uffizi_front.png\"") \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "			    var me = '\"1\" \"\"2\" \"\\n3\"';''')
      ) \
     ) \

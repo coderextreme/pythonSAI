@@ -63,7 +63,7 @@ X3D0 = X3DObject() \
        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
        .setValue("-50 -50 0 50 50 0") \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_cycle(value) {\n"+
 "                        Browser.print(value);\n"+

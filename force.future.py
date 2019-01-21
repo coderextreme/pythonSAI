@@ -108,7 +108,7 @@ X3D0 = X3DObject() \
          .setName("keyValue") \
          .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
@@ -205,7 +205,7 @@ X3D0 = X3DObject() \
           .setProtoField("set_positionB") \
          ) \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -333,8 +333,8 @@ X3D0 = X3DObject() \
       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
       .setValue("false") \
      ) \
-.addComments(CommentsBlock("""<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>""")) \
-.setSourceCode('''ecmascript:\n"+
+     .addComments(CommentsBlock("""<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>""")) \
+     .setSourceCode('''ecmascript:\n"+
 "	function add_node(value) {\n"+
 "                // Browser.print('hey ', counter);\n"+
 "                counter = counter++;\n"+

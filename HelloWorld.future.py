@@ -98,10 +98,10 @@ X3D0 = X3DObject() \
      .setName("reference") \
      .setContent("HelloWorld.json") \
     ) \
-.addComments(CommentsBlock("""Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON""")) \
+    .addComments(CommentsBlock("""Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON""")) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""Example scene to illustrate X3D nodes and fields (XML elements and attributes)""")) \
+    .addComments(CommentsBlock("""Example scene to illustrate X3D nodes and fields (XML elements and attributes)""")) \
     .addChild(WorldInfoObject() \
      .setTitle("Hello world!") \
     ) \

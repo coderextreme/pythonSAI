@@ -154,7 +154,7 @@ X3D0 = X3DObject() \
      .setTranslation([3,0,0]) \
      .addChild(ShapeObject() \
       .setAppearance(AppearanceObject() \
-.addComments(CommentsBlock("""note 0x000000 = 0""")) \
+       .addComments(CommentsBlock("""note 0x000000 = 0""")) \
        .setTexture(PixelTextureObject() \
         .setDEF("ThreeComponents") \
         .setImage([2,4,3,16711680,65280,0,0,0,0,16777215,16776960]) \
@@ -182,7 +182,7 @@ X3D0 = X3DObject() \
      .setTranslation([6,0,0]) \
      .addChild(ShapeObject() \
       .setAppearance(AppearanceObject() \
-.addComments(CommentsBlock("""Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127""")) \
+       .addComments(CommentsBlock("""Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127""")) \
        .setTexture(PixelTextureObject() \
         .setDEF("FourComponents") \
         .setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407]) \
@@ -206,7 +206,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""Background from PixelTextureBW.x3d""")) \
+    .addComments(CommentsBlock("""Background from PixelTextureBW.x3d""")) \
     .addChild(TransformObject() \
      .setTranslation([0,6,-2]) \
      .addChild(ShapeObject() \

@@ -56,14 +56,14 @@ X3D0 = X3DObject() \
         ) \
        ) \
        .addChild(ShapeObject() \
-.addComments(CommentsBlock("""comment before Sphere""")) \
-.addComments(CommentsBlock("""comment after Sphere""")) \
-.addComments(CommentsBlock("""comment after Appearance""")) \
+        .addComments(CommentsBlock("""comment before Sphere""")) \
+        .addComments(CommentsBlock("""comment after Sphere""")) \
+        .addComments(CommentsBlock("""comment after Appearance""")) \
         .setGeometry(SphereObject() \
         ) \
         .setAppearance(AppearanceObject() \
-.addComments(CommentsBlock("""comment before Material""")) \
-.addComments(CommentsBlock("""comment after Material""")) \
+         .addComments(CommentsBlock("""comment before Material""")) \
+         .addComments(CommentsBlock("""comment after Material""")) \
          .setMaterial(MaterialObject() \
           .setDiffuseColor([1,0,0]) \
          ) \
@@ -99,7 +99,7 @@ X3D0 = X3DObject() \
         .setName("keyValue") \
         .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
@@ -194,7 +194,7 @@ X3D0 = X3DObject() \
          .setProtoField("positionB") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+

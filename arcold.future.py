@@ -141,7 +141,7 @@ X3D0 = X3DObject() \
          .setName("keyValue") \
          .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "		function set_location(value) {\n"+
 "                    old = translation;\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
@@ -181,7 +181,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""from doug sanden""")) \
+    .addComments(CommentsBlock("""from doug sanden""")) \
     .addChild(ProtoDeclareObject() \
      .setName("x3dconnector") \
      .setProtoInterface(ProtoInterfaceObject() \
@@ -275,7 +275,7 @@ X3D0 = X3DObject() \
          .setProtoField("set_endpoint") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+

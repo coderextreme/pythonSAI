@@ -99,7 +99,7 @@ X3D0 = X3DObject() \
          .setName("set_fraction") \
          .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+

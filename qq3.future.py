@@ -44,7 +44,7 @@ X3D0 = X3DObject() \
      .setName("Process") \
      .setProtoBody(ProtoBodyObject() \
       .addChild(GroupObject() \
-.addComments(CommentsBlock("""left""")) \
+       .addComments(CommentsBlock("""left""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -61,7 +61,7 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-.addComments(CommentsBlock("""right""")) \
+       .addComments(CommentsBlock("""right""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
@@ -78,14 +78,14 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-.addComments(CommentsBlock("""up""")) \
+       .addComments(CommentsBlock("""up""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \
          .setUSE("ShapeUpRight") \
         ) \
        ) \
-.addComments(CommentsBlock("""down""")) \
+       .addComments(CommentsBlock("""down""")) \
        .addChild(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
         .addChild(ShapeObject() \

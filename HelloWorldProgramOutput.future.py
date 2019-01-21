@@ -6,10 +6,10 @@ X3D0 = X3DObject() \
    .setProfile("Immersive") \
    .setVersion("3.3") \
    .setHead(headObject() \
-.addComments(CommentsBlock("""comment #1""")) \
-.addComments(CommentsBlock("""comment #2""")) \
-.addComments(CommentsBlock("""comment #3""")) \
-.addComments(CommentsBlock("""comment #4""")) \
+    .addComments(CommentsBlock("""comment #1""")) \
+    .addComments(CommentsBlock("""comment #2""")) \
+    .addComments(CommentsBlock("""comment #3""")) \
+    .addComments(CommentsBlock("""comment #4""")) \
     .addComponent(componentObject() \
      .setName("Navigation") \
      .setLevel(3) \
@@ -176,7 +176,7 @@ X3D0 = X3DObject() \
      ) \
      .setGeometry(IndexedLineSetObject() \
       .setCoordIndex([0,1,2,3,4,0]) \
-.addComments(CommentsBlock("""Coordinate 3-tuple point count: 6""")) \
+      .addComments(CommentsBlock("""Coordinate 3-tuple point count: 6""")) \
       .setCoord(CoordinateObject() \
        .setPoint([0,1.5,0,2,1.5,0,2,1.5,-2,-2,1.5,-2,-2,1.5,0,0,1.5,0]) \
       ) \
@@ -215,8 +215,8 @@ X3D0 = X3DObject() \
       ) \
       .setGeometry(TextObject() \
        .setString(["X3D Java","SAI Library","X3DJSAIL"]) \
-.addComments(CommentsBlock("""Comment example A, plain quotation marks: He said, \"Immel did it!\"""")) \
-.addComments(CommentsBlock("""Comment example B, XML character entities: He said, &quot;Immel did it!&quot;""")) \
+       .addComments(CommentsBlock("""Comment example A, plain quotation marks: He said, \"Immel did it!\"""")) \
+       .addComments(CommentsBlock("""Comment example B, XML character entities: He said, &quot;Immel did it!&quot;""")) \
        .setMetadata(MetadataSetObject() \
         .setName("EscapedQuotationMarksMetadataSet") \
         .addValue(MetadataStringObject() \
@@ -234,23 +234,23 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .addChild(CollisionObject() \
-.addComments(CommentsBlock("""test containerField='proxy'""")) \
+      .addComments(CommentsBlock("""test containerField='proxy'""")) \
       .setProxy(ShapeObject() \
        .setDEF("ProxyShape") \
-.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
-.addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'""")) \
-.addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})""")) \
-.addComments(CommentsBlock("""reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html""")) \
+       .addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
+       .addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'""")) \
+       .addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})""")) \
+       .addComments(CommentsBlock("""reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html""")) \
        .setGeometry(TextObject() \
         .setString(["One, Two, Text","","He said, \"Immel did it!\" \"\""]) \
        ) \
       ) \
      ) \
-.addComments(CommentsBlock("""It's a beautiful world""")) \
-.addComments(CommentsBlock("""... for you!""")) \
-.addComments(CommentsBlock("""https://en.wikipedia.org/wiki/Beautiful_World_(Devo_song)""")) \
+     .addComments(CommentsBlock("""It's a beautiful world""")) \
+     .addComments(CommentsBlock("""... for you!""")) \
+     .addComments(CommentsBlock("""https://en.wikipedia.org/wiki/Beautiful_World_(Devo_song)""")) \
     ) \
-.addComments(CommentsBlock("""repeatedly spin 180 degrees as a readable special effect""")) \
+    .addComments(CommentsBlock("""repeatedly spin 180 degrees as a readable special effect""")) \
     .addChild(OrientationInterpolatorObject() \
      .setDEF("SpinInterpolator") \
      .setKey([0,0.5,1]) \
@@ -290,7 +290,7 @@ X3D0 = X3DObject() \
        .setName("colorsOutput") \
        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "\n"+
 "function colorInput (eventValue) // Example source code\n"+
 "{\n"+
@@ -302,7 +302,7 @@ X3D0 = X3DObject() \
       .setDEF("ColorAnimator") \
       .setKey([0,0.5,1]) \
       .setKeyValue([0.9411765,1,1,0.29411766,0,0.50980395,0.9411765,1,1]) \
-.addComments(CommentsBlock("""AZURE to INDIGO and back again""")) \
+      .addComments(CommentsBlock("""AZURE to INDIGO and back again""")) \
      ) \
      .addChild(TimeSensorObject() \
       .setDEF("ColorClock") \
@@ -347,15 +347,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-.addComments(CommentsBlock("""Initial node of ProtoBody determines prototype node type""")) \
+      .addComments(CommentsBlock("""Initial node of ProtoBody determines prototype node type""")) \
       .addChild(MaterialObject() \
        .setAmbientIntensity(0.25) \
        .setDiffuseColor([0.282435,0.085159,0.134462]) \
        .setShininess(0.127273) \
        .setSpecularColor([0.276305,0.11431,0.139857]) \
       ) \
-.addComments(CommentsBlock("""[HelloWorldProgram diagnostic] should be connected to scene graph: ArtDeco01ProtoDeclare.getNodeType()=\"Material\"""")) \
-.addComments(CommentsBlock("""presence of follow-on TouchSensor shows that additional nodes are allowed in ProtoBody after initial node, regardless of node types""")) \
+      .addComments(CommentsBlock("""[HelloWorldProgram diagnostic] should be connected to scene graph: ArtDeco01ProtoDeclare.getNodeType()=\"Material\"""")) \
+      .addComments(CommentsBlock("""presence of follow-on TouchSensor shows that additional nodes are allowed in ProtoBody after initial node, regardless of node types""")) \
       .addChild(TouchSensorObject() \
        .setDescription("within ProtoBody") \
        .setIS(ISObject() \
@@ -375,7 +375,7 @@ X3D0 = X3DObject() \
      .setName("ArtDeco02Material") \
      .setAppinfo("this is a different Material node") \
      .setUrl(["http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"]) \
-.addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time, TODO X3DJSAIL needs to add further capability.\"""")) \
+     .addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time, TODO X3DJSAIL needs to add further capability.\"""")) \
      .addField(fieldObject() \
       .setType(fieldObject.TYPE_SFSTRING) \
       .setName("description") \
@@ -383,15 +383,15 @@ X3D0 = X3DObject() \
       .setAppinfo("tooltip for descriptionField") \
      ) \
     ) \
-.addComments(CommentsBlock("""Tested ArtDeco01ProtoInstance, ArtDeco02ProtoInstance for improper node type when ProtoInstance is added in wrong place""")) \
+    .addComments(CommentsBlock("""Tested ArtDeco01ProtoInstance, ArtDeco02ProtoInstance for improper node type when ProtoInstance is added in wrong place""")) \
     .addChild(ShapeObject() \
      .setDEF("TestShape1") \
      .setAppearance(AppearanceObject() \
       .setDEF("TestAppearance1") \
-.addComments(CommentsBlock("""ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java""")) \
+      .addComments(CommentsBlock("""ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java""")) \
       .setMaterial(ProtoInstanceObject() \
        .setName("ArtDeco01Material") \
-.addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco01ProtoInstance.getNodeType()=\"Material\"""")) \
+       .addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco01ProtoInstance.getNodeType()=\"Material\"""")) \
        .addFieldValue(fieldValueObject() \
         .setName("description") \
         .setValue("ArtDeco01Material can substitute for a Material node") \
@@ -406,11 +406,11 @@ X3D0 = X3DObject() \
      .setDEF("TestShape2") \
      .setAppearance(AppearanceObject() \
       .setDEF("TestAppearance2") \
-.addComments(CommentsBlock("""ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java""")) \
+      .addComments(CommentsBlock("""ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java""")) \
       .setMaterial(ProtoInstanceObject() \
        .setName("ArtDeco02Material") \
        .setDEF("ArtDeco02MaterialDEF") \
-.addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco02ProtoInstance.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time, TODO X3DJSAIL needs to add further capability.\"""")) \
+       .addComments(CommentsBlock("""[HelloWorldProgram diagnostic] ArtDeco02ProtoInstance.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time, TODO X3DJSAIL needs to add further capability.\"""")) \
        .addFieldValue(fieldValueObject() \
         .setName("description") \
         .setValue("ArtDeco02Material can substitute for another Material node") \
@@ -426,7 +426,7 @@ X3D0 = X3DObject() \
      .setDEF("TestShape3") \
      .setAppearance(AppearanceObject() \
       .setDEF("TestAppearance3") \
-.addComments(CommentsBlock("""ArtDeco02Material ProtoInstance USE goes here...""")) \
+      .addComments(CommentsBlock("""ArtDeco02Material ProtoInstance USE goes here...""")) \
       .setMaterial(ProtoInstanceObject() \
        .setUSE("ArtDeco02MaterialDEF") \
       ) \
@@ -527,7 +527,7 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-.addComments(CommentsBlock("""Only first node (the node type) is renderable, others are along for the ride""")) \
+      .addComments(CommentsBlock("""Only first node (the node type) is renderable, others are along for the ride""")) \
       .addChild(ScriptObject() \
        .setDEF("MaterialModulatorScript") \
        .addField(fieldObject() \
@@ -560,7 +560,7 @@ X3D0 = X3DObject() \
          .setProtoField("diffuseColor") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "function initialize ()\n"+
 "{\n"+
 "    newColor = diffuseColor; // start with correct color\n"+
@@ -586,7 +586,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""Test success: declarative statement createDeclarativeShapeTests()""")) \
+    .addComments(CommentsBlock("""Test success: declarative statement createDeclarativeShapeTests()""")) \
     .addChild(GroupObject() \
      .setDEF("DeclarativeGroupExample") \
      .addChild(ShapeObject() \
@@ -597,7 +597,7 @@ X3D0 = X3DObject() \
       ) \
       .setAppearance(AppearanceObject() \
        .setDEF("DeclarativeAppearanceExample") \
-.addComments(CommentsBlock("""DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance""")) \
+       .addComments(CommentsBlock("""DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance""")) \
        .setMaterial(ProtoInstanceObject() \
         .setName("MaterialModulator") \
         .setDEF("MyMaterialModulator") \
@@ -609,54 +609,54 @@ X3D0 = X3DObject() \
        .setHeight(0.1) \
       ) \
      ) \
-.addComments(CommentsBlock("""Test success: declarativeGroup.addChild() singleton pipeline method""")) \
+     .addComments(CommentsBlock("""Test success: declarativeGroup.addChild() singleton pipeline method""")) \
     ) \
-.addComments(CommentsBlock("""Test success: declarative statement addChild()""")) \
-.addComments(CommentsBlock("""Test success: x3dModel.findNodeByDEF(DeclarativeAppearanceExample) = <Appearance DEF='DeclarativeAppearanceExample'/> i.e. <Appearance DEF='DeclarativeAppearanceExample'> <!- - DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance - -> <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator' containerField='material'/> </Appearance>""")) \
-.addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(findThisNameValue) = <MetadataString DEF='FindableMetadataStringTest' name='findThisNameValue' value='\"test case\"'/>""")) \
-.addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"ArtDeco01Material\", \"ProtoDeclare\") found""")) \
-.addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoDeclare\") found""")) \
-.addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoInstance\") found""")) \
+    .addComments(CommentsBlock("""Test success: declarative statement addChild()""")) \
+    .addComments(CommentsBlock("""Test success: x3dModel.findNodeByDEF(DeclarativeAppearanceExample) = <Appearance DEF='DeclarativeAppearanceExample'/> i.e. <Appearance DEF='DeclarativeAppearanceExample'> <!- - DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance - -> <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator' containerField='material'/> </Appearance>""")) \
+    .addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(findThisNameValue) = <MetadataString DEF='FindableMetadataStringTest' name='findThisNameValue' value='\"test case\"'/>""")) \
+    .addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"ArtDeco01Material\", \"ProtoDeclare\") found""")) \
+    .addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoDeclare\") found""")) \
+    .addComments(CommentsBlock("""Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoInstance\") found""")) \
     .addChild(GroupObject() \
      .setDEF("TestFieldObjectsGroup") \
-.addComments(CommentsBlock("""testFieldObjects() results""")) \
-.addComments(CommentsBlock("""SFBool default=true, true=true, false=false, negate()=true""")) \
-.addComments(CommentsBlock("""MFBool default=, initial=true false true, negate()=false true false""")) \
-.addComments(CommentsBlock("""SFFloat default=0.0, initial=1.0, setValue(2)=2.0, setValue(3.0f)=3.0, setValue(4.0)=4.0""")) \
-.addComments(CommentsBlock("""MFFloat default=, initial=1 2 3, append(5)=1 2 3 5, inserts(3,4)(0,0)=0 1 2 3 4 5, append(6)=0 1 2 3 4 5 6, size()=7""")) \
-.addComments(CommentsBlock("""... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear=""")) \
-.addComments(CommentsBlock("""SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true""")) \
-.addComments(CommentsBlock("""regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value""")) \
+     .addComments(CommentsBlock("""testFieldObjects() results""")) \
+     .addComments(CommentsBlock("""SFBool default=true, true=true, false=false, negate()=true""")) \
+     .addComments(CommentsBlock("""MFBool default=, initial=true false true, negate()=false true false""")) \
+     .addComments(CommentsBlock("""SFFloat default=0.0, initial=1.0, setValue(2)=2.0, setValue(3.0f)=3.0, setValue(4.0)=4.0""")) \
+     .addComments(CommentsBlock("""MFFloat default=, initial=1 2 3, append(5)=1 2 3 5, inserts(3,4)(0,0)=0 1 2 3 4 5, append(6)=0 1 2 3 4 5 6, size()=7""")) \
+     .addComments(CommentsBlock("""... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear=""")) \
+     .addComments(CommentsBlock("""SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true""")) \
+     .addComments(CommentsBlock("""regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value""")) \
     ) \
     .addChild(SoundObject() \
      .setLocation([0,1.6,0]) \
-.addComments(CommentsBlock("""set sound-ellipsoid location height at 1.6m to match typical avatar height""")) \
+     .addComments(CommentsBlock("""set sound-ellipsoid location height at 1.6m to match typical avatar height""")) \
      .setSource(AudioClipObject() \
       .setDescription("chimes") \
       .setUrl(["chimes.wav","http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]) \
-.addComments(CommentsBlock("""Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d""")) \
+      .addComments(CommentsBlock("""Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d""")) \
      ) \
     ) \
     .addChild(SoundObject() \
      .setLocation([0,1.6,0]) \
-.addComments(CommentsBlock("""set sound-ellipsoid location height at 1.6m to match typical avatar height""")) \
+     .addComments(CommentsBlock("""set sound-ellipsoid location height at 1.6m to match typical avatar height""")) \
      .setSource(MovieTextureObject() \
       .setDescription("mpgsys.mpg from ConformanceNist suite") \
       .setUrl(["mpgsys.mpg","http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"]) \
-.addComments(CommentsBlock("""Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d""")) \
-.addComments(CommentsBlock("""Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"""")) \
+      .addComments(CommentsBlock("""Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d""")) \
+      .addComments(CommentsBlock("""Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"""")) \
      ) \
     ) \
-.addComments(CommentsBlock("""Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true""")) \
-.addComments(CommentsBlock("""Test success: AnchorObject.isStatement()=false, siteAnchor.isStatement()=false""")) \
-.addComments(CommentsBlock("""Test success: ROUTEObject.isNode()=false, orbitPositionROUTE.isNode()=false""")) \
-.addComments(CommentsBlock("""Test success: ROUTEObject.isStatement()=true, orbitPositionROUTE.isStatement()=true""")) \
-.addComments(CommentsBlock("""Test success: CommentsBlock.isNode()=false, testComments.isNode()=false""")) \
-.addComments(CommentsBlock("""Test failure: CommentsBlock.isStatement()=true, testComments.isStatement()=true""")) \
+    .addComments(CommentsBlock("""Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true""")) \
+    .addComments(CommentsBlock("""Test success: AnchorObject.isStatement()=false, siteAnchor.isStatement()=false""")) \
+    .addComments(CommentsBlock("""Test success: ROUTEObject.isNode()=false, orbitPositionROUTE.isNode()=false""")) \
+    .addComments(CommentsBlock("""Test success: ROUTEObject.isStatement()=true, orbitPositionROUTE.isStatement()=true""")) \
+    .addComments(CommentsBlock("""Test success: CommentsBlock.isNode()=false, testComments.isNode()=false""")) \
+    .addComments(CommentsBlock("""Test failure: CommentsBlock.isStatement()=true, testComments.isStatement()=true""")) \
     .addChild(ShapeObject() \
      .setDEF("ExtrusionShape") \
-.addComments(CommentsBlock("""ExampleExtrusion isCrossSectionClosed()=true, crossSection='[1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0]'""")) \
-.addComments(CommentsBlock("""ExampleExtrusion isSpineClosed()=false, spine='[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]'""")) \
+     .addComments(CommentsBlock("""ExampleExtrusion isCrossSectionClosed()=true, crossSection='[1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0]'""")) \
+     .addComments(CommentsBlock("""ExampleExtrusion isSpineClosed()=false, spine='[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]'""")) \
      .setAppearance(AppearanceObject() \
       .setDEF("TransparentAppearance") \
       .setMaterial(MaterialObject() \

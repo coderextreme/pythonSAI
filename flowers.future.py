@@ -227,7 +227,7 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-.addComments(CommentsBlock("""<Sphere></Sphere>""")) \
+        .addComments(CommentsBlock("""<Sphere></Sphere>""")) \
         .setGeometry(IndexedFaceSetObject() \
          .setConvex(False) \
          .setDEF("Orbit") \
@@ -302,7 +302,7 @@ X3D0 = X3DObject() \
         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
         .setValue("0.5") \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "			function newBubble() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -444,14 +444,14 @@ X3D0 = X3DObject() \
        .setToNode("transform") \
        .setToField("set_translation") \
       ) \
-.addComments(CommentsBlock("""<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/> <ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>""")) \
+      .addComments(CommentsBlock("""<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/> <ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>""")) \
      ) \
     ) \
     .addChild(TransformObject() \
      .addChild(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-.addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <ProtoInstance name=\"flower\"/>""")) \
+     .addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <ProtoInstance name=\"flower\"/>""")) \
     ) \
    ) \
 

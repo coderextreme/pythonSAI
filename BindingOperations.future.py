@@ -92,7 +92,7 @@ X3D0 = X3DObject() \
      .setDescription("Viewpoint 4") \
      .setPosition([6,0,5]) \
     ) \
-.addComments(CommentsBlock("""Script initialization ought to first bind view5 below.""")) \
+    .addComments(CommentsBlock("""Script initialization ought to first bind view5 below.""")) \
     .addChild(GroupObject() \
      .addChild(TransformObject() \
       .setDEF("Text1") \
@@ -163,11 +163,11 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.""")) \
-.addComments(CommentsBlock("""It does not need to be studied in this chapter.""")) \
+    .addComments(CommentsBlock("""The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.""")) \
+    .addComments(CommentsBlock("""It does not need to be studied in this chapter.""")) \
     .addChild(TransformObject() \
      .setTranslation([0,-3,8]) \
-.addComments(CommentsBlock("""notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.""")) \
+     .addComments(CommentsBlock("""notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.""")) \
      .addChild(ViewpointObject() \
       .setDEF("ClickToAnimateView") \
       .setDescription("Select animation sequence") \
@@ -279,7 +279,7 @@ X3D0 = X3DObject() \
        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
        .setValue("-1") \
       ) \
-.setSourceCode('''ecmascript:\n"+
+      .setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize ()\n"+
 "{\n"+
@@ -368,14 +368,14 @@ X3D0 = X3DObject() \
 "    Browser.print (', view5Bound ' + (inputValue));\n"+
 "}''')
      ) \
-.addComments(CommentsBlock("""drive Script with TimeSensor clock""")) \
+     .addComments(CommentsBlock("""drive Script with TimeSensor clock""")) \
      .addChild(ROUTEObject() \
       .setFromField("value_changed") \
       .setFromNode("TimingSequencer") \
       .setToField("set_timeEvent") \
       .setToNode("BindingSequencerEngine") \
      ) \
-.addComments(CommentsBlock("""Script will bind and unbind Viewpoint nodes""")) \
+     .addComments(CommentsBlock("""Script will bind and unbind Viewpoint nodes""")) \
      .addChild(ROUTEObject() \
       .setFromField("bindView1") \
       .setFromNode("BindingSequencerEngine") \
@@ -406,7 +406,7 @@ X3D0 = X3DObject() \
       .setToField("set_bind") \
       .setToNode("ClickToAnimateView") \
      ) \
-.addComments(CommentsBlock("""Viewpoint nodes report bind and unbind events""")) \
+     .addComments(CommentsBlock("""Viewpoint nodes report bind and unbind events""")) \
      .addChild(ROUTEObject() \
       .setFromField("isBound") \
       .setFromNode("View1") \

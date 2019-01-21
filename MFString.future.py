@@ -282,7 +282,7 @@ X3D0 = X3DObject() \
       .setCenter([0,2.5,0]) \
       .setRotation([-1,0,0,1.92]) \
       .setTranslation([0.7,-5.2,-6.5]) \
-.addComments(CommentsBlock("""Front wheel is taken from the Savage Library, modified and re-animated.(from F18 Blue Angel)""")) \
+      .addComments(CommentsBlock("""Front wheel is taken from the Savage Library, modified and re-animated.(from F18 Blue Angel)""")) \
       .addChild(InlineObject() \
        .setUrl(["FrontWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.x3d","FrontWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.wrl"]) \
       ) \
@@ -292,7 +292,7 @@ X3D0 = X3DObject() \
       .setCenter([0,2.5,0]) \
       .setRotation([1,0,1,1.92]) \
       .setTranslation([-2.95,-5,7]) \
-.addComments(CommentsBlock("""Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)""")) \
+      .addComments(CommentsBlock("""Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)""")) \
       .addChild(InlineObject() \
        .setUrl(["RearLeftWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.x3d","RearLeftWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.wrl"]) \
       ) \
@@ -302,7 +302,7 @@ X3D0 = X3DObject() \
       .setCenter([0,2.5,0]) \
       .setRotation([-1,0,-1,1.92]) \
       .setTranslation([2.95,-5,7]) \
-.addComments(CommentsBlock("""Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)""")) \
+      .addComments(CommentsBlock("""Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)""")) \
       .addChild(InlineObject() \
        .setUrl(["RearRightWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.x3d","RearRightWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.wrl"]) \
       ) \
@@ -524,7 +524,7 @@ X3D0 = X3DObject() \
      .setToField("set_rotation") \
      .setToNode("FrontWheelTransform") \
     ) \
-.addComments(CommentsBlock("""Animation commands for Rear Right Wheel Starts""")) \
+    .addComments(CommentsBlock("""Animation commands for Rear Right Wheel Starts""")) \
     .addChild(TimeSensorObject() \
      .setDEF("RRearUp1") \
      .setCycleInterval(8) \
@@ -579,7 +579,7 @@ X3D0 = X3DObject() \
      .setToField("set_rotation") \
      .setToNode("RearRightWheelTransform") \
     ) \
-.addComments(CommentsBlock("""Animation commands for Rear Left Wheel""")) \
+    .addComments(CommentsBlock("""Animation commands for Rear Left Wheel""")) \
     .addChild(TimeSensorObject() \
      .setDEF("LRearUp1") \
      .setCycleInterval(8) \
@@ -845,7 +845,7 @@ X3D0 = X3DObject() \
      .setToField("set_bind") \
      .setToNode("MissileLaunchView") \
     ) \
-.addComments(CommentsBlock("""TODO fix type, add filter""")) \
+    .addComments(CommentsBlock("""TODO fix type, add filter""")) \
    ) \
 
 X3D0.toFileX3D("./future/./MFString.newf.x3d")

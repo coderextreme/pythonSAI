@@ -43,7 +43,7 @@ X3D0 = X3DObject() \
      .setDEF("Tour") \
      .setDescription("Tour Views") \
     ) \
-.addComments(CommentsBlock("""Viewpoint position='0 0 4' description='sphere in road'/""")) \
+    .addComments(CommentsBlock("""Viewpoint position='0 0 4' description='sphere in road'/""")) \
     .addChild(BackgroundObject() \
      .setBackUrl(["resources/images/bBK.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png"]) \
      .setBottomUrl(["resources/images/bBT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png"]) \

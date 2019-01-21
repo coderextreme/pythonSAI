@@ -70,7 +70,7 @@ X3D0 = X3DObject() \
       .setName("set_fraction") \
       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
      ) \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "			function newBubble() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+

@@ -94,7 +94,7 @@ X3D0 = X3DObject() \
          .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
          .setValue("0 0 0 0 5 0") \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "		function set_location(value) {\n"+
 "                    old = translation;\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
@@ -233,7 +233,7 @@ X3D0 = X3DObject() \
           .setProtoField("set_endpoint") \
          ) \
         ) \
-.setSourceCode('''ecmascript:\n"+
+        .setSourceCode('''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+

@@ -117,7 +117,7 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-.addComments(CommentsBlock("""<Sphere>""")) \
+      .addComments(CommentsBlock("""<Sphere>""")) \
       .setGeometry(IndexedFaceSetObject() \
        .setConvex(False) \
        .setDEF("Orbit") \
@@ -144,7 +144,7 @@ X3D0 = X3DObject() \
       .setName("coordIndexes") \
       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
      ) \
-.setSourceCode('''ecmascript:\n"+
+     .setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+

@@ -64,12 +64,12 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-.addComments(CommentsBlock("""=============== Camera ==============""")) \
+    .addComments(CommentsBlock("""=============== Camera ==============""")) \
     .addChild(ProtoDeclareObject() \
      .setName("Camera") \
      .setAppinfo("Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images.") \
      .setProtoInterface(ProtoInterfaceObject() \
-.addComments(CommentsBlock("""Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields""")) \
+      .addComments(CommentsBlock("""Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields""")) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
@@ -140,7 +140,7 @@ X3D0 = X3DObject() \
        .setName("shots") \
        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
        .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-.addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+       .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
       ) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFBOOL) \
@@ -215,7 +215,7 @@ X3D0 = X3DObject() \
        .setName("offlineRender") \
        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
        .setAppinfo("OfflineRender node") \
-.addComments(CommentsBlock("""initialization node (if any) goes here""")) \
+       .addComments(CommentsBlock("""initialization node (if any) goes here""")) \
       ) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFBOOL) \
@@ -259,7 +259,7 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-.addComments(CommentsBlock("""NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation""")) \
+      .addComments(CommentsBlock("""NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation""")) \
       .addChild(NavigationInfoObject() \
        .setType(["EXAMINE","FLY","ANY"]) \
        .setDEF("CameraNavInfo") \
@@ -276,14 +276,14 @@ X3D0 = X3DObject() \
          .setNodeField("visibilityLimit") \
          .setProtoField("farClipPlane") \
         ) \
-.addComments(CommentsBlock("""No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.""")) \
+        .addComments(CommentsBlock("""No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.""")) \
        ) \
       ) \
-.addComments(CommentsBlock("""this DirectionalLight replaces NavigationInfo headlight in order to add color capability""")) \
+      .addComments(CommentsBlock("""this DirectionalLight replaces NavigationInfo headlight in order to add color capability""")) \
       .addChild(DirectionalLightObject() \
        .setDEF("CameraDirectionalLight") \
        .setGlobal(True) \
-.addComments(CommentsBlock("""TODO confirm other default field values match NavigationInfo spec""")) \
+       .addComments(CommentsBlock("""TODO confirm other default field values match NavigationInfo spec""")) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("on") \
@@ -337,7 +337,7 @@ X3D0 = X3DObject() \
        .setDEF("CameraScript") \
        .setDirectOutput(True) \
        .setMustEvaluate(True) \
-.addComments(CommentsBlock("""binding is controlled externally, all camera operations proceed the same regardless of whether bound or not""")) \
+       .addComments(CommentsBlock("""binding is controlled externally, all camera operations proceed the same regardless of whether bound or not""")) \
        .addField(fieldObject() \
         .setType(fieldObject.TYPE_SFSTRING) \
         .setName("description") \
@@ -391,7 +391,7 @@ X3D0 = X3DObject() \
         .setName("shots") \
         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
         .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-.addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+        .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
        ) \
        .addField(fieldObject() \
         .setType(fieldObject.TYPE_SFCOLOR) \
@@ -440,7 +440,7 @@ X3D0 = X3DObject() \
         .setName("offlineRender") \
         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
         .setAppinfo("OfflineRender node") \
-.addComments(CommentsBlock("""initialization node (if any) goes here""")) \
+        .addComments(CommentsBlock("""initialization node (if any) goes here""")) \
        ) \
        .addField(fieldObject() \
         .setType(fieldObject.TYPE_SFNODE) \
@@ -625,7 +625,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -998,7 +998,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== CameraShot ==============""")) \
+    .addComments(CommentsBlock("""=============== CameraShot ==============""")) \
     .addChild(ProtoDeclareObject() \
      .setName("CameraShot") \
      .setAppinfo("CameraShot collects a specific set of CameraMovement animations that make up an individual shot.") \
@@ -1021,7 +1021,7 @@ X3D0 = X3DObject() \
        .setName("moves") \
        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
        .setAppinfo("Set of CameraMovement nodes") \
-.addComments(CommentsBlock("""initializing CameraMovement nodes are inserted here by scene author using ProtoInstance""")) \
+       .addComments(CommentsBlock("""initializing CameraMovement nodes are inserted here by scene author using ProtoInstance""")) \
       ) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFVEC3F) \
@@ -1107,7 +1107,7 @@ X3D0 = X3DObject() \
         .setName("moves") \
         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
         .setAppinfo("Set of CameraMovement nodes") \
-.addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+        .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
        ) \
        .addField(fieldObject() \
         .setType(fieldObject.TYPE_SFVEC3F) \
@@ -1231,7 +1231,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraShotScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1325,10 +1325,10 @@ X3D0 = X3DObject() \
 "         Browser.print ('[CameraShot] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== CameraMovement ==============""")) \
+    .addComments(CommentsBlock("""=============== CameraMovement ==============""")) \
     .addChild(ProtoDeclareObject() \
      .setName("CameraMovement") \
      .setAppinfo("CameraMovement node defines a single camera movement animation including goalPosition, goalOrientation, goalAimPoint and goalFieldOfView.") \
@@ -1417,9 +1417,9 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-.addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-.addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
-.addComments(CommentsBlock("""Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events""")) \
+      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
+      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
+      .addComments(CommentsBlock("""Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events""")) \
       .addChild(ScriptObject() \
        .setDEF("CameraMovementScript") \
        .setDirectOutput(True) \
@@ -1546,7 +1546,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraMovementScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1637,15 +1637,15 @@ X3D0 = X3DObject() \
 "         Browser.print ('[CameraMovement] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== OfflineRender ==============""")) \
+    .addComments(CommentsBlock("""=============== OfflineRender ==============""")) \
     .addChild(ProtoDeclareObject() \
      .setName("OfflineRender") \
      .setAppinfo("OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot).") \
      .setProtoInterface(ProtoInterfaceObject() \
-.addComments(CommentsBlock("""TODO non-photorealistic rendering (NPR) parameters""")) \
+      .addComments(CommentsBlock("""TODO non-photorealistic rendering (NPR) parameters""")) \
       .addField(fieldObject() \
        .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
@@ -1721,8 +1721,8 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-.addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-.addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
+      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
+      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
       .addChild(ScriptObject() \
        .setDEF("OfflineRenderScript") \
        .setMustEvaluate(True) \
@@ -1838,7 +1838,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-.setSourceCode('''ecmascript:\n"+
+       .setSourceCode('''ecmascript:\n"+
 "function initialize () // OfflineRenderScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1893,10 +1893,10 @@ X3D0 = X3DObject() \
 "         Browser.print ('[OfflineRender] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-.addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
      ) \
     ) \
-.addComments(CommentsBlock("""=============== Launch Prototype Example ==============""")) \
+    .addComments(CommentsBlock("""=============== Launch Prototype Example ==============""")) \
     .addChild(BackgroundObject() \
      .setSkyColor([0.282353,0.380392,0.470588]) \
     ) \

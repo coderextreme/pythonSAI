@@ -50,7 +50,7 @@ X3D0 = X3DObject() \
    .setScene(SceneObject() \
     .addChild(ShapeObject() \
      .setDEF("Arch") \
-.addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly""")) \
+     .addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly""")) \
      .setGeometry(IndexedFaceSetObject() \
       .setDEF("ArchIndex") \
       .setConvex(False) \
