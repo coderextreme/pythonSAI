@@ -13,13 +13,14 @@ class ClassPrinter:
         }
         self.node = node
         self.parents = []
-        inhers = self.node.find_all("Inheritance")
-        for inher in inhers:
-            self.parents.append(inher['baseType'])
 
         addinhers = self.node.find_all("AdditionalInheritance")
         for addinher in addinhers:
             self.parents.append(addinher['baseType'])
+
+        inhers = self.node.find_all("Inheritance")
+        for inher in inhers:
+            self.parents.append(inher['baseType'])
 
         self.printed = False
 

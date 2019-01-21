@@ -1598,7 +1598,7 @@ class X3DBoundedObject():
     pass
 
 
-class X3DGroupingNode(X3DChildNode, X3DBoundedObject):
+class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -2152,7 +2152,7 @@ class X3DMaterialNode(X3DAppearanceChildNode):
     pass
 
 
-class X3DNBodyCollidableNode(X3DChildNode, X3DBoundedObject):
+class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -2243,7 +2243,7 @@ class X3DNBodyCollidableNode(X3DChildNode, X3DBoundedObject):
     pass
 
 
-class X3DNBodyCollisionSpaceNode(X3DNode, X3DBoundedObject):
+class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -3199,7 +3199,7 @@ class X3DUrlObject():
     pass
 
 
-class X3DScriptNode(X3DChildNode, X3DUrlObject):
+class X3DScriptNode(X3DUrlObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -3420,7 +3420,7 @@ class X3DShaderNode(X3DAppearanceChildNode):
     pass
 
 
-class X3DShapeNode(X3DChildNode, X3DBoundedObject):
+class X3DShapeNode(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -4460,7 +4460,7 @@ class X3DViewportNode(X3DGroupingNode):
     pass
 
 
-class X3DVolumeDataNode(X3DChildNode, X3DBoundedObject):
+class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -4665,7 +4665,7 @@ class X3DProgrammableShaderObject():
     pass
 
 
-class Anchor(X3DGroupingNode, X3DUrlObject):
+class Anchor(X3DUrlObject, X3DGroupingNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -5049,7 +5049,7 @@ class ArcClose2D(X3DGeometryNode):
     pass
 
 
-class AudioClip(X3DSoundSourceNode, X3DUrlObject):
+class AudioClip(X3DUrlObject, X3DSoundSourceNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -6355,7 +6355,7 @@ class Box(X3DGeometryNode):
     pass
 
 
-class CADAssembly(X3DGroupingNode, X3DProductStructureChildNode):
+class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -6445,7 +6445,7 @@ class CADAssembly(X3DGroupingNode, X3DProductStructureChildNode):
     pass
 
 
-class CADFace(X3DProductStructureChildNode, X3DBoundedObject):
+class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -6626,7 +6626,7 @@ class CADLayer(X3DGroupingNode):
     pass
 
 
-class CADPart(X3DProductStructureChildNode, X3DGroupingNode):
+class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -7213,7 +7213,7 @@ class CollidableShape(X3DNBodyCollidableNode):
     pass
 
 
-class Collision(X3DGroupingNode, X3DSensorNode):
+class Collision(X3DSensorNode, X3DGroupingNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -8268,7 +8268,7 @@ class ComposedCubeMapTexture(X3DEnvironmentTextureNode):
     pass
 
 
-class ComposedShader(X3DShaderNode, X3DProgrammableShaderObject):
+class ComposedShader(X3DProgrammableShaderObject, X3DShaderNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(language_) is not SFString:
@@ -10115,7 +10115,7 @@ class DISEntityManager(X3DChildNode):
     pass
 
 
-class DISEntityTypeMapping(X3DInfoNode, X3DUrlObject):
+class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(category_) is not SFInt32:
@@ -10926,7 +10926,7 @@ class ElevationGrid(X3DGeometryNode):
     pass
 
 
-class EspduTransform(X3DGroupingNode, X3DNetworkSensorNode):
+class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -12201,7 +12201,7 @@ class FloatVertexAttribute(X3DVertexAttributeNode):
     pass
 
 
-class Fog(X3DBindableNode, X3DFogObject):
+class Fog(X3DFogObject, X3DBindableNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -12995,7 +12995,7 @@ class GeoLocation(X3DGroupingNode):
     pass
 
 
-class GeoLOD(X3DChildNode, X3DBoundedObject):
+class GeoLOD(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -13097,7 +13097,7 @@ class GeoLOD(X3DChildNode, X3DBoundedObject):
     pass
 
 
-class GeoMetadata(X3DInfoNode, X3DUrlObject):
+class GeoMetadata(X3DUrlObject, X3DInfoNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -14234,7 +14234,7 @@ class HAnimDisplacer(X3DGeometricPropertyNode):
     pass
 
 
-class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
+class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -14570,7 +14570,7 @@ class HAnimHumanoid(X3DChildNode, X3DBoundedObject):
     pass
 
 
-class HAnimJoint(X3DChildNode, X3DBoundedObject):
+class HAnimJoint(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -16089,7 +16089,7 @@ class HAnimSite(X3DGroupingNode):
     pass
 
 
-class ImageCubeMapTexture(X3DEnvironmentTextureNode, X3DUrlObject):
+class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(textureProperties_) is not SFNode:
@@ -16155,7 +16155,7 @@ class ImageCubeMapTexture(X3DEnvironmentTextureNode, X3DUrlObject):
     pass
 
 
-class ImageTexture(X3DTexture2DNode, X3DUrlObject):
+class ImageTexture(X3DUrlObject, X3DTexture2DNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(repeatS_) is not SFBool:
@@ -16227,7 +16227,7 @@ class ImageTexture(X3DTexture2DNode, X3DUrlObject):
     pass
 
 
-class ImageTexture3D(X3DTexture3DNode, X3DUrlObject):
+class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(repeatR_) is not SFBool:
@@ -17179,7 +17179,7 @@ class IndexedTriangleStripSet(X3DComposedGeometryNode):
     pass
 
 
-class Inline(X3DChildNode, X3DBoundedObject, X3DUrlObject):
+class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -18058,7 +18058,7 @@ class Layout(X3DLayoutNode):
     pass
 
 
-class LayoutGroup(X3DNode, X3DGroupingNode):
+class LayoutGroup(X3DGroupingNode, X3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -18747,7 +18747,7 @@ class LoadSensor(X3DNetworkSensorNode):
     pass
 
 
-class LocalFog(X3DChildNode, X3DFogObject):
+class LocalFog(X3DFogObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19239,7 +19239,7 @@ class Matrix4VertexAttribute(X3DVertexAttributeNode):
     pass
 
 
-class MetadataBoolean(X3DMetadataObject, X3DNode):
+class MetadataBoolean(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19324,7 +19324,7 @@ class MetadataBoolean(X3DMetadataObject, X3DNode):
     pass
 
 
-class MetadataDouble(X3DMetadataObject, X3DNode):
+class MetadataDouble(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19409,7 +19409,7 @@ class MetadataDouble(X3DMetadataObject, X3DNode):
     pass
 
 
-class MetadataFloat(X3DMetadataObject, X3DNode):
+class MetadataFloat(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19494,7 +19494,7 @@ class MetadataFloat(X3DMetadataObject, X3DNode):
     pass
 
 
-class MetadataInteger(X3DMetadataObject, X3DNode):
+class MetadataInteger(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19579,7 +19579,7 @@ class MetadataInteger(X3DMetadataObject, X3DNode):
     pass
 
 
-class MetadataSet(X3DNode, X3DMetadataObject):
+class MetadataSet(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -19664,7 +19664,7 @@ class MetadataSet(X3DNode, X3DMetadataObject):
     pass
 
 
-class MetadataString(X3DMetadataObject, X3DNode):
+class MetadataString(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -20059,7 +20059,7 @@ class MotorJoint(X3DRigidJointNode):
     pass
 
 
-class MovieTexture(X3DSoundSourceNode, X3DTexture2DNode, X3DUrlObject):
+class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(repeatS_) is not SFBool:
@@ -21435,7 +21435,7 @@ class NurbsPositionInterpolator(X3DChildNode):
     pass
 
 
-class NurbsSet(X3DChildNode, X3DBoundedObject):
+class NurbsSet(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -22572,7 +22572,7 @@ class OrthoViewpoint(X3DViewpointNode):
     pass
 
 
-class PackagedShader(X3DShaderNode, X3DUrlObject, X3DProgrammableShaderObject):
+class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(language_) is not SFString:
@@ -22875,7 +22875,7 @@ class ParticleSystem(X3DShapeNode):
     pass
 
 
-class PickableGroup(X3DGroupingNode, X3DPickableObject):
+class PickableGroup(X3DPickableObject, X3DGroupingNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -24968,7 +24968,7 @@ class ProjectionVolumeStyle(X3DVolumeRenderStyleNode):
     pass
 
 
-class ProtoInstance(X3DPrototypeInstance, X3DChildNode):
+class ProtoInstance(X3DChildNode, X3DPrototypeInstance):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -25287,7 +25287,7 @@ class QuadSet(X3DComposedGeometryNode):
     pass
 
 
-class ReceiverPdu(X3DNetworkSensorNode, X3DBoundedObject):
+class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -27005,7 +27005,7 @@ class ShadedVolumeStyle(X3DComposableVolumeRenderStyleNode):
     pass
 
 
-class ShaderPart(X3DNode, X3DUrlObject):
+class ShaderPart(X3DUrlObject, X3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -27085,7 +27085,7 @@ class ShaderPart(X3DNode, X3DUrlObject):
     pass
 
 
-class ShaderProgram(X3DNode, X3DUrlObject, X3DProgrammableShaderObject):
+class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -27245,7 +27245,7 @@ class Shape(X3DShapeNode):
     pass
 
 
-class SignalPdu(X3DNetworkSensorNode, X3DBoundedObject):
+class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -29009,7 +29009,7 @@ class SquadOrientationInterpolator(X3DInterpolatorNode):
     pass
 
 
-class StaticGroup(X3DChildNode, X3DBoundedObject):
+class StaticGroup(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
@@ -30693,7 +30693,7 @@ class TextureTransformMatrix3D(X3DTextureTransformNode):
     pass
 
 
-class TimeSensor(X3DTimeDependentNode, X3DSensorNode):
+class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
     def __init__(self, **kwargs):
         super().__init__()
         return
@@ -31391,7 +31391,7 @@ class TransformSensor(X3DEnvironmentalSensorNode):
     pass
 
 
-class TransmitterPdu(X3DNetworkSensorNode, X3DBoundedObject):
+class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def __init__(self, **kwargs):
         super().__init__()
         if type(bboxCenter_) is not SFVec3f:
