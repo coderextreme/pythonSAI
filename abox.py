@@ -123,3 +123,4 @@ ProtoInstance27.addFieldValue(fieldValue28)
 Scene7.addChild(ProtoInstance27)
 X3D0.setScene(Scene7)
 
+X3D0.toFileX3D("././abox.new.x3d")

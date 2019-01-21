@@ -47,7 +47,6 @@ X3D0.setHead(head1)
 Scene9 = SceneObject()
 
 NavigationInfo10 = NavigationInfoObject()
-NavigationInfo10.setType(["EXAMINE","ANY"])
 
 Scene9.addChild(NavigationInfo10)
 Background11 = BackgroundObject()
@@ -71,7 +70,6 @@ ProtoBody14 = ProtoBodyObject()
 
 Transform15 = TransformObject()
 Transform15.setDEF("transform")
-Transform15.setTranslation([0,0,0])
 
 Shape16 = ShapeObject()
 Shape16.setDEF("myShape")
@@ -79,8 +77,8 @@ Shape16.setDEF("myShape")
 Appearance17 = AppearanceObject()
 
 Material18 = MaterialObject()
-Material18.setDiffuseColor([.7,.7,.7])
-Material18.setSpecularColor([.5,.5,.5])
+Material18.setDiffuseColor([0.7,0.7,0.7])
+Material18.setSpecularColor([0.5,0.5,0.5])
 
 Appearance17.setMaterial(Material18)
 ComposedCubeMapTexture19 = ComposedCubeMapTextureObject()
@@ -112,28 +110,9 @@ ImageTexture25.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_t
 ComposedCubeMapTexture19.setTop(ImageTexture25)
 Appearance17.setTexture(ComposedCubeMapTexture19)
 
-Appearance17.addComments(CommentsBlock("""
-					<ComposedShader DEF='gl' language=\"GLSL\">
-					  <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/>
-					  <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/>
-					  <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/>
+Appearance17.addComments(CommentsBlock("""<ComposedShader DEF='gl' language=\"GLSL\"> <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/gl.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/gl.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader> <ComposedShader DEF='freewrl' language=\"GLSL\"> <field name='fw_textureCoodGenType' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/freewrl.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/freewrl.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader>"""))
 
-					  <ShaderPart url='\"../shaders/gl.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/gl.vs\"' type='VERTEX'></ShaderPart>
-					  <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart>
-					</ComposedShader>
-					<ComposedShader DEF='freewrl' language=\"GLSL\">
-					  <field name='fw_textureCoodGenType' type='SFInt32' accessType=\"inputOutput\" value='0'/>
-					  <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/>
-					  <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/>
-
-					  <ShaderPart url='\"../shaders/freewrl.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/freewrl.vs\"' type='VERTEX'></ShaderPart>
-					  <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart>
-					</ComposedShader>
-					"""))
+Appearance17.addComments(CommentsBlock("""<ComposedShader DEF='instant' language=\"GLSL\"> <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/instant.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/instant.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader>"""))
 ComposedShader26 = ComposedShaderObject()
 ComposedShader26.setDEF("x3dom")
 ComposedShader26.setLanguage("GLSL")
@@ -149,7 +128,7 @@ field28 = fieldObject()
 field28.setType(fieldObject.TYPE_SFVEC3F)
 field28.setName("chromaticDispertion")
 field28.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field28.setValue("0.98 1.0 1.033")
+field28.setValue("0.98 1 1.033")
 
 ComposedShader26.addField(field28)
 field29 = fieldObject()
@@ -170,7 +149,7 @@ field31 = fieldObject()
 field31.setType(fieldObject.TYPE_SFFLOAT)
 field31.setName("power")
 field31.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field31.setValue("2.0")
+field31.setValue("2")
 
 ComposedShader26.addField(field31)
 ShaderPart32 = ShaderPartObject()
@@ -184,19 +163,6 @@ ShaderPart33.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSO
 
 ComposedShader26.addParts(ShaderPart33)
 Appearance17.addShaders(ComposedShader26)
-
-Appearance17.addComments(CommentsBlock("""
-					<ComposedShader DEF='instant' language=\"GLSL\">
-					  <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/>
-					  <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/>
-					  <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/>
-					  <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/>
-
-                              <ShaderPart url='\"../shaders/instant.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/instant.vs\"' type='VERTEX'></ShaderPart>
-                              <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart>
-                            </ComposedShader>
-                            """))
 ComposedShader34 = ComposedShaderObject()
 ComposedShader34.setDEF("cobweb")
 ComposedShader34.setLanguage("GLSL")
@@ -215,7 +181,7 @@ field37 = fieldObject()
 field37.setType(fieldObject.TYPE_SFVEC3F)
 field37.setName("chromaticDispertion")
 field37.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field37.setValue("0.98 1.0 1.033")
+field37.setValue("0.98 1 1.033")
 
 ComposedShader34.addField(field37)
 field38 = fieldObject()
@@ -236,7 +202,7 @@ field40 = fieldObject()
 field40.setType(fieldObject.TYPE_SFFLOAT)
 field40.setName("power")
 field40.setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT)
-field40.setValue("2.0")
+field40.setValue("2")
 
 ComposedShader34.addField(field40)
 ShaderPart41 = ShaderPartObject()
@@ -304,12 +270,11 @@ Script44.setSourceCode("ecmascript:\n"+
 "				velocity.y += Math.random() * 0.2 - 0.1;\n"+
 "				velocity.z += Math.random() * 0.2 - 0.1;\n"+
 "			    }\n"+
-"			}\n"+
-"               ")
+"			}")
 ProtoBody14.addChild(Script44)
 TimeSensor48 = TimeSensorObject()
 TimeSensor48.setDEF("TourTime")
-TimeSensor48.setCycleInterval(0.150)
+TimeSensor48.setCycleInterval(0.15)
 TimeSensor48.setLoop(True)
 
 ProtoBody14.addChild(TimeSensor48)
@@ -343,3 +308,4 @@ ProtoInstance53.setName("Bubble")
 Scene9.addChild(ProtoInstance53)
 X3D0.setScene(Scene9)
 
+X3D0.toFileX3D("././bub.new.x3d")

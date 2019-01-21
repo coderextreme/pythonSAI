@@ -9,68 +9,68 @@ X3D0.setVersion("3.3")
 head1 = headObject()
 
 meta2 = metaObject()
-meta2.setContent("PixelTextureComponentExamples.x3d")
 meta2.setName("title")
+meta2.setContent("PixelTextureComponentExamples.x3d")
 
 head1.addMeta(meta2)
 meta3 = metaObject()
-meta3.setContent("This example shows the five PixelTexture components, with 0 to 4 components each, shown in Table 5-18.")
 meta3.setName("description")
+meta3.setContent("This example shows the five PixelTexture components, with 0 to 4 components each, shown in Table 5-18.")
 
 head1.addMeta(meta3)
 meta4 = metaObject()
-meta4.setContent("Leonard Daly and Don Brutzman")
 meta4.setName("creator")
+meta4.setContent("Leonard Daly and Don Brutzman")
 
 head1.addMeta(meta4)
 meta5 = metaObject()
-meta5.setContent("25 August 2008")
 meta5.setName("created")
+meta5.setContent("25 August 2008")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setContent("7 January 2014")
 meta6.setName("modified")
+meta6.setContent("7 January 2014")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
-meta7.setContent("http://X3dGraphics.com")
 meta7.setName("reference")
+meta7.setContent("http://X3dGraphics.com")
 
 head1.addMeta(meta7)
 meta8 = metaObject()
-meta8.setContent("X3D for Web Authors, Table 5.18")
 meta8.setName("reference")
+meta8.setContent("X3D for Web Authors, Table 5.18")
 
 head1.addMeta(meta8)
 meta9 = metaObject()
-meta9.setContent("http://www.web3d.org/x3d/content/examples/X3dResources.html")
 meta9.setName("reference")
+meta9.setContent("http://www.web3d.org/x3d/content/examples/X3dResources.html")
 
 head1.addMeta(meta9)
 meta10 = metaObject()
-meta10.setContent("Copyright (c) 2006, Daly Realism and Don Brutzman")
 meta10.setName("rights")
+meta10.setContent("Copyright (c) 2006, Daly Realism and Don Brutzman")
 
 head1.addMeta(meta10)
 meta11 = metaObject()
-meta11.setContent("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com")
 meta11.setName("subject")
+meta11.setContent("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com")
 
 head1.addMeta(meta11)
 meta12 = metaObject()
-meta12.setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter05AppearanceMaterialTextures/PixelTextureComponentExamples.x3d")
 meta12.setName("identifier")
+meta12.setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter05AppearanceMaterialTextures/PixelTextureComponentExamples.x3d")
 
 head1.addMeta(meta12)
 meta13 = metaObject()
-meta13.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
 meta13.setName("generator")
+meta13.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
 
 head1.addMeta(meta13)
 meta14 = metaObject()
-meta14.setContent("../license.html")
 meta14.setName("license")
+meta14.setContent("../license.html")
 
 head1.addMeta(meta14)
 X3D0.setHead(head1)
@@ -135,7 +135,7 @@ Appearance31 = AppearanceObject()
 
 PixelTexture32 = PixelTextureObject()
 PixelTexture32.setDEF("OneComponent")
-PixelTexture32.setImage([1,2,1,0xFF,0x00])
+PixelTexture32.setImage([1,2,1,255,0])
 
 Appearance31.setTexture(PixelTexture32)
 Shape30.setAppearance(Appearance31)
@@ -171,7 +171,7 @@ Appearance41 = AppearanceObject()
 
 PixelTexture42 = PixelTextureObject()
 PixelTexture42.setDEF("TwoComponents")
-PixelTexture42.setImage([2,1,2,0xCCFF,0x2277])
+PixelTexture42.setImage([2,1,2,52479,8823])
 
 Appearance41.setTexture(PixelTexture42)
 Shape40.setAppearance(Appearance41)
@@ -207,10 +207,10 @@ Shape50 = ShapeObject()
 Appearance51 = AppearanceObject()
 
 
-Appearance51.addComments(CommentsBlock(""" note 0x000000 = 0 """))
+Appearance51.addComments(CommentsBlock("""note 0x000000 = 0"""))
 PixelTexture52 = PixelTextureObject()
 PixelTexture52.setDEF("ThreeComponents")
-PixelTexture52.setImage([2,4,3,0xFF0000,0xFF00,0x000000,0,0,0,0xFFFFFF,0xFFFF00])
+PixelTexture52.setImage([2,4,3,16711680,65280,0,0,0,0,16777215,16776960])
 
 Appearance51.setTexture(PixelTexture52)
 Shape50.setAppearance(Appearance51)
@@ -246,10 +246,10 @@ Shape60 = ShapeObject()
 Appearance61 = AppearanceObject()
 
 
-Appearance61.addComments(CommentsBlock(""" Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127 """))
+Appearance61.addComments(CommentsBlock("""Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127"""))
 PixelTexture62 = PixelTextureObject()
 PixelTexture62.setDEF("FourComponents")
-PixelTexture62.setImage([3,2,4,-16776961,0x00FF00FF,0x0000FFFF,-16777089,0x00FF007F,0x0000FF7F])
+PixelTexture62.setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407])
 
 Appearance61.setTexture(PixelTexture62)
 Shape60.setAppearance(Appearance61)
@@ -278,7 +278,7 @@ Transform64.addChild(Shape65)
 Transform59.addChild(Transform64)
 Scene15.addChild(Transform59)
 
-Scene15.addComments(CommentsBlock(""" Background from PixelTextureBW.x3d """))
+Scene15.addComments(CommentsBlock("""Background from PixelTextureBW.x3d"""))
 Transform69 = TransformObject()
 Transform69.setTranslation([0,6,-2])
 
@@ -287,15 +287,16 @@ Shape70 = ShapeObject()
 Appearance71 = AppearanceObject()
 
 PixelTexture72 = PixelTextureObject()
-PixelTexture72.setImage([8,8,1,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0x00,0xcc,0x00,0xcc,0x00,0xcc,0x00,0xcc])
+PixelTexture72.setImage([8,8,1,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204])
 
 Appearance71.setTexture(PixelTexture72)
 Shape70.setAppearance(Appearance71)
 Box73 = BoxObject()
-Box73.setSize([16,16,.1])
+Box73.setSize([16,16,0.1])
 
 Shape70.setGeometry(Box73)
 Transform69.addChild(Shape70)
 Scene15.addChild(Transform69)
 X3D0.setScene(Scene15)
 
+X3D0.toFileX3D("././PixelTextureComponentExamples.new.x3d")

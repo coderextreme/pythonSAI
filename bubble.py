@@ -151,8 +151,7 @@ Script17.setSourceCode("ecmascript:\n"+
 "		translation.z = 0;\n"+
 "		initialize();\n"+
 "	}\n"+
-"}\n"+
-"")
+"}")
 Transform12.addChild(Script17)
 TimeSensor23 = TimeSensorObject()
 TimeSensor23.setDEF("bubbleClock")
@@ -191,3 +190,4 @@ ProtoInstance27.setDEF("bubbleA")
 Scene7.addChild(ProtoInstance27)
 X3D0.setScene(Scene7)
 
+X3D0.toFileX3D("././bubble.new.x3d")

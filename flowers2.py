@@ -9,50 +9,49 @@ X3D0.setVersion("3.0")
 head1 = headObject()
 
 meta2 = metaObject()
-meta2.setContent("title")
 meta2.setName("flowers2.x3d")
+meta2.setContent("title")
 
 head1.addMeta(meta2)
 meta3 = metaObject()
-meta3.setContent("John Carlson")
 meta3.setName("author")
+meta3.setContent("John Carlson")
 
 head1.addMeta(meta3)
 meta4 = metaObject()
-meta4.setContent("John Carlson")
 meta4.setName("transcriber")
+meta4.setContent("John Carlson")
 
 head1.addMeta(meta4)
 meta5 = metaObject()
-meta5.setContent("23 January 2005")
 meta5.setName("created")
+meta5.setContent("23 January 2005")
 
 head1.addMeta(meta5)
 meta6 = metaObject()
-meta6.setContent("05 May 2017")
 meta6.setName("modified")
+meta6.setContent("05 May 2017")
 
 head1.addMeta(meta6)
 meta7 = metaObject()
-meta7.setContent("2 random mathematical roses in spherical dimensions. rho = a + b * cos(c * theta) * cos(d * phi)")
 meta7.setName("description")
+meta7.setContent("2 random mathematical roses in spherical dimensions. rho = a + b * cos(c * theta) * cos(d * phi)")
 
 head1.addMeta(meta7)
 meta8 = metaObject()
-meta8.setContent("https://coderextreme.net/x3d/flowers2.x3d")
 meta8.setName("url")
+meta8.setContent("https://coderextreme.net/x3d/flowers2.x3d")
 
 head1.addMeta(meta8)
 meta9 = metaObject()
-meta9.setContent("manually written")
 meta9.setName("generator")
+meta9.setContent("manually written")
 
 head1.addMeta(meta9)
 X3D0.setHead(head1)
 Scene10 = SceneObject()
 
 NavigationInfo11 = NavigationInfoObject()
-NavigationInfo11.setType(["EXAMINE","ANY"])
 
 Scene10.addChild(NavigationInfo11)
 Viewpoint12 = ViewpointObject()
@@ -83,7 +82,6 @@ Shape16.setAppearance(Appearance17)
 IndexedFaceSet19 = IndexedFaceSetObject()
 IndexedFaceSet19.setConvex(False)
 IndexedFaceSet19.setDEF("Orbit")
-IndexedFaceSet19.setCreaseAngle(0)
 
 Coordinate20 = CoordinateObject()
 Coordinate20.setDEF("OrbitCoordinates")
@@ -109,7 +107,6 @@ Appearance23.setMaterial(Material24)
 Shape22.setAppearance(Appearance23)
 IndexedFaceSet25 = IndexedFaceSetObject()
 IndexedFaceSet25.setDEF("Orbit2")
-IndexedFaceSet25.setCreaseAngle(0)
 
 Coordinate26 = CoordinateObject()
 Coordinate26.setDEF("OrbitCoordinates2")
@@ -126,8 +123,8 @@ TimeSensor27.setLoop(True)
 Group13.addChild(TimeSensor27)
 OrientationInterpolator28 = OrientationInterpolatorObject()
 OrientationInterpolator28.setDEF("OrbitPath")
-OrientationInterpolator28.setKey([0.0,0.50,1.0])
-OrientationInterpolator28.setKeyValue([1.0,0.0,0.0,0.0,1.0,0.0,0.0,3.14,1.0,0.0,0.0,6.28])
+OrientationInterpolator28.setKey([0,0.5,1])
+OrientationInterpolator28.setKeyValue([1,0,0,0,1,0,0,3.14,1,0,0,6.28])
 
 Group13.addChild(OrientationInterpolator28)
 Script29 = ScriptObject()
@@ -135,26 +132,24 @@ Script29.setDEF("OrbitScript")
 
 field30 = fieldObject()
 field30.setType(fieldObject.TYPE_SFFLOAT)
-field30.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 field30.setName("set_fraction")
+field30.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 
 Script29.addField(field30)
 field31 = fieldObject()
 field31.setType(fieldObject.TYPE_MFVEC3F)
-field31.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 field31.setName("coordinates")
+field31.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script29.addField(field31)
 field32 = fieldObject()
 field32.setType(fieldObject.TYPE_MFINT32)
-field32.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 field32.setName("coordIndexes")
+field32.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script29.addField(field32)
 
-Script29.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script29.setSourceCode("ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -224,34 +219,31 @@ Script29.setSourceCode("\n"+
 "	}\n"+
 "	resolution = 100;\n"+
 "	generateCoordinates(resolution);\n"+
-"}\n"+
-"      ")
+"}")
 Group13.addChild(Script29)
 Script33 = ScriptObject()
 Script33.setDEF("OrbitScript2")
 
 field34 = fieldObject()
 field34.setType(fieldObject.TYPE_SFFLOAT)
-field34.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 field34.setName("set_fraction")
+field34.setAccessType(fieldObject.ACCESSTYPE_INPUTONLY)
 
 Script33.addField(field34)
 field35 = fieldObject()
 field35.setType(fieldObject.TYPE_MFVEC3F)
-field35.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 field35.setName("coordinates")
+field35.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script33.addField(field35)
 field36 = fieldObject()
 field36.setType(fieldObject.TYPE_MFINT32)
-field36.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 field36.setName("coordIndexes")
+field36.setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY)
 
 Script33.addField(field36)
 
-Script33.setSourceCode("\n"+
-"\n"+
-"ecmascript:\n"+
+Script33.setSourceCode("ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -291,7 +283,7 @@ Script33.setSourceCode("\n"+
 "	}\n"+
 "	phi += delta;\n"+
 "     }\n"+
-"     \n"+
+"\n"+
 "     coordinates = new MFVec3f(localc);\n"+
 "}\n"+
 "\n"+
@@ -322,8 +314,7 @@ Script33.setSourceCode("\n"+
 "	}\n"+
 "	resolution = 100;\n"+
 "	generateCoordinates(resolution);\n"+
-"}\n"+
-"      ")
+"}")
 Group13.addChild(Script33)
 Scene10.addChild(Group13)
 ROUTE37 = ROUTEObject()
@@ -391,3 +382,4 @@ ROUTE45.setToNode("OrbitTransform2")
 Scene10.addChild(ROUTE45)
 X3D0.setScene(Scene10)
 
+X3D0.toFileX3D("././flowers2.new.x3d")

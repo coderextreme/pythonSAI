@@ -32,20 +32,18 @@ X3D0.setHead(head1)
 Scene6 = SceneObject()
 
 NavigationInfo7 = NavigationInfoObject()
-NavigationInfo7.setType(["EXAMINE","ANY"])
 
 Scene6.addChild(NavigationInfo7)
 Transform8 = TransformObject()
 Transform8.setDEF("transform")
-Transform8.setTranslation([0,0,0])
 
 Shape9 = ShapeObject()
 
 Appearance10 = AppearanceObject()
 
 Material11 = MaterialObject()
-Material11.setDiffuseColor([.7,.7,.7])
-Material11.setSpecularColor([.5,.5,.5])
+Material11.setDiffuseColor([0.7,0.7,0.7])
+Material11.setSpecularColor([0.5,0.5,0.5])
 
 Appearance10.setMaterial(Material11)
 Shape9.setAppearance(Appearance10)
@@ -122,13 +120,11 @@ Script13.setSourceCode("ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			     newBubble();\n"+
-"			}\n"+
-"\n"+
-"")
+"			}")
 Scene6.addChild(Script13)
 TimeSensor19 = TimeSensorObject()
 TimeSensor19.setDEF("TourTime")
-TimeSensor19.setCycleInterval(0.150)
+TimeSensor19.setCycleInterval(0.15)
 TimeSensor19.setLoop(True)
 
 Scene6.addChild(TimeSensor19)
@@ -148,3 +144,4 @@ ROUTE21.setToField("set_translation")
 Scene6.addChild(ROUTE21)
 X3D0.setScene(Scene6)
 
+X3D0.toFileX3D("././SFVec3f.new.x3d")

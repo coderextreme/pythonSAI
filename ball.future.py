@@ -1,0 +1,187 @@
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
+from jnius import autoclass
+from X3Dautoclass import *
+X3D0 = X3DObject() \
+   .setProfile("Immersive") \
+   .setVersion("3.3") \
+   .setHead(headObject() \
+    .addComponent(componentObject() \
+     .setName("EnvironmentalEffects") \
+     .setLevel(1) \
+    ) \
+    .addComponent(componentObject() \
+     .setName("EnvironmentalEffects") \
+     .setLevel(3) \
+    ) \
+    .addComponent(componentObject() \
+     .setName("Shaders") \
+     .setLevel(1) \
+    ) \
+    .addComponent(componentObject() \
+     .setName("CubeMapTexturing") \
+     .setLevel(1) \
+    ) \
+    .addMeta(metaObject() \
+     .setName("title") \
+     .setContent("ball.x3d") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("creator") \
+     .setContent("John Carlson") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("generator") \
+     .setContent("manual") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("identifier") \
+     .setContent("https://coderextreme.net/X3DJSONLD/ball.x3d") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("description") \
+     .setContent("a prismatic sphere") \
+    ) \
+   ) \
+   .setScene(SceneObject() \
+    .addChild(NavigationInfoObject() \
+     .setType(["ANY","EXAMINE","FLY","LOOKAT"]) \
+    ) \
+    .addChild(ViewpointObject() \
+     .setDescription("Tour Views") \
+    ) \
+    .addChild(BackgroundObject() \
+     .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
+     .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
+     .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
+     .setLeftUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
+     .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
+     .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
+    ) \
+    .addChild(TransformObject() \
+     .addChild(ShapeObject() \
+      .setGeometry(SphereObject() \
+      ) \
+      .setAppearance(AppearanceObject() \
+       .setMaterial(MaterialObject() \
+        .setDiffuseColor([0.7,0.7,0.7]) \
+        .setSpecularColor([0.5,0.5,0.5]) \
+       ) \
+       .setTexture(ComposedCubeMapTextureObject() \
+        .setDEF("texture") \
+        .setBack(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
+        ) \
+        .setBottom(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
+        ) \
+        .setFront(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
+        ) \
+        .setLeft(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
+        ) \
+        .setRight(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
+        ) \
+        .setTop(ImageTextureObject() \
+         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
+        ) \
+       ) \
+.addComments(CommentsBlock("""<ProgramShader DEF='ProgramShader' containerField='shaders' language='GLSL'> <ShaderProgram url='\"../shaders/freewrl.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/freewrl.vs\"' containerField='programs' type='VERTEX'> <field name='chromaticDispertion' accessType='initializeOnly' type='SFVec3f' value='0.98 1 1.033'/> <field name='bias' accessType='initializeOnly' type='SFFloat' value='0.5'/> <field name='scale' accessType='initializeOnly' type='SFFloat' value='0.5'/> <field name='power' accessType='initializeOnly' type='SFFloat' value='2'/> </ShaderProgram> <ShaderProgram url='\"../shaders/freewrl.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/freewrl.fs\"' containerField='programs' type='FRAGMENT'/> </ProgramShader>""")) \
+.addComments(CommentsBlock("""<ComposedShader language='GLSL'> <field name='chromaticDispertion' accessType='initializeOnly' type='SFVec3f' value='0.98 1 1.033'></field> <field name='fw_Texture_unit0' type='SFNode' accessType=\"initializeOnly\"> <ComposedCubeMapTexture USE=\"texture\"></ComposedCubeMapTexture> </field> <field name='bias' accessType='initializeOnly' type='SFFloat' value='0.5'></field> <field name='scale' accessType='initializeOnly' type='SFFloat' value='0.5'></field> <field name='power' accessType='initializeOnly' type='SFFloat' value='2'></field> <ShaderPart url='\"../shaders/contact.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/contact.vs\"' type=\"VERTEX\" containerField='parts'></ShaderPart> <ShaderPart url='\"../shaders/common.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/common.fs\"' containerField='parts' type='FRAGMENT'></ShaderPart> </ComposedShader>""")) \
+.addComments(CommentsBlock("""<ComposedShader language='GLSL'> <field name='chromaticDispertion' accessType='inputOutput' type='SFVec3f' value='0.98 1 1.033'></field> <field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"></ComposedCubeMapTexture> </field> <field name='bias' accessType='inputOutput' type='SFFloat' value='0.5'></field> <field name='scale' accessType='inputOutput' type='SFFloat' value='0.5'></field> <field name='power' accessType='inputOutput' type='SFFloat' value='2'></field> <ShaderPart url='\"../shaders/octaga.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/octaga.vs\"' type=\"VERTEX\" containerField='parts'></ShaderPart> <ShaderPart url='\"../shaders/common.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/common.fs\"' containerField='parts' type='FRAGMENT'></ShaderPart> </ComposedShader>""")) \
+.addComments(CommentsBlock("""<ComposedShader language='GLSL'> <field name='chromaticDispertion' accessType='initializeOnly' type='SFVec3f' value='0.98 1 1.033'></field> <field name='cube' accessType='initializeOnly' type='SFInt32' value='0'></field> <field name='bias' accessType='initializeOnly' type='SFFloat' value='0.5'></field> <field name='scale' accessType='initializeOnly' type='SFFloat' value='0.5'></field> <field name='power' accessType='initializeOnly' type='SFFloat' value='2'></field> <ShaderPart url='\"../shaders/instant.vs\" \"https://coderextreme.net/X3DJSONLD/shaders/instant.vs\"' type=\"VERTEX\" containerField='parts'></ShaderPart> <ShaderPart url='\"../shaders/common.fs\" \"https://coderextreme.net/X3DJSONLD/shaders/common.fs\"' containerField='parts' type='FRAGMENT'></ShaderPart> </ComposedShader>""")) \
+.addComments(CommentsBlock("""""")) \
+       .addShaders(ComposedShaderObject() \
+        .setLanguage("GLSL") \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFVEC3F) \
+         .setName("chromaticDispertion") \
+         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setValue("0.98 1 1.033") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFNODE) \
+         .setName("cube") \
+         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .addChild(ComposedCubeMapTextureObject() \
+          .setUSE("texture") \
+         ) \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("bias") \
+         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setValue("0.5") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("scale") \
+         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setValue("0.5") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("power") \
+         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setValue("2") \
+        ) \
+        .addParts(ShaderPartObject() \
+         .setType("VERTEX") \
+         .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+        ) \
+        .addParts(ShaderPartObject() \
+         .setType("FRAGMENT") \
+         .setDEF("common") \
+         .setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"]) \
+        ) \
+       ) \
+       .addShaders(ComposedShaderObject() \
+        .setLanguage("GLSL") \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFVEC3F) \
+         .setName("chromaticDispertion") \
+         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setValue("0.98 1 1.033") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFNODE) \
+         .setName("cube") \
+         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .addChild(ComposedCubeMapTextureObject() \
+          .setUSE("texture") \
+         ) \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("bias") \
+         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setValue("0.5") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("scale") \
+         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setValue("0.5") \
+        ) \
+        .addField(fieldObject() \
+         .setType(fieldObject.TYPE_SFFLOAT) \
+         .setName("power") \
+         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setValue("2") \
+        ) \
+        .addParts(ShaderPartObject() \
+         .setType("VERTEX") \
+         .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
+        ) \
+        .addParts(ShaderPartObject() \
+         .setUSE("common") \
+        ) \
+       ) \
+      ) \
+     ) \
+    ) \
+   ) \
+
+X3D0.toFileX3D("./future/./ball.newf.x3d")

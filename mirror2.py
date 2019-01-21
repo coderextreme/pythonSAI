@@ -68,8 +68,8 @@ Shape13 = ShapeObject()
 Appearance14 = AppearanceObject()
 
 Material15 = MaterialObject()
-Material15.setDiffuseColor([.7,.7,.7])
-Material15.setSpecularColor([.5,.5,.5])
+Material15.setDiffuseColor([0.7,0.7,0.7])
+Material15.setSpecularColor([0.5,0.5,0.5])
 
 Appearance14.setMaterial(Material15)
 ComposedCubeMapTexture16 = ComposedCubeMapTextureObject()
@@ -311,8 +311,7 @@ field54.setValue("-1")
 
 Script40.addField(field54)
 
-Script40.setSourceCode("\n"+
-"ecmascript:\n"+
+Script40.setSourceCode("ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+
@@ -328,8 +327,7 @@ Script40.setSourceCode("\n"+
 "		    top_changed[0] = topUrls[side];\n"+
 "		    bottom_changed[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }\n"+
-"")
+"        }")
 Transform12.addChild(Script40)
 TimeSensor55 = TimeSensorObject()
 TimeSensor55.setDEF("Clock")
@@ -431,3 +429,4 @@ Transform12.addChild(ROUTE68)
 Scene9.addChild(Transform12)
 X3D0.setScene(Scene9)
 
+X3D0.toFileX3D("././mirror2.new.x3d")

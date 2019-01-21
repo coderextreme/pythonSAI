@@ -9,6 +9,12 @@ var convertJSON = require('./convertJSON.js').convertJSON;
 
 convertJSON([
 	{ 
+	serializer : './PythonPipeliningSerializer.js',
+	folder : "./",
+	extension : ".future.py",
+	codeOutput : "./future/",
+	},
+	{ 
 	serializer : './PythonSerializer.js',
 	folder : "./",
 	extension : ".py",

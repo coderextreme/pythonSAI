@@ -30,7 +30,7 @@ PythonSerializer.prototype = {
 		str += element.nodeName+stack[0]+" =  "+element.nodeName+"Object()\n";
 		str += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
 		str += "\n";
-		// str += ""+element.nodeName+stack[0]+".toFileX3D(\""+clazz+".new.x3d\")\n";
+		str += ""+element.nodeName+stack[0]+".toFileX3D(\""+clazz+".new.x3d\")\n";
 		stack.shift();
 		return str;
 	},

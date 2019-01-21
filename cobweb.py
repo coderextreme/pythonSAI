@@ -154,8 +154,7 @@ Script18.setSourceCode("ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}\n"+
-"")
+"}")
 Transform13.addChild(Script18)
 TimeSensor24 = TimeSensorObject()
 TimeSensor24.setDEF("bubbleClock")
@@ -209,3 +208,4 @@ ProtoInstance31.setDEF("bubbleD")
 Scene7.addChild(ProtoInstance31)
 X3D0.setScene(Scene7)
 
+X3D0.toFileX3D("././cobweb.new.x3d")

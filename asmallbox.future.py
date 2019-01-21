@@ -1,0 +1,95 @@
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
+from jnius import autoclass
+from X3Dautoclass import *
+X3D0 = X3DObject() \
+   .setProfile("Immersive") \
+   .setVersion("3.3") \
+   .setHead(headObject() \
+    .addMeta(metaObject() \
+     .setName("title") \
+     .setContent("abox.x3d") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("creator") \
+     .setContent("John Carlson") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("generator") \
+     .setContent("manual") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("identifier") \
+     .setContent("https://coderextreme.net/X3DJSONLD/abox.x3d") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("description") \
+     .setContent("a box") \
+    ) \
+   ) \
+   .setScene(SceneObject() \
+    .addChild(ProtoDeclareObject() \
+     .setName("anyShape") \
+     .setProtoInterface(ProtoInterfaceObject() \
+      .addField(fieldObject() \
+       .setType(fieldObject.TYPE_MFNODE) \
+       .setName("myShape") \
+       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .addChild(ShapeObject() \
+        .setGeometry(SphereObject() \
+        ) \
+       ) \
+      ) \
+     ) \
+     .setProtoBody(ProtoBodyObject() \
+      .addChild(TransformObject() \
+       .setIS(ISObject() \
+        .addConnect(connectObject() \
+         .setNodeField("children") \
+         .setProtoField("myShape") \
+        ) \
+       ) \
+      ) \
+     ) \
+    ) \
+    .addChild(ProtoDeclareObject() \
+     .setName("one") \
+     .setProtoInterface(ProtoInterfaceObject() \
+      .addField(fieldObject() \
+       .setType(fieldObject.TYPE_MFNODE) \
+       .setName("myShape") \
+       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .addChild(ShapeObject() \
+        .setGeometry(CylinderObject() \
+        ) \
+       ) \
+      ) \
+     ) \
+     .setProtoBody(ProtoBodyObject() \
+      .addChild(TransformObject() \
+       .addChild(ProtoInstanceObject() \
+        .setName("anyShape") \
+        .setIS(ISObject() \
+         .addConnect(connectObject() \
+          .setNodeField("myShape") \
+          .setProtoField("myShape") \
+         ) \
+        ) \
+       ) \
+      ) \
+     ) \
+    ) \
+    .addChild(ProtoInstanceObject() \
+     .setName("one") \
+     .addFieldValue(fieldValueObject() \
+      .setName("myShape") \
+      .addChild(ShapeObject() \
+       .setGeometry(BoxObject() \
+        .setSize([0.125,0.125,0.125]) \
+       ) \
+      ) \
+     ) \
+    ) \
+   ) \
+
+X3D0.toFileX3D("./future/./asmallbox.newf.x3d")

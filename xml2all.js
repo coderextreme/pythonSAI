@@ -9,6 +9,11 @@ var convertXML = require('./convertXML.js');
 
 convertXML([
 	{ 
+	serializer : './PythonPipeliningSerializer.js',
+	folder : "./future/",
+	extension : ".future.py",
+	},
+	{ 
 	serializer : './PythonSerializer.js',
 	folder : "./",
 	extension : ".py",

@@ -59,8 +59,6 @@ Background11.setGroundAngle([0.9,1.5,1.57])
 Background11.setGroundColor([0.21,0.18,0.66,0.2,0.44,0.85,0.51,0.81,0.95,0.51,0.81,0.95])
 Background11.setSkyAngle([0.9,1.5,1.57])
 Background11.setSkyColor([0.21,0.18,0.66,0.2,0.44,0.85,0.51,0.81,0.95,0.51,0.81,0.95])
-Background11.setGroundTransparency("0.5 0.5 0.5 0.5")
-Background11.setSkyTransparency("0.5 0.5 0.5 0.5")
 
 Scene7.addChild(Background11)
 NavigationInfo12 = NavigationInfoObject()
@@ -140,3 +138,4 @@ ROUTE25.setToField("set_fraction")
 Scene7.addChild(ROUTE25)
 X3D0.setScene(Scene7)
 
+X3D0.toFileX3D("././flipper.new.x3d")

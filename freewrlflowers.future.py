@@ -1,0 +1,95 @@
+import jnius_config
+jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
+from jnius import autoclass
+from X3Dautoclass import *
+X3D0 = X3DObject() \
+   .setProfile("Immersive") \
+   .setVersion("3.3") \
+   .setHead(headObject() \
+    .addMeta(metaObject() \
+     .setName("title") \
+     .setContent("sphereflowers.x3d") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("creator") \
+     .setContent("John Carlson") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("description") \
+     .setContent("5 or more prismatic flowers") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("generator") \
+     .setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit") \
+    ) \
+    .addMeta(metaObject() \
+     .setName("identifier") \
+     .setContent("https://coderextreme.net/X3DJSONLD/sphereflowers.x3d") \
+    ) \
+   ) \
+   .setScene(SceneObject() \
+    .addChild(NavigationInfoObject() \
+    ) \
+    .addChild(BackgroundObject() \
+     .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
+     .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
+     .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
+     .setLeftUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
+     .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
+     .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
+    ) \
+    .addChild(GroupObject() \
+     .addChild(ExternProtoDeclareObject() \
+      .setName("FlowerProto") \
+      .setUrl(["../data/flowerproto.x3d#FlowerProto"]) \
+      .addField(fieldObject() \
+       .setType(fieldObject.TYPE_MFSTRING) \
+       .setName("vertex") \
+       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      ) \
+      .addField(fieldObject() \
+       .setType(fieldObject.TYPE_MFSTRING) \
+       .setName("fragment") \
+       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      ) \
+     ) \
+     .addChild(ProtoDeclareObject() \
+      .setName("flower") \
+      .setProtoBody(ProtoBodyObject() \
+       .addChild(GroupObject() \
+        .addChild(ProtoInstanceObject() \
+         .setName("FlowerProto") \
+         .addFieldValue(fieldValueObject() \
+          .setName("vertex") \
+          .setValue("\"../shaders/freewrl_flowers_chromatic.vs\"") \
+         ) \
+         .addFieldValue(fieldValueObject() \
+          .setName("fragment") \
+          .setValue("\"../shaders/freewrl.fs\"") \
+         ) \
+        ) \
+       ) \
+      ) \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+     .addChild(ProtoInstanceObject() \
+      .setName("flower") \
+     ) \
+    ) \
+   ) \
+
+X3D0.toFileX3D("./future/./freewrlflowers.newf.x3d")
