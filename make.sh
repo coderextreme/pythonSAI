@@ -16,7 +16,7 @@ rm *new*
 
 sh x3d2py.sh
 
-for i in *.py 
+for i in *.py
 do
 	FILE=$i
 	echo ========================================$FILE
