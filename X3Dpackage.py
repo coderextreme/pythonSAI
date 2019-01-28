@@ -649,6 +649,10 @@ class IsoSurfaceVolumeDataObject(X3DVolumeDataNode):
             raise InvalidFieldTypeException()
         return self.renderStyle_
 
+    def addRenderStyle(self, renderStyle_):
+        pass
+    def removeRenderStyle(self, renderStyle_):
+        pass
     def setSurfaceTolerance(self, surfaceTolerance_ = 0):
         super(IsoSurfaceVolumeDataObject, self).setSurfaceTolerance(surfaceTolerance_)
         if type(surfaceTolerance_) is not SFFloatObject:
@@ -1062,6 +1066,10 @@ class X3DComposedGeometryNode(X3DGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(X3DComposedGeometryNode, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -1196,6 +1204,10 @@ class IndexedQuadSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedQuadSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -2177,6 +2189,10 @@ class X3DPickSensorNode(X3DSensorNode):
             raise InvalidFieldTypeException()
         return self.pickTarget_
 
+    def addPickTarget(self, pickTarget_):
+        pass
+    def removePickTarget(self, pickTarget_):
+        pass
     def setDEF(self, DEF_):
         super(X3DPickSensorNode, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -2333,6 +2349,10 @@ class PrimitivePickSensorObject(X3DPickSensorNode):
             raise InvalidFieldTypeException()
         return self.pickTarget_
 
+    def addPickTarget(self, pickTarget_):
+        pass
+    def removePickTarget(self, pickTarget_):
+        pass
     def setDEF(self, DEF_):
         super(PrimitivePickSensorObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -2457,6 +2477,10 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(X3DGroupingNode, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -2535,6 +2559,10 @@ class CADAssemblyObject(X3DProductStructureChildNode, X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(CADAssemblyObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -2850,6 +2878,10 @@ class CollisionObject(X3DSensorNode, X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
 
     def getCollideTime(self):
         if type(self.collideTime_) is not SFTimeObject:
@@ -3496,6 +3528,10 @@ class GeoLocationObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setGeoCoords(self, geoCoords_ = [0, 0, 0]):
         super(GeoLocationObject, self).setGeoCoords(geoCoords_)
         if type(geoCoords_) is not SFVec3dObject:
@@ -4198,6 +4234,10 @@ class CollisionSpaceObject(X3DNBodyCollisionSpaceNode):
             raise InvalidFieldTypeException()
         return self.collidables_
 
+    def addCollidables(self, collidables_):
+        pass
+    def removeCollidables(self, collidables_):
+        pass
     def setEnabled(self, enabled_ = True):
         super(CollisionSpaceObject, self).setEnabled(enabled_)
         if type(enabled_) is not SFBoolObject:
@@ -5078,6 +5118,10 @@ class LoadSensorObject(X3DNetworkSensorNode):
             raise InvalidFieldTypeException()
         return self.watchList_
 
+    def addWatchList(self, watchList_):
+        pass
+    def removeWatchList(self, watchList_):
+        pass
     def setDEF(self, DEF_):
         super(LoadSensorObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -5140,6 +5184,10 @@ class X3DViewportNode(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(X3DViewportNode, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -5218,6 +5266,10 @@ class ViewportObject(X3DViewportNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setClipBoundary(self, clipBoundary_ = [0, 1, 0, 1]):
         super(ViewportObject, self).setClipBoundary(clipBoundary_)
         if type(clipBoundary_) is not MFFloatObject:
@@ -6855,6 +6907,10 @@ class TriangleStripSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(TriangleStripSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -7297,6 +7353,10 @@ class GroupObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(GroupObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -9227,6 +9287,10 @@ class ComposedShaderObject(X3DProgrammableShaderObject, X3DShaderNode):
             raise InvalidFieldTypeException()
         return self.parts_
 
+    def addParts(self, parts_):
+        pass
+    def removeParts(self, parts_):
+        pass
     def setDEF(self, DEF_):
         super(ComposedShaderObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -9613,6 +9677,10 @@ class SegmentedVolumeDataObject(X3DVolumeDataNode):
             raise InvalidFieldTypeException()
         return self.renderStyle_
 
+    def addRenderStyle(self, renderStyle_):
+        pass
+    def removeRenderStyle(self, renderStyle_):
+        pass
     def setSegmentEnabled(self, segmentEnabled_):
         super(SegmentedVolumeDataObject, self).setSegmentEnabled(segmentEnabled_)
         if type(segmentEnabled_) is not MFBoolObject:
@@ -10121,6 +10189,10 @@ class LayoutGroupObject(X3DGroupingNode, X3DNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setLayout(self, layout_ = None):
         super(LayoutGroupObject, self).setLayout(layout_)
         if type(layout_) is not SFNodeObject:
@@ -10396,6 +10468,10 @@ class ProtoInterfaceObject():
             raise InvalidFieldTypeException()
         return self.field_
 
+    def addField(self, field_):
+        pass
+    def removeField(self, field_):
+        pass
     pass
 
 
@@ -10700,6 +10776,10 @@ class IndexedTriangleSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedTriangleSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -11103,6 +11183,10 @@ class PointSetObject(X3DGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(PointSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -11220,6 +11304,10 @@ class HAnimJointObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setDescription(self, description_):
         super(HAnimJointObject, self).setDescription(description_)
         if type(description_) is not SFStringObject:
@@ -11242,6 +11330,10 @@ class HAnimJointObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.displacers_
 
+    def addDisplacers(self, displacers_):
+        pass
+    def removeDisplacers(self, displacers_):
+        pass
     def setLimitOrientation(self, limitOrientation_ = [0, 0, 1, 0]):
         super(HAnimJointObject, self).setLimitOrientation(limitOrientation_)
         if type(limitOrientation_) is not SFRotationObject:
@@ -14100,6 +14192,10 @@ class MultiTextureObject(X3DTextureNode):
             raise InvalidFieldTypeException()
         return self.texture_
 
+    def addTexture(self, texture_):
+        pass
+    def removeTexture(self, texture_):
+        pass
     def setDEF(self, DEF_):
         super(MultiTextureObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -14165,6 +14261,10 @@ class RigidBodyCollectionObject(X3DChildNode):
             raise InvalidFieldTypeException()
         return self.bodies_
 
+    def addBodies(self, bodies_):
+        pass
+    def removeBodies(self, bodies_):
+        pass
     def setConstantForceMix(self, constantForceMix_ = 0.0001):
         super(RigidBodyCollectionObject, self).setConstantForceMix(constantForceMix_)
         if type(constantForceMix_) is not SFFloatObject:
@@ -14277,6 +14377,10 @@ class RigidBodyCollectionObject(X3DChildNode):
             raise InvalidFieldTypeException()
         return self.joints_
 
+    def addJoints(self, joints_):
+        pass
+    def removeJoints(self, joints_):
+        pass
     def setMaxCorrectionSpeed(self, maxCorrectionSpeed_ = -1):
         super(RigidBodyCollectionObject, self).setMaxCorrectionSpeed(maxCorrectionSpeed_)
         if type(maxCorrectionSpeed_) is not SFFloatObject:
@@ -14603,6 +14707,10 @@ class ComposedTexture3DObject(X3DTexture3DNode):
             raise InvalidFieldTypeException()
         return self.texture_
 
+    def addTexture(self, texture_):
+        pass
+    def removeTexture(self, texture_):
+        pass
     def setDEF(self, DEF_):
         super(ComposedTexture3DObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -15419,6 +15527,10 @@ class ISObject():
             raise InvalidFieldTypeException()
         return self.connect_
 
+    def addConnect(self, connect_):
+        pass
+    def removeConnect(self, connect_):
+        pass
     pass
 
 
@@ -15523,6 +15635,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.joints_
 
+    def addJoints(self, joints_):
+        pass
+    def removeJoints(self, joints_):
+        pass
     def setLoa(self, loa_ = -1):
         super(HAnimHumanoidObject, self).setLoa(loa_)
         if type(loa_) is not SFInt32Object:
@@ -15560,6 +15676,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.motions_
 
+    def addMotions(self, motions_):
+        pass
+    def removeMotions(self, motions_):
+        pass
     def setName(self, name_):
         super(HAnimHumanoidObject, self).setName(name_)
         if type(name_) is not SFStringObject:
@@ -15617,6 +15737,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.segments_
 
+    def addSegments(self, segments_):
+        pass
+    def removeSegments(self, segments_):
+        pass
     def setSites(self, sites_):
         super(HAnimHumanoidObject, self).setSites(sites_)
         if type(sites_) is not MFNodeObject:
@@ -15628,6 +15752,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.sites_
 
+    def addSites(self, sites_):
+        pass
+    def removeSites(self, sites_):
+        pass
     def setSkeletalConfiguration(self, skeletalConfiguration_ = "BASIC"):
         super(HAnimHumanoidObject, self).setSkeletalConfiguration(skeletalConfiguration_)
         if type(skeletalConfiguration_) is not SFStringObject:
@@ -15650,6 +15778,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.skeleton_
 
+    def addSkeleton(self, skeleton_):
+        pass
+    def removeSkeleton(self, skeleton_):
+        pass
     def setSkin(self, skin_):
         super(HAnimHumanoidObject, self).setSkin(skin_)
         if type(skin_) is not MFNodeObject:
@@ -15661,6 +15793,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.skin_
 
+    def addSkin(self, skin_):
+        pass
+    def removeSkin(self, skin_):
+        pass
     def setSkinBindingCoords(self, skinBindingCoords_):
         super(HAnimHumanoidObject, self).setSkinBindingCoords(skinBindingCoords_)
         if type(skinBindingCoords_) is not MFNodeObject:
@@ -15672,6 +15808,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.skinBindingCoords_
 
+    def addSkinBindingCoords(self, skinBindingCoords_):
+        pass
+    def removeSkinBindingCoords(self, skinBindingCoords_):
+        pass
     def setSkinBindingNormals(self, skinBindingNormals_):
         super(HAnimHumanoidObject, self).setSkinBindingNormals(skinBindingNormals_)
         if type(skinBindingNormals_) is not MFNodeObject:
@@ -15683,6 +15823,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.skinBindingNormals_
 
+    def addSkinBindingNormals(self, skinBindingNormals_):
+        pass
+    def removeSkinBindingNormals(self, skinBindingNormals_):
+        pass
     def setSkinCoord(self, skinCoord_ = None):
         super(HAnimHumanoidObject, self).setSkinCoord(skinCoord_)
         if type(skinCoord_) is not SFNodeObject:
@@ -15746,6 +15890,10 @@ class HAnimHumanoidObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.viewpoints_
 
+    def addViewpoints(self, viewpoints_):
+        pass
+    def removeViewpoints(self, viewpoints_):
+        pass
     def setDEF(self, DEF_):
         super(HAnimHumanoidObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -16107,6 +16255,10 @@ class VolumePickSensorObject(X3DPickSensorNode):
             raise InvalidFieldTypeException()
         return self.pickTarget_
 
+    def addPickTarget(self, pickTarget_):
+        pass
+    def removePickTarget(self, pickTarget_):
+        pass
     def setDEF(self, DEF_):
         super(VolumePickSensorObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -16599,6 +16751,10 @@ class MultiTextureCoordinateObject(X3DTextureCoordinateNode):
             raise InvalidFieldTypeException()
         return self.texCoord_
 
+    def addTexCoord(self, texCoord_):
+        pass
+    def removeTexCoord(self, texCoord_):
+        pass
     def setDEF(self, DEF_):
         super(MultiTextureCoordinateObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -17095,6 +17251,10 @@ class PickableGroupObject(X3DPickableObject, X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(PickableGroupObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -17315,6 +17475,10 @@ class LinePickSensorObject(X3DPickSensorNode):
             raise InvalidFieldTypeException()
         return self.pickTarget_
 
+    def addPickTarget(self, pickTarget_):
+        pass
+    def removePickTarget(self, pickTarget_):
+        pass
     def setDEF(self, DEF_):
         super(LinePickSensorObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -18051,6 +18215,10 @@ class TriangleSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(TriangleSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -18593,6 +18761,10 @@ class EspduTransformObject(X3DNetworkSensorNode, X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
 
     def getCollideTime(self):
         if type(self.collideTime_) is not SFTimeObject:
@@ -19312,6 +19484,10 @@ class IndexedTriangleStripSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedTriangleStripSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -19848,6 +20024,10 @@ class CADPartObject(X3DGroupingNode, X3DProductStructureChildNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(CADPartObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -19969,6 +20149,10 @@ class SceneObject():
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     pass
 
 
@@ -20314,6 +20498,10 @@ class MultiTextureTransformObject(X3DTextureTransformNode):
             raise InvalidFieldTypeException()
         return self.textureTransform_
 
+    def addTextureTransform(self, textureTransform_):
+        pass
+    def removeTextureTransform(self, textureTransform_):
+        pass
     def setDEF(self, DEF_):
         super(MultiTextureTransformObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -20580,6 +20768,10 @@ class MetadataSetObject(X3DMetadataObject, X3DNode):
             raise InvalidFieldTypeException()
         return self.value_
 
+    def addValue(self, value_):
+        pass
+    def removeValue(self, value_):
+        pass
     def setDEF(self, DEF_):
         super(MetadataSetObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -20742,6 +20934,10 @@ class PointPickSensorObject(X3DPickSensorNode):
             raise InvalidFieldTypeException()
         return self.pickTarget_
 
+    def addPickTarget(self, pickTarget_):
+        pass
+    def removePickTarget(self, pickTarget_):
+        pass
     def setDEF(self, DEF_):
         super(PointPickSensorObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -20833,6 +21029,10 @@ class ElevationGridObject(X3DGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(ElevationGridObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -21265,6 +21465,10 @@ class LineSetObject(X3DGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(LineSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -21805,6 +22009,10 @@ class CADLayerObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(CADLayerObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -22389,6 +22597,10 @@ class NurbsTrimmedSurfaceObject(X3DNurbsSurfaceGeometryNode):
             raise InvalidFieldTypeException()
         return self.trimmingContour_
 
+    def addTrimmingContour(self, trimmingContour_):
+        pass
+    def removeTrimmingContour(self, trimmingContour_):
+        pass
     def setUTessellation(self, uTessellation_ = 0):
         super(NurbsTrimmedSurfaceObject, self).setUTessellation(uTessellation_)
         if type(uTessellation_) is not SFInt32Object:
@@ -22605,6 +22817,10 @@ class IndexedTriangleFanSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedTriangleFanSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -23020,6 +23236,10 @@ class AppearanceObject(X3DAppearanceNode):
             raise InvalidFieldTypeException()
         return self.shaders_
 
+    def addShaders(self, shaders_):
+        pass
+    def removeShaders(self, shaders_):
+        pass
     def setTexture(self, texture_ = None):
         super(AppearanceObject, self).setTexture(texture_)
         if type(texture_) is not SFNodeObject:
@@ -23170,6 +23390,10 @@ class ProtoBodyObject():
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     pass
 
 
@@ -23199,6 +23423,10 @@ class AnchorObject(X3DUrlObject, X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setDescription(self, description_):
         super(AnchorObject, self).setDescription(description_)
         if type(description_) is not SFStringObject:
@@ -23545,6 +23773,10 @@ class QuadSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(QuadSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -23844,6 +24076,10 @@ class IndexedFaceSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedFaceSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -24011,6 +24247,10 @@ class TransformObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(TransformObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -24566,6 +24806,10 @@ class SwitchObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(SwitchObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -24815,6 +25059,10 @@ class HAnimSegmentObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setCoord(self, coord_ = None):
         super(HAnimSegmentObject, self).setCoord(coord_)
         if type(coord_) is not SFNodeObject:
@@ -24848,6 +25096,10 @@ class HAnimSegmentObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.displacers_
 
+    def addDisplacers(self, displacers_):
+        pass
+    def removeDisplacers(self, displacers_):
+        pass
     def setMass(self, mass_ = 0):
         super(HAnimSegmentObject, self).setMass(mass_)
         if type(mass_) is not SFFloatObject:
@@ -25509,6 +25761,10 @@ class RigidBodyObject(X3DNode):
             raise InvalidFieldTypeException()
         return self.geometry_
 
+    def addGeometry(self, geometry_):
+        pass
+    def removeGeometry(self, geometry_):
+        pass
     def setInertia(self, inertia_ = [1, 0, 0, 0, 1, 0, 0, 0, 1]):
         super(RigidBodyObject, self).setInertia(inertia_)
         if type(inertia_) is not SFMatrix3fObject:
@@ -25831,6 +26087,10 @@ class GeoTransformObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setGeoCenter(self, geoCenter_ = [0, 0, 0]):
         super(GeoTransformObject, self).setGeoCenter(geoCenter_)
         if type(geoCenter_) is not SFVec3dObject:
@@ -25975,6 +26235,10 @@ class LODObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
 
     def getLevel_changed(self):
         if type(self.level_changed_) is not SFInt32Object:
@@ -26348,6 +26612,10 @@ class TriangleFanSetObject(X3DComposedGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(TriangleFanSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -26527,6 +26795,10 @@ class ComposedVolumeStyleObject(X3DComposableVolumeRenderStyleNode):
             raise InvalidFieldTypeException()
         return self.renderStyle_
 
+    def addRenderStyle(self, renderStyle_):
+        pass
+    def removeRenderStyle(self, renderStyle_):
+        pass
     def setDEF(self, DEF_):
         super(ComposedVolumeStyleObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -27259,6 +27531,10 @@ class ScreenGroupObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(ScreenGroupObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -27331,6 +27607,10 @@ class LayoutLayerObject(X3DLayerNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setPickable(self, Pickable_ = True):
         super(LayoutLayerObject, self).setPickable(Pickable_)
         if type(Pickable_) is not SFBoolObject:
@@ -27631,6 +27911,10 @@ class ProgramShaderObject(X3DShaderNode):
             raise InvalidFieldTypeException()
         return self.programs_
 
+    def addPrograms(self, programs_):
+        pass
+    def removePrograms(self, programs_):
+        pass
     def setDEF(self, DEF_):
         super(ProgramShaderObject, self).setDEF(DEF_)
         if type(DEF_) is not SFStringObject:
@@ -27728,6 +28012,10 @@ class CollisionCollectionObject(X3DNode):
             raise InvalidFieldTypeException()
         return self.collidables_
 
+    def addCollidables(self, collidables_):
+        pass
+    def removeCollidables(self, collidables_):
+        pass
     def setEnabled(self, enabled_ = True):
         super(CollisionCollectionObject, self).setEnabled(enabled_)
         if type(enabled_) is not SFBoolObject:
@@ -27879,6 +28167,10 @@ class ProtoInstanceObject(X3DChildNode, X3DPrototypeInstance):
             raise InvalidFieldTypeException()
         return self.fieldValue_
 
+    def addFieldValue(self, fieldValue_):
+        pass
+    def removeFieldValue(self, fieldValue_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(ProtoInstanceObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -28389,6 +28681,10 @@ class HAnimSiteObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setDescription(self, description_):
         super(HAnimSiteObject, self).setDescription(description_)
         if type(description_) is not SFStringObject:
@@ -29134,6 +29430,10 @@ class LayerObject(X3DLayerNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setPickable(self, Pickable_ = True):
         super(LayerObject, self).setPickable(Pickable_)
         if type(Pickable_) is not SFBoolObject:
@@ -29659,6 +29959,10 @@ class ViewpointGroupObject(X3DChildNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setDescription(self, description_):
         super(ViewpointGroupObject, self).setDescription(description_)
         if type(description_) is not SFStringObject:
@@ -30314,6 +30618,10 @@ class ExternProtoDeclareObject():
             raise InvalidFieldTypeException()
         return self.field_
 
+    def addField(self, field_):
+        pass
+    def removeField(self, field_):
+        pass
     def setName(self, name_):
         if type(name_) is not SFStringObject:
             raise InvalidFieldTypeException()
@@ -30614,6 +30922,10 @@ class IndexedLineSetObject(X3DGeometryNode):
             raise InvalidFieldTypeException()
         return self.attrib_
 
+    def addAttrib(self, attrib_):
+        pass
+    def removeAttrib(self, attrib_):
+        pass
     def setColor(self, color_ = None):
         super(IndexedLineSetObject, self).setColor(color_)
         if type(color_) is not SFNodeObject:
@@ -31229,6 +31541,10 @@ class fieldValueObject():
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setName(self, name_):
         if type(name_) is not SFStringObject:
             raise InvalidFieldTypeException()
@@ -31857,6 +32173,10 @@ class GeoMetadataObject(X3DUrlObject, X3DInfoNode):
             raise InvalidFieldTypeException()
         return self.data_
 
+    def addData(self, data_):
+        pass
+    def removeData(self, data_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(GeoMetadataObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -32420,6 +32740,10 @@ class headObject():
             raise InvalidFieldTypeException()
         return self.component_
 
+    def addComponent(self, component_):
+        pass
+    def removeComponent(self, component_):
+        pass
     def setMeta(self, meta_):
         if type(meta_) is not MFNodeObject:
             raise InvalidFieldTypeException()
@@ -32430,6 +32754,10 @@ class headObject():
             raise InvalidFieldTypeException()
         return self.meta_
 
+    def addMeta(self, meta_):
+        pass
+    def removeMeta(self, meta_):
+        pass
     def setUnit(self, unit_):
         if type(unit_) is not MFNodeObject:
             raise InvalidFieldTypeException()
@@ -32440,6 +32768,10 @@ class headObject():
             raise InvalidFieldTypeException()
         return self.unit_
 
+    def addUnit(self, unit_):
+        pass
+    def removeUnit(self, unit_):
+        pass
     pass
 
 
@@ -32674,6 +33006,10 @@ class BillboardObject(X3DGroupingNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(BillboardObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -32759,6 +33095,10 @@ class LayerSetObject(X3DNode):
             raise InvalidFieldTypeException()
         return self.layers_
 
+    def addLayers(self, layers_):
+        pass
+    def removeLayers(self, layers_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(LayerSetObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -33899,6 +34239,10 @@ class fieldObject():
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setDocumentation(self, documentation_):
         if type(documentation_) is not SFStringObject:
             raise InvalidFieldTypeException()
@@ -34167,6 +34511,10 @@ class DISEntityManagerObject(X3DChildNode):
             raise InvalidFieldTypeException()
         return self.mapping_
 
+    def addMapping(self, mapping_):
+        pass
+    def removeMapping(self, mapping_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(DISEntityManagerObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -34540,6 +34888,10 @@ class Contour2DObject(X3DNode):
             raise InvalidFieldTypeException()
         return self.children_
 
+    def addChildren(self, children_):
+        pass
+    def removeChildren(self, children_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(Contour2DObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:
@@ -34618,6 +34970,10 @@ class NurbsSetObject(X3DBoundedObject, X3DChildNode):
             raise InvalidFieldTypeException()
         return self.geometry_
 
+    def addGeometry(self, geometry_):
+        pass
+    def removeGeometry(self, geometry_):
+        pass
     def setMetadata(self, metadata_ = None):
         super(NurbsSetObject, self).setMetadata(metadata_)
         if type(metadata_) is not SFNodeObject:

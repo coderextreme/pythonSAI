@@ -155,6 +155,23 @@ class ClassPrinter:
         str = ""
         str += self.setter(field, func)
         str += self.getter(field, func)
+
+        # do MFNode fields
+        if field['type'] == 'MFNode' and field['accessType'] == 'inputOutput':
+            if re.search(r"^add", func):
+                fld = func[3:]
+                if field != "address":
+                    str += '    def add'+ func[:1].upper() + func[1:] + '(self, '+func+'_):\n'
+                    str += "        pass\n"
+            elif re.search(r"^remove", func):
+                fld = func[6:]
+                str += '    def remove'+ func[:1].upper() + func[1:] + '(self, '+func+'_):\n'
+                str += "        pass\n"
+            else:
+                str += '    def add'+ func[:1].upper() + func[1:] + '(self, '+func+'_):\n'
+                str += "        pass\n"
+                str += '    def remove'+ func[:1].upper() + func[1:] + '(self, '+func+'_):\n'
+                str += "        pass\n"
         return str
 
     def printClass(self):
