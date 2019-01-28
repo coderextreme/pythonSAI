@@ -65,7 +65,7 @@ class ClassPrinter:
                  'maxInclusive':" > ",
                  'minExclusive':" <= ",
                  'maxExclusive':" >= "}
-        str += '        if type('+fld+"_" + ') is not ' + field['type'] + ":" + """
+        str += '        if type('+fld+"_" + ') is not ' + field['type'] + "Object:" + """
             raise InvalidFieldTypeException()
 """
         for k,v in inex.items():
@@ -145,7 +145,7 @@ class ClassPrinter:
         else:
             fld = func
             str += '    def get'+ func[:1].upper() + func[1:] + '(self):\n'
-        str += '        if type(self.' +  fld + "_" + ') is not ' + field['type'] + ":" + """
+        str += '        if type(self.' +  fld + "_" + ') is not ' + field['type'] + "Object:" + """
             raise InvalidFieldTypeException()
 """
         str += '        return self.' + fld + "_\n\n"
@@ -166,9 +166,13 @@ class ClassPrinter:
                 str += classes[parent].printClass()
             except:
                 pass
-        str += 'class ' + self.node['name'] + self.metaInfo + "("
-
-        str += ", ".join(self.parents)
+        try:
+            str += 'class ' + self.node['name'] + self.metaInfo + "("
+        except:
+            str += 'class ' + self.node['type'] + self.metaInfo + "("
+        strjoin = ", ".join(self.parents)
+        if not strjoin.startswith("xs:") and strjoin != "SFString":
+            str += strjoin
         str += "):\n"
         str += "    def __init__(self, **kwargs):\n"
         # str += "        super()."+"__init__()\n"
@@ -218,6 +222,10 @@ for cn in cns:
 sts = soup.find_all("Statement")
 for st in sts:
     classes[st['name']] = ClassPrinter(st, "Object")
+
+fts = soup.find_all("FieldType")
+for ft in fts:
+    classes[ft['type']] = ClassPrinter(ft, "Object")
 
 for k,v in classes.items():
     code += v.printClass()
