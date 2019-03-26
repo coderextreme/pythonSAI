@@ -14,7 +14,7 @@ class ClassPrinter:
         for inher in inhers:
             self.parents.append(inher['baseType'])
 
-        self.componentInfo = self.node.find("componentInfo")
+        self.componentInfo = self.node.find("InterfaceDefinition").find("componentInfo")
         self.metaInfo = metaInfo
 
         self.printed = False

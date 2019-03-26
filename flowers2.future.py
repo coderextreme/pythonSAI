@@ -40,28 +40,27 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Two mathematical orbitals") \
      .setPosition([0,0,50]) \
     ) \
-    .addChild(GroupObject() \
-     .addChild(DirectionalLightObject() \
+    .addChildren(GroupObject() \
+     .addChildren(DirectionalLightObject() \
       .setDirection([1,1,1]) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("OrbitTransform") \
       .setTranslation([8,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
          .setDiffuseColor([0,0.5,1]) \
          .setSpecularColor([0,0.5,1]) \
         ) \
        ) \
-       .setGeometry(IndexedFaceSetObject() \
-        .setConvex(False) \
+       .setGeometry(IndexedFaceSetObject(convex = False) \
         .setDEF("Orbit") \
         .setCoord(CoordinateObject() \
          .setDEF("OrbitCoordinates") \
@@ -69,10 +68,10 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("OrbitTransform2") \
       .setTranslation([-8,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
          .setDiffuseColor([1,0.5,0]) \
@@ -88,34 +87,34 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TimeSensorObject() \
+     .addChildren(TimeSensorObject() \
       .setDEF("Clock") \
       .setCycleInterval(16) \
       .setLoop(True) \
      ) \
-     .addChild(OrientationInterpolatorObject() \
+     .addChildren(OrientationInterpolatorObject() \
       .setDEF("OrbitPath") \
       .setKey([0,0.5,1]) \
       .setKeyValue([1,0,0,0,1,0,0,3.14,1,0,0,6.28]) \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject() \
       .setDEF("OrbitScript") \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("set_fraction") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFFloat") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFVEC3F) \
        .setName("coordinates") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("MFVec3f") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFINT32) \
        .setName("coordIndexes") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("MFInt32") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -187,24 +186,24 @@ X3D0 = X3DObject() \
 "	generateCoordinates(resolution);\n"+
 "}''')
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject() \
       .setDEF("OrbitScript2") \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("set_fraction") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFFloat") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFVEC3F) \
        .setName("coordinates") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("MFVec3f") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFINT32) \
        .setName("coordIndexes") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("MFInt32") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -278,55 +277,55 @@ X3D0 = X3DObject() \
 "}''')
      ) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordIndexes") \
      .setFromNode("OrbitScript") \
      .setToField("coordIndex") \
      .setToNode("Orbit") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordinates") \
      .setFromNode("OrbitScript") \
      .setToField("point") \
      .setToNode("OrbitCoordinates") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \
      .setToNode("OrbitScript") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordIndexes") \
      .setFromNode("OrbitScript2") \
      .setToField("coordIndex") \
      .setToNode("Orbit2") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordinates") \
      .setFromNode("OrbitScript2") \
      .setToField("point") \
      .setToNode("OrbitCoordinates2") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \
      .setToNode("OrbitScript2") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \
      .setToNode("OrbitPath") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("value_changed") \
      .setFromNode("OrbitPath") \
      .setToField("rotation") \
      .setToNode("OrbitTransform") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("value_changed") \
      .setFromNode("OrbitPath") \
      .setToField("rotation") \

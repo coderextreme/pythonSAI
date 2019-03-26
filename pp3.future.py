@@ -40,47 +40,41 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("Process") \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(GroupObject() \
-       .addComments(CommentsBlock("""left""")) \
-       .addChild(TransformObject() \
+      .addChildren(GroupObject() \
+#left
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0.7,1,0]) \
            .setTransparency(0.5) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
-          .setSpine([-2.5,0,0,-1.5,0,0]) \
+         .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [-2.5,0,0,-1.5,0,0]) \
          ) \
         ) \
-        .addComments(CommentsBlock("""<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>""")) \
+#<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>
        ) \
-       .addComments(CommentsBlock("""right""")) \
-       .addChild(TransformObject() \
+#right
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0,0.7,1]) \
            .setTransparency(0.5) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
-          .setSpine([1.5,0,0,2.5,0,0]) \
+         .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [1.5,0,0,2.5,0,0]) \
          ) \
         ) \
-        .addChild(TransformObject() \
+        .addChildren(TransformObject() \
          .setTranslation([2,0,0]) \
-         .addChild(ShapeObject() \
+         .addChildren(ShapeObject() \
           .setAppearance(AppearanceObject() \
            .setMaterial(MaterialObject() \
             .setDEF("MaterialLightBlue") \
@@ -93,34 +87,31 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-        .addChild(StringSensorObject() \
+        .addChildren(StringSensorObject() \
          .setDEF("RightSensor") \
          .setEnabled(False) \
         ) \
-        .addChild(TouchSensorObject() \
+        .addChildren(TouchSensorObject() \
          .setDescription("touch to activate") \
          .setDEF("RightTouch") \
         ) \
        ) \
-       .addComments(CommentsBlock("""up""")) \
-       .addChild(TransformObject() \
+#up
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0,0.7,1]) \
            .setTransparency(0.5) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
-          .setSpine([0,1.5,0,0,2.5,0]) \
+         .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [0,1.5,0,0,2.5,0]) \
          ) \
         ) \
-        .addChild(TransformObject() \
+        .addChildren(TransformObject() \
          .setTranslation([-0.5,2,0]) \
-         .addChild(ShapeObject() \
+         .addChildren(ShapeObject() \
           .setAppearance(AppearanceObject() \
            .setMaterial(MaterialObject() \
             .setUSE("MaterialLightBlue") \
@@ -132,36 +123,33 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-        .addChild(StringSensorObject() \
+        .addChildren(StringSensorObject() \
          .setDEF("UpSensor") \
          .setEnabled(False) \
         ) \
-        .addChild(TouchSensorObject() \
+        .addChildren(TouchSensorObject() \
          .setDescription("touch to activate") \
          .setDEF("UpTouch") \
         ) \
        ) \
-       .addComments(CommentsBlock("""down""")) \
-       .addChild(TransformObject() \
+#down
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0.7,1,0]) \
            .setTransparency(0.5) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
-          .setSpine([0,-2.5,0,0,-1.5,0]) \
+         .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [0,-2.5,0,0,-1.5,0]) \
          ) \
         ) \
-        .addComments(CommentsBlock("""<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>""")) \
+#<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>
        ) \
-       .addComments(CommentsBlock("""center""")) \
-       .addChild(TransformObject() \
-        .addChild(ShapeObject() \
+#center
+       .addChildren(TransformObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([1,0,0.7]) \
@@ -170,10 +158,10 @@ X3D0 = X3DObject() \
          .setGeometry(SphereObject() \
          ) \
         ) \
-        .addChild(TransformObject() \
+        .addChildren(TransformObject() \
          .setScale([0.5,0.5,0.5]) \
          .setTranslation([-0.5,0,1]) \
-         .addChild(ShapeObject() \
+         .addChildren(ShapeObject() \
           .setAppearance(AppearanceObject() \
            .setMaterial(MaterialObject() \
             .setUSE("MaterialLightBlue") \
@@ -184,29 +172,29 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-        .addChild(StringSensorObject() \
+        .addChildren(StringSensorObject() \
          .setDEF("CenterSensor") \
          .setEnabled(False) \
         ) \
-        .addChild(TouchSensorObject() \
+        .addChildren(TouchSensorObject() \
          .setDescription("touch to activate") \
          .setDEF("CenterTouch") \
         ) \
        ) \
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("RightSingleToMultiString") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("set_rightstring") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFSTRING) \
         .setName("rightlines") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
+        .setType("MFString") \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	rightlines = new MFString(\"\");\n"+
@@ -216,19 +204,19 @@ X3D0 = X3DObject() \
 "	rightlines = new MFString(rightstr);\n"+
 "}''')
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("UpSingleToMultiString") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("set_upstring") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFSTRING) \
         .setName("uplines") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
+        .setType("MFString") \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	uplines = new MFString(\"\");\n"+
@@ -238,19 +226,19 @@ X3D0 = X3DObject() \
 "	uplines = new MFString(upstr);\n"+
 "}''')
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("CenterSingleToMultiString") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("set_centerstring") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFSTRING) \
         .setName("centerlines") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
+        .setType("MFString") \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize() {\n"+
 "	centerlines = new MFString(\"\");\n"+
@@ -260,55 +248,55 @@ X3D0 = X3DObject() \
 "	centerlines = new MFString(centerstr);\n"+
 "}''')
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("enteredText") \
        .setFromNode("CenterSensor") \
        .setToField("set_centerstring") \
        .setToNode("CenterSingleToMultiString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("centerlines") \
        .setFromNode("CenterSingleToMultiString") \
        .setToField("set_string") \
        .setToNode("CenterString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isOver") \
        .setFromNode("CenterTouch") \
        .setToField("set_enabled") \
        .setToNode("CenterSensor") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("enteredText") \
        .setFromNode("RightSensor") \
        .setToField("set_rightstring") \
        .setToNode("RightSingleToMultiString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("rightlines") \
        .setFromNode("RightSingleToMultiString") \
        .setToField("set_string") \
        .setToNode("RightString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isOver") \
        .setFromNode("RightTouch") \
        .setToField("set_enabled") \
        .setToNode("RightSensor") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("enteredText") \
        .setFromNode("UpSensor") \
        .setToField("set_upstring") \
        .setToNode("UpSingleToMultiString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("uplines") \
        .setFromNode("UpSingleToMultiString") \
        .setToField("set_string") \
        .setToNode("UpString") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isOver") \
        .setFromNode("UpTouch") \
        .setToField("set_enabled") \
@@ -316,27 +304,27 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Process pipes") \
      .setOrientation([1,0,0,-0.4]) \
      .setPosition([0,5,12]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,-2.5,0]) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ProtoInstanceObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,2.5,0]) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \

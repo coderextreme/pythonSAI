@@ -2,12 +2,10 @@ import jnius_config
 jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
 from jnius import autoclass
 from X3Dautoclass import *
-X3D0 =  X3DObject()
+X3D0 = X3DObject()
 X3D0.setProfile("Immersive")
 X3D0.setVersion("3.3")
-
 head1 = headObject()
-
 meta2 = metaObject()
 meta2.setName("title")
 meta2.setContent("browser.x3d")
@@ -33,23 +31,22 @@ meta6.setName("description")
 meta6.setContent("a script test with embedded \\n between single quotes, a double backslash \\\\ a backslash \\ and a closing quote \"")
 
 head1.addMeta(meta6)
+
 X3D0.setHead(head1)
 Scene7 = SceneObject()
-
 Script8 = ScriptObject()
 Script8.setDEF("Browser")
 
-
-Script8.setSourceCode("ecmascript:\n"+
+Script8.setSourceCode('''ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
-"                }")
-Scene7.addChild(Script8)
+"                }''')
+
+Scene7.addChildren(Script8)
 Script9 = ScriptObject()
 Script9.setDEF("Clouds")
 
-
-Script9.setSourceCode("ecmascript:\n"+
+Script9.setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -58,8 +55,9 @@ Script9.setSourceCode("ecmascript:\n"+
 "'	Transform		\\n'+\n"+
 "'    ' + '               	\\n';\n"+
 "\n"+
-"}")
-Scene7.addChild(Script9)
-X3D0.setScene(Scene7)
+"}''')
 
+Scene7.addChildren(Script9)
+
+X3D0.setScene(Scene7)
 X3D0.toFileX3D("././browser.new.x3d")

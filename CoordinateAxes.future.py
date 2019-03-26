@@ -28,20 +28,19 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(CollisionObject() \
+    .addChildren(CollisionObject() \
      .setDEF("DoNotCollideWithVisualizationWidget") \
-     .addComments(CommentsBlock("""Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.""")) \
-     .addComments(CommentsBlock("""This NavigationInfo allows examine mode and will be overridden by any parent scene.""")) \
-     .addComments(CommentsBlock("""Each arrow goes from +1m to -1m to allow linear scaling to fit a scene""")) \
-     .addComments(CommentsBlock("""Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user""")) \
-     .addChild(GroupObject() \
-      .addComments(CommentsBlock("""Vertical Y arrow and label""")) \
-      .addChild(GroupObject() \
+#Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.
+#This NavigationInfo allows examine mode and will be overridden by any parent scene.
+#Each arrow goes from +1m to -1m to allow linear scaling to fit a scene
+#Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user
+     .setProxy(GroupObject() \
+#Vertical Y arrow and label
+      .addChildren(GroupObject() \
        .setDEF("ArrowGreen") \
-       .addChild(ShapeObject() \
-        .setGeometry(CylinderObject() \
+       .addChildren(ShapeObject() \
+        .setGeometry(CylinderObject(radius = 0.025) \
          .setDEF("ArrowCylinder") \
-         .setRadius(0.025) \
          .setTop(False) \
         ) \
         .setAppearance(AppearanceObject() \
@@ -52,13 +51,11 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(TransformObject() \
+       .addChildren(TransformObject() \
         .setTranslation([0,1,0]) \
-        .addChild(ShapeObject() \
-         .setGeometry(ConeObject() \
+        .addChildren(ShapeObject() \
+         .setGeometry(ConeObject(bottomRadius = 0.05, height = 0.1) \
           .setDEF("ArrowCone") \
-          .setBottomRadius(0.05) \
-          .setHeight(0.1) \
          ) \
          .setAppearance(AppearanceObject() \
           .setUSE("Green") \
@@ -66,10 +63,10 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setTranslation([0,1.08,0]) \
-       .addChild(BillboardObject() \
-        .addChild(ShapeObject() \
+       .addChildren(BillboardObject() \
+        .addChildren(ShapeObject() \
          .setAppearance(AppearanceObject() \
           .setDEF("LABEL_APPEARANCE") \
           .setMaterial(MaterialObject() \
@@ -79,24 +76,21 @@ X3D0 = X3DObject() \
          ) \
          .setGeometry(TextObject() \
           .setString(["Y"]) \
-          .setFontStyle(FontStyleObject() \
+          .setFontStyle(FontStyleObject(family = ["SANS"], justify = ["MIDDLE","MIDDLE"], size = 0.2) \
            .setDEF("LABEL_FONT") \
-           .setFamily(["SANS"]) \
-           .setJustify(["MIDDLE","MIDDLE"]) \
-           .setSize(0.2) \
           ) \
          ) \
         ) \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .setProxy(TransformObject() \
       .setRotation([0,0,1,-1.57079]) \
-      .addComments(CommentsBlock("""Horizontal X arrow and label""")) \
-      .addChild(GroupObject() \
-       .addChild(GroupObject() \
+#Horizontal X arrow and label
+      .addChildren(GroupObject() \
+       .addChildren(GroupObject() \
         .setDEF("ArrowRed") \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setGeometry(CylinderObject() \
           .setUSE("ArrowCylinder") \
          ) \
@@ -108,9 +102,9 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-        .addChild(TransformObject() \
+        .addChildren(TransformObject() \
          .setTranslation([0,1,0]) \
-         .addChild(ShapeObject() \
+         .addChildren(ShapeObject() \
           .setGeometry(ConeObject() \
            .setUSE("ArrowCone") \
           ) \
@@ -120,12 +114,12 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(TransformObject() \
+       .addChildren(TransformObject() \
         .setRotation([0,0,1,1.57079]) \
         .setTranslation([0.072,1.1,0]) \
-        .addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
-        .addChild(BillboardObject() \
-         .addChild(ShapeObject() \
+#note label rotated back to original coordinate frame
+        .addChildren(BillboardObject() \
+         .addChildren(ShapeObject() \
           .setAppearance(AppearanceObject() \
            .setUSE("LABEL_APPEARANCE") \
           ) \
@@ -140,13 +134,13 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .setProxy(TransformObject() \
       .setRotation([1,0,0,1.57079]) \
-      .addComments(CommentsBlock("""Perpendicular Z arrow and label, note right-hand rule""")) \
-      .addChild(GroupObject() \
-       .addChild(GroupObject() \
+#Perpendicular Z arrow and label, note right-hand rule
+      .addChildren(GroupObject() \
+       .addChildren(GroupObject() \
         .setDEF("ArrowBlue") \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setGeometry(CylinderObject() \
           .setUSE("ArrowCylinder") \
          ) \
@@ -158,9 +152,9 @@ X3D0 = X3DObject() \
           ) \
          ) \
         ) \
-        .addChild(TransformObject() \
+        .addChildren(TransformObject() \
          .setTranslation([0,1,0]) \
-         .addChild(ShapeObject() \
+         .addChildren(ShapeObject() \
           .setGeometry(ConeObject() \
            .setUSE("ArrowCone") \
           ) \
@@ -170,12 +164,12 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(TransformObject() \
+       .addChildren(TransformObject() \
         .setRotation([1,0,0,-1.57079]) \
         .setTranslation([0,1.1,0.072]) \
-        .addComments(CommentsBlock("""note label rotated back to original coordinate frame""")) \
-        .addChild(BillboardObject() \
-         .addChild(ShapeObject() \
+#note label rotated back to original coordinate frame
+        .addChildren(BillboardObject() \
+         .addChildren(ShapeObject() \
           .setAppearance(AppearanceObject() \
            .setUSE("LABEL_APPEARANCE") \
           ) \

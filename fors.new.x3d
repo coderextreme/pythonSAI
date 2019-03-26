@@ -44,12 +44,18 @@
           <field name='keyValue' accessType='outputOnly' type='MFVec3f'/>
 <![CDATA[
 ecmascript:
-					function set_cycle(value) {
-                                                old = translation;
-						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);
-                                                keyValue = new MFVec3f([old, translation]);
-						// Browser.println(translation);
-					}
+"+
+"					function set_cycle(value) {
+"+
+"                                                old = translation;
+"+
+"						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);
+"+
+"                                                keyValue = new MFVec3f([old, translation]);
+"+
+"						// Browser.println(translation);
+"+
+"					}
 ]]>
         </Script>
         <TimeSensor DEF='nodeClock' cycleInterval='3.0' loop='true'/>
@@ -81,26 +87,46 @@ ecmascript:
           </IS>
 <![CDATA[
 ecmascript:
-
-                function set_endA(value) {
-		    if (typeof spine === 'undefined') {
-		        spine = new MFVec3f([value, value]);
-		    } else {
-		        spine = new MFVec3f([value, spine[1]]);
-		    }
-                }
-
-                function set_endB(value) {
-		    if (typeof spine === 'undefined') {
-		        spine = new MFVec3f([value, value]);
-		    } else {
-		        spine = new MFVec3f([spine[0], value]);
-		    }
-                }
-
-                function set_spine(value) {
-                    spine = value;
-                }
+"+
+"
+"+
+"                function set_endA(value) {
+"+
+"		    if (typeof spine === 'undefined') {
+"+
+"		        spine = new MFVec3f([value, value]);
+"+
+"		    } else {
+"+
+"		        spine = new MFVec3f([value, spine[1]]);
+"+
+"		    }
+"+
+"                }
+"+
+"
+"+
+"                function set_endB(value) {
+"+
+"		    if (typeof spine === 'undefined') {
+"+
+"		        spine = new MFVec3f([value, value]);
+"+
+"		    } else {
+"+
+"		        spine = new MFVec3f([spine[0], value]);
+"+
+"		    }
+"+
+"                }
+"+
+"
+"+
+"                function set_spine(value) {
+"+
+"                    spine = value;
+"+
+"                }
 ]]>
         </Script>
         <ROUTE fromField='spine' fromNode='MoveCylinder' toField='set_spine' toNode='extrusion'/>

@@ -36,9 +36,9 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
      .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
      .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
@@ -46,9 +46,9 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
      .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("transform") \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([0.7,0.7,0.7]) \
@@ -74,52 +74,50 @@ X3D0 = X3DObject() \
          .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .setDEF("shader") \
-        .setLanguage("GLSL") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFINT32) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFInt32") \
+         .setAccessType("inputOutput") \
          .setValue("0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
       ) \
-      .addComments(CommentsBlock("""<Sphere>""")) \
-      .setGeometry(IndexedFaceSetObject() \
-       .setConvex(False) \
+#<Sphere>
+      .setGeometry(IndexedFaceSetObject(convex = False) \
        .setDEF("Orbit") \
        .setCoord(CoordinateObject() \
         .setDEF("OrbitCoordinates") \
@@ -127,24 +125,24 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("OrbitScript") \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFFLOAT) \
       .setName("set_fraction") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFFloat") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3F) \
       .setName("coordinates") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("MFVec3f") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFINT32) \
       .setName("coordIndexes") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFInt32") \
      ) \
-     .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -216,24 +214,24 @@ X3D0 = X3DObject() \
 "	updateCoordinates(resolution);\n"+
 "}''')
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("Clock") \
      .setCycleInterval(16) \
      .setLoop(True) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordIndexes") \
      .setFromNode("OrbitScript") \
      .setToField("set_coordIndex") \
      .setToNode("Orbit") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("coordinates") \
      .setFromNode("OrbitScript") \
      .setToField("set_point") \
      .setToNode("OrbitCoordinates") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \

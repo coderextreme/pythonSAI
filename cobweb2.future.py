@@ -36,15 +36,15 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE"]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setPosition([0,0,4]) \
      .setOrientation([1,0,0,0]) \
      .setDescription("Bubbles in action") \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"]) \
      .setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"]) \
      .setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"]) \
@@ -52,14 +52,13 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"]) \
      .setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"]) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("Bubble") \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setDEF("transform") \
-       .addChild(ShapeObject() \
-        .setGeometry(SphereObject() \
-         .setRadius(0.25) \
+       .addChildren(ShapeObject() \
+        .setGeometry(SphereObject(radius = 0.25) \
         ) \
         .setAppearance(AppearanceObject() \
          .setMaterial(MaterialObject() \
@@ -68,38 +67,38 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(ScriptObject() \
+       .addChildren(ScriptObject() \
         .setDEF("bounce") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("1 1 1") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("translation") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0 0 0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("velocity") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0 0 0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("scalvel") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0 0 0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("set_fraction") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+         .setAccessType("inputOnly") \
+         .setType("SFFloat") \
         ) \
-        .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -151,24 +150,24 @@ X3D0 = X3DObject() \
 "    }\n"+
 "}''')
        ) \
-       .addChild(TimeSensorObject() \
+       .addChildren(TimeSensorObject() \
         .setDEF("bubbleClock") \
         .setCycleInterval(10) \
         .setLoop(True) \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("bounce") \
         .setFromField("translation_changed") \
         .setToNode("transform") \
         .setToField("set_translation") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("bounce") \
         .setFromField("scale_changed") \
         .setToNode("transform") \
         .setToField("set_scale") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("bubbleClock") \
         .setFromField("fraction_changed") \
         .setToNode("bounce") \
@@ -177,19 +176,19 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("Bubble") \
      .setDEF("bubbleA") \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("Bubble") \
      .setDEF("bubbleB") \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("Bubble") \
      .setDEF("bubbleC") \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("Bubble") \
      .setDEF("bubbleD") \
     ) \

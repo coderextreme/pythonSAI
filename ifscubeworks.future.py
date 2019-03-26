@@ -28,13 +28,10 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(GroupObject() \
-     .addChild(ShapeObject() \
-      .setGeometry(IndexedFaceSetObject() \
+    .addChildren(GroupObject() \
+     .addChildren(ShapeObject() \
+      .setGeometry(IndexedFaceSetObject(coordIndex = [0,0,1,-1,0,1,1,-1,2,2,3,3,-1,0,3,3,0,-1,0,3,2,1,-1,1,2,2,1,-1,1,2,3,0,-1], normalIndex = [0,0,1,2,3,4,5], normalPerVertex = False) \
        .setDEF("IndexedFaceSet") \
-       .setCoordIndex([0,0,1,-1,0,1,1,-1,2,2,3,3,-1,0,3,3,0,-1,0,3,2,1,-1,1,2,2,1,-1,1,2,3,0,-1]) \
-       .setNormalIndex([0,0,1,2,3,4,5]) \
-       .setNormalPerVertex(False) \
        .setColorIndex([0,0,0,-1,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1]) \
        .setCoord(CoordinateObject() \
         .setPoint([0,0,1,0,1,1,1,1,1,1,0,1]) \

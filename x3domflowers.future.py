@@ -28,9 +28,9 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
      .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
      .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
@@ -38,26 +38,26 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
      .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
     ) \
-    .addChild(GroupObject() \
-     .addChild(ExternProtoDeclareObject() \
+    .addChildren(GroupObject() \
+     .addChildren(ExternProtoDeclareObject() \
       .setName("FlowerProto") \
       .setUrl(["../data/flowerproto.json#FlowerProto"]) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("vertex") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("MFString") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("fragment") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("MFString") \
       ) \
      ) \
-     .addChild(ProtoDeclareObject() \
+     .addChildren(ProtoDeclareObject() \
       .setName("flower") \
       .setProtoBody(ProtoBodyObject() \
-       .addChild(GroupObject() \
-        .addChild(ProtoInstanceObject() \
+       .addChildren(GroupObject() \
+        .addChildren(ProtoInstanceObject() \
          .setName("FlowerProto") \
          .addFieldValue(fieldValueObject() \
           .setName("vertex") \
@@ -71,22 +71,22 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
     ) \

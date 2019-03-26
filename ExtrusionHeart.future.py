@@ -40,20 +40,16 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Extrusion Heart") \
      .setOrientation([1,0,0,1.57]) \
      .setPosition([0,-4,0]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,-0.5,0]) \
-     .addChild(ShapeObject() \
-      .setGeometry(ExtrusionObject() \
-       .setCreaseAngle(3.14159) \
-       .setCrossSection([0,0.8,0.2,1,0.7,0.95,1,0.5,0.8,0,0.5,-0.3,0,-0.7,-0.5,-0.3,-0.8,0,-1,0.5,-0.7,0.95,-0.2,1,0,0.8]) \
+     .addChildren(ShapeObject() \
+      .setGeometry(ExtrusionObject(creaseAngle = 3.14159, crossSection = [0,0.8,0.2,1,0.7,0.95,1,0.5,0.8,0,0.5,-0.3,0,-0.7,-0.5,-0.3,-0.8,0,-1,0.5,-0.7,0.95,-0.2,1,0,0.8], solid = False, spine = [0,0,0,0,0.1,0,0,0.5,0,0,0.9,0,0,1,0]) \
        .setScale([0.01,0.01,0.8,0.8,1,1,0.8,0.8,0.01,0.01]) \
-       .setSolid(False) \
-       .setSpine([0,0,0,0,0.1,0,0,0.5,0,0,0.9,0,0,1,0]) \
       ) \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \

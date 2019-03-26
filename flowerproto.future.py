@@ -36,26 +36,26 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("FlowerProto") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("vertex") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("MFString") \
        .setValue("\"../shaders/gl_flowers_chromatic.vs\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("fragment") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("MFString") \
        .setValue("\"../shaders/pc_flowers.fs\"") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setDEF("transform") \
-       .addChild(ShapeObject() \
+       .addChildren(ShapeObject() \
         .setAppearance(AppearanceObject() \
          .setMaterial(MaterialObject() \
           .setDiffuseColor([0.7,0.7,0.7]) \
@@ -81,76 +81,75 @@ X3D0 = X3DObject() \
            .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
           ) \
          ) \
-         .addShaders(ComposedShaderObject() \
+         .addShaders(ComposedShaderObject(language = "GLSL") \
           .setDEF("shader") \
-          .setLanguage("GLSL") \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFINT32) \
            .setName("cube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFInt32") \
+           .setAccessType("inputOutput") \
            .setValue("0") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFVEC3F) \
            .setName("chromaticDispertion") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFVec3f") \
+           .setAccessType("inputOutput") \
            .setValue("0.98 1 1.033") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("bias") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("10") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("scale") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("10") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("power") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("2") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("a") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("3") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("b") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("1") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("c") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("3") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("d") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("3") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("tdelta") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("pdelta") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
-          .addComments(CommentsBlock("""<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>""")) \
+#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
           .addParts(ShaderPartObject() \
            .setType("VERTEX") \
            .setIS(ISObject() \
@@ -174,62 +173,62 @@ X3D0 = X3DObject() \
         .setGeometry(SphereObject() \
         ) \
        ) \
-       .addChild(ScriptObject() \
+       .addChildren(ScriptObject() \
         .setDEF("Bounce") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("translation") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0 0 0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("velocity") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0 0 0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFTIME) \
          .setName("set_fraction") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+         .setAccessType("inputOnly") \
+         .setType("SFTime") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("a") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("b") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("c") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("3") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("d") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("3") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("tdelta") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("pdelta") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setType("SFFloat") \
+         .setAccessType("inputOutput") \
          .setValue("0.5") \
         ) \
-        .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -296,54 +295,54 @@ X3D0 = X3DObject() \
 "				}\n"+
 "			}''')
        ) \
-       .addChild(TimeSensorObject() \
+       .addChildren(TimeSensorObject() \
         .setDEF("TourTime") \
         .setCycleInterval(0.15) \
         .setLoop(True) \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("TourTime") \
         .setFromField("cycleTime") \
         .setToNode("Bounce") \
         .setToField("set_fraction") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("translation_changed") \
         .setToNode("transform") \
         .setToField("set_translation") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("a") \
         .setToNode("shader") \
         .setToField("a") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("b") \
         .setToNode("shader") \
         .setToField("b") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("c") \
         .setToNode("shader") \
         .setToField("c") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("d") \
         .setToNode("shader") \
         .setToField("d") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("tdelta") \
         .setToNode("shader") \
         .setToField("tdelta") \
        ) \
-       .addChild(ROUTEObject() \
+       .addChildren(ROUTEObject() \
         .setFromNode("Bounce") \
         .setFromField("pdelta") \
         .setToNode("shader") \

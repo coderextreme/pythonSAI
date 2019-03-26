@@ -44,49 +44,48 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addComments(CommentsBlock("""A png image file for the cloud texture must be designated in the ecmascript node.""")) \
-    .addChild(ViewpointObject() \
+#A png image file for the cloud texture must be designated in the ecmascript node.
+    .addChildren(ViewpointObject() \
      .setDescription("Main") \
      .setJump(False) \
      .setOrientation([0,1,0,1.57]) \
      .setPosition([50000,1000,42000]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Light House Tower") \
      .setJump(False) \
      .setOrientation([0,1,0,1.3]) \
      .setPosition([45000,1290,44000]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("centerWest") \
      .setJump(False) \
      .setOrientation([0,1,0,2.5]) \
      .setPosition([48000,1000,20000]) \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setGroundColor([0,0,1]) \
      .setSkyColor([0,0,1]) \
     ) \
-    .addChild(DirectionalLightObject() \
+    .addChildren(DirectionalLightObject() \
      .setAmbientIntensity(1) \
      .setDirection([-1,0,0]) \
      .setGlobal(True) \
     ) \
-    .addChild(GroupObject() \
+    .addChildren(GroupObject() \
      .setDEF("Terrain") \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([50,50,50]) \
       .setTranslation([25000,0,25000]) \
-      .addChild(InlineObject() \
+      .addChildren(InlineObject() \
        .setUrl(["MontereyBayLargeMesh.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.x3d","MontereyBayLargeMesh.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.wrl"]) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setRotation([1,0,0,1.57]) \
       .setTranslation([25000,0,25000]) \
-      .addChild(ShapeObject() \
-       .setGeometry(Rectangle2DObject() \
-        .setSize([77000,55000]) \
+      .addChildren(ShapeObject() \
+       .setGeometry(Rectangle2DObject(size = [77000,55000]) \
        ) \
        .setAppearance(AppearanceObject() \
         .setTexture(ImageTextureObject() \
@@ -96,52 +95,51 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(GroupObject() \
+    .addChildren(GroupObject() \
      .setDEF("Placemarks") \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([50,50,50]) \
       .setTranslation([45000,30,44000]) \
-      .addChild(InlineObject() \
+      .addChildren(InlineObject() \
        .setUrl(["Lighthouse.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.x3d","Lighthouse.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.wrl"]) \
       ) \
      ) \
     ) \
-    .addChild(GroupObject() \
+    .addChildren(GroupObject() \
      .setDEF("Clouds") \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Cumulus") \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Cirrus") \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Fog") \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject(directOutput = True) \
       .setDEF("PixelScript") \
-      .setDirectOutput(True) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("Cumulus") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
-       .addChild(TransformObject() \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
+       .addChildren(TransformObject() \
         .setUSE("Cumulus") \
        ) \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("Cirrus") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
-       .addChild(TransformObject() \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
+       .addChildren(TransformObject() \
         .setUSE("Cirrus") \
        ) \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("Fog") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -523,7 +521,7 @@ X3D0 = X3DObject() \
 "cirrus();\n"+
 "}''')
      ) \
-     .addChild(DirectionalLightObject() \
+     .addChildren(DirectionalLightObject() \
       .setAmbientIntensity(1) \
       .setColor([1,0,0]) \
       .setDirection([-1,-1,0]) \

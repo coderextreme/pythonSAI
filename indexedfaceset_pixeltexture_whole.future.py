@@ -92,38 +92,38 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Front View") \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Rear View") \
      .setOrientation([0,1,0,3.14]) \
      .setPosition([0,0,-10]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Top View") \
      .setOrientation([1,0,0,-1.57]) \
      .setPosition([0,10,0]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Bottom View") \
      .setOrientation([1,0,0,1.57]) \
      .setPosition([0,-10,0]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Right View") \
      .setOrientation([0,1,0,1.57]) \
      .setPosition([10,0,0]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Left View") \
      .setOrientation([0,1,0,-1.57]) \
      .setPosition([-10,0,0]) \
     ) \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE"]) \
     ) \
-    .addChild(ShapeObject() \
+    .addChildren(ShapeObject() \
      .setAppearance(AppearanceObject() \
       .setMaterial(MaterialObject() \
       ) \
@@ -131,11 +131,7 @@ X3D0 = X3DObject() \
        .setImage([2,2,4,-16776961,16711935,-1,-65281]) \
       ) \
      ) \
-     .setGeometry(IndexedFaceSetObject() \
-      .setColorPerVertex(False) \
-      .setCoordIndex([0,1,3,2,-1,4,5,7,6,-1,6,7,1,0,-1,2,3,5,4,-1,6,0,2,4,-1,1,7,5,3,-1]) \
-      .setCreaseAngle(0.5) \
-      .setTexCoordIndex([0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1]) \
+     .setGeometry(IndexedFaceSetObject(colorPerVertex = False, coordIndex = [0,1,3,2,-1,4,5,7,6,-1,6,7,1,0,-1,2,3,5,4,-1,6,0,2,4,-1,1,7,5,3,-1], creaseAngle = 0.5, texCoordIndex = [0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1]) \
       .setColor(ColorObject() \
        .setColor([0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0]) \
       ) \

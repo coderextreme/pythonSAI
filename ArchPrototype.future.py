@@ -52,125 +52,123 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("ArchPrototype") \
      .setAppinfo("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. - Possibility to create shapes related to an arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.js.") \
      .setProtoInterface(ProtoInterfaceObject() \
-      .addComments(CommentsBlock("""COLOR OF ARCH""")) \
-      .addComments(CommentsBlock("""INPUT PARAMETERS""")) \
-      .addComments(CommentsBlock("""General parameters: measures in meters""")) \
-      .addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
+#COLOR OF ARCH
+#INPUT PARAMETERS
+#General parameters: measures in meters
+#Parameters to create to create shapes related to arch: put true to apply
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("diffuseColor") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("color of arch") \
+       .setType("SFColor") \
        .setValue("0.2 0.8 0.8") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("emissiveColor") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("color of arch") \
+       .setType("SFColor") \
        .setValue("0.2 0.8 0.8") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("clearSpanWidth") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("clearSpanWidth: clearSpanWidth must be double of riseHeight to obtain an half circumference") \
+       .setType("SFFloat") \
        .setValue("4") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("riseHeight") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("riseHeight: riseHeight must be half of clearSpanWidth to obtain an half circumference") \
+       .setType("SFFloat") \
        .setValue("2") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("depth") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("depth") \
+       .setType("SFFloat") \
        .setValue("3") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("topAbutmentHeight") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("topAbutmentHeight:topAbutmentHeight=0 means no topAbutment") \
+       .setType("SFFloat") \
        .setValue("0.5") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("pierWidth") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("pierWidth:pierWidtht=0 means no pierWidth") \
+       .setType("SFFloat") \
        .setValue("0.5") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("pierHeight") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("pierHeight: pierHeight=0 means no pierHeight") \
+       .setType("SFFloat") \
        .setValue("1") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("archHalf") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("archHalf: can modify also clearSpanWidth, riseHeight, depth, pierWidth, pierHeight, topAbutmentHeight, archHalfExtensionWidth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalf width") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("archHalfExtensionWidth") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("archHalfExtensionWidth: measure in meters, use only if archHalf=true, it is the width of the etension of the abutment of the archHalf. See the reference file ArchModelingDiagrams.pdf to find further information.") \
+       .setType("SFFloat") \
        .setValue("0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("onlyIntrados") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("onlyIntrados: note it is a flat curved surface, can modify also clearSpanWidth, riseHeight, depth at purpose, if needed apply archHalf=true.") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("archFilled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("archFilled: note it is an half cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose.") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("archHalfFilled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("archHalfFilled: note it is a quarter cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalfFilled width.") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("lintel") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("lintel: no arc is rendered, but a lintel: topAbutmentHeight on pierHeight, total height is pierHeight + topAbutmentHeight, if needed apply archHalf=true.") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-      .addComments(CommentsBlock("""IndexedFaceset creates arch""")) \
-      .addChild(TransformObject() \
+#First node determines node type of this prototype
+#IndexedFaceset creates arch
+      .addChildren(TransformObject() \
        .setDEF("ArchTransform") \
-       .addChild(ShapeObject() \
+       .addChildren(ShapeObject() \
         .setDEF("Arch") \
-        .addComments(CommentsBlock("""note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly""")) \
-        .setGeometry(IndexedFaceSetObject() \
+#note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly
+        .setGeometry(IndexedFaceSetObject(convex = False, solid = False) \
          .setDEF("ArchIndex") \
-         .setConvex(False) \
-         .setSolid(False) \
          .setCoord(CoordinateObject() \
           .setDEF("ArchChord") \
          ) \
@@ -192,104 +190,104 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
-      .addComments(CommentsBlock("""This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs""")) \
-      .addChild(ScriptObject() \
+#Subsequent nodes do not render, but still must be a valid X3D subgraph
+#This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs
+      .addChildren(ScriptObject() \
        .setDEF("ArchPrototypeScript") \
        .setUrl(["../node/ArchPrototypeScript.js"]) \
-       .addComments(CommentsBlock("""INPUT PARAMETERS""")) \
-       .addComments(CommentsBlock("""General parameters""")) \
-       .addComments(CommentsBlock("""Parameters to create to create shapes related to arch: put true to apply""")) \
-       .addComments(CommentsBlock("""OUTPUT PARAMETERS""")) \
+#INPUT PARAMETERS
+#General parameters
+#Parameters to create to create shapes related to arch: put true to apply
+#OUTPUT PARAMETERS
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("clearSpanWidth") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for clearSpanWidth parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("riseHeight") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for riseHeight parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("depth") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for depth parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("topAbutmentHeight") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for topAbutmentHeight parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("pierWidth") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for pierWidth parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("pierHeight") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for pierHeight parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("archHalf") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for archHalf parameter") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("archHalfExtensionWidth") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for archHalfExtensionWidth parameter") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("onlyIntrados") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for onlyIntrados parameter") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("archFilled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for archFilled parameter") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("archHalfFilled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for archHalfFilled parameter") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("lintel") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("user or default input for lintel parameter") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("computedScale") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("computedScale: modify scale field - NOTE it is not used to modify the whole arch, but to modify clearSpanWidth, riseHeight, depth. It does not affect topAbutmentHeight, pierWidth, pierHeight, archHalfExtensionWidth") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("pointOut") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("send computed points to the Coordinate node") \
+        .setType("MFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFINT32) \
         .setName("indexOut") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("send computed indices to the IndexedFaceSet node") \
+        .setType("MFInt32") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -342,19 +340,19 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("computedScale") \
        .setFromNode("ArchPrototypeScript") \
        .setToField("scale") \
        .setToNode("ArchTransform") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("pointOut") \
        .setFromNode("ArchPrototypeScript") \
        .setToField("point") \
        .setToNode("ArchChord") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("indexOut") \
        .setFromNode("ArchPrototypeScript") \
        .setToField("set_coordIndex") \
@@ -362,7 +360,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("ArchPrototype") \
      .setDEF("ArchInstance") \
      .addFieldValue(fieldValueObject() \
@@ -398,8 +396,8 @@ X3D0 = X3DObject() \
       .setValue("2") \
      ) \
     ) \
-    .addComments(CommentsBlock("""Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)""")) \
-    .addChild(InlineObject() \
+#Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)
+    .addChildren(InlineObject() \
      .setDEF("CoordinateAxes") \
      .setUrl(["../data/CoordinateAxes.x3d"]) \
     ) \

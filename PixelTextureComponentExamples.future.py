@@ -60,16 +60,16 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([0.1,0.1,0.4]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Table 5.18 SFImage component examples") \
      .setPosition([0,0,14]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([-6,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setDEF("ZeroComponents") \
@@ -78,14 +78,13 @@ X3D0 = X3DObject() \
       .setGeometry(BoxObject() \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["0"]) \
-        .setFontStyle(FontStyleObject() \
+        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
          .setDEF("CenterJustify") \
-         .setJustify(["MIDDLE","MIDDLE"]) \
         ) \
        ) \
        .setAppearance(AppearanceObject() \
@@ -97,9 +96,9 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([-3,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setDEF("OneComponent") \
@@ -109,9 +108,9 @@ X3D0 = X3DObject() \
       .setGeometry(BoxObject() \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["1"]) \
         .setFontStyle(FontStyleObject() \
@@ -124,8 +123,8 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ShapeObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setDEF("TwoComponents") \
@@ -135,9 +134,9 @@ X3D0 = X3DObject() \
       .setGeometry(BoxObject() \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["2"]) \
         .setFontStyle(FontStyleObject() \
@@ -150,11 +149,11 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([3,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
-       .addComments(CommentsBlock("""note 0x000000 = 0""")) \
+#note 0x000000 = 0
        .setTexture(PixelTextureObject() \
         .setDEF("ThreeComponents") \
         .setImage([2,4,3,16711680,65280,0,0,0,0,16777215,16776960]) \
@@ -163,9 +162,9 @@ X3D0 = X3DObject() \
       .setGeometry(BoxObject() \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["3"]) \
         .setFontStyle(FontStyleObject() \
@@ -178,11 +177,11 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([6,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
-       .addComments(CommentsBlock("""Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127""")) \
+#Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127
        .setTexture(PixelTextureObject() \
         .setDEF("FourComponents") \
         .setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407]) \
@@ -191,9 +190,9 @@ X3D0 = X3DObject() \
       .setGeometry(BoxObject() \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["4"]) \
         .setFontStyle(FontStyleObject() \
@@ -206,17 +205,16 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addComments(CommentsBlock("""Background from PixelTextureBW.x3d""")) \
-    .addChild(TransformObject() \
+#Background from PixelTextureBW.x3d
+    .addChildren(TransformObject() \
      .setTranslation([0,6,-2]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setImage([8,8,1,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204]) \
        ) \
       ) \
-      .setGeometry(BoxObject() \
-       .setSize([16,16,0.1]) \
+      .setGeometry(BoxObject(size = [16,16,0.1]) \
       ) \
      ) \
     ) \

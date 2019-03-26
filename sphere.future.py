@@ -28,8 +28,8 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(GroupObject() \
-     .addChild(ShapeObject() \
+    .addChildren(GroupObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([1,1,1]) \

@@ -17,10 +17,6 @@
   <Scene>
     <ProtoDeclare name='ArchPrototype' appinfo='Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. - Possibility to create shapes related to an arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.js.'>
       <ProtoInterface>
-        <!-- COLOR OF ARCH -->
-        <!-- INPUT PARAMETERS -->
-        <!-- General parameters: measures in meters -->
-        <!-- Parameters to create to create shapes related to arch: put true to apply -->
         <field name='diffuseColor' accessType='inputOutput' appinfo='color of arch' type='SFColor' value='0.2 0.8 0.8'/>
         <field name='emissiveColor' accessType='inputOutput' appinfo='color of arch' type='SFColor' value='0.2 0.8 0.8'/>
         <field name='clearSpanWidth' accessType='initializeOnly' appinfo='clearSpanWidth: clearSpanWidth must be double of riseHeight to obtain an half circumference' type='SFFloat' value='4.0'/>
@@ -37,11 +33,8 @@
         <field name='lintel' accessType='initializeOnly' appinfo='lintel: no arc is rendered, but a lintel: topAbutmentHeight on pierHeight, total height is pierHeight + topAbutmentHeight, if needed apply archHalf=true.' type='SFBool' value='false'/>
       </ProtoInterface>
       <ProtoBody>
-        <!-- First node determines node type of this prototype -->
-        <!-- IndexedFaceset creates arch -->
         <Transform DEF='ArchTransform'>
           <Shape DEF='Arch'>
-            <!-- note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly -->
             <Appearance>
               <Material DEF='MaterialNode'>
                 <IS>
@@ -55,13 +48,7 @@
             </IndexedFaceSet>
           </Shape>
         </Transform>
-        <!-- Subsequent nodes do not render, but still must be a valid X3D subgraph -->
-        <!-- This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs -->
         <Script DEF='ArchPrototypeScript' url='"../node/ArchPrototypeScript.js"'>
-          <!-- INPUT PARAMETERS -->
-          <!-- General parameters -->
-          <!-- Parameters to create to create shapes related to arch: put true to apply -->
-          <!-- OUTPUT PARAMETERS -->
           <field name='clearSpanWidth' accessType='initializeOnly' appinfo='user or default input for clearSpanWidth parameter' type='SFFloat'/>
           <field name='riseHeight' accessType='initializeOnly' appinfo='user or default input for riseHeight parameter' type='SFFloat'/>
           <field name='depth' accessType='initializeOnly' appinfo='user or default input for depth parameter' type='SFFloat'/>
@@ -107,7 +94,6 @@
       <fieldValue name='pierWidth' value='1.0'/>
       <fieldValue name='pierHeight' value='2.0'/>
     </ProtoInstance>
-    <!-- Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare) -->
     <Inline DEF='CoordinateAxes' url='"../data/CoordinateAxes.x3d"'/>
   </Scene>
 </X3D>

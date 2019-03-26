@@ -40,11 +40,11 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setPosition([0,5,100]) \
      .setDescription("Switch background and images texture") \
     ) \
-    .addChild(TextureBackgroundObject() \
+    .addChildren(TextureBackgroundObject() \
      .setLeftTexture(ImageTextureObject() \
       .setDEF("leftBack") \
       .setUrl(["../resources/images/all_probes/beach_cross/beach_left.png","https://coderextreme.net/images/all_probes/beach_cross/beach_left.png"]) \
@@ -70,8 +70,8 @@ X3D0 = X3DObject() \
       .setUrl(["../resources/images/all_probes/beach_cross/beach_bottom.png","https://coderextreme.net/images/all_probes/beach_cross/beach_bottom.png"]) \
      ) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ShapeObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([0.7,0.7,0.7]) \
@@ -103,178 +103,174 @@ X3D0 = X3DObject() \
          .setUrl(["../resources/images/all_probes/beach_cross/beach_top.png","https://coderextreme.net/images/all_probes/beach_cross/beach_top.png"]) \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .setDEF("x3dom") \
-        .setLanguage("GLSL") \
-        .addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
+#http://hypertextbook.com/facts/2005/JustinChe.shtml
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFINT32) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFInt32") \
          .setValue("0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/shaders/mix.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .setDEF("cobweb") \
-        .setLanguage("GLSL") \
-        .addComments(CommentsBlock("""http://hypertextbook.com/facts/2005/JustinChe.shtml""")) \
+#http://hypertextbook.com/facts/2005/JustinChe.shtml
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFINT32) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFInt32") \
          .setValue("0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/shaders/mix.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
       ) \
-      .setGeometry(SphereObject() \
-       .setRadius(30) \
+      .setGeometry(SphereObject(radius = 30) \
       ) \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject(directOutput = True) \
       .setDEF("UrlSelector") \
-      .setDirectOutput(True) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("frontUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_front.png\" \"../resources/images/all_probes/building_cross/building_front.png\" \"../resources/images/all_probes/campus_cross/campus_front.png\" \"../resources/images/all_probes/galileo_cross/galileo_front.png\" \"../resources/images/all_probes/grace_cross/grace_front.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_front.png\" \"../resources/images/all_probes/rnl_cross/rnl_front.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_front.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_front.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("backUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_back.png\" \"../resources/images/all_probes/building_cross/building_back.png\" \"../resources/images/all_probes/campus_cross/campus_back.png\" \"../resources/images/all_probes/galileo_cross/galileo_back.png\" \"../resources/images/all_probes/grace_cross/grace_back.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_back.png\" \"../resources/images/all_probes/rnl_cross/rnl_back.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_back.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_back.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("leftUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_left.png\" \"../resources/images/all_probes/building_cross/building_left.png\" \"../resources/images/all_probes/campus_cross/campus_left.png\" \"../resources/images/all_probes/galileo_cross/galileo_left.png\" \"../resources/images/all_probes/grace_cross/grace_left.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_left.png\" \"../resources/images/all_probes/rnl_cross/rnl_left.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_left.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_left.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("rightUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_right.png\" \"../resources/images/all_probes/building_cross/building_right.png\" \"../resources/images/all_probes/campus_cross/campus_right.png\" \"../resources/images/all_probes/galileo_cross/galileo_right.png\" \"../resources/images/all_probes/grace_cross/grace_right.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_right.png\" \"../resources/images/all_probes/rnl_cross/rnl_right.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_right.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_right.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("topUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_top.png\" \"../resources/images/all_probes/building_cross/building_top.png\" \"../resources/images/all_probes/campus_cross/campus_top.png\" \"../resources/images/all_probes/galileo_cross/galileo_top.png\" \"../resources/images/all_probes/grace_cross/grace_top.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_top.png\" \"../resources/images/all_probes/rnl_cross/rnl_top.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_top.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_top.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("bottomUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"../resources/images/all_probes/beach_cross/beach_bottom.png\" \"../resources/images/all_probes/building_cross/building_bottom.png\" \"../resources/images/all_probes/campus_cross/campus_bottom.png\" \"../resources/images/all_probes/galileo_cross/galileo_bottom.png\" \"../resources/images/all_probes/grace_cross/grace_bottom.png\" \"../resources/images/all_probes/kitchen_cross/kitchen_bottom.png\" \"../resources/images/all_probes/rnl_cross/rnl_bottom.png\" \"../resources/images/all_probes/stpeters_cross/stpeters_bottom.png\" \"../resources/images/all_probes/uffizi_cross/uffizi_bottom.png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("front_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("back_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("left_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("right_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("top_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("bottom_changed") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setType("MFString") \
+       .setAccessType("outputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("set_fraction") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setType("SFFloat") \
+       .setAccessType("inputOnly") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFINT32) \
        .setName("old") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setType("SFInt32") \
+       .setAccessType("inputOutput") \
        .setValue("-1") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+
@@ -292,84 +288,84 @@ X3D0 = X3DObject() \
 "            }\n"+
 "        }''')
      ) \
-     .addChild(TimeSensorObject() \
+     .addChildren(TimeSensorObject() \
       .setDEF("Clock") \
       .setCycleInterval(45) \
       .setLoop(True) \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("Clock") \
       .setFromField("fraction_changed") \
       .setToNode("UrlSelector") \
       .setToField("set_fraction") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("front_changed") \
       .setToNode("frontBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("back_changed") \
       .setToNode("backBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("left_changed") \
       .setToNode("leftBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("right_changed") \
       .setToNode("rightBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("top_changed") \
       .setToNode("topBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("bottom_changed") \
       .setToNode("bottomBack") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("front_changed") \
       .setToNode("frontShader") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("back_changed") \
       .setToNode("backShader") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("left_changed") \
       .setToNode("leftShader") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("right_changed") \
       .setToNode("rightShader") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("top_changed") \
       .setToNode("topShader") \
       .setToField("url") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("UrlSelector") \
       .setFromField("bottom_changed") \
       .setToNode("bottomShader") \

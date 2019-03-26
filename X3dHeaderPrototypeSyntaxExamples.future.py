@@ -68,66 +68,66 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ExternProtoDeclareObject() \
+    .addChildren(ExternProtoDeclareObject() \
      .setName("ViewPositionOrientation") \
      .setUrl(["../../Savage/Tools/Authoring/ViewPositionOrientationPrototype.x3d#ViewPositionOrientation","https://savage.nps.edu/Savage/Tools/Authoring/ViewPositionOrientationPrototype.x3d#ViewPositionOrientation","../../Savage/Tools/Authoring/ViewPositionOrientationPrototype.wrl#ViewPositionOrientation","https://savage.nps.edu/Savage/Tools/Authoring/ViewPositionOrientationPrototype.wrl#ViewPositionOrientation"]) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("enabled") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("traceEnabled") \
-      .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+      .setAccessType("initializeOnly") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("set_traceEnabled") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFVEC3F) \
       .setName("position_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("SFVec3f") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFROTATION) \
       .setName("orientation_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("SFRotation") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFSTRING) \
       .setName("outputViewpointString") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFString") \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("NewWorldInfoNode") \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(WorldInfoObject() \
+      .addChildren(WorldInfoObject() \
        .setDEF("ExamplePrototypeBody") \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("NewWorldInfoNode") \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("EmissiveMaterial") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("onlyColor") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFColor") \
        .setValue("1 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addComments(CommentsBlock("""Override default diffuseColor value 0.8 0.8 0.8""")) \
-      .addChild(MaterialObject() \
+#Override default diffuseColor value 0.8 0.8 0.8
+      .addChildren(MaterialObject() \
        .setDiffuseColor([0,0,0]) \
-       .addComments(CommentsBlock("""Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare.""")) \
+#Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare.
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("emissiveColor") \
@@ -137,24 +137,23 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("ShiftGroupUp2m") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("children") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-       .addChild(GroupObject() \
+       .setAccessType("inputOutput") \
+       .setType("MFNode") \
+       .addChildren(GroupObject(bboxSize = [2,2,2]) \
         .setDEF("DefaultNodeValue") \
-        .setBboxSize([2,2,2]) \
-        .addComments(CommentsBlock("""Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\"""")) \
+#Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\"
        ) \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setTranslation([0,2,0]) \
-       .addChild(GroupObject() \
+       .addChildren(GroupObject() \
         .setIS(ISObject() \
          .addConnect(connectObject() \
           .setNodeField("children") \
@@ -165,17 +164,17 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("ShiftGroupUp2m") \
     ) \
-    .addComments(CommentsBlock("""====================""")) \
-    .addChild(ViewpointObject() \
+#====================
+    .addChildren(ViewpointObject() \
      .setDEF("ExampleSingleElement") \
      .setDescription("Hello syntax") \
     ) \
-    .addChild(GroupObject() \
+    .addChildren(GroupObject() \
      .setDEF("ExampleChildElement") \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(BoxObject() \
       ) \
       .setAppearance(AppearanceObject() \
@@ -185,18 +184,18 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("TransformExampleUSE") \
      .setRotation([0,1,0,0.78]) \
      .setTranslation([0,2.5,0]) \
-     .addChild(GroupObject() \
+     .addChildren(GroupObject() \
       .setUSE("ExampleChildElement") \
      ) \
     ) \
-    .addChild(CollisionObject() \
+    .addChildren(CollisionObject() \
      .setProxy(ShapeObject() \
-      .addComments(CommentsBlock("""note that Collision proxy Shape is not rendered""")) \
-      .addComments(CommentsBlock("""alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
+#note that Collision proxy Shape is not rendered
+#alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'
       .setGeometry(TextObject() \
        .setString(["He said, \"Immel did it!\""]) \
       ) \
@@ -205,13 +204,13 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(GroupObject() \
+     .setProxy(GroupObject() \
       .setUSE("ExampleChildElement") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,-2.5,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(ProtoInstanceObject() \
         .setName("EmissiveMaterial") \
@@ -223,63 +222,61 @@ X3D0 = X3DObject() \
       ) \
       .setGeometry(TextObject() \
        .setString(["X3D Header Prototype syntax examples","(view console for EXTERNPROTO output)"]) \
-       .setFontStyle(FontStyleObject() \
-        .setJustify(["MIDDLE","MIDDLE"]) \
-        .setSize(0.6) \
+       .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"], size = 0.6) \
        ) \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("ViewPositionOrientation") \
      .addFieldValue(fieldValueObject() \
       .setName("enabled") \
       .setValue("true") \
      ) \
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("Clock") \
      .setCycleInterval(4) \
      .setLoop(True) \
     ) \
-    .addChild(OrientationInterpolatorObject() \
+    .addChildren(OrientationInterpolatorObject() \
      .setDEF("Spinner") \
      .setKey([0,0.5,1]) \
      .setKeyValue([0,1,0,0,0,1,0,3.14159,0,1,0,6.28318]) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \
      .setToNode("Spinner") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("value_changed") \
      .setFromNode("Spinner") \
      .setToField("rotation") \
      .setToNode("TransformExampleUSE") \
     ) \
-    .addChild(InlineObject() \
+    .addChildren(InlineObject() \
      .setDEF("someInline") \
      .setUrl(["someUrl.x3d","http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/someUrl.x3d"]) \
     ) \
-    .addChild(IMPORTObject() \
+    .addChildren(IMPORTObject() \
      .setAS("someInlineRoot") \
      .setImportedDEF("someName") \
      .setInlineDEF("someInline") \
     ) \
-    .addChild(PositionInterpolatorObject() \
+    .addChildren(PositionInterpolatorObject() \
      .setDEF("StayInPlace") \
      .setKey([0,1]) \
      .setKeyValue([0,0,0,0,0,0]) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("fraction_changed") \
      .setFromNode("Clock") \
      .setToField("set_fraction") \
      .setToNode("StayInPlace") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromField("value_changed") \
      .setFromNode("StayInPlace") \
      .setToField("set_translation") \

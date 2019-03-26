@@ -64,169 +64,169 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addComments(CommentsBlock("""=============== Camera ==============""")) \
-    .addChild(ProtoDeclareObject() \
+#=============== Camera ==============
+    .addChildren(ProtoDeclareObject() \
      .setName("Camera") \
      .setAppinfo("Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images.") \
      .setProtoInterface(ProtoInterfaceObject() \
-      .addComments(CommentsBlock("""Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields""")) \
+#Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Text description to be displayed for this Camera") \
+       .setType("SFString") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("position") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera position in local transformation frame, which is default prior to first CameraShot initialPosition getting activated") \
+       .setType("SFVec3f") \
        .setValue("0 0 10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFROTATION) \
        .setName("orientation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera rotation in local transformation frame, which is default prior to first CameraShot initialPosition getting activated") \
+       .setType("SFRotation") \
        .setValue("0 0 1 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("fieldOfView") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("pi/4") \
+       .setType("SFFloat") \
        .setValue("0.7854") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("set_fraction") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
        .setAppinfo("input fraction drives interpolators") \
+       .setType("SFFloat") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("set_bind") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
        .setAppinfo("input event binds or unbinds this Camera") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("bindTime") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("output event indicates when this Camera is bound") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("isBound") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("output event indicates whether this Camera is bound or unbound") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("nearClipPlane") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Vector distance to near clipping plane corresponds to NavigationInfo.avatarSize[0]") \
+       .setType("SFFloat") \
        .setValue("0.25") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("farClipPlane") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Vector distance to far clipping plane corresponds to NavigationInfo.visibilityLimit") \
+       .setType("SFFloat") \
        .setValue("0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("shots") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-       .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+       .setType("MFNode") \
+#initialization nodes (if any) go here
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("headlight") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Whether camera headlight is on or off") \
+       .setType("SFBool") \
        .setValue("true") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("headlightColor") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera headlight color") \
+       .setType("SFColor") \
        .setValue("1 1 1") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("headlightIntensity") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera headlight intensity") \
+       .setType("SFFloat") \
        .setValue("1") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFCOLOR) \
        .setName("filterColor") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera filter color that modifies virtual lens capture") \
+       .setType("SFColor") \
        .setValue("1 1 1") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("filterTransparency") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Camera filter transparency that modifies virtual lens capture") \
+       .setType("SFFloat") \
        .setValue("1") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("upVector") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("upVector changes modify camera orientation (and possibly vice versa)") \
+       .setType("SFVec3f") \
        .setValue("0 1 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("fStop") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+       .setType("SFFloat") \
        .setValue("5.6") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("focusDistance") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Distance to focal plane of sharpest focus") \
+       .setType("SFFloat") \
        .setValue("10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("isActive") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("totalDuration") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("offlineRender") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("OfflineRender node") \
-       .addComments(CommentsBlock("""initialization node (if any) goes here""")) \
+       .setType("SFNode") \
+#initialization node (if any) goes here
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("traceEnabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("enable console output to trace script computations and prototype progress") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(ViewpointObject() \
+      .addChildren(ViewpointObject() \
        .setDEF("CameraViewpoint") \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -259,10 +259,10 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addComments(CommentsBlock("""NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation""")) \
-      .addChild(NavigationInfoObject() \
-       .setType(["EXAMINE","FLY","ANY"]) \
+#NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation
+      .addChildren(NavigationInfoObject() \
        .setDEF("CameraNavInfo") \
+       .setType(["EXAMINE","FLY","ANY"]) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("set_bind") \
@@ -276,14 +276,14 @@ X3D0 = X3DObject() \
          .setNodeField("visibilityLimit") \
          .setProtoField("farClipPlane") \
         ) \
-        .addComments(CommentsBlock("""No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.""")) \
+#No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.
        ) \
       ) \
-      .addComments(CommentsBlock("""this DirectionalLight replaces NavigationInfo headlight in order to add color capability""")) \
-      .addChild(DirectionalLightObject() \
+#this DirectionalLight replaces NavigationInfo headlight in order to add color capability
+      .addChildren(DirectionalLightObject() \
        .setDEF("CameraDirectionalLight") \
        .setGlobal(True) \
-       .addComments(CommentsBlock("""TODO confirm other default field values match NavigationInfo spec""")) \
+#TODO confirm other default field values match NavigationInfo spec
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("on") \
@@ -299,7 +299,7 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(PositionInterpolatorObject() \
+      .addChildren(PositionInterpolatorObject() \
        .setDEF("CameraPositionInterpolator") \
        .setKey([0,1]) \
        .setKeyValue([0,0,0,0,0,0]) \
@@ -310,7 +310,7 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(OrientationInterpolatorObject() \
+      .addChildren(OrientationInterpolatorObject() \
        .setDEF("CameraOrientationInterpolator") \
        .setKey([0,1]) \
        .setKeyValue([0,1,0,0,0,1,0,0]) \
@@ -321,235 +321,233 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("value_changed") \
        .setFromNode("CameraPositionInterpolator") \
        .setToField("position") \
        .setToNode("CameraViewpoint") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("value_changed") \
        .setFromNode("CameraOrientationInterpolator") \
        .setToField("orientation") \
        .setToNode("CameraViewpoint") \
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
        .setDEF("CameraScript") \
-       .setDirectOutput(True) \
-       .setMustEvaluate(True) \
-       .addComments(CommentsBlock("""binding is controlled externally, all camera operations proceed the same regardless of whether bound or not""")) \
+#binding is controlled externally, all camera operations proceed the same regardless of whether bound or not
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("description") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Text description to be displayed for this Camera") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("position") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Camera position in local transformation frame") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFROTATION) \
         .setName("orientation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Camera rotation in local transformation frame") \
+        .setType("SFRotation") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("set_fraction") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
         .setAppinfo("input fraction drives interpolators") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("set_bind") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
         .setAppinfo("input event binds or unbinds this Camera") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("fieldOfView") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("pi/4") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("nearClipPlane") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Vector distance to near clipping plane") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("farClipPlane") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Vector distance to far clipping plane") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFNODE) \
         .setName("shots") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-        .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+        .setType("MFNode") \
+#initialization nodes (if any) go here
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFCOLOR) \
         .setName("filterColor") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Camera filter color that modifies virtual lens capture") \
+        .setType("SFColor") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("filterTransparency") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Camera filter transparency that modifies virtual lens capture") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("upVector") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("upVector changes modify camera orientation (and possibly vice versa)") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("fStop") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("focusDistance") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Distance to focal plane of sharpest focus") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("isActive") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("totalDuration") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("offlineRender") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("OfflineRender node") \
-        .addComments(CommentsBlock("""initialization node (if any) goes here""")) \
+        .setType("SFNode") \
+#initialization node (if any) goes here
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("ViewpointNode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .addChild(ViewpointObject() \
+        .setType("SFNode") \
+        .addChildren(ViewpointObject() \
          .setUSE("CameraViewpoint") \
         ) \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("NavInfoNode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .addChild(NavigationInfoObject() \
+        .setType("SFNode") \
+        .addChildren(NavigationInfoObject() \
          .setUSE("CameraNavInfo") \
         ) \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("CameraPI") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .addChild(PositionInterpolatorObject() \
+        .setType("SFNode") \
+        .addChildren(PositionInterpolatorObject() \
          .setUSE("CameraPositionInterpolator") \
         ) \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("CameraOI") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .addChild(OrientationInterpolatorObject() \
+        .setType("SFNode") \
+        .addChildren(OrientationInterpolatorObject() \
          .setUSE("CameraOrientationInterpolator") \
         ) \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFFLOAT) \
         .setName("key") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("key array for interpolators") \
+        .setType("MFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("keyValuePosition") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("keyValue array for PositionInterpolator") \
+        .setType("MFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFROTATION) \
         .setName("keyValueOrientation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("keyValue array for OrientationInterpolator") \
+        .setType("MFRotation") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("animated") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("whether internal CameraShot and CameraMove nodes are tracking or changed via ROUTE events") \
+        .setType("SFBool") \
         .setValue("false") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("initialized") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("perform checkShots() function once immediately after initialization") \
+        .setType("SFBool") \
         .setValue("false") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFINT32) \
         .setName("shotCount") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("how many CameraShot nodes are contained in shots array") \
+        .setType("SFInt32") \
         .setValue("0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFINT32) \
         .setName("movesCount") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("how many CameraMove nodes are contained in moves array") \
+        .setType("SFInt32") \
         .setValue("0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("frameCount") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("how many frames were created in current loop") \
+        .setType("SFFloat") \
         .setValue("0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("startTime") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("holding variable") \
+        .setType("SFTime") \
         .setValue("0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("priorTraceTime") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("holding variable") \
+        .setType("SFTime") \
         .setValue("0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("traceEnabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("enable console output to trace script computations and prototype progress") \
+        .setType("SFBool") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -625,7 +623,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -966,31 +964,31 @@ X3D0 = X3DObject() \
 "         Browser.print ('[Camera] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("position") \
        .setFromNode("CameraScript") \
        .setToField("position") \
        .setToNode("CameraViewpoint") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("orientation") \
        .setFromNode("CameraScript") \
        .setToField("orientation") \
        .setToNode("CameraViewpoint") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isActive") \
        .setFromNode("CameraScript") \
        .setToField("set_bind") \
        .setToNode("CameraViewpoint") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isActive") \
        .setFromNode("CameraScript") \
        .setToField("set_bind") \
        .setToNode("CameraNavInfo") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("isActive") \
        .setFromNode("CameraScript") \
        .setToField("on") \
@@ -998,188 +996,186 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addComments(CommentsBlock("""=============== CameraShot ==============""")) \
-    .addChild(ProtoDeclareObject() \
+#=============== CameraShot ==============
+    .addChildren(ProtoDeclareObject() \
      .setName("CameraShot") \
      .setAppinfo("CameraShot collects a specific set of CameraMovement animations that make up an individual shot.") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Text description to be displayed for this CameraShot") \
+       .setType("SFString") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("enabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Whether this CameraShot can be activated") \
+       .setType("SFBool") \
        .setValue("true") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("moves") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Set of CameraMovement nodes") \
-       .addComments(CommentsBlock("""initializing CameraMovement nodes are inserted here by scene author using ProtoInstance""")) \
+       .setType("MFNode") \
+#initializing CameraMovement nodes are inserted here by scene author using ProtoInstance
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("initialPosition") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Setup to reinitialize camera position for this shot") \
+       .setType("SFVec3f") \
        .setValue("0 0 10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFROTATION) \
        .setName("initialOrientation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Setup to reinitialize camera rotation for this shot") \
+       .setType("SFRotation") \
        .setValue("0 0 1 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("initialAimPoint") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Setup to reinitialize aimpoint (relative location for camera direction) for this shot") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("initialFieldOfView") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("pi/4") \
+       .setType("SFFloat") \
        .setValue("0.7854") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("initialFStop") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+       .setType("SFFloat") \
        .setValue("5.6") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("initialFocusDistance") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Distance to focal plane of sharpest focus") \
+       .setType("SFFloat") \
        .setValue("10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("shotDuration") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Subtotal duration of contained CameraMovement move durations") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("isActive") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("traceEnabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("enable console output to trace script computations and prototype progress") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
        .setDEF("CameraShotScript") \
-       .setDirectOutput(True) \
-       .setMustEvaluate(True) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("description") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Text description to be displayed for this CameraShot") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("enabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Whether this CameraShot can be activated") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFNODE) \
         .setName("moves") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Set of CameraMovement nodes") \
-        .addComments(CommentsBlock("""initialization nodes (if any) go here""")) \
+        .setType("MFNode") \
+#initialization nodes (if any) go here
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("initialPosition") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Setup to reinitialize camera position for this shot") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFROTATION) \
         .setName("initialOrientation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Setup to reinitialize camera rotation for this shot") \
+        .setType("SFRotation") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("initialAimPoint") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Setup to reinitialize aimpoint (relative location for camera direction) for this shot") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("initialFieldOfView") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("pi/4") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("initialFStop") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("initialFocusDistance") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Distance to focal plane of sharpest focus") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("shotDuration") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Subtotal duration of contained CameraMovement move durations") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("isActive") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("traceEnabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("enable console output to trace script computations and prototype progress") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFFLOAT) \
         .setName("key") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("key array for interpolators") \
+        .setType("MFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("keyValuePosition") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("keyValue array for PositionInterpolator") \
+        .setType("MFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFROTATION) \
         .setName("keyValueOrientation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("keyValue array for OrientationInterpolator") \
+        .setType("MFRotation") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -1231,7 +1227,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraShotScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1325,176 +1321,174 @@ X3D0 = X3DObject() \
 "         Browser.print ('[CameraShot] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+#Add any ROUTEs here, going from Script to other nodes within ProtoBody
      ) \
     ) \
-    .addComments(CommentsBlock("""=============== CameraMovement ==============""")) \
-    .addChild(ProtoDeclareObject() \
+#=============== CameraMovement ==============
+    .addChildren(ProtoDeclareObject() \
      .setName("CameraMovement") \
      .setAppinfo("CameraMovement node defines a single camera movement animation including goalPosition, goalOrientation, goalAimPoint and goalFieldOfView.") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Text description to be displayed for this CameraMovement") \
+       .setType("SFString") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("enabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Whether this CameraMovement can be activated") \
+       .setType("SFBool") \
        .setValue("true") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("duration") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Duration in seconds for this move") \
+       .setType("SFFloat") \
        .setValue("0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("goalPosition") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Goal camera position for this move") \
+       .setType("SFVec3f") \
        .setValue("0 0 10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFROTATION) \
        .setName("goalOrientation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Goal camera rotation for this move") \
+       .setType("SFRotation") \
        .setValue("0 0 1 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("tracking") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Whether or not camera direction is tracking towards the aimPoint") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("goalAimPoint") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Goal aimPoint for this move, ignored if tracking=false") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("goalFieldOfView") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Goal fieldOfView for this move") \
+       .setType("SFFloat") \
        .setValue("0.7854") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("goalFStop") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+       .setType("SFFloat") \
        .setValue("5.6") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("goalFocusDistance") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Distance to focal plane of sharpest focus") \
+       .setType("SFFloat") \
        .setValue("10") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("isActive") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("traceEnabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("enable console output to trace script computations and prototype progress") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
-      .addComments(CommentsBlock("""Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events""")) \
-      .addChild(ScriptObject() \
+#First node determines node type of this prototype
+#Subsequent nodes do not render, but still must be a valid X3D subgraph
+#Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events
+      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
        .setDEF("CameraMovementScript") \
-       .setDirectOutput(True) \
-       .setMustEvaluate(True) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("description") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Text description to be displayed for this CameraMovement") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("enabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Whether this CameraMovement can be activated") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("duration") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Duration in seconds for this move") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("goalPosition") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Goal camera position for this move") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFROTATION) \
         .setName("goalOrientation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Goal camera rotation for this move") \
+        .setType("SFRotation") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("tracking") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Whether or not camera direction is tracking towards the aimPoint") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("goalAimPoint") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Goal aimPoint for this move, ignored if tracking=false") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("goalFieldOfView") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Goal fieldOfView for this move") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("goalFStop") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("goalFocusDistance") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Distance to focal plane of sharpest focus") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("isActive") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("traceEnabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("enable console output to trace script computations and prototype progress") \
+        .setType("SFBool") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -1546,7 +1540,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraMovementScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1637,160 +1631,159 @@ X3D0 = X3DObject() \
 "         Browser.print ('[CameraMovement] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+#Add any ROUTEs here, going from Script to other nodes within ProtoBody
      ) \
     ) \
-    .addComments(CommentsBlock("""=============== OfflineRender ==============""")) \
-    .addChild(ProtoDeclareObject() \
+#=============== OfflineRender ==============
+    .addChildren(ProtoDeclareObject() \
      .setName("OfflineRender") \
      .setAppinfo("OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot).") \
      .setProtoInterface(ProtoInterfaceObject() \
-      .addComments(CommentsBlock("""TODO non-photorealistic rendering (NPR) parameters""")) \
+#TODO non-photorealistic rendering (NPR) parameters
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFSTRING) \
        .setName("description") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Text description to be displayed for this OfflineRender") \
+       .setType("SFString") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("enabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Whether this OfflineRender can be activated") \
+       .setType("SFBool") \
        .setValue("true") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("frameRate") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Frames per second recorded for this rendering") \
+       .setType("SFFloat") \
        .setValue("30") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC2F) \
        .setName("frameSize") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Size of frame in number of pixels width and height") \
+       .setType("SFVec2f") \
        .setValue("640 480") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("pixelAspectRatio") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
        .setAppinfo("Relative dimensions of pixel height/width typically 1.33 or 1") \
+       .setType("SFFloat") \
        .setValue("1.33") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("set_startTime") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
        .setAppinfo("Begin render operation") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFFLOAT) \
        .setName("progress") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Progress performing render operation (0..1)") \
+       .setType("SFFloat") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("renderCompleteTime") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
        .setAppinfo("Render operation complete") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("movieFormat") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("Format of rendered output movie (mpeg mp4 etc.), use first supported format") \
+       .setType("MFString") \
        .setValue("\"mpeg\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("imageFormat") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("Format of rendered output images (png jpeg gif tiff etc.) use first supported format") \
+       .setType("MFString") \
        .setValue("\"png\"") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("traceEnabled") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
        .setAppinfo("enable console output to trace script computations and prototype progress") \
+       .setType("SFBool") \
        .setValue("false") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addComments(CommentsBlock("""First node determines node type of this prototype""")) \
-      .addComments(CommentsBlock("""Subsequent nodes do not render, but still must be a valid X3D subgraph""")) \
-      .addChild(ScriptObject() \
+#First node determines node type of this prototype
+#Subsequent nodes do not render, but still must be a valid X3D subgraph
+      .addChildren(ScriptObject(mustEvaluate = True) \
        .setDEF("OfflineRenderScript") \
-       .setMustEvaluate(True) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFSTRING) \
         .setName("description") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Text description to be displayed for this OfflineRender") \
+        .setType("SFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("enabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Whether this OfflineRender can be activated") \
+        .setType("SFBool") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("frameRate") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Frames per second recorded for this rendering") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC2F) \
         .setName("frameSize") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Size of frame in number of pixels width and height") \
+        .setType("SFVec2f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("pixelAspectRatio") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
         .setAppinfo("Relative dimensions of pixel height/width typically 1.33 or 1") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("set_startTime") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
         .setAppinfo("Begin render operation") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("progress") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Progress performing render operation (0..1)") \
+        .setType("SFFloat") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("renderCompleteTime") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
         .setAppinfo("Render operation complete") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFSTRING) \
         .setName("movieFormat") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("Format of rendered output movie (mpeg mp4 etc.)") \
+        .setType("MFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFSTRING) \
         .setName("imageFormat") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("Format of rendered output images (png jpeg gif tiff etc.)") \
+        .setType("MFString") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFBOOL) \
         .setName("traceEnabled") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
         .setAppinfo("enable console output to trace script computations and prototype progress") \
+        .setType("SFBool") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -1838,7 +1831,7 @@ X3D0 = X3DObject() \
          .setProtoField("traceEnabled") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "function initialize () // OfflineRenderScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1893,22 +1886,21 @@ X3D0 = X3DObject() \
 "         Browser.print ('[OfflineRender] ' + outputString + '\\n');\n"+
 "}''')
       ) \
-      .addComments(CommentsBlock("""Add any ROUTEs here, going from Script to other nodes within ProtoBody""")) \
+#Add any ROUTEs here, going from Script to other nodes within ProtoBody
      ) \
     ) \
-    .addComments(CommentsBlock("""=============== Launch Prototype Example ==============""")) \
-    .addChild(BackgroundObject() \
+#=============== Launch Prototype Example ==============
+    .addChildren(BackgroundObject() \
      .setSkyColor([0.282353,0.380392,0.470588]) \
     ) \
-    .addChild(AnchorObject() \
+    .addChildren(AnchorObject() \
      .setDescription("launch CameraExample scene") \
      .setUrl(["CameraExamples.x3d","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d","CameraExamples.wrl","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.wrl"]) \
-     .addChild(TransformObject() \
-      .addChild(ShapeObject() \
+     .addChildren(TransformObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["CameraPrototypes.x3d","defines multiple prototype nodes","","Click on this text to see","CameraExamples.x3d scene"]) \
-        .setFontStyle(FontStyleObject() \
-         .setJustify(["MIDDLE","MIDDLE"]) \
+        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
         ) \
        ) \
        .setAppearance(AppearanceObject() \

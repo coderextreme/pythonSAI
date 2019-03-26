@@ -28,21 +28,21 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("anyShape") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("myShape") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-       .addChild(ShapeObject() \
+       .setAccessType("inputOutput") \
+       .setType("MFNode") \
+       .addChildren(ShapeObject() \
         .setGeometry(SphereObject() \
         ) \
        ) \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("children") \
@@ -52,22 +52,22 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("one") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("myShape") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-       .addChild(ShapeObject() \
+       .setAccessType("inputOutput") \
+       .setType("MFNode") \
+       .addChildren(ShapeObject() \
         .setGeometry(CylinderObject() \
         ) \
        ) \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
-       .addChild(ProtoInstanceObject() \
+      .addChildren(TransformObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("anyShape") \
         .setIS(ISObject() \
          .addConnect(connectObject() \
@@ -79,13 +79,12 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("one") \
      .addFieldValue(fieldValueObject() \
       .setName("myShape") \
-      .addChild(ShapeObject() \
-       .setGeometry(BoxObject() \
-        .setSize([140,140,140]) \
+      .addChildren(ShapeObject() \
+       .setGeometry(BoxObject(size = [140,140,140]) \
        ) \
       ) \
      ) \

@@ -28,144 +28,141 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setPosition([0,0,5]) \
      .setDescription("Only Viewpoint") \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([0.4,0.4,0.4]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("G1") \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([0.7,0.2,0.2]) \
        ) \
       ) \
-      .setGeometry(SphereObject() \
-       .setRadius(0.1) \
+      .setGeometry(SphereObject(radius = 0.1) \
       ) \
      ) \
-     .addChild(PlaneSensorObject() \
+     .addChildren(PlaneSensorObject() \
       .setDescription("Grab to move") \
       .setDEF("PS1") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("PS1") \
       .setFromField("translation_changed") \
       .setToNode("G1") \
       .setToField("set_translation") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("G2") \
      .setTranslation([1,-1,0.01]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([0.2,0.7,0.2]) \
        ) \
       ) \
-      .setGeometry(SphereObject() \
-       .setRadius(0.1) \
+      .setGeometry(SphereObject(radius = 0.1) \
       ) \
      ) \
-     .addChild(PlaneSensorObject() \
+     .addChildren(PlaneSensorObject() \
       .setDescription("Grab to move") \
       .setOffset([1,-1,0.01]) \
       .setDEF("PS2") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("PS2") \
       .setFromField("translation_changed") \
       .setToNode("G2") \
       .setToField("set_translation") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("transC1") \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("rotscaleC1") \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
          .setDiffuseColor([0.2,0.7,0.7]) \
          .setTransparency(0.5) \
         ) \
        ) \
-       .setGeometry(CylinderObject() \
-        .setRadius(0.05) \
+       .setGeometry(CylinderObject(radius = 0.05) \
        ) \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("x3dconnector") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("startnode") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("endnode") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("transnode") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFNODE) \
        .setName("rotscalenode") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFNode") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("set_startpoint") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFVec3f") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("set_endpoint") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFVec3f") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("S1") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("startnode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
+        .setType("SFNode") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("endnode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
+        .setType("SFNode") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("transnode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
+        .setType("SFNode") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFNODE) \
         .setName("rotscalenode") \
-        .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+        .setAccessType("initializeOnly") \
+        .setType("SFNode") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("set_startpoint") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("set_endpoint") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFVec3f") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -193,7 +190,7 @@ X3D0 = X3DObject() \
          .setProtoField("set_endpoint") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+
@@ -235,30 +232,30 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("x3dconnector") \
      .setDEF("connector1") \
      .addFieldValue(fieldValueObject() \
       .setName("startnode") \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setUSE("G1") \
       ) \
      ) \
      .addFieldValue(fieldValueObject() \
       .setName("endnode") \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setUSE("G2") \
       ) \
      ) \
      .addFieldValue(fieldValueObject() \
       .setName("transnode") \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setUSE("transC1") \
       ) \
      ) \
      .addFieldValue(fieldValueObject() \
       .setName("rotscalenode") \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setUSE("rotscaleC1") \
       ) \
      ) \
@@ -269,13 +266,13 @@ X3D0 = X3DObject() \
       .setName("set_endpoint") \
      ) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("G1") \
      .setFromField("translation_changed") \
      .setToNode("connector1") \
      .setToField("set_startpoint") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("G2") \
      .setFromField("translation_changed") \
      .setToNode("connector1") \

@@ -112,26 +112,23 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([0.419608,0.427451,1]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([0,1,0]) \
-     .addChild(TouchSensorObject() \
+     .addChildren(TouchSensorObject() \
       .setDEF("RandomTextClickedSensor") \
       .setDescription("Select to see a new strategy") \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Oblique Strategies","","(Over One Hundred Worthwhile Dilemmas)","","by Brian Eno and Peter Schmidt"]) \
-       .setFontStyle(FontStyleObject() \
+       .setFontStyle(FontStyleObject(family = ["SANS"], justify = ["MIDDLE","MIDDLE"], style = "BOLD") \
         .setDEF("MessageFont") \
-        .setFamily(["SANS"]) \
-        .setJustify(["MIDDLE","MIDDLE"]) \
-        .setStyle("BOLD") \
        ) \
       ) \
       .setAppearance(AppearanceObject() \
@@ -140,13 +137,11 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([10,3,1]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setDEF("HeadlineClickSurface") \
-       .setGeometry(IndexedFaceSetObject() \
-        .setCoordIndex([0,1,2,3,-1]) \
-        .setSolid(False) \
+       .setGeometry(IndexedFaceSetObject(coordIndex = [0,1,2,3,-1], solid = False) \
         .setCoord(CoordinateObject() \
          .setPoint([1,1,0,1,-1,0,-1,-1,0,-1,1,0]) \
         ) \
@@ -163,70 +158,67 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("TextScript") \
      .setUrl(["./ObliqueStrategiesScript.js"]) \
-     .addComments(CommentsBlock("""initialize() method includes unit test to printAllStrategies() to console""")) \
-     .addComments(CommentsBlock("""TODO insert field definitions here (index string_changed previous next random) and then animate!""")) \
+#initialize() method includes unit test to printAllStrategies() to console
+#TODO insert field definitions here (index string_changed previous next random) and then animate!
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFINT32) \
       .setName("index") \
-      .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+      .setAccessType("initializeOnly") \
       .setAppinfo("index for active strategy card, -1 means no selection") \
+      .setType("SFInt32") \
       .setValue("0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFSTRING) \
       .setName("string_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
       .setAppinfo("latest strategy card value") \
+      .setType("MFString") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFSTRING) \
       .setName("textToSpeechUrl") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
       .setAppinfo("url to invoke Google Translate") \
+      .setType("MFString") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFTIME) \
       .setName("newCardTime") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
       .setAppinfo("activate Sound node") \
+      .setType("SFTime") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("selectPreviousCard") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("selectNextCard") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("selectRandomCard") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFBool") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFBOOL) \
       .setName("traceEnabled") \
-      .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+      .setAccessType("initializeOnly") \
       .setAppinfo("controls console tracing") \
+      .setType("SFBool") \
       .setValue("true") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("CardTransform") \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([0,-1.5,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setDEF("CardText") \
-       .setFontStyle(FontStyleObject() \
-        .setFamily(["SANS"]) \
-        .setJustify(["MIDDLE","MIDDLE"]) \
-        .setStyle("BOLD") \
+       .setFontStyle(FontStyleObject(family = ["SANS"], justify = ["MIDDLE","MIDDLE"], style = "BOLD") \
        ) \
       ) \
       .setAppearance(AppearanceObject() \
@@ -235,55 +227,55 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("string_changed") \
       .setFromNode("TextScript") \
       .setToField("string") \
       .setToNode("CardText") \
      ) \
-     .addChild(SoundObject() \
+     .addChildren(SoundObject() \
       .setDEF("CardSoundSpatialization") \
       .setMaxBack(100) \
       .setMaxFront(100) \
       .setMinBack(20) \
       .setMinFront(20) \
-      .addComments(CommentsBlock("""Make sure the sound source AudioClip is audible at the user location""")) \
-      .addComments(CommentsBlock("""Not all X3D players seem to use the .mp3""")) \
-      .addComments(CommentsBlock("""&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players""")) \
-      .addComments(CommentsBlock("""%20 is space character used in uri/url encoding""")) \
+#Make sure the sound source AudioClip is audible at the user location
+#Not all X3D players seem to use the .mp3
+#&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players
+#%20 is space character used in uri/url encoding
       .setSource(AudioClipObject() \
        .setDEF("TextToSpeechAudioClip") \
        .setDescription("sends strategy text google translate") \
        .setUrl(["http://translate.google.com/translate_tts?tl=en&q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav"]) \
       ) \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("textToSpeechUrl") \
       .setFromNode("TextScript") \
       .setToField("url") \
       .setToNode("TextToSpeechAudioClip") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("newCardTime") \
       .setFromNode("TextScript") \
       .setToField("startTime") \
       .setToNode("TextToSpeechAudioClip") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([-3.2,2.5,0]) \
-     .addChild(TouchSensorObject() \
+     .addChildren(TouchSensorObject() \
       .setDEF("PreviousTextClickedSensor") \
       .setDescription("Select to see previous strategy") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isActive") \
       .setFromNode("PreviousTextClickedSensor") \
       .setToField("selectPreviousCard") \
       .setToNode("TextScript") \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["previous"]) \
        .setFontStyle(FontStyleObject() \
@@ -297,14 +289,12 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([2,0.6,1]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setDEF("TransparentClickSurface") \
-       .addComments(CommentsBlock("""support Selectable Text with a scalable IFS""")) \
-       .setGeometry(IndexedFaceSetObject() \
-        .setCoordIndex([0,1,2,3,-1]) \
-        .setSolid(False) \
+#support Selectable Text with a scalable IFS
+       .setGeometry(IndexedFaceSetObject(coordIndex = [0,1,2,3,-1], solid = False) \
         .setCoord(CoordinateObject() \
          .setPoint([1,1,0,1,-1,0,-1,-1,0,-1,1,0]) \
         ) \
@@ -317,20 +307,20 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([3.5,2.5,0]) \
-     .addChild(TouchSensorObject() \
+     .addChildren(TouchSensorObject() \
       .setDEF("NextTextClickedSensor") \
       .setDescription("Select to see next strategy") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isActive") \
       .setFromNode("NextTextClickedSensor") \
       .setToField("selectNextCard") \
       .setToNode("TextScript") \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["next"]) \
        .setFontStyle(FontStyleObject() \
@@ -341,26 +331,26 @@ X3D0 = X3DObject() \
        .setUSE("InterfaceAppearance") \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([1.2,0.6,1]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setUSE("TransparentClickSurface") \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([-3.3,-0.5,0]) \
-     .addChild(TouchSensorObject() \
+     .addChildren(TouchSensorObject() \
       .setUSE("RandomTextClickedSensor") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isActive") \
       .setFromNode("RandomTextClickedSensor") \
       .setToField("selectRandomCard") \
       .setToNode("TextScript") \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["random"]) \
        .setFontStyle(FontStyleObject() \
@@ -371,28 +361,28 @@ X3D0 = X3DObject() \
        .setUSE("InterfaceAppearance") \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setScale([1.8,0.6,1]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setUSE("TransparentClickSurface") \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.4,0.4,0.4]) \
      .setTranslation([3.3,-0.5,0]) \
-     .addChild(AnchorObject() \
+     .addChildren(AnchorObject() \
       .setDEF("TextToSpeechAnchor") \
       .setDescription("text to speech in browser") \
       .setParameter(["target=_blank"]) \
       .setUrl(["http://translate.google.com/translate_tts?tl=en&q=Overtly%20resist%20change"]) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("textToSpeechUrl") \
        .setFromNode("TextScript") \
        .setToField("url") \
        .setToNode("TextToSpeechAnchor") \
       ) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["speech"]) \
         .setFontStyle(FontStyleObject() \
@@ -403,9 +393,9 @@ X3D0 = X3DObject() \
         .setUSE("InterfaceAppearance") \
        ) \
       ) \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setScale([1.8,0.6,1]) \
-       .addChild(ShapeObject() \
+       .addChildren(ShapeObject() \
         .setUSE("TransparentClickSurface") \
        ) \
       ) \

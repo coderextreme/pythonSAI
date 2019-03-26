@@ -36,9 +36,9 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
      .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
      .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
@@ -46,12 +46,12 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
      .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("flower") \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setDEF("transform") \
-       .addChild(ShapeObject() \
+       .addChildren(ShapeObject() \
         .setAppearance(AppearanceObject() \
          .setMaterial(MaterialObject() \
           .setDiffuseColor([0.7,0.7,0.7]) \
@@ -78,158 +78,154 @@ X3D0 = X3DObject() \
            .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
           ) \
          ) \
-         .addShaders(ComposedShaderObject() \
-          .setLanguage("GLSL") \
+         .addShaders(ComposedShaderObject(language = "GLSL") \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFINT32) \
            .setName("xxxcube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFInt32") \
+           .setAccessType("inputOutput") \
            .setValue("0") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFNODE) \
            .setName("cube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-           .addChild(ComposedCubeMapTextureObject() \
+           .setType("SFNode") \
+           .setAccessType("inputOutput") \
+           .addChildren(ComposedCubeMapTextureObject() \
             .setUSE("texture") \
            ) \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFVEC3F) \
            .setName("chromaticDispertion") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFVec3f") \
+           .setAccessType("inputOutput") \
            .setValue("0.98 1 1.033") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("bias") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("scale") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("power") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("2") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("VERTEX") \
            .setUrl(["../shaders/common.vs","https://coderextreme.net/X3DJSONLD/shaders/common.vs"]) \
+           .setType("VERTEX") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("FRAGMENT") \
            .setUrl(["../shaders/gl_flowers_chromatic.fs","https://coderextreme.net/X3DJSONLD/shaders/gl_flowers_chromatic.fs"]) \
+           .setType("FRAGMENT") \
           ) \
          ) \
-         .addShaders(ComposedShaderObject() \
-          .setLanguage("GLSL") \
+         .addShaders(ComposedShaderObject(language = "GLSL") \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFINT32) \
            .setName("xxxcube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFInt32") \
+           .setAccessType("inputOutput") \
            .setValue("0") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFNODE) \
            .setName("cube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-           .addChild(ComposedCubeMapTextureObject() \
+           .setType("SFNode") \
+           .setAccessType("inputOutput") \
+           .addChildren(ComposedCubeMapTextureObject() \
             .setUSE("texture") \
            ) \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFVEC3F) \
            .setName("chromaticDispertion") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFVec3f") \
+           .setAccessType("inputOutput") \
            .setValue("0.98 1 1.033") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("bias") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("scale") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("0.5") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("power") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("2") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("VERTEX") \
            .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+           .setType("VERTEX") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("FRAGMENT") \
            .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
+           .setType("FRAGMENT") \
           ) \
          ) \
-         .addShaders(ComposedShaderObject() \
+         .addShaders(ComposedShaderObject(language = "GLSL") \
           .setDEF("shader") \
-          .setLanguage("GLSL") \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFINT32) \
            .setName("xxxcube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFInt32") \
+           .setAccessType("inputOutput") \
            .setValue("0") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFNODE) \
            .setName("cube") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-           .addChild(ComposedCubeMapTextureObject() \
+           .setType("SFNode") \
+           .setAccessType("inputOutput") \
+           .addChildren(ComposedCubeMapTextureObject() \
             .setUSE("texture") \
            ) \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFVEC3F) \
            .setName("chromaticDispertion") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFVec3f") \
+           .setAccessType("inputOutput") \
            .setValue("0.98 1 1.033") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("bias") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("10") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("scale") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("10") \
           ) \
           .addField(fieldObject() \
-           .setType(fieldObject.TYPE_SFFLOAT) \
            .setName("power") \
-           .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+           .setType("SFFloat") \
+           .setAccessType("inputOutput") \
            .setValue("2") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("VERTEX") \
            .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
+           .setType("VERTEX") \
           ) \
           .addParts(ShaderPartObject() \
-           .setType("FRAGMENT") \
            .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
+           .setType("FRAGMENT") \
           ) \
          ) \
         ) \
-        .addComments(CommentsBlock("""<Sphere></Sphere>""")) \
-        .setGeometry(IndexedFaceSetObject() \
-         .setConvex(False) \
+#<Sphere></Sphere>
+        .setGeometry(IndexedFaceSetObject(convex = False) \
          .setDEF("Orbit") \
          .setCoord(CoordinateObject() \
           .setDEF("OrbitCoordinates") \
@@ -237,72 +233,72 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("Bounce") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("translation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("SFVec3f") \
         .setValue("0 0 0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("velocity") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("SFVec3f") \
         .setValue("0 0 0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("set_fraction") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("coordinates") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("MFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFINT32) \
         .setName("coordIndexes") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
+        .setType("MFInt32") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("a") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("0.5") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("b") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("0.5") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("c") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("3") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("d") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("3") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("tdelta") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("0.5") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFFLOAT) \
         .setName("pdelta") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setType("SFFloat") \
+        .setAccessType("inputOutput") \
         .setValue("0.5") \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "			function newBubble() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -406,16 +402,16 @@ X3D0 = X3DObject() \
 "				updateCoordinates(resolution);\n"+
 "			}''')
       ) \
-      .addChild(TimeSensorObject() \
+      .addChildren(TimeSensorObject() \
        .setDEF("TourTime") \
        .setCycleInterval(0.15) \
        .setLoop(True) \
       ) \
-      .addChild(TimeSensorObject() \
+      .addChildren(TimeSensorObject() \
        .setDEF("SongTime") \
        .setLoop(True) \
       ) \
-      .addChild(SoundObject() \
+      .addChildren(SoundObject() \
        .setMaxBack(100) \
        .setMaxFront(100) \
        .setMinBack(20) \
@@ -426,32 +422,32 @@ X3D0 = X3DObject() \
         .setUrl(["../resources/chandubabamusic1.wav"]) \
        ) \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromField("cycleTime") \
        .setFromNode("SongTime") \
        .setToField("startTime") \
        .setToNode("AudioClip") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("TourTime") \
        .setFromField("cycleTime") \
        .setToNode("Bounce") \
        .setToField("set_fraction") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("Bounce") \
        .setFromField("translation") \
        .setToNode("transform") \
        .setToField("set_translation") \
       ) \
-      .addComments(CommentsBlock("""<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/> <ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>""")) \
+#<ROUTE fromField=\"coordIndexes\" fromNode=\"Bounce\" toField=\"set_coordIndex\" toNode=\"Orbit\"/> <ROUTE fromField=\"coordinates\" fromNode=\"Bounce\" toField=\"set_point\" toNode=\"OrbitCoordinates\"/>
      ) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ProtoInstanceObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("flower") \
      ) \
-     .addComments(CommentsBlock("""<ProtoInstance name=\"flower\"/> <ProtoInstance name=\"flower\"/>""")) \
+#<ProtoInstance name=\"flower\"/> <ProtoInstance name=\"flower\"/>
     ) \
    ) \
 

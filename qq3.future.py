@@ -40,80 +40,74 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("Process") \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(GroupObject() \
-       .addComments(CommentsBlock("""left""")) \
-       .addChild(TransformObject() \
+      .addChildren(GroupObject() \
+#left
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setDEF("ShapeLeftDown") \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0.7,1,0]) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setSpine([-2.5,0,0,-1.5,0,0]) \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
+         .setGeometry(ExtrusionObject(spine = [-2.5,0,0,-1.5,0,0], creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
          ) \
         ) \
        ) \
-       .addComments(CommentsBlock("""right""")) \
-       .addChild(TransformObject() \
+#right
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setDEF("ShapeUpRight") \
          .setAppearance(AppearanceObject() \
           .setMaterial(MaterialObject() \
            .setDiffuseColor([0,0.7,1]) \
           ) \
          ) \
-         .setGeometry(ExtrusionObject() \
-          .setSpine([1.5,0,0,2.5,0,0]) \
-          .setCreaseAngle(0.785) \
-          .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
+         .setGeometry(ExtrusionObject(spine = [1.5,0,0,2.5,0,0], creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
          ) \
         ) \
        ) \
-       .addComments(CommentsBlock("""up""")) \
-       .addChild(TransformObject() \
+#up
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setUSE("ShapeUpRight") \
         ) \
        ) \
-       .addComments(CommentsBlock("""down""")) \
-       .addChild(TransformObject() \
+#down
+       .addChildren(TransformObject() \
         .setScale([0.5,0.5,0.5]) \
-        .addChild(ShapeObject() \
+        .addChildren(ShapeObject() \
          .setUSE("ShapeLeftDown") \
         ) \
        ) \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Process pipes") \
      .setOrientation([1,0,0,-0.4]) \
      .setPosition([0,5,12]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,-2.5,0]) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ProtoInstanceObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,2.5,0]) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("Process") \
      ) \
     ) \

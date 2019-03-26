@@ -32,13 +32,10 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(GroupObject() \
-     .addChild(ShapeObject() \
-      .setGeometry(ExtrusionObject() \
+    .addChildren(GroupObject() \
+     .addChildren(ShapeObject() \
+      .setGeometry(ExtrusionObject(spine = [-50,-50,0,50,50,0], creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
        .setDEF("extrusion") \
-       .setSpine([-50,-50,0,50,50,0]) \
-       .setCreaseAngle(0.785) \
-       .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
       ) \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
@@ -46,24 +43,24 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TimeSensorObject() \
+     .addChildren(TimeSensorObject() \
       .setDEF("TourTime") \
       .setLoop(True) \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject() \
       .setDEF("MoveCylinder") \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFTIME) \
        .setName("set_cycle") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFTime") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFVEC3F) \
        .setName("spine") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("MFVec3f") \
        .setValue("-50 -50 0 50 50 0") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_cycle(value) {\n"+
 "                        Browser.print(value);\n"+
@@ -72,13 +69,13 @@ X3D0 = X3DObject() \
 "		        spine = new MFVec3f([endA, endB]);\n"+
 "                }''')
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("TourTime") \
       .setFromField("cycleTime") \
       .setToNode("MoveCylinder") \
       .setToField("set_cycle") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromNode("MoveCylinder") \
       .setFromField("spine_changed") \
       .setToNode("extrusion") \

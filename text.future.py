@@ -32,8 +32,8 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(TransformObject() \
-     .addChild(ShapeObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Node\"\"\""]) \
        .setFontStyle(FontStyleObject() \
@@ -44,7 +44,7 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Node2","\\\\","\\\\\\\\","Node2"]) \
        .setFontStyle(FontStyleObject() \
@@ -55,7 +55,7 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Node3 \\\\\\\\ \\\\ ","Node3\"\"\""]) \
        .setFontStyle(FontStyleObject() \
@@ -66,14 +66,14 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFSTRING) \
        .setName("frontUrls") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setType("MFString") \
+       .setAccessType("initializeOnly") \
        .setValue("\"rnl_front.png\" \"uffizi_front.png\"") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "			    var me = '\"1\" \"\"2\" \"\\n3\"';''')
      ) \
     ) \

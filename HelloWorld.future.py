@@ -98,23 +98,23 @@ X3D0 = X3DObject() \
      .setName("reference") \
      .setContent("HelloWorld.json") \
     ) \
-    .addComments(CommentsBlock("""Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON""")) \
+#Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON
    ) \
    .setScene(SceneObject() \
-    .addComments(CommentsBlock("""Example scene to illustrate X3D nodes and fields (XML elements and attributes)""")) \
-    .addChild(WorldInfoObject() \
+#Example scene to illustrate X3D nodes and fields (XML elements and attributes)
+    .addChildren(WorldInfoObject() \
      .setTitle("Hello world!") \
     ) \
-    .addChild(GroupObject() \
-     .addChild(ViewpointObject() \
+    .addChildren(GroupObject() \
+     .addChildren(ViewpointObject() \
       .setDEF("ViewUpClose") \
       .setCenterOfRotation([0,-1,0]) \
       .setDescription("Hello world!") \
       .setPosition([0,-1,7]) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setRotation([0,1,0,3]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(SphereObject() \
        ) \
        .setAppearance(AppearanceObject() \
@@ -129,14 +129,13 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([0,-2,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setDEF("TextMessage") \
         .setString(["Hello","world!"]) \
-        .setFontStyle(FontStyleObject() \
-         .setJustify(["MIDDLE","MIDDLE"]) \
+        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
         ) \
        ) \
        .setAppearance(AppearanceObject() \

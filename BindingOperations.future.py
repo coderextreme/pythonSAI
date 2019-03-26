@@ -68,41 +68,40 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("View1") \
      .setCenterOfRotation([-6,0,0]) \
      .setDescription("Viewpoint 1") \
      .setPosition([-6,0,5]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("View2") \
      .setCenterOfRotation([-2,0,0]) \
      .setDescription("Viewpoint 2") \
      .setPosition([-2,0,5]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("View3") \
      .setCenterOfRotation([2,0,0]) \
      .setDescription("Viewpoint 3") \
      .setPosition([2,0,5]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("View4") \
      .setCenterOfRotation([6,0,0]) \
      .setDescription("Viewpoint 4") \
      .setPosition([6,0,5]) \
     ) \
-    .addComments(CommentsBlock("""Script initialization ought to first bind view5 below.""")) \
-    .addChild(GroupObject() \
-     .addChild(TransformObject() \
+#Script initialization ought to first bind view5 below.
+    .addChildren(GroupObject() \
+     .addChildren(TransformObject() \
       .setDEF("Text1") \
       .setTranslation([-6,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["View","# 1"]) \
-        .setFontStyle(FontStyleObject() \
+        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
          .setDEF("CenterJustify") \
-         .setJustify(["MIDDLE","MIDDLE"]) \
         ) \
        ) \
        .setAppearance(AppearanceObject() \
@@ -112,10 +111,10 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Text2") \
       .setTranslation([-2,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["View","# 2"]) \
         .setFontStyle(FontStyleObject() \
@@ -129,10 +128,10 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Text3") \
       .setTranslation([2,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["View","# 3"]) \
         .setFontStyle(FontStyleObject() \
@@ -146,10 +145,10 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setDEF("Text4") \
       .setTranslation([6,0,0]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setGeometry(TextObject() \
         .setString(["View","# 4"]) \
         .setFontStyle(FontStyleObject() \
@@ -163,21 +162,20 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addComments(CommentsBlock("""The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.""")) \
-    .addComments(CommentsBlock("""It does not need to be studied in this chapter.""")) \
-    .addChild(TransformObject() \
+#The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.
+#It does not need to be studied in this chapter.
+    .addChildren(TransformObject() \
      .setTranslation([0,-3,8]) \
-     .addComments(CommentsBlock("""notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.""")) \
-     .addChild(ViewpointObject() \
+#notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.
+     .addChildren(ViewpointObject() \
       .setDEF("ClickToAnimateView") \
       .setDescription("Select animation sequence") \
       .setPosition([0,0,7]) \
      ) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Click here to animate"]) \
-       .setFontStyle(FontStyleObject() \
-        .setJustify(["MIDDLE","BEGIN"]) \
+       .setFontStyle(FontStyleObject(justify = ["MIDDLE","BEGIN"]) \
        ) \
       ) \
       .setAppearance(AppearanceObject() \
@@ -186,9 +184,8 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(ShapeObject() \
-      .setGeometry(BoxObject() \
-       .setSize([7,1,0.02]) \
+     .addChildren(ShapeObject() \
+      .setGeometry(BoxObject(size = [7,1,0.02]) \
       ) \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
@@ -196,90 +193,90 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TouchSensorObject() \
+     .addChildren(TouchSensorObject() \
       .setDEF("TextTouchSensor") \
       .setDescription("Click to begin animating viewpoint selections") \
      ) \
-     .addChild(TimeSensorObject() \
+     .addChildren(TimeSensorObject() \
       .setDEF("Clock") \
       .setCycleInterval(10) \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("touchTime") \
       .setFromNode("TextTouchSensor") \
       .setToField("set_startTime") \
       .setToNode("Clock") \
      ) \
-     .addChild(IntegerSequencerObject() \
+     .addChildren(IntegerSequencerObject() \
       .setDEF("TimingSequencer") \
       .setKey([0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,1]) \
       .setKeyValue([0,1,2,3,4,5,6,7,8,10]) \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("fraction_changed") \
       .setFromNode("Clock") \
       .setToField("set_fraction") \
       .setToNode("TimingSequencer") \
      ) \
-     .addChild(ScriptObject() \
+     .addChildren(ScriptObject() \
       .setDEF("BindingSequencerEngine") \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFINT32) \
        .setName("set_timeEvent") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFInt32") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("bindView1") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("bindView2") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("bindView3") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("bindView4") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("bindView5") \
-       .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+       .setAccessType("outputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("view1Bound") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("view2Bound") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("view3Bound") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFBOOL) \
        .setName("view4Bound") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFBool") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFINT32) \
        .setName("priorInputvalue") \
-       .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+       .setAccessType("initializeOnly") \
+       .setType("SFInt32") \
        .setValue("-1") \
       ) \
-      .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize ()\n"+
 "{\n"+
@@ -368,64 +365,64 @@ X3D0 = X3DObject() \
 "    Browser.print (', view5Bound ' + (inputValue));\n"+
 "}''')
      ) \
-     .addComments(CommentsBlock("""drive Script with TimeSensor clock""")) \
-     .addChild(ROUTEObject() \
+#drive Script with TimeSensor clock
+     .addChildren(ROUTEObject() \
       .setFromField("value_changed") \
       .setFromNode("TimingSequencer") \
       .setToField("set_timeEvent") \
       .setToNode("BindingSequencerEngine") \
      ) \
-     .addComments(CommentsBlock("""Script will bind and unbind Viewpoint nodes""")) \
-     .addChild(ROUTEObject() \
+#Script will bind and unbind Viewpoint nodes
+     .addChildren(ROUTEObject() \
       .setFromField("bindView1") \
       .setFromNode("BindingSequencerEngine") \
       .setToField("set_bind") \
       .setToNode("View1") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("bindView2") \
       .setFromNode("BindingSequencerEngine") \
       .setToField("set_bind") \
       .setToNode("View2") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("bindView3") \
       .setFromNode("BindingSequencerEngine") \
       .setToField("set_bind") \
       .setToNode("View3") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("bindView4") \
       .setFromNode("BindingSequencerEngine") \
       .setToField("set_bind") \
       .setToNode("View4") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("bindView5") \
       .setFromNode("BindingSequencerEngine") \
       .setToField("set_bind") \
       .setToNode("ClickToAnimateView") \
      ) \
-     .addComments(CommentsBlock("""Viewpoint nodes report bind and unbind events""")) \
-     .addChild(ROUTEObject() \
+#Viewpoint nodes report bind and unbind events
+     .addChildren(ROUTEObject() \
       .setFromField("isBound") \
       .setFromNode("View1") \
       .setToField("view1Bound") \
       .setToNode("BindingSequencerEngine") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isBound") \
       .setFromNode("View2") \
       .setToField("view2Bound") \
       .setToNode("BindingSequencerEngine") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isBound") \
       .setFromNode("View3") \
       .setToField("view3Bound") \
       .setToNode("BindingSequencerEngine") \
      ) \
-     .addChild(ROUTEObject() \
+     .addChildren(ROUTEObject() \
       .setFromField("isBound") \
       .setFromNode("View4") \
       .setToField("view4Bound") \

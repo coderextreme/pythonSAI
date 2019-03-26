@@ -28,32 +28,32 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE"]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Rubiks Cube") \
      .setPosition([0,0,12]) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("sphere") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("xtranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
          .setProtoField("xtranslation") \
         ) \
        ) \
-       .addChild(ShapeObject() \
+       .addChildren(ShapeObject() \
         .setGeometry(SphereObject() \
         ) \
         .setAppearance(AppearanceObject() \
@@ -65,39 +65,39 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("three") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("ytranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
          .setProtoField("ytranslation") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("sphere") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
          .setValue("0 0 0") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("sphere") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
          .setValue("2 0 0") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("sphere") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
@@ -107,39 +107,39 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("nine") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("ztranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
          .setProtoField("ztranslation") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("three") \
         .addFieldValue(fieldValueObject() \
          .setName("ytranslation") \
          .setValue("0 0 0") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("three") \
         .addFieldValue(fieldValueObject() \
          .setName("ytranslation") \
          .setValue("0 2 0") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("three") \
         .addFieldValue(fieldValueObject() \
          .setName("ytranslation") \
@@ -149,39 +149,39 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("twentyseven") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("ttranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
          .setProtoField("ttranslation") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("nine") \
         .addFieldValue(fieldValueObject() \
          .setName("ztranslation") \
          .setValue("0 0 0") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("nine") \
         .addFieldValue(fieldValueObject() \
          .setName("ztranslation") \
          .setValue("0 0 2") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("nine") \
         .addFieldValue(fieldValueObject() \
          .setName("ztranslation") \
@@ -191,7 +191,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("twentyseven") \
      .addFieldValue(fieldValueObject() \
       .setName("ttranslation") \

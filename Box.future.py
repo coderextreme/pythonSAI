@@ -28,27 +28,27 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE"]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Cubes on Fire") \
      .setPosition([0,0,12]) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("anyShape") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("xtranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("myShape") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-       .addChild(ShapeObject() \
+       .setAccessType("inputOutput") \
+       .setType("MFNode") \
+       .addChildren(ShapeObject() \
         .setGeometry(SphereObject() \
         ) \
         .setAppearance(AppearanceObject() \
@@ -60,7 +60,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
@@ -74,20 +74,20 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("three") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("ytranslation") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_MFNODE) \
        .setName("myShape") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-       .addChild(ShapeObject() \
+       .setAccessType("inputOutput") \
+       .setType("MFNode") \
+       .addChildren(ShapeObject() \
         .setGeometry(CylinderObject() \
         ) \
         .setAppearance(AppearanceObject() \
@@ -99,14 +99,14 @@ X3D0 = X3DObject() \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setIS(ISObject() \
         .addConnect(connectObject() \
          .setNodeField("translation") \
          .setProtoField("ytranslation") \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("anyShape") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
@@ -119,7 +119,7 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("anyShape") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
@@ -132,7 +132,7 @@ X3D0 = X3DObject() \
          ) \
         ) \
        ) \
-       .addChild(ProtoInstanceObject() \
+       .addChildren(ProtoInstanceObject() \
         .setName("anyShape") \
         .addFieldValue(fieldValueObject() \
          .setName("xtranslation") \
@@ -148,7 +148,7 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoInstanceObject() \
+    .addChildren(ProtoInstanceObject() \
      .setName("three") \
      .addFieldValue(fieldValueObject() \
       .setName("ytranslation") \
@@ -156,9 +156,8 @@ X3D0 = X3DObject() \
      ) \
      .addFieldValue(fieldValueObject() \
       .setName("myShape") \
-      .addChild(ShapeObject() \
-       .setGeometry(BoxObject() \
-        .setSize([1,1,1]) \
+      .addChildren(ShapeObject() \
+       .setGeometry(BoxObject(size = [1,1,1]) \
        ) \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \

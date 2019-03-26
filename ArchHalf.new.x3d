@@ -15,7 +15,6 @@
   </head>
   <Scene>
     <Shape DEF='Arch'>
-      <!-- note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly -->
       <Appearance>
         <Material DEF='MaterialNode' diffuseColor='1 0.75 0.25'/>
       </Appearance>

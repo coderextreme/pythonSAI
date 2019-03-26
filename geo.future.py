@@ -36,15 +36,15 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["ANY","EXAMINE","FLY","LOOKAT"]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("Tour") \
      .setDescription("Tour Views") \
     ) \
-    .addComments(CommentsBlock("""Viewpoint position='0 0 4' description='sphere in road'/""")) \
-    .addChild(BackgroundObject() \
+#Viewpoint position='0 0 4' description='sphere in road'/
+    .addChildren(BackgroundObject() \
      .setBackUrl(["resources/images/bBK.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png"]) \
      .setBottomUrl(["resources/images/bBT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png"]) \
      .setFrontUrl(["resources/images/bFR.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bFR.png"]) \
@@ -52,8 +52,8 @@ X3D0 = X3DObject() \
      .setRightUrl(["resources/images/bRT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bRT.png"]) \
      .setTopUrl(["resources/images/bTP.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bTP.png"]) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ShapeObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(SphereObject() \
       ) \
       .setAppearance(AppearanceObject() \
@@ -82,87 +82,85 @@ X3D0 = X3DObject() \
          .setUrl(["resources/images/bTP.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bTP.png"]) \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
-        .setLanguage("GLSL") \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFNODE) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
-         .addChild(ComposedCubeMapTextureObject() \
+         .setType("SFNode") \
+         .setAccessType("inputOutput") \
+         .addChildren(ComposedCubeMapTextureObject() \
           .setUSE("texture") \
          ) \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setDEF("common") \
          .setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
-        .setLanguage("GLSL") \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setAccessType("initializeOnly") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFNODE) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
-         .addChild(ComposedCubeMapTextureObject() \
+         .setType("SFNode") \
+         .setAccessType("initializeOnly") \
+         .addChildren(ComposedCubeMapTextureObject() \
           .setUSE("texture") \
          ) \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setAccessType("initializeOnly") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setAccessType("initializeOnly") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INITIALIZEONLY) \
+         .setAccessType("initializeOnly") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
          .setUSE("common") \

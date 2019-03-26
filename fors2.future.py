@@ -36,18 +36,18 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("node") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("position") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+       .setAccessType("inputOutput") \
+       .setType("SFVec3f") \
        .setValue("0 0 0") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(TransformObject() \
+      .addChildren(TransformObject() \
        .setDEF("transform") \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -55,51 +55,51 @@ X3D0 = X3DObject() \
          .setProtoField("position") \
         ) \
        ) \
-       .addChild(ShapeObject() \
-        .addComments(CommentsBlock("""comment before Sphere""")) \
-        .addComments(CommentsBlock("""comment after Sphere""")) \
-        .addComments(CommentsBlock("""comment after Appearance""")) \
+       .addChildren(ShapeObject() \
+#comment before Sphere
+#comment after Sphere
+#comment after Appearance
         .setGeometry(SphereObject() \
         ) \
         .setAppearance(AppearanceObject() \
-         .addComments(CommentsBlock("""comment before Material""")) \
-         .addComments(CommentsBlock("""comment after Material""")) \
+#comment before Material
+#comment after Material
          .setMaterial(MaterialObject() \
           .setDiffuseColor([1,0,0]) \
          ) \
         ) \
        ) \
       ) \
-      .addChild(PositionInterpolatorObject() \
+      .addChildren(PositionInterpolatorObject() \
        .setDEF("NodePosition") \
        .setKey([0,1]) \
        .setKeyValue([0,0,0,0,5,0]) \
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("MoveBall") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("translation") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("SFVec3f") \
         .setValue("50 50 0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("old") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("SFVec3f") \
         .setValue("0 0 0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFTIME) \
         .setName("set_cycle") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFTime") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("keyValue") \
-        .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+        .setAccessType("outputOnly") \
+        .setType("MFVec3f") \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
@@ -107,30 +107,30 @@ X3D0 = X3DObject() \
 "						// Browser.println(translation);\n"+
 "					}''')
       ) \
-      .addChild(TimeSensorObject() \
+      .addChildren(TimeSensorObject() \
        .setDEF("nodeClock") \
        .setCycleInterval(3) \
        .setLoop(True) \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("nodeClock") \
        .setFromField("cycleTime") \
        .setToNode("MoveBall") \
        .setToField("set_cycle") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("nodeClock") \
        .setFromField("fraction_changed") \
        .setToNode("NodePosition") \
        .setToField("set_fraction") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("MoveBall") \
        .setFromField("keyValue") \
        .setToNode("NodePosition") \
        .setToField("keyValue") \
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("NodePosition") \
        .setFromField("value_changed") \
        .setToNode("transform") \
@@ -138,27 +138,24 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ProtoDeclareObject() \
+    .addChildren(ProtoDeclareObject() \
      .setName("cylinder") \
      .setProtoInterface(ProtoInterfaceObject() \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("positionA") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFVec3f") \
       ) \
       .addField(fieldObject() \
-       .setType(fieldObject.TYPE_SFVEC3F) \
        .setName("positionB") \
-       .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+       .setAccessType("inputOnly") \
+       .setType("SFVec3f") \
       ) \
      ) \
      .setProtoBody(ProtoBodyObject() \
-      .addChild(ShapeObject() \
-       .setGeometry(ExtrusionObject() \
+      .addChildren(ShapeObject() \
+       .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [0,-50,0,0,0,0,0,50,0]) \
         .setDEF("extrusion") \
-        .setCreaseAngle(0.785) \
-        .setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]) \
-        .setSpine([0,-50,0,0,0,0,0,50,0]) \
        ) \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
@@ -166,23 +163,23 @@ X3D0 = X3DObject() \
         ) \
        ) \
       ) \
-      .addChild(ScriptObject() \
+      .addChildren(ScriptObject() \
        .setDEF("MoveCylinder") \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_MFVEC3F) \
         .setName("spine") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+        .setAccessType("inputOutput") \
+        .setType("MFVec3f") \
         .setValue("0 -50 0 0 0 0 0 50 0") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("set_endA") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFVec3f") \
        ) \
        .addField(fieldObject() \
-        .setType(fieldObject.TYPE_SFVEC3F) \
         .setName("set_endB") \
-        .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+        .setAccessType("inputOnly") \
+        .setType("SFVec3f") \
        ) \
        .setIS(ISObject() \
         .addConnect(connectObject() \
@@ -194,7 +191,7 @@ X3D0 = X3DObject() \
          .setProtoField("positionB") \
         ) \
        ) \
-       .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
@@ -217,7 +214,7 @@ X3D0 = X3DObject() \
 "                    spine = value;\n"+
 "                }''')
       ) \
-      .addChild(ROUTEObject() \
+      .addChildren(ROUTEObject() \
        .setFromNode("MoveCylinder") \
        .setFromField("spine") \
        .setToNode("extrusion") \
@@ -225,9 +222,9 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setScale([0.1,0.1,0.1]) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("node") \
       .setDEF("nodeA") \
       .addFieldValue(fieldValueObject() \
@@ -235,7 +232,7 @@ X3D0 = X3DObject() \
        .setValue("-50 -50 -50") \
       ) \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("node") \
       .setDEF("nodeB") \
       .addFieldValue(fieldValueObject() \
@@ -243,7 +240,7 @@ X3D0 = X3DObject() \
        .setValue("50 50 50") \
       ) \
      ) \
-     .addChild(ProtoInstanceObject() \
+     .addChildren(ProtoInstanceObject() \
       .setName("cylinder") \
       .setDEF("linkA") \
       .addFieldValue(fieldValueObject() \
@@ -256,13 +253,13 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("nodeA") \
      .setFromField("position") \
      .setToNode("linkA") \
      .setToField("positionA") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("nodeB") \
      .setFromField("position") \
      .setToNode("linkA") \

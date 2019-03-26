@@ -6,24 +6,24 @@ X3D0 = X3DObject() \
    .setProfile("Immersive") \
    .setVersion("3.3") \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(DirectionalLightObject() \
+    .addChildren(DirectionalLightObject() \
      .setDirection([0,-0.8,-0.2]) \
      .setIntensity(0.5) \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([1,1,1]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("One mathematical orbital") \
      .setPosition([0,0,50]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,-1,1]) \
      .setRotation([0,1,0,3.1415926]) \
      .setScale([1.5,1.5,1.5]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setTransparency(0.1) \
@@ -32,10 +32,7 @@ X3D0 = X3DObject() \
         .setShininess(0.145) \
        ) \
       ) \
-      .setGeometry(IndexedFaceSetObject() \
-       .setCcw(False) \
-       .setConvex(False) \
-       .setCoordIndex([0,1,2,-1]) \
+      .setGeometry(IndexedFaceSetObject(ccw = False, convex = False, coordIndex = [0,1,2,-1]) \
        .setDEF("ifs") \
        .setCoord(CoordinateObject() \
         .setDEF("crd") \
@@ -44,24 +41,24 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("FlowerScript") \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFFLOAT) \
       .setName("set_fraction") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFFloat") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3F) \
       .setName("coordinates") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFVec3f") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFINT32) \
       .setName("coordIndexes") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFInt32") \
      ) \
-     .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -149,24 +146,24 @@ X3D0 = X3DObject() \
 "	updateCoordinates(resolution);\n"+
 "}''')
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("Clock") \
      .setCycleInterval(16) \
      .setLoop(True) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("FlowerScript") \
      .setFromField("coordIndexes") \
      .setToNode("ifs") \
      .setToField("coordIndex") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("FlowerScript") \
      .setFromField("coordinates") \
      .setToNode("crd") \
      .setToField("point") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("Clock") \
      .setFromField("fraction_changed") \
      .setToNode("FlowerScript") \

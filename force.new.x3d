@@ -45,12 +45,18 @@
             <field name='keyValue' accessType='outputOnly' type='MFVec3f'/>
 <![CDATA[
 ecmascript:
-					function set_cycle(value) {
-                                                old = translation;
-						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);
-                                                keyValue = new MFVec3f([old, translation]);
-						// Browser.println(translation);
-					}
+"+
+"					function set_cycle(value) {
+"+
+"                                                old = translation;
+"+
+"						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);
+"+
+"                                                keyValue = new MFVec3f([old, translation]);
+"+
+"						// Browser.println(translation);
+"+
+"					}
 ]]>
           </Script>
           <TimeSensor DEF='nodeClock' cycleInterval='3.0' loop='true'/>
@@ -84,26 +90,46 @@ ecmascript:
             </IS>
 <![CDATA[
 ecmascript:
-
-                function set_endA(value) {
-		    if (typeof spine === 'undefined') {
-		        spine = new MFVec3f([value, value]);
-		    } else {
-		        spine = new MFVec3f([value, spine[1]]);
-		    }
-                }
-
-                function set_endB(value) {
-		    if (typeof spine === 'undefined') {
-		        spine = new MFVec3f([value, value]);
-		    } else {
-		        spine = new MFVec3f([spine[0], value]);
-		    }
-                }
-
-                function set_spine(value) {
-                    spine = value;
-                }
+"+
+"
+"+
+"                function set_endA(value) {
+"+
+"		    if (typeof spine === 'undefined') {
+"+
+"		        spine = new MFVec3f([value, value]);
+"+
+"		    } else {
+"+
+"		        spine = new MFVec3f([value, spine[1]]);
+"+
+"		    }
+"+
+"                }
+"+
+"
+"+
+"                function set_endB(value) {
+"+
+"		    if (typeof spine === 'undefined') {
+"+
+"		        spine = new MFVec3f([value, value]);
+"+
+"		    } else {
+"+
+"		        spine = new MFVec3f([spine[0], value]);
+"+
+"		    }
+"+
+"                }
+"+
+"
+"+
+"                function set_spine(value) {
+"+
+"                    spine = value;
+"+
+"                }
 ]]>
           </Script>
           <ROUTE fromField='spine' fromNode='MoveCylinder' toField='set_spine' toNode='extrusion'/>
@@ -138,29 +164,45 @@ ecmascript:
       </ProtoInstance>
     </Transform>
     <Script DEF='clickHandler'>
-      <!-- <field name="ModifiableNode" type="SFNode" accessType="inputOutput"> <Transform USE="HoldsContent"/> </field> -->
       <field name='counter' accessType='inputOutput' type='SFInt32' value='0'/>
       <field name='node_changed' accessType='outputOnly' type='SFNode'/>
       <field name='add_node' accessType='inputOnly' type='SFBool' value='false'/>
 <![CDATA[
 ecmascript:
-	function add_node(value) {
-                // Browser.print('hey ', counter);
-                counter = counter++;
-		Browser.appendTo(Browser.getDocument().querySelector("field [name=ModifiableNode]"),
-			{ "ProtoInstance":
-				{ "@name":"node",
-				  "@DEF":"node'+counter+'",
-				  "fieldValue": [
-					{
-						 "@name":"position",
-						 "@value":[0.0,0.0,0.0]
-					}
-				  ]
-				}
-			});
-
-        }
+"+
+"	function add_node(value) {
+"+
+"                // Browser.print('hey ', counter);
+"+
+"                counter = counter++;
+"+
+"		Browser.appendTo(Browser.getDocument().querySelector("field [name=ModifiableNode]"),
+"+
+"			{ "ProtoInstance":
+"+
+"				{ "@name":"node",
+"+
+"				  "@DEF":"node'+counter+'",
+"+
+"				  "fieldValue": [
+"+
+"					{
+"+
+"						 "@name":"position",
+"+
+"						 "@value":[0.0,0.0,0.0]
+"+
+"					}
+"+
+"				  ]
+"+
+"				}
+"+
+"			});
+"+
+"
+"+
+"        }
 ]]>
     </Script>
     <ROUTE fromField='isActive' fromNode='clickGenerator' toField='add_node' toNode='clickHandler'/>

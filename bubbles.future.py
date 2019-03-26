@@ -44,18 +44,18 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE"]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("Tour") \
      .setDescription("Tour Views") \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setPosition([0,0,4]) \
      .setDescription("sphere in road") \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/all_probes/uffizi_cross/uffizi_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_back.png"]) \
      .setBottomUrl(["../resources/images/all_probes/uffizi_cross/uffizi_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_bottom.png"]) \
      .setFrontUrl(["../resources/images/all_probes/uffizi_cross/uffizi_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_front.png"]) \
@@ -63,9 +63,9 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/all_probes/uffizi_cross/uffizi_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_right.png"]) \
      .setTopUrl(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("Rose01") \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(SphereObject() \
       ) \
       .setAppearance(AppearanceObject() \
@@ -94,149 +94,147 @@ X3D0 = X3DObject() \
          .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"]) \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .setDEF("cobweb") \
-        .setLanguage("GLSL") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFINT32) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFInt32") \
          .setValue("0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
-       .addShaders(ComposedShaderObject() \
+       .addShaders(ComposedShaderObject(language = "GLSL") \
         .setDEF("x3dom") \
-        .setLanguage("GLSL") \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFINT32) \
          .setName("cube") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFInt32") \
          .setValue("0") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFVEC3F) \
          .setName("chromaticDispertion") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFVec3f") \
          .setValue("0.98 1 1.033") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("bias") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("scale") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("0.5") \
         ) \
         .addField(fieldObject() \
-         .setType(fieldObject.TYPE_SFFLOAT) \
          .setName("power") \
-         .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+         .setAccessType("inputOutput") \
+         .setType("SFFloat") \
          .setValue("2") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("VERTEX") \
          .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
+         .setType("VERTEX") \
         ) \
         .addParts(ShaderPartObject() \
-         .setType("FRAGMENT") \
          .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
+         .setType("FRAGMENT") \
         ) \
        ) \
       ) \
      ) \
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("TourTime") \
      .setCycleInterval(5) \
      .setLoop(True) \
     ) \
-    .addChild(PositionInterpolatorObject() \
+    .addChildren(PositionInterpolatorObject() \
      .setDEF("TourPosition") \
      .setKey([0,1]) \
      .setKeyValue([0,0,10,0,0,-10]) \
     ) \
-    .addChild(OrientationInterpolatorObject() \
+    .addChildren(OrientationInterpolatorObject() \
      .setDEF("TourOrientation") \
      .setKey([0,1]) \
      .setKeyValue([0,1,0,0,0,1,0,3.1416]) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("RandomTourTime") \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFTIME) \
       .setName("set_cycle") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFTime") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFFLOAT) \
       .setName("lastKey") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("SFFloat") \
       .setValue("0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFROTATION) \
       .setName("orientations") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("MFRotation") \
       .setValue("0 1 0 0 0 1 0 -1.57 0 1 0 3.14 0 1 0 1.57 0 1 0 0 1 0 0 -1.57 0 1 0 0 1 0 0 1.57 0 1 0 0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3F) \
       .setName("positions") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("MFVec3f") \
       .setValue("0 0 10 -10 0 0 0 0 -10 10 0 0 0 0 10 0 10 0 0 0 10 0 -10 0 0 0 10") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3F) \
       .setName("position_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFVec3f") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFROTATION) \
       .setName("set_orientation") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("MFRotation") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFROTATION) \
       .setName("orientation_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("MFRotation") \
      ) \
-     .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "               function set_cycle(value) {\n"+
 "                        var ov = lastKey;\n"+
 "                        do {\n"+
@@ -253,43 +251,43 @@ X3D0 = X3DObject() \
 "                    // }\n"+
 "               }''')
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("cycleTime_changed") \
      .setToNode("RandomTourTime") \
      .setToField("set_cycle") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("RandomTourTime") \
      .setFromField("orientation_changed") \
      .setToNode("TourOrientation") \
      .setToField("set_keyValue") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("RandomTourTime") \
      .setFromField("position_changed") \
      .setToNode("TourPosition") \
      .setToField("set_keyValue") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("fraction_changed") \
      .setToNode("TourOrientation") \
      .setToField("set_fraction") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourOrientation") \
      .setFromField("value_changed") \
      .setToNode("Tour") \
      .setToField("set_orientation") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("fraction_changed") \
      .setToNode("TourPosition") \
      .setToField("set_fraction") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourPosition") \
      .setFromField("value_changed") \
      .setToNode("Tour") \

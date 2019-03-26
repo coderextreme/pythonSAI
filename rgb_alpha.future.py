@@ -80,13 +80,13 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
      .setType(["EXAMINE","WALK","FLY","ANY"]) \
     ) \
-    .addChild(GroupObject() \
-     .addChild(TransformObject() \
+    .addChildren(GroupObject() \
+     .addChildren(TransformObject() \
       .setTranslation([6.14221,0.0694613,-0.000999451]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
         ) \
@@ -99,9 +99,9 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([-4.85443,0.0694381,-0.00149918]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
         ) \
@@ -113,9 +113,9 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([-1.47341,0.036672,-0.00175095]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
         ) \
@@ -127,9 +127,9 @@ X3D0 = X3DObject() \
        ) \
       ) \
      ) \
-     .addChild(TransformObject() \
+     .addChildren(TransformObject() \
       .setTranslation([2.31094,0.0694206,-0.00187683]) \
-      .addChild(ShapeObject() \
+      .addChildren(ShapeObject() \
        .setAppearance(AppearanceObject() \
         .setMaterial(MaterialObject() \
         ) \

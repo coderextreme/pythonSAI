@@ -48,15 +48,13 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([0,2,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["Compare special character escaping"]) \
-       .setFontStyle(FontStyleObject() \
+       .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"], size = 0.8) \
         .setDEF("testFontStyle") \
-        .setJustify(["MIDDLE","MIDDLE"]) \
-        .setSize(0.8) \
        ) \
       ) \
       .setAppearance(AppearanceObject() \
@@ -67,9 +65,9 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([-3,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["I don't think so","","he said \"Hi\""]) \
        .setFontStyle(FontStyleObject() \
@@ -81,9 +79,9 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setTranslation([3,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(TextObject() \
        .setString(["I don't think so","","he said \"Hi\""]) \
        .setFontStyle(FontStyleObject() \

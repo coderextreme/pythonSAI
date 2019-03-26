@@ -32,15 +32,15 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addComments(CommentsBlock("""Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/""")) \
-    .addComments(CommentsBlock("""PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/""")) \
-    .addChild(GeoViewpointObject() \
+#Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/
+#PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/
+    .addChildren(GeoViewpointObject() \
      .setDEF("Tour") \
      .setPosition([0,0,4]) \
      .setOrientation([1,0,0,0]) \
      .setDescription("Tour Views") \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"]) \
      .setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"]) \
      .setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"]) \
@@ -48,8 +48,8 @@ X3D0 = X3DObject() \
      .setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"]) \
      .setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"]) \
     ) \
-    .addChild(TransformObject() \
-     .addChild(ShapeObject() \
+    .addChildren(TransformObject() \
+     .addChildren(ShapeObject() \
       .setGeometry(SphereObject() \
       ) \
       .setAppearance(AppearanceObject() \
@@ -60,42 +60,42 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("TourTime") \
      .setCycleInterval(5) \
      .setLoop(True) \
     ) \
-    .addChild(GeoPositionInterpolatorObject() \
+    .addChildren(GeoPositionInterpolatorObject() \
      .setDEF("TourPosition") \
      .setKey([0,1]) \
      .setKeyValue([0.0015708,0,4,0,0.0015708,4]) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("RandomTourTime") \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFTIME) \
       .setName("set_cycle") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFTime") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFFLOAT) \
       .setName("val") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("SFFloat") \
       .setValue("0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3D) \
       .setName("positions") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("MFVec3d") \
       .setValue("0.0015708 0 4 0 0.0015708 4") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_MFVEC3D) \
       .setName("position") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("MFVec3d") \
       .setValue("0.0015708 0 4 0 0.0015708 4") \
      ) \
-     .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "\n"+
 "               function set_cycle(value) {\n"+
 "                        var cartesianMult = -150;  // -150 if cartesian, 1 if geo\n"+
@@ -113,25 +113,25 @@ X3D0 = X3DObject() \
 "                        position[1] = new SFVec3d(positions[vc][0],positions[vc][1],positions[vc][2]);\n"+
 "               }''')
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("cycleTime") \
      .setToNode("RandomTourTime") \
      .setToField("set_cycle") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("RandomTourTime") \
      .setFromField("position") \
      .setToNode("TourPosition") \
      .setToField("keyValue") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("fraction_changed") \
      .setToNode("TourPosition") \
      .setToField("set_fraction") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourPosition") \
      .setFromField("geovalue_changed") \
      .setToNode("Tour") \

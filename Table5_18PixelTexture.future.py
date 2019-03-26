@@ -56,13 +56,13 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([0,0,1]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("Checkerboard") \
      .setTranslation([0,0,-10]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTextureTransform(TextureTransformObject() \
         .setScale([500,500]) \
@@ -71,24 +71,23 @@ X3D0 = X3DObject() \
         .setImage([2,2,3,15119869,16767927,16767927,15119869]) \
        ) \
       ) \
-      .setGeometry(BoxObject() \
-       .setSize([1000,1000,0.01]) \
+      .setGeometry(BoxObject(size = [1000,1000,0.01]) \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("View All") \
      .setPosition([0,0,20]) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Empty Image") \
      .setPosition([0,5,5]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("EmptyImage") \
      .setRotation([1,1,0,1]) \
      .setTranslation([0,5,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
        ) \
@@ -98,15 +97,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Black and white PixelTexture") \
      .setPosition([-5,0,5]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("BW") \
      .setRotation([1,1,0,1]) \
      .setTranslation([-5,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setImage([1,2,1,255,0]) \
@@ -117,15 +116,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("Black and white with Alpha PixelTexture") \
      .setPosition([5,0,5]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("AlphaBW") \
      .setRotation([1,1,0,1]) \
      .setTranslation([5,0,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setImage([2,1,2,52479,8823]) \
@@ -136,15 +135,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("RGB PixelTexture") \
      .setPosition([-5,-5,5]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("RGB") \
      .setRotation([1,1,0,1]) \
      .setTranslation([-5,-5,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setImage([2,4,3,16711680,65280,0,0,0,0,16777215,16776960]) \
@@ -155,15 +154,15 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDescription("RGB with Alpha PixelTexture") \
      .setPosition([5,-5,5]) \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("AlphaRGB") \
      .setRotation([1,1,0,1]) \
      .setTranslation([5,-5,0]) \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setTexture(PixelTextureObject() \
         .setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407]) \

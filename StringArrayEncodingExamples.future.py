@@ -68,21 +68,19 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(ViewpointObject() \
+    .addChildren(ViewpointObject() \
      .setDEF("EntryView") \
      .setDescription("Hello MFString syntax") \
     ) \
-    .addChild(BackgroundObject() \
+    .addChildren(BackgroundObject() \
      .setSkyColor([0.6,1,0.8]) \
     ) \
-    .addChild(ShapeObject() \
+    .addChildren(ShapeObject() \
      .setGeometry(TextObject() \
       .setString(["One, Two, Three","","He said, \"Immel did it!\""]) \
-      .addComments(CommentsBlock("""alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'""")) \
-      .addComments(CommentsBlock("""alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})""")) \
-      .setFontStyle(FontStyleObject() \
-       .setJustify(["MIDDLE","MIDDLE"]) \
-       .setStyle("BOLD") \
+#alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'
+#alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})
+      .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"], style = "BOLD") \
       ) \
      ) \
      .setAppearance(AppearanceObject() \

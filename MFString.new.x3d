@@ -110,15 +110,12 @@
         <Inline url='"Seat.x3d" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Seat.x3d" "Seat.wrl" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Seat.wrl"'/>
       </Transform>
       <Transform DEF='FrontWheelTransform' center='0 2.5 0' rotation='-1 0 0 1.92' translation='0.7 -5.2 -6.5'>
-        <!-- Front wheel is taken from the Savage Library, modified and re-animated.(from F18 Blue Angel) -->
         <Inline url='"FrontWheel.x3d" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.x3d" "FrontWheel.wrl" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.wrl"'/>
       </Transform>
       <Transform DEF='RearLeftWheelTransform' center='0 2.5 0' rotation='1 0 1 1.92' translation='-2.95 -5 7'>
-        <!-- Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel) -->
         <Inline url='"RearLeftWheel.x3d" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.x3d" "RearLeftWheel.wrl" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.wrl"'/>
       </Transform>
       <Transform DEF='RearRightWheelTransform' center='0 2.5 0' rotation='-1 0 -1 1.92' translation='2.95 -5 7'>
-        <!-- Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel) -->
         <Inline url='"RearRightWheel.x3d" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.x3d" "RearRightWheel.wrl" "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.wrl"'/>
       </Transform>
       <Transform DEF='CockpitButtonsTransform'>
@@ -199,7 +196,6 @@
     <ROUTE fromField='touchTime' fromNode='TouchSensorDown' toField='set_startTime' toNode='WheelDown'/>
     <ROUTE fromField='fraction_changed' fromNode='WheelDown' toField='set_fraction' toNode='GearDownInterpolator'/>
     <ROUTE fromField='value_changed' fromNode='GearDownInterpolator' toField='set_rotation' toNode='FrontWheelTransform'/>
-    <!-- Animation commands for Rear Right Wheel Starts -->
     <TimeSensor DEF='RRearUp1' cycleInterval='8.0'/>
     <TimeSensor DEF='RRearDown1' cycleInterval='8.0'/>
     <OrientationInterpolator DEF='RRearInterUp1' key='0 0 1' keyValue='-1 0 -1 0 -1 0 -1 0.44 -1 0 -1 1.92'/>
@@ -210,7 +206,6 @@
     <ROUTE fromField='fraction_changed' fromNode='RRearUp1' toField='set_fraction' toNode='RRearInterUp1'/>
     <ROUTE fromField='value_changed' fromNode='RRearInterDown1' toField='set_rotation' toNode='RearRightWheelTransform'/>
     <ROUTE fromField='value_changed' fromNode='RRearInterUp1' toField='set_rotation' toNode='RearRightWheelTransform'/>
-    <!-- Animation commands for Rear Left Wheel -->
     <TimeSensor DEF='LRearUp1' cycleInterval='8.0'/>
     <TimeSensor DEF='LRearDown1' cycleInterval='8.0'/>
     <OrientationInterpolator DEF='LRearInterUp1' key='0 0 1' keyValue='1 0 1 0 1 0 1 0.44 1 0 1 1.92'/>
@@ -288,6 +283,5 @@
     <ROUTE fromField='value_changed' fromNode='MissilePath' toField='set_translation' toNode='LeftmostAmraamTransform'/>
     <Viewpoint DEF='MissileLaunchView' description='Missile Fire View' orientation='0.094 -0.994 0.057 1.1716' position='-344.3 -142.8 -27.7'/>
     <ROUTE fromField='isActive' fromNode='FireSensor' toField='set_bind' toNode='MissileLaunchView'/>
-    <!-- TODO fix type, add filter -->
   </Scene>
 </X3D>

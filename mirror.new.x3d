@@ -26,7 +26,6 @@
         <Appearance>
           <Material diffuseColor='0.7 0.7 0.7' specularColor='0.5 0.5 0.5'/>
           <ComposedShader DEF='x3dom' language='GLSL'>
-            <!-- http://hypertextbook.com/facts/2005/JustinChe.shtml -->
             <ShaderPart url='"../shaders/x3dom.vs" "https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"'/>
             <ShaderPart type='FRAGMENT' url='"../shaders/mix.fs" "https://coderextreme.net/X3DJSONLD/shaders/mix.fs"'/>
             <field name='chromaticDispertion' accessType='inputOutput' type='SFVec3f' value='0.98 1 1.033'/>
@@ -36,7 +35,6 @@
             <field name='power' accessType='inputOutput' type='SFFloat' value='2.0'/>
           </ComposedShader>
           <ComposedShader DEF='cobweb' language='GLSL'>
-            <!-- http://hypertextbook.com/facts/2005/JustinChe.shtml -->
             <ShaderPart url='"../shaders/cobweb.vs" "https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"'/>
             <ShaderPart type='FRAGMENT' url='"../shaders/mix.fs" "https://coderextreme.net/X3DJSONLD/shaders/mix.fs"'/>
             <field name='chromaticDispertion' accessType='inputOutput' type='SFVec3f' value='0.98 1 1.033'/>
@@ -73,22 +71,38 @@
         <field name='old' accessType='inputOutput' type='SFInt32' value='-1'/>
 <![CDATA[
 ecmascript:
-        function set_fraction( f, tm ) {
-	    var side = Math.floor(f*frontUrls.length);
-	    if (side > frontUrls.length-1) {
-	    	side = 0;
-	    }
-	    if (side != old) {
-	    	    Browser.print(f+" "+side);
-	    	    old = side;
-		    front_changed[0] = frontUrls[side];
-		    back_changed[0] = backUrls[side];
-		    left_changed[0] = leftUrls[side];
-		    right_changed[0] = rightUrls[side];
-		    top_changed[0] = topUrls[side];
-		    bottom_changed[0] = bottomUrls[side];
-            }
-        }
+"+
+"        function set_fraction( f, tm ) {
+"+
+"	    var side = Math.floor(f*frontUrls.length);
+"+
+"	    if (side > frontUrls.length-1) {
+"+
+"	    	side = 0;
+"+
+"	    }
+"+
+"	    if (side != old) {
+"+
+"	    	    Browser.print(f+" "+side);
+"+
+"	    	    old = side;
+"+
+"		    front_changed[0] = frontUrls[side];
+"+
+"		    back_changed[0] = backUrls[side];
+"+
+"		    left_changed[0] = leftUrls[side];
+"+
+"		    right_changed[0] = rightUrls[side];
+"+
+"		    top_changed[0] = topUrls[side];
+"+
+"		    bottom_changed[0] = bottomUrls[side];
+"+
+"            }
+"+
+"        }
 ]]>
       </Script>
       <TimeSensor DEF='Clock' cycleInterval='45.0' loop='true'/>

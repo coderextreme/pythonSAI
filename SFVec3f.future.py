@@ -24,11 +24,11 @@ X3D0 = X3DObject() \
     ) \
    ) \
    .setScene(SceneObject() \
-    .addChild(NavigationInfoObject() \
+    .addChildren(NavigationInfoObject() \
     ) \
-    .addChild(TransformObject() \
+    .addChildren(TransformObject() \
      .setDEF("transform") \
-     .addChild(ShapeObject() \
+     .addChildren(ShapeObject() \
       .setAppearance(AppearanceObject() \
        .setMaterial(MaterialObject() \
         .setDiffuseColor([0.7,0.7,0.7]) \
@@ -39,38 +39,38 @@ X3D0 = X3DObject() \
       ) \
      ) \
     ) \
-    .addChild(ScriptObject() \
+    .addChildren(ScriptObject() \
      .setDEF("Bounce") \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFVEC3F) \
       .setName("set_translation") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFVec3f") \
       .setValue("0 0 0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFVEC3F) \
       .setName("translation_changed") \
-      .setAccessType(fieldObject.ACCESSTYPE_OUTPUTONLY) \
+      .setAccessType("outputOnly") \
+      .setType("SFVec3f") \
       .setValue("0 0 0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFVEC3F) \
       .setName("translation") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("SFVec3f") \
       .setValue("0 0 0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFVEC3F) \
       .setName("velocity") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTOUTPUT) \
+      .setAccessType("inputOutput") \
+      .setType("SFVec3f") \
       .setValue("0 0 0") \
      ) \
      .addField(fieldObject() \
-      .setType(fieldObject.TYPE_SFTIME) \
       .setName("set_fraction") \
-      .setAccessType(fieldObject.ACCESSTYPE_INPUTONLY) \
+      .setAccessType("inputOnly") \
+      .setType("SFTime") \
      ) \
-     .setSourceCode('''ecmascript:\n"+
+.setSourceCode('''ecmascript:\n"+
 "			function newBubble() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -102,18 +102,18 @@ X3D0 = X3DObject() \
 "			     newBubble();\n"+
 "			}''')
     ) \
-    .addChild(TimeSensorObject() \
+    .addChildren(TimeSensorObject() \
      .setDEF("TourTime") \
      .setCycleInterval(0.15) \
      .setLoop(True) \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("TourTime") \
      .setFromField("cycleTime") \
      .setToNode("Bounce") \
      .setToField("set_fraction") \
     ) \
-    .addChild(ROUTEObject() \
+    .addChildren(ROUTEObject() \
      .setFromNode("Bounce") \
      .setFromField("translation_changed") \
      .setToNode("transform") \

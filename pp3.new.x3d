@@ -15,7 +15,6 @@
     <ProtoDeclare name='Process'>
       <ProtoBody>
         <Group>
-          <!-- left -->
           <Transform scale='0.5 0.5 0.5'>
             <Shape>
               <Appearance>
@@ -23,9 +22,7 @@
               </Appearance>
               <Extrusion creaseAngle='0.785' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' spine='-2.5 0 0 -1.5 0 0'/>
             </Shape>
-            <!-- <Transform translation="-2.5 0 0"> <Shape> <Text DEF="LeftString" string='"l"'/> </Shape> </Transform> <StringSensor DEF="LeftSensor" enabled="false"/> <TouchSensor DEF="LeftTouch" enabled="true"/> -->
           </Transform>
-          <!-- right -->
           <Transform scale='0.5 0.5 0.5'>
             <Shape>
               <Appearance>
@@ -44,7 +41,6 @@
             <StringSensor DEF='RightSensor' enabled='false'/>
             <TouchSensor DEF='RightTouch' description='touch to activate'/>
           </Transform>
-          <!-- up -->
           <Transform scale='0.5 0.5 0.5'>
             <Shape>
               <Appearance>
@@ -63,7 +59,6 @@
             <StringSensor DEF='UpSensor' enabled='false'/>
             <TouchSensor DEF='UpTouch' description='touch to activate'/>
           </Transform>
-          <!-- down -->
           <Transform scale='0.5 0.5 0.5'>
             <Shape>
               <Appearance>
@@ -71,9 +66,7 @@
               </Appearance>
               <Extrusion creaseAngle='0.785' crossSection='1 0 0.92 -0.38 0.71 -0.71 0.38 -0.92 0 -1 -0.38 -0.92 -0.71 -0.71 -0.92 -0.38 -1 0 -0.92 0.38 -0.71 0.71 -0.38 0.92 0 1 0.38 0.92 0.71 0.71 0.92 0.38 1 0' spine='0 -2.5 0 0 -1.5 0'/>
             </Shape>
-            <!-- <Transform translation="-0.5 -2.5 0"> <Shape> <Text DEF="DownString" string='"d"'/> </Shape> </Transform> <StringSensor DEF="DownSensor" enabled="false"/> <TouchSensor description='touch to activate' DEF="DownTouch" enabled="true"/> -->
           </Transform>
-          <!-- center -->
           <Transform>
             <Shape>
               <Appearance>
@@ -98,14 +91,22 @@
           <field name='rightlines' accessType='outputOnly' type='MFString'/>
 <![CDATA[
 ecmascript:
-
-function initialize() {
-	rightlines = new MFString("");
-}
-
-function set_rightstring(rightstr) {
-	rightlines = new MFString(rightstr);
-}
+"+
+"
+"+
+"function initialize() {
+"+
+"	rightlines = new MFString("");
+"+
+"}
+"+
+"
+"+
+"function set_rightstring(rightstr) {
+"+
+"	rightlines = new MFString(rightstr);
+"+
+"}
 ]]>
         </Script>
         <Script DEF='UpSingleToMultiString'>
@@ -113,14 +114,22 @@ function set_rightstring(rightstr) {
           <field name='uplines' accessType='outputOnly' type='MFString'/>
 <![CDATA[
 ecmascript:
-
-function initialize() {
-	uplines = new MFString("");
-}
-
-function set_upstring(upstr) {
-	uplines = new MFString(upstr);
-}
+"+
+"
+"+
+"function initialize() {
+"+
+"	uplines = new MFString("");
+"+
+"}
+"+
+"
+"+
+"function set_upstring(upstr) {
+"+
+"	uplines = new MFString(upstr);
+"+
+"}
 ]]>
         </Script>
         <Script DEF='CenterSingleToMultiString'>
@@ -128,14 +137,22 @@ function set_upstring(upstr) {
           <field name='centerlines' accessType='outputOnly' type='MFString'/>
 <![CDATA[
 ecmascript:
-
-function initialize() {
-	centerlines = new MFString("");
-}
-
-function set_centerstring(centerstr) {
-	centerlines = new MFString(centerstr);
-}
+"+
+"
+"+
+"function initialize() {
+"+
+"	centerlines = new MFString("");
+"+
+"}
+"+
+"
+"+
+"function set_centerstring(centerstr) {
+"+
+"	centerlines = new MFString(centerstr);
+"+
+"}
 ]]>
         </Script>
         <ROUTE fromField='enteredText' fromNode='CenterSensor' toField='set_centerstring' toNode='CenterSingleToMultiString'/>

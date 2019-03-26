@@ -38,21 +38,17 @@
         <field name='onlyColor' accessType='inputOutput' type='SFColor' value='1 0 0'/>
       </ProtoInterface>
       <ProtoBody>
-        <!-- Override default diffuseColor value 0.8 0.8 0.8 -->
         <Material diffuseColor='0 0 0'>
           <IS>
             <connect nodeField='emissiveColor' protoField='onlyColor'/>
           </IS>
-          <!-- Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare. -->
         </Material>
       </ProtoBody>
     </ProtoDeclare>
     <ProtoDeclare name='ShiftGroupUp2m'>
       <ProtoInterface>
         <field name='children' accessType='inputOutput' type='MFNode'>
-          <Group DEF='DefaultNodeValue' bboxSize='2 2 2'>
-            <!-- Authors need to override this node when creating the ProtoInstance fieldValue name="children" -->
-          </Group>
+          <Group DEF='DefaultNodeValue' bboxSize='2 2 2'/>
         </field>
       </ProtoInterface>
       <ProtoBody>
@@ -66,7 +62,6 @@
       </ProtoBody>
     </ProtoDeclare>
     <ProtoInstance name='ShiftGroupUp2m'/>
-    <!-- ==================== -->
     <Viewpoint DEF='ExampleSingleElement' description='Hello syntax'/>
     <Group DEF='ExampleChildElement'>
       <Shape>
@@ -80,15 +75,7 @@
       <Group USE='ExampleChildElement'/>
     </Transform>
     <Collision>
-      <Group USE='ExampleChildElement'/>
-      <Shape containerField='proxy'>
-        <!-- note that Collision proxy Shape is not rendered -->
-        <!-- alternative: Text string='"He said, \&quot;Immel did it!\&quot;"' -->
-        <Appearance>
-          <Material/>
-        </Appearance>
-        <Text string='"He said, \"Immel did it!\""'/>
-      </Shape>
+      <Group USE='ExampleChildElement' containerField='proxy'/>
     </Collision>
     <Transform translation='0 -2.5 0'>
       <Shape>
