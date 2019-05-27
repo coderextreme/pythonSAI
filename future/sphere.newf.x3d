@@ -8,14 +8,4 @@
     <meta content='https://coderextreme.net/X3DJSONLD/sphere.x3d' name='identifier'/>
     <meta content='a sphere' name='description'/>
   </head>
-  <Scene>
-    <Group>
-      <Shape>
-        <Appearance>
-          <Material diffuseColor='1 1 1'/>
-        </Appearance>
-        <Sphere/>
-      </Shape>
-    </Group>
-  </Scene>
 </X3D>
