@@ -2,7 +2,7 @@
 <!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-3.3.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2019-03-24-07:00 22:21:19.739-07:00 -->
+<!-- Generated 2019-04-02-07:00 05:44:28.894-07:00 -->
 <X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                        version="3.3"
                        xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
@@ -1340,6 +1340,8 @@
          <enumeration value="description"
                       appinfo="summary overview describing this resource"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-description"/>
+         <enumeration value="disclaimer"
+                      appinfo="statement of denial or disavowal regarding potential claims or responsiblity"/>
          <enumeration value="drawing"
                       appinfo="name or reference link to a supporting drawing or sketch file"/>
          <enumeration value="error"
@@ -1371,11 +1373,15 @@
          <enumeration value="modified"
                       appinfo="date of modified version"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-modified"/>
+         <enumeration value="movie"
+                      appinfo="name or reference link to supporting movie file (note that Dublin Core term is MovingImage)"/>
          <enumeration value="MovingImage"
                       appinfo="name or reference link to supporting movie"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#dcmitype-MovingImage"/>
          <enumeration value="original"
                       appinfo="name or reference link to original file or resource"/>
+         <enumeration value="photo"
+                      appinfo="name or reference link to supporting photo file (note that Dublin Core term is Image)"/>
          <enumeration value="photograph"
                       appinfo="name or reference link to supporting photograph file (note that Dublin Core term is Image)"/>
          <enumeration value="publisher"
@@ -21486,6 +21492,8 @@
                <enumeration value="description"
                             appinfo="summary overview describing this resource"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-description"/>
+               <enumeration value="disclaimer"
+                            appinfo="statement of denial or disavowal regarding potential claims or responsiblity"/>
                <enumeration value="drawing"
                             appinfo="name or reference link to a supporting drawing or sketch file"/>
                <enumeration value="error"
@@ -21517,11 +21525,15 @@
                <enumeration value="modified"
                             appinfo="date of modified version"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-modified"/>
+               <enumeration value="movie"
+                            appinfo="name or reference link to supporting movie file (note that Dublin Core term is MovingImage)"/>
                <enumeration value="MovingImage"
                             appinfo="name or reference link to supporting movie"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#dcmitype-MovingImage"/>
                <enumeration value="original"
                             appinfo="name or reference link to original file or resource"/>
+               <enumeration value="photo"
+                            appinfo="name or reference link to supporting photo file (note that Dublin Core term is Image)"/>
                <enumeration value="photograph"
                             appinfo="name or reference link to supporting photograph file (note that Dublin Core term is Image)"/>
                <enumeration value="publisher"

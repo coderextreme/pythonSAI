@@ -2,7 +2,7 @@
 <!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-4.0.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 4.0 of X3D -->
-<!-- Generated 2019-03-24-07:00 22:21:15.769-07:00 -->
+<!-- Generated 2019-05-04-07:00 21:58:30.992-07:00 -->
 <X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                        version="4.0"
                        xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
@@ -45,10 +45,18 @@
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/group.html#Boundingboxes"/>
       <SimpleType name="closureTypeChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="closureTypeChoices are strictly allowed enumeration values for ArcClose2D closureType."
+                  appinfo="closureTypeChoices are strictly allowed enumeration values for ArcClose2D closureType field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html#ArcClose2D">
          <enumeration value="PIE"/>
          <enumeration value="CHORD"/>
+      </SimpleType>
+      <SimpleType name="colorModeChoices"
+                  baseType="xs:NMTOKEN"
+                  appinfo="colorModeChoices are strictly allowed enumeration values for PointProperties colorMode field."
+                  documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html#ArcClose2D">
+         <enumeration value="POINT_COLOR"/>
+         <enumeration value="TEXTURE_COLOR"/>
+         <enumeration value="TEXTURE_AND_POINT_COLOR"/>
       </SimpleType>
       <SimpleType name="componentNameChoices"
                   baseType="xs:NMTOKEN"
@@ -1035,14 +1043,14 @@
       </SimpleType>
       <SimpleType name="fogTypeChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="fogTypeChoices are strictly allowed enumeration values for Fog node fogType attribute."
+                  appinfo="fogTypeChoices are strictly allowed enumeration values for Fog node fogType field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/enveffects.html#Fog">
          <enumeration value="LINEAR"/>
          <enumeration value="EXPONENTIAL"/>
       </SimpleType>
       <SimpleType name="fontFamilyValues"
                   baseType="MFString"
-                  appinfo="fontFamilyValues are allowed enumeration values for FontStyle/ScreenFontStyle node family attribute. Unbounded, additional values are possible."
+                  appinfo="fontFamilyValues are allowed enumeration values for FontStyle/ScreenFontStyle node family field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Fontfamilyandstyle">
          <enumeration value="&#34;SANS&#34;"/>
          <enumeration value="&#34;SERIF&#34;"/>
@@ -1050,7 +1058,7 @@
       </SimpleType>
       <SimpleType name="fontStyleChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="fontStyleChoices are strictly allowed enumeration values for FontStyle/ScreenFontStyle node style attribute."
+                  appinfo="fontStyleChoices are strictly allowed enumeration values for FontStyle/ScreenFontStyle node style field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Fontfamilyandstyle">
          <enumeration value="PLAIN"/>
          <enumeration value="BOLD"/>
@@ -1059,7 +1067,7 @@
       </SimpleType>
       <SimpleType name="forceOutputValues"
                   baseType="MFString"
-                  appinfo="forceOutputValues are suggested values for X3DRigidJointNode type forceOutput attribute. Unbounded, additional values are possible."
+                  appinfo="forceOutputValues are suggested values for X3DRigidJointNode type forceOutput field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/rigid_physics.html#X3DRigidJointNode">
          <enumeration value="&#34;ALL&#34;"/>
          <enumeration value="&#34;NONE&#34;"/>
@@ -1352,6 +1360,7 @@
          <enumeration value="channelsEnabled"/>
          <enumeration value="collisionType"/>
          <enumeration value="color"/>
+         <enumeration value="colorMode"/>
          <enumeration value="colorSteps"/>
          <enumeration value="contactNormal"/>
          <enumeration value="contourStepSize"/>
@@ -1535,6 +1544,10 @@
          <enumeration value="pitch"/>
          <enumeration value="plane"/>
          <enumeration value="point"/>
+         <enumeration value="pointSizeScaleFactor"/>
+         <enumeration value="pointSizeMinValue"/>
+         <enumeration value="pointSizeMaxValue"/>
+         <enumeration value="pointSizeAttenuation"/>
          <enumeration value="port"/>
          <enumeration value="position"/>
          <enumeration value="power"/>
@@ -1669,7 +1682,7 @@
                   documentation="_Evaluating the X3D Schema with semantic web tools_, Web3D 2012 Conference, Petit, Marc (EDF), Henry Boccon-Gibod (EDF), Mouton, Christophe (EDF)"/>
       <SimpleType name="intersectionTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="intersectionTypeValues are suggested values for X3DPickSensorNode type intersectionType attribute. Unbounded, additional values are possible."
+                  appinfo="intersectionTypeValues are suggested values for X3DPickSensorNode type intersectionType field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="BOUNDS"/>
          <enumeration value="GEOMETRY"/>
@@ -2431,7 +2444,7 @@
       </SimpleType>
       <SimpleType name="justifyChoices"
                   baseType="MFString"
-                  appinfo="justifyChoices are strictly allowed enumeration values for FontStyle node justify attribute. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  appinfo="justifyChoices are strictly allowed enumeration values for FontStyle node justify field. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Directionandjustification">
          <enumeration value="&#34;MIDDLE&#34;"/>
          <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
@@ -2509,14 +2522,14 @@
                   documentation="TODO HAnim specification"/>
       <SimpleType name="metaDirectionChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="metaDirectionChoices are strictly allowed enumeration values for meta element direction attribute."
+                  appinfo="metaDirectionChoices are strictly allowed enumeration values for meta element direction field."
                   documentation="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir">
          <enumeration value="rtl" appinfo="right-to-left"/>
          <enumeration value="ltr" appinfo="left-to-right"/>
       </SimpleType>
       <SimpleType name="metaNameValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="metaNameValues are suggested optional values for meta element name attribute. Additional names are also defined and allowed."
+                  appinfo="metaNameValues are suggested optional values for meta element name field. Additional names are also defined and allowed."
                   documentation="http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#metaTags">
          <enumeration value="accessRights"
                       appinfo="permission required to access resource or security status"
@@ -2536,6 +2549,8 @@
          <enumeration value="description"
                       appinfo="summary overview describing this resource"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-description"/>
+         <enumeration value="disclaimer"
+                      appinfo="statement of denial or disavowal regarding potential claims or responsiblity"/>
          <enumeration value="drawing"
                       appinfo="name or reference link to a supporting drawing or sketch file"/>
          <enumeration value="error"
@@ -2567,11 +2582,15 @@
          <enumeration value="modified"
                       appinfo="date of modified version"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-modified"/>
+         <enumeration value="movie"
+                      appinfo="name or reference link to supporting movie file (note that Dublin Core term is MovingImage)"/>
          <enumeration value="MovingImage"
                       appinfo="name or reference link to supporting movie"
                       documentation="http://www.dublincore.org/documents/dcmi-terms/#dcmitype-MovingImage"/>
          <enumeration value="original"
                       appinfo="name or reference link to original file or resource"/>
+         <enumeration value="photo"
+                      appinfo="name or reference link to supporting photo file (note that Dublin Core term is Image)"/>
          <enumeration value="photograph"
                       appinfo="name or reference link to supporting photograph file (note that Dublin Core term is Image)"/>
          <enumeration value="publisher"
@@ -2791,7 +2810,7 @@
       </SimpleType>
       <SimpleType name="particleSystemGeometryTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="particleSystemGeometryTypeValues are allowed enumeration values for the ParticleSystem node geometryType attribute. Unbounded, additional values are possible."
+                  appinfo="particleSystemGeometryTypeValues are allowed enumeration values for the ParticleSystem node geometryType field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/particle_systems.html#ParticleSystem">
          <enumeration value="LINE"/>
          <enumeration value="POINT"/>
@@ -2817,7 +2836,7 @@
       </SimpleType>
       <SimpleType name="pickSensorMatchCriterionChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="pickSensorMatchCriterionChoices are strictly allowed enumeration values for X3DPickSensorNode node matchCriterion attribute. Bounded, no additional values are possible."
+                  appinfo="pickSensorMatchCriterionChoices are strictly allowed enumeration values for X3DPickSensorNode node matchCriterion field. Bounded, no additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="MATCH_ANY"/>
          <enumeration value="MATCH_EVERY"/>
@@ -2825,7 +2844,7 @@
       </SimpleType>
       <SimpleType name="pickSensorSortOrderValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="pickSensorSortOrderValues are allowed enumeration values for X3DPickSensorNode node sortOrder attribute. Unbounded, additional values are possible."
+                  appinfo="pickSensorSortOrderValues are allowed enumeration values for X3DPickSensorNode node sortOrder field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="ANY"/>
          <enumeration value="CLOSEST"/>
@@ -3665,7 +3684,7 @@
       </SimpleType>
       <SimpleType name="shaderPartTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart type attribute. Unbounded, additional values are possible."
+                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart type field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#ShaderPart">
          <enumeration value="VERTEX"/>
          <enumeration value="FRAGMENT"/>
@@ -6855,6 +6874,13 @@
                    default="NULL"
                    acceptableNodeTypes="X3DMetadataObject"
                    inheritedFrom="X3DNode"/>
+            <field type="SFNode"
+                   accessType="inputOutput"
+                   name="pointProperties"
+                   default="NULL"
+                   acceptableNodeTypes="PointProperties">
+               <componentInfo name="Shape" level="5"/>
+            </field>
             <field type="MFNode"
                    accessType="inputOutput"
                    name="shaders"
@@ -20024,6 +20050,66 @@
             </ContentModel>
          </InterfaceDefinition>
       </ConcreteNode>
+      <ConcreteNode name="PointProperties">
+         <InterfaceDefinition specificationUrl="https://github.com/Web3DConsortium/X3D/blob/master/ISO-IEC19775/ISO-IEC19775-1/ISO-IEC19775-1v4.0/ISO-IEC19775-1v4-WD1/Part01/components/shape.html">
+            <componentInfo name="Shape" level="5"/>
+            <Inheritance baseType="X3DAppearanceChildNode"/>
+            <field type="SFString"
+                   accessType="inputOutput"
+                   name="colorMode"
+                   default="TEXTURE_AND_POINT_COLOR"
+                   additionalEnumerationValuesAllowed="false"
+                   baseType="colorModeChoices">
+               <enumeration value="POINT_COLOR"/>
+               <enumeration value="TEXTURE_COLOR"/>
+               <enumeration value="TEXTURE_AND_POINT_COLOR"/>
+            </field>
+            <field type="SFNode"
+                   accessType="inputOutput"
+                   name="metadata"
+                   default="NULL"
+                   acceptableNodeTypes="X3DMetadataObject"
+                   inheritedFrom="X3DNode"/>
+            <field type="MFFloat"
+                   accessType="inputOutput"
+                   name="pointSizeAttenuation"
+                   default="1 0 0"/>
+            <field type="SFFloat"
+                   accessType="inputOutput"
+                   name="pointSizeMaxValue"
+                   default="1"
+                   minInclusive="0"/>
+            <field type="SFFloat"
+                   accessType="inputOutput"
+                   name="pointSizeMinValue"
+                   default="1"
+                   minInclusive="0"/>
+            <field type="SFFloat"
+                   accessType="inputOutput"
+                   name="pointSizeScaleFactor"
+                   default="1"
+                   minInclusive="1"/>
+            <field type="SFString"
+                   accessType="inputOutput"
+                   name="DEF"
+                   inheritedFrom="DEF_USE"
+                   baseType="xs:ID"/>
+            <field type="SFString"
+                   accessType="inputOutput"
+                   name="USE"
+                   inheritedFrom="DEF_USE"
+                   baseType="xs:IDREF"/>
+            <field type="SFString"
+                   accessType="inputOutput"
+                   name="class"
+                   inheritedFrom="globalAttributes"
+                   baseType="xs:NMTOKENS"/>
+            <containerField default="pointProperties" type="xs:NMTOKEN"/>
+            <ContentModel>
+               <GroupContentModel name="ChildContentModelCore" minOccurs="0"/>
+            </ContentModel>
+         </InterfaceDefinition>
+      </ConcreteNode>
       <ConcreteNode name="PointSet">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/rendering.html#PointSet">
             <componentInfo name="Rendering" level="1"/>
@@ -25874,6 +25960,8 @@
                <enumeration value="description"
                             appinfo="summary overview describing this resource"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-description"/>
+               <enumeration value="disclaimer"
+                            appinfo="statement of denial or disavowal regarding potential claims or responsiblity"/>
                <enumeration value="drawing"
                             appinfo="name or reference link to a supporting drawing or sketch file"/>
                <enumeration value="error"
@@ -25905,11 +25993,15 @@
                <enumeration value="modified"
                             appinfo="date of modified version"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#terms-modified"/>
+               <enumeration value="movie"
+                            appinfo="name or reference link to supporting movie file (note that Dublin Core term is MovingImage)"/>
                <enumeration value="MovingImage"
                             appinfo="name or reference link to supporting movie"
                             documentation="http://www.dublincore.org/documents/dcmi-terms/#dcmitype-MovingImage"/>
                <enumeration value="original"
                             appinfo="name or reference link to original file or resource"/>
+               <enumeration value="photo"
+                            appinfo="name or reference link to supporting photo file (note that Dublin Core term is Image)"/>
                <enumeration value="photograph"
                             appinfo="name or reference link to supporting photograph file (note that Dublin Core term is Image)"/>
                <enumeration value="publisher"
