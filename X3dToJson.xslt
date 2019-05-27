@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2001-2018 held by the author(s).  All rights reserved.
+Copyright (c) 2001-2019 held by the author(s).  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -45,7 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
    <meta name="reference"   content="http://www.freeformatter.com/xml-to-json-converter.html"/>
    <meta name="reference"   content="http://json.org"/>
    <meta name="reference"   content="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf"/>
-   <meta name="reference"   content="http://www.w3.org/TR/xslt"/>
+   <meta name="reference"   content="https://www.w3.org/TR/xslt"/>
    <meta name="reference"   content="XML Spy, http://www.xmlspy.com"/>
    <meta name="reference"   content="SAXON XML Toolkit, http://saxon.sourceforge.net"/>
    <meta name="generator"   content="X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"/>
