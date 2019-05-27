@@ -1,151 +1,51 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("HelloWorld.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Simple X3D scene example: Hello World!") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("30 October 2000") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("14 April 2017") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Don Brutzman") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("Image") \
-     .setContent("HelloWorld.tall.png") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://en.wikipedia.org/wiki/Hello_world") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("https://en.wikipedia.org/wiki/Hello#.22Hello.2C_World.22_computer_program") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("https://en.wikipedia.org/wiki/\"Hello,_World!\"_program") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.HelloWorldExample.net") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3D.org") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3d.org/realtime-3d/news/internationalization-x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3d.org/x3d/content/examples/HelloWorld.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloWorld.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("http://www.web3d.org/x3d/content/examples/license.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("HelloWorld.wrl") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("HelloWorld.x3dv") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("HelloWorld.x3db") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("HelloWorld.xhtml") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("HelloWorld.json") \
-    ) \
-#Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON
-   ) \
-   .setScene(SceneObject() \
-#Example scene to illustrate X3D nodes and fields (XML elements and attributes)
-    .addChildren(WorldInfoObject() \
-     .setTitle("Hello world!") \
-    ) \
-    .addChildren(GroupObject() \
-     .addChildren(ViewpointObject() \
-      .setDEF("ViewUpClose") \
-      .setCenterOfRotation([0,-1,0]) \
-      .setDescription("Hello world!") \
-      .setPosition([0,-1,7]) \
-     ) \
-     .addChildren(TransformObject() \
-      .setRotation([0,1,0,3]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(SphereObject() \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDEF("MaterialLightBlue") \
-         .setDiffuseColor([0.1,0.5,1]) \
-        ) \
-        .setTexture(ImageTextureObject() \
-         .setDEF("ImageCloudlessEarth") \
-         .setUrl(["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"]) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setDEF("TextMessage") \
-        .setString(["Hello","world!"]) \
-        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setUSE("MaterialLightBlue") \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./HelloWorld.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("HelloWorld.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Simple X3D scene example: Hello World!")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("30 October 2000")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("14 April 2017")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Don Brutzman")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("Image")).setContent(x3dpsail.SFString("HelloWorld.tall.png")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://en.wikipedia.org/wiki/Hello_world")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("https://en.wikipedia.org/wiki/Hello#.22Hello.2C_World.22_computer_program")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("https://en.wikipedia.org/wiki/\"Hello,_World!\"_program")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://en.wikibooks.org/w/index.php?title=Computer_Programming/Hello_world")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.HelloWorldExample.net")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3D.org")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3d.org/realtime-3d/news/internationalization-x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/content/examples/HelloWorld.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForAdvancedModeling/HelloWorldScenes")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter01TechnicalOverview/HelloWorld.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/content/examples/license.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("HelloWorld.wrl")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("HelloWorld.x3dv")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("HelloWorld.x3db")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("HelloWorld.xhtml")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("HelloWorld.json")))
+        #Alternate encodings: VRML97, X3D ClassicVRML Encoding, X3D Compressed Binary Encoding (CBE), X3DOM, JSON
+
+        )
+      .setScene(x3dpsail.Scene()
+        #Example scene to illustrate X3D nodes and fields (XML elements and attributes)
+
+        .addChild(x3dpsail.WorldInfo().setTitle(x3dpsail.SFString("Hello world!")))
+        .addChild(x3dpsail.Group()
+          .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("ViewUpClose")).setCenterOfRotation(x3dpsail.SFVec3f(0,-1,0)).setDescription(x3dpsail.SFString("Hello world!")).setPosition(x3dpsail.SFVec3f(0,-1,7)))
+          .addChild(x3dpsail.Transform().setRotation(x3dpsail.SFRotation(0,1,0,3))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Sphere())
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDEF(x3dpsail.SFString("MaterialLightBlue")).setDiffuseColor(x3dpsail.SFColor(0.1,0.5,1)))
+                .setTexture(x3dpsail.ImageTexture().setDEF(x3dpsail.SFString("ImageCloudlessEarth")).setUrl(x3dpsail.MFString(["earth-topo.png","earth-topo.jpg","earth-topo-small.gif","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.png","http://www.web3d.org/x3d/content/examples/Basic/earth-topo.jpg","http://www.web3d.org/x3d/content/examples/Basic/earth-topo-small.gif"]))))))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setDEF(x3dpsail.SFString("TextMessage")).setString(x3dpsail.MFString(["Hello","world!"]))
+                .setFontStyle(x3dpsail.FontStyle().setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"]))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setUSE(x3dpsail.SFString("MaterialLightBlue")))))))))
+
+X3D0.toFileX3D("./future/./HelloWorld_RoundTrip.x3d")

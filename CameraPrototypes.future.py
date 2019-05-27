@@ -1,629 +1,159 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.2") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("CameraPrototypes.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Camera, CameraShot and CameraMovement prototypes that demonstrate storyboard capabilities and precise camera operation. This is a developmental effort for potential X3D Specification improvement.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Don Brutzman and Jeff Weekley") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("16 March 2009") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("25 October 2016") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("TODO") \
-     .setContent("Schematron rules, backed up by initialize() checks") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("BeyondViewpointCameraNodesWeb3D2009.pdf") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/navigation.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("subject") \
-     .setContent("Camera nodes for Viewpoint navigation control") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("CameraExamples.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../license.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-#=============== Camera ==============
-    .addChildren(ProtoDeclareObject() \
-     .setName("Camera") \
-     .setAppinfo("Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images.") \
-     .setProtoInterface(ProtoInterfaceObject() \
-#Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields
-      .addField(fieldObject() \
-       .setName("description") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Text description to be displayed for this Camera") \
-       .setType("SFString") \
-      ) \
-      .addField(fieldObject() \
-       .setName("position") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera position in local transformation frame, which is default prior to first CameraShot initialPosition getting activated") \
-       .setType("SFVec3f") \
-       .setValue("0 0 10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("orientation") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera rotation in local transformation frame, which is default prior to first CameraShot initialPosition getting activated") \
-       .setType("SFRotation") \
-       .setValue("0 0 1 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("fieldOfView") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("pi/4") \
-       .setType("SFFloat") \
-       .setValue("0.7854") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_fraction") \
-       .setAccessType("inputOnly") \
-       .setAppinfo("input fraction drives interpolators") \
-       .setType("SFFloat") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_bind") \
-       .setAccessType("inputOnly") \
-       .setAppinfo("input event binds or unbinds this Camera") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindTime") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("output event indicates when this Camera is bound") \
-       .setType("SFTime") \
-      ) \
-      .addField(fieldObject() \
-       .setName("isBound") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("output event indicates whether this Camera is bound or unbound") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("nearClipPlane") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Vector distance to near clipping plane corresponds to NavigationInfo.avatarSize[0]") \
-       .setType("SFFloat") \
-       .setValue("0.25") \
-      ) \
-      .addField(fieldObject() \
-       .setName("farClipPlane") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Vector distance to far clipping plane corresponds to NavigationInfo.visibilityLimit") \
-       .setType("SFFloat") \
-       .setValue("0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("shots") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-       .setType("MFNode") \
-#initialization nodes (if any) go here
-      ) \
-      .addField(fieldObject() \
-       .setName("headlight") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Whether camera headlight is on or off") \
-       .setType("SFBool") \
-       .setValue("true") \
-      ) \
-      .addField(fieldObject() \
-       .setName("headlightColor") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera headlight color") \
-       .setType("SFColor") \
-       .setValue("1 1 1") \
-      ) \
-      .addField(fieldObject() \
-       .setName("headlightIntensity") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera headlight intensity") \
-       .setType("SFFloat") \
-       .setValue("1") \
-      ) \
-      .addField(fieldObject() \
-       .setName("filterColor") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera filter color that modifies virtual lens capture") \
-       .setType("SFColor") \
-       .setValue("1 1 1") \
-      ) \
-      .addField(fieldObject() \
-       .setName("filterTransparency") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Camera filter transparency that modifies virtual lens capture") \
-       .setType("SFFloat") \
-       .setValue("1") \
-      ) \
-      .addField(fieldObject() \
-       .setName("upVector") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("upVector changes modify camera orientation (and possibly vice versa)") \
-       .setType("SFVec3f") \
-       .setValue("0 1 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("fStop") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-       .setType("SFFloat") \
-       .setValue("5.6") \
-      ) \
-      .addField(fieldObject() \
-       .setName("focusDistance") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Distance to focal plane of sharpest focus") \
-       .setType("SFFloat") \
-       .setValue("10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("isActive") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("totalDuration") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations") \
-       .setType("SFTime") \
-      ) \
-      .addField(fieldObject() \
-       .setName("offlineRender") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("OfflineRender node") \
-       .setType("SFNode") \
-#initialization node (if any) goes here
-      ) \
-      .addField(fieldObject() \
-       .setName("traceEnabled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("enable console output to trace script computations and prototype progress") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(ViewpointObject() \
-       .setDEF("CameraViewpoint") \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("description") \
-         .setProtoField("description") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("position") \
-         .setProtoField("position") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("orientation") \
-         .setProtoField("orientation") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("fieldOfView") \
-         .setProtoField("fieldOfView") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_bind") \
-         .setProtoField("set_bind") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("bindTime") \
-         .setProtoField("bindTime") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("isBound") \
-         .setProtoField("isBound") \
-        ) \
-       ) \
-      ) \
-#NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation
-      .addChildren(NavigationInfoObject() \
-       .setDEF("CameraNavInfo") \
-       .setType(["EXAMINE","FLY","ANY"]) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("set_bind") \
-         .setProtoField("set_bind") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("headlight") \
-         .setProtoField("headlight") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("visibilityLimit") \
-         .setProtoField("farClipPlane") \
-        ) \
-#No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.
-       ) \
-      ) \
-#this DirectionalLight replaces NavigationInfo headlight in order to add color capability
-      .addChildren(DirectionalLightObject() \
-       .setDEF("CameraDirectionalLight") \
-       .setGlobal(True) \
-#TODO confirm other default field values match NavigationInfo spec
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("on") \
-         .setProtoField("headlight") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("color") \
-         .setProtoField("headlightColor") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("intensity") \
-         .setProtoField("headlightIntensity") \
-        ) \
-       ) \
-      ) \
-      .addChildren(PositionInterpolatorObject() \
-       .setDEF("CameraPositionInterpolator") \
-       .setKey([0,1]) \
-       .setKeyValue([0,0,0,0,0,0]) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("set_fraction") \
-         .setProtoField("set_fraction") \
-        ) \
-       ) \
-      ) \
-      .addChildren(OrientationInterpolatorObject() \
-       .setDEF("CameraOrientationInterpolator") \
-       .setKey([0,1]) \
-       .setKeyValue([0,1,0,0,0,1,0,0]) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("set_fraction") \
-         .setProtoField("set_fraction") \
-        ) \
-       ) \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("value_changed") \
-       .setFromNode("CameraPositionInterpolator") \
-       .setToField("position") \
-       .setToNode("CameraViewpoint") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("value_changed") \
-       .setFromNode("CameraOrientationInterpolator") \
-       .setToField("orientation") \
-       .setToNode("CameraViewpoint") \
-      ) \
-      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
-       .setDEF("CameraScript") \
-#binding is controlled externally, all camera operations proceed the same regardless of whether bound or not
-       .addField(fieldObject() \
-        .setName("description") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Text description to be displayed for this Camera") \
-        .setType("SFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("position") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Camera position in local transformation frame") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("orientation") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Camera rotation in local transformation frame") \
-        .setType("SFRotation") \
-       ) \
-       .addField(fieldObject() \
-        .setName("set_fraction") \
-        .setAccessType("inputOnly") \
-        .setAppinfo("input fraction drives interpolators") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("set_bind") \
-        .setAccessType("inputOnly") \
-        .setAppinfo("input event binds or unbinds this Camera") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("fieldOfView") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("pi/4") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("nearClipPlane") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Vector distance to near clipping plane") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("farClipPlane") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Vector distance to far clipping plane") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("shots") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Array of CameraShot nodes which in turn contain CameraMovement nodes") \
-        .setType("MFNode") \
-#initialization nodes (if any) go here
-       ) \
-       .addField(fieldObject() \
-        .setName("filterColor") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Camera filter color that modifies virtual lens capture") \
-        .setType("SFColor") \
-       ) \
-       .addField(fieldObject() \
-        .setName("filterTransparency") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Camera filter transparency that modifies virtual lens capture") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("upVector") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("upVector changes modify camera orientation (and possibly vice versa)") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("fStop") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("focusDistance") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Distance to focal plane of sharpest focus") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("isActive") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("totalDuration") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations") \
-        .setType("SFTime") \
-       ) \
-       .addField(fieldObject() \
-        .setName("offlineRender") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("OfflineRender node") \
-        .setType("SFNode") \
-#initialization node (if any) goes here
-       ) \
-       .addField(fieldObject() \
-        .setName("ViewpointNode") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .setType("SFNode") \
-        .addChildren(ViewpointObject() \
-         .setUSE("CameraViewpoint") \
-        ) \
-       ) \
-       .addField(fieldObject() \
-        .setName("NavInfoNode") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .setType("SFNode") \
-        .addChildren(NavigationInfoObject() \
-         .setUSE("CameraNavInfo") \
-        ) \
-       ) \
-       .addField(fieldObject() \
-        .setName("CameraPI") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .setType("SFNode") \
-        .addChildren(PositionInterpolatorObject() \
-         .setUSE("CameraPositionInterpolator") \
-        ) \
-       ) \
-       .addField(fieldObject() \
-        .setName("CameraOI") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("node reference to permit getting setting fields from within Script") \
-        .setType("SFNode") \
-        .addChildren(OrientationInterpolatorObject() \
-         .setUSE("CameraOrientationInterpolator") \
-        ) \
-       ) \
-       .addField(fieldObject() \
-        .setName("key") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("key array for interpolators") \
-        .setType("MFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("keyValuePosition") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("keyValue array for PositionInterpolator") \
-        .setType("MFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("keyValueOrientation") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("keyValue array for OrientationInterpolator") \
-        .setType("MFRotation") \
-       ) \
-       .addField(fieldObject() \
-        .setName("animated") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("whether internal CameraShot and CameraMove nodes are tracking or changed via ROUTE events") \
-        .setType("SFBool") \
-        .setValue("false") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialized") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("perform checkShots() function once immediately after initialization") \
-        .setType("SFBool") \
-        .setValue("false") \
-       ) \
-       .addField(fieldObject() \
-        .setName("shotCount") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("how many CameraShot nodes are contained in shots array") \
-        .setType("SFInt32") \
-        .setValue("0") \
-       ) \
-       .addField(fieldObject() \
-        .setName("movesCount") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("how many CameraMove nodes are contained in moves array") \
-        .setType("SFInt32") \
-        .setValue("0") \
-       ) \
-       .addField(fieldObject() \
-        .setName("frameCount") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("how many frames were created in current loop") \
-        .setType("SFFloat") \
-        .setValue("0") \
-       ) \
-       .addField(fieldObject() \
-        .setName("startTime") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("holding variable") \
-        .setType("SFTime") \
-        .setValue("0") \
-       ) \
-       .addField(fieldObject() \
-        .setName("priorTraceTime") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("holding variable") \
-        .setType("SFTime") \
-        .setValue("0") \
-       ) \
-       .addField(fieldObject() \
-        .setName("traceEnabled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("enable console output to trace script computations and prototype progress") \
-        .setType("SFBool") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("description") \
-         .setProtoField("description") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("position") \
-         .setProtoField("position") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("orientation") \
-         .setProtoField("orientation") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_fraction") \
-         .setProtoField("set_fraction") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_bind") \
-         .setProtoField("set_bind") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("fieldOfView") \
-         .setProtoField("fieldOfView") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("nearClipPlane") \
-         .setProtoField("nearClipPlane") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("farClipPlane") \
-         .setProtoField("farClipPlane") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("shots") \
-         .setProtoField("shots") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("filterColor") \
-         .setProtoField("filterColor") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("filterTransparency") \
-         .setProtoField("filterTransparency") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("upVector") \
-         .setProtoField("upVector") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("fStop") \
-         .setProtoField("fStop") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("focusDistance") \
-         .setProtoField("focusDistance") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("isActive") \
-         .setProtoField("isActive") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("totalDuration") \
-         .setProtoField("totalDuration") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("offlineRender") \
-         .setProtoField("offlineRender") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("traceEnabled") \
-         .setProtoField("traceEnabled") \
-        ) \
-       ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.2"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("CameraPrototypes.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Camera, CameraShot and CameraMovement prototypes that demonstrate storyboard capabilities and precise camera operation. This is a developmental effort for potential X3D Specification improvement.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Don Brutzman and Jeff Weekley")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("16 March 2009")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("25 October 2016")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("TODO")).setContent(x3dpsail.SFString("Schematron rules, backed up by initialize() checks")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("BeyondViewpointCameraNodesWeb3D2009.pdf")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/navigation.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("subject")).setContent(x3dpsail.SFString("Camera nodes for Viewpoint navigation control")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("CameraExamples.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../license.html"))))
+      .setScene(x3dpsail.Scene()
+        #=============== Camera ==============
+
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("Camera")).setAppinfo(x3dpsail.SFString("Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images."))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            #Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields
+
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this Camera")).setType(x3dpsail.SFString("SFString")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("position")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera position in local transformation frame, which is default prior to first CameraShot initialPosition getting activated")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("orientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera rotation in local transformation frame, which is default prior to first CameraShot initialPosition getting activated")).setType(x3dpsail.SFString("SFRotation")).setValue(x3dpsail.SFString("0 0 1 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("fieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("pi/4")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.7854")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("input fraction drives interpolators")).setType(x3dpsail.SFString("SFFloat")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_bind")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("input event binds or unbinds this Camera")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindTime")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("output event indicates when this Camera is bound")).setType(x3dpsail.SFString("SFTime")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("isBound")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("output event indicates whether this Camera is bound or unbound")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("nearClipPlane")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Vector distance to near clipping plane corresponds to NavigationInfo.avatarSize[0]")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.25")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("farClipPlane")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Vector distance to far clipping plane corresponds to NavigationInfo.visibilityLimit")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("shots")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Array of CameraShot nodes which in turn contain CameraMovement nodes")).setType(x3dpsail.SFString("MFNode"))
+              #initialization nodes (if any) go here
+
+              )
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("headlight")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether camera headlight is on or off")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("true")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("headlightColor")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera headlight color")).setType(x3dpsail.SFString("SFColor")).setValue(x3dpsail.SFString("1 1 1")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("headlightIntensity")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera headlight intensity")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("1")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("filterColor")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera filter color that modifies virtual lens capture")).setType(x3dpsail.SFString("SFColor")).setValue(x3dpsail.SFString("1 1 1")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("filterTransparency")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera filter transparency that modifies virtual lens capture")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("1")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("upVector")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("upVector changes modify camera orientation (and possibly vice versa)")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 1 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("fStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("5.6")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("focusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("totalDuration")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations")).setType(x3dpsail.SFString("SFTime")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("offlineRender")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("OfflineRender node")).setType(x3dpsail.SFString("SFNode"))
+              #initialization node (if any) goes here
+
+              )
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("CameraViewpoint"))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("description")).setProtoField(x3dpsail.SFString("description")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("position")).setProtoField(x3dpsail.SFString("position")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("orientation")).setProtoField(x3dpsail.SFString("orientation")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("fieldOfView")).setProtoField(x3dpsail.SFString("fieldOfView")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_bind")).setProtoField(x3dpsail.SFString("set_bind")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("bindTime")).setProtoField(x3dpsail.SFString("bindTime")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("isBound")).setProtoField(x3dpsail.SFString("isBound")))))
+            #NavInfo EXAMINE used since some browsers (InstantReality) try to lock view to vertical when flying to avoid disorientation
+
+            .addChild(x3dpsail.NavigationInfo().setDEF(x3dpsail.SFString("CameraNavInfo")).setType(x3dpsail.MFString(["EXAMINE","FLY","ANY"]))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_bind")).setProtoField(x3dpsail.SFString("set_bind")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("headlight")).setProtoField(x3dpsail.SFString("headlight")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("visibilityLimit")).setProtoField(x3dpsail.SFString("farClipPlane")))
+                #No need to bind outputs bindTime, isBound from NavigationInfo since Viewpoint outputs will suffice. TODO inform BitManagement that bindTime field is missing.
+
+                ))
+            #this DirectionalLight replaces NavigationInfo headlight in order to add color capability
+
+            .addChild(x3dpsail.DirectionalLight().setDEF(x3dpsail.SFString("CameraDirectionalLight")).setGlobal(x3dpsail.SFBool(True))
+              #TODO confirm other default field values match NavigationInfo spec
+
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("on")).setProtoField(x3dpsail.SFString("headlight")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("color")).setProtoField(x3dpsail.SFString("headlightColor")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("intensity")).setProtoField(x3dpsail.SFString("headlightIntensity")))))
+            .addChild(x3dpsail.PositionInterpolator().setDEF(x3dpsail.SFString("CameraPositionInterpolator")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFVec3f([0,0,0,0,0,0]))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_fraction")).setProtoField(x3dpsail.SFString("set_fraction")))))
+            .addChild(x3dpsail.OrientationInterpolator().setDEF(x3dpsail.SFString("CameraOrientationInterpolator")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFRotation([0,1,0,0,0,1,0,0]))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_fraction")).setProtoField(x3dpsail.SFString("set_fraction")))))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("value_changed")).setFromNode(x3dpsail.SFString("CameraPositionInterpolator")).setToField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("CameraViewpoint")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("value_changed")).setFromNode(x3dpsail.SFString("CameraOrientationInterpolator")).setToField(x3dpsail.SFString("orientation")).setToNode(x3dpsail.SFString("CameraViewpoint")))
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("CameraScript")).setDirectOutput(x3dpsail.SFBool(True)).setMustEvaluate(x3dpsail.SFBool(True))
+              #binding is controlled externally, all camera operations proceed the same regardless of whether bound or not
+
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this Camera")).setType(x3dpsail.SFString("SFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("position")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera position in local transformation frame")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("orientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera rotation in local transformation frame")).setType(x3dpsail.SFString("SFRotation")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("input fraction drives interpolators")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("set_bind")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("input event binds or unbinds this Camera")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("fieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("pi/4")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("nearClipPlane")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Vector distance to near clipping plane")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("farClipPlane")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Vector distance to far clipping plane")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("shots")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Array of CameraShot nodes which in turn contain CameraMovement nodes")).setType(x3dpsail.SFString("MFNode"))
+                #initialization nodes (if any) go here
+
+                )
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("filterColor")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera filter color that modifies virtual lens capture")).setType(x3dpsail.SFString("SFColor")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("filterTransparency")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Camera filter transparency that modifies virtual lens capture")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("upVector")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("upVector changes modify camera orientation (and possibly vice versa)")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("fStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("focusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("totalDuration")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Total duration of contained enabled CameraShot (and thus CameraMovement) move durations")).setType(x3dpsail.SFString("SFTime")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("offlineRender")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("OfflineRender node")).setType(x3dpsail.SFString("SFNode"))
+                #initialization node (if any) goes here
+
+                )
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("ViewpointNode")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("node reference to permit getting setting fields from within Script")).setType(x3dpsail.SFString("SFNode"))
+                .addChild(x3dpsail.Viewpoint().setUSE(x3dpsail.SFString("CameraViewpoint"))))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("NavInfoNode")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("node reference to permit getting setting fields from within Script")).setType(x3dpsail.SFString("SFNode"))
+                .addChild(x3dpsail.NavigationInfo().setUSE(x3dpsail.SFString("CameraNavInfo"))))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("CameraPI")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("node reference to permit getting setting fields from within Script")).setType(x3dpsail.SFString("SFNode"))
+                .addChild(x3dpsail.PositionInterpolator().setUSE(x3dpsail.SFString("CameraPositionInterpolator"))))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("CameraOI")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("node reference to permit getting setting fields from within Script")).setType(x3dpsail.SFString("SFNode"))
+                .addChild(x3dpsail.OrientationInterpolator().setUSE(x3dpsail.SFString("CameraOrientationInterpolator"))))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("key")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("key array for interpolators")).setType(x3dpsail.SFString("MFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("keyValuePosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("keyValue array for PositionInterpolator")).setType(x3dpsail.SFString("MFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("keyValueOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("keyValue array for OrientationInterpolator")).setType(x3dpsail.SFString("MFRotation")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("animated")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("whether internal CameraShot and CameraMove nodes are tracking or changed via ROUTE events")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialized")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("perform checkShots() function once immediately after initialization")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("shotCount")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("how many CameraShot nodes are contained in shots array")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("0")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("movesCount")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("how many CameraMove nodes are contained in moves array")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("0")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("frameCount")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("how many frames were created in current loop")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("startTime")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("holding variable")).setType(x3dpsail.SFString("SFTime")).setValue(x3dpsail.SFString("0")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("priorTraceTime")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("holding variable")).setType(x3dpsail.SFString("SFTime")).setValue(x3dpsail.SFString("0")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("description")).setProtoField(x3dpsail.SFString("description")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("position")).setProtoField(x3dpsail.SFString("position")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("orientation")).setProtoField(x3dpsail.SFString("orientation")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_fraction")).setProtoField(x3dpsail.SFString("set_fraction")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_bind")).setProtoField(x3dpsail.SFString("set_bind")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("fieldOfView")).setProtoField(x3dpsail.SFString("fieldOfView")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("nearClipPlane")).setProtoField(x3dpsail.SFString("nearClipPlane")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("farClipPlane")).setProtoField(x3dpsail.SFString("farClipPlane")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("shots")).setProtoField(x3dpsail.SFString("shots")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("filterColor")).setProtoField(x3dpsail.SFString("filterColor")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("filterTransparency")).setProtoField(x3dpsail.SFString("filterTransparency")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("upVector")).setProtoField(x3dpsail.SFString("upVector")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("fStop")).setProtoField(x3dpsail.SFString("fStop")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("focusDistance")).setProtoField(x3dpsail.SFString("focusDistance")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("isActive")).setProtoField(x3dpsail.SFString("isActive")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("totalDuration")).setProtoField(x3dpsail.SFString("totalDuration")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("offlineRender")).setProtoField(x3dpsail.SFString("offlineRender")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("traceEnabled")).setProtoField(x3dpsail.SFString("traceEnabled")))).setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -963,271 +493,64 @@ X3D0 = X3DObject() \
 "    else\n"+
 "         Browser.print ('[Camera] ' + outputString + '\\n');\n"+
 "}''')
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("position") \
-       .setFromNode("CameraScript") \
-       .setToField("position") \
-       .setToNode("CameraViewpoint") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("orientation") \
-       .setFromNode("CameraScript") \
-       .setToField("orientation") \
-       .setToNode("CameraViewpoint") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("isActive") \
-       .setFromNode("CameraScript") \
-       .setToField("set_bind") \
-       .setToNode("CameraViewpoint") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("isActive") \
-       .setFromNode("CameraScript") \
-       .setToField("set_bind") \
-       .setToNode("CameraNavInfo") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("isActive") \
-       .setFromNode("CameraScript") \
-       .setToField("on") \
-       .setToNode("CameraDirectionalLight") \
-      ) \
-     ) \
-    ) \
-#=============== CameraShot ==============
-    .addChildren(ProtoDeclareObject() \
-     .setName("CameraShot") \
-     .setAppinfo("CameraShot collects a specific set of CameraMovement animations that make up an individual shot.") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("description") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Text description to be displayed for this CameraShot") \
-       .setType("SFString") \
-      ) \
-      .addField(fieldObject() \
-       .setName("enabled") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Whether this CameraShot can be activated") \
-       .setType("SFBool") \
-       .setValue("true") \
-      ) \
-      .addField(fieldObject() \
-       .setName("moves") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Set of CameraMovement nodes") \
-       .setType("MFNode") \
-#initializing CameraMovement nodes are inserted here by scene author using ProtoInstance
-      ) \
-      .addField(fieldObject() \
-       .setName("initialPosition") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Setup to reinitialize camera position for this shot") \
-       .setType("SFVec3f") \
-       .setValue("0 0 10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("initialOrientation") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Setup to reinitialize camera rotation for this shot") \
-       .setType("SFRotation") \
-       .setValue("0 0 1 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("initialAimPoint") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Setup to reinitialize aimpoint (relative location for camera direction) for this shot") \
-       .setType("SFVec3f") \
-       .setValue("0 0 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("initialFieldOfView") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("pi/4") \
-       .setType("SFFloat") \
-       .setValue("0.7854") \
-      ) \
-      .addField(fieldObject() \
-       .setName("initialFStop") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-       .setType("SFFloat") \
-       .setValue("5.6") \
-      ) \
-      .addField(fieldObject() \
-       .setName("initialFocusDistance") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Distance to focal plane of sharpest focus") \
-       .setType("SFFloat") \
-       .setValue("10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("shotDuration") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Subtotal duration of contained CameraMovement move durations") \
-       .setType("SFTime") \
-      ) \
-      .addField(fieldObject() \
-       .setName("isActive") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("traceEnabled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("enable console output to trace script computations and prototype progress") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
-       .setDEF("CameraShotScript") \
-       .addField(fieldObject() \
-        .setName("description") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Text description to be displayed for this CameraShot") \
-        .setType("SFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("enabled") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Whether this CameraShot can be activated") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("moves") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Set of CameraMovement nodes") \
-        .setType("MFNode") \
-#initialization nodes (if any) go here
-       ) \
-       .addField(fieldObject() \
-        .setName("initialPosition") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Setup to reinitialize camera position for this shot") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialOrientation") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Setup to reinitialize camera rotation for this shot") \
-        .setType("SFRotation") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialAimPoint") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Setup to reinitialize aimpoint (relative location for camera direction) for this shot") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialFieldOfView") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("pi/4") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialFStop") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("initialFocusDistance") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Distance to focal plane of sharpest focus") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("shotDuration") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Subtotal duration of contained CameraMovement move durations") \
-        .setType("SFTime") \
-       ) \
-       .addField(fieldObject() \
-        .setName("isActive") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("traceEnabled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("enable console output to trace script computations and prototype progress") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("key") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("key array for interpolators") \
-        .setType("MFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("keyValuePosition") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("keyValue array for PositionInterpolator") \
-        .setType("MFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("keyValueOrientation") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("keyValue array for OrientationInterpolator") \
-        .setType("MFRotation") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("description") \
-         .setProtoField("description") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("enabled") \
-         .setProtoField("enabled") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("moves") \
-         .setProtoField("moves") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialPosition") \
-         .setProtoField("initialPosition") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialOrientation") \
-         .setProtoField("initialOrientation") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialAimPoint") \
-         .setProtoField("initialAimPoint") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialFieldOfView") \
-         .setProtoField("initialFieldOfView") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialFStop") \
-         .setProtoField("initialFStop") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("initialFocusDistance") \
-         .setProtoField("initialFocusDistance") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("shotDuration") \
-         .setProtoField("shotDuration") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("isActive") \
-         .setProtoField("isActive") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("traceEnabled") \
-         .setProtoField("traceEnabled") \
-        ) \
-       ) \
-.setSourceCode('''ecmascript:\n"+
+)
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("position")).setFromNode(x3dpsail.SFString("CameraScript")).setToField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("CameraViewpoint")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("orientation")).setFromNode(x3dpsail.SFString("CameraScript")).setToField(x3dpsail.SFString("orientation")).setToNode(x3dpsail.SFString("CameraViewpoint")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("CameraScript")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("CameraViewpoint")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("CameraScript")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("CameraNavInfo")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("CameraScript")).setToField(x3dpsail.SFString("on")).setToNode(x3dpsail.SFString("CameraDirectionalLight")))))
+        #=============== CameraShot ==============
+
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("CameraShot")).setAppinfo(x3dpsail.SFString("CameraShot collects a specific set of CameraMovement animations that make up an individual shot."))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this CameraShot")).setType(x3dpsail.SFString("SFString")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this CameraShot can be activated")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("true")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("moves")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Set of CameraMovement nodes")).setType(x3dpsail.SFString("MFNode"))
+              #initializing CameraMovement nodes are inserted here by scene author using ProtoInstance
+
+              )
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialPosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize camera position for this shot")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize camera rotation for this shot")).setType(x3dpsail.SFString("SFRotation")).setValue(x3dpsail.SFString("0 0 1 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialAimPoint")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize aimpoint (relative location for camera direction) for this shot")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("pi/4")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.7854")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("5.6")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFocusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("shotDuration")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Subtotal duration of contained CameraMovement move durations")).setType(x3dpsail.SFString("SFTime")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("CameraShotScript")).setDirectOutput(x3dpsail.SFBool(True)).setMustEvaluate(x3dpsail.SFBool(True))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this CameraShot")).setType(x3dpsail.SFString("SFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this CameraShot can be activated")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("moves")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Set of CameraMovement nodes")).setType(x3dpsail.SFString("MFNode"))
+                #initialization nodes (if any) go here
+
+                )
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialPosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize camera position for this shot")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize camera rotation for this shot")).setType(x3dpsail.SFString("SFRotation")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialAimPoint")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Setup to reinitialize aimpoint (relative location for camera direction) for this shot")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("pi/4")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("initialFocusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("shotDuration")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Subtotal duration of contained CameraMovement move durations")).setType(x3dpsail.SFString("SFTime")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("key")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("key array for interpolators")).setType(x3dpsail.SFString("MFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("keyValuePosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("keyValue array for PositionInterpolator")).setType(x3dpsail.SFString("MFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("keyValueOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("keyValue array for OrientationInterpolator")).setType(x3dpsail.SFString("MFRotation")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("description")).setProtoField(x3dpsail.SFString("description")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("enabled")).setProtoField(x3dpsail.SFString("enabled")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("moves")).setProtoField(x3dpsail.SFString("moves")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialPosition")).setProtoField(x3dpsail.SFString("initialPosition")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialOrientation")).setProtoField(x3dpsail.SFString("initialOrientation")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialAimPoint")).setProtoField(x3dpsail.SFString("initialAimPoint")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialFieldOfView")).setProtoField(x3dpsail.SFString("initialFieldOfView")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialFStop")).setProtoField(x3dpsail.SFString("initialFStop")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("initialFocusDistance")).setProtoField(x3dpsail.SFString("initialFocusDistance")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("shotDuration")).setProtoField(x3dpsail.SFString("shotDuration")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("isActive")).setProtoField(x3dpsail.SFString("isActive")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("traceEnabled")).setProtoField(x3dpsail.SFString("traceEnabled")))).setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraShotScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1320,227 +643,59 @@ X3D0 = X3DObject() \
 "    else\n"+
 "         Browser.print ('[CameraShot] ' + outputString + '\\n');\n"+
 "}''')
-      ) \
-#Add any ROUTEs here, going from Script to other nodes within ProtoBody
-     ) \
-    ) \
-#=============== CameraMovement ==============
-    .addChildren(ProtoDeclareObject() \
-     .setName("CameraMovement") \
-     .setAppinfo("CameraMovement node defines a single camera movement animation including goalPosition, goalOrientation, goalAimPoint and goalFieldOfView.") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("description") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Text description to be displayed for this CameraMovement") \
-       .setType("SFString") \
-      ) \
-      .addField(fieldObject() \
-       .setName("enabled") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Whether this CameraMovement can be activated") \
-       .setType("SFBool") \
-       .setValue("true") \
-      ) \
-      .addField(fieldObject() \
-       .setName("duration") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Duration in seconds for this move") \
-       .setType("SFFloat") \
-       .setValue("0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalPosition") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Goal camera position for this move") \
-       .setType("SFVec3f") \
-       .setValue("0 0 10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalOrientation") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Goal camera rotation for this move") \
-       .setType("SFRotation") \
-       .setValue("0 0 1 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("tracking") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Whether or not camera direction is tracking towards the aimPoint") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalAimPoint") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Goal aimPoint for this move, ignored if tracking=false") \
-       .setType("SFVec3f") \
-       .setValue("0 0 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalFieldOfView") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Goal fieldOfView for this move") \
-       .setType("SFFloat") \
-       .setValue("0.7854") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalFStop") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-       .setType("SFFloat") \
-       .setValue("5.6") \
-      ) \
-      .addField(fieldObject() \
-       .setName("goalFocusDistance") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Distance to focal plane of sharpest focus") \
-       .setType("SFFloat") \
-       .setValue("10") \
-      ) \
-      .addField(fieldObject() \
-       .setName("isActive") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("traceEnabled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("enable console output to trace script computations and prototype progress") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-#First node determines node type of this prototype
-#Subsequent nodes do not render, but still must be a valid X3D subgraph
-#Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events
-      .addChildren(ScriptObject(directOutput = True, mustEvaluate = True) \
-       .setDEF("CameraMovementScript") \
-       .addField(fieldObject() \
-        .setName("description") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Text description to be displayed for this CameraMovement") \
-        .setType("SFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("enabled") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Whether this CameraMovement can be activated") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("duration") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Duration in seconds for this move") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalPosition") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Goal camera position for this move") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalOrientation") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Goal camera rotation for this move") \
-        .setType("SFRotation") \
-       ) \
-       .addField(fieldObject() \
-        .setName("tracking") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Whether or not camera direction is tracking towards the aimPoint") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalAimPoint") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Goal aimPoint for this move, ignored if tracking=false") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalFieldOfView") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Goal fieldOfView for this move") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalFStop") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Focal length divided effective aperture diameter indicating width of focal plane") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("goalFocusDistance") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Distance to focal plane of sharpest focus") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("isActive") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Mark start/stop with true/false output respectively useful to trigger external animations") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("traceEnabled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("enable console output to trace script computations and prototype progress") \
-        .setType("SFBool") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("description") \
-         .setProtoField("description") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("enabled") \
-         .setProtoField("enabled") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("duration") \
-         .setProtoField("duration") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalPosition") \
-         .setProtoField("goalPosition") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalOrientation") \
-         .setProtoField("goalOrientation") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("tracking") \
-         .setProtoField("tracking") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalAimPoint") \
-         .setProtoField("goalAimPoint") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalFieldOfView") \
-         .setProtoField("goalFieldOfView") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalFStop") \
-         .setProtoField("goalFStop") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("goalFocusDistance") \
-         .setProtoField("goalFocusDistance") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("isActive") \
-         .setProtoField("isActive") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("traceEnabled") \
-         .setProtoField("traceEnabled") \
-        ) \
-       ) \
-.setSourceCode('''ecmascript:\n"+
+)
+            #Add any ROUTEs here, going from Script to other nodes within ProtoBody
+
+            ))
+        #=============== CameraMovement ==============
+
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("CameraMovement")).setAppinfo(x3dpsail.SFString("CameraMovement node defines a single camera movement animation including goalPosition, goalOrientation, goalAimPoint and goalFieldOfView."))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this CameraMovement")).setType(x3dpsail.SFString("SFString")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this CameraMovement can be activated")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("true")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("duration")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Duration in seconds for this move")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalPosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal camera position for this move")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal camera rotation for this move")).setType(x3dpsail.SFString("SFRotation")).setValue(x3dpsail.SFString("0 0 1 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("tracking")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether or not camera direction is tracking towards the aimPoint")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalAimPoint")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal aimPoint for this move, ignored if tracking=false")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal fieldOfView for this move")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.7854")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("5.6")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFocusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("10")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            #First node determines node type of this prototype
+
+            #Subsequent nodes do not render, but still must be a valid X3D subgraph
+
+            #Script holds CameraMovement initialization values for query by parent CameraShot, and also permits changing values via events
+
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("CameraMovementScript")).setDirectOutput(x3dpsail.SFBool(True)).setMustEvaluate(x3dpsail.SFBool(True))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this CameraMovement")).setType(x3dpsail.SFString("SFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this CameraMovement can be activated")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("duration")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Duration in seconds for this move")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalPosition")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal camera position for this move")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalOrientation")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal camera rotation for this move")).setType(x3dpsail.SFString("SFRotation")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("tracking")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether or not camera direction is tracking towards the aimPoint")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalAimPoint")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal aimPoint for this move, ignored if tracking=false")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFieldOfView")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Goal fieldOfView for this move")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFStop")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Focal length divided effective aperture diameter indicating width of focal plane")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("goalFocusDistance")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Distance to focal plane of sharpest focus")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("isActive")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Mark start/stop with true/false output respectively useful to trigger external animations")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("description")).setProtoField(x3dpsail.SFString("description")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("enabled")).setProtoField(x3dpsail.SFString("enabled")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("duration")).setProtoField(x3dpsail.SFString("duration")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalPosition")).setProtoField(x3dpsail.SFString("goalPosition")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalOrientation")).setProtoField(x3dpsail.SFString("goalOrientation")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("tracking")).setProtoField(x3dpsail.SFString("tracking")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalAimPoint")).setProtoField(x3dpsail.SFString("goalAimPoint")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalFieldOfView")).setProtoField(x3dpsail.SFString("goalFieldOfView")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalFStop")).setProtoField(x3dpsail.SFString("goalFStop")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("goalFocusDistance")).setProtoField(x3dpsail.SFString("goalFocusDistance")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("isActive")).setProtoField(x3dpsail.SFString("isActive")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("traceEnabled")).setProtoField(x3dpsail.SFString("traceEnabled")))).setSourceCode('''ecmascript:\n"+
 "function initialize () // CameraMovementScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1630,208 +785,56 @@ X3D0 = X3DObject() \
 "    else\n"+
 "         Browser.print ('[CameraMovement] ' + outputString + '\\n');\n"+
 "}''')
-      ) \
-#Add any ROUTEs here, going from Script to other nodes within ProtoBody
-     ) \
-    ) \
-#=============== OfflineRender ==============
-    .addChildren(ProtoDeclareObject() \
-     .setName("OfflineRender") \
-     .setAppinfo("OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot).") \
-     .setProtoInterface(ProtoInterfaceObject() \
-#TODO non-photorealistic rendering (NPR) parameters
-      .addField(fieldObject() \
-       .setName("description") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Text description to be displayed for this OfflineRender") \
-       .setType("SFString") \
-      ) \
-      .addField(fieldObject() \
-       .setName("enabled") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Whether this OfflineRender can be activated") \
-       .setType("SFBool") \
-       .setValue("true") \
-      ) \
-      .addField(fieldObject() \
-       .setName("frameRate") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Frames per second recorded for this rendering") \
-       .setType("SFFloat") \
-       .setValue("30") \
-      ) \
-      .addField(fieldObject() \
-       .setName("frameSize") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Size of frame in number of pixels width and height") \
-       .setType("SFVec2f") \
-       .setValue("640 480") \
-      ) \
-      .addField(fieldObject() \
-       .setName("pixelAspectRatio") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("Relative dimensions of pixel height/width typically 1.33 or 1") \
-       .setType("SFFloat") \
-       .setValue("1.33") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_startTime") \
-       .setAccessType("inputOnly") \
-       .setAppinfo("Begin render operation") \
-       .setType("SFTime") \
-      ) \
-      .addField(fieldObject() \
-       .setName("progress") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Progress performing render operation (0..1)") \
-       .setType("SFFloat") \
-      ) \
-      .addField(fieldObject() \
-       .setName("renderCompleteTime") \
-       .setAccessType("outputOnly") \
-       .setAppinfo("Render operation complete") \
-       .setType("SFTime") \
-      ) \
-      .addField(fieldObject() \
-       .setName("movieFormat") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("Format of rendered output movie (mpeg mp4 etc.), use first supported format") \
-       .setType("MFString") \
-       .setValue("\"mpeg\"") \
-      ) \
-      .addField(fieldObject() \
-       .setName("imageFormat") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("Format of rendered output images (png jpeg gif tiff etc.) use first supported format") \
-       .setType("MFString") \
-       .setValue("\"png\"") \
-      ) \
-      .addField(fieldObject() \
-       .setName("traceEnabled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("enable console output to trace script computations and prototype progress") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-#First node determines node type of this prototype
-#Subsequent nodes do not render, but still must be a valid X3D subgraph
-      .addChildren(ScriptObject(mustEvaluate = True) \
-       .setDEF("OfflineRenderScript") \
-       .addField(fieldObject() \
-        .setName("description") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Text description to be displayed for this OfflineRender") \
-        .setType("SFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("enabled") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Whether this OfflineRender can be activated") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("frameRate") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Frames per second recorded for this rendering") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("frameSize") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Size of frame in number of pixels width and height") \
-        .setType("SFVec2f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("pixelAspectRatio") \
-        .setAccessType("inputOutput") \
-        .setAppinfo("Relative dimensions of pixel height/width typically 1.33 or 1") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("set_startTime") \
-        .setAccessType("inputOnly") \
-        .setAppinfo("Begin render operation") \
-        .setType("SFTime") \
-       ) \
-       .addField(fieldObject() \
-        .setName("progress") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Progress performing render operation (0..1)") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("renderCompleteTime") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("Render operation complete") \
-        .setType("SFTime") \
-       ) \
-       .addField(fieldObject() \
-        .setName("movieFormat") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("Format of rendered output movie (mpeg mp4 etc.)") \
-        .setType("MFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("imageFormat") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("Format of rendered output images (png jpeg gif tiff etc.)") \
-        .setType("MFString") \
-       ) \
-       .addField(fieldObject() \
-        .setName("traceEnabled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("enable console output to trace script computations and prototype progress") \
-        .setType("SFBool") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("description") \
-         .setProtoField("description") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("enabled") \
-         .setProtoField("enabled") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("frameRate") \
-         .setProtoField("frameRate") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("frameSize") \
-         .setProtoField("frameSize") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("pixelAspectRatio") \
-         .setProtoField("pixelAspectRatio") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_startTime") \
-         .setProtoField("set_startTime") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("progress") \
-         .setProtoField("progress") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("renderCompleteTime") \
-         .setProtoField("renderCompleteTime") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("movieFormat") \
-         .setProtoField("movieFormat") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("imageFormat") \
-         .setProtoField("imageFormat") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("traceEnabled") \
-         .setProtoField("traceEnabled") \
-        ) \
-       ) \
-.setSourceCode('''ecmascript:\n"+
+)
+            #Add any ROUTEs here, going from Script to other nodes within ProtoBody
+
+            ))
+        #=============== OfflineRender ==============
+
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("OfflineRender")).setAppinfo(x3dpsail.SFString("OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot)."))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            #TODO non-photorealistic rendering (NPR) parameters
+
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this OfflineRender")).setType(x3dpsail.SFString("SFString")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this OfflineRender can be activated")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("true")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("frameRate")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Frames per second recorded for this rendering")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("30")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("frameSize")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Size of frame in number of pixels width and height")).setType(x3dpsail.SFString("SFVec2f")).setValue(x3dpsail.SFString("640 480")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("pixelAspectRatio")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Relative dimensions of pixel height/width typically 1.33 or 1")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("1.33")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_startTime")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("Begin render operation")).setType(x3dpsail.SFString("SFTime")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("progress")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Progress performing render operation (0..1)")).setType(x3dpsail.SFString("SFFloat")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("renderCompleteTime")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Render operation complete")).setType(x3dpsail.SFString("SFTime")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("movieFormat")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("Format of rendered output movie (mpeg mp4 etc.), use first supported format")).setType(x3dpsail.SFString("MFString")).setValue(x3dpsail.SFString("\"mpeg\"")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("imageFormat")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("Format of rendered output images (png jpeg gif tiff etc.) use first supported format")).setType(x3dpsail.SFString("MFString")).setValue(x3dpsail.SFString("\"png\"")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            #First node determines node type of this prototype
+
+            #Subsequent nodes do not render, but still must be a valid X3D subgraph
+
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("OfflineRenderScript")).setMustEvaluate(x3dpsail.SFBool(True))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("description")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Text description to be displayed for this OfflineRender")).setType(x3dpsail.SFString("SFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("enabled")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Whether this OfflineRender can be activated")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("frameRate")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Frames per second recorded for this rendering")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("frameSize")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Size of frame in number of pixels width and height")).setType(x3dpsail.SFString("SFVec2f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("pixelAspectRatio")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("Relative dimensions of pixel height/width typically 1.33 or 1")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("set_startTime")).setAccessType(x3dpsail.SFString("inputOnly")).setAppinfo(x3dpsail.SFString("Begin render operation")).setType(x3dpsail.SFString("SFTime")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("progress")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Progress performing render operation (0..1)")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("renderCompleteTime")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("Render operation complete")).setType(x3dpsail.SFString("SFTime")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("movieFormat")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("Format of rendered output movie (mpeg mp4 etc.)")).setType(x3dpsail.SFString("MFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("imageFormat")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("Format of rendered output images (png jpeg gif tiff etc.)")).setType(x3dpsail.SFString("MFString")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("enable console output to trace script computations and prototype progress")).setType(x3dpsail.SFString("SFBool")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("description")).setProtoField(x3dpsail.SFString("description")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("enabled")).setProtoField(x3dpsail.SFString("enabled")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("frameRate")).setProtoField(x3dpsail.SFString("frameRate")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("frameSize")).setProtoField(x3dpsail.SFString("frameSize")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("pixelAspectRatio")).setProtoField(x3dpsail.SFString("pixelAspectRatio")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_startTime")).setProtoField(x3dpsail.SFString("set_startTime")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("progress")).setProtoField(x3dpsail.SFString("progress")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("renderCompleteTime")).setProtoField(x3dpsail.SFString("renderCompleteTime")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("movieFormat")).setProtoField(x3dpsail.SFString("movieFormat")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("imageFormat")).setProtoField(x3dpsail.SFString("imageFormat")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("traceEnabled")).setProtoField(x3dpsail.SFString("traceEnabled")))).setSourceCode('''ecmascript:\n"+
 "function initialize () // OfflineRenderScript\n"+
 "{\n"+
 "//  tracePrint ('initialize start...');\n"+
@@ -1885,32 +888,19 @@ X3D0 = X3DObject() \
 "    else\n"+
 "         Browser.print ('[OfflineRender] ' + outputString + '\\n');\n"+
 "}''')
-      ) \
-#Add any ROUTEs here, going from Script to other nodes within ProtoBody
-     ) \
-    ) \
-#=============== Launch Prototype Example ==============
-    .addChildren(BackgroundObject() \
-     .setSkyColor([0.282353,0.380392,0.470588]) \
-    ) \
-    .addChildren(AnchorObject() \
-     .setDescription("launch CameraExample scene") \
-     .setUrl(["CameraExamples.x3d","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d","CameraExamples.wrl","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.wrl"]) \
-     .addChildren(TransformObject() \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["CameraPrototypes.x3d","defines multiple prototype nodes","","Click on this text to see","CameraExamples.x3d scene"]) \
-        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([1,1,0.2]) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-   ) \
+)
+            #Add any ROUTEs here, going from Script to other nodes within ProtoBody
 
-X3D0.toFileX3D("./future/./CameraPrototypes.newf.x3d")
+            ))
+        #=============== Launch Prototype Example ==============
+
+        .addChild(x3dpsail.Background().setSkyColor(x3dpsail.MFColor([0.282353,0.380392,0.470588])))
+        .addChild(x3dpsail.Anchor().setDescription(x3dpsail.SFString("launch CameraExample scene")).setUrl(x3dpsail.MFString(["CameraExamples.x3d","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d","CameraExamples.wrl","http://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.wrl"]))
+          .addChild(x3dpsail.Transform()
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["CameraPrototypes.x3d","defines multiple prototype nodes","","Click on this text to see","CameraExamples.x3d scene"]))
+                .setFontStyle(x3dpsail.FontStyle().setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"]))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,0.2)))))))))
+
+X3D0.toFileX3D("./future/./CameraPrototypes_RoundTrip.x3d")

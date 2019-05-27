@@ -1,148 +1,45 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addComponent(componentObject() \
-     .setName("Shaders") \
-     .setLevel(1) \
-    ) \
-    .addComponent(componentObject() \
-     .setName("CubeMapTexturing") \
-     .setLevel(1) \
-    ) \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("flowers4.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/flowers4.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("an animated flower") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
-     .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
-     .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
-     .setLeftUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
-     .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
-     .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("transform") \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.7,0.7,0.7]) \
-        .setSpecularColor([0.5,0.5,0.5]) \
-       ) \
-       .setTexture(ComposedCubeMapTextureObject() \
-        .setBack(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
-        ) \
-        .setBottom(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
-        ) \
-        .setFront(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
-        ) \
-        .setLeft(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
-        ) \
-        .setRight(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
-        ) \
-        .setTop(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
-        ) \
-       ) \
-       .addShaders(ComposedShaderObject(language = "GLSL") \
-        .setDEF("shader") \
-        .addField(fieldObject() \
-         .setName("cube") \
-         .setType("SFInt32") \
-         .setAccessType("inputOutput") \
-         .setValue("0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("chromaticDispertion") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0.98 1 1.033") \
-        ) \
-        .addField(fieldObject() \
-         .setName("bias") \
-         .setType("SFFloat") \
-         .setAccessType("inputOutput") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("scale") \
-         .setType("SFFloat") \
-         .setAccessType("inputOutput") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("power") \
-         .setType("SFFloat") \
-         .setAccessType("inputOutput") \
-         .setValue("2") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
-         .setType("VERTEX") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
-         .setType("FRAGMENT") \
-        ) \
-       ) \
-      ) \
-#<Sphere>
-      .setGeometry(IndexedFaceSetObject(convex = False) \
-       .setDEF("Orbit") \
-       .setCoord(CoordinateObject() \
-        .setDEF("OrbitCoordinates") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("OrbitScript") \
-     .addField(fieldObject() \
-      .setName("set_fraction") \
-      .setAccessType("inputOnly") \
-      .setType("SFFloat") \
-     ) \
-     .addField(fieldObject() \
-      .setName("coordinates") \
-      .setAccessType("inputOutput") \
-      .setType("MFVec3f") \
-     ) \
-     .addField(fieldObject() \
-      .setName("coordIndexes") \
-      .setAccessType("outputOnly") \
-      .setType("MFInt32") \
-     ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("Shaders")).setLevel(x3dpsail.SFInt32(1)))
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("CubeMapTexturing")).setLevel(x3dpsail.SFInt32(1)))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("flowers4.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/flowers4.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("an animated flower"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo())
+        .addChild(x3dpsail.Background().setBackUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])).setBottomUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])).setFrontUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"])).setLeftUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"])).setRightUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"])).setTopUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"])))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transform"))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.7,0.7,0.7)).setSpecularColor(x3dpsail.SFColor(0.5,0.5,0.5)))
+              .setTexture(x3dpsail.ComposedCubeMapTexture()
+                .setBack(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])))
+                .setBottom(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])))
+                .setFront(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"])))
+                .setLeft(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"])))
+                .setRight(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"])))
+                .setTop(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]))))
+              .addShaders(x3dpsail.ComposedShader().setDEF(x3dpsail.SFString("shader")).setLanguage(x3dpsail.SFString("GLSL"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("cube")).setType(x3dpsail.SFString("SFInt32")).setAccessType(x3dpsail.SFString("inputOutput")).setValue(x3dpsail.SFString("0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("chromaticDispertion")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0.98 1 1.033")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("bias")).setType(x3dpsail.SFString("SFFloat")).setAccessType(x3dpsail.SFString("inputOutput")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("scale")).setType(x3dpsail.SFString("SFFloat")).setAccessType(x3dpsail.SFString("inputOutput")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("power")).setType(x3dpsail.SFString("SFFloat")).setAccessType(x3dpsail.SFString("inputOutput")).setValue(x3dpsail.SFString("2")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])).setType(x3dpsail.SFString("VERTEX")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])).setType(x3dpsail.SFString("FRAGMENT")))))
+            #<Sphere>
+
+            .setGeometry(x3dpsail.IndexedFaceSet().setConvex(x3dpsail.SFBool(False)).setDEF(x3dpsail.SFString("Orbit"))
+              .setCoord(x3dpsail.Coordinate().setDEF(x3dpsail.SFString("OrbitCoordinates"))))))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("OrbitScript"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFFloat")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("coordinates")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFVec3f")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("coordIndexes")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFInt32"))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -213,30 +110,10 @@ X3D0 = X3DObject() \
 "	resolution = 100;\n"+
 "	updateCoordinates(resolution);\n"+
 "}''')
-    ) \
-    .addChildren(TimeSensorObject() \
-     .setDEF("Clock") \
-     .setCycleInterval(16) \
-     .setLoop(True) \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromField("coordIndexes") \
-     .setFromNode("OrbitScript") \
-     .setToField("set_coordIndex") \
-     .setToNode("Orbit") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromField("coordinates") \
-     .setFromNode("OrbitScript") \
-     .setToField("set_point") \
-     .setToNode("OrbitCoordinates") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromField("fraction_changed") \
-     .setFromNode("Clock") \
-     .setToField("set_fraction") \
-     .setToNode("OrbitScript") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("Clock")).setCycleInterval(x3dpsail.SFTime(16)).setLoop(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("coordIndexes")).setFromNode(x3dpsail.SFString("OrbitScript")).setToField(x3dpsail.SFString("set_coordIndex")).setToNode(x3dpsail.SFString("Orbit")))
+        .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("coordinates")).setFromNode(x3dpsail.SFString("OrbitScript")).setToField(x3dpsail.SFString("set_point")).setToNode(x3dpsail.SFString("OrbitCoordinates")))
+        .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("fraction_changed")).setFromNode(x3dpsail.SFString("Clock")).setToField(x3dpsail.SFString("set_fraction")).setToNode(x3dpsail.SFString("OrbitScript")))))
 
-X3D0.toFileX3D("./future/./flowers4.newf.x3d")
+X3D0.toFileX3D("./future/./flowers4_RoundTrip.x3d")

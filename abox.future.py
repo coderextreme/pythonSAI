@@ -1,94 +1,36 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("abox.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/abox.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("a box") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ProtoDeclareObject() \
-     .setName("anyShape") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("myShape") \
-       .setAccessType("inputOutput") \
-       .setType("MFNode") \
-       .addChildren(ShapeObject() \
-        .setGeometry(SphereObject() \
-        ) \
-       ) \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(TransformObject() \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("children") \
-         .setProtoField("myShape") \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("one") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("myShape") \
-       .setAccessType("inputOutput") \
-       .setType("MFNode") \
-       .addChildren(ShapeObject() \
-        .setGeometry(CylinderObject() \
-        ) \
-       ) \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(TransformObject() \
-       .addChildren(ProtoInstanceObject() \
-        .setName("anyShape") \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("myShape") \
-          .setProtoField("myShape") \
-         ) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("one") \
-     .addFieldValue(fieldValueObject() \
-      .setName("myShape") \
-      .addChildren(ShapeObject() \
-       .setGeometry(BoxObject(size = [140,140,140]) \
-       ) \
-      ) \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./abox.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("abox.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/abox.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("a box"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("anyShape"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("myShape")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFNode"))
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Sphere()))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Transform()
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("children")).setProtoField(x3dpsail.SFString("myShape")))))))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("one"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("myShape")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFNode"))
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Cylinder()))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Transform()
+              .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("anyShape"))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("myShape")).setProtoField(x3dpsail.SFString("myShape"))))))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("one"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("myShape"))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Box().setSize(x3dpsail.SFVec3f(140,140,140))))))))
+
+X3D0.toFileX3D("./future/./abox_RoundTrip.x3d")

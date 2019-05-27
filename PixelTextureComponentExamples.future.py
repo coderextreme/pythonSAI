@@ -1,223 +1,85 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("PixelTextureComponentExamples.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("This example shows the five PixelTexture components, with 0 to 4 components each, shown in Table 5-18.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Leonard Daly and Don Brutzman") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("25 August 2008") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("7 January 2014") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://X3dGraphics.com") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("X3D for Web Authors, Table 5.18") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3d.org/x3d/content/examples/X3dResources.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("rights") \
-     .setContent("Copyright (c) 2006, Daly Realism and Don Brutzman") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("subject") \
-     .setContent("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter05AppearanceMaterialTextures/PixelTextureComponentExamples.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../license.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(BackgroundObject() \
-     .setSkyColor([0.1,0.1,0.4]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDescription("Table 5.18 SFImage component examples") \
-     .setPosition([0,0,14]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setTranslation([-6,0,0]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setTexture(PixelTextureObject() \
-        .setDEF("ZeroComponents") \
-       ) \
-      ) \
-      .setGeometry(BoxObject() \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["0"]) \
-        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
-         .setDEF("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setDEF("TextMaterial") \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([1,1,1]) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setTranslation([-3,0,0]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setTexture(PixelTextureObject() \
-        .setDEF("OneComponent") \
-        .setImage([1,2,1,255,0]) \
-       ) \
-      ) \
-      .setGeometry(BoxObject() \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["1"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setUSE("TextMaterial") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setTexture(PixelTextureObject() \
-        .setDEF("TwoComponents") \
-        .setImage([2,1,2,52479,8823]) \
-       ) \
-      ) \
-      .setGeometry(BoxObject() \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["2"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setUSE("TextMaterial") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setTranslation([3,0,0]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-#note 0x000000 = 0
-       .setTexture(PixelTextureObject() \
-        .setDEF("ThreeComponents") \
-        .setImage([2,4,3,16711680,65280,0,0,0,0,16777215,16776960]) \
-       ) \
-      ) \
-      .setGeometry(BoxObject() \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["3"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setUSE("TextMaterial") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setTranslation([6,0,0]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-#Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127
-       .setTexture(PixelTextureObject() \
-        .setDEF("FourComponents") \
-        .setImage([3,2,4,-16776961,16711935,65535,-16777089,16711807,65407]) \
-       ) \
-      ) \
-      .setGeometry(BoxObject() \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setTranslation([0,-2,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["4"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setUSE("TextMaterial") \
-       ) \
-      ) \
-     ) \
-    ) \
-#Background from PixelTextureBW.x3d
-    .addChildren(TransformObject() \
-     .setTranslation([0,6,-2]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setTexture(PixelTextureObject() \
-        .setImage([8,8,1,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204]) \
-       ) \
-      ) \
-      .setGeometry(BoxObject(size = [16,16,0.1]) \
-      ) \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./PixelTextureComponentExamples.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("PixelTextureComponentExamples.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("This example shows the five PixelTexture components, with 0 to 4 components each, shown in Table 5-18.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Leonard Daly and Don Brutzman")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("25 August 2008")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("7 January 2014")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://X3dGraphics.com")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("X3D for Web Authors, Table 5.18")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/content/examples/X3dResources.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("rights")).setContent(x3dpsail.SFString("Copyright (c) 2006, Daly Realism and Don Brutzman")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("subject")).setContent(x3dpsail.SFString("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter05AppearanceMaterialTextures/PixelTextureComponentExamples.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../license.html"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.Background().setSkyColor(x3dpsail.MFColor([0.1,0.1,0.4])))
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("Table 5.18 SFImage component examples")).setPosition(x3dpsail.SFVec3f(0,0,14)))
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(-6,0,0))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setTexture(x3dpsail.PixelTexture().setDEF(x3dpsail.SFString("ZeroComponents"))))
+            .setGeometry(x3dpsail.Box()))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["0"]))
+                .setFontStyle(x3dpsail.FontStyle().setDEF(x3dpsail.SFString("CenterJustify")).setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"]))))
+              .setAppearance(x3dpsail.Appearance().setDEF(x3dpsail.SFString("TextMaterial"))
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,1)))))))
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(-3,0,0))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setTexture(x3dpsail.PixelTexture().setDEF(x3dpsail.SFString("OneComponent")).setImage(x3dpsail.SFImage(1,2,1,255,0))))
+            .setGeometry(x3dpsail.Box()))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["1"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("TextMaterial"))))))
+        .addChild(x3dpsail.Transform()
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setTexture(x3dpsail.PixelTexture().setDEF(x3dpsail.SFString("TwoComponents")).setImage(x3dpsail.SFImage(2,1,2,52479,8823))))
+            .setGeometry(x3dpsail.Box()))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["2"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("TextMaterial"))))))
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(3,0,0))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              #note 0x000000 = 0
+
+              .setTexture(x3dpsail.PixelTexture().setDEF(x3dpsail.SFString("ThreeComponents")).setImage(x3dpsail.SFImage(2,4,3,16711680,65280,0,0,0,0,16777215,16776960))))
+            .setGeometry(x3dpsail.Box()))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["3"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("TextMaterial"))))))
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(6,0,0))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              #Erroneous value in book: 1 0 0 255, 0 1 0 255, 0 0 1 255, 1 0 0 127, 0 1 0 127, 0 0 1 127
+
+              .setTexture(x3dpsail.PixelTexture().setDEF(x3dpsail.SFString("FourComponents")).setImage(x3dpsail.SFImage(3,2,4,-16776961,16711935,65535,-16777089,16711807,65407))))
+            .setGeometry(x3dpsail.Box()))
+          .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-2,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["4"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("TextMaterial"))))))
+        #Background from PixelTextureBW.x3d
+
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,6,-2))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setTexture(x3dpsail.PixelTexture().setImage(x3dpsail.SFImage(8,8,1,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204,204,0,204,0,204,0,204,0,0,204,0,204,0,204,0,204))))
+            .setGeometry(x3dpsail.Box().setSize(x3dpsail.SFVec3f(16,16,0.1)))))))
+
+X3D0.toFileX3D("./future/./PixelTextureComponentExamples_RoundTrip.x3d")

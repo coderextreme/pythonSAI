@@ -11497,6 +11497,28 @@ class Appearance(X3DAppearanceNode):
             self.metadata = []
             self.metadata = self.metadata + metadata
         return self
+        self.pointProperties = None
+        if not self.pointProperties:
+            self.pointProperties = kwargs.pop("pointProperties", None)
+    def setPointProperties(self, pointProperties = None):
+        try:
+            super().setPointProperties(pointProperties)
+        except AttributeError:
+           pass
+        self.pointProperties = pointProperties
+        return self
+    def addPointProperties(self, pointProperties = None):
+        if not isinstance(pointProperties, list):
+            pointProperties = [pointProperties]
+            self.pointProperties = []
+            self.pointProperties = self.pointProperties + pointProperties
+        return self
+    def addPointProperties(self, pointProperties = None):
+        if not isinstance(pointProperties, list):
+            pointProperties = [pointProperties]
+            self.pointProperties = []
+            self.pointProperties = self.pointProperties + pointProperties
+        return self
         self.shaders = []
         if not self.shaders:
             self.shaders = kwargs.pop("shaders", [])
@@ -57743,6 +57765,284 @@ class PointPickSensor(X3DPickSensorNode):
             sortOrder = [sortOrder]
             self.sortOrder = []
             self.sortOrder = self.sortOrder + sortOrder
+        return self
+        self.DEF = None
+        if not self.DEF:
+            self.DEF = kwargs.pop("DEF", None)
+    def setDEF(self, DEF = None):
+        try:
+            super().setDEF(DEF)
+        except AttributeError:
+           pass
+        self.DEF = DEF
+        return self
+    def addDEF(self, DEF = None):
+        if not isinstance(DEF, list):
+            DEF = [DEF]
+            self.DEF = []
+            self.DEF = self.DEF + DEF
+        return self
+    def addDEF(self, DEF = None):
+        if not isinstance(DEF, list):
+            DEF = [DEF]
+            self.DEF = []
+            self.DEF = self.DEF + DEF
+        return self
+        self.USE = None
+        if not self.USE:
+            self.USE = kwargs.pop("USE", None)
+    def setUSE(self, USE = None):
+        try:
+            super().setUSE(USE)
+        except AttributeError:
+           pass
+        self.USE = USE
+        return self
+    def addUSE(self, USE = None):
+        if not isinstance(USE, list):
+            USE = [USE]
+            self.USE = []
+            self.USE = self.USE + USE
+        return self
+    def addUSE(self, USE = None):
+        if not isinstance(USE, list):
+            USE = [USE]
+            self.USE = []
+            self.USE = self.USE + USE
+        return self
+        self.class_ = None
+        if not self.class_:
+            self.class_ = kwargs.pop("class_", None)
+    def setClass(self, class_ = None):
+        try:
+            super().setClass(class_)
+        except AttributeError:
+           pass
+        self.class_ = class_
+        return self
+    def addClass(self, class_ = None):
+        if not isinstance(class_, list):
+            class_ = [class_]
+            self.class_ = []
+            self.class_ = self.class_ + class_
+        return self
+    def addClass(self, class_ = None):
+        if not isinstance(class_, list):
+            class_ = [class_]
+            self.class_ = []
+            self.class_ = self.class_ + class_
+        return self
+    def setComments(self, comments = None):
+        try:
+            super().setComments(comments)
+        except AttributeError:
+           pass
+        self.comments = comments
+        return self
+    def addComments(self, comments = None):
+        if not isinstance(comments, list):
+            comments = [comments]
+            self.comments = []
+            self.comments = self.comments + comments
+        return self
+    def addComments(self, comments = None):
+        if not isinstance(comments, list):
+            comments = [comments]
+            self.comments = []
+            self.comments = self.comments + comments
+        return self
+
+
+class PointProperties(X3DAppearanceChildNode):
+    def __init__(self, **kwargs):
+        super(PointProperties, self).__init__(**kwargs)
+        self.colorMode = "TEXTURE_AND_POINT_COLOR"
+        if not self.colorMode:
+            self.colorMode = kwargs.pop("colorMode", "TEXTURE_AND_POINT_COLOR")
+        if 'POINT_COLOR' == self.colorMode:
+            pass
+        elif 'TEXTURE_COLOR' == self.colorMode:
+            pass
+        elif 'TEXTURE_AND_POINT_COLOR' == self.colorMode:
+            pass
+        else:
+            return None
+    def setColorMode(self, colorMode = "TEXTURE_AND_POINT_COLOR"):
+        if 'POINT_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_AND_POINT_COLOR' == colorMode:
+            pass
+        else:
+            return None
+        try:
+            super().setColorMode(colorMode)
+        except AttributeError:
+           pass
+        self.colorMode = colorMode
+        return self
+    def addColorMode(self, colorMode = "TEXTURE_AND_POINT_COLOR"):
+        if 'POINT_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_AND_POINT_COLOR' == colorMode:
+            pass
+        else:
+            return None
+        if not isinstance(colorMode, list):
+            colorMode = [colorMode]
+            self.colorMode = []
+            self.colorMode = self.colorMode + colorMode
+        return self
+    def addColorMode(self, colorMode = "TEXTURE_AND_POINT_COLOR"):
+        if 'POINT_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_COLOR' == colorMode:
+            pass
+        elif 'TEXTURE_AND_POINT_COLOR' == colorMode:
+            pass
+        else:
+            return None
+        if not isinstance(colorMode, list):
+            colorMode = [colorMode]
+            self.colorMode = []
+            self.colorMode = self.colorMode + colorMode
+        return self
+        self.metadata = None
+        if not self.metadata:
+            self.metadata = kwargs.pop("metadata", None)
+    def setMetadata(self, metadata = None):
+        try:
+            super().setMetadata(metadata)
+        except AttributeError:
+           pass
+        self.metadata = metadata
+        return self
+    def addMetadata(self, metadata = None):
+        if not isinstance(metadata, list):
+            metadata = [metadata]
+            self.metadata = []
+            self.metadata = self.metadata + metadata
+        return self
+    def addMetadata(self, metadata = None):
+        if not isinstance(metadata, list):
+            metadata = [metadata]
+            self.metadata = []
+            self.metadata = self.metadata + metadata
+        return self
+        self.pointSizeAttenuation = [1, 0, 0]
+        if not self.pointSizeAttenuation:
+            self.pointSizeAttenuation = kwargs.pop("pointSizeAttenuation", [1, 0, 0])
+    def setPointSizeAttenuation(self, pointSizeAttenuation = [1, 0, 0]):
+        try:
+            super().setPointSizeAttenuation(pointSizeAttenuation)
+        except AttributeError:
+           pass
+        self.pointSizeAttenuation = pointSizeAttenuation
+        return self
+    def addPointSizeAttenuation(self, pointSizeAttenuation = [1, 0, 0]):
+        if not isinstance(pointSizeAttenuation, list):
+            pointSizeAttenuation = [pointSizeAttenuation]
+            self.pointSizeAttenuation = []
+            self.pointSizeAttenuation = self.pointSizeAttenuation + pointSizeAttenuation
+        return self
+    def addPointSizeAttenuation(self, pointSizeAttenuation = [1, 0, 0]):
+        if not isinstance(pointSizeAttenuation, list):
+            pointSizeAttenuation = [pointSizeAttenuation]
+            self.pointSizeAttenuation = []
+            self.pointSizeAttenuation = self.pointSizeAttenuation + pointSizeAttenuation
+        return self
+        self.pointSizeMaxValue = 1
+        if not self.pointSizeMaxValue:
+            self.pointSizeMaxValue = kwargs.pop("pointSizeMaxValue", 1)
+        if self.pointSizeMaxValue == None or self.pointSizeMaxValue  <  0:
+            return None
+    def setPointSizeMaxValue(self, pointSizeMaxValue = 1):
+        if pointSizeMaxValue == None or pointSizeMaxValue  <  0:
+            return None
+        try:
+            super().setPointSizeMaxValue(pointSizeMaxValue)
+        except AttributeError:
+           pass
+        self.pointSizeMaxValue = pointSizeMaxValue
+        return self
+    def addPointSizeMaxValue(self, pointSizeMaxValue = 1):
+        if pointSizeMaxValue == None or pointSizeMaxValue  <  0:
+            return None
+        if not isinstance(pointSizeMaxValue, list):
+            pointSizeMaxValue = [pointSizeMaxValue]
+            self.pointSizeMaxValue = []
+            self.pointSizeMaxValue = self.pointSizeMaxValue + pointSizeMaxValue
+        return self
+    def addPointSizeMaxValue(self, pointSizeMaxValue = 1):
+        if pointSizeMaxValue == None or pointSizeMaxValue  <  0:
+            return None
+        if not isinstance(pointSizeMaxValue, list):
+            pointSizeMaxValue = [pointSizeMaxValue]
+            self.pointSizeMaxValue = []
+            self.pointSizeMaxValue = self.pointSizeMaxValue + pointSizeMaxValue
+        return self
+        self.pointSizeMinValue = 1
+        if not self.pointSizeMinValue:
+            self.pointSizeMinValue = kwargs.pop("pointSizeMinValue", 1)
+        if self.pointSizeMinValue == None or self.pointSizeMinValue  <  0:
+            return None
+    def setPointSizeMinValue(self, pointSizeMinValue = 1):
+        if pointSizeMinValue == None or pointSizeMinValue  <  0:
+            return None
+        try:
+            super().setPointSizeMinValue(pointSizeMinValue)
+        except AttributeError:
+           pass
+        self.pointSizeMinValue = pointSizeMinValue
+        return self
+    def addPointSizeMinValue(self, pointSizeMinValue = 1):
+        if pointSizeMinValue == None or pointSizeMinValue  <  0:
+            return None
+        if not isinstance(pointSizeMinValue, list):
+            pointSizeMinValue = [pointSizeMinValue]
+            self.pointSizeMinValue = []
+            self.pointSizeMinValue = self.pointSizeMinValue + pointSizeMinValue
+        return self
+    def addPointSizeMinValue(self, pointSizeMinValue = 1):
+        if pointSizeMinValue == None or pointSizeMinValue  <  0:
+            return None
+        if not isinstance(pointSizeMinValue, list):
+            pointSizeMinValue = [pointSizeMinValue]
+            self.pointSizeMinValue = []
+            self.pointSizeMinValue = self.pointSizeMinValue + pointSizeMinValue
+        return self
+        self.pointSizeScaleFactor = 1
+        if not self.pointSizeScaleFactor:
+            self.pointSizeScaleFactor = kwargs.pop("pointSizeScaleFactor", 1)
+        if self.pointSizeScaleFactor == None or self.pointSizeScaleFactor  <  1:
+            return None
+    def setPointSizeScaleFactor(self, pointSizeScaleFactor = 1):
+        if pointSizeScaleFactor == None or pointSizeScaleFactor  <  1:
+            return None
+        try:
+            super().setPointSizeScaleFactor(pointSizeScaleFactor)
+        except AttributeError:
+           pass
+        self.pointSizeScaleFactor = pointSizeScaleFactor
+        return self
+    def addPointSizeScaleFactor(self, pointSizeScaleFactor = 1):
+        if pointSizeScaleFactor == None or pointSizeScaleFactor  <  1:
+            return None
+        if not isinstance(pointSizeScaleFactor, list):
+            pointSizeScaleFactor = [pointSizeScaleFactor]
+            self.pointSizeScaleFactor = []
+            self.pointSizeScaleFactor = self.pointSizeScaleFactor + pointSizeScaleFactor
+        return self
+    def addPointSizeScaleFactor(self, pointSizeScaleFactor = 1):
+        if pointSizeScaleFactor == None or pointSizeScaleFactor  <  1:
+            return None
+        if not isinstance(pointSizeScaleFactor, list):
+            pointSizeScaleFactor = [pointSizeScaleFactor]
+            self.pointSizeScaleFactor = []
+            self.pointSizeScaleFactor = self.pointSizeScaleFactor + pointSizeScaleFactor
         return self
         self.DEF = None
         if not self.DEF:

@@ -1,406 +1,115 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("ArchPrototype.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Possibility to create shapes related to arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Michele Foti, Don Brutzman") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("15 December 2014") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("27 November 2015") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("ArchModelingDiagrams.pdf") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("https://en.wikipedia.org/wiki/Arch") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://X3dGraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchPrototype.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../license.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ProtoDeclareObject() \
-     .setName("ArchPrototype") \
-     .setAppinfo("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. - Possibility to create shapes related to an arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.js.") \
-     .setProtoInterface(ProtoInterfaceObject() \
-#COLOR OF ARCH
-#INPUT PARAMETERS
-#General parameters: measures in meters
-#Parameters to create to create shapes related to arch: put true to apply
-      .addField(fieldObject() \
-       .setName("diffuseColor") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("color of arch") \
-       .setType("SFColor") \
-       .setValue("0.2 0.8 0.8") \
-      ) \
-      .addField(fieldObject() \
-       .setName("emissiveColor") \
-       .setAccessType("inputOutput") \
-       .setAppinfo("color of arch") \
-       .setType("SFColor") \
-       .setValue("0.2 0.8 0.8") \
-      ) \
-      .addField(fieldObject() \
-       .setName("clearSpanWidth") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("clearSpanWidth: clearSpanWidth must be double of riseHeight to obtain an half circumference") \
-       .setType("SFFloat") \
-       .setValue("4") \
-      ) \
-      .addField(fieldObject() \
-       .setName("riseHeight") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("riseHeight: riseHeight must be half of clearSpanWidth to obtain an half circumference") \
-       .setType("SFFloat") \
-       .setValue("2") \
-      ) \
-      .addField(fieldObject() \
-       .setName("depth") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("depth") \
-       .setType("SFFloat") \
-       .setValue("3") \
-      ) \
-      .addField(fieldObject() \
-       .setName("topAbutmentHeight") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("topAbutmentHeight:topAbutmentHeight=0 means no topAbutment") \
-       .setType("SFFloat") \
-       .setValue("0.5") \
-      ) \
-      .addField(fieldObject() \
-       .setName("pierWidth") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("pierWidth:pierWidtht=0 means no pierWidth") \
-       .setType("SFFloat") \
-       .setValue("0.5") \
-      ) \
-      .addField(fieldObject() \
-       .setName("pierHeight") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("pierHeight: pierHeight=0 means no pierHeight") \
-       .setType("SFFloat") \
-       .setValue("1") \
-      ) \
-      .addField(fieldObject() \
-       .setName("archHalf") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("archHalf: can modify also clearSpanWidth, riseHeight, depth, pierWidth, pierHeight, topAbutmentHeight, archHalfExtensionWidth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalf width") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-      .addField(fieldObject() \
-       .setName("archHalfExtensionWidth") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("archHalfExtensionWidth: measure in meters, use only if archHalf=true, it is the width of the etension of the abutment of the archHalf. See the reference file ArchModelingDiagrams.pdf to find further information.") \
-       .setType("SFFloat") \
-       .setValue("0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("onlyIntrados") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("onlyIntrados: note it is a flat curved surface, can modify also clearSpanWidth, riseHeight, depth at purpose, if needed apply archHalf=true.") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-      .addField(fieldObject() \
-       .setName("archFilled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("archFilled: note it is an half cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose.") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-      .addField(fieldObject() \
-       .setName("archHalfFilled") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("archHalfFilled: note it is a quarter cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalfFilled width.") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-      .addField(fieldObject() \
-       .setName("lintel") \
-       .setAccessType("initializeOnly") \
-       .setAppinfo("lintel: no arc is rendered, but a lintel: topAbutmentHeight on pierHeight, total height is pierHeight + topAbutmentHeight, if needed apply archHalf=true.") \
-       .setType("SFBool") \
-       .setValue("false") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-#First node determines node type of this prototype
-#IndexedFaceset creates arch
-      .addChildren(TransformObject() \
-       .setDEF("ArchTransform") \
-       .addChildren(ShapeObject() \
-        .setDEF("Arch") \
-#note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly
-        .setGeometry(IndexedFaceSetObject(convex = False, solid = False) \
-         .setDEF("ArchIndex") \
-         .setCoord(CoordinateObject() \
-          .setDEF("ArchChord") \
-         ) \
-        ) \
-        .setAppearance(AppearanceObject() \
-         .setMaterial(MaterialObject() \
-          .setDEF("MaterialNode") \
-          .setIS(ISObject() \
-           .addConnect(connectObject() \
-            .setNodeField("emissiveColor") \
-            .setProtoField("emissiveColor") \
-           ) \
-           .addConnect(connectObject() \
-            .setNodeField("diffuseColor") \
-            .setProtoField("diffuseColor") \
-           ) \
-          ) \
-         ) \
-        ) \
-       ) \
-      ) \
-#Subsequent nodes do not render, but still must be a valid X3D subgraph
-#This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs
-      .addChildren(ScriptObject() \
-       .setDEF("ArchPrototypeScript") \
-       .setUrl(["../node/ArchPrototypeScript.js"]) \
-#INPUT PARAMETERS
-#General parameters
-#Parameters to create to create shapes related to arch: put true to apply
-#OUTPUT PARAMETERS
-       .addField(fieldObject() \
-        .setName("clearSpanWidth") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for clearSpanWidth parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("riseHeight") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for riseHeight parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("depth") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for depth parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("topAbutmentHeight") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for topAbutmentHeight parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("pierWidth") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for pierWidth parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("pierHeight") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for pierHeight parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("archHalf") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for archHalf parameter") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("archHalfExtensionWidth") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for archHalfExtensionWidth parameter") \
-        .setType("SFFloat") \
-       ) \
-       .addField(fieldObject() \
-        .setName("onlyIntrados") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for onlyIntrados parameter") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("archFilled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for archFilled parameter") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("archHalfFilled") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for archHalfFilled parameter") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("lintel") \
-        .setAccessType("initializeOnly") \
-        .setAppinfo("user or default input for lintel parameter") \
-        .setType("SFBool") \
-       ) \
-       .addField(fieldObject() \
-        .setName("computedScale") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("computedScale: modify scale field - NOTE it is not used to modify the whole arch, but to modify clearSpanWidth, riseHeight, depth. It does not affect topAbutmentHeight, pierWidth, pierHeight, archHalfExtensionWidth") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("pointOut") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("send computed points to the Coordinate node") \
-        .setType("MFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("indexOut") \
-        .setAccessType("outputOnly") \
-        .setAppinfo("send computed indices to the IndexedFaceSet node") \
-        .setType("MFInt32") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("clearSpanWidth") \
-         .setProtoField("clearSpanWidth") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("riseHeight") \
-         .setProtoField("riseHeight") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("depth") \
-         .setProtoField("depth") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("pierWidth") \
-         .setProtoField("pierWidth") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("topAbutmentHeight") \
-         .setProtoField("topAbutmentHeight") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("pierHeight") \
-         .setProtoField("pierHeight") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("archHalf") \
-         .setProtoField("archHalf") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("archHalfExtensionWidth") \
-         .setProtoField("archHalfExtensionWidth") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("onlyIntrados") \
-         .setProtoField("onlyIntrados") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("archFilled") \
-         .setProtoField("archFilled") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("archHalfFilled") \
-         .setProtoField("archHalfFilled") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("lintel") \
-         .setProtoField("lintel") \
-        ) \
-       ) \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("computedScale") \
-       .setFromNode("ArchPrototypeScript") \
-       .setToField("scale") \
-       .setToNode("ArchTransform") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("pointOut") \
-       .setFromNode("ArchPrototypeScript") \
-       .setToField("point") \
-       .setToNode("ArchChord") \
-      ) \
-      .addChildren(ROUTEObject() \
-       .setFromField("indexOut") \
-       .setFromNode("ArchPrototypeScript") \
-       .setToField("set_coordIndex") \
-       .setToNode("ArchIndex") \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("ArchPrototype") \
-     .setDEF("ArchInstance") \
-     .addFieldValue(fieldValueObject() \
-      .setName("diffuseColor") \
-      .setValue("0.5 0.3 0.6") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("emissiveColor") \
-      .setValue("0.5 0.3 0.6") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("clearSpanWidth") \
-      .setValue("5") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("riseHeight") \
-      .setValue("2.5") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("depth") \
-      .setValue("2") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("topAbutmentHeight") \
-      .setValue("0.6") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("pierWidth") \
-      .setValue("1") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("pierHeight") \
-      .setValue("2") \
-     ) \
-    ) \
-#Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)
-    .addChildren(InlineObject() \
-     .setDEF("CoordinateAxes") \
-     .setUrl(["../data/CoordinateAxes.x3d"]) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./ArchPrototype.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("ArchPrototype.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Possibility to create shapes related to arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Michele Foti, Don Brutzman")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("15 December 2014")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("27 November 2015")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("ArchModelingDiagrams.pdf")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("https://en.wikipedia.org/wiki/Arch")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForAdvancedModeling/Buildings/ArchPrototype.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../license.html"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("ArchPrototype")).setAppinfo(x3dpsail.SFString("Create an arch. Can modify general parameters: clearSpanWidth, riseHeight, depth, topAbutmentHeight, pierWidth, pierHeight. - Possibility to create shapes related to an arch: ArchHalf; IntradosOnly; ArchFilled; ArchHalfFilled; Lintel. See the reference file ArchModelingDiagrams.pdf to find further information. See also ArchPrototypeScript_more_readable.js.js."))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            #COLOR OF ARCH
+
+            #INPUT PARAMETERS
+
+            #General parameters: measures in meters
+
+            #Parameters to create to create shapes related to arch: put true to apply
+
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("diffuseColor")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("color of arch")).setType(x3dpsail.SFString("SFColor")).setValue(x3dpsail.SFString("0.2 0.8 0.8")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("emissiveColor")).setAccessType(x3dpsail.SFString("inputOutput")).setAppinfo(x3dpsail.SFString("color of arch")).setType(x3dpsail.SFString("SFColor")).setValue(x3dpsail.SFString("0.2 0.8 0.8")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("clearSpanWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("clearSpanWidth: clearSpanWidth must be double of riseHeight to obtain an half circumference")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("4")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("riseHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("riseHeight: riseHeight must be half of clearSpanWidth to obtain an half circumference")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("2")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("depth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("depth")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("3")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("topAbutmentHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("topAbutmentHeight:topAbutmentHeight=0 means no topAbutment")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("pierWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("pierWidth:pierWidtht=0 means no pierWidth")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("pierHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("pierHeight: pierHeight=0 means no pierHeight")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("1")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalf")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("archHalf: can modify also clearSpanWidth, riseHeight, depth, pierWidth, pierHeight, topAbutmentHeight, archHalfExtensionWidth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalf width")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalfExtensionWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("archHalfExtensionWidth: measure in meters, use only if archHalf=true, it is the width of the etension of the abutment of the archHalf. See the reference file ArchModelingDiagrams.pdf to find further information.")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("onlyIntrados")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("onlyIntrados: note it is a flat curved surface, can modify also clearSpanWidth, riseHeight, depth at purpose, if needed apply archHalf=true.")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("archFilled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("archFilled: note it is an half cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose.")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalfFilled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("archHalfFilled: note it is a quarter cylinder, can modify also clearSpanWidth, riseHeight, depth at purpose, clearSpanWidth measure refers to a full arc, consider clearSpanWidth/2 for the archHalfFilled width.")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("lintel")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("lintel: no arc is rendered, but a lintel: topAbutmentHeight on pierHeight, total height is pierHeight + topAbutmentHeight, if needed apply archHalf=true.")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("false"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            #First node determines node type of this prototype
+
+            #IndexedFaceset creates arch
+
+            .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("ArchTransform"))
+              .addChild(x3dpsail.Shape().setDEF(x3dpsail.SFString("Arch"))
+                #note that convex='false' (meaning concave geometry) is crucial for this IFS of a geometric chord to render properly
+
+                .setGeometry(x3dpsail.IndexedFaceSet().setDEF(x3dpsail.SFString("ArchIndex")).setConvex(x3dpsail.SFBool(False)).setSolid(x3dpsail.SFBool(False))
+                  .setCoord(x3dpsail.Coordinate().setDEF(x3dpsail.SFString("ArchChord"))))
+                .setAppearance(x3dpsail.Appearance()
+                  .setMaterial(x3dpsail.Material().setDEF(x3dpsail.SFString("MaterialNode"))
+                    .setIS(x3dpsail.IS()
+                      .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("emissiveColor")).setProtoField(x3dpsail.SFString("emissiveColor")))
+                      .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("diffuseColor")).setProtoField(x3dpsail.SFString("diffuseColor"))))))))
+            #Subsequent nodes do not render, but still must be a valid X3D subgraph
+
+            #This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs
+
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("ArchPrototypeScript")).setUrl(x3dpsail.MFString(["../node/ArchPrototypeScript.js"]))
+              #INPUT PARAMETERS
+
+              #General parameters
+
+              #Parameters to create to create shapes related to arch: put true to apply
+
+              #OUTPUT PARAMETERS
+
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("clearSpanWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for clearSpanWidth parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("riseHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for riseHeight parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("depth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for depth parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("topAbutmentHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for topAbutmentHeight parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("pierWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for pierWidth parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("pierHeight")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for pierHeight parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalf")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for archHalf parameter")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalfExtensionWidth")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for archHalfExtensionWidth parameter")).setType(x3dpsail.SFString("SFFloat")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("onlyIntrados")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for onlyIntrados parameter")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("archFilled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for archFilled parameter")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("archHalfFilled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for archHalfFilled parameter")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("lintel")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("user or default input for lintel parameter")).setType(x3dpsail.SFString("SFBool")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("computedScale")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("computedScale: modify scale field - NOTE it is not used to modify the whole arch, but to modify clearSpanWidth, riseHeight, depth. It does not affect topAbutmentHeight, pierWidth, pierHeight, archHalfExtensionWidth")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("pointOut")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("send computed points to the Coordinate node")).setType(x3dpsail.SFString("MFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("indexOut")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("send computed indices to the IndexedFaceSet node")).setType(x3dpsail.SFString("MFInt32")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("clearSpanWidth")).setProtoField(x3dpsail.SFString("clearSpanWidth")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("riseHeight")).setProtoField(x3dpsail.SFString("riseHeight")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("depth")).setProtoField(x3dpsail.SFString("depth")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("pierWidth")).setProtoField(x3dpsail.SFString("pierWidth")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("topAbutmentHeight")).setProtoField(x3dpsail.SFString("topAbutmentHeight")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("pierHeight")).setProtoField(x3dpsail.SFString("pierHeight")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("archHalf")).setProtoField(x3dpsail.SFString("archHalf")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("archHalfExtensionWidth")).setProtoField(x3dpsail.SFString("archHalfExtensionWidth")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("onlyIntrados")).setProtoField(x3dpsail.SFString("onlyIntrados")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("archFilled")).setProtoField(x3dpsail.SFString("archFilled")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("archHalfFilled")).setProtoField(x3dpsail.SFString("archHalfFilled")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("lintel")).setProtoField(x3dpsail.SFString("lintel")))))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("computedScale")).setFromNode(x3dpsail.SFString("ArchPrototypeScript")).setToField(x3dpsail.SFString("scale")).setToNode(x3dpsail.SFString("ArchTransform")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("pointOut")).setFromNode(x3dpsail.SFString("ArchPrototypeScript")).setToField(x3dpsail.SFString("point")).setToNode(x3dpsail.SFString("ArchChord")))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("indexOut")).setFromNode(x3dpsail.SFString("ArchPrototypeScript")).setToField(x3dpsail.SFString("set_coordIndex")).setToNode(x3dpsail.SFString("ArchIndex")))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("ArchPrototype")).setDEF(x3dpsail.SFString("ArchInstance"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("diffuseColor")).setValue(x3dpsail.SFString("0.5 0.3 0.6")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("emissiveColor")).setValue(x3dpsail.SFString("0.5 0.3 0.6")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("clearSpanWidth")).setValue(x3dpsail.SFString("5")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("riseHeight")).setValue(x3dpsail.SFString("2.5")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("depth")).setValue(x3dpsail.SFString("2")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("topAbutmentHeight")).setValue(x3dpsail.SFString("0.6")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("pierWidth")).setValue(x3dpsail.SFString("1")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("pierHeight")).setValue(x3dpsail.SFString("2"))))
+        #Add any ROUTEs here that connect ProtoInstance to/from prior nodes in Scene (and outside of ProtoDeclare)
+
+        .addChild(x3dpsail.Inline().setDEF(x3dpsail.SFString("CoordinateAxes")).setUrl(x3dpsail.MFString(["../data/CoordinateAxes.x3d"])))))
+
+X3D0.toFileX3D("./future/./ArchPrototype_RoundTrip.x3d")

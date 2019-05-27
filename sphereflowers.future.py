@@ -1,116 +1,35 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("sphereflowers.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("5 or more prismatic flowers") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/sphereflowers.x3d") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]) \
-     .setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]) \
-     .setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]) \
-     .setLeftUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]) \
-     .setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]) \
-     .setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]) \
-    ) \
-    .addChildren(GroupObject() \
-     .addChildren(ExternProtoDeclareObject() \
-      .setName("FlowerProto") \
-      .setUrl(["../data/flowerproto.x3d#FlowerProto"]) \
-      .addField(fieldObject() \
-       .setName("vertex") \
-       .setAccessType("inputOutput") \
-       .setType("MFString") \
-      ) \
-      .addField(fieldObject() \
-       .setName("fragment") \
-       .setAccessType("inputOutput") \
-       .setType("MFString") \
-      ) \
-     ) \
-     .addChildren(ProtoDeclareObject() \
-      .setName("flower") \
-      .setProtoBody(ProtoBodyObject() \
-       .addChildren(GroupObject() \
-        .addChildren(ProtoInstanceObject() \
-         .setName("FlowerProto") \
-         .addFieldValue(fieldValueObject() \
-          .setName("vertex") \
-          .setValue("\"../shaders/cobweb_flowers_chromatic.vs\"") \
-         ) \
-         .addFieldValue(fieldValueObject() \
-          .setName("fragment") \
-          .setValue("\"../shaders/common.fs\"") \
-         ) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("flower") \
-     ) \
-     .addChildren(TimeSensorObject() \
-      .setDEF("SongTime") \
-      .setLoop(True) \
-     ) \
-     .addChildren(SoundObject() \
-      .setMaxBack(100) \
-      .setMaxFront(100) \
-      .setMinBack(20) \
-      .setMinFront(20) \
-      .setSource(AudioClipObject() \
-       .setDEF("AudioClip") \
-       .setDescription("Chandubabamusic #1") \
-       .setUrl(["../resources/chandubabamusic1.wav"]) \
-      ) \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("cycleTime") \
-      .setFromNode("SongTime") \
-      .setToField("startTime") \
-      .setToNode("AudioClip") \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./sphereflowers.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("sphereflowers.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("5 or more prismatic flowers")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/sphereflowers.x3d"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo())
+        .addChild(x3dpsail.Background().setBackUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])).setBottomUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])).setFrontUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"])).setLeftUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"])).setRightUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"])).setTopUrl(x3dpsail.MFString(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"])))
+        .addChild(x3dpsail.Group()
+          .addChild(x3dpsail.ExternProtoDeclare().setName(x3dpsail.SFString("FlowerProto")).setUrl(x3dpsail.MFString(["../data/flowerproto.x3d#FlowerProto"]))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("vertex")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFString")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("fragment")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFString"))))
+          .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("flower"))
+            .setProtoBody(x3dpsail.ProtoBody()
+              .addChild(x3dpsail.Group()
+                .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("FlowerProto"))
+                  .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("vertex")).setValue(x3dpsail.SFString("\"../shaders/cobweb_flowers_chromatic.vs\"")))
+                  .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("fragment")).setValue(x3dpsail.SFString("\"../shaders/common.fs\"")))))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("flower")))
+          .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("SongTime")).setLoop(x3dpsail.SFBool(True)))
+          .addChild(x3dpsail.Sound().setMaxBack(x3dpsail.SFFloat(100)).setMaxFront(x3dpsail.SFFloat(100)).setMinBack(x3dpsail.SFFloat(20)).setMinFront(x3dpsail.SFFloat(20))
+            .setSource(x3dpsail.AudioClip().setDEF(x3dpsail.SFString("AudioClip")).setDescription(x3dpsail.SFString("Chandubabamusic #1")).setUrl(x3dpsail.MFString(["../resources/chandubabamusic1.wav"]))))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("cycleTime")).setFromNode(x3dpsail.SFString("SongTime")).setToField(x3dpsail.SFString("startTime")).setToNode(x3dpsail.SFString("AudioClip"))))))
+
+X3D0.toFileX3D("./future/./sphereflowers_RoundTrip.x3d")

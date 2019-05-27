@@ -1,104 +1,32 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("geo.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Tour around a prismatic sphere") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/geo.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("translated") \
-     .setContent("13 March 2016") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3dToJson.xslt, http://www.web3d.org/x3d/stylesheets/X3dToJson.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-     .setType(["EXAMINE"]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setPosition([0,0,4]) \
-     .setOrientation([1,0,0,0]) \
-     .setDescription("Bubbles in action") \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"]) \
-     .setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"]) \
-     .setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"]) \
-     .setLeftUrl(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"]) \
-     .setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"]) \
-     .setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"]) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("Bubble") \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(TransformObject() \
-       .setDEF("transform") \
-       .addChildren(ShapeObject() \
-        .setGeometry(SphereObject(radius = 0.25) \
-        ) \
-        .setAppearance(AppearanceObject() \
-         .setMaterial(MaterialObject() \
-          .setDiffuseColor([1,0,0]) \
-          .setTransparency(0.2) \
-         ) \
-        ) \
-       ) \
-       .addChildren(ScriptObject() \
-        .setDEF("bounce") \
-        .addField(fieldObject() \
-         .setName("scale") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("1 1 1") \
-        ) \
-        .addField(fieldObject() \
-         .setName("translation") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0 0 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("velocity") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0 0 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("scalvel") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0 0 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("set_fraction") \
-         .setAccessType("inputOnly") \
-         .setType("SFFloat") \
-        ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("geo.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Tour around a prismatic sphere")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/geo.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("translated")).setContent(x3dpsail.SFString("13 March 2016")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3dToJson.xslt, http://www.web3d.org/x3d/stylesheets/X3dToJson.html"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo().setType(x3dpsail.MFString(["EXAMINE"])))
+        .addChild(x3dpsail.Viewpoint().setPosition(x3dpsail.SFVec3f(0,0,4)).setOrientation(x3dpsail.SFRotation(1,0,0,0)).setDescription(x3dpsail.SFString("Bubbles in action")))
+        .addChild(x3dpsail.Background().setBackUrl(x3dpsail.MFString(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"])).setBottomUrl(x3dpsail.MFString(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"])).setFrontUrl(x3dpsail.MFString(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"])).setLeftUrl(x3dpsail.MFString(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"])).setRightUrl(x3dpsail.MFString(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"])).setTopUrl(x3dpsail.MFString(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"])))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("Bubble"))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transform"))
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Sphere().setRadius(x3dpsail.SFFloat(0.25)))
+                .setAppearance(x3dpsail.Appearance()
+                  .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,0,0)).setTransparency(x3dpsail.SFFloat(0.2)))))
+              .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("bounce"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("scale")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("1 1 1")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("translation")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("velocity")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("scalvel")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFFloat"))).setSourceCode('''ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -149,49 +77,14 @@ X3D0 = X3DObject() \
 "	initialize();\n"+
 "    }\n"+
 "}''')
-       ) \
-       .addChildren(TimeSensorObject() \
-        .setDEF("bubbleClock") \
-        .setCycleInterval(10) \
-        .setLoop(True) \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("bounce") \
-        .setFromField("translation_changed") \
-        .setToNode("transform") \
-        .setToField("set_translation") \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("bounce") \
-        .setFromField("scale_changed") \
-        .setToNode("transform") \
-        .setToField("set_scale") \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("bubbleClock") \
-        .setFromField("fraction_changed") \
-        .setToNode("bounce") \
-        .setToField("set_fraction") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("Bubble") \
-     .setDEF("bubbleA") \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("Bubble") \
-     .setDEF("bubbleB") \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("Bubble") \
-     .setDEF("bubbleC") \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("Bubble") \
-     .setDEF("bubbleD") \
-    ) \
-   ) \
+)
+              .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("bubbleClock")).setCycleInterval(x3dpsail.SFTime(10)).setLoop(x3dpsail.SFBool(True)))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("bounce")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("transform")).setToField(x3dpsail.SFString("set_translation")))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("bounce")).setFromField(x3dpsail.SFString("scale_changed")).setToNode(x3dpsail.SFString("transform")).setToField(x3dpsail.SFString("set_scale")))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("bubbleClock")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("bounce")).setToField(x3dpsail.SFString("set_fraction"))))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("Bubble")).setDEF(x3dpsail.SFString("bubbleA")))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("Bubble")).setDEF(x3dpsail.SFString("bubbleB")))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("Bubble")).setDEF(x3dpsail.SFString("bubbleC")))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("Bubble")).setDEF(x3dpsail.SFString("bubbleD")))))
 
-X3D0.toFileX3D("./future/./cobweb2.newf.x3d")
+X3D0.toFileX3D("./future/./cobweb2_RoundTrip.x3d")

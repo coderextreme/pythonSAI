@@ -1,276 +1,85 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("x3dconnectorProto") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Lost, Doug Sanden I think") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/x3dconnectorProto.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("a generic proto to connect two objects") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ViewpointObject() \
-     .setPosition([0,0,5]) \
-     .setDescription("Only Viewpoint") \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setSkyColor([0.4,0.4,0.4]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("G1") \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.7,0.2,0.2]) \
-       ) \
-      ) \
-      .setGeometry(SphereObject(radius = 0.1) \
-      ) \
-     ) \
-     .addChildren(PlaneSensorObject() \
-      .setDescription("Grab to move") \
-      .setDEF("PS1") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromNode("PS1") \
-      .setFromField("translation_changed") \
-      .setToNode("G1") \
-      .setToField("set_translation") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("G2") \
-     .setTranslation([1,-1,0.01]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.2,0.7,0.2]) \
-       ) \
-      ) \
-      .setGeometry(SphereObject(radius = 0.1) \
-      ) \
-     ) \
-     .addChildren(PlaneSensorObject() \
-      .setDescription("Grab to move") \
-      .setOffset([1,-1,0.01]) \
-      .setDEF("PS2") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromNode("PS2") \
-      .setFromField("translation_changed") \
-      .setToNode("G2") \
-      .setToField("set_translation") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("G3") \
-     .setTranslation([1,1,0.01]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.2,0.7,0.2]) \
-       ) \
-      ) \
-      .setGeometry(SphereObject(radius = 0.1) \
-      ) \
-     ) \
-     .addChildren(PlaneSensorObject() \
-      .setDescription("Grab to move") \
-      .setOffset([1,1,0.01]) \
-      .setDEF("PS3") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromNode("PS3") \
-      .setFromField("translation_changed") \
-      .setToNode("G3") \
-      .setToField("set_translation") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("G4") \
-     .setTranslation([-1,1,0.01]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.2,0.7,0.2]) \
-       ) \
-      ) \
-      .setGeometry(SphereObject(radius = 0.1) \
-      ) \
-     ) \
-     .addChildren(PlaneSensorObject() \
-      .setDescription("Grab to move") \
-      .setOffset([-1,1,0.01]) \
-      .setDEF("PS4") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromNode("PS4") \
-      .setFromField("translation_changed") \
-      .setToNode("G4") \
-      .setToField("set_translation") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("transC1") \
-     .addChildren(TransformObject() \
-      .setDEF("rotscaleC1") \
-      .addChildren(ShapeObject() \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0.2,0.7,0.7]) \
-         .setTransparency(0.5) \
-        ) \
-       ) \
-       .setGeometry(CylinderObject(radius = 0.05) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("transC2") \
-     .addChildren(TransformObject() \
-      .setDEF("rotscaleC2") \
-      .addChildren(ShapeObject() \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0.2,0.7,0.7]) \
-         .setTransparency(0.5) \
-        ) \
-       ) \
-       .setGeometry(CylinderObject(radius = 0.05) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("transC3") \
-     .addChildren(TransformObject() \
-      .setDEF("rotscaleC3") \
-      .addChildren(ShapeObject() \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0.2,0.7,0.7]) \
-         .setTransparency(0.5) \
-        ) \
-       ) \
-       .setGeometry(CylinderObject(radius = 0.05) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("x3dconnector") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("startnode") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-      ) \
-      .addField(fieldObject() \
-       .setName("endnode") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-      ) \
-      .addField(fieldObject() \
-       .setName("transnode") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-      ) \
-      .addField(fieldObject() \
-       .setName("rotscalenode") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_startpoint") \
-       .setAccessType("inputOnly") \
-       .setType("SFVec3f") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_endpoint") \
-       .setAccessType("inputOnly") \
-       .setType("SFVec3f") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(ScriptObject() \
-       .setDEF("S1") \
-       .addField(fieldObject() \
-        .setName("startnode") \
-        .setAccessType("initializeOnly") \
-        .setType("SFNode") \
-       ) \
-       .addField(fieldObject() \
-        .setName("endnode") \
-        .setAccessType("initializeOnly") \
-        .setType("SFNode") \
-       ) \
-       .addField(fieldObject() \
-        .setName("transnode") \
-        .setAccessType("initializeOnly") \
-        .setType("SFNode") \
-       ) \
-       .addField(fieldObject() \
-        .setName("rotscalenode") \
-        .setAccessType("initializeOnly") \
-        .setType("SFNode") \
-       ) \
-       .addField(fieldObject() \
-        .setName("set_startpoint") \
-        .setAccessType("inputOnly") \
-        .setType("SFVec3f") \
-       ) \
-       .addField(fieldObject() \
-        .setName("set_endpoint") \
-        .setAccessType("inputOnly") \
-        .setType("SFVec3f") \
-       ) \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("startnode") \
-         .setProtoField("startnode") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("endnode") \
-         .setProtoField("endnode") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("transnode") \
-         .setProtoField("transnode") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("rotscalenode") \
-         .setProtoField("rotscalenode") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_startpoint") \
-         .setProtoField("set_startpoint") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("set_endpoint") \
-         .setProtoField("set_endpoint") \
-        ) \
-       ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("x3dconnectorProto")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Lost, Doug Sanden I think")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/x3dconnectorProto.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("a generic proto to connect two objects"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.Viewpoint().setPosition(x3dpsail.SFVec3f(0,0,5)).setDescription(x3dpsail.SFString("Only Viewpoint")))
+        .addChild(x3dpsail.Background().setSkyColor(x3dpsail.MFColor([0.4,0.4,0.4])))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("G1"))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.7,0.2,0.2))))
+            .setGeometry(x3dpsail.Sphere().setRadius(x3dpsail.SFFloat(0.1))))
+          .addChild(x3dpsail.PlaneSensor().setDescription(x3dpsail.SFString("Grab to move")).setDEF(x3dpsail.SFString("PS1")))
+          .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("PS1")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("G1")).setToField(x3dpsail.SFString("set_translation"))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("G2")).setTranslation(x3dpsail.SFVec3f(1,-1,0.01))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.2))))
+            .setGeometry(x3dpsail.Sphere().setRadius(x3dpsail.SFFloat(0.1))))
+          .addChild(x3dpsail.PlaneSensor().setDescription(x3dpsail.SFString("Grab to move")).setOffset(x3dpsail.SFVec3f(1,-1,0.01)).setDEF(x3dpsail.SFString("PS2")))
+          .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("PS2")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("G2")).setToField(x3dpsail.SFString("set_translation"))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("G3")).setTranslation(x3dpsail.SFVec3f(1,1,0.01))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.2))))
+            .setGeometry(x3dpsail.Sphere().setRadius(x3dpsail.SFFloat(0.1))))
+          .addChild(x3dpsail.PlaneSensor().setDescription(x3dpsail.SFString("Grab to move")).setOffset(x3dpsail.SFVec3f(1,1,0.01)).setDEF(x3dpsail.SFString("PS3")))
+          .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("PS3")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("G3")).setToField(x3dpsail.SFString("set_translation"))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("G4")).setTranslation(x3dpsail.SFVec3f(-1,1,0.01))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.2))))
+            .setGeometry(x3dpsail.Sphere().setRadius(x3dpsail.SFFloat(0.1))))
+          .addChild(x3dpsail.PlaneSensor().setDescription(x3dpsail.SFString("Grab to move")).setOffset(x3dpsail.SFVec3f(-1,1,0.01)).setDEF(x3dpsail.SFString("PS4")))
+          .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("PS4")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("G4")).setToField(x3dpsail.SFString("set_translation"))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transC1"))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("rotscaleC1"))
+            .addChild(x3dpsail.Shape()
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.7)).setTransparency(x3dpsail.SFFloat(0.5))))
+              .setGeometry(x3dpsail.Cylinder().setRadius(x3dpsail.SFFloat(0.05))))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transC2"))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("rotscaleC2"))
+            .addChild(x3dpsail.Shape()
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.7)).setTransparency(x3dpsail.SFFloat(0.5))))
+              .setGeometry(x3dpsail.Cylinder().setRadius(x3dpsail.SFFloat(0.05))))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transC3"))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("rotscaleC3"))
+            .addChild(x3dpsail.Shape()
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.2,0.7,0.7)).setTransparency(x3dpsail.SFFloat(0.5))))
+              .setGeometry(x3dpsail.Cylinder().setRadius(x3dpsail.SFFloat(0.05))))))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("x3dconnector"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("startnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("endnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("transnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("rotscalenode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_startpoint")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_endpoint")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("S1"))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("startnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("endnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("transnode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("rotscalenode")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("set_startpoint")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+              .addField(x3dpsail.field().setName(x3dpsail.SFString("set_endpoint")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("startnode")).setProtoField(x3dpsail.SFString("startnode")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("endnode")).setProtoField(x3dpsail.SFString("endnode")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("transnode")).setProtoField(x3dpsail.SFString("transnode")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("rotscalenode")).setProtoField(x3dpsail.SFString("rotscalenode")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_startpoint")).setProtoField(x3dpsail.SFString("set_startpoint")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_endpoint")).setProtoField(x3dpsail.SFString("set_endpoint")))).setSourceCode('''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+
@@ -309,147 +118,45 @@ X3D0 = X3DObject() \
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
 "        }''')
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("x3dconnector") \
-     .setDEF("connector1") \
-     .addFieldValue(fieldValueObject() \
-      .setName("startnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G1") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("endnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G2") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("transnode") \
-      .addChildren(TransformObject() \
-       .setUSE("transC1") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("rotscalenode") \
-      .addChildren(TransformObject() \
-       .setUSE("rotscaleC1") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_startpoint") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_endpoint") \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("x3dconnector") \
-     .setDEF("connector2") \
-     .addFieldValue(fieldValueObject() \
-      .setName("startnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G1") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("endnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G3") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("transnode") \
-      .addChildren(TransformObject() \
-       .setUSE("transC2") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("rotscalenode") \
-      .addChildren(TransformObject() \
-       .setUSE("rotscaleC2") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_startpoint") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_endpoint") \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("x3dconnector") \
-     .setDEF("connector3") \
-     .addFieldValue(fieldValueObject() \
-      .setName("startnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G1") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("endnode") \
-      .addChildren(TransformObject() \
-       .setUSE("G4") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("transnode") \
-      .addChildren(TransformObject() \
-       .setUSE("transC3") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("rotscalenode") \
-      .addChildren(TransformObject() \
-       .setUSE("rotscaleC3") \
-      ) \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_startpoint") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("set_endpoint") \
-     ) \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G1") \
-     .setFromField("translation_changed") \
-     .setToNode("connector1") \
-     .setToField("set_startpoint") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G2") \
-     .setFromField("translation_changed") \
-     .setToNode("connector1") \
-     .setToField("set_endpoint") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G1") \
-     .setFromField("translation_changed") \
-     .setToNode("connector2") \
-     .setToField("set_startpoint") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G3") \
-     .setFromField("translation_changed") \
-     .setToNode("connector2") \
-     .setToField("set_endpoint") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G1") \
-     .setFromField("translation_changed") \
-     .setToNode("connector3") \
-     .setToField("set_startpoint") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("G4") \
-     .setFromField("translation_changed") \
-     .setToNode("connector3") \
-     .setToField("set_endpoint") \
-    ) \
-   ) \
+)))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("x3dconnector")).setDEF(x3dpsail.SFString("connector1"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("startnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G1"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("endnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G2"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("transnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("transC1"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("rotscalenode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("rotscaleC1"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_startpoint")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_endpoint"))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("x3dconnector")).setDEF(x3dpsail.SFString("connector2"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("startnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G1"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("endnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G3"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("transnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("transC2"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("rotscalenode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("rotscaleC2"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_startpoint")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_endpoint"))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("x3dconnector")).setDEF(x3dpsail.SFString("connector3"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("startnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G1"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("endnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("G4"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("transnode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("transC3"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("rotscalenode"))
+            .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("rotscaleC3"))))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_startpoint")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_endpoint"))))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G1")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector1")).setToField(x3dpsail.SFString("set_startpoint")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G2")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector1")).setToField(x3dpsail.SFString("set_endpoint")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G1")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector2")).setToField(x3dpsail.SFString("set_startpoint")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G3")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector2")).setToField(x3dpsail.SFString("set_endpoint")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G1")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector3")).setToField(x3dpsail.SFString("set_startpoint")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("G4")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("connector3")).setToField(x3dpsail.SFString("set_endpoint")))))
 
-X3D0.toFileX3D("./future/./x3dconnectorProto.newf.x3d")
+X3D0.toFileX3D("./future/./x3dconnectorProto_RoundTrip.x3d")

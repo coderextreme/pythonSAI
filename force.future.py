@@ -1,206 +1,68 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John W Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("December 13 2015") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("force.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/force.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("beginnings of a force directed graph in 3D") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ProtoDeclareObject() \
-     .setName("node") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("position") \
-       .setAccessType("inputOutput") \
-       .setType("SFVec3f") \
-       .setValue("0 0 0") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(GroupObject() \
-       .addChildren(TransformObject() \
-        .setDEF("transform") \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("translation") \
-          .setProtoField("position") \
-         ) \
-        ) \
-        .addChildren(ShapeObject() \
-         .setGeometry(SphereObject() \
-         ) \
-         .setAppearance(AppearanceObject() \
-          .setMaterial(MaterialObject() \
-           .setDiffuseColor([1,0,0]) \
-          ) \
-         ) \
-        ) \
-        .addChildren(TransformObject() \
-         .setTranslation([1,0,0]) \
-         .addChildren(ShapeObject() \
-          .setGeometry(TextObject() \
-           .setString(["Node"]) \
-           .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"], size = 5) \
-           ) \
-          ) \
-          .setAppearance(AppearanceObject() \
-           .setMaterial(MaterialObject() \
-            .setDiffuseColor([0,0,1]) \
-           ) \
-          ) \
-         ) \
-        ) \
-       ) \
-       .addChildren(PositionInterpolatorObject() \
-        .setDEF("NodePosition") \
-        .setKey([0,1]) \
-        .setKeyValue([0,0,0,0,5,0]) \
-       ) \
-       .addChildren(ScriptObject() \
-        .setDEF("MoveBall") \
-        .addField(fieldObject() \
-         .setName("translation") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("50 50 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("old") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0 0 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("set_cycle") \
-         .setAccessType("inputOnly") \
-         .setType("SFTime") \
-        ) \
-        .addField(fieldObject() \
-         .setName("keyValue") \
-         .setAccessType("outputOnly") \
-         .setType("MFVec3f") \
-        ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John W Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("December 13 2015")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("force.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/force.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("beginnings of a force directed graph in 3D")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("node"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("position")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Group()
+              .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transform"))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("translation")).setProtoField(x3dpsail.SFString("position"))))
+                .addChild(x3dpsail.Shape()
+                  .setGeometry(x3dpsail.Sphere())
+                  .setAppearance(x3dpsail.Appearance()
+                    .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,0,0)))))
+                .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(1,0,0))
+                  .addChild(x3dpsail.Shape()
+                    .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Node"]))
+                      .setFontStyle(x3dpsail.FontStyle().setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"])).setSize(x3dpsail.SFFloat(5))))
+                    .setAppearance(x3dpsail.Appearance()
+                      .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0,0,1)))))))
+              .addChild(x3dpsail.PositionInterpolator().setDEF(x3dpsail.SFString("NodePosition")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFVec3f([0,0,0,0,5,0])))
+              .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("MoveBall"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("translation")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("50 50 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("old")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("set_cycle")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFTime")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("keyValue")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFVec3f"))).setSourceCode('''ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
 "					}''')
-       ) \
-       .addChildren(TimeSensorObject() \
-        .setDEF("nodeClock") \
-        .setCycleInterval(3) \
-        .setLoop(True) \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("nodeClock") \
-        .setFromField("cycleTime") \
-        .setToNode("MoveBall") \
-        .setToField("set_cycle") \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("nodeClock") \
-        .setFromField("fraction_changed") \
-        .setToNode("NodePosition") \
-        .setToField("set_fraction") \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("MoveBall") \
-        .setFromField("keyValue") \
-        .setToNode("NodePosition") \
-        .setToField("keyValue") \
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("NodePosition") \
-        .setFromField("value_changed") \
-        .setToNode("transform") \
-        .setToField("set_translation") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("cylinder") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("set_positionA") \
-       .setAccessType("inputOnly") \
-       .setType("SFVec3f") \
-      ) \
-      .addField(fieldObject() \
-       .setName("set_positionB") \
-       .setAccessType("inputOnly") \
-       .setType("SFVec3f") \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(GroupObject() \
-       .addChildren(ShapeObject() \
-        .setGeometry(ExtrusionObject(creaseAngle = 0.785, crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0], spine = [0,-50,0,0,50,0]) \
-         .setDEF("extrusion") \
-        ) \
-        .setAppearance(AppearanceObject() \
-         .setMaterial(MaterialObject() \
-          .setDiffuseColor([0,1,0]) \
-         ) \
-        ) \
-       ) \
-       .addChildren(ScriptObject() \
-        .setDEF("MoveCylinder") \
-        .addField(fieldObject() \
-         .setName("spine") \
-         .setAccessType("inputOutput") \
-         .setType("MFVec3f") \
-         .setValue("0 -50 0 0 50 0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("set_endA") \
-         .setAccessType("inputOnly") \
-         .setType("SFVec3f") \
-        ) \
-        .addField(fieldObject() \
-         .setName("set_endB") \
-         .setAccessType("inputOnly") \
-         .setType("SFVec3f") \
-        ) \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("set_endA") \
-          .setProtoField("set_positionA") \
-         ) \
-         .addConnect(connectObject() \
-          .setNodeField("set_endB") \
-          .setProtoField("set_positionB") \
-         ) \
-        ) \
-.setSourceCode('''ecmascript:\n"+
+)
+              .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("nodeClock")).setCycleInterval(x3dpsail.SFTime(3)).setLoop(x3dpsail.SFBool(True)))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeClock")).setFromField(x3dpsail.SFString("cycleTime")).setToNode(x3dpsail.SFString("MoveBall")).setToField(x3dpsail.SFString("set_cycle")))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeClock")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("NodePosition")).setToField(x3dpsail.SFString("set_fraction")))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("MoveBall")).setFromField(x3dpsail.SFString("keyValue")).setToNode(x3dpsail.SFString("NodePosition")).setToField(x3dpsail.SFString("keyValue")))
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("NodePosition")).setFromField(x3dpsail.SFString("value_changed")).setToNode(x3dpsail.SFString("transform")).setToField(x3dpsail.SFString("set_translation"))))))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("cylinder"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_positionA")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_positionB")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f"))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Group()
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Extrusion().setDEF(x3dpsail.SFString("extrusion")).setCreaseAngle(x3dpsail.SFFloat(0.785)).setCrossSection(x3dpsail.MFVec2f([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0])).setSpine(x3dpsail.MFVec3f([0,-50,0,0,50,0])))
+                .setAppearance(x3dpsail.Appearance()
+                  .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0,1,0)))))
+              .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("MoveCylinder"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("spine")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFVec3f")).setValue(x3dpsail.SFString("0 -50 0 0 50 0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("set_endA")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("set_endB")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_endA")).setProtoField(x3dpsail.SFString("set_positionA")))
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("set_endB")).setProtoField(x3dpsail.SFString("set_positionB")))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -221,114 +83,32 @@ X3D0 = X3DObject() \
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
 "                }''')
-       ) \
-       .addChildren(ROUTEObject() \
-        .setFromNode("MoveCylinder") \
-        .setFromField("spine") \
-        .setToNode("extrusion") \
-        .setToField("set_spine") \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("HoldsContent") \
-     .setScale([0.1,0.1,0.1]) \
-     .addChildren(PlaneSensorObject() \
-      .setDEF("clickGenerator") \
-      .setMinPosition([-50,-50]) \
-      .setMaxPosition([50,50]) \
-      .setDescription("click on background to add nodes, click on nodes to add links") \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("node") \
-      .setDEF("nodeA") \
-      .addFieldValue(fieldValueObject() \
-       .setName("position") \
-       .setValue("0 0 0") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("node") \
-      .setDEF("nodeB") \
-      .addFieldValue(fieldValueObject() \
-       .setName("position") \
-       .setValue("50 50 50") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("node") \
-      .setDEF("nodeC") \
-      .addFieldValue(fieldValueObject() \
-       .setName("position") \
-       .setValue("-50 -50 -50") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("node") \
-      .setDEF("nodeD") \
-      .addFieldValue(fieldValueObject() \
-       .setName("position") \
-       .setValue("50 50 -50") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("cylinder") \
-      .setDEF("linkA") \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionA") \
-       .setValue("0 0 0") \
-      ) \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionB") \
-       .setValue("50 50 50") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("cylinder") \
-      .setDEF("linkB") \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionA") \
-       .setValue("0 0 0") \
-      ) \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionB") \
-       .setValue("-50 -50 -50") \
-      ) \
-     ) \
-     .addChildren(ProtoInstanceObject() \
-      .setName("cylinder") \
-      .setDEF("linkC") \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionA") \
-       .setValue("50 50 50") \
-      ) \
-      .addFieldValue(fieldValueObject() \
-       .setName("set_positionB") \
-       .setValue("50 50 -50") \
-      ) \
-     ) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("clickHandler") \
-     .addField(fieldObject() \
-      .setName("counter") \
-      .setAccessType("inputOutput") \
-      .setValue("0") \
-      .setType("SFInt32") \
-     ) \
-     .addField(fieldObject() \
-      .setName("node_changed") \
-      .setAccessType("outputOnly") \
-      .setType("SFNode") \
-     ) \
-     .addField(fieldObject() \
-      .setName("add_node") \
-      .setAccessType("inputOnly") \
-      .setValue("false") \
-      .setType("SFBool") \
-     ) \
-#<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>
+)
+              .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("MoveCylinder")).setFromField(x3dpsail.SFString("spine")).setToNode(x3dpsail.SFString("extrusion")).setToField(x3dpsail.SFString("set_spine"))))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("HoldsContent")).setScale(x3dpsail.SFVec3f(0.1,0.1,0.1))
+          .addChild(x3dpsail.PlaneSensor().setDEF(x3dpsail.SFString("clickGenerator")).setMinPosition(x3dpsail.SFVec2f(-50,-50)).setMaxPosition(x3dpsail.SFVec2f(50,50)).setDescription(x3dpsail.SFString("click on background to add nodes, click on nodes to add links")))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("node")).setDEF(x3dpsail.SFString("nodeA"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("position")).setValue(x3dpsail.SFString("0 0 0"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("node")).setDEF(x3dpsail.SFString("nodeB"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("position")).setValue(x3dpsail.SFString("50 50 50"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("node")).setDEF(x3dpsail.SFString("nodeC"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("position")).setValue(x3dpsail.SFString("-50 -50 -50"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("node")).setDEF(x3dpsail.SFString("nodeD"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("position")).setValue(x3dpsail.SFString("50 50 -50"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("cylinder")).setDEF(x3dpsail.SFString("linkA"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionA")).setValue(x3dpsail.SFString("0 0 0")))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionB")).setValue(x3dpsail.SFString("50 50 50"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("cylinder")).setDEF(x3dpsail.SFString("linkB"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionA")).setValue(x3dpsail.SFString("0 0 0")))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionB")).setValue(x3dpsail.SFString("-50 -50 -50"))))
+          .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("cylinder")).setDEF(x3dpsail.SFString("linkC"))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionA")).setValue(x3dpsail.SFString("50 50 50")))
+            .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("set_positionB")).setValue(x3dpsail.SFString("50 50 -50")))))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("clickHandler"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("counter")).setAccessType(x3dpsail.SFString("inputOutput")).setValue(x3dpsail.SFString("0")).setType(x3dpsail.SFString("SFInt32")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("node_changed")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFNode")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("add_node")).setAccessType(x3dpsail.SFString("inputOnly")).setValue(x3dpsail.SFString("false")).setType(x3dpsail.SFString("SFBool")))
+          #<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>
 .setSourceCode('''ecmascript:\n"+
 "	function add_node(value) {\n"+
 "                // Browser.print('hey ', counter);\n"+
@@ -347,49 +127,13 @@ X3D0 = X3DObject() \
 "			});\n"+
 "\n"+
 "        }''')
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("clickGenerator") \
-     .setFromField("isActive") \
-     .setToNode("clickHandler") \
-     .setToField("add_node") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeA") \
-     .setFromField("position") \
-     .setToNode("linkA") \
-     .setToField("set_positionA") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeB") \
-     .setFromField("position") \
-     .setToNode("linkA") \
-     .setToField("set_positionB") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeA") \
-     .setFromField("position") \
-     .setToNode("linkB") \
-     .setToField("set_positionA") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeC") \
-     .setFromField("position") \
-     .setToNode("linkB") \
-     .setToField("set_positionB") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeA") \
-     .setFromField("position") \
-     .setToNode("linkC") \
-     .setToField("set_positionA") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("nodeD") \
-     .setFromField("position") \
-     .setToNode("linkC") \
-     .setToField("set_positionB") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("clickGenerator")).setFromField(x3dpsail.SFString("isActive")).setToNode(x3dpsail.SFString("clickHandler")).setToField(x3dpsail.SFString("add_node")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeA")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkA")).setToField(x3dpsail.SFString("set_positionA")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeB")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkA")).setToField(x3dpsail.SFString("set_positionB")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeA")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkB")).setToField(x3dpsail.SFString("set_positionA")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeC")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkB")).setToField(x3dpsail.SFString("set_positionB")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeA")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkC")).setToField(x3dpsail.SFString("set_positionA")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("nodeD")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("linkC")).setToField(x3dpsail.SFString("set_positionB")))))
 
-X3D0.toFileX3D("./future/./force.newf.x3d")
+X3D0.toFileX3D("./future/./force_RoundTrip.x3d")

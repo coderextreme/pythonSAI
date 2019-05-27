@@ -1,145 +1,46 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.2") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("CloudsProcedural4.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("X3D utilizing ecmascript to develop quasi volumetric 3D clouds from png image textured billboard nodes.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Capt Darren W. Murphy") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("1 November 2007") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("14 January 2014") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://savage.nps.edu/Savage/Environment/Atmosphere/CloudsProcedural4.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit, http://www.web3d.org/x3d/content/README.X3D-Edit.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../../license.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("TODO") \
-     .setContent("fix links") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-#A png image file for the cloud texture must be designated in the ecmascript node.
-    .addChildren(ViewpointObject() \
-     .setDescription("Main") \
-     .setJump(False) \
-     .setOrientation([0,1,0,1.57]) \
-     .setPosition([50000,1000,42000]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDescription("Light House Tower") \
-     .setJump(False) \
-     .setOrientation([0,1,0,1.3]) \
-     .setPosition([45000,1290,44000]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDescription("centerWest") \
-     .setJump(False) \
-     .setOrientation([0,1,0,2.5]) \
-     .setPosition([48000,1000,20000]) \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setGroundColor([0,0,1]) \
-     .setSkyColor([0,0,1]) \
-    ) \
-    .addChildren(DirectionalLightObject() \
-     .setAmbientIntensity(1) \
-     .setDirection([-1,0,0]) \
-     .setGlobal(True) \
-    ) \
-    .addChildren(GroupObject() \
-     .setDEF("Terrain") \
-     .addChildren(TransformObject() \
-      .setScale([50,50,50]) \
-      .setTranslation([25000,0,25000]) \
-      .addChildren(InlineObject() \
-       .setUrl(["MontereyBayLargeMesh.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.x3d","MontereyBayLargeMesh.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.wrl"]) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setRotation([1,0,0,1.57]) \
-      .setTranslation([25000,0,25000]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(Rectangle2DObject(size = [77000,55000]) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setTexture(ImageTextureObject() \
-         .setUrl(["ocean.png","https://savage.nps.edu/Savage/Environment/Atmosphere/ocean.png"]) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(GroupObject() \
-     .setDEF("Placemarks") \
-     .addChildren(TransformObject() \
-      .setScale([50,50,50]) \
-      .setTranslation([45000,30,44000]) \
-      .addChildren(InlineObject() \
-       .setUrl(["Lighthouse.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.x3d","Lighthouse.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.wrl"]) \
-      ) \
-     ) \
-    ) \
-    .addChildren(GroupObject() \
-     .setDEF("Clouds") \
-     .addChildren(TransformObject() \
-      .setDEF("Cumulus") \
-     ) \
-     .addChildren(TransformObject() \
-      .setDEF("Cirrus") \
-     ) \
-     .addChildren(TransformObject() \
-      .setDEF("Fog") \
-     ) \
-     .addChildren(ScriptObject(directOutput = True) \
-      .setDEF("PixelScript") \
-      .addField(fieldObject() \
-       .setName("Cumulus") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-       .addChildren(TransformObject() \
-        .setUSE("Cumulus") \
-       ) \
-      ) \
-      .addField(fieldObject() \
-       .setName("Cirrus") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-       .addChildren(TransformObject() \
-        .setUSE("Cirrus") \
-       ) \
-      ) \
-      .addField(fieldObject() \
-       .setName("Fog") \
-       .setAccessType("initializeOnly") \
-       .setType("SFNode") \
-      ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.2"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("CloudsProcedural4.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("X3D utilizing ecmascript to develop quasi volumetric 3D clouds from png image textured billboard nodes.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Capt Darren W. Murphy")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("1 November 2007")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("14 January 2014")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://savage.nps.edu/Savage/Environment/Atmosphere/CloudsProcedural4.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit, http://www.web3d.org/x3d/content/README.X3D-Edit.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../../license.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("TODO")).setContent(x3dpsail.SFString("fix links"))))
+      .setScene(x3dpsail.Scene()
+        #A png image file for the cloud texture must be designated in the ecmascript node.
+
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("Main")).setJump(x3dpsail.SFBool(False)).setOrientation(x3dpsail.SFRotation(0,1,0,1.57)).setPosition(x3dpsail.SFVec3f(50000,1000,42000)))
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("Light House Tower")).setJump(x3dpsail.SFBool(False)).setOrientation(x3dpsail.SFRotation(0,1,0,1.3)).setPosition(x3dpsail.SFVec3f(45000,1290,44000)))
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("centerWest")).setJump(x3dpsail.SFBool(False)).setOrientation(x3dpsail.SFRotation(0,1,0,2.5)).setPosition(x3dpsail.SFVec3f(48000,1000,20000)))
+        .addChild(x3dpsail.Background().setGroundColor(x3dpsail.MFColor([0,0,1])).setSkyColor(x3dpsail.MFColor([0,0,1])))
+        .addChild(x3dpsail.DirectionalLight().setAmbientIntensity(x3dpsail.SFFloat(1)).setDirection(x3dpsail.SFVec3f(-1,0,0)).setGlobal(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.Group().setDEF(x3dpsail.SFString("Terrain"))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(50,50,50)).setTranslation(x3dpsail.SFVec3f(25000,0,25000))
+            .addChild(x3dpsail.Inline().setUrl(x3dpsail.MFString(["MontereyBayLargeMesh.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.x3d","MontereyBayLargeMesh.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.wrl"]))))
+          .addChild(x3dpsail.Transform().setRotation(x3dpsail.SFRotation(1,0,0,1.57)).setTranslation(x3dpsail.SFVec3f(25000,0,25000))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Rectangle2D().setSize(x3dpsail.SFVec2f(77000,55000)))
+              .setAppearance(x3dpsail.Appearance()
+                .setTexture(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["ocean.png","https://savage.nps.edu/Savage/Environment/Atmosphere/ocean.png"])))))))
+        .addChild(x3dpsail.Group().setDEF(x3dpsail.SFString("Placemarks"))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(50,50,50)).setTranslation(x3dpsail.SFVec3f(45000,30,44000))
+            .addChild(x3dpsail.Inline().setUrl(x3dpsail.MFString(["Lighthouse.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.x3d","Lighthouse.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.wrl"])))))
+        .addChild(x3dpsail.Group().setDEF(x3dpsail.SFString("Clouds"))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Cumulus")))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Cirrus")))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Fog")))
+          .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("PixelScript")).setDirectOutput(x3dpsail.SFBool(True))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("Cumulus")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode"))
+              .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("Cumulus"))))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("Cirrus")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode"))
+              .addChild(x3dpsail.Transform().setUSE(x3dpsail.SFString("Cirrus"))))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("Fog")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFNode"))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -520,14 +421,7 @@ X3D0 = X3DObject() \
 "\n"+
 "cirrus();\n"+
 "}''')
-     ) \
-     .addChildren(DirectionalLightObject() \
-      .setAmbientIntensity(1) \
-      .setColor([1,0,0]) \
-      .setDirection([-1,-1,0]) \
-      .setGlobal(True) \
-     ) \
-    ) \
-   ) \
+)
+          .addChild(x3dpsail.DirectionalLight().setAmbientIntensity(x3dpsail.SFFloat(1)).setColor(x3dpsail.SFColor(1,0,0)).setDirection(x3dpsail.SFVec3f(-1,-1,0)).setGlobal(x3dpsail.SFBool(True))))))
 
-X3D0.toFileX3D("./future/./CloudsProcedural4.newf.x3d")
+X3D0.toFileX3D("./future/./CloudsProcedural4_RoundTrip.x3d")

@@ -1,76 +1,25 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("SFVec3f.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("3 prismatic spheres") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/SFVec3f.x3d") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("transform") \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.7,0.7,0.7]) \
-        .setSpecularColor([0.5,0.5,0.5]) \
-       ) \
-      ) \
-      .setGeometry(SphereObject() \
-      ) \
-     ) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("Bounce") \
-     .addField(fieldObject() \
-      .setName("set_translation") \
-      .setAccessType("inputOnly") \
-      .setType("SFVec3f") \
-      .setValue("0 0 0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("translation_changed") \
-      .setAccessType("outputOnly") \
-      .setType("SFVec3f") \
-      .setValue("0 0 0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("translation") \
-      .setAccessType("inputOutput") \
-      .setType("SFVec3f") \
-      .setValue("0 0 0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("velocity") \
-      .setAccessType("inputOutput") \
-      .setType("SFVec3f") \
-      .setValue("0 0 0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("set_fraction") \
-      .setAccessType("inputOnly") \
-      .setType("SFTime") \
-     ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("SFVec3f.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("3 prismatic spheres")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/SFVec3f.x3d"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo())
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("transform"))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.7,0.7,0.7)).setSpecularColor(x3dpsail.SFColor(0.5,0.5,0.5))))
+            .setGeometry(x3dpsail.Sphere())))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("Bounce"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_translation")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("translation_changed")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("translation")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("velocity")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFTime"))).setSourceCode('''ecmascript:\n"+
 "			function newBubble() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -101,24 +50,9 @@ X3D0 = X3DObject() \
 "			function initialize() {\n"+
 "			     newBubble();\n"+
 "			}''')
-    ) \
-    .addChildren(TimeSensorObject() \
-     .setDEF("TourTime") \
-     .setCycleInterval(0.15) \
-     .setLoop(True) \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("cycleTime") \
-     .setToNode("Bounce") \
-     .setToField("set_fraction") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("Bounce") \
-     .setFromField("translation_changed") \
-     .setToNode("transform") \
-     .setToField("set_translation") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("TourTime")).setCycleInterval(x3dpsail.SFTime(0.15)).setLoop(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("cycleTime")).setToNode(x3dpsail.SFString("Bounce")).setToField(x3dpsail.SFString("set_fraction")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("Bounce")).setFromField(x3dpsail.SFString("translation_changed")).setToNode(x3dpsail.SFString("transform")).setToField(x3dpsail.SFString("set_translation")))))
 
-X3D0.toFileX3D("./future/./SFVec3f.newf.x3d")
+X3D0.toFileX3D("./future/./SFVec3f_RoundTrip.x3d")

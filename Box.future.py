@@ -1,172 +1,59 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("box.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/box.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("3 boxes") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-     .setType(["EXAMINE"]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDescription("Cubes on Fire") \
-     .setPosition([0,0,12]) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("anyShape") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("xtranslation") \
-       .setAccessType("inputOutput") \
-       .setType("SFVec3f") \
-       .setValue("0 0 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("myShape") \
-       .setAccessType("inputOutput") \
-       .setType("MFNode") \
-       .addChildren(ShapeObject() \
-        .setGeometry(SphereObject() \
-        ) \
-        .setAppearance(AppearanceObject() \
-         .setMaterial(MaterialObject() \
-          .setDiffuseColor([1,1,1]) \
-         ) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(TransformObject() \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("translation") \
-         .setProtoField("xtranslation") \
-        ) \
-        .addConnect(connectObject() \
-         .setNodeField("children") \
-         .setProtoField("myShape") \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoDeclareObject() \
-     .setName("three") \
-     .setProtoInterface(ProtoInterfaceObject() \
-      .addField(fieldObject() \
-       .setName("ytranslation") \
-       .setAccessType("inputOutput") \
-       .setType("SFVec3f") \
-       .setValue("0 0 0") \
-      ) \
-      .addField(fieldObject() \
-       .setName("myShape") \
-       .setAccessType("inputOutput") \
-       .setType("MFNode") \
-       .addChildren(ShapeObject() \
-        .setGeometry(CylinderObject() \
-        ) \
-        .setAppearance(AppearanceObject() \
-         .setMaterial(MaterialObject() \
-          .setDiffuseColor([1,1,1]) \
-         ) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .setProtoBody(ProtoBodyObject() \
-      .addChildren(TransformObject() \
-       .setIS(ISObject() \
-        .addConnect(connectObject() \
-         .setNodeField("translation") \
-         .setProtoField("ytranslation") \
-        ) \
-       ) \
-       .addChildren(ProtoInstanceObject() \
-        .setName("anyShape") \
-        .addFieldValue(fieldValueObject() \
-         .setName("xtranslation") \
-         .setValue("0 0 0") \
-        ) \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("myShape") \
-          .setProtoField("myShape") \
-         ) \
-        ) \
-       ) \
-       .addChildren(ProtoInstanceObject() \
-        .setName("anyShape") \
-        .addFieldValue(fieldValueObject() \
-         .setName("xtranslation") \
-         .setValue("2 0 0") \
-        ) \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("myShape") \
-          .setProtoField("myShape") \
-         ) \
-        ) \
-       ) \
-       .addChildren(ProtoInstanceObject() \
-        .setName("anyShape") \
-        .addFieldValue(fieldValueObject() \
-         .setName("xtranslation") \
-         .setValue("-2 0 0") \
-        ) \
-        .setIS(ISObject() \
-         .addConnect(connectObject() \
-          .setNodeField("myShape") \
-          .setProtoField("myShape") \
-         ) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ProtoInstanceObject() \
-     .setName("three") \
-     .addFieldValue(fieldValueObject() \
-      .setName("ytranslation") \
-      .setValue("0 0 0") \
-     ) \
-     .addFieldValue(fieldValueObject() \
-      .setName("myShape") \
-      .addChildren(ShapeObject() \
-       .setGeometry(BoxObject(size = [1,1,1]) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0,1,0]) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./Box.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("box.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/box.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("3 boxes"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo().setType(x3dpsail.MFString(["EXAMINE"])))
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("Cubes on Fire")).setPosition(x3dpsail.SFVec3f(0,0,12)))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("anyShape"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("xtranslation")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("myShape")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFNode"))
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Sphere())
+                .setAppearance(x3dpsail.Appearance()
+                  .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,1)))))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Transform()
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("translation")).setProtoField(x3dpsail.SFString("xtranslation")))
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("children")).setProtoField(x3dpsail.SFString("myShape")))))))
+        .addChild(x3dpsail.ProtoDeclare().setName(x3dpsail.SFString("three"))
+          .setProtoInterface(x3dpsail.ProtoInterface()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("ytranslation")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0 0 0")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("myShape")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFNode"))
+              .addChild(x3dpsail.Shape()
+                .setGeometry(x3dpsail.Cylinder())
+                .setAppearance(x3dpsail.Appearance()
+                  .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,1)))))))
+          .setProtoBody(x3dpsail.ProtoBody()
+            .addChild(x3dpsail.Transform()
+              .setIS(x3dpsail.IS()
+                .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("translation")).setProtoField(x3dpsail.SFString("ytranslation"))))
+              .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("anyShape"))
+                .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("xtranslation")).setValue(x3dpsail.SFString("0 0 0")))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("myShape")).setProtoField(x3dpsail.SFString("myShape")))))
+              .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("anyShape"))
+                .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("xtranslation")).setValue(x3dpsail.SFString("2 0 0")))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("myShape")).setProtoField(x3dpsail.SFString("myShape")))))
+              .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("anyShape"))
+                .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("xtranslation")).setValue(x3dpsail.SFString("-2 0 0")))
+                .setIS(x3dpsail.IS()
+                  .addConnect(x3dpsail.connect().setNodeField(x3dpsail.SFString("myShape")).setProtoField(x3dpsail.SFString("myShape"))))))))
+        .addChild(x3dpsail.ProtoInstance().setName(x3dpsail.SFString("three"))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("ytranslation")).setValue(x3dpsail.SFString("0 0 0")))
+          .addFieldValue(x3dpsail.fieldValue().setName(x3dpsail.SFString("myShape"))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Box().setSize(x3dpsail.SFVec3f(1,1,1)))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0,1,0)))))))))
+
+X3D0.toFileX3D("./future/./Box_RoundTrip.x3d")

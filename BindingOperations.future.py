@@ -1,282 +1,89 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("BindingOperations.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Illustrate Viewpoint binding operations (in gory detail!) as described in Chapter 4 concepts. Scene design: a TimeSensor clock drives and IntegerSequencer for each t0/t1/etc. event, and a customized Script node sends bind/unbind events to the correct Viewpoint. Display the browser console to see occurrence of each event.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Don Brutzman") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("5 January 2008") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("22 July 2013") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("BindingOperations.console.txt") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("BindingStackOperations.png") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("X3D for Web Authors, Section 2.5.1, Figure 4.1") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://X3dGraphics.com") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.web3d.org/x3d/content/examples/X3dResources.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("rights") \
-     .setContent("Copyright Don Brutzman and Leonard Daly 2007") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("subject") \
-     .setContent("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter04ViewingNavigation/BindingOperations.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../license.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ViewpointObject() \
-     .setDEF("View1") \
-     .setCenterOfRotation([-6,0,0]) \
-     .setDescription("Viewpoint 1") \
-     .setPosition([-6,0,5]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDEF("View2") \
-     .setCenterOfRotation([-2,0,0]) \
-     .setDescription("Viewpoint 2") \
-     .setPosition([-2,0,5]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDEF("View3") \
-     .setCenterOfRotation([2,0,0]) \
-     .setDescription("Viewpoint 3") \
-     .setPosition([2,0,5]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDEF("View4") \
-     .setCenterOfRotation([6,0,0]) \
-     .setDescription("Viewpoint 4") \
-     .setPosition([6,0,5]) \
-    ) \
-#Script initialization ought to first bind view5 below.
-    .addChildren(GroupObject() \
-     .addChildren(TransformObject() \
-      .setDEF("Text1") \
-      .setTranslation([-6,0,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["View","# 1"]) \
-        .setFontStyle(FontStyleObject(justify = ["MIDDLE","MIDDLE"]) \
-         .setDEF("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([1,0,0]) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setDEF("Text2") \
-      .setTranslation([-2,0,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["View","# 2"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0,1,0]) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setDEF("Text3") \
-      .setTranslation([2,0,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["View","# 3"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setDiffuseColor([0,0,1]) \
-        ) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setDEF("Text4") \
-      .setTranslation([6,0,0]) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["View","# 4"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("CenterJustify") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-#The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.
-#It does not need to be studied in this chapter.
-    .addChildren(TransformObject() \
-     .setTranslation([0,-3,8]) \
-#notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.
-     .addChildren(ViewpointObject() \
-      .setDEF("ClickToAnimateView") \
-      .setDescription("Select animation sequence") \
-      .setPosition([0,0,7]) \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["Click here to animate"]) \
-       .setFontStyle(FontStyleObject(justify = ["MIDDLE","BEGIN"]) \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.8,0.4,0]) \
-       ) \
-      ) \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(BoxObject(size = [7,1,0.02]) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setTransparency(1) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TouchSensorObject() \
-      .setDEF("TextTouchSensor") \
-      .setDescription("Click to begin animating viewpoint selections") \
-     ) \
-     .addChildren(TimeSensorObject() \
-      .setDEF("Clock") \
-      .setCycleInterval(10) \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("touchTime") \
-      .setFromNode("TextTouchSensor") \
-      .setToField("set_startTime") \
-      .setToNode("Clock") \
-     ) \
-     .addChildren(IntegerSequencerObject() \
-      .setDEF("TimingSequencer") \
-      .setKey([0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,1]) \
-      .setKeyValue([0,1,2,3,4,5,6,7,8,10]) \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("fraction_changed") \
-      .setFromNode("Clock") \
-      .setToField("set_fraction") \
-      .setToNode("TimingSequencer") \
-     ) \
-     .addChildren(ScriptObject() \
-      .setDEF("BindingSequencerEngine") \
-      .addField(fieldObject() \
-       .setName("set_timeEvent") \
-       .setAccessType("inputOnly") \
-       .setType("SFInt32") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindView1") \
-       .setAccessType("outputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindView2") \
-       .setAccessType("outputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindView3") \
-       .setAccessType("outputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindView4") \
-       .setAccessType("outputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("bindView5") \
-       .setAccessType("outputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("view1Bound") \
-       .setAccessType("inputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("view2Bound") \
-       .setAccessType("inputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("view3Bound") \
-       .setAccessType("inputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("view4Bound") \
-       .setAccessType("inputOnly") \
-       .setType("SFBool") \
-      ) \
-      .addField(fieldObject() \
-       .setName("priorInputvalue") \
-       .setAccessType("initializeOnly") \
-       .setType("SFInt32") \
-       .setValue("-1") \
-      ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("BindingOperations.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Illustrate Viewpoint binding operations (in gory detail!) as described in Chapter 4 concepts. Scene design: a TimeSensor clock drives and IntegerSequencer for each t0/t1/etc. event, and a customized Script node sends bind/unbind events to the correct Viewpoint. Display the browser console to see occurrence of each event.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Don Brutzman")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("5 January 2008")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("22 July 2013")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("BindingOperations.console.txt")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("BindingStackOperations.png")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("X3D for Web Authors, Section 2.5.1, Figure 4.1")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://X3dGraphics.com")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.web3d.org/x3d/content/examples/X3dResources.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("rights")).setContent(x3dpsail.SFString("Copyright Don Brutzman and Leonard Daly 2007")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("subject")).setContent(x3dpsail.SFString("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter04ViewingNavigation/BindingOperations.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../license.html"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("View1")).setCenterOfRotation(x3dpsail.SFVec3f(-6,0,0)).setDescription(x3dpsail.SFString("Viewpoint 1")).setPosition(x3dpsail.SFVec3f(-6,0,5)))
+        .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("View2")).setCenterOfRotation(x3dpsail.SFVec3f(-2,0,0)).setDescription(x3dpsail.SFString("Viewpoint 2")).setPosition(x3dpsail.SFVec3f(-2,0,5)))
+        .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("View3")).setCenterOfRotation(x3dpsail.SFVec3f(2,0,0)).setDescription(x3dpsail.SFString("Viewpoint 3")).setPosition(x3dpsail.SFVec3f(2,0,5)))
+        .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("View4")).setCenterOfRotation(x3dpsail.SFVec3f(6,0,0)).setDescription(x3dpsail.SFString("Viewpoint 4")).setPosition(x3dpsail.SFVec3f(6,0,5)))
+        #Script initialization ought to first bind view5 below.
+
+        .addChild(x3dpsail.Group()
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Text1")).setTranslation(x3dpsail.SFVec3f(-6,0,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["View","# 1"]))
+                .setFontStyle(x3dpsail.FontStyle().setDEF(x3dpsail.SFString("CenterJustify")).setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"]))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,0,0))))))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Text2")).setTranslation(x3dpsail.SFVec3f(-2,0,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["View","# 2"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0,1,0))))))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Text3")).setTranslation(x3dpsail.SFVec3f(2,0,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["View","# 3"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0,0,1))))))
+          .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Text4")).setTranslation(x3dpsail.SFVec3f(6,0,0))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["View","# 4"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("CenterJustify"))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material())))))
+        #The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.
+
+        #It does not need to be studied in this chapter.
+
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-3,8))
+          #notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.
+
+          .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("ClickToAnimateView")).setDescription(x3dpsail.SFString("Select animation sequence")).setPosition(x3dpsail.SFVec3f(0,0,7)))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Click here to animate"]))
+              .setFontStyle(x3dpsail.FontStyle().setJustify(x3dpsail.MFString(["MIDDLE","BEGIN"]))))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.8,0.4,0)))))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Box().setSize(x3dpsail.SFVec3f(7,1,0.02)))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setTransparency(x3dpsail.SFFloat(1)))))
+          .addChild(x3dpsail.TouchSensor().setDEF(x3dpsail.SFString("TextTouchSensor")).setDescription(x3dpsail.SFString("Click to begin animating viewpoint selections")))
+          .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("Clock")).setCycleInterval(x3dpsail.SFTime(10)))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("touchTime")).setFromNode(x3dpsail.SFString("TextTouchSensor")).setToField(x3dpsail.SFString("set_startTime")).setToNode(x3dpsail.SFString("Clock")))
+          .addChild(x3dpsail.IntegerSequencer().setDEF(x3dpsail.SFString("TimingSequencer")).setKey(x3dpsail.MFFloat([0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,1])).setKeyValue(x3dpsail.MFInt32([0,1,2,3,4,5,6,7,8,10])))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("fraction_changed")).setFromNode(x3dpsail.SFString("Clock")).setToField(x3dpsail.SFString("set_fraction")).setToNode(x3dpsail.SFString("TimingSequencer")))
+          .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("BindingSequencerEngine"))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("set_timeEvent")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFInt32")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindView1")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindView2")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindView3")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindView4")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("bindView5")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("view1Bound")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("view2Bound")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("view3Bound")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("view4Bound")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("priorInputvalue")).setAccessType(x3dpsail.SFString("initializeOnly")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("-1"))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "function initialize ()\n"+
 "{\n"+
@@ -364,71 +171,22 @@ X3D0 = X3DObject() \
 "{\n"+
 "    Browser.print (', view5Bound ' + (inputValue));\n"+
 "}''')
-     ) \
-#drive Script with TimeSensor clock
-     .addChildren(ROUTEObject() \
-      .setFromField("value_changed") \
-      .setFromNode("TimingSequencer") \
-      .setToField("set_timeEvent") \
-      .setToNode("BindingSequencerEngine") \
-     ) \
-#Script will bind and unbind Viewpoint nodes
-     .addChildren(ROUTEObject() \
-      .setFromField("bindView1") \
-      .setFromNode("BindingSequencerEngine") \
-      .setToField("set_bind") \
-      .setToNode("View1") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("bindView2") \
-      .setFromNode("BindingSequencerEngine") \
-      .setToField("set_bind") \
-      .setToNode("View2") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("bindView3") \
-      .setFromNode("BindingSequencerEngine") \
-      .setToField("set_bind") \
-      .setToNode("View3") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("bindView4") \
-      .setFromNode("BindingSequencerEngine") \
-      .setToField("set_bind") \
-      .setToNode("View4") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("bindView5") \
-      .setFromNode("BindingSequencerEngine") \
-      .setToField("set_bind") \
-      .setToNode("ClickToAnimateView") \
-     ) \
-#Viewpoint nodes report bind and unbind events
-     .addChildren(ROUTEObject() \
-      .setFromField("isBound") \
-      .setFromNode("View1") \
-      .setToField("view1Bound") \
-      .setToNode("BindingSequencerEngine") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isBound") \
-      .setFromNode("View2") \
-      .setToField("view2Bound") \
-      .setToNode("BindingSequencerEngine") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isBound") \
-      .setFromNode("View3") \
-      .setToField("view3Bound") \
-      .setToNode("BindingSequencerEngine") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isBound") \
-      .setFromNode("View4") \
-      .setToField("view4Bound") \
-      .setToNode("BindingSequencerEngine") \
-     ) \
-    ) \
-   ) \
+)
+          #drive Script with TimeSensor clock
 
-X3D0.toFileX3D("./future/./BindingOperations.newf.x3d")
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("value_changed")).setFromNode(x3dpsail.SFString("TimingSequencer")).setToField(x3dpsail.SFString("set_timeEvent")).setToNode(x3dpsail.SFString("BindingSequencerEngine")))
+          #Script will bind and unbind Viewpoint nodes
+
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("bindView1")).setFromNode(x3dpsail.SFString("BindingSequencerEngine")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("View1")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("bindView2")).setFromNode(x3dpsail.SFString("BindingSequencerEngine")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("View2")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("bindView3")).setFromNode(x3dpsail.SFString("BindingSequencerEngine")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("View3")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("bindView4")).setFromNode(x3dpsail.SFString("BindingSequencerEngine")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("View4")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("bindView5")).setFromNode(x3dpsail.SFString("BindingSequencerEngine")).setToField(x3dpsail.SFString("set_bind")).setToNode(x3dpsail.SFString("ClickToAnimateView")))
+          #Viewpoint nodes report bind and unbind events
+
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isBound")).setFromNode(x3dpsail.SFString("View1")).setToField(x3dpsail.SFString("view1Bound")).setToNode(x3dpsail.SFString("BindingSequencerEngine")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isBound")).setFromNode(x3dpsail.SFString("View2")).setToField(x3dpsail.SFString("view2Bound")).setToNode(x3dpsail.SFString("BindingSequencerEngine")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isBound")).setFromNode(x3dpsail.SFString("View3")).setToField(x3dpsail.SFString("view3Bound")).setToNode(x3dpsail.SFString("BindingSequencerEngine")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isBound")).setFromNode(x3dpsail.SFString("View4")).setToField(x3dpsail.SFString("view4Bound")).setToNode(x3dpsail.SFString("BindingSequencerEngine"))))))
+
+X3D0.toFileX3D("./future/./BindingOperations_RoundTrip.x3d")

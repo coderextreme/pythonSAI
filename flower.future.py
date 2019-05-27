@@ -1,64 +1,22 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-    ) \
-    .addChildren(DirectionalLightObject() \
-     .setDirection([0,-0.8,-0.2]) \
-     .setIntensity(0.5) \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setSkyColor([1,1,1]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDescription("One mathematical orbital") \
-     .setPosition([0,0,50]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setTranslation([0,-1,1]) \
-     .setRotation([0,1,0,3.1415926]) \
-     .setScale([1.5,1.5,1.5]) \
-     .addChildren(ShapeObject() \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setTransparency(0.1) \
-        .setDiffuseColor([0.9,0.3,0.3]) \
-        .setSpecularColor([0.8,0.8,0.8]) \
-        .setShininess(0.145) \
-       ) \
-      ) \
-      .setGeometry(IndexedFaceSetObject(ccw = False, convex = False, coordIndex = [0,1,2,-1]) \
-       .setDEF("ifs") \
-       .setCoord(CoordinateObject() \
-        .setDEF("crd") \
-        .setPoint([0,0,1,0,1,0,1,0,0]) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("FlowerScript") \
-     .addField(fieldObject() \
-      .setName("set_fraction") \
-      .setAccessType("inputOnly") \
-      .setType("SFFloat") \
-     ) \
-     .addField(fieldObject() \
-      .setName("coordinates") \
-      .setAccessType("outputOnly") \
-      .setType("MFVec3f") \
-     ) \
-     .addField(fieldObject() \
-      .setName("coordIndexes") \
-      .setAccessType("outputOnly") \
-      .setType("MFInt32") \
-     ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo())
+        .addChild(x3dpsail.DirectionalLight().setDirection(x3dpsail.SFVec3f(0,-0.8,-0.2)).setIntensity(x3dpsail.SFFloat(0.5)))
+        .addChild(x3dpsail.Background().setSkyColor(x3dpsail.MFColor([1,1,1])))
+        .addChild(x3dpsail.Viewpoint().setDescription(x3dpsail.SFString("One mathematical orbital")).setPosition(x3dpsail.SFVec3f(0,0,50)))
+        .addChild(x3dpsail.Transform().setTranslation(x3dpsail.SFVec3f(0,-1,1)).setRotation(x3dpsail.SFRotation(0,1,0,3.1415926)).setScale(x3dpsail.SFVec3f(1.5,1.5,1.5))
+          .addChild(x3dpsail.Shape()
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setTransparency(x3dpsail.SFFloat(0.1)).setDiffuseColor(x3dpsail.SFColor(0.9,0.3,0.3)).setSpecularColor(x3dpsail.SFColor(0.8,0.8,0.8)).setShininess(x3dpsail.SFFloat(0.145))))
+            .setGeometry(x3dpsail.IndexedFaceSet().setCcw(x3dpsail.SFBool(False)).setConvex(x3dpsail.SFBool(False)).setCoordIndex(x3dpsail.MFInt32([0,1,2,-1])).setDEF(x3dpsail.SFString("ifs"))
+              .setCoord(x3dpsail.Coordinate().setDEF(x3dpsail.SFString("crd")).setPoint(x3dpsail.MFVec3f([0,0,1,0,1,0,1,0,0]))))))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("FlowerScript"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_fraction")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFFloat")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("coordinates")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFVec3f")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("coordIndexes")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFInt32"))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -145,30 +103,10 @@ X3D0 = X3DObject() \
 "	}\n"+
 "	updateCoordinates(resolution);\n"+
 "}''')
-    ) \
-    .addChildren(TimeSensorObject() \
-     .setDEF("Clock") \
-     .setCycleInterval(16) \
-     .setLoop(True) \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("FlowerScript") \
-     .setFromField("coordIndexes") \
-     .setToNode("ifs") \
-     .setToField("coordIndex") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("FlowerScript") \
-     .setFromField("coordinates") \
-     .setToNode("crd") \
-     .setToField("point") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("Clock") \
-     .setFromField("fraction_changed") \
-     .setToNode("FlowerScript") \
-     .setToField("set_fraction") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("Clock")).setCycleInterval(x3dpsail.SFTime(16)).setLoop(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("FlowerScript")).setFromField(x3dpsail.SFString("coordIndexes")).setToNode(x3dpsail.SFString("ifs")).setToField(x3dpsail.SFString("coordIndex")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("FlowerScript")).setFromField(x3dpsail.SFString("coordinates")).setToNode(x3dpsail.SFString("crd")).setToField(x3dpsail.SFString("point")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("Clock")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("FlowerScript")).setToField(x3dpsail.SFString("set_fraction")))))
 
-X3D0.toFileX3D("./future/./flower.newf.x3d")
+X3D0.toFileX3D("./future/./flower_RoundTrip.x3d")

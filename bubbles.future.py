@@ -1,240 +1,61 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addComponent(componentObject() \
-     .setName("EnvironmentalEffects") \
-     .setLevel(1) \
-    ) \
-    .addComponent(componentObject() \
-     .setName("EnvironmentalEffects") \
-     .setLevel(3) \
-    ) \
-    .addComponent(componentObject() \
-     .setName("Shaders") \
-     .setLevel(1) \
-    ) \
-    .addComponent(componentObject() \
-     .setName("CubeMapTexturing") \
-     .setLevel(1) \
-    ) \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("bubbles.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/bubbles.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("not sure what this is") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-     .setType(["EXAMINE"]) \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setDEF("Tour") \
-     .setDescription("Tour Views") \
-    ) \
-    .addChildren(ViewpointObject() \
-     .setPosition([0,0,4]) \
-     .setDescription("sphere in road") \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setBackUrl(["../resources/images/all_probes/uffizi_cross/uffizi_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_back.png"]) \
-     .setBottomUrl(["../resources/images/all_probes/uffizi_cross/uffizi_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_bottom.png"]) \
-     .setFrontUrl(["../resources/images/all_probes/uffizi_cross/uffizi_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_front.png"]) \
-     .setLeftUrl(["../resources/images/all_probes/uffizi_cross/uffizi_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_left.png"]) \
-     .setRightUrl(["../resources/images/all_probes/uffizi_cross/uffizi_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_right.png"]) \
-     .setTopUrl(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("Rose01") \
-     .addChildren(ShapeObject() \
-      .setGeometry(SphereObject() \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setDEF("_01_-_Default") \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.7,0.7,0.7]) \
-        .setSpecularColor([0.5,0.5,0.5]) \
-       ) \
-       .setTexture(ComposedCubeMapTextureObject() \
-        .setBack(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_back.png"]) \
-        ) \
-        .setBottom(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_bottom.png"]) \
-        ) \
-        .setFront(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_front.png"]) \
-        ) \
-        .setLeft(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_left.png"]) \
-        ) \
-        .setRight(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_right.png"]) \
-        ) \
-        .setTop(ImageTextureObject() \
-         .setUrl(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"]) \
-        ) \
-       ) \
-       .addShaders(ComposedShaderObject(language = "GLSL") \
-        .setDEF("cobweb") \
-        .addField(fieldObject() \
-         .setName("cube") \
-         .setAccessType("inputOutput") \
-         .setType("SFInt32") \
-         .setValue("0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("chromaticDispertion") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0.98 1 1.033") \
-        ) \
-        .addField(fieldObject() \
-         .setName("bias") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("scale") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("power") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("2") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"]) \
-         .setType("VERTEX") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
-         .setType("FRAGMENT") \
-        ) \
-       ) \
-       .addShaders(ComposedShaderObject(language = "GLSL") \
-        .setDEF("x3dom") \
-        .addField(fieldObject() \
-         .setName("cube") \
-         .setAccessType("inputOutput") \
-         .setType("SFInt32") \
-         .setValue("0") \
-        ) \
-        .addField(fieldObject() \
-         .setName("chromaticDispertion") \
-         .setAccessType("inputOutput") \
-         .setType("SFVec3f") \
-         .setValue("0.98 1 1.033") \
-        ) \
-        .addField(fieldObject() \
-         .setName("bias") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("scale") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("0.5") \
-        ) \
-        .addField(fieldObject() \
-         .setName("power") \
-         .setAccessType("inputOutput") \
-         .setType("SFFloat") \
-         .setValue("2") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"]) \
-         .setType("VERTEX") \
-        ) \
-        .addParts(ShaderPartObject() \
-         .setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"]) \
-         .setType("FRAGMENT") \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TimeSensorObject() \
-     .setDEF("TourTime") \
-     .setCycleInterval(5) \
-     .setLoop(True) \
-    ) \
-    .addChildren(PositionInterpolatorObject() \
-     .setDEF("TourPosition") \
-     .setKey([0,1]) \
-     .setKeyValue([0,0,10,0,0,-10]) \
-    ) \
-    .addChildren(OrientationInterpolatorObject() \
-     .setDEF("TourOrientation") \
-     .setKey([0,1]) \
-     .setKeyValue([0,1,0,0,0,1,0,3.1416]) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("RandomTourTime") \
-     .addField(fieldObject() \
-      .setName("set_cycle") \
-      .setAccessType("inputOnly") \
-      .setType("SFTime") \
-     ) \
-     .addField(fieldObject() \
-      .setName("lastKey") \
-      .setAccessType("inputOutput") \
-      .setType("SFFloat") \
-      .setValue("0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("orientations") \
-      .setAccessType("inputOutput") \
-      .setType("MFRotation") \
-      .setValue("0 1 0 0 0 1 0 -1.57 0 1 0 3.14 0 1 0 1.57 0 1 0 0 1 0 0 -1.57 0 1 0 0 1 0 0 1.57 0 1 0 0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("positions") \
-      .setAccessType("inputOutput") \
-      .setType("MFVec3f") \
-      .setValue("0 0 10 -10 0 0 0 0 -10 10 0 0 0 0 10 0 10 0 0 0 10 0 -10 0 0 0 10") \
-     ) \
-     .addField(fieldObject() \
-      .setName("position_changed") \
-      .setAccessType("outputOnly") \
-      .setType("MFVec3f") \
-     ) \
-     .addField(fieldObject() \
-      .setName("set_orientation") \
-      .setAccessType("inputOnly") \
-      .setType("MFRotation") \
-     ) \
-     .addField(fieldObject() \
-      .setName("orientation_changed") \
-      .setAccessType("outputOnly") \
-      .setType("MFRotation") \
-     ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("EnvironmentalEffects")).setLevel(x3dpsail.SFInt32(1)))
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("EnvironmentalEffects")).setLevel(x3dpsail.SFInt32(3)))
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("Shaders")).setLevel(x3dpsail.SFInt32(1)))
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("CubeMapTexturing")).setLevel(x3dpsail.SFInt32(1)))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("bubbles.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/bubbles.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("not sure what this is"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo().setType(x3dpsail.MFString(["EXAMINE"])))
+        .addChild(x3dpsail.Viewpoint().setDEF(x3dpsail.SFString("Tour")).setDescription(x3dpsail.SFString("Tour Views")))
+        .addChild(x3dpsail.Viewpoint().setPosition(x3dpsail.SFVec3f(0,0,4)).setDescription(x3dpsail.SFString("sphere in road")))
+        .addChild(x3dpsail.Background().setBackUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_back.png"])).setBottomUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_bottom.png"])).setFrontUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_front.png"])).setLeftUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_left.png"])).setRightUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_right.png"])).setTopUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"])))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("Rose01"))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Sphere())
+            .setAppearance(x3dpsail.Appearance().setDEF(x3dpsail.SFString("_01_-_Default"))
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.7,0.7,0.7)).setSpecularColor(x3dpsail.SFColor(0.5,0.5,0.5)))
+              .setTexture(x3dpsail.ComposedCubeMapTexture()
+                .setBack(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_back.png"])))
+                .setBottom(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_bottom.png"])))
+                .setFront(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_front.png"])))
+                .setLeft(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_left.png"])))
+                .setRight(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_right.png"])))
+                .setTop(x3dpsail.ImageTexture().setUrl(x3dpsail.MFString(["../resources/images/all_probes/uffizi_cross/uffizi_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/uffizi_cross/uffizi_top.png"]))))
+              .addShaders(x3dpsail.ComposedShader().setDEF(x3dpsail.SFString("cobweb")).setLanguage(x3dpsail.SFString("GLSL"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("cube")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("chromaticDispertion")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0.98 1 1.033")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("bias")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("scale")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("power")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("2")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])).setType(x3dpsail.SFString("VERTEX")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])).setType(x3dpsail.SFString("FRAGMENT"))))
+              .addShaders(x3dpsail.ComposedShader().setDEF(x3dpsail.SFString("x3dom")).setLanguage(x3dpsail.SFString("GLSL"))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("cube")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("0")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("chromaticDispertion")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFVec3f")).setValue(x3dpsail.SFString("0.98 1 1.033")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("bias")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("scale")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0.5")))
+                .addField(x3dpsail.field().setName(x3dpsail.SFString("power")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("2")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])).setType(x3dpsail.SFString("VERTEX")))
+                .addParts(x3dpsail.ShaderPart().setUrl(x3dpsail.MFString(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])).setType(x3dpsail.SFString("FRAGMENT")))))))
+        .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("TourTime")).setCycleInterval(x3dpsail.SFTime(5)).setLoop(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.PositionInterpolator().setDEF(x3dpsail.SFString("TourPosition")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFVec3f([0,0,10,0,0,-10])))
+        .addChild(x3dpsail.OrientationInterpolator().setDEF(x3dpsail.SFString("TourOrientation")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFRotation([0,1,0,0,0,1,0,3.1416])))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("RandomTourTime"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_cycle")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFTime")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("lastKey")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("orientations")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFRotation")).setValue(x3dpsail.SFString("0 1 0 0 0 1 0 -1.57 0 1 0 3.14 0 1 0 1.57 0 1 0 0 1 0 0 -1.57 0 1 0 0 1 0 0 1.57 0 1 0 0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("positions")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFVec3f")).setValue(x3dpsail.SFString("0 0 10 -10 0 0 0 0 -10 10 0 0 0 0 10 0 10 0 0 0 10 0 -10 0 0 0 10")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("position_changed")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFVec3f")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_orientation")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("MFRotation")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("orientation_changed")).setAccessType(x3dpsail.SFString("outputOnly")).setType(x3dpsail.SFString("MFRotation"))).setSourceCode('''ecmascript:\n"+
 "               function set_cycle(value) {\n"+
 "                        var ov = lastKey;\n"+
 "                        do {\n"+
@@ -250,49 +71,13 @@ X3D0 = X3DObject() \
 "                        position_changed[1] = new SFVec3f(positions[vc].x,positions[vc].y,positions[vc].z);\n"+
 "                    // }\n"+
 "               }''')
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("cycleTime_changed") \
-     .setToNode("RandomTourTime") \
-     .setToField("set_cycle") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("RandomTourTime") \
-     .setFromField("orientation_changed") \
-     .setToNode("TourOrientation") \
-     .setToField("set_keyValue") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("RandomTourTime") \
-     .setFromField("position_changed") \
-     .setToNode("TourPosition") \
-     .setToField("set_keyValue") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("fraction_changed") \
-     .setToNode("TourOrientation") \
-     .setToField("set_fraction") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourOrientation") \
-     .setFromField("value_changed") \
-     .setToNode("Tour") \
-     .setToField("set_orientation") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("fraction_changed") \
-     .setToNode("TourPosition") \
-     .setToField("set_fraction") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourPosition") \
-     .setFromField("value_changed") \
-     .setToNode("Tour") \
-     .setToField("set_position") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("cycleTime_changed")).setToNode(x3dpsail.SFString("RandomTourTime")).setToField(x3dpsail.SFString("set_cycle")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("RandomTourTime")).setFromField(x3dpsail.SFString("orientation_changed")).setToNode(x3dpsail.SFString("TourOrientation")).setToField(x3dpsail.SFString("set_keyValue")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("RandomTourTime")).setFromField(x3dpsail.SFString("position_changed")).setToNode(x3dpsail.SFString("TourPosition")).setToField(x3dpsail.SFString("set_keyValue")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("TourOrientation")).setToField(x3dpsail.SFString("set_fraction")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourOrientation")).setFromField(x3dpsail.SFString("value_changed")).setToNode(x3dpsail.SFString("Tour")).setToField(x3dpsail.SFString("set_orientation")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("TourPosition")).setToField(x3dpsail.SFString("set_fraction")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourPosition")).setFromField(x3dpsail.SFString("value_changed")).setToNode(x3dpsail.SFString("Tour")).setToField(x3dpsail.SFString("set_position")))))
 
-X3D0.toFileX3D("./future/./bubbles.newf.x3d")
+X3D0.toFileX3D("./future/./bubbles_RoundTrip.x3d")

@@ -1,101 +1,33 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addComponent(componentObject() \
-     .setName("Geospatial") \
-     .setLevel(1) \
-    ) \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("geobubbles.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/geobubbles.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("geo bubbles") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-#Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/
-#PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/
-    .addChildren(GeoViewpointObject() \
-     .setDEF("Tour") \
-     .setPosition([0,0,4]) \
-     .setOrientation([1,0,0,0]) \
-     .setDescription("Tour Views") \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setBackUrl(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"]) \
-     .setBottomUrl(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"]) \
-     .setFrontUrl(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"]) \
-     .setLeftUrl(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"]) \
-     .setRightUrl(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"]) \
-     .setTopUrl(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"]) \
-    ) \
-    .addChildren(TransformObject() \
-     .addChildren(ShapeObject() \
-      .setGeometry(SphereObject() \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([0.7,0.7,0.7]) \
-        .setSpecularColor([0.5,0.5,0.5]) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TimeSensorObject() \
-     .setDEF("TourTime") \
-     .setCycleInterval(5) \
-     .setLoop(True) \
-    ) \
-    .addChildren(GeoPositionInterpolatorObject() \
-     .setDEF("TourPosition") \
-     .setKey([0,1]) \
-     .setKeyValue([0.0015708,0,4,0,0.0015708,4]) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("RandomTourTime") \
-     .addField(fieldObject() \
-      .setName("set_cycle") \
-      .setAccessType("inputOnly") \
-      .setType("SFTime") \
-     ) \
-     .addField(fieldObject() \
-      .setName("val") \
-      .setAccessType("inputOutput") \
-      .setType("SFFloat") \
-      .setValue("0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("positions") \
-      .setAccessType("inputOutput") \
-      .setType("MFVec3d") \
-      .setValue("0.0015708 0 4 0 0.0015708 4") \
-     ) \
-     .addField(fieldObject() \
-      .setName("position") \
-      .setAccessType("inputOutput") \
-      .setType("MFVec3d") \
-      .setValue("0.0015708 0 4 0 0.0015708 4") \
-     ) \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addComponent(x3dpsail.component().setName(x3dpsail.SFString("Geospatial")).setLevel(x3dpsail.SFInt32(1)))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("geobubbles.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/geobubbles.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("geo bubbles"))))
+      .setScene(x3dpsail.Scene()
+        #Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/
+
+        #PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/
+
+        .addChild(x3dpsail.GeoViewpoint().setDEF(x3dpsail.SFString("Tour")).setPosition(x3dpsail.SFVec3d(0,0,4)).setOrientation(x3dpsail.SFRotation(1,0,0,0)).setDescription(x3dpsail.SFString("Tour Views")))
+        .addChild(x3dpsail.Background().setBackUrl(x3dpsail.MFString(["../resources/images/BK.png","https://coderextreme.net/X3DJSONLD/images/BK.png"])).setBottomUrl(x3dpsail.MFString(["../resources/images/BT.png","https://coderextreme.net/X3DJSONLD/images/BT.png"])).setFrontUrl(x3dpsail.MFString(["../resources/images/FR.png","https://coderextreme.net/X3DJSONLD/images/FR.png"])).setLeftUrl(x3dpsail.MFString(["../resources/images/LF.png","https://coderextreme.net/X3DJSONLD/images/LF.png"])).setRightUrl(x3dpsail.MFString(["../resources/images/RT.png","https://coderextreme.net/X3DJSONLD/images/RT.png"])).setTopUrl(x3dpsail.MFString(["../resources/images/TP.png","https://coderextreme.net/X3DJSONLD/images/TP.png"])))
+        .addChild(x3dpsail.Transform()
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Sphere())
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(0.7,0.7,0.7)).setSpecularColor(x3dpsail.SFColor(0.5,0.5,0.5))))))
+        .addChild(x3dpsail.TimeSensor().setDEF(x3dpsail.SFString("TourTime")).setCycleInterval(x3dpsail.SFTime(5)).setLoop(x3dpsail.SFBool(True)))
+        .addChild(x3dpsail.GeoPositionInterpolator().setDEF(x3dpsail.SFString("TourPosition")).setKey(x3dpsail.MFFloat([0,1])).setKeyValue(x3dpsail.MFVec3d([0.0015708,0,4,0,0.0015708,4])))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("RandomTourTime"))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("set_cycle")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFTime")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("val")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("SFFloat")).setValue(x3dpsail.SFString("0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("positions")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFVec3d")).setValue(x3dpsail.SFString("0.0015708 0 4 0 0.0015708 4")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("position")).setAccessType(x3dpsail.SFString("inputOutput")).setType(x3dpsail.SFString("MFVec3d")).setValue(x3dpsail.SFString("0.0015708 0 4 0 0.0015708 4"))).setSourceCode('''ecmascript:\n"+
 "\n"+
 "               function set_cycle(value) {\n"+
 "                        var cartesianMult = -150;  // -150 if cartesian, 1 if geo\n"+
@@ -112,31 +44,10 @@ X3D0 = X3DObject() \
 "                        position[0] = new SFVec3d(positions[ov][0],positions[ov][1],positions[ov][2]);\n"+
 "                        position[1] = new SFVec3d(positions[vc][0],positions[vc][1],positions[vc][2]);\n"+
 "               }''')
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("cycleTime") \
-     .setToNode("RandomTourTime") \
-     .setToField("set_cycle") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("RandomTourTime") \
-     .setFromField("position") \
-     .setToNode("TourPosition") \
-     .setToField("keyValue") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourTime") \
-     .setFromField("fraction_changed") \
-     .setToNode("TourPosition") \
-     .setToField("set_fraction") \
-    ) \
-    .addChildren(ROUTEObject() \
-     .setFromNode("TourPosition") \
-     .setFromField("geovalue_changed") \
-     .setToNode("Tour") \
-     .setToField("set_position") \
-    ) \
-   ) \
+)
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("cycleTime")).setToNode(x3dpsail.SFString("RandomTourTime")).setToField(x3dpsail.SFString("set_cycle")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("RandomTourTime")).setFromField(x3dpsail.SFString("position")).setToNode(x3dpsail.SFString("TourPosition")).setToField(x3dpsail.SFString("keyValue")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourTime")).setFromField(x3dpsail.SFString("fraction_changed")).setToNode(x3dpsail.SFString("TourPosition")).setToField(x3dpsail.SFString("set_fraction")))
+        .addChild(x3dpsail.ROUTE().setFromNode(x3dpsail.SFString("TourPosition")).setFromField(x3dpsail.SFString("geovalue_changed")).setToNode(x3dpsail.SFString("Tour")).setToField(x3dpsail.SFString("set_position")))))
 
-X3D0.toFileX3D("./future/./geobubbles.newf.x3d")
+X3D0.toFileX3D("./future/./geobubbles_RoundTrip.x3d")

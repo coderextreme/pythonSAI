@@ -1,43 +1,20 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("browser.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("manual") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/browser.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("a script test with embedded \\n between single quotes, a double backslash \\\\ a backslash \\ and a closing quote \"") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(ScriptObject() \
-     .setDEF("Browser") \
-.setSourceCode('''ecmascript:\n"+
+import x3dpsail
+
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("browser.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("manual")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/browser.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("a script test with embedded \\n between single quotes, a double backslash \\\\ a backslash \\ and a closing quote \""))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("Browser")).setSourceCode('''ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
 "                }''')
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("Clouds") \
-.setSourceCode('''ecmascript:\n"+
+)
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("Clouds")).setSourceCode('''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -47,7 +24,6 @@ X3D0 = X3DObject() \
 "'    ' + '               	\\n';\n"+
 "\n"+
 "}''')
-    ) \
-   ) \
+)))
 
-X3D0.toFileX3D("./future/./browser.newf.x3d")
+X3D0.toFileX3D("./future/./browser_RoundTrip.x3d")

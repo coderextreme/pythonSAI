@@ -38,9 +38,9 @@ class ClassPrinter:
         if self.metaInfo == "Object":
                 superpackage = "jsail"
         try:
-            str += self.node['name'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['name'] + self.metaInfo + "')\n"
+            str += self.node['name'] + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['name'] + self.metaInfo + "')\n"
         except:
-            str += self.node['type'] + self.metaInfo + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['type'] + self.metaInfo + "')\n"
+            str += self.node['type'] + " = autoclass('org.web3d.x3d."+superpackage+"."+package+"." + self.node['type'] + self.metaInfo + "')\n"
         self.printed = True
         return str
 
@@ -77,7 +77,7 @@ for k,v in classes.items():
     if cls != None:
         code +=  cls
 
-f = open("X3Dautoclass.py", "w")
+f = open("x3dpsail.py", "w")
 f.write('from jnius import autoclass\n')
 f.write(code)
 f.close()

@@ -1,406 +1,124 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("ObliqueStrategies.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("Text scripting and animation example using Oblique Strategies card set by Brian Eno.") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("Don Brutzman, John Kelly, Ben Cheng") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("3 November 2013") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("modified") \
-     .setContent("18 October 2015") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("oblique.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("ObliqueStrategies.txt") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("ObliqueStrategiesScript.js") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://music.hyperreal.org/artists/brian_eno/oblique/oblique.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.eno-web.co.uk/obliques.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://gothpunk.com/haiku-intro.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.rtqe.net/ObliqueStrategies/OSintro.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("https://en.wikipedia.org/wiki/Oblique_Strategies") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("subject") \
-     .setContent("Brian Eno, Oblique Strategies") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("Image") \
-     .setContent("images/ObliqueStrategiesEntryScreen.png") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("audio") \
-     .setContent("http://translate.google.com/translate_tts?tl=en&q=hello%20X3D") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("audio") \
-     .setContent("translate_tts_HelloX3D.mp3") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("audio") \
-     .setContent("translate_tts_HelloX3D.wav") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("TODO") \
-     .setContent("multiliingual translation parameter") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://stackoverflow.com/questions/9163988/download-mp3-from-google-translate-text-to-speech") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("reference") \
-     .setContent("http://www.greenbot.com/article/2105862/how-to-get-started-with-google-text-to-speech.html") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("warning") \
-     .setContent("under development, scene Sound/AudioClip triggering (or retrieved file format) not working") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("warning") \
-     .setContent("BSContact error: Script node TextScript: parse error: line 15 \" var strategy = [];") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategies.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("license") \
-     .setContent("../license.html") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(NavigationInfoObject() \
-    ) \
-    .addChildren(BackgroundObject() \
-     .setSkyColor([0.419608,0.427451,1]) \
-    ) \
-    .addChildren(TransformObject() \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([0,1,0]) \
-     .addChildren(TouchSensorObject() \
-      .setDEF("RandomTextClickedSensor") \
-      .setDescription("Select to see a new strategy") \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["Oblique Strategies","","(Over One Hundred Worthwhile Dilemmas)","","by Brian Eno and Peter Schmidt"]) \
-       .setFontStyle(FontStyleObject(family = ["SANS"], justify = ["MIDDLE","MIDDLE"], style = "BOLD") \
-        .setDEF("MessageFont") \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([1,1,1]) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setScale([10,3,1]) \
-      .addChildren(ShapeObject() \
-       .setDEF("HeadlineClickSurface") \
-       .setGeometry(IndexedFaceSetObject(coordIndex = [0,1,2,3,-1], solid = False) \
-        .setCoord(CoordinateObject() \
-         .setPoint([1,1,0,1,-1,0,-1,-1,0,-1,1,0]) \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setAmbientIntensity(0.245763) \
-         .setDiffuseColor([0.34773,0.090909,0.005289]) \
-         .setShininess(0.07) \
-         .setSpecularColor([0.336735,0.051091,0.051091]) \
-         .setTransparency(0.8) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(ScriptObject() \
-     .setDEF("TextScript") \
-     .setUrl(["./ObliqueStrategiesScript.js"]) \
-#initialize() method includes unit test to printAllStrategies() to console
-#TODO insert field definitions here (index string_changed previous next random) and then animate!
-     .addField(fieldObject() \
-      .setName("index") \
-      .setAccessType("initializeOnly") \
-      .setAppinfo("index for active strategy card, -1 means no selection") \
-      .setType("SFInt32") \
-      .setValue("0") \
-     ) \
-     .addField(fieldObject() \
-      .setName("string_changed") \
-      .setAccessType("outputOnly") \
-      .setAppinfo("latest strategy card value") \
-      .setType("MFString") \
-     ) \
-     .addField(fieldObject() \
-      .setName("textToSpeechUrl") \
-      .setAccessType("outputOnly") \
-      .setAppinfo("url to invoke Google Translate") \
-      .setType("MFString") \
-     ) \
-     .addField(fieldObject() \
-      .setName("newCardTime") \
-      .setAccessType("outputOnly") \
-      .setAppinfo("activate Sound node") \
-      .setType("SFTime") \
-     ) \
-     .addField(fieldObject() \
-      .setName("selectPreviousCard") \
-      .setAccessType("inputOnly") \
-      .setType("SFBool") \
-     ) \
-     .addField(fieldObject() \
-      .setName("selectNextCard") \
-      .setAccessType("inputOnly") \
-      .setType("SFBool") \
-     ) \
-     .addField(fieldObject() \
-      .setName("selectRandomCard") \
-      .setAccessType("inputOnly") \
-      .setType("SFBool") \
-     ) \
-     .addField(fieldObject() \
-      .setName("traceEnabled") \
-      .setAccessType("initializeOnly") \
-      .setAppinfo("controls console tracing") \
-      .setType("SFBool") \
-      .setValue("true") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setDEF("CardTransform") \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([0,-1.5,0]) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setDEF("CardText") \
-       .setFontStyle(FontStyleObject(family = ["SANS"], justify = ["MIDDLE","MIDDLE"], style = "BOLD") \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([1,1,1]) \
-       ) \
-      ) \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("string_changed") \
-      .setFromNode("TextScript") \
-      .setToField("string") \
-      .setToNode("CardText") \
-     ) \
-     .addChildren(SoundObject() \
-      .setDEF("CardSoundSpatialization") \
-      .setMaxBack(100) \
-      .setMaxFront(100) \
-      .setMinBack(20) \
-      .setMinFront(20) \
-#Make sure the sound source AudioClip is audible at the user location
-#Not all X3D players seem to use the .mp3
-#&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players
-#%20 is space character used in uri/url encoding
-      .setSource(AudioClipObject() \
-       .setDEF("TextToSpeechAudioClip") \
-       .setDescription("sends strategy text google translate") \
-       .setUrl(["http://translate.google.com/translate_tts?tl=en&q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav"]) \
-      ) \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("textToSpeechUrl") \
-      .setFromNode("TextScript") \
-      .setToField("url") \
-      .setToNode("TextToSpeechAudioClip") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("newCardTime") \
-      .setFromNode("TextScript") \
-      .setToField("startTime") \
-      .setToNode("TextToSpeechAudioClip") \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([-3.2,2.5,0]) \
-     .addChildren(TouchSensorObject() \
-      .setDEF("PreviousTextClickedSensor") \
-      .setDescription("Select to see previous strategy") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isActive") \
-      .setFromNode("PreviousTextClickedSensor") \
-      .setToField("selectPreviousCard") \
-      .setToNode("TextScript") \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["previous"]) \
-       .setFontStyle(FontStyleObject() \
-        .setUSE("MessageFont") \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setDEF("InterfaceAppearance") \
-       .setMaterial(MaterialObject() \
-        .setDiffuseColor([1,0,0.6]) \
-       ) \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setScale([2,0.6,1]) \
-      .addChildren(ShapeObject() \
-       .setDEF("TransparentClickSurface") \
-#support Selectable Text with a scalable IFS
-       .setGeometry(IndexedFaceSetObject(coordIndex = [0,1,2,3,-1], solid = False) \
-        .setCoord(CoordinateObject() \
-         .setPoint([1,1,0,1,-1,0,-1,-1,0,-1,1,0]) \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setMaterial(MaterialObject() \
-         .setTransparency(1) \
-        ) \
-       ) \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([3.5,2.5,0]) \
-     .addChildren(TouchSensorObject() \
-      .setDEF("NextTextClickedSensor") \
-      .setDescription("Select to see next strategy") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isActive") \
-      .setFromNode("NextTextClickedSensor") \
-      .setToField("selectNextCard") \
-      .setToNode("TextScript") \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["next"]) \
-       .setFontStyle(FontStyleObject() \
-        .setUSE("MessageFont") \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setUSE("InterfaceAppearance") \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setScale([1.2,0.6,1]) \
-      .addChildren(ShapeObject() \
-       .setUSE("TransparentClickSurface") \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([-3.3,-0.5,0]) \
-     .addChildren(TouchSensorObject() \
-      .setUSE("RandomTextClickedSensor") \
-     ) \
-     .addChildren(ROUTEObject() \
-      .setFromField("isActive") \
-      .setFromNode("RandomTextClickedSensor") \
-      .setToField("selectRandomCard") \
-      .setToNode("TextScript") \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["random"]) \
-       .setFontStyle(FontStyleObject() \
-        .setUSE("MessageFont") \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setUSE("InterfaceAppearance") \
-      ) \
-     ) \
-     .addChildren(TransformObject() \
-      .setScale([1.8,0.6,1]) \
-      .addChildren(ShapeObject() \
-       .setUSE("TransparentClickSurface") \
-      ) \
-     ) \
-    ) \
-    .addChildren(TransformObject() \
-     .setScale([0.4,0.4,0.4]) \
-     .setTranslation([3.3,-0.5,0]) \
-     .addChildren(AnchorObject() \
-      .setDEF("TextToSpeechAnchor") \
-      .setDescription("text to speech in browser") \
-      .setParameter(["target=_blank"]) \
-      .setUrl(["http://translate.google.com/translate_tts?tl=en&q=Overtly%20resist%20change"]) \
-      .addChildren(ROUTEObject() \
-       .setFromField("textToSpeechUrl") \
-       .setFromNode("TextScript") \
-       .setToField("url") \
-       .setToNode("TextToSpeechAnchor") \
-      ) \
-      .addChildren(ShapeObject() \
-       .setGeometry(TextObject() \
-        .setString(["speech"]) \
-        .setFontStyle(FontStyleObject() \
-         .setUSE("MessageFont") \
-        ) \
-       ) \
-       .setAppearance(AppearanceObject() \
-        .setUSE("InterfaceAppearance") \
-       ) \
-      ) \
-      .addChildren(TransformObject() \
-       .setScale([1.8,0.6,1]) \
-       .addChildren(ShapeObject() \
-        .setUSE("TransparentClickSurface") \
-       ) \
-      ) \
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./ObliqueStrategies.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("ObliqueStrategies.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("Text scripting and animation example using Oblique Strategies card set by Brian Eno.")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("Don Brutzman, John Kelly, Ben Cheng")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("3 November 2013")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("modified")).setContent(x3dpsail.SFString("18 October 2015")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("oblique.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("ObliqueStrategies.txt")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("ObliqueStrategiesScript.js")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://music.hyperreal.org/artists/brian_eno/oblique/oblique.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.eno-web.co.uk/obliques.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://gothpunk.com/haiku-intro.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.rtqe.net/ObliqueStrategies/OSintro.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("https://en.wikipedia.org/wiki/Oblique_Strategies")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("subject")).setContent(x3dpsail.SFString("Brian Eno, Oblique Strategies")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("Image")).setContent(x3dpsail.SFString("images/ObliqueStrategiesEntryScreen.png")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("audio")).setContent(x3dpsail.SFString("http://translate.google.com/translate_tts?tl=en&q=hello%20X3D")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("audio")).setContent(x3dpsail.SFString("translate_tts_HelloX3D.mp3")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("audio")).setContent(x3dpsail.SFString("translate_tts_HelloX3D.wav")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("TODO")).setContent(x3dpsail.SFString("multiliingual translation parameter")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://stackoverflow.com/questions/9163988/download-mp3-from-google-translate-text-to-speech")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("reference")).setContent(x3dpsail.SFString("http://www.greenbot.com/article/2105862/how-to-get-started-with-google-text-to-speech.html")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("warning")).setContent(x3dpsail.SFString("under development, scene Sound/AudioClip triggering (or retrieved file format) not working")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("warning")).setContent(x3dpsail.SFString("BSContact error: Script node TextScript: parse error: line 15 \" var strategy = [];")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategies.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("license")).setContent(x3dpsail.SFString("../license.html"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.NavigationInfo())
+        .addChild(x3dpsail.Background().setSkyColor(x3dpsail.MFColor([0.419608,0.427451,1])))
+        .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(0,1,0))
+          .addChild(x3dpsail.TouchSensor().setDEF(x3dpsail.SFString("RandomTextClickedSensor")).setDescription(x3dpsail.SFString("Select to see a new strategy")))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Oblique Strategies","","(Over One Hundred Worthwhile Dilemmas)","","by Brian Eno and Peter Schmidt"]))
+              .setFontStyle(x3dpsail.FontStyle().setDEF(x3dpsail.SFString("MessageFont")).setFamily(x3dpsail.MFString(["SANS"])).setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"])).setStyle(x3dpsail.SFString("BOLD"))))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,1)))))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(10,3,1))
+            .addChild(x3dpsail.Shape().setDEF(x3dpsail.SFString("HeadlineClickSurface"))
+              .setGeometry(x3dpsail.IndexedFaceSet().setCoordIndex(x3dpsail.MFInt32([0,1,2,3,-1])).setSolid(x3dpsail.SFBool(False))
+                .setCoord(x3dpsail.Coordinate().setPoint(x3dpsail.MFVec3f([1,1,0,1,-1,0,-1,-1,0,-1,1,0]))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setAmbientIntensity(x3dpsail.SFFloat(0.245763)).setDiffuseColor(x3dpsail.SFColor(0.34773,0.090909,0.005289)).setShininess(x3dpsail.SFFloat(0.07)).setSpecularColor(x3dpsail.SFColor(0.336735,0.051091,0.051091)).setTransparency(x3dpsail.SFFloat(0.8)))))))
+        .addChild(x3dpsail.Script().setDEF(x3dpsail.SFString("TextScript")).setUrl(x3dpsail.MFString(["./ObliqueStrategiesScript.js"]))
+          #initialize() method includes unit test to printAllStrategies() to console
+
+          #TODO insert field definitions here (index string_changed previous next random) and then animate!
+
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("index")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("index for active strategy card, -1 means no selection")).setType(x3dpsail.SFString("SFInt32")).setValue(x3dpsail.SFString("0")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("string_changed")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("latest strategy card value")).setType(x3dpsail.SFString("MFString")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("textToSpeechUrl")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("url to invoke Google Translate")).setType(x3dpsail.SFString("MFString")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("newCardTime")).setAccessType(x3dpsail.SFString("outputOnly")).setAppinfo(x3dpsail.SFString("activate Sound node")).setType(x3dpsail.SFString("SFTime")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("selectPreviousCard")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("selectNextCard")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("selectRandomCard")).setAccessType(x3dpsail.SFString("inputOnly")).setType(x3dpsail.SFString("SFBool")))
+          .addField(x3dpsail.field().setName(x3dpsail.SFString("traceEnabled")).setAccessType(x3dpsail.SFString("initializeOnly")).setAppinfo(x3dpsail.SFString("controls console tracing")).setType(x3dpsail.SFString("SFBool")).setValue(x3dpsail.SFString("true"))))
+        .addChild(x3dpsail.Transform().setDEF(x3dpsail.SFString("CardTransform")).setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(0,-1.5,0))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setDEF(x3dpsail.SFString("CardText"))
+              .setFontStyle(x3dpsail.FontStyle().setFamily(x3dpsail.MFString(["SANS"])).setJustify(x3dpsail.MFString(["MIDDLE","MIDDLE"])).setStyle(x3dpsail.SFString("BOLD"))))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,1,1)))))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("string_changed")).setFromNode(x3dpsail.SFString("TextScript")).setToField(x3dpsail.SFString("string")).setToNode(x3dpsail.SFString("CardText")))
+          .addChild(x3dpsail.Sound().setDEF(x3dpsail.SFString("CardSoundSpatialization")).setMaxBack(x3dpsail.SFFloat(100)).setMaxFront(x3dpsail.SFFloat(100)).setMinBack(x3dpsail.SFFloat(20)).setMinFront(x3dpsail.SFFloat(20))
+            #Make sure the sound source AudioClip is audible at the user location
+
+            #Not all X3D players seem to use the .mp3
+
+            #&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players
+
+            #%20 is space character used in uri/url encoding
+
+            .setSource(x3dpsail.AudioClip().setDEF(x3dpsail.SFString("TextToSpeechAudioClip")).setDescription(x3dpsail.SFString("sends strategy text google translate")).setUrl(x3dpsail.MFString(["http://translate.google.com/translate_tts?tl=en&q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav"]))))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("textToSpeechUrl")).setFromNode(x3dpsail.SFString("TextScript")).setToField(x3dpsail.SFString("url")).setToNode(x3dpsail.SFString("TextToSpeechAudioClip")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("newCardTime")).setFromNode(x3dpsail.SFString("TextScript")).setToField(x3dpsail.SFString("startTime")).setToNode(x3dpsail.SFString("TextToSpeechAudioClip"))))
+        .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(-3.2,2.5,0))
+          .addChild(x3dpsail.TouchSensor().setDEF(x3dpsail.SFString("PreviousTextClickedSensor")).setDescription(x3dpsail.SFString("Select to see previous strategy")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("PreviousTextClickedSensor")).setToField(x3dpsail.SFString("selectPreviousCard")).setToNode(x3dpsail.SFString("TextScript")))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["previous"]))
+              .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("MessageFont"))))
+            .setAppearance(x3dpsail.Appearance().setDEF(x3dpsail.SFString("InterfaceAppearance"))
+              .setMaterial(x3dpsail.Material().setDiffuseColor(x3dpsail.SFColor(1,0,0.6)))))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(2,0.6,1))
+            .addChild(x3dpsail.Shape().setDEF(x3dpsail.SFString("TransparentClickSurface"))
+              #support Selectable Text with a scalable IFS
+
+              .setGeometry(x3dpsail.IndexedFaceSet().setCoordIndex(x3dpsail.MFInt32([0,1,2,3,-1])).setSolid(x3dpsail.SFBool(False))
+                .setCoord(x3dpsail.Coordinate().setPoint(x3dpsail.MFVec3f([1,1,0,1,-1,0,-1,-1,0,-1,1,0]))))
+              .setAppearance(x3dpsail.Appearance()
+                .setMaterial(x3dpsail.Material().setTransparency(x3dpsail.SFFloat(1)))))))
+        .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(3.5,2.5,0))
+          .addChild(x3dpsail.TouchSensor().setDEF(x3dpsail.SFString("NextTextClickedSensor")).setDescription(x3dpsail.SFString("Select to see next strategy")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("NextTextClickedSensor")).setToField(x3dpsail.SFString("selectNextCard")).setToNode(x3dpsail.SFString("TextScript")))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["next"]))
+              .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("MessageFont"))))
+            .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("InterfaceAppearance"))))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(1.2,0.6,1))
+            .addChild(x3dpsail.Shape().setUSE(x3dpsail.SFString("TransparentClickSurface")))))
+        .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(-3.3,-0.5,0))
+          .addChild(x3dpsail.TouchSensor().setUSE(x3dpsail.SFString("RandomTextClickedSensor")))
+          .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("isActive")).setFromNode(x3dpsail.SFString("RandomTextClickedSensor")).setToField(x3dpsail.SFString("selectRandomCard")).setToNode(x3dpsail.SFString("TextScript")))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["random"]))
+              .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("MessageFont"))))
+            .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("InterfaceAppearance"))))
+          .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(1.8,0.6,1))
+            .addChild(x3dpsail.Shape().setUSE(x3dpsail.SFString("TransparentClickSurface")))))
+        .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(0.4,0.4,0.4)).setTranslation(x3dpsail.SFVec3f(3.3,-0.5,0))
+          .addChild(x3dpsail.Anchor().setDEF(x3dpsail.SFString("TextToSpeechAnchor")).setDescription(x3dpsail.SFString("text to speech in browser")).setParameter(x3dpsail.MFString(["target=_blank"])).setUrl(x3dpsail.MFString(["http://translate.google.com/translate_tts?tl=en&q=Overtly%20resist%20change"]))
+            .addChild(x3dpsail.ROUTE().setFromField(x3dpsail.SFString("textToSpeechUrl")).setFromNode(x3dpsail.SFString("TextScript")).setToField(x3dpsail.SFString("url")).setToNode(x3dpsail.SFString("TextToSpeechAnchor")))
+            .addChild(x3dpsail.Shape()
+              .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["speech"]))
+                .setFontStyle(x3dpsail.FontStyle().setUSE(x3dpsail.SFString("MessageFont"))))
+              .setAppearance(x3dpsail.Appearance().setUSE(x3dpsail.SFString("InterfaceAppearance"))))
+            .addChild(x3dpsail.Transform().setScale(x3dpsail.SFVec3f(1.8,0.6,1))
+              .addChild(x3dpsail.Shape().setUSE(x3dpsail.SFString("TransparentClickSurface"))))))))
+
+X3D0.toFileX3D("./future/./ObliqueStrategies_RoundTrip.x3d")

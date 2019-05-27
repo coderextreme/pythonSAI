@@ -1,82 +1,34 @@
-import jnius_config
-jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')
-from jnius import autoclass
-from X3Dautoclass import *
-X3D0 = X3DObject() \
-   .setProfile("Immersive") \
-   .setVersion("3.3") \
-   .setHead(headObject() \
-    .addMeta(metaObject() \
-     .setName("creator") \
-     .setContent("John W Carlson") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("created") \
-     .setContent("December 13 2015") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("title") \
-     .setContent("text.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("identifier") \
-     .setContent("https://coderextreme.net/X3DJSONLD/text.x3d") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("description") \
-     .setContent("test \\n text") \
-    ) \
-    .addMeta(metaObject() \
-     .setName("generator") \
-     .setContent("Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit") \
-    ) \
-   ) \
-   .setScene(SceneObject() \
-    .addChildren(TransformObject() \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["Node\"\"\""]) \
-       .setFontStyle(FontStyleObject() \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-       ) \
-      ) \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["Node2","\\\\","\\\\\\\\","Node2"]) \
-       .setFontStyle(FontStyleObject() \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-       ) \
-      ) \
-     ) \
-     .addChildren(ShapeObject() \
-      .setGeometry(TextObject() \
-       .setString(["Node3 \\\\\\\\ \\\\ ","Node3\"\"\""]) \
-       .setFontStyle(FontStyleObject() \
-       ) \
-      ) \
-      .setAppearance(AppearanceObject() \
-       .setMaterial(MaterialObject() \
-       ) \
-      ) \
-     ) \
-     .addChildren(ScriptObject() \
-      .addField(fieldObject() \
-       .setName("frontUrls") \
-       .setType("MFString") \
-       .setAccessType("initializeOnly") \
-       .setValue("\"rnl_front.png\" \"uffizi_front.png\"") \
-      ) \
-.setSourceCode('''ecmascript:\n"+
-"			    var me = '\"1\" \"\"2\" \"\\n3\"';''')
-     ) \
-    ) \
-   ) \
+import x3dpsail
 
-X3D0.toFileX3D("./future/./text.newf.x3d")
+
+X3D0 = (x3dpsail.X3D().setProfile(x3dpsail.SFString("Immersive")).setVersion(x3dpsail.SFString("3.3"))
+      .setHead(x3dpsail.head()
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("creator")).setContent(x3dpsail.SFString("John W Carlson")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("created")).setContent(x3dpsail.SFString("December 13 2015")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("title")).setContent(x3dpsail.SFString("text.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("identifier")).setContent(x3dpsail.SFString("https://coderextreme.net/X3DJSONLD/text.x3d")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("description")).setContent(x3dpsail.SFString("test \\n text")))
+        .addMeta(x3dpsail.meta().setName(x3dpsail.SFString("generator")).setContent(x3dpsail.SFString("Vim, X3D-Edit, https://savage.nps.edu/X3D-Edit"))))
+      .setScene(x3dpsail.Scene()
+        .addChild(x3dpsail.Transform()
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Node\"\"\""]))
+              .setFontStyle(x3dpsail.FontStyle()))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material())))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Node2","\\\\","\\\\\\\\","Node2"]))
+              .setFontStyle(x3dpsail.FontStyle()))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material())))
+          .addChild(x3dpsail.Shape()
+            .setGeometry(x3dpsail.Text().setString(x3dpsail.MFString(["Node3 \\\\\\\\ \\\\ ","Node3\"\"\""]))
+              .setFontStyle(x3dpsail.FontStyle()))
+            .setAppearance(x3dpsail.Appearance()
+              .setMaterial(x3dpsail.Material())))
+          .addChild(x3dpsail.Script()
+            .addField(x3dpsail.field().setName(x3dpsail.SFString("frontUrls")).setType(x3dpsail.SFString("MFString")).setAccessType(x3dpsail.SFString("initializeOnly")).setValue(x3dpsail.SFString("\"rnl_front.png\" \"uffizi_front.png\""))).setSourceCode('''ecmascript:\n"+
+"			    var me = '\"1\" \"\"2\" \"\\n3\"';''')
+))))
+
+X3D0.toFileX3D("./future/./text_RoundTrip.x3d")
