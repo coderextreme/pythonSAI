@@ -37,7 +37,7 @@ sh make.sh
 
 Python source code is in local folder.
 
-SAI found in X3Dautoclass.py
+SAI found in x3dpsail.py
 
 SAI generator in classes.py
 
@@ -45,7 +45,7 @@ X3DJSAIL documentation, source, and jars are found here:
 
 http://www.web3d.org/specifications/java/X3dJavaSceneAuthoringInterface.html
 
-classes.py generates X3Dautoclass.py, The PyJNIus interface to X3DJSAIL
+classes.py generates x3dpsail.py, The PyJNIus interface to X3DJSAIL
 
 The next two are for the PythonSerializer.js:
 

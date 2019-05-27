@@ -9,7 +9,7 @@ ${PYTHON} -m pip install --upgrade lxml
 ${PYTHON} classes.py
 ${PYTHON} fieldtypes.py
 ${PYTHON} parseom.py
-echo did not cp X3Dautoclass.py fieldTypes.js mapToMethod.js ../X3DJSONLD
+echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 rm *new*
 

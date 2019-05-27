@@ -3,6 +3,8 @@
 const DOUBLE_SUFFIX = '';
 const FLOAT_SUFFIX = '';
 
+var fs = require("fs");
+
 function PythonSerializer () {
 this.code = [];
 this.codeno = 0;
@@ -20,17 +22,22 @@ PythonSerializer.prototype = {
 		var str = "";
 		// str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
 
-		str += "import jnius_config\n";
-		str += "jnius_config.set_classpath('.', 'X3DJSAIL.3.3.full.jar')\n";
-		str += "from jnius import autoclass\n";
-		str += "from X3Dautoclass import *\n";
+		str += "import x3dpsail\n";
 
 		stack.unshift(this.preno);
 		this.preno++;
-		str += element.nodeName+stack[0]+" = "+element.nodeName;
-		str += "Object()\n";
-		str += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
-		str += element.nodeName+stack[0]+".toFileX3D(\""+clazz+".new.x3d\")\n";
+		var bodystr = "";
+        
+        // https://stackoverflow.com/questions/48469666/error-enoent-no-such-file-or-directory-open-moviedata-json
+        // https://stackoverflow.com/questions/3151436/how-can-i-get-the-current-directory-name-in-javascript
+        // console.log('Current directory: ' + process.cwd()); // Node.js method for current directory - not what is needed here
+        // https://flaviocopes.com/node-get-current-folder/ use __dirname under Node.js
+		bodystr += element.nodeName+stack[0]+" = x3dpsail."+element.nodeName;
+		bodystr += "()\n";
+		bodystr += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
+
+		str += bodystr;
+		str += element.nodeName+stack[0]+".toFileX3D(\""+clazz+"_RoundTrip.x3d\")\n";
 		stack.shift();
 		return str;
 	},
@@ -49,6 +56,15 @@ PythonSerializer.prototype = {
 				*/
                         }
                 }
+                if (type === "boolean") {
+                        for (var v in values) {
+				if (values[v] === 'true') {
+					values[v] = "True";
+				} else if (values[v] === 'false') {
+					values[v] = "False";
+				}
+			}
+		}
 		if (values[0] === "" || values[v] === null) {
 			values.shift();
 		}
@@ -263,9 +279,11 @@ PythonSerializer.prototype = {
 				stack.unshift(this.preno);
 				this.preno++;
 				var ch = "";
-				ch += node.nodeName+stack[0]+" = "+node.nodeName;
-				ch += "Object()\n";
-				ch += this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);
+				ch += node.nodeName+stack[0]+" = x3dpsail."+node.nodeName;
+
+				ch += "()\n";
+				var bodystr = this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);
+				ch += bodystr;
 				ch += "\n"
 				method = this.printParentChild(element, node, cn, mapToMethod, n);
 				ch += element.nodeName+stack[1]+method+"("+node.nodeName+stack[0]+")\n";
