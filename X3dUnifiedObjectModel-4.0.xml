@@ -2,7 +2,7 @@
 <!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-4.0.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-4.0.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 4.0 of X3D -->
-<!-- Generated 2019-05-04-07:00 21:58:30.992-07:00 -->
+<!-- Generated 2019-06-19-07:00 16:00:03.472495-07:00 -->
 <X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                        version="4.0"
                        xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
@@ -3800,7 +3800,9 @@
       </FieldType>
       <FieldType type="MFBool" regex="\s*((true|false)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFBoolAndMFBool"
-                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents."/>
+                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents.">
+            <Inheritance baseType="xs:string"/>
+         </InterfaceDefinition>
       </FieldType>
       <FieldType type="SFColor"
                  defaultValue="0 0 0"
@@ -3843,7 +3845,7 @@
       <FieldType type="MFDouble"
                  regex="(\s)*(([+-]?((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFDoubleAndMFDouble"
-                              appinfo="MFDouble is an array of Double values, i.e. a double-precision floating-point array type. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale. SFDouble/MFDouble are analagous to SFDouble/MFDouble. Array values are optionally separated by commas.">
+                              appinfo="MFDouble is an array of Double values, meaning a double-precision floating-point array type. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale. Array values are optionally separated by commas.">
             <Inheritance baseType="xs:string"/>
          </InterfaceDefinition>
       </FieldType>
@@ -3858,7 +3860,7 @@
       <FieldType type="MFFloat"
                  regex="(\s)*(([+-]?((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFFloatAndMFFloat"
-                              appinfo="MFFloat is an array of SFFloat values, i.e. a single-precision floating-point array type. Array values are optionally separated by commas.">
+                              appinfo="MFFloat is an array of SFFloat values, meaning a single-precision floating-point array type. Array values are optionally separated by commas.">
             <Inheritance baseType="xs:string"/>
          </InterfaceDefinition>
       </FieldType>

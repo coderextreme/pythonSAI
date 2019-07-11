@@ -2,7 +2,7 @@
 <!-- X3D Unified Object Model (X3DUOM) X3dUnifiedObjectModel-3.3.xml -->
 <!-- Online at http://www.web3d.org/specifications/X3dUnifiedObjectModel-3.3.xml -->
 <!-- This file contains a listing of all abstract and concrete nodes in version 3.3 of X3D -->
-<!-- Generated 2019-04-02-07:00 05:44:28.894-07:00 -->
+<!-- Generated 2019-06-19-07:00 16:00:07.157889-07:00 -->
 <X3dUnifiedObjectModel xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
                        version="3.3"
                        xsd:noNamespaceSchemaLocation="X3dUnifiedObjectModel.xsd">
@@ -45,7 +45,7 @@
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/group.html#Boundingboxes"/>
       <SimpleType name="closureTypeChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="closureTypeChoices are strictly allowed enumeration values for ArcClose2D closureType."
+                  appinfo="closureTypeChoices are strictly allowed enumeration values for ArcClose2D closureType field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/geometry2D.html#ArcClose2D">
          <enumeration value="PIE"/>
          <enumeration value="CHORD"/>
@@ -509,14 +509,14 @@
       </SimpleType>
       <SimpleType name="fogTypeChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="fogTypeChoices are strictly allowed enumeration values for Fog node fogType attribute."
+                  appinfo="fogTypeChoices are strictly allowed enumeration values for Fog node fogType field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/enveffects.html#Fog">
          <enumeration value="LINEAR"/>
          <enumeration value="EXPONENTIAL"/>
       </SimpleType>
       <SimpleType name="fontFamilyValues"
                   baseType="MFString"
-                  appinfo="fontFamilyValues are allowed enumeration values for FontStyle/ScreenFontStyle node family attribute. Unbounded, additional values are possible."
+                  appinfo="fontFamilyValues are allowed enumeration values for FontStyle/ScreenFontStyle node family field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Fontfamilyandstyle">
          <enumeration value="&#34;SANS&#34;"/>
          <enumeration value="&#34;SERIF&#34;"/>
@@ -524,7 +524,7 @@
       </SimpleType>
       <SimpleType name="fontStyleChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="fontStyleChoices are strictly allowed enumeration values for FontStyle/ScreenFontStyle node style attribute."
+                  appinfo="fontStyleChoices are strictly allowed enumeration values for FontStyle/ScreenFontStyle node style field."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Fontfamilyandstyle">
          <enumeration value="PLAIN"/>
          <enumeration value="BOLD"/>
@@ -533,7 +533,7 @@
       </SimpleType>
       <SimpleType name="forceOutputValues"
                   baseType="MFString"
-                  appinfo="forceOutputValues are suggested values for X3DRigidJointNode type forceOutput attribute. Unbounded, additional values are possible."
+                  appinfo="forceOutputValues are suggested values for X3DRigidJointNode type forceOutput field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/rigid_physics.html#X3DRigidJointNode">
          <enumeration value="&#34;ALL&#34;"/>
          <enumeration value="&#34;NONE&#34;"/>
@@ -1129,7 +1129,7 @@
                   documentation="_Evaluating the X3D Schema with semantic web tools_, Web3D 2012 Conference, Petit, Marc (EDF), Henry Boccon-Gibod (EDF), Mouton, Christophe (EDF)"/>
       <SimpleType name="intersectionTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="intersectionTypeValues are suggested values for X3DPickSensorNode type intersectionType attribute. Unbounded, additional values are possible."
+                  appinfo="intersectionTypeValues are suggested values for X3DPickSensorNode type intersectionType field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="BOUNDS"/>
          <enumeration value="GEOMETRY"/>
@@ -1239,7 +1239,7 @@
       </SimpleType>
       <SimpleType name="justifyChoices"
                   baseType="MFString"
-                  appinfo="justifyChoices are strictly allowed enumeration values for FontStyle node justify attribute. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
+                  appinfo="justifyChoices are strictly allowed enumeration values for FontStyle node justify field. Note that intermediate commas and extraneous whitespace are disallowed by these strictly defined enumeration values."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/text.html#Directionandjustification">
          <enumeration value="&#34;MIDDLE&#34;"/>
          <enumeration value="&#34;MIDDLE&#34; &#34;BEGIN&#34;"/>
@@ -1313,14 +1313,14 @@
       </SimpleType>
       <SimpleType name="metaDirectionChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="metaDirectionChoices are strictly allowed enumeration values for meta element direction attribute."
+                  appinfo="metaDirectionChoices are strictly allowed enumeration values for meta element direction field."
                   documentation="http://www.w3.org/TR/html4/struct/dirlang.html#adef-dir">
          <enumeration value="rtl" appinfo="right-to-left"/>
          <enumeration value="ltr" appinfo="left-to-right"/>
       </SimpleType>
       <SimpleType name="metaNameValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="metaNameValues are suggested optional values for meta element name attribute. Additional names are also defined and allowed."
+                  appinfo="metaNameValues are suggested optional values for meta element name field. Additional names are also defined and allowed."
                   documentation="http://www.web3d.org/x3d/content/examples/X3dSceneAuthoringHints.html#metaTags">
          <enumeration value="accessRights"
                       appinfo="permission required to access resource or security status"
@@ -1600,7 +1600,7 @@
       </SimpleType>
       <SimpleType name="particleSystemGeometryTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="particleSystemGeometryTypeValues are allowed enumeration values for the ParticleSystem node geometryType attribute. Unbounded, additional values are possible."
+                  appinfo="particleSystemGeometryTypeValues are allowed enumeration values for the ParticleSystem node geometryType field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/particle_systems.html#ParticleSystem">
          <enumeration value="LINE"/>
          <enumeration value="POINT"/>
@@ -1626,7 +1626,7 @@
       </SimpleType>
       <SimpleType name="pickSensorMatchCriterionChoices"
                   baseType="xs:NMTOKEN"
-                  appinfo="pickSensorMatchCriterionChoices are strictly allowed enumeration values for X3DPickSensorNode node matchCriterion attribute. Bounded, no additional values are possible."
+                  appinfo="pickSensorMatchCriterionChoices are strictly allowed enumeration values for X3DPickSensorNode node matchCriterion field. Bounded, no additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="MATCH_ANY"/>
          <enumeration value="MATCH_EVERY"/>
@@ -1634,7 +1634,7 @@
       </SimpleType>
       <SimpleType name="pickSensorSortOrderValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="pickSensorSortOrderValues are allowed enumeration values for X3DPickSensorNode node sortOrder attribute. Unbounded, additional values are possible."
+                  appinfo="pickSensorSortOrderValues are allowed enumeration values for X3DPickSensorNode node sortOrder field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/picking.html#X3DPickSensorNode">
          <enumeration value="ANY"/>
          <enumeration value="CLOSEST"/>
@@ -1796,7 +1796,7 @@
       </SimpleType>
       <SimpleType name="shaderPartTypeValues"
                   baseType="xs:NMTOKEN"
-                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart type attribute. Unbounded, additional values are possible."
+                  appinfo="shaderPartTypeValues are allowed enumeration values for ShaderPart type field. Unbounded, additional values are possible."
                   documentation="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/components/shaders.html#ShaderPart">
          <enumeration value="VERTEX"/>
          <enumeration value="FRAGMENT"/>
@@ -1909,7 +1909,9 @@
       </FieldType>
       <FieldType type="MFBool" regex="\s*((true|false)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFBoolAndMFBool"
-                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents."/>
+                              appinfo="MFBool is an array of Boolean values. Type MFBool was previously undefined in the VRML 97 Specification, but nevertheless needed for event utilities and scripting. Example use: MFBool is useful for defining a series of behavior states using a BooleanSequencer prototype. Hint: boolean values are lower case (true|false) in order to maintain compatibility with HTML and other XML documents.">
+            <Inheritance baseType="xs:string"/>
+         </InterfaceDefinition>
       </FieldType>
       <FieldType type="SFColor"
                  defaultValue="0 0 0"
@@ -1952,7 +1954,7 @@
       <FieldType type="MFDouble"
                  regex="(\s)*(([+-]?((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFDoubleAndMFDouble"
-                              appinfo="MFDouble is an array of Double values, i.e. a double-precision floating-point array type. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale. SFDouble/MFDouble are analagous to SFDouble/MFDouble. Array values are optionally separated by commas.">
+                              appinfo="MFDouble is an array of Double values, meaning a double-precision floating-point array type. See GeoVRML 1.0 Recommended Practice, Section 2.3, Limitations of Single Precision for rationale. Array values are optionally separated by commas.">
             <Inheritance baseType="xs:string"/>
          </InterfaceDefinition>
       </FieldType>
@@ -1967,7 +1969,7 @@
       <FieldType type="MFFloat"
                  regex="(\s)*(([+-]?((0|[1-9][0-9]*)(\.[0-9]*)?|\.[0-9]+)([Ee][+-]?[0-9]+)?)\s*,?\s*)*">
          <InterfaceDefinition specificationUrl="http://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFFloatAndMFFloat"
-                              appinfo="MFFloat is an array of SFFloat values, i.e. a single-precision floating-point array type. Array values are optionally separated by commas.">
+                              appinfo="MFFloat is an array of SFFloat values, meaning a single-precision floating-point array type. Array values are optionally separated by commas.">
             <Inheritance baseType="xs:string"/>
          </InterfaceDefinition>
       </FieldType>
