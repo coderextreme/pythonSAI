@@ -165,19 +165,19 @@ field35.setValue("2")
 
 ComposedShader30.addField(field35)
 ShaderPart36 = x3d.ShaderPart()
-ShaderPart36.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
+ShaderPart36.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
 ShaderPart36.setType("VERTEX")
 
 ComposedShader30.addParts(ShaderPart36)
 ShaderPart37 = x3d.ShaderPart()
-ShaderPart37.setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/shaders/mix.fs"])
+ShaderPart37.setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/mix.fs"])
 ShaderPart37.setType("FRAGMENT")
 
 ComposedShader30.addParts(ShaderPart37)
 
 Appearance21.addShaders(ComposedShader30)
 ComposedShader38 = x3d.ComposedShader()
-ComposedShader38.setDEF("cobweb")
+ComposedShader38.setDEF("x_ite")
 ComposedShader38.setLanguage("GLSL")
 #http://hypertextbook.com/facts/2005/JustinChe.shtml
 field39 = x3d.field()
@@ -216,12 +216,12 @@ field43.setValue("2")
 
 ComposedShader38.addField(field43)
 ShaderPart44 = x3d.ShaderPart()
-ShaderPart44.setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])
+ShaderPart44.setUrl(["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/src/main/shaders/x_ite.vs"])
 ShaderPart44.setType("VERTEX")
 
 ComposedShader38.addParts(ShaderPart44)
 ShaderPart45 = x3d.ShaderPart()
-ShaderPart45.setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/shaders/mix.fs"])
+ShaderPart45.setUrl(["../shaders/mix.fs","https://coderextreme.net/X3DJSONLD/src/main/src/main/shaders/mix.fs"])
 ShaderPart45.setType("FRAGMENT")
 
 ComposedShader38.addParts(ShaderPart45)

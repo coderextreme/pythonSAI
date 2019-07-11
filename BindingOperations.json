@@ -429,8 +429,7 @@
                     ],
                     "#sourceText":[
 "",
-"",
-"ecmascript:",
+"        ecmascript:",
 "",
 "function initialize ()",
 "{",

@@ -140,13 +140,13 @@ field31.setValue("2")
 
 ComposedShader25.addField(field31)
 ShaderPart32 = x3d.ShaderPart()
-ShaderPart32.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
+ShaderPart32.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
 ShaderPart32.setType("VERTEX")
 
 ComposedShader25.addParts(ShaderPart32)
 ShaderPart33 = x3d.ShaderPart()
 ShaderPart33.setDEF("common")
-ShaderPart33.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"])
+ShaderPart33.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"])
 ShaderPart33.setType("FRAGMENT")
 
 ComposedShader25.addParts(ShaderPart33)
@@ -193,7 +193,7 @@ field40.setValue("2")
 
 ComposedShader34.addField(field40)
 ShaderPart41 = x3d.ShaderPart()
-ShaderPart41.setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])
+ShaderPart41.setUrl(["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs"])
 ShaderPart41.setType("VERTEX")
 
 ComposedShader34.addParts(ShaderPart41)

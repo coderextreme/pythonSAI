@@ -128,12 +128,12 @@ field28.setValue("2")
 
 ComposedShader23.addField(field28)
 ShaderPart29 = x3d.ShaderPart()
-ShaderPart29.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
+ShaderPart29.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
 ShaderPart29.setType("VERTEX")
 
 ComposedShader23.addParts(ShaderPart29)
 ShaderPart30 = x3d.ShaderPart()
-ShaderPart30.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])
+ShaderPart30.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
 ShaderPart30.setType("FRAGMENT")
 
 ComposedShader23.addParts(ShaderPart30)
@@ -184,7 +184,7 @@ Script33.setSourceCode('''ecmascript:\n"+
 "var h = 5;\n"+
 "\n"+
 "function initialize() {\n"+
-"     resolution = 100;\n"+
+"     var resolution = 100;\n"+
 "     updateCoordinates(resolution);\n"+
 "     var cis = [];\n"+
 "     for ( i = 0; i < resolution-1; i++) {\n"+
@@ -200,13 +200,13 @@ Script33.setSourceCode('''ecmascript:\n"+
 "}\n"+
 "\n"+
 "function updateCoordinates(resolution) {\n"+
-"     theta = 0.0;\n"+
-"     phi = 0.0;\n"+
-"     delta = (2 * 3.141592653) / (resolution-1);\n"+
+"     var theta = 0.0;\n"+
+"     var phi = 0.0;\n"+
+"     var delta = (2 * 3.141592653) / (resolution-1);\n"+
 "     var crds = [];\n"+
 "     for ( i = 0; i < resolution; i++) {\n"+
 "     	for ( j = 0; j < resolution; j++) {\n"+
-"		rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
+"		var rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
 "		crds.push(new SFVec3f(\n"+
 "			rho * Math.cos(phi) * Math.cos(theta),\n"+
 "			rho * Math.cos(phi) * Math.sin(theta),\n"+
@@ -220,7 +220,7 @@ Script33.setSourceCode('''ecmascript:\n"+
 "}\n"+
 "\n"+
 "function set_fraction(fraction, eventTime) {\n"+
-"	choice = Math.floor(Math.random() * 4);\n"+
+"	var choice = Math.floor(Math.random() * 4);\n"+
 "	switch (choice) {\n"+
 "	case 0:\n"+
 "		e += Math.floor(Math.random() * 2) * 2 - 1;\n"+
@@ -244,7 +244,7 @@ Script33.setSourceCode('''ecmascript:\n"+
 "	if (h < 1) {\n"+
 "		h = 4;\n"+
 "	}\n"+
-"	resolution = 100;\n"+
+"	var resolution = 100;\n"+
 "	updateCoordinates(resolution);\n"+
 "}''')
 

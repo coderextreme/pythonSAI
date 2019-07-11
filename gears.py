@@ -5,7 +5,7 @@ X3D0.setVersion("3.3")
 head1 = x3d.head()
 meta2 = x3d.meta()
 meta2.setName("title")
-meta2.setContent("template.json")
+meta2.setContent("gears.x3d")
 
 head1.addMeta(meta2)
 meta3 = x3d.meta()

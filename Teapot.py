@@ -5,7 +5,7 @@ X3D0.setVersion("3.0")
 head1 = x3d.head()
 meta2 = x3d.meta()
 meta2.setName("title")
-meta2.setContent("MooringBuoy.x3d")
+meta2.setContent("Teapot.x3d")
 
 head1.addMeta(meta2)
 meta3 = x3d.meta()

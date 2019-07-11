@@ -5,7 +5,7 @@ X3D0.setVersion("3.3")
 head1 = x3d.head()
 meta2 = x3d.meta()
 meta2.setName("title")
-meta2.setContent("abox.x3d")
+meta2.setContent("asmallbox.x3d")
 
 head1.addMeta(meta2)
 meta3 = x3d.meta()
@@ -107,7 +107,6 @@ fieldValue28 = x3d.fieldValue()
 fieldValue28.setName("myShape")
 Shape29 = x3d.Shape()
 Box30 = x3d.Box()
-Box30.setSize([0.125,0.125,0.125])
 
 Shape29.setGeometry(Box30)
 

@@ -8,7 +8,7 @@
         "meta": [
           {
             "@name":"title",
-            "@content":"sphereflowers.x3d"
+            "@content":"x3domflowers.x3d"
           },
           {
             "@name":"creator",
@@ -45,6 +45,9 @@
           { "NavigationInfo":
             {
             }
+          },
+          {
+            "#comment":"Images courtesy of Paul Debevec's Light Probe Image Gallery"
           },
           { "Background":
             {

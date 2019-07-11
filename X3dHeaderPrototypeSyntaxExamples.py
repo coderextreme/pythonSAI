@@ -45,7 +45,7 @@ meta9.setContent("14 October 2002")
 head1.addMeta(meta9)
 meta10 = x3d.meta()
 meta10.setName("modified")
-meta10.setContent("7 May 2017")
+meta10.setContent("27 May 2017")
 
 head1.addMeta(meta10)
 meta11 = x3d.meta()
@@ -245,11 +245,9 @@ Scene17.addChildren(Transform52)
 Collision54 = x3d.Collision()
 Shape55 = x3d.Shape()
 #note that Collision proxy Shape is not rendered
-#alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'
-Text56 = x3d.Text()
-Text56.setString(["He said, \"Immel did it!\""])
+Sphere56 = x3d.Sphere()
 
-Shape55.setGeometry(Text56)
+Shape55.setGeometry(Sphere56)
 Appearance57 = x3d.Appearance()
 Material58 = x3d.Material()
 

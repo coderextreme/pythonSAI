@@ -39,9 +39,9 @@ IndexedFaceSet10 = x3d.IndexedFaceSet()
 IndexedFaceSet10.setCcw(False)
 IndexedFaceSet10.setConvex(False)
 IndexedFaceSet10.setCoordIndex([0,1,2,-1])
-IndexedFaceSet10.setDEF("ifs")
+IndexedFaceSet10.setDEF("Orbit")
 Coordinate11 = x3d.Coordinate()
-Coordinate11.setDEF("crd")
+Coordinate11.setDEF("OrbitCoordinates")
 Coordinate11.setPoint([0,0,1,0,1,0,1,0,0])
 
 IndexedFaceSet10.setCoord(Coordinate11)
@@ -52,7 +52,7 @@ Transform6.addChildren(Shape7)
 
 Scene1.addChildren(Transform6)
 Script12 = x3d.Script()
-Script12.setDEF("FlowerScript")
+Script12.setDEF("OrbitScript")
 field13 = x3d.field()
 field13.setName("set_fraction")
 field13.setAccessType("inputOnly")
@@ -71,6 +71,7 @@ field15.setAccessType("outputOnly")
 field15.setType("MFInt32")
 
 Script12.addField(field15)
+#<field accessType=\"inputOutput\" name=\"e\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"f\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"g\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"h\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"t\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"inputOutput\" name=\"p\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"inputOutput\" name=\"resolution\" type=\"SFInt32\" value=\"150\"/>
 
 Script12.setSourceCode('''ecmascript:\n"+
 "\n"+
@@ -78,60 +79,49 @@ Script12.setSourceCode('''ecmascript:\n"+
 "var f = 5;\n"+
 "var g = 5;\n"+
 "var h = 5;\n"+
-"var resolution = 150;\n"+
+"var resolution = 100;\n"+
 "var t = 0;\n"+
 "var p = 0;\n"+
 "\n"+
 "function initialize() {\n"+
-"     var localci = new Array();\n"+
-"     var ci = 0;\n"+
-"     var buf = [];\n"+
-"     for (var i = 0; i < resolution-1; i++) {\n"+
-"     	for (var j = 0; j < resolution-1; j++) {\n"+
-"	     localci[ci] = i*resolution+j;\n"+
-"	     localci[ci+1] = i*resolution+j+1;\n"+
-"	     localci[ci+2] = (i+1)*resolution+j+1;\n"+
-"	     localci[ci+3] = (i+1)*resolution+j;\n"+
-"	     localci[ci+4] = -1;\n"+
-"	     buf.push(localci[ci]);\n"+
-"	     buf.push(localci[ci+1]);\n"+
-"	     buf.push(localci[ci+3]);\n"+
-"	     buf.push(localci[ci+4]);\n"+
-"\n"+
-"	     buf.push(localci[ci+1]);\n"+
-"	     buf.push(localci[ci+2]);\n"+
-"	     buf.push(localci[ci+3]);\n"+
-"	     buf.push(localci[ci+4]);\n"+
-"	     ci += 5;\n"+
+"     generateCoordinates(resolution);\n"+
+"     var localci = [];\n"+
+"     for ( i = 0; i < resolution-1; i++) {\n"+
+"     	for ( j = 0; j < resolution-1; j++) {\n"+
+"	     localci.push(i*resolution+j);\n"+
+"	     localci.push(i*resolution+j+1);\n"+
+"	     localci.push((i+1)*resolution+j+1);\n"+
+"	     localci.push((i+1)*resolution+j);\n"+
+"	     localci.push(-1);\n"+
 "	}\n"+
 "    }\n"+
-"    updateCoordinates(resolution);\n"+
-"    coordIndexes = new x3dom.fields.MFInt32(buf);\n"+
+"    coordIndexes = new MFInt32(localci);\n"+
 "}\n"+
 "\n"+
-"function updateCoordinates(resolution) {\n"+
-"     theta = 0.0;\n"+
-"     phi = 0.0;\n"+
-"     delta = (2 * 3.141592653) / (resolution-1);\n"+
-"     var buf = [];\n"+
+"function generateCoordinates(resolution) {\n"+
+"     var theta = 0.0;\n"+
+"     var phi = 0.0;\n"+
+"     var delta = (2 * 3.141592653) / (resolution-1);\n"+
+"     var localc = [];\n"+
 "     for ( i = 0; i < resolution; i++) {\n"+
 "     	for ( j = 0; j < resolution; j++) {\n"+
-"		rho = e + f * Math.cos(g * theta + t) * Math.cos(h * phi + p);\n"+
-"		var coord = new x3dom.fields.SFVec3f(\n"+
+"		var rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
+"		localc.push(new SFVec3f(\n"+
 "			rho * Math.cos(phi) * Math.cos(theta),\n"+
 "			rho * Math.cos(phi) * Math.sin(theta),\n"+
 "			rho * Math.sin(phi)\n"+
-"		);\n"+
-"	     	buf.push(coord);\n"+
+"		));\n"+
 "		theta += delta;\n"+
 "	}\n"+
 "	phi += delta;\n"+
 "     }\n"+
-"     coordinates = new x3dom.fields.MFVec3f(buf);\n"+
+"     coordinates = new MFVec3f(localc);\n"+
 "}\n"+
 "\n"+
-"function set_fraction() {\n"+
-"	choice = Math.floor(Math.random() * 4);\n"+
+"function set_fraction(fraction, eventTime) {\n"+
+"	t += 0.5;\n"+
+"	p += 0.5;\n"+
+"	var choice = Math.floor(Math.random() * 4);\n"+
 "	switch (choice) {\n"+
 "	case 0:\n"+
 "		e += Math.floor(Math.random() * 2) * 2 - 1;\n"+
@@ -146,8 +136,6 @@ Script12.setSourceCode('''ecmascript:\n"+
 "		h += Math.floor(Math.random() * 2) * 2 - 1;\n"+
 "		break;\n"+
 "	}\n"+
-"	t += 0.5;\n"+
-"	p += 0.5;\n"+
 "	if (f < 1) {\n"+
 "		f = 10;\n"+
 "	}\n"+
@@ -157,7 +145,7 @@ Script12.setSourceCode('''ecmascript:\n"+
 "	if (h < 1) {\n"+
 "		h = 4;\n"+
 "	}\n"+
-"	updateCoordinates(resolution);\n"+
+"	generateCoordinates(resolution);\n"+
 "}''')
 
 Scene1.addChildren(Script12)
@@ -168,23 +156,23 @@ TimeSensor16.setLoop(True)
 
 Scene1.addChildren(TimeSensor16)
 ROUTE17 = x3d.ROUTE()
-ROUTE17.setFromNode("FlowerScript")
+ROUTE17.setFromNode("OrbitScript")
 ROUTE17.setFromField("coordIndexes")
-ROUTE17.setToNode("ifs")
+ROUTE17.setToNode("Orbit")
 ROUTE17.setToField("coordIndex")
 
 Scene1.addChildren(ROUTE17)
 ROUTE18 = x3d.ROUTE()
-ROUTE18.setFromNode("FlowerScript")
+ROUTE18.setFromNode("OrbitScript")
 ROUTE18.setFromField("coordinates")
-ROUTE18.setToNode("crd")
+ROUTE18.setToNode("OrbitCoordinates")
 ROUTE18.setToField("point")
 
 Scene1.addChildren(ROUTE18)
 ROUTE19 = x3d.ROUTE()
 ROUTE19.setFromNode("Clock")
 ROUTE19.setFromField("fraction_changed")
-ROUTE19.setToNode("FlowerScript")
+ROUTE19.setToNode("OrbitScript")
 ROUTE19.setToField("set_fraction")
 
 Scene1.addChildren(ROUTE19)

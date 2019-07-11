@@ -61,7 +61,6 @@ Viewpoint12.setDescription("Transparent rose")
 
 Scene9.addChildren(Viewpoint12)
 Transform13 = x3d.Transform()
-Transform13.setDEF("Rose01")
 Shape14 = x3d.Shape()
 Appearance15 = x3d.Appearance()
 Material16 = x3d.Material()
@@ -183,21 +182,21 @@ field35.setAccessType("inputOutput")
 field35.setValue("0")
 
 ComposedShader24.addField(field35)
-#field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field
+#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart36 = x3d.ShaderPart()
-ShaderPart36.setUrl(["../shaders/x3dom_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom_flowers_chromatic.vs"])
+ShaderPart36.setUrl(["../shaders/x3dom_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom_flowers_chromatic.vs"])
 ShaderPart36.setType("VERTEX")
 
 ComposedShader24.addParts(ShaderPart36)
 ShaderPart37 = x3d.ShaderPart()
-ShaderPart37.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"])
+ShaderPart37.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"])
 ShaderPart37.setType("FRAGMENT")
 
 ComposedShader24.addParts(ShaderPart37)
 
 Appearance15.addShaders(ComposedShader24)
 ComposedShader38 = x3d.ComposedShader()
-ComposedShader38.setDEF("cobweb")
+ComposedShader38.setDEF("x_ite")
 ComposedShader38.setLanguage("GLSL")
 field39 = x3d.field()
 field39.setName("cube")
@@ -280,12 +279,12 @@ field50.setValue("0")
 
 ComposedShader38.addField(field50)
 ShaderPart51 = x3d.ShaderPart()
-ShaderPart51.setUrl(["../shaders/cobweb_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb_flowers_chromatic.vs"])
+ShaderPart51.setUrl(["../shaders/x_ite_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite_flowers_chromatic.vs"])
 ShaderPart51.setType("VERTEX")
 
 ComposedShader38.addParts(ShaderPart51)
 ShaderPart52 = x3d.ShaderPart()
-ShaderPart52.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/shaders/common.fs"])
+ShaderPart52.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"])
 ShaderPart52.setType("FRAGMENT")
 
 ComposedShader38.addParts(ShaderPart52)
@@ -294,7 +293,6 @@ Appearance15.addShaders(ComposedShader38)
 
 Shape14.setAppearance(Appearance15)
 Sphere53 = x3d.Sphere()
-Sphere53.setSolid(False)
 
 Shape14.setGeometry(Sphere53)
 
@@ -471,14 +469,19 @@ Script69.setSourceCode('''ecmascript:\n"+
 "\n"+
 "function set_fraction() {\n"+
 "	var choice = Math.floor(Math.random() * 4);\n"+
-"	if (choice == 0) {\n"+
+"	switch (choice) {\n"+
+"	case 0:\n"+
 "		a = a + Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"	} else if (choice == 1) {\n"+
+"		break;\n"+
+"	case 1:\n"+
 "		b = b + Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"	} else if (choice == 2) {\n"+
+"		break;\n"+
+"	case 2:\n"+
 "		c = c + Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"	} else if (choice == 3) {\n"+
+"		break;\n"+
+"	case 3:\n"+
 "		d = d + Math.floor(Math.random() * 2) * 2 - 1;\n"+
+"		break;\n"+
 "	}\n"+
 "	tdelta = tdelta + 0.5;\n"+
 "	pdelta = pdelta + 0.5;\n"+
@@ -519,42 +522,42 @@ Scene9.addChildren(ROUTE78)
 ROUTE79 = x3d.ROUTE()
 ROUTE79.setFromNode("Animate")
 ROUTE79.setFromField("a")
-ROUTE79.setToNode("cobweb")
+ROUTE79.setToNode("x_ite")
 ROUTE79.setToField("a")
 
 Scene9.addChildren(ROUTE79)
 ROUTE80 = x3d.ROUTE()
 ROUTE80.setFromNode("Animate")
 ROUTE80.setFromField("b")
-ROUTE80.setToNode("cobweb")
+ROUTE80.setToNode("x_ite")
 ROUTE80.setToField("b")
 
 Scene9.addChildren(ROUTE80)
 ROUTE81 = x3d.ROUTE()
 ROUTE81.setFromNode("Animate")
 ROUTE81.setFromField("c")
-ROUTE81.setToNode("cobweb")
+ROUTE81.setToNode("x_ite")
 ROUTE81.setToField("c")
 
 Scene9.addChildren(ROUTE81)
 ROUTE82 = x3d.ROUTE()
 ROUTE82.setFromNode("Animate")
 ROUTE82.setFromField("d")
-ROUTE82.setToNode("cobweb")
+ROUTE82.setToNode("x_ite")
 ROUTE82.setToField("d")
 
 Scene9.addChildren(ROUTE82)
 ROUTE83 = x3d.ROUTE()
 ROUTE83.setFromNode("Animate")
 ROUTE83.setFromField("pdelta")
-ROUTE83.setToNode("cobweb")
+ROUTE83.setToNode("x_ite")
 ROUTE83.setToField("pdelta")
 
 Scene9.addChildren(ROUTE83)
 ROUTE84 = x3d.ROUTE()
 ROUTE84.setFromNode("Animate")
 ROUTE84.setFromField("tdelta")
-ROUTE84.setToNode("cobweb")
+ROUTE84.setToNode("x_ite")
 ROUTE84.setToField("tdelta")
 
 Scene9.addChildren(ROUTE84)

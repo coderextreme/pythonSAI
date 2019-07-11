@@ -62,7 +62,7 @@
                 { "ExternProtoDeclare":
                   {
                     "@name":"FlowerProto",
-                    "@url":["../data/flowerproto.x3d#FlowerProto"],
+                    "@url":["../data/flowerproto.json#FlowerProto"],
                     "field": [
                       {
                         "@name":"vertex",
@@ -91,7 +91,7 @@
                                     "fieldValue": [
                                       {
                                         "@name":"vertex",
-                                        "@value":["../shaders/cobweb_flowers_chromatic.vs"]
+                                        "@value":["../shaders/x_ite_flowers_chromatic.vs"]
                                       },
                                       {
                                         "@name":"fragment",

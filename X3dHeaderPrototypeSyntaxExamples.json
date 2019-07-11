@@ -42,7 +42,7 @@
           },
           {
             "@name":"modified",
-            "@content":"7 May 2017"
+            "@content":"27 May 2017"
           },
           {
             "@name":"creator",
@@ -294,15 +294,11 @@
                     "-children":[
                       {
                         "#comment":"note that Collision proxy Shape is not rendered"
-                      },
-                      {
-                        "#comment":"alternative: Text string='\"He said, \\&quot;Immel did it!\\&quot;\"'"
                       }
                     ],
                     "-geometry":
-                      { "Text":
+                      { "Sphere":
                         {
-                          "@string":["He said, \"Immel did it!\""]
                         }
                       },
                     "-appearance":

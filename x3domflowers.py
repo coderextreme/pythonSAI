@@ -5,7 +5,7 @@ X3D0.setVersion("3.3")
 head1 = x3d.head()
 meta2 = x3d.meta()
 meta2.setName("title")
-meta2.setContent("sphereflowers.x3d")
+meta2.setContent("x3domflowers.x3d")
 
 head1.addMeta(meta2)
 meta3 = x3d.meta()
@@ -34,6 +34,7 @@ Scene7 = x3d.Scene()
 NavigationInfo8 = x3d.NavigationInfo()
 
 Scene7.addChildren(NavigationInfo8)
+#Images courtesy of Paul Debevec's Light Probe Image Gallery
 Background9 = x3d.Background()
 Background9.setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])
 Background9.setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])

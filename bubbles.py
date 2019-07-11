@@ -115,7 +115,7 @@ ComposedCubeMapTexture21.setTop(ImageTexture27)
 
 Appearance19.setTexture(ComposedCubeMapTexture21)
 ComposedShader28 = x3d.ComposedShader()
-ComposedShader28.setDEF("cobweb")
+ComposedShader28.setDEF("x_ite")
 ComposedShader28.setLanguage("GLSL")
 field29 = x3d.field()
 field29.setName("cube")
@@ -153,12 +153,12 @@ field33.setValue("2")
 
 ComposedShader28.addField(field33)
 ShaderPart34 = x3d.ShaderPart()
-ShaderPart34.setUrl(["../shaders/cobweb.vs","https://coderextreme.net/X3DJSONLD/shaders/cobweb.vs"])
+ShaderPart34.setUrl(["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs"])
 ShaderPart34.setType("VERTEX")
 
 ComposedShader28.addParts(ShaderPart34)
 ShaderPart35 = x3d.ShaderPart()
-ShaderPart35.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])
+ShaderPart35.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
 ShaderPart35.setType("FRAGMENT")
 
 ComposedShader28.addParts(ShaderPart35)
@@ -203,12 +203,12 @@ field41.setValue("2")
 
 ComposedShader36.addField(field41)
 ShaderPart42 = x3d.ShaderPart()
-ShaderPart42.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/shaders/x3dom.vs"])
+ShaderPart42.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
 ShaderPart42.setType("VERTEX")
 
 ComposedShader36.addParts(ShaderPart42)
 ShaderPart43 = x3d.ShaderPart()
-ShaderPart43.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/shaders/pc_bubbles.fs"])
+ShaderPart43.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
 ShaderPart43.setType("FRAGMENT")
 
 ComposedShader36.addParts(ShaderPart43)
@@ -288,19 +288,25 @@ Script47.addField(field54)
 
 Script47.setSourceCode('''ecmascript:\n"+
 "               function set_cycle(value) {\n"+
+"	       	   try {\n"+
 "                        var ov = lastKey;\n"+
 "                        do {\n"+
 "                            lastKey = Math.round(Math.random()*(positions.length-1));\n"+
 "                        } while (lastKey === ov);\n"+
 "                        var vc = lastKey;\n"+
 "\n"+
-"                        orientation_changed = new MFRotation();\n"+
-"                        orientation_changed[0] = new SFRotation(orientations[ov].x, orientations[ov].y, orientations[ov].z, orientations[ov].w);\n"+
-"                        orientation_changed[1] = new SFRotation(orientations[vc].x, orientations[vc].y, orientations[vc].z, orientations[vc].w);\n"+
 "                        position_changed = new MFVec3f();\n"+
 "                        position_changed[0] = new SFVec3f(positions[ov].x,positions[ov].y,positions[ov].z);\n"+
 "                        position_changed[1] = new SFVec3f(positions[vc].x,positions[vc].y,positions[vc].z);\n"+
-"                    // }\n"+
+"\n"+
+"                        orientation_changed = new MFRotation();\n"+
+"                        orientation_changed[0] = new SFRotation(orientations[ov].x, orientations[ov].y, orientations[ov].z, orientations[ov].w);\n"+
+"                        orientation_changed[1] = new SFRotation(orientations[vc].x, orientations[vc].y, orientations[vc].z, orientations[vc].w);\n"+
+"		   } catch (e) {\n"+
+"		   	if (typeof alert === 'function') {\n"+
+"				alert(e);\n"+
+"			}\n"+
+"		   }\n"+
 "               }''')
 
 Scene11.addChildren(Script47)

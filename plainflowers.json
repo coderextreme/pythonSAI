@@ -8,7 +8,7 @@
         "meta": [
           {
             "@name":"title",
-            "@content":"sphereflowers.x3d"
+            "@content":"plainflowers.x3d"
           },
           {
             "@name":"creator",
@@ -91,7 +91,7 @@
                                     "fieldValue": [
                                       {
                                         "@name":"vertex",
-                                        "@value":["../shaders/cobweb_flowers_plain.vs"]
+                                        "@value":["../shaders/x_ite_flowers_plain.vs"]
                                       },
                                       {
                                         "@name":"fragment",

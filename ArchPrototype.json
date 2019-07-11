@@ -257,7 +257,7 @@
                     { "Script":
                       {
                         "@DEF":"ArchPrototypeScript",
-                        "@url":["../node/ArchPrototypeScript.js"],
+                        "@url":["../node/ArchPrototypeScript.js","https://coderextreme.net/X3DJSONLD/src/main/node/ArchPrototypeScript.js"],
                         "-children":[
                           {
                             "#comment":"INPUT PARAMETERS"

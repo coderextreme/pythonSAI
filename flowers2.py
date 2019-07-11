@@ -4,12 +4,12 @@ X3D0.setProfile("Immersive")
 X3D0.setVersion("3.0")
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.setName("flowers2.x3d")
-meta2.setContent("title")
+meta2.setName("title")
+meta2.setContent("flowers2.x3d")
 
 head1.addMeta(meta2)
 meta3 = x3d.meta()
-meta3.setName("author")
+meta3.setName("creator")
 meta3.setContent("John Carlson")
 
 head1.addMeta(meta3)
@@ -25,7 +25,7 @@ meta5.setContent("23 January 2005")
 head1.addMeta(meta5)
 meta6 = x3d.meta()
 meta6.setName("modified")
-meta6.setContent("05 May 2017")
+meta6.setContent("21 March 2018")
 
 head1.addMeta(meta6)
 meta7 = x3d.meta()
@@ -34,8 +34,8 @@ meta7.setContent("2 random mathematical roses in spherical dimensions. rho = a +
 
 head1.addMeta(meta7)
 meta8 = x3d.meta()
-meta8.setName("url")
-meta8.setContent("https://coderextreme.net/x3d/flowers2.x3d")
+meta8.setName("identifier")
+meta8.setContent("https://coderextreme.net/X3DJSONLD/src/main/data/flowers2.x3d")
 
 head1.addMeta(meta8)
 meta9 = x3d.meta()
@@ -43,338 +43,349 @@ meta9.setName("generator")
 meta9.setContent("manually written")
 
 head1.addMeta(meta9)
+meta10 = x3d.meta()
+meta10.setName("license")
+meta10.setContent("http://www.web3d.org/x3d/content/examples/license.html")
+
+head1.addMeta(meta10)
 
 X3D0.setHead(head1)
-Scene10 = x3d.Scene()
-NavigationInfo11 = x3d.NavigationInfo()
+Scene11 = x3d.Scene()
+NavigationInfo12 = x3d.NavigationInfo()
 
-Scene10.addChildren(NavigationInfo11)
-Viewpoint12 = x3d.Viewpoint()
-Viewpoint12.setDescription("Two mathematical orbitals")
-Viewpoint12.setPosition([0,0,50])
+Scene11.addChildren(NavigationInfo12)
+Viewpoint13 = x3d.Viewpoint()
+Viewpoint13.setDescription("Two mathematical orbitals")
+Viewpoint13.setPosition([0,0,50])
 
-Scene10.addChildren(Viewpoint12)
-Group13 = x3d.Group()
-DirectionalLight14 = x3d.DirectionalLight()
-DirectionalLight14.setDirection([1,1,1])
+Scene11.addChildren(Viewpoint13)
+Group14 = x3d.Group()
+DirectionalLight15 = x3d.DirectionalLight()
+DirectionalLight15.setDirection([1,1,1])
 
-Group13.addChildren(DirectionalLight14)
-Transform15 = x3d.Transform()
-Transform15.setDEF("OrbitTransform")
-Transform15.setTranslation([8,0,0])
-Shape16 = x3d.Shape()
-Appearance17 = x3d.Appearance()
-Material18 = x3d.Material()
-Material18.setDiffuseColor([0,0.5,1])
-Material18.setSpecularColor([0,0.5,1])
+Group14.addChildren(DirectionalLight15)
+ProtoDeclare16 = x3d.ProtoDeclare()
+ProtoDeclare16.setName("orbit")
+ProtoInterface17 = x3d.ProtoInterface()
+field18 = x3d.field()
+field18.setName("translation")
+field18.setAccessType("inputOutput")
+field18.setType("SFVec3f")
+field18.setValue("-8 0 0")
 
-Appearance17.setMaterial(Material18)
+ProtoInterface17.addField(field18)
+field19 = x3d.field()
+field19.setName("diffuseColor")
+field19.setAccessType("inputOutput")
+field19.setType("SFColor")
+field19.setValue("1 0.5 0")
 
-Shape16.setAppearance(Appearance17)
-IndexedFaceSet19 = x3d.IndexedFaceSet()
-IndexedFaceSet19.setConvex(False)
-IndexedFaceSet19.setDEF("Orbit")
-Coordinate20 = x3d.Coordinate()
-Coordinate20.setDEF("OrbitCoordinates")
+ProtoInterface17.addField(field19)
+field20 = x3d.field()
+field20.setName("specularColor")
+field20.setAccessType("inputOutput")
+field20.setType("SFColor")
+field20.setValue("1 0.5 0")
 
-IndexedFaceSet19.setCoord(Coordinate20)
+ProtoInterface17.addField(field20)
+field21 = x3d.field()
+field21.setName("transparency")
+field21.setAccessType("inputOutput")
+field21.setType("SFFloat")
+field21.setValue("0.75")
 
-Shape16.setGeometry(IndexedFaceSet19)
+ProtoInterface17.addField(field21)
 
-Transform15.addChildren(Shape16)
+ProtoDeclare16.setProtoInterface(ProtoInterface17)
+ProtoBody22 = x3d.ProtoBody()
+Group23 = x3d.Group()
+TimeSensor24 = x3d.TimeSensor()
+TimeSensor24.setDEF("Clock")
+TimeSensor24.setCycleInterval(16)
+TimeSensor24.setLoop(True)
 
-Group13.addChildren(Transform15)
-Transform21 = x3d.Transform()
-Transform21.setDEF("OrbitTransform2")
-Transform21.setTranslation([-8,0,0])
-Shape22 = x3d.Shape()
-Appearance23 = x3d.Appearance()
-Material24 = x3d.Material()
-Material24.setDiffuseColor([1,0.5,0])
-Material24.setSpecularColor([1,0.5,0])
-Material24.setTransparency(0.75)
+Group23.addChildren(TimeSensor24)
+OrientationInterpolator25 = x3d.OrientationInterpolator()
+OrientationInterpolator25.setDEF("OrbitPath")
+OrientationInterpolator25.setKey([0,0.5,1])
+OrientationInterpolator25.setKeyValue([1,0,0,0,1,0,0,3.14,1,0,0,6.28])
 
-Appearance23.setMaterial(Material24)
+Group23.addChildren(OrientationInterpolator25)
+Transform26 = x3d.Transform()
+Transform26.setDEF("OrbitTransform")
+IS27 = x3d.IS()
+connect28 = x3d.connect()
+connect28.setNodeField("translation")
+connect28.setProtoField("translation")
 
-Shape22.setAppearance(Appearance23)
-IndexedFaceSet25 = x3d.IndexedFaceSet()
-IndexedFaceSet25.setDEF("Orbit2")
-Coordinate26 = x3d.Coordinate()
-Coordinate26.setDEF("OrbitCoordinates2")
+IS27.addConnect(connect28)
 
-IndexedFaceSet25.setCoord(Coordinate26)
+Transform26.setIS(IS27)
+Shape29 = x3d.Shape()
+Appearance30 = x3d.Appearance()
+Material31 = x3d.Material()
+IS32 = x3d.IS()
+connect33 = x3d.connect()
+connect33.setNodeField("diffuseColor")
+connect33.setProtoField("diffuseColor")
 
-Shape22.setGeometry(IndexedFaceSet25)
+IS32.addConnect(connect33)
+connect34 = x3d.connect()
+connect34.setNodeField("specularColor")
+connect34.setProtoField("specularColor")
 
-Transform21.addChildren(Shape22)
+IS32.addConnect(connect34)
+connect35 = x3d.connect()
+connect35.setNodeField("transparency")
+connect35.setProtoField("transparency")
 
-Group13.addChildren(Transform21)
-TimeSensor27 = x3d.TimeSensor()
-TimeSensor27.setDEF("Clock")
-TimeSensor27.setCycleInterval(16)
-TimeSensor27.setLoop(True)
+IS32.addConnect(connect35)
 
-Group13.addChildren(TimeSensor27)
-OrientationInterpolator28 = x3d.OrientationInterpolator()
-OrientationInterpolator28.setDEF("OrbitPath")
-OrientationInterpolator28.setKey([0,0.5,1])
-OrientationInterpolator28.setKeyValue([1,0,0,0,1,0,0,3.14,1,0,0,6.28])
+Material31.setIS(IS32)
 
-Group13.addChildren(OrientationInterpolator28)
-Script29 = x3d.Script()
-Script29.setDEF("OrbitScript")
-field30 = x3d.field()
-field30.setName("set_fraction")
-field30.setAccessType("inputOnly")
-field30.setType("SFFloat")
+Appearance30.setMaterial(Material31)
 
-Script29.addField(field30)
-field31 = x3d.field()
-field31.setName("coordinates")
-field31.setAccessType("outputOnly")
-field31.setType("MFVec3f")
+Shape29.setAppearance(Appearance30)
+#<IndexedFaceSet DEF=\"Orbit\" creaseAngle=\"0\"> <Coordinate DEF=\"OrbitCoordinates\"/> </IndexedFaceSet>
+IndexedFaceSet36 = x3d.IndexedFaceSet()
+IndexedFaceSet36.setCcw(False)
+IndexedFaceSet36.setConvex(False)
+IndexedFaceSet36.setCoordIndex([0,1,2,-1])
+IndexedFaceSet36.setDEF("Orbit")
+Coordinate37 = x3d.Coordinate()
+Coordinate37.setDEF("OrbitCoordinates")
+Coordinate37.setPoint([0,0,1,0,1,0,1,0,0])
 
-Script29.addField(field31)
-field32 = x3d.field()
-field32.setName("coordIndexes")
-field32.setAccessType("outputOnly")
-field32.setType("MFInt32")
+IndexedFaceSet36.setCoord(Coordinate37)
 
-Script29.addField(field32)
+Shape29.setGeometry(IndexedFaceSet36)
 
-Script29.setSourceCode('''ecmascript:\n"+
+Transform26.addChildren(Shape29)
+
+Group23.addChildren(Transform26)
+Script38 = x3d.Script()
+Script38.setDEF("OrbitScript")
+field39 = x3d.field()
+field39.setName("set_fraction")
+field39.setAccessType("inputOnly")
+field39.setType("SFFloat")
+
+Script38.addField(field39)
+field40 = x3d.field()
+field40.setName("coordinates")
+field40.setAccessType("outputOnly")
+field40.setType("MFVec3f")
+
+Script38.addField(field40)
+field41 = x3d.field()
+field41.setName("coordIndexes")
+field41.setAccessType("outputOnly")
+field41.setType("MFInt32")
+
+Script38.addField(field41)
+field42 = x3d.field()
+field42.setName("e")
+field42.setAccessType("outputOnly")
+field42.setType("SFFloat")
+field42.setValue("5")
+
+Script38.addField(field42)
+field43 = x3d.field()
+field43.setName("f")
+field43.setAccessType("outputOnly")
+field43.setType("SFFloat")
+field43.setValue("5")
+
+Script38.addField(field43)
+field44 = x3d.field()
+field44.setName("g")
+field44.setAccessType("outputOnly")
+field44.setType("SFFloat")
+field44.setValue("5")
+
+Script38.addField(field44)
+field45 = x3d.field()
+field45.setName("h")
+field45.setAccessType("outputOnly")
+field45.setType("SFFloat")
+field45.setValue("5")
+
+Script38.addField(field45)
+field46 = x3d.field()
+field46.setName("resolution")
+field46.setAccessType("inputOutput")
+field46.setType("SFInt32")
+field46.setValue("50")
+
+Script38.addField(field46)
+
+Script38.setSourceCode('''ecmascript:\n"+
 "\n"+
-"var e = 5;\n"+
-"var f = 5;\n"+
-"var g = 5;\n"+
-"var h = 5;\n"+
+"			var e = 5;\n"+
+"			var f = 5;\n"+
+"			var g = 5;\n"+
+"			var h = 5;\n"+
+"			var resolution = 100;\n"+
 "\n"+
-"function initialize() {\n"+
-"     resolution = 100;\n"+
-"     generateCoordinates(resolution);\n"+
-"     var localci = [];\n"+
-"     for ( i = 0; i < resolution-1; i++) {\n"+
-"     	for ( j = 0; j < resolution-1; j++) {\n"+
-"	     localci.push(i*resolution+j);\n"+
-"	     localci.push(i*resolution+j+1);\n"+
-"	     localci.push((i+1)*resolution+j+1);\n"+
-"	     localci.push((i+1)*resolution+j);\n"+
-"	     localci.push(-1);\n"+
-"	}\n"+
-"    }\n"+
-"    coordIndexes = new MFInt32(localci);\n"+
-"}\n"+
+"			function initialize() {\n"+
+"			     generateCoordinates();\n"+
+"			     var localci = [];\n"+
+"			     for (var i = 0; i < resolution-1; i++) {\n"+
+"				for (var j = 0; j < resolution-1; j++) {\n"+
+"				     localci.push(i*resolution+j);\n"+
+"				     localci.push(i*resolution+j+1);\n"+
+"				     localci.push((i+1)*resolution+j+1);\n"+
+"				     localci.push((i+1)*resolution+j);\n"+
+"				     localci.push(-1);\n"+
+"				}\n"+
+"			    }\n"+
+"			    coordIndexes = new MFInt32(localci);\n"+
+"			}\n"+
 "\n"+
-"function generateCoordinates(resolution) {\n"+
-"     theta = 0.0;\n"+
-"     phi = 0.0;\n"+
-"     delta = (2 * 3.141592653) / (resolution-1);\n"+
-"     var localc = [];\n"+
-"     for ( i = 0; i < resolution; i++) {\n"+
-"     	for ( j = 0; j < resolution; j++) {\n"+
-"		rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
-"		localc.push(new SFVec3f(\n"+
-"			rho * Math.cos(phi) * Math.cos(theta),\n"+
-"			rho * Math.cos(phi) * Math.sin(theta),\n"+
-"			rho * Math.sin(phi)\n"+
-"		));\n"+
-"		theta += delta;\n"+
-"	}\n"+
-"	phi += delta;\n"+
-"     }\n"+
-"     coordinates = new MFVec3f(localc);\n"+
-"}\n"+
+"			function generateCoordinates() {\n"+
+"			     var theta = 0.0;\n"+
+"			     var phi = 0.0;\n"+
+"			     var delta = (2 * 3.141592653) / (resolution-1);\n"+
+"			     var localc = [];\n"+
+"			     for (var i = 0; i < resolution; i++) {\n"+
+"				for (var j = 0; j < resolution; j++) {\n"+
+"					var rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
+"					localc.push(new SFVec3f(\n"+
+"						rho * Math.cos(phi) * Math.cos(theta),\n"+
+"						rho * Math.cos(phi) * Math.sin(theta),\n"+
+"						rho * Math.sin(phi)\n"+
+"					));\n"+
+"					theta += delta;\n"+
+"				}\n"+
+"				phi += delta;\n"+
+"			     }\n"+
+"			     \n"+
+"			     coordinates = new MFVec3f(localc);\n"+
+"			}\n"+
 "\n"+
-"function set_fraction(fraction, eventTime) {\n"+
-"	choice = Math.floor(Math.random() * 4);\n"+
-"	switch (choice) {\n"+
-"	case 0:\n"+
-"		e += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 1:\n"+
-"		f += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 2:\n"+
-"		g += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 3:\n"+
-"		h += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	}\n"+
-"	if (f < 1) {\n"+
-"		f = 10;\n"+
-"	}\n"+
-"	if (g < 1) {\n"+
-"		g = 4;\n"+
-"	}\n"+
-"	if (h < 1) {\n"+
-"		h = 4;\n"+
-"	}\n"+
-"	resolution = 100;\n"+
-"	generateCoordinates(resolution);\n"+
-"}''')
+"			function set_fraction(fraction, eventTime) {\n"+
+"				var choice = Math.floor(Math.random() * 4);\n"+
+"				switch (choice) {\n"+
+"				case 0:\n"+
+"					e += Math.floor(Math.random() * 2) * 2 - 1;\n"+
+"					break;\n"+
+"				case 1:\n"+
+"					f += Math.floor(Math.random() * 2) * 2 - 1;\n"+
+"					break;\n"+
+"				case 2:\n"+
+"					g += Math.floor(Math.random() * 2) * 2 - 1;\n"+
+"					break;\n"+
+"				case 3:\n"+
+"					h += Math.floor(Math.random() * 2) * 2 - 1;\n"+
+"					break;\n"+
+"				}\n"+
+"				if (e < 1) {\n"+
+"					f = 10;\n"+
+"				}\n"+
+"				if (f < 1) {\n"+
+"					f = 10;\n"+
+"				}\n"+
+"				if (g < 1) {\n"+
+"					g = 4;\n"+
+"				}\n"+
+"				if (h < 1) {\n"+
+"					h = 4;\n"+
+"				}\n"+
+"				generateCoordinates();\n"+
+"			}''')
 
-Group13.addChildren(Script29)
-Script33 = x3d.Script()
-Script33.setDEF("OrbitScript2")
-field34 = x3d.field()
-field34.setName("set_fraction")
-field34.setAccessType("inputOnly")
-field34.setType("SFFloat")
+Group23.addChildren(Script38)
+ROUTE47 = x3d.ROUTE()
+ROUTE47.setFromNode("OrbitScript")
+ROUTE47.setFromField("coordIndexes")
+ROUTE47.setToNode("Orbit")
+ROUTE47.setToField("coordIndex")
 
-Script33.addField(field34)
-field35 = x3d.field()
-field35.setName("coordinates")
-field35.setAccessType("outputOnly")
-field35.setType("MFVec3f")
+Group23.addChildren(ROUTE47)
+ROUTE48 = x3d.ROUTE()
+ROUTE48.setFromNode("OrbitScript")
+ROUTE48.setFromField("coordinates")
+ROUTE48.setToNode("OrbitCoordinates")
+ROUTE48.setToField("point")
 
-Script33.addField(field35)
-field36 = x3d.field()
-field36.setName("coordIndexes")
-field36.setAccessType("outputOnly")
-field36.setType("MFInt32")
+Group23.addChildren(ROUTE48)
+ROUTE49 = x3d.ROUTE()
+ROUTE49.setFromNode("Clock")
+ROUTE49.setFromField("fraction_changed")
+ROUTE49.setToNode("OrbitScript")
+ROUTE49.setToField("set_fraction")
 
-Script33.addField(field36)
+Group23.addChildren(ROUTE49)
+ROUTE50 = x3d.ROUTE()
+ROUTE50.setFromNode("OrbitPath")
+ROUTE50.setFromField("value_changed")
+ROUTE50.setToNode("OrbitTransform")
+ROUTE50.setToField("rotation")
 
-Script33.setSourceCode('''ecmascript:\n"+
-"\n"+
-"var e = 5;\n"+
-"var f = 5;\n"+
-"var g = 5;\n"+
-"var h = 5;\n"+
-"\n"+
-"function initialize() {\n"+
-"     resolution = 100;\n"+
-"     generateCoordinates(resolution);\n"+
-"     var localci = [];\n"+
-"     for ( i = 0; i < resolution-1; i++) {\n"+
-"     	for ( j = 0; j < resolution-1; j++) {\n"+
-"	     localci.push(i*resolution+j);\n"+
-"	     localci.push(i*resolution+j+1);\n"+
-"	     localci.push((i+1)*resolution+j+1);\n"+
-"	     localci.push((i+1)*resolution+j);\n"+
-"	     localci.push(-1);\n"+
-"	}\n"+
-"    }\n"+
-"    coordIndexes = new MFInt32(localci);\n"+
-"}\n"+
-"\n"+
-"function generateCoordinates(resolution) {\n"+
-"     theta = 0.0;\n"+
-"     phi = 0.0;\n"+
-"     delta = (2 * 3.141592653) / (resolution-1);\n"+
-"     var localc = [];\n"+
-"     for ( i = 0; i < resolution; i++) {\n"+
-"     	for ( j = 0; j < resolution; j++) {\n"+
-"		rho = e + f * Math.cos(g * theta) * Math.cos(h * phi);\n"+
-"		localc.push(new SFVec3f(\n"+
-"			rho * Math.cos(phi) * Math.cos(theta),\n"+
-"			rho * Math.cos(phi) * Math.sin(theta),\n"+
-"			rho * Math.sin(phi)\n"+
-"		));\n"+
-"		theta += delta;\n"+
-"	}\n"+
-"	phi += delta;\n"+
-"     }\n"+
-"\n"+
-"     coordinates = new MFVec3f(localc);\n"+
-"}\n"+
-"\n"+
-"function set_fraction(fraction, eventTime) {\n"+
-"	choice = Math.floor(Math.random() * 4);\n"+
-"	switch (choice) {\n"+
-"	case 0:\n"+
-"		e += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 1:\n"+
-"		f += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 2:\n"+
-"		g += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	case 3:\n"+
-"		h += Math.floor(Math.random() * 2) * 2 - 1;\n"+
-"		break;\n"+
-"	}\n"+
-"	if (f < 1) {\n"+
-"		f = 10;\n"+
-"	}\n"+
-"	if (g < 1) {\n"+
-"		g = 4;\n"+
-"	}\n"+
-"	if (h < 1) {\n"+
-"		h = 4;\n"+
-"	}\n"+
-"	resolution = 100;\n"+
-"	generateCoordinates(resolution);\n"+
-"}''')
+Group23.addChildren(ROUTE50)
+ROUTE51 = x3d.ROUTE()
+ROUTE51.setFromNode("Clock")
+ROUTE51.setFromField("fraction_changed")
+ROUTE51.setToNode("OrbitPath")
+ROUTE51.setToField("set_fraction")
 
-Group13.addChildren(Script33)
+Group23.addChildren(ROUTE51)
 
-Scene10.addChildren(Group13)
-ROUTE37 = x3d.ROUTE()
-ROUTE37.setFromField("coordIndexes")
-ROUTE37.setFromNode("OrbitScript")
-ROUTE37.setToField("coordIndex")
-ROUTE37.setToNode("Orbit")
+ProtoBody22.addChildren(Group23)
 
-Scene10.addChildren(ROUTE37)
-ROUTE38 = x3d.ROUTE()
-ROUTE38.setFromField("coordinates")
-ROUTE38.setFromNode("OrbitScript")
-ROUTE38.setToField("point")
-ROUTE38.setToNode("OrbitCoordinates")
+ProtoDeclare16.setProtoBody(ProtoBody22)
 
-Scene10.addChildren(ROUTE38)
-ROUTE39 = x3d.ROUTE()
-ROUTE39.setFromField("fraction_changed")
-ROUTE39.setFromNode("Clock")
-ROUTE39.setToField("set_fraction")
-ROUTE39.setToNode("OrbitScript")
+Group14.addChildren(ProtoDeclare16)
+ProtoInstance52 = x3d.ProtoInstance()
+ProtoInstance52.setName("orbit")
+fieldValue53 = x3d.fieldValue()
+fieldValue53.setName("translation")
+fieldValue53.setValue("-8 0 0")
 
-Scene10.addChildren(ROUTE39)
-ROUTE40 = x3d.ROUTE()
-ROUTE40.setFromField("coordIndexes")
-ROUTE40.setFromNode("OrbitScript2")
-ROUTE40.setToField("coordIndex")
-ROUTE40.setToNode("Orbit2")
+ProtoInstance52.addFieldValue(fieldValue53)
+fieldValue54 = x3d.fieldValue()
+fieldValue54.setName("diffuseColor")
+fieldValue54.setValue("1 0.5 0")
 
-Scene10.addChildren(ROUTE40)
-ROUTE41 = x3d.ROUTE()
-ROUTE41.setFromField("coordinates")
-ROUTE41.setFromNode("OrbitScript2")
-ROUTE41.setToField("point")
-ROUTE41.setToNode("OrbitCoordinates2")
+ProtoInstance52.addFieldValue(fieldValue54)
+fieldValue55 = x3d.fieldValue()
+fieldValue55.setName("specularColor")
+fieldValue55.setValue("1 0.5 0")
 
-Scene10.addChildren(ROUTE41)
-ROUTE42 = x3d.ROUTE()
-ROUTE42.setFromField("fraction_changed")
-ROUTE42.setFromNode("Clock")
-ROUTE42.setToField("set_fraction")
-ROUTE42.setToNode("OrbitScript2")
+ProtoInstance52.addFieldValue(fieldValue55)
+fieldValue56 = x3d.fieldValue()
+fieldValue56.setName("transparency")
+fieldValue56.setValue("0.75")
 
-Scene10.addChildren(ROUTE42)
-ROUTE43 = x3d.ROUTE()
-ROUTE43.setFromField("fraction_changed")
-ROUTE43.setFromNode("Clock")
-ROUTE43.setToField("set_fraction")
-ROUTE43.setToNode("OrbitPath")
+ProtoInstance52.addFieldValue(fieldValue56)
 
-Scene10.addChildren(ROUTE43)
-ROUTE44 = x3d.ROUTE()
-ROUTE44.setFromField("value_changed")
-ROUTE44.setFromNode("OrbitPath")
-ROUTE44.setToField("rotation")
-ROUTE44.setToNode("OrbitTransform")
+Group14.addChildren(ProtoInstance52)
+ProtoInstance57 = x3d.ProtoInstance()
+ProtoInstance57.setName("orbit")
+fieldValue58 = x3d.fieldValue()
+fieldValue58.setName("translation")
+fieldValue58.setValue("8 0 0")
 
-Scene10.addChildren(ROUTE44)
-ROUTE45 = x3d.ROUTE()
-ROUTE45.setFromField("value_changed")
-ROUTE45.setFromNode("OrbitPath")
-ROUTE45.setToField("rotation")
-ROUTE45.setToNode("OrbitTransform2")
+ProtoInstance57.addFieldValue(fieldValue58)
+fieldValue59 = x3d.fieldValue()
+fieldValue59.setName("diffuseColor")
+fieldValue59.setValue("0 0.5 1")
 
-Scene10.addChildren(ROUTE45)
+ProtoInstance57.addFieldValue(fieldValue59)
+fieldValue60 = x3d.fieldValue()
+fieldValue60.setName("specularColor")
+fieldValue60.setValue("0 0.5 1")
 
-X3D0.setScene(Scene10)
+ProtoInstance57.addFieldValue(fieldValue60)
+fieldValue61 = x3d.fieldValue()
+fieldValue61.setName("transparency")
+fieldValue61.setValue("0.5")
+
+ProtoInstance57.addFieldValue(fieldValue61)
+
+Group14.addChildren(ProtoInstance57)
+
+Scene11.addChildren(Group14)
+
+X3D0.setScene(Scene11)
 X3D0.toFileX3D("././flowers2_RoundTrip.x3d")

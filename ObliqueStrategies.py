@@ -204,7 +204,7 @@ Transform31.addChildren(Transform38)
 Scene28.addChildren(Transform31)
 Script44 = x3d.Script()
 Script44.setDEF("TextScript")
-Script44.setUrl(["./ObliqueStrategiesScript.js"])
+Script44.setUrl(["../node/ObliqueStrategiesScript.js"])
 #initialize() method includes unit test to printAllStrategies() to console
 #TODO insert field definitions here (index string_changed previous next random) and then animate!
 field45 = x3d.field()

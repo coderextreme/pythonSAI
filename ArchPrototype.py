@@ -229,7 +229,7 @@ ProtoBody30.addChildren(Transform31)
 #This embedded Script provides the X3D author with additional visibility and control over prototype inputs and outputs
 Script40 = x3d.Script()
 Script40.setDEF("ArchPrototypeScript")
-Script40.setUrl(["../node/ArchPrototypeScript.js"])
+Script40.setUrl(["../node/ArchPrototypeScript.js","https://coderextreme.net/X3DJSONLD/src/main/node/ArchPrototypeScript.js"])
 #INPUT PARAMETERS
 #General parameters
 #Parameters to create to create shapes related to arch: put true to apply
