@@ -7,8 +7,8 @@ ${PYTHON} -m pip install --upgrade pyjnius
 ${PYTHON} -m pip install --upgrade bs4
 ${PYTHON} -m pip install --upgrade lxml
 ${PYTHON} classes.py
-${PYTHON} fieldtypes.py
-${PYTHON} parseom.py
+${PYTHON} fieldTypesGenerator.py
+${PYTHON} mapToMethodGenerator.py
 echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 rm *new* *Round*

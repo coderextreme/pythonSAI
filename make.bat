@@ -16,8 +16,8 @@ npm install
 %PIP% install bs4
 %PIP% install lxml
 %PYTHON% classes.py
-%PYTHON% fieldtypes.py
-%PYTHON% parseom.py
+%PYTHON% fieldTypesGenerator.py
+%PYTHON% mapToMethodGenerator.py
 echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 
