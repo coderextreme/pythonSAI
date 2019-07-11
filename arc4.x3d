@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Immersive" version="3.3" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd"><head><meta name="title" content="arc3.x3d"></meta>
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Immersive" version="3.3" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd"><head><meta name="title" content="arc4.x3d"></meta>
 <meta name="creator" content="Lost, Doug Sanden I think"></meta>
 <meta name="generator" content="manual"></meta>
 <meta name="identifier" content="https://coderextreme.net/X3DJSONLD/x3dconnectorProto.x3d"></meta>
@@ -24,6 +24,8 @@
                     keyValue = new MFVec3f([old, translation]);
 		    // Browser.println(keyValue);
 		}
+
+
 ]]></Script>
 <TimeSensor DEF="DECLpoint_G1_CL1" cycleInterval="3" loop="true"></TimeSensor>
 <ROUTE fromNode="DECLpoint_G1_CL1" fromField="cycleTime" toNode="DECLpoint_G1_MB1" toField="set_location"></ROUTE>
@@ -47,6 +49,8 @@
                     keyValue = new MFVec3f([old, translation]);
 		    // Browser.println(keyValue);
 		}
+
+
 ]]></Script>
 <TimeSensor DEF="DECLpoint_G2_CL1" cycleInterval="3" loop="true"></TimeSensor>
 <ROUTE fromNode="DECLpoint_G2_CL1" fromField="cycleTime" toNode="DECLpoint_G2_MB1" toField="set_location"></ROUTE>
@@ -60,10 +64,8 @@
 </Shape>
 </Transform>
 </Transform>
-<Script DEF="DECLx3dconnector_connector1_S1"><field name="startnode" accessType="initializeOnly" type="SFNode"><Group USE="DECLpoint_G1_node"></Group>
-</field>
-<field name="endnode" accessType="initializeOnly" type="SFNode"><Group USE="DECLpoint_G2_node"></Group>
-</field>
+<Script DEF="DECLx3dconnector_connector1_S1"><field name="startnode" accessType="initializeOnly" type="SFNode"></field>
+<field name="endnode" accessType="initializeOnly" type="SFNode"></field>
 <field name="position" accessType="inputOutput" type="SFNode"><Transform USE="DECLx3dconnector_connector1_trans"></Transform>
 </field>
 <field name="rotscale" accessType="inputOutput" type="SFNode"><Transform USE="DECLx3dconnector_connector1_rotscale"></Transform>
@@ -73,7 +75,24 @@
 <![CDATA[ecmascript:
         function recompute(startpoint,endpoint){
 	    if (typeof endpoint === 'undefined') {
-		return;
+		    if (typeof Quaternion !== 'undefined') {
+			    return {
+				    scale : new SFVec3f(1.0,1.0,1.0),
+				    translation : new SFVec3f(1.0,1.0,1.0),
+			    	    rotation : new Quaternion.rotateFromTo(new SFVec3f(0.0,1.0,0.0), 1.0)
+			    };
+	    	    } else if (typeof SFRotation !== 'undefined') {
+			    return {
+				    scale : new SFVec3f(1.0,1.0,1.0),
+				    translation : new SFVec3f(1.0,1.0,1.0),
+			    	    rotation : new SFRotation(new SFVec3f(0.0,1.0,0.0),1.0)
+			    };
+	    	    } else {
+			    return {
+				    scale : new SFVec3f(1.0,1.0,1.0),
+				    translation : new SFVec3f(1.0,1.0,1.0)
+			    };
+		    }
 	    }
             var dif = endpoint.subtract(startpoint);
             var dist = dif.length()*0.5;
@@ -116,7 +135,7 @@
         }
 ]]></Script>
 </Group>
-<ROUTE fromNode="DECLpoint_G1_node" fromField="translation" toNode="DECLx3dconnector_connector1_S1" toField="set_startpoint"></ROUTE>
-<ROUTE fromNode="DECLpoint_G2_node" fromField="translation" toNode="DECLx3dconnector_connector1_S1" toField="set_endpoint"></ROUTE>
+<ROUTE fromNode="DECLpoint_G1_node" fromField="translation_changed" toNode="DECLx3dconnector_connector1_S1" toField="set_startpoint"></ROUTE>
+<ROUTE fromNode="DECLpoint_G2_node" fromField="translation_changed" toNode="DECLx3dconnector_connector1_S1" toField="set_endpoint"></ROUTE>
 </Scene>
 </X3D>
