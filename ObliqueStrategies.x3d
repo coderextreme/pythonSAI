@@ -6,7 +6,7 @@
     <meta content='Text scripting and animation example using Oblique Strategies card set by Brian Eno.' name='description'/>
     <meta content='Don Brutzman, John Kelly, Ben Cheng' name='creator'/>
     <meta content='3 November 2013' name='created'/>
-    <meta content='18 October 2015' name='modified'/>
+    <meta content='2 April 2019' name='modified'/>
     <meta content='oblique.html' name='reference'/>
     <meta content='ObliqueStrategies.txt' name='reference'/>
     <meta content='ObliqueStrategiesScript.js' name='reference'/>
@@ -17,9 +17,9 @@
     <meta content='https://en.wikipedia.org/wiki/Oblique_Strategies' name='reference'/>
     <meta content='Brian Eno, Oblique Strategies' name='subject'/>
     <meta content='images/ObliqueStrategiesEntryScreen.png' name='Image'/>
-    <meta content='http://translate.google.com/translate_tts?tl=en&amp;q=hello%20X3D' name='audio'/>
-    <meta content='translate_tts_HelloX3D.mp3' name='audio'/>
-    <meta content='translate_tts_HelloX3D.wav' name='audio'/>
+    <meta content='http://translate.google.com/translate_tts?tl=en&amp;q=hello%20X3D' name='Sound'/>
+    <meta content='translate_tts_HelloX3D.mp3' name='Sound'/>
+    <meta content='translate_tts_HelloX3D.wav' name='Sound'/>
     <meta content='multiliingual translation parameter' name='TODO'/>
     <meta content='http://stackoverflow.com/questions/9163988/download-mp3-from-google-translate-text-to-speech' name='reference'/>
     <meta content='http://www.greenbot.com/article/2105862/how-to-get-started-with-google-text-to-speech.html' name='reference'/>
@@ -30,7 +30,7 @@
     <meta content='../license.html' name='license'/>
   </head>
   <Scene>
-    <NavigationInfo type='"EXAMINE" "ANY"'/>
+    <NavigationInfo type='"NONE"'/>
     <Background skyColor='0.419608 0.427451 1'/>
     <Transform scale='0.4 0.4 0.4' translation='0 1 0'>
       <TouchSensor DEF='RandomTextClickedSensor' description='Select to see a new strategy'/>
@@ -53,7 +53,7 @@
         </Shape>
       </Transform>
     </Transform>
-    <Script DEF='TextScript' url='"../node/ObliqueStrategiesScript.js"'>
+    <Script DEF='TextScript' url='"ObliqueStrategiesScript.js" "http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategiesScript.js"'>
       <!-- initialize() method includes unit test to printAllStrategies() to console -->
       <!-- TODO insert field definitions here (index string_changed previous next random) and then animate! -->
       <field accessType='initializeOnly' appinfo='index for active strategy card, -1 means no selection' name='index' type='SFInt32' value='0'/>
@@ -80,7 +80,7 @@
         <!-- Not all X3D players seem to use the .mp3 -->
         <!-- &#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players -->
         <!-- %20 is space character used in uri/url encoding -->
-        <AudioClip DEF='TextToSpeechAudioClip' description='sends strategy text google translate' url='"http://translate.google.com/translate_tts?tl=en&amp;q=Feed%20the%20recording%20back%20out%20of%20the%20medium" "translate_tts_mp3FileFormatNotSupported.wav"'/>
+        <AudioClip DEF='TextToSpeechAudioClip' description='sends strategy text google translate' url='"http://translate.google.com/translate_tts?tl=en&amp;q=Feed%20the%20recording%20back%20out%20of%20the%20medium" "translate_tts_mp3FileFormatNotSupported.wav" "http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/translate_tts_mp3FileFormatNotSupported.wav"'/>
       </Sound>
       <ROUTE fromField='textToSpeechUrl' fromNode='TextScript' toField='url' toNode='TextToSpeechAudioClip'/>
       <ROUTE fromField='newCardTime' fromNode='TextScript' toField='startTime' toNode='TextToSpeechAudioClip'/>

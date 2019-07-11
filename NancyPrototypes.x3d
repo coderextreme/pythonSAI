@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
-<X3D profile='Immersive' version='3.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
   <head>
     <meta content='NancyPrototypes.x3d' name='title'/>
     <meta content='Cindy Ballreich' name='creator'/>
     <meta content='Tom Miller and Don Brutzman, NPS' name='translators'/>
     <meta content='9 July 2000' name='created'/>
-    <meta content='19 January 2014' name='modified'/>
+    <meta content='19 October 2018' name='modified'/>
     <meta content='Canonical H-Anim 1.1 specification example, using ProtoDeclaration and ProtoInstance instead of native X3D tags. Prototype definitions are a compatible combination of version 1.0 and 2.0 prototype interfaces.' name='description'/>
     <meta content='using ProtoDeclare is only for developmental experimentation, use X3D native tags for Humanoids instead' name='warning'/>
     <meta content='NancyNativeTags.x3d' name='reference'/>
+    <meta content='Material color of neck and arms is ignored/incorrect in Xj3D, possily DEF/USE problem.' name='TODO'/>
     <meta content='http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/NancyPrototypes.x3d' name='identifier'/>
     <meta content='X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit' name='generator'/>
     <meta content='../license.html' name='license'/>
@@ -45,8 +46,12 @@
         <field accessType='inputOutput' appinfo='Container field for Segment nodes' name='segments' type='MFNode'/>
         <field accessType='inputOutput' appinfo='Container field for Site nodes' name='sites' type='MFNode'/>
         <field accessType='inputOutput' appinfo='Container field for Viewpoint nodes' name='viewpoints' type='MFNode'/>
-        <field accessType='inputOutput' appinfo='Hint: H-anim version 2.0' name='skinCoord' type='SFNode' value='NULL'/>
-        <field accessType='inputOutput' appinfo='Hint: H-anim version 2.0' name='skinNormal' type='SFNode' value='NULL'/>
+        <field accessType='inputOutput' appinfo='Hint: H-anim version 2.0' name='skinCoord' type='SFNode'>
+          <!-- NULL node -->
+        </field>
+        <field accessType='inputOutput' appinfo='Hint: H-anim version 2.0' name='skinNormal' type='SFNode'>
+          <!-- NULL node -->
+        </field>
       </ProtoInterface>
       <ProtoBody>
         <Transform DEF='HumanoidTransform'>
@@ -125,7 +130,9 @@
         <field accessType='inputOutput' name='children' type='MFNode'/>
         <field accessType='inputOnly' name='addChildren' type='MFNode'/>
         <field accessType='inputOnly' name='removeChildren' type='MFNode'/>
-        <field accessType='inputOutput' appinfo='contains Coordinate nodes' name='coord' type='SFNode' value='NULL'/>
+        <field accessType='inputOutput' appinfo='contains Coordinate nodes' name='coord' type='SFNode'>
+          <!-- NULL node -->
+        </field>
         <field accessType='inputOutput' appinfo='contains Displacer nodes' name='displacers' type='MFNode'/>
       </ProtoInterface>
       <ProtoBody>
@@ -178,7 +185,7 @@
       <fieldValue name='info' value='"humanoidVersion=Nancy V1.2b" "authorName=Cindy Ballreich" "authorEmail=cindy@ballreich.net" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo &lt;www.ballreich.net/vrml/h-anim/small_logo.gif> is present and proper credit is given."'/>
       <fieldValue name='humanoidBody'>
         <ProtoInstance DEF='hanim_HumanoidRoot' name='Joint'>
-          <fieldValue name='name' value='HumanoidRoot'/>
+          <fieldValue name='name' value='humanoid_root'/>
           <fieldValue name='center' value='-0.00405 0.855 -0.000113'/>
           <fieldValue name='children'>
             <ProtoInstance DEF='hanim_sacroiliac' name='Joint'>
@@ -505,41 +512,41 @@
         <Group/>
       </fieldValue>
       <fieldValue name='joints'>
-        <ProtoInstance USE='hanim_HumanoidRoot' name='Joint'/>
-        <ProtoInstance USE='hanim_sacroiliac' name='Joint'/>
-        <ProtoInstance USE='hanim_l_hip' name='Joint'/>
-        <ProtoInstance USE='hanim_l_knee' name='Joint'/>
-        <ProtoInstance USE='hanim_l_ankle' name='Joint'/>
-        <ProtoInstance USE='hanim_r_hip' name='Joint'/>
-        <ProtoInstance USE='hanim_r_knee' name='Joint'/>
-        <ProtoInstance USE='hanim_r_ankle' name='Joint'/>
-        <ProtoInstance USE='hanim_vl1' name='Joint'/>
-        <ProtoInstance USE='hanim_l_shoulder' name='Joint'/>
-        <ProtoInstance USE='hanim_l_elbow' name='Joint'/>
-        <ProtoInstance USE='hanim_l_wrist' name='Joint'/>
-        <ProtoInstance USE='hanim_r_shoulder' name='Joint'/>
-        <ProtoInstance USE='hanim_r_elbow' name='Joint'/>
-        <ProtoInstance USE='hanim_r_wrist' name='Joint'/>
-        <ProtoInstance USE='hanim_vc4' name='Joint'/>
-        <ProtoInstance USE='hanim_skullbase' name='Joint'/>
+        <ProtoInstance USE='hanim_HumanoidRoot'/>
+        <ProtoInstance USE='hanim_sacroiliac'/>
+        <ProtoInstance USE='hanim_l_hip'/>
+        <ProtoInstance USE='hanim_l_knee'/>
+        <ProtoInstance USE='hanim_l_ankle'/>
+        <ProtoInstance USE='hanim_r_hip'/>
+        <ProtoInstance USE='hanim_r_knee'/>
+        <ProtoInstance USE='hanim_r_ankle'/>
+        <ProtoInstance USE='hanim_vl1'/>
+        <ProtoInstance USE='hanim_l_shoulder'/>
+        <ProtoInstance USE='hanim_l_elbow'/>
+        <ProtoInstance USE='hanim_l_wrist'/>
+        <ProtoInstance USE='hanim_r_shoulder'/>
+        <ProtoInstance USE='hanim_r_elbow'/>
+        <ProtoInstance USE='hanim_r_wrist'/>
+        <ProtoInstance USE='hanim_vc4'/>
+        <ProtoInstance USE='hanim_skullbase'/>
       </fieldValue>
       <fieldValue name='segments'>
-        <ProtoInstance USE='hanim_pelvis' name='Segment'/>
-        <ProtoInstance USE='hanim_l_thigh' name='Segment'/>
-        <ProtoInstance USE='hanim_l_calf' name='Segment'/>
-        <ProtoInstance USE='hanim_l_hindfoot' name='Segment'/>
-        <ProtoInstance USE='hanim_r_thigh' name='Segment'/>
-        <ProtoInstance USE='hanim_r_calf' name='Segment'/>
-        <ProtoInstance USE='hanim_r_hindfoot' name='Segment'/>
-        <ProtoInstance USE='hanim_c7' name='Segment'/>
-        <ProtoInstance USE='hanim_l_upperarm' name='Segment'/>
-        <ProtoInstance USE='hanim_l_forearm' name='Segment'/>
-        <ProtoInstance USE='hanim_l_hand' name='Segment'/>
-        <ProtoInstance USE='hanim_r_upperarm' name='Segment'/>
-        <ProtoInstance USE='hanim_r_forearm' name='Segment'/>
-        <ProtoInstance USE='hanim_r_hand' name='Segment'/>
-        <ProtoInstance USE='hanim_c4' name='Segment'/>
-        <ProtoInstance USE='hanim_skull' name='Segment'/>
+        <ProtoInstance USE='hanim_pelvis'/>
+        <ProtoInstance USE='hanim_l_thigh'/>
+        <ProtoInstance USE='hanim_l_calf'/>
+        <ProtoInstance USE='hanim_l_hindfoot'/>
+        <ProtoInstance USE='hanim_r_thigh'/>
+        <ProtoInstance USE='hanim_r_calf'/>
+        <ProtoInstance USE='hanim_r_hindfoot'/>
+        <ProtoInstance USE='hanim_c7'/>
+        <ProtoInstance USE='hanim_l_upperarm'/>
+        <ProtoInstance USE='hanim_l_forearm'/>
+        <ProtoInstance USE='hanim_l_hand'/>
+        <ProtoInstance USE='hanim_r_upperarm'/>
+        <ProtoInstance USE='hanim_r_forearm'/>
+        <ProtoInstance USE='hanim_r_hand'/>
+        <ProtoInstance USE='hanim_c4'/>
+        <ProtoInstance USE='hanim_skull'/>
       </fieldValue>
       <fieldValue name='viewpoints'>
         <Viewpoint DEF='InclinedView' description='Inclined View' orientation='-0.113 0.993 0.0347 0.671' position='1.62 1.05 2.06'/>

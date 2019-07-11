@@ -24,7 +24,7 @@
           },
           {
             "@name":"modified",
-            "@content":"18 October 2015"
+            "@content":"2 April 2019"
           },
           {
             "@name":"reference",
@@ -67,15 +67,15 @@
             "@content":"images/ObliqueStrategiesEntryScreen.png"
           },
           {
-            "@name":"audio",
+            "@name":"Sound",
             "@content":"http://translate.google.com/translate_tts?tl=en&q=hello%20X3D"
           },
           {
-            "@name":"audio",
+            "@name":"Sound",
             "@content":"translate_tts_HelloX3D.mp3"
           },
           {
-            "@name":"audio",
+            "@name":"Sound",
             "@content":"translate_tts_HelloX3D.wav"
           },
           {
@@ -112,7 +112,7 @@
           },
           {
             "@name":"translated",
-            "@content":"10 July 2019"
+            "@content":"11 July 2019"
           },
           {
             "@name":"generator",
@@ -128,6 +128,7 @@
         "-children":[
           { "NavigationInfo":
             {
+              "@type":["NONE"]
             }
           },
           { "Background":
@@ -222,7 +223,7 @@
           { "Script":
             {
               "@DEF":"TextScript",
-              "@url":["../node/ObliqueStrategiesScript.js"],
+              "@url":["ObliqueStrategiesScript.js","http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategiesScript.js"],
               "-children":[
                 {
                   "#comment":"initialize() method includes unit test to printAllStrategies() to console"
@@ -351,7 +352,7 @@
                         {
                           "@DEF":"TextToSpeechAudioClip",
                           "@description":"sends strategy text google translate",
-                          "@url":["http://translate.google.com/translate_tts?tl=en&q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav"]
+                          "@url":["http://translate.google.com/translate_tts?tl=en&q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav","http://X3dGraphics.com/examples/X3dForAdvancedModeling/Inspiration/translate_tts_mp3FileFormatNotSupported.wav"]
                         }
                       }
                   }
