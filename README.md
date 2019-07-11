@@ -49,8 +49,8 @@ classes.py generates x3dpsail.py, The PyJNIus interface to X3DJSAIL
 
 The next two are for the PythonSerializer.js:
 
-fieldtypes.py generates fieldTypes.js -- a way to look up info on fields
-parseom.py generates mapToMethod.js -- a way to map fields to methods
+fieldTypesGenerator.py generates fieldTypes.js -- a way to look up info on fields
+mapToMethodGenerator.py generates mapToMethod.js -- a way to map fields to methods
 
 old.py generates X3Dpackage.py, the old Python SAI, to be replaced by a full SAI
 
