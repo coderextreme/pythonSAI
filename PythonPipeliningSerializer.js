@@ -21,7 +21,7 @@ PythonPipeliningSerializer.prototype = {
 		var str = "";
 		// str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
 
-		str += "import x3dpsail\n";
+		str += "import x3dpsail as x3d\n";
 		str += "\n";
 
 		stack.unshift(this.preno);
@@ -35,7 +35,7 @@ PythonPipeliningSerializer.prototype = {
         
 		bodystr += element.nodeName+stack[0]+" = ";
 		bodystr += "("; // wrap entire expression in parenthesis to avoid needing line-continuation characters
-		bodystr += "x3dpsail."+element.nodeName;
+		bodystr += "x3d."+element.nodeName;
 		bodystr += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
 		str += "\n";
 		bodystr += ")"; // wrap entire expression in parenthesis to avoid needing line-continuation characters
@@ -72,11 +72,11 @@ PythonPipeliningSerializer.prototype = {
 			values.pop();
 		}
 
-		if (attrType.startsWith("SF")) {
-		    return     lead+values.join(j)+trail; // avoid array brackets on SF types
-		} else {
+		//if (attrType.startsWith("SF")) {
+		//    return     lead+values.join(j)+trail; // avoid array brackets on SF types
+		//} else {
 		    return '['+lead+values.join(j)+trail+']';
-		}
+		//}
 	},
 
 	printParentChild : function (element, node, cn, mapToMethod, n) {
@@ -111,12 +111,12 @@ PythonPipeliningSerializer.prototype = {
 				var attr = attrsa.nodeName;
 				if (attrs.hasOwnProperty(a) && attrsa.nodeType === 2) { // attribute
 					if (attr === "containerField") {
-						if (method === "setShaders") {
-							method = "addShaders";
-							addpre = "";
+						method = attrsa.nodeValue.charAt(0).toUpperCase() + attrsa.nodeValue.slice(1);
+						if (method === "Shaders") {
+							addpre = "add";
+							method = "Child";
 						} else {
-							method = "set"+attrsa.nodeValue.charAt(0).toUpperCase() + attrsa.nodeValue.slice(1);
-							addpre = "";
+							addpre = "set";
 						}
 					}
 				}
@@ -125,16 +125,26 @@ PythonPipeliningSerializer.prototype = {
 			}
 		}
 		if (node.nodeName === "IS") {
-			method = "setIS";
-			addpre = "";
+			method = "IS";
+			addpre = "set";
 		}
-		if (method === "setJoints") {
-			method = "addJoints";
-			addpre = "";
+		if (addpre+method === "setJoints") {
+			method = "Joints";
+			addpre = "add";
 		}
-		if (method === "addChildren") {
-			method = "addChild";
-			addpre = "";
+		if (addpre+method === "setValue") {
+			method = "Value";
+			addpre = "add";
+		}
+		if (addpre+method === "addChildren" || method === "Children") {
+			method = "Child";
+			addpre = "add";
+		} else if (element.nodeName === 'Scene' && addpre === "set") {
+			addpre = "add";
+		}
+		if (node.nodeName === 'LayerSet' && addpre+method === "addChild") {
+			method = "LayerSet"
+			addpre = "add";
 		}
 		return prepre+addpre+method;
 	},
@@ -277,10 +287,20 @@ PythonPipeliningSerializer.prototype = {
 					var method = attr;
 					// if (attr !== 'mustEvaluate' && attr !== 'proxy' && attr !== 'side' && attr !== 'style' && attr !== 'bottom' && attr !== 'height' && attr !== 'category' && attr !== 'solid' && attr !== 'justify' && attr !== 'ccw' && attr !== 'convex' && attr !== 'family' && attr !== 'bboxSize' && attr !== 'bboxCenter' && attr !== "normalPerVertex" && attr !== "normalIndex" && attr !== "texCoordIndex" && attr !== "coordIndex" && attr !== "directOutput" && attr !== "crossSection" && attr !== "spine" && attr !== "creaseAngle" && attr !== "repeatS" && attr !== "repeatT" && attr !== "colorPerVertex" && attr !== "size" && attr !== "bottomRadius" && attr !== "radius" && attr !== "language") {
 						method = "set"+method.charAt(0).toUpperCase() + method.slice(1);
+						if (attr === "class") {
+							method = "setCssClass";
+						}
 
                     // Object typing when setting values:
-						setstr += '.'+method+"(x3dpsail."+attrType+"("+strval+"))";// field type casting
-//						setstr += '.'+method+"("+             strval+")"; // avoid type casting
+					/*
+						if (attr === "nodeField" || attr === "protoField" || attr === "value" || attr === "rotation" || attr === "position" || attr === "centerOfRotation" || attr === "translation" || attr === "orientation" || attr === "class" || attr === "url" || attr === 'order' || attr === 'USE' || attr === 'name' || attr === 'DEF' || attr === "description") {
+							setstr += '.'+method+"(x3d."+attrType+"("+strval+"))";// field type casting
+						} else {
+					*/
+							setstr += '.'+method+"("+strval+")"; // avoid type casting
+					/*
+						}
+					*/
 
                     /*
 					} else {
@@ -319,10 +339,20 @@ PythonPipeliningSerializer.prototype = {
 				ch += "\n";
 				ch += "  ".repeat(n);
 
-				ch += this.printParentChild(element, node, cn, mapToMethod, n);
+				method = this.printParentChild(element, node, cn, mapToMethod, n);
+				if (method == '.addChild' && element.nodeName == 'Viewpoint' && element.nodeName == 'ViewpointGroup') {
+					method = '.addChildren';
+				}
+				ch += method;
 				ch += "(";
-				ch += "x3dpsail."+node.nodeName;
+				if (method == '.addChildren' && element.nodeName == 'Viewpoint' && node.nodeName == 'ViewpointGroup') {
+					ch += '[';
+				}
+				ch += "x3d."+node.nodeName;
 				ch += this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);
+				if (method == '.addChildren' && element.nodeName == 'Viewpoint' && node.nodeName == 'ViewpointGroup') {
+					ch += ']';
+				}
 //				ch += "  ".repeat(n);
 				ch += ")";
 //				ch += " \\"; // line continuation is optional inside parenthesis or braces

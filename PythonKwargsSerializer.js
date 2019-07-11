@@ -3,14 +3,14 @@
 const DOUBLE_SUFFIX = '';
 const FLOAT_SUFFIX = '';
 
-function PythonSerializer () {
+function PythonKwargsSerializer () {
 this.code = [];
 this.codeno = 0;
 this.preno = 0;
 }
 
 
-PythonSerializer.prototype = {
+PythonKwargsSerializer.prototype = {
 	serializeToString : function(json, element, clazz, mapToMethod, fieldTypes) {
 		this.code = [];
 		this.codeno = 0;
@@ -24,10 +24,24 @@ PythonSerializer.prototype = {
 
 		stack.unshift(this.preno);
 		this.preno++;
-		str += element.nodeName+stack[0]+" = "+element.nodeName+"Object(";
-		str += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
+		str += element.nodeName+stack[0]+" = "+element.nodeName+"(";
+		var as = this.subSerializeAttrsToString(element, mapToMethod, fieldTypes, 3, stack);
+		var ns = this.subSerializeNodesToString(element, mapToMethod, fieldTypes, 3, stack);
+		if (as && ns) {
+			str += as+", "+ns;
+		} else {
+			if (typeof as !== 'undefined') {
+				str += as;
+			}
+			if (typeof ns !== 'undefined') {
+				str += ns;
+			}
+		}
+		if (str.substr(str.length-3, 3) === "), ") {
+			str = str.substring(0, str.length-2);
+		}
 		str += ")\n";
-		str += element.nodeName+stack[0]+".toFileX3D(\""+clazz+".newf.x3d\")\n";
+		// str += element.nodeName+stack[0]+".toFileX3D(\""+clazz+".newf.x3d\")\n";
 		stack.shift();
 		return str;
 	},
@@ -88,8 +102,10 @@ PythonSerializer.prototype = {
 				if (attrs.hasOwnProperty(a) && attrsa.nodeType == 2) {
 					if (attr === "containerField") {
 						if (method === "setShaders") {
-							method = "addShaders"
-							addpre = "";
+							addpre = "add";
+							if (element.nodeName === "ProtoBody") {
+								method = "Child";
+							}
 						} else {
 							method = "set"+attrsa.nodeValue.charAt(0).toUpperCase() + attrsa.nodeValue.slice(1);
 							addpre = "";
@@ -203,9 +219,7 @@ PythonSerializer.prototype = {
 		}
 		return strval;
 	},
-	subSerializeToString : function(element, mapToMethod, fieldTypes, n, stack) {
-		var initstr = [];
-		var setstr = "";
+	subSerializeNodesToString : function(element, mapToMethod, fieldTypes, n, stack) {
 		var str = "";
 		var attrType = "";
 		for (var cn in element.childNodes) {
@@ -223,22 +237,23 @@ PythonSerializer.prototype = {
 					ch += "\n";
 				}
 				ch += " ".repeat(n)+node.nodeName+stack[0] + " = ";
-
-				// ch += this.printParentChild(element, node, cn, mapToMethod, n);
-				// if (node.nodeName === 'connect' || node.nodeName === "head" || node.nodeName === "Scene") {
-				//	ch += "compound([";
-				// } else {
-					ch += node.nodeName+"Object(";
-				// }
-				ch += this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);
-				// if (node.nodeName === "Scene") {
-				// 	ch = ch.substring(0, ch.length-2);
-				// 	ch += "]), ";
-				// } else if (node.nodeName === 'connect' || node.nodeName === "head") {
-				//	 ch += "]), ";
-				// } else {
-					ch += "), ";
-				// }
+				ch += node.nodeName+"(";
+				var as = this.subSerializeAttrsToString(node, mapToMethod, fieldTypes, n+1, stack);
+				var ns = this.subSerializeNodesToString(node, mapToMethod, fieldTypes, n+1, stack);
+				if (as && ns) {
+					ch += as+", "+ns;
+				} else {
+					if (typeof as !== 'undefined') {
+						ch += as;
+					}
+					if (typeof ns !== 'undefined') {
+						ch += ns;
+					}
+				}
+				if (ch.substr(ch.length-3, 3) === "), ") {
+					ch = ch.substring(0, ch.length-2);
+				}
+				ch += "), ";
 				str += ch;
 				stack.shift();
 			} else if (element.childNodes.hasOwnProperty(cn) && node.nodeType == 8) {
@@ -267,8 +282,13 @@ PythonSerializer.prototype = {
 					}).join('\\n\"+\n\"')+"''', ";
 			}
 		}
-		attrType = "";
+		return str;
+	},
+	subSerializeAttrsToString : function(element, mapToMethod, fieldTypes, n, stack) {
+		var attrType = "";
+		var str = "";
 		for (var a in element.attributes) {
+			var accessType = "inputOutput";
 			var attrs = element.attributes;
 			try {
 				parseInt(a);
@@ -304,8 +324,10 @@ PythonSerializer.prototype = {
 					}
 					// look at object model
 					attrType = "SFString";
-					if (typeof fieldTypes[element.nodeName] !== 'undefined') {
-						attrType = fieldTypes[element.nodeName][attr];
+					if (typeof fieldTypes[element.nodeName] !== 'undefined'
+					&& typeof fieldTypes[element.nodeName][attr] !== 'undefined') {
+						attrType = fieldTypes[element.nodeName][attr][0];
+						accessType = fieldTypes[element.nodeName][attr][1];
 					}
 					var strval = this.stringValue(attrsa, attr, attrType, element);
 					var method = attr;
@@ -334,5 +356,5 @@ PythonSerializer.prototype = {
 
 
 if (typeof module === 'object')  {
-	module.exports = PythonSerializer;
+	module.exports = PythonKwargsSerializer;
 }

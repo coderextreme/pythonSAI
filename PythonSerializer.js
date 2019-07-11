@@ -22,7 +22,7 @@ PythonSerializer.prototype = {
 		var str = "";
 		// str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
 
-		str += "import x3dpsail\n";
+		str += "import x3dpsail as x3d\n";
 
 		stack.unshift(this.preno);
 		this.preno++;
@@ -32,7 +32,7 @@ PythonSerializer.prototype = {
         // https://stackoverflow.com/questions/3151436/how-can-i-get-the-current-directory-name-in-javascript
         // console.log('Current directory: ' + process.cwd()); // Node.js method for current directory - not what is needed here
         // https://flaviocopes.com/node-get-current-folder/ use __dirname under Node.js
-		bodystr += element.nodeName+stack[0]+" = x3dpsail."+element.nodeName;
+		bodystr += element.nodeName+stack[0]+" = x3d."+element.nodeName;
 		bodystr += "()\n";
 		bodystr += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
 
@@ -107,12 +107,12 @@ PythonSerializer.prototype = {
 				var attr = attrsa.nodeName;
 				if (attrs.hasOwnProperty(a) && attrsa.nodeType == 2) {
 					if (attr === "containerField") {
-						if (method === "setShaders") {
-							method = "addShaders"
-							addpre = "";
+						method = attrsa.nodeValue.charAt(0).toUpperCase() + attrsa.nodeValue.slice(1);
+						if (method === "Shaders") {
+							addpre = "add";
+							method = "Child";
 						} else {
-							method = "set"+attrsa.nodeValue.charAt(0).toUpperCase() + attrsa.nodeValue.slice(1);
-							addpre = "";
+							addpre = "set";
 						}
 					}
 				}
@@ -121,12 +121,20 @@ PythonSerializer.prototype = {
 			}
 		}
 		if (node.nodeName === "IS") {
-			method = "setIS";
-			addpre = "";
+			method = "IS";
+			addpre = "set";
 		}
-		if (method === "setJoints") {
-			method = "addJoints"
-			addpre = "";
+		if (addpre+method === "setJoints") {
+			method = "Joints"
+			addpre = "add";
+		}
+		if (element.nodeName === 'Scene' && addpre+method === "setMetadata") {
+			method = "Metadata"
+			addpre = "add";
+		}
+		if (node.nodeName === 'LayerSet' && addpre+method === "addChild") {
+			method = "LayerSet"
+			addpre = "add";
 		}
 		return prepre+addpre+method;
 	},
@@ -265,6 +273,9 @@ PythonSerializer.prototype = {
 					var strval = this.stringValue(attrsa, attr, attrType, element);
 					var method = attr;
 					method = method.charAt(0).toUpperCase() + method.slice(1);
+					if (attr === "class") {
+						method = "CssClass";
+					}
 					str += element.nodeName+stack[0];
 					str += '.set'+method+"("+strval+")\n";
 				}
@@ -279,7 +290,7 @@ PythonSerializer.prototype = {
 				stack.unshift(this.preno);
 				this.preno++;
 				var ch = "";
-				ch += node.nodeName+stack[0]+" = x3dpsail."+node.nodeName;
+				ch += node.nodeName+stack[0]+" = x3d."+node.nodeName;
 
 				ch += "()\n";
 				var bodystr = this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);

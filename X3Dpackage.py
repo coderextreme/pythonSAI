@@ -85984,7 +85984,7 @@ class SFBool(object):
 
 class MFBool(object):
     def __init__(self, **kwargs):
-        super(MFBool, self).__init__()
+        super(MFBool, self).__init__(**kwargs)
 
 
 class SFColor(object):
