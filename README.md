@@ -28,7 +28,7 @@ Python SAI testing harness for X3DJSAIL concrete classes
 
 Install X3DJSONLD https://github.com/coderextreme/X3DJSONLD in sibling folder to pythonSAI
 
-Configure per your environment for Python 3.6 and node.js in profile.sh
+Configure per your environment for Python 3.7.3 and node.js in profile.sh
 
 Run;
 ```
@@ -43,7 +43,7 @@ SAI generator in classes.py
 
 X3DJSAIL documentation, source, and jars are found here:
 
-http://www.web3d.org/specifications/java/X3dJavaSceneAuthoringInterface.html
+https://www.web3d.org/specifications/java/X3dJavaSceneAuthoringInterface.html
 
 classes.py generates x3dpsail.py, The PyJNIus interface to X3DJSAIL
 
@@ -52,7 +52,7 @@ The next two are for the PythonSerializer.js:
 fieldTypesGenerator.py generates fieldTypes.js -- a way to look up info on fields
 mapToMethodGenerator.py generates mapToMethod.js -- a way to map fields to methods
 
-old.py generates X3Dpackage.py, the old Python SAI, to be replaced by a full SAI
+packagemaker.py generates X3Dpackage.py, the old Python SAI, to be replaced by a full SAI
 
 allsaxon.js  -- for Saxon
 config.js -- configuration
@@ -69,4 +69,3 @@ X3DJSONLD.js -- JSON to DOM converter
 Make.sh – main build script
 Profile.sh – environment
 X3d2py.sh – converts X3D files to JSON
-
