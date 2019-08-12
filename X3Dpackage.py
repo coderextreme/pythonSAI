@@ -1,6 +1,28 @@
 class X3DNode(object):
     def __init__(self, **kwargs):
         super(X3DNode, self).__init__()
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -113,6 +135,28 @@ class X3DNode(object):
 class X3DAppearanceChildNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DAppearanceChildNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -225,6 +269,28 @@ class X3DAppearanceChildNode(X3DNode):
 class X3DAppearanceNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DAppearanceNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -337,6 +403,28 @@ class X3DAppearanceNode(X3DNode):
 class X3DChildNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DChildNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -470,6 +558,28 @@ class X3DBindableNode(X3DChildNode):
             bindTime = [bindTime]
             self.bindTime = []
             self.bindTime = self.bindTime + bindTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Bound = None
         if not self.Bound:
@@ -724,6 +834,28 @@ class X3DBackgroundNode(X3DBindableNode):
             groundColor = [groundColor]
             self.groundColor = []
             self.groundColor = self.groundColor + groundColor
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Bound = None
         if not self.Bound:
@@ -995,6 +1127,28 @@ class X3DBackgroundNode(X3DBindableNode):
 class X3DFollowerNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DFollowerNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -1159,6 +1313,28 @@ class X3DChaserNode(X3DFollowerNode):
             self.duration = []
             self.duration = self.duration + duration
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -1293,6 +1469,28 @@ class X3DChaserNode(X3DFollowerNode):
 class X3DGeometricPropertyNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DGeometricPropertyNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -1405,6 +1603,28 @@ class X3DGeometricPropertyNode(X3DNode):
 class X3DColorNode(X3DGeometricPropertyNode):
     def __init__(self, **kwargs):
         super(X3DColorNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -1538,6 +1758,28 @@ class X3DVolumeRenderStyleNode(X3DNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -1673,6 +1915,28 @@ class X3DComposableVolumeRenderStyleNode(X3DVolumeRenderStyleNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -1785,6 +2049,28 @@ class X3DComposableVolumeRenderStyleNode(X3DVolumeRenderStyleNode):
 class X3DGeometryNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DGeometryNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -2029,6 +2315,28 @@ class X3DComposedGeometryNode(X3DGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -2229,6 +2537,28 @@ class X3DComposedGeometryNode(X3DGeometryNode):
 class X3DCoordinateNode(X3DGeometricPropertyNode):
     def __init__(self, **kwargs):
         super(X3DCoordinateNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -2341,6 +2671,28 @@ class X3DCoordinateNode(X3DGeometricPropertyNode):
 class X3DDamperNode(X3DFollowerNode):
     def __init__(self, **kwargs):
         super(X3DDamperNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -2587,6 +2939,28 @@ class X3DSensorNode(X3DChildNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -2764,6 +3138,28 @@ class X3DPointingDeviceSensorNode(X3DSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -2987,6 +3383,28 @@ class X3DDragSensorNode(X3DPointingDeviceSensorNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -3187,6 +3605,28 @@ class X3DEnvironmentalSensorNode(X3DSensorNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -3351,6 +3791,28 @@ class X3DEnvironmentalSensorNode(X3DSensorNode):
 class X3DTextureNode(X3DAppearanceChildNode):
     def __init__(self, **kwargs):
         super(X3DTextureNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -3463,6 +3925,28 @@ class X3DTextureNode(X3DAppearanceChildNode):
 class X3DEnvironmentTextureNode(X3DTextureNode):
     def __init__(self, **kwargs):
         super(X3DEnvironmentTextureNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -3575,6 +4059,28 @@ class X3DEnvironmentTextureNode(X3DTextureNode):
 class X3DFontStyleNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DFontStyleNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -3843,6 +4349,28 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -3977,6 +4505,28 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
 class X3DInfoNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DInfoNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -4089,6 +4639,28 @@ class X3DInfoNode(X3DChildNode):
 class X3DInterpolatorNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DInterpolatorNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -4267,6 +4839,28 @@ class X3DKeyDeviceSensorNode(X3DSensorNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -4401,6 +4995,28 @@ class X3DKeyDeviceSensorNode(X3DSensorNode):
 class X3DLayerNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DLayerNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Pickable = True
         if not self.Pickable:
             self.Pickable = kwargs.pop("Pickable", True)
@@ -4557,6 +5173,28 @@ class X3DLayerNode(X3DNode):
 class X3DLayoutNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DLayoutNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -4783,6 +5421,28 @@ class X3DLightNode(X3DChildNode):
             self.intensity = []
             self.intensity = self.intensity + intensity
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -4917,6 +5577,28 @@ class X3DLightNode(X3DChildNode):
 class X3DMaterialNode(X3DAppearanceChildNode):
     def __init__(self, **kwargs):
         super(X3DMaterialNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5094,6 +5776,28 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -5317,6 +6021,28 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5450,6 +6176,28 @@ class X3DNetworkSensorNode(X3DSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -5585,6 +6333,28 @@ class X3DNetworkSensorNode(X3DSensorNode):
 class X3DNormalNode(X3DGeometricPropertyNode):
     def __init__(self, **kwargs):
         super(X3DNormalNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5719,6 +6489,28 @@ class X3DNurbsControlCurveNode(X3DNode):
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5831,6 +6623,28 @@ class X3DNurbsControlCurveNode(X3DNode):
 class X3DParametricGeometryNode(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(X3DParametricGeometryNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5964,6 +6778,28 @@ class X3DNurbsSurfaceGeometryNode(X3DParametricGeometryNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -6403,6 +7239,28 @@ class X3DNurbsSurfaceGeometryNode(X3DParametricGeometryNode):
 class X3DParticleEmitterNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DParticleEmitterNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.mass = 0
         if not self.mass:
             self.mass = kwargs.pop("mass", 0)
@@ -6657,6 +7515,28 @@ class X3DParticlePhysicsModelNode(X3DNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -6812,6 +7692,28 @@ class X3DPickSensorNode(X3DSensorNode):
             intersectionType = [intersectionType]
             self.intersectionType = []
             self.intersectionType = self.intersectionType + intersectionType
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -7111,6 +8013,28 @@ class X3DPickSensorNode(X3DSensorNode):
 class X3DProductStructureChildNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DProductStructureChildNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -7245,6 +8169,28 @@ class X3DProductStructureChildNode(X3DChildNode):
 class X3DPrototypeInstance(X3DNode):
     def __init__(self, **kwargs):
         super(X3DPrototypeInstance, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -7356,6 +8302,28 @@ class X3DRigidJointNode(X3DNode):
             forceOutput = [forceOutput]
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -7515,6 +8483,28 @@ class X3DUrlObject(object):
 class X3DScriptNode(X3DUrlObject, X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DScriptNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -7649,6 +8639,28 @@ class X3DScriptNode(X3DUrlObject, X3DChildNode):
 class X3DSequencerNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DSequencerNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -7870,6 +8882,28 @@ class X3DShaderNode(X3DAppearanceChildNode):
             activate = [activate]
             self.activate = []
             self.activate = self.activate + activate
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Selected = None
         if not self.Selected:
@@ -8137,6 +9171,28 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
             self.geometry = []
             self.geometry = self.geometry + geometry
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -8249,6 +9305,28 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
 class X3DSoundNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DSoundNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -8390,6 +9468,28 @@ class X3DTimeDependentNode(X3DChildNode):
             elapsedTime = [elapsedTime]
             self.elapsedTime = []
             self.elapsedTime = self.elapsedTime + elapsedTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -8739,6 +9839,28 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
             self.elapsedTime = []
             self.elapsedTime = self.elapsedTime + elapsedTime
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -9035,6 +10157,28 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
 class X3DTexture2DNode(X3DTextureNode):
     def __init__(self, **kwargs):
         super(X3DTexture2DNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -9213,6 +10357,28 @@ class X3DTexture2DNode(X3DTextureNode):
 class X3DTexture3DNode(X3DTextureNode):
     def __init__(self, **kwargs):
         super(X3DTexture3DNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -9413,6 +10579,28 @@ class X3DTexture3DNode(X3DTextureNode):
 class X3DTextureCoordinateNode(X3DGeometricPropertyNode):
     def __init__(self, **kwargs):
         super(X3DTextureCoordinateNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -9525,6 +10713,28 @@ class X3DTextureCoordinateNode(X3DGeometricPropertyNode):
 class X3DTextureTransformNode(X3DAppearanceChildNode):
     def __init__(self, **kwargs):
         super(X3DTextureTransformNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -9680,6 +10890,28 @@ class X3DTouchSensorNode(X3DPointingDeviceSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -9859,6 +11091,28 @@ class X3DTouchSensorNode(X3DPointingDeviceSensorNode):
 class X3DTriggerNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DTriggerNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -9971,6 +11225,28 @@ class X3DTriggerNode(X3DChildNode):
 class X3DVertexAttributeNode(X3DGeometricPropertyNode):
     def __init__(self, **kwargs):
         super(X3DVertexAttributeNode, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -10148,6 +11424,28 @@ class X3DViewpointNode(X3DBindableNode):
             description = [description]
             self.description = []
             self.description = self.description + description
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Bound = None
         if not self.Bound:
@@ -10459,6 +11757,28 @@ class X3DViewportNode(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -10666,6 +11986,28 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
             dimensions = [dimensions]
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -11231,6 +12573,28 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
             self.description = []
             self.description = self.description + description
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -11430,6 +12794,28 @@ class Appearance(X3DAppearanceNode):
             fillProperties = [fillProperties]
             self.fillProperties = []
             self.fillProperties = self.fillProperties + fillProperties
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.lineProperties = None
         if not self.lineProperties:
@@ -11713,6 +13099,28 @@ class Arc2D(X3DGeometryNode):
             self.endAngle = []
             self.endAngle = self.endAngle + endAngle
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -11976,6 +13384,28 @@ class ArcClose2D(X3DGeometryNode):
             endAngle = [endAngle]
             self.endAngle = []
             self.endAngle = self.endAngle + endAngle
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -12260,6 +13690,28 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
             elapsedTime = [elapsedTime]
             self.elapsedTime = []
             self.elapsedTime = self.elapsedTime + elapsedTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -12743,6 +14195,28 @@ class Background(X3DBackgroundNode):
             self.groundColor = []
             self.groundColor = self.groundColor + groundColor
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -13211,6 +14685,28 @@ class BallJoint(X3DRigidJointNode):
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -13433,6 +14929,28 @@ class Billboard(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -13588,6 +15106,28 @@ class BlendedVolumeStyle(X3DComposableVolumeRenderStyleNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -14087,6 +15627,28 @@ class BooleanFilter(X3DChildNode):
             self.inputTrue = []
             self.inputTrue = self.inputTrue + inputTrue
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -14221,6 +15783,28 @@ class BooleanFilter(X3DChildNode):
 class BooleanSequencer(X3DSequencerNode):
     def __init__(self, **kwargs):
         super(BooleanSequencer, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -14465,6 +16049,28 @@ class BooleanSequencer(X3DSequencerNode):
 class BooleanToggle(X3DChildNode):
     def __init__(self, **kwargs):
         super(BooleanToggle, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -14621,6 +16227,28 @@ class BooleanToggle(X3DChildNode):
 class BooleanTrigger(X3DTriggerNode):
     def __init__(self, **kwargs):
         super(BooleanTrigger, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -14836,6 +16464,28 @@ class BoundaryEnhancementVolumeStyle(X3DComposableVolumeRenderStyleNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -15061,6 +16711,28 @@ class BoundedPhysicsModel(X3DParticlePhysicsModelNode):
             self.geometry = []
             self.geometry = self.geometry + geometry
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -15173,6 +16845,28 @@ class BoundedPhysicsModel(X3DParticlePhysicsModelNode):
 class Box(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Box, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -15417,6 +17111,28 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -15616,6 +17332,28 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
             bboxSize = [bboxSize]
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -15860,6 +17598,28 @@ class CADLayer(X3DGroupingNode):
             children = [children]
             self.children = []
             self.children = self.children + children
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -16148,6 +17908,28 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
             children = [children]
             self.children = []
             self.children = self.children + children
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -16453,6 +18235,28 @@ class CartoonVolumeStyle(X3DComposableVolumeRenderStyleNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -16663,6 +18467,28 @@ class CartoonVolumeStyle(X3DComposableVolumeRenderStyleNode):
 class Circle2D(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Circle2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -16826,6 +18652,28 @@ class ClipPlane(X3DChildNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -17065,6 +18913,28 @@ class CollidableOffset(X3DNBodyCollidableNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -17286,6 +19156,28 @@ class CollidableShape(X3DNBodyCollidableNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -17596,6 +19488,28 @@ class Collision(X3DSensorNode, X3DGroupingNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -17989,6 +19903,28 @@ class CollisionCollection(X3DNode):
             self.frictionCoefficients = []
             self.frictionCoefficients = self.frictionCoefficients + frictionCoefficients
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -18339,6 +20275,28 @@ class CollisionSensor(X3DSensorNode):
             self.intersections = []
             self.intersections = self.intersections + intersections
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -18561,6 +20519,28 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -18732,6 +20712,28 @@ class Color(X3DColorNode):
             color = [color]
             self.color = []
             self.color = self.color + color
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -18950,6 +20952,28 @@ class ColorChaser(X3DChaserNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -19274,6 +21298,28 @@ class ColorDamper(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -19613,6 +21659,28 @@ class ColorDamper(X3DDamperNode):
 class ColorInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(ColorInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -19883,6 +21951,28 @@ class ColorRGBA(X3DColorNode):
             self.color = []
             self.color = self.color + color
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -20060,6 +22150,28 @@ class ComposedCubeMapTexture(X3DEnvironmentTextureNode):
             front = [front]
             self.front = []
             self.front = self.front + front
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.left = None
         if not self.left:
@@ -20260,6 +22372,50 @@ class ComposedShader(X3DProgrammableShaderObject, X3DShaderNode):
             activate = [activate]
             self.activate = []
             self.activate = self.activate + activate
+        return self
+        self.field = []
+        if not self.field:
+            self.field = kwargs.pop("field", [])
+    def setField(self, field = []):
+        try:
+            super().setField(field)
+        except AttributeError:
+           pass
+        self.field = field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Selected = None
         if not self.Selected:
@@ -20511,6 +22667,28 @@ class ComposedShader(X3DProgrammableShaderObject, X3DShaderNode):
 class ComposedTexture3D(X3DTexture3DNode):
     def __init__(self, **kwargs):
         super(ComposedTexture3D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -20755,6 +22933,28 @@ class ComposedVolumeStyle(X3DComposableVolumeRenderStyleNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -20970,6 +23170,28 @@ class Cone(X3DGeometryNode):
             height = [height]
             self.height = []
             self.height = self.height + height
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -21202,6 +23424,28 @@ class ConeEmitter(X3DParticleEmitterNode):
             direction = [direction]
             self.direction = []
             self.direction = self.direction + direction
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mass = 0
         if not self.mass:
@@ -21781,6 +24025,28 @@ class Contact(X3DNode):
             self.geometry2 = []
             self.geometry2 = self.geometry2 + geometry2
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -22109,6 +24375,28 @@ class Contour2D(X3DNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -22265,6 +24553,28 @@ class ContourPolyline2D(X3DNurbsControlCurveNode):
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -22377,6 +24687,28 @@ class ContourPolyline2D(X3DNurbsControlCurveNode):
 class Coordinate(X3DCoordinateNode):
     def __init__(self, **kwargs):
         super(Coordinate, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -22584,6 +24916,28 @@ class CoordinateChaser(X3DChaserNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -22828,6 +25182,28 @@ class CoordinateDamper(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -23119,6 +25495,28 @@ class CoordinateDamper(X3DDamperNode):
 class CoordinateDouble(X3DCoordinateNode):
     def __init__(self, **kwargs):
         super(CoordinateDouble, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -23253,6 +25651,28 @@ class CoordinateDouble(X3DCoordinateNode):
 class CoordinateInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(CoordinateInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -23453,6 +25873,28 @@ class CoordinateInterpolator(X3DInterpolatorNode):
 class CoordinateInterpolator2D(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(CoordinateInterpolator2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -23704,6 +26146,28 @@ class Cylinder(X3DGeometryNode):
             height = [height]
             self.height = []
             self.height = self.height + height
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -24038,6 +26502,28 @@ class CylinderSensor(X3DDragSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -24495,6 +26981,28 @@ class DirectionalLight(X3DLightNode):
             self.intensity = []
             self.intensity = self.intensity + intensity
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -24725,6 +27233,28 @@ class DISEntityManager(X3DChildNode):
             applicationID = [applicationID]
             self.applicationID = []
             self.applicationID = self.applicationID + applicationID
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mapping = []
         if not self.mapping:
@@ -25078,6 +27608,28 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
             self.extra = []
             self.extra = self.extra + extra
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.kind = 0
         if not self.kind:
             self.kind = kwargs.pop("kind", 0)
@@ -25355,6 +27907,28 @@ class Disk2D(X3DGeometryNode):
             innerRadius = [innerRadius]
             self.innerRadius = []
             self.innerRadius = self.innerRadius + innerRadius
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -25872,6 +28446,28 @@ class DoubleAxisHingeJoint(X3DRigidJointNode):
             self.hinge2AngleRate = []
             self.hinge2AngleRate = self.hinge2AngleRate + hinge2AngleRate
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.maxAngle1 = 3.141592653
         if not self.maxAngle1:
             self.maxAngle1 = kwargs.pop("maxAngle1", 3.141592653)
@@ -26204,6 +28800,28 @@ class EaseInEaseOut(X3DChildNode):
             self.easeInEaseOut = []
             self.easeInEaseOut = self.easeInEaseOut + easeInEaseOut
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -26479,6 +29097,28 @@ class EdgeEnhancementVolumeStyle(X3DComposableVolumeRenderStyleNode):
             gradientThreshold = [gradientThreshold]
             self.gradientThreshold = []
             self.gradientThreshold = self.gradientThreshold + gradientThreshold
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -26775,6 +29415,28 @@ class ElevationGrid(X3DGeometryNode):
             height = [height]
             self.height = []
             self.height = self.height + height
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -28240,6 +30902,28 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -29266,6 +31950,28 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
 class ExplosionEmitter(X3DParticleEmitterNode):
     def __init__(self, **kwargs):
         super(ExplosionEmitter, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.mass = 0
         if not self.mass:
             self.mass = kwargs.pop("mass", 0)
@@ -29660,6 +32366,28 @@ class Extrusion(X3DGeometryNode):
             self.endCap = []
             self.endCap = self.endCap + endCap
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -30052,6 +32780,28 @@ class FillProperties(X3DAppearanceChildNode):
             self.hatchStyle = []
             self.hatchStyle = self.hatchStyle + hatchStyle
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -30164,6 +32914,28 @@ class FillProperties(X3DAppearanceChildNode):
 class FloatVertexAttribute(X3DVertexAttributeNode):
     def __init__(self, **kwargs):
         super(FloatVertexAttribute, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -30464,6 +33236,28 @@ class Fog(X3DFogObject, X3DBindableNode):
             self.fogType = []
             self.fogType = self.fogType + fogType
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -30688,6 +33482,28 @@ class FogCoordinate(X3DGeometricPropertyNode):
             self.depth = []
             self.depth = self.depth + depth
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -30843,6 +33659,28 @@ class FontStyle(X3DFontStyleNode):
             horizontal = [horizontal]
             self.horizontal = []
             self.horizontal = self.horizontal + horizontal
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.justify = "BEGIN"
         if not self.justify:
@@ -31378,6 +34216,28 @@ class ForcePhysicsModel(X3DParticlePhysicsModelNode):
             self.force = []
             self.force = self.force + force
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -31490,6 +34350,28 @@ class ForcePhysicsModel(X3DParticlePhysicsModelNode):
 class GeneratedCubeMapTexture(X3DEnvironmentTextureNode):
     def __init__(self, **kwargs):
         super(GeneratedCubeMapTexture, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -31751,6 +34633,28 @@ class GeoCoordinate(X3DCoordinateNode):
             geoSystem = [geoSystem]
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -32069,6 +34973,28 @@ class GeoElevationGrid(X3DGeometryNode):
             height = [height]
             self.height = []
             self.height = self.height + height
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -32596,6 +35522,28 @@ class GeoLocation(X3DGroupingNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -32950,6 +35898,28 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.level_changed = None
         if not self.level_changed:
             self.level_changed = kwargs.pop("level_changed", None)
@@ -33196,6 +36166,28 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
             self.data = []
             self.data = self.data + data
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -33396,6 +36388,28 @@ class GeoOrigin(X3DNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -33595,6 +36609,28 @@ class GeoPositionInterpolator(X3DInterpolatorNode):
             geovalue_changed = [geovalue_changed]
             self.geovalue_changed = []
             self.geovalue_changed = self.geovalue_changed + geovalue_changed
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.key = []
         if not self.key:
@@ -33994,6 +37030,28 @@ class GeoProximitySensor(X3DEnvironmentalSensorNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -34378,6 +37436,28 @@ class GeoTouchSensor(X3DTouchSensorNode):
             self.hitTexCoord_changed = []
             self.hitTexCoord_changed = self.hitTexCoord_changed + hitTexCoord_changed
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -34709,6 +37789,28 @@ class GeoTransform(X3DGroupingNode):
             geoSystem = [geoSystem]
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -35088,6 +38190,28 @@ class GeoViewpoint(X3DViewpointNode):
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -35450,6 +38574,28 @@ class Group(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -35688,6 +38834,28 @@ class HAnimDisplacer(X3DGeometricPropertyNode):
             displacements = [displacements]
             self.displacements = []
             self.displacements = self.displacements + displacements
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -35954,6 +39122,28 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
             info = [info]
             self.info = []
             self.info = self.info + info
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.jointBindingPositions = [0, 0, 0]
         if not self.jointBindingPositions:
@@ -36761,6 +39951,28 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
             self.displacers = []
             self.displacers = self.displacers + displacers
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.limitOrientation = [0, 0, 1, 0]
         if not self.limitOrientation:
             self.limitOrientation = kwargs.pop("limitOrientation", [0, 0, 1, 0])
@@ -37459,6 +40671,28 @@ class HAnimMotion(X3DChildNode):
             self.frameIndex = []
             self.frameIndex = self.frameIndex + frameIndex
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.joints = []
         if not self.joints:
             self.joints = kwargs.pop("joints", [])
@@ -37881,6 +41115,28 @@ class HAnimSegment(X3DGroupingNode):
             self.displacers = []
             self.displacers = self.displacers + displacers
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.mass = 0
         if not self.mass:
             self.mass = kwargs.pop("mass", 0)
@@ -38229,6 +41485,28 @@ class HAnimSite(X3DGroupingNode):
             self.description = []
             self.description = self.description + description
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -38481,6 +41759,28 @@ class HAnimSite(X3DGroupingNode):
 class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
     def __init__(self, **kwargs):
         super(ImageCubeMapTexture, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -38637,6 +41937,28 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
 class ImageTexture(X3DUrlObject, X3DTexture2DNode):
     def __init__(self, **kwargs):
         super(ImageTexture, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -38837,6 +42159,28 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
 class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
     def __init__(self, **kwargs):
         super(ImageTexture3D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -39302,6 +42646,28 @@ class IndexedFaceSet(X3DComposedGeometryNode):
             fogCoord = [fogCoord]
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -39853,6 +43219,28 @@ class IndexedLineSet(X3DGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -40186,6 +43574,28 @@ class IndexedQuadSet(X3DComposedGeometryNode):
             index = [index]
             self.index = []
             self.index = self.index + index
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -40579,6 +43989,28 @@ class IndexedTriangleFanSet(X3DComposedGeometryNode):
             self.index = []
             self.index = self.index + index
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -40970,6 +44402,28 @@ class IndexedTriangleSet(X3DComposedGeometryNode):
             index = [index]
             self.index = []
             self.index = self.index + index
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -41363,6 +44817,28 @@ class IndexedTriangleStripSet(X3DComposedGeometryNode):
             self.index = []
             self.index = self.index + index
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -41637,6 +45113,28 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.load = True
         if not self.load:
             self.load = kwargs.pop("load", True)
@@ -41793,6 +45291,28 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
 class IntegerSequencer(X3DSequencerNode):
     def __init__(self, **kwargs):
         super(IntegerSequencer, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -42058,6 +45578,28 @@ class IntegerTrigger(X3DTriggerNode):
             integerKey = [integerKey]
             self.integerKey = []
             self.integerKey = self.integerKey + integerKey
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -42332,6 +45874,28 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
             gradients = [gradients]
             self.gradients = []
             self.gradients = self.gradients + gradients
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -42651,6 +46215,28 @@ class KeySensor(X3DKeyDeviceSensorNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -42895,6 +46481,28 @@ class Layer(X3DLayerNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Pickable = True
         if not self.Pickable:
             self.Pickable = kwargs.pop("Pickable", True)
@@ -43102,6 +46710,28 @@ class LayerSet(X3DNode):
             activeLayer = [activeLayer]
             self.activeLayer = []
             self.activeLayer = self.activeLayer + activeLayer
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.layers = []
         if not self.layers:
@@ -43368,6 +46998,28 @@ class Layout(X3DLayoutNode):
             align = [align]
             self.align = []
             self.align = self.align + align
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -43975,6 +47627,28 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.layout = None
         if not self.layout:
             self.layout = kwargs.pop("layout", None)
@@ -44196,6 +47870,28 @@ class LayoutLayer(X3DLayerNode):
             children = [children]
             self.children = []
             self.children = self.children + children
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Pickable = True
         if not self.Pickable:
@@ -44440,6 +48136,28 @@ class LinePickSensor(X3DPickSensorNode):
             intersectionType = [intersectionType]
             self.intersectionType = []
             self.intersectionType = self.intersectionType + intersectionType
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -44827,6 +48545,28 @@ class LineProperties(X3DAppearanceChildNode):
             self.applied = []
             self.applied = self.applied + applied
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.linetype = 1
         if not self.linetype:
             self.linetype = kwargs.pop("linetype", 1)
@@ -45079,6 +48819,28 @@ class LineSet(X3DGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -45242,6 +49004,28 @@ class LoadSensor(X3DNetworkSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -45601,6 +49385,28 @@ class LocalFog(X3DFogObject, X3DChildNode):
             self.fogType = []
             self.fogType = self.fogType + fogType
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -45874,6 +49680,28 @@ class LOD(X3DGroupingNode):
             forceTransitions = [forceTransitions]
             self.forceTransitions = []
             self.forceTransitions = self.forceTransitions + forceTransitions
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.level_changed = None
         if not self.level_changed:
@@ -46175,6 +50003,28 @@ class Material(X3DMaterialNode):
             self.emissiveColor = []
             self.emissiveColor = self.emissiveColor + emissiveColor
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -46432,6 +50282,28 @@ class Material(X3DMaterialNode):
 class Matrix3VertexAttribute(X3DVertexAttributeNode):
     def __init__(self, **kwargs):
         super(Matrix3VertexAttribute, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -46588,6 +50460,28 @@ class Matrix3VertexAttribute(X3DVertexAttributeNode):
 class Matrix4VertexAttribute(X3DVertexAttributeNode):
     def __init__(self, **kwargs):
         super(Matrix4VertexAttribute, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -46744,6 +50638,28 @@ class Matrix4VertexAttribute(X3DVertexAttributeNode):
 class MetadataBoolean(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super(MetadataBoolean, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -46922,6 +50838,28 @@ class MetadataBoolean(X3DNode, X3DMetadataObject):
 class MetadataDouble(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super(MetadataDouble, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -47100,6 +51038,28 @@ class MetadataDouble(X3DNode, X3DMetadataObject):
 class MetadataFloat(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super(MetadataFloat, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -47278,6 +51238,28 @@ class MetadataFloat(X3DNode, X3DMetadataObject):
 class MetadataInteger(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super(MetadataInteger, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -47456,6 +51438,28 @@ class MetadataInteger(X3DNode, X3DMetadataObject):
 class MetadataSet(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataSet, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -47634,6 +51638,28 @@ class MetadataSet(X3DMetadataObject, X3DNode):
 class MetadataString(X3DNode, X3DMetadataObject):
     def __init__(self, **kwargs):
         super(MetadataString, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -48069,6 +52095,28 @@ class MotorJoint(X3DRigidJointNode):
             forceOutput = [forceOutput]
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -48594,6 +52642,28 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
             self.elapsedTime = []
             self.elapsedTime = self.elapsedTime + elapsedTime
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -49098,6 +53168,28 @@ class MultiTexture(X3DTextureNode):
             self.function = []
             self.function = self.function + function
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -49276,6 +53368,28 @@ class MultiTexture(X3DTextureNode):
 class MultiTextureCoordinate(X3DTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(MultiTextureCoordinate, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -49410,6 +53524,28 @@ class MultiTextureCoordinate(X3DTextureCoordinateNode):
 class MultiTextureTransform(X3DTextureTransformNode):
     def __init__(self, **kwargs):
         super(MultiTextureTransform, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -49617,6 +53753,28 @@ class NavigationInfo(X3DBindableNode):
             headlight = [headlight]
             self.headlight = []
             self.headlight = self.headlight + headlight
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Bound = None
         if not self.Bound:
@@ -49961,6 +54119,28 @@ class NavigationInfo(X3DBindableNode):
 class Normal(X3DNormalNode):
     def __init__(self, **kwargs):
         super(Normal, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -50111,6 +54291,28 @@ class Normal(X3DNormalNode):
 class NormalInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(NormalInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -50354,6 +54556,28 @@ class NurbsCurve(X3DParametricGeometryNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.knot = []
         if not self.knot:
@@ -50615,6 +54839,28 @@ class NurbsCurve2D(X3DNurbsControlCurveNode):
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.knot = []
         if not self.knot:
             self.knot = kwargs.pop("knot", [])
@@ -50852,6 +55098,28 @@ class NurbsOrientationInterpolator(X3DChildNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.knot = []
         if not self.knot:
@@ -51104,6 +55372,28 @@ class NurbsPatchSurface(X3DNurbsSurfaceGeometryNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -51565,6 +55855,28 @@ class NurbsPositionInterpolator(X3DChildNode):
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.knot = []
         if not self.knot:
             self.knot = kwargs.pop("knot", [])
@@ -51883,6 +56195,28 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
             self.geometry = []
             self.geometry = self.geometry + geometry
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -52068,6 +56402,28 @@ class NurbsSurfaceInterpolator(X3DChildNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -52477,6 +56833,28 @@ class NurbsSweptSurface(X3DParametricGeometryNode):
             self.crossSectionCurve = []
             self.crossSectionCurve = self.crossSectionCurve + crossSectionCurve
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -52654,6 +57032,28 @@ class NurbsSwungSurface(X3DParametricGeometryNode):
             ccw = [ccw]
             self.ccw = []
             self.ccw = self.ccw + ccw
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -52854,6 +57254,28 @@ class NurbsTextureCoordinate(X3DNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -53204,6 +57626,28 @@ class NurbsTrimmedSurface(X3DNurbsSurfaceGeometryNode):
             controlPoint = [controlPoint]
             self.controlPoint = []
             self.controlPoint = self.controlPoint + controlPoint
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -53709,6 +58153,28 @@ class OpacityMapVolumeStyle(X3DComposableVolumeRenderStyleNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -53916,6 +58382,28 @@ class OrientationChaser(X3DChaserNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -54160,6 +58648,28 @@ class OrientationDamper(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -54451,6 +58961,28 @@ class OrientationDamper(X3DDamperNode):
 class OrientationInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(OrientationInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -54770,6 +59302,28 @@ class OrthoViewpoint(X3DViewpointNode):
             self.fieldOfView = []
             self.fieldOfView = self.fieldOfView + fieldOfView
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -55035,6 +59589,50 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
             activate = [activate]
             self.activate = []
             self.activate = self.activate + activate
+        return self
+        self.field = []
+        if not self.field:
+            self.field = kwargs.pop("field", [])
+    def setField(self, field = []):
+        try:
+            super().setField(field)
+        except AttributeError:
+           pass
+        self.field = field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Selected = None
         if not self.Selected:
@@ -55486,6 +60084,28 @@ class ParticleSystem(X3DShapeNode):
             self.geometryType = []
             self.geometryType = self.geometryType + geometryType
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -55910,6 +60530,28 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -56110,6 +60752,28 @@ class PixelTexture(X3DTexture2DNode):
             self.image = []
             self.image = self.image + image
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -56309,6 +60973,28 @@ class PixelTexture3D(X3DTexture3DNode):
             image = [image]
             self.image = []
             self.image = self.image + image
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -56598,6 +61284,28 @@ class PlaneSensor(X3DDragSensorNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -56885,6 +61593,28 @@ class PointEmitter(X3DParticleEmitterNode):
             direction = [direction]
             self.direction = []
             self.direction = self.direction + direction
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mass = 0
         if not self.mass:
@@ -57306,6 +62036,28 @@ class PointLight(X3DLightNode):
             self.intensity = []
             self.intensity = self.intensity + intensity
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.location = [0, 0, 0]
         if not self.location:
             self.location = kwargs.pop("location", [0, 0, 0])
@@ -57535,6 +62287,28 @@ class PointPickSensor(X3DPickSensorNode):
             intersectionType = [intersectionType]
             self.intersectionType = []
             self.intersectionType = self.intersectionType + intersectionType
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -57910,6 +62684,28 @@ class PointProperties(X3DAppearanceChildNode):
             self.colorMode = []
             self.colorMode = self.colorMode + colorMode
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -58222,6 +63018,28 @@ class PointSet(X3DGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -58334,6 +63152,28 @@ class PointSet(X3DGeometryNode):
 class Polyline2D(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Polyline2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.lineSegments = []
         if not self.lineSegments:
             self.lineSegments = kwargs.pop("lineSegments", [])
@@ -58557,6 +63397,28 @@ class PolylineEmitter(X3DParticleEmitterNode):
             direction = [direction]
             self.direction = []
             self.direction = self.direction + direction
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mass = 0
         if not self.mass:
@@ -58820,6 +63682,28 @@ class PolylineEmitter(X3DParticleEmitterNode):
 class Polypoint2D(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Polypoint2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -59027,6 +63911,28 @@ class PositionChaser(X3DChaserNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -59302,6 +64208,28 @@ class PositionChaser2D(X3DChaserNode):
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -59545,6 +64473,28 @@ class PositionDamper(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -59880,6 +64830,28 @@ class PositionDamper2D(X3DDamperNode):
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -60170,6 +65142,28 @@ class PositionDamper2D(X3DDamperNode):
 class PositionInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(PositionInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -60401,6 +65395,28 @@ class PositionInterpolator(X3DInterpolatorNode):
 class PositionInterpolator2D(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(PositionInterpolator2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -60644,6 +65660,28 @@ class PrimitivePickSensor(X3DPickSensorNode):
             intersectionType = [intersectionType]
             self.intersectionType = []
             self.intersectionType = self.intersectionType + intersectionType
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -60965,6 +66003,28 @@ class ProgramShader(X3DShaderNode):
             self.activate = []
             self.activate = self.activate + activate
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Selected = None
         if not self.Selected:
             self.Selected = kwargs.pop("Selected", None)
@@ -61225,6 +66285,28 @@ class ProjectionVolumeStyle(X3DVolumeRenderStyleNode):
             self.intensityThreshold = []
             self.intensityThreshold = self.intensityThreshold + intensityThreshold
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -61412,6 +66494,28 @@ class ProtoInstance(X3DChildNode, X3DPrototypeInstance):
             fieldValue = [fieldValue]
             self.fieldValue = []
             self.fieldValue = self.fieldValue + fieldValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -61687,6 +66791,28 @@ class ProximitySensor(X3DEnvironmentalSensorNode):
             exitTime = [exitTime]
             self.exitTime = []
             self.exitTime = self.exitTime + exitTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -62027,6 +67153,28 @@ class QuadSet(X3DComposedGeometryNode):
             fogCoord = [fogCoord]
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -62403,6 +67551,28 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
             geoSystem = [geoSystem]
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -63056,6 +68226,28 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
 class Rectangle2D(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Rectangle2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -63535,6 +68727,28 @@ class RigidBody(X3DNode):
             inertia = [inertia]
             self.inertia = []
             self.inertia = self.inertia + inertia
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.linearDampingFactor = 0.001
         if not self.linearDampingFactor:
@@ -64096,6 +69310,28 @@ class RigidBodyCollection(X3DChildNode):
             self.gravity = []
             self.gravity = self.gravity + gravity
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.iterations = 10
         if not self.iterations:
             self.iterations = kwargs.pop("iterations", 10)
@@ -64392,6 +69628,28 @@ class ScalarChaser(X3DChaserNode):
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -64635,6 +69893,28 @@ class ScalarDamper(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -64926,6 +70206,28 @@ class ScalarDamper(X3DDamperNode):
 class ScalarInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(ScalarInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -65169,6 +70471,28 @@ class ScreenFontStyle(X3DFontStyleNode):
             horizontal = [horizontal]
             self.horizontal = []
             self.horizontal = self.horizontal + horizontal
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.justify = "BEGIN"
         if not self.justify:
@@ -65748,6 +71072,28 @@ class ScreenGroup(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -65903,6 +71249,50 @@ class Script(X3DScriptNode):
             directOutput = [directOutput]
             self.directOutput = []
             self.directOutput = self.directOutput + directOutput
+        return self
+        self.field = []
+        if not self.field:
+            self.field = kwargs.pop("field", [])
+    def setField(self, field = []):
+        try:
+            super().setField(field)
+        except AttributeError:
+           pass
+        self.field = field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -66215,6 +71605,28 @@ class SegmentedVolumeData(X3DVolumeDataNode):
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -66436,6 +71848,28 @@ class ShadedVolumeStyle(X3DComposableVolumeRenderStyleNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.lighting = False
         if not self.lighting:
@@ -66659,6 +72093,28 @@ class ShadedVolumeStyle(X3DComposableVolumeRenderStyleNode):
 class ShaderPart(X3DUrlObject, X3DNode):
     def __init__(self, **kwargs):
         super(ShaderPart, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -66846,6 +72302,50 @@ class ShaderPart(X3DUrlObject, X3DNode):
 class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def __init__(self, **kwargs):
         super(ShaderProgram, self).__init__(**kwargs)
+        self.field = []
+        if not self.field:
+            self.field = kwargs.pop("field", [])
+    def setField(self, field = []):
+        try:
+            super().setField(field)
+        except AttributeError:
+           pass
+        self.field = field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+    def addField(self, field = []):
+        if not isinstance(field, list):
+            field = [field]
+            self.field = []
+            self.field = self.field + field
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -67089,6 +72589,28 @@ class Shape(X3DShapeNode):
             geometry = [geometry]
             self.geometry = []
             self.geometry = self.geometry + geometry
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -67474,6 +72996,28 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
             geoSystem = [geoSystem]
             self.geoSystem = []
             self.geoSystem = self.geoSystem + geoSystem
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -68083,6 +73627,28 @@ class SilhouetteEnhancementVolumeStyle(X3DComposableVolumeRenderStyleNode):
             self.enabled = []
             self.enabled = self.enabled + enabled
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -68521,6 +74087,28 @@ class SingleAxisHingeJoint(X3DRigidJointNode):
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.maxAngle = 3.141592653
         if not self.maxAngle:
             self.maxAngle = kwargs.pop("maxAngle", 3.141592653)
@@ -68808,6 +74396,28 @@ class SliderJoint(X3DRigidJointNode):
             forceOutput = [forceOutput]
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.maxSeparation = 1
         if not self.maxSeparation:
@@ -69134,6 +74744,28 @@ class Sound(X3DSoundNode):
             intensity = [intensity]
             self.intensity = []
             self.intensity = self.intensity + intensity
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.location = [0, 0, 0]
         if not self.location:
@@ -69471,6 +75103,28 @@ class Sound(X3DSoundNode):
 class Sphere(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(Sphere, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -69700,6 +75354,28 @@ class SphereSensor(X3DDragSensorNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -69944,6 +75620,28 @@ class SplinePositionInterpolator(X3DInterpolatorNode):
             closed = [closed]
             self.closed = []
             self.closed = self.closed + closed
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.key = []
         if not self.key:
@@ -70211,6 +75909,28 @@ class SplinePositionInterpolator2D(X3DInterpolatorNode):
             self.closed = []
             self.closed = self.closed + closed
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -70476,6 +76196,28 @@ class SplineScalarInterpolator(X3DInterpolatorNode):
             closed = [closed]
             self.closed = []
             self.closed = self.closed + closed
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.key = []
         if not self.key:
@@ -70985,6 +76727,28 @@ class SpotLight(X3DLightNode):
             self.intensity = []
             self.intensity = self.intensity + intensity
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.location = [0, 0, 0]
         if not self.location:
             self.location = kwargs.pop("location", [0, 0, 0])
@@ -71171,6 +76935,28 @@ class SpotLight(X3DLightNode):
 class SquadOrientationInterpolator(X3DInterpolatorNode):
     def __init__(self, **kwargs):
         super(SquadOrientationInterpolator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.key = []
         if not self.key:
             self.key = kwargs.pop("key", [])
@@ -71459,6 +77245,28 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -71659,6 +77467,28 @@ class StringSensor(X3DKeyDeviceSensorNode):
             self.finalText = []
             self.finalText = self.finalText + finalText
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Active = None
         if not self.Active:
             self.Active = kwargs.pop("Active", None)
@@ -71822,6 +77652,28 @@ class SurfaceEmitter(X3DParticleEmitterNode):
             coordIndex = [coordIndex]
             self.coordIndex = []
             self.coordIndex = self.coordIndex + coordIndex
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mass = 0
         if not self.mass:
@@ -72195,6 +78047,28 @@ class Switch(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -72432,6 +78306,28 @@ class TexCoordChaser2D(X3DChaserNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -72676,6 +78572,28 @@ class TexCoordDamper2D(X3DDamperNode):
             initialValue = [initialValue]
             self.initialValue = []
             self.initialValue = self.initialValue + initialValue
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -72988,6 +78906,28 @@ class Text(X3DGeometryNode):
             fontStyle = [fontStyle]
             self.fontStyle = []
             self.fontStyle = self.fontStyle + fontStyle
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.length = []
         if not self.length:
@@ -73435,6 +79375,28 @@ class TextureBackground(X3DBackgroundNode):
             self.groundColor = []
             self.groundColor = self.groundColor + groundColor
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -73771,6 +79733,28 @@ class TextureBackground(X3DBackgroundNode):
 class TextureCoordinate(X3DTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -73905,6 +79889,28 @@ class TextureCoordinate(X3DTextureCoordinateNode):
 class TextureCoordinate3D(X3DTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate3D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -74039,6 +80045,28 @@ class TextureCoordinate3D(X3DTextureCoordinateNode):
 class TextureCoordinate4D(X3DTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate4D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -74173,6 +80201,28 @@ class TextureCoordinate4D(X3DTextureCoordinateNode):
 class TextureCoordinateGenerator(X3DTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinateGenerator, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -74755,6 +80805,28 @@ class TextureProperties(X3DNode):
             self.generateMipMaps = []
             self.generateMipMaps = self.generateMipMaps + generateMipMaps
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.magnificationFilter = "FASTEST"
         if not self.magnificationFilter:
             self.magnificationFilter = kwargs.pop("magnificationFilter", "FASTEST")
@@ -75177,6 +81249,28 @@ class TextureTransform(X3DTextureTransformNode):
             self.center = []
             self.center = self.center + center
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -75377,6 +81471,28 @@ class TextureTransform3D(X3DTextureTransformNode):
             self.center = []
             self.center = self.center + center
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -75555,6 +81671,28 @@ class TextureTransform3D(X3DTextureTransformNode):
 class TextureTransformMatrix3D(X3DTextureTransformNode):
     def __init__(self, **kwargs):
         super(TextureTransformMatrix3D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.matrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
         if not self.matrix:
             self.matrix = kwargs.pop("matrix", [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1])
@@ -75822,6 +81960,28 @@ class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
             fraction_changed = [fraction_changed]
             self.fraction_changed = []
             self.fraction_changed = self.fraction_changed + fraction_changed
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -76119,6 +82279,28 @@ class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
 class TimeTrigger(X3DTriggerNode):
     def __init__(self, **kwargs):
         super(TimeTrigger, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -76334,6 +82516,28 @@ class ToneMappedVolumeStyle(X3DComposableVolumeRenderStyleNode):
             enabled = [enabled]
             self.enabled = []
             self.enabled = self.enabled + enabled
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -76616,6 +82820,28 @@ class TouchSensor(X3DTouchSensorNode):
             hitTexCoord_changed = [hitTexCoord_changed]
             self.hitTexCoord_changed = []
             self.hitTexCoord_changed = self.hitTexCoord_changed + hitTexCoord_changed
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -76935,6 +83161,28 @@ class Transform(X3DGroupingNode):
             children = [children]
             self.children = []
             self.children = self.children + children
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -77276,6 +83524,28 @@ class TransformSensor(X3DEnvironmentalSensorNode):
             exitTime = [exitTime]
             self.exitTime = []
             self.exitTime = self.exitTime + exitTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -77836,6 +84106,28 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
             inputSource = [inputSource]
             self.inputSource = []
             self.inputSource = self.inputSource + inputSource
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -78849,6 +85141,28 @@ class TriangleFanSet(X3DComposedGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -79181,6 +85495,28 @@ class TriangleSet(X3DComposedGeometryNode):
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -79381,6 +85717,28 @@ class TriangleSet(X3DComposedGeometryNode):
 class TriangleSet2D(X3DGeometryNode):
     def __init__(self, **kwargs):
         super(TriangleSet2D, self).__init__(**kwargs)
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -79668,6 +86026,28 @@ class TriangleStripSet(X3DComposedGeometryNode):
             fogCoord = [fogCoord]
             self.fogCoord = []
             self.fogCoord = self.fogCoord + fogCoord
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -80241,6 +86621,28 @@ class TwoSidedMaterial(X3DMaterialNode):
             self.emissiveColor = []
             self.emissiveColor = self.emissiveColor + emissiveColor
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -80709,6 +87111,28 @@ class UniversalJoint(X3DRigidJointNode):
             self.forceOutput = []
             self.forceOutput = self.forceOutput + forceOutput
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -81077,6 +87501,28 @@ class Viewpoint(X3DViewpointNode):
             self.fieldOfView = []
             self.fieldOfView = self.fieldOfView + fieldOfView
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.Bound = None
         if not self.Bound:
             self.Bound = kwargs.pop("Bound", None)
@@ -81440,6 +87886,28 @@ class ViewpointGroup(X3DChildNode):
             self.displayed = []
             self.displayed = self.displayed + displayed
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -81722,6 +88190,28 @@ class Viewport(X3DViewportNode):
             self.clipBoundary = []
             self.clipBoundary = self.clipBoundary + clipBoundary
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -81943,6 +88433,28 @@ class VisibilitySensor(X3DEnvironmentalSensorNode):
             exitTime = [exitTime]
             self.exitTime = []
             self.exitTime = self.exitTime + exitTime
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -82181,6 +88693,28 @@ class VolumeData(X3DVolumeDataNode):
             dimensions = [dimensions]
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
@@ -82449,6 +88983,28 @@ class VolumeEmitter(X3DParticleEmitterNode):
             internal = [internal]
             self.internal = []
             self.internal = self.internal + internal
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.mass = 0
         if not self.mass:
@@ -82755,6 +89311,28 @@ class VolumePickSensor(X3DPickSensorNode):
             intersectionType = [intersectionType]
             self.intersectionType = []
             self.intersectionType = self.intersectionType + intersectionType
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.Active = None
         if not self.Active:
@@ -83128,6 +89706,28 @@ class WindPhysicsModel(X3DParticlePhysicsModelNode):
             self.gustiness = []
             self.gustiness = self.gustiness + gustiness
         return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -83329,6 +89929,28 @@ class WorldInfo(X3DInfoNode):
             info = [info]
             self.info = []
             self.info = self.info + info
+        return self
+        self.IS = None
+        if not self.IS:
+            self.IS = kwargs.pop("IS", None)
+    def setIS(self, IS = None):
+        try:
+            super().setIS(IS)
+        except AttributeError:
+           pass
+        self.IS = IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
+        return self
+    def addIS(self, IS = None):
+        if not isinstance(IS, list):
+            IS = [IS]
+            self.IS = []
+            self.IS = self.IS + IS
         return self
         self.metadata = None
         if not self.metadata:
