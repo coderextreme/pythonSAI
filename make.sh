@@ -1,7 +1,7 @@
 #!/bin/sh
 . ./profile.sh
 npm install
-${PYTHON} -m pip install --upgrade pip setuptools
+${PYTHON} -m pip install --upgrade pip3 setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius
 ${PYTHON} -m pip install --upgrade bs4

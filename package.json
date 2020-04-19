@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "node-mkdirp": "*",
     "ajv": "*",
     "ajv-i18n": "*",
-    "xmldom": "*",
     "java": "*",
-    "jsonlint": "*"
+    "jsonlint": "*",
+    "node-mkdirp": "*",
+    "xmldom": "*"
   }
 }
