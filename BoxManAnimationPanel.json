@@ -46,7 +46,7 @@
           },
           {
             "@name":"modified",
-            "@content":"9 April 2019"
+            "@content":"20 October 2019"
           },
           {
             "@name":"Image",
@@ -110,7 +110,7 @@
           },
           {
             "@name":"reference",
-            "@content":"http://www.web3d.org/x3d/content/X3dToVrml97.xslt"
+            "@content":"https://www.web3d.org/x3d/content/X3dToVrml97.xslt"
           },
           {
             "@name":"rights",
@@ -126,7 +126,7 @@
           },
           {
             "@name":"identifier",
-            "@content":"http://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.x3d"
+            "@content":"https://www.web3d.org/x3d/content/examples/Basic/HumanoidAnimation/BoxManAnimationPanel.x3d"
           },
           {
             "@name":"generator",
@@ -142,11 +142,11 @@
           },
           {
             "@name":"generator",
-            "@content":"X3dToJson.xslt, http://www.web3d.org/x3d/stylesheets/X3dToJson.html"
+            "@content":"X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
           },
           {
             "@name":"reference",
-            "@content":"X3D JSON encoding: http://www.web3d.org/wiki/index.php/X3D_JSON_Encoding"
+            "@content":"X3D JSON encoding: https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding"
           }
         ]
     },
