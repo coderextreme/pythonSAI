@@ -55,7 +55,7 @@ The next two are for the PythonSerializer.js:
 fieldTypesGenerator.py generates fieldTypes.js -- a way to look up info on fields
 mapToMethodGenerator.py generates mapToMethod.js -- a way to map fields to methods
 
-packagemaker.py generates X3Dpackage.py, the old Python SAI, to be replaced by a full SAI
+packagemaker.py generates X3Dpackage.py, the Python SAI
 
 allsaxon.js  -- for Saxon
 config.js -- configuration

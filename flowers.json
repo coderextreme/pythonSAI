@@ -7,6 +7,10 @@
     "head": {
         "component": [
           {
+            "@name":"Scripting",
+            "@level":1
+          },
+          {
             "@name":"Shaders",
             "@level":1
           },

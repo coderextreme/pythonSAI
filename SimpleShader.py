@@ -79,7 +79,7 @@ meta16.setContent("Titania V3.0.3, http://titania.create3000.de")
 
 head1.addMeta(meta16)
 meta17 = x3d.meta()
-meta17.setName("info")
+meta17.setName("comment")
 meta17.setContent("World of Titania")
 
 head1.addMeta(meta17)

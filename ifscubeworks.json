@@ -8,11 +8,11 @@
         "meta": [
           {
             "@name":"title",
-            "@content":"ifscubeworks.json"
+            "@content":"ifscubeworks.x3d"
           },
           {
             "@name":"identifier",
-            "@content":"http://coderextreme.net/X3DJSONLD/template.json"
+            "@content":"http://coderextreme.net/X3DJSONLD/src/main/data/ifscubeworks.x3d"
           },
           {
             "@name":"description",

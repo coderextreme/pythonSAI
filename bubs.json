@@ -5,6 +5,12 @@
     "@xsd:noNamespaceSchemaLocation":"http://www.web3d.org/specifications/x3d-3.3.xsd",
     "JSON schema":"http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
     "head": {
+        "component": [
+          {
+            "@name":"Scripting",
+            "@level":1
+          }
+        ],
         "meta": [
           {
             "@name":"title",
@@ -97,7 +103,7 @@
                           },
                           { "Script":
                             {
-                              "@DEF":"bounce",
+                              "@DEF":"bounce1",
                               "field": [
                                 {
                                   "@name":"scale",
@@ -184,7 +190,7 @@
                           },
                           { "ROUTE":
                             {
-                              "@fromNode":"bounce",
+                              "@fromNode":"bounce1",
                               "@fromField":"translation_changed",
                               "@toNode":"transform",
                               "@toField":"set_translation"
@@ -192,7 +198,7 @@
                           },
                           { "ROUTE":
                             {
-                              "@fromNode":"bounce",
+                              "@fromNode":"bounce1",
                               "@fromField":"scale_changed",
                               "@toNode":"transform",
                               "@toField":"set_scale"
@@ -202,7 +208,7 @@
                             {
                               "@fromNode":"bubbleClock",
                               "@fromField":"fraction_changed",
-                              "@toNode":"bounce",
+                              "@toNode":"bounce1",
                               "@toField":"set_fraction"
                             }
                           }
