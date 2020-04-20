@@ -4237,6 +4237,50 @@ class X3DBoundedObject(object):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
     def setComments(self, comments = None):
         try:
             super().setComments(comments)
@@ -4349,6 +4393,28 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -4414,6 +4480,28 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -4992,7 +5080,53 @@ class X3DKeyDeviceSensorNode(X3DSensorNode):
         return self
 
 
-class X3DLayerNode(X3DNode):
+class X3DPickableObject(object):
+    def __init__(self, **kwargs):
+        super(X3DPickableObject, self).__init__()
+        self.pickable = True
+        if not self.pickable:
+            self.pickable = kwargs.pop("pickable", True)
+    def setPickable(self, pickable = True):
+        try:
+            super().setPickable(pickable)
+        except AttributeError:
+           pass
+        self.pickable = pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
+    def setComments(self, comments = None):
+        try:
+            super().setComments(comments)
+        except AttributeError:
+           pass
+        self.comments = comments
+        return self
+    def addComments(self, comments = None):
+        if not isinstance(comments, list):
+            comments = [comments]
+            self.comments = []
+            self.comments = self.comments + comments
+        return self
+    def addComments(self, comments = None):
+        if not isinstance(comments, list):
+            comments = [comments]
+            self.comments = []
+            self.comments = self.comments + comments
+        return self
+
+
+class X3DLayerNode(X3DPickableObject, X3DNode):
     def __init__(self, **kwargs):
         super(X3DLayerNode, self).__init__(**kwargs)
         self.IS = None
@@ -5017,28 +5151,6 @@ class X3DLayerNode(X3DNode):
             self.IS = []
             self.IS = self.IS + IS
         return self
-        self.Pickable = True
-        if not self.Pickable:
-            self.Pickable = kwargs.pop("Pickable", True)
-    def setIsPickable(self, Pickable = True):
-        try:
-            super().setIsPickable(Pickable)
-        except AttributeError:
-           pass
-        self.Pickable = Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -5061,6 +5173,50 @@ class X3DLayerNode(X3DNode):
             self.metadata = []
             self.metadata = self.metadata + metadata
         return self
+        self.objectType = "ALL"
+        if not self.objectType:
+            self.objectType = kwargs.pop("objectType", "ALL")
+    def setObjectType(self, objectType = "ALL"):
+        try:
+            super().setObjectType(objectType)
+        except AttributeError:
+           pass
+        self.objectType = objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+        self.pickable = True
+        if not self.pickable:
+            self.pickable = kwargs.pop("pickable", True)
+    def setPickable(self, pickable = True):
+        try:
+            super().setPickable(pickable)
+        except AttributeError:
+           pass
+        self.pickable = pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
         self.viewport = None
         if not self.viewport:
             self.viewport = kwargs.pop("viewport", None)
@@ -5082,6 +5238,28 @@ class X3DLayerNode(X3DNode):
             viewport = [viewport]
             self.viewport = []
             self.viewport = self.viewport + viewport
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -5755,6 +5933,28 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -5864,6 +6064,28 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -5999,6 +6221,28 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -6064,6 +6308,28 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -9149,6 +9415,28 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geometry = None
         if not self.geometry:
             self.geometry = kwargs.pop("geometry", None)
@@ -9214,6 +9502,28 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -11757,6 +12067,28 @@ class X3DViewportNode(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -11822,6 +12154,28 @@ class X3DViewportNode(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -11987,6 +12341,28 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -12030,6 +12406,28 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -12324,52 +12722,6 @@ class X3DMetadataObject(object):
         return self
 
 
-class X3DPickableObject(object):
-    def __init__(self, **kwargs):
-        super(X3DPickableObject, self).__init__()
-        self.pickable = True
-        if not self.pickable:
-            self.pickable = kwargs.pop("pickable", True)
-    def setPickable(self, pickable = True):
-        try:
-            super().setPickable(pickable)
-        except AttributeError:
-           pass
-        self.pickable = pickable
-        return self
-    def addPickable(self, pickable = True):
-        if not isinstance(pickable, list):
-            pickable = [pickable]
-            self.pickable = []
-            self.pickable = self.pickable + pickable
-        return self
-    def addPickable(self, pickable = True):
-        if not isinstance(pickable, list):
-            pickable = [pickable]
-            self.pickable = []
-            self.pickable = self.pickable + pickable
-        return self
-    def setComments(self, comments = None):
-        try:
-            super().setComments(comments)
-        except AttributeError:
-           pass
-        self.comments = comments
-        return self
-    def addComments(self, comments = None):
-        if not isinstance(comments, list):
-            comments = [comments]
-            self.comments = []
-            self.comments = self.comments + comments
-        return self
-    def addComments(self, comments = None):
-        if not isinstance(comments, list):
-            comments = [comments]
-            self.comments = []
-            self.comments = self.comments + comments
-        return self
-
-
 class X3DProgrammableShaderObject(object):
     def __init__(self, **kwargs):
         super(X3DProgrammableShaderObject, self).__init__()
@@ -12573,6 +12925,28 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
             self.description = []
             self.description = self.description + description
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -12682,6 +13056,28 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
             url = [url]
             self.url = []
             self.url = self.url + url
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -14929,6 +15325,28 @@ class Billboard(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -14994,6 +15412,28 @@ class Billboard(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -17111,6 +17551,28 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -17198,6 +17660,28 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -17333,6 +17817,28 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -17420,6 +17926,28 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
             shape = [shape]
             self.shape = []
             self.shape = self.shape + shape
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -17599,6 +18127,28 @@ class CADLayer(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -17687,23 +18237,23 @@ class CADLayer(X3DGroupingNode):
             self.Children = []
             self.Children = self.Children + Children
         return self
-        self.visible = []
+        self.visible = True
         if not self.visible:
-            self.visible = kwargs.pop("visible", [])
-    def setVisible(self, visible = []):
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
         try:
             super().setVisible(visible)
         except AttributeError:
            pass
         self.visible = visible
         return self
-    def addVisible(self, visible = []):
+    def addVisible(self, visible = True):
         if not isinstance(visible, list):
             visible = [visible]
             self.visible = []
             self.visible = self.visible + visible
         return self
-    def addVisible(self, visible = []):
+    def addVisible(self, visible = True):
         if not isinstance(visible, list):
             visible = [visible]
             self.visible = []
@@ -17909,6 +18459,28 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -18084,6 +18656,28 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -18891,6 +19485,28 @@ class CollidableOffset(X3DNBodyCollidableNode):
             self.collidable = []
             self.collidable = self.collidable + collidable
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -19000,6 +19616,28 @@ class CollidableOffset(X3DNBodyCollidableNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -19135,6 +19773,28 @@ class CollidableShape(X3DNBodyCollidableNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -19266,6 +19926,28 @@ class CollidableShape(X3DNBodyCollidableNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -19467,6 +20149,28 @@ class Collision(X3DSensorNode, X3DGroupingNode):
             self.collideTime = []
             self.collideTime = self.collideTime + collideTime
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -19599,6 +20303,28 @@ class Collision(X3DSensorNode, X3DGroupingNode):
             self.Children = []
             self.Children = self.Children + Children
         return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
         self.DEF = None
         if not self.DEF:
             self.DEF = kwargs.pop("DEF", None)
@@ -19686,7 +20412,7 @@ class Collision(X3DSensorNode, X3DGroupingNode):
         return self
 
 
-class CollisionCollection(X3DNode):
+class CollisionCollection(X3DBoundedObject, X3DChildNode):
     def __init__(self, **kwargs):
         super(CollisionCollection, self).__init__(**kwargs)
         self.appliedParameters = "BOUNCE"
@@ -19791,6 +20517,50 @@ class CollisionCollection(X3DNode):
             self.appliedParameters = []
             self.appliedParameters = self.appliedParameters + appliedParameters
         return self
+        self.bboxCenter = [0, 0, 0]
+        if not self.bboxCenter:
+            self.bboxCenter = kwargs.pop("bboxCenter", [0, 0, 0])
+    def setBboxCenter(self, bboxCenter = [0, 0, 0]):
+        try:
+            super().setBboxCenter(bboxCenter)
+        except AttributeError:
+           pass
+        self.bboxCenter = bboxCenter
+        return self
+    def addBboxCenter(self, bboxCenter = [0, 0, 0]):
+        if not isinstance(bboxCenter, list):
+            bboxCenter = [bboxCenter]
+            self.bboxCenter = []
+            self.bboxCenter = self.bboxCenter + bboxCenter
+        return self
+    def addBboxCenter(self, bboxCenter = [0, 0, 0]):
+        if not isinstance(bboxCenter, list):
+            bboxCenter = [bboxCenter]
+            self.bboxCenter = []
+            self.bboxCenter = self.bboxCenter + bboxCenter
+        return self
+        self.bboxSize = [-1, -1, -1]
+        if not self.bboxSize:
+            self.bboxSize = kwargs.pop("bboxSize", [-1, -1, -1])
+    def setBboxSize(self, bboxSize = [-1, -1, -1]):
+        try:
+            super().setBboxSize(bboxSize)
+        except AttributeError:
+           pass
+        self.bboxSize = bboxSize
+        return self
+    def addBboxSize(self, bboxSize = [-1, -1, -1]):
+        if not isinstance(bboxSize, list):
+            bboxSize = [bboxSize]
+            self.bboxSize = []
+            self.bboxSize = self.bboxSize + bboxSize
+        return self
+    def addBboxSize(self, bboxSize = [-1, -1, -1]):
+        if not isinstance(bboxSize, list):
+            bboxSize = [bboxSize]
+            self.bboxSize = []
+            self.bboxSize = self.bboxSize + bboxSize
+        return self
         self.bounce = 0
         if not self.bounce:
             self.bounce = kwargs.pop("bounce", 0)
@@ -19850,6 +20620,28 @@ class CollisionCollection(X3DNode):
             collidables = [collidables]
             self.collidables = []
             self.collidables = self.collidables + collidables
+        return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
         return self
         self.enabled = True
         if not self.enabled:
@@ -20096,6 +20888,28 @@ class CollisionCollection(X3DNode):
             surfaceSpeed = [surfaceSpeed]
             self.surfaceSpeed = []
             self.surfaceSpeed = self.surfaceSpeed + surfaceSpeed
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -20497,6 +21311,28 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
             self.collidables = []
             self.collidables = self.collidables + collidables
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -20584,6 +21420,28 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
             useGeometry = [useGeometry]
             self.useGeometry = []
             self.useGeometry = self.useGeometry + useGeometry
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -30396,6 +31254,28 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
             self.detonationResult = []
             self.detonationResult = self.detonationResult + detonationResult
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -31807,6 +32687,28 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.warhead = 0
         if not self.warhead:
@@ -35456,6 +36358,28 @@ class GeoLocation(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geoCoords = [0, 0, 0]
         if not self.geoCoords:
             self.geoCoords = kwargs.pop("geoCoords", [0, 0, 0])
@@ -35587,6 +36511,28 @@ class GeoLocation(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -35854,6 +36800,28 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geoOrigin = None
         if not self.geoOrigin:
             self.geoOrigin = kwargs.pop("geoOrigin", None)
@@ -36053,6 +37021,28 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
             rootUrl = [rootUrl]
             self.rootUrl = []
             self.rootUrl = self.rootUrl + rootUrl
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -37724,6 +38714,28 @@ class GeoTransform(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geoCenter = [0, 0, 0]
         if not self.geoCenter:
             self.geoCenter = kwargs.pop("geoCenter", [0, 0, 0])
@@ -37951,6 +38963,28 @@ class GeoTransform(X3DGroupingNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -38574,6 +39608,28 @@ class Group(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -38639,6 +39695,28 @@ class Group(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -39101,6 +40179,28 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
             self.description = []
             self.description = self.description + description
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.info = []
         if not self.info:
             self.info = kwargs.pop("info", [])
@@ -39521,45 +40621,45 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
             self.skin = []
             self.skin = self.skin + skin
         return self
-        self.skinBindingCoords = []
+        self.skinBindingCoords = None
         if not self.skinBindingCoords:
-            self.skinBindingCoords = kwargs.pop("skinBindingCoords", [])
-    def setSkinBindingCoords(self, skinBindingCoords = []):
+            self.skinBindingCoords = kwargs.pop("skinBindingCoords", None)
+    def setSkinBindingCoords(self, skinBindingCoords = None):
         try:
             super().setSkinBindingCoords(skinBindingCoords)
         except AttributeError:
            pass
         self.skinBindingCoords = skinBindingCoords
         return self
-    def addSkinBindingCoords(self, skinBindingCoords = []):
+    def addSkinBindingCoords(self, skinBindingCoords = None):
         if not isinstance(skinBindingCoords, list):
             skinBindingCoords = [skinBindingCoords]
             self.skinBindingCoords = []
             self.skinBindingCoords = self.skinBindingCoords + skinBindingCoords
         return self
-    def addSkinBindingCoords(self, skinBindingCoords = []):
+    def addSkinBindingCoords(self, skinBindingCoords = None):
         if not isinstance(skinBindingCoords, list):
             skinBindingCoords = [skinBindingCoords]
             self.skinBindingCoords = []
             self.skinBindingCoords = self.skinBindingCoords + skinBindingCoords
         return self
-        self.skinBindingNormals = []
+        self.skinBindingNormals = None
         if not self.skinBindingNormals:
-            self.skinBindingNormals = kwargs.pop("skinBindingNormals", [])
-    def setSkinBindingNormals(self, skinBindingNormals = []):
+            self.skinBindingNormals = kwargs.pop("skinBindingNormals", None)
+    def setSkinBindingNormals(self, skinBindingNormals = None):
         try:
             super().setSkinBindingNormals(skinBindingNormals)
         except AttributeError:
            pass
         self.skinBindingNormals = skinBindingNormals
         return self
-    def addSkinBindingNormals(self, skinBindingNormals = []):
+    def addSkinBindingNormals(self, skinBindingNormals = None):
         if not isinstance(skinBindingNormals, list):
             skinBindingNormals = [skinBindingNormals]
             self.skinBindingNormals = []
             self.skinBindingNormals = self.skinBindingNormals + skinBindingNormals
         return self
-    def addSkinBindingNormals(self, skinBindingNormals = []):
+    def addSkinBindingNormals(self, skinBindingNormals = None):
         if not isinstance(skinBindingNormals, list):
             skinBindingNormals = [skinBindingNormals]
             self.skinBindingNormals = []
@@ -39706,6 +40806,28 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
             viewpoints = [viewpoints]
             self.viewpoints = []
             self.viewpoints = self.viewpoints + viewpoints
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -39950,6 +41072,28 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
             displacers = [displacers]
             self.displacers = []
             self.displacers = self.displacers + displacers
+        return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
         return self
         self.IS = None
         if not self.IS:
@@ -40290,6 +41434,28 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
             ulimit = [ulimit]
             self.ulimit = []
             self.ulimit = self.ulimit + ulimit
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -41115,6 +42281,28 @@ class HAnimSegment(X3DGroupingNode):
             self.displacers = []
             self.displacers = self.displacers + displacers
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -41262,6 +42450,28 @@ class HAnimSegment(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -41485,6 +42695,28 @@ class HAnimSite(X3DGroupingNode):
             self.description = []
             self.description = self.description + description
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -41668,6 +42900,28 @@ class HAnimSite(X3DGroupingNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -45113,6 +46367,28 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -45200,6 +46476,28 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
             url = [url]
             self.url = []
             self.url = self.url + url
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -45853,6 +47151,28 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.gradients = None
         if not self.gradients:
             self.gradients = kwargs.pop("gradients", None)
@@ -45992,6 +47312,28 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
             surfaceValues = [surfaceValues]
             self.surfaceValues = []
             self.surfaceValues = self.surfaceValues + surfaceValues
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.voxels = None
         if not self.voxels:
@@ -46503,28 +47845,6 @@ class Layer(X3DLayerNode):
             self.IS = []
             self.IS = self.IS + IS
         return self
-        self.Pickable = True
-        if not self.Pickable:
-            self.Pickable = kwargs.pop("Pickable", True)
-    def setIsPickable(self, Pickable = True):
-        try:
-            super().setIsPickable(Pickable)
-        except AttributeError:
-           pass
-        self.Pickable = Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
         self.metadata = None
         if not self.metadata:
             self.metadata = kwargs.pop("metadata", None)
@@ -46546,6 +47866,50 @@ class Layer(X3DLayerNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.objectType = "ALL"
+        if not self.objectType:
+            self.objectType = kwargs.pop("objectType", "ALL")
+    def setObjectType(self, objectType = "ALL"):
+        try:
+            super().setObjectType(objectType)
+        except AttributeError:
+           pass
+        self.objectType = objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+        self.pickable = True
+        if not self.pickable:
+            self.pickable = kwargs.pop("pickable", True)
+    def setPickable(self, pickable = True):
+        try:
+            super().setPickable(pickable)
+        except AttributeError:
+           pass
+        self.pickable = pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
         return self
         self.Children = []
         if not self.Children:
@@ -46590,6 +47954,28 @@ class Layer(X3DLayerNode):
             viewport = [viewport]
             self.viewport = []
             self.viewport = self.viewport + viewport
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -47627,6 +49013,28 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -47736,6 +49144,28 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
             viewport = [viewport]
             self.viewport = []
             self.viewport = self.viewport + viewport
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -47893,28 +49323,6 @@ class LayoutLayer(X3DLayerNode):
             self.IS = []
             self.IS = self.IS + IS
         return self
-        self.Pickable = True
-        if not self.Pickable:
-            self.Pickable = kwargs.pop("Pickable", True)
-    def setIsPickable(self, Pickable = True):
-        try:
-            super().setIsPickable(Pickable)
-        except AttributeError:
-           pass
-        self.Pickable = Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
-    def addIsPickable(self, Pickable = True):
-        if not isinstance(Pickable, list):
-            Pickable = [Pickable]
-            self.Pickable = []
-            self.Pickable = self.Pickable + Pickable
-        return self
         self.layout = None
         if not self.layout:
             self.layout = kwargs.pop("layout", None)
@@ -47959,6 +49367,50 @@ class LayoutLayer(X3DLayerNode):
             self.metadata = []
             self.metadata = self.metadata + metadata
         return self
+        self.objectType = "ALL"
+        if not self.objectType:
+            self.objectType = kwargs.pop("objectType", "ALL")
+    def setObjectType(self, objectType = "ALL"):
+        try:
+            super().setObjectType(objectType)
+        except AttributeError:
+           pass
+        self.objectType = objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+    def addObjectType(self, objectType = "ALL"):
+        if not isinstance(objectType, list):
+            objectType = [objectType]
+            self.objectType = []
+            self.objectType = self.objectType + objectType
+        return self
+        self.pickable = True
+        if not self.pickable:
+            self.pickable = kwargs.pop("pickable", True)
+    def setPickable(self, pickable = True):
+        try:
+            super().setPickable(pickable)
+        except AttributeError:
+           pass
+        self.pickable = pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
+    def addPickable(self, pickable = True):
+        if not isinstance(pickable, list):
+            pickable = [pickable]
+            self.pickable = []
+            self.pickable = self.pickable + pickable
+        return self
         self.Children = []
         if not self.Children:
             self.Children = kwargs.pop("Children", [])
@@ -48002,6 +49454,28 @@ class LayoutLayer(X3DLayerNode):
             viewport = [viewport]
             self.viewport = []
             self.viewport = self.viewport + viewport
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -49659,6 +51133,28 @@ class LOD(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.forceTransitions = False
         if not self.forceTransitions:
             self.forceTransitions = kwargs.pop("forceTransitions", False)
@@ -49798,6 +51294,28 @@ class LOD(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -50635,7 +52153,7 @@ class Matrix4VertexAttribute(X3DVertexAttributeNode):
         return self
 
 
-class MetadataBoolean(X3DNode, X3DMetadataObject):
+class MetadataBoolean(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataBoolean, self).__init__(**kwargs)
         self.IS = None
@@ -50835,7 +52353,7 @@ class MetadataBoolean(X3DNode, X3DMetadataObject):
         return self
 
 
-class MetadataDouble(X3DNode, X3DMetadataObject):
+class MetadataDouble(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataDouble, self).__init__(**kwargs)
         self.IS = None
@@ -51035,7 +52553,7 @@ class MetadataDouble(X3DNode, X3DMetadataObject):
         return self
 
 
-class MetadataFloat(X3DNode, X3DMetadataObject):
+class MetadataFloat(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataFloat, self).__init__(**kwargs)
         self.IS = None
@@ -51235,7 +52753,7 @@ class MetadataFloat(X3DNode, X3DMetadataObject):
         return self
 
 
-class MetadataInteger(X3DNode, X3DMetadataObject):
+class MetadataInteger(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataInteger, self).__init__(**kwargs)
         self.IS = None
@@ -51635,7 +53153,7 @@ class MetadataSet(X3DMetadataObject, X3DNode):
         return self
 
 
-class MetadataString(X3DNode, X3DMetadataObject):
+class MetadataString(X3DMetadataObject, X3DNode):
     def __init__(self, **kwargs):
         super(MetadataString, self).__init__(**kwargs)
         self.IS = None
@@ -56173,6 +57691,28 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geometry = []
         if not self.geometry:
             self.geometry = kwargs.pop("geometry", [])
@@ -56290,6 +57830,28 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
             tessellationScale = [tessellationScale]
             self.tessellationScale = []
             self.tessellationScale = self.tessellationScale + tessellationScale
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -59974,6 +61536,28 @@ class ParticleSystem(X3DShapeNode):
             self.createParticles = []
             self.createParticles = self.createParticles + createParticles
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.emitter = None
         if not self.emitter:
             self.emitter = kwargs.pop("emitter", None)
@@ -60352,6 +61936,28 @@ class ParticleSystem(X3DShapeNode):
             self.texCoordRamp = []
             self.texCoordRamp = self.texCoordRamp + texCoordRamp
         return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
         self.DEF = None
         if not self.DEF:
             self.DEF = kwargs.pop("DEF", None)
@@ -60530,6 +62136,28 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -60639,6 +62267,28 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -67464,6 +69114,28 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.enabled = True
         if not self.enabled:
             self.enabled = kwargs.pop("enabled", True)
@@ -68083,6 +69755,28 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
             transmitterSiteID = [transmitterSiteID]
             self.transmitterSiteID = []
             self.transmitterSiteID = self.transmitterSiteID + transmitterSiteID
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.whichGeometry = 1
         if not self.whichGeometry:
@@ -71072,6 +72766,28 @@ class ScreenGroup(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -71137,6 +72853,28 @@ class ScreenGroup(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -71605,6 +73343,28 @@ class SegmentedVolumeData(X3DVolumeDataNode):
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -71714,6 +73474,28 @@ class SegmentedVolumeData(X3DVolumeDataNode):
             segmentIdentifiers = [segmentIdentifiers]
             self.segmentIdentifiers = []
             self.segmentIdentifiers = self.segmentIdentifiers + segmentIdentifiers
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.voxels = None
         if not self.voxels:
@@ -72568,6 +74350,28 @@ class Shape(X3DShapeNode):
             self.bboxSize = []
             self.bboxSize = self.bboxSize + bboxSize
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.geometry = None
         if not self.geometry:
             self.geometry = kwargs.pop("geometry", None)
@@ -72633,6 +74437,28 @@ class Shape(X3DShapeNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -72886,6 +74712,28 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
             dataLength = [dataLength]
             self.dataLength = []
             self.dataLength = self.dataLength + dataLength
+        return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
         return self
         self.enabled = True
         if not self.enabled:
@@ -73462,6 +75310,28 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
             timestamp = [timestamp]
             self.timestamp = []
             self.timestamp = self.timestamp + timestamp
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.whichGeometry = 1
         if not self.whichGeometry:
@@ -77245,6 +79115,28 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -77288,6 +79180,28 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
             metadata = [metadata]
             self.metadata = []
             self.metadata = self.metadata + metadata
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -78047,6 +79961,28 @@ class Switch(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -78112,6 +80048,28 @@ class Switch(X3DGroupingNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.whichChoice = -1
         if not self.whichChoice:
@@ -83162,6 +85120,28 @@ class Transform(X3DGroupingNode):
             self.children = []
             self.children = self.children + children
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -83315,6 +85295,28 @@ class Transform(X3DGroupingNode):
             translation = [translation]
             self.translation = []
             self.translation = self.translation + translation
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -83974,6 +85976,28 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
             cryptoSystem = [cryptoSystem]
             self.cryptoSystem = []
             self.cryptoSystem = self.cryptoSystem + cryptoSystem
+        return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
         return self
         self.enabled = True
         if not self.enabled:
@@ -84836,6 +86860,28 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
             transmitState = [transmitState]
             self.transmitState = []
             self.transmitState = self.transmitState + transmitState
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.whichGeometry = 1
         if not self.whichGeometry:
@@ -88190,6 +90236,28 @@ class Viewport(X3DViewportNode):
             self.clipBoundary = []
             self.clipBoundary = self.clipBoundary + clipBoundary
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -88255,6 +90323,28 @@ class Viewport(X3DViewportNode):
             Children = [Children]
             self.Children = []
             self.Children = self.Children + Children
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.DEF = None
         if not self.DEF:
@@ -88694,6 +90784,28 @@ class VolumeData(X3DVolumeDataNode):
             self.dimensions = []
             self.dimensions = self.dimensions + dimensions
         return self
+        self.displayBBox = False
+        if not self.displayBBox:
+            self.displayBBox = kwargs.pop("displayBBox", False)
+    def setDisplayBBox(self, displayBBox = False):
+        try:
+            super().setDisplayBBox(displayBBox)
+        except AttributeError:
+           pass
+        self.displayBBox = displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
+    def addDisplayBBox(self, displayBBox = False):
+        if not isinstance(displayBBox, list):
+            displayBBox = [displayBBox]
+            self.displayBBox = []
+            self.displayBBox = self.displayBBox + displayBBox
+        return self
         self.IS = None
         if not self.IS:
             self.IS = kwargs.pop("IS", None)
@@ -88759,6 +90871,28 @@ class VolumeData(X3DVolumeDataNode):
             renderStyle = [renderStyle]
             self.renderStyle = []
             self.renderStyle = self.renderStyle + renderStyle
+        return self
+        self.visible = True
+        if not self.visible:
+            self.visible = kwargs.pop("visible", True)
+    def setVisible(self, visible = True):
+        try:
+            super().setVisible(visible)
+        except AttributeError:
+           pass
+        self.visible = visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
+        return self
+    def addVisible(self, visible = True):
+        if not isinstance(visible, list):
+            visible = [visible]
+            self.visible = []
+            self.visible = self.visible + visible
         return self
         self.voxels = None
         if not self.voxels:
@@ -90151,6 +92285,8 @@ class component(object):
             pass
         elif 'Grouping' == self.name:
             pass
+        elif 'HAnim' == self.name:
+            pass
         elif 'H-Anim' == self.name:
             pass
         elif 'Interpolation' == self.name:
@@ -90223,6 +92359,8 @@ class component(object):
         elif 'Geospatial' == name:
             pass
         elif 'Grouping' == name:
+            pass
+        elif 'HAnim' == name:
             pass
         elif 'H-Anim' == name:
             pass
@@ -90303,6 +92441,8 @@ class component(object):
             pass
         elif 'Grouping' == name:
             pass
+        elif 'HAnim' == name:
+            pass
         elif 'H-Anim' == name:
             pass
         elif 'Interpolation' == name:
@@ -90380,6 +92520,8 @@ class component(object):
         elif 'Geospatial' == name:
             pass
         elif 'Grouping' == name:
+            pass
+        elif 'HAnim' == name:
             pass
         elif 'H-Anim' == name:
             pass
@@ -92508,9 +94650,9 @@ class X3D(object):
             self.Scene = []
             self.Scene = self.Scene + Scene
         return self
-        self.version = "3.3"
+        self.version = "4.0"
         if not self.version:
-            self.version = kwargs.pop("version", "3.3")
+            self.version = kwargs.pop("version", "4.0")
         if '3.0' == self.version:
             pass
         elif '3.1' == self.version:
@@ -92523,7 +94665,7 @@ class X3D(object):
             pass
         else:
             return None
-    def setVersion(self, version = "3.3"):
+    def setVersion(self, version = "4.0"):
         if '3.0' == version:
             pass
         elif '3.1' == version:
@@ -92542,7 +94684,7 @@ class X3D(object):
            pass
         self.version = version
         return self
-    def addVersion(self, version = "3.3"):
+    def addVersion(self, version = "4.0"):
         if '3.0' == version:
             pass
         elif '3.1' == version:
@@ -92560,7 +94702,7 @@ class X3D(object):
             self.version = []
             self.version = self.version + version
         return self
-    def addVersion(self, version = "3.3"):
+    def addVersion(self, version = "4.0"):
         if '3.0' == version:
             pass
         elif '3.1' == version:

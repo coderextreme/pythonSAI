@@ -74,36 +74,36 @@ POSSIBILITY OF SUCH DAMAGE.
 	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="setuptools"/>
 	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="Cython"/>
 	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="pyjnius"/>
 	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="bs4"/>
 	</exec>
 	<exec executable="python">
 		<arg value="-m"/>
-		<arg value="pip3"/>
+		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="lxml"/>
@@ -112,7 +112,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		<arg value="classes.py"/>
 	</exec>
 	<exec executable="python">
-		<arg value="fieldtypes.py"/>
+		<arg value="fieldTypesGenerator.py"/>
 	</exec>
 	<exec executable="python">
 		<arg value="parseom.py"/>

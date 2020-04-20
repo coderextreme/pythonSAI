@@ -95,11 +95,12 @@ field26.setValue("\"rnl_front.png\" \"uffizi_front.png\"")
 Script25.addField(field26)
 
 Script25.setSourceCode('''ecmascript:\n"+
-"			    var me = '\"1\" \"\"2\" \"\\n3\"';''')
+"			    var me = '\"1\" \"\\\"2\" \"\\n3\"';\n"+
+"			    ''')
 
 Transform9.addChildren(Script25)
 
 Scene8.addChildren(Transform9)
 
 X3D0.setScene(Scene8)
-X3D0.toFileX3D("././text_RoundTrip.x3d")
+X3D0.toFileX3D("text_RoundTrip.x3d")

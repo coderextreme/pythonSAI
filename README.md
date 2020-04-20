@@ -34,6 +34,7 @@ Configure per your environment for Python 3.7.3 and node.js in profile.sh
 
 Run;
 ```
+. profile.sh
 sh make.sh
 ```
 

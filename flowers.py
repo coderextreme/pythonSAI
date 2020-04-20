@@ -42,9 +42,10 @@ head1.addMeta(meta8)
 X3D0.setHead(head1)
 Scene9 = x3d.Scene()
 NavigationInfo10 = x3d.NavigationInfo()
+NavigationInfo10.setType(["EXAMINE","ANY"])
 
 Scene9.addChildren(NavigationInfo10)
-#Images courtesy of Paul Debevec's Light Probe Image Gallery
+# Images courtesy of Paul Debevec's Light Probe Image Gallery 
 Background11 = x3d.Background()
 Background11.setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])
 Background11.setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])
@@ -59,11 +60,12 @@ ProtoDeclare12.setName("flower")
 ProtoBody13 = x3d.ProtoBody()
 Transform14 = x3d.Transform()
 Transform14.setDEF("animate_transform")
+Transform14.setTranslation([0,0,0])
 Shape15 = x3d.Shape()
 Appearance16 = x3d.Appearance()
 Material17 = x3d.Material()
-Material17.setDiffuseColor([0.7,0.7,0.7])
-Material17.setSpecularColor([0.5,0.5,0.5])
+Material17.setDiffuseColor([.7,.7,.7])
+Material17.setSpecularColor([.5,.5,.5])
 
 Appearance16.setMaterial(Material17)
 ComposedCubeMapTexture18 = x3d.ComposedCubeMapTexture()
@@ -104,11 +106,16 @@ field26.setAccessType("inputOutput")
 field26.setValue("0")
 
 ComposedShader25.addField(field26)
+# 
+		       <field name='cube' type='SFNode' accessType=\"inputOutput\">
+			  <ComposedCubeMapTexture USE=\"texture\"/>
+		  </field>
+		  
 field27 = x3d.field()
 field27.setName("chromaticDispertion")
 field27.setAccessType("initializeOnly")
 field27.setType("SFVec3f")
-field27.setValue("0.98 1 1.033")
+field27.setValue("0.98 1.0 1.033")
 
 ComposedShader25.addField(field27)
 field28 = x3d.field()
@@ -174,17 +181,16 @@ field36.setAccessType("inputOutput")
 field36.setValue("0")
 
 ComposedShader25.addField(field36)
-#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart37 = x3d.ShaderPart()
 ShaderPart37.setUrl(["../shaders/x3dom_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom_flowers_chromatic.vs"])
 ShaderPart37.setType("VERTEX")
 
-ComposedShader25.addParts(ShaderPart37)
+ComposedShader25.setParts(ShaderPart37)
 ShaderPart38 = x3d.ShaderPart()
 ShaderPart38.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"])
 ShaderPart38.setType("FRAGMENT")
 
-ComposedShader25.addParts(ShaderPart38)
+ComposedShader25.setParts(ShaderPart38)
 
 Appearance16.addShaders(ComposedShader25)
 ComposedShader39 = x3d.ComposedShader()
@@ -204,7 +210,7 @@ field42 = x3d.field()
 field42.setName("chromaticDispertion")
 field42.setAccessType("initializeOnly")
 field42.setType("SFVec3f")
-field42.setValue("0.98 1 1.033")
+field42.setValue("0.98 1.0 1.033")
 
 ComposedShader39.addField(field42)
 field43 = x3d.field()
@@ -274,12 +280,12 @@ ShaderPart52 = x3d.ShaderPart()
 ShaderPart52.setUrl(["../shaders/x_ite_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite_flowers_chromatic.vs"])
 ShaderPart52.setType("VERTEX")
 
-ComposedShader39.addParts(ShaderPart52)
+ComposedShader39.setParts(ShaderPart52)
 ShaderPart53 = x3d.ShaderPart()
 ShaderPart53.setUrl(["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"])
 ShaderPart53.setType("FRAGMENT")
 
-ComposedShader39.addParts(ShaderPart53)
+ComposedShader39.setParts(ShaderPart53)
 
 Appearance16.addShaders(ComposedShader39)
 
@@ -356,7 +362,8 @@ field64.setValue("0.5")
 
 Script55.addField(field64)
 
-Script55.setSourceCode('''ecmascript:\n"+
+Script55.setSourceCode('''\n"+
+"ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
@@ -422,7 +429,8 @@ Script55.setSourceCode('''ecmascript:\n"+
 "				if (d > 10) {\n"+
 "					d = 4;\n"+
 "				}\n"+
-"			}''')
+"			}\n"+
+"''')
 
 ProtoBody13.addChildren(Script55)
 TimeSensor65 = x3d.TimeSensor()
@@ -547,4 +555,4 @@ ProtoInstance82.setName("flower")
 Scene9.addChildren(ProtoInstance82)
 
 X3D0.setScene(Scene9)
-X3D0.toFileX3D("././flowers_RoundTrip.x3d")
+X3D0.toFileX3D("flowers_RoundTrip.x3d")

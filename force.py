@@ -79,6 +79,7 @@ Shape22 = x3d.Shape()
 Text23 = x3d.Text()
 Text23.setString(["Node"])
 FontStyle24 = x3d.FontStyle()
+FontStyle24.setFamily(["SERIF"])
 FontStyle24.setJustify(["MIDDLE","MIDDLE"])
 FontStyle24.setSize(5)
 
@@ -133,13 +134,15 @@ field32.setType("MFVec3f")
 
 Script28.addField(field32)
 
-Script28.setSourceCode('''ecmascript:\n"+
+Script28.setSourceCode('''\n"+
+"ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}''')
+"					}\n"+
+"''')
 
 Group13.addChildren(Script28)
 TimeSensor33 = x3d.TimeSensor()
@@ -205,7 +208,7 @@ Shape44 = x3d.Shape()
 Extrusion45 = x3d.Extrusion()
 Extrusion45.setDEF("extrusion")
 Extrusion45.setCreaseAngle(0.785)
-Extrusion45.setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0])
+Extrusion45.setCrossSection([1.00,0.00,0.92,-0.38,0.71,-0.71,0.38,-0.92,0.00,-1.00,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1.00,-0.00,-0.92,0.38,-0.71,0.71,-0.38,0.92,0.00,1.00,0.38,0.92,0.71,0.71,0.92,0.38,1.00,0.00])
 Extrusion45.setSpine([0,-50,0,0,50,0])
 
 Shape44.setGeometry(Extrusion45)
@@ -253,7 +256,8 @@ IS52.addConnect(connect54)
 
 Script48.setIS(IS52)
 
-Script48.setSourceCode('''ecmascript:\n"+
+Script48.setSourceCode('''\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -262,7 +266,7 @@ Script48.setSourceCode('''ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -270,10 +274,11 @@ Script48.setSourceCode('''ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
-"                }''')
+"                }\n"+
+"''')
 
 Group43.addChildren(Script48)
 ROUTE55 = x3d.ROUTE()
@@ -294,54 +299,55 @@ Transform56.setDEF("HoldsContent")
 Transform56.setScale([0.1,0.1,0.1])
 PlaneSensor57 = x3d.PlaneSensor()
 PlaneSensor57.setDEF("clickGenerator")
+PlaneSensor57.setEnabled(True)
 PlaneSensor57.setMinPosition([-50,-50])
 PlaneSensor57.setMaxPosition([50,50])
 PlaneSensor57.setDescription("click on background to add nodes, click on nodes to add links")
 
 Transform56.addChildren(PlaneSensor57)
 ProtoInstance58 = x3d.ProtoInstance()
-ProtoInstance58.setName("node")
 ProtoInstance58.setDEF("nodeA")
+ProtoInstance58.setName("node")
 fieldValue59 = x3d.fieldValue()
 fieldValue59.setName("position")
-fieldValue59.setValue("0 0 0")
+fieldValue59.setValue("0.0 0.0 0.0")
 
 ProtoInstance58.addFieldValue(fieldValue59)
 
 Transform56.addChildren(ProtoInstance58)
 ProtoInstance60 = x3d.ProtoInstance()
-ProtoInstance60.setName("node")
 ProtoInstance60.setDEF("nodeB")
+ProtoInstance60.setName("node")
 fieldValue61 = x3d.fieldValue()
 fieldValue61.setName("position")
-fieldValue61.setValue("50 50 50")
+fieldValue61.setValue("50.0 50.0 50.0")
 
 ProtoInstance60.addFieldValue(fieldValue61)
 
 Transform56.addChildren(ProtoInstance60)
 ProtoInstance62 = x3d.ProtoInstance()
-ProtoInstance62.setName("node")
 ProtoInstance62.setDEF("nodeC")
+ProtoInstance62.setName("node")
 fieldValue63 = x3d.fieldValue()
 fieldValue63.setName("position")
-fieldValue63.setValue("-50 -50 -50")
+fieldValue63.setValue("-50.0 -50.0 -50.0")
 
 ProtoInstance62.addFieldValue(fieldValue63)
 
 Transform56.addChildren(ProtoInstance62)
 ProtoInstance64 = x3d.ProtoInstance()
-ProtoInstance64.setName("node")
 ProtoInstance64.setDEF("nodeD")
+ProtoInstance64.setName("node")
 fieldValue65 = x3d.fieldValue()
 fieldValue65.setName("position")
-fieldValue65.setValue("50 50 -50")
+fieldValue65.setValue("50.0 50.0 -50.0")
 
 ProtoInstance64.addFieldValue(fieldValue65)
 
 Transform56.addChildren(ProtoInstance64)
 ProtoInstance66 = x3d.ProtoInstance()
-ProtoInstance66.setName("cylinder")
 ProtoInstance66.setDEF("linkA")
+ProtoInstance66.setName("cylinder")
 fieldValue67 = x3d.fieldValue()
 fieldValue67.setName("set_positionA")
 fieldValue67.setValue("0 0 0")
@@ -355,8 +361,8 @@ ProtoInstance66.addFieldValue(fieldValue68)
 
 Transform56.addChildren(ProtoInstance66)
 ProtoInstance69 = x3d.ProtoInstance()
-ProtoInstance69.setName("cylinder")
 ProtoInstance69.setDEF("linkB")
+ProtoInstance69.setName("cylinder")
 fieldValue70 = x3d.fieldValue()
 fieldValue70.setName("set_positionA")
 fieldValue70.setValue("0 0 0")
@@ -370,8 +376,8 @@ ProtoInstance69.addFieldValue(fieldValue71)
 
 Transform56.addChildren(ProtoInstance69)
 ProtoInstance72 = x3d.ProtoInstance()
-ProtoInstance72.setName("cylinder")
 ProtoInstance72.setDEF("linkC")
+ProtoInstance72.setName("cylinder")
 fieldValue73 = x3d.fieldValue()
 fieldValue73.setName("set_positionA")
 fieldValue73.setValue("50 50 50")
@@ -389,28 +395,33 @@ Scene8.addChildren(Transform56)
 Script75 = x3d.Script()
 Script75.setDEF("clickHandler")
 field76 = x3d.field()
-field76.setName("counter")
 field76.setAccessType("inputOutput")
+field76.setName("counter")
 field76.setValue("0")
 field76.setType("SFInt32")
 
 Script75.addField(field76)
 field77 = x3d.field()
-field77.setName("node_changed")
 field77.setAccessType("outputOnly")
+field77.setName("node_changed")
 field77.setType("SFNode")
 
 Script75.addField(field77)
 field78 = x3d.field()
-field78.setName("add_node")
 field78.setAccessType("inputOnly")
+field78.setName("add_node")
 field78.setValue("false")
 field78.setType("SFBool")
 
 Script75.addField(field78)
-#<field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\"> <Transform USE=\"HoldsContent\"/> </field>
+#
+            <field name=\"ModifiableNode\" type=\"SFNode\" accessType=\"inputOutput\">
+                <Transform USE=\"HoldsContent\"/>
+            </field>
+	    
 
-Script75.setSourceCode('''ecmascript:\n"+
+Script75.setSourceCode('''\n"+
+"ecmascript:\n"+
 "	function add_node(value) {\n"+
 "                // Browser.print('hey ', counter);\n"+
 "                counter = counter++;\n"+
@@ -426,8 +437,9 @@ Script75.setSourceCode('''ecmascript:\n"+
 "				  ]\n"+
 "				}\n"+
 "			});\n"+
-"\n"+
-"        }''')
+"                \n"+
+"        }\n"+
+"	''')
 
 Scene8.addChildren(Script75)
 ROUTE79 = x3d.ROUTE()
@@ -481,4 +493,4 @@ ROUTE85.setToField("set_positionB")
 Scene8.addChildren(ROUTE85)
 
 X3D0.setScene(Scene8)
-X3D0.toFileX3D("././force_RoundTrip.x3d")
+X3D0.toFileX3D("force_RoundTrip.x3d")

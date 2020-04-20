@@ -33,26 +33,27 @@ X3D0.setHead(head1)
 Scene7 = x3d.Scene()
 Collision8 = x3d.Collision()
 Collision8.setDEF("DoNotCollideWithVisualizationWidget")
-#Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.
-#This NavigationInfo allows examine mode and will be overridden by any parent scene.
-#Each arrow goes from +1m to -1m to allow linear scaling to fit a scene
-#Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user
+Collision8.setEnabled(True)
+# Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph. 
+# This NavigationInfo allows examine mode and will be overridden by any parent scene. 
+# Each arrow goes from +1m to -1m to allow linear scaling to fit a scene 
+# Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user 
 Group9 = x3d.Group()
-#Vertical Y arrow and label
+# Vertical Y arrow and label 
 Group10 = x3d.Group()
 Group10.setDEF("ArrowGreen")
 Shape11 = x3d.Shape()
 Cylinder12 = x3d.Cylinder()
 Cylinder12.setDEF("ArrowCylinder")
-Cylinder12.setRadius(0.025)
+Cylinder12.setRadius(.025)
 Cylinder12.setTop(False)
 
 Shape11.setGeometry(Cylinder12)
 Appearance13 = x3d.Appearance()
 Appearance13.setDEF("Green")
 Material14 = x3d.Material()
-Material14.setDiffuseColor([0.1,0.6,0.1])
-Material14.setEmissiveColor([0.05,0.2,0.05])
+Material14.setDiffuseColor([.1,.6,.1])
+Material14.setEmissiveColor([.05,.2,.05])
 
 Appearance13.setMaterial(Material14)
 
@@ -64,8 +65,8 @@ Transform15.setTranslation([0,1,0])
 Shape16 = x3d.Shape()
 Cone17 = x3d.Cone()
 Cone17.setDEF("ArrowCone")
-Cone17.setBottomRadius(0.05)
-Cone17.setHeight(0.1)
+Cone17.setBottomRadius(.05)
+Cone17.setHeight(.1)
 
 Shape16.setGeometry(Cone17)
 Appearance18 = x3d.Appearance()
@@ -85,8 +86,8 @@ Shape21 = x3d.Shape()
 Appearance22 = x3d.Appearance()
 Appearance22.setDEF("LABEL_APPEARANCE")
 Material23 = x3d.Material()
-Material23.setDiffuseColor([1,1,0.3])
-Material23.setEmissiveColor([0.33,0.33,0.1])
+Material23.setDiffuseColor([1,1,.3])
+Material23.setEmissiveColor([.33,.33,.1])
 
 Appearance22.setMaterial(Material23)
 
@@ -97,7 +98,7 @@ FontStyle25 = x3d.FontStyle()
 FontStyle25.setDEF("LABEL_FONT")
 FontStyle25.setFamily(["SANS"])
 FontStyle25.setJustify(["MIDDLE","MIDDLE"])
-FontStyle25.setSize(0.2)
+FontStyle25.setSize(.2)
 
 Text24.setFontStyle(FontStyle25)
 
@@ -112,7 +113,7 @@ Group9.addChildren(Transform19)
 Collision8.addChild(Group9)
 Transform26 = x3d.Transform()
 Transform26.setRotation([0,0,1,-1.57079])
-#Horizontal X arrow and label
+# Horizontal X arrow and label 
 Group27 = x3d.Group()
 Group28 = x3d.Group()
 Group28.setDEF("ArrowRed")
@@ -124,8 +125,8 @@ Shape29.setGeometry(Cylinder30)
 Appearance31 = x3d.Appearance()
 Appearance31.setDEF("Red")
 Material32 = x3d.Material()
-Material32.setDiffuseColor([0.7,0.1,0.1])
-Material32.setEmissiveColor([0.33,0,0])
+Material32.setDiffuseColor([.7,.1,.1])
+Material32.setEmissiveColor([.33,0,0])
 
 Appearance31.setMaterial(Material32)
 
@@ -151,8 +152,8 @@ Group28.addChildren(Transform33)
 Group27.addChildren(Group28)
 Transform37 = x3d.Transform()
 Transform37.setRotation([0,0,1,1.57079])
-Transform37.setTranslation([0.072,1.1,0])
-#note label rotated back to original coordinate frame
+Transform37.setTranslation([.072,1.1,0])
+# note label rotated back to original coordinate frame 
 Billboard38 = x3d.Billboard()
 Shape39 = x3d.Shape()
 Appearance40 = x3d.Appearance()
@@ -179,7 +180,7 @@ Transform26.addChildren(Group27)
 Collision8.addChild(Transform26)
 Transform43 = x3d.Transform()
 Transform43.setRotation([1,0,0,1.57079])
-#Perpendicular Z arrow and label, note right-hand rule
+# Perpendicular Z arrow and label, note right-hand rule 
 Group44 = x3d.Group()
 Group45 = x3d.Group()
 Group45.setDEF("ArrowBlue")
@@ -191,8 +192,8 @@ Shape46.setGeometry(Cylinder47)
 Appearance48 = x3d.Appearance()
 Appearance48.setDEF("Blue")
 Material49 = x3d.Material()
-Material49.setDiffuseColor([0.3,0.3,1])
-Material49.setEmissiveColor([0.1,0.1,0.33])
+Material49.setDiffuseColor([.3,.3,1])
+Material49.setEmissiveColor([.1,.1,.33])
 
 Appearance48.setMaterial(Material49)
 
@@ -218,8 +219,8 @@ Group45.addChildren(Transform50)
 Group44.addChildren(Group45)
 Transform54 = x3d.Transform()
 Transform54.setRotation([1,0,0,-1.57079])
-Transform54.setTranslation([0,1.1,0.072])
-#note label rotated back to original coordinate frame
+Transform54.setTranslation([0,1.1,.072])
+# note label rotated back to original coordinate frame 
 Billboard55 = x3d.Billboard()
 Shape56 = x3d.Shape()
 Appearance57 = x3d.Appearance()
@@ -248,4 +249,4 @@ Collision8.addChild(Transform43)
 Scene7.addChildren(Collision8)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././CoordinateAxes_RoundTrip.x3d")
+X3D0.toFileX3D("CoordinateAxes_RoundTrip.x3d")

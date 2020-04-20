@@ -136,6 +136,10 @@ PythonSerializer.prototype = {
 			method = "LayerSet"
 			addpre = "add";
 		}
+		if (method === "setShaders") {
+			method = "Shaders"
+			addpre = "add";
+		}
 		return prepre+addpre+method;
 	},
 	stringValue : function(attrsa, attr, attrType, element) {
