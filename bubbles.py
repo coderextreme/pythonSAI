@@ -156,14 +156,14 @@ ShaderPart34 = x3d.ShaderPart()
 ShaderPart34.setUrl(["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs"])
 ShaderPart34.setType("VERTEX")
 
-ComposedShader28.addParts(ShaderPart34)
+ComposedShader28.setParts(ShaderPart34)
 ShaderPart35 = x3d.ShaderPart()
 ShaderPart35.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
 ShaderPart35.setType("FRAGMENT")
 
-ComposedShader28.addParts(ShaderPart35)
+ComposedShader28.setParts(ShaderPart35)
 
-Appearance19.addShaders(ComposedShader28)
+Appearance19.addChild(ComposedShader28)
 ComposedShader36 = x3d.ComposedShader()
 ComposedShader36.setDEF("x3dom")
 ComposedShader36.setLanguage("GLSL")
@@ -206,14 +206,14 @@ ShaderPart42 = x3d.ShaderPart()
 ShaderPart42.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
 ShaderPart42.setType("VERTEX")
 
-ComposedShader36.addParts(ShaderPart42)
+ComposedShader36.setParts(ShaderPart42)
 ShaderPart43 = x3d.ShaderPart()
 ShaderPart43.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
 ShaderPart43.setType("FRAGMENT")
 
-ComposedShader36.addParts(ShaderPart43)
+ComposedShader36.setParts(ShaderPart43)
 
-Appearance19.addShaders(ComposedShader36)
+Appearance19.addChild(ComposedShader36)
 
 Shape17.setAppearance(Appearance19)
 
@@ -298,7 +298,7 @@ Script47.setSourceCode('''ecmascript:\n"+
 "                        position_changed = new MFVec3f();\n"+
 "                        position_changed[0] = new SFVec3f(positions[ov].x,positions[ov].y,positions[ov].z);\n"+
 "                        position_changed[1] = new SFVec3f(positions[vc].x,positions[vc].y,positions[vc].z);\n"+
-"\n"+
+"                        \n"+
 "                        orientation_changed = new MFRotation();\n"+
 "                        orientation_changed[0] = new SFRotation(orientations[ov].x, orientations[ov].y, orientations[ov].z, orientations[ov].w);\n"+
 "                        orientation_changed[1] = new SFRotation(orientations[vc].x, orientations[vc].y, orientations[vc].z, orientations[vc].w);\n"+
@@ -361,4 +361,4 @@ ROUTE61.setToField("set_position")
 Scene11.addChildren(ROUTE61)
 
 X3D0.setScene(Scene11)
-X3D0.toFileX3D("././bubbles_RoundTrip.x3d")
+X3D0.toFileX3D("bubbles_RoundTrip.x3d")

@@ -118,4 +118,4 @@ ProtoInstance27.addFieldValue(fieldValue28)
 Scene7.addChildren(ProtoInstance27)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././abox_RoundTrip.x3d")
+X3D0.toFileX3D("abox_RoundTrip.x3d")

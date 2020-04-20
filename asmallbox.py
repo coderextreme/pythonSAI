@@ -40,6 +40,8 @@ field10.setAccessType("inputOutput")
 field10.setType("MFNode")
 Shape11 = x3d.Shape()
 Sphere12 = x3d.Sphere()
+Sphere12.setRadius(1.0)
+Sphere12.setSolid(True)
 
 Shape11.setGeometry(Sphere12)
 
@@ -117,4 +119,4 @@ ProtoInstance27.addFieldValue(fieldValue28)
 Scene7.addChildren(ProtoInstance27)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././asmallbox_RoundTrip.x3d")
+X3D0.toFileX3D("asmallbox_RoundTrip.x3d")

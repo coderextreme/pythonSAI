@@ -60,8 +60,8 @@ Transform12 = x3d.Transform()
 Shape13 = x3d.Shape()
 Appearance14 = x3d.Appearance()
 Material15 = x3d.Material()
-Material15.setDiffuseColor([0.7,0.7,0.7])
-Material15.setSpecularColor([0.5,0.5,0.5])
+Material15.setDiffuseColor([.7,.7,.7])
+Material15.setSpecularColor([.5,.5,.5])
 
 Appearance14.setMaterial(Material15)
 ComposedCubeMapTexture16 = x3d.ComposedCubeMapTexture()
@@ -302,7 +302,8 @@ field54.setValue("-1")
 
 Script40.addField(field54)
 
-Script40.setSourceCode('''ecmascript:\n"+
+Script40.setSourceCode('''\n"+
+"ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+
@@ -318,7 +319,8 @@ Script40.setSourceCode('''ecmascript:\n"+
 "		    top_changed[0] = topUrls[side];\n"+
 "		    bottom_changed[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }''')
+"        }\n"+
+"''')
 
 Transform12.addChildren(Script40)
 TimeSensor55 = x3d.TimeSensor()
@@ -422,4 +424,4 @@ Transform12.addChildren(ROUTE68)
 Scene9.addChildren(Transform12)
 
 X3D0.setScene(Scene9)
-X3D0.toFileX3D("././mirror2_RoundTrip.x3d")
+X3D0.toFileX3D("mirror2_RoundTrip.x3d")
