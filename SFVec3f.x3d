@@ -2,6 +2,7 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
 <X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Immersive" version="3.3" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
     <head>
+    	<component level='1' name='Scripting'/>
         <meta name="title" content="SFVec3f.x3d"></meta>
         <meta name="creator" content="John Carlson"></meta>
         <meta name="description" content="3 prismatic spheres"></meta>
@@ -17,7 +18,7 @@
 			<Sphere></Sphere>
                     </Shape>
                 </Transform>
-                <Script DEF="Bounce">
+                <Script DEF="Bounce2">
                   <field name="set_translation" accessType="inputOnly" type="SFVec3f" value="0 0 0"></field>
                   <field name="translation_changed" accessType="outputOnly" type="SFVec3f" value="0 0 0"></field>
                   <field name="translation" accessType="inputOutput" type="SFVec3f" value="0 0 0"></field>
@@ -58,7 +59,7 @@
 ]]>
                 </Script>
                 <TimeSensor DEF='TourTime' cycleInterval='0.150' loop='true'></TimeSensor>
-                <ROUTE fromNode="TourTime" fromField="cycleTime" toNode="Bounce" toField="set_fraction"></ROUTE>
-                <ROUTE fromNode="Bounce" fromField="translation_changed" toNode="transform" toField="set_translation"></ROUTE>
+                <ROUTE fromNode="TourTime" fromField="cycleTime" toNode="Bounce2" toField="set_fraction"></ROUTE>
+                <ROUTE fromNode="Bounce2" fromField="translation_changed" toNode="transform" toField="set_translation"></ROUTE>
     </Scene>
 </X3D>

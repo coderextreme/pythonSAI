@@ -60,4 +60,4 @@ Group8.addChildren(Shape9)
 Scene7.addChildren(Group8)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("ifscube_RoundTrip.x3d")
+X3D0.toFileX3D("././ifscube_RoundTrip.x3d")

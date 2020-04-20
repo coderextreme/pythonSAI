@@ -4,7 +4,6 @@ X3D0.setProfile("Immersive")
 X3D0.setVersion("3.3")
 Scene1 = x3d.Scene()
 NavigationInfo2 = x3d.NavigationInfo()
-NavigationInfo2.setType(["EXAMINE","ANY"])
 
 Scene1.addChildren(NavigationInfo2)
 DirectionalLight3 = x3d.DirectionalLight()
@@ -13,7 +12,7 @@ DirectionalLight3.setIntensity(0.5)
 
 Scene1.addChildren(DirectionalLight3)
 Background4 = x3d.Background()
-Background4.setSkyColor([1.000,1.000,1.000])
+Background4.setSkyColor([1,1,1])
 
 Scene1.addChildren(Background4)
 Viewpoint5 = x3d.Viewpoint()
@@ -40,9 +39,7 @@ IndexedFaceSet10 = x3d.IndexedFaceSet()
 IndexedFaceSet10.setCcw(False)
 IndexedFaceSet10.setConvex(False)
 IndexedFaceSet10.setCoordIndex([0,1,2,-1])
-IndexedFaceSet10.setCreaseAngle(0)
 IndexedFaceSet10.setDEF("Orbit")
-IndexedFaceSet10.setSolid(True)
 Coordinate11 = x3d.Coordinate()
 Coordinate11.setDEF("OrbitCoordinates")
 Coordinate11.setPoint([0,0,1,0,1,0,1,0,0])
@@ -57,32 +54,24 @@ Scene1.addChildren(Transform6)
 Script12 = x3d.Script()
 Script12.setDEF("OrbitScript")
 field13 = x3d.field()
-field13.setAccessType("inputOnly")
 field13.setName("set_fraction")
+field13.setAccessType("inputOnly")
 field13.setType("SFFloat")
 
 Script12.addField(field13)
 field14 = x3d.field()
-field14.setAccessType("outputOnly")
 field14.setName("coordinates")
+field14.setAccessType("outputOnly")
 field14.setType("MFVec3f")
 
 Script12.addField(field14)
 field15 = x3d.field()
-field15.setAccessType("outputOnly")
 field15.setName("coordIndexes")
+field15.setAccessType("outputOnly")
 field15.setType("MFInt32")
 
 Script12.addField(field15)
-#
-        <field accessType=\"inputOutput\" name=\"e\" type=\"SFFloat\" value=\"5\"/>
-        <field accessType=\"inputOutput\" name=\"f\" type=\"SFFloat\" value=\"5\"/>
-        <field accessType=\"inputOutput\" name=\"g\" type=\"SFFloat\" value=\"5\"/>
-        <field accessType=\"inputOutput\" name=\"h\" type=\"SFFloat\" value=\"5\"/>
-        <field accessType=\"inputOutput\" name=\"t\" type=\"SFFloat\" value=\"0\"/>
-        <field accessType=\"inputOutput\" name=\"p\" type=\"SFFloat\" value=\"0\"/>
-        <field accessType=\"inputOutput\" name=\"resolution\" type=\"SFInt32\" value=\"150\"/>
-	
+#<field accessType=\"inputOutput\" name=\"e\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"f\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"g\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"h\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"t\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"inputOutput\" name=\"p\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"inputOutput\" name=\"resolution\" type=\"SFInt32\" value=\"150\"/>
 
 Script12.setSourceCode('''ecmascript:\n"+
 "\n"+
@@ -157,8 +146,7 @@ Script12.setSourceCode('''ecmascript:\n"+
 "		h = 4;\n"+
 "	}\n"+
 "	generateCoordinates(resolution);\n"+
-"}\n"+
-"''')
+"}''')
 
 Scene1.addChildren(Script12)
 TimeSensor16 = x3d.TimeSensor()
@@ -190,4 +178,4 @@ ROUTE19.setToField("set_fraction")
 Scene1.addChildren(ROUTE19)
 
 X3D0.setScene(Scene1)
-X3D0.toFileX3D("flower_RoundTrip.x3d")
+X3D0.toFileX3D("././flower_RoundTrip.x3d")
