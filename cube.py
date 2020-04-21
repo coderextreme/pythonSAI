@@ -69,4 +69,4 @@ Group10.addChildren(Shape11)
 Scene9.addChildren(Group10)
 
 X3D0.setScene(Scene9)
-X3D0.toFileX3D("././cube_RoundTrip.x3d")
+X3D0.toFileX3D("cube_RoundTrip.x3d")

@@ -41,6 +41,7 @@ Appearance10.setMaterial(Material11)
 
 Shape9.setAppearance(Appearance10)
 Sphere12 = x3d.Sphere()
+Sphere12.setRadius(1)
 
 Shape9.setGeometry(Sphere12)
 
@@ -49,4 +50,4 @@ Group8.addChildren(Shape9)
 Scene7.addChildren(Group8)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././sphere_RoundTrip.x3d")
+X3D0.toFileX3D("sphere_RoundTrip.x3d")

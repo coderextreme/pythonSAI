@@ -10,4 +10,4 @@ export PYTHONPATH=/c/Users/coderextreme/AppData/Local/Programs/Python/Python38/:
 
 
 export PATH="${PYTHONPATH};${JAVA_HOME}/bin;${PATH}:/c/Program\ Files/Java/jdk-14.0.1/bin/server"
-export CLASSPATH=".;${PYSAIHOME}/saxon9he.jar;${PYSAIHOME}/X3DJSAIL.3.3.full.jar"
+export CLASSPATH=".;${PYSAIHOME}/saxon9he.jar;${PYSAIHOME}/X3DJSAIL.4.0.full.jar"
