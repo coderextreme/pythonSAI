@@ -259,7 +259,7 @@ Collision54.setProxy(Shape55)
 Group59 = x3d.Group()
 Group59.setUSE("ExampleChildElement")
 
-Collision54.addChild(Group59)
+Collision54.setProxy(Group59)
 
 Scene17.addChildren(Collision54)
 Transform60 = x3d.Transform()

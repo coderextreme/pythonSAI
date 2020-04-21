@@ -109,7 +109,7 @@ Transform19.addChildren(Billboard20)
 
 Group9.addChildren(Transform19)
 
-Collision8.addChild(Group9)
+Collision8.setProxy(Group9)
 Transform26 = x3d.Transform()
 Transform26.setRotation([0,0,1,-1.57079])
 #Horizontal X arrow and label
@@ -176,7 +176,7 @@ Group27.addChildren(Transform37)
 
 Transform26.addChildren(Group27)
 
-Collision8.addChild(Transform26)
+Collision8.setProxy(Transform26)
 Transform43 = x3d.Transform()
 Transform43.setRotation([1,0,0,1.57079])
 #Perpendicular Z arrow and label, note right-hand rule
@@ -243,7 +243,7 @@ Group44.addChildren(Transform54)
 
 Transform43.addChildren(Group44)
 
-Collision8.addChild(Transform43)
+Collision8.setProxy(Transform43)
 
 Scene7.addChildren(Collision8)
 

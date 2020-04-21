@@ -1,13 +1,14 @@
 var mapToMethod2 = {
 	"Shape" : {
-		"ProtoInstance": "setGeometry"
+		"ProtoInstance" : "setGeometry"
 	},
 	"HAnimJoint" : {
-		"Transform" : "addChild"
+		"Transform" : "addChildren"
 	},
 	"Appearance" : {
-		"ProtoInstance" : "setMaterial",
-		"ProgramShader" : "addShaders"
+		"ProtoInstance" : "addShaders",
+		"ProgramShader" : "addShaders",
+		"ComposedShader" : "addShaders"
 	},
 	"ComposedShader" : {
 		"field" : "addField"
@@ -22,10 +23,10 @@ var mapToMethod2 = {
 		"CollidableShape" : "addGeometry"
 	},
 	"HAnimHumanoid" : {
+		"IS" : "addSkin",
 		"HAnimJoint" : "addJoints",
 		"HAnimSegment" : "addSegments",
-		"HAnimSite": "addViewpoints",
-		"Group" : "addSkeleton"
+		"HAnimSite" : "addViewpoints"
 	},
 	"X3DPickSensorNode" : {
 		"IS" : "addPickedGeometry"
@@ -36,17 +37,21 @@ var mapToMethod2 = {
 	"PointPickSensor" : {
 		"IS" : "addPickedGeometry"
 	},
-	"ProtoBody" : {
-		"ProgramShader" : "addChild"
-	},
 	"Collision" : {
-		"Transform" : "addChild",
-		"Group" : "addChild"
+		"Transform" : "setProxy",
+		"Group" : "setProxy"
 	},
 	"PrimitivePickSensor" : {
 		"IS" : "addPickedGeometry"
 	},
+	"LinePickSensor" : {
+		"IS" : "addPickedGeometry"
+	},
+	"GeoMetadata" : {
+		"IS" : "addData"
+	},
 	"GeoLOD" : {
+		"IS" : "addRootNode",
 		"GeoOrigin" : "setGeoOrigin"
 	},
 	"Scene" : {
@@ -55,4 +60,6 @@ var mapToMethod2 = {
 	}
 };
 
-module.exports = mapToMethod2;
+if (typeof module === 'object')  {
+	module.exports = mapToMethod2;
+}

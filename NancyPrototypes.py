@@ -2129,7 +2129,7 @@ Transform399.addChildren(Transform439)
 
 Transform398.addChildren(Transform399)
 
-Collision397.addChild(Transform398)
+Collision397.setProxy(Transform398)
 
 Group394.addChildren(Collision397)
 Transform452 = x3d.Transform()

@@ -726,7 +726,7 @@ Shape144.setGeometry(IndexedLineSet147)
 
 Group123.addChildren(Shape144)
 
-HAnimHumanoid37.addSkeleton(Group123)
+HAnimHumanoid37.addSkin(Group123)
 HAnimJoint149 = x3d.HAnimJoint()
 HAnimJoint149.setUSE("boxman_r_wrist")
 

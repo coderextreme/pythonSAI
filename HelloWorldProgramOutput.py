@@ -901,7 +901,7 @@ ProtoDeclare165.setName("ShaderProto")
 ProtoBody166 = x3d.ProtoBody()
 ProgramShader167 = x3d.ProgramShader()
 
-ProtoBody166.addChild(ProgramShader167)
+ProtoBody166.addChildren(ProgramShader167)
 
 ProtoDeclare165.setProtoBody(ProtoBody166)
 
@@ -923,7 +923,7 @@ ProtoInstance172 = x3d.ProtoInstance()
 ProtoInstance172.setName("ShaderProto")
 ProtoInstance172.setDEF("TestShader3")
 
-Appearance169.setMaterial(ProtoInstance172)
+Appearance169.addShaders(ProtoInstance172)
 ComposedShader173 = x3d.ComposedShader()
 ComposedShader173.setDEF("TestShader4")
 ShaderPart174 = x3d.ShaderPart()
