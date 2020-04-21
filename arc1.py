@@ -34,6 +34,7 @@ Scene7 = x3d.Scene()
 Viewpoint8 = x3d.Viewpoint()
 Viewpoint8.setPosition([0,0,5])
 Viewpoint8.setDescription("Only Viewpoint")
+Viewpoint8.setOrientation([0,0,1,0])
 
 Scene7.addChildren(Viewpoint8)
 Background9 = x3d.Background()
@@ -44,8 +45,8 @@ ProtoDeclare10 = x3d.ProtoDeclare()
 ProtoDeclare10.setName("point")
 ProtoInterface11 = x3d.ProtoInterface()
 field12 = x3d.field()
-field12.setName("translation")
 field12.setAccessType("inputOutput")
+field12.setName("translation")
 field12.setType("SFVec3f")
 field12.setValue("0 0 0")
 
@@ -113,12 +114,14 @@ field26.setValue("0 0 0 0 5 0")
 
 Script22.addField(field26)
 
-Script22.setSourceCode('''ecmascript:\n"+
+Script22.setSourceCode('''\n"+
+"ecmascript:\n"+
 "               function set_location(value) {\n"+
 "                    old = translation;\n"+
 "                    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
-"               }''')
+"               }\n"+
+"''')
 
 Transform14.addChildren(Script22)
 TimeSensor27 = x3d.TimeSensor()
@@ -192,13 +195,13 @@ Shape39 = x3d.Shape()
 Appearance40 = x3d.Appearance()
 Material41 = x3d.Material()
 Material41.setDiffuseColor([0.2,0.7,0.7])
-Material41.setTransparency(0.5)
+Material41.setTransparency(.5)
 
 Appearance40.setMaterial(Material41)
 
 Shape39.setAppearance(Appearance40)
 Cylinder42 = x3d.Cylinder()
-Cylinder42.setRadius(0.05)
+Cylinder42.setRadius(.05)
 
 Shape39.setGeometry(Cylinder42)
 
@@ -211,38 +214,38 @@ ProtoDeclare43 = x3d.ProtoDeclare()
 ProtoDeclare43.setName("x3dconnector")
 ProtoInterface44 = x3d.ProtoInterface()
 field45 = x3d.field()
-field45.setName("startnode")
 field45.setAccessType("initializeOnly")
+field45.setName("startnode")
 field45.setType("SFNode")
 
 ProtoInterface44.addField(field45)
 field46 = x3d.field()
-field46.setName("endnode")
 field46.setAccessType("initializeOnly")
+field46.setName("endnode")
 field46.setType("SFNode")
 
 ProtoInterface44.addField(field46)
 field47 = x3d.field()
-field47.setName("transnode")
 field47.setAccessType("inputOutput")
+field47.setName("transnode")
 field47.setType("SFNode")
 
 ProtoInterface44.addField(field47)
 field48 = x3d.field()
-field48.setName("rotscalenode")
 field48.setAccessType("inputOutput")
+field48.setName("rotscalenode")
 field48.setType("SFNode")
 
 ProtoInterface44.addField(field48)
 field49 = x3d.field()
-field49.setName("set_startpoint")
 field49.setAccessType("inputOnly")
+field49.setName("set_startpoint")
 field49.setType("SFVec3f")
 
 ProtoInterface44.addField(field49)
 field50 = x3d.field()
-field50.setName("set_endpoint")
 field50.setAccessType("inputOnly")
+field50.setName("set_endpoint")
 field50.setType("SFVec3f")
 
 ProtoInterface44.addField(field50)
@@ -252,38 +255,38 @@ ProtoBody51 = x3d.ProtoBody()
 Script52 = x3d.Script()
 Script52.setDEF("S1")
 field53 = x3d.field()
-field53.setName("startnode")
 field53.setAccessType("initializeOnly")
+field53.setName("startnode")
 field53.setType("SFNode")
 
 Script52.addField(field53)
 field54 = x3d.field()
-field54.setName("endnode")
 field54.setAccessType("initializeOnly")
+field54.setName("endnode")
 field54.setType("SFNode")
 
 Script52.addField(field54)
 field55 = x3d.field()
-field55.setName("transnode")
 field55.setAccessType("initializeOnly")
+field55.setName("transnode")
 field55.setType("SFNode")
 
 Script52.addField(field55)
 field56 = x3d.field()
-field56.setName("rotscalenode")
 field56.setAccessType("initializeOnly")
+field56.setName("rotscalenode")
 field56.setType("SFNode")
 
 Script52.addField(field56)
 field57 = x3d.field()
-field57.setName("set_startpoint")
 field57.setAccessType("inputOnly")
+field57.setName("set_startpoint")
 field57.setType("SFVec3f")
 
 Script52.addField(field57)
 field58 = x3d.field()
-field58.setName("set_endpoint")
 field58.setAccessType("inputOnly")
+field58.setName("set_endpoint")
 field58.setType("SFVec3f")
 
 Script52.addField(field58)
@@ -359,7 +362,8 @@ Script52.setSourceCode('''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }''')
+"        }\n"+
+"            ''')
 
 ProtoBody51.addChildren(Script52)
 
@@ -427,4 +431,4 @@ ROUTE78.setToField("set_endpoint")
 Scene7.addChildren(ROUTE78)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././arc1_RoundTrip.x3d")
+X3D0.toFileX3D("arc1_RoundTrip.x3d")
