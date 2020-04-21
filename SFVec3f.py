@@ -4,8 +4,8 @@ X3D0.setProfile("Immersive")
 X3D0.setVersion("3.3")
 head1 = x3d.head()
 component2 = x3d.component()
-component2.setLevel(1)
 component2.setName("Scripting")
+component2.setLevel(1)
 
 head1.addComponent(component2)
 meta3 = x3d.meta()
@@ -32,17 +32,15 @@ head1.addMeta(meta6)
 X3D0.setHead(head1)
 Scene7 = x3d.Scene()
 NavigationInfo8 = x3d.NavigationInfo()
-NavigationInfo8.setType(["EXAMINE","ANY"])
 
 Scene7.addChildren(NavigationInfo8)
 Transform9 = x3d.Transform()
 Transform9.setDEF("transform")
-Transform9.setTranslation([0,0,0])
 Shape10 = x3d.Shape()
 Appearance11 = x3d.Appearance()
 Material12 = x3d.Material()
-Material12.setDiffuseColor([.7,.7,.7])
-Material12.setSpecularColor([.5,.5,.5])
+Material12.setDiffuseColor([0.7,0.7,0.7])
+Material12.setSpecularColor([0.5,0.5,0.5])
 
 Appearance11.setMaterial(Material12)
 
@@ -121,14 +119,12 @@ Script14.setSourceCode('''ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			     newBubble();\n"+
-"			}\n"+
-"\n"+
-"''')
+"			}''')
 
 Scene7.addChildren(Script14)
 TimeSensor20 = x3d.TimeSensor()
 TimeSensor20.setDEF("TourTime")
-TimeSensor20.setCycleInterval(0.150)
+TimeSensor20.setCycleInterval(0.15)
 TimeSensor20.setLoop(True)
 
 Scene7.addChildren(TimeSensor20)
@@ -148,4 +144,4 @@ ROUTE22.setToField("set_translation")
 Scene7.addChildren(ROUTE22)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("SFVec3f_RoundTrip.x3d")
+X3D0.toFileX3D("././SFVec3f_RoundTrip.x3d")
