@@ -45,15 +45,15 @@ ProtoDeclare10 = x3d.ProtoDeclare()
 ProtoDeclare10.setName("FlowerProto")
 ProtoInterface11 = x3d.ProtoInterface()
 field12 = x3d.field()
-field12.setAccessType("inputOutput")
 field12.setName("vertex")
+field12.setAccessType("inputOutput")
 field12.setType("MFString")
 field12.setValue("\"../shaders/gl_flowers_chromatic.vs\"")
 
 ProtoInterface11.addField(field12)
 field13 = x3d.field()
-field13.setAccessType("inputOutput")
 field13.setName("fragment")
+field13.setAccessType("inputOutput")
 field13.setType("MFString")
 field13.setValue("\"../shaders/pc_flowers.fs\"")
 
@@ -63,12 +63,11 @@ ProtoDeclare10.setProtoInterface(ProtoInterface11)
 ProtoBody14 = x3d.ProtoBody()
 Transform15 = x3d.Transform()
 Transform15.setDEF("transform")
-Transform15.setTranslation([0,0,0])
 Shape16 = x3d.Shape()
 Appearance17 = x3d.Appearance()
 Material18 = x3d.Material()
-Material18.setDiffuseColor([.7,.7,.7])
-Material18.setSpecularColor([.5,.5,.5])
+Material18.setDiffuseColor([0.7,0.7,0.7])
+Material18.setSpecularColor([0.5,0.5,0.5])
 
 Appearance17.setMaterial(Material18)
 ComposedCubeMapTexture19 = x3d.ComposedCubeMapTexture()
@@ -109,16 +108,11 @@ field27.setAccessType("inputOutput")
 field27.setValue("0")
 
 ComposedShader26.addField(field27)
-# 
-		       <field name='cube' type='SFNode' accessType=\"inputOutput\">
-			  <ComposedCubeMapTexture USE=\"texture\"/>
-		  </field>
-		  
 field28 = x3d.field()
 field28.setName("chromaticDispertion")
 field28.setAccessType("initializeOnly")
 field28.setType("SFVec3f")
-field28.setValue("0.98 1.0 1.033")
+field28.setValue("0.98 1 1.033")
 
 ComposedShader26.addField(field28)
 field29 = x3d.field()
@@ -184,6 +178,7 @@ field37.setAccessType("inputOutput")
 field37.setValue("0")
 
 ComposedShader26.addField(field37)
+#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart38 = x3d.ShaderPart()
 ShaderPart38.setType("VERTEX")
 IS39 = x3d.IS()
@@ -282,9 +277,7 @@ field54.setValue("0.5")
 
 Script45.addField(field54)
 
-Script45.setSourceCode('''\n"+
-"  \n"+
-"ecmascript:\n"+
+Script45.setSourceCode('''ecmascript:\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -349,9 +342,7 @@ Script45.setSourceCode('''\n"+
 "				if (d > 10) {\n"+
 "					d = 4;\n"+
 "				}\n"+
-"			}\n"+
-"\n"+
-"''')
+"			}''')
 
 Transform15.addChildren(Script45)
 TimeSensor55 = x3d.TimeSensor()
@@ -424,4 +415,4 @@ ProtoDeclare10.setProtoBody(ProtoBody14)
 Scene9.addChildren(ProtoDeclare10)
 
 X3D0.setScene(Scene9)
-X3D0.toFileX3D("flowerproto_RoundTrip.x3d")
+X3D0.toFileX3D("././flowerproto_RoundTrip.x3d")

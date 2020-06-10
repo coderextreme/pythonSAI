@@ -4873,30 +4873,30 @@ class X3DBoundedObject(object):
         super(X3DBoundedObject, self).__init__()
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         visible  = kwargs.pop("visible", True)
         self.__visible = visible
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def visible(self):
         return self.__visible
@@ -4936,16 +4936,16 @@ class X3DBoundedObject(object):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -4963,12 +4963,12 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -4994,6 +4994,24 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -5013,24 +5031,6 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -5176,16 +5176,16 @@ class X3DGroupingNode(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -6858,10 +6858,10 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
         super(X3DNBodyCollidableNode, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -6881,23 +6881,23 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def enabled(self):
         return self.__enabled
@@ -7095,16 +7095,16 @@ class X3DNBodyCollidableNode(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -7172,10 +7172,10 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
         super(X3DNBodyCollisionSpaceNode, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -7191,23 +7191,23 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def enabled(self):
         return self.__enabled
@@ -7365,16 +7365,16 @@ class X3DNBodyCollisionSpaceNode(X3DBoundedObject, X3DNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -10719,10 +10719,10 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
         self.__appearance = appearance
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geometry  = kwargs.pop("geometry", None)
         self.__geometry = geometry
         IS  = kwargs.pop("IS", None)
@@ -10758,23 +10758,23 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
     def appearance_changed(self, appearance = None):
         return self.__appearance
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def geometry(self):
         return self.__geometry
@@ -10934,16 +10934,16 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -13628,12 +13628,12 @@ class X3DViewportNode(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -13659,6 +13659,24 @@ class X3DViewportNode(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -13678,24 +13696,6 @@ class X3DViewportNode(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -13841,16 +13841,16 @@ class X3DViewportNode(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -13936,14 +13936,14 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
         super(X3DVolumeDataNode, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         dimensions  = kwargs.pop("dimensions", [1, 1, 1])
         if dimensions == None or len(dimensions) <= 0 or min(dimensions)  <=  0:
             return None
         self.__dimensions = dimensions
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -13956,6 +13956,24 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def dimensions(self):
         return self.__dimensions
@@ -13982,24 +14000,6 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
         return self.__dimensions
     def dimensions_changed(self, dimensions = [1, 1, 1]):
         return self.__dimensions
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -14139,6 +14139,11 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -14149,11 +14154,6 @@ class X3DVolumeDataNode(X3DBoundedObject, X3DChildNode):
                 str += ' dimensions="'+self.__dimensions+'"'
             else:
                 str += ' dimensions="'+self.__dimensions[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -14544,14 +14544,14 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
         description  = kwargs.pop("description", None)
         self.__description = description
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -14580,6 +14580,24 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def children(self):
         return self.__children
@@ -14620,24 +14638,6 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -14823,6 +14823,11 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -14833,11 +14838,6 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__parameter is not None:
             if isinstance(self.__parameter, six.string_types):
                 str += ' parameter="'+self.__parameter+'"'
@@ -17112,12 +17112,12 @@ class Billboard(X3DGroupingNode):
         self.__axisOfRotation = axisOfRotation
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -17163,6 +17163,24 @@ class Billboard(X3DGroupingNode):
     def axisOfRotation_changed(self, axisOfRotation = [0, 1, 0]):
         return self.__axisOfRotation
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -17182,24 +17200,6 @@ class Billboard(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -17350,16 +17350,16 @@ class Billboard(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -19685,12 +19685,12 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -19718,6 +19718,24 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -19737,24 +19755,6 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -19920,16 +19920,16 @@ class CADAssembly(X3DProductStructureChildNode, X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__name is not None:
             if isinstance(self.__name, six.string_types):
                 str += ' name="'+self.__name+'"'
@@ -20020,10 +20020,10 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
         super(CADFace, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -20041,23 +20041,23 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def IS(self):
         return self.__IS
@@ -20237,16 +20237,16 @@ class CADFace(X3DBoundedObject, X3DProductStructureChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__name is not None:
             if isinstance(self.__name, six.string_types):
                 str += ' name="'+self.__name+'"'
@@ -20317,12 +20317,12 @@ class CADLayer(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -20350,6 +20350,24 @@ class CADLayer(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -20369,24 +20387,6 @@ class CADLayer(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -20552,16 +20552,16 @@ class CADLayer(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__name is not None:
             if isinstance(self.__name, six.string_types):
                 str += ' name="'+self.__name+'"'
@@ -20654,14 +20654,14 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
         self.__center = center
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -20696,6 +20696,24 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def center(self):
         return self.__center
@@ -20736,24 +20754,6 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -20999,6 +20999,11 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -21009,11 +21014,6 @@ class CADPart(X3DGroupingNode, X3DProductStructureChildNode):
                 str += ' center="'+self.__center+'"'
             else:
                 str += ' center="'+self.__center[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__name is not None:
             if isinstance(self.__name, six.string_types):
                 str += ' name="'+self.__name+'"'
@@ -21901,12 +21901,12 @@ class CollidableOffset(X3DNBodyCollidableNode):
         super(CollidableOffset, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         collidable  = kwargs.pop("collidable", None)
         self.__collidable = collidable
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -21926,23 +21926,23 @@ class CollidableOffset(X3DNBodyCollidableNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def enabled(self):
         return self.__enabled
@@ -22140,16 +22140,16 @@ class CollidableOffset(X3DNBodyCollidableNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -22228,10 +22228,10 @@ class CollidableShape(X3DNBodyCollidableNode):
         super(CollidableShape, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -22253,23 +22253,23 @@ class CollidableShape(X3DNBodyCollidableNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def enabled(self):
         return self.__enabled
@@ -22467,16 +22467,16 @@ class CollidableShape(X3DNBodyCollidableNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -22557,14 +22557,14 @@ class Collision(X3DSensorNode, X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
         collideTime  = kwargs.pop("collideTime", None)
         self.__collideTime = collideTime
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -22596,6 +22596,24 @@ class Collision(X3DSensorNode, X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -22622,24 +22640,6 @@ class Collision(X3DSensorNode, X3DGroupingNode):
         return self.__collideTime
     def collideTime_changed(self, collideTime = None):
         return self.__collideTime
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -22818,6 +22818,11 @@ class Collision(X3DSensorNode, X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -22828,11 +22833,6 @@ class Collision(X3DSensorNode, X3DGroupingNode):
                 str += ' collideTime="'+self.__collideTime+'"'
             else:
                 str += ' collideTime="'+self.__collideTime[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -22961,6 +22961,8 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
         self.__appliedParameters = appliedParameters
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         bounce  = kwargs.pop("bounce", 0)
@@ -22971,8 +22973,6 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
         self.__bounce = bounce
         collidables  = kwargs.pop("collidables", None)
         self.__collidables = collidables
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         frictionCoefficients  = kwargs.pop("frictionCoefficients", [0, 0])
@@ -23092,6 +23092,24 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
     def appliedParameters_changed(self, appliedParameters = ["BOUNCE"]):
         return self.__appliedParameters
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def bounce(self):
         return self.__bounce
     @bounce.setter
@@ -23143,24 +23161,6 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
         return self.__collidables
     def collidables_changed(self, collidables = None):
         return self.__collidables
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -23479,6 +23479,11 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -23489,11 +23494,6 @@ class CollisionCollection(X3DBoundedObject, X3DChildNode):
                 str += ' bounce="'+self.__bounce+'"'
             else:
                 str += ' bounce="'+self.__bounce[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -23870,12 +23870,12 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
         super(CollisionSpace, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         collidables  = kwargs.pop("collidables", None)
         self.__collidables = collidables
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
@@ -23892,6 +23892,24 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def collidables(self):
         return self.__collidables
@@ -23912,24 +23930,6 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
         return self.__collidables
     def collidables_changed(self, collidables = None):
         return self.__collidables
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -24105,16 +24105,16 @@ class CollisionSpace(X3DNBodyCollisionSpaceNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -26701,6 +26701,24 @@ class Cone(X3DGeometryNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
+    def bottom(self):
+        return self.__bottom
+    @bottom.setter
+    def bottom(self, value = True):
+        self.__bottom = [value]
+    def setBottom(self, bottom = True):
+        self.__bottom = [bottom]
+        return self
+    def addBottom(self, bottom = True):
+        if self.__bottom == None:            self.__bottom =  []
+        self.__bottom +=  [bottom]
+        return self
+    def removeBottom(self, bottom):
+        self.__bottom = [x for x in self.__bottom if x not in bottom]
+        return self.__bottom
+    def isBottom(self, bottom = True):
+        return self.__bottom
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -26740,6 +26758,24 @@ class Cone(X3DGeometryNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def side(self):
+        return self.__side
+    @side.setter
+    def side(self, value = True):
+        self.__side = [value]
+    def setSide(self, side = True):
+        self.__side = [side]
+        return self
+    def addSide(self, side = True):
+        if self.__side == None:            self.__side =  []
+        self.__side +=  [side]
+        return self
+    def removeSide(self, side):
+        self.__side = [x for x in self.__side if x not in side]
+        return self.__side
+    def isSide(self, side = True):
+        return self.__side
     @property
     def DEF(self):
         return self.__DEF
@@ -29994,6 +30030,24 @@ class Cylinder(X3DGeometryNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
+    def bottom(self):
+        return self.__bottom
+    @bottom.setter
+    def bottom(self, value = True):
+        self.__bottom = [value]
+    def setBottom(self, bottom = True):
+        self.__bottom = [bottom]
+        return self
+    def addBottom(self, bottom = True):
+        if self.__bottom == None:            self.__bottom =  []
+        self.__bottom +=  [bottom]
+        return self
+    def removeBottom(self, bottom):
+        self.__bottom = [x for x in self.__bottom if x not in bottom]
+        return self.__bottom
+    def isBottom(self, bottom = True):
+        return self.__bottom
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -30033,6 +30087,24 @@ class Cylinder(X3DGeometryNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def side(self):
+        return self.__side
+    @side.setter
+    def side(self, value = True):
+        self.__side = [value]
+    def setSide(self, side = True):
+        self.__side = [side]
+        return self
+    def addSide(self, side = True):
+        if self.__side == None:            self.__side =  []
+        self.__side +=  [side]
+        return self
+    def removeSide(self, side):
+        self.__side = [x for x in self.__side if x not in side]
+        return self.__side
+    def isSide(self, side = True):
+        return self.__side
     @property
     def top(self):
         return self.__top
@@ -33688,6 +33760,8 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
         self.__articulationParameterValue7_changed = articulationParameterValue7_changed
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
@@ -33708,8 +33782,6 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
         self.__detonationRelativeLocation = detonationRelativeLocation
         detonationResult  = kwargs.pop("detonationResult", 0)
         self.__detonationResult = detonationResult
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         entityCategory  = kwargs.pop("entityCategory", 0)
@@ -34084,6 +34156,24 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
     def articulationParameterValue7_changed_changed(self, articulationParameterValue7_changed = None):
         return self.__articulationParameterValue7_changed
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def center(self):
         return self.__center
     @center.setter
@@ -34237,24 +34327,6 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
         return self.__detonationResult
     def detonationResult_changed(self, detonationResult = 0):
         return self.__detonationResult
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -35450,6 +35522,11 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -35495,11 +35572,6 @@ class EspduTransform(X3DNetworkSensorNode, X3DGroupingNode):
                 str += ' detonationResult="'+self.__detonationResult+'"'
             else:
                 str += ' detonationResult="'+self.__detonationResult[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -36206,7 +36278,7 @@ class Extrusion(X3DGeometryNode):
         self.__ccw = ccw
         convex  = kwargs.pop("convex", True)
         self.__convex = convex
-        creaseAngle  = kwargs.pop("creaseAngle", 0.0)
+        creaseAngle  = kwargs.pop("creaseAngle", 0)
         if creaseAngle == None or creaseAngle  <  0:
             return None
         self.__creaseAngle = creaseAngle
@@ -39042,12 +39114,12 @@ class GeoLocation(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geoCoords  = kwargs.pop("geoCoords", [0, 0, 0])
         self.__geoCoords = geoCoords
         geoOrigin  = kwargs.pop("geoOrigin", None)
@@ -39079,6 +39151,24 @@ class GeoLocation(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -39098,24 +39188,6 @@ class GeoLocation(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def geoCoords(self):
         return self.__geoCoords
@@ -39281,16 +39353,16 @@ class GeoLocation(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__geoCoords is not None:
             if isinstance(self.__geoCoords, six.string_types):
                 str += ' geoCoords="'+self.__geoCoords+'"'
@@ -39397,6 +39469,8 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
         super(GeoLOD, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
@@ -39411,8 +39485,6 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
         self.__child4Url = child4Url
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geoOrigin  = kwargs.pop("geoOrigin", None)
         self.__geoOrigin = geoOrigin
         geoSystem  = kwargs.pop("geoSystem", ["GD", "WE"])
@@ -39443,6 +39515,24 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     def removeChildren(self, children):
         self.__children = [x for x in self.__children if x not in children]
         return self.__children
@@ -39450,24 +39540,6 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -39614,6 +39686,11 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -39644,11 +39721,6 @@ class GeoLOD(X3DBoundedObject, X3DChildNode):
                 str += ' child4Url="'+self.__child4Url+'"'
             else:
                 str += ' child4Url="'+self.__child4Url[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__geoSystem is not None:
             if isinstance(self.__geoSystem, six.string_types):
                 str += ' geoSystem="'+self.__geoSystem+'"'
@@ -41218,12 +41290,12 @@ class GeoTransform(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geoCenter  = kwargs.pop("geoCenter", [0, 0, 0])
         self.__geoCenter = geoCenter
         geoOrigin  = kwargs.pop("geoOrigin", None)
@@ -41265,6 +41337,24 @@ class GeoTransform(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -41284,24 +41374,6 @@ class GeoTransform(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def geoCenter(self):
         return self.__geoCenter
@@ -41553,16 +41625,16 @@ class GeoTransform(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__geoCenter is not None:
             if isinstance(self.__geoCenter, six.string_types):
                 str += ' geoCenter="'+self.__geoCenter+'"'
@@ -42131,12 +42203,12 @@ class Group(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -42162,6 +42234,24 @@ class Group(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -42181,24 +42271,6 @@ class Group(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -42364,16 +42436,16 @@ class Group(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -42747,14 +42819,14 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         super(HAnimHumanoid, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
         self.__center = center
         description  = kwargs.pop("description", None)
         self.__description = description
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         info  = kwargs.pop("info", None)
         self.__info = info
         IS  = kwargs.pop("IS", None)
@@ -42810,8 +42882,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         version  = kwargs.pop("version", "2.0")
         if '1.0' == version:
             pass
-        elif '1.1' == version:
-            pass
         elif '2.0' == version:
             pass
         else:
@@ -42827,6 +42897,24 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def center(self):
         return self.__center
@@ -42867,24 +42955,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def info(self):
         return self.__info
@@ -43370,8 +43440,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
     def version(self, value = "2.0"):
         if '1.0' == value:
             pass
-        elif '1.1' == value:
-            pass
         elif '2.0' == value:
             pass
         else:
@@ -43379,8 +43447,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         self.__version = [value]
     def setVersion(self, version = "2.0"):
         if '1.0' == version:
-            pass
-        elif '1.1' == version:
             pass
         elif '2.0' == version:
             pass
@@ -43390,8 +43456,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
         return self
     def addVersion(self, version = "2.0"):
         if '1.0' == version:
-            pass
-        elif '1.1' == version:
             pass
         elif '2.0' == version:
             pass
@@ -43526,6 +43590,11 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -43541,11 +43610,6 @@ class HAnimHumanoid(X3DBoundedObject, X3DChildNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__info is not None:
             if isinstance(self.__info, six.string_types):
                 str += ' info="'+self.__info+'"'
@@ -43781,6 +43845,8 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
@@ -43791,8 +43857,6 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
         self.__description = description
         displacers  = kwargs.pop("displacers", None)
         self.__displacers = displacers
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         limitOrientation  = kwargs.pop("limitOrientation", [0, 0, 1, 0])
@@ -43847,6 +43911,24 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def center(self):
         return self.__center
@@ -43927,24 +44009,6 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
         return self.__displacers
     def displacers_changed(self, displacers = None):
         return self.__displacers
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -44334,6 +44398,11 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -44349,11 +44418,6 @@ class HAnimJoint(X3DBoundedObject, X3DChildNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__limitOrientation is not None:
             if isinstance(self.__limitOrientation, six.string_types):
                 str += ' limitOrientation="'+self.__limitOrientation+'"'
@@ -44523,7 +44587,7 @@ class HAnimMotion(X3DChildNode):
         if endFrame == None or endFrame  <  -1:
             return None
         self.__endFrame = endFrame
-        frameCount  = kwargs.pop("frameCount", None)
+        frameCount  = kwargs.pop("frameCount", 0)
         if frameCount == None or frameCount  <  0:
             return None
         self.__frameCount = frameCount
@@ -44681,12 +44745,31 @@ class HAnimMotion(X3DChildNode):
         return self.__endFrame
     def endFrame_changed(self, endFrame = -1):
         return self.__endFrame
+    @property
+    def frameCount(self):
+        return self.__frameCount
+    @frameCount.setter
+    def frameCount(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__frameCount = [value]
+    def setFrameCount(self, frameCount = 0):
+        if frameCount == None or frameCount  <  0:
+            return None
+        self.__frameCount = [frameCount]
+        return self
+    def addFrameCount(self, frameCount = 0):
+        if frameCount == None or frameCount  <  0:
+            return None
+        if self.__frameCount == None:            self.__frameCount =  []
+        self.__frameCount +=  [frameCount]
+        return self
     def removeFrameCount(self, frameCount):
         self.__frameCount = [x for x in self.__frameCount if x not in frameCount]
         return self.__frameCount
-    def getFrameCount(self, frameCount = None):
+    def getFrameCount(self, frameCount = 0):
         return self.__frameCount
-    def frameCount_changed(self, frameCount = None):
+    def frameCount_changed(self, frameCount = 0):
         return self.__frameCount
     @property
     def frameDuration(self):
@@ -45121,6 +45204,8 @@ class HAnimSegment(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         centerOfMass  = kwargs.pop("centerOfMass", [0, 0, 0])
@@ -45133,8 +45218,6 @@ class HAnimSegment(X3DGroupingNode):
         self.__description = description
         displacers  = kwargs.pop("displacers", None)
         self.__displacers = displacers
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         mass  = kwargs.pop("mass", 0)
@@ -45169,6 +45252,24 @@ class HAnimSegment(X3DGroupingNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def centerOfMass(self):
         return self.__centerOfMass
@@ -45269,24 +45370,6 @@ class HAnimSegment(X3DGroupingNode):
         return self.__displacers
     def displacers_changed(self, displacers = None):
         return self.__displacers
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -45504,6 +45587,11 @@ class HAnimSegment(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -45519,11 +45607,6 @@ class HAnimSegment(X3DGroupingNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__mass is not None:
             if isinstance(self.__mass, six.string_types):
                 str += ' mass="'+self.__mass+'"'
@@ -45648,6 +45731,8 @@ class HAnimSite(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
@@ -45656,8 +45741,6 @@ class HAnimSite(X3DGroupingNode):
         self.__children = children
         description  = kwargs.pop("description", None)
         self.__description = description
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -45694,6 +45777,24 @@ class HAnimSite(X3DGroupingNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def center(self):
         return self.__center
@@ -45754,24 +45855,6 @@ class HAnimSite(X3DGroupingNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -46023,6 +46106,11 @@ class HAnimSite(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -46038,11 +46126,6 @@ class HAnimSite(X3DGroupingNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__name is not None:
             if isinstance(self.__name, six.string_types):
                 str += ' name="'+self.__name+'"'
@@ -49442,10 +49525,10 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
         super(Inline, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         load  = kwargs.pop("load", True)
@@ -49463,23 +49546,23 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def IS(self):
         return self.__IS
@@ -49657,16 +49740,16 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__load is not None:
             if isinstance(self.__load, six.string_types):
                 str += ' load="'+self.__load+'"'
@@ -50252,6 +50335,8 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
         super(IsoSurfaceVolumeData, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         contourStepSize  = kwargs.pop("contourStepSize", 0)
@@ -50260,8 +50345,6 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
         if dimensions == None or len(dimensions) <= 0 or min(dimensions)  <=  0:
             return None
         self.__dimensions = dimensions
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         gradients  = kwargs.pop("gradients", None)
         self.__gradients = gradients
         IS  = kwargs.pop("IS", None)
@@ -50286,6 +50369,24 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def contourStepSize(self):
         return self.__contourStepSize
@@ -50332,24 +50433,6 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
         return self.__dimensions
     def dimensions_changed(self, dimensions = [1, 1, 1]):
         return self.__dimensions
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def gradients(self):
         return self.__gradients
@@ -50595,6 +50678,11 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -50610,11 +50698,6 @@ class IsoSurfaceVolumeData(X3DVolumeDataNode):
                 str += ' dimensions="'+self.__dimensions+'"'
             else:
                 str += ' dimensions="'+self.__dimensions[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__surfaceTolerance is not None:
             if isinstance(self.__surfaceTolerance, six.string_types):
                 str += ' surfaceTolerance="'+self.__surfaceTolerance+'"'
@@ -52315,12 +52398,12 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         layout  = kwargs.pop("layout", None)
@@ -52350,6 +52433,24 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -52369,24 +52470,6 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -52572,16 +52655,16 @@ class LayoutGroup(X3DGroupingNode, X3DNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -54744,14 +54827,14 @@ class LOD(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
         self.__center = center
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         forceTransitions  = kwargs.pop("forceTransitions", False)
         self.__forceTransitions = forceTransitions
         IS  = kwargs.pop("IS", None)
@@ -54785,6 +54868,24 @@ class LOD(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -54804,24 +54905,6 @@ class LOD(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -54974,6 +55057,11 @@ class LOD(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -54984,11 +55072,6 @@ class LOD(X3DGroupingNode):
                 str += ' center="'+self.__center+'"'
             else:
                 str += ' center="'+self.__center[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__forceTransitions is not None:
             if isinstance(self.__forceTransitions, six.string_types):
                 str += ' forceTransitions="'+self.__forceTransitions+'"'
@@ -62092,10 +62175,10 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
         self.__Geometry = Geometry
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geometry  = kwargs.pop("geometry", None)
         self.__geometry = geometry
         IS  = kwargs.pop("IS", None)
@@ -62127,23 +62210,23 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
         self.__Geometry +=  [Geometry]
         return self
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def geometry(self):
         return self.__geometry
@@ -62335,16 +62418,16 @@ class NurbsSet(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__tessellationScale is not None:
             if isinstance(self.__tessellationScale, six.string_types):
                 str += ' tessellationScale="'+self.__tessellationScale+'"'
@@ -65756,6 +65839,8 @@ class ParticleSystem(X3DShapeNode):
         self.__appearance = appearance
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         colorKey  = kwargs.pop("colorKey", None)
@@ -65766,8 +65851,6 @@ class ParticleSystem(X3DShapeNode):
         self.__colorRamp = colorRamp
         createParticles  = kwargs.pop("createParticles", True)
         self.__createParticles = createParticles
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         emitter  = kwargs.pop("emitter", None)
         self.__emitter = emitter
         enabled  = kwargs.pop("enabled", True)
@@ -65839,6 +65922,24 @@ class ParticleSystem(X3DShapeNode):
     def appearance_changed(self, appearance = None):
         return self.__appearance
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def createParticles(self):
         return self.__createParticles
     @createParticles.setter
@@ -65856,24 +65957,6 @@ class ParticleSystem(X3DShapeNode):
         return self.__createParticles
     def isCreateParticles(self, createParticles = True):
         return self.__createParticles
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -66183,6 +66266,11 @@ class ParticleSystem(X3DShapeNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -66198,11 +66286,6 @@ class ParticleSystem(X3DShapeNode):
                 str += ' createParticles="'+self.__createParticles+'"'
             else:
                 str += ' createParticles="'+self.__createParticles[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -66374,12 +66457,12 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -66409,6 +66492,24 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -66428,24 +66529,6 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -66629,16 +66712,16 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__objectType is not None:
             if isinstance(self.__objectType, six.string_types):
                 str += ' objectType="'+self.__objectType+'"'
@@ -73746,10 +73829,10 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
         self.__applicationID = applicationID
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         entityID  = kwargs.pop("entityID", 0)
@@ -73866,23 +73949,23 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def applicationID_changed(self, applicationID = 0):
         return self.__applicationID
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def enabled(self):
         return self.__enabled
@@ -74443,16 +74526,16 @@ class ReceiverPdu(X3DBoundedObject, X3DNetworkSensorNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -77329,12 +77412,12 @@ class ScreenGroup(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -77360,6 +77443,24 @@ class ScreenGroup(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -77379,24 +77480,6 @@ class ScreenGroup(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -77542,16 +77625,16 @@ class ScreenGroup(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -77939,14 +78022,14 @@ class SegmentedVolumeData(X3DVolumeDataNode):
         super(SegmentedVolumeData, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         dimensions  = kwargs.pop("dimensions", [1, 1, 1])
         if dimensions == None or len(dimensions) <= 0 or min(dimensions)  <=  0:
             return None
         self.__dimensions = dimensions
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -77967,6 +78050,24 @@ class SegmentedVolumeData(X3DVolumeDataNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def dimensions(self):
         return self.__dimensions
@@ -77993,24 +78094,6 @@ class SegmentedVolumeData(X3DVolumeDataNode):
         return self.__dimensions
     def dimensions_changed(self, dimensions = [1, 1, 1]):
         return self.__dimensions
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -78230,6 +78313,11 @@ class SegmentedVolumeData(X3DVolumeDataNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -78240,11 +78328,6 @@ class SegmentedVolumeData(X3DVolumeDataNode):
                 str += ' dimensions="'+self.__dimensions+'"'
             else:
                 str += ' dimensions="'+self.__dimensions[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__segmentEnabled is not None:
             if isinstance(self.__segmentEnabled, six.string_types):
                 str += ' segmentEnabled="'+self.__segmentEnabled+'"'
@@ -78707,26 +78790,6 @@ class ShaderPart(X3DUrlObject, X3DNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
-    def type(self):
-        return self.__type
-    @type.setter
-    def type(self, value = "VERTEX"):
-        self.__type = [value]
-    def setType(self, type = "VERTEX"):
-        self.__type = [type]
-        return self
-    def addType(self, type = "VERTEX"):
-        if self.__type == None:            self.__type =  []
-        self.__type +=  [type]
-        return self
-    def removeType(self, type):
-        self.__type = [x for x in self.__type if x not in type]
-        return self.__type
-    def getType(self, type = "VERTEX"):
-        return self.__type
-    def type_changed(self, type = "VERTEX"):
-        return self.__type
-    @property
     def url(self):
         return self.__url
     @url.setter
@@ -78974,26 +79037,6 @@ class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
-    def type(self):
-        return self.__type
-    @type.setter
-    def type(self, value = "VERTEX"):
-        self.__type = [value]
-    def setType(self, type = "VERTEX"):
-        self.__type = [type]
-        return self
-    def addType(self, type = "VERTEX"):
-        if self.__type == None:            self.__type =  []
-        self.__type +=  [type]
-        return self
-    def removeType(self, type):
-        self.__type = [x for x in self.__type if x not in type]
-        return self.__type
-    def getType(self, type = "VERTEX"):
-        return self.__type
-    def type_changed(self, type = "VERTEX"):
-        return self.__type
-    @property
     def url(self):
         return self.__url
     @url.setter
@@ -79159,10 +79202,10 @@ class Shape(X3DShapeNode):
         self.__appearance = appearance
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         geometry  = kwargs.pop("geometry", None)
         self.__geometry = geometry
         IS  = kwargs.pop("IS", None)
@@ -79198,23 +79241,23 @@ class Shape(X3DShapeNode):
     def appearance_changed(self, appearance = None):
         return self.__appearance
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def geometry(self):
         return self.__geometry
@@ -79394,16 +79437,16 @@ class Shape(X3DShapeNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -79482,14 +79525,14 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
         self.__applicationID = applicationID
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         data  = kwargs.pop("data", None)
         self.__data = data
         dataLength  = kwargs.pop("dataLength", 0)
         self.__dataLength = dataLength
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         encodingScheme  = kwargs.pop("encodingScheme", 0)
@@ -79602,6 +79645,24 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def applicationID_changed(self, applicationID = 0):
         return self.__applicationID
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def data(self):
         return self.__data
     @data.setter
@@ -79641,24 +79702,6 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
         return self.__dataLength
     def dataLength_changed(self, dataLength = 0):
         return self.__dataLength
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -80179,6 +80222,11 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -80194,11 +80242,6 @@ class SignalPdu(X3DBoundedObject, X3DNetworkSensorNode):
                 str += ' dataLength="'+self.__dataLength+'"'
             else:
                 str += ' dataLength="'+self.__dataLength[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -84412,12 +84455,12 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
         super(StaticGroup, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -84431,23 +84474,23 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
         return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
         return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def IS(self):
         return self.__IS
@@ -84587,16 +84630,16 @@ class StaticGroup(X3DBoundedObject, X3DChildNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -85249,12 +85292,12 @@ class Switch(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -85284,6 +85327,24 @@ class Switch(X3DGroupingNode):
         self.__children +=  [Children]
         return self
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def children(self):
         return self.__children
     @children.setter
@@ -85303,24 +85364,6 @@ class Switch(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -85492,16 +85535,16 @@ class Switch(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -90901,14 +90944,14 @@ class Transform(X3DGroupingNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         center  = kwargs.pop("center", [0, 0, 0])
         self.__center = center
         children  = kwargs.pop("children", None)
         self.__children = children
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -90941,6 +90984,24 @@ class Transform(X3DGroupingNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def center(self):
         return self.__center
@@ -90981,24 +91042,6 @@ class Transform(X3DGroupingNode):
         return self.__children
     def children_changed(self, children = None):
         return self.__children
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -91244,6 +91287,11 @@ class Transform(X3DGroupingNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -91254,11 +91302,6 @@ class Transform(X3DGroupingNode):
                 str += ' center="'+self.__center+'"'
             else:
                 str += ' center="'+self.__center[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__rotation is not None:
             if isinstance(self.__rotation, six.string_types):
                 str += ' rotation="'+self.__rotation+'"'
@@ -91704,14 +91747,14 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
         self.__applicationID = applicationID
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         cryptoKeyID  = kwargs.pop("cryptoKeyID", 0)
         self.__cryptoKeyID = cryptoKeyID
         cryptoSystem  = kwargs.pop("cryptoSystem", 0)
         self.__cryptoSystem = cryptoSystem
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
         entityID  = kwargs.pop("entityID", 0)
@@ -91910,6 +91953,24 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
     def applicationID_changed(self, applicationID = 0):
         return self.__applicationID
     @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
+    @property
     def cryptoKeyID(self):
         return self.__cryptoKeyID
     @cryptoKeyID.setter
@@ -91949,24 +92010,6 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
         return self.__cryptoSystem
     def cryptoSystem_changed(self, cryptoSystem = 0):
         return self.__cryptoSystem
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def enabled(self):
         return self.__enabled
@@ -92762,6 +92805,11 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -92777,11 +92825,6 @@ class TransmitterPdu(X3DBoundedObject, X3DNetworkSensorNode):
                 str += ' cryptoSystem="'+self.__cryptoSystem+'"'
             else:
                 str += ' cryptoSystem="'+self.__cryptoSystem[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__enabled is not None:
             if isinstance(self.__enabled, six.string_types):
                 str += ' enabled="'+self.__enabled+'"'
@@ -96518,6 +96561,8 @@ class Viewport(X3DViewportNode):
         self.__children = Children
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         children  = kwargs.pop("children", None)
@@ -96528,8 +96573,6 @@ class Viewport(X3DViewportNode):
         if clipBoundary == None or len(clipBoundary) <= 0 or max(clipBoundary)  >  1:
             return None
         self.__clipBoundary = clipBoundary
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -96554,6 +96597,24 @@ class Viewport(X3DViewportNode):
         if self.__children == None:            self.__children =  []
         self.__children +=  [Children]
         return self
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def children(self):
         return self.__children
@@ -96606,24 +96667,6 @@ class Viewport(X3DViewportNode):
         return self.__clipBoundary
     def clipBoundary_changed(self, clipBoundary = [0, 1, 0, 1]):
         return self.__clipBoundary
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -96769,6 +96812,11 @@ class Viewport(X3DViewportNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -96779,11 +96827,6 @@ class Viewport(X3DViewportNode):
                 str += ' clipBoundary="'+self.__clipBoundary+'"'
             else:
                 str += ' clipBoundary="'+self.__clipBoundary[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -97138,14 +97181,14 @@ class VolumeData(X3DVolumeDataNode):
         super(VolumeData, self).__init__(**kwargs)
         bboxCenter  = kwargs.pop("bboxCenter", [0, 0, 0])
         self.__bboxCenter = bboxCenter
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
         dimensions  = kwargs.pop("dimensions", [1, 1, 1])
         if dimensions == None or len(dimensions) <= 0 or min(dimensions)  <=  0:
             return None
         self.__dimensions = dimensions
-        displayBBox  = kwargs.pop("displayBBox", False)
-        self.__displayBBox = displayBBox
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -97162,6 +97205,24 @@ class VolumeData(X3DVolumeDataNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def dimensions(self):
         return self.__dimensions
@@ -97188,24 +97249,6 @@ class VolumeData(X3DVolumeDataNode):
         return self.__dimensions
     def dimensions_changed(self, dimensions = [1, 1, 1]):
         return self.__dimensions
-    @property
-    def displayBBox(self):
-        return self.__displayBBox
-    @displayBBox.setter
-    def displayBBox(self, value = False):
-        self.__displayBBox = [value]
-    def setDisplayBBox(self, displayBBox = False):
-        self.__displayBBox = [displayBBox]
-        return self
-    def addDisplayBBox(self, displayBBox = False):
-        if self.__displayBBox == None:            self.__displayBBox =  []
-        self.__displayBBox +=  [displayBBox]
-        return self
-    def removeDisplayBBox(self, displayBBox):
-        self.__displayBBox = [x for x in self.__displayBBox if x not in displayBBox]
-        return self.__displayBBox
-    def isDisplayBBox(self, displayBBox = False):
-        return self.__displayBBox
     @property
     def IS(self):
         return self.__IS
@@ -97385,6 +97428,11 @@ class VolumeData(X3DVolumeDataNode):
                 str += ' bboxCenter="'+self.__bboxCenter+'"'
             else:
                 str += ' bboxCenter="'+self.__bboxCenter[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__bboxSize is not None:
             if isinstance(self.__bboxSize, six.string_types):
                 str += ' bboxSize="'+self.__bboxSize+'"'
@@ -97395,11 +97443,6 @@ class VolumeData(X3DVolumeDataNode):
                 str += ' dimensions="'+self.__dimensions+'"'
             else:
                 str += ' dimensions="'+self.__dimensions[0]+'"'
-        if self.__displayBBox is not None:
-            if isinstance(self.__displayBBox, six.string_types):
-                str += ' displayBBox="'+self.__displayBBox+'"'
-            else:
-                str += ' displayBBox="'+self.__displayBBox[0]+'"'
         if self.__visible is not None:
             if isinstance(self.__visible, six.string_types):
                 str += ' visible="'+self.__visible+'"'
@@ -99571,11 +99614,11 @@ class field(object):
             pass
         elif 'SFInt32' == type:
             pass
+        elif 'MFInt32' == type:
+            pass
         elif 'SFNode' == type:
             pass
         elif 'MFNode' == type:
-            pass
-        elif 'MFInt32' == type:
             pass
         elif 'SFRotation' == type:
             pass
@@ -99797,11 +99840,11 @@ class field(object):
             pass
         elif 'SFInt32' == value:
             pass
+        elif 'MFInt32' == value:
+            pass
         elif 'SFNode' == value:
             pass
         elif 'MFNode' == value:
-            pass
-        elif 'MFInt32' == value:
             pass
         elif 'SFRotation' == value:
             pass
@@ -99885,11 +99928,11 @@ class field(object):
             pass
         elif 'SFInt32' == type:
             pass
+        elif 'MFInt32' == type:
+            pass
         elif 'SFNode' == type:
             pass
         elif 'MFNode' == type:
-            pass
-        elif 'MFInt32' == type:
             pass
         elif 'SFRotation' == type:
             pass
@@ -99974,11 +100017,11 @@ class field(object):
             pass
         elif 'SFInt32' == type:
             pass
+        elif 'MFInt32' == type:
+            pass
         elif 'SFNode' == type:
             pass
         elif 'MFNode' == type:
-            pass
-        elif 'MFInt32' == type:
             pass
         elif 'SFRotation' == type:
             pass
