@@ -4358,6 +4358,8 @@ class X3DEnvironmentalSensorNode(X3DSensorNode):
 class X3DTextureNode(X3DAppearanceChildNode):
     def __init__(self, **kwargs):
         super(X3DTextureNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -4368,6 +4370,26 @@ class X3DTextureNode(X3DAppearanceChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -4484,6 +4506,11 @@ class X3DTextureNode(X3DAppearanceChildNode):
     def toXML(self):
         str = ''
         str += '<X3DTextureNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -4529,6 +4556,8 @@ class X3DTextureNode(X3DAppearanceChildNode):
 class X3DEnvironmentTextureNode(X3DTextureNode):
     def __init__(self, **kwargs):
         super(X3DEnvironmentTextureNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -4539,6 +4568,26 @@ class X3DEnvironmentTextureNode(X3DTextureNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -4655,6 +4704,11 @@ class X3DEnvironmentTextureNode(X3DTextureNode):
     def toXML(self):
         str = ''
         str += '<X3DEnvironmentTextureNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -8569,6 +8623,309 @@ class X3DNurbsSurfaceGeometryNode(X3DParametricGeometryNode):
         return str
 
 
+class X3DOneSidedMaterialNode(X3DMaterialNode):
+    def __init__(self, **kwargs):
+        super(X3DOneSidedMaterialNode, self).__init__(**kwargs)
+        emissiveColor  = kwargs.pop("emissiveColor", [0, 0, 0])
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = emissiveColor
+        emissiveTextureMapping  = kwargs.pop("emissiveTextureMapping", None)
+        self.__emissiveTextureMapping = emissiveTextureMapping
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        normalScale  = kwargs.pop("normalScale", 1)
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = normalScale
+        normalTextureMapping  = kwargs.pop("normalTextureMapping", None)
+        self.__normalTextureMapping = normalTextureMapping
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def emissiveColor(self):
+        return self.__emissiveColor
+    @emissiveColor.setter
+    def emissiveColor(self, value = [0, 0, 0]):
+        if value == None or len(value) <= 0 or min(value)  <  0:
+            return None
+        if value == None or len(value) <= 0 or max(value)  >  1:
+            return None
+        self.__emissiveColor = [value]
+    def setEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = [emissiveColor]
+        return self
+    def addEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        if self.__emissiveColor == None:            self.__emissiveColor =  []
+        self.__emissiveColor +=  [emissiveColor]
+        return self
+    def removeEmissiveColor(self, emissiveColor):
+        self.__emissiveColor = [x for x in self.__emissiveColor if x not in emissiveColor]
+        return self.__emissiveColor
+    def getEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    def emissiveColor_changed(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    @property
+    def emissiveTextureMapping(self):
+        return self.__emissiveTextureMapping
+    @emissiveTextureMapping.setter
+    def emissiveTextureMapping(self, value = None):
+        self.__emissiveTextureMapping = [value]
+    def setEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        self.__emissiveTextureMapping = [emissiveTextureMapping]
+        return self
+    def addEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        if self.__emissiveTextureMapping == None:            self.__emissiveTextureMapping =  []
+        self.__emissiveTextureMapping +=  [emissiveTextureMapping]
+        return self
+    def removeEmissiveTextureMapping(self, emissiveTextureMapping):
+        self.__emissiveTextureMapping = [x for x in self.__emissiveTextureMapping if x not in emissiveTextureMapping]
+        return self.__emissiveTextureMapping
+    def getEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    def emissiveTextureMapping_changed(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def normalScale(self):
+        return self.__normalScale
+    @normalScale.setter
+    def normalScale(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        self.__normalScale = [value]
+    def setNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = [normalScale]
+        return self
+    def addNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        if self.__normalScale == None:            self.__normalScale =  []
+        self.__normalScale +=  [normalScale]
+        return self
+    def removeNormalScale(self, normalScale):
+        self.__normalScale = [x for x in self.__normalScale if x not in normalScale]
+        return self.__normalScale
+    def getNormalScale(self, normalScale = 1):
+        return self.__normalScale
+    def normalScale_changed(self, normalScale = 1):
+        return self.__normalScale
+    @property
+    def normalTextureMapping(self):
+        return self.__normalTextureMapping
+    @normalTextureMapping.setter
+    def normalTextureMapping(self, value = None):
+        self.__normalTextureMapping = [value]
+    def setNormalTextureMapping(self, normalTextureMapping = None):
+        self.__normalTextureMapping = [normalTextureMapping]
+        return self
+    def addNormalTextureMapping(self, normalTextureMapping = None):
+        if self.__normalTextureMapping == None:            self.__normalTextureMapping =  []
+        self.__normalTextureMapping +=  [normalTextureMapping]
+        return self
+    def removeNormalTextureMapping(self, normalTextureMapping):
+        self.__normalTextureMapping = [x for x in self.__normalTextureMapping if x not in normalTextureMapping]
+        return self.__normalTextureMapping
+    def getNormalTextureMapping(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    def normalTextureMapping_changed(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DOneSidedMaterialNode'
+        if self.__emissiveColor is not None:
+            if isinstance(self.__emissiveColor, six.string_types):
+                str += ' emissiveColor="'+self.__emissiveColor+'"'
+            else:
+                str += ' emissiveColor="'+self.__emissiveColor[0]+'"'
+        if self.__emissiveTextureMapping is not None:
+            if isinstance(self.__emissiveTextureMapping, six.string_types):
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping+'"'
+            else:
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping[0]+'"'
+        if self.__normalScale is not None:
+            if isinstance(self.__normalScale, six.string_types):
+                str += ' normalScale="'+self.__normalScale+'"'
+            else:
+                str += ' normalScale="'+self.__normalScale[0]+'"'
+        if self.__normalTextureMapping is not None:
+            if isinstance(self.__normalTextureMapping, six.string_types):
+                str += ' normalTextureMapping="'+self.__normalTextureMapping+'"'
+            else:
+                str += ' normalTextureMapping="'+self.__normalTextureMapping[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DOneSidedMaterialNode>'
+        return str
+
+
 class X3DParticleEmitterNode(X3DNode):
     def __init__(self, **kwargs):
         super(X3DParticleEmitterNode, self).__init__(**kwargs)
@@ -8690,6 +9047,32 @@ class X3DParticleEmitterNode(X3DNode):
         return self.__speed
     def speed_changed(self, speed = 0):
         return self.__speed
+    @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
     @property
     def variation(self):
         return self.__variation
@@ -9996,8 +10379,80 @@ class X3DRigidJointNode(X3DNode):
 class X3DUrlObject(object):
     def __init__(self, **kwargs):
         super(X3DUrlObject, self).__init__()
+        description  = kwargs.pop("description", None)
+        self.__description = description
+        load  = kwargs.pop("load", True)
+        self.__load = load
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         url  = kwargs.pop("url", None)
         self.__url = url
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
+    @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -10034,6 +10489,21 @@ class X3DUrlObject(object):
     def toXML(self):
         str = ''
         str += '<X3DUrlObject'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -10047,10 +10517,18 @@ class X3DUrlObject(object):
 class X3DScriptNode(X3DUrlObject, X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DScriptNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         url  = kwargs.pop("url", None)
         self.__url = url
         DEF  = kwargs.pop("DEF", None)
@@ -10059,6 +10537,26 @@ class X3DScriptNode(X3DUrlObject, X3DChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -10080,6 +10578,24 @@ class X3DScriptNode(X3DUrlObject, X3DChildNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -10099,6 +10615,32 @@ class X3DScriptNode(X3DUrlObject, X3DChildNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -10195,6 +10737,21 @@ class X3DScriptNode(X3DUrlObject, X3DChildNode):
     def toXML(self):
         str = ''
         str += '<X3DScriptNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -11013,6 +11570,942 @@ class X3DShapeNode(X3DBoundedObject, X3DChildNode):
         return str
 
 
+class X3DTextureCoordinateNode(X3DGeometricPropertyNode):
+    def __init__(self, **kwargs):
+        super(X3DTextureCoordinateNode, self).__init__(**kwargs)
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DTextureCoordinateNode'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DTextureCoordinateNode>'
+        return str
+
+
+class X3DSingleTextureCoordinateNode(X3DTextureCoordinateNode):
+    def __init__(self, **kwargs):
+        super(X3DSingleTextureCoordinateNode, self).__init__(**kwargs)
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DSingleTextureCoordinateNode'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DSingleTextureCoordinateNode>'
+        return str
+
+
+class X3DSingleTextureNode(X3DTextureNode):
+    def __init__(self, **kwargs):
+        super(X3DSingleTextureNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DSingleTextureNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DSingleTextureNode>'
+        return str
+
+
+class X3DTextureTransformNode(X3DAppearanceChildNode):
+    def __init__(self, **kwargs):
+        super(X3DTextureTransformNode, self).__init__(**kwargs)
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DTextureTransformNode'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DTextureTransformNode>'
+        return str
+
+
+class X3DSingleTextureTransformNode(X3DTextureTransformNode):
+    def __init__(self, **kwargs):
+        super(X3DSingleTextureTransformNode, self).__init__(**kwargs)
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<X3DSingleTextureTransformNode'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '</X3DSingleTextureTransformNode>'
+        return str
+
+
 class X3DSoundNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DSoundNode, self).__init__(**kwargs)
@@ -11187,6 +12680,8 @@ class X3DSoundNode(X3DChildNode):
 class X3DTimeDependentNode(X3DChildNode):
     def __init__(self, **kwargs):
         super(X3DTimeDependentNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         elapsedTime  = kwargs.pop("elapsedTime", None)
         if elapsedTime == None or elapsedTime  <  0:
             return None
@@ -11215,6 +12710,26 @@ class X3DTimeDependentNode(X3DChildNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     def removeElapsedTime(self, elapsedTime):
         self.__elapsedTime = [x for x in self.__elapsedTime if x not in elapsedTime]
         return self.__elapsedTime
@@ -11440,6 +12955,11 @@ class X3DTimeDependentNode(X3DChildNode):
     def toXML(self):
         str = ''
         str += '<X3DTimeDependentNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__elapsedTime is not None:
             if isinstance(self.__elapsedTime, six.string_types):
                 str += ' elapsedTime="'+self.__elapsedTime+'"'
@@ -11535,6 +13055,8 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
         if elapsedTime == None or elapsedTime  <  0:
             return None
         self.__elapsedTime = elapsedTime
+        enabled  = kwargs.pop("enabled", True)
+        self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         Active  = kwargs.pop("Active", None)
@@ -11597,6 +13119,24 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
         return self.__elapsedTime
     def elapsedTime_changed(self, elapsedTime = None):
         return self.__elapsedTime
+    @property
+    def enabled(self):
+        return self.__enabled
+    @enabled.setter
+    def enabled(self, value = True):
+        self.__enabled = [value]
+    def setEnabled(self, enabled = True):
+        self.__enabled = [enabled]
+        return self
+    def addEnabled(self, enabled = True):
+        if self.__enabled == None:            self.__enabled =  []
+        self.__enabled +=  [enabled]
+        return self
+    def removeEnabled(self, enabled):
+        self.__enabled = [x for x in self.__enabled if x not in enabled]
+        return self.__enabled
+    def isEnabled(self, enabled = True):
+        return self.__enabled
     @property
     def IS(self):
         return self.__IS
@@ -11856,6 +13396,11 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
                 str += ' elapsedTime="'+self.__elapsedTime+'"'
             else:
                 str += ' elapsedTime="'+self.__elapsedTime[0]+'"'
+        if self.__enabled is not None:
+            if isinstance(self.__enabled, six.string_types):
+                str += ' enabled="'+self.__enabled+'"'
+            else:
+                str += ' enabled="'+self.__enabled[0]+'"'
         if self.__Active is not None:
             if isinstance(self.__Active, six.string_types):
                 str += ' Active="'+self.__Active+'"'
@@ -11938,9 +13483,11 @@ class X3DSoundSourceNode(X3DTimeDependentNode):
         return str
 
 
-class X3DTexture2DNode(X3DTextureNode):
+class X3DTexture2DNode(X3DSingleTextureNode):
     def __init__(self, **kwargs):
         super(X3DTexture2DNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -11957,6 +13504,26 @@ class X3DTexture2DNode(X3DTextureNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -12073,6 +13640,11 @@ class X3DTexture2DNode(X3DTextureNode):
     def toXML(self):
         str = ''
         str += '<X3DTexture2DNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__repeatS is not None:
             if isinstance(self.__repeatS, six.string_types):
                 str += ' repeatS="'+self.__repeatS+'"'
@@ -12139,6 +13711,8 @@ class X3DTexture2DNode(X3DTextureNode):
 class X3DTexture3DNode(X3DTextureNode):
     def __init__(self, **kwargs):
         super(X3DTexture3DNode, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -12157,6 +13731,26 @@ class X3DTexture3DNode(X3DTextureNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -12273,6 +13867,11 @@ class X3DTexture3DNode(X3DTextureNode):
     def toXML(self):
         str = ''
         str += '<X3DTexture3DNode'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__repeatR is not None:
             if isinstance(self.__repeatR, six.string_types):
                 str += ' repeatR="'+self.__repeatR+'"'
@@ -12338,348 +13937,6 @@ class X3DTexture3DNode(X3DTextureNode):
                    str += s.toXMLNode()
         str += '</textureProperties>'
         str += '</X3DTexture3DNode>'
-        return str
-
-
-class X3DTextureCoordinateNode(X3DGeometricPropertyNode):
-    def __init__(self, **kwargs):
-        super(X3DTextureCoordinateNode, self).__init__(**kwargs)
-        IS  = kwargs.pop("IS", None)
-        self.__IS = IS
-        metadata  = kwargs.pop("metadata", None)
-        self.__metadata = metadata
-        DEF  = kwargs.pop("DEF", None)
-        self.__DEF = DEF
-        USE  = kwargs.pop("USE", None)
-        self.__USE = USE
-        class_  = kwargs.pop("class_", None)
-        self.__class_ = class_
-    @property
-    def IS(self):
-        return self.__IS
-    @IS.setter
-    def IS(self, value = None):
-        self.__IS = [value]
-    def setIS(self, IS = None):
-        self.__IS = [IS]
-        return self
-    def addIS(self, IS = None):
-        if self.__IS == None:            self.__IS =  []
-        self.__IS +=  [IS]
-        return self
-    def removeIS(self, IS):
-        self.__IS = [x for x in self.__IS if x not in IS]
-        return self.__IS
-    def getIS(self, IS = None):
-        return self.__IS
-    def IS_changed(self, IS = None):
-        return self.__IS
-    @property
-    def metadata(self):
-        return self.__metadata
-    @metadata.setter
-    def metadata(self, value = None):
-        self.__metadata = [value]
-    def setMetadata(self, metadata = None):
-        self.__metadata = [metadata]
-        return self
-    def addMetadata(self, metadata = None):
-        if self.__metadata == None:            self.__metadata =  []
-        self.__metadata +=  [metadata]
-        return self
-    def removeMetadata(self, metadata):
-        self.__metadata = [x for x in self.__metadata if x not in metadata]
-        return self.__metadata
-    def getMetadata(self, metadata = None):
-        return self.__metadata
-    def metadata_changed(self, metadata = None):
-        return self.__metadata
-    @property
-    def DEF(self):
-        return self.__DEF
-    @DEF.setter
-    def DEF(self, value = None):
-        self.__DEF = [value]
-    def setDEF(self, DEF = None):
-        self.__DEF = [DEF]
-        return self
-    def addDEF(self, DEF = None):
-        if self.__DEF == None:            self.__DEF =  []
-        self.__DEF +=  [DEF]
-        return self
-    def removeDEF(self, DEF):
-        self.__DEF = [x for x in self.__DEF if x not in DEF]
-        return self.__DEF
-    def getDEF(self, DEF = None):
-        return self.__DEF
-    def DEF_changed(self, DEF = None):
-        return self.__DEF
-    @property
-    def USE(self):
-        return self.__USE
-    @USE.setter
-    def USE(self, value = None):
-        self.__USE = [value]
-    def setUSE(self, USE = None):
-        self.__USE = [USE]
-        return self
-    def addUSE(self, USE = None):
-        if self.__USE == None:            self.__USE =  []
-        self.__USE +=  [USE]
-        return self
-    def removeUSE(self, USE):
-        self.__USE = [x for x in self.__USE if x not in USE]
-        return self.__USE
-    def getUSE(self, USE = None):
-        return self.__USE
-    def USE_changed(self, USE = None):
-        return self.__USE
-    @property
-    def class_(self):
-        return self.__class_
-    @class_.setter
-    def class_(self, value = None):
-        self.__class_ = [value]
-    def setClass(self, class_ = None):
-        self.__class_ = [class_]
-        return self
-    def addClass(self, class_ = None):
-        if self.__class_ == None:            self.__class_ =  []
-        self.__class_ +=  [class_]
-        return self
-    def removeClass(self, class_):
-        self.__class_ = [x for x in self.__class_ if x not in class_]
-        return self.__class_
-    def getClass(self, class_ = None):
-        return self.__class_
-    def class_changed(self, class_ = None):
-        return self.__class_
-    @property
-    def comments(self):
-        return self.__comments
-    @comments.setter
-    def comments(self, value = None):
-        self.__comments = [value]
-    def setComments(self, comments = None):
-        self.__comments = [comments]
-        return self
-    def addComments(self, comments = None):
-        if self.__comments == None:            self.__comments =  []
-        self.__comments +=  [comments]
-        return self
-    def toXML(self):
-        str = ''
-        str += '<X3DTextureCoordinateNode'
-        if self.__DEF is not None:
-            if isinstance(self.__DEF, six.string_types):
-                str += ' DEF="'+self.__DEF+'"'
-            else:
-                str += ' DEF="'+self.__DEF[0]+'"'
-        if self.__USE is not None:
-            if isinstance(self.__USE, six.string_types):
-                str += ' USE="'+self.__USE+'"'
-            else:
-                str += ' USE="'+self.__USE[0]+'"'
-        if self.__class_ is not None:
-            if isinstance(self.__class_, six.string_types):
-                str += ' class_="'+self.__class_+'"'
-            else:
-                str += ' class_="'+self.__class_[0]+'"'
-        str += '>'
-        str += '<IS'
-        if self.__IS is not None:
-           for s in self.__IS:
-               if type(s) not in ['head', 'Scene']:
-                   str += s.toXML()
-        str += '>'
-        if self.__IS is not None:
-           for s in self.__IS:
-               if type(s) in ['head', 'Scene']:
-                   str += s.toXMLNode()
-        str += '</IS>'
-        str += '<metadata'
-        if self.__metadata is not None:
-           for s in self.__metadata:
-               if type(s) not in ['head', 'Scene']:
-                   str += s.toXML()
-        str += '>'
-        if self.__metadata is not None:
-           for s in self.__metadata:
-               if type(s) in ['head', 'Scene']:
-                   str += s.toXMLNode()
-        str += '</metadata>'
-        str += '</X3DTextureCoordinateNode>'
-        return str
-
-
-class X3DTextureTransformNode(X3DAppearanceChildNode):
-    def __init__(self, **kwargs):
-        super(X3DTextureTransformNode, self).__init__(**kwargs)
-        IS  = kwargs.pop("IS", None)
-        self.__IS = IS
-        metadata  = kwargs.pop("metadata", None)
-        self.__metadata = metadata
-        DEF  = kwargs.pop("DEF", None)
-        self.__DEF = DEF
-        USE  = kwargs.pop("USE", None)
-        self.__USE = USE
-        class_  = kwargs.pop("class_", None)
-        self.__class_ = class_
-    @property
-    def IS(self):
-        return self.__IS
-    @IS.setter
-    def IS(self, value = None):
-        self.__IS = [value]
-    def setIS(self, IS = None):
-        self.__IS = [IS]
-        return self
-    def addIS(self, IS = None):
-        if self.__IS == None:            self.__IS =  []
-        self.__IS +=  [IS]
-        return self
-    def removeIS(self, IS):
-        self.__IS = [x for x in self.__IS if x not in IS]
-        return self.__IS
-    def getIS(self, IS = None):
-        return self.__IS
-    def IS_changed(self, IS = None):
-        return self.__IS
-    @property
-    def metadata(self):
-        return self.__metadata
-    @metadata.setter
-    def metadata(self, value = None):
-        self.__metadata = [value]
-    def setMetadata(self, metadata = None):
-        self.__metadata = [metadata]
-        return self
-    def addMetadata(self, metadata = None):
-        if self.__metadata == None:            self.__metadata =  []
-        self.__metadata +=  [metadata]
-        return self
-    def removeMetadata(self, metadata):
-        self.__metadata = [x for x in self.__metadata if x not in metadata]
-        return self.__metadata
-    def getMetadata(self, metadata = None):
-        return self.__metadata
-    def metadata_changed(self, metadata = None):
-        return self.__metadata
-    @property
-    def DEF(self):
-        return self.__DEF
-    @DEF.setter
-    def DEF(self, value = None):
-        self.__DEF = [value]
-    def setDEF(self, DEF = None):
-        self.__DEF = [DEF]
-        return self
-    def addDEF(self, DEF = None):
-        if self.__DEF == None:            self.__DEF =  []
-        self.__DEF +=  [DEF]
-        return self
-    def removeDEF(self, DEF):
-        self.__DEF = [x for x in self.__DEF if x not in DEF]
-        return self.__DEF
-    def getDEF(self, DEF = None):
-        return self.__DEF
-    def DEF_changed(self, DEF = None):
-        return self.__DEF
-    @property
-    def USE(self):
-        return self.__USE
-    @USE.setter
-    def USE(self, value = None):
-        self.__USE = [value]
-    def setUSE(self, USE = None):
-        self.__USE = [USE]
-        return self
-    def addUSE(self, USE = None):
-        if self.__USE == None:            self.__USE =  []
-        self.__USE +=  [USE]
-        return self
-    def removeUSE(self, USE):
-        self.__USE = [x for x in self.__USE if x not in USE]
-        return self.__USE
-    def getUSE(self, USE = None):
-        return self.__USE
-    def USE_changed(self, USE = None):
-        return self.__USE
-    @property
-    def class_(self):
-        return self.__class_
-    @class_.setter
-    def class_(self, value = None):
-        self.__class_ = [value]
-    def setClass(self, class_ = None):
-        self.__class_ = [class_]
-        return self
-    def addClass(self, class_ = None):
-        if self.__class_ == None:            self.__class_ =  []
-        self.__class_ +=  [class_]
-        return self
-    def removeClass(self, class_):
-        self.__class_ = [x for x in self.__class_ if x not in class_]
-        return self.__class_
-    def getClass(self, class_ = None):
-        return self.__class_
-    def class_changed(self, class_ = None):
-        return self.__class_
-    @property
-    def comments(self):
-        return self.__comments
-    @comments.setter
-    def comments(self, value = None):
-        self.__comments = [value]
-    def setComments(self, comments = None):
-        self.__comments = [comments]
-        return self
-    def addComments(self, comments = None):
-        if self.__comments == None:            self.__comments =  []
-        self.__comments +=  [comments]
-        return self
-    def toXML(self):
-        str = ''
-        str += '<X3DTextureTransformNode'
-        if self.__DEF is not None:
-            if isinstance(self.__DEF, six.string_types):
-                str += ' DEF="'+self.__DEF+'"'
-            else:
-                str += ' DEF="'+self.__DEF[0]+'"'
-        if self.__USE is not None:
-            if isinstance(self.__USE, six.string_types):
-                str += ' USE="'+self.__USE+'"'
-            else:
-                str += ' USE="'+self.__USE[0]+'"'
-        if self.__class_ is not None:
-            if isinstance(self.__class_, six.string_types):
-                str += ' class_="'+self.__class_+'"'
-            else:
-                str += ' class_="'+self.__class_[0]+'"'
-        str += '>'
-        str += '<IS'
-        if self.__IS is not None:
-           for s in self.__IS:
-               if type(s) not in ['head', 'Scene']:
-                   str += s.toXML()
-        str += '>'
-        if self.__IS is not None:
-           for s in self.__IS:
-               if type(s) in ['head', 'Scene']:
-                   str += s.toXMLNode()
-        str += '</IS>'
-        str += '<metadata'
-        if self.__metadata is not None:
-           for s in self.__metadata:
-               if type(s) not in ['head', 'Scene']:
-                   str += s.toXML()
-        str += '>'
-        if self.__metadata is not None:
-           for s in self.__metadata:
-               if type(s) in ['head', 'Scene']:
-                   str += s.toXMLNode()
-        str += '</metadata>'
-        str += '</X3DTextureTransformNode>'
         return str
 
 
@@ -13314,6 +14571,8 @@ class X3DViewpointNode(X3DBindableNode):
         self.__bindTime = bindTime
         description  = kwargs.pop("description", None)
         self.__description = description
+        farClippingPlane  = kwargs.pop("farClippingPlane", -1)
+        self.__farClippingPlane = farClippingPlane
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         Bound  = kwargs.pop("Bound", None)
@@ -13322,12 +14581,18 @@ class X3DViewpointNode(X3DBindableNode):
         self.__jump = jump
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        navigationInfo  = kwargs.pop("navigationInfo", None)
+        self.__navigationInfo = navigationInfo
+        nearClippingPlane  = kwargs.pop("nearClippingPlane", -1)
+        self.__nearClippingPlane = nearClippingPlane
         orientation  = kwargs.pop("orientation", [0, 0, 1, 0])
         self.__orientation = orientation
         retainUserOffsets  = kwargs.pop("retainUserOffsets", False)
         self.__retainUserOffsets = retainUserOffsets
         bind  = kwargs.pop("bind", None)
         self.__bind = bind
+        viewAll  = kwargs.pop("viewAll", False)
+        self.__viewAll = viewAll
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -13361,6 +14626,26 @@ class X3DViewpointNode(X3DBindableNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
+    @property
+    def farClippingPlane(self):
+        return self.__farClippingPlane
+    @farClippingPlane.setter
+    def farClippingPlane(self, value = -1):
+        self.__farClippingPlane = [value]
+    def setFarClippingPlane(self, farClippingPlane = -1):
+        self.__farClippingPlane = [farClippingPlane]
+        return self
+    def addFarClippingPlane(self, farClippingPlane = -1):
+        if self.__farClippingPlane == None:            self.__farClippingPlane =  []
+        self.__farClippingPlane +=  [farClippingPlane]
+        return self
+    def removeFarClippingPlane(self, farClippingPlane):
+        self.__farClippingPlane = [x for x in self.__farClippingPlane if x not in farClippingPlane]
+        return self.__farClippingPlane
+    def getFarClippingPlane(self, farClippingPlane = -1):
+        return self.__farClippingPlane
+    def farClippingPlane_changed(self, farClippingPlane = -1):
+        return self.__farClippingPlane
     @property
     def IS(self):
         return self.__IS
@@ -13422,6 +14707,46 @@ class X3DViewpointNode(X3DBindableNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
+    def navigationInfo(self):
+        return self.__navigationInfo
+    @navigationInfo.setter
+    def navigationInfo(self, value = None):
+        self.__navigationInfo = [value]
+    def setNavigationInfo(self, navigationInfo = None):
+        self.__navigationInfo = [navigationInfo]
+        return self
+    def addNavigationInfo(self, navigationInfo = None):
+        if self.__navigationInfo == None:            self.__navigationInfo =  []
+        self.__navigationInfo +=  [navigationInfo]
+        return self
+    def removeNavigationInfo(self, navigationInfo):
+        self.__navigationInfo = [x for x in self.__navigationInfo if x not in navigationInfo]
+        return self.__navigationInfo
+    def getNavigationInfo(self, navigationInfo = None):
+        return self.__navigationInfo
+    def navigationInfo_changed(self, navigationInfo = None):
+        return self.__navigationInfo
+    @property
+    def nearClippingPlane(self):
+        return self.__nearClippingPlane
+    @nearClippingPlane.setter
+    def nearClippingPlane(self, value = -1):
+        self.__nearClippingPlane = [value]
+    def setNearClippingPlane(self, nearClippingPlane = -1):
+        self.__nearClippingPlane = [nearClippingPlane]
+        return self
+    def addNearClippingPlane(self, nearClippingPlane = -1):
+        if self.__nearClippingPlane == None:            self.__nearClippingPlane =  []
+        self.__nearClippingPlane +=  [nearClippingPlane]
+        return self
+    def removeNearClippingPlane(self, nearClippingPlane):
+        self.__nearClippingPlane = [x for x in self.__nearClippingPlane if x not in nearClippingPlane]
+        return self.__nearClippingPlane
+    def getNearClippingPlane(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    def nearClippingPlane_changed(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    @property
     def orientation(self):
         return self.__orientation
     @orientation.setter
@@ -13468,6 +14793,24 @@ class X3DViewpointNode(X3DBindableNode):
     def set_bind(self, bind = None):
         self.__bind = [bind]
         return self
+    @property
+    def viewAll(self):
+        return self.__viewAll
+    @viewAll.setter
+    def viewAll(self, value = False):
+        self.__viewAll = [value]
+    def setViewAll(self, viewAll = False):
+        self.__viewAll = [viewAll]
+        return self
+    def addViewAll(self, viewAll = False):
+        if self.__viewAll == None:            self.__viewAll =  []
+        self.__viewAll +=  [viewAll]
+        return self
+    def removeViewAll(self, viewAll):
+        self.__viewAll = [x for x in self.__viewAll if x not in viewAll]
+        return self.__viewAll
+    def isViewAll(self, viewAll = False):
+        return self.__viewAll
     @property
     def DEF(self):
         return self.__DEF
@@ -13554,6 +14897,11 @@ class X3DViewpointNode(X3DBindableNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
+        if self.__farClippingPlane is not None:
+            if isinstance(self.__farClippingPlane, six.string_types):
+                str += ' farClippingPlane="'+self.__farClippingPlane+'"'
+            else:
+                str += ' farClippingPlane="'+self.__farClippingPlane[0]+'"'
         if self.__Bound is not None:
             if isinstance(self.__Bound, six.string_types):
                 str += ' Bound="'+self.__Bound+'"'
@@ -13564,6 +14912,11 @@ class X3DViewpointNode(X3DBindableNode):
                 str += ' jump="'+self.__jump+'"'
             else:
                 str += ' jump="'+self.__jump[0]+'"'
+        if self.__nearClippingPlane is not None:
+            if isinstance(self.__nearClippingPlane, six.string_types):
+                str += ' nearClippingPlane="'+self.__nearClippingPlane+'"'
+            else:
+                str += ' nearClippingPlane="'+self.__nearClippingPlane[0]+'"'
         if self.__orientation is not None:
             if isinstance(self.__orientation, six.string_types):
                 str += ' orientation="'+self.__orientation+'"'
@@ -13579,6 +14932,11 @@ class X3DViewpointNode(X3DBindableNode):
                 str += ' bind="'+self.__bind+'"'
             else:
                 str += ' bind="'+self.__bind[0]+'"'
+        if self.__viewAll is not None:
+            if isinstance(self.__viewAll, six.string_types):
+                str += ' viewAll="'+self.__viewAll+'"'
+            else:
+                str += ' viewAll="'+self.__viewAll[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -13617,6 +14975,17 @@ class X3DViewpointNode(X3DBindableNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<navigationInfo'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</navigationInfo>'
         str += '</X3DViewpointNode>'
         return str
 
@@ -14554,10 +15923,16 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
         self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         parameter  = kwargs.pop("parameter", None)
         self.__parameter = parameter
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         Children  = kwargs.pop("Children", None)
         self.__children = Children
         url  = kwargs.pop("url", None)
@@ -14659,6 +16034,24 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -14698,6 +16091,32 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
         return self.__parameter
     def parameter_changed(self, parameter = None):
         return self.__parameter
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def Children(self):
         return self.__children
@@ -14838,11 +16257,21 @@ class Anchor(X3DUrlObject, X3DGroupingNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
         if self.__parameter is not None:
             if isinstance(self.__parameter, six.string_types):
                 str += ' parameter="'+self.__parameter+'"'
             else:
                 str += ' parameter="'+self.__parameter[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -15767,12 +17196,16 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
         if elapsedTime == None or elapsedTime  <  0:
             return None
         self.__elapsedTime = elapsedTime
+        enabled  = kwargs.pop("enabled", True)
+        self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         Active  = kwargs.pop("Active", None)
         self.__Active = Active
         Paused  = kwargs.pop("Paused", None)
         self.__Paused = Paused
+        load  = kwargs.pop("load", True)
+        self.__load = load
         loop  = kwargs.pop("loop", False)
         self.__loop = loop
         metadata  = kwargs.pop("metadata", None)
@@ -15783,6 +17216,10 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
         if pitch == None or pitch  <=  0:
             return None
         self.__pitch = pitch
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         resumeTime  = kwargs.pop("resumeTime", 0)
         self.__resumeTime = resumeTime
         startTime  = kwargs.pop("startTime", 0)
@@ -15832,6 +17269,24 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
     def elapsedTime_changed(self, elapsedTime = None):
         return self.__elapsedTime
     @property
+    def enabled(self):
+        return self.__enabled
+    @enabled.setter
+    def enabled(self, value = True):
+        self.__enabled = [value]
+    def setEnabled(self, enabled = True):
+        self.__enabled = [enabled]
+        return self
+    def addEnabled(self, enabled = True):
+        if self.__enabled == None:            self.__enabled =  []
+        self.__enabled +=  [enabled]
+        return self
+    def removeEnabled(self, enabled):
+        self.__enabled = [x for x in self.__enabled if x not in enabled]
+        return self.__enabled
+    def isEnabled(self, enabled = True):
+        return self.__enabled
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -15855,6 +17310,24 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
         return self.__Active
     def isPaused(self, Paused = None):
         return self.__Paused
+    @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
     @property
     def loop(self):
         return self.__loop
@@ -15939,6 +17412,32 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
         return self.__pitch
     def pitch_changed(self, pitch = 1.0):
         return self.__pitch
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def resumeTime(self):
         return self.__resumeTime
@@ -16110,6 +17609,11 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
                 str += ' elapsedTime="'+self.__elapsedTime+'"'
             else:
                 str += ' elapsedTime="'+self.__elapsedTime[0]+'"'
+        if self.__enabled is not None:
+            if isinstance(self.__enabled, six.string_types):
+                str += ' enabled="'+self.__enabled+'"'
+            else:
+                str += ' enabled="'+self.__enabled[0]+'"'
         if self.__Active is not None:
             if isinstance(self.__Active, six.string_types):
                 str += ' Active="'+self.__Active+'"'
@@ -16120,6 +17624,11 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
                 str += ' Paused="'+self.__Paused+'"'
             else:
                 str += ' Paused="'+self.__Paused[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
         if self.__loop is not None:
             if isinstance(self.__loop, six.string_types):
                 str += ' loop="'+self.__loop+'"'
@@ -16135,6 +17644,11 @@ class AudioClip(X3DUrlObject, X3DSoundSourceNode):
                 str += ' pitch="'+self.__pitch+'"'
             else:
                 str += ' pitch="'+self.__pitch[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__resumeTime is not None:
             if isinstance(self.__resumeTime, six.string_types):
                 str += ' resumeTime="'+self.__resumeTime+'"'
@@ -25527,6 +27041,8 @@ class ComposedCubeMapTexture(X3DEnvironmentTextureNode):
         self.__back = back
         bottom  = kwargs.pop("bottom", None)
         self.__bottom = bottom
+        description  = kwargs.pop("description", None)
+        self.__description = description
         front  = kwargs.pop("front", None)
         self.__front = front
         IS  = kwargs.pop("IS", None)
@@ -25585,6 +27101,26 @@ class ComposedCubeMapTexture(X3DEnvironmentTextureNode):
         return self.__bottom
     def bottom_changed(self, bottom = None):
         return self.__bottom
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def front(self):
         return self.__front
@@ -25781,6 +27317,11 @@ class ComposedCubeMapTexture(X3DEnvironmentTextureNode):
     def toXML(self):
         str = ''
         str += '<ComposedCubeMapTexture'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -26209,6 +27750,8 @@ class ComposedShader(X3DProgrammableShaderObject, X3DShaderNode):
 class ComposedTexture3D(X3DTexture3DNode):
     def __init__(self, **kwargs):
         super(ComposedTexture3D, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -26229,6 +27772,26 @@ class ComposedTexture3D(X3DTexture3DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -26365,6 +27928,11 @@ class ComposedTexture3D(X3DTexture3DNode):
     def toXML(self):
         str = ''
         str += '<ComposedTexture3D'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__repeatR is not None:
             if isinstance(self.__repeatR, six.string_types):
                 str += ' repeatR="'+self.__repeatR+'"'
@@ -27138,6 +28706,32 @@ class ConeEmitter(X3DParticleEmitterNode):
         return self.__speed
     def speed_changed(self, speed = 0):
         return self.__speed
+    @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
     @property
     def variation(self):
         return self.__variation
@@ -31509,6 +33103,8 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
         if country == None or country  >  65535:
             return None
         self.__country = country
+        description  = kwargs.pop("description", None)
+        self.__description = description
         domain  = kwargs.pop("domain", 0)
         if domain == None or domain  <  0:
             return None
@@ -31529,8 +33125,14 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
         if kind == None or kind  >  255:
             return None
         self.__kind = kind
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         specific  = kwargs.pop("specific", 0)
         if specific == None or specific  <  0:
             return None
@@ -31552,6 +33154,26 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
     @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -31572,6 +33194,24 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -31591,6 +33231,32 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -31697,6 +33363,11 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
                 str += ' country="'+self.__country+'"'
             else:
                 str += ' country="'+self.__country[0]+'"'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__domain is not None:
             if isinstance(self.__domain, six.string_types):
                 str += ' domain="'+self.__domain+'"'
@@ -31712,6 +33383,16 @@ class DISEntityTypeMapping(X3DUrlObject, X3DInfoNode):
                 str += ' kind="'+self.__kind+'"'
             else:
                 str += ' kind="'+self.__kind[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__specific is not None:
             if isinstance(self.__specific, six.string_types):
                 str += ' specific="'+self.__specific+'"'
@@ -36101,6 +37782,32 @@ class ExplosionEmitter(X3DParticleEmitterNode):
     def speed_changed(self, speed = 0):
         return self.__speed
     @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
+    @property
     def variation(self):
         return self.__variation
     @variation.setter
@@ -38212,6 +39919,8 @@ class ForcePhysicsModel(X3DParticlePhysicsModelNode):
 class GeneratedCubeMapTexture(X3DEnvironmentTextureNode):
     def __init__(self, **kwargs):
         super(GeneratedCubeMapTexture, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
@@ -38238,6 +39947,26 @@ class GeneratedCubeMapTexture(X3DEnvironmentTextureNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -38398,6 +40127,11 @@ class GeneratedCubeMapTexture(X3DEnvironmentTextureNode):
     def toXML(self):
         str = ''
         str += '<GeneratedCubeMapTexture'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__size is not None:
             if isinstance(self.__size, six.string_types):
                 str += ' size="'+self.__size+'"'
@@ -39826,10 +41560,18 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
         super(GeoMetadata, self).__init__(**kwargs)
         data  = kwargs.pop("data", None)
         self.__data = data
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         summary  = kwargs.pop("summary", None)
         self.__summary = summary
         url  = kwargs.pop("url", None)
@@ -39861,6 +41603,26 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
     def data_changed(self, data = None):
         return self.__data
     @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -39881,6 +41643,24 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -39900,6 +41680,32 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def summary(self):
         return self.__summary
@@ -40016,6 +41822,21 @@ class GeoMetadata(X3DUrlObject, X3DInfoNode):
     def toXML(self):
         str = ''
         str += '<GeoMetadata'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__summary is not None:
             if isinstance(self.__summary, six.string_types):
                 str += ' summary="'+self.__summary+'"'
@@ -41765,6 +43586,8 @@ class GeoViewpoint(X3DViewpointNode):
         self.__centerOfRotation = centerOfRotation
         description  = kwargs.pop("description", None)
         self.__description = description
+        farClippingPlane  = kwargs.pop("farClippingPlane", -1)
+        self.__farClippingPlane = farClippingPlane
         fieldOfView  = kwargs.pop("fieldOfView", 0.7854)
         if fieldOfView == None or fieldOfView  <=  0:
             return None
@@ -41783,6 +43606,10 @@ class GeoViewpoint(X3DViewpointNode):
         self.__jump = jump
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        navigationInfo  = kwargs.pop("navigationInfo", None)
+        self.__navigationInfo = navigationInfo
+        nearClippingPlane  = kwargs.pop("nearClippingPlane", -1)
+        self.__nearClippingPlane = nearClippingPlane
         orientation  = kwargs.pop("orientation", [0, 0, 1, 0])
         self.__orientation = orientation
         position  = kwargs.pop("position", [0, 0, 100000])
@@ -41795,6 +43622,8 @@ class GeoViewpoint(X3DViewpointNode):
         if speedFactor == None or speedFactor  <  0:
             return None
         self.__speedFactor = speedFactor
+        viewAll  = kwargs.pop("viewAll", False)
+        self.__viewAll = viewAll
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -41848,6 +43677,26 @@ class GeoViewpoint(X3DViewpointNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
+    @property
+    def farClippingPlane(self):
+        return self.__farClippingPlane
+    @farClippingPlane.setter
+    def farClippingPlane(self, value = -1):
+        self.__farClippingPlane = [value]
+    def setFarClippingPlane(self, farClippingPlane = -1):
+        self.__farClippingPlane = [farClippingPlane]
+        return self
+    def addFarClippingPlane(self, farClippingPlane = -1):
+        if self.__farClippingPlane == None:            self.__farClippingPlane =  []
+        self.__farClippingPlane +=  [farClippingPlane]
+        return self
+    def removeFarClippingPlane(self, farClippingPlane):
+        self.__farClippingPlane = [x for x in self.__farClippingPlane if x not in farClippingPlane]
+        return self.__farClippingPlane
+    def getFarClippingPlane(self, farClippingPlane = -1):
+        return self.__farClippingPlane
+    def farClippingPlane_changed(self, farClippingPlane = -1):
+        return self.__farClippingPlane
     @property
     def fieldOfView(self):
         return self.__fieldOfView
@@ -41941,6 +43790,46 @@ class GeoViewpoint(X3DViewpointNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
+    def navigationInfo(self):
+        return self.__navigationInfo
+    @navigationInfo.setter
+    def navigationInfo(self, value = None):
+        self.__navigationInfo = [value]
+    def setNavigationInfo(self, navigationInfo = None):
+        self.__navigationInfo = [navigationInfo]
+        return self
+    def addNavigationInfo(self, navigationInfo = None):
+        if self.__navigationInfo == None:            self.__navigationInfo =  []
+        self.__navigationInfo +=  [navigationInfo]
+        return self
+    def removeNavigationInfo(self, navigationInfo):
+        self.__navigationInfo = [x for x in self.__navigationInfo if x not in navigationInfo]
+        return self.__navigationInfo
+    def getNavigationInfo(self, navigationInfo = None):
+        return self.__navigationInfo
+    def navigationInfo_changed(self, navigationInfo = None):
+        return self.__navigationInfo
+    @property
+    def nearClippingPlane(self):
+        return self.__nearClippingPlane
+    @nearClippingPlane.setter
+    def nearClippingPlane(self, value = -1):
+        self.__nearClippingPlane = [value]
+    def setNearClippingPlane(self, nearClippingPlane = -1):
+        self.__nearClippingPlane = [nearClippingPlane]
+        return self
+    def addNearClippingPlane(self, nearClippingPlane = -1):
+        if self.__nearClippingPlane == None:            self.__nearClippingPlane =  []
+        self.__nearClippingPlane +=  [nearClippingPlane]
+        return self
+    def removeNearClippingPlane(self, nearClippingPlane):
+        self.__nearClippingPlane = [x for x in self.__nearClippingPlane if x not in nearClippingPlane]
+        return self.__nearClippingPlane
+    def getNearClippingPlane(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    def nearClippingPlane_changed(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    @property
     def orientation(self):
         return self.__orientation
     @orientation.setter
@@ -42007,6 +43896,24 @@ class GeoViewpoint(X3DViewpointNode):
     def set_bind(self, bind = None):
         self.__bind = [bind]
         return self
+    @property
+    def viewAll(self):
+        return self.__viewAll
+    @viewAll.setter
+    def viewAll(self, value = False):
+        self.__viewAll = [value]
+    def setViewAll(self, viewAll = False):
+        self.__viewAll = [viewAll]
+        return self
+    def addViewAll(self, viewAll = False):
+        if self.__viewAll == None:            self.__viewAll =  []
+        self.__viewAll +=  [viewAll]
+        return self
+    def removeViewAll(self, viewAll):
+        self.__viewAll = [x for x in self.__viewAll if x not in viewAll]
+        return self.__viewAll
+    def isViewAll(self, viewAll = False):
+        return self.__viewAll
     @property
     def DEF(self):
         return self.__DEF
@@ -42098,6 +44005,11 @@ class GeoViewpoint(X3DViewpointNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
+        if self.__farClippingPlane is not None:
+            if isinstance(self.__farClippingPlane, six.string_types):
+                str += ' farClippingPlane="'+self.__farClippingPlane+'"'
+            else:
+                str += ' farClippingPlane="'+self.__farClippingPlane[0]+'"'
         if self.__fieldOfView is not None:
             if isinstance(self.__fieldOfView, six.string_types):
                 str += ' fieldOfView="'+self.__fieldOfView+'"'
@@ -42118,6 +44030,11 @@ class GeoViewpoint(X3DViewpointNode):
                 str += ' jump="'+self.__jump+'"'
             else:
                 str += ' jump="'+self.__jump[0]+'"'
+        if self.__nearClippingPlane is not None:
+            if isinstance(self.__nearClippingPlane, six.string_types):
+                str += ' nearClippingPlane="'+self.__nearClippingPlane+'"'
+            else:
+                str += ' nearClippingPlane="'+self.__nearClippingPlane[0]+'"'
         if self.__orientation is not None:
             if isinstance(self.__orientation, six.string_types):
                 str += ' orientation="'+self.__orientation+'"'
@@ -42143,6 +44060,11 @@ class GeoViewpoint(X3DViewpointNode):
                 str += ' speedFactor="'+self.__speedFactor+'"'
             else:
                 str += ' speedFactor="'+self.__speedFactor[0]+'"'
+        if self.__viewAll is not None:
+            if isinstance(self.__viewAll, six.string_types):
+                str += ' viewAll="'+self.__viewAll+'"'
+            else:
+                str += ' viewAll="'+self.__viewAll[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -42192,6 +44114,17 @@ class GeoViewpoint(X3DViewpointNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<navigationInfo'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</navigationInfo>'
         str += '</GeoViewpoint>'
         return str
 
@@ -44583,8 +46516,8 @@ class HAnimMotion(X3DChildNode):
         self.__elapsedTime = elapsedTime
         enabled  = kwargs.pop("enabled", False)
         self.__enabled = enabled
-        endFrame  = kwargs.pop("endFrame", -1)
-        if endFrame == None or endFrame  <  -1:
+        endFrame  = kwargs.pop("endFrame", 0)
+        if endFrame == None or endFrame  <  0:
             return None
         self.__endFrame = endFrame
         frameCount  = kwargs.pop("frameCount", 0)
@@ -44723,17 +46656,17 @@ class HAnimMotion(X3DChildNode):
     def endFrame(self):
         return self.__endFrame
     @endFrame.setter
-    def endFrame(self, value = -1):
-        if value == None or value  <  -1:
+    def endFrame(self, value = 0):
+        if value == None or value  <  0:
             return None
         self.__endFrame = [value]
-    def setEndFrame(self, endFrame = -1):
-        if endFrame == None or endFrame  <  -1:
+    def setEndFrame(self, endFrame = 0):
+        if endFrame == None or endFrame  <  0:
             return None
         self.__endFrame = [endFrame]
         return self
-    def addEndFrame(self, endFrame = -1):
-        if endFrame == None or endFrame  <  -1:
+    def addEndFrame(self, endFrame = 0):
+        if endFrame == None or endFrame  <  0:
             return None
         if self.__endFrame == None:            self.__endFrame =  []
         self.__endFrame +=  [endFrame]
@@ -44741,9 +46674,9 @@ class HAnimMotion(X3DChildNode):
     def removeEndFrame(self, endFrame):
         self.__endFrame = [x for x in self.__endFrame if x not in endFrame]
         return self.__endFrame
-    def getEndFrame(self, endFrame = -1):
+    def getEndFrame(self, endFrame = 0):
         return self.__endFrame
-    def endFrame_changed(self, endFrame = -1):
+    def endFrame_changed(self, endFrame = 0):
         return self.__endFrame
     @property
     def frameCount(self):
@@ -46234,10 +48167,18 @@ class HAnimSite(X3DGroupingNode):
 class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
     def __init__(self, **kwargs):
         super(ImageCubeMapTexture, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         textureProperties  = kwargs.pop("textureProperties", None)
         self.__textureProperties = textureProperties
         url  = kwargs.pop("url", None)
@@ -46248,6 +48189,26 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -46269,6 +48230,24 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -46288,6 +48267,32 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -46384,6 +48389,21 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
     def toXML(self):
         str = ''
         str += '<ImageCubeMapTexture'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -46445,10 +48465,18 @@ class ImageCubeMapTexture(X3DUrlObject, X3DEnvironmentTextureNode):
 class ImageTexture(X3DUrlObject, X3DTexture2DNode):
     def __init__(self, **kwargs):
         super(ImageTexture, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         repeatS  = kwargs.pop("repeatS", True)
         self.__repeatS = repeatS
         repeatT  = kwargs.pop("repeatT", True)
@@ -46463,6 +48491,26 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -46484,6 +48532,24 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -46503,6 +48569,32 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -46599,6 +48691,21 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
     def toXML(self):
         str = ''
         str += '<ImageTexture'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__repeatS is not None:
             if isinstance(self.__repeatS, six.string_types):
                 str += ' repeatS="'+self.__repeatS+'"'
@@ -46670,10 +48777,18 @@ class ImageTexture(X3DUrlObject, X3DTexture2DNode):
 class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
     def __init__(self, **kwargs):
         super(ImageTexture3D, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         repeatR  = kwargs.pop("repeatR", False)
         self.__repeatR = repeatR
         repeatS  = kwargs.pop("repeatS", False)
@@ -46690,6 +48805,26 @@ class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -46711,6 +48846,24 @@ class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -46730,6 +48883,32 @@ class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -46826,6 +49005,21 @@ class ImageTexture3D(X3DUrlObject, X3DTexture3DNode):
     def toXML(self):
         str = ''
         str += '<ImageTexture3D'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__repeatR is not None:
             if isinstance(self.__repeatR, six.string_types):
                 str += ' repeatR="'+self.__repeatR+'"'
@@ -47461,6 +49655,8 @@ class IndexedLineSet(X3DGeometryNode):
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        normal  = kwargs.pop("normal", None)
+        self.__normal = normal
         colorIndex  = kwargs.pop("colorIndex", None)
         if colorIndex == None or len(colorIndex) <= 0 or min(colorIndex)  <  -1:
             return None
@@ -47595,6 +49791,26 @@ class IndexedLineSet(X3DGeometryNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def normal(self):
+        return self.__normal
+    @normal.setter
+    def normal(self, value = None):
+        self.__normal = [value]
+    def setNormal(self, normal = None):
+        self.__normal = [normal]
+        return self
+    def addNormal(self, normal = None):
+        if self.__normal == None:            self.__normal =  []
+        self.__normal +=  [normal]
+        return self
+    def removeNormal(self, normal):
+        self.__normal = [x for x in self.__normal if x not in normal]
+        return self.__normal
+    def getNormal(self, normal = None):
+        return self.__normal
+    def normal_changed(self, normal = None):
+        return self.__normal
     @property
     def colorIndex(self):
         return self.__colorIndex
@@ -47804,6 +50020,17 @@ class IndexedLineSet(X3DGeometryNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<normal'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normal>'
         str += '</IndexedLineSet>'
         return str
 
@@ -49529,12 +51756,18 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
         self.__bboxDisplay = bboxDisplay
         bboxSize  = kwargs.pop("bboxSize", [-1, -1, -1])
         self.__bboxSize = bboxSize
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         load  = kwargs.pop("load", True)
         self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         url  = kwargs.pop("url", None)
         self.__url = url
         visible  = kwargs.pop("visible", True)
@@ -49563,6 +51796,26 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
         return self.__bboxDisplay
     def isBboxDisplay(self, bboxDisplay = False):
         return self.__bboxDisplay
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -49621,6 +51874,32 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -49750,11 +52029,21 @@ class Inline(X3DBoundedObject, X3DUrlObject, X3DChildNode):
                 str += ' bboxSize="'+self.__bboxSize+'"'
             else:
                 str += ' bboxSize="'+self.__bboxSize[0]+'"'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__load is not None:
             if isinstance(self.__load, six.string_types):
                 str += ' load="'+self.__load+'"'
             else:
                 str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -53862,6 +56151,8 @@ class LineSet(X3DGeometryNode):
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        normal  = kwargs.pop("normal", None)
+        self.__normal = normal
         vertexCount  = kwargs.pop("vertexCount", None)
         if vertexCount == None or len(vertexCount) <= 0 or min(vertexCount)  <  2:
             return None
@@ -53992,6 +56283,26 @@ class LineSet(X3DGeometryNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def normal(self):
+        return self.__normal
+    @normal.setter
+    def normal(self, value = None):
+        self.__normal = [value]
+    def setNormal(self, normal = None):
+        self.__normal = [normal]
+        return self
+    def addNormal(self, normal = None):
+        if self.__normal == None:            self.__normal =  []
+        self.__normal +=  [normal]
+        return self
+    def removeNormal(self, normal):
+        self.__normal = [x for x in self.__normal if x not in normal]
+        return self.__normal
+    def getNormal(self, normal = None):
+        return self.__normal
+    def normal_changed(self, normal = None):
+        return self.__normal
     @property
     def vertexCount(self):
         return self.__vertexCount
@@ -54181,6 +56492,17 @@ class LineSet(X3DGeometryNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<normal'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normal>'
         str += '</LineSet>'
         return str
 
@@ -55167,7 +57489,7 @@ class LOD(X3DGroupingNode):
         return str
 
 
-class Material(X3DMaterialNode):
+class Material(X3DOneSidedMaterialNode):
     def __init__(self, **kwargs):
         super(Material, self).__init__(**kwargs)
         ambientIntensity  = kwargs.pop("ambientIntensity", 0.2)
@@ -55176,34 +57498,72 @@ class Material(X3DMaterialNode):
         if ambientIntensity == None or ambientIntensity  >  1:
             return None
         self.__ambientIntensity = ambientIntensity
+        ambientTexture  = kwargs.pop("ambientTexture", None)
+        self.__ambientTexture = ambientTexture
+        ambientTextureMapping  = kwargs.pop("ambientTextureMapping", None)
+        self.__ambientTextureMapping = ambientTextureMapping
         diffuseColor  = kwargs.pop("diffuseColor", [0.8, 0.8, 0.8])
         if diffuseColor == None or len(diffuseColor) <= 0 or min(diffuseColor)  <  0:
             return None
         if diffuseColor == None or len(diffuseColor) <= 0 or max(diffuseColor)  >  1:
             return None
         self.__diffuseColor = diffuseColor
+        diffuseTexture  = kwargs.pop("diffuseTexture", None)
+        self.__diffuseTexture = diffuseTexture
+        diffuseTextureMapping  = kwargs.pop("diffuseTextureMapping", None)
+        self.__diffuseTextureMapping = diffuseTextureMapping
         emissiveColor  = kwargs.pop("emissiveColor", [0, 0, 0])
         if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
             return None
         if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
             return None
         self.__emissiveColor = emissiveColor
+        emissiveTexture  = kwargs.pop("emissiveTexture", None)
+        self.__emissiveTexture = emissiveTexture
+        emissiveTextureMapping  = kwargs.pop("emissiveTextureMapping", None)
+        self.__emissiveTextureMapping = emissiveTextureMapping
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        normalScale  = kwargs.pop("normalScale", 1)
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = normalScale
+        normalTexture  = kwargs.pop("normalTexture", None)
+        self.__normalTexture = normalTexture
+        normalTextureMapping  = kwargs.pop("normalTextureMapping", None)
+        self.__normalTextureMapping = normalTextureMapping
+        occlusionStrength  = kwargs.pop("occlusionStrength", [0, 0, 0])
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or min(occlusionStrength)  <  0:
+            return None
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or max(occlusionStrength)  >  1:
+            return None
+        self.__occlusionStrength = occlusionStrength
+        occlusionTexture  = kwargs.pop("occlusionTexture", None)
+        self.__occlusionTexture = occlusionTexture
+        occlusionTextureMapping  = kwargs.pop("occlusionTextureMapping", None)
+        self.__occlusionTextureMapping = occlusionTextureMapping
         shininess  = kwargs.pop("shininess", 0.2)
         if shininess == None or shininess  <  0:
             return None
         if shininess == None or shininess  >  1:
             return None
         self.__shininess = shininess
+        shininessTexture  = kwargs.pop("shininessTexture", None)
+        self.__shininessTexture = shininessTexture
+        shininessTextureMapping  = kwargs.pop("shininessTextureMapping", None)
+        self.__shininessTextureMapping = shininessTextureMapping
         specularColor  = kwargs.pop("specularColor", [0, 0, 0])
         if specularColor == None or len(specularColor) <= 0 or min(specularColor)  <  0:
             return None
         if specularColor == None or len(specularColor) <= 0 or max(specularColor)  >  1:
             return None
         self.__specularColor = specularColor
+        specularTexture  = kwargs.pop("specularTexture", None)
+        self.__specularTexture = specularTexture
+        specularTextureMapping  = kwargs.pop("specularTextureMapping", None)
+        self.__specularTextureMapping = specularTextureMapping
         transparency  = kwargs.pop("transparency", 0)
         if transparency == None or transparency  <  0:
             return None
@@ -55249,6 +57609,46 @@ class Material(X3DMaterialNode):
     def ambientIntensity_changed(self, ambientIntensity = 0.2):
         return self.__ambientIntensity
     @property
+    def ambientTexture(self):
+        return self.__ambientTexture
+    @ambientTexture.setter
+    def ambientTexture(self, value = None):
+        self.__ambientTexture = [value]
+    def setAmbientTexture(self, ambientTexture = None):
+        self.__ambientTexture = [ambientTexture]
+        return self
+    def addAmbientTexture(self, ambientTexture = None):
+        if self.__ambientTexture == None:            self.__ambientTexture =  []
+        self.__ambientTexture +=  [ambientTexture]
+        return self
+    def removeAmbientTexture(self, ambientTexture):
+        self.__ambientTexture = [x for x in self.__ambientTexture if x not in ambientTexture]
+        return self.__ambientTexture
+    def getAmbientTexture(self, ambientTexture = None):
+        return self.__ambientTexture
+    def ambientTexture_changed(self, ambientTexture = None):
+        return self.__ambientTexture
+    @property
+    def ambientTextureMapping(self):
+        return self.__ambientTextureMapping
+    @ambientTextureMapping.setter
+    def ambientTextureMapping(self, value = None):
+        self.__ambientTextureMapping = [value]
+    def setAmbientTextureMapping(self, ambientTextureMapping = None):
+        self.__ambientTextureMapping = [ambientTextureMapping]
+        return self
+    def addAmbientTextureMapping(self, ambientTextureMapping = None):
+        if self.__ambientTextureMapping == None:            self.__ambientTextureMapping =  []
+        self.__ambientTextureMapping +=  [ambientTextureMapping]
+        return self
+    def removeAmbientTextureMapping(self, ambientTextureMapping):
+        self.__ambientTextureMapping = [x for x in self.__ambientTextureMapping if x not in ambientTextureMapping]
+        return self.__ambientTextureMapping
+    def getAmbientTextureMapping(self, ambientTextureMapping = None):
+        return self.__ambientTextureMapping
+    def ambientTextureMapping_changed(self, ambientTextureMapping = None):
+        return self.__ambientTextureMapping
+    @property
     def diffuseColor(self):
         return self.__diffuseColor
     @diffuseColor.setter
@@ -55281,6 +57681,46 @@ class Material(X3DMaterialNode):
     def diffuseColor_changed(self, diffuseColor = [0.8, 0.8, 0.8]):
         return self.__diffuseColor
     @property
+    def diffuseTexture(self):
+        return self.__diffuseTexture
+    @diffuseTexture.setter
+    def diffuseTexture(self, value = None):
+        self.__diffuseTexture = [value]
+    def setDiffuseTexture(self, diffuseTexture = None):
+        self.__diffuseTexture = [diffuseTexture]
+        return self
+    def addDiffuseTexture(self, diffuseTexture = None):
+        if self.__diffuseTexture == None:            self.__diffuseTexture =  []
+        self.__diffuseTexture +=  [diffuseTexture]
+        return self
+    def removeDiffuseTexture(self, diffuseTexture):
+        self.__diffuseTexture = [x for x in self.__diffuseTexture if x not in diffuseTexture]
+        return self.__diffuseTexture
+    def getDiffuseTexture(self, diffuseTexture = None):
+        return self.__diffuseTexture
+    def diffuseTexture_changed(self, diffuseTexture = None):
+        return self.__diffuseTexture
+    @property
+    def diffuseTextureMapping(self):
+        return self.__diffuseTextureMapping
+    @diffuseTextureMapping.setter
+    def diffuseTextureMapping(self, value = None):
+        self.__diffuseTextureMapping = [value]
+    def setDiffuseTextureMapping(self, diffuseTextureMapping = None):
+        self.__diffuseTextureMapping = [diffuseTextureMapping]
+        return self
+    def addDiffuseTextureMapping(self, diffuseTextureMapping = None):
+        if self.__diffuseTextureMapping == None:            self.__diffuseTextureMapping =  []
+        self.__diffuseTextureMapping +=  [diffuseTextureMapping]
+        return self
+    def removeDiffuseTextureMapping(self, diffuseTextureMapping):
+        self.__diffuseTextureMapping = [x for x in self.__diffuseTextureMapping if x not in diffuseTextureMapping]
+        return self.__diffuseTextureMapping
+    def getDiffuseTextureMapping(self, diffuseTextureMapping = None):
+        return self.__diffuseTextureMapping
+    def diffuseTextureMapping_changed(self, diffuseTextureMapping = None):
+        return self.__diffuseTextureMapping
+    @property
     def emissiveColor(self):
         return self.__emissiveColor
     @emissiveColor.setter
@@ -55312,6 +57752,46 @@ class Material(X3DMaterialNode):
         return self.__emissiveColor
     def emissiveColor_changed(self, emissiveColor = [0, 0, 0]):
         return self.__emissiveColor
+    @property
+    def emissiveTexture(self):
+        return self.__emissiveTexture
+    @emissiveTexture.setter
+    def emissiveTexture(self, value = None):
+        self.__emissiveTexture = [value]
+    def setEmissiveTexture(self, emissiveTexture = None):
+        self.__emissiveTexture = [emissiveTexture]
+        return self
+    def addEmissiveTexture(self, emissiveTexture = None):
+        if self.__emissiveTexture == None:            self.__emissiveTexture =  []
+        self.__emissiveTexture +=  [emissiveTexture]
+        return self
+    def removeEmissiveTexture(self, emissiveTexture):
+        self.__emissiveTexture = [x for x in self.__emissiveTexture if x not in emissiveTexture]
+        return self.__emissiveTexture
+    def getEmissiveTexture(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    def emissiveTexture_changed(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    @property
+    def emissiveTextureMapping(self):
+        return self.__emissiveTextureMapping
+    @emissiveTextureMapping.setter
+    def emissiveTextureMapping(self, value = None):
+        self.__emissiveTextureMapping = [value]
+    def setEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        self.__emissiveTextureMapping = [emissiveTextureMapping]
+        return self
+    def addEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        if self.__emissiveTextureMapping == None:            self.__emissiveTextureMapping =  []
+        self.__emissiveTextureMapping +=  [emissiveTextureMapping]
+        return self
+    def removeEmissiveTextureMapping(self, emissiveTextureMapping):
+        self.__emissiveTextureMapping = [x for x in self.__emissiveTextureMapping if x not in emissiveTextureMapping]
+        return self.__emissiveTextureMapping
+    def getEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    def emissiveTextureMapping_changed(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
     @property
     def IS(self):
         return self.__IS
@@ -55353,6 +57833,144 @@ class Material(X3DMaterialNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
+    def normalScale(self):
+        return self.__normalScale
+    @normalScale.setter
+    def normalScale(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        self.__normalScale = [value]
+    def setNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = [normalScale]
+        return self
+    def addNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        if self.__normalScale == None:            self.__normalScale =  []
+        self.__normalScale +=  [normalScale]
+        return self
+    def removeNormalScale(self, normalScale):
+        self.__normalScale = [x for x in self.__normalScale if x not in normalScale]
+        return self.__normalScale
+    def getNormalScale(self, normalScale = 1):
+        return self.__normalScale
+    def normalScale_changed(self, normalScale = 1):
+        return self.__normalScale
+    @property
+    def normalTexture(self):
+        return self.__normalTexture
+    @normalTexture.setter
+    def normalTexture(self, value = None):
+        self.__normalTexture = [value]
+    def setNormalTexture(self, normalTexture = None):
+        self.__normalTexture = [normalTexture]
+        return self
+    def addNormalTexture(self, normalTexture = None):
+        if self.__normalTexture == None:            self.__normalTexture =  []
+        self.__normalTexture +=  [normalTexture]
+        return self
+    def removeNormalTexture(self, normalTexture):
+        self.__normalTexture = [x for x in self.__normalTexture if x not in normalTexture]
+        return self.__normalTexture
+    def getNormalTexture(self, normalTexture = None):
+        return self.__normalTexture
+    def normalTexture_changed(self, normalTexture = None):
+        return self.__normalTexture
+    @property
+    def normalTextureMapping(self):
+        return self.__normalTextureMapping
+    @normalTextureMapping.setter
+    def normalTextureMapping(self, value = None):
+        self.__normalTextureMapping = [value]
+    def setNormalTextureMapping(self, normalTextureMapping = None):
+        self.__normalTextureMapping = [normalTextureMapping]
+        return self
+    def addNormalTextureMapping(self, normalTextureMapping = None):
+        if self.__normalTextureMapping == None:            self.__normalTextureMapping =  []
+        self.__normalTextureMapping +=  [normalTextureMapping]
+        return self
+    def removeNormalTextureMapping(self, normalTextureMapping):
+        self.__normalTextureMapping = [x for x in self.__normalTextureMapping if x not in normalTextureMapping]
+        return self.__normalTextureMapping
+    def getNormalTextureMapping(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    def normalTextureMapping_changed(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    @property
+    def occlusionStrength(self):
+        return self.__occlusionStrength
+    @occlusionStrength.setter
+    def occlusionStrength(self, value = [0, 0, 0]):
+        if value == None or len(value) <= 0 or min(value)  <  0:
+            return None
+        if value == None or len(value) <= 0 or max(value)  >  1:
+            return None
+        self.__occlusionStrength = [value]
+    def setOcclusionStrength(self, occlusionStrength = [0, 0, 0]):
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or min(occlusionStrength)  <  0:
+            return None
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or max(occlusionStrength)  >  1:
+            return None
+        self.__occlusionStrength = [occlusionStrength]
+        return self
+    def addOcclusionStrength(self, occlusionStrength = [0, 0, 0]):
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or min(occlusionStrength)  <  0:
+            return None
+        if occlusionStrength == None or len(occlusionStrength) <= 0 or max(occlusionStrength)  >  1:
+            return None
+        if self.__occlusionStrength == None:            self.__occlusionStrength =  []
+        self.__occlusionStrength +=  [occlusionStrength]
+        return self
+    def removeOcclusionStrength(self, occlusionStrength):
+        self.__occlusionStrength = [x for x in self.__occlusionStrength if x not in occlusionStrength]
+        return self.__occlusionStrength
+    def getOcclusionStrength(self, occlusionStrength = [0, 0, 0]):
+        return self.__occlusionStrength
+    def occlusionStrength_changed(self, occlusionStrength = [0, 0, 0]):
+        return self.__occlusionStrength
+    @property
+    def occlusionTexture(self):
+        return self.__occlusionTexture
+    @occlusionTexture.setter
+    def occlusionTexture(self, value = None):
+        self.__occlusionTexture = [value]
+    def setOcclusionTexture(self, occlusionTexture = None):
+        self.__occlusionTexture = [occlusionTexture]
+        return self
+    def addOcclusionTexture(self, occlusionTexture = None):
+        if self.__occlusionTexture == None:            self.__occlusionTexture =  []
+        self.__occlusionTexture +=  [occlusionTexture]
+        return self
+    def removeOcclusionTexture(self, occlusionTexture):
+        self.__occlusionTexture = [x for x in self.__occlusionTexture if x not in occlusionTexture]
+        return self.__occlusionTexture
+    def getOcclusionTexture(self, occlusionTexture = None):
+        return self.__occlusionTexture
+    def occlusionTexture_changed(self, occlusionTexture = None):
+        return self.__occlusionTexture
+    @property
+    def occlusionTextureMapping(self):
+        return self.__occlusionTextureMapping
+    @occlusionTextureMapping.setter
+    def occlusionTextureMapping(self, value = None):
+        self.__occlusionTextureMapping = [value]
+    def setOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        self.__occlusionTextureMapping = [occlusionTextureMapping]
+        return self
+    def addOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        if self.__occlusionTextureMapping == None:            self.__occlusionTextureMapping =  []
+        self.__occlusionTextureMapping +=  [occlusionTextureMapping]
+        return self
+    def removeOcclusionTextureMapping(self, occlusionTextureMapping):
+        self.__occlusionTextureMapping = [x for x in self.__occlusionTextureMapping if x not in occlusionTextureMapping]
+        return self.__occlusionTextureMapping
+    def getOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        return self.__occlusionTextureMapping
+    def occlusionTextureMapping_changed(self, occlusionTextureMapping = None):
+        return self.__occlusionTextureMapping
+    @property
     def shininess(self):
         return self.__shininess
     @shininess.setter
@@ -55385,6 +58003,46 @@ class Material(X3DMaterialNode):
     def shininess_changed(self, shininess = 0.2):
         return self.__shininess
     @property
+    def shininessTexture(self):
+        return self.__shininessTexture
+    @shininessTexture.setter
+    def shininessTexture(self, value = None):
+        self.__shininessTexture = [value]
+    def setShininessTexture(self, shininessTexture = None):
+        self.__shininessTexture = [shininessTexture]
+        return self
+    def addShininessTexture(self, shininessTexture = None):
+        if self.__shininessTexture == None:            self.__shininessTexture =  []
+        self.__shininessTexture +=  [shininessTexture]
+        return self
+    def removeShininessTexture(self, shininessTexture):
+        self.__shininessTexture = [x for x in self.__shininessTexture if x not in shininessTexture]
+        return self.__shininessTexture
+    def getShininessTexture(self, shininessTexture = None):
+        return self.__shininessTexture
+    def shininessTexture_changed(self, shininessTexture = None):
+        return self.__shininessTexture
+    @property
+    def shininessTextureMapping(self):
+        return self.__shininessTextureMapping
+    @shininessTextureMapping.setter
+    def shininessTextureMapping(self, value = None):
+        self.__shininessTextureMapping = [value]
+    def setShininessTextureMapping(self, shininessTextureMapping = None):
+        self.__shininessTextureMapping = [shininessTextureMapping]
+        return self
+    def addShininessTextureMapping(self, shininessTextureMapping = None):
+        if self.__shininessTextureMapping == None:            self.__shininessTextureMapping =  []
+        self.__shininessTextureMapping +=  [shininessTextureMapping]
+        return self
+    def removeShininessTextureMapping(self, shininessTextureMapping):
+        self.__shininessTextureMapping = [x for x in self.__shininessTextureMapping if x not in shininessTextureMapping]
+        return self.__shininessTextureMapping
+    def getShininessTextureMapping(self, shininessTextureMapping = None):
+        return self.__shininessTextureMapping
+    def shininessTextureMapping_changed(self, shininessTextureMapping = None):
+        return self.__shininessTextureMapping
+    @property
     def specularColor(self):
         return self.__specularColor
     @specularColor.setter
@@ -55416,6 +58074,46 @@ class Material(X3DMaterialNode):
         return self.__specularColor
     def specularColor_changed(self, specularColor = [0, 0, 0]):
         return self.__specularColor
+    @property
+    def specularTexture(self):
+        return self.__specularTexture
+    @specularTexture.setter
+    def specularTexture(self, value = None):
+        self.__specularTexture = [value]
+    def setSpecularTexture(self, specularTexture = None):
+        self.__specularTexture = [specularTexture]
+        return self
+    def addSpecularTexture(self, specularTexture = None):
+        if self.__specularTexture == None:            self.__specularTexture =  []
+        self.__specularTexture +=  [specularTexture]
+        return self
+    def removeSpecularTexture(self, specularTexture):
+        self.__specularTexture = [x for x in self.__specularTexture if x not in specularTexture]
+        return self.__specularTexture
+    def getSpecularTexture(self, specularTexture = None):
+        return self.__specularTexture
+    def specularTexture_changed(self, specularTexture = None):
+        return self.__specularTexture
+    @property
+    def specularTextureMapping(self):
+        return self.__specularTextureMapping
+    @specularTextureMapping.setter
+    def specularTextureMapping(self, value = None):
+        self.__specularTextureMapping = [value]
+    def setSpecularTextureMapping(self, specularTextureMapping = None):
+        self.__specularTextureMapping = [specularTextureMapping]
+        return self
+    def addSpecularTextureMapping(self, specularTextureMapping = None):
+        if self.__specularTextureMapping == None:            self.__specularTextureMapping =  []
+        self.__specularTextureMapping +=  [specularTextureMapping]
+        return self
+    def removeSpecularTextureMapping(self, specularTextureMapping):
+        self.__specularTextureMapping = [x for x in self.__specularTextureMapping if x not in specularTextureMapping]
+        return self.__specularTextureMapping
+    def getSpecularTextureMapping(self, specularTextureMapping = None):
+        return self.__specularTextureMapping
+    def specularTextureMapping_changed(self, specularTextureMapping = None):
+        return self.__specularTextureMapping
     @property
     def transparency(self):
         return self.__transparency
@@ -55549,26 +58247,71 @@ class Material(X3DMaterialNode):
                 str += ' ambientIntensity="'+self.__ambientIntensity+'"'
             else:
                 str += ' ambientIntensity="'+self.__ambientIntensity[0]+'"'
+        if self.__ambientTextureMapping is not None:
+            if isinstance(self.__ambientTextureMapping, six.string_types):
+                str += ' ambientTextureMapping="'+self.__ambientTextureMapping+'"'
+            else:
+                str += ' ambientTextureMapping="'+self.__ambientTextureMapping[0]+'"'
         if self.__diffuseColor is not None:
             if isinstance(self.__diffuseColor, six.string_types):
                 str += ' diffuseColor="'+self.__diffuseColor+'"'
             else:
                 str += ' diffuseColor="'+self.__diffuseColor[0]+'"'
+        if self.__diffuseTextureMapping is not None:
+            if isinstance(self.__diffuseTextureMapping, six.string_types):
+                str += ' diffuseTextureMapping="'+self.__diffuseTextureMapping+'"'
+            else:
+                str += ' diffuseTextureMapping="'+self.__diffuseTextureMapping[0]+'"'
         if self.__emissiveColor is not None:
             if isinstance(self.__emissiveColor, six.string_types):
                 str += ' emissiveColor="'+self.__emissiveColor+'"'
             else:
                 str += ' emissiveColor="'+self.__emissiveColor[0]+'"'
+        if self.__emissiveTextureMapping is not None:
+            if isinstance(self.__emissiveTextureMapping, six.string_types):
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping+'"'
+            else:
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping[0]+'"'
+        if self.__normalScale is not None:
+            if isinstance(self.__normalScale, six.string_types):
+                str += ' normalScale="'+self.__normalScale+'"'
+            else:
+                str += ' normalScale="'+self.__normalScale[0]+'"'
+        if self.__normalTextureMapping is not None:
+            if isinstance(self.__normalTextureMapping, six.string_types):
+                str += ' normalTextureMapping="'+self.__normalTextureMapping+'"'
+            else:
+                str += ' normalTextureMapping="'+self.__normalTextureMapping[0]+'"'
+        if self.__occlusionStrength is not None:
+            if isinstance(self.__occlusionStrength, six.string_types):
+                str += ' occlusionStrength="'+self.__occlusionStrength+'"'
+            else:
+                str += ' occlusionStrength="'+self.__occlusionStrength[0]+'"'
+        if self.__occlusionTextureMapping is not None:
+            if isinstance(self.__occlusionTextureMapping, six.string_types):
+                str += ' occlusionTextureMapping="'+self.__occlusionTextureMapping+'"'
+            else:
+                str += ' occlusionTextureMapping="'+self.__occlusionTextureMapping[0]+'"'
         if self.__shininess is not None:
             if isinstance(self.__shininess, six.string_types):
                 str += ' shininess="'+self.__shininess+'"'
             else:
                 str += ' shininess="'+self.__shininess[0]+'"'
+        if self.__shininessTextureMapping is not None:
+            if isinstance(self.__shininessTextureMapping, six.string_types):
+                str += ' shininessTextureMapping="'+self.__shininessTextureMapping+'"'
+            else:
+                str += ' shininessTextureMapping="'+self.__shininessTextureMapping[0]+'"'
         if self.__specularColor is not None:
             if isinstance(self.__specularColor, six.string_types):
                 str += ' specularColor="'+self.__specularColor+'"'
             else:
                 str += ' specularColor="'+self.__specularColor[0]+'"'
+        if self.__specularTextureMapping is not None:
+            if isinstance(self.__specularTextureMapping, six.string_types):
+                str += ' specularTextureMapping="'+self.__specularTextureMapping+'"'
+            else:
+                str += ' specularTextureMapping="'+self.__specularTextureMapping[0]+'"'
         if self.__transparency is not None:
             if isinstance(self.__transparency, six.string_types):
                 str += ' transparency="'+self.__transparency+'"'
@@ -55590,6 +58333,39 @@ class Material(X3DMaterialNode):
             else:
                 str += ' class_="'+self.__class_[0]+'"'
         str += '>'
+        str += '<ambientTexture'
+        if self.__ambientTexture is not None:
+           for s in self.__ambientTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__ambientTexture is not None:
+           for s in self.__ambientTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</ambientTexture>'
+        str += '<diffuseTexture'
+        if self.__diffuseTexture is not None:
+           for s in self.__diffuseTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__diffuseTexture is not None:
+           for s in self.__diffuseTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</diffuseTexture>'
+        str += '<emissiveTexture'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</emissiveTexture>'
         str += '<IS'
         if self.__IS is not None:
            for s in self.__IS:
@@ -55612,6 +58388,50 @@ class Material(X3DMaterialNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<normalTexture'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normalTexture>'
+        str += '<occlusionTexture'
+        if self.__occlusionTexture is not None:
+           for s in self.__occlusionTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__occlusionTexture is not None:
+           for s in self.__occlusionTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</occlusionTexture>'
+        str += '<shininessTexture'
+        if self.__shininessTexture is not None:
+           for s in self.__shininessTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__shininessTexture is not None:
+           for s in self.__shininessTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</shininessTexture>'
+        str += '<specularTexture'
+        if self.__specularTexture is not None:
+           for s in self.__specularTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__specularTexture is not None:
+           for s in self.__specularTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</specularTexture>'
         str += '</Material>'
         return str
 
@@ -58400,12 +61220,16 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
         if elapsedTime == None or elapsedTime  <  0:
             return None
         self.__elapsedTime = elapsedTime
+        enabled  = kwargs.pop("enabled", True)
+        self.__enabled = enabled
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
         Active  = kwargs.pop("Active", None)
         self.__Active = Active
         Paused  = kwargs.pop("Paused", None)
         self.__Paused = Paused
+        load  = kwargs.pop("load", True)
+        self.__load = load
         loop  = kwargs.pop("loop", False)
         self.__loop = loop
         metadata  = kwargs.pop("metadata", None)
@@ -58416,6 +61240,10 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
         if pitch == None or pitch  <=  0:
             return None
         self.__pitch = pitch
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         repeatS  = kwargs.pop("repeatS", True)
         self.__repeatS = repeatS
         repeatT  = kwargs.pop("repeatT", True)
@@ -58473,6 +61301,24 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
     def elapsedTime_changed(self, elapsedTime = None):
         return self.__elapsedTime
     @property
+    def enabled(self):
+        return self.__enabled
+    @enabled.setter
+    def enabled(self, value = True):
+        self.__enabled = [value]
+    def setEnabled(self, enabled = True):
+        self.__enabled = [enabled]
+        return self
+    def addEnabled(self, enabled = True):
+        if self.__enabled == None:            self.__enabled =  []
+        self.__enabled +=  [enabled]
+        return self
+    def removeEnabled(self, enabled):
+        self.__enabled = [x for x in self.__enabled if x not in enabled]
+        return self.__enabled
+    def isEnabled(self, enabled = True):
+        return self.__enabled
+    @property
     def IS(self):
         return self.__IS
     @IS.setter
@@ -58496,6 +61342,24 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
         return self.__Active
     def isPaused(self, Paused = None):
         return self.__Paused
+    @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
     @property
     def loop(self):
         return self.__loop
@@ -58580,6 +61444,32 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
         return self.__pitch
     def pitch_changed(self, pitch = 1.0):
         return self.__pitch
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def resumeTime(self):
         return self.__resumeTime
@@ -58771,6 +61661,11 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
                 str += ' elapsedTime="'+self.__elapsedTime+'"'
             else:
                 str += ' elapsedTime="'+self.__elapsedTime[0]+'"'
+        if self.__enabled is not None:
+            if isinstance(self.__enabled, six.string_types):
+                str += ' enabled="'+self.__enabled+'"'
+            else:
+                str += ' enabled="'+self.__enabled[0]+'"'
         if self.__Active is not None:
             if isinstance(self.__Active, six.string_types):
                 str += ' Active="'+self.__Active+'"'
@@ -58781,6 +61676,11 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
                 str += ' Paused="'+self.__Paused+'"'
             else:
                 str += ' Paused="'+self.__Paused[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
         if self.__loop is not None:
             if isinstance(self.__loop, six.string_types):
                 str += ' loop="'+self.__loop+'"'
@@ -58796,6 +61696,11 @@ class MovieTexture(X3DTexture2DNode, X3DUrlObject, X3DSoundSourceNode):
                 str += ' pitch="'+self.__pitch+'"'
             else:
                 str += ' pitch="'+self.__pitch[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__repeatS is not None:
             if isinstance(self.__repeatS, six.string_types):
                 str += ' repeatS="'+self.__repeatS+'"'
@@ -58899,6 +61804,8 @@ class MultiTexture(X3DTextureNode):
         if color == None or len(color) <= 0 or max(color)  >  1:
             return None
         self.__color = color
+        description  = kwargs.pop("description", None)
+        self.__description = description
         function  = kwargs.pop("function", None)
         self.__function = function
         IS  = kwargs.pop("IS", None)
@@ -58981,6 +61888,26 @@ class MultiTexture(X3DTextureNode):
         return self.__color
     def color_changed(self, color = [1, 1, 1]):
         return self.__color
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def function(self):
         return self.__function
@@ -59187,6 +62114,11 @@ class MultiTexture(X3DTextureNode):
                 str += ' color="'+self.__color+'"'
             else:
                 str += ' color="'+self.__color[0]+'"'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__function is not None:
             if isinstance(self.__function, six.string_types):
                 str += ' function="'+self.__function+'"'
@@ -65170,6 +68102,8 @@ class OrthoViewpoint(X3DViewpointNode):
         self.__centerOfRotation = centerOfRotation
         description  = kwargs.pop("description", None)
         self.__description = description
+        farClippingPlane  = kwargs.pop("farClippingPlane", -1)
+        self.__farClippingPlane = farClippingPlane
         fieldOfView  = kwargs.pop("fieldOfView", [-1, -1, 1, 1])
         self.__fieldOfView = fieldOfView
         IS  = kwargs.pop("IS", None)
@@ -65180,6 +68114,10 @@ class OrthoViewpoint(X3DViewpointNode):
         self.__jump = jump
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        navigationInfo  = kwargs.pop("navigationInfo", None)
+        self.__navigationInfo = navigationInfo
+        nearClippingPlane  = kwargs.pop("nearClippingPlane", -1)
+        self.__nearClippingPlane = nearClippingPlane
         orientation  = kwargs.pop("orientation", [0, 0, 1, 0])
         self.__orientation = orientation
         position  = kwargs.pop("position", [0, 0, 10])
@@ -65188,6 +68126,8 @@ class OrthoViewpoint(X3DViewpointNode):
         self.__retainUserOffsets = retainUserOffsets
         bind  = kwargs.pop("bind", None)
         self.__bind = bind
+        viewAll  = kwargs.pop("viewAll", False)
+        self.__viewAll = viewAll
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -65241,6 +68181,26 @@ class OrthoViewpoint(X3DViewpointNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
+    @property
+    def farClippingPlane(self):
+        return self.__farClippingPlane
+    @farClippingPlane.setter
+    def farClippingPlane(self, value = -1):
+        self.__farClippingPlane = [value]
+    def setFarClippingPlane(self, farClippingPlane = -1):
+        self.__farClippingPlane = [farClippingPlane]
+        return self
+    def addFarClippingPlane(self, farClippingPlane = -1):
+        if self.__farClippingPlane == None:            self.__farClippingPlane =  []
+        self.__farClippingPlane +=  [farClippingPlane]
+        return self
+    def removeFarClippingPlane(self, farClippingPlane):
+        self.__farClippingPlane = [x for x in self.__farClippingPlane if x not in farClippingPlane]
+        return self.__farClippingPlane
+    def getFarClippingPlane(self, farClippingPlane = -1):
+        return self.__farClippingPlane
+    def farClippingPlane_changed(self, farClippingPlane = -1):
+        return self.__farClippingPlane
     @property
     def fieldOfView(self):
         return self.__fieldOfView
@@ -65322,6 +68282,46 @@ class OrthoViewpoint(X3DViewpointNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
+    def navigationInfo(self):
+        return self.__navigationInfo
+    @navigationInfo.setter
+    def navigationInfo(self, value = None):
+        self.__navigationInfo = [value]
+    def setNavigationInfo(self, navigationInfo = None):
+        self.__navigationInfo = [navigationInfo]
+        return self
+    def addNavigationInfo(self, navigationInfo = None):
+        if self.__navigationInfo == None:            self.__navigationInfo =  []
+        self.__navigationInfo +=  [navigationInfo]
+        return self
+    def removeNavigationInfo(self, navigationInfo):
+        self.__navigationInfo = [x for x in self.__navigationInfo if x not in navigationInfo]
+        return self.__navigationInfo
+    def getNavigationInfo(self, navigationInfo = None):
+        return self.__navigationInfo
+    def navigationInfo_changed(self, navigationInfo = None):
+        return self.__navigationInfo
+    @property
+    def nearClippingPlane(self):
+        return self.__nearClippingPlane
+    @nearClippingPlane.setter
+    def nearClippingPlane(self, value = -1):
+        self.__nearClippingPlane = [value]
+    def setNearClippingPlane(self, nearClippingPlane = -1):
+        self.__nearClippingPlane = [nearClippingPlane]
+        return self
+    def addNearClippingPlane(self, nearClippingPlane = -1):
+        if self.__nearClippingPlane == None:            self.__nearClippingPlane =  []
+        self.__nearClippingPlane +=  [nearClippingPlane]
+        return self
+    def removeNearClippingPlane(self, nearClippingPlane):
+        self.__nearClippingPlane = [x for x in self.__nearClippingPlane if x not in nearClippingPlane]
+        return self.__nearClippingPlane
+    def getNearClippingPlane(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    def nearClippingPlane_changed(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    @property
     def orientation(self):
         return self.__orientation
     @orientation.setter
@@ -65388,6 +68388,24 @@ class OrthoViewpoint(X3DViewpointNode):
     def set_bind(self, bind = None):
         self.__bind = [bind]
         return self
+    @property
+    def viewAll(self):
+        return self.__viewAll
+    @viewAll.setter
+    def viewAll(self, value = False):
+        self.__viewAll = [value]
+    def setViewAll(self, viewAll = False):
+        self.__viewAll = [viewAll]
+        return self
+    def addViewAll(self, viewAll = False):
+        if self.__viewAll == None:            self.__viewAll =  []
+        self.__viewAll +=  [viewAll]
+        return self
+    def removeViewAll(self, viewAll):
+        self.__viewAll = [x for x in self.__viewAll if x not in viewAll]
+        return self.__viewAll
+    def isViewAll(self, viewAll = False):
+        return self.__viewAll
     @property
     def DEF(self):
         return self.__DEF
@@ -65479,6 +68497,11 @@ class OrthoViewpoint(X3DViewpointNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
+        if self.__farClippingPlane is not None:
+            if isinstance(self.__farClippingPlane, six.string_types):
+                str += ' farClippingPlane="'+self.__farClippingPlane+'"'
+            else:
+                str += ' farClippingPlane="'+self.__farClippingPlane[0]+'"'
         if self.__fieldOfView is not None:
             if isinstance(self.__fieldOfView, six.string_types):
                 str += ' fieldOfView="'+self.__fieldOfView+'"'
@@ -65494,6 +68517,11 @@ class OrthoViewpoint(X3DViewpointNode):
                 str += ' jump="'+self.__jump+'"'
             else:
                 str += ' jump="'+self.__jump[0]+'"'
+        if self.__nearClippingPlane is not None:
+            if isinstance(self.__nearClippingPlane, six.string_types):
+                str += ' nearClippingPlane="'+self.__nearClippingPlane+'"'
+            else:
+                str += ' nearClippingPlane="'+self.__nearClippingPlane[0]+'"'
         if self.__orientation is not None:
             if isinstance(self.__orientation, six.string_types):
                 str += ' orientation="'+self.__orientation+'"'
@@ -65514,6 +68542,11 @@ class OrthoViewpoint(X3DViewpointNode):
                 str += ' bind="'+self.__bind+'"'
             else:
                 str += ' bind="'+self.__bind[0]+'"'
+        if self.__viewAll is not None:
+            if isinstance(self.__viewAll, six.string_types):
+                str += ' viewAll="'+self.__viewAll+'"'
+            else:
+                str += ' viewAll="'+self.__viewAll[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -65552,6 +68585,17 @@ class OrthoViewpoint(X3DViewpointNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<navigationInfo'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</navigationInfo>'
         str += '</OrthoViewpoint>'
         return str
 
@@ -65561,6 +68605,8 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
         super(PackagedShader, self).__init__(**kwargs)
         activate  = kwargs.pop("activate", None)
         self.__activate = activate
+        description  = kwargs.pop("description", None)
+        self.__description = description
         field  = kwargs.pop("field", None)
         self.__field = field
         IS  = kwargs.pop("IS", None)
@@ -65571,8 +68617,14 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
         self.__Valid = Valid
         language  = kwargs.pop("language", None)
         self.__language = language
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         url  = kwargs.pop("url", None)
         self.__url = url
         DEF  = kwargs.pop("DEF", None)
@@ -65594,6 +68646,26 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
         if self.__activate == None:            self.__activate =  []
         self.__activate +=  [activate]
         return self
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def field(self):
         return self.__field
@@ -65639,6 +68711,24 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
     def isValid(self, Valid = None):
         return self.__Valid
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -65658,6 +68748,32 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -65759,6 +68875,11 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
                 str += ' activate="'+self.__activate+'"'
             else:
                 str += ' activate="'+self.__activate[0]+'"'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__Selected is not None:
             if isinstance(self.__Selected, six.string_types):
                 str += ' Selected="'+self.__Selected+'"'
@@ -65774,6 +68895,16 @@ class PackagedShader(X3DUrlObject, X3DProgrammableShaderObject, X3DShaderNode):
                 str += ' language="'+self.__language+'"'
             else:
                 str += ' language="'+self.__language[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -65855,8 +68986,6 @@ class ParticleSystem(X3DShapeNode):
         self.__emitter = emitter
         enabled  = kwargs.pop("enabled", True)
         self.__enabled = enabled
-        geometry  = kwargs.pop("geometry", None)
-        self.__geometry = geometry
         geometry  = kwargs.pop("geometry", None)
         self.__geometry = geometry
         geometryType  = kwargs.pop("geometryType", "QUAD")
@@ -65975,26 +69104,6 @@ class ParticleSystem(X3DShapeNode):
         return self.__enabled
     def isEnabled(self, enabled = True):
         return self.__enabled
-    @property
-    def geometry(self):
-        return self.__geometry
-    @geometry.setter
-    def geometry(self, value = None):
-        self.__geometry = [value]
-    def setGeometry(self, geometry = None):
-        self.__geometry = [geometry]
-        return self
-    def addGeometry(self, geometry = None):
-        if self.__geometry == None:            self.__geometry =  []
-        self.__geometry +=  [geometry]
-        return self
-    def removeGeometry(self, geometry):
-        self.__geometry = [x for x in self.__geometry if x not in geometry]
-        return self.__geometry
-    def getGeometry(self, geometry = None):
-        return self.__geometry
-    def geometry_changed(self, geometry = None):
-        return self.__geometry
     @property
     def geometry(self):
         return self.__geometry
@@ -66391,17 +69500,6 @@ class ParticleSystem(X3DShapeNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</geometry>'
-        str += '<geometry'
-        if self.__geometry is not None:
-           for s in self.__geometry:
-               if type(s) not in ['head', 'Scene']:
-                   str += s.toXML()
-        str += '>'
-        if self.__geometry is not None:
-           for s in self.__geometry:
-               if type(s) in ['head', 'Scene']:
-                   str += s.toXMLNode()
-        str += '</geometry>'
         str += '<IS'
         if self.__IS is not None:
            for s in self.__IS:
@@ -66447,6 +69545,770 @@ class ParticleSystem(X3DShapeNode):
                    str += s.toXMLNode()
         str += '</texCoordRamp>'
         str += '</ParticleSystem>'
+        return str
+
+
+class PhysicalMaterial(X3DOneSidedMaterialNode):
+    def __init__(self, **kwargs):
+        super(PhysicalMaterial, self).__init__(**kwargs)
+        baseColor  = kwargs.pop("baseColor", [1, 1, 1])
+        if baseColor == None or len(baseColor) <= 0 or min(baseColor)  <  0:
+            return None
+        if baseColor == None or len(baseColor) <= 0 or max(baseColor)  >  1:
+            return None
+        self.__baseColor = baseColor
+        baseTexture  = kwargs.pop("baseTexture", None)
+        self.__baseTexture = baseTexture
+        baseTextureMapping  = kwargs.pop("baseTextureMapping", None)
+        self.__baseTextureMapping = baseTextureMapping
+        emissiveColor  = kwargs.pop("emissiveColor", [0, 0, 0])
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = emissiveColor
+        emissiveTexture  = kwargs.pop("emissiveTexture", None)
+        self.__emissiveTexture = emissiveTexture
+        emissiveTextureMapping  = kwargs.pop("emissiveTextureMapping", None)
+        self.__emissiveTextureMapping = emissiveTextureMapping
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        metallic  = kwargs.pop("metallic", 1)
+        if metallic == None or metallic  <  0:
+            return None
+        if metallic == None or metallic  >  1:
+            return None
+        self.__metallic = metallic
+        metallicRoughnessTexture  = kwargs.pop("metallicRoughnessTexture", None)
+        self.__metallicRoughnessTexture = metallicRoughnessTexture
+        metallicRoughnessTextureMapping  = kwargs.pop("metallicRoughnessTextureMapping", None)
+        self.__metallicRoughnessTextureMapping = metallicRoughnessTextureMapping
+        normalScale  = kwargs.pop("normalScale", 1)
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = normalScale
+        normalTexture  = kwargs.pop("normalTexture", None)
+        self.__normalTexture = normalTexture
+        normalTextureMapping  = kwargs.pop("normalTextureMapping", None)
+        self.__normalTextureMapping = normalTextureMapping
+        occlusionStrength  = kwargs.pop("occlusionStrength", 1)
+        if occlusionStrength == None or occlusionStrength  <  0:
+            return None
+        if occlusionStrength == None or occlusionStrength  >  1:
+            return None
+        self.__occlusionStrength = occlusionStrength
+        occlusionTexture  = kwargs.pop("occlusionTexture", None)
+        self.__occlusionTexture = occlusionTexture
+        occlusionTextureMapping  = kwargs.pop("occlusionTextureMapping", None)
+        self.__occlusionTextureMapping = occlusionTextureMapping
+        roughness  = kwargs.pop("roughness", 1)
+        if roughness == None or roughness  <  0:
+            return None
+        if roughness == None or roughness  >  1:
+            return None
+        self.__roughness = roughness
+        transparency  = kwargs.pop("transparency", 0)
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        self.__transparency = transparency
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def baseColor(self):
+        return self.__baseColor
+    @baseColor.setter
+    def baseColor(self, value = [1, 1, 1]):
+        if value == None or len(value) <= 0 or min(value)  <  0:
+            return None
+        if value == None or len(value) <= 0 or max(value)  >  1:
+            return None
+        self.__baseColor = [value]
+    def setBaseColor(self, baseColor = [1, 1, 1]):
+        if baseColor == None or len(baseColor) <= 0 or min(baseColor)  <  0:
+            return None
+        if baseColor == None or len(baseColor) <= 0 or max(baseColor)  >  1:
+            return None
+        self.__baseColor = [baseColor]
+        return self
+    def addBaseColor(self, baseColor = [1, 1, 1]):
+        if baseColor == None or len(baseColor) <= 0 or min(baseColor)  <  0:
+            return None
+        if baseColor == None or len(baseColor) <= 0 or max(baseColor)  >  1:
+            return None
+        if self.__baseColor == None:            self.__baseColor =  []
+        self.__baseColor +=  [baseColor]
+        return self
+    def removeBaseColor(self, baseColor):
+        self.__baseColor = [x for x in self.__baseColor if x not in baseColor]
+        return self.__baseColor
+    def getBaseColor(self, baseColor = [1, 1, 1]):
+        return self.__baseColor
+    def baseColor_changed(self, baseColor = [1, 1, 1]):
+        return self.__baseColor
+    @property
+    def baseTexture(self):
+        return self.__baseTexture
+    @baseTexture.setter
+    def baseTexture(self, value = None):
+        self.__baseTexture = [value]
+    def setBaseTexture(self, baseTexture = None):
+        self.__baseTexture = [baseTexture]
+        return self
+    def addBaseTexture(self, baseTexture = None):
+        if self.__baseTexture == None:            self.__baseTexture =  []
+        self.__baseTexture +=  [baseTexture]
+        return self
+    def removeBaseTexture(self, baseTexture):
+        self.__baseTexture = [x for x in self.__baseTexture if x not in baseTexture]
+        return self.__baseTexture
+    def getBaseTexture(self, baseTexture = None):
+        return self.__baseTexture
+    def baseTexture_changed(self, baseTexture = None):
+        return self.__baseTexture
+    @property
+    def baseTextureMapping(self):
+        return self.__baseTextureMapping
+    @baseTextureMapping.setter
+    def baseTextureMapping(self, value = None):
+        self.__baseTextureMapping = [value]
+    def setBaseTextureMapping(self, baseTextureMapping = None):
+        self.__baseTextureMapping = [baseTextureMapping]
+        return self
+    def addBaseTextureMapping(self, baseTextureMapping = None):
+        if self.__baseTextureMapping == None:            self.__baseTextureMapping =  []
+        self.__baseTextureMapping +=  [baseTextureMapping]
+        return self
+    def removeBaseTextureMapping(self, baseTextureMapping):
+        self.__baseTextureMapping = [x for x in self.__baseTextureMapping if x not in baseTextureMapping]
+        return self.__baseTextureMapping
+    def getBaseTextureMapping(self, baseTextureMapping = None):
+        return self.__baseTextureMapping
+    def baseTextureMapping_changed(self, baseTextureMapping = None):
+        return self.__baseTextureMapping
+    @property
+    def emissiveColor(self):
+        return self.__emissiveColor
+    @emissiveColor.setter
+    def emissiveColor(self, value = [0, 0, 0]):
+        if value == None or len(value) <= 0 or min(value)  <  0:
+            return None
+        if value == None or len(value) <= 0 or max(value)  >  1:
+            return None
+        self.__emissiveColor = [value]
+    def setEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = [emissiveColor]
+        return self
+    def addEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        if self.__emissiveColor == None:            self.__emissiveColor =  []
+        self.__emissiveColor +=  [emissiveColor]
+        return self
+    def removeEmissiveColor(self, emissiveColor):
+        self.__emissiveColor = [x for x in self.__emissiveColor if x not in emissiveColor]
+        return self.__emissiveColor
+    def getEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    def emissiveColor_changed(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    @property
+    def emissiveTexture(self):
+        return self.__emissiveTexture
+    @emissiveTexture.setter
+    def emissiveTexture(self, value = None):
+        self.__emissiveTexture = [value]
+    def setEmissiveTexture(self, emissiveTexture = None):
+        self.__emissiveTexture = [emissiveTexture]
+        return self
+    def addEmissiveTexture(self, emissiveTexture = None):
+        if self.__emissiveTexture == None:            self.__emissiveTexture =  []
+        self.__emissiveTexture +=  [emissiveTexture]
+        return self
+    def removeEmissiveTexture(self, emissiveTexture):
+        self.__emissiveTexture = [x for x in self.__emissiveTexture if x not in emissiveTexture]
+        return self.__emissiveTexture
+    def getEmissiveTexture(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    def emissiveTexture_changed(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    @property
+    def emissiveTextureMapping(self):
+        return self.__emissiveTextureMapping
+    @emissiveTextureMapping.setter
+    def emissiveTextureMapping(self, value = None):
+        self.__emissiveTextureMapping = [value]
+    def setEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        self.__emissiveTextureMapping = [emissiveTextureMapping]
+        return self
+    def addEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        if self.__emissiveTextureMapping == None:            self.__emissiveTextureMapping =  []
+        self.__emissiveTextureMapping +=  [emissiveTextureMapping]
+        return self
+    def removeEmissiveTextureMapping(self, emissiveTextureMapping):
+        self.__emissiveTextureMapping = [x for x in self.__emissiveTextureMapping if x not in emissiveTextureMapping]
+        return self.__emissiveTextureMapping
+    def getEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    def emissiveTextureMapping_changed(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def metallic(self):
+        return self.__metallic
+    @metallic.setter
+    def metallic(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        if value == None or value  >  1:
+            return None
+        self.__metallic = [value]
+    def setMetallic(self, metallic = 1):
+        if metallic == None or metallic  <  0:
+            return None
+        if metallic == None or metallic  >  1:
+            return None
+        self.__metallic = [metallic]
+        return self
+    def addMetallic(self, metallic = 1):
+        if metallic == None or metallic  <  0:
+            return None
+        if metallic == None or metallic  >  1:
+            return None
+        if self.__metallic == None:            self.__metallic =  []
+        self.__metallic +=  [metallic]
+        return self
+    def removeMetallic(self, metallic):
+        self.__metallic = [x for x in self.__metallic if x not in metallic]
+        return self.__metallic
+    def getMetallic(self, metallic = 1):
+        return self.__metallic
+    def metallic_changed(self, metallic = 1):
+        return self.__metallic
+    @property
+    def metallicRoughnessTexture(self):
+        return self.__metallicRoughnessTexture
+    @metallicRoughnessTexture.setter
+    def metallicRoughnessTexture(self, value = None):
+        self.__metallicRoughnessTexture = [value]
+    def setMetallicRoughnessTexture(self, metallicRoughnessTexture = None):
+        self.__metallicRoughnessTexture = [metallicRoughnessTexture]
+        return self
+    def addMetallicRoughnessTexture(self, metallicRoughnessTexture = None):
+        if self.__metallicRoughnessTexture == None:            self.__metallicRoughnessTexture =  []
+        self.__metallicRoughnessTexture +=  [metallicRoughnessTexture]
+        return self
+    def removeMetallicRoughnessTexture(self, metallicRoughnessTexture):
+        self.__metallicRoughnessTexture = [x for x in self.__metallicRoughnessTexture if x not in metallicRoughnessTexture]
+        return self.__metallicRoughnessTexture
+    def getMetallicRoughnessTexture(self, metallicRoughnessTexture = None):
+        return self.__metallicRoughnessTexture
+    def metallicRoughnessTexture_changed(self, metallicRoughnessTexture = None):
+        return self.__metallicRoughnessTexture
+    @property
+    def metallicRoughnessTextureMapping(self):
+        return self.__metallicRoughnessTextureMapping
+    @metallicRoughnessTextureMapping.setter
+    def metallicRoughnessTextureMapping(self, value = None):
+        self.__metallicRoughnessTextureMapping = [value]
+    def setMetallicRoughnessTextureMapping(self, metallicRoughnessTextureMapping = None):
+        self.__metallicRoughnessTextureMapping = [metallicRoughnessTextureMapping]
+        return self
+    def addMetallicRoughnessTextureMapping(self, metallicRoughnessTextureMapping = None):
+        if self.__metallicRoughnessTextureMapping == None:            self.__metallicRoughnessTextureMapping =  []
+        self.__metallicRoughnessTextureMapping +=  [metallicRoughnessTextureMapping]
+        return self
+    def removeMetallicRoughnessTextureMapping(self, metallicRoughnessTextureMapping):
+        self.__metallicRoughnessTextureMapping = [x for x in self.__metallicRoughnessTextureMapping if x not in metallicRoughnessTextureMapping]
+        return self.__metallicRoughnessTextureMapping
+    def getMetallicRoughnessTextureMapping(self, metallicRoughnessTextureMapping = None):
+        return self.__metallicRoughnessTextureMapping
+    def metallicRoughnessTextureMapping_changed(self, metallicRoughnessTextureMapping = None):
+        return self.__metallicRoughnessTextureMapping
+    @property
+    def normalScale(self):
+        return self.__normalScale
+    @normalScale.setter
+    def normalScale(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        self.__normalScale = [value]
+    def setNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = [normalScale]
+        return self
+    def addNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        if self.__normalScale == None:            self.__normalScale =  []
+        self.__normalScale +=  [normalScale]
+        return self
+    def removeNormalScale(self, normalScale):
+        self.__normalScale = [x for x in self.__normalScale if x not in normalScale]
+        return self.__normalScale
+    def getNormalScale(self, normalScale = 1):
+        return self.__normalScale
+    def normalScale_changed(self, normalScale = 1):
+        return self.__normalScale
+    @property
+    def normalTexture(self):
+        return self.__normalTexture
+    @normalTexture.setter
+    def normalTexture(self, value = None):
+        self.__normalTexture = [value]
+    def setNormalTexture(self, normalTexture = None):
+        self.__normalTexture = [normalTexture]
+        return self
+    def addNormalTexture(self, normalTexture = None):
+        if self.__normalTexture == None:            self.__normalTexture =  []
+        self.__normalTexture +=  [normalTexture]
+        return self
+    def removeNormalTexture(self, normalTexture):
+        self.__normalTexture = [x for x in self.__normalTexture if x not in normalTexture]
+        return self.__normalTexture
+    def getNormalTexture(self, normalTexture = None):
+        return self.__normalTexture
+    def normalTexture_changed(self, normalTexture = None):
+        return self.__normalTexture
+    @property
+    def normalTextureMapping(self):
+        return self.__normalTextureMapping
+    @normalTextureMapping.setter
+    def normalTextureMapping(self, value = None):
+        self.__normalTextureMapping = [value]
+    def setNormalTextureMapping(self, normalTextureMapping = None):
+        self.__normalTextureMapping = [normalTextureMapping]
+        return self
+    def addNormalTextureMapping(self, normalTextureMapping = None):
+        if self.__normalTextureMapping == None:            self.__normalTextureMapping =  []
+        self.__normalTextureMapping +=  [normalTextureMapping]
+        return self
+    def removeNormalTextureMapping(self, normalTextureMapping):
+        self.__normalTextureMapping = [x for x in self.__normalTextureMapping if x not in normalTextureMapping]
+        return self.__normalTextureMapping
+    def getNormalTextureMapping(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    def normalTextureMapping_changed(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    @property
+    def occlusionStrength(self):
+        return self.__occlusionStrength
+    @occlusionStrength.setter
+    def occlusionStrength(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        if value == None or value  >  1:
+            return None
+        self.__occlusionStrength = [value]
+    def setOcclusionStrength(self, occlusionStrength = 1):
+        if occlusionStrength == None or occlusionStrength  <  0:
+            return None
+        if occlusionStrength == None or occlusionStrength  >  1:
+            return None
+        self.__occlusionStrength = [occlusionStrength]
+        return self
+    def addOcclusionStrength(self, occlusionStrength = 1):
+        if occlusionStrength == None or occlusionStrength  <  0:
+            return None
+        if occlusionStrength == None or occlusionStrength  >  1:
+            return None
+        if self.__occlusionStrength == None:            self.__occlusionStrength =  []
+        self.__occlusionStrength +=  [occlusionStrength]
+        return self
+    def removeOcclusionStrength(self, occlusionStrength):
+        self.__occlusionStrength = [x for x in self.__occlusionStrength if x not in occlusionStrength]
+        return self.__occlusionStrength
+    def getOcclusionStrength(self, occlusionStrength = 1):
+        return self.__occlusionStrength
+    def occlusionStrength_changed(self, occlusionStrength = 1):
+        return self.__occlusionStrength
+    @property
+    def occlusionTexture(self):
+        return self.__occlusionTexture
+    @occlusionTexture.setter
+    def occlusionTexture(self, value = None):
+        self.__occlusionTexture = [value]
+    def setOcclusionTexture(self, occlusionTexture = None):
+        self.__occlusionTexture = [occlusionTexture]
+        return self
+    def addOcclusionTexture(self, occlusionTexture = None):
+        if self.__occlusionTexture == None:            self.__occlusionTexture =  []
+        self.__occlusionTexture +=  [occlusionTexture]
+        return self
+    def removeOcclusionTexture(self, occlusionTexture):
+        self.__occlusionTexture = [x for x in self.__occlusionTexture if x not in occlusionTexture]
+        return self.__occlusionTexture
+    def getOcclusionTexture(self, occlusionTexture = None):
+        return self.__occlusionTexture
+    def occlusionTexture_changed(self, occlusionTexture = None):
+        return self.__occlusionTexture
+    @property
+    def occlusionTextureMapping(self):
+        return self.__occlusionTextureMapping
+    @occlusionTextureMapping.setter
+    def occlusionTextureMapping(self, value = None):
+        self.__occlusionTextureMapping = [value]
+    def setOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        self.__occlusionTextureMapping = [occlusionTextureMapping]
+        return self
+    def addOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        if self.__occlusionTextureMapping == None:            self.__occlusionTextureMapping =  []
+        self.__occlusionTextureMapping +=  [occlusionTextureMapping]
+        return self
+    def removeOcclusionTextureMapping(self, occlusionTextureMapping):
+        self.__occlusionTextureMapping = [x for x in self.__occlusionTextureMapping if x not in occlusionTextureMapping]
+        return self.__occlusionTextureMapping
+    def getOcclusionTextureMapping(self, occlusionTextureMapping = None):
+        return self.__occlusionTextureMapping
+    def occlusionTextureMapping_changed(self, occlusionTextureMapping = None):
+        return self.__occlusionTextureMapping
+    @property
+    def roughness(self):
+        return self.__roughness
+    @roughness.setter
+    def roughness(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        if value == None or value  >  1:
+            return None
+        self.__roughness = [value]
+    def setRoughness(self, roughness = 1):
+        if roughness == None or roughness  <  0:
+            return None
+        if roughness == None or roughness  >  1:
+            return None
+        self.__roughness = [roughness]
+        return self
+    def addRoughness(self, roughness = 1):
+        if roughness == None or roughness  <  0:
+            return None
+        if roughness == None or roughness  >  1:
+            return None
+        if self.__roughness == None:            self.__roughness =  []
+        self.__roughness +=  [roughness]
+        return self
+    def removeRoughness(self, roughness):
+        self.__roughness = [x for x in self.__roughness if x not in roughness]
+        return self.__roughness
+    def getRoughness(self, roughness = 1):
+        return self.__roughness
+    def roughness_changed(self, roughness = 1):
+        return self.__roughness
+    @property
+    def transparency(self):
+        return self.__transparency
+    @transparency.setter
+    def transparency(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        if value == None or value  >  1:
+            return None
+        self.__transparency = [value]
+    def setTransparency(self, transparency = 0):
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        self.__transparency = [transparency]
+        return self
+    def addTransparency(self, transparency = 0):
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        if self.__transparency == None:            self.__transparency =  []
+        self.__transparency +=  [transparency]
+        return self
+    def removeTransparency(self, transparency):
+        self.__transparency = [x for x in self.__transparency if x not in transparency]
+        return self.__transparency
+    def getTransparency(self, transparency = 0):
+        return self.__transparency
+    def transparency_changed(self, transparency = 0):
+        return self.__transparency
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<PhysicalMaterial'
+        if self.__baseColor is not None:
+            if isinstance(self.__baseColor, six.string_types):
+                str += ' baseColor="'+self.__baseColor+'"'
+            else:
+                str += ' baseColor="'+self.__baseColor[0]+'"'
+        if self.__baseTextureMapping is not None:
+            if isinstance(self.__baseTextureMapping, six.string_types):
+                str += ' baseTextureMapping="'+self.__baseTextureMapping+'"'
+            else:
+                str += ' baseTextureMapping="'+self.__baseTextureMapping[0]+'"'
+        if self.__emissiveColor is not None:
+            if isinstance(self.__emissiveColor, six.string_types):
+                str += ' emissiveColor="'+self.__emissiveColor+'"'
+            else:
+                str += ' emissiveColor="'+self.__emissiveColor[0]+'"'
+        if self.__emissiveTextureMapping is not None:
+            if isinstance(self.__emissiveTextureMapping, six.string_types):
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping+'"'
+            else:
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping[0]+'"'
+        if self.__metallic is not None:
+            if isinstance(self.__metallic, six.string_types):
+                str += ' metallic="'+self.__metallic+'"'
+            else:
+                str += ' metallic="'+self.__metallic[0]+'"'
+        if self.__metallicRoughnessTextureMapping is not None:
+            if isinstance(self.__metallicRoughnessTextureMapping, six.string_types):
+                str += ' metallicRoughnessTextureMapping="'+self.__metallicRoughnessTextureMapping+'"'
+            else:
+                str += ' metallicRoughnessTextureMapping="'+self.__metallicRoughnessTextureMapping[0]+'"'
+        if self.__normalScale is not None:
+            if isinstance(self.__normalScale, six.string_types):
+                str += ' normalScale="'+self.__normalScale+'"'
+            else:
+                str += ' normalScale="'+self.__normalScale[0]+'"'
+        if self.__normalTextureMapping is not None:
+            if isinstance(self.__normalTextureMapping, six.string_types):
+                str += ' normalTextureMapping="'+self.__normalTextureMapping+'"'
+            else:
+                str += ' normalTextureMapping="'+self.__normalTextureMapping[0]+'"'
+        if self.__occlusionStrength is not None:
+            if isinstance(self.__occlusionStrength, six.string_types):
+                str += ' occlusionStrength="'+self.__occlusionStrength+'"'
+            else:
+                str += ' occlusionStrength="'+self.__occlusionStrength[0]+'"'
+        if self.__occlusionTextureMapping is not None:
+            if isinstance(self.__occlusionTextureMapping, six.string_types):
+                str += ' occlusionTextureMapping="'+self.__occlusionTextureMapping+'"'
+            else:
+                str += ' occlusionTextureMapping="'+self.__occlusionTextureMapping[0]+'"'
+        if self.__roughness is not None:
+            if isinstance(self.__roughness, six.string_types):
+                str += ' roughness="'+self.__roughness+'"'
+            else:
+                str += ' roughness="'+self.__roughness[0]+'"'
+        if self.__transparency is not None:
+            if isinstance(self.__transparency, six.string_types):
+                str += ' transparency="'+self.__transparency+'"'
+            else:
+                str += ' transparency="'+self.__transparency[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<baseTexture'
+        if self.__baseTexture is not None:
+           for s in self.__baseTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__baseTexture is not None:
+           for s in self.__baseTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</baseTexture>'
+        str += '<emissiveTexture'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</emissiveTexture>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '<metallicRoughnessTexture'
+        if self.__metallicRoughnessTexture is not None:
+           for s in self.__metallicRoughnessTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metallicRoughnessTexture is not None:
+           for s in self.__metallicRoughnessTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metallicRoughnessTexture>'
+        str += '<normalTexture'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normalTexture>'
+        str += '<occlusionTexture'
+        if self.__occlusionTexture is not None:
+           for s in self.__occlusionTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__occlusionTexture is not None:
+           for s in self.__occlusionTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</occlusionTexture>'
+        str += '</PhysicalMaterial>'
         return str
 
 
@@ -66815,6 +70677,8 @@ class PickableGroup(X3DPickableObject, X3DGroupingNode):
 class PixelTexture(X3DTexture2DNode):
     def __init__(self, **kwargs):
         super(PixelTexture, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         image  = kwargs.pop("image", [0, 0, 0])
         self.__image = image
         IS  = kwargs.pop("IS", None)
@@ -66833,6 +70697,26 @@ class PixelTexture(X3DTexture2DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def image(self):
         return self.__image
@@ -66969,6 +70853,11 @@ class PixelTexture(X3DTexture2DNode):
     def toXML(self):
         str = ''
         str += '<PixelTexture'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__image is not None:
             if isinstance(self.__image, six.string_types):
                 str += ' image="'+self.__image+'"'
@@ -67040,6 +70929,8 @@ class PixelTexture(X3DTexture2DNode):
 class PixelTexture3D(X3DTexture3DNode):
     def __init__(self, **kwargs):
         super(PixelTexture3D, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         image  = kwargs.pop("image", [0, 0, 0, 0])
         self.__image = image
         IS  = kwargs.pop("IS", None)
@@ -67060,6 +70951,26 @@ class PixelTexture3D(X3DTexture3DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def image(self):
         return self.__image
@@ -67196,6 +71107,11 @@ class PixelTexture3D(X3DTexture3DNode):
     def toXML(self):
         str = ''
         str += '<PixelTexture3D'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__image is not None:
             if isinstance(self.__image, six.string_types):
                 str += ' image="'+self.__image+'"'
@@ -67836,6 +71752,32 @@ class PointEmitter(X3DParticleEmitterNode):
         return self.__speed
     def speed_changed(self, speed = 0):
         return self.__speed
+    @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
     @property
     def variation(self):
         return self.__variation
@@ -69213,6 +73155,8 @@ class PointSet(X3DGeometryNode):
         self.__IS = IS
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        normal  = kwargs.pop("normal", None)
+        self.__normal = normal
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -69339,6 +73283,26 @@ class PointSet(X3DGeometryNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def normal(self):
+        return self.__normal
+    @normal.setter
+    def normal(self, value = None):
+        self.__normal = [value]
+    def setNormal(self, normal = None):
+        self.__normal = [normal]
+        return self
+    def addNormal(self, normal = None):
+        if self.__normal == None:            self.__normal =  []
+        self.__normal +=  [normal]
+        return self
+    def removeNormal(self, normal):
+        self.__normal = [x for x in self.__normal if x not in normal]
+        return self.__normal
+    def getNormal(self, normal = None):
+        return self.__normal
+    def normal_changed(self, normal = None):
+        return self.__normal
     @property
     def DEF(self):
         return self.__DEF
@@ -69497,6 +73461,17 @@ class PointSet(X3DGeometryNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<normal'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normal is not None:
+           for s in self.__normal:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normal>'
         str += '</PointSet>'
         return str
 
@@ -69881,6 +73856,32 @@ class PolylineEmitter(X3DParticleEmitterNode):
         return self.__speed
     def speed_changed(self, speed = 0):
         return self.__speed
+    @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
     @property
     def variation(self):
         return self.__variation
@@ -74911,6 +78912,8 @@ class RigidBody(X3DNode):
         self.__autoDamp = autoDamp
         autoDisable  = kwargs.pop("autoDisable", False)
         self.__autoDisable = autoDisable
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         centerOfMass  = kwargs.pop("centerOfMass", [0, 0, 0])
         self.__centerOfMass = centerOfMass
         disableAngularSpeed  = kwargs.pop("disableAngularSpeed", 0)
@@ -74955,6 +78958,8 @@ class RigidBody(X3DNode):
         self.__useFiniteRotation = useFiniteRotation
         useGlobalGravity  = kwargs.pop("useGlobalGravity", True)
         self.__useGlobalGravity = useGlobalGravity
+        visible  = kwargs.pop("visible", True)
+        self.__visible = visible
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -75037,6 +79042,24 @@ class RigidBody(X3DNode):
         return self.__autoDisable
     def isAutoDisable(self, autoDisable = False):
         return self.__autoDisable
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def centerOfMass(self):
         return self.__centerOfMass
@@ -75456,6 +79479,24 @@ class RigidBody(X3DNode):
     def isUseGlobalGravity(self, useGlobalGravity = True):
         return self.__useGlobalGravity
     @property
+    def visible(self):
+        return self.__visible
+    @visible.setter
+    def visible(self, value = True):
+        self.__visible = [value]
+    def setVisible(self, visible = True):
+        self.__visible = [visible]
+        return self
+    def addVisible(self, visible = True):
+        if self.__visible == None:            self.__visible =  []
+        self.__visible +=  [visible]
+        return self
+    def removeVisible(self, visible):
+        self.__visible = [x for x in self.__visible if x not in visible]
+        return self.__visible
+    def isVisible(self, visible = True):
+        return self.__visible
+    @property
     def DEF(self):
         return self.__DEF
     @DEF.setter
@@ -75551,6 +79592,11 @@ class RigidBody(X3DNode):
                 str += ' autoDisable="'+self.__autoDisable+'"'
             else:
                 str += ' autoDisable="'+self.__autoDisable[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__centerOfMass is not None:
             if isinstance(self.__centerOfMass, six.string_types):
                 str += ' centerOfMass="'+self.__centerOfMass+'"'
@@ -75636,6 +79682,11 @@ class RigidBody(X3DNode):
                 str += ' useGlobalGravity="'+self.__useGlobalGravity+'"'
             else:
                 str += ' useGlobalGravity="'+self.__useGlobalGravity[0]+'"'
+        if self.__visible is not None:
+            if isinstance(self.__visible, six.string_types):
+                str += ' visible="'+self.__visible+'"'
+            else:
+                str += ' visible="'+self.__visible[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -75705,6 +79756,8 @@ class RigidBodyCollection(X3DChildNode):
         super(RigidBodyCollection, self).__init__(**kwargs)
         autoDisable  = kwargs.pop("autoDisable", False)
         self.__autoDisable = autoDisable
+        bboxDisplay  = kwargs.pop("bboxDisplay", False)
+        self.__bboxDisplay = bboxDisplay
         bodies  = kwargs.pop("bodies", None)
         self.__bodies = bodies
         collider  = kwargs.pop("collider", None)
@@ -75741,6 +79794,8 @@ class RigidBodyCollection(X3DChildNode):
         self.__preferAccuracy = preferAccuracy
         contacts  = kwargs.pop("contacts", None)
         self.__contacts = contacts
+        visible  = kwargs.pop("visible", True)
+        self.__visible = visible
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -75765,6 +79820,24 @@ class RigidBodyCollection(X3DChildNode):
         return self.__autoDisable
     def isAutoDisable(self, autoDisable = False):
         return self.__autoDisable
+    @property
+    def bboxDisplay(self):
+        return self.__bboxDisplay
+    @bboxDisplay.setter
+    def bboxDisplay(self, value = False):
+        self.__bboxDisplay = [value]
+    def setBboxDisplay(self, bboxDisplay = False):
+        self.__bboxDisplay = [bboxDisplay]
+        return self
+    def addBboxDisplay(self, bboxDisplay = False):
+        if self.__bboxDisplay == None:            self.__bboxDisplay =  []
+        self.__bboxDisplay +=  [bboxDisplay]
+        return self
+    def removeBboxDisplay(self, bboxDisplay):
+        self.__bboxDisplay = [x for x in self.__bboxDisplay if x not in bboxDisplay]
+        return self.__bboxDisplay
+    def isBboxDisplay(self, bboxDisplay = False):
+        return self.__bboxDisplay
     @property
     def bodies(self):
         return self.__bodies
@@ -76077,6 +80150,24 @@ class RigidBodyCollection(X3DChildNode):
         self.__contacts = [contacts]
         return self
     @property
+    def visible(self):
+        return self.__visible
+    @visible.setter
+    def visible(self, value = True):
+        self.__visible = [value]
+    def setVisible(self, visible = True):
+        self.__visible = [visible]
+        return self
+    def addVisible(self, visible = True):
+        if self.__visible == None:            self.__visible =  []
+        self.__visible +=  [visible]
+        return self
+    def removeVisible(self, visible):
+        self.__visible = [x for x in self.__visible if x not in visible]
+        return self.__visible
+    def isVisible(self, visible = True):
+        return self.__visible
+    @property
     def DEF(self):
         return self.__DEF
     @DEF.setter
@@ -76157,6 +80248,11 @@ class RigidBodyCollection(X3DChildNode):
                 str += ' autoDisable="'+self.__autoDisable+'"'
             else:
                 str += ' autoDisable="'+self.__autoDisable[0]+'"'
+        if self.__bboxDisplay is not None:
+            if isinstance(self.__bboxDisplay, six.string_types):
+                str += ' bboxDisplay="'+self.__bboxDisplay+'"'
+            else:
+                str += ' bboxDisplay="'+self.__bboxDisplay[0]+'"'
         if self.__constantForceMix is not None:
             if isinstance(self.__constantForceMix, six.string_types):
                 str += ' constantForceMix="'+self.__constantForceMix+'"'
@@ -76212,6 +80308,11 @@ class RigidBodyCollection(X3DChildNode):
                 str += ' preferAccuracy="'+self.__preferAccuracy+'"'
             else:
                 str += ' preferAccuracy="'+self.__preferAccuracy[0]+'"'
+        if self.__visible is not None:
+            if isinstance(self.__visible, six.string_types):
+                str += ' visible="'+self.__visible+'"'
+            else:
+                str += ' visible="'+self.__visible[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -77718,16 +81819,24 @@ class ScreenGroup(X3DGroupingNode):
 class Script(X3DScriptNode):
     def __init__(self, **kwargs):
         super(Script, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         directOutput  = kwargs.pop("directOutput", False)
         self.__directOutput = directOutput
         field  = kwargs.pop("field", None)
         self.__field = field
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         mustEvaluate  = kwargs.pop("mustEvaluate", False)
         self.__mustEvaluate = mustEvaluate
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         url  = kwargs.pop("url", None)
         self.__url = url
         DEF  = kwargs.pop("DEF", None)
@@ -77740,6 +81849,26 @@ class Script(X3DScriptNode):
         self.__field = field
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def field(self):
         return self.__field
@@ -77781,6 +81910,24 @@ class Script(X3DScriptNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -77800,6 +81947,32 @@ class Script(X3DScriptNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -77949,16 +82122,31 @@ class Script(X3DScriptNode):
     def toXML(self):
         str = ''
         str += '<Script'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__directOutput is not None:
             if isinstance(self.__directOutput, six.string_types):
                 str += ' directOutput="'+self.__directOutput+'"'
             else:
                 str += ' directOutput="'+self.__directOutput[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
         if self.__mustEvaluate is not None:
             if isinstance(self.__mustEvaluate, six.string_types):
                 str += ' mustEvaluate="'+self.__mustEvaluate+'"'
             else:
                 str += ' mustEvaluate="'+self.__mustEvaluate[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__url is not None:
             if isinstance(self.__url, six.string_types):
                 str += ' url="'+self.__url+'"'
@@ -78735,10 +82923,18 @@ class ShadedVolumeStyle(X3DComposableVolumeRenderStyleNode):
 class ShaderPart(X3DUrlObject, X3DNode):
     def __init__(self, **kwargs):
         super(ShaderPart, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         type  = kwargs.pop("type", "VERTEX")
         self.__type = type
         url  = kwargs.pop("url", None)
@@ -78749,6 +82945,26 @@ class ShaderPart(X3DUrlObject, X3DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def IS(self):
         return self.__IS
@@ -78770,6 +82986,24 @@ class ShaderPart(X3DUrlObject, X3DNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -78789,6 +83023,32 @@ class ShaderPart(X3DUrlObject, X3DNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -78905,6 +83165,21 @@ class ShaderPart(X3DUrlObject, X3DNode):
     def toXML(self):
         str = ''
         str += '<ShaderPart'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__type is not None:
             if isinstance(self.__type, six.string_types):
                 str += ' type="'+self.__type+'"'
@@ -78960,12 +83235,20 @@ class ShaderPart(X3DUrlObject, X3DNode):
 class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def __init__(self, **kwargs):
         super(ShaderProgram, self).__init__(**kwargs)
+        description  = kwargs.pop("description", None)
+        self.__description = description
         field  = kwargs.pop("field", None)
         self.__field = field
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        load  = kwargs.pop("load", True)
+        self.__load = load
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        refresh  = kwargs.pop("refresh", 0)
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = refresh
         type  = kwargs.pop("type", "VERTEX")
         self.__type = type
         url  = kwargs.pop("url", None)
@@ -78976,6 +83259,26 @@ class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
         self.__USE = USE
         class_  = kwargs.pop("class_", None)
         self.__class_ = class_
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     @property
     def field(self):
         return self.__field
@@ -79017,6 +83320,24 @@ class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def IS_changed(self, IS = None):
         return self.__IS
     @property
+    def load(self):
+        return self.__load
+    @load.setter
+    def load(self, value = True):
+        self.__load = [value]
+    def setLoad(self, load = True):
+        self.__load = [load]
+        return self
+    def addLoad(self, load = True):
+        if self.__load == None:            self.__load =  []
+        self.__load +=  [load]
+        return self
+    def removeLoad(self, load):
+        self.__load = [x for x in self.__load if x not in load]
+        return self.__load
+    def isLoad(self, load = True):
+        return self.__load
+    @property
     def metadata(self):
         return self.__metadata
     @metadata.setter
@@ -79036,6 +83357,32 @@ class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
         return self.__metadata
     def metadata_changed(self, metadata = None):
         return self.__metadata
+    @property
+    def refresh(self):
+        return self.__refresh
+    @refresh.setter
+    def refresh(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__refresh = [value]
+    def setRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        self.__refresh = [refresh]
+        return self
+    def addRefresh(self, refresh = 0):
+        if refresh == None or refresh  <  0:
+            return None
+        if self.__refresh == None:            self.__refresh =  []
+        self.__refresh +=  [refresh]
+        return self
+    def removeRefresh(self, refresh):
+        self.__refresh = [x for x in self.__refresh if x not in refresh]
+        return self.__refresh
+    def getRefresh(self, refresh = 0):
+        return self.__refresh
+    def refresh_changed(self, refresh = 0):
+        return self.__refresh
     @property
     def url(self):
         return self.__url
@@ -79132,6 +83479,21 @@ class ShaderProgram(X3DUrlObject, X3DProgrammableShaderObject, X3DNode):
     def toXML(self):
         str = ''
         str += '<ShaderProgram'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
+        if self.__load is not None:
+            if isinstance(self.__load, six.string_types):
+                str += ' load="'+self.__load+'"'
+            else:
+                str += ' load="'+self.__load[0]+'"'
+        if self.__refresh is not None:
+            if isinstance(self.__refresh, six.string_types):
+                str += ' refresh="'+self.__refresh+'"'
+            else:
+                str += ' refresh="'+self.__refresh[0]+'"'
         if self.__type is not None:
             if isinstance(self.__type, six.string_types):
                 str += ' type="'+self.__type+'"'
@@ -85101,6 +89463,32 @@ class SurfaceEmitter(X3DParticleEmitterNode):
     def speed_changed(self, speed = 0):
         return self.__speed
     @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
+    @property
     def variation(self):
         return self.__variation
     @variation.setter
@@ -87165,11 +91553,13 @@ class TextureBackground(X3DBackgroundNode):
         return str
 
 
-class TextureCoordinate(X3DTextureCoordinateNode):
+class TextureCoordinate(X3DSingleTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate, self).__init__(**kwargs)
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         point  = kwargs.pop("point", None)
@@ -87200,6 +91590,26 @@ class TextureCoordinate(X3DTextureCoordinateNode):
         return self.__IS
     def IS_changed(self, IS = None):
         return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
     @property
     def metadata(self):
         return self.__metadata
@@ -87316,6 +91726,11 @@ class TextureCoordinate(X3DTextureCoordinateNode):
     def toXML(self):
         str = ''
         str += '<TextureCoordinate'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
         if self.__point is not None:
             if isinstance(self.__point, six.string_types):
                 str += ' point="'+self.__point+'"'
@@ -87363,11 +91778,13 @@ class TextureCoordinate(X3DTextureCoordinateNode):
         return str
 
 
-class TextureCoordinate3D(X3DTextureCoordinateNode):
+class TextureCoordinate3D(X3DSingleTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate3D, self).__init__(**kwargs)
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         point  = kwargs.pop("point", None)
@@ -87398,6 +91815,26 @@ class TextureCoordinate3D(X3DTextureCoordinateNode):
         return self.__IS
     def IS_changed(self, IS = None):
         return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
     @property
     def metadata(self):
         return self.__metadata
@@ -87514,6 +91951,11 @@ class TextureCoordinate3D(X3DTextureCoordinateNode):
     def toXML(self):
         str = ''
         str += '<TextureCoordinate3D'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
         if self.__point is not None:
             if isinstance(self.__point, six.string_types):
                 str += ' point="'+self.__point+'"'
@@ -87561,11 +92003,13 @@ class TextureCoordinate3D(X3DTextureCoordinateNode):
         return str
 
 
-class TextureCoordinate4D(X3DTextureCoordinateNode):
+class TextureCoordinate4D(X3DSingleTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinate4D, self).__init__(**kwargs)
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         point  = kwargs.pop("point", None)
@@ -87596,6 +92040,26 @@ class TextureCoordinate4D(X3DTextureCoordinateNode):
         return self.__IS
     def IS_changed(self, IS = None):
         return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
     @property
     def metadata(self):
         return self.__metadata
@@ -87712,6 +92176,11 @@ class TextureCoordinate4D(X3DTextureCoordinateNode):
     def toXML(self):
         str = ''
         str += '<TextureCoordinate4D'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
         if self.__point is not None:
             if isinstance(self.__point, six.string_types):
                 str += ' point="'+self.__point+'"'
@@ -87759,11 +92228,13 @@ class TextureCoordinate4D(X3DTextureCoordinateNode):
         return str
 
 
-class TextureCoordinateGenerator(X3DTextureCoordinateNode):
+class TextureCoordinateGenerator(X3DSingleTextureCoordinateNode):
     def __init__(self, **kwargs):
         super(TextureCoordinateGenerator, self).__init__(**kwargs)
         IS  = kwargs.pop("IS", None)
         self.__IS = IS
+        mapping  = kwargs.pop("mapping", None)
+        self.__mapping = mapping
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
         mode  = kwargs.pop("mode", "SPHERE")
@@ -87820,6 +92291,26 @@ class TextureCoordinateGenerator(X3DTextureCoordinateNode):
         return self.__IS
     def IS_changed(self, IS = None):
         return self.__IS
+    @property
+    def mapping(self):
+        return self.__mapping
+    @mapping.setter
+    def mapping(self, value = None):
+        self.__mapping = [value]
+    def setMapping(self, mapping = None):
+        self.__mapping = [mapping]
+        return self
+    def addMapping(self, mapping = None):
+        if self.__mapping == None:            self.__mapping =  []
+        self.__mapping +=  [mapping]
+        return self
+    def removeMapping(self, mapping):
+        self.__mapping = [x for x in self.__mapping if x not in mapping]
+        return self.__mapping
+    def getMapping(self, mapping = None):
+        return self.__mapping
+    def mapping_changed(self, mapping = None):
+        return self.__mapping
     @property
     def metadata(self):
         return self.__metadata
@@ -88028,6 +92519,11 @@ class TextureCoordinateGenerator(X3DTextureCoordinateNode):
     def toXML(self):
         str = ''
         str += '<TextureCoordinateGenerator'
+        if self.__mapping is not None:
+            if isinstance(self.__mapping, six.string_types):
+                str += ' mapping="'+self.__mapping+'"'
+            else:
+                str += ' mapping="'+self.__mapping[0]+'"'
         if self.__mode is not None:
             if isinstance(self.__mode, six.string_types):
                 str += ' mode="'+self.__mode+'"'
@@ -89671,6 +94167,8 @@ class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
         if cycleTime == None or cycleTime  <  0:
             return None
         self.__cycleTime = cycleTime
+        description  = kwargs.pop("description", None)
+        self.__description = description
         elapsedTime  = kwargs.pop("elapsedTime", None)
         if elapsedTime == None or elapsedTime  <  0:
             return None
@@ -89740,6 +94238,26 @@ class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
         return self.__cycleTime
     def cycleTime_changed(self, cycleTime = None):
         return self.__cycleTime
+    @property
+    def description(self):
+        return self.__description
+    @description.setter
+    def description(self, value = None):
+        self.__description = [value]
+    def setDescription(self, description = None):
+        self.__description = [description]
+        return self
+    def addDescription(self, description = None):
+        if self.__description == None:            self.__description =  []
+        self.__description +=  [description]
+        return self
+    def removeDescription(self, description):
+        self.__description = [x for x in self.__description if x not in description]
+        return self.__description
+    def getDescription(self, description = None):
+        return self.__description
+    def description_changed(self, description = None):
+        return self.__description
     def removeElapsedTime(self, elapsedTime):
         self.__elapsedTime = [x for x in self.__elapsedTime if x not in elapsedTime]
         return self.__elapsedTime
@@ -90007,6 +94525,11 @@ class TimeSensor(X3DSensorNode, X3DTimeDependentNode):
                 str += ' cycleTime="'+self.__cycleTime+'"'
             else:
                 str += ' cycleTime="'+self.__cycleTime[0]+'"'
+        if self.__description is not None:
+            if isinstance(self.__description, six.string_types):
+                str += ' description="'+self.__description+'"'
+            else:
+                str += ' description="'+self.__description[0]+'"'
         if self.__elapsedTime is not None:
             if isinstance(self.__elapsedTime, six.string_types):
                 str += ' elapsedTime="'+self.__elapsedTime+'"'
@@ -95808,6 +100331,418 @@ class UniversalJoint(X3DRigidJointNode):
         return str
 
 
+class UnlitMaterial(X3DOneSidedMaterialNode):
+    def __init__(self, **kwargs):
+        super(UnlitMaterial, self).__init__(**kwargs)
+        emissiveColor  = kwargs.pop("emissiveColor", [0, 0, 0])
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = emissiveColor
+        emissiveTexture  = kwargs.pop("emissiveTexture", None)
+        self.__emissiveTexture = emissiveTexture
+        emissiveTextureMapping  = kwargs.pop("emissiveTextureMapping", None)
+        self.__emissiveTextureMapping = emissiveTextureMapping
+        IS  = kwargs.pop("IS", None)
+        self.__IS = IS
+        metadata  = kwargs.pop("metadata", None)
+        self.__metadata = metadata
+        normalScale  = kwargs.pop("normalScale", 1)
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = normalScale
+        normalTexture  = kwargs.pop("normalTexture", None)
+        self.__normalTexture = normalTexture
+        normalTextureMapping  = kwargs.pop("normalTextureMapping", None)
+        self.__normalTextureMapping = normalTextureMapping
+        transparency  = kwargs.pop("transparency", 0)
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        self.__transparency = transparency
+        DEF  = kwargs.pop("DEF", None)
+        self.__DEF = DEF
+        USE  = kwargs.pop("USE", None)
+        self.__USE = USE
+        class_  = kwargs.pop("class_", None)
+        self.__class_ = class_
+    @property
+    def emissiveColor(self):
+        return self.__emissiveColor
+    @emissiveColor.setter
+    def emissiveColor(self, value = [0, 0, 0]):
+        if value == None or len(value) <= 0 or min(value)  <  0:
+            return None
+        if value == None or len(value) <= 0 or max(value)  >  1:
+            return None
+        self.__emissiveColor = [value]
+    def setEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        self.__emissiveColor = [emissiveColor]
+        return self
+    def addEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        if emissiveColor == None or len(emissiveColor) <= 0 or min(emissiveColor)  <  0:
+            return None
+        if emissiveColor == None or len(emissiveColor) <= 0 or max(emissiveColor)  >  1:
+            return None
+        if self.__emissiveColor == None:            self.__emissiveColor =  []
+        self.__emissiveColor +=  [emissiveColor]
+        return self
+    def removeEmissiveColor(self, emissiveColor):
+        self.__emissiveColor = [x for x in self.__emissiveColor if x not in emissiveColor]
+        return self.__emissiveColor
+    def getEmissiveColor(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    def emissiveColor_changed(self, emissiveColor = [0, 0, 0]):
+        return self.__emissiveColor
+    @property
+    def emissiveTexture(self):
+        return self.__emissiveTexture
+    @emissiveTexture.setter
+    def emissiveTexture(self, value = None):
+        self.__emissiveTexture = [value]
+    def setEmissiveTexture(self, emissiveTexture = None):
+        self.__emissiveTexture = [emissiveTexture]
+        return self
+    def addEmissiveTexture(self, emissiveTexture = None):
+        if self.__emissiveTexture == None:            self.__emissiveTexture =  []
+        self.__emissiveTexture +=  [emissiveTexture]
+        return self
+    def removeEmissiveTexture(self, emissiveTexture):
+        self.__emissiveTexture = [x for x in self.__emissiveTexture if x not in emissiveTexture]
+        return self.__emissiveTexture
+    def getEmissiveTexture(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    def emissiveTexture_changed(self, emissiveTexture = None):
+        return self.__emissiveTexture
+    @property
+    def emissiveTextureMapping(self):
+        return self.__emissiveTextureMapping
+    @emissiveTextureMapping.setter
+    def emissiveTextureMapping(self, value = None):
+        self.__emissiveTextureMapping = [value]
+    def setEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        self.__emissiveTextureMapping = [emissiveTextureMapping]
+        return self
+    def addEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        if self.__emissiveTextureMapping == None:            self.__emissiveTextureMapping =  []
+        self.__emissiveTextureMapping +=  [emissiveTextureMapping]
+        return self
+    def removeEmissiveTextureMapping(self, emissiveTextureMapping):
+        self.__emissiveTextureMapping = [x for x in self.__emissiveTextureMapping if x not in emissiveTextureMapping]
+        return self.__emissiveTextureMapping
+    def getEmissiveTextureMapping(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    def emissiveTextureMapping_changed(self, emissiveTextureMapping = None):
+        return self.__emissiveTextureMapping
+    @property
+    def IS(self):
+        return self.__IS
+    @IS.setter
+    def IS(self, value = None):
+        self.__IS = [value]
+    def setIS(self, IS = None):
+        self.__IS = [IS]
+        return self
+    def addIS(self, IS = None):
+        if self.__IS == None:            self.__IS =  []
+        self.__IS +=  [IS]
+        return self
+    def removeIS(self, IS):
+        self.__IS = [x for x in self.__IS if x not in IS]
+        return self.__IS
+    def getIS(self, IS = None):
+        return self.__IS
+    def IS_changed(self, IS = None):
+        return self.__IS
+    @property
+    def metadata(self):
+        return self.__metadata
+    @metadata.setter
+    def metadata(self, value = None):
+        self.__metadata = [value]
+    def setMetadata(self, metadata = None):
+        self.__metadata = [metadata]
+        return self
+    def addMetadata(self, metadata = None):
+        if self.__metadata == None:            self.__metadata =  []
+        self.__metadata +=  [metadata]
+        return self
+    def removeMetadata(self, metadata):
+        self.__metadata = [x for x in self.__metadata if x not in metadata]
+        return self.__metadata
+    def getMetadata(self, metadata = None):
+        return self.__metadata
+    def metadata_changed(self, metadata = None):
+        return self.__metadata
+    @property
+    def normalScale(self):
+        return self.__normalScale
+    @normalScale.setter
+    def normalScale(self, value = 1):
+        if value == None or value  <  0:
+            return None
+        self.__normalScale = [value]
+    def setNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        self.__normalScale = [normalScale]
+        return self
+    def addNormalScale(self, normalScale = 1):
+        if normalScale == None or normalScale  <  0:
+            return None
+        if self.__normalScale == None:            self.__normalScale =  []
+        self.__normalScale +=  [normalScale]
+        return self
+    def removeNormalScale(self, normalScale):
+        self.__normalScale = [x for x in self.__normalScale if x not in normalScale]
+        return self.__normalScale
+    def getNormalScale(self, normalScale = 1):
+        return self.__normalScale
+    def normalScale_changed(self, normalScale = 1):
+        return self.__normalScale
+    @property
+    def normalTexture(self):
+        return self.__normalTexture
+    @normalTexture.setter
+    def normalTexture(self, value = None):
+        self.__normalTexture = [value]
+    def setNormalTexture(self, normalTexture = None):
+        self.__normalTexture = [normalTexture]
+        return self
+    def addNormalTexture(self, normalTexture = None):
+        if self.__normalTexture == None:            self.__normalTexture =  []
+        self.__normalTexture +=  [normalTexture]
+        return self
+    def removeNormalTexture(self, normalTexture):
+        self.__normalTexture = [x for x in self.__normalTexture if x not in normalTexture]
+        return self.__normalTexture
+    def getNormalTexture(self, normalTexture = None):
+        return self.__normalTexture
+    def normalTexture_changed(self, normalTexture = None):
+        return self.__normalTexture
+    @property
+    def normalTextureMapping(self):
+        return self.__normalTextureMapping
+    @normalTextureMapping.setter
+    def normalTextureMapping(self, value = None):
+        self.__normalTextureMapping = [value]
+    def setNormalTextureMapping(self, normalTextureMapping = None):
+        self.__normalTextureMapping = [normalTextureMapping]
+        return self
+    def addNormalTextureMapping(self, normalTextureMapping = None):
+        if self.__normalTextureMapping == None:            self.__normalTextureMapping =  []
+        self.__normalTextureMapping +=  [normalTextureMapping]
+        return self
+    def removeNormalTextureMapping(self, normalTextureMapping):
+        self.__normalTextureMapping = [x for x in self.__normalTextureMapping if x not in normalTextureMapping]
+        return self.__normalTextureMapping
+    def getNormalTextureMapping(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    def normalTextureMapping_changed(self, normalTextureMapping = None):
+        return self.__normalTextureMapping
+    @property
+    def transparency(self):
+        return self.__transparency
+    @transparency.setter
+    def transparency(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        if value == None or value  >  1:
+            return None
+        self.__transparency = [value]
+    def setTransparency(self, transparency = 0):
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        self.__transparency = [transparency]
+        return self
+    def addTransparency(self, transparency = 0):
+        if transparency == None or transparency  <  0:
+            return None
+        if transparency == None or transparency  >  1:
+            return None
+        if self.__transparency == None:            self.__transparency =  []
+        self.__transparency +=  [transparency]
+        return self
+    def removeTransparency(self, transparency):
+        self.__transparency = [x for x in self.__transparency if x not in transparency]
+        return self.__transparency
+    def getTransparency(self, transparency = 0):
+        return self.__transparency
+    def transparency_changed(self, transparency = 0):
+        return self.__transparency
+    @property
+    def DEF(self):
+        return self.__DEF
+    @DEF.setter
+    def DEF(self, value = None):
+        self.__DEF = [value]
+    def setDEF(self, DEF = None):
+        self.__DEF = [DEF]
+        return self
+    def addDEF(self, DEF = None):
+        if self.__DEF == None:            self.__DEF =  []
+        self.__DEF +=  [DEF]
+        return self
+    def removeDEF(self, DEF):
+        self.__DEF = [x for x in self.__DEF if x not in DEF]
+        return self.__DEF
+    def getDEF(self, DEF = None):
+        return self.__DEF
+    def DEF_changed(self, DEF = None):
+        return self.__DEF
+    @property
+    def USE(self):
+        return self.__USE
+    @USE.setter
+    def USE(self, value = None):
+        self.__USE = [value]
+    def setUSE(self, USE = None):
+        self.__USE = [USE]
+        return self
+    def addUSE(self, USE = None):
+        if self.__USE == None:            self.__USE =  []
+        self.__USE +=  [USE]
+        return self
+    def removeUSE(self, USE):
+        self.__USE = [x for x in self.__USE if x not in USE]
+        return self.__USE
+    def getUSE(self, USE = None):
+        return self.__USE
+    def USE_changed(self, USE = None):
+        return self.__USE
+    @property
+    def class_(self):
+        return self.__class_
+    @class_.setter
+    def class_(self, value = None):
+        self.__class_ = [value]
+    def setClass(self, class_ = None):
+        self.__class_ = [class_]
+        return self
+    def addClass(self, class_ = None):
+        if self.__class_ == None:            self.__class_ =  []
+        self.__class_ +=  [class_]
+        return self
+    def removeClass(self, class_):
+        self.__class_ = [x for x in self.__class_ if x not in class_]
+        return self.__class_
+    def getClass(self, class_ = None):
+        return self.__class_
+    def class_changed(self, class_ = None):
+        return self.__class_
+    @property
+    def comments(self):
+        return self.__comments
+    @comments.setter
+    def comments(self, value = None):
+        self.__comments = [value]
+    def setComments(self, comments = None):
+        self.__comments = [comments]
+        return self
+    def addComments(self, comments = None):
+        if self.__comments == None:            self.__comments =  []
+        self.__comments +=  [comments]
+        return self
+    def toXML(self):
+        str = ''
+        str += '<UnlitMaterial'
+        if self.__emissiveColor is not None:
+            if isinstance(self.__emissiveColor, six.string_types):
+                str += ' emissiveColor="'+self.__emissiveColor+'"'
+            else:
+                str += ' emissiveColor="'+self.__emissiveColor[0]+'"'
+        if self.__emissiveTextureMapping is not None:
+            if isinstance(self.__emissiveTextureMapping, six.string_types):
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping+'"'
+            else:
+                str += ' emissiveTextureMapping="'+self.__emissiveTextureMapping[0]+'"'
+        if self.__normalScale is not None:
+            if isinstance(self.__normalScale, six.string_types):
+                str += ' normalScale="'+self.__normalScale+'"'
+            else:
+                str += ' normalScale="'+self.__normalScale[0]+'"'
+        if self.__normalTextureMapping is not None:
+            if isinstance(self.__normalTextureMapping, six.string_types):
+                str += ' normalTextureMapping="'+self.__normalTextureMapping+'"'
+            else:
+                str += ' normalTextureMapping="'+self.__normalTextureMapping[0]+'"'
+        if self.__transparency is not None:
+            if isinstance(self.__transparency, six.string_types):
+                str += ' transparency="'+self.__transparency+'"'
+            else:
+                str += ' transparency="'+self.__transparency[0]+'"'
+        if self.__DEF is not None:
+            if isinstance(self.__DEF, six.string_types):
+                str += ' DEF="'+self.__DEF+'"'
+            else:
+                str += ' DEF="'+self.__DEF[0]+'"'
+        if self.__USE is not None:
+            if isinstance(self.__USE, six.string_types):
+                str += ' USE="'+self.__USE+'"'
+            else:
+                str += ' USE="'+self.__USE[0]+'"'
+        if self.__class_ is not None:
+            if isinstance(self.__class_, six.string_types):
+                str += ' class_="'+self.__class_+'"'
+            else:
+                str += ' class_="'+self.__class_[0]+'"'
+        str += '>'
+        str += '<emissiveTexture'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__emissiveTexture is not None:
+           for s in self.__emissiveTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</emissiveTexture>'
+        str += '<IS'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__IS is not None:
+           for s in self.__IS:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</IS>'
+        str += '<metadata'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__metadata is not None:
+           for s in self.__metadata:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</metadata>'
+        str += '<normalTexture'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__normalTexture is not None:
+           for s in self.__normalTexture:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</normalTexture>'
+        str += '</UnlitMaterial>'
+        return str
+
+
 class Viewpoint(X3DViewpointNode):
     def __init__(self, **kwargs):
         super(Viewpoint, self).__init__(**kwargs)
@@ -95817,6 +100752,8 @@ class Viewpoint(X3DViewpointNode):
         self.__centerOfRotation = centerOfRotation
         description  = kwargs.pop("description", None)
         self.__description = description
+        farClippingPlane  = kwargs.pop("farClippingPlane", -1)
+        self.__farClippingPlane = farClippingPlane
         fieldOfView  = kwargs.pop("fieldOfView", 0.7854)
         if fieldOfView == None or fieldOfView  <=  0:
             return None
@@ -95831,6 +100768,10 @@ class Viewpoint(X3DViewpointNode):
         self.__jump = jump
         metadata  = kwargs.pop("metadata", None)
         self.__metadata = metadata
+        navigationInfo  = kwargs.pop("navigationInfo", None)
+        self.__navigationInfo = navigationInfo
+        nearClippingPlane  = kwargs.pop("nearClippingPlane", -1)
+        self.__nearClippingPlane = nearClippingPlane
         orientation  = kwargs.pop("orientation", [0, 0, 1, 0])
         self.__orientation = orientation
         position  = kwargs.pop("position", [0, 0, 10])
@@ -95839,6 +100780,8 @@ class Viewpoint(X3DViewpointNode):
         self.__retainUserOffsets = retainUserOffsets
         bind  = kwargs.pop("bind", None)
         self.__bind = bind
+        viewAll  = kwargs.pop("viewAll", False)
+        self.__viewAll = viewAll
         DEF  = kwargs.pop("DEF", None)
         self.__DEF = DEF
         USE  = kwargs.pop("USE", None)
@@ -95892,6 +100835,26 @@ class Viewpoint(X3DViewpointNode):
         return self.__description
     def description_changed(self, description = None):
         return self.__description
+    @property
+    def farClippingPlane(self):
+        return self.__farClippingPlane
+    @farClippingPlane.setter
+    def farClippingPlane(self, value = -1):
+        self.__farClippingPlane = [value]
+    def setFarClippingPlane(self, farClippingPlane = -1):
+        self.__farClippingPlane = [farClippingPlane]
+        return self
+    def addFarClippingPlane(self, farClippingPlane = -1):
+        if self.__farClippingPlane == None:            self.__farClippingPlane =  []
+        self.__farClippingPlane +=  [farClippingPlane]
+        return self
+    def removeFarClippingPlane(self, farClippingPlane):
+        self.__farClippingPlane = [x for x in self.__farClippingPlane if x not in farClippingPlane]
+        return self.__farClippingPlane
+    def getFarClippingPlane(self, farClippingPlane = -1):
+        return self.__farClippingPlane
+    def farClippingPlane_changed(self, farClippingPlane = -1):
+        return self.__farClippingPlane
     @property
     def fieldOfView(self):
         return self.__fieldOfView
@@ -95985,6 +100948,46 @@ class Viewpoint(X3DViewpointNode):
     def metadata_changed(self, metadata = None):
         return self.__metadata
     @property
+    def navigationInfo(self):
+        return self.__navigationInfo
+    @navigationInfo.setter
+    def navigationInfo(self, value = None):
+        self.__navigationInfo = [value]
+    def setNavigationInfo(self, navigationInfo = None):
+        self.__navigationInfo = [navigationInfo]
+        return self
+    def addNavigationInfo(self, navigationInfo = None):
+        if self.__navigationInfo == None:            self.__navigationInfo =  []
+        self.__navigationInfo +=  [navigationInfo]
+        return self
+    def removeNavigationInfo(self, navigationInfo):
+        self.__navigationInfo = [x for x in self.__navigationInfo if x not in navigationInfo]
+        return self.__navigationInfo
+    def getNavigationInfo(self, navigationInfo = None):
+        return self.__navigationInfo
+    def navigationInfo_changed(self, navigationInfo = None):
+        return self.__navigationInfo
+    @property
+    def nearClippingPlane(self):
+        return self.__nearClippingPlane
+    @nearClippingPlane.setter
+    def nearClippingPlane(self, value = -1):
+        self.__nearClippingPlane = [value]
+    def setNearClippingPlane(self, nearClippingPlane = -1):
+        self.__nearClippingPlane = [nearClippingPlane]
+        return self
+    def addNearClippingPlane(self, nearClippingPlane = -1):
+        if self.__nearClippingPlane == None:            self.__nearClippingPlane =  []
+        self.__nearClippingPlane +=  [nearClippingPlane]
+        return self
+    def removeNearClippingPlane(self, nearClippingPlane):
+        self.__nearClippingPlane = [x for x in self.__nearClippingPlane if x not in nearClippingPlane]
+        return self.__nearClippingPlane
+    def getNearClippingPlane(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    def nearClippingPlane_changed(self, nearClippingPlane = -1):
+        return self.__nearClippingPlane
+    @property
     def orientation(self):
         return self.__orientation
     @orientation.setter
@@ -96051,6 +101054,24 @@ class Viewpoint(X3DViewpointNode):
     def set_bind(self, bind = None):
         self.__bind = [bind]
         return self
+    @property
+    def viewAll(self):
+        return self.__viewAll
+    @viewAll.setter
+    def viewAll(self, value = False):
+        self.__viewAll = [value]
+    def setViewAll(self, viewAll = False):
+        self.__viewAll = [viewAll]
+        return self
+    def addViewAll(self, viewAll = False):
+        if self.__viewAll == None:            self.__viewAll =  []
+        self.__viewAll +=  [viewAll]
+        return self
+    def removeViewAll(self, viewAll):
+        self.__viewAll = [x for x in self.__viewAll if x not in viewAll]
+        return self.__viewAll
+    def isViewAll(self, viewAll = False):
+        return self.__viewAll
     @property
     def DEF(self):
         return self.__DEF
@@ -96162,6 +101183,11 @@ class Viewpoint(X3DViewpointNode):
                 str += ' description="'+self.__description+'"'
             else:
                 str += ' description="'+self.__description[0]+'"'
+        if self.__farClippingPlane is not None:
+            if isinstance(self.__farClippingPlane, six.string_types):
+                str += ' farClippingPlane="'+self.__farClippingPlane+'"'
+            else:
+                str += ' farClippingPlane="'+self.__farClippingPlane[0]+'"'
         if self.__fieldOfView is not None:
             if isinstance(self.__fieldOfView, six.string_types):
                 str += ' fieldOfView="'+self.__fieldOfView+'"'
@@ -96177,6 +101203,11 @@ class Viewpoint(X3DViewpointNode):
                 str += ' jump="'+self.__jump+'"'
             else:
                 str += ' jump="'+self.__jump[0]+'"'
+        if self.__nearClippingPlane is not None:
+            if isinstance(self.__nearClippingPlane, six.string_types):
+                str += ' nearClippingPlane="'+self.__nearClippingPlane+'"'
+            else:
+                str += ' nearClippingPlane="'+self.__nearClippingPlane[0]+'"'
         if self.__orientation is not None:
             if isinstance(self.__orientation, six.string_types):
                 str += ' orientation="'+self.__orientation+'"'
@@ -96197,6 +101228,11 @@ class Viewpoint(X3DViewpointNode):
                 str += ' bind="'+self.__bind+'"'
             else:
                 str += ' bind="'+self.__bind[0]+'"'
+        if self.__viewAll is not None:
+            if isinstance(self.__viewAll, six.string_types):
+                str += ' viewAll="'+self.__viewAll+'"'
+            else:
+                str += ' viewAll="'+self.__viewAll[0]+'"'
         if self.__DEF is not None:
             if isinstance(self.__DEF, six.string_types):
                 str += ' DEF="'+self.__DEF+'"'
@@ -96235,6 +101271,17 @@ class Viewpoint(X3DViewpointNode):
                if type(s) in ['head', 'Scene']:
                    str += s.toXMLNode()
         str += '</metadata>'
+        str += '<navigationInfo'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) not in ['head', 'Scene']:
+                   str += s.toXML()
+        str += '>'
+        if self.__navigationInfo is not None:
+           for s in self.__navigationInfo:
+               if type(s) in ['head', 'Scene']:
+                   str += s.toXMLNode()
+        str += '</navigationInfo>'
         str += '</Viewpoint>'
         return str
 
@@ -97716,6 +102763,32 @@ class VolumeEmitter(X3DParticleEmitterNode):
         return self.__speed
     def speed_changed(self, speed = 0):
         return self.__speed
+    @property
+    def surfaceArea(self):
+        return self.__surfaceArea
+    @surfaceArea.setter
+    def surfaceArea(self, value = 0):
+        if value == None or value  <  0:
+            return None
+        self.__surfaceArea = [value]
+    def setSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        self.__surfaceArea = [surfaceArea]
+        return self
+    def addSurfaceArea(self, surfaceArea = 0):
+        if surfaceArea == None or surfaceArea  <  0:
+            return None
+        if self.__surfaceArea == None:            self.__surfaceArea =  []
+        self.__surfaceArea +=  [surfaceArea]
+        return self
+    def removeSurfaceArea(self, surfaceArea):
+        self.__surfaceArea = [x for x in self.__surfaceArea if x not in surfaceArea]
+        return self.__surfaceArea
+    def getSurfaceArea(self, surfaceArea = 0):
+        return self.__surfaceArea
+    def surfaceArea_changed(self, surfaceArea = 0):
+        return self.__surfaceArea
     @property
     def variation(self):
         return self.__variation
