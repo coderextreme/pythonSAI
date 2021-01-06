@@ -69,7 +69,7 @@
             "@content":"Titania V3.0.3, http://titania.create3000.de"
           },
           {
-            "@name":"comment",
+            "@name":"info",
             "@content":"World of Titania"
           },
           {
@@ -94,7 +94,7 @@
           },
           {
             "@name":"translated",
-            "@content":"09 October 2020"
+            "@content":"05 January 2021"
           },
           {
             "@name":"generator",

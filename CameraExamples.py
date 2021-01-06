@@ -14,7 +14,7 @@ meta3.setContent("Camera, CameraShot and CameraMove examples that demonstrate st
 
 head1.addMeta(meta3)
 meta4 = x3d.meta()
-meta4.setName("documentation")
+meta4.setName("info")
 meta4.setContent("Two demos are found in the scene, click the \"red text\" on left or right to start. (a) SimpleShotsTest shows Zoom in/out, Pan left/right, Boom up/down, Tilt left/right, with each is defined by a CameraShot collecting a series of CameraMovements. (b) AimPointTest gradually slews the camera view to look at the sliding cube, then follows it around before returning to original viewpoint.")
 
 head1.addMeta(meta4)
