@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 . ./profile.sh
 npm install
+exit
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "ajv": "*",
+    "gyp": "*",
+    "ajv": "^6.12.3",
     "ajv-i18n": "*",
     "java": "*",
     "jsonlint": "*",
