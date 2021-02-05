@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "gyp": "*",
-    "ajv": "^6.12.3",
+    "ajv": "^6.12.6",
     "ajv-i18n": "*",
-    "java": "*",
+    "node-gyp": "^7.1.2",
+    "java": "^0.12.1",
     "jsonlint": "*",
     "node-mkdirp": "*",
     "xmldom": "*"
