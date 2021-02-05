@@ -13,7 +13,7 @@ npm install
 %PYTHON% -m pip install --upgrade pip3 setuptools
 %PYTHON% -m pip install --upgrade Cython
 %PIP% install pyjnius
-%PIP% install bs4
+%PIP% install beautifulsoup4
 %PIP% install lxml
 %PYTHON% classes.py
 %PYTHON% fieldTypesGenerator.py
@@ -21,9 +21,9 @@ npm install
 echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
 
-javac RunSaxon.java
+javac -cp ${CLASSPATH} RunSaxon.java
 
-java RunSaxon ---overwrite *.x3d
+java -cp ${CLASSPATH} RunSaxon ---overwrite *.x3d
 FOR %%i IN ("*.json") DO %NODE% json2py.js %%i
 
 

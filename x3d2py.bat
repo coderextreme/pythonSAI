@@ -11,8 +11,8 @@ set PIP=pip3.exe
 set NODE=node.exe
 @ECHO ON
 
-javac RunSaxon.java
+javac -cp "saxon9he.jar;." RunSaxon.java
 
-java RunSaxon ---overwrite *.x3d
+java -cp "saxon9he.jar;." RunSaxon ---overwrite *.x3d
 FOR %%i IN ("*.json") DO %NODE% json2py.js %%i
 

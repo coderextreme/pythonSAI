@@ -1,11 +1,12 @@
 #!/bin/bash
 . ./profile.sh
 npm install
-exit
+
+javac -cp "saxon9he.jar:." RunSaxon.java
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius
-${PYTHON} -m pip install --upgrade bs4
+${PYTHON} -m pip install --upgrade beautifulsoup4
 ${PYTHON} -m pip install --upgrade lxml
 ${PYTHON} classes.py
 ${PYTHON} fieldTypesGenerator.py
