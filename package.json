@@ -5,9 +5,9 @@
   "dependencies": {
     "ajv": "^6.12.6",
     "ajv-i18n": "*",
-    "node-gyp": "^7.1.2",
     "java": "^0.12.1",
     "jsonlint": "*",
+    "node-gyp": "^7.1.2",
     "node-mkdirp": "*",
     "xmldom": "*"
   }
