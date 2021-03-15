@@ -78,6 +78,7 @@ Shape21 = x3d.Shape()
 Text22 = x3d.Text()
 Text22.setString(["Node"])
 FontStyle23 = x3d.FontStyle()
+FontStyle23.setFamily(["SERIF"])
 FontStyle23.setJustify(["MIDDLE","MIDDLE"])
 FontStyle23.setSize(5)
 
@@ -132,13 +133,15 @@ field31.setType("MFVec3f")
 
 Script27.addField(field31)
 
-Script27.setSourceCode('''ecmascript:\n"+
+Script27.setSourceCode('''\n"+
+"ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}''')
+"					}\n"+
+"''')
 
 ProtoBody12.addChildren(Script27)
 TimeSensor32 = x3d.TimeSensor()
@@ -201,7 +204,7 @@ Shape42 = x3d.Shape()
 Extrusion43 = x3d.Extrusion()
 Extrusion43.setDEF("extrusion")
 Extrusion43.setCreaseAngle(0.785)
-Extrusion43.setCrossSection([1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0])
+Extrusion43.setCrossSection([1.00,0.00,0.92,-0.38,0.71,-0.71,0.38,-0.92,0.00,-1.00,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1.00,-0.00,-0.92,0.38,-0.71,0.71,-0.38,0.92,0.00,1.00,0.38,0.92,0.71,0.71,0.92,0.38,1.00,0.00])
 Extrusion43.setSpine([0,-50,0,0,50,0])
 
 Shape42.setGeometry(Extrusion43)
@@ -249,7 +252,8 @@ IS50.addConnect(connect52)
 
 Script46.setIS(IS50)
 
-Script46.setSourceCode('''ecmascript:\n"+
+Script46.setSourceCode('''\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -258,7 +262,7 @@ Script46.setSourceCode('''ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -266,10 +270,11 @@ Script46.setSourceCode('''ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
-"                }''')
+"                }\n"+
+"''')
 
 ProtoBody41.addChildren(Script46)
 ROUTE53 = x3d.ROUTE()
@@ -288,34 +293,35 @@ Transform54.setDEF("HoldsContent")
 Transform54.setScale([0.1,0.1,0.1])
 PlaneSensor55 = x3d.PlaneSensor()
 PlaneSensor55.setDEF("clickGenerator")
+PlaneSensor55.setEnabled(True)
 PlaneSensor55.setMinPosition([-50,-50])
 PlaneSensor55.setMaxPosition([50,50])
 PlaneSensor55.setDescription("click on background to add nodes, click on nodes to add links")
 
 Transform54.addChildren(PlaneSensor55)
 ProtoInstance56 = x3d.ProtoInstance()
-ProtoInstance56.setName("node")
 ProtoInstance56.setDEF("nodeA")
+ProtoInstance56.setName("node")
 fieldValue57 = x3d.fieldValue()
 fieldValue57.setName("position")
-fieldValue57.setValue("0 0 0")
+fieldValue57.setValue("0.0 0.0 0.0")
 
 ProtoInstance56.addFieldValue(fieldValue57)
 
 Transform54.addChildren(ProtoInstance56)
 ProtoInstance58 = x3d.ProtoInstance()
-ProtoInstance58.setName("node")
 ProtoInstance58.setDEF("nodeB")
+ProtoInstance58.setName("node")
 fieldValue59 = x3d.fieldValue()
 fieldValue59.setName("position")
-fieldValue59.setValue("50 50 50")
+fieldValue59.setValue("50.0 50.0 50.0")
 
 ProtoInstance58.addFieldValue(fieldValue59)
 
 Transform54.addChildren(ProtoInstance58)
 ProtoInstance60 = x3d.ProtoInstance()
-ProtoInstance60.setName("cylinder")
 ProtoInstance60.setDEF("linkA")
+ProtoInstance60.setName("cylinder")
 fieldValue61 = x3d.fieldValue()
 fieldValue61.setName("set_positionA")
 fieldValue61.setValue("0 0 0")
@@ -346,4 +352,4 @@ ROUTE64.setToField("set_positionB")
 Scene8.addChildren(ROUTE64)
 
 X3D0.setScene(Scene8)
-X3D0.toFileX3D("././fors_RoundTrip.x3d")
+X3D0.toFileX3D("fors_RoundTrip.x3d")

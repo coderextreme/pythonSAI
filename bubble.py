@@ -142,7 +142,8 @@ Script17.setSourceCode('''ecmascript:\n"+
 "		translation.z = 0;\n"+
 "		initialize();\n"+
 "	}\n"+
-"}''')
+"}\n"+
+"''')
 
 Transform12.addChildren(Script17)
 TimeSensor23 = x3d.TimeSensor()
@@ -185,4 +186,4 @@ ProtoInstance27.setDEF("bubbleA")
 Scene7.addChildren(ProtoInstance27)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././bubble_RoundTrip.x3d")
+X3D0.toFileX3D("bubble_RoundTrip.x3d")

@@ -145,7 +145,8 @@ Script18.setSourceCode('''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}''')
+"}\n"+
+"''')
 
 Transform13.addChildren(Script18)
 TimeSensor24 = x3d.TimeSensor()
@@ -203,4 +204,4 @@ ProtoInstance31.setDEF("bubbleD")
 Scene7.addChildren(ProtoInstance31)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("././cobweb_RoundTrip.x3d")
+X3D0.toFileX3D("cobweb_RoundTrip.x3d")

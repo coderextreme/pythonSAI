@@ -9,15 +9,15 @@ This program reads X3D files (provided) and generates python files.
 For a simple smoke test, set your environment in profile.sh, then run the two commands:  You should probably use Python 3.6 with Java 9
 Then run these for comparison
 ```bash
-python MFString.py
-python sphere.py
-python text.py
+python3 MFString.py
+python3 sphere.py
+python3 text.py
 
 ```
 
 ```cmd
 profile.bat
-python abox.py
+python3 abox.py
 ```
 
 For more complex stuff, like installing pyjnius, see below

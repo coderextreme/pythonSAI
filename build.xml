@@ -69,10 +69,10 @@ POSSIBILITY OF SUCH DAMAGE.
     <target name="default" depends="build.all"/>
 
     <target name="build.all" description="Test Python output">
-	<exec executable="npm.cmd">
+	<exec executable="npm">
 		<arg value="install"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="-m"/>
 		<arg value="pip"/>
 		<arg value="install"/>
@@ -80,41 +80,41 @@ POSSIBILITY OF SUCH DAMAGE.
 		<arg value="pip"/>
 		<arg value="setuptools"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="-m"/>
 		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="Cython"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="-m"/>
 		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="pyjnius"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="-m"/>
 		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="bs4"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="-m"/>
 		<arg value="pip"/>
 		<arg value="install"/>
 		<arg value="--upgrade"/>
 		<arg value="lxml"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="classes.py"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="fieldTypesGenerator.py"/>
 	</exec>
-	<exec executable="python">
+	<exec executable="python3">
 		<arg value="parseom.py"/>
 	</exec>
 		<!-- convert X3D XML files to X3D Python files -->
@@ -200,238 +200,238 @@ POSSIBILITY OF SUCH DAMAGE.
 			<arg value="x3domflowers.x3d"/>
 		</exec>
 		<!-- run Python files Begin -->
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="abox.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="arc.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="arc1.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="arc3.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ArchHalf.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ArchPrototype.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="arcold.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="asmallbox.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ball.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="BindingOperations.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="Box.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="BoxManAnimationPanel.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="browser.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="bub.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="bubble.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="bubbles.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="CameraExamples.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="CameraPrototypes.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="CameraShape.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="CloudsProcedural4.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="cobweb.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="cobweb2.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="CoordinateAxes.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="cube.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="extrusion.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ExtrusionHeart.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flipp.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flipper.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flower.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flowerproto.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flowers.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flowers2.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flowers4.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="flowers7.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="force.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="fors.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="fors2.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="freewrlflowers.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="gears.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="geo.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="geobubbles.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="glflowers.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="gridBack.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="HeadsUpDisplayExample.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="HelloWorld.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="HelloWorldProgramOutput.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="IcosahedronSubdivisionLevel5.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ifscube.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ifscubeworks.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="indexedfaceset_pixeltexture_entire.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="indexedfaceset_pixeltexture_part.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="indexedfaceset_pixeltexture_plus.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="indexedfaceset_pixeltexture_whole.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="MFString.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="mirror.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="mirror2.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="ObliqueStrategies.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="PixelTextureComponentExamples.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="plainflowers.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="pp3.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="qq3.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="rgb_alpha.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="rubik.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="rubikFurnace.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="rubikOnFire.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="SFVec3f.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="sphere.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="sphereflowers.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="StringArrayEncodingExamples.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="Table5_18PixelTexture.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="Teapot.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="text.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="TextExamples.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="TextSpecialCharacters.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="x3dconnector.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="x3dconnectorProto.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="X3dHeaderPrototypeSyntaxExamples.py"/>
 		</exec>
-		<exec executable="python">
+		<exec executable="python3">
 			<arg value="x3domflowers.py"/>
 		</exec>
 		<!-- run Python files End -->
