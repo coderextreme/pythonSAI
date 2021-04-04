@@ -3,11 +3,11 @@
 npm install
 
 javac -cp "saxon9he.jar:." RunSaxon.java
-${PYTHON} -m pip install --upgrade pip setuptools
-${PYTHON} -m pip install --upgrade Cython
-${PYTHON} -m pip install --upgrade pyjnius
-${PYTHON} -m pip install --upgrade beautifulsoup4
-${PYTHON} -m pip install --upgrade lxml
+sudo ${PYTHON} -m pip install --upgrade pip setuptools
+sudo ${PYTHON} -m pip install --upgrade Cython
+sudo ${PYTHON} -m pip install --upgrade pyjnius
+sudo ${PYTHON} -m pip install --upgrade beautifulsoup4
+sudo ${PYTHON} -m pip install --upgrade lxml
 ${PYTHON} classes.py
 ${PYTHON} fieldTypesGenerator.py
 ${PYTHON} mapToMethodGenerator.py
