@@ -4,9 +4,10 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.12.6",
-    "ajv-i18n": "*",
+    "ajv-i18n": "^3.6.0",
     "java": "^0.12.1",
     "jsonlint": "*",
+    "lodash": ">=4.17.21",
     "node-gyp": "^7.1.2",
     "node-mkdirp": "*",
     "xmldom": "*"
