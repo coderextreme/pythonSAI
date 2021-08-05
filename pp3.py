@@ -24,8 +24,8 @@ meta5.setContent("5 May 2015")
 
 head1.addMeta(meta5)
 meta6 = x3d.meta()
-meta6.setContent("05 May 2017")
 meta6.setName("modified")
+meta6.setContent("05 May 2017")
 
 head1.addMeta(meta6)
 meta7 = x3d.meta()
@@ -116,7 +116,6 @@ Transform19.addChildren(Transform24)
 StringSensor29 = x3d.StringSensor()
 StringSensor29.setDEF("RightSensor")
 StringSensor29.setEnabled(False)
-StringSensor29.setDeletionAllowed(True)
 
 Transform19.addChildren(StringSensor29)
 TouchSensor30 = x3d.TouchSensor()
@@ -168,7 +167,6 @@ Transform31.addChildren(Transform36)
 StringSensor41 = x3d.StringSensor()
 StringSensor41.setDEF("UpSensor")
 StringSensor41.setEnabled(False)
-StringSensor41.setDeletionAllowed(True)
 
 Transform31.addChildren(StringSensor41)
 TouchSensor42 = x3d.TouchSensor()
@@ -238,7 +236,6 @@ Transform48.addChildren(Transform53)
 StringSensor58 = x3d.StringSensor()
 StringSensor58.setDEF("CenterSensor")
 StringSensor58.setEnabled(False)
-StringSensor58.setDeletionAllowed(True)
 
 Transform48.addChildren(StringSensor58)
 TouchSensor59 = x3d.TouchSensor()
@@ -409,14 +406,14 @@ Transform80.setTranslation([0,-2.5,0])
 ProtoInstance81 = x3d.ProtoInstance()
 ProtoInstance81.setName("Process")
 
-Transform80.setChildren(ProtoInstance81)
+Transform80.addChildren(ProtoInstance81)
 
 Scene10.addChildren(Transform80)
 Transform82 = x3d.Transform()
 ProtoInstance83 = x3d.ProtoInstance()
 ProtoInstance83.setName("Process")
 
-Transform82.setChildren(ProtoInstance83)
+Transform82.addChildren(ProtoInstance83)
 
 Scene10.addChildren(Transform82)
 Transform84 = x3d.Transform()
@@ -424,9 +421,9 @@ Transform84.setTranslation([0,2.5,0])
 ProtoInstance85 = x3d.ProtoInstance()
 ProtoInstance85.setName("Process")
 
-Transform84.setChildren(ProtoInstance85)
+Transform84.addChildren(ProtoInstance85)
 
 Scene10.addChildren(Transform84)
 
 X3D0.setScene(Scene10)
-X3D0.toFileX3D("pp3_RoundTrip.x3d")
+X3D0.toFileX3D("././pp3_RoundTrip.x3d")

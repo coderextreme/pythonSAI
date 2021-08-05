@@ -229,4 +229,4 @@ Transform54.addChildren(Shape55)
 Scene7.addChildren(Transform54)
 
 X3D0.setScene(Scene7)
-X3D0.toFileX3D("Box_RoundTrip.x3d")
+X3D0.toFileX3D("././Box_RoundTrip.x3d")

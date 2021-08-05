@@ -10,6 +10,6 @@
     "lodash": ">=4.17.21",
     "node-gyp": "^7.1.2",
     "node-mkdirp": "*",
-    "xmldom": "*"
+    "xmldom": "git://github.com/xmldom/xmldom.git#v0.7.0"
   }
 }
