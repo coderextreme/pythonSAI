@@ -19,11 +19,18 @@ var DOMImplementation = new xmldom.DOMImplementation();
 X3DJSONLD = Object.assign(X3DJSONLD, { processURLs : function(urls) { return urls; }});
 var selectObjectFromJSObj = X3DJSONLD.selectObjectFromJSObj;
 
+if (typeof mapToMethod2 !== 'undefined') {
+	for (var map in mapToMethod2) {
+		Object.assign(mapToMethod[map], mapToMethod2[map]);
+	}
+}
+/*
 for (var par in mapToMethod2) {
 	for (var child in mapToMethod2[par]) {
 		mapToMethod[par][child] = mapToMethod2[par][child];
 	}
 }
+*/
 
 function convertJSON(options) {
 
@@ -48,7 +55,7 @@ function convertJSON(options) {
 			console.error("Error:", e);
 			continue;
 		}
-		var NS = "http://www.web3d.org/specifications/x3d";
+		var NS = "https://www.web3d.org/specifications/x3d";
 		loadX3DJS(DOMImplementation, json, file, NS, loadSchema, doValidate, X3DJSONLD, function(element, xml) {
 			if (typeof element === undefined) {
 				throw ("Undefined element returned from loadX3DJS()")

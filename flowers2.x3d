@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "https://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D profile="Immersive" version="3.0"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.0.xsd">
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="https://www.web3d.org/specifications/x3d-3.0.xsd">
   <head>
     <component level='1' name='Scripting'/>
     <meta name="title" content="flowers2.x3d"/>
@@ -12,7 +12,7 @@
     <meta content="2 random mathematical roses in spherical dimensions. rho = a + b * cos(c * theta) * cos(d * phi)" name="description"/>
     <meta content="https://coderextreme.net/X3DJSONLD/src/main/data/flowers2.x3d" name="identifier"/>
     <meta content="manually written" name="generator"/>
-    <meta content='http://www.web3d.org/x3d/content/examples/license.html' name='license'/>
+    <meta content='https://www.web3d.org/x3d/content/examples/license.html' name='license'/>
   </head>
   <Scene>
     <NavigationInfo type="&quot;EXAMINE&quot; &quot;ANY&quot;"/>
@@ -142,7 +142,7 @@
 			}
 			      ]]></Script>
 
-			    <ROUTE fromNode="OrbitScript" fromField="coordIndexes" toNode="Orbit" toField="coordIndex"/>
+			    <ROUTE fromNode="OrbitScript" fromField="coordIndexes" toNode="Orbit" toField="set_coordIndex"/>
 			    <ROUTE fromNode="OrbitScript" fromField="coordinates" toNode="OrbitCoordinates" toField="point"/>
 			    <ROUTE fromNode="Clock" fromField="fraction_changed" toNode="OrbitScript" toField="set_fraction"/>
 			    <ROUTE fromNode="OrbitPath" fromField="value_changed" toNode="OrbitTransform" toField="rotation"/>

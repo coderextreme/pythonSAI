@@ -22,7 +22,7 @@ PythonSerializer.prototype = {
 		var str = "";
 		// str += "# -*- coding: "+json.X3D.encoding+" -*-\n";
 
-		str += "import x3dpsail as x3d\n";
+		str += "from x3dpsail import *\n";
 
 		stack.unshift(this.preno);
 		this.preno++;
@@ -32,7 +32,7 @@ PythonSerializer.prototype = {
         // https://stackoverflow.com/questions/3151436/how-can-i-get-the-current-directory-name-in-javascript
         // console.log('Current directory: ' + process.cwd()); // Node.js method for current directory - not what is needed here
         // https://flaviocopes.com/node-get-current-folder/ use __dirname under Node.js
-		bodystr += element.nodeName+stack[0]+" = x3d."+element.nodeName;
+		bodystr += element.nodeName+stack[0]+" = "+element.nodeName;
 		bodystr += "()\n";
 		bodystr += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
 
@@ -112,12 +112,20 @@ PythonSerializer.prototype = {
 							addpre = "add";
 							method = "Child";
 						} else {
-							addpre = "set";
+							if (attrs[a].nodeValue == "joints" 
+								|| attrs[a].nodeValue == "sites" 
+								|| attrs[a].nodeValue == "segments" 
+							) {
+								method = "add"+attrs[a].nodeValue.charAt(0).toUpperCase() + attrs[a].nodeValue.slice(1);
+							} else {
+								method = "set"+attrs[a].nodeValue.charAt(0).toUpperCase() + attrs[a].nodeValue.slice(1);
+							}
+							addpre = "";
 						}
 					}
 				}
 			} catch (e) {
-				console.error(e);
+				// console.error(e);
 			}
 		}
 		if (node.nodeName === "IS") {
@@ -284,7 +292,7 @@ PythonSerializer.prototype = {
 					str += '.set'+method+"("+strval+")\n";
 				}
 			} catch (e) {
-				console.error(e);
+				// console.error(e);
 			}
 			attrType = "";
 		}
@@ -294,7 +302,7 @@ PythonSerializer.prototype = {
 				stack.unshift(this.preno);
 				this.preno++;
 				var ch = "";
-				ch += node.nodeName+stack[0]+" = x3d."+node.nodeName;
+				ch += node.nodeName+stack[0]+" = "+node.nodeName;
 
 				ch += "()\n";
 				var bodystr = this.subSerializeToString(node, mapToMethod, fieldTypes, n+1, stack);

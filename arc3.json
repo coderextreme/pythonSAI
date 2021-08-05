@@ -2,8 +2,8 @@
     "encoding":"UTF-8",
     "@profile":"Immersive",
     "@version":"3.3",
-    "@xsd:noNamespaceSchemaLocation":"http://www.web3d.org/specifications/x3d-3.3.xsd",
-    "JSON schema":"http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "@xsd:noNamespaceSchemaLocation":"https://www.web3d.org/specifications/x3d-3.3.xsd",
+    "JSON schema":"https://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
     "head": {
         "meta": [
           {
@@ -418,9 +418,11 @@
 "\t}",
 "\tfunction recompute_and_route(startpoint, endpoint) {",
 "\t      var trafo = recompute(startpoint, endpoint);",
-"\t      position.translation = trafo.translation;",
-"\t      rotscale.rotation = trafo.rotation;",
-"\t      rotscale.scale = trafo.scale;",
+"\t      if (trafo) {",
+"\t\t      position.translation = trafo.translation;",
+"\t\t      rotscale.rotation = trafo.rotation;",
+"\t\t      rotscale.scale = trafo.scale;",
+"\t      }",
 "\t}",
 "        function initialize(){",
 "            recompute_and_route(startnode.translation,endnode.translation);",

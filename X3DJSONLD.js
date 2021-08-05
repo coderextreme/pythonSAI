@@ -8,6 +8,7 @@ if (typeof require === 'function' && typeof load !== 'function') {
 	var fs = require("fs");
 	var http = require("http");
 	var https = require("https");
+	// TODO this causes node-java 0.12.2 to hang
 	var runAndSend = require("./runAndSend");
 	var xmldom = require('xmldom');
 	var domserializer = new xmldom.XMLSerializer();
@@ -228,7 +229,7 @@ loadURLs : function(loadpath, urls, loadedCallback, protoexp, done, externProtoD
 },
 
 
-// 'http://www.web3d.org/specifications/x3d-namespace'
+// 'https://www.web3d.org/specifications/x3d-namespace'
 
 // Load X3D JavaScript object into web page
 
@@ -486,7 +487,19 @@ ConvertToX3DOM : function(xmlDoc, object, parentkey, element, path, containerFie
 			if (key === 'X3D') {
 				this.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
 			} else {
-				this.ConvertObject(xmlDoc, key, object, element, path);
+				if (key === "-skin" || key === "-skeleton" || key === "-value") {
+					let firstNode = object[key][0];
+					for (var skv in firstNode) {
+						firstNode[skv]['@containerField'] = key.substr(1);
+						// console.log(firstNode[skv]);
+						this.ConvertObject(xmlDoc, key, object, element, path, firstNode[skv]['@containerField']);
+					}
+				} else if (key.indexOf("HAnim") === 0 && key !== "HAnimHumanoid" && typeof object[key]['@USE'] != 'undefined') {
+					object[key]['@containerField'] = key.substr(5).toLowerCase()+"s";
+					this.ConvertObject(xmlDoc, key, object, element, path, object[key]['@containerField']);
+				} else {
+					this.ConvertObject(xmlDoc, key, object, element, path);
+				}
 			}
 		} else if (typeof object[key] === 'number') {
 			this.elementSetAttribute(element, key.substr(1),object[key]);
@@ -561,11 +574,16 @@ loadJsonIntoDom: function(DOMImplementation, jsobj, path) {
 },
 
 prepareDocument: function(DOMImplementation, jsobj) {
-	var version = jsobj.X3D["@version"];
-       	var docType = DOMImplementation.createDocumentType("X3D", 'ISO//Web3D//DTD X3D '+version+'//EN" "http://www.web3d.org/specifications/x3d-'+version+'.dtd', null);
+	var version = "4.0";
+	var encoding = "UTF-8";
+	if (typeof jsobj.X3D !== 'undefined') {
+		version = jsobj.X3D["@version"];
+		encoding = jsobj.X3D["@encoding"];
+	}
+       	var docType = DOMImplementation.createDocumentType("X3D", 'ISO//Web3D//DTD X3D '+version+'//EN" "https://www.web3d.org/specifications/x3d-'+version+'.dtd', null);
 	var xmlDoc = DOMImplementation.createDocument(null, "X3D", docType);
 
-	xmlDoc.insertBefore(xmlDoc.createProcessingInstruction('xml', 'version="1.0" encoding="'+jsobj.X3D["encoding"]+'"'), docType);
+	xmlDoc.insertBefore(xmlDoc.createProcessingInstruction('xml', 'version="1.0" encoding="'+encoding+'"'), docType);
 	return xmlDoc;
 },
 
@@ -609,20 +627,20 @@ fixXML : function(xmlstr) {
  * Serialize an element to XML and add an XML header.
  */
 serializeDOM : function(json, element, appendDocType) {
-	var version = "3.3";
+	var version = "4.0";
 	var encoding = "UTF-8";
-	if (typeof json !== 'undefined') {
+	if (typeof json !== 'undefined' && typeof json.X3D !== 'undefined') {
 		version = json.X3D["@version"];
 		encoding = json.X3D["encoding"];
 	}
 	var xml = '';
 	if (appendDocType) {
 		xml += '<?xml version="1.0" encoding="'+encoding+'"?>\n';
-		xml += '<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D '+version+'//EN" "http://www.web3d.org/specifications/x3d-'+version+'.dtd">\n';
+		xml += '<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D '+version+'//EN" "https://www.web3d.org/specifications/x3d-'+version+'.dtd">\n';
 	}
 	if (typeof element === 'string') {
 		xml += element;
-	} else {
+	} else if (typeof element !== 'undefined') {
 		xml += domserializer.serializeToString(element);
 	}
 

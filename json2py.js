@@ -1,17 +1,15 @@
 "use strict";
 
-// Convert X3D JSON to various formats
+// Convert X3D JSON to Python
 
 process.argv.shift();
 process.argv.shift();
 
 var convertJSON = require('./convertJSON.js').convertJSON;
 
-convertJSON([
-	{ 
+convertJSON([{ 
 	serializer : './PythonSerializer.js',
 	folder : "./",
 	extension : ".py",
 	codeOutput : "./",
-	}
-	]);
+	}]);

@@ -1,9 +1,9 @@
 { "X3D": {
     "encoding":"UTF-8",
     "@profile":"Immersive",
-    "@version":"3.3",
-    "@xsd:noNamespaceSchemaLocation":"http://www.web3d.org/specifications/x3d-3.3.xsd",
-    "JSON schema":"http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "@version":"4.0",
+    "@xsd:noNamespaceSchemaLocation":"https://www.web3d.org/specifications/x3d-4.0.xsd",
+    "JSON schema":"https://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
     "head": {
         "component": [
           {
@@ -13,6 +13,22 @@
           {
             "@name":"CubeMapTexturing",
             "@level":1
+          },
+          {
+            "@name":"Texturing",
+            "@level":1
+          },
+          {
+            "@name":"Rendering",
+            "@level":1
+          },
+          {
+            "@name":"Shape",
+            "@level":4
+          },
+          {
+            "@name":"Grouping",
+            "@level":3
           }
         ],
         "meta": [
@@ -95,42 +111,42 @@
                             { "ComposedCubeMapTexture":
                               {
                                 "@DEF":"texture",
-                                "-back":
+                                "-backTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"backShader",
                                       "@url":["../resources/images/all_probes/beach_cross/beach_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_back.png"]
                                     }
                                   },
-                                "-bottom":
+                                "-bottomTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"bottomShader",
                                       "@url":["../resources/images/all_probes/beach_cross/beach_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_bottom.png"]
                                     }
                                   },
-                                "-front":
+                                "-frontTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"frontShader",
                                       "@url":["../resources/images/all_probes/beach_cross/beach_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_front.png"]
                                     }
                                   },
-                                "-left":
+                                "-leftTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"leftShader",
                                       "@url":["../resources/images/all_probes/beach_cross/beach_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_left.png"]
                                     }
                                   },
-                                "-right":
+                                "-rightTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"rightShader",
                                       "@url":["../resources/images/all_probes/beach_cross/beach_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_right.png"]
                                     }
                                   },
-                                "-top":
+                                "-topTexture":
                                   { "ImageTexture":
                                     {
                                       "@DEF":"topShader",
@@ -320,7 +336,7 @@
                                   },
                                   { "ShaderPart":
                                     {
-                                      "@url":["../shaders/common.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/common.fs"],
+                                      "@url":["../shaders/x_ite.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.fs"],
                                       "@type":"FRAGMENT"
                                     }
                                   }

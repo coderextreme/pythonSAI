@@ -1,9 +1,9 @@
 { "X3D": {
     "encoding":"UTF-8",
-    "@xsd:noNamespaceSchemaLocation":"http://www.web3d.org/specifications/x3d-3.3.xsd",
+    "@xsd:noNamespaceSchemaLocation":"https://www.web3d.org/specifications/x3d-3.3.xsd",
     "@profile":"Immersive",
     "@version":"3.3",
-    "JSON schema":"http://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "JSON schema":"https://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
     "head": {
         "meta": [
           {
@@ -32,7 +32,7 @@
           },
           {
             "@name":"generator",
-            "@content":"X3dToJson.xslt, http://www.web3d.org/x3d/stylesheets/X3dToJson.html"
+            "@content":"X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
           },
           {
             "@name":"translated",
@@ -79,7 +79,7 @@
                   "-children":[
                     { "Transform":
                       {
-                        "@DEF":"transform",
+                        "@DEF":"body_trans",
                         "-children":[
                           { "Shape":
                             {
@@ -204,7 +204,7 @@
                             {
                               "@fromNode":"bounce",
                               "@fromField":"translation_changed",
-                              "@toNode":"transform",
+                              "@toNode":"body_trans",
                               "@toField":"set_translation"
                             }
                           },
@@ -212,7 +212,7 @@
                             {
                               "@fromNode":"bounce",
                               "@fromField":"scale_changed",
-                              "@toNode":"transform",
+                              "@toNode":"body_trans",
                               "@toField":"set_scale"
                             }
                           },

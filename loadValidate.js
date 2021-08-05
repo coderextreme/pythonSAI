@@ -18,7 +18,10 @@ function doValidate(json, validated_version, file, X3DJSONLD, success, failure, 
 		}
 		console.error(e);
 	}
-	var version = json.X3D["@version"];
+	var version = "4.0";
+	if (typeof json.X3D !== 'undefined') {
+		version = json.X3D["@version"];
+	}
 	if (typeof validated_version !== 'undefined') {
 		var valid = validated_version(json);
 		if (!valid) {
@@ -79,16 +82,19 @@ function addSchema(ajv, schemajson, version) {
 
 function loadSchema(json, file, doValidate, X3DJSONLD, success, failure) {
 	var versions = { "3.0":true,"3.1":true,"3.2":true,"3.3":true,"4.0":true }
-	var version = json.X3D["@version"];
+	var version = "4.0";
+	if (typeof json.X3D !== 'undefined') {
+		version = json.X3D["@version"];
+	}
 	if (!versions[version]) {
-		console.error("Can only validate version 3.0-4.0 presently. Switching version to 3.3.");
-		version = "3.3";
+		console.error("Can only validate version 3.0-4.0 presently. Switching version to 4.0.");
+		version = "4.0";
 	}
 	var validated_version = validate[version];
         if (typeof validated_version === 'undefined') {
 		var ajv = new Ajv({allErrors:true, verbose:true});
-		      if (typeof $ === 'function') {
-			      $.getJSON("../schema/x3d-"+version+"-JSONSchema.json", function(schemajson) {
+		      if (typeof $ === 'function' && typeof $.getJSON === 'function') {
+			      $.getJSON("./x3d-"+version+"-JSONSchema.json", function(schemajson) {
 				      validated_version = addSchema(ajv, schemajson, version);
 				      doValidate(json, validated_version, file, X3DJSONLD, success, undefined);
 				}).fail(function(e) {
