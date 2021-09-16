@@ -2,7 +2,7 @@
 . ./profile.sh
 npm install
 
-javac -cp "saxon9he.jar:." RunSaxon.java
+javac -cp "saxon-he-10.5.jar:." RunSaxon.java
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius

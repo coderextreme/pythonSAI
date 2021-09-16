@@ -84,7 +84,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <xsl:variable name="isX3D3" select="starts-with($x3dVersion,'3')"/>
     <xsl:variable name="isX3D4" select="starts-with($x3dVersion,'4')"/>
     
-    <!-- saxon9he problem: fails due to line length, licensing issue: saxon:line-length="10000" -->
+    <!-- saxon-he-10.5 problem: fails due to line length, licensing issue: saxon:line-length="10000" -->
     <!-- http://stackoverflow.com/questions/23084785/xslt-avoid-new-line-added-between-element-attributes/43301327#43301327 -->
     <xsl:output method="text" encoding="UTF-8"/> <!-- output methods: xml html text -->
     
