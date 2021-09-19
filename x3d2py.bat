@@ -5,14 +5,14 @@ set PYSAIHOME=.
 set X3DJSONLD=..\X3DJSONLD
 set PYTHONPATH=C:\Python27;c:\Python27\Scripts
 set PATH=%PYTHONPATH%;%JDK_HOME%\bin:%PATH%
-set CLASSPATH=.;%PYSAIHOME%\saxon-he-10.5.jar;%PYSAIHOME%\X3DJSAIL.4.0.classes.jar
+set CLASSPATH=.;%PYSAIHOME%\saxon-he-10.6.jar;%PYSAIHOME%\X3DJSAIL.4.0.classes.jar
 set PYTHON=python.exe
 set PIP=pip3.exe
 set NODE=node.exe
 @ECHO ON
 
-javac -cp "saxon-he-10.5.jar;." RunSaxon.java
+javac -cp "saxon-he-10.6.jar;." RunSaxon.java
 
-java -cp "saxon-he-10.5.jar;." RunSaxon ---overwrite *.x3d
+java -cp "saxon-he-10.6.jar;." RunSaxon ---overwrite *.x3d
 FOR %%i IN ("*.json") DO %NODE% json2py.js %%i
 

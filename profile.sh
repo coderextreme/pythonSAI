@@ -7,4 +7,4 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib/jvm/java-15-openjdk-amd64/lib
 export PYSAIHOME=.
 
 export PATH="${PYTHONPATH}:${PATH}"
-export CLASSPATH=".:${PYSAIHOME}/saxon-he-10.5.jar:${PYSAIHOME}/X3DJSAIL.4.0.full.jar"
+export CLASSPATH=".:${PYSAIHOME}/saxon-he-10.6.jar:${PYSAIHOME}/X3DJSAIL.4.0.full.jar"
