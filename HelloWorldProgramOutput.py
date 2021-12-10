@@ -1,8 +1,6 @@
 from x3dpsail import *
 X3D0 = X3D()
-X3D0.setCssClass("x3dModel.class")
 X3D0.setProfile("Full")
-X3D0.setStyle("x3dModel.style")
 X3D0.setVersion("4.0")
 #x3dVersionComparisonTest for this model: supportsX3dVersion(X3D.VERSION_3_0)=true
 head1 = head()
@@ -95,7 +93,7 @@ meta17.setContent("6 September 2016")
 head1.addMeta(meta17)
 meta18 = meta()
 meta18.setName("modified")
-meta18.setContent("2 August 2021")
+meta18.setContent("20 December 2020")
 
 head1.addMeta(meta18)
 meta19 = meta()
@@ -188,8 +186,6 @@ NavigationInfo36.setType(["EXAMINE","FLY","ANY"])
 Scene32.addChildren(NavigationInfo36)
 WorldInfo37 = WorldInfo()
 WorldInfo37.setDEF("WorldInfoDEF")
-WorldInfo37.setCssClass("worldInfoNode.class")
-WorldInfo37.setStyle("worldInfoNode.style")
 WorldInfo37.setTitle("HelloWorldProgram produced by X3D Java SAI Library (X3DJSAIL)")
 
 Scene32.addChildren(WorldInfo37)
@@ -319,7 +315,7 @@ MetadataString65.setValue(["checks MetadataSet addValue() method"])
 
 MetadataSet63.addValue(MetadataString65)
 
-Text62.setMetadata(MetadataSet63)
+Text62.setValue(MetadataSet63)
 FontStyle66 = FontStyle()
 FontStyle66.setJustify(["MIDDLE","MIDDLE"])
 
@@ -765,7 +761,7 @@ MetadataString141.setName("findThisNameValue")
 MetadataString141.setDEF("FindableMetadataStringTest")
 MetadataString141.setValue(["test case"])
 
-Shape140.setMetadata(MetadataString141)
+Shape140.setValue(MetadataString141)
 Appearance142 = Appearance()
 Appearance142.setDEF("DeclarativeAppearanceExample")
 #DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance

@@ -3,7 +3,7 @@
     "@profile":"Interchange",
     "@version":"3.0",
     "@xsd:noNamespaceSchemaLocation":"https://www.web3d.org/specifications/x3d-3.0.xsd",
-    "JSON schema":"https://www.web3d.org/specifications/x3d-3.3-JSONSchema.json",
+    "JSON schema":"https://www.web3d.org/specifications/x3d-4.0-JSONSchema.json",
     "head": {
         "meta": [
           {
@@ -88,7 +88,7 @@
           },
           {
             "@name":"translated",
-            "@content":"19 September 2021"
+            "@content":"10 December 2021"
           },
           {
             "@name":"generator",
@@ -144,7 +144,7 @@
           },
           { "NavigationInfo":
             {
-              "@type":["EXAMINE","WALK","FLY","ANY"]
+              "@type":"\"EXAMINE\" \"WALK\" \"FLY\" \"ANY\""
             }
           },
           { "Shape":

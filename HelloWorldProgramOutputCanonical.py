@@ -47,7 +47,7 @@ meta8.setContent("Example HelloWorldProgram creates an X3D model using the X3D J
 head1.addMeta(meta8)
 meta9 = meta()
 meta9.setName("reference")
-meta9.setContent("http://www.web3d.org/specifications/java/X3DJSAIL.html")
+meta9.setContent("https://www.web3d.org/specifications/java/X3DJSAIL.html")
 
 head1.addMeta(meta9)
 meta10 = meta()
@@ -72,12 +72,12 @@ meta13.setContent("X3D Java Scene Access Interface Library (X3DJSAIL)")
 head1.addMeta(meta13)
 meta14 = meta()
 meta14.setName("generator")
-meta14.setContent("http://www.web3d.org/specifications/java/examples/HelloWorldProgram.java")
+meta14.setContent("https://www.web3d.org/specifications/java/examples/HelloWorldProgram.java")
 
 head1.addMeta(meta14)
 meta15 = meta()
 meta15.setName("generator")
-meta15.setContent("Netbeans http://www.netbeans.org")
+meta15.setContent("Netbeans https://www.netbeans.org")
 
 head1.addMeta(meta15)
 meta16 = meta()
@@ -117,12 +117,12 @@ meta22.setContent("HelloWorldProgramOutput.html")
 head1.addMeta(meta22)
 meta23 = meta()
 meta23.setName("reference")
-meta23.setContent("https://savage.nps.edu/X3dValidator?url=http://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d")
+meta23.setContent("https://savage.nps.edu/X3dValidator?url=https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d")
 
 head1.addMeta(meta23)
 meta24 = meta()
 meta24.setName("identifier")
-meta24.setContent("http://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d")
+meta24.setContent("https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d")
 
 head1.addMeta(meta24)
 meta25 = meta()
@@ -181,7 +181,7 @@ Transform36.setDEF("LogoGeometryTransform")
 Transform36.setTranslation([0,1.5,0])
 Anchor37 = Anchor()
 Anchor37.setDescription("select for X3D Java SAI Library (X3DJSAIL) description")
-Anchor37.setUrl(["../X3DJSAIL.html","http://www.web3d.org/specifications/java/X3DJSAIL.html"])
+Anchor37.setUrl(["../X3DJSAIL.html","https://www.web3d.org/specifications/java/X3DJSAIL.html"])
 Shape38 = Shape()
 Shape38.setDEF("BoxShape")
 Appearance39 = Appearance()
@@ -193,7 +193,7 @@ Material40.setTransparency(0.1)
 
 Appearance39.setMaterial(Material40)
 ImageTexture41 = ImageTexture()
-ImageTexture41.setUrl(["images/X3dJavaSceneAccessInterfaceSaiLibrary.png","http://www.web3d.org/specifications/java/examples/images/X3dJavaSceneAccessInterfaceSaiLibrary.png"])
+ImageTexture41.setUrl(["images/X3dJavaSceneAccessInterfaceSaiLibrary.png","https://www.web3d.org/specifications/java/examples/images/X3dJavaSceneAccessInterfaceSaiLibrary.png"])
 
 Appearance39.setTexture(ImageTexture41)
 
@@ -299,7 +299,7 @@ Shape62.setDEF("ProxyShape")
 #alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'
 #alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'
 #alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})
-#reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html
+#reference: https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html
 Text63 = Text()
 Text63.setString(["One, Two, Text","","He said, \"Immel did it!\" \"\""])
 
@@ -462,7 +462,7 @@ Scene26.addChildren(ProtoDeclare78)
 ExternProtoDeclare88 = ExternProtoDeclare()
 ExternProtoDeclare88.setName("ArtDeco02Material")
 ExternProtoDeclare88.setAppinfo("this is a different Material node")
-ExternProtoDeclare88.setUrl(["http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"])
+ExternProtoDeclare88.setUrl(["https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"])
 #[HelloWorldProgram diagnostic] artDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\"
 field89 = field()
 field89.setName("description")
@@ -542,7 +542,7 @@ Shape100.setGeometry(Cylinder103)
 Scene26.addChildren(Shape100)
 Inline104 = Inline()
 Inline104.setDEF("inlineSceneDef")
-Inline104.setUrl(["someOtherScene.x3d","http://www.web3d.org/specifications/java/examples/someOtherScene.x3d"])
+Inline104.setUrl(["someOtherScene.x3d","https://www.web3d.org/specifications/java/examples/someOtherScene.x3d"])
 
 Scene26.addChildren(Inline104)
 IMPORT105 = IMPORT()
@@ -559,7 +559,7 @@ Scene26.addChildren(EXPORT106)
 ProtoDeclare107 = ProtoDeclare()
 ProtoDeclare107.setName("MaterialModulator")
 ProtoDeclare107.setAppinfo("mimic a Material node and modulate fields as an animation effect")
-ProtoDeclare107.setDocumentation("http://x3dgraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/MaterialModulatorIndex.html")
+ProtoDeclare107.setDocumentation("https://x3dgraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/MaterialModulatorIndex.html")
 ProtoInterface108 = ProtoInterface()
 field109 = field()
 field109.setName("enabled")
@@ -774,8 +774,8 @@ Sound140.setLocation([0,1.6,0])
 #set sound-ellipsoid location height at 1.6m to match typical avatar height
 AudioClip141 = AudioClip()
 AudioClip141.setDescription("chimes")
-AudioClip141.setUrl(["chimes.wav","http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"])
-#Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
+AudioClip141.setUrl(["chimes.wav","https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"])
+#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
 
 Sound140.setSource(AudioClip141)
 
@@ -785,8 +785,8 @@ Sound142.setLocation([0,1.6,0])
 #set sound-ellipsoid location height at 1.6m to match typical avatar height
 MovieTexture143 = MovieTexture()
 MovieTexture143.setDescription("mpgsys.mpg from ConformanceNist suite")
-MovieTexture143.setUrl(["mpgsys.mpg","http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"])
-#Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
+MovieTexture143.setUrl(["mpgsys.mpg","https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"])
+#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
 #Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"
 
 Sound142.setSource(MovieTexture143)
