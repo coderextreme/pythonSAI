@@ -1,4 +1,5 @@
 #!/bin/bash
+source ../X3DJSONLD/venv/Scripts/activate
 . ./profile.sh
 npm install
 
