@@ -10,6 +10,6 @@
     "jsonlint-mod": ">=1.7.6",
     "node-gyp": "*",
     "node-mkdirp": "*",
-    "@xmldom/xmldom": ">=0.8.3"
+    "@xmldom/xmldom": ">=0.8.4"
   }
 }
