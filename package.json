@@ -6,10 +6,11 @@
     "underscore": ">=1.13.1",
     "ajv": "^6.12.6",
     "ajv-i18n": "^3.6.0",
-    "java": "^0.12.2",
     "jsonlint-mod": ">=1.7.6",
     "node-gyp": "*",
     "node-mkdirp": "*",
-    "@xmldom/xmldom": "@xmldom/xmldom@~0.8.4"
+    "@xmldom/xmldom": ">=0.8.6",
+    "xslt3": "*",
+    "saxon-js": "*"
   }
 }
