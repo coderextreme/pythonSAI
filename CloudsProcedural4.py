@@ -1,179 +1,181 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.2")
-head1 = head()
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("CloudsProcedural4.x3d")
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.2"
+head1 = x3d.head()
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "CloudsProcedural4.x3d"
 
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("description")
-meta3.setContent("X3D utilizing ecmascript to develop quasi volumetric 3D clouds from png image textured billboard nodes.")
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "description"
+meta3.content = "X3D utilizing ecmascript to develop quasi volumetric 3D clouds from png image textured billboard nodes."
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("creator")
-meta4.setContent("Capt Darren W. Murphy")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "creator"
+meta4.content = "Capt Darren W. Murphy"
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("created")
-meta5.setContent("1 November 2007")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "created"
+meta5.content = "1 November 2007"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("modified")
-meta6.setContent("14 January 2014")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "modified"
+meta6.content = "14 January 2014"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("identifier")
-meta7.setContent("https://savage.nps.edu/Savage/Environment/Atmosphere/CloudsProcedural4.x3d")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "identifier"
+meta7.content = "https://savage.nps.edu/Savage/Environment/Atmosphere/CloudsProcedural4.x3d"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("generator")
-meta8.setContent("X3D-Edit, https://www.web3d.org/x3d/content/README.X3D-Edit.html")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "generator"
+meta8.content = "X3D-Edit, https://www.web3d.org/x3d/content/README.X3D-Edit.html"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("license")
-meta9.setContent("../../license.html")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "license"
+meta9.content = "../../license.html"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("TODO")
-meta10.setContent("fix links")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "TODO"
+meta10.content = "fix links"
 
-head1.addMeta(meta10)
+head1.children.append(meta10)
 
-X3D0.setHead(head1)
-Scene11 = Scene()
+X3D0.head = head1
+Scene11 = x3d.Scene()
 #A png image file for the cloud texture must be designated in the ecmascript node.
-Viewpoint12 = Viewpoint()
-Viewpoint12.setDescription("Main")
-Viewpoint12.setJump(False)
-Viewpoint12.setOrientation([0,1,0,1.57])
-Viewpoint12.setPosition([50000,1000,42000])
+Viewpoint12 = x3d.Viewpoint()
+Viewpoint12.description = "Main"
+Viewpoint12.jump = False
+Viewpoint12.orientation = [0,1,0,1.57]
+Viewpoint12.position = [50000,1000,42000]
 
-Scene11.addChildren(Viewpoint12)
-Viewpoint13 = Viewpoint()
-Viewpoint13.setDescription("Light House Tower")
-Viewpoint13.setJump(False)
-Viewpoint13.setOrientation([0,1,0,1.3])
-Viewpoint13.setPosition([45000,1290,44000])
+Scene11.children.append(Viewpoint12)
+Viewpoint13 = x3d.Viewpoint()
+Viewpoint13.description = "Light House Tower"
+Viewpoint13.jump = False
+Viewpoint13.orientation = [0,1,0,1.3]
+Viewpoint13.position = [45000,1290,44000]
 
-Scene11.addChildren(Viewpoint13)
-Viewpoint14 = Viewpoint()
-Viewpoint14.setDescription("centerWest")
-Viewpoint14.setJump(False)
-Viewpoint14.setOrientation([0,1,0,2.5])
-Viewpoint14.setPosition([48000,1000,20000])
+Scene11.children.append(Viewpoint13)
+Viewpoint14 = x3d.Viewpoint()
+Viewpoint14.description = "centerWest"
+Viewpoint14.jump = False
+Viewpoint14.orientation = [0,1,0,2.5]
+Viewpoint14.position = [48000,1000,20000]
 
-Scene11.addChildren(Viewpoint14)
-Background15 = Background()
-Background15.setGroundColor([0,0,1])
-Background15.setSkyColor([0,0,1])
+Scene11.children.append(Viewpoint14)
+Background15 = x3d.Background()
+Background15.groundColor = [0,0,1]
+Background15.skyColor = [0,0,1]
 
-Scene11.addChildren(Background15)
-DirectionalLight16 = DirectionalLight()
-DirectionalLight16.setAmbientIntensity(1)
-DirectionalLight16.setDirection([-1,0,0])
-DirectionalLight16.setGlobal(True)
+Scene11.children.append(Background15)
+DirectionalLight16 = x3d.DirectionalLight()
+DirectionalLight16.ambientIntensity = 1
+DirectionalLight16.direction = [-1,0,0]
+DirectionalLight16.global = True
 
-Scene11.addChildren(DirectionalLight16)
-Group17 = Group()
-Group17.setDEF("Terrain")
-Transform18 = Transform()
-Transform18.setScale([50,50,50])
-Transform18.setTranslation([25000,0,25000])
-Inline19 = Inline()
-Inline19.setUrl(["MontereyBayLargeMesh.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.x3d","MontereyBayLargeMesh.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.wrl"])
+Scene11.children.append(DirectionalLight16)
+Group17 = x3d.Group()
+Group17.DEF = "Terrain"
+Transform18 = x3d.Transform()
+Transform18.scale = [50,50,50]
+Transform18.translation = [25000,0,25000]
+Inline19 = x3d.Inline()
+Inline19.url = ["MontereyBayLargeMesh.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.x3d","MontereyBayLargeMesh.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/MontereyBayLargeMesh.wrl"]
 
-Transform18.addChildren(Inline19)
+Transform18.children.append(Inline19)
 
-Group17.addChildren(Transform18)
-Transform20 = Transform()
-Transform20.setRotation([1,0,0,1.57])
-Transform20.setTranslation([25000,0,25000])
-Shape21 = Shape()
-Rectangle2D22 = Rectangle2D()
-Rectangle2D22.setSize([77000,55000])
+Group17.children.append(Transform18)
+Transform20 = x3d.Transform()
+Transform20.rotation = [1,0,0,1.57]
+Transform20.translation = [25000,0,25000]
+Shape21 = x3d.Shape()
+Rectangle2D22 = x3d.Rectangle2D()
+Rectangle2D22.size = [77000,55000]
 
-Shape21.setGeometry(Rectangle2D22)
-Appearance23 = Appearance()
-ImageTexture24 = ImageTexture()
-ImageTexture24.setUrl(["ocean.png","https://savage.nps.edu/Savage/Environment/Atmosphere/ocean.png"])
+Shape21.geometry = Rectangle2D22
+Appearance23 = x3d.Appearance()
+ImageTexture24 = x3d.ImageTexture()
+ImageTexture24.url = ["ocean.png","https://savage.nps.edu/Savage/Environment/Atmosphere/ocean.png"]
 
-Appearance23.setTexture(ImageTexture24)
+Appearance23.texture = ImageTexture24
 
-Shape21.setAppearance(Appearance23)
+Shape21.appearance = Appearance23
 
-Transform20.addChildren(Shape21)
+Transform20.children.append(Shape21)
 
-Group17.addChildren(Transform20)
+Group17.children.append(Transform20)
 
-Scene11.addChildren(Group17)
-Group25 = Group()
-Group25.setDEF("Placemarks")
-Transform26 = Transform()
-Transform26.setScale([50,50,50])
-Transform26.setTranslation([45000,30,44000])
-Inline27 = Inline()
-Inline27.setUrl(["Lighthouse.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.x3d","Lighthouse.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.wrl"])
+Scene11.children.append(Group17)
+Group25 = x3d.Group()
+Group25.DEF = "Placemarks"
+Transform26 = x3d.Transform()
+Transform26.scale = [50,50,50]
+Transform26.translation = [45000,30,44000]
+Inline27 = x3d.Inline()
+Inline27.url = ["Lighthouse.x3d","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.x3d","Lighthouse.wrl","https://savage.nps.edu/Savage/Environment/Atmosphere/Lighthouse.wrl"]
 
-Transform26.addChildren(Inline27)
+Transform26.children.append(Inline27)
 
-Group25.addChildren(Transform26)
+Group25.children.append(Transform26)
 
-Scene11.addChildren(Group25)
-Group28 = Group()
-Group28.setDEF("Clouds")
-Transform29 = Transform()
-Transform29.setDEF("Cumulus")
+Scene11.children.append(Group25)
+Group28 = x3d.Group()
+Group28.DEF = "Clouds"
+Transform29 = x3d.Transform()
+Transform29.DEF = "Cumulus"
 
-Group28.addChildren(Transform29)
-Transform30 = Transform()
-Transform30.setDEF("Cirrus")
+Group28.children.append(Transform29)
+Transform30 = x3d.Transform()
+Transform30.DEF = "Cirrus"
 
-Group28.addChildren(Transform30)
-Transform31 = Transform()
-Transform31.setDEF("Fog")
+Group28.children.append(Transform30)
+Transform31 = x3d.Transform()
+Transform31.DEF = "Fog"
 
-Group28.addChildren(Transform31)
-Script32 = Script()
-Script32.setDEF("PixelScript")
-Script32.setDirectOutput(True)
-field33 = field()
-field33.setName("Cumulus")
-field33.setAccessType("initializeOnly")
-field33.setType("SFNode")
-Transform34 = Transform()
-Transform34.setUSE("Cumulus")
+Group28.children.append(Transform31)
+Script32 = x3d.Script()
+Script32.DEF = "PixelScript"
+Script32.directOutput = True
+field33 = x3d.field()
+field33.name = "Cumulus"
+field33.accessType = "initializeOnly"
+field33.type = "SFNode"
+Transform34 = x3d.Transform()
+Transform34.USE = "Cumulus"
 
-field33.addChildren(Transform34)
+field33.children.append(Transform34)
 
-Script32.addField(field33)
-field35 = field()
-field35.setName("Cirrus")
-field35.setAccessType("initializeOnly")
-field35.setType("SFNode")
-Transform36 = Transform()
-Transform36.setUSE("Cirrus")
+Script32.field.append(field33)
+field35 = x3d.field()
+field35.name = "Cirrus"
+field35.accessType = "initializeOnly"
+field35.type = "SFNode"
+Transform36 = x3d.Transform()
+Transform36.USE = "Cirrus"
 
-field35.addChildren(Transform36)
+field35.children.append(Transform36)
 
-Script32.addField(field35)
-field37 = field()
-field37.setName("Fog")
-field37.setAccessType("initializeOnly")
-field37.setType("SFNode")
+Script32.field.append(field35)
+field37 = x3d.field()
+field37.name = "Fog"
+field37.accessType = "initializeOnly"
+field37.type = "SFNode"
 
-Script32.addField(field37)
+Script32.field.append(field37)
 
-Script32.setSourceCode('''ecmascript:\n"+
+Script32.sourceCode = '''ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -553,18 +555,20 @@ Script32.setSourceCode('''ecmascript:\n"+
 "cumulus();\n"+
 "\n"+
 "cirrus();\n"+
-"}''')
+"}'''
 
-Group28.addChildren(Script32)
-DirectionalLight38 = DirectionalLight()
-DirectionalLight38.setAmbientIntensity(1)
-DirectionalLight38.setColor([1,0,0])
-DirectionalLight38.setDirection([-1,-1,0])
-DirectionalLight38.setGlobal(True)
+Group28.children.append(Script32)
+DirectionalLight38 = x3d.DirectionalLight()
+DirectionalLight38.ambientIntensity = 1
+DirectionalLight38.color = [1,0,0]
+DirectionalLight38.direction = [-1,-1,0]
+DirectionalLight38.global = True
 
-Group28.addChildren(DirectionalLight38)
+Group28.children.append(DirectionalLight38)
 
-Scene11.addChildren(Group28)
+Scene11.children.append(Group28)
 
-X3D0.setScene(Scene11)
-X3D0.toFileX3D("././CloudsProcedural4_RoundTrip.x3d")
+X3D0.Scene = Scene11
+f = open("././CloudsProcedural4_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

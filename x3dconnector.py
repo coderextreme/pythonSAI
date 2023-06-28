@@ -1,245 +1,247 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("x3dconnector")
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "x3dconnector"
 
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("creator")
-meta3.setContent("Lost, Doug Sanden I think")
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "creator"
+meta3.content = "Lost, Doug Sanden I think"
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("generator")
-meta4.setContent("manual")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "generator"
+meta4.content = "manual"
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("identifier")
-meta5.setContent("https://coderextreme.net/X3DJSONLD/x3dconnectorProto.x3d")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "identifier"
+meta5.content = "https://coderextreme.net/X3DJSONLD/x3dconnectorProto.x3d"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("description")
-meta6.setContent("a generic proto to connect two objects")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "description"
+meta6.content = "a generic proto to connect two objects"
 
-head1.addMeta(meta6)
+head1.children.append(meta6)
 
-X3D0.setHead(head1)
-Scene7 = Scene()
-Viewpoint8 = Viewpoint()
-Viewpoint8.setPosition([0,0,5])
-Viewpoint8.setDescription("Only Viewpoint")
+X3D0.head = head1
+Scene7 = x3d.Scene()
+Viewpoint8 = x3d.Viewpoint()
+Viewpoint8.position = [0,0,5]
+Viewpoint8.description = "Only Viewpoint"
 
-Scene7.addChildren(Viewpoint8)
-Background9 = Background()
-Background9.setSkyColor([0.4,0.4,0.4])
+Scene7.children.append(Viewpoint8)
+Background9 = x3d.Background()
+Background9.skyColor = [0.4,0.4,0.4]
 
-Scene7.addChildren(Background9)
-Transform10 = Transform()
-Transform10.setDEF("G1")
-Shape11 = Shape()
-Appearance12 = Appearance()
-Material13 = Material()
-Material13.setDiffuseColor([0.7,0.2,0.2])
+Scene7.children.append(Background9)
+Transform10 = x3d.Transform()
+Transform10.DEF = "G1"
+Shape11 = x3d.Shape()
+Appearance12 = x3d.Appearance()
+Material13 = x3d.Material()
+Material13.diffuseColor = [0.7,0.2,0.2]
 
-Appearance12.setMaterial(Material13)
+Appearance12.material = Material13
 
-Shape11.setAppearance(Appearance12)
-Sphere14 = Sphere()
-Sphere14.setRadius(0.1)
+Shape11.appearance = Appearance12
+Sphere14 = x3d.Sphere()
+Sphere14.radius = 0.1
 
-Shape11.setGeometry(Sphere14)
+Shape11.geometry = Sphere14
 
-Transform10.addChildren(Shape11)
-PlaneSensor15 = PlaneSensor()
-PlaneSensor15.setDescription("Grab to move")
-PlaneSensor15.setDEF("PS1")
+Transform10.children.append(Shape11)
+PlaneSensor15 = x3d.PlaneSensor()
+PlaneSensor15.description = "Grab to move"
+PlaneSensor15.DEF = "PS1"
 
-Transform10.addChildren(PlaneSensor15)
-ROUTE16 = ROUTE()
-ROUTE16.setFromNode("PS1")
-ROUTE16.setFromField("translation_changed")
-ROUTE16.setToNode("G1")
-ROUTE16.setToField("set_translation")
+Transform10.children.append(PlaneSensor15)
+ROUTE16 = x3d.ROUTE()
+ROUTE16.fromNode = "PS1"
+ROUTE16.fromField = "translation_changed"
+ROUTE16.toNode = "G1"
+ROUTE16.toField = "set_translation"
 
-Transform10.addChildren(ROUTE16)
+Transform10.children.append(ROUTE16)
 
-Scene7.addChildren(Transform10)
-Transform17 = Transform()
-Transform17.setDEF("G2")
-Transform17.setTranslation([1,-1,0.01])
-Shape18 = Shape()
-Appearance19 = Appearance()
-Material20 = Material()
-Material20.setDiffuseColor([0.2,0.7,0.2])
+Scene7.children.append(Transform10)
+Transform17 = x3d.Transform()
+Transform17.DEF = "G2"
+Transform17.translation = [1,-1,0.01]
+Shape18 = x3d.Shape()
+Appearance19 = x3d.Appearance()
+Material20 = x3d.Material()
+Material20.diffuseColor = [0.2,0.7,0.2]
 
-Appearance19.setMaterial(Material20)
+Appearance19.material = Material20
 
-Shape18.setAppearance(Appearance19)
-Sphere21 = Sphere()
-Sphere21.setRadius(0.1)
+Shape18.appearance = Appearance19
+Sphere21 = x3d.Sphere()
+Sphere21.radius = 0.1
 
-Shape18.setGeometry(Sphere21)
+Shape18.geometry = Sphere21
 
-Transform17.addChildren(Shape18)
-PlaneSensor22 = PlaneSensor()
-PlaneSensor22.setDescription("Grab to move")
-PlaneSensor22.setOffset([1,-1,0.01])
-PlaneSensor22.setDEF("PS2")
+Transform17.children.append(Shape18)
+PlaneSensor22 = x3d.PlaneSensor()
+PlaneSensor22.description = "Grab to move"
+PlaneSensor22.offset = [1,-1,0.01]
+PlaneSensor22.DEF = "PS2"
 
-Transform17.addChildren(PlaneSensor22)
-ROUTE23 = ROUTE()
-ROUTE23.setFromNode("PS2")
-ROUTE23.setFromField("translation_changed")
-ROUTE23.setToNode("G2")
-ROUTE23.setToField("set_translation")
+Transform17.children.append(PlaneSensor22)
+ROUTE23 = x3d.ROUTE()
+ROUTE23.fromNode = "PS2"
+ROUTE23.fromField = "translation_changed"
+ROUTE23.toNode = "G2"
+ROUTE23.toField = "set_translation"
 
-Transform17.addChildren(ROUTE23)
+Transform17.children.append(ROUTE23)
 
-Scene7.addChildren(Transform17)
-Transform24 = Transform()
-Transform24.setDEF("transC1")
-Transform25 = Transform()
-Transform25.setDEF("rotscaleC1")
-Shape26 = Shape()
-Appearance27 = Appearance()
-Material28 = Material()
-Material28.setDiffuseColor([0.2,0.7,0.7])
-Material28.setTransparency(0.5)
+Scene7.children.append(Transform17)
+Transform24 = x3d.Transform()
+Transform24.DEF = "transC1"
+Transform25 = x3d.Transform()
+Transform25.DEF = "rotscaleC1"
+Shape26 = x3d.Shape()
+Appearance27 = x3d.Appearance()
+Material28 = x3d.Material()
+Material28.diffuseColor = [0.2,0.7,0.7]
+Material28.transparency = 0.5
 
-Appearance27.setMaterial(Material28)
+Appearance27.material = Material28
 
-Shape26.setAppearance(Appearance27)
-Cylinder29 = Cylinder()
-Cylinder29.setRadius(0.05)
+Shape26.appearance = Appearance27
+Cylinder29 = x3d.Cylinder()
+Cylinder29.radius = 0.05
 
-Shape26.setGeometry(Cylinder29)
+Shape26.geometry = Cylinder29
 
-Transform25.addChildren(Shape26)
+Transform25.children.append(Shape26)
 
-Transform24.addChildren(Transform25)
+Transform24.children.append(Transform25)
 
-Scene7.addChildren(Transform24)
-ProtoDeclare30 = ProtoDeclare()
-ProtoDeclare30.setName("x3dconnector")
-ProtoInterface31 = ProtoInterface()
-field32 = field()
-field32.setName("startnode")
-field32.setAccessType("initializeOnly")
-field32.setType("SFNode")
+Scene7.children.append(Transform24)
+ProtoDeclare30 = x3d.ProtoDeclare()
+ProtoDeclare30.name = "x3dconnector"
+ProtoInterface31 = x3d.ProtoInterface()
+field32 = x3d.field()
+field32.name = "startnode"
+field32.accessType = "initializeOnly"
+field32.type = "SFNode"
 
-ProtoInterface31.addField(field32)
-field33 = field()
-field33.setName("endnode")
-field33.setAccessType("initializeOnly")
-field33.setType("SFNode")
+ProtoInterface31.field.append(field32)
+field33 = x3d.field()
+field33.name = "endnode"
+field33.accessType = "initializeOnly"
+field33.type = "SFNode"
 
-ProtoInterface31.addField(field33)
-field34 = field()
-field34.setName("transnode")
-field34.setAccessType("initializeOnly")
-field34.setType("SFNode")
+ProtoInterface31.field.append(field33)
+field34 = x3d.field()
+field34.name = "transnode"
+field34.accessType = "initializeOnly"
+field34.type = "SFNode"
 
-ProtoInterface31.addField(field34)
-field35 = field()
-field35.setName("rotscalenode")
-field35.setAccessType("initializeOnly")
-field35.setType("SFNode")
+ProtoInterface31.field.append(field34)
+field35 = x3d.field()
+field35.name = "rotscalenode"
+field35.accessType = "initializeOnly"
+field35.type = "SFNode"
 
-ProtoInterface31.addField(field35)
-field36 = field()
-field36.setName("set_startpoint")
-field36.setAccessType("inputOnly")
-field36.setType("SFVec3f")
+ProtoInterface31.field.append(field35)
+field36 = x3d.field()
+field36.name = "set_startpoint"
+field36.accessType = "inputOnly"
+field36.type = "SFVec3f"
 
-ProtoInterface31.addField(field36)
-field37 = field()
-field37.setName("set_endpoint")
-field37.setAccessType("inputOnly")
-field37.setType("SFVec3f")
+ProtoInterface31.field.append(field36)
+field37 = x3d.field()
+field37.name = "set_endpoint"
+field37.accessType = "inputOnly"
+field37.type = "SFVec3f"
 
-ProtoInterface31.addField(field37)
+ProtoInterface31.field.append(field37)
 
-ProtoDeclare30.setProtoInterface(ProtoInterface31)
-ProtoBody38 = ProtoBody()
-Script39 = Script()
-Script39.setDEF("S1")
-field40 = field()
-field40.setName("startnode")
-field40.setAccessType("initializeOnly")
-field40.setType("SFNode")
+ProtoDeclare30.ProtoInterface = ProtoInterface31
+ProtoBody38 = x3d.ProtoBody()
+Script39 = x3d.Script()
+Script39.DEF = "S1"
+field40 = x3d.field()
+field40.name = "startnode"
+field40.accessType = "initializeOnly"
+field40.type = "SFNode"
 
-Script39.addField(field40)
-field41 = field()
-field41.setName("endnode")
-field41.setAccessType("initializeOnly")
-field41.setType("SFNode")
+Script39.field.append(field40)
+field41 = x3d.field()
+field41.name = "endnode"
+field41.accessType = "initializeOnly"
+field41.type = "SFNode"
 
-Script39.addField(field41)
-field42 = field()
-field42.setName("transnode")
-field42.setAccessType("initializeOnly")
-field42.setType("SFNode")
+Script39.field.append(field41)
+field42 = x3d.field()
+field42.name = "transnode"
+field42.accessType = "initializeOnly"
+field42.type = "SFNode"
 
-Script39.addField(field42)
-field43 = field()
-field43.setName("rotscalenode")
-field43.setAccessType("initializeOnly")
-field43.setType("SFNode")
+Script39.field.append(field42)
+field43 = x3d.field()
+field43.name = "rotscalenode"
+field43.accessType = "initializeOnly"
+field43.type = "SFNode"
 
-Script39.addField(field43)
-field44 = field()
-field44.setName("set_startpoint")
-field44.setAccessType("inputOnly")
-field44.setType("SFVec3f")
+Script39.field.append(field43)
+field44 = x3d.field()
+field44.name = "set_startpoint"
+field44.accessType = "inputOnly"
+field44.type = "SFVec3f"
 
-Script39.addField(field44)
-field45 = field()
-field45.setName("set_endpoint")
-field45.setAccessType("inputOnly")
-field45.setType("SFVec3f")
+Script39.field.append(field44)
+field45 = x3d.field()
+field45.name = "set_endpoint"
+field45.accessType = "inputOnly"
+field45.type = "SFVec3f"
 
-Script39.addField(field45)
-IS46 = IS()
-connect47 = connect()
-connect47.setNodeField("startnode")
-connect47.setProtoField("startnode")
+Script39.field.append(field45)
+IS46 = x3d.IS()
+connect47 = x3d.connect()
+connect47.nodeField = "startnode"
+connect47.protoField = "startnode"
 
-IS46.addConnect(connect47)
-connect48 = connect()
-connect48.setNodeField("endnode")
-connect48.setProtoField("endnode")
+IS46.connect.append(connect47)
+connect48 = x3d.connect()
+connect48.nodeField = "endnode"
+connect48.protoField = "endnode"
 
-IS46.addConnect(connect48)
-connect49 = connect()
-connect49.setNodeField("transnode")
-connect49.setProtoField("transnode")
+IS46.connect.append(connect48)
+connect49 = x3d.connect()
+connect49.nodeField = "transnode"
+connect49.protoField = "transnode"
 
-IS46.addConnect(connect49)
-connect50 = connect()
-connect50.setNodeField("rotscalenode")
-connect50.setProtoField("rotscalenode")
+IS46.connect.append(connect49)
+connect50 = x3d.connect()
+connect50.nodeField = "rotscalenode"
+connect50.protoField = "rotscalenode"
 
-IS46.addConnect(connect50)
-connect51 = connect()
-connect51.setNodeField("set_startpoint")
-connect51.setProtoField("set_startpoint")
+IS46.connect.append(connect50)
+connect51 = x3d.connect()
+connect51.nodeField = "set_startpoint"
+connect51.protoField = "set_startpoint"
 
-IS46.addConnect(connect51)
-connect52 = connect()
-connect52.setNodeField("set_endpoint")
-connect52.setProtoField("set_endpoint")
+IS46.connect.append(connect51)
+connect52 = x3d.connect()
+connect52.nodeField = "set_endpoint"
+connect52.protoField = "set_endpoint"
 
-IS46.addConnect(connect52)
+IS46.connect.append(connect52)
 
-Script39.setIS(IS46)
+Script39.IS = IS46
 
-Script39.setSourceCode('''ecmascript:\n"+
+Script39.sourceCode = '''ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+
@@ -279,72 +281,74 @@ Script39.setSourceCode('''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }''')
+"        }'''
 
-ProtoBody38.addChildren(Script39)
+ProtoBody38.children.append(Script39)
 
-ProtoDeclare30.setProtoBody(ProtoBody38)
+ProtoDeclare30.ProtoBody = ProtoBody38
 
-Scene7.addChildren(ProtoDeclare30)
-ProtoInstance53 = ProtoInstance()
-ProtoInstance53.setName("x3dconnector")
-ProtoInstance53.setDEF("connector1")
-fieldValue54 = fieldValue()
-fieldValue54.setName("startnode")
-Transform55 = Transform()
-Transform55.setUSE("G1")
+Scene7.children.append(ProtoDeclare30)
+ProtoInstance53 = x3d.ProtoInstance()
+ProtoInstance53.name = "x3dconnector"
+ProtoInstance53.DEF = "connector1"
+fieldValue54 = x3d.fieldValue()
+fieldValue54.name = "startnode"
+Transform55 = x3d.Transform()
+Transform55.USE = "G1"
 
-fieldValue54.addChildren(Transform55)
+fieldValue54.children.append(Transform55)
 
-ProtoInstance53.addFieldValue(fieldValue54)
-fieldValue56 = fieldValue()
-fieldValue56.setName("endnode")
-Transform57 = Transform()
-Transform57.setUSE("G2")
+ProtoInstance53.fieldValue.append(fieldValue54)
+fieldValue56 = x3d.fieldValue()
+fieldValue56.name = "endnode"
+Transform57 = x3d.Transform()
+Transform57.USE = "G2"
 
-fieldValue56.addChildren(Transform57)
+fieldValue56.children.append(Transform57)
 
-ProtoInstance53.addFieldValue(fieldValue56)
-fieldValue58 = fieldValue()
-fieldValue58.setName("transnode")
-Transform59 = Transform()
-Transform59.setUSE("transC1")
+ProtoInstance53.fieldValue.append(fieldValue56)
+fieldValue58 = x3d.fieldValue()
+fieldValue58.name = "transnode"
+Transform59 = x3d.Transform()
+Transform59.USE = "transC1"
 
-fieldValue58.addChildren(Transform59)
+fieldValue58.children.append(Transform59)
 
-ProtoInstance53.addFieldValue(fieldValue58)
-fieldValue60 = fieldValue()
-fieldValue60.setName("rotscalenode")
-Transform61 = Transform()
-Transform61.setUSE("rotscaleC1")
+ProtoInstance53.fieldValue.append(fieldValue58)
+fieldValue60 = x3d.fieldValue()
+fieldValue60.name = "rotscalenode"
+Transform61 = x3d.Transform()
+Transform61.USE = "rotscaleC1"
 
-fieldValue60.addChildren(Transform61)
+fieldValue60.children.append(Transform61)
 
-ProtoInstance53.addFieldValue(fieldValue60)
-fieldValue62 = fieldValue()
-fieldValue62.setName("set_startpoint")
+ProtoInstance53.fieldValue.append(fieldValue60)
+fieldValue62 = x3d.fieldValue()
+fieldValue62.name = "set_startpoint"
 
-ProtoInstance53.addFieldValue(fieldValue62)
-fieldValue63 = fieldValue()
-fieldValue63.setName("set_endpoint")
+ProtoInstance53.fieldValue.append(fieldValue62)
+fieldValue63 = x3d.fieldValue()
+fieldValue63.name = "set_endpoint"
 
-ProtoInstance53.addFieldValue(fieldValue63)
+ProtoInstance53.fieldValue.append(fieldValue63)
 
-Scene7.addChildren(ProtoInstance53)
-ROUTE64 = ROUTE()
-ROUTE64.setFromNode("G1")
-ROUTE64.setFromField("translation_changed")
-ROUTE64.setToNode("connector1")
-ROUTE64.setToField("set_startpoint")
+Scene7.children.append(ProtoInstance53)
+ROUTE64 = x3d.ROUTE()
+ROUTE64.fromNode = "G1"
+ROUTE64.fromField = "translation_changed"
+ROUTE64.toNode = "connector1"
+ROUTE64.toField = "set_startpoint"
 
-Scene7.addChildren(ROUTE64)
-ROUTE65 = ROUTE()
-ROUTE65.setFromNode("G2")
-ROUTE65.setFromField("translation_changed")
-ROUTE65.setToNode("connector1")
-ROUTE65.setToField("set_endpoint")
+Scene7.children.append(ROUTE64)
+ROUTE65 = x3d.ROUTE()
+ROUTE65.fromNode = "G2"
+ROUTE65.fromField = "translation_changed"
+ROUTE65.toNode = "connector1"
+ROUTE65.toField = "set_endpoint"
 
-Scene7.addChildren(ROUTE65)
+Scene7.children.append(ROUTE65)
 
-X3D0.setScene(Scene7)
-X3D0.toFileX3D("././x3dconnector_RoundTrip.x3d")
+X3D0.Scene = Scene7
+f = open("././x3dconnector_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

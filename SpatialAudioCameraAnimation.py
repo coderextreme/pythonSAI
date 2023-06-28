@@ -1,297 +1,309 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Full")
-X3D0.setVersion("4.0")
-head1 = head()
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("SpatialAudioCameraAnimation.x3d")
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Full"
+X3D0.version = "4.0"
+head1 = x3d.head()
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "SpatialAudioCameraAnimation.x3d"
 
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("description")
-meta3.setContent("In the last demo, there are two sound sources in different positions. Through the immersion in the X3D scene the user could attend a rational navigation. Whenever the camera moves in the direction of an existing sound source, the strength of this source increases, while the sound strength of the other (the second one) decreases and vice versa. Through this process, great realism of the scene is achieved, since it emulates the spatial sound in real world.")
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "description"
+meta3.content = "In the last demo, there are two sound sources in different positions. Through the immersion in the X3D scene the user could attend a rational navigation. Whenever the camera moves in the direction of an existing sound source, the strength of this source increases, while the sound strength of the other (the second one) decreases and vice versa. Through this process, great realism of the scene is achieved, since it emulates the spatial sound in real world."
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("info")
-meta4.setContent("This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API.")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "info"
+meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("creator")
-meta5.setContent("Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "creator"
+meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("created")
-meta6.setContent("28 October 2020")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "created"
+meta6.content = "28 October 2020"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("modified")
-meta7.setContent("5 December 2021")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "modified"
+meta7.content = "5 December 2021"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("reference")
-meta8.setContent("CHANGELOG.txt")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "reference"
+meta8.content = "CHANGELOG.txt"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("TODO")
-meta9.setContent("credit for audio files")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "TODO"
+meta9.content = "credit for audio files"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("reference")
-meta10.setContent("https://www.medialab.hmu.gr/minipages/x3domAudio")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "reference"
+meta10.content = "https://www.medialab.hmu.gr/minipages/x3domAudio"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("identifier")
-meta11.setContent("https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SpatialAudioCameraAnimation.x3d")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "identifier"
+meta11.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SpatialAudioCameraAnimation.x3d"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("generator")
-meta12.setContent("X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "generator"
+meta12.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("license")
-meta13.setContent("../license.html")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "license"
+meta13.content = "../license.html"
 
-head1.addMeta(meta13)
+head1.children.append(meta13)
 
-X3D0.setHead(head1)
-Scene14 = Scene()
-WorldInfo15 = WorldInfo()
-WorldInfo15.setTitle("SpatialAudioCameraAnimation.x3d")
+X3D0.head = head1
+Scene14 = x3d.Scene()
+WorldInfo15 = x3d.WorldInfo()
+WorldInfo15.title = "SpatialAudioCameraAnimation.x3d"
 
-Scene14.addChildren(WorldInfo15)
-NavigationInfo16 = NavigationInfo()
+Scene14.children.append(WorldInfo15)
+NavigationInfo16 = x3d.NavigationInfo()
 
-Scene14.addChildren(NavigationInfo16)
-Background17 = Background()
-Background17.setBackUrl(["images/generic/BK1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/BK1.png"])
-Background17.setBottomUrl(["images/generic/DN1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/DN1.png"])
-Background17.setFrontUrl(["images/generic/FR1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/FR1.png"])
-Background17.setLeftUrl(["images/generic/LF1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/LF1.png"])
-Background17.setRightUrl(["images/generic/RT1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/RT1.png"])
-Background17.setTopUrl(["images/generic/UP1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/UP1.png"])
+Scene14.children.append(NavigationInfo16)
+Background17 = x3d.Background()
+Background17.backUrl = ["images/generic/BK1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/BK1.png"]
+Background17.bottomUrl = ["images/generic/DN1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/DN1.png"]
+Background17.frontUrl = ["images/generic/FR1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/FR1.png"]
+Background17.leftUrl = ["images/generic/LF1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/LF1.png"]
+Background17.rightUrl = ["images/generic/RT1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/RT1.png"]
+Background17.topUrl = ["images/generic/UP1.png","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/images/generic/UP1.png"]
 
-Scene14.addChildren(Background17)
-Viewpoint18 = Viewpoint()
-Viewpoint18.setDEF("Camera001")
-Viewpoint18.setDescription("Viewpoint is like camera, prepositioned in locations (and directions) of interest. In this example the camera is the \"ears of the user\". So, if the trackCurrentView field from ListenerPointSource is TRUE then position and orientation matches the users current view")
-Viewpoint18.setOrientation([1,0,0,-0.523599])
-Viewpoint18.setPosition([0,2000,3500])
+Scene14.children.append(Background17)
+Viewpoint18 = x3d.Viewpoint()
+Viewpoint18.DEF = "Camera001"
+Viewpoint18.description = "Viewpoint is like camera, prepositioned in locations (and directions) of interest. In this example the camera is the \"ears of the user\". So, if the trackCurrentView field from ListenerPointSource is TRUE then position and orientation matches the users current view"
+Viewpoint18.orientation = [1,0,0,-0.523599]
+Viewpoint18.position = [0,2000,3500]
 
-Scene14.addChildren(Viewpoint18)
-TimeSensor19 = TimeSensor()
-TimeSensor19.setDEF("TIMER")
-TimeSensor19.setCycleInterval(33.333332)
-TimeSensor19.setLoop(True)
+Scene14.children.append(Viewpoint18)
+TimeSensor19 = x3d.TimeSensor()
+TimeSensor19.DEF = "TIMER"
+TimeSensor19.cycleInterval = 33.333332
+TimeSensor19.loop = True
 
-Scene14.addChildren(TimeSensor19)
-PositionInterpolator20 = PositionInterpolator()
-PositionInterpolator20.setDEF("Camera001-POS-INTERP")
-PositionInterpolator20.setKey([0,0.25,0.5,0.75,1])
-PositionInterpolator20.setKeyValue([0,2000,3500,0,2000,0,0,2000,-3500,0,2000,0,0,2000,3500])
+Scene14.children.append(TimeSensor19)
+PositionInterpolator20 = x3d.PositionInterpolator()
+PositionInterpolator20.DEF = "Camera001-POS-INTERP"
+PositionInterpolator20.key = [0,0.25,0.5,0.75,1]
+PositionInterpolator20.keyValue = (0.0000,2000.0000,3500.0000,0.0000,2000.0000,0.0000,0.0000,2000.0000,-3500.0000,0.0000,2000.0000,0.0000,0.0000,2000.0000,3500.0000)
 
-Scene14.addChildren(PositionInterpolator20)
-OrientationInterpolator21 = OrientationInterpolator()
-OrientationInterpolator21.setDEF("Camera001-ROT-INTERP")
-OrientationInterpolator21.setKey([0,0.25,0.5,0.75,1])
-OrientationInterpolator21.setKeyValue([1,0,0,-0.523599,0.99999,0.003554,0.002727,-1.309007,0,-0.965926,-0.258819,-3.141593,0.002282,-0.793351,-0.60876,-3.135645,1,-0.000001,0,-0.523599])
+Scene14.children.append(PositionInterpolator20)
+OrientationInterpolator21 = x3d.OrientationInterpolator()
+OrientationInterpolator21.DEF = "Camera001-ROT-INTERP"
+OrientationInterpolator21.key = [0,0.25,0.5,0.75,1]
+OrientationInterpolator21.keyValue = (1.0000,0.0000,0.0000,-0.5236,1.0000,0.0036,0.0027,-1.3090,0.0000,-0.9659,-0.2588,-3.1416,0.0023,-0.7934,-0.6088,-3.1356,1.0000,-0.0000,0.0000,-0.5236)
 
-Scene14.addChildren(OrientationInterpolator21)
-ROUTE22 = ROUTE()
-ROUTE22.setFromField("fraction_changed")
-ROUTE22.setFromNode("TIMER")
-ROUTE22.setToField("set_fraction")
-ROUTE22.setToNode("Camera001-POS-INTERP")
+Scene14.children.append(OrientationInterpolator21)
+ROUTE22 = x3d.ROUTE()
+ROUTE22.fromField = "fraction_changed"
+ROUTE22.fromNode = "TIMER"
+ROUTE22.toField = "set_fraction"
+ROUTE22.toNode = "Camera001-POS-INTERP"
 
-Scene14.addChildren(ROUTE22)
-ROUTE23 = ROUTE()
-ROUTE23.setFromField("value_changed")
-ROUTE23.setFromNode("Camera001-POS-INTERP")
-ROUTE23.setToField("set_position")
-ROUTE23.setToNode("Camera001")
+Scene14.children.append(ROUTE22)
+ROUTE23 = x3d.ROUTE()
+ROUTE23.fromField = "value_changed"
+ROUTE23.fromNode = "Camera001-POS-INTERP"
+ROUTE23.toField = "set_position"
+ROUTE23.toNode = "Camera001"
 
-Scene14.addChildren(ROUTE23)
-ROUTE24 = ROUTE()
-ROUTE24.setFromField("fraction_changed")
-ROUTE24.setFromNode("TIMER")
-ROUTE24.setToField("set_fraction")
-ROUTE24.setToNode("Camera001-ROT-INTERP")
+Scene14.children.append(ROUTE23)
+ROUTE24 = x3d.ROUTE()
+ROUTE24.fromField = "fraction_changed"
+ROUTE24.fromNode = "TIMER"
+ROUTE24.toField = "set_fraction"
+ROUTE24.toNode = "Camera001-ROT-INTERP"
 
-Scene14.addChildren(ROUTE24)
-ROUTE25 = ROUTE()
-ROUTE25.setFromField("value_changed")
-ROUTE25.setFromNode("Camera001-ROT-INTERP")
-ROUTE25.setToField("set_orientation")
-ROUTE25.setToNode("Camera001")
+Scene14.children.append(ROUTE24)
+ROUTE25 = x3d.ROUTE()
+ROUTE25.fromField = "value_changed"
+ROUTE25.fromNode = "Camera001-ROT-INTERP"
+ROUTE25.toField = "set_orientation"
+ROUTE25.toNode = "Camera001"
 
-Scene14.addChildren(ROUTE25)
-Transform26 = Transform()
-Transform26.setDEF("Floor")
-Transform26.setTranslation([1.241,0,0.358])
-Shape27 = Shape()
-Appearance28 = Appearance()
-Appearance28.setDEF("WireColor")
-Material29 = Material()
-Material29.setDiffuseColor([0.122,0.114,0.125])
+Scene14.children.append(ROUTE25)
+Transform26 = x3d.Transform()
+Transform26.DEF = "Floor"
+Transform26.translation = [1.241,0,0.358]
+Shape27 = x3d.Shape()
+Appearance28 = x3d.Appearance()
+Appearance28.DEF = "WireColor"
+Material29 = x3d.Material()
+Material29.diffuseColor = [0.122,0.114,0.125]
 
-Appearance28.setMaterial(Material29)
+Appearance28.material = Material29
 
-Shape27.setAppearance(Appearance28)
-Box30 = Box()
-Box30.setSize([2000,1,2000])
+Shape27.appearance = Appearance28
+Box30 = x3d.Box()
+Box30.size = [2000,1,2000]
 
-Shape27.setGeometry(Box30)
+Shape27.geometry = Box30
 
-Transform26.addChildren(Shape27)
+Transform26.children.append(Shape27)
 
-Scene14.addChildren(Transform26)
-Transform31 = Transform()
-Transform31.setDEF("TransformAudio1")
-Transform31.setTranslation([-933.123474,0,-926.253235])
-Shape32 = Shape()
-Appearance33 = Appearance()
-Appearance33.setDEF("WireColor_1")
-Material34 = Material()
-Material34.setDiffuseColor([0.690196,0.101961,0.101961])
+Scene14.children.append(Transform26)
+Transform31 = x3d.Transform()
+Transform31.DEF = "TransformAudio1"
+Transform31.translation = [-933.123474,0,-926.253235]
+Shape32 = x3d.Shape()
+Appearance33 = x3d.Appearance()
+Appearance33.DEF = "WireColor_1"
+Material34 = x3d.Material()
+Material34.diffuseColor = [0.690196,0.101961,0.101961]
 
-Appearance33.setMaterial(Material34)
+Appearance33.material = Material34
 
-Shape32.setAppearance(Appearance33)
-Sphere35 = Sphere()
-Sphere35.setRadius(100)
+Shape32.appearance = Appearance33
+Sphere35 = x3d.Sphere()
+Sphere35.radius = 100
 
-Shape32.setGeometry(Sphere35)
+Shape32.geometry = Sphere35
 
-Transform31.addChildren(Shape32)
-Billboard36 = Billboard()
-Transform37 = Transform()
-Transform37.setDEF("violin")
-Transform37.setRotation([1,0,0,-0.5])
-Transform37.setScale([100,100,100])
-Transform37.setTranslation([0,100,0])
-Shape38 = Shape()
-Appearance39 = Appearance()
-Material40 = Material()
-Material40.setAmbientIntensity(0.0933)
-Material40.setDiffuseColor([1,1,1])
-Material40.setShininess(0.51)
-Material40.setSpecularColor([0.46,0.46,0.46])
+Transform31.children.append(Shape32)
+Billboard36 = x3d.Billboard()
+Transform37 = x3d.Transform()
+Transform37.DEF = "violin"
+Transform37.rotation = [1,0,0,-0.5]
+Transform37.scale = [100,100,100]
+Transform37.translation = [0,100,0]
+Shape38 = x3d.Shape()
+Appearance39 = x3d.Appearance()
+Material40 = x3d.Material()
+Material40.ambientIntensity = 0.0933
+Material40.diffuseColor = [1,1,1]
+Material40.shininess = 0.51
+Material40.specularColor = [0.46,0.46,0.46]
 
-Appearance39.setMaterial(Material40)
+Appearance39.material = Material40
 
-Shape38.setAppearance(Appearance39)
-Text41 = Text()
-Text41.setString(["Violin"])
-FontStyle42 = FontStyle()
-FontStyle42.setDEF("ModelFontStyle")
-FontStyle42.setFamily(["Times","SERIF"])
-FontStyle42.setStyle("BOLD")
+Shape38.appearance = Appearance39
+Text41 = x3d.Text()
+Text41.string = ["Violin"]
+FontStyle42 = x3d.FontStyle()
+FontStyle42.DEF = "ModelFontStyle"
+FontStyle42.family = ["Times","SERIF"]
+FontStyle42.style = "BOLD"
 
-Text41.setFontStyle(FontStyle42)
+Text41.fontStyle = FontStyle42
 
-Shape38.setGeometry(Text41)
+Shape38.geometry = Text41
 
-Transform37.addChildren(Shape38)
+Transform37.children.append(Shape38)
 
-Billboard36.addChildren(Transform37)
+Billboard36.children.append(Transform37)
 
-Transform31.addChildren(Billboard36)
+Transform31.children.append(Billboard36)
 
-Scene14.addChildren(Transform31)
-Transform43 = Transform()
-Transform43.setDEF("TransformAudio2")
-Transform43.setTranslation([933.475586,0,924.423218])
-Shape44 = Shape()
-Appearance45 = Appearance()
-Appearance45.setDEF("WireColor_2")
-Material46 = Material()
-Material46.setDiffuseColor([0.105882,0.694118,0.580392])
+Scene14.children.append(Transform31)
+Transform43 = x3d.Transform()
+Transform43.DEF = "TransformAudio2"
+Transform43.translation = [933.475586,0,924.423218]
+Shape44 = x3d.Shape()
+Appearance45 = x3d.Appearance()
+Appearance45.DEF = "WireColor_2"
+Material46 = x3d.Material()
+Material46.diffuseColor = [0.105882,0.694118,0.580392]
 
-Appearance45.setMaterial(Material46)
+Appearance45.material = Material46
 
-Shape44.setAppearance(Appearance45)
-Sphere47 = Sphere()
-Sphere47.setRadius(100)
+Shape44.appearance = Appearance45
+Sphere47 = x3d.Sphere()
+Sphere47.radius = 100
 
-Shape44.setGeometry(Sphere47)
+Shape44.geometry = Sphere47
 
-Transform43.addChildren(Shape44)
-Billboard48 = Billboard()
-Transform49 = Transform()
-Transform49.setDEF("saxophone")
-Transform49.setRotation([1,0,0,-0.5])
-Transform49.setScale([100,100,100])
-Transform49.setTranslation([0,100,0])
-Shape50 = Shape()
-Appearance51 = Appearance()
-Material52 = Material()
-Material52.setAmbientIntensity(0.0933)
-Material52.setDiffuseColor([1,1,1])
-Material52.setShininess(0.51)
-Material52.setSpecularColor([0.46,0.46,0.46])
+Transform43.children.append(Shape44)
+Billboard48 = x3d.Billboard()
+Transform49 = x3d.Transform()
+Transform49.DEF = "saxophone"
+Transform49.rotation = [1,0,0,-0.5]
+Transform49.scale = [100,100,100]
+Transform49.translation = [0,100,0]
+Shape50 = x3d.Shape()
+Appearance51 = x3d.Appearance()
+Material52 = x3d.Material()
+Material52.ambientIntensity = 0.0933
+Material52.diffuseColor = [1,1,1]
+Material52.shininess = 0.51
+Material52.specularColor = [0.46,0.46,0.46]
 
-Appearance51.setMaterial(Material52)
+Appearance51.material = Material52
 
-Shape50.setAppearance(Appearance51)
-Text53 = Text()
-Text53.setString(["Saxophone"])
-FontStyle54 = FontStyle()
-FontStyle54.setUSE("ModelFontStyle")
+Shape50.appearance = Appearance51
+Text53 = x3d.Text()
+Text53.string = ["Saxophone"]
+FontStyle54 = x3d.FontStyle()
+FontStyle54.USE = "ModelFontStyle"
 
-Text53.setFontStyle(FontStyle54)
+Text53.fontStyle = FontStyle54
 
-Shape50.setGeometry(Text53)
+Shape50.geometry = Text53
 
-Transform49.addChildren(Shape50)
+Transform49.children.append(Shape50)
 
-Billboard48.addChildren(Transform49)
+Billboard48.children.append(Transform49)
 
-Transform43.addChildren(Billboard48)
+Transform43.children.append(Billboard48)
 
-Scene14.addChildren(Transform43)
-ListenerPointSource55 = ListenerPointSource()
-ListenerPointSource55.setTrackCurrentView(True)
+Scene14.children.append(Transform43)
+ListenerPointSource55 = x3d.ListenerPointSource()
+ListenerPointSource55.trackCurrentView = True
 
-Scene14.addChildren(ListenerPointSource55)
-StreamAudioDestination56 = StreamAudioDestination()
-SpatialSound57 = SpatialSound()
-SpatialSound57.setDEF("Audio1")
-Gain58 = Gain()
-AudioClip59 = AudioClip()
-AudioClip59.setDescription("Violin")
-AudioClip59.setLoop(True)
-AudioClip59.setUrl(["sound/violin.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/violin.mp3"])
+Scene14.children.append(ListenerPointSource55)
+StreamAudioDestination56 = x3d.StreamAudioDestination()
+StreamAudioDestination56.channelCountMode = "MAX"
+StreamAudioDestination56.channelInterpretation = "SPEAKERS"
+SpatialSound57 = x3d.SpatialSound()
+SpatialSound57.DEF = "Audio1"
+SpatialSound57.distanceModel = "INVERSE"
+Gain58 = x3d.Gain()
+Gain58.channelCountMode = "MAX"
+Gain58.channelInterpretation = "SPEAKERS"
+AudioClip59 = x3d.AudioClip()
+AudioClip59.description = "Violin"
+AudioClip59.loop = True
+AudioClip59.url = ["sound/violin.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/violin.mp3"]
 
-Gain58.addChildren(AudioClip59)
+Gain58.children.append(AudioClip59)
 
-SpatialSound57.addChildren(Gain58)
+SpatialSound57.children.append(Gain58)
 
-StreamAudioDestination56.addChildren(SpatialSound57)
-SpatialSound60 = SpatialSound()
-SpatialSound60.setDEF("Audio2")
-Gain61 = Gain()
-AudioClip62 = AudioClip()
-AudioClip62.setDescription("Saxophone")
-AudioClip62.setLoop(True)
-AudioClip62.setUrl(["sound/saxophone.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/saxophone.mp3"])
+StreamAudioDestination56.children.append(SpatialSound57)
+SpatialSound60 = x3d.SpatialSound()
+SpatialSound60.DEF = "Audio2"
+SpatialSound60.distanceModel = "INVERSE"
+Gain61 = x3d.Gain()
+Gain61.channelCountMode = "MAX"
+Gain61.channelInterpretation = "SPEAKERS"
+AudioClip62 = x3d.AudioClip()
+AudioClip62.description = "Saxophone"
+AudioClip62.loop = True
+AudioClip62.url = ["sound/saxophone.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/saxophone.mp3"]
 
-Gain61.addChildren(AudioClip62)
+Gain61.children.append(AudioClip62)
 
-SpatialSound60.addChildren(Gain61)
+SpatialSound60.children.append(Gain61)
 
-StreamAudioDestination56.addChildren(SpatialSound60)
+StreamAudioDestination56.children.append(SpatialSound60)
 
-Scene14.addChildren(StreamAudioDestination56)
+Scene14.children.append(StreamAudioDestination56)
 
-X3D0.setScene(Scene14)
-X3D0.toFileX3D("././SpatialAudioCameraAnimation_RoundTrip.x3d")
+X3D0.Scene = Scene14
+f = open("././SpatialAudioCameraAnimation_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

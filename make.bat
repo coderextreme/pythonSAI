@@ -3,7 +3,7 @@ set PYSAIHOME=.
 set X3DJSONLD=..\X3DJSONLD
 set PYTHONPATH=C:\Python27;c:\Python27\Scripts
 set PATH=%PYTHONPATH%;%JDK_HOME%\bin:%PATH%
-set CLASSPATH=.;%PYSAIHOME%\saxon-he-10.6.jar;%PYSAIHOME%\X3DJSAIL.4.0.classes.jar
+set CLASSPATH=.;%PYSAIHOME%\saxon-he-12.1.jar;%PYSAIHOME%\X3DJSAIL.4.0.classes.jar
 set PYTHON=python3
 set PIP=pip3.exe
 set NODE=node.exe
@@ -20,12 +20,7 @@ npm install
 %PYTHON% mapToMethodGenerator.py
 echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 
-
-javac -cp ${CLASSPATH} RunSaxon.java
-
-java -cp ${CLASSPATH} RunSaxon ---overwrite *.x3d
+FOR %%i IN ("*.x3d") DO node_modules/.bin/xslt3 -xsl:X3dToJson.xslt -s:%%i -o:`dirname %%i`/`basename %%i .x3d`.json
 FOR %%i IN ("*.json") DO %NODE% json2py.js %%i
-
-
 FOR %%i IN ("*.py") DO %PYTHON% %%i
 

@@ -1,841 +1,845 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
 #Originally these fundamental prototypes were defined in InterchangableActorsViaDynamicRoutingPrototypes.x3d
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("HAnimPrototypes.x3d")
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "HAnimPrototypes.x3d"
 
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("description")
-meta3.setContent("Example implementation of X3D Humanoid Animation (HAnim) nodes using X3D prototypes.")
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "description"
+meta3.content = "Example implementation of X3D Humanoid Animation (HAnim) nodes using X3D prototypes."
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("warning")
-meta4.setContent("These are developmental examples that can assist X3D player implementations and support interoperability. They are not intended for author use in regular X3D scenes.")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "warning"
+meta4.content = "These are developmental examples that can assist X3D player implementations and support interoperability. They are not intended for author use in regular X3D scenes."
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("warning")
-meta5.setContent("Developer note: names for these HAnim Prototypes need to be corrected if used internally in an X3D player implementation (e.g. Joint to HAnimJoint).")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "warning"
+meta5.content = "Developer note: names for these HAnim Prototypes need to be corrected if used internally in an X3D player implementation (e.g. Joint to HAnimJoint)."
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("warning")
-meta6.setContent("Need support for skin")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "warning"
+meta6.content = "Need support for skin"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("creator")
-meta7.setContent("Ozan APAYDIN, Don Brutzman")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "creator"
+meta7.content = "Ozan APAYDIN, Don Brutzman"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("translator")
-meta8.setContent("Ozan APAYDIN, Don Brutzman")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "translator"
+meta8.content = "Ozan APAYDIN, Don Brutzman"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("created")
-meta9.setContent("15 November 2001")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "created"
+meta9.content = "15 November 2001"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("modified")
-meta10.setContent("23 May 2020")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "modified"
+meta10.content = "23 May 2020"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("TODO")
-meta11.setContent("upgrade to match support requirements for HAnim 2.2")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "TODO"
+meta11.content = "upgrade to match support requirements for HAnim 2.2"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("reference")
-meta12.setContent("https://www.web3d.org/files/specifications/19774/V1.0/HAnim/HAnim.html")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "reference"
+meta12.content = "https://www.web3d.org/files/specifications/19774/V1.0/HAnim/HAnim.html"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("reference")
-meta13.setContent("https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/hanim.html")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "reference"
+meta13.content = "https://www.web3d.org/files/specifications/19775-1/V3.3/Part01/components/hanim.html"
 
-head1.addMeta(meta13)
-meta14 = meta()
-meta14.setName("reference")
-meta14.setContent("http://HAnim.org/Models/HAnim2001/boxman/boxman.wrl")
+head1.children.append(meta13)
+meta14 = x3d.meta()
+meta14.name = "reference"
+meta14.content = "http://HAnim.org/Models/HAnim2001/boxman/boxman.wrl"
 
-head1.addMeta(meta14)
-meta15 = meta()
-meta15.setName("reference")
-meta15.setContent("http://HAnim.org/Specifications/HAnim2001")
+head1.children.append(meta14)
+meta15 = x3d.meta()
+meta15.name = "reference"
+meta15.content = "http://HAnim.org/Specifications/HAnim2001"
 
-head1.addMeta(meta15)
-meta16 = meta()
-meta16.setName("reference")
-meta16.setContent("http://www.HAnim.org")
+head1.children.append(meta15)
+meta16 = x3d.meta()
+meta16.name = "reference"
+meta16.content = "http://www.HAnim.org"
 
-head1.addMeta(meta16)
-meta17 = meta()
-meta17.setName("reference")
-meta17.setContent("http://HAnim.org/Models")
+head1.children.append(meta16)
+meta17 = x3d.meta()
+meta17.name = "reference"
+meta17.content = "http://HAnim.org/Models"
 
-head1.addMeta(meta17)
-meta18 = meta()
-meta18.setName("reference")
-meta18.setContent("http://HAnim.org/Specifications")
+head1.children.append(meta17)
+meta18 = x3d.meta()
+meta18.name = "reference"
+meta18.content = "http://HAnim.org/Specifications"
 
-head1.addMeta(meta18)
-meta19 = meta()
-meta19.setName("reference")
-meta19.setContent("InterchangableActorsViaDynamicRoutingPrototypes.x3d")
+head1.children.append(meta18)
+meta19 = x3d.meta()
+meta19.name = "reference"
+meta19.content = "InterchangableActorsViaDynamicRoutingPrototypes.x3d"
 
-head1.addMeta(meta19)
-meta20 = meta()
-meta20.setName("identifier")
-meta20.setContent("https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimPrototypes.x3d")
+head1.children.append(meta19)
+meta20 = x3d.meta()
+meta20.name = "identifier"
+meta20.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimPrototypes.x3d"
 
-head1.addMeta(meta20)
-meta21 = meta()
-meta21.setName("generator")
-meta21.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta20)
+meta21 = x3d.meta()
+meta21.name = "generator"
+meta21.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta21)
-meta22 = meta()
-meta22.setName("license")
-meta22.setContent("../license.html")
+head1.children.append(meta21)
+meta22 = x3d.meta()
+meta22.name = "license"
+meta22.content = "../license.html"
 
-head1.addMeta(meta22)
+head1.children.append(meta22)
 
-X3D0.setHead(head1)
-Scene23 = Scene()
+X3D0.head = head1
+Scene23 = x3d.Scene()
 #**********Human Model Protypes*********
-ProtoDeclare24 = ProtoDeclare()
-ProtoDeclare24.setName("Humanoid1_1")
-ProtoDeclare24.setAppinfo("The Humanoid node serves as overall container for the Joint Segment Site and Viewpoint nodes which define the skeleton geometry and landmarks of the humanoid figure. Additionally the node provides a means for defining information about the author copyright and usage restrictions of the model.")
-ProtoDeclare24.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Humanoid.html")
-ProtoInterface25 = ProtoInterface()
+ProtoDeclare24 = x3d.ProtoDeclare()
+ProtoDeclare24.name = "Humanoid1_1"
+ProtoDeclare24.appinfo = "The Humanoid node serves as overall container for the Joint Segment Site and Viewpoint nodes which define the skeleton geometry and landmarks of the humanoid figure. Additionally the node provides a means for defining information about the author copyright and usage restrictions of the model."
+ProtoDeclare24.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Humanoid.html"
+ProtoInterface25 = x3d.ProtoInterface()
 #HAnim v1.1 field definitions
-field26 = field()
-field26.setName("name")
-field26.setAccessType("inputOutput")
-field26.setType("SFString")
+field26 = x3d.field()
+field26.name = "name"
+field26.accessType = "inputOutput"
+field26.type = "SFString"
 
-ProtoInterface25.addField(field26)
-field27 = field()
-field27.setName("version")
-field27.setAccessType("inputOutput")
-field27.setAppinfo("legal values: 1.1 or 2.0")
-field27.setType("SFString")
-field27.setValue("1.1")
+ProtoInterface25.field.append(field26)
+field27 = x3d.field()
+field27.name = "version"
+field27.accessType = "inputOutput"
+field27.appinfo = "legal values: 1.1 or 2.0"
+field27.type = "SFString"
+field27.value = "1.1"
 
-ProtoInterface25.addField(field27)
-field28 = field()
-field28.setName("humanoidVersion")
-field28.setAccessType("inputOutput")
-field28.setAppinfo("Version of the humanoid being modeled. Hint: HAnim version 2.0")
-field28.setType("SFString")
+ProtoInterface25.field.append(field27)
+field28 = x3d.field()
+field28.name = "humanoidVersion"
+field28.accessType = "inputOutput"
+field28.appinfo = "Version of the humanoid being modeled. Hint: HAnim version 2.0"
+field28.type = "SFString"
 
-ProtoInterface25.addField(field28)
-field29 = field()
-field29.setName("info")
-field29.setAccessType("inputOutput")
-field29.setType("MFString")
+ProtoInterface25.field.append(field28)
+field29 = x3d.field()
+field29.name = "info"
+field29.accessType = "inputOutput"
+field29.type = "MFString"
 
-ProtoInterface25.addField(field29)
-field30 = field()
-field30.setName("translation")
-field30.setAccessType("inputOutput")
-field30.setType("SFVec3f")
-field30.setValue("0 0 0")
+ProtoInterface25.field.append(field29)
+field30 = x3d.field()
+field30.name = "translation"
+field30.accessType = "inputOutput"
+field30.type = "SFVec3f"
+field30.value = [0,0,0]
 
-ProtoInterface25.addField(field30)
-field31 = field()
-field31.setName("rotation")
-field31.setAccessType("inputOutput")
-field31.setType("SFRotation")
-field31.setValue("0 0 1 0")
+ProtoInterface25.field.append(field30)
+field31 = x3d.field()
+field31.name = "rotation"
+field31.accessType = "inputOutput"
+field31.type = "SFRotation"
+field31.value = [0,0,1,0]
 
-ProtoInterface25.addField(field31)
-field32 = field()
-field32.setName("center")
-field32.setAccessType("inputOutput")
-field32.setType("SFVec3f")
-field32.setValue("0 0 0")
+ProtoInterface25.field.append(field31)
+field32 = x3d.field()
+field32.name = "center"
+field32.accessType = "inputOutput"
+field32.type = "SFVec3f"
+field32.value = [0,0,0]
 
-ProtoInterface25.addField(field32)
-field33 = field()
-field33.setName("scale")
-field33.setAccessType("inputOutput")
-field33.setType("SFVec3f")
-field33.setValue("1 1 1")
+ProtoInterface25.field.append(field32)
+field33 = x3d.field()
+field33.name = "scale"
+field33.accessType = "inputOutput"
+field33.type = "SFVec3f"
+field33.value = [1,1,1]
 
-ProtoInterface25.addField(field33)
-field34 = field()
-field34.setName("scaleOrientation")
-field34.setAccessType("inputOutput")
-field34.setType("SFRotation")
-field34.setValue("0 0 1 0")
+ProtoInterface25.field.append(field33)
+field34 = x3d.field()
+field34.name = "scaleOrientation"
+field34.accessType = "inputOutput"
+field34.type = "SFRotation"
+field34.value = [0,0,1,0]
 
-ProtoInterface25.addField(field34)
-field35 = field()
-field35.setName("bboxCenter")
-field35.setAccessType("initializeOnly")
-field35.setType("SFVec3f")
-field35.setValue("0 0 0")
+ProtoInterface25.field.append(field34)
+field35 = x3d.field()
+field35.name = "bboxCenter"
+field35.accessType = "initializeOnly"
+field35.type = "SFVec3f"
+field35.value = [0,0,0]
 
-ProtoInterface25.addField(field35)
-field36 = field()
-field36.setName("bboxSize")
-field36.setAccessType("initializeOnly")
-field36.setType("SFVec3f")
-field36.setValue("-1 -1 -1")
+ProtoInterface25.field.append(field35)
+field36 = x3d.field()
+field36.name = "bboxSize"
+field36.accessType = "initializeOnly"
+field36.type = "SFVec3f"
+field36.value = [-1,-1,-1]
 
-ProtoInterface25.addField(field36)
-field37 = field()
-field37.setName("humanoidBody")
-field37.setAccessType("inputOutput")
-field37.setAppinfo("HAnim 1.1 field container for body head. Hint: replaced by 2.0 skeleton.")
-field37.setDocumentation("http://HAnim.org/Specifications/HAnim1.1/#humanoid")
-field37.setType("MFNode")
+ProtoInterface25.field.append(field36)
+field37 = x3d.field()
+field37.name = "humanoidBody"
+field37.accessType = "inputOutput"
+field37.appinfo = "HAnim 1.1 field container for body head. Hint: replaced by 2.0 skeleton."
+field37.documentation = "http://HAnim.org/Specifications/HAnim1.1/#humanoid"
+field37.type = "MFNode"
 
-ProtoInterface25.addField(field37)
-field38 = field()
-field38.setName("skeleton")
-field38.setAccessType("inputOutput")
-field38.setAppinfo("HAnim 2.0 field container for body geometry Hint: replaces 1.1 humanoidBody")
-field38.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Humanoid.html")
-field38.setType("MFNode")
+ProtoInterface25.field.append(field37)
+field38 = x3d.field()
+field38.name = "skeleton"
+field38.accessType = "inputOutput"
+field38.appinfo = "HAnim 2.0 field container for body geometry Hint: replaces 1.1 humanoidBody"
+field38.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Humanoid.html"
+field38.type = "MFNode"
 
-ProtoInterface25.addField(field38)
-field39 = field()
-field39.setName("joints")
-field39.setAccessType("inputOutput")
-field39.setAppinfo("Container field for Joint nodes")
-field39.setType("MFNode")
+ProtoInterface25.field.append(field38)
+field39 = x3d.field()
+field39.name = "joints"
+field39.accessType = "inputOutput"
+field39.appinfo = "Container field for Joint nodes"
+field39.type = "MFNode"
 
-ProtoInterface25.addField(field39)
-field40 = field()
-field40.setName("segments")
-field40.setAccessType("inputOutput")
-field40.setAppinfo("Container field for Segment nodes")
-field40.setType("MFNode")
+ProtoInterface25.field.append(field39)
+field40 = x3d.field()
+field40.name = "segments"
+field40.accessType = "inputOutput"
+field40.appinfo = "Container field for Segment nodes"
+field40.type = "MFNode"
 
-ProtoInterface25.addField(field40)
-field41 = field()
-field41.setName("sites")
-field41.setAccessType("inputOutput")
-field41.setAppinfo("Container field for Site nodes")
-field41.setType("MFNode")
+ProtoInterface25.field.append(field40)
+field41 = x3d.field()
+field41.name = "sites"
+field41.accessType = "inputOutput"
+field41.appinfo = "Container field for Site nodes"
+field41.type = "MFNode"
 
-ProtoInterface25.addField(field41)
-field42 = field()
-field42.setName("viewpoints")
-field42.setAccessType("inputOutput")
-field42.setAppinfo("Container field for Viewpoint nodes")
-field42.setType("MFNode")
+ProtoInterface25.field.append(field41)
+field42 = x3d.field()
+field42.name = "viewpoints"
+field42.accessType = "inputOutput"
+field42.appinfo = "Container field for Viewpoint nodes"
+field42.type = "MFNode"
 
-ProtoInterface25.addField(field42)
-field43 = field()
-field43.setName("skinCoord")
-field43.setAccessType("inputOutput")
-field43.setAppinfo("Hint: HAnim version 2.0")
-field43.setType("SFNode")
+ProtoInterface25.field.append(field42)
+field43 = x3d.field()
+field43.name = "skinCoord"
+field43.accessType = "inputOutput"
+field43.appinfo = "Hint: HAnim version 2.0"
+field43.type = "SFNode"
 #NULL
 
-ProtoInterface25.addField(field43)
-field44 = field()
-field44.setName("skinNormal")
-field44.setAccessType("inputOutput")
-field44.setAppinfo("Hint: HAnim version 2.0")
-field44.setType("SFNode")
+ProtoInterface25.field.append(field43)
+field44 = x3d.field()
+field44.name = "skinNormal"
+field44.accessType = "inputOutput"
+field44.appinfo = "Hint: HAnim version 2.0"
+field44.type = "SFNode"
 #NULL
 
-ProtoInterface25.addField(field44)
+ProtoInterface25.field.append(field44)
 
-ProtoDeclare24.setProtoInterface(ProtoInterface25)
-ProtoBody45 = ProtoBody()
-Transform46 = Transform()
-Transform46.setDEF("HumanoidTransform")
-IS47 = IS()
-connect48 = connect()
-connect48.setNodeField("translation")
-connect48.setProtoField("translation")
+ProtoDeclare24.ProtoInterface = ProtoInterface25
+ProtoBody45 = x3d.ProtoBody()
+Transform46 = x3d.Transform()
+Transform46.DEF = "HumanoidTransform"
+IS47 = x3d.IS()
+connect48 = x3d.connect()
+connect48.nodeField = "translation"
+connect48.protoField = "translation"
 
-IS47.addConnect(connect48)
-connect49 = connect()
-connect49.setNodeField("rotation")
-connect49.setProtoField("rotation")
+IS47.connect.append(connect48)
+connect49 = x3d.connect()
+connect49.nodeField = "rotation"
+connect49.protoField = "rotation"
 
-IS47.addConnect(connect49)
-connect50 = connect()
-connect50.setNodeField("center")
-connect50.setProtoField("center")
+IS47.connect.append(connect49)
+connect50 = x3d.connect()
+connect50.nodeField = "center"
+connect50.protoField = "center"
 
-IS47.addConnect(connect50)
-connect51 = connect()
-connect51.setNodeField("scale")
-connect51.setProtoField("scale")
+IS47.connect.append(connect50)
+connect51 = x3d.connect()
+connect51.nodeField = "scale"
+connect51.protoField = "scale"
 
-IS47.addConnect(connect51)
-connect52 = connect()
-connect52.setNodeField("scaleOrientation")
-connect52.setProtoField("scaleOrientation")
+IS47.connect.append(connect51)
+connect52 = x3d.connect()
+connect52.nodeField = "scaleOrientation"
+connect52.protoField = "scaleOrientation"
 
-IS47.addConnect(connect52)
-connect53 = connect()
-connect53.setNodeField("bboxCenter")
-connect53.setProtoField("bboxCenter")
+IS47.connect.append(connect52)
+connect53 = x3d.connect()
+connect53.nodeField = "bboxCenter"
+connect53.protoField = "bboxCenter"
 
-IS47.addConnect(connect53)
-connect54 = connect()
-connect54.setNodeField("bboxSize")
-connect54.setProtoField("bboxSize")
+IS47.connect.append(connect53)
+connect54 = x3d.connect()
+connect54.nodeField = "bboxSize"
+connect54.protoField = "bboxSize"
 
-IS47.addConnect(connect54)
+IS47.connect.append(connect54)
 
-Transform46.setIS(IS47)
-Group55 = Group()
-Group55.setDEF("HumanoidGroup1")
-IS56 = IS()
-connect57 = connect()
-connect57.setNodeField("children")
-connect57.setProtoField("humanoidBody")
+Transform46.IS = IS47
+Group55 = x3d.Group()
+Group55.DEF = "HumanoidGroup1"
+IS56 = x3d.IS()
+connect57 = x3d.connect()
+connect57.nodeField = "children"
+connect57.protoField = "humanoidBody"
 
-IS56.addConnect(connect57)
+IS56.connect.append(connect57)
 
-Group55.setIS(IS56)
+Group55.IS = IS56
 
-Transform46.addChildren(Group55)
-Group58 = Group()
-Group58.setDEF("HumanoidGroup2")
-IS59 = IS()
-connect60 = connect()
-connect60.setNodeField("children")
-connect60.setProtoField("skeleton")
+Transform46.children.append(Group55)
+Group58 = x3d.Group()
+Group58.DEF = "HumanoidGroup2"
+IS59 = x3d.IS()
+connect60 = x3d.connect()
+connect60.nodeField = "children"
+connect60.protoField = "skeleton"
 
-IS59.addConnect(connect60)
+IS59.connect.append(connect60)
 
-Group58.setIS(IS59)
+Group58.IS = IS59
 
-Transform46.addChildren(Group58)
-Group61 = Group()
-Group61.setDEF("HumanoidGroup3")
-IS62 = IS()
-connect63 = connect()
-connect63.setNodeField("children")
-connect63.setProtoField("viewpoints")
+Transform46.children.append(Group58)
+Group61 = x3d.Group()
+Group61.DEF = "HumanoidGroup3"
+IS62 = x3d.IS()
+connect63 = x3d.connect()
+connect63.nodeField = "children"
+connect63.protoField = "viewpoints"
 
-IS62.addConnect(connect63)
+IS62.connect.append(connect63)
 
-Group61.setIS(IS62)
+Group61.IS = IS62
 
-Transform46.addChildren(Group61)
+Transform46.children.append(Group61)
 
-ProtoBody45.addChildren(Transform46)
+ProtoBody45.children.append(Transform46)
 
-ProtoDeclare24.setProtoBody(ProtoBody45)
+ProtoDeclare24.ProtoBody = ProtoBody45
 
-Scene23.addChildren(ProtoDeclare24)
-ProtoDeclare64 = ProtoDeclare()
-ProtoDeclare64.setName("Joint")
-ProtoDeclare64.setAppinfo("The Joint node is used as a building block to describe the articulations of the humanoid figure. Each articulation of the humanoid figure is represented by a Joint node each of which is organized into a hierarchy that describes the overall skeleton of the humanoid.")
-ProtoDeclare64.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Joint.html")
-ProtoInterface65 = ProtoInterface()
-field66 = field()
-field66.setName("name")
-field66.setAccessType("inputOutput")
-field66.setType("SFString")
+Scene23.children.append(ProtoDeclare24)
+ProtoDeclare64 = x3d.ProtoDeclare()
+ProtoDeclare64.name = "Joint"
+ProtoDeclare64.appinfo = "The Joint node is used as a building block to describe the articulations of the humanoid figure. Each articulation of the humanoid figure is represented by a Joint node each of which is organized into a hierarchy that describes the overall skeleton of the humanoid."
+ProtoDeclare64.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Joint.html"
+ProtoInterface65 = x3d.ProtoInterface()
+field66 = x3d.field()
+field66.name = "name"
+field66.accessType = "inputOutput"
+field66.type = "SFString"
 
-ProtoInterface65.addField(field66)
-field67 = field()
-field67.setName("ulimit")
-field67.setAccessType("inputOutput")
-field67.setType("MFFloat")
+ProtoInterface65.field.append(field66)
+field67 = x3d.field()
+field67.name = "ulimit"
+field67.accessType = "inputOutput"
+field67.type = "MFFloat"
 
-ProtoInterface65.addField(field67)
-field68 = field()
-field68.setName("llimit")
-field68.setAccessType("inputOutput")
-field68.setType("MFFloat")
+ProtoInterface65.field.append(field67)
+field68 = x3d.field()
+field68.name = "llimit"
+field68.accessType = "inputOutput"
+field68.type = "MFFloat"
 
-ProtoInterface65.addField(field68)
-field69 = field()
-field69.setName("limitOrientation")
-field69.setAccessType("inputOutput")
-field69.setType("SFRotation")
-field69.setValue("0 0 1 0")
+ProtoInterface65.field.append(field68)
+field69 = x3d.field()
+field69.name = "limitOrientation"
+field69.accessType = "inputOutput"
+field69.type = "SFRotation"
+field69.value = [0,0,1,0]
 
-ProtoInterface65.addField(field69)
-field70 = field()
-field70.setName("skinCoordIndex")
-field70.setAccessType("inputOutput")
-field70.setType("MFInt32")
+ProtoInterface65.field.append(field69)
+field70 = x3d.field()
+field70.name = "skinCoordIndex"
+field70.accessType = "inputOutput"
+field70.type = "MFInt32"
 
-ProtoInterface65.addField(field70)
-field71 = field()
-field71.setName("skinCoordWeight")
-field71.setAccessType("inputOutput")
-field71.setType("MFFloat")
+ProtoInterface65.field.append(field70)
+field71 = x3d.field()
+field71.name = "skinCoordWeight"
+field71.accessType = "inputOutput"
+field71.type = "MFFloat"
 
-ProtoInterface65.addField(field71)
-field72 = field()
-field72.setName("stiffness")
-field72.setAccessType("inputOutput")
-field72.setType("MFFloat")
-field72.setValue("0 0 0")
+ProtoInterface65.field.append(field71)
+field72 = x3d.field()
+field72.name = "stiffness"
+field72.accessType = "inputOutput"
+field72.type = "MFFloat"
+field72.value = [0,0,0]
 
-ProtoInterface65.addField(field72)
-field73 = field()
-field73.setName("translation")
-field73.setAccessType("inputOutput")
-field73.setType("SFVec3f")
-field73.setValue("0 0 0")
+ProtoInterface65.field.append(field72)
+field73 = x3d.field()
+field73.name = "translation"
+field73.accessType = "inputOutput"
+field73.type = "SFVec3f"
+field73.value = [0,0,0]
 
-ProtoInterface65.addField(field73)
-field74 = field()
-field74.setName("rotation")
-field74.setAccessType("inputOutput")
-field74.setType("SFRotation")
-field74.setValue("0 0 1 0")
+ProtoInterface65.field.append(field73)
+field74 = x3d.field()
+field74.name = "rotation"
+field74.accessType = "inputOutput"
+field74.type = "SFRotation"
+field74.value = [0,0,1,0]
 
-ProtoInterface65.addField(field74)
-field75 = field()
-field75.setName("scale")
-field75.setAccessType("inputOutput")
-field75.setType("SFVec3f")
-field75.setValue("1 1 1")
+ProtoInterface65.field.append(field74)
+field75 = x3d.field()
+field75.name = "scale"
+field75.accessType = "inputOutput"
+field75.type = "SFVec3f"
+field75.value = [1,1,1]
 
-ProtoInterface65.addField(field75)
-field76 = field()
-field76.setName("scaleOrientation")
-field76.setAccessType("inputOutput")
-field76.setType("SFRotation")
-field76.setValue("0 0 1 0")
+ProtoInterface65.field.append(field75)
+field76 = x3d.field()
+field76.name = "scaleOrientation"
+field76.accessType = "inputOutput"
+field76.type = "SFRotation"
+field76.value = [0,0,1,0]
 
-ProtoInterface65.addField(field76)
-field77 = field()
-field77.setName("center")
-field77.setAccessType("inputOutput")
-field77.setType("SFVec3f")
-field77.setValue("0 0 0")
+ProtoInterface65.field.append(field76)
+field77 = x3d.field()
+field77.name = "center"
+field77.accessType = "inputOutput"
+field77.type = "SFVec3f"
+field77.value = [0,0,0]
 
-ProtoInterface65.addField(field77)
-field78 = field()
-field78.setName("bboxCenter")
-field78.setAccessType("initializeOnly")
-field78.setType("SFVec3f")
-field78.setValue("0 0 0")
+ProtoInterface65.field.append(field77)
+field78 = x3d.field()
+field78.name = "bboxCenter"
+field78.accessType = "initializeOnly"
+field78.type = "SFVec3f"
+field78.value = [0,0,0]
 
-ProtoInterface65.addField(field78)
-field79 = field()
-field79.setName("bboxSize")
-field79.setAccessType("initializeOnly")
-field79.setType("SFVec3f")
-field79.setValue("-1 -1 -1")
+ProtoInterface65.field.append(field78)
+field79 = x3d.field()
+field79.name = "bboxSize"
+field79.accessType = "initializeOnly"
+field79.type = "SFVec3f"
+field79.value = [-1,-1,-1]
 
-ProtoInterface65.addField(field79)
-field80 = field()
-field80.setName("children")
-field80.setAccessType("inputOutput")
-field80.setType("MFNode")
+ProtoInterface65.field.append(field79)
+field80 = x3d.field()
+field80.name = "children"
+field80.accessType = "inputOutput"
+field80.type = "MFNode"
 
-ProtoInterface65.addField(field80)
-field81 = field()
-field81.setName("addChildren")
-field81.setAccessType("inputOnly")
-field81.setType("MFNode")
+ProtoInterface65.field.append(field80)
+field81 = x3d.field()
+field81.name = "addChildren"
+field81.accessType = "inputOnly"
+field81.type = "MFNode"
 
-ProtoInterface65.addField(field81)
-field82 = field()
-field82.setName("removeChildren")
-field82.setAccessType("inputOnly")
-field82.setType("MFNode")
+ProtoInterface65.field.append(field81)
+field82 = x3d.field()
+field82.name = "removeChildren"
+field82.accessType = "inputOnly"
+field82.type = "MFNode"
 
-ProtoInterface65.addField(field82)
+ProtoInterface65.field.append(field82)
 
-ProtoDeclare64.setProtoInterface(ProtoInterface65)
-ProtoBody83 = ProtoBody()
-Transform84 = Transform()
-Transform84.setDEF("JointTransform")
-IS85 = IS()
-connect86 = connect()
-connect86.setNodeField("translation")
-connect86.setProtoField("translation")
+ProtoDeclare64.ProtoInterface = ProtoInterface65
+ProtoBody83 = x3d.ProtoBody()
+Transform84 = x3d.Transform()
+Transform84.DEF = "JointTransform"
+IS85 = x3d.IS()
+connect86 = x3d.connect()
+connect86.nodeField = "translation"
+connect86.protoField = "translation"
 
-IS85.addConnect(connect86)
-connect87 = connect()
-connect87.setNodeField("rotation")
-connect87.setProtoField("rotation")
+IS85.connect.append(connect86)
+connect87 = x3d.connect()
+connect87.nodeField = "rotation"
+connect87.protoField = "rotation"
 
-IS85.addConnect(connect87)
-connect88 = connect()
-connect88.setNodeField("center")
-connect88.setProtoField("center")
+IS85.connect.append(connect87)
+connect88 = x3d.connect()
+connect88.nodeField = "center"
+connect88.protoField = "center"
 
-IS85.addConnect(connect88)
-connect89 = connect()
-connect89.setNodeField("scale")
-connect89.setProtoField("scale")
+IS85.connect.append(connect88)
+connect89 = x3d.connect()
+connect89.nodeField = "scale"
+connect89.protoField = "scale"
 
-IS85.addConnect(connect89)
-connect90 = connect()
-connect90.setNodeField("scaleOrientation")
-connect90.setProtoField("scaleOrientation")
+IS85.connect.append(connect89)
+connect90 = x3d.connect()
+connect90.nodeField = "scaleOrientation"
+connect90.protoField = "scaleOrientation"
 
-IS85.addConnect(connect90)
-connect91 = connect()
-connect91.setNodeField("bboxCenter")
-connect91.setProtoField("bboxCenter")
+IS85.connect.append(connect90)
+connect91 = x3d.connect()
+connect91.nodeField = "bboxCenter"
+connect91.protoField = "bboxCenter"
 
-IS85.addConnect(connect91)
-connect92 = connect()
-connect92.setNodeField("bboxSize")
-connect92.setProtoField("bboxSize")
+IS85.connect.append(connect91)
+connect92 = x3d.connect()
+connect92.nodeField = "bboxSize"
+connect92.protoField = "bboxSize"
 
-IS85.addConnect(connect92)
-connect93 = connect()
-connect93.setNodeField("children")
-connect93.setProtoField("children")
+IS85.connect.append(connect92)
+connect93 = x3d.connect()
+connect93.nodeField = "children"
+connect93.protoField = "children"
 
-IS85.addConnect(connect93)
-connect94 = connect()
-connect94.setNodeField("addChildren")
-connect94.setProtoField("addChildren")
+IS85.connect.append(connect93)
+connect94 = x3d.connect()
+connect94.nodeField = "addChildren"
+connect94.protoField = "addChildren"
 
-IS85.addConnect(connect94)
-connect95 = connect()
-connect95.setNodeField("removeChildren")
-connect95.setProtoField("removeChildren")
+IS85.connect.append(connect94)
+connect95 = x3d.connect()
+connect95.nodeField = "removeChildren"
+connect95.protoField = "removeChildren"
 
-IS85.addConnect(connect95)
+IS85.connect.append(connect95)
 
-Transform84.setIS(IS85)
+Transform84.IS = IS85
 
-ProtoBody83.addChildren(Transform84)
+ProtoBody83.children.append(Transform84)
 
-ProtoDeclare64.setProtoBody(ProtoBody83)
+ProtoDeclare64.ProtoBody = ProtoBody83
 
-Scene23.addChildren(ProtoDeclare64)
-ProtoDeclare96 = ProtoDeclare()
-ProtoDeclare96.setName("Segment")
-ProtoDeclare96.setAppinfo("The Segment node is used describe the attributes of the physical links between the joints of the humanoid figure. Each body part (pelvis thigh calf etc.) of the humanoid figure is represented by a Segment node.")
-ProtoDeclare96.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Segment.html")
-ProtoInterface97 = ProtoInterface()
-field98 = field()
-field98.setName("name")
-field98.setAccessType("inputOutput")
-field98.setType("SFString")
+Scene23.children.append(ProtoDeclare64)
+ProtoDeclare96 = x3d.ProtoDeclare()
+ProtoDeclare96.name = "Segment"
+ProtoDeclare96.appinfo = "The Segment node is used describe the attributes of the physical links between the joints of the humanoid figure. Each body part (pelvis thigh calf etc.) of the humanoid figure is represented by a Segment node."
+ProtoDeclare96.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Segment.html"
+ProtoInterface97 = x3d.ProtoInterface()
+field98 = x3d.field()
+field98.name = "name"
+field98.accessType = "inputOutput"
+field98.type = "SFString"
 
-ProtoInterface97.addField(field98)
-field99 = field()
-field99.setName("mass")
-field99.setAccessType("inputOutput")
-field99.setType("SFFloat")
-field99.setValue("0")
+ProtoInterface97.field.append(field98)
+field99 = x3d.field()
+field99.name = "mass"
+field99.accessType = "inputOutput"
+field99.type = "SFFloat"
+field99.value = 0
 
-ProtoInterface97.addField(field99)
-field100 = field()
-field100.setName("centerOfMass")
-field100.setAccessType("inputOutput")
-field100.setType("SFVec3f")
-field100.setValue("0 0 0")
+ProtoInterface97.field.append(field99)
+field100 = x3d.field()
+field100.name = "centerOfMass"
+field100.accessType = "inputOutput"
+field100.type = "SFVec3f"
+field100.value = [0,0,0]
 
-ProtoInterface97.addField(field100)
-field101 = field()
-field101.setName("momentsOfInertia")
-field101.setAccessType("inputOutput")
-field101.setType("MFFloat")
-field101.setValue("0 0 0 0 0 0 0 0 0")
+ProtoInterface97.field.append(field100)
+field101 = x3d.field()
+field101.name = "momentsOfInertia"
+field101.accessType = "inputOutput"
+field101.type = "MFFloat"
+field101.value = [0,0,0,0,0,0,0,0,0]
 
-ProtoInterface97.addField(field101)
-field102 = field()
-field102.setName("bboxCenter")
-field102.setAccessType("initializeOnly")
-field102.setType("SFVec3f")
-field102.setValue("0 0 0")
+ProtoInterface97.field.append(field101)
+field102 = x3d.field()
+field102.name = "bboxCenter"
+field102.accessType = "initializeOnly"
+field102.type = "SFVec3f"
+field102.value = [0,0,0]
 
-ProtoInterface97.addField(field102)
-field103 = field()
-field103.setName("bboxSize")
-field103.setAccessType("initializeOnly")
-field103.setType("SFVec3f")
-field103.setValue("-1 -1 -1")
+ProtoInterface97.field.append(field102)
+field103 = x3d.field()
+field103.name = "bboxSize"
+field103.accessType = "initializeOnly"
+field103.type = "SFVec3f"
+field103.value = [-1,-1,-1]
 
-ProtoInterface97.addField(field103)
-field104 = field()
-field104.setName("children")
-field104.setAccessType("inputOutput")
-field104.setType("MFNode")
+ProtoInterface97.field.append(field103)
+field104 = x3d.field()
+field104.name = "children"
+field104.accessType = "inputOutput"
+field104.type = "MFNode"
 
-ProtoInterface97.addField(field104)
-field105 = field()
-field105.setName("addChildren")
-field105.setAccessType("inputOnly")
-field105.setType("MFNode")
+ProtoInterface97.field.append(field104)
+field105 = x3d.field()
+field105.name = "addChildren"
+field105.accessType = "inputOnly"
+field105.type = "MFNode"
 
-ProtoInterface97.addField(field105)
-field106 = field()
-field106.setName("removeChildren")
-field106.setAccessType("inputOnly")
-field106.setType("MFNode")
+ProtoInterface97.field.append(field105)
+field106 = x3d.field()
+field106.name = "removeChildren"
+field106.accessType = "inputOnly"
+field106.type = "MFNode"
 
-ProtoInterface97.addField(field106)
-field107 = field()
-field107.setName("coord")
-field107.setAccessType("inputOutput")
-field107.setAppinfo("contains Coordinate nodes")
-field107.setType("SFNode")
+ProtoInterface97.field.append(field106)
+field107 = x3d.field()
+field107.name = "coord"
+field107.accessType = "inputOutput"
+field107.appinfo = "contains Coordinate nodes"
+field107.type = "SFNode"
 #NULL
 
-ProtoInterface97.addField(field107)
-field108 = field()
-field108.setName("displacers")
-field108.setAccessType("inputOutput")
-field108.setAppinfo("contains Displacer nodes")
-field108.setType("MFNode")
+ProtoInterface97.field.append(field107)
+field108 = x3d.field()
+field108.name = "displacers"
+field108.accessType = "inputOutput"
+field108.appinfo = "contains Displacer nodes"
+field108.type = "MFNode"
 
-ProtoInterface97.addField(field108)
+ProtoInterface97.field.append(field108)
 
-ProtoDeclare96.setProtoInterface(ProtoInterface97)
-ProtoBody109 = ProtoBody()
-Group110 = Group()
-Group110.setDEF("SegmentGroup")
-IS111 = IS()
-connect112 = connect()
-connect112.setNodeField("bboxCenter")
-connect112.setProtoField("bboxCenter")
+ProtoDeclare96.ProtoInterface = ProtoInterface97
+ProtoBody109 = x3d.ProtoBody()
+Group110 = x3d.Group()
+Group110.DEF = "SegmentGroup"
+IS111 = x3d.IS()
+connect112 = x3d.connect()
+connect112.nodeField = "bboxCenter"
+connect112.protoField = "bboxCenter"
 
-IS111.addConnect(connect112)
-connect113 = connect()
-connect113.setNodeField("bboxSize")
-connect113.setProtoField("bboxSize")
+IS111.connect.append(connect112)
+connect113 = x3d.connect()
+connect113.nodeField = "bboxSize"
+connect113.protoField = "bboxSize"
 
-IS111.addConnect(connect113)
-connect114 = connect()
-connect114.setNodeField("children")
-connect114.setProtoField("children")
+IS111.connect.append(connect113)
+connect114 = x3d.connect()
+connect114.nodeField = "children"
+connect114.protoField = "children"
 
-IS111.addConnect(connect114)
-connect115 = connect()
-connect115.setNodeField("addChildren")
-connect115.setProtoField("addChildren")
+IS111.connect.append(connect114)
+connect115 = x3d.connect()
+connect115.nodeField = "addChildren"
+connect115.protoField = "addChildren"
 
-IS111.addConnect(connect115)
-connect116 = connect()
-connect116.setNodeField("removeChildren")
-connect116.setProtoField("removeChildren")
+IS111.connect.append(connect115)
+connect116 = x3d.connect()
+connect116.nodeField = "removeChildren"
+connect116.protoField = "removeChildren"
 
-IS111.addConnect(connect116)
+IS111.connect.append(connect116)
 
-Group110.setIS(IS111)
+Group110.IS = IS111
 
-ProtoBody109.addChildren(Group110)
+ProtoBody109.children.append(Group110)
 
-ProtoDeclare96.setProtoBody(ProtoBody109)
+ProtoDeclare96.ProtoBody = ProtoBody109
 
-Scene23.addChildren(ProtoDeclare96)
-ProtoDeclare117 = ProtoDeclare()
-ProtoDeclare117.setName("Site")
-ProtoDeclare117.setAppinfo("The Site node can be used for three purposes: (a) to define an \"end effector\" location which can be used by an inverse kinematics system (b) to define an attachment point for accessories such as jewelry and clothing and (c) to define a location for a virtual camera in the reference frame of a Segment node (such as a view \"through the eyes\" of the humanoid for use in multi-user worlds).")
-ProtoDeclare117.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Site.html")
-ProtoInterface118 = ProtoInterface()
-field119 = field()
-field119.setName("name")
-field119.setAccessType("inputOutput")
-field119.setType("SFString")
+Scene23.children.append(ProtoDeclare96)
+ProtoDeclare117 = x3d.ProtoDeclare()
+ProtoDeclare117.name = "Site"
+ProtoDeclare117.appinfo = "The Site node can be used for three purposes: (a) to define an \"end effector\" location which can be used by an inverse kinematics system (b) to define an attachment point for accessories such as jewelry and clothing and (c) to define a location for a virtual camera in the reference frame of a Segment node (such as a view \"through the eyes\" of the humanoid for use in multi-user worlds)."
+ProtoDeclare117.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Site.html"
+ProtoInterface118 = x3d.ProtoInterface()
+field119 = x3d.field()
+field119.name = "name"
+field119.accessType = "inputOutput"
+field119.type = "SFString"
 
-ProtoInterface118.addField(field119)
-field120 = field()
-field120.setName("translation")
-field120.setAccessType("inputOutput")
-field120.setType("SFVec3f")
-field120.setValue("0 0 0")
+ProtoInterface118.field.append(field119)
+field120 = x3d.field()
+field120.name = "translation"
+field120.accessType = "inputOutput"
+field120.type = "SFVec3f"
+field120.value = [0,0,0]
 
-ProtoInterface118.addField(field120)
-field121 = field()
-field121.setName("rotation")
-field121.setAccessType("inputOutput")
-field121.setType("SFRotation")
-field121.setValue("0 0 1 0")
+ProtoInterface118.field.append(field120)
+field121 = x3d.field()
+field121.name = "rotation"
+field121.accessType = "inputOutput"
+field121.type = "SFRotation"
+field121.value = [0,0,1,0]
 
-ProtoInterface118.addField(field121)
-field122 = field()
-field122.setName("scale")
-field122.setAccessType("inputOutput")
-field122.setType("SFVec3f")
-field122.setValue("1 1 1")
+ProtoInterface118.field.append(field121)
+field122 = x3d.field()
+field122.name = "scale"
+field122.accessType = "inputOutput"
+field122.type = "SFVec3f"
+field122.value = [1,1,1]
 
-ProtoInterface118.addField(field122)
-field123 = field()
-field123.setName("scaleOrientation")
-field123.setAccessType("inputOutput")
-field123.setType("SFRotation")
-field123.setValue("0 0 1 0")
+ProtoInterface118.field.append(field122)
+field123 = x3d.field()
+field123.name = "scaleOrientation"
+field123.accessType = "inputOutput"
+field123.type = "SFRotation"
+field123.value = [0,0,1,0]
 
-ProtoInterface118.addField(field123)
-field124 = field()
-field124.setName("center")
-field124.setAccessType("inputOutput")
-field124.setType("SFVec3f")
-field124.setValue("0 0 0")
+ProtoInterface118.field.append(field123)
+field124 = x3d.field()
+field124.name = "center"
+field124.accessType = "inputOutput"
+field124.type = "SFVec3f"
+field124.value = [0,0,0]
 
-ProtoInterface118.addField(field124)
-field125 = field()
-field125.setName("bboxCenter")
-field125.setAccessType("initializeOnly")
-field125.setType("SFVec3f")
-field125.setValue("0 0 0")
+ProtoInterface118.field.append(field124)
+field125 = x3d.field()
+field125.name = "bboxCenter"
+field125.accessType = "initializeOnly"
+field125.type = "SFVec3f"
+field125.value = [0,0,0]
 
-ProtoInterface118.addField(field125)
-field126 = field()
-field126.setName("bboxSize")
-field126.setAccessType("initializeOnly")
-field126.setType("SFVec3f")
-field126.setValue("-1 -1 -1")
+ProtoInterface118.field.append(field125)
+field126 = x3d.field()
+field126.name = "bboxSize"
+field126.accessType = "initializeOnly"
+field126.type = "SFVec3f"
+field126.value = [-1,-1,-1]
 
-ProtoInterface118.addField(field126)
-field127 = field()
-field127.setName("children")
-field127.setAccessType("inputOutput")
-field127.setType("MFNode")
+ProtoInterface118.field.append(field126)
+field127 = x3d.field()
+field127.name = "children"
+field127.accessType = "inputOutput"
+field127.type = "MFNode"
 
-ProtoInterface118.addField(field127)
-field128 = field()
-field128.setName("addChildren")
-field128.setAccessType("inputOnly")
-field128.setType("MFNode")
+ProtoInterface118.field.append(field127)
+field128 = x3d.field()
+field128.name = "addChildren"
+field128.accessType = "inputOnly"
+field128.type = "MFNode"
 
-ProtoInterface118.addField(field128)
-field129 = field()
-field129.setName("removeChildren")
-field129.setAccessType("inputOnly")
-field129.setType("MFNode")
+ProtoInterface118.field.append(field128)
+field129 = x3d.field()
+field129.name = "removeChildren"
+field129.accessType = "inputOnly"
+field129.type = "MFNode"
 
-ProtoInterface118.addField(field129)
+ProtoInterface118.field.append(field129)
 
-ProtoDeclare117.setProtoInterface(ProtoInterface118)
-ProtoBody130 = ProtoBody()
-Transform131 = Transform()
-Transform131.setDEF("SiteTransform")
-IS132 = IS()
-connect133 = connect()
-connect133.setNodeField("translation")
-connect133.setProtoField("translation")
+ProtoDeclare117.ProtoInterface = ProtoInterface118
+ProtoBody130 = x3d.ProtoBody()
+Transform131 = x3d.Transform()
+Transform131.DEF = "SiteTransform"
+IS132 = x3d.IS()
+connect133 = x3d.connect()
+connect133.nodeField = "translation"
+connect133.protoField = "translation"
 
-IS132.addConnect(connect133)
-connect134 = connect()
-connect134.setNodeField("rotation")
-connect134.setProtoField("rotation")
+IS132.connect.append(connect133)
+connect134 = x3d.connect()
+connect134.nodeField = "rotation"
+connect134.protoField = "rotation"
 
-IS132.addConnect(connect134)
-connect135 = connect()
-connect135.setNodeField("center")
-connect135.setProtoField("center")
+IS132.connect.append(connect134)
+connect135 = x3d.connect()
+connect135.nodeField = "center"
+connect135.protoField = "center"
 
-IS132.addConnect(connect135)
-connect136 = connect()
-connect136.setNodeField("scale")
-connect136.setProtoField("scale")
+IS132.connect.append(connect135)
+connect136 = x3d.connect()
+connect136.nodeField = "scale"
+connect136.protoField = "scale"
 
-IS132.addConnect(connect136)
-connect137 = connect()
-connect137.setNodeField("scaleOrientation")
-connect137.setProtoField("scaleOrientation")
+IS132.connect.append(connect136)
+connect137 = x3d.connect()
+connect137.nodeField = "scaleOrientation"
+connect137.protoField = "scaleOrientation"
 
-IS132.addConnect(connect137)
-connect138 = connect()
-connect138.setNodeField("bboxCenter")
-connect138.setProtoField("bboxCenter")
+IS132.connect.append(connect137)
+connect138 = x3d.connect()
+connect138.nodeField = "bboxCenter"
+connect138.protoField = "bboxCenter"
 
-IS132.addConnect(connect138)
-connect139 = connect()
-connect139.setNodeField("bboxSize")
-connect139.setProtoField("bboxSize")
+IS132.connect.append(connect138)
+connect139 = x3d.connect()
+connect139.nodeField = "bboxSize"
+connect139.protoField = "bboxSize"
 
-IS132.addConnect(connect139)
-connect140 = connect()
-connect140.setNodeField("children")
-connect140.setProtoField("children")
+IS132.connect.append(connect139)
+connect140 = x3d.connect()
+connect140.nodeField = "children"
+connect140.protoField = "children"
 
-IS132.addConnect(connect140)
-connect141 = connect()
-connect141.setNodeField("addChildren")
-connect141.setProtoField("addChildren")
+IS132.connect.append(connect140)
+connect141 = x3d.connect()
+connect141.nodeField = "addChildren"
+connect141.protoField = "addChildren"
 
-IS132.addConnect(connect141)
-connect142 = connect()
-connect142.setNodeField("removeChildren")
-connect142.setProtoField("removeChildren")
+IS132.connect.append(connect141)
+connect142 = x3d.connect()
+connect142.nodeField = "removeChildren"
+connect142.protoField = "removeChildren"
 
-IS132.addConnect(connect142)
+IS132.connect.append(connect142)
 
-Transform131.setIS(IS132)
+Transform131.IS = IS132
 
-ProtoBody130.addChildren(Transform131)
+ProtoBody130.children.append(Transform131)
 
-ProtoDeclare117.setProtoBody(ProtoBody130)
+ProtoDeclare117.ProtoBody = ProtoBody130
 
-Scene23.addChildren(ProtoDeclare117)
-ProtoDeclare143 = ProtoDeclare()
-ProtoDeclare143.setName("Displacer")
-ProtoDeclare143.setAppinfo("A Displacer can be used in three different ways: (a) identify the vertices corresponding to a particular feature on a Segment (b) represent a particular muscular action which displaces the vertices in various directions (linearly or radially) and (c) represent a complete configuration of the vertices in a Segment.")
-ProtoDeclare143.setDocumentation("http://HAnim.org/Specifications/HAnim2001/part1/Displacer.html")
-ProtoInterface144 = ProtoInterface()
-field145 = field()
-field145.setName("name")
-field145.setAccessType("inputOutput")
-field145.setType("SFString")
+Scene23.children.append(ProtoDeclare117)
+ProtoDeclare143 = x3d.ProtoDeclare()
+ProtoDeclare143.name = "Displacer"
+ProtoDeclare143.appinfo = "A Displacer can be used in three different ways: (a) identify the vertices corresponding to a particular feature on a Segment (b) represent a particular muscular action which displaces the vertices in various directions (linearly or radially) and (c) represent a complete configuration of the vertices in a Segment."
+ProtoDeclare143.documentation = "http://HAnim.org/Specifications/HAnim2001/part1/Displacer.html"
+ProtoInterface144 = x3d.ProtoInterface()
+field145 = x3d.field()
+field145.name = "name"
+field145.accessType = "inputOutput"
+field145.type = "SFString"
 
-ProtoInterface144.addField(field145)
-field146 = field()
-field146.setName("coordIndex")
-field146.setAccessType("inputOutput")
-field146.setType("MFInt32")
+ProtoInterface144.field.append(field145)
+field146 = x3d.field()
+field146.name = "coordIndex"
+field146.accessType = "inputOutput"
+field146.type = "MFInt32"
 
-ProtoInterface144.addField(field146)
-field147 = field()
-field147.setName("displacements")
-field147.setAccessType("inputOutput")
-field147.setType("MFVec3f")
+ProtoInterface144.field.append(field146)
+field147 = x3d.field()
+field147.name = "displacements"
+field147.accessType = "inputOutput"
+field147.type = "MFVec3f"
 
-ProtoInterface144.addField(field147)
+ProtoInterface144.field.append(field147)
 
-ProtoDeclare143.setProtoInterface(ProtoInterface144)
-ProtoBody148 = ProtoBody()
-WorldInfo149 = WorldInfo()
-WorldInfo149.setInfo(["null body node"])
+ProtoDeclare143.ProtoInterface = ProtoInterface144
+ProtoBody148 = x3d.ProtoBody()
+WorldInfo149 = x3d.WorldInfo()
+WorldInfo149.info = ["null body node"]
 
-ProtoBody148.addChildren(WorldInfo149)
+ProtoBody148.children.append(WorldInfo149)
 
-ProtoDeclare143.setProtoBody(ProtoBody148)
+ProtoDeclare143.ProtoBody = ProtoBody148
 
-Scene23.addChildren(ProtoDeclare143)
-Shape150 = Shape()
-Text151 = Text()
-Text151.setString(["Humanoid Animation","(HAnim) prototype","implementations"])
-FontStyle152 = FontStyle()
-FontStyle152.setJustify(["MIDDLE","MIDDLE"])
+Scene23.children.append(ProtoDeclare143)
+Shape150 = x3d.Shape()
+Text151 = x3d.Text()
+Text151.string = ["Humanoid Animation","(HAnim) prototype","implementations"]
+FontStyle152 = x3d.FontStyle()
+FontStyle152.justify = ["MIDDLE","MIDDLE"]
 
-Text151.setFontStyle(FontStyle152)
+Text151.fontStyle = FontStyle152
 
-Shape150.setGeometry(Text151)
-Appearance153 = Appearance()
-Material154 = Material()
-Material154.setAmbientIntensity(0.25)
-Material154.setDiffuseColor([0.795918,0.505869,0.093315])
-Material154.setShininess(0.39)
-Material154.setSpecularColor([0.923469,0.428866,0.006369])
+Shape150.geometry = Text151
+Appearance153 = x3d.Appearance()
+Material154 = x3d.Material()
+Material154.ambientIntensity = 0.25
+Material154.diffuseColor = [0.795918,0.505869,0.093315]
+Material154.shininess = 0.39
+Material154.specularColor = [0.923469,0.428866,0.006369]
 #Universal Media Library: Autumn 9
 
-Appearance153.setMaterial(Material154)
+Appearance153.material = Material154
 
-Shape150.setAppearance(Appearance153)
+Shape150.appearance = Appearance153
 
-Scene23.addChildren(Shape150)
+Scene23.children.append(Shape150)
 
-X3D0.setScene(Scene23)
-X3D0.toFileX3D("././HAnimPrototypes_RoundTrip.x3d")
+X3D0.Scene = Scene23
+f = open("././HAnimPrototypes_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

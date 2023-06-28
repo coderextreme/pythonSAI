@@ -6,7 +6,7 @@
     <meta content='Cindy Ballreich' name='creator'/>
     <meta content='Tom Miller and Don Brutzman, NPS' name='translators'/>
     <meta content='9 July 2000' name='created'/>
-    <meta content='4 July 2020' name='modified'/>
+    <meta content='22 February 2022' name='modified'/>
     <meta content='Canonical HAnim 1.1 specification example, using ProtoDeclaration and ProtoInstance instead of native X3D tags. Prototype definitions are a compatible combination of version 1.0 and 2.0 prototype interfaces.' name='description'/>
     <meta content='using ProtoDeclare is only for developmental experimentation, use X3D native tags for Humanoids instead' name='warning'/>
     <meta content='NancyNativeTags.x3d' name='reference'/>
@@ -182,7 +182,7 @@
     <ProtoInstance DEF='Humanoid' name='Humanoid'>
       <fieldValue name='name' value='nancy'/>
       <fieldValue name='version' value='1.1'/>
-      <fieldValue name='info' value='"humanoidVersion=Nancy V1.2b" "authorName=Cindy Ballreich" "authorEmail=cindy@ballreich.net" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo &lt;www.ballreich.net/vrml/HAnim/small_logo.gif> is present and proper credit is given."'/>
+      <fieldValue name='info' value='"humanoidVersion=Nancy V1.2b" "authorName=Cindy Ballreich" "authorEmail=cindy@ballreich.net" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo www.ballreich.net/vrml/HAnim/small_logo.gif is present and proper credit is given."'/>
       <fieldValue name='humanoidBody'>
         <ProtoInstance DEF='hanim_humanoid_root' name='Joint'>
           <fieldValue name='name' value='humanoid_root'/>

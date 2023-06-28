@@ -33,8 +33,9 @@ class ClassPrinter:
 
             inhers = self.node.iter("Inheritance")
             for inher in inhers:
-                self.parents.update({ inher.get('baseType') : 1} )
-                self.parents.update(classes[inher.get('baseType')].findParents())
+                if inher.get('baseType') is not None:
+                    self.parents.update({ inher.get('baseType') : 1} )
+                    self.parents.update(classes[inher.get('baseType')].findParents())
     
             return self.parents;
 
@@ -46,7 +47,8 @@ class ClassPrinter:
 
             inhers = self.node.iter("Inheritance")
             for inher in inhers:
-                classes[inher.get('baseType')].children.append(self.name)
+                if inher.get('baseType') is not None:
+                    classes[inher.get('baseType')].children.append(self.name)
     
             return self.children;
 
@@ -134,8 +136,9 @@ for k,v in classes.items():
 for k,v in classes.items():
     code += v.printClass()
 
-code += "};"
+code += "}\n"
 
+# code += "export default mapToMethod;\n"
 code  += "if (typeof module === 'object')  {\n";
 code  += "    module.exports = mapToMethod;\n";
 code  += "}\n";

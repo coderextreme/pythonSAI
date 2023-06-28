@@ -1,437 +1,441 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
-component2 = component()
-component2.setName("Networking")
-component2.setLevel(2)
-
-head1.addComponent(component2)
-component3 = component()
-component3.setName("Core")
-component3.setLevel(2)
-
-head1.addComponent(component3)
-meta4 = meta()
-meta4.setName("title")
-meta4.setContent("t4.x3d")
-
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("identifier")
-meta5.setContent("http://coderextreme.net/X3DJSONLD/src/main/data/t4.x3d")
-
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("generator")
-meta6.setContent("view3dscene, https://castle-engine.io/view3dscene.php")
-
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("creator")
-meta7.setContent("Andreas Plesch and John Carlson")
-
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("source")
-meta8.setContent("t1.wrl")
-
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("description")
-meta9.setContent("Test Case for Proto Expander")
-
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("license")
-meta10.setContent("https://www.web3d.org/x3d/content/examples/license.html")
-
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("translated")
-meta11.setContent("12 May 2020")
-
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("generator")
-meta12.setContent("DOM2JSONSerializer.js, https://github.com/coderextreme/X3DJSONLD/blob/master/src/main/node/DOM2JSONSerializer.js")
-
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("reference")
-meta13.setContent("X3D JSON encoding: https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding")
-
-head1.addMeta(meta13)
-
-X3D0.setHead(head1)
-Scene14 = Scene()
-NavigationInfo15 = NavigationInfo()
-NavigationInfo15.setType(["EXAMINE","FLY","WALK"])
-NavigationInfo15.setSpeed(3)
-NavigationInfo15.setAvatarSize([200,200,120])
-
-Scene14.addChildren(NavigationInfo15)
-WorldInfo16 = WorldInfo()
-WorldInfo16.setTitle("Arts Mapper")
-
-Scene14.addChildren(WorldInfo16)
-Viewpoint17 = Viewpoint()
-Viewpoint17.setDescription("looking North")
-Viewpoint17.setPosition([0,60,110])
-Viewpoint17.setOrientation([1,0,0,-0.699999988079071])
-Viewpoint17.setFieldOfView(0.785398125648499)
-
-Scene14.addChildren(Viewpoint17)
-Transform18 = Transform()
-Transform18.setTranslation([-468,0,315])
-Anchor19 = Anchor()
-Anchor19.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor19.setDescription("High Peak Community Arts")
-Transform20 = Transform()
-Shape21 = Shape()
-Appearance22 = Appearance()
-Material23 = Material()
-Material23.setDiffuseColor([1,1,1])
-Material23.setEmissiveColor([0,0.300000011920929,1])
-
-Appearance22.setMaterial(Material23)
-
-Shape21.setAppearance(Appearance22)
-Sphere24 = Sphere()
-Sphere24.setRadius(5.10000002384186)
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
+component2 = x3d.component()
+component2.name = "Networking"
+component2.level = 2
+
+head1.children.append(component2)
+component3 = x3d.component()
+component3.name = "Core"
+component3.level = 2
+
+head1.children.append(component3)
+meta4 = x3d.meta()
+meta4.name = "title"
+meta4.content = "t4.x3d"
+
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "identifier"
+meta5.content = "http://coderextreme.net/X3DJSONLD/src/main/data/t4.x3d"
+
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "generator"
+meta6.content = "view3dscene, https://castle-engine.io/view3dscene.php"
+
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "creator"
+meta7.content = "Andreas Plesch and John Carlson"
+
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "source"
+meta8.content = "t1.wrl"
+
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "description"
+meta9.content = "Test Case for Proto Expander"
+
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "license"
+meta10.content = "https://www.web3d.org/x3d/content/examples/license.html"
+
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "translated"
+meta11.content = "12 May 2020"
+
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "generator"
+meta12.content = "DOM2JSONSerializer.js, https://github.com/coderextreme/X3DJSONLD/blob/master/src/main/node/DOM2JSONSerializer.js"
+
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "reference"
+meta13.content = "X3D JSON encoding: https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding"
+
+head1.children.append(meta13)
+
+X3D0.head = head1
+Scene14 = x3d.Scene()
+NavigationInfo15 = x3d.NavigationInfo()
+NavigationInfo15.type = ["EXAMINE","FLY","WALK"]
+NavigationInfo15.speed = 3
+NavigationInfo15.avatarSize = [200,200,120]
+
+Scene14.children.append(NavigationInfo15)
+WorldInfo16 = x3d.WorldInfo()
+WorldInfo16.title = "Arts Mapper"
+
+Scene14.children.append(WorldInfo16)
+Viewpoint17 = x3d.Viewpoint()
+Viewpoint17.description = "looking North"
+Viewpoint17.position = [0,60,110]
+Viewpoint17.orientation = [1,0,0,-0.699999988079071]
+Viewpoint17.fieldOfView = 0.785398125648499
+
+Scene14.children.append(Viewpoint17)
+Transform18 = x3d.Transform()
+Transform18.translation = [-468,0,315]
+Anchor19 = x3d.Anchor()
+Anchor19.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor19.description = "High Peak Community Arts"
+Transform20 = x3d.Transform()
+Shape21 = x3d.Shape()
+Appearance22 = x3d.Appearance()
+Material23 = x3d.Material()
+Material23.diffuseColor = [1,1,1]
+Material23.emissiveColor = [0,0.300000011920929,1]
+
+Appearance22.material = Material23
+
+Shape21.appearance = Appearance22
+Sphere24 = x3d.Sphere()
+Sphere24.radius = 5.10000002384186
 
-Shape21.setGeometry(Sphere24)
+Shape21.geometry = Sphere24
 
-Transform20.addChildren(Shape21)
+Transform20.children.append(Shape21)
 
-Anchor19.addChildren(Transform20)
+Anchor19.children.append(Transform20)
 
-Transform18.addChildren(Anchor19)
-Anchor25 = Anchor()
-Anchor25.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor25.setDescription("People Express")
-Transform26 = Transform()
-Shape27 = Shape()
-Appearance28 = Appearance()
-Material29 = Material()
-Material29.setDiffuseColor([1,1,1])
-Material29.setEmissiveColor([0.600000023841858,0,0.600000023841858])
+Transform18.children.append(Anchor19)
+Anchor25 = x3d.Anchor()
+Anchor25.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor25.description = "People Express"
+Transform26 = x3d.Transform()
+Shape27 = x3d.Shape()
+Appearance28 = x3d.Appearance()
+Material29 = x3d.Material()
+Material29.diffuseColor = [1,1,1]
+Material29.emissiveColor = [0.600000023841858,0,0.600000023841858]
 
-Appearance28.setMaterial(Material29)
+Appearance28.material = Material29
 
-Shape27.setAppearance(Appearance28)
-Sphere30 = Sphere()
-Sphere30.setRadius(5.10000002384186)
+Shape27.appearance = Appearance28
+Sphere30 = x3d.Sphere()
+Sphere30.radius = 5.10000002384186
 
-Shape27.setGeometry(Sphere30)
+Shape27.geometry = Sphere30
 
-Transform26.addChildren(Shape27)
+Transform26.children.append(Shape27)
 
-Anchor25.addChildren(Transform26)
+Anchor25.children.append(Transform26)
 
-Transform18.addChildren(Anchor25)
-Anchor31 = Anchor()
-Anchor31.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor31.setDescription("QArts/Studios")
-Transform32 = Transform()
-Shape33 = Shape()
-Appearance34 = Appearance()
-Material35 = Material()
-Material35.setDiffuseColor([1,1,1])
-Material35.setEmissiveColor([0.600000023841858,0,0.600000023841858])
+Transform18.children.append(Anchor25)
+Anchor31 = x3d.Anchor()
+Anchor31.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor31.description = "QArts/Studios"
+Transform32 = x3d.Transform()
+Shape33 = x3d.Shape()
+Appearance34 = x3d.Appearance()
+Material35 = x3d.Material()
+Material35.diffuseColor = [1,1,1]
+Material35.emissiveColor = [0.600000023841858,0,0.600000023841858]
 
-Appearance34.setMaterial(Material35)
+Appearance34.material = Material35
 
-Shape33.setAppearance(Appearance34)
-Sphere36 = Sphere()
-Sphere36.setRadius(5.10000002384186)
+Shape33.appearance = Appearance34
+Sphere36 = x3d.Sphere()
+Sphere36.radius = 5.10000002384186
 
-Shape33.setGeometry(Sphere36)
+Shape33.geometry = Sphere36
 
-Transform32.addChildren(Shape33)
+Transform32.children.append(Shape33)
 
-Anchor31.addChildren(Transform32)
+Anchor31.children.append(Transform32)
 
-Transform18.addChildren(Anchor31)
-Anchor37 = Anchor()
-Anchor37.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor37.setDescription("First Movement")
-Transform38 = Transform()
-Shape39 = Shape()
-Appearance40 = Appearance()
-Material41 = Material()
-Material41.setDiffuseColor([1,1,1])
-Material41.setEmissiveColor([1,0,0.200000002980232])
+Transform18.children.append(Anchor31)
+Anchor37 = x3d.Anchor()
+Anchor37.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor37.description = "First Movement"
+Transform38 = x3d.Transform()
+Shape39 = x3d.Shape()
+Appearance40 = x3d.Appearance()
+Material41 = x3d.Material()
+Material41.diffuseColor = [1,1,1]
+Material41.emissiveColor = [1,0,0.200000002980232]
 
-Appearance40.setMaterial(Material41)
+Appearance40.material = Material41
 
-Shape39.setAppearance(Appearance40)
-Sphere42 = Sphere()
-Sphere42.setRadius(5.10000002384186)
+Shape39.appearance = Appearance40
+Sphere42 = x3d.Sphere()
+Sphere42.radius = 5.10000002384186
 
-Shape39.setGeometry(Sphere42)
+Shape39.geometry = Sphere42
 
-Transform38.addChildren(Shape39)
+Transform38.children.append(Shape39)
 
-Anchor37.addChildren(Transform38)
+Anchor37.children.append(Transform38)
 
-Transform18.addChildren(Anchor37)
-Anchor43 = Anchor()
-Anchor43.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor43.setDescription("City Arts")
-Transform44 = Transform()
-Shape45 = Shape()
-Appearance46 = Appearance()
-Material47 = Material()
-Material47.setDiffuseColor([1,1,1])
-Material47.setEmissiveColor([0.600000023841858,0,0.600000023841858])
+Transform18.children.append(Anchor37)
+Anchor43 = x3d.Anchor()
+Anchor43.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor43.description = "City Arts"
+Transform44 = x3d.Transform()
+Shape45 = x3d.Shape()
+Appearance46 = x3d.Appearance()
+Material47 = x3d.Material()
+Material47.diffuseColor = [1,1,1]
+Material47.emissiveColor = [0.600000023841858,0,0.600000023841858]
 
-Appearance46.setMaterial(Material47)
+Appearance46.material = Material47
 
-Shape45.setAppearance(Appearance46)
-Sphere48 = Sphere()
-Sphere48.setRadius(5.10000002384186)
+Shape45.appearance = Appearance46
+Sphere48 = x3d.Sphere()
+Sphere48.radius = 5.10000002384186
 
-Shape45.setGeometry(Sphere48)
+Shape45.geometry = Sphere48
 
-Transform44.addChildren(Shape45)
+Transform44.children.append(Shape45)
 
-Anchor43.addChildren(Transform44)
+Anchor43.children.append(Transform44)
 
-Transform18.addChildren(Anchor43)
-Anchor49 = Anchor()
-Anchor49.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor49.setDescription("Indigo Dance Group (Salamanda Tandem)")
-Transform50 = Transform()
-Shape51 = Shape()
-Appearance52 = Appearance()
-Material53 = Material()
-Material53.setDiffuseColor([1,1,1])
-Material53.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor43)
+Anchor49 = x3d.Anchor()
+Anchor49.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor49.description = "Indigo Dance Group (Salamanda Tandem)"
+Transform50 = x3d.Transform()
+Shape51 = x3d.Shape()
+Appearance52 = x3d.Appearance()
+Material53 = x3d.Material()
+Material53.diffuseColor = [1,1,1]
+Material53.emissiveColor = [0,0.300000011920929,1]
 
-Appearance52.setMaterial(Material53)
+Appearance52.material = Material53
 
-Shape51.setAppearance(Appearance52)
-Sphere54 = Sphere()
-Sphere54.setRadius(5.10000002384186)
+Shape51.appearance = Appearance52
+Sphere54 = x3d.Sphere()
+Sphere54.radius = 5.10000002384186
 
-Shape51.setGeometry(Sphere54)
+Shape51.geometry = Sphere54
 
-Transform50.addChildren(Shape51)
+Transform50.children.append(Shape51)
 
-Anchor49.addChildren(Transform50)
+Anchor49.children.append(Transform50)
 
-Transform18.addChildren(Anchor49)
-Anchor55 = Anchor()
-Anchor55.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor55.setDescription("Watering Seeds")
-Transform56 = Transform()
-Shape57 = Shape()
-Appearance58 = Appearance()
-Material59 = Material()
-Material59.setDiffuseColor([1,1,1])
-Material59.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor49)
+Anchor55 = x3d.Anchor()
+Anchor55.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor55.description = "Watering Seeds"
+Transform56 = x3d.Transform()
+Shape57 = x3d.Shape()
+Appearance58 = x3d.Appearance()
+Material59 = x3d.Material()
+Material59.diffuseColor = [1,1,1]
+Material59.emissiveColor = [0,0.300000011920929,1]
 
-Appearance58.setMaterial(Material59)
+Appearance58.material = Material59
 
-Shape57.setAppearance(Appearance58)
-Sphere60 = Sphere()
-Sphere60.setRadius(5.10000002384186)
+Shape57.appearance = Appearance58
+Sphere60 = x3d.Sphere()
+Sphere60.radius = 5.10000002384186
 
-Shape57.setGeometry(Sphere60)
+Shape57.geometry = Sphere60
 
-Transform56.addChildren(Shape57)
+Transform56.children.append(Shape57)
 
-Anchor55.addChildren(Transform56)
+Anchor55.children.append(Transform56)
 
-Transform18.addChildren(Anchor55)
-Anchor61 = Anchor()
-Anchor61.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor61.setDescription("Fased In The Arts")
-Transform62 = Transform()
-Shape63 = Shape()
-Appearance64 = Appearance()
-Material65 = Material()
-Material65.setDiffuseColor([1,1,1])
-Material65.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor55)
+Anchor61 = x3d.Anchor()
+Anchor61.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor61.description = "Fased In The Arts"
+Transform62 = x3d.Transform()
+Shape63 = x3d.Shape()
+Appearance64 = x3d.Appearance()
+Material65 = x3d.Material()
+Material65.diffuseColor = [1,1,1]
+Material65.emissiveColor = [0,0.300000011920929,1]
 
-Appearance64.setMaterial(Material65)
+Appearance64.material = Material65
 
-Shape63.setAppearance(Appearance64)
-Sphere66 = Sphere()
-Sphere66.setRadius(5.10000002384186)
+Shape63.appearance = Appearance64
+Sphere66 = x3d.Sphere()
+Sphere66.radius = 5.10000002384186
 
-Shape63.setGeometry(Sphere66)
+Shape63.geometry = Sphere66
 
-Transform62.addChildren(Shape63)
+Transform62.children.append(Shape63)
 
-Anchor61.addChildren(Transform62)
+Anchor61.children.append(Transform62)
 
-Transform18.addChildren(Anchor61)
-Anchor67 = Anchor()
-Anchor67.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor67.setDescription("27a Access Artspace")
-Transform68 = Transform()
-Shape69 = Shape()
-Appearance70 = Appearance()
-Material71 = Material()
-Material71.setDiffuseColor([1,1,1])
-Material71.setEmissiveColor([1,0,0.200000002980232])
+Transform18.children.append(Anchor61)
+Anchor67 = x3d.Anchor()
+Anchor67.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor67.description = "27a Access Artspace"
+Transform68 = x3d.Transform()
+Shape69 = x3d.Shape()
+Appearance70 = x3d.Appearance()
+Material71 = x3d.Material()
+Material71.diffuseColor = [1,1,1]
+Material71.emissiveColor = [1,0,0.200000002980232]
 
-Appearance70.setMaterial(Material71)
+Appearance70.material = Material71
 
-Shape69.setAppearance(Appearance70)
-Sphere72 = Sphere()
-Sphere72.setRadius(5.10000002384186)
+Shape69.appearance = Appearance70
+Sphere72 = x3d.Sphere()
+Sphere72.radius = 5.10000002384186
 
-Shape69.setGeometry(Sphere72)
+Shape69.geometry = Sphere72
 
-Transform68.addChildren(Shape69)
+Transform68.children.append(Shape69)
 
-Anchor67.addChildren(Transform68)
+Anchor67.children.append(Transform68)
 
-Transform18.addChildren(Anchor67)
-Anchor73 = Anchor()
-Anchor73.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor73.setDescription("Bamboozle Theatre Company")
-Transform74 = Transform()
-Shape75 = Shape()
-Appearance76 = Appearance()
-Material77 = Material()
-Material77.setDiffuseColor([1,1,1])
-Material77.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor67)
+Anchor73 = x3d.Anchor()
+Anchor73.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor73.description = "Bamboozle Theatre Company"
+Transform74 = x3d.Transform()
+Shape75 = x3d.Shape()
+Appearance76 = x3d.Appearance()
+Material77 = x3d.Material()
+Material77.diffuseColor = [1,1,1]
+Material77.emissiveColor = [0,0.300000011920929,1]
 
-Appearance76.setMaterial(Material77)
+Appearance76.material = Material77
 
-Shape75.setAppearance(Appearance76)
-Sphere78 = Sphere()
-Sphere78.setRadius(5.10000002384186)
+Shape75.appearance = Appearance76
+Sphere78 = x3d.Sphere()
+Sphere78.radius = 5.10000002384186
 
-Shape75.setGeometry(Sphere78)
+Shape75.geometry = Sphere78
 
-Transform74.addChildren(Shape75)
+Transform74.children.append(Shape75)
 
-Anchor73.addChildren(Transform74)
+Anchor73.children.append(Transform74)
 
-Transform18.addChildren(Anchor73)
-Anchor79 = Anchor()
-Anchor79.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor79.setDescription("Mantle Community Arts")
-Transform80 = Transform()
-Shape81 = Shape()
-Appearance82 = Appearance()
-Material83 = Material()
-Material83.setDiffuseColor([1,1,1])
-Material83.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor73)
+Anchor79 = x3d.Anchor()
+Anchor79.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor79.description = "Mantle Community Arts"
+Transform80 = x3d.Transform()
+Shape81 = x3d.Shape()
+Appearance82 = x3d.Appearance()
+Material83 = x3d.Material()
+Material83.diffuseColor = [1,1,1]
+Material83.emissiveColor = [0,0.300000011920929,1]
 
-Appearance82.setMaterial(Material83)
+Appearance82.material = Material83
 
-Shape81.setAppearance(Appearance82)
-Sphere84 = Sphere()
-Sphere84.setRadius(5.10000002384186)
+Shape81.appearance = Appearance82
+Sphere84 = x3d.Sphere()
+Sphere84.radius = 5.10000002384186
 
-Shape81.setGeometry(Sphere84)
+Shape81.geometry = Sphere84
 
-Transform80.addChildren(Shape81)
+Transform80.children.append(Shape81)
 
-Anchor79.addChildren(Transform80)
+Anchor79.children.append(Transform80)
 
-Transform18.addChildren(Anchor79)
-Anchor85 = Anchor()
-Anchor85.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor85.setDescription("Artlink East")
-Transform86 = Transform()
-Shape87 = Shape()
-Appearance88 = Appearance()
-Material89 = Material()
-Material89.setDiffuseColor([1,1,1])
-Material89.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor79)
+Anchor85 = x3d.Anchor()
+Anchor85.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor85.description = "Artlink East"
+Transform86 = x3d.Transform()
+Shape87 = x3d.Shape()
+Appearance88 = x3d.Appearance()
+Material89 = x3d.Material()
+Material89.diffuseColor = [1,1,1]
+Material89.emissiveColor = [0,0.300000011920929,1]
 
-Appearance88.setMaterial(Material89)
+Appearance88.material = Material89
 
-Shape87.setAppearance(Appearance88)
-Sphere90 = Sphere()
-Sphere90.setRadius(5.10000002384186)
+Shape87.appearance = Appearance88
+Sphere90 = x3d.Sphere()
+Sphere90.radius = 5.10000002384186
 
-Shape87.setGeometry(Sphere90)
+Shape87.geometry = Sphere90
 
-Transform86.addChildren(Shape87)
+Transform86.children.append(Shape87)
 
-Anchor85.addChildren(Transform86)
+Anchor85.children.append(Transform86)
 
-Transform18.addChildren(Anchor85)
-Anchor91 = Anchor()
-Anchor91.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor91.setDescription("Creations")
-Transform92 = Transform()
-Shape93 = Shape()
-Appearance94 = Appearance()
-Material95 = Material()
-Material95.setDiffuseColor([1,1,1])
-Material95.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor85)
+Anchor91 = x3d.Anchor()
+Anchor91.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor91.description = "Creations"
+Transform92 = x3d.Transform()
+Shape93 = x3d.Shape()
+Appearance94 = x3d.Appearance()
+Material95 = x3d.Material()
+Material95.diffuseColor = [1,1,1]
+Material95.emissiveColor = [0,0.300000011920929,1]
 
-Appearance94.setMaterial(Material95)
+Appearance94.material = Material95
 
-Shape93.setAppearance(Appearance94)
-Sphere96 = Sphere()
-Sphere96.setRadius(5.10000002384186)
+Shape93.appearance = Appearance94
+Sphere96 = x3d.Sphere()
+Sphere96.radius = 5.10000002384186
 
-Shape93.setGeometry(Sphere96)
+Shape93.geometry = Sphere96
 
-Transform92.addChildren(Shape93)
+Transform92.children.append(Shape93)
 
-Anchor91.addChildren(Transform92)
+Anchor91.children.append(Transform92)
 
-Transform18.addChildren(Anchor91)
-Anchor97 = Anchor()
-Anchor97.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor97.setDescription("New Perspectives")
-Transform98 = Transform()
-Shape99 = Shape()
-Appearance100 = Appearance()
-Material101 = Material()
-Material101.setDiffuseColor([1,1,1])
-Material101.setEmissiveColor([1,0,0.200000002980232])
+Transform18.children.append(Anchor91)
+Anchor97 = x3d.Anchor()
+Anchor97.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor97.description = "New Perspectives"
+Transform98 = x3d.Transform()
+Shape99 = x3d.Shape()
+Appearance100 = x3d.Appearance()
+Material101 = x3d.Material()
+Material101.diffuseColor = [1,1,1]
+Material101.emissiveColor = [1,0,0.200000002980232]
 
-Appearance100.setMaterial(Material101)
+Appearance100.material = Material101
 
-Shape99.setAppearance(Appearance100)
-Sphere102 = Sphere()
-Sphere102.setRadius(5.10000002384186)
+Shape99.appearance = Appearance100
+Sphere102 = x3d.Sphere()
+Sphere102.radius = 5.10000002384186
 
-Shape99.setGeometry(Sphere102)
+Shape99.geometry = Sphere102
 
-Transform98.addChildren(Shape99)
+Transform98.children.append(Shape99)
 
-Anchor97.addChildren(Transform98)
+Anchor97.children.append(Transform98)
 
-Transform18.addChildren(Anchor97)
-Anchor103 = Anchor()
-Anchor103.setUrl(["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"])
-Anchor103.setDescription("UKan2")
-Transform104 = Transform()
-Shape105 = Shape()
-Appearance106 = Appearance()
-Material107 = Material()
-Material107.setDiffuseColor([1,1,1])
-Material107.setEmissiveColor([0,0.300000011920929,1])
+Transform18.children.append(Anchor97)
+Anchor103 = x3d.Anchor()
+Anchor103.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor103.description = "UKan2"
+Transform104 = x3d.Transform()
+Shape105 = x3d.Shape()
+Appearance106 = x3d.Appearance()
+Material107 = x3d.Material()
+Material107.diffuseColor = [1,1,1]
+Material107.emissiveColor = [0,0.300000011920929,1]
 
-Appearance106.setMaterial(Material107)
+Appearance106.material = Material107
 
-Shape105.setAppearance(Appearance106)
-Sphere108 = Sphere()
-Sphere108.setRadius(5.10000002384186)
+Shape105.appearance = Appearance106
+Sphere108 = x3d.Sphere()
+Sphere108.radius = 5.10000002384186
 
-Shape105.setGeometry(Sphere108)
+Shape105.geometry = Sphere108
 
-Transform104.addChildren(Shape105)
+Transform104.children.append(Shape105)
 
-Anchor103.addChildren(Transform104)
+Anchor103.children.append(Transform104)
 
-Transform18.addChildren(Anchor103)
+Transform18.children.append(Anchor103)
 
-Scene14.addChildren(Transform18)
+Scene14.children.append(Transform18)
 
-X3D0.setScene(Scene14)
-X3D0.toFileX3D("././t3_RoundTrip.x3d")
+X3D0.Scene = Scene14
+f = open("././t3_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

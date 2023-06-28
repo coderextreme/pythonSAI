@@ -1,8901 +1,8999 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
-component2 = component()
-component2.setName("H-Anim")
-component2.setLevel(1)
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
+component2 = x3d.component()
+component2.name = "H-Anim"
+component2.level = 1
 
-head1.addComponent(component2)
-meta3 = meta()
-meta3.setName("title")
-meta3.setContent("HAnim1SpecificationLOA3Illustrated.x3d")
+head1.children.append(component2)
+meta3 = x3d.meta()
+meta3.name = "title"
+meta3.content = "HAnim1SpecificationLOA3Illustrated.x3d"
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("description")
-meta4.setContent("HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, also suitable for re-use as an authoring template. Geometry visualizations are derived from HAnim1SpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships.")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "description"
+meta4.content = "HAnim Specification reference example providing full coverage and visibility of all specified HAnim constructs, also suitable for re-use as an authoring template. Geometry visualizations are derived from HAnim1SpecificationLOA3Invisible.x3d visualization report. Resusable exemplar animations also added via heads-up display (HUD) interface to confirm proper parent-child relationships."
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("reference")
-meta5.setContent("https://www.web3d.org/files/specifications/19774/V1.0/HAnim/BodyDimensionsAndLOAs.html#LOA3ExampleSourceWithDiamonds")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "reference"
+meta5.content = "https://www.web3d.org/files/specifications/19774/V1.0/HAnim/BodyDimensionsAndLOAs.html#LOA3ExampleSourceWithDiamonds"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("created")
-meta6.setContent("24 April 2013")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "created"
+meta6.content = "24 April 2013"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("modified")
-meta7.setContent("19 February 2021")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "modified"
+meta7.content = "19 February 2021"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("creator")
-meta8.setContent("Matthew T. Beitler, Joe D. Williams, Don Brutzman")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "creator"
+meta8.content = "Matthew T. Beitler, Joe D. Williams, Don Brutzman"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("Image")
-meta9.setContent("HAnim1SpecificationLOA3Illustrated.png")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "Image"
+meta9.content = "HAnim1SpecificationLOA3Illustrated.png"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("Image")
-meta10.setContent("HAnim1SpecificationLOA3IllustratedLeftSide.png")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "Image"
+meta10.content = "HAnim1SpecificationLOA3IllustratedLeftSide.png"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("reference")
-meta11.setContent("HAnim1SpecificationLOA3Invisible.x3d")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "reference"
+meta11.content = "HAnim1SpecificationLOA3Invisible.x3d"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("reference")
-meta12.setContent("HAnim1SpecificationLOA3Animation.x3d")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "reference"
+meta12.content = "HAnim1SpecificationLOA3Animation.x3d"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("reference")
-meta13.setContent("HAnimSpecificationExampleChangeLog.txt")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "reference"
+meta13.content = "HAnimSpecificationExampleChangeLog.txt"
 
-head1.addMeta(meta13)
-meta14 = meta()
-meta14.setName("Image")
-meta14.setContent("images/BonesAllSkeletonFrontViewLOA1.png")
+head1.children.append(meta13)
+meta14 = x3d.meta()
+meta14.name = "Image"
+meta14.content = "images/BonesAllSkeletonFrontViewLOA1.png"
 
-head1.addMeta(meta14)
-meta15 = meta()
-meta15.setName("Image")
-meta15.setContent("images/BonesAllSkeletonFrontViewLOA2.png")
+head1.children.append(meta14)
+meta15 = x3d.meta()
+meta15.name = "Image"
+meta15.content = "images/BonesAllSkeletonFrontViewLOA2.png"
 
-head1.addMeta(meta15)
-meta16 = meta()
-meta16.setName("Image")
-meta16.setContent("images/BonesAllSkeletonFrontViewLOA3.png")
+head1.children.append(meta15)
+meta16 = x3d.meta()
+meta16.name = "Image"
+meta16.content = "images/BonesAllSkeletonFrontViewLOA3.png"
 
-head1.addMeta(meta16)
-meta17 = meta()
-meta17.setName("TODO")
-meta17.setContent("move relevant HAnimSite/Viewpoint pairs into skeleton at appropriate locations")
+head1.children.append(meta16)
+meta17 = x3d.meta()
+meta17.name = "TODO"
+meta17.content = "move relevant HAnimSite/Viewpoint pairs into skeleton at appropriate locations"
 
-head1.addMeta(meta17)
-meta18 = meta()
-meta18.setName("warning")
-meta18.setContent("BS Contact and H3DViewer have polygon-culling problems at close range (possibly related to avatarSize), other players look OK")
+head1.children.append(meta17)
+meta18 = x3d.meta()
+meta18.name = "warning"
+meta18.content = "BS Contact and H3DViewer have polygon-culling problems at close range (possibly related to avatarSize), other players look OK"
 
-head1.addMeta(meta18)
-meta19 = meta()
-meta19.setName("TODO")
-meta19.setContent("insert MetadataInteger nodes indicating LOA for each Joint and Segment")
+head1.children.append(meta18)
+meta19 = x3d.meta()
+meta19.name = "TODO"
+meta19.content = "insert MetadataInteger nodes indicating LOA for each Joint and Segment"
 
-head1.addMeta(meta19)
-meta20 = meta()
-meta20.setName("reference")
-meta20.setContent("Norman Badler et al., ANTHROPOMETRY FOR COMPUTER GRAPHICS HUMAN FIGURES, University of Pennsylvania, 1989.")
+head1.children.append(meta19)
+meta20 = x3d.meta()
+meta20.name = "reference"
+meta20.content = "Norman Badler et al., ANTHROPOMETRY FOR COMPUTER GRAPHICS HUMAN FIGURES, University of Pennsylvania, 1989."
 
-head1.addMeta(meta20)
-meta21 = meta()
-meta21.setName("reference")
-meta21.setContent("http://www.cis.upenn.edu/~badler/anthro/89-71.ps")
+head1.children.append(meta20)
+meta21 = x3d.meta()
+meta21.name = "reference"
+meta21.content = "http://www.cis.upenn.edu/~badler/anthro/89-71.ps"
 
-head1.addMeta(meta21)
-meta22 = meta()
-meta22.setName("reference")
-meta22.setContent("tables/AnthropometryForComputerGraphicsHumanFigures89-71.pdf")
+head1.children.append(meta21)
+meta22 = x3d.meta()
+meta22.name = "reference"
+meta22.content = "tables/AnthropometryForComputerGraphicsHumanFigures89-71.pdf"
 
-head1.addMeta(meta22)
-meta23 = meta()
-meta23.setName("translator")
-meta23.setContent("Don Brutzman and Joe Williams")
+head1.children.append(meta22)
+meta23 = x3d.meta()
+meta23.name = "translator"
+meta23.content = "Don Brutzman and Joe Williams"
 
-head1.addMeta(meta23)
-meta24 = meta()
-meta24.setName("generator")
-meta24.setContent("BS Contact Geo 8.001, http://www.bitmanagement.de/en/products/interactive-3d-clients/bs-contact-geo")
+head1.children.append(meta23)
+meta24 = x3d.meta()
+meta24.name = "generator"
+meta24.content = "BS Contact Geo 8.001, http://www.bitmanagement.de/en/products/interactive-3d-clients/bs-contact-geo"
 
-head1.addMeta(meta24)
-meta25 = meta()
-meta25.setName("reference")
-meta25.setContent("originals/LOA3ExampleSourceWithDiamondsOriginal.wrl")
+head1.children.append(meta24)
+meta25 = x3d.meta()
+meta25.name = "reference"
+meta25.content = "originals/LOA3ExampleSourceWithDiamondsOriginal.wrl"
 
-head1.addMeta(meta25)
-meta26 = meta()
-meta26.setName("reference")
-meta26.setContent("originals/LOA3ExampleSourceWithDiamondsOriginal.x3d")
+head1.children.append(meta25)
+meta26 = x3d.meta()
+meta26.name = "reference"
+meta26.content = "originals/LOA3ExampleSourceWithDiamondsOriginal.x3d"
 
-head1.addMeta(meta26)
-meta27 = meta()
-meta27.setName("reference")
-meta27.setContent("originals/LOA3ExampleSourceWithDiamondsOriginalBsContactExport.x3d")
+head1.children.append(meta26)
+meta27 = x3d.meta()
+meta27.name = "reference"
+meta27.content = "originals/LOA3ExampleSourceWithDiamondsOriginalBsContactExport.x3d"
 
-head1.addMeta(meta27)
-meta28 = meta()
-meta28.setName("reference")
-meta28.setContent("HAnim Specification Table 4.4 - Face Joint object names, https://www.web3d.org/files/specifications/19774/V1.0/HAnim/concepts.html#FaceJointObjectNames")
+head1.children.append(meta27)
+meta28 = x3d.meta()
+meta28.name = "reference"
+meta28.content = "HAnim Specification Table 4.4 - Face Joint object names, https://www.web3d.org/files/specifications/19774/V1.0/HAnim/concepts.html#FaceJointObjectNames"
 
-head1.addMeta(meta28)
-meta29 = meta()
-meta29.setName("generator")
-meta29.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta28)
+meta29 = x3d.meta()
+meta29.name = "generator"
+meta29.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta29)
-meta30 = meta()
-meta30.setName("identifier")
-meta30.setContent("https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/HAnim1SpecificationLOA3Illustrated.x3d")
+head1.children.append(meta29)
+meta30 = x3d.meta()
+meta30.name = "identifier"
+meta30.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/HAnim1SpecificationLOA3Illustrated.x3d"
 
-head1.addMeta(meta30)
-meta31 = meta()
-meta31.setName("license")
-meta31.setContent("../license.html")
+head1.children.append(meta30)
+meta31 = x3d.meta()
+meta31.name = "license"
+meta31.content = "../license.html"
 
-head1.addMeta(meta31)
+head1.children.append(meta31)
 
-X3D0.setHead(head1)
-Scene32 = Scene()
-Background33 = Background()
-Background33.setSkyColor([0.3,0.3,0.3])
+X3D0.head = head1
+Scene32 = x3d.Scene()
+Background33 = x3d.Background()
+Background33.skyColor = [0.3,0.3,0.3]
 
-Scene32.addChildren(Background33)
-NavigationInfo34 = NavigationInfo()
+Scene32.children.append(Background33)
+NavigationInfo34 = x3d.NavigationInfo()
 
-Scene32.addChildren(NavigationInfo34)
-Group35 = Group()
-Group35.setDEF("Original_WorldInfo")
-WorldInfo36 = WorldInfo()
-WorldInfo36.setInfo([" HANIM 200x Default Joint Centers, Level-Of-Articulation 3 HANIM 200x (VRML97) Author name: eMpTy (a.k.a. Matthew T. Beitler) HANIM 200x (VRML97) Author email: beitler@cis.upenn.edu or beitler@acm.org HANIM 200x (VRML97) Author homepage: http://www.cis.upenn.edu/~beitler HANIM 200x (VRML97) Compliance Date: August 12, 2003 HANIM 200x Compliance Information: http://HAnim.org/Specifications/HAnim200x Construction Info (joint centers): The joint centers of this figure are based on the work of Norman Badler, director of the Center for Human Modeling and Simulation at the University of Pennsylvania. The original document which these joint centers are based on can be found at: http://www.cis.upenn.edu/~badler/anthro/89-71.ps "])
-WorldInfo36.setTitle("HANIM 200x Default Joint Centers, LOA3")
+Scene32.children.append(NavigationInfo34)
+Group35 = x3d.Group()
+Group35.DEF = "Original_WorldInfo"
+WorldInfo36 = x3d.WorldInfo()
+WorldInfo36.info = [" HANIM 200x Default Joint Centers, Level-Of-Articulation 3 HANIM 200x (VRML97) Author name: eMpTy (a.k.a. Matthew T. Beitler) HANIM 200x (VRML97) Author email: beitler@cis.upenn.edu or beitler@acm.org HANIM 200x (VRML97) Author homepage: http://www.cis.upenn.edu/~beitler HANIM 200x (VRML97) Compliance Date: August 12, 2003 HANIM 200x Compliance Information: http://HAnim.org/Specifications/HAnim200x Construction Info (joint centers): The joint centers of this figure are based on the work of Norman Badler, director of the Center for Human Modeling and Simulation at the University of Pennsylvania. The original document which these joint centers are based on can be found at: http://www.cis.upenn.edu/~badler/anthro/89-71.ps "]
+WorldInfo36.title = "HANIM 200x Default Joint Centers, LOA3"
 
-Group35.addChildren(WorldInfo36)
+Group35.children.append(WorldInfo36)
 
-Scene32.addChildren(Group35)
+Scene32.children.append(Group35)
 #TODO move viewpoints to be internal to HAnimHumanoid
 #Viewpoint centerOfRotation=\"0 0.9149 0.0016\" matches initial at-rest locaton of the sacroliac. Note that these viewpoints are external to the HAnimHumanoid and do not move with the human.
-Viewpoint37 = Viewpoint()
-Viewpoint37.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint37.setDescription("Humanoid LOA 3 Front")
-Viewpoint37.setPosition([0,0.4,4])
+Viewpoint37 = x3d.Viewpoint()
+Viewpoint37.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint37.description = "Humanoid LOA 3 Front"
+Viewpoint37.position = [0,0.4,4]
 
-Scene32.addChildren(Viewpoint37)
-Viewpoint38 = Viewpoint()
-Viewpoint38.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint38.setDescription("Humanoid LOA 3 Front Close")
-Viewpoint38.setPosition([0,0.8,2])
+Scene32.children.append(Viewpoint37)
+Viewpoint38 = x3d.Viewpoint()
+Viewpoint38.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint38.description = "Humanoid LOA 3 Front Close"
+Viewpoint38.position = [0,0.8,2]
 
-Scene32.addChildren(Viewpoint38)
-Viewpoint39 = Viewpoint()
-Viewpoint39.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint39.setDescription("Humanoid LOA 3 Front Closer")
-Viewpoint39.setPosition([0,1.2,1])
+Scene32.children.append(Viewpoint38)
+Viewpoint39 = x3d.Viewpoint()
+Viewpoint39.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint39.description = "Humanoid LOA 3 Front Closer"
+Viewpoint39.position = [0,1.2,1]
 
-Scene32.addChildren(Viewpoint39)
-Viewpoint40 = Viewpoint()
-Viewpoint40.setCenterOfRotation([0,1.5,0.0016])
-Viewpoint40.setDescription("Humanoid LOA 3 Front Face")
-Viewpoint40.setPosition([0,1.63,1])
+Scene32.children.append(Viewpoint39)
+Viewpoint40 = x3d.Viewpoint()
+Viewpoint40.centerOfRotation = [0,1.5,0.0016]
+Viewpoint40.description = "Humanoid LOA 3 Front Face"
+Viewpoint40.position = [0,1.63,1]
 
-Scene32.addChildren(Viewpoint40)
-Viewpoint41 = Viewpoint()
-Viewpoint41.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint41.setDescription("Humanoid LOA 3 Right Side")
-Viewpoint41.setOrientation([0,1,0,1.5708])
-Viewpoint41.setPosition([2.6,0.8,0])
+Scene32.children.append(Viewpoint40)
+Viewpoint41 = x3d.Viewpoint()
+Viewpoint41.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint41.description = "Humanoid LOA 3 Right Side"
+Viewpoint41.orientation = [0,1,0,1.5708]
+Viewpoint41.position = [2.6,0.8,0]
 
-Scene32.addChildren(Viewpoint41)
-Viewpoint42 = Viewpoint()
-Viewpoint42.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint42.setDescription("Humanoid LOA 3 Right Side Close")
-Viewpoint42.setOrientation([0,1,0,1.2])
-Viewpoint42.setPosition([1,0.8,0.5])
+Scene32.children.append(Viewpoint41)
+Viewpoint42 = x3d.Viewpoint()
+Viewpoint42.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint42.description = "Humanoid LOA 3 Right Side Close"
+Viewpoint42.orientation = [0,1,0,1.2]
+Viewpoint42.position = [1,0.8,0.5]
 
-Scene32.addChildren(Viewpoint42)
-Viewpoint43 = Viewpoint()
-Viewpoint43.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint43.setDescription("Humanoid LOA 3 Left Side Close")
-Viewpoint43.setOrientation([0,1,0,-1.2])
-Viewpoint43.setPosition([-1,0.8,0.5])
+Scene32.children.append(Viewpoint42)
+Viewpoint43 = x3d.Viewpoint()
+Viewpoint43.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint43.description = "Humanoid LOA 3 Left Side Close"
+Viewpoint43.orientation = [0,1,0,-1.2]
+Viewpoint43.position = [-1,0.8,0.5]
 
-Scene32.addChildren(Viewpoint43)
-Viewpoint44 = Viewpoint()
-Viewpoint44.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint44.setDescription("Humanoid LOA 3 Left Side")
-Viewpoint44.setOrientation([0,1,0,-1.5708])
-Viewpoint44.setPosition([-2.6,0.8,0])
+Scene32.children.append(Viewpoint43)
+Viewpoint44 = x3d.Viewpoint()
+Viewpoint44.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint44.description = "Humanoid LOA 3 Left Side"
+Viewpoint44.orientation = [0,1,0,-1.5708]
+Viewpoint44.position = [-2.6,0.8,0]
 
-Scene32.addChildren(Viewpoint44)
-Viewpoint45 = Viewpoint()
-Viewpoint45.setCenterOfRotation([0,0.9149,0.0016])
-Viewpoint45.setDescription("Humanoid LOA 3 Top")
-Viewpoint45.setOrientation([1,0,0,-1.5708])
-Viewpoint45.setPosition([0,3.5,0])
+Scene32.children.append(Viewpoint44)
+Viewpoint45 = x3d.Viewpoint()
+Viewpoint45.centerOfRotation = [0,0.9149,0.0016]
+Viewpoint45.description = "Humanoid LOA 3 Top"
+Viewpoint45.orientation = [1,0,0,-1.5708]
+Viewpoint45.position = [0,3.5,0]
 
-Scene32.addChildren(Viewpoint45)
-HAnimHumanoid46 = HAnimHumanoid()
-HAnimHumanoid46.setName("humanoid")
-HAnimHumanoid46.setDEF("hanim_humanoid")
-HAnimHumanoid46.setInfo(["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=2.0","height=1.7504"])
-HAnimHumanoid46.setVersion("1.0")
+Scene32.children.append(Viewpoint45)
+HAnimHumanoid46 = x3d.HAnimHumanoid()
+HAnimHumanoid46.name = "humanoid"
+HAnimHumanoid46.DEF = "hanim_humanoid"
+HAnimHumanoid46.info = ["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=2.0","height=1.7504"]
+HAnimHumanoid46.version = "1.0"
 #Only one root HAnimJoint is expected
 #USE nodes go here for access by inverse kinematics (IK) engines and other tools
 #Top-level HAnimSite/Viewpoint nodes that move with the human center but are unaffected by body animation
 #TODO move relevant HAnimSite/Viewpoint pairs into skeleton at appropriate locations, if so also revert containerField to default
 #right between the eyes, stationary position not animating except with body itself
-HAnimJoint47 = HAnimJoint()
-HAnimJoint47.setName("humanoid_root")
-HAnimJoint47.setDEF("hanim_humanoid_root")
-HAnimJoint47.setCenter([0,0.824,0.0277])
-HAnimJoint47.setStiffness([0,0,0])
-HAnimSegment48 = HAnimSegment()
-HAnimSegment48.setName("sacrum")
-HAnimSegment48.setDEF("hanim_sacrum")
+HAnimJoint47 = x3d.HAnimJoint()
+HAnimJoint47.name = "humanoid_root"
+HAnimJoint47.DEF = "hanim_humanoid_root"
+HAnimJoint47.center = [0,0.824,0.0277]
+HAnimJoint47.ulimit = [0,0,0]
+HAnimJoint47.llimit = [0,0,0]
+HAnimSegment48 = x3d.HAnimSegment()
+HAnimSegment48.name = "sacrum"
+HAnimSegment48.DEF = "hanim_sacrum"
 #<HAnimJoint name='humanoid_root'/> visualization sphere is placed within <HAnimSegment name='sacrum'/>
-TouchSensor49 = TouchSensor()
-TouchSensor49.setDescription("HAnimJoint HumanoidRoot, HAnimSegment sacrum")
+TouchSensor49 = x3d.TouchSensor()
+TouchSensor49.description = "HAnimJoint HumanoidRoot, HAnimSegment sacrum"
 
-HAnimSegment48.addChildren(TouchSensor49)
-Transform50 = Transform()
-Transform50.setTranslation([0,0.824,0.0277])
-Shape51 = Shape()
-Shape51.setDEF("HAnimJointShape")
-Sphere52 = Sphere()
-Sphere52.setRadius(0.006)
+HAnimSegment48.children.append(TouchSensor49)
+Transform50 = x3d.Transform()
+Transform50.translation = [0,0.824,0.0277]
+Shape51 = x3d.Shape()
+Shape51.DEF = "HAnimJointShape"
+Sphere52 = x3d.Sphere()
+Sphere52.radius = 0.006
 
-Shape51.setGeometry(Sphere52)
-Appearance53 = Appearance()
-Appearance53.setDEF("HAnimJointAppearance")
-Material54 = Material()
-Material54.setDiffuseColor([1,0.5,0])
-Material54.setTransparency(0.5)
+Shape51.geometry = Sphere52
+Appearance53 = x3d.Appearance()
+Appearance53.DEF = "HAnimJointAppearance"
+Material54 = x3d.Material()
+Material54.diffuseColor = [1,0.5,0]
+Material54.transparency = 0.5
 
-Appearance53.setMaterial(Material54)
+Appearance53.material = Material54
 
-Shape51.setAppearance(Appearance53)
+Shape51.appearance = Appearance53
 
-Transform50.addChildren(Shape51)
+Transform50.children.append(Shape51)
 
-HAnimSegment48.addChildren(Transform50)
+HAnimSegment48.children.append(Transform50)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='humanoid_root'/> to <HAnimJoint name='sacroiliac'/>
-Shape55 = Shape()
-LineSet56 = LineSet()
-LineSet56.setVertexCount([2])
-Coordinate57 = Coordinate()
-Coordinate57.setPoint([0,0.824,0.0277,0,0.9149,0.0016])
+Shape55 = x3d.Shape()
+LineSet56 = x3d.LineSet()
+LineSet56.vertexCount = [2]
+Coordinate57 = x3d.Coordinate()
+Coordinate57.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
-LineSet56.setCoord(Coordinate57)
-ColorRGBA58 = ColorRGBA()
-ColorRGBA58.setDEF("HAnimSegmentLineColorRGBA")
-ColorRGBA58.setColor([1,1,0,1,1,1,0,0.1])
+LineSet56.coord.append(Coordinate57)
+ColorRGBA58 = x3d.ColorRGBA()
+ColorRGBA58.DEF = "HAnimSegmentLineColorRGBA"
+ColorRGBA58.color = [1,1,0,1,1,1,0,0.1]
 
-LineSet56.setColor(ColorRGBA58)
+LineSet56.color.append(ColorRGBA58)
 
-Shape55.setGeometry(LineSet56)
+Shape55.geometry = LineSet56
 
-HAnimSegment48.addChildren(Shape55)
+HAnimSegment48.children.append(Shape55)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='humanoid_root'/> to <HAnimJoint name='vl5'/>
-Shape59 = Shape()
-LineSet60 = LineSet()
-LineSet60.setVertexCount([2])
-Coordinate61 = Coordinate()
-Coordinate61.setPoint([0,0.824,0.0277,0.0028,1.0568,-0.0776])
+Shape59 = x3d.Shape()
+LineSet60 = x3d.LineSet()
+LineSet60.vertexCount = [2]
+Coordinate61 = x3d.Coordinate()
+Coordinate61.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
-LineSet60.setCoord(Coordinate61)
-ColorRGBA62 = ColorRGBA()
-ColorRGBA62.setUSE("HAnimSegmentLineColorRGBA")
+LineSet60.coord.append(Coordinate61)
+ColorRGBA62 = x3d.ColorRGBA()
+ColorRGBA62.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet60.setColor(ColorRGBA62)
+LineSet60.color.append(ColorRGBA62)
 
-Shape59.setGeometry(LineSet60)
+Shape59.geometry = LineSet60
 
-HAnimSegment48.addChildren(Shape59)
+HAnimSegment48.children.append(Shape59)
 
-HAnimJoint47.addChildren(HAnimSegment48)
-HAnimJoint63 = HAnimJoint()
-HAnimJoint63.setName("sacroiliac")
-HAnimJoint63.setDEF("hanim_sacroiliac")
-HAnimJoint63.setCenter([0,0.9149,0.0016])
-HAnimJoint63.setStiffness([0,0,0])
-HAnimSegment64 = HAnimSegment()
-HAnimSegment64.setName("pelvis")
-HAnimSegment64.setDEF("hanim_pelvis")
+HAnimJoint47.children.append(HAnimSegment48)
+HAnimJoint63 = x3d.HAnimJoint()
+HAnimJoint63.name = "sacroiliac"
+HAnimJoint63.DEF = "hanim_sacroiliac"
+HAnimJoint63.center = [0,0.9149,0.0016]
+HAnimJoint63.ulimit = [0,0,0]
+HAnimJoint63.llimit = [0,0,0]
+HAnimSegment64 = x3d.HAnimSegment()
+HAnimSegment64.name = "pelvis"
+HAnimSegment64.DEF = "hanim_pelvis"
 #<HAnimJoint name='sacroiliac'/> visualization sphere is placed within <HAnimSegment name='pelvis'/>
-TouchSensor65 = TouchSensor()
-TouchSensor65.setDescription("HAnimJoint sacroiliac, HAnimSegment pelvis")
+TouchSensor65 = x3d.TouchSensor()
+TouchSensor65.description = "HAnimJoint sacroiliac, HAnimSegment pelvis"
 
-HAnimSegment64.addChildren(TouchSensor65)
-Transform66 = Transform()
-Transform66.setTranslation([0,0.9149,0.0016])
-Shape67 = Shape()
-Shape67.setUSE("HAnimJointShape")
+HAnimSegment64.children.append(TouchSensor65)
+Transform66 = x3d.Transform()
+Transform66.translation = [0,0.9149,0.0016]
+Shape67 = x3d.Shape()
+Shape67.USE = "HAnimJointShape"
 
-Transform66.addChildren(Shape67)
+Transform66.children.append(Shape67)
 
-HAnimSegment64.addChildren(Transform66)
+HAnimSegment64.children.append(Transform66)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='sacroiliac'/> to <HAnimJoint name='l_hip'/>
-Shape68 = Shape()
-LineSet69 = LineSet()
-LineSet69.setVertexCount([2])
-Coordinate70 = Coordinate()
-Coordinate70.setPoint([0,0.9149,0.0016,0.0961,0.9124,-0.0001])
+Shape68 = x3d.Shape()
+LineSet69 = x3d.LineSet()
+LineSet69.vertexCount = [2]
+Coordinate70 = x3d.Coordinate()
+Coordinate70.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
-LineSet69.setCoord(Coordinate70)
-ColorRGBA71 = ColorRGBA()
-ColorRGBA71.setUSE("HAnimSegmentLineColorRGBA")
+LineSet69.coord.append(Coordinate70)
+ColorRGBA71 = x3d.ColorRGBA()
+ColorRGBA71.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet69.setColor(ColorRGBA71)
+LineSet69.color.append(ColorRGBA71)
 
-Shape68.setGeometry(LineSet69)
+Shape68.geometry = LineSet69
 
-HAnimSegment64.addChildren(Shape68)
+HAnimSegment64.children.append(Shape68)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='sacroiliac'/> to <HAnimJoint name='r_hip'/>
-Shape72 = Shape()
-LineSet73 = LineSet()
-LineSet73.setVertexCount([2])
-Coordinate74 = Coordinate()
-Coordinate74.setPoint([0,0.9149,0.0016,-0.0961,0.9124,-0.0001])
+Shape72 = x3d.Shape()
+LineSet73 = x3d.LineSet()
+LineSet73.vertexCount = [2]
+Coordinate74 = x3d.Coordinate()
+Coordinate74.point = (0.0000,0.9149,0.0016,-0.0961,0.9124,-0.0001)
 
-LineSet73.setCoord(Coordinate74)
-ColorRGBA75 = ColorRGBA()
-ColorRGBA75.setUSE("HAnimSegmentLineColorRGBA")
+LineSet73.coord.append(Coordinate74)
+ColorRGBA75 = x3d.ColorRGBA()
+ColorRGBA75.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet73.setColor(ColorRGBA75)
+LineSet73.color.append(ColorRGBA75)
 
-Shape72.setGeometry(LineSet73)
+Shape72.geometry = LineSet73
 
-HAnimSegment64.addChildren(Shape72)
+HAnimSegment64.children.append(Shape72)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='r_iliocristale'/>
-Shape76 = Shape()
-LineSet77 = LineSet()
-LineSet77.setVertexCount([2])
-Coordinate78 = Coordinate()
-Coordinate78.setPoint([0,0.9149,0.0016,-0.1525,1.0628,0.0035])
+Shape76 = x3d.Shape()
+LineSet77 = x3d.LineSet()
+LineSet77.vertexCount = [2]
+Coordinate78 = x3d.Coordinate()
+Coordinate78.point = (0.0000,0.9149,0.0016,-0.1525,1.0628,0.0035)
 
-LineSet77.setCoord(Coordinate78)
-ColorRGBA79 = ColorRGBA()
-ColorRGBA79.setDEF("HAnimSiteLineColorRGBA")
-ColorRGBA79.setColor([1,0,0,1,1,0,0,0.1])
+LineSet77.coord.append(Coordinate78)
+ColorRGBA79 = x3d.ColorRGBA()
+ColorRGBA79.DEF = "HAnimSiteLineColorRGBA"
+ColorRGBA79.color = [1,0,0,1,1,0,0,0.1]
 
-LineSet77.setColor(ColorRGBA79)
+LineSet77.color.append(ColorRGBA79)
 
-Shape76.setGeometry(LineSet77)
+Shape76.geometry = LineSet77
 
-HAnimSegment64.addChildren(Shape76)
+HAnimSegment64.children.append(Shape76)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='r_trochanterion'/>
-Shape80 = Shape()
-LineSet81 = LineSet()
-LineSet81.setVertexCount([2])
-Coordinate82 = Coordinate()
-Coordinate82.setPoint([0,0.9149,0.0016,-0.1689,0.8419,0.0352])
+Shape80 = x3d.Shape()
+LineSet81 = x3d.LineSet()
+LineSet81.vertexCount = [2]
+Coordinate82 = x3d.Coordinate()
+Coordinate82.point = (0.0000,0.9149,0.0016,-0.1689,0.8419,0.0352)
 
-LineSet81.setCoord(Coordinate82)
-ColorRGBA83 = ColorRGBA()
-ColorRGBA83.setUSE("HAnimSiteLineColorRGBA")
+LineSet81.coord.append(Coordinate82)
+ColorRGBA83 = x3d.ColorRGBA()
+ColorRGBA83.USE = "HAnimSiteLineColorRGBA"
 
-LineSet81.setColor(ColorRGBA83)
+LineSet81.color.append(ColorRGBA83)
 
-Shape80.setGeometry(LineSet81)
+Shape80.geometry = LineSet81
 
-HAnimSegment64.addChildren(Shape80)
+HAnimSegment64.children.append(Shape80)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='l_iliocristale'/>
-Shape84 = Shape()
-LineSet85 = LineSet()
-LineSet85.setVertexCount([2])
-Coordinate86 = Coordinate()
-Coordinate86.setPoint([0,0.9149,0.0016,0.1612,1.0537,0.0008])
+Shape84 = x3d.Shape()
+LineSet85 = x3d.LineSet()
+LineSet85.vertexCount = [2]
+Coordinate86 = x3d.Coordinate()
+Coordinate86.point = (0.0000,0.9149,0.0016,0.1612,1.0537,0.0008)
 
-LineSet85.setCoord(Coordinate86)
-ColorRGBA87 = ColorRGBA()
-ColorRGBA87.setUSE("HAnimSiteLineColorRGBA")
+LineSet85.coord.append(Coordinate86)
+ColorRGBA87 = x3d.ColorRGBA()
+ColorRGBA87.USE = "HAnimSiteLineColorRGBA"
 
-LineSet85.setColor(ColorRGBA87)
+LineSet85.color.append(ColorRGBA87)
 
-Shape84.setGeometry(LineSet85)
+Shape84.geometry = LineSet85
 
-HAnimSegment64.addChildren(Shape84)
+HAnimSegment64.children.append(Shape84)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='l_trochanterion'/>
-Shape88 = Shape()
-LineSet89 = LineSet()
-LineSet89.setVertexCount([2])
-Coordinate90 = Coordinate()
-Coordinate90.setPoint([0,0.9149,0.0016,0.1677,0.8336,0.0303])
+Shape88 = x3d.Shape()
+LineSet89 = x3d.LineSet()
+LineSet89.vertexCount = [2]
+Coordinate90 = x3d.Coordinate()
+Coordinate90.point = (0.0000,0.9149,0.0016,0.1677,0.8336,0.0303)
 
-LineSet89.setCoord(Coordinate90)
-ColorRGBA91 = ColorRGBA()
-ColorRGBA91.setUSE("HAnimSiteLineColorRGBA")
+LineSet89.coord.append(Coordinate90)
+ColorRGBA91 = x3d.ColorRGBA()
+ColorRGBA91.USE = "HAnimSiteLineColorRGBA"
 
-LineSet89.setColor(ColorRGBA91)
+LineSet89.color.append(ColorRGBA91)
 
-Shape88.setGeometry(LineSet89)
+Shape88.geometry = LineSet89
 
-HAnimSegment64.addChildren(Shape88)
+HAnimSegment64.children.append(Shape88)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='r_asis'/>
-Shape92 = Shape()
-LineSet93 = LineSet()
-LineSet93.setVertexCount([2])
-Coordinate94 = Coordinate()
-Coordinate94.setPoint([0,0.9149,0.0016,-0.0887,1.0021,0.1112])
+Shape92 = x3d.Shape()
+LineSet93 = x3d.LineSet()
+LineSet93.vertexCount = [2]
+Coordinate94 = x3d.Coordinate()
+Coordinate94.point = (0.0000,0.9149,0.0016,-0.0887,1.0021,0.1112)
 
-LineSet93.setCoord(Coordinate94)
-ColorRGBA95 = ColorRGBA()
-ColorRGBA95.setUSE("HAnimSiteLineColorRGBA")
+LineSet93.coord.append(Coordinate94)
+ColorRGBA95 = x3d.ColorRGBA()
+ColorRGBA95.USE = "HAnimSiteLineColorRGBA"
 
-LineSet93.setColor(ColorRGBA95)
+LineSet93.color.append(ColorRGBA95)
 
-Shape92.setGeometry(LineSet93)
+Shape92.geometry = LineSet93
 
-HAnimSegment64.addChildren(Shape92)
+HAnimSegment64.children.append(Shape92)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='l_asis'/>
-Shape96 = Shape()
-LineSet97 = LineSet()
-LineSet97.setVertexCount([2])
-Coordinate98 = Coordinate()
-Coordinate98.setPoint([0,0.9149,0.0016,0.0925,0.9983,0.1052])
+Shape96 = x3d.Shape()
+LineSet97 = x3d.LineSet()
+LineSet97.vertexCount = [2]
+Coordinate98 = x3d.Coordinate()
+Coordinate98.point = (0.0000,0.9149,0.0016,0.0925,0.9983,0.1052)
 
-LineSet97.setCoord(Coordinate98)
-ColorRGBA99 = ColorRGBA()
-ColorRGBA99.setUSE("HAnimSiteLineColorRGBA")
+LineSet97.coord.append(Coordinate98)
+ColorRGBA99 = x3d.ColorRGBA()
+ColorRGBA99.USE = "HAnimSiteLineColorRGBA"
 
-LineSet97.setColor(ColorRGBA99)
+LineSet97.color.append(ColorRGBA99)
 
-Shape96.setGeometry(LineSet97)
+Shape96.geometry = LineSet97
 
-HAnimSegment64.addChildren(Shape96)
+HAnimSegment64.children.append(Shape96)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='r_psis'/>
-Shape100 = Shape()
-LineSet101 = LineSet()
-LineSet101.setVertexCount([2])
-Coordinate102 = Coordinate()
-Coordinate102.setPoint([0,0.9149,0.0016,-0.0716,1.019,-0.1138])
+Shape100 = x3d.Shape()
+LineSet101 = x3d.LineSet()
+LineSet101.vertexCount = [2]
+Coordinate102 = x3d.Coordinate()
+Coordinate102.point = (0.0000,0.9149,0.0016,-0.0716,1.0190,-0.1138)
 
-LineSet101.setCoord(Coordinate102)
-ColorRGBA103 = ColorRGBA()
-ColorRGBA103.setUSE("HAnimSiteLineColorRGBA")
+LineSet101.coord.append(Coordinate102)
+ColorRGBA103 = x3d.ColorRGBA()
+ColorRGBA103.USE = "HAnimSiteLineColorRGBA"
 
-LineSet101.setColor(ColorRGBA103)
+LineSet101.color.append(ColorRGBA103)
 
-Shape100.setGeometry(LineSet101)
+Shape100.geometry = LineSet101
 
-HAnimSegment64.addChildren(Shape100)
+HAnimSegment64.children.append(Shape100)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='l_psis'/>
-Shape104 = Shape()
-LineSet105 = LineSet()
-LineSet105.setVertexCount([2])
-Coordinate106 = Coordinate()
-Coordinate106.setPoint([0,0.9149,0.0016,0.0774,1.019,-0.1151])
+Shape104 = x3d.Shape()
+LineSet105 = x3d.LineSet()
+LineSet105.vertexCount = [2]
+Coordinate106 = x3d.Coordinate()
+Coordinate106.point = (0.0000,0.9149,0.0016,0.0774,1.0190,-0.1151)
 
-LineSet105.setCoord(Coordinate106)
-ColorRGBA107 = ColorRGBA()
-ColorRGBA107.setUSE("HAnimSiteLineColorRGBA")
+LineSet105.coord.append(Coordinate106)
+ColorRGBA107 = x3d.ColorRGBA()
+ColorRGBA107.USE = "HAnimSiteLineColorRGBA"
 
-LineSet105.setColor(ColorRGBA107)
+LineSet105.color.append(ColorRGBA107)
 
-Shape104.setGeometry(LineSet105)
+Shape104.geometry = LineSet105
 
-HAnimSegment64.addChildren(Shape104)
+HAnimSegment64.children.append(Shape104)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='sacroiliac'/> to <HAnimSite name='crotch'/>
-Shape108 = Shape()
-LineSet109 = LineSet()
-LineSet109.setVertexCount([2])
-Coordinate110 = Coordinate()
-Coordinate110.setPoint([0,0.9149,0.0016,0.0034,0.8266,0.0257])
+Shape108 = x3d.Shape()
+LineSet109 = x3d.LineSet()
+LineSet109.vertexCount = [2]
+Coordinate110 = x3d.Coordinate()
+Coordinate110.point = (0.0000,0.9149,0.0016,0.0034,0.8266,0.0257)
 
-LineSet109.setCoord(Coordinate110)
-ColorRGBA111 = ColorRGBA()
-ColorRGBA111.setUSE("HAnimSiteLineColorRGBA")
+LineSet109.coord.append(Coordinate110)
+ColorRGBA111 = x3d.ColorRGBA()
+ColorRGBA111.USE = "HAnimSiteLineColorRGBA"
 
-LineSet109.setColor(ColorRGBA111)
+LineSet109.color.append(ColorRGBA111)
 
-Shape108.setGeometry(LineSet109)
+Shape108.geometry = LineSet109
 
-HAnimSegment64.addChildren(Shape108)
-HAnimSite112 = HAnimSite()
-HAnimSite112.setName("r_iliocristale_pt")
-HAnimSite112.setDEF("hanim_r_iliocristale_pt")
-HAnimSite112.setTranslation([-0.1525,1.0628,0.0035])
+HAnimSegment64.children.append(Shape108)
+HAnimSite112 = x3d.HAnimSite()
+HAnimSite112.name = "r_iliocristale_pt"
+HAnimSite112.DEF = "hanim_r_iliocristale_pt"
+HAnimSite112.translation = [-0.1525,1.0628,0.0035]
 #HAnimSite visualization shape
-TouchSensor113 = TouchSensor()
-TouchSensor113.setDescription("HAnimSite r_iliocristale")
+TouchSensor113 = x3d.TouchSensor()
+TouchSensor113.description = "HAnimSite r_iliocristale"
 
-HAnimSite112.addChildren(TouchSensor113)
-Shape114 = Shape()
-Shape114.setDEF("HAnimSiteShape")
-IndexedFaceSet115 = IndexedFaceSet()
-IndexedFaceSet115.setDEF("DiamondIFS")
-IndexedFaceSet115.setCoordIndex([0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1])
-IndexedFaceSet115.setCreaseAngle(0.5)
-IndexedFaceSet115.setSolid(False)
-Coordinate116 = Coordinate()
-Coordinate116.setPoint([0,0.008,0,-0.008,0,0,0,0,0.008,0.008,0,0,0,0,-0.008,0,-0.008,0])
+HAnimSite112.children.append(TouchSensor113)
+Shape114 = x3d.Shape()
+Shape114.DEF = "HAnimSiteShape"
+IndexedFaceSet115 = x3d.IndexedFaceSet()
+IndexedFaceSet115.DEF = "DiamondIFS"
+IndexedFaceSet115.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
+IndexedFaceSet115.creaseAngle = 0.5
+IndexedFaceSet115.solid = False
+Coordinate116 = x3d.Coordinate()
+Coordinate116.point = (0.0000,0.0080,0.0000,-0.0080,0.0000,0.0000,0.0000,0.0000,0.0080,0.0080,0.0000,0.0000,0.0000,0.0000,-0.0080,0.0000,-0.0080,0.0000)
 
-IndexedFaceSet115.setCoord(Coordinate116)
+IndexedFaceSet115.coord.append(Coordinate116)
 
-Shape114.setGeometry(IndexedFaceSet115)
-Appearance117 = Appearance()
-Material118 = Material()
-Material118.setDiffuseColor([1,0,0])
+Shape114.geometry = IndexedFaceSet115
+Appearance117 = x3d.Appearance()
+Material118 = x3d.Material()
+Material118.diffuseColor = [1,0,0]
 
-Appearance117.setMaterial(Material118)
+Appearance117.material = Material118
 
-Shape114.setAppearance(Appearance117)
+Shape114.appearance = Appearance117
 
-HAnimSite112.addChildren(Shape114)
+HAnimSite112.children.append(Shape114)
 
-HAnimSegment64.addChildren(HAnimSite112)
-HAnimSite119 = HAnimSite()
-HAnimSite119.setName("r_trochanterion_pt")
-HAnimSite119.setDEF("hanim_r_trochanterion_pt")
-HAnimSite119.setTranslation([-0.1689,0.8419,0.0352])
+HAnimSegment64.children.append(HAnimSite112)
+HAnimSite119 = x3d.HAnimSite()
+HAnimSite119.name = "r_trochanterion_pt"
+HAnimSite119.DEF = "hanim_r_trochanterion_pt"
+HAnimSite119.translation = [-0.1689,0.8419,0.0352]
 #HAnimSite visualization shape
-TouchSensor120 = TouchSensor()
-TouchSensor120.setDescription("HAnimSite r_trochanterion")
+TouchSensor120 = x3d.TouchSensor()
+TouchSensor120.description = "HAnimSite r_trochanterion"
 
-HAnimSite119.addChildren(TouchSensor120)
-Shape121 = Shape()
-Shape121.setUSE("HAnimSiteShape")
+HAnimSite119.children.append(TouchSensor120)
+Shape121 = x3d.Shape()
+Shape121.USE = "HAnimSiteShape"
 
-HAnimSite119.addChildren(Shape121)
+HAnimSite119.children.append(Shape121)
 
-HAnimSegment64.addChildren(HAnimSite119)
-HAnimSite122 = HAnimSite()
-HAnimSite122.setName("l_iliocristale_pt")
-HAnimSite122.setDEF("hanim_l_iliocristale_pt")
-HAnimSite122.setTranslation([0.1612,1.0537,0.0008])
+HAnimSegment64.children.append(HAnimSite119)
+HAnimSite122 = x3d.HAnimSite()
+HAnimSite122.name = "l_iliocristale_pt"
+HAnimSite122.DEF = "hanim_l_iliocristale_pt"
+HAnimSite122.translation = [0.1612,1.0537,0.0008]
 #HAnimSite visualization shape
-TouchSensor123 = TouchSensor()
-TouchSensor123.setDescription("HAnimSite l_iliocristale")
+TouchSensor123 = x3d.TouchSensor()
+TouchSensor123.description = "HAnimSite l_iliocristale"
 
-HAnimSite122.addChildren(TouchSensor123)
-Shape124 = Shape()
-Shape124.setUSE("HAnimSiteShape")
+HAnimSite122.children.append(TouchSensor123)
+Shape124 = x3d.Shape()
+Shape124.USE = "HAnimSiteShape"
 
-HAnimSite122.addChildren(Shape124)
+HAnimSite122.children.append(Shape124)
 
-HAnimSegment64.addChildren(HAnimSite122)
-HAnimSite125 = HAnimSite()
-HAnimSite125.setName("l_trochanterion_pt")
-HAnimSite125.setDEF("hanim_l_trochanterion_pt")
-HAnimSite125.setTranslation([0.1677,0.8336,0.0303])
+HAnimSegment64.children.append(HAnimSite122)
+HAnimSite125 = x3d.HAnimSite()
+HAnimSite125.name = "l_trochanterion_pt"
+HAnimSite125.DEF = "hanim_l_trochanterion_pt"
+HAnimSite125.translation = [0.1677,0.8336,0.0303]
 #HAnimSite visualization shape
-TouchSensor126 = TouchSensor()
-TouchSensor126.setDescription("HAnimSite l_trochanterion")
+TouchSensor126 = x3d.TouchSensor()
+TouchSensor126.description = "HAnimSite l_trochanterion"
 
-HAnimSite125.addChildren(TouchSensor126)
-Shape127 = Shape()
-Shape127.setUSE("HAnimSiteShape")
+HAnimSite125.children.append(TouchSensor126)
+Shape127 = x3d.Shape()
+Shape127.USE = "HAnimSiteShape"
 
-HAnimSite125.addChildren(Shape127)
+HAnimSite125.children.append(Shape127)
 
-HAnimSegment64.addChildren(HAnimSite125)
-HAnimSite128 = HAnimSite()
-HAnimSite128.setName("r_asis_pt")
-HAnimSite128.setDEF("hanim_r_asis_pt")
-HAnimSite128.setTranslation([-0.0887,1.0021,0.1112])
+HAnimSegment64.children.append(HAnimSite125)
+HAnimSite128 = x3d.HAnimSite()
+HAnimSite128.name = "r_asis_pt"
+HAnimSite128.DEF = "hanim_r_asis_pt"
+HAnimSite128.translation = [-0.0887,1.0021,0.1112]
 #HAnimSite visualization shape
-TouchSensor129 = TouchSensor()
-TouchSensor129.setDescription("HAnimSite r_asis")
+TouchSensor129 = x3d.TouchSensor()
+TouchSensor129.description = "HAnimSite r_asis"
 
-HAnimSite128.addChildren(TouchSensor129)
-Shape130 = Shape()
-Shape130.setUSE("HAnimSiteShape")
+HAnimSite128.children.append(TouchSensor129)
+Shape130 = x3d.Shape()
+Shape130.USE = "HAnimSiteShape"
 
-HAnimSite128.addChildren(Shape130)
+HAnimSite128.children.append(Shape130)
 
-HAnimSegment64.addChildren(HAnimSite128)
-HAnimSite131 = HAnimSite()
-HAnimSite131.setName("l_asis_pt")
-HAnimSite131.setDEF("hanim_l_asis_pt")
-HAnimSite131.setTranslation([0.0925,0.9983,0.1052])
+HAnimSegment64.children.append(HAnimSite128)
+HAnimSite131 = x3d.HAnimSite()
+HAnimSite131.name = "l_asis_pt"
+HAnimSite131.DEF = "hanim_l_asis_pt"
+HAnimSite131.translation = [0.0925,0.9983,0.1052]
 #HAnimSite visualization shape
-TouchSensor132 = TouchSensor()
-TouchSensor132.setDescription("HAnimSite l_asis")
+TouchSensor132 = x3d.TouchSensor()
+TouchSensor132.description = "HAnimSite l_asis"
 
-HAnimSite131.addChildren(TouchSensor132)
-Shape133 = Shape()
-Shape133.setUSE("HAnimSiteShape")
+HAnimSite131.children.append(TouchSensor132)
+Shape133 = x3d.Shape()
+Shape133.USE = "HAnimSiteShape"
 
-HAnimSite131.addChildren(Shape133)
+HAnimSite131.children.append(Shape133)
 
-HAnimSegment64.addChildren(HAnimSite131)
-HAnimSite134 = HAnimSite()
-HAnimSite134.setName("r_psis_pt")
-HAnimSite134.setDEF("hanim_r_psis_pt")
-HAnimSite134.setTranslation([-0.0716,1.019,-0.1138])
+HAnimSegment64.children.append(HAnimSite131)
+HAnimSite134 = x3d.HAnimSite()
+HAnimSite134.name = "r_psis_pt"
+HAnimSite134.DEF = "hanim_r_psis_pt"
+HAnimSite134.translation = [-0.0716,1.019,-0.1138]
 #HAnimSite visualization shape
-TouchSensor135 = TouchSensor()
-TouchSensor135.setDescription("HAnimSite r_psis")
+TouchSensor135 = x3d.TouchSensor()
+TouchSensor135.description = "HAnimSite r_psis"
 
-HAnimSite134.addChildren(TouchSensor135)
-Shape136 = Shape()
-Shape136.setUSE("HAnimSiteShape")
+HAnimSite134.children.append(TouchSensor135)
+Shape136 = x3d.Shape()
+Shape136.USE = "HAnimSiteShape"
 
-HAnimSite134.addChildren(Shape136)
+HAnimSite134.children.append(Shape136)
 
-HAnimSegment64.addChildren(HAnimSite134)
-HAnimSite137 = HAnimSite()
-HAnimSite137.setName("l_psis_pt")
-HAnimSite137.setDEF("hanim_l_psis_pt")
-HAnimSite137.setTranslation([0.0774,1.019,-0.1151])
+HAnimSegment64.children.append(HAnimSite134)
+HAnimSite137 = x3d.HAnimSite()
+HAnimSite137.name = "l_psis_pt"
+HAnimSite137.DEF = "hanim_l_psis_pt"
+HAnimSite137.translation = [0.0774,1.019,-0.1151]
 #HAnimSite visualization shape
-TouchSensor138 = TouchSensor()
-TouchSensor138.setDescription("HAnimSite l_psis")
+TouchSensor138 = x3d.TouchSensor()
+TouchSensor138.description = "HAnimSite l_psis"
 
-HAnimSite137.addChildren(TouchSensor138)
-Shape139 = Shape()
-Shape139.setUSE("HAnimSiteShape")
+HAnimSite137.children.append(TouchSensor138)
+Shape139 = x3d.Shape()
+Shape139.USE = "HAnimSiteShape"
 
-HAnimSite137.addChildren(Shape139)
+HAnimSite137.children.append(Shape139)
 
-HAnimSegment64.addChildren(HAnimSite137)
-HAnimSite140 = HAnimSite()
-HAnimSite140.setName("crotch_pt")
-HAnimSite140.setDEF("hanim_crotch_pt")
-HAnimSite140.setTranslation([0.0034,0.8266,0.0257])
+HAnimSegment64.children.append(HAnimSite137)
+HAnimSite140 = x3d.HAnimSite()
+HAnimSite140.name = "crotch_pt"
+HAnimSite140.DEF = "hanim_crotch_pt"
+HAnimSite140.translation = [0.0034,0.8266,0.0257]
 #HAnimSite visualization shape
-TouchSensor141 = TouchSensor()
-TouchSensor141.setDescription("HAnimSite crotch")
+TouchSensor141 = x3d.TouchSensor()
+TouchSensor141.description = "HAnimSite crotch"
 
-HAnimSite140.addChildren(TouchSensor141)
-Shape142 = Shape()
-Shape142.setUSE("HAnimSiteShape")
+HAnimSite140.children.append(TouchSensor141)
+Shape142 = x3d.Shape()
+Shape142.USE = "HAnimSiteShape"
 
-HAnimSite140.addChildren(Shape142)
+HAnimSite140.children.append(Shape142)
 
-HAnimSegment64.addChildren(HAnimSite140)
+HAnimSegment64.children.append(HAnimSite140)
 
-HAnimJoint63.addChildren(HAnimSegment64)
-HAnimJoint143 = HAnimJoint()
-HAnimJoint143.setName("l_hip")
-HAnimJoint143.setDEF("hanim_l_hip")
-HAnimJoint143.setCenter([0.0961,0.9124,-0.0001])
-HAnimJoint143.setStiffness([0,0,0])
-HAnimSegment144 = HAnimSegment()
-HAnimSegment144.setName("l_thigh")
-HAnimSegment144.setDEF("hanim_l_thigh")
+HAnimJoint63.children.append(HAnimSegment64)
+HAnimJoint143 = x3d.HAnimJoint()
+HAnimJoint143.name = "l_hip"
+HAnimJoint143.DEF = "hanim_l_hip"
+HAnimJoint143.center = [0.0961,0.9124,-0.0001]
+HAnimJoint143.ulimit = [0,0,0]
+HAnimJoint143.llimit = [0,0,0]
+HAnimSegment144 = x3d.HAnimSegment()
+HAnimSegment144.name = "l_thigh"
+HAnimSegment144.DEF = "hanim_l_thigh"
 #<HAnimJoint name='l_hip'/> visualization sphere is placed within <HAnimSegment name='l_thigh'/>
-TouchSensor145 = TouchSensor()
-TouchSensor145.setDescription("HAnimJoint l_hip, HAnimSegment l_thigh")
+TouchSensor145 = x3d.TouchSensor()
+TouchSensor145.description = "HAnimJoint l_hip, HAnimSegment l_thigh"
 
-HAnimSegment144.addChildren(TouchSensor145)
-Transform146 = Transform()
-Transform146.setTranslation([0.0961,0.9124,-0.0001])
-Shape147 = Shape()
-Shape147.setUSE("HAnimJointShape")
+HAnimSegment144.children.append(TouchSensor145)
+Transform146 = x3d.Transform()
+Transform146.translation = [0.0961,0.9124,-0.0001]
+Shape147 = x3d.Shape()
+Shape147.USE = "HAnimJointShape"
 
-Transform146.addChildren(Shape147)
+Transform146.children.append(Shape147)
 
-HAnimSegment144.addChildren(Transform146)
+HAnimSegment144.children.append(Transform146)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_hip'/> to <HAnimJoint name='l_knee'/>
-Shape148 = Shape()
-LineSet149 = LineSet()
-LineSet149.setVertexCount([2])
-Coordinate150 = Coordinate()
-Coordinate150.setPoint([0.0961,0.9124,-0.0001,0.104,0.4867,0.0308])
+Shape148 = x3d.Shape()
+LineSet149 = x3d.LineSet()
+LineSet149.vertexCount = [2]
+Coordinate150 = x3d.Coordinate()
+Coordinate150.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
-LineSet149.setCoord(Coordinate150)
-ColorRGBA151 = ColorRGBA()
-ColorRGBA151.setUSE("HAnimSegmentLineColorRGBA")
+LineSet149.coord.append(Coordinate150)
+ColorRGBA151 = x3d.ColorRGBA()
+ColorRGBA151.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet149.setColor(ColorRGBA151)
+LineSet149.color.append(ColorRGBA151)
 
-Shape148.setGeometry(LineSet149)
+Shape148.geometry = LineSet149
 
-HAnimSegment144.addChildren(Shape148)
+HAnimSegment144.children.append(Shape148)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_hip'/> to <HAnimSite name='l_knee_crease'/>
-Shape152 = Shape()
-LineSet153 = LineSet()
-LineSet153.setVertexCount([2])
-Coordinate154 = Coordinate()
-Coordinate154.setPoint([0.0961,0.9124,-0.0001,0.0993,0.4881,-0.0309])
+Shape152 = x3d.Shape()
+LineSet153 = x3d.LineSet()
+LineSet153.vertexCount = [2]
+Coordinate154 = x3d.Coordinate()
+Coordinate154.point = (0.0961,0.9124,-0.0001,0.0993,0.4881,-0.0309)
 
-LineSet153.setCoord(Coordinate154)
-ColorRGBA155 = ColorRGBA()
-ColorRGBA155.setUSE("HAnimSiteLineColorRGBA")
+LineSet153.coord.append(Coordinate154)
+ColorRGBA155 = x3d.ColorRGBA()
+ColorRGBA155.USE = "HAnimSiteLineColorRGBA"
 
-LineSet153.setColor(ColorRGBA155)
+LineSet153.color.append(ColorRGBA155)
 
-Shape152.setGeometry(LineSet153)
+Shape152.geometry = LineSet153
 
-HAnimSegment144.addChildren(Shape152)
+HAnimSegment144.children.append(Shape152)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_hip'/> to <HAnimSite name='l_femoral_lateral_epicn'/>
-Shape156 = Shape()
-LineSet157 = LineSet()
-LineSet157.setVertexCount([2])
-Coordinate158 = Coordinate()
-Coordinate158.setPoint([0.0961,0.9124,-0.0001,0.1598,0.4967,0.0297])
+Shape156 = x3d.Shape()
+LineSet157 = x3d.LineSet()
+LineSet157.vertexCount = [2]
+Coordinate158 = x3d.Coordinate()
+Coordinate158.point = (0.0961,0.9124,-0.0001,0.1598,0.4967,0.0297)
 
-LineSet157.setCoord(Coordinate158)
-ColorRGBA159 = ColorRGBA()
-ColorRGBA159.setUSE("HAnimSiteLineColorRGBA")
+LineSet157.coord.append(Coordinate158)
+ColorRGBA159 = x3d.ColorRGBA()
+ColorRGBA159.USE = "HAnimSiteLineColorRGBA"
 
-LineSet157.setColor(ColorRGBA159)
+LineSet157.color.append(ColorRGBA159)
 
-Shape156.setGeometry(LineSet157)
+Shape156.geometry = LineSet157
 
-HAnimSegment144.addChildren(Shape156)
+HAnimSegment144.children.append(Shape156)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_hip'/> to <HAnimSite name='l_femoral_medial_epicn'/>
-Shape160 = Shape()
-LineSet161 = LineSet()
-LineSet161.setVertexCount([2])
-Coordinate162 = Coordinate()
-Coordinate162.setPoint([0.0961,0.9124,-0.0001,0.0398,0.4946,0.0303])
+Shape160 = x3d.Shape()
+LineSet161 = x3d.LineSet()
+LineSet161.vertexCount = [2]
+Coordinate162 = x3d.Coordinate()
+Coordinate162.point = (0.0961,0.9124,-0.0001,0.0398,0.4946,0.0303)
 
-LineSet161.setCoord(Coordinate162)
-ColorRGBA163 = ColorRGBA()
-ColorRGBA163.setUSE("HAnimSiteLineColorRGBA")
+LineSet161.coord.append(Coordinate162)
+ColorRGBA163 = x3d.ColorRGBA()
+ColorRGBA163.USE = "HAnimSiteLineColorRGBA"
 
-LineSet161.setColor(ColorRGBA163)
+LineSet161.color.append(ColorRGBA163)
 
-Shape160.setGeometry(LineSet161)
+Shape160.geometry = LineSet161
 
-HAnimSegment144.addChildren(Shape160)
-HAnimSite164 = HAnimSite()
-HAnimSite164.setName("l_knee_crease_pt")
-HAnimSite164.setDEF("hanim_l_knee_crease_pt")
-HAnimSite164.setTranslation([0.0993,0.4881,-0.0309])
+HAnimSegment144.children.append(Shape160)
+HAnimSite164 = x3d.HAnimSite()
+HAnimSite164.name = "l_knee_crease_pt"
+HAnimSite164.DEF = "hanim_l_knee_crease_pt"
+HAnimSite164.translation = [0.0993,0.4881,-0.0309]
 #HAnimSite visualization shape
-TouchSensor165 = TouchSensor()
-TouchSensor165.setDescription("HAnimSite l_knee_crease")
+TouchSensor165 = x3d.TouchSensor()
+TouchSensor165.description = "HAnimSite l_knee_crease"
 
-HAnimSite164.addChildren(TouchSensor165)
-Shape166 = Shape()
-Shape166.setUSE("HAnimSiteShape")
+HAnimSite164.children.append(TouchSensor165)
+Shape166 = x3d.Shape()
+Shape166.USE = "HAnimSiteShape"
 
-HAnimSite164.addChildren(Shape166)
+HAnimSite164.children.append(Shape166)
 
-HAnimSegment144.addChildren(HAnimSite164)
-HAnimSite167 = HAnimSite()
-HAnimSite167.setName("l_femoral_lateral_epicn_pt")
-HAnimSite167.setDEF("hanim_l_femoral_lateral_epicn_pt")
-HAnimSite167.setTranslation([0.1598,0.4967,0.0297])
+HAnimSegment144.children.append(HAnimSite164)
+HAnimSite167 = x3d.HAnimSite()
+HAnimSite167.name = "l_femoral_lateral_epicn_pt"
+HAnimSite167.DEF = "hanim_l_femoral_lateral_epicn_pt"
+HAnimSite167.translation = [0.1598,0.4967,0.0297]
 #HAnimSite visualization shape
-TouchSensor168 = TouchSensor()
-TouchSensor168.setDescription("HAnimSite l_femoral_lateral_epicn")
+TouchSensor168 = x3d.TouchSensor()
+TouchSensor168.description = "HAnimSite l_femoral_lateral_epicn"
 
-HAnimSite167.addChildren(TouchSensor168)
-Shape169 = Shape()
-Shape169.setUSE("HAnimSiteShape")
+HAnimSite167.children.append(TouchSensor168)
+Shape169 = x3d.Shape()
+Shape169.USE = "HAnimSiteShape"
 
-HAnimSite167.addChildren(Shape169)
+HAnimSite167.children.append(Shape169)
 
-HAnimSegment144.addChildren(HAnimSite167)
-HAnimSite170 = HAnimSite()
-HAnimSite170.setName("l_femoral_medial_epicn_pt")
-HAnimSite170.setDEF("hanim_l_femoral_medial_epicn_pt")
-HAnimSite170.setTranslation([0.0398,0.4946,0.0303])
+HAnimSegment144.children.append(HAnimSite167)
+HAnimSite170 = x3d.HAnimSite()
+HAnimSite170.name = "l_femoral_medial_epicn_pt"
+HAnimSite170.DEF = "hanim_l_femoral_medial_epicn_pt"
+HAnimSite170.translation = [0.0398,0.4946,0.0303]
 #HAnimSite visualization shape
-TouchSensor171 = TouchSensor()
-TouchSensor171.setDescription("HAnimSite l_femoral_medial_epicn")
+TouchSensor171 = x3d.TouchSensor()
+TouchSensor171.description = "HAnimSite l_femoral_medial_epicn"
 
-HAnimSite170.addChildren(TouchSensor171)
-Shape172 = Shape()
-Shape172.setUSE("HAnimSiteShape")
+HAnimSite170.children.append(TouchSensor171)
+Shape172 = x3d.Shape()
+Shape172.USE = "HAnimSiteShape"
 
-HAnimSite170.addChildren(Shape172)
+HAnimSite170.children.append(Shape172)
 
-HAnimSegment144.addChildren(HAnimSite170)
+HAnimSegment144.children.append(HAnimSite170)
 
-HAnimJoint143.addChildren(HAnimSegment144)
-HAnimJoint173 = HAnimJoint()
-HAnimJoint173.setName("l_knee")
-HAnimJoint173.setDEF("hanim_l_knee")
-HAnimJoint173.setCenter([0.104,0.4867,0.0308])
-HAnimJoint173.setStiffness([0,0,0])
-HAnimSegment174 = HAnimSegment()
-HAnimSegment174.setName("l_calf")
-HAnimSegment174.setDEF("hanim_l_calf")
+HAnimJoint143.children.append(HAnimSegment144)
+HAnimJoint173 = x3d.HAnimJoint()
+HAnimJoint173.name = "l_knee"
+HAnimJoint173.DEF = "hanim_l_knee"
+HAnimJoint173.center = [0.104,0.4867,0.0308]
+HAnimJoint173.ulimit = [0,0,0]
+HAnimJoint173.llimit = [0,0,0]
+HAnimSegment174 = x3d.HAnimSegment()
+HAnimSegment174.name = "l_calf"
+HAnimSegment174.DEF = "hanim_l_calf"
 #<HAnimJoint name='l_knee'/> visualization sphere is placed within <HAnimSegment name='l_calf'/>
-TouchSensor175 = TouchSensor()
-TouchSensor175.setDescription("HAnimJoint l_knee, HAnimSegment l_calf")
+TouchSensor175 = x3d.TouchSensor()
+TouchSensor175.description = "HAnimJoint l_knee, HAnimSegment l_calf"
 
-HAnimSegment174.addChildren(TouchSensor175)
-Transform176 = Transform()
-Transform176.setTranslation([0.104,0.4867,0.0308])
-Shape177 = Shape()
-Shape177.setUSE("HAnimJointShape")
+HAnimSegment174.children.append(TouchSensor175)
+Transform176 = x3d.Transform()
+Transform176.translation = [0.104,0.4867,0.0308]
+Shape177 = x3d.Shape()
+Shape177.USE = "HAnimJointShape"
 
-Transform176.addChildren(Shape177)
+Transform176.children.append(Shape177)
 
-HAnimSegment174.addChildren(Transform176)
+HAnimSegment174.children.append(Transform176)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_knee'/> to <HAnimJoint name='l_ankle'/>
-Shape178 = Shape()
-LineSet179 = LineSet()
-LineSet179.setVertexCount([2])
-Coordinate180 = Coordinate()
-Coordinate180.setPoint([0.104,0.4867,0.0308,0.1101,0.0656,-0.0736])
+Shape178 = x3d.Shape()
+LineSet179 = x3d.LineSet()
+LineSet179.vertexCount = [2]
+Coordinate180 = x3d.Coordinate()
+Coordinate180.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
-LineSet179.setCoord(Coordinate180)
-ColorRGBA181 = ColorRGBA()
-ColorRGBA181.setUSE("HAnimSegmentLineColorRGBA")
+LineSet179.coord.append(Coordinate180)
+ColorRGBA181 = x3d.ColorRGBA()
+ColorRGBA181.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet179.setColor(ColorRGBA181)
+LineSet179.color.append(ColorRGBA181)
 
-Shape178.setGeometry(LineSet179)
+Shape178.geometry = LineSet179
 
-HAnimSegment174.addChildren(Shape178)
+HAnimSegment174.children.append(Shape178)
 
-HAnimJoint173.addChildren(HAnimSegment174)
-HAnimJoint182 = HAnimJoint()
-HAnimJoint182.setName("l_ankle")
-HAnimJoint182.setDEF("hanim_l_ankle")
-HAnimJoint182.setCenter([0.1101,0.0656,-0.0736])
-HAnimJoint182.setStiffness([0,0,0])
-HAnimSegment183 = HAnimSegment()
-HAnimSegment183.setName("l_hindfoot")
-HAnimSegment183.setDEF("hanim_l_hindfoot")
+HAnimJoint173.children.append(HAnimSegment174)
+HAnimJoint182 = x3d.HAnimJoint()
+HAnimJoint182.name = "l_ankle"
+HAnimJoint182.DEF = "hanim_l_ankle"
+HAnimJoint182.center = [0.1101,0.0656,-0.0736]
+HAnimJoint182.ulimit = [0,0,0]
+HAnimJoint182.llimit = [0,0,0]
+HAnimSegment183 = x3d.HAnimSegment()
+HAnimSegment183.name = "l_hindfoot"
+HAnimSegment183.DEF = "hanim_l_hindfoot"
 #<HAnimJoint name='l_ankle'/> visualization sphere is placed within <HAnimSegment name='l_hindfoot'/>
-TouchSensor184 = TouchSensor()
-TouchSensor184.setDescription("HAnimJoint l_ankle, HAnimSegment l_hindfoot")
+TouchSensor184 = x3d.TouchSensor()
+TouchSensor184.description = "HAnimJoint l_ankle, HAnimSegment l_hindfoot"
 
-HAnimSegment183.addChildren(TouchSensor184)
-Transform185 = Transform()
-Transform185.setTranslation([0.1101,0.0656,-0.0736])
-Shape186 = Shape()
-Shape186.setUSE("HAnimJointShape")
+HAnimSegment183.children.append(TouchSensor184)
+Transform185 = x3d.Transform()
+Transform185.translation = [0.1101,0.0656,-0.0736]
+Shape186 = x3d.Shape()
+Shape186.USE = "HAnimJointShape"
 
-Transform185.addChildren(Shape186)
+Transform185.children.append(Shape186)
 
-HAnimSegment183.addChildren(Transform185)
+HAnimSegment183.children.append(Transform185)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_ankle'/> to <HAnimJoint name='l_subtalar'/>
-Shape187 = Shape()
-LineSet188 = LineSet()
-LineSet188.setVertexCount([2])
-Coordinate189 = Coordinate()
-Coordinate189.setPoint([0.1101,0.0656,-0.0736,0.1086,0.0001,-0.0368])
+Shape187 = x3d.Shape()
+LineSet188 = x3d.LineSet()
+LineSet188.vertexCount = [2]
+Coordinate189 = x3d.Coordinate()
+Coordinate189.point = (0.1101,0.0656,-0.0736,0.1086,0.0001,-0.0368)
 
-LineSet188.setCoord(Coordinate189)
-ColorRGBA190 = ColorRGBA()
-ColorRGBA190.setUSE("HAnimSegmentLineColorRGBA")
+LineSet188.coord.append(Coordinate189)
+ColorRGBA190 = x3d.ColorRGBA()
+ColorRGBA190.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet188.setColor(ColorRGBA190)
+LineSet188.color.append(ColorRGBA190)
 
-Shape187.setGeometry(LineSet188)
+Shape187.geometry = LineSet188
 
-HAnimSegment183.addChildren(Shape187)
+HAnimSegment183.children.append(Shape187)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_ankle'/> to <HAnimSite name='l_lateral_malleolus'/>
-Shape191 = Shape()
-LineSet192 = LineSet()
-LineSet192.setVertexCount([2])
-Coordinate193 = Coordinate()
-Coordinate193.setPoint([0.1101,0.0656,-0.0736,0.1308,0.0597,-0.1032])
+Shape191 = x3d.Shape()
+LineSet192 = x3d.LineSet()
+LineSet192.vertexCount = [2]
+Coordinate193 = x3d.Coordinate()
+Coordinate193.point = (0.1101,0.0656,-0.0736,0.1308,0.0597,-0.1032)
 
-LineSet192.setCoord(Coordinate193)
-ColorRGBA194 = ColorRGBA()
-ColorRGBA194.setUSE("HAnimSiteLineColorRGBA")
+LineSet192.coord.append(Coordinate193)
+ColorRGBA194 = x3d.ColorRGBA()
+ColorRGBA194.USE = "HAnimSiteLineColorRGBA"
 
-LineSet192.setColor(ColorRGBA194)
+LineSet192.color.append(ColorRGBA194)
 
-Shape191.setGeometry(LineSet192)
+Shape191.geometry = LineSet192
 
-HAnimSegment183.addChildren(Shape191)
+HAnimSegment183.children.append(Shape191)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_ankle'/> to <HAnimSite name='l_medial_malleolus'/>
-Shape195 = Shape()
-LineSet196 = LineSet()
-LineSet196.setVertexCount([2])
-Coordinate197 = Coordinate()
-Coordinate197.setPoint([0.1101,0.0656,-0.0736,0.089,0.0716,-0.0881])
+Shape195 = x3d.Shape()
+LineSet196 = x3d.LineSet()
+LineSet196.vertexCount = [2]
+Coordinate197 = x3d.Coordinate()
+Coordinate197.point = (0.1101,0.0656,-0.0736,0.0890,0.0716,-0.0881)
 
-LineSet196.setCoord(Coordinate197)
-ColorRGBA198 = ColorRGBA()
-ColorRGBA198.setUSE("HAnimSiteLineColorRGBA")
+LineSet196.coord.append(Coordinate197)
+ColorRGBA198 = x3d.ColorRGBA()
+ColorRGBA198.USE = "HAnimSiteLineColorRGBA"
 
-LineSet196.setColor(ColorRGBA198)
+LineSet196.color.append(ColorRGBA198)
 
-Shape195.setGeometry(LineSet196)
+Shape195.geometry = LineSet196
 
-HAnimSegment183.addChildren(Shape195)
+HAnimSegment183.children.append(Shape195)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_ankle'/> to <HAnimSite name='l_sphyrion'/>
-Shape199 = Shape()
-LineSet200 = LineSet()
-LineSet200.setVertexCount([2])
-Coordinate201 = Coordinate()
-Coordinate201.setPoint([0.1101,0.0656,-0.0736,0.089,0.0575,-0.0943])
+Shape199 = x3d.Shape()
+LineSet200 = x3d.LineSet()
+LineSet200.vertexCount = [2]
+Coordinate201 = x3d.Coordinate()
+Coordinate201.point = (0.1101,0.0656,-0.0736,0.0890,0.0575,-0.0943)
 
-LineSet200.setCoord(Coordinate201)
-ColorRGBA202 = ColorRGBA()
-ColorRGBA202.setUSE("HAnimSiteLineColorRGBA")
+LineSet200.coord.append(Coordinate201)
+ColorRGBA202 = x3d.ColorRGBA()
+ColorRGBA202.USE = "HAnimSiteLineColorRGBA"
 
-LineSet200.setColor(ColorRGBA202)
+LineSet200.color.append(ColorRGBA202)
 
-Shape199.setGeometry(LineSet200)
+Shape199.geometry = LineSet200
 
-HAnimSegment183.addChildren(Shape199)
+HAnimSegment183.children.append(Shape199)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_ankle'/> to <HAnimSite name='l_calcaneous_post'/>
-Shape203 = Shape()
-LineSet204 = LineSet()
-LineSet204.setVertexCount([2])
-Coordinate205 = Coordinate()
-Coordinate205.setPoint([0.1101,0.0656,-0.0736,0.0974,0.0259,-0.1171])
+Shape203 = x3d.Shape()
+LineSet204 = x3d.LineSet()
+LineSet204.vertexCount = [2]
+Coordinate205 = x3d.Coordinate()
+Coordinate205.point = (0.1101,0.0656,-0.0736,0.0974,0.0259,-0.1171)
 
-LineSet204.setCoord(Coordinate205)
-ColorRGBA206 = ColorRGBA()
-ColorRGBA206.setUSE("HAnimSiteLineColorRGBA")
+LineSet204.coord.append(Coordinate205)
+ColorRGBA206 = x3d.ColorRGBA()
+ColorRGBA206.USE = "HAnimSiteLineColorRGBA"
 
-LineSet204.setColor(ColorRGBA206)
+LineSet204.color.append(ColorRGBA206)
 
-Shape203.setGeometry(LineSet204)
+Shape203.geometry = LineSet204
 
-HAnimSegment183.addChildren(Shape203)
-HAnimSite207 = HAnimSite()
-HAnimSite207.setName("l_lateral_malleolus_pt")
-HAnimSite207.setDEF("hanim_l_lateral_malleolus_pt")
-HAnimSite207.setTranslation([0.1308,0.0597,-0.1032])
+HAnimSegment183.children.append(Shape203)
+HAnimSite207 = x3d.HAnimSite()
+HAnimSite207.name = "l_lateral_malleolus_pt"
+HAnimSite207.DEF = "hanim_l_lateral_malleolus_pt"
+HAnimSite207.translation = [0.1308,0.0597,-0.1032]
 #HAnimSite visualization shape
-TouchSensor208 = TouchSensor()
-TouchSensor208.setDescription("HAnimSite l_lateral_malleolus")
+TouchSensor208 = x3d.TouchSensor()
+TouchSensor208.description = "HAnimSite l_lateral_malleolus"
 
-HAnimSite207.addChildren(TouchSensor208)
-Shape209 = Shape()
-Shape209.setUSE("HAnimSiteShape")
+HAnimSite207.children.append(TouchSensor208)
+Shape209 = x3d.Shape()
+Shape209.USE = "HAnimSiteShape"
 
-HAnimSite207.addChildren(Shape209)
+HAnimSite207.children.append(Shape209)
 
-HAnimSegment183.addChildren(HAnimSite207)
-HAnimSite210 = HAnimSite()
-HAnimSite210.setName("l_medial_malleolus_pt")
-HAnimSite210.setDEF("hanim_l_medial_malleolus_pt")
-HAnimSite210.setTranslation([0.089,0.0716,-0.0881])
+HAnimSegment183.children.append(HAnimSite207)
+HAnimSite210 = x3d.HAnimSite()
+HAnimSite210.name = "l_medial_malleolus_pt"
+HAnimSite210.DEF = "hanim_l_medial_malleolus_pt"
+HAnimSite210.translation = [0.089,0.0716,-0.0881]
 #HAnimSite visualization shape
-TouchSensor211 = TouchSensor()
-TouchSensor211.setDescription("HAnimSite l_medial_malleolus")
+TouchSensor211 = x3d.TouchSensor()
+TouchSensor211.description = "HAnimSite l_medial_malleolus"
 
-HAnimSite210.addChildren(TouchSensor211)
-Shape212 = Shape()
-Shape212.setUSE("HAnimSiteShape")
+HAnimSite210.children.append(TouchSensor211)
+Shape212 = x3d.Shape()
+Shape212.USE = "HAnimSiteShape"
 
-HAnimSite210.addChildren(Shape212)
+HAnimSite210.children.append(Shape212)
 
-HAnimSegment183.addChildren(HAnimSite210)
-HAnimSite213 = HAnimSite()
-HAnimSite213.setName("l_sphyrion_pt")
-HAnimSite213.setDEF("hanim_l_sphyrion_pt")
-HAnimSite213.setTranslation([0.089,0.0575,-0.0943])
+HAnimSegment183.children.append(HAnimSite210)
+HAnimSite213 = x3d.HAnimSite()
+HAnimSite213.name = "l_sphyrion_pt"
+HAnimSite213.DEF = "hanim_l_sphyrion_pt"
+HAnimSite213.translation = [0.089,0.0575,-0.0943]
 #HAnimSite visualization shape
-TouchSensor214 = TouchSensor()
-TouchSensor214.setDescription("HAnimSite l_sphyrion")
+TouchSensor214 = x3d.TouchSensor()
+TouchSensor214.description = "HAnimSite l_sphyrion"
 
-HAnimSite213.addChildren(TouchSensor214)
-Shape215 = Shape()
-Shape215.setUSE("HAnimSiteShape")
+HAnimSite213.children.append(TouchSensor214)
+Shape215 = x3d.Shape()
+Shape215.USE = "HAnimSiteShape"
 
-HAnimSite213.addChildren(Shape215)
+HAnimSite213.children.append(Shape215)
 
-HAnimSegment183.addChildren(HAnimSite213)
-HAnimSite216 = HAnimSite()
-HAnimSite216.setName("l_calcaneous_post_pt")
-HAnimSite216.setDEF("hanim_l_calcaneous_post_pt")
-HAnimSite216.setTranslation([0.0974,0.0259,-0.1171])
+HAnimSegment183.children.append(HAnimSite213)
+HAnimSite216 = x3d.HAnimSite()
+HAnimSite216.name = "l_calcaneous_post_pt"
+HAnimSite216.DEF = "hanim_l_calcaneous_post_pt"
+HAnimSite216.translation = [0.0974,0.0259,-0.1171]
 #HAnimSite visualization shape
-TouchSensor217 = TouchSensor()
-TouchSensor217.setDescription("HAnimSite l_calcaneous_post")
+TouchSensor217 = x3d.TouchSensor()
+TouchSensor217.description = "HAnimSite l_calcaneous_post"
 
-HAnimSite216.addChildren(TouchSensor217)
-Shape218 = Shape()
-Shape218.setUSE("HAnimSiteShape")
+HAnimSite216.children.append(TouchSensor217)
+Shape218 = x3d.Shape()
+Shape218.USE = "HAnimSiteShape"
 
-HAnimSite216.addChildren(Shape218)
+HAnimSite216.children.append(Shape218)
 
-HAnimSegment183.addChildren(HAnimSite216)
+HAnimSegment183.children.append(HAnimSite216)
 
-HAnimJoint182.addChildren(HAnimSegment183)
-HAnimJoint219 = HAnimJoint()
-HAnimJoint219.setName("l_subtalar")
-HAnimJoint219.setDEF("hanim_l_subtalar")
-HAnimJoint219.setCenter([0.1086,0.0001,-0.0368])
-HAnimJoint219.setStiffness([0,0,0])
-HAnimSegment220 = HAnimSegment()
-HAnimSegment220.setName("l_midproximal")
-HAnimSegment220.setDEF("hanim_l_midproximal")
+HAnimJoint182.children.append(HAnimSegment183)
+HAnimJoint219 = x3d.HAnimJoint()
+HAnimJoint219.name = "l_subtalar"
+HAnimJoint219.DEF = "hanim_l_subtalar"
+HAnimJoint219.center = [0.1086,0.0001,-0.0368]
+HAnimJoint219.ulimit = [0,0,0]
+HAnimJoint219.llimit = [0,0,0]
+HAnimSegment220 = x3d.HAnimSegment()
+HAnimSegment220.name = "l_midproximal"
+HAnimSegment220.DEF = "hanim_l_midproximal"
 #<HAnimJoint name='l_subtalar'/> visualization sphere is placed within <HAnimSegment name='l_midproximal'/>
-TouchSensor221 = TouchSensor()
-TouchSensor221.setDescription("HAnimJoint l_subtalar, HAnimSegment l_midproximal")
+TouchSensor221 = x3d.TouchSensor()
+TouchSensor221.description = "HAnimJoint l_subtalar, HAnimSegment l_midproximal"
 
-HAnimSegment220.addChildren(TouchSensor221)
-Transform222 = Transform()
-Transform222.setTranslation([0.1086,0.0001,-0.0368])
-Shape223 = Shape()
-Shape223.setUSE("HAnimJointShape")
+HAnimSegment220.children.append(TouchSensor221)
+Transform222 = x3d.Transform()
+Transform222.translation = [0.1086,0.0001,-0.0368]
+Shape223 = x3d.Shape()
+Shape223.USE = "HAnimJointShape"
 
-Transform222.addChildren(Shape223)
+Transform222.children.append(Shape223)
 
-HAnimSegment220.addChildren(Transform222)
+HAnimSegment220.children.append(Transform222)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_subtalar'/> to <HAnimJoint name='l_midtarsal'/>
-Shape224 = Shape()
-LineSet225 = LineSet()
-LineSet225.setVertexCount([2])
-Coordinate226 = Coordinate()
-Coordinate226.setPoint([0.1086,0.0001,-0.0368,0.1086,0.0001,0.0368])
+Shape224 = x3d.Shape()
+LineSet225 = x3d.LineSet()
+LineSet225.vertexCount = [2]
+Coordinate226 = x3d.Coordinate()
+Coordinate226.point = (0.1086,0.0001,-0.0368,0.1086,0.0001,0.0368)
 
-LineSet225.setCoord(Coordinate226)
-ColorRGBA227 = ColorRGBA()
-ColorRGBA227.setUSE("HAnimSegmentLineColorRGBA")
+LineSet225.coord.append(Coordinate226)
+ColorRGBA227 = x3d.ColorRGBA()
+ColorRGBA227.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet225.setColor(ColorRGBA227)
+LineSet225.color.append(ColorRGBA227)
 
-Shape224.setGeometry(LineSet225)
+Shape224.geometry = LineSet225
 
-HAnimSegment220.addChildren(Shape224)
+HAnimSegment220.children.append(Shape224)
 
-HAnimJoint219.addChildren(HAnimSegment220)
-HAnimJoint228 = HAnimJoint()
-HAnimJoint228.setName("l_midtarsal")
-HAnimJoint228.setDEF("hanim_l_midtarsal")
-HAnimJoint228.setCenter([0.1086,0.0001,0.0368])
-HAnimJoint228.setStiffness([0,0,0])
-HAnimSegment229 = HAnimSegment()
-HAnimSegment229.setName("l_middistal")
-HAnimSegment229.setDEF("hanim_l_middistal")
+HAnimJoint219.children.append(HAnimSegment220)
+HAnimJoint228 = x3d.HAnimJoint()
+HAnimJoint228.name = "l_midtarsal"
+HAnimJoint228.DEF = "hanim_l_midtarsal"
+HAnimJoint228.center = [0.1086,0.0001,0.0368]
+HAnimJoint228.ulimit = [0,0,0]
+HAnimJoint228.llimit = [0,0,0]
+HAnimSegment229 = x3d.HAnimSegment()
+HAnimSegment229.name = "l_middistal"
+HAnimSegment229.DEF = "hanim_l_middistal"
 #<HAnimJoint name='l_midtarsal'/> visualization sphere is placed within <HAnimSegment name='l_middistal'/>
-TouchSensor230 = TouchSensor()
-TouchSensor230.setDescription("HAnimJoint l_midtarsal, HAnimSegment l_middistal")
+TouchSensor230 = x3d.TouchSensor()
+TouchSensor230.description = "HAnimJoint l_midtarsal, HAnimSegment l_middistal"
 
-HAnimSegment229.addChildren(TouchSensor230)
-Transform231 = Transform()
-Transform231.setTranslation([0.1086,0.0001,0.0368])
-Shape232 = Shape()
-Shape232.setUSE("HAnimJointShape")
+HAnimSegment229.children.append(TouchSensor230)
+Transform231 = x3d.Transform()
+Transform231.translation = [0.1086,0.0001,0.0368]
+Shape232 = x3d.Shape()
+Shape232.USE = "HAnimJointShape"
 
-Transform231.addChildren(Shape232)
+Transform231.children.append(Shape232)
 
-HAnimSegment229.addChildren(Transform231)
+HAnimSegment229.children.append(Transform231)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_midtarsal'/> to <HAnimJoint name='l_metatarsal'/>
-Shape233 = Shape()
-LineSet234 = LineSet()
-LineSet234.setVertexCount([2])
-Coordinate235 = Coordinate()
-Coordinate235.setPoint([0.1086,0.0001,0.0368,0.1086,0,0.0762])
+Shape233 = x3d.Shape()
+LineSet234 = x3d.LineSet()
+LineSet234.vertexCount = [2]
+Coordinate235 = x3d.Coordinate()
+Coordinate235.point = (0.1086,0.0001,0.0368,0.1086,0.0000,0.0762)
 
-LineSet234.setCoord(Coordinate235)
-ColorRGBA236 = ColorRGBA()
-ColorRGBA236.setUSE("HAnimSegmentLineColorRGBA")
+LineSet234.coord.append(Coordinate235)
+ColorRGBA236 = x3d.ColorRGBA()
+ColorRGBA236.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet234.setColor(ColorRGBA236)
+LineSet234.color.append(ColorRGBA236)
 
-Shape233.setGeometry(LineSet234)
+Shape233.geometry = LineSet234
 
-HAnimSegment229.addChildren(Shape233)
+HAnimSegment229.children.append(Shape233)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_midtarsal'/> to <HAnimSite name='l_metatarsal_pha1'/>
-Shape237 = Shape()
-LineSet238 = LineSet()
-LineSet238.setVertexCount([2])
-Coordinate239 = Coordinate()
-Coordinate239.setPoint([0.1086,0.0001,0.0368,0.0816,0.0232,0.0106])
+Shape237 = x3d.Shape()
+LineSet238 = x3d.LineSet()
+LineSet238.vertexCount = [2]
+Coordinate239 = x3d.Coordinate()
+Coordinate239.point = (0.1086,0.0001,0.0368,0.0816,0.0232,0.0106)
 
-LineSet238.setCoord(Coordinate239)
-ColorRGBA240 = ColorRGBA()
-ColorRGBA240.setUSE("HAnimSiteLineColorRGBA")
+LineSet238.coord.append(Coordinate239)
+ColorRGBA240 = x3d.ColorRGBA()
+ColorRGBA240.USE = "HAnimSiteLineColorRGBA"
 
-LineSet238.setColor(ColorRGBA240)
+LineSet238.color.append(ColorRGBA240)
 
-Shape237.setGeometry(LineSet238)
+Shape237.geometry = LineSet238
 
-HAnimSegment229.addChildren(Shape237)
-HAnimSite241 = HAnimSite()
-HAnimSite241.setName("l_metatarsal_pha1_pt")
-HAnimSite241.setDEF("hanim_l_metatarsal_pha1_pt")
-HAnimSite241.setTranslation([0.0816,0.0232,0.0106])
+HAnimSegment229.children.append(Shape237)
+HAnimSite241 = x3d.HAnimSite()
+HAnimSite241.name = "l_metatarsal_pha1_pt"
+HAnimSite241.DEF = "hanim_l_metatarsal_pha1_pt"
+HAnimSite241.translation = [0.0816,0.0232,0.0106]
 #HAnimSite visualization shape
-TouchSensor242 = TouchSensor()
-TouchSensor242.setDescription("HAnimSite l_metatarsal_pha1")
+TouchSensor242 = x3d.TouchSensor()
+TouchSensor242.description = "HAnimSite l_metatarsal_pha1"
 
-HAnimSite241.addChildren(TouchSensor242)
-Shape243 = Shape()
-Shape243.setUSE("HAnimSiteShape")
+HAnimSite241.children.append(TouchSensor242)
+Shape243 = x3d.Shape()
+Shape243.USE = "HAnimSiteShape"
 
-HAnimSite241.addChildren(Shape243)
+HAnimSite241.children.append(Shape243)
 
-HAnimSegment229.addChildren(HAnimSite241)
+HAnimSegment229.children.append(HAnimSite241)
 
-HAnimJoint228.addChildren(HAnimSegment229)
-HAnimJoint244 = HAnimJoint()
-HAnimJoint244.setName("l_metatarsal")
-HAnimJoint244.setDEF("hanim_l_metatarsal")
-HAnimJoint244.setCenter([0.1086,0,0.0762])
-HAnimJoint244.setStiffness([0,0,0])
-HAnimSegment245 = HAnimSegment()
-HAnimSegment245.setName("l_forefoot")
-HAnimSegment245.setDEF("hanim_l_forefoot")
+HAnimJoint228.children.append(HAnimSegment229)
+HAnimJoint244 = x3d.HAnimJoint()
+HAnimJoint244.name = "l_metatarsal"
+HAnimJoint244.DEF = "hanim_l_metatarsal"
+HAnimJoint244.center = [0.1086,0,0.0762]
+HAnimJoint244.ulimit = [0,0,0]
+HAnimJoint244.llimit = [0,0,0]
+HAnimSegment245 = x3d.HAnimSegment()
+HAnimSegment245.name = "l_forefoot"
+HAnimSegment245.DEF = "hanim_l_forefoot"
 #<HAnimJoint name='l_metatarsal'/> visualization sphere is placed within <HAnimSegment name='l_forefoot'/>
-TouchSensor246 = TouchSensor()
-TouchSensor246.setDescription("HAnimJoint l_metatarsal, HAnimSegment l_forefoot")
+TouchSensor246 = x3d.TouchSensor()
+TouchSensor246.description = "HAnimJoint l_metatarsal, HAnimSegment l_forefoot"
 
-HAnimSegment245.addChildren(TouchSensor246)
-Transform247 = Transform()
-Transform247.setTranslation([0.1086,0,0.0762])
-Shape248 = Shape()
-Shape248.setUSE("HAnimJointShape")
+HAnimSegment245.children.append(TouchSensor246)
+Transform247 = x3d.Transform()
+Transform247.translation = [0.1086,0,0.0762]
+Shape248 = x3d.Shape()
+Shape248.USE = "HAnimJointShape"
 
-Transform247.addChildren(Shape248)
+Transform247.children.append(Shape248)
 
-HAnimSegment245.addChildren(Transform247)
+HAnimSegment245.children.append(Transform247)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_metatarsal'/> to <HAnimSite name='l_forefoot_tip'/>
-Shape249 = Shape()
-LineSet250 = LineSet()
-LineSet250.setVertexCount([2])
-Coordinate251 = Coordinate()
-Coordinate251.setPoint([0.1086,0,0.0762,0.1354,0.0016,0.1476])
+Shape249 = x3d.Shape()
+LineSet250 = x3d.LineSet()
+LineSet250.vertexCount = [2]
+Coordinate251 = x3d.Coordinate()
+Coordinate251.point = (0.1086,0.0000,0.0762,0.1354,0.0016,0.1476)
 
-LineSet250.setCoord(Coordinate251)
-ColorRGBA252 = ColorRGBA()
-ColorRGBA252.setUSE("HAnimSiteLineColorRGBA")
+LineSet250.coord.append(Coordinate251)
+ColorRGBA252 = x3d.ColorRGBA()
+ColorRGBA252.USE = "HAnimSiteLineColorRGBA"
 
-LineSet250.setColor(ColorRGBA252)
+LineSet250.color.append(ColorRGBA252)
 
-Shape249.setGeometry(LineSet250)
+Shape249.geometry = LineSet250
 
-HAnimSegment245.addChildren(Shape249)
+HAnimSegment245.children.append(Shape249)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_metatarsal'/> to <HAnimSite name='l_metatarsal_pha5'/>
-Shape253 = Shape()
-LineSet254 = LineSet()
-LineSet254.setVertexCount([2])
-Coordinate255 = Coordinate()
-Coordinate255.setPoint([0.1086,0,0.0762,0.1825,0.007,0.0928])
+Shape253 = x3d.Shape()
+LineSet254 = x3d.LineSet()
+LineSet254.vertexCount = [2]
+Coordinate255 = x3d.Coordinate()
+Coordinate255.point = (0.1086,0.0000,0.0762,0.1825,0.0070,0.0928)
 
-LineSet254.setCoord(Coordinate255)
-ColorRGBA256 = ColorRGBA()
-ColorRGBA256.setUSE("HAnimSiteLineColorRGBA")
+LineSet254.coord.append(Coordinate255)
+ColorRGBA256 = x3d.ColorRGBA()
+ColorRGBA256.USE = "HAnimSiteLineColorRGBA"
 
-LineSet254.setColor(ColorRGBA256)
+LineSet254.color.append(ColorRGBA256)
 
-Shape253.setGeometry(LineSet254)
+Shape253.geometry = LineSet254
 
-HAnimSegment245.addChildren(Shape253)
+HAnimSegment245.children.append(Shape253)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_metatarsal'/> to <HAnimSite name='l_digit2'/>
-Shape257 = Shape()
-LineSet258 = LineSet()
-LineSet258.setVertexCount([2])
-Coordinate259 = Coordinate()
-Coordinate259.setPoint([0.1086,0,0.0762,0.1195,0.0079,0.1433])
+Shape257 = x3d.Shape()
+LineSet258 = x3d.LineSet()
+LineSet258.vertexCount = [2]
+Coordinate259 = x3d.Coordinate()
+Coordinate259.point = (0.1086,0.0000,0.0762,0.1195,0.0079,0.1433)
 
-LineSet258.setCoord(Coordinate259)
-ColorRGBA260 = ColorRGBA()
-ColorRGBA260.setUSE("HAnimSiteLineColorRGBA")
+LineSet258.coord.append(Coordinate259)
+ColorRGBA260 = x3d.ColorRGBA()
+ColorRGBA260.USE = "HAnimSiteLineColorRGBA"
 
-LineSet258.setColor(ColorRGBA260)
+LineSet258.color.append(ColorRGBA260)
 
-Shape257.setGeometry(LineSet258)
+Shape257.geometry = LineSet258
 
-HAnimSegment245.addChildren(Shape257)
-HAnimSite261 = HAnimSite()
-HAnimSite261.setName("l_forefoot_tip")
-HAnimSite261.setDEF("hanim_l_forefoot_tip")
-HAnimSite261.setTranslation([0.1354,0.0016,0.1476])
+HAnimSegment245.children.append(Shape257)
+HAnimSite261 = x3d.HAnimSite()
+HAnimSite261.name = "l_forefoot_tip"
+HAnimSite261.DEF = "hanim_l_forefoot_tip"
+HAnimSite261.translation = [0.1354,0.0016,0.1476]
 #HAnimSite visualization shape
-TouchSensor262 = TouchSensor()
-TouchSensor262.setDescription("HAnimSite l_forefoot_tip")
+TouchSensor262 = x3d.TouchSensor()
+TouchSensor262.description = "HAnimSite l_forefoot_tip"
 
-HAnimSite261.addChildren(TouchSensor262)
-Shape263 = Shape()
-Shape263.setUSE("HAnimSiteShape")
+HAnimSite261.children.append(TouchSensor262)
+Shape263 = x3d.Shape()
+Shape263.USE = "HAnimSiteShape"
 
-HAnimSite261.addChildren(Shape263)
+HAnimSite261.children.append(Shape263)
 
-HAnimSegment245.addChildren(HAnimSite261)
-HAnimSite264 = HAnimSite()
-HAnimSite264.setName("l_metatarsal_pha5_pt")
-HAnimSite264.setDEF("hanim_l_metatarsal_pha5_pt")
-HAnimSite264.setTranslation([0.1825,0.007,0.0928])
+HAnimSegment245.children.append(HAnimSite261)
+HAnimSite264 = x3d.HAnimSite()
+HAnimSite264.name = "l_metatarsal_pha5_pt"
+HAnimSite264.DEF = "hanim_l_metatarsal_pha5_pt"
+HAnimSite264.translation = [0.1825,0.007,0.0928]
 #HAnimSite visualization shape
-TouchSensor265 = TouchSensor()
-TouchSensor265.setDescription("HAnimSite l_metatarsal_pha5")
+TouchSensor265 = x3d.TouchSensor()
+TouchSensor265.description = "HAnimSite l_metatarsal_pha5"
 
-HAnimSite264.addChildren(TouchSensor265)
-Shape266 = Shape()
-Shape266.setUSE("HAnimSiteShape")
+HAnimSite264.children.append(TouchSensor265)
+Shape266 = x3d.Shape()
+Shape266.USE = "HAnimSiteShape"
 
-HAnimSite264.addChildren(Shape266)
+HAnimSite264.children.append(Shape266)
 
-HAnimSegment245.addChildren(HAnimSite264)
-HAnimSite267 = HAnimSite()
-HAnimSite267.setName("l_digit2_pt")
-HAnimSite267.setDEF("hanim_l_digit2_pt")
-HAnimSite267.setTranslation([0.1195,0.0079,0.1433])
+HAnimSegment245.children.append(HAnimSite264)
+HAnimSite267 = x3d.HAnimSite()
+HAnimSite267.name = "l_digit2_pt"
+HAnimSite267.DEF = "hanim_l_digit2_pt"
+HAnimSite267.translation = [0.1195,0.0079,0.1433]
 #HAnimSite visualization shape
-TouchSensor268 = TouchSensor()
-TouchSensor268.setDescription("HAnimSite l_digit2")
+TouchSensor268 = x3d.TouchSensor()
+TouchSensor268.description = "HAnimSite l_digit2"
 
-HAnimSite267.addChildren(TouchSensor268)
-Shape269 = Shape()
-Shape269.setUSE("HAnimSiteShape")
+HAnimSite267.children.append(TouchSensor268)
+Shape269 = x3d.Shape()
+Shape269.USE = "HAnimSiteShape"
 
-HAnimSite267.addChildren(Shape269)
+HAnimSite267.children.append(Shape269)
 
-HAnimSegment245.addChildren(HAnimSite267)
+HAnimSegment245.children.append(HAnimSite267)
 
-HAnimJoint244.addChildren(HAnimSegment245)
+HAnimJoint244.children.append(HAnimSegment245)
 
-HAnimJoint228.addChildren(HAnimJoint244)
+HAnimJoint228.children.append(HAnimJoint244)
 
-HAnimJoint219.addChildren(HAnimJoint228)
+HAnimJoint219.children.append(HAnimJoint228)
 
-HAnimJoint182.addChildren(HAnimJoint219)
+HAnimJoint182.children.append(HAnimJoint219)
 
-HAnimJoint173.addChildren(HAnimJoint182)
+HAnimJoint173.children.append(HAnimJoint182)
 
-HAnimJoint143.addChildren(HAnimJoint173)
+HAnimJoint143.children.append(HAnimJoint173)
 
-HAnimJoint63.addChildren(HAnimJoint143)
-HAnimJoint270 = HAnimJoint()
-HAnimJoint270.setName("r_hip")
-HAnimJoint270.setDEF("hanim_r_hip")
-HAnimJoint270.setCenter([-0.0961,0.9124,-0.0001])
-HAnimJoint270.setStiffness([0,0,0])
-HAnimSegment271 = HAnimSegment()
-HAnimSegment271.setName("r_thigh")
-HAnimSegment271.setDEF("hanim_r_thigh")
+HAnimJoint63.children.append(HAnimJoint143)
+HAnimJoint270 = x3d.HAnimJoint()
+HAnimJoint270.name = "r_hip"
+HAnimJoint270.DEF = "hanim_r_hip"
+HAnimJoint270.center = [-0.0961,0.9124,-0.0001]
+HAnimJoint270.ulimit = [0,0,0]
+HAnimJoint270.llimit = [0,0,0]
+HAnimSegment271 = x3d.HAnimSegment()
+HAnimSegment271.name = "r_thigh"
+HAnimSegment271.DEF = "hanim_r_thigh"
 #<HAnimJoint name='r_hip'/> visualization sphere is placed within <HAnimSegment name='r_thigh'/>
-TouchSensor272 = TouchSensor()
-TouchSensor272.setDescription("HAnimJoint r_hip, HAnimSegment r_thigh")
+TouchSensor272 = x3d.TouchSensor()
+TouchSensor272.description = "HAnimJoint r_hip, HAnimSegment r_thigh"
 
-HAnimSegment271.addChildren(TouchSensor272)
-Transform273 = Transform()
-Transform273.setTranslation([-0.0961,0.9124,-0.0001])
-Shape274 = Shape()
-Shape274.setUSE("HAnimJointShape")
+HAnimSegment271.children.append(TouchSensor272)
+Transform273 = x3d.Transform()
+Transform273.translation = [-0.0961,0.9124,-0.0001]
+Shape274 = x3d.Shape()
+Shape274.USE = "HAnimJointShape"
 
-Transform273.addChildren(Shape274)
+Transform273.children.append(Shape274)
 
-HAnimSegment271.addChildren(Transform273)
+HAnimSegment271.children.append(Transform273)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_hip'/> to <HAnimJoint name='r_knee'/>
-Shape275 = Shape()
-LineSet276 = LineSet()
-LineSet276.setVertexCount([2])
-Coordinate277 = Coordinate()
-Coordinate277.setPoint([-0.0961,0.9124,-0.0001,-0.104,0.4867,0.0308])
+Shape275 = x3d.Shape()
+LineSet276 = x3d.LineSet()
+LineSet276.vertexCount = [2]
+Coordinate277 = x3d.Coordinate()
+Coordinate277.point = (-0.0961,0.9124,-0.0001,-0.1040,0.4867,0.0308)
 
-LineSet276.setCoord(Coordinate277)
-ColorRGBA278 = ColorRGBA()
-ColorRGBA278.setUSE("HAnimSegmentLineColorRGBA")
+LineSet276.coord.append(Coordinate277)
+ColorRGBA278 = x3d.ColorRGBA()
+ColorRGBA278.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet276.setColor(ColorRGBA278)
+LineSet276.color.append(ColorRGBA278)
 
-Shape275.setGeometry(LineSet276)
+Shape275.geometry = LineSet276
 
-HAnimSegment271.addChildren(Shape275)
+HAnimSegment271.children.append(Shape275)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_hip'/> to <HAnimSite name='r_knee_crease'/>
-Shape279 = Shape()
-LineSet280 = LineSet()
-LineSet280.setVertexCount([2])
-Coordinate281 = Coordinate()
-Coordinate281.setPoint([-0.0961,0.9124,-0.0001,-0.0825,0.4932,-0.0326])
+Shape279 = x3d.Shape()
+LineSet280 = x3d.LineSet()
+LineSet280.vertexCount = [2]
+Coordinate281 = x3d.Coordinate()
+Coordinate281.point = (-0.0961,0.9124,-0.0001,-0.0825,0.4932,-0.0326)
 
-LineSet280.setCoord(Coordinate281)
-ColorRGBA282 = ColorRGBA()
-ColorRGBA282.setUSE("HAnimSiteLineColorRGBA")
+LineSet280.coord.append(Coordinate281)
+ColorRGBA282 = x3d.ColorRGBA()
+ColorRGBA282.USE = "HAnimSiteLineColorRGBA"
 
-LineSet280.setColor(ColorRGBA282)
+LineSet280.color.append(ColorRGBA282)
 
-Shape279.setGeometry(LineSet280)
+Shape279.geometry = LineSet280
 
-HAnimSegment271.addChildren(Shape279)
+HAnimSegment271.children.append(Shape279)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_hip'/> to <HAnimSite name='r_femoral_lateral_epicn'/>
-Shape283 = Shape()
-LineSet284 = LineSet()
-LineSet284.setVertexCount([2])
-Coordinate285 = Coordinate()
-Coordinate285.setPoint([-0.0961,0.9124,-0.0001,-0.1421,0.4992,0.031])
+Shape283 = x3d.Shape()
+LineSet284 = x3d.LineSet()
+LineSet284.vertexCount = [2]
+Coordinate285 = x3d.Coordinate()
+Coordinate285.point = (-0.0961,0.9124,-0.0001,-0.1421,0.4992,0.0310)
 
-LineSet284.setCoord(Coordinate285)
-ColorRGBA286 = ColorRGBA()
-ColorRGBA286.setUSE("HAnimSiteLineColorRGBA")
+LineSet284.coord.append(Coordinate285)
+ColorRGBA286 = x3d.ColorRGBA()
+ColorRGBA286.USE = "HAnimSiteLineColorRGBA"
 
-LineSet284.setColor(ColorRGBA286)
+LineSet284.color.append(ColorRGBA286)
 
-Shape283.setGeometry(LineSet284)
+Shape283.geometry = LineSet284
 
-HAnimSegment271.addChildren(Shape283)
+HAnimSegment271.children.append(Shape283)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_hip'/> to <HAnimSite name='r_femoral_medial_epicn'/>
-Shape287 = Shape()
-LineSet288 = LineSet()
-LineSet288.setVertexCount([2])
-Coordinate289 = Coordinate()
-Coordinate289.setPoint([-0.0961,0.9124,-0.0001,-0.0221,0.5014,0.0289])
+Shape287 = x3d.Shape()
+LineSet288 = x3d.LineSet()
+LineSet288.vertexCount = [2]
+Coordinate289 = x3d.Coordinate()
+Coordinate289.point = (-0.0961,0.9124,-0.0001,-0.0221,0.5014,0.0289)
 
-LineSet288.setCoord(Coordinate289)
-ColorRGBA290 = ColorRGBA()
-ColorRGBA290.setUSE("HAnimSiteLineColorRGBA")
+LineSet288.coord.append(Coordinate289)
+ColorRGBA290 = x3d.ColorRGBA()
+ColorRGBA290.USE = "HAnimSiteLineColorRGBA"
 
-LineSet288.setColor(ColorRGBA290)
+LineSet288.color.append(ColorRGBA290)
 
-Shape287.setGeometry(LineSet288)
+Shape287.geometry = LineSet288
 
-HAnimSegment271.addChildren(Shape287)
-HAnimSite291 = HAnimSite()
-HAnimSite291.setName("r_knee_crease_pt")
-HAnimSite291.setDEF("hanim_r_knee_crease_pt")
-HAnimSite291.setTranslation([-0.0825,0.4932,-0.0326])
+HAnimSegment271.children.append(Shape287)
+HAnimSite291 = x3d.HAnimSite()
+HAnimSite291.name = "r_knee_crease_pt"
+HAnimSite291.DEF = "hanim_r_knee_crease_pt"
+HAnimSite291.translation = [-0.0825,0.4932,-0.0326]
 #HAnimSite visualization shape
-TouchSensor292 = TouchSensor()
-TouchSensor292.setDescription("HAnimSite r_knee_crease")
+TouchSensor292 = x3d.TouchSensor()
+TouchSensor292.description = "HAnimSite r_knee_crease"
 
-HAnimSite291.addChildren(TouchSensor292)
-Shape293 = Shape()
-Shape293.setUSE("HAnimSiteShape")
+HAnimSite291.children.append(TouchSensor292)
+Shape293 = x3d.Shape()
+Shape293.USE = "HAnimSiteShape"
 
-HAnimSite291.addChildren(Shape293)
+HAnimSite291.children.append(Shape293)
 
-HAnimSegment271.addChildren(HAnimSite291)
-HAnimSite294 = HAnimSite()
-HAnimSite294.setName("r_femoral_lateral_epicn_pt")
-HAnimSite294.setDEF("hanim_r_femoral_lateral_epicn_pt")
-HAnimSite294.setTranslation([-0.1421,0.4992,0.031])
+HAnimSegment271.children.append(HAnimSite291)
+HAnimSite294 = x3d.HAnimSite()
+HAnimSite294.name = "r_femoral_lateral_epicn_pt"
+HAnimSite294.DEF = "hanim_r_femoral_lateral_epicn_pt"
+HAnimSite294.translation = [-0.1421,0.4992,0.031]
 #HAnimSite visualization shape
-TouchSensor295 = TouchSensor()
-TouchSensor295.setDescription("HAnimSite r_femoral_lateral_epicn")
+TouchSensor295 = x3d.TouchSensor()
+TouchSensor295.description = "HAnimSite r_femoral_lateral_epicn"
 
-HAnimSite294.addChildren(TouchSensor295)
-Shape296 = Shape()
-Shape296.setUSE("HAnimSiteShape")
+HAnimSite294.children.append(TouchSensor295)
+Shape296 = x3d.Shape()
+Shape296.USE = "HAnimSiteShape"
 
-HAnimSite294.addChildren(Shape296)
+HAnimSite294.children.append(Shape296)
 
-HAnimSegment271.addChildren(HAnimSite294)
-HAnimSite297 = HAnimSite()
-HAnimSite297.setName("r_femoral_medial_epicn_pt")
-HAnimSite297.setDEF("hanim_r_femoral_medial_epicn_pt")
-HAnimSite297.setTranslation([-0.0221,0.5014,0.0289])
+HAnimSegment271.children.append(HAnimSite294)
+HAnimSite297 = x3d.HAnimSite()
+HAnimSite297.name = "r_femoral_medial_epicn_pt"
+HAnimSite297.DEF = "hanim_r_femoral_medial_epicn_pt"
+HAnimSite297.translation = [-0.0221,0.5014,0.0289]
 #HAnimSite visualization shape
-TouchSensor298 = TouchSensor()
-TouchSensor298.setDescription("HAnimSite r_femoral_medial_epicn")
+TouchSensor298 = x3d.TouchSensor()
+TouchSensor298.description = "HAnimSite r_femoral_medial_epicn"
 
-HAnimSite297.addChildren(TouchSensor298)
-Shape299 = Shape()
-Shape299.setUSE("HAnimSiteShape")
+HAnimSite297.children.append(TouchSensor298)
+Shape299 = x3d.Shape()
+Shape299.USE = "HAnimSiteShape"
 
-HAnimSite297.addChildren(Shape299)
+HAnimSite297.children.append(Shape299)
 
-HAnimSegment271.addChildren(HAnimSite297)
+HAnimSegment271.children.append(HAnimSite297)
 
-HAnimJoint270.addChildren(HAnimSegment271)
-HAnimJoint300 = HAnimJoint()
-HAnimJoint300.setName("r_knee")
-HAnimJoint300.setDEF("hanim_r_knee")
-HAnimJoint300.setCenter([-0.104,0.4867,0.0308])
-HAnimJoint300.setStiffness([0,0,0])
-HAnimSegment301 = HAnimSegment()
-HAnimSegment301.setName("r_calf")
-HAnimSegment301.setDEF("hanim_r_calf")
+HAnimJoint270.children.append(HAnimSegment271)
+HAnimJoint300 = x3d.HAnimJoint()
+HAnimJoint300.name = "r_knee"
+HAnimJoint300.DEF = "hanim_r_knee"
+HAnimJoint300.center = [-0.104,0.4867,0.0308]
+HAnimJoint300.ulimit = [0,0,0]
+HAnimJoint300.llimit = [0,0,0]
+HAnimSegment301 = x3d.HAnimSegment()
+HAnimSegment301.name = "r_calf"
+HAnimSegment301.DEF = "hanim_r_calf"
 #<HAnimJoint name='r_knee'/> visualization sphere is placed within <HAnimSegment name='r_calf'/>
-TouchSensor302 = TouchSensor()
-TouchSensor302.setDescription("HAnimJoint r_knee, HAnimSegment r_calf")
+TouchSensor302 = x3d.TouchSensor()
+TouchSensor302.description = "HAnimJoint r_knee, HAnimSegment r_calf"
 
-HAnimSegment301.addChildren(TouchSensor302)
-Transform303 = Transform()
-Transform303.setTranslation([-0.104,0.4867,0.0308])
-Shape304 = Shape()
-Shape304.setUSE("HAnimJointShape")
+HAnimSegment301.children.append(TouchSensor302)
+Transform303 = x3d.Transform()
+Transform303.translation = [-0.104,0.4867,0.0308]
+Shape304 = x3d.Shape()
+Shape304.USE = "HAnimJointShape"
 
-Transform303.addChildren(Shape304)
+Transform303.children.append(Shape304)
 
-HAnimSegment301.addChildren(Transform303)
+HAnimSegment301.children.append(Transform303)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_knee'/> to <HAnimJoint name='r_ankle'/>
-Shape305 = Shape()
-LineSet306 = LineSet()
-LineSet306.setVertexCount([2])
-Coordinate307 = Coordinate()
-Coordinate307.setPoint([-0.104,0.4867,0.0308,-0.1101,0.0656,-0.0736])
+Shape305 = x3d.Shape()
+LineSet306 = x3d.LineSet()
+LineSet306.vertexCount = [2]
+Coordinate307 = x3d.Coordinate()
+Coordinate307.point = (-0.1040,0.4867,0.0308,-0.1101,0.0656,-0.0736)
 
-LineSet306.setCoord(Coordinate307)
-ColorRGBA308 = ColorRGBA()
-ColorRGBA308.setUSE("HAnimSegmentLineColorRGBA")
+LineSet306.coord.append(Coordinate307)
+ColorRGBA308 = x3d.ColorRGBA()
+ColorRGBA308.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet306.setColor(ColorRGBA308)
+LineSet306.color.append(ColorRGBA308)
 
-Shape305.setGeometry(LineSet306)
+Shape305.geometry = LineSet306
 
-HAnimSegment301.addChildren(Shape305)
+HAnimSegment301.children.append(Shape305)
 
-HAnimJoint300.addChildren(HAnimSegment301)
-HAnimJoint309 = HAnimJoint()
-HAnimJoint309.setName("r_ankle")
-HAnimJoint309.setDEF("hanim_r_ankle")
-HAnimJoint309.setCenter([-0.1101,0.0656,-0.0736])
-HAnimJoint309.setStiffness([0,0,0])
-HAnimSegment310 = HAnimSegment()
-HAnimSegment310.setName("r_hindfoot")
-HAnimSegment310.setDEF("hanim_r_hindfoot")
+HAnimJoint300.children.append(HAnimSegment301)
+HAnimJoint309 = x3d.HAnimJoint()
+HAnimJoint309.name = "r_ankle"
+HAnimJoint309.DEF = "hanim_r_ankle"
+HAnimJoint309.center = [-0.1101,0.0656,-0.0736]
+HAnimJoint309.ulimit = [0,0,0]
+HAnimJoint309.llimit = [0,0,0]
+HAnimSegment310 = x3d.HAnimSegment()
+HAnimSegment310.name = "r_hindfoot"
+HAnimSegment310.DEF = "hanim_r_hindfoot"
 #<HAnimJoint name='r_ankle'/> visualization sphere is placed within <HAnimSegment name='r_hindfoot'/>
-TouchSensor311 = TouchSensor()
-TouchSensor311.setDescription("HAnimJoint r_ankle, HAnimSegment r_hindfoot")
+TouchSensor311 = x3d.TouchSensor()
+TouchSensor311.description = "HAnimJoint r_ankle, HAnimSegment r_hindfoot"
 
-HAnimSegment310.addChildren(TouchSensor311)
-Transform312 = Transform()
-Transform312.setTranslation([-0.1101,0.0656,-0.0736])
-Shape313 = Shape()
-Shape313.setUSE("HAnimJointShape")
+HAnimSegment310.children.append(TouchSensor311)
+Transform312 = x3d.Transform()
+Transform312.translation = [-0.1101,0.0656,-0.0736]
+Shape313 = x3d.Shape()
+Shape313.USE = "HAnimJointShape"
 
-Transform312.addChildren(Shape313)
+Transform312.children.append(Shape313)
 
-HAnimSegment310.addChildren(Transform312)
+HAnimSegment310.children.append(Transform312)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_ankle'/> to <HAnimJoint name='r_subtalar'/>
-Shape314 = Shape()
-LineSet315 = LineSet()
-LineSet315.setVertexCount([2])
-Coordinate316 = Coordinate()
-Coordinate316.setPoint([-0.1101,0.0656,-0.0736,-0.1086,0.0001,-0.0368])
+Shape314 = x3d.Shape()
+LineSet315 = x3d.LineSet()
+LineSet315.vertexCount = [2]
+Coordinate316 = x3d.Coordinate()
+Coordinate316.point = (-0.1101,0.0656,-0.0736,-0.1086,0.0001,-0.0368)
 
-LineSet315.setCoord(Coordinate316)
-ColorRGBA317 = ColorRGBA()
-ColorRGBA317.setUSE("HAnimSegmentLineColorRGBA")
+LineSet315.coord.append(Coordinate316)
+ColorRGBA317 = x3d.ColorRGBA()
+ColorRGBA317.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet315.setColor(ColorRGBA317)
+LineSet315.color.append(ColorRGBA317)
 
-Shape314.setGeometry(LineSet315)
+Shape314.geometry = LineSet315
 
-HAnimSegment310.addChildren(Shape314)
+HAnimSegment310.children.append(Shape314)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_ankle'/> to <HAnimSite name='r_lateral_malleolus'/>
-Shape318 = Shape()
-LineSet319 = LineSet()
-LineSet319.setVertexCount([2])
-Coordinate320 = Coordinate()
-Coordinate320.setPoint([-0.1101,0.0656,-0.0736,-0.1006,0.0658,-0.1075])
+Shape318 = x3d.Shape()
+LineSet319 = x3d.LineSet()
+LineSet319.vertexCount = [2]
+Coordinate320 = x3d.Coordinate()
+Coordinate320.point = (-0.1101,0.0656,-0.0736,-0.1006,0.0658,-0.1075)
 
-LineSet319.setCoord(Coordinate320)
-ColorRGBA321 = ColorRGBA()
-ColorRGBA321.setUSE("HAnimSiteLineColorRGBA")
+LineSet319.coord.append(Coordinate320)
+ColorRGBA321 = x3d.ColorRGBA()
+ColorRGBA321.USE = "HAnimSiteLineColorRGBA"
 
-LineSet319.setColor(ColorRGBA321)
+LineSet319.color.append(ColorRGBA321)
 
-Shape318.setGeometry(LineSet319)
+Shape318.geometry = LineSet319
 
-HAnimSegment310.addChildren(Shape318)
+HAnimSegment310.children.append(Shape318)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_ankle'/> to <HAnimSite name='r_medial_malleolus'/>
-Shape322 = Shape()
-LineSet323 = LineSet()
-LineSet323.setVertexCount([2])
-Coordinate324 = Coordinate()
-Coordinate324.setPoint([-0.1101,0.0656,-0.0736,-0.0591,0.076,-0.0928])
+Shape322 = x3d.Shape()
+LineSet323 = x3d.LineSet()
+LineSet323.vertexCount = [2]
+Coordinate324 = x3d.Coordinate()
+Coordinate324.point = (-0.1101,0.0656,-0.0736,-0.0591,0.0760,-0.0928)
 
-LineSet323.setCoord(Coordinate324)
-ColorRGBA325 = ColorRGBA()
-ColorRGBA325.setUSE("HAnimSiteLineColorRGBA")
+LineSet323.coord.append(Coordinate324)
+ColorRGBA325 = x3d.ColorRGBA()
+ColorRGBA325.USE = "HAnimSiteLineColorRGBA"
 
-LineSet323.setColor(ColorRGBA325)
+LineSet323.color.append(ColorRGBA325)
 
-Shape322.setGeometry(LineSet323)
+Shape322.geometry = LineSet323
 
-HAnimSegment310.addChildren(Shape322)
+HAnimSegment310.children.append(Shape322)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_ankle'/> to <HAnimSite name='r_sphyrion'/>
-Shape326 = Shape()
-LineSet327 = LineSet()
-LineSet327.setVertexCount([2])
-Coordinate328 = Coordinate()
-Coordinate328.setPoint([-0.1101,0.0656,-0.0736,-0.0603,0.061,-0.1002])
+Shape326 = x3d.Shape()
+LineSet327 = x3d.LineSet()
+LineSet327.vertexCount = [2]
+Coordinate328 = x3d.Coordinate()
+Coordinate328.point = (-0.1101,0.0656,-0.0736,-0.0603,0.0610,-0.1002)
 
-LineSet327.setCoord(Coordinate328)
-ColorRGBA329 = ColorRGBA()
-ColorRGBA329.setUSE("HAnimSiteLineColorRGBA")
+LineSet327.coord.append(Coordinate328)
+ColorRGBA329 = x3d.ColorRGBA()
+ColorRGBA329.USE = "HAnimSiteLineColorRGBA"
 
-LineSet327.setColor(ColorRGBA329)
+LineSet327.color.append(ColorRGBA329)
 
-Shape326.setGeometry(LineSet327)
+Shape326.geometry = LineSet327
 
-HAnimSegment310.addChildren(Shape326)
+HAnimSegment310.children.append(Shape326)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_ankle'/> to <HAnimSite name='r_calcaneous_post'/>
-Shape330 = Shape()
-LineSet331 = LineSet()
-LineSet331.setVertexCount([2])
-Coordinate332 = Coordinate()
-Coordinate332.setPoint([-0.1101,0.0656,-0.0736,-0.0692,0.0297,-0.1221])
+Shape330 = x3d.Shape()
+LineSet331 = x3d.LineSet()
+LineSet331.vertexCount = [2]
+Coordinate332 = x3d.Coordinate()
+Coordinate332.point = (-0.1101,0.0656,-0.0736,-0.0692,0.0297,-0.1221)
 
-LineSet331.setCoord(Coordinate332)
-ColorRGBA333 = ColorRGBA()
-ColorRGBA333.setUSE("HAnimSiteLineColorRGBA")
+LineSet331.coord.append(Coordinate332)
+ColorRGBA333 = x3d.ColorRGBA()
+ColorRGBA333.USE = "HAnimSiteLineColorRGBA"
 
-LineSet331.setColor(ColorRGBA333)
+LineSet331.color.append(ColorRGBA333)
 
-Shape330.setGeometry(LineSet331)
+Shape330.geometry = LineSet331
 
-HAnimSegment310.addChildren(Shape330)
-HAnimSite334 = HAnimSite()
-HAnimSite334.setName("r_lateral_malleolus_pt")
-HAnimSite334.setDEF("hanim_r_lateral_malleolus_pt")
-HAnimSite334.setTranslation([-0.1006,0.0658,-0.1075])
+HAnimSegment310.children.append(Shape330)
+HAnimSite334 = x3d.HAnimSite()
+HAnimSite334.name = "r_lateral_malleolus_pt"
+HAnimSite334.DEF = "hanim_r_lateral_malleolus_pt"
+HAnimSite334.translation = [-0.1006,0.0658,-0.1075]
 #HAnimSite visualization shape
-TouchSensor335 = TouchSensor()
-TouchSensor335.setDescription("HAnimSite r_lateral_malleolus")
+TouchSensor335 = x3d.TouchSensor()
+TouchSensor335.description = "HAnimSite r_lateral_malleolus"
 
-HAnimSite334.addChildren(TouchSensor335)
-Shape336 = Shape()
-Shape336.setUSE("HAnimSiteShape")
+HAnimSite334.children.append(TouchSensor335)
+Shape336 = x3d.Shape()
+Shape336.USE = "HAnimSiteShape"
 
-HAnimSite334.addChildren(Shape336)
+HAnimSite334.children.append(Shape336)
 
-HAnimSegment310.addChildren(HAnimSite334)
-HAnimSite337 = HAnimSite()
-HAnimSite337.setName("r_medial_malleolus_pt")
-HAnimSite337.setDEF("hanim_r_medial_malleolus_pt")
-HAnimSite337.setTranslation([-0.0591,0.076,-0.0928])
+HAnimSegment310.children.append(HAnimSite334)
+HAnimSite337 = x3d.HAnimSite()
+HAnimSite337.name = "r_medial_malleolus_pt"
+HAnimSite337.DEF = "hanim_r_medial_malleolus_pt"
+HAnimSite337.translation = [-0.0591,0.076,-0.0928]
 #HAnimSite visualization shape
-TouchSensor338 = TouchSensor()
-TouchSensor338.setDescription("HAnimSite r_medial_malleolus")
+TouchSensor338 = x3d.TouchSensor()
+TouchSensor338.description = "HAnimSite r_medial_malleolus"
 
-HAnimSite337.addChildren(TouchSensor338)
-Shape339 = Shape()
-Shape339.setUSE("HAnimSiteShape")
+HAnimSite337.children.append(TouchSensor338)
+Shape339 = x3d.Shape()
+Shape339.USE = "HAnimSiteShape"
 
-HAnimSite337.addChildren(Shape339)
+HAnimSite337.children.append(Shape339)
 
-HAnimSegment310.addChildren(HAnimSite337)
-HAnimSite340 = HAnimSite()
-HAnimSite340.setName("r_sphyrion_pt")
-HAnimSite340.setDEF("hanim_r_sphyrion_pt")
-HAnimSite340.setTranslation([-0.0603,0.061,-0.1002])
+HAnimSegment310.children.append(HAnimSite337)
+HAnimSite340 = x3d.HAnimSite()
+HAnimSite340.name = "r_sphyrion_pt"
+HAnimSite340.DEF = "hanim_r_sphyrion_pt"
+HAnimSite340.translation = [-0.0603,0.061,-0.1002]
 #HAnimSite visualization shape
-TouchSensor341 = TouchSensor()
-TouchSensor341.setDescription("HAnimSite r_sphyrion")
+TouchSensor341 = x3d.TouchSensor()
+TouchSensor341.description = "HAnimSite r_sphyrion"
 
-HAnimSite340.addChildren(TouchSensor341)
-Shape342 = Shape()
-Shape342.setUSE("HAnimSiteShape")
+HAnimSite340.children.append(TouchSensor341)
+Shape342 = x3d.Shape()
+Shape342.USE = "HAnimSiteShape"
 
-HAnimSite340.addChildren(Shape342)
+HAnimSite340.children.append(Shape342)
 
-HAnimSegment310.addChildren(HAnimSite340)
-HAnimSite343 = HAnimSite()
-HAnimSite343.setName("r_calcaneous_post_pt")
-HAnimSite343.setDEF("hanim_r_calcaneous_post_pt")
-HAnimSite343.setTranslation([-0.0692,0.0297,-0.1221])
+HAnimSegment310.children.append(HAnimSite340)
+HAnimSite343 = x3d.HAnimSite()
+HAnimSite343.name = "r_calcaneous_post_pt"
+HAnimSite343.DEF = "hanim_r_calcaneous_post_pt"
+HAnimSite343.translation = [-0.0692,0.0297,-0.1221]
 #HAnimSite visualization shape
-TouchSensor344 = TouchSensor()
-TouchSensor344.setDescription("HAnimSite r_calcaneous_post")
+TouchSensor344 = x3d.TouchSensor()
+TouchSensor344.description = "HAnimSite r_calcaneous_post"
 
-HAnimSite343.addChildren(TouchSensor344)
-Shape345 = Shape()
-Shape345.setUSE("HAnimSiteShape")
+HAnimSite343.children.append(TouchSensor344)
+Shape345 = x3d.Shape()
+Shape345.USE = "HAnimSiteShape"
 
-HAnimSite343.addChildren(Shape345)
+HAnimSite343.children.append(Shape345)
 
-HAnimSegment310.addChildren(HAnimSite343)
+HAnimSegment310.children.append(HAnimSite343)
 
-HAnimJoint309.addChildren(HAnimSegment310)
-HAnimJoint346 = HAnimJoint()
-HAnimJoint346.setName("r_subtalar")
-HAnimJoint346.setDEF("hanim_r_subtalar")
-HAnimJoint346.setCenter([-0.1086,0.0001,-0.0368])
-HAnimJoint346.setStiffness([0,0,0])
-HAnimSegment347 = HAnimSegment()
-HAnimSegment347.setName("r_midproximal")
-HAnimSegment347.setDEF("hanim_r_midproximal")
+HAnimJoint309.children.append(HAnimSegment310)
+HAnimJoint346 = x3d.HAnimJoint()
+HAnimJoint346.name = "r_subtalar"
+HAnimJoint346.DEF = "hanim_r_subtalar"
+HAnimJoint346.center = [-0.1086,0.0001,-0.0368]
+HAnimJoint346.ulimit = [0,0,0]
+HAnimJoint346.llimit = [0,0,0]
+HAnimSegment347 = x3d.HAnimSegment()
+HAnimSegment347.name = "r_midproximal"
+HAnimSegment347.DEF = "hanim_r_midproximal"
 #<HAnimJoint name='r_subtalar'/> visualization sphere is placed within <HAnimSegment name='r_midproximal'/>
-TouchSensor348 = TouchSensor()
-TouchSensor348.setDescription("HAnimJoint r_subtalar, HAnimSegment r_midproximal")
+TouchSensor348 = x3d.TouchSensor()
+TouchSensor348.description = "HAnimJoint r_subtalar, HAnimSegment r_midproximal"
 
-HAnimSegment347.addChildren(TouchSensor348)
-Transform349 = Transform()
-Transform349.setTranslation([-0.1086,0.0001,-0.0368])
-Shape350 = Shape()
-Shape350.setUSE("HAnimJointShape")
+HAnimSegment347.children.append(TouchSensor348)
+Transform349 = x3d.Transform()
+Transform349.translation = [-0.1086,0.0001,-0.0368]
+Shape350 = x3d.Shape()
+Shape350.USE = "HAnimJointShape"
 
-Transform349.addChildren(Shape350)
+Transform349.children.append(Shape350)
 
-HAnimSegment347.addChildren(Transform349)
+HAnimSegment347.children.append(Transform349)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_subtalar'/> to <HAnimJoint name='r_midtarsal'/>
-Shape351 = Shape()
-LineSet352 = LineSet()
-LineSet352.setVertexCount([2])
-Coordinate353 = Coordinate()
-Coordinate353.setPoint([-0.1086,0.0001,-0.0368,-0.1086,0.0001,0.0368])
+Shape351 = x3d.Shape()
+LineSet352 = x3d.LineSet()
+LineSet352.vertexCount = [2]
+Coordinate353 = x3d.Coordinate()
+Coordinate353.point = (-0.1086,0.0001,-0.0368,-0.1086,0.0001,0.0368)
 
-LineSet352.setCoord(Coordinate353)
-ColorRGBA354 = ColorRGBA()
-ColorRGBA354.setUSE("HAnimSegmentLineColorRGBA")
+LineSet352.coord.append(Coordinate353)
+ColorRGBA354 = x3d.ColorRGBA()
+ColorRGBA354.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet352.setColor(ColorRGBA354)
+LineSet352.color.append(ColorRGBA354)
 
-Shape351.setGeometry(LineSet352)
+Shape351.geometry = LineSet352
 
-HAnimSegment347.addChildren(Shape351)
+HAnimSegment347.children.append(Shape351)
 
-HAnimJoint346.addChildren(HAnimSegment347)
-HAnimJoint355 = HAnimJoint()
-HAnimJoint355.setName("r_midtarsal")
-HAnimJoint355.setDEF("hanim_r_midtarsal")
-HAnimJoint355.setCenter([-0.1086,0.0001,0.0368])
-HAnimJoint355.setStiffness([0,0,0])
-HAnimSegment356 = HAnimSegment()
-HAnimSegment356.setName("r_middistal")
-HAnimSegment356.setDEF("hanim_r_middistal")
+HAnimJoint346.children.append(HAnimSegment347)
+HAnimJoint355 = x3d.HAnimJoint()
+HAnimJoint355.name = "r_midtarsal"
+HAnimJoint355.DEF = "hanim_r_midtarsal"
+HAnimJoint355.center = [-0.1086,0.0001,0.0368]
+HAnimJoint355.ulimit = [0,0,0]
+HAnimJoint355.llimit = [0,0,0]
+HAnimSegment356 = x3d.HAnimSegment()
+HAnimSegment356.name = "r_middistal"
+HAnimSegment356.DEF = "hanim_r_middistal"
 #<HAnimJoint name='r_midtarsal'/> visualization sphere is placed within <HAnimSegment name='r_middistal'/>
-TouchSensor357 = TouchSensor()
-TouchSensor357.setDescription("HAnimJoint r_midtarsal, HAnimSegment r_middistal")
+TouchSensor357 = x3d.TouchSensor()
+TouchSensor357.description = "HAnimJoint r_midtarsal, HAnimSegment r_middistal"
 
-HAnimSegment356.addChildren(TouchSensor357)
-Transform358 = Transform()
-Transform358.setTranslation([-0.1086,0.0001,0.0368])
-Shape359 = Shape()
-Shape359.setUSE("HAnimJointShape")
+HAnimSegment356.children.append(TouchSensor357)
+Transform358 = x3d.Transform()
+Transform358.translation = [-0.1086,0.0001,0.0368]
+Shape359 = x3d.Shape()
+Shape359.USE = "HAnimJointShape"
 
-Transform358.addChildren(Shape359)
+Transform358.children.append(Shape359)
 
-HAnimSegment356.addChildren(Transform358)
+HAnimSegment356.children.append(Transform358)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_midtarsal'/> to <HAnimJoint name='r_metatarsal'/>
-Shape360 = Shape()
-LineSet361 = LineSet()
-LineSet361.setVertexCount([2])
-Coordinate362 = Coordinate()
-Coordinate362.setPoint([-0.1086,0.0001,0.0368,-0.1086,0,0.0762])
+Shape360 = x3d.Shape()
+LineSet361 = x3d.LineSet()
+LineSet361.vertexCount = [2]
+Coordinate362 = x3d.Coordinate()
+Coordinate362.point = (-0.1086,0.0001,0.0368,-0.1086,0.0000,0.0762)
 
-LineSet361.setCoord(Coordinate362)
-ColorRGBA363 = ColorRGBA()
-ColorRGBA363.setUSE("HAnimSegmentLineColorRGBA")
+LineSet361.coord.append(Coordinate362)
+ColorRGBA363 = x3d.ColorRGBA()
+ColorRGBA363.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet361.setColor(ColorRGBA363)
+LineSet361.color.append(ColorRGBA363)
 
-Shape360.setGeometry(LineSet361)
+Shape360.geometry = LineSet361
 
-HAnimSegment356.addChildren(Shape360)
+HAnimSegment356.children.append(Shape360)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_midtarsal'/> to <HAnimSite name='r_metatarsal_pha1'/>
-Shape364 = Shape()
-LineSet365 = LineSet()
-LineSet365.setVertexCount([2])
-Coordinate366 = Coordinate()
-Coordinate366.setPoint([-0.1086,0.0001,0.0368,-0.0521,0.026,0.0127])
+Shape364 = x3d.Shape()
+LineSet365 = x3d.LineSet()
+LineSet365.vertexCount = [2]
+Coordinate366 = x3d.Coordinate()
+Coordinate366.point = (-0.1086,0.0001,0.0368,-0.0521,0.0260,0.0127)
 
-LineSet365.setCoord(Coordinate366)
-ColorRGBA367 = ColorRGBA()
-ColorRGBA367.setUSE("HAnimSiteLineColorRGBA")
+LineSet365.coord.append(Coordinate366)
+ColorRGBA367 = x3d.ColorRGBA()
+ColorRGBA367.USE = "HAnimSiteLineColorRGBA"
 
-LineSet365.setColor(ColorRGBA367)
+LineSet365.color.append(ColorRGBA367)
 
-Shape364.setGeometry(LineSet365)
+Shape364.geometry = LineSet365
 
-HAnimSegment356.addChildren(Shape364)
-HAnimSite368 = HAnimSite()
-HAnimSite368.setName("r_metatarsal_pha1_pt")
-HAnimSite368.setDEF("hanim_r_metatarsal_pha1_pt")
-HAnimSite368.setTranslation([-0.0521,0.026,0.0127])
+HAnimSegment356.children.append(Shape364)
+HAnimSite368 = x3d.HAnimSite()
+HAnimSite368.name = "r_metatarsal_pha1_pt"
+HAnimSite368.DEF = "hanim_r_metatarsal_pha1_pt"
+HAnimSite368.translation = [-0.0521,0.026,0.0127]
 #HAnimSite visualization shape
-TouchSensor369 = TouchSensor()
-TouchSensor369.setDescription("HAnimSite r_metatarsal_pha1")
+TouchSensor369 = x3d.TouchSensor()
+TouchSensor369.description = "HAnimSite r_metatarsal_pha1"
 
-HAnimSite368.addChildren(TouchSensor369)
-Shape370 = Shape()
-Shape370.setUSE("HAnimSiteShape")
+HAnimSite368.children.append(TouchSensor369)
+Shape370 = x3d.Shape()
+Shape370.USE = "HAnimSiteShape"
 
-HAnimSite368.addChildren(Shape370)
+HAnimSite368.children.append(Shape370)
 
-HAnimSegment356.addChildren(HAnimSite368)
+HAnimSegment356.children.append(HAnimSite368)
 
-HAnimJoint355.addChildren(HAnimSegment356)
-HAnimJoint371 = HAnimJoint()
-HAnimJoint371.setName("r_metatarsal")
-HAnimJoint371.setDEF("hanim_r_metatarsal")
-HAnimJoint371.setCenter([-0.1086,0,0.0762])
-HAnimJoint371.setStiffness([0,0,0])
-HAnimSegment372 = HAnimSegment()
-HAnimSegment372.setName("r_forefoot")
-HAnimSegment372.setDEF("hanim_r_forefoot")
+HAnimJoint355.children.append(HAnimSegment356)
+HAnimJoint371 = x3d.HAnimJoint()
+HAnimJoint371.name = "r_metatarsal"
+HAnimJoint371.DEF = "hanim_r_metatarsal"
+HAnimJoint371.center = [-0.1086,0,0.0762]
+HAnimJoint371.ulimit = [0,0,0]
+HAnimJoint371.llimit = [0,0,0]
+HAnimSegment372 = x3d.HAnimSegment()
+HAnimSegment372.name = "r_forefoot"
+HAnimSegment372.DEF = "hanim_r_forefoot"
 #<HAnimJoint name='r_metatarsal'/> visualization sphere is placed within <HAnimSegment name='r_forefoot'/>
-TouchSensor373 = TouchSensor()
-TouchSensor373.setDescription("HAnimJoint r_metatarsal, HAnimSegment r_forefoot")
+TouchSensor373 = x3d.TouchSensor()
+TouchSensor373.description = "HAnimJoint r_metatarsal, HAnimSegment r_forefoot"
 
-HAnimSegment372.addChildren(TouchSensor373)
-Transform374 = Transform()
-Transform374.setTranslation([-0.1086,0,0.0762])
-Shape375 = Shape()
-Shape375.setUSE("HAnimJointShape")
+HAnimSegment372.children.append(TouchSensor373)
+Transform374 = x3d.Transform()
+Transform374.translation = [-0.1086,0,0.0762]
+Shape375 = x3d.Shape()
+Shape375.USE = "HAnimJointShape"
 
-Transform374.addChildren(Shape375)
+Transform374.children.append(Shape375)
 
-HAnimSegment372.addChildren(Transform374)
+HAnimSegment372.children.append(Transform374)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_metatarsal'/> to <HAnimSite name='r_forefoot_tip'/>
-Shape376 = Shape()
-LineSet377 = LineSet()
-LineSet377.setVertexCount([2])
-Coordinate378 = Coordinate()
-Coordinate378.setPoint([-0.1086,0,0.0762,-0.1043,0.0227,0.145])
+Shape376 = x3d.Shape()
+LineSet377 = x3d.LineSet()
+LineSet377.vertexCount = [2]
+Coordinate378 = x3d.Coordinate()
+Coordinate378.point = (-0.1086,0.0000,0.0762,-0.1043,0.0227,0.1450)
 
-LineSet377.setCoord(Coordinate378)
-ColorRGBA379 = ColorRGBA()
-ColorRGBA379.setUSE("HAnimSiteLineColorRGBA")
+LineSet377.coord.append(Coordinate378)
+ColorRGBA379 = x3d.ColorRGBA()
+ColorRGBA379.USE = "HAnimSiteLineColorRGBA"
 
-LineSet377.setColor(ColorRGBA379)
+LineSet377.color.append(ColorRGBA379)
 
-Shape376.setGeometry(LineSet377)
+Shape376.geometry = LineSet377
 
-HAnimSegment372.addChildren(Shape376)
+HAnimSegment372.children.append(Shape376)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_metatarsal'/> to <HAnimSite name='r_metatarsal_pha5'/>
-Shape380 = Shape()
-LineSet381 = LineSet()
-LineSet381.setVertexCount([2])
-Coordinate382 = Coordinate()
-Coordinate382.setPoint([-0.1086,0,0.0762,-0.1523,0.0166,0.0895])
+Shape380 = x3d.Shape()
+LineSet381 = x3d.LineSet()
+LineSet381.vertexCount = [2]
+Coordinate382 = x3d.Coordinate()
+Coordinate382.point = (-0.1086,0.0000,0.0762,-0.1523,0.0166,0.0895)
 
-LineSet381.setCoord(Coordinate382)
-ColorRGBA383 = ColorRGBA()
-ColorRGBA383.setUSE("HAnimSiteLineColorRGBA")
+LineSet381.coord.append(Coordinate382)
+ColorRGBA383 = x3d.ColorRGBA()
+ColorRGBA383.USE = "HAnimSiteLineColorRGBA"
 
-LineSet381.setColor(ColorRGBA383)
+LineSet381.color.append(ColorRGBA383)
 
-Shape380.setGeometry(LineSet381)
+Shape380.geometry = LineSet381
 
-HAnimSegment372.addChildren(Shape380)
+HAnimSegment372.children.append(Shape380)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_metatarsal'/> to <HAnimSite name='r_digit2'/>
-Shape384 = Shape()
-LineSet385 = LineSet()
-LineSet385.setVertexCount([2])
-Coordinate386 = Coordinate()
-Coordinate386.setPoint([-0.1086,0,0.0762,-0.0883,0.0134,0.1383])
+Shape384 = x3d.Shape()
+LineSet385 = x3d.LineSet()
+LineSet385.vertexCount = [2]
+Coordinate386 = x3d.Coordinate()
+Coordinate386.point = (-0.1086,0.0000,0.0762,-0.0883,0.0134,0.1383)
 
-LineSet385.setCoord(Coordinate386)
-ColorRGBA387 = ColorRGBA()
-ColorRGBA387.setUSE("HAnimSiteLineColorRGBA")
+LineSet385.coord.append(Coordinate386)
+ColorRGBA387 = x3d.ColorRGBA()
+ColorRGBA387.USE = "HAnimSiteLineColorRGBA"
 
-LineSet385.setColor(ColorRGBA387)
+LineSet385.color.append(ColorRGBA387)
 
-Shape384.setGeometry(LineSet385)
+Shape384.geometry = LineSet385
 
-HAnimSegment372.addChildren(Shape384)
-HAnimSite388 = HAnimSite()
-HAnimSite388.setName("r_forefoot_tip")
-HAnimSite388.setDEF("hanim_r_forefoot_tip")
-HAnimSite388.setTranslation([-0.1043,0.0227,0.145])
+HAnimSegment372.children.append(Shape384)
+HAnimSite388 = x3d.HAnimSite()
+HAnimSite388.name = "r_forefoot_tip"
+HAnimSite388.DEF = "hanim_r_forefoot_tip"
+HAnimSite388.translation = [-0.1043,0.0227,0.145]
 #HAnimSite visualization shape
-TouchSensor389 = TouchSensor()
-TouchSensor389.setDescription("HAnimSite r_forefoot_tip")
+TouchSensor389 = x3d.TouchSensor()
+TouchSensor389.description = "HAnimSite r_forefoot_tip"
 
-HAnimSite388.addChildren(TouchSensor389)
-Shape390 = Shape()
-Shape390.setUSE("HAnimSiteShape")
+HAnimSite388.children.append(TouchSensor389)
+Shape390 = x3d.Shape()
+Shape390.USE = "HAnimSiteShape"
 
-HAnimSite388.addChildren(Shape390)
+HAnimSite388.children.append(Shape390)
 
-HAnimSegment372.addChildren(HAnimSite388)
-HAnimSite391 = HAnimSite()
-HAnimSite391.setName("r_metatarsal_pha5_pt")
-HAnimSite391.setDEF("hanim_r_metatarsal_pha5_pt")
-HAnimSite391.setTranslation([-0.1523,0.0166,0.0895])
+HAnimSegment372.children.append(HAnimSite388)
+HAnimSite391 = x3d.HAnimSite()
+HAnimSite391.name = "r_metatarsal_pha5_pt"
+HAnimSite391.DEF = "hanim_r_metatarsal_pha5_pt"
+HAnimSite391.translation = [-0.1523,0.0166,0.0895]
 #HAnimSite visualization shape
-TouchSensor392 = TouchSensor()
-TouchSensor392.setDescription("HAnimSite r_metatarsal_pha5")
+TouchSensor392 = x3d.TouchSensor()
+TouchSensor392.description = "HAnimSite r_metatarsal_pha5"
 
-HAnimSite391.addChildren(TouchSensor392)
-Shape393 = Shape()
-Shape393.setUSE("HAnimSiteShape")
+HAnimSite391.children.append(TouchSensor392)
+Shape393 = x3d.Shape()
+Shape393.USE = "HAnimSiteShape"
 
-HAnimSite391.addChildren(Shape393)
+HAnimSite391.children.append(Shape393)
 
-HAnimSegment372.addChildren(HAnimSite391)
-HAnimSite394 = HAnimSite()
-HAnimSite394.setName("r_digit2_pt")
-HAnimSite394.setDEF("hanim_r_digit2_pt")
-HAnimSite394.setTranslation([-0.0883,0.0134,0.1383])
+HAnimSegment372.children.append(HAnimSite391)
+HAnimSite394 = x3d.HAnimSite()
+HAnimSite394.name = "r_digit2_pt"
+HAnimSite394.DEF = "hanim_r_digit2_pt"
+HAnimSite394.translation = [-0.0883,0.0134,0.1383]
 #HAnimSite visualization shape
-TouchSensor395 = TouchSensor()
-TouchSensor395.setDescription("HAnimSite r_digit2")
+TouchSensor395 = x3d.TouchSensor()
+TouchSensor395.description = "HAnimSite r_digit2"
 
-HAnimSite394.addChildren(TouchSensor395)
-Shape396 = Shape()
-Shape396.setUSE("HAnimSiteShape")
+HAnimSite394.children.append(TouchSensor395)
+Shape396 = x3d.Shape()
+Shape396.USE = "HAnimSiteShape"
 
-HAnimSite394.addChildren(Shape396)
+HAnimSite394.children.append(Shape396)
 
-HAnimSegment372.addChildren(HAnimSite394)
+HAnimSegment372.children.append(HAnimSite394)
 
-HAnimJoint371.addChildren(HAnimSegment372)
+HAnimJoint371.children.append(HAnimSegment372)
 
-HAnimJoint355.addChildren(HAnimJoint371)
+HAnimJoint355.children.append(HAnimJoint371)
 
-HAnimJoint346.addChildren(HAnimJoint355)
+HAnimJoint346.children.append(HAnimJoint355)
 
-HAnimJoint309.addChildren(HAnimJoint346)
+HAnimJoint309.children.append(HAnimJoint346)
 
-HAnimJoint300.addChildren(HAnimJoint309)
+HAnimJoint300.children.append(HAnimJoint309)
 
-HAnimJoint270.addChildren(HAnimJoint300)
+HAnimJoint270.children.append(HAnimJoint300)
 
-HAnimJoint63.addChildren(HAnimJoint270)
+HAnimJoint63.children.append(HAnimJoint270)
 
-HAnimJoint47.addChildren(HAnimJoint63)
-HAnimJoint397 = HAnimJoint()
-HAnimJoint397.setName("vl5")
-HAnimJoint397.setDEF("hanim_vl5")
-HAnimJoint397.setCenter([0.0028,1.0568,-0.0776])
-HAnimJoint397.setStiffness([0,0,0])
-HAnimSegment398 = HAnimSegment()
-HAnimSegment398.setName("l5")
-HAnimSegment398.setDEF("hanim_l5")
+HAnimJoint47.children.append(HAnimJoint63)
+HAnimJoint397 = x3d.HAnimJoint()
+HAnimJoint397.name = "vl5"
+HAnimJoint397.DEF = "hanim_vl5"
+HAnimJoint397.center = [0.0028,1.0568,-0.0776]
+HAnimJoint397.ulimit = [0,0,0]
+HAnimJoint397.llimit = [0,0,0]
+HAnimSegment398 = x3d.HAnimSegment()
+HAnimSegment398.name = "l5"
+HAnimSegment398.DEF = "hanim_l5"
 #<HAnimJoint name='vl5'/> visualization sphere is placed within <HAnimSegment name='l5'/>
-TouchSensor399 = TouchSensor()
-TouchSensor399.setDescription("HAnimJoint vl5, HAnimSegment l5")
+TouchSensor399 = x3d.TouchSensor()
+TouchSensor399.description = "HAnimJoint vl5, HAnimSegment l5"
 
-HAnimSegment398.addChildren(TouchSensor399)
-Transform400 = Transform()
-Transform400.setTranslation([0.0028,1.0568,-0.0776])
-Shape401 = Shape()
-Shape401.setUSE("HAnimJointShape")
+HAnimSegment398.children.append(TouchSensor399)
+Transform400 = x3d.Transform()
+Transform400.translation = [0.0028,1.0568,-0.0776]
+Shape401 = x3d.Shape()
+Shape401.USE = "HAnimJointShape"
 
-Transform400.addChildren(Shape401)
+Transform400.children.append(Shape401)
 
-HAnimSegment398.addChildren(Transform400)
+HAnimSegment398.children.append(Transform400)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vl5'/> to <HAnimJoint name='vl4'/>
-Shape402 = Shape()
-LineSet403 = LineSet()
-LineSet403.setVertexCount([2])
-Coordinate404 = Coordinate()
-Coordinate404.setPoint([0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787])
+Shape402 = x3d.Shape()
+LineSet403 = x3d.LineSet()
+LineSet403.vertexCount = [2]
+Coordinate404 = x3d.Coordinate()
+Coordinate404.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
-LineSet403.setCoord(Coordinate404)
-ColorRGBA405 = ColorRGBA()
-ColorRGBA405.setUSE("HAnimSegmentLineColorRGBA")
+LineSet403.coord.append(Coordinate404)
+ColorRGBA405 = x3d.ColorRGBA()
+ColorRGBA405.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet403.setColor(ColorRGBA405)
+LineSet403.color.append(ColorRGBA405)
 
-Shape402.setGeometry(LineSet403)
+Shape402.geometry = LineSet403
 
-HAnimSegment398.addChildren(Shape402)
+HAnimSegment398.children.append(Shape402)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vl5'/> to <HAnimSite name='waist_preferred_post'/>
-Shape406 = Shape()
-LineSet407 = LineSet()
-LineSet407.setVertexCount([2])
-Coordinate408 = Coordinate()
-Coordinate408.setPoint([0.0028,1.0568,-0.0776,0,1.0915,-0.1091])
+Shape406 = x3d.Shape()
+LineSet407 = x3d.LineSet()
+LineSet407.vertexCount = [2]
+Coordinate408 = x3d.Coordinate()
+Coordinate408.point = (0.0028,1.0568,-0.0776,0.0000,1.0915,-0.1091)
 
-LineSet407.setCoord(Coordinate408)
-ColorRGBA409 = ColorRGBA()
-ColorRGBA409.setUSE("HAnimSiteLineColorRGBA")
+LineSet407.coord.append(Coordinate408)
+ColorRGBA409 = x3d.ColorRGBA()
+ColorRGBA409.USE = "HAnimSiteLineColorRGBA"
 
-LineSet407.setColor(ColorRGBA409)
+LineSet407.color.append(ColorRGBA409)
 
-Shape406.setGeometry(LineSet407)
+Shape406.geometry = LineSet407
 
-HAnimSegment398.addChildren(Shape406)
+HAnimSegment398.children.append(Shape406)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vl5'/> to <HAnimSite name='navel'/>
-Shape410 = Shape()
-LineSet411 = LineSet()
-LineSet411.setVertexCount([2])
-Coordinate412 = Coordinate()
-Coordinate412.setPoint([0.0028,1.0568,-0.0776,0.0069,1.0966,0.1017])
+Shape410 = x3d.Shape()
+LineSet411 = x3d.LineSet()
+LineSet411.vertexCount = [2]
+Coordinate412 = x3d.Coordinate()
+Coordinate412.point = (0.0028,1.0568,-0.0776,0.0069,1.0966,0.1017)
 
-LineSet411.setCoord(Coordinate412)
-ColorRGBA413 = ColorRGBA()
-ColorRGBA413.setUSE("HAnimSiteLineColorRGBA")
+LineSet411.coord.append(Coordinate412)
+ColorRGBA413 = x3d.ColorRGBA()
+ColorRGBA413.USE = "HAnimSiteLineColorRGBA"
 
-LineSet411.setColor(ColorRGBA413)
+LineSet411.color.append(ColorRGBA413)
 
-Shape410.setGeometry(LineSet411)
+Shape410.geometry = LineSet411
 
-HAnimSegment398.addChildren(Shape410)
-HAnimSite414 = HAnimSite()
-HAnimSite414.setName("waist_preferred_post_pt")
-HAnimSite414.setDEF("hanim_waist_preferred_post_pt")
-HAnimSite414.setTranslation([0,1.0915,-0.1091])
+HAnimSegment398.children.append(Shape410)
+HAnimSite414 = x3d.HAnimSite()
+HAnimSite414.name = "waist_preferred_post_pt"
+HAnimSite414.DEF = "hanim_waist_preferred_post_pt"
+HAnimSite414.translation = [0,1.0915,-0.1091]
 #HAnimSite visualization shape
-TouchSensor415 = TouchSensor()
-TouchSensor415.setDescription("HAnimSite waist_preferred_post")
+TouchSensor415 = x3d.TouchSensor()
+TouchSensor415.description = "HAnimSite waist_preferred_post"
 
-HAnimSite414.addChildren(TouchSensor415)
-Shape416 = Shape()
-Shape416.setUSE("HAnimSiteShape")
+HAnimSite414.children.append(TouchSensor415)
+Shape416 = x3d.Shape()
+Shape416.USE = "HAnimSiteShape"
 
-HAnimSite414.addChildren(Shape416)
+HAnimSite414.children.append(Shape416)
 
-HAnimSegment398.addChildren(HAnimSite414)
-HAnimSite417 = HAnimSite()
-HAnimSite417.setName("navel_pt")
-HAnimSite417.setDEF("hanim_navel_pt")
-HAnimSite417.setTranslation([0.0069,1.0966,0.1017])
+HAnimSegment398.children.append(HAnimSite414)
+HAnimSite417 = x3d.HAnimSite()
+HAnimSite417.name = "navel_pt"
+HAnimSite417.DEF = "hanim_navel_pt"
+HAnimSite417.translation = [0.0069,1.0966,0.1017]
 #HAnimSite visualization shape
-TouchSensor418 = TouchSensor()
-TouchSensor418.setDescription("HAnimSite navel")
+TouchSensor418 = x3d.TouchSensor()
+TouchSensor418.description = "HAnimSite navel"
 
-HAnimSite417.addChildren(TouchSensor418)
-Shape419 = Shape()
-Shape419.setUSE("HAnimSiteShape")
+HAnimSite417.children.append(TouchSensor418)
+Shape419 = x3d.Shape()
+Shape419.USE = "HAnimSiteShape"
 
-HAnimSite417.addChildren(Shape419)
+HAnimSite417.children.append(Shape419)
 
-HAnimSegment398.addChildren(HAnimSite417)
+HAnimSegment398.children.append(HAnimSite417)
 
-HAnimJoint397.addChildren(HAnimSegment398)
-HAnimJoint420 = HAnimJoint()
-HAnimJoint420.setName("vl4")
-HAnimJoint420.setDEF("hanim_vl4")
-HAnimJoint420.setCenter([0.0035,1.0925,-0.0787])
-HAnimJoint420.setStiffness([0,0,0])
-HAnimSegment421 = HAnimSegment()
-HAnimSegment421.setName("l4")
-HAnimSegment421.setDEF("hanim_l4")
+HAnimJoint397.children.append(HAnimSegment398)
+HAnimJoint420 = x3d.HAnimJoint()
+HAnimJoint420.name = "vl4"
+HAnimJoint420.DEF = "hanim_vl4"
+HAnimJoint420.center = [0.0035,1.0925,-0.0787]
+HAnimJoint420.ulimit = [0,0,0]
+HAnimJoint420.llimit = [0,0,0]
+HAnimSegment421 = x3d.HAnimSegment()
+HAnimSegment421.name = "l4"
+HAnimSegment421.DEF = "hanim_l4"
 #<HAnimJoint name='vl4'/> visualization sphere is placed within <HAnimSegment name='l4'/>
-TouchSensor422 = TouchSensor()
-TouchSensor422.setDescription("HAnimJoint vl4, HAnimSegment l4")
+TouchSensor422 = x3d.TouchSensor()
+TouchSensor422.description = "HAnimJoint vl4, HAnimSegment l4"
 
-HAnimSegment421.addChildren(TouchSensor422)
-Transform423 = Transform()
-Transform423.setTranslation([0.0035,1.0925,-0.0787])
-Shape424 = Shape()
-Shape424.setUSE("HAnimJointShape")
+HAnimSegment421.children.append(TouchSensor422)
+Transform423 = x3d.Transform()
+Transform423.translation = [0.0035,1.0925,-0.0787]
+Shape424 = x3d.Shape()
+Shape424.USE = "HAnimJointShape"
 
-Transform423.addChildren(Shape424)
+Transform423.children.append(Shape424)
 
-HAnimSegment421.addChildren(Transform423)
+HAnimSegment421.children.append(Transform423)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vl4'/> to <HAnimJoint name='vl3'/>
-Shape425 = Shape()
-LineSet426 = LineSet()
-LineSet426.setVertexCount([2])
-Coordinate427 = Coordinate()
-Coordinate427.setPoint([0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796])
+Shape425 = x3d.Shape()
+LineSet426 = x3d.LineSet()
+LineSet426.vertexCount = [2]
+Coordinate427 = x3d.Coordinate()
+Coordinate427.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
-LineSet426.setCoord(Coordinate427)
-ColorRGBA428 = ColorRGBA()
-ColorRGBA428.setUSE("HAnimSegmentLineColorRGBA")
+LineSet426.coord.append(Coordinate427)
+ColorRGBA428 = x3d.ColorRGBA()
+ColorRGBA428.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet426.setColor(ColorRGBA428)
+LineSet426.color.append(ColorRGBA428)
 
-Shape425.setGeometry(LineSet426)
+Shape425.geometry = LineSet426
 
-HAnimSegment421.addChildren(Shape425)
+HAnimSegment421.children.append(Shape425)
 
-HAnimJoint420.addChildren(HAnimSegment421)
-HAnimJoint429 = HAnimJoint()
-HAnimJoint429.setName("vl3")
-HAnimJoint429.setDEF("hanim_vl3")
-HAnimJoint429.setCenter([0.0041,1.1276,-0.0796])
-HAnimJoint429.setStiffness([0,0,0])
-HAnimSegment430 = HAnimSegment()
-HAnimSegment430.setName("l3")
-HAnimSegment430.setDEF("hanim_l3")
+HAnimJoint420.children.append(HAnimSegment421)
+HAnimJoint429 = x3d.HAnimJoint()
+HAnimJoint429.name = "vl3"
+HAnimJoint429.DEF = "hanim_vl3"
+HAnimJoint429.center = [0.0041,1.1276,-0.0796]
+HAnimJoint429.ulimit = [0,0,0]
+HAnimJoint429.llimit = [0,0,0]
+HAnimSegment430 = x3d.HAnimSegment()
+HAnimSegment430.name = "l3"
+HAnimSegment430.DEF = "hanim_l3"
 #<HAnimJoint name='vl3'/> visualization sphere is placed within <HAnimSegment name='l3'/>
-TouchSensor431 = TouchSensor()
-TouchSensor431.setDescription("HAnimJoint vl3, HAnimSegment l3")
+TouchSensor431 = x3d.TouchSensor()
+TouchSensor431.description = "HAnimJoint vl3, HAnimSegment l3"
 
-HAnimSegment430.addChildren(TouchSensor431)
-Transform432 = Transform()
-Transform432.setTranslation([0.0041,1.1276,-0.0796])
-Shape433 = Shape()
-Shape433.setUSE("HAnimJointShape")
+HAnimSegment430.children.append(TouchSensor431)
+Transform432 = x3d.Transform()
+Transform432.translation = [0.0041,1.1276,-0.0796]
+Shape433 = x3d.Shape()
+Shape433.USE = "HAnimJointShape"
 
-Transform432.addChildren(Shape433)
+Transform432.children.append(Shape433)
 
-HAnimSegment430.addChildren(Transform432)
+HAnimSegment430.children.append(Transform432)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vl3'/> to <HAnimJoint name='vl2'/>
-Shape434 = Shape()
-LineSet435 = LineSet()
-LineSet435.setVertexCount([2])
-Coordinate436 = Coordinate()
-Coordinate436.setPoint([0.0041,1.1276,-0.0796,0.0045,1.1546,-0.08])
+Shape434 = x3d.Shape()
+LineSet435 = x3d.LineSet()
+LineSet435.vertexCount = [2]
+Coordinate436 = x3d.Coordinate()
+Coordinate436.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
-LineSet435.setCoord(Coordinate436)
-ColorRGBA437 = ColorRGBA()
-ColorRGBA437.setUSE("HAnimSegmentLineColorRGBA")
+LineSet435.coord.append(Coordinate436)
+ColorRGBA437 = x3d.ColorRGBA()
+ColorRGBA437.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet435.setColor(ColorRGBA437)
+LineSet435.color.append(ColorRGBA437)
 
-Shape434.setGeometry(LineSet435)
+Shape434.geometry = LineSet435
 
-HAnimSegment430.addChildren(Shape434)
+HAnimSegment430.children.append(Shape434)
 
-HAnimJoint429.addChildren(HAnimSegment430)
-HAnimJoint438 = HAnimJoint()
-HAnimJoint438.setName("vl2")
-HAnimJoint438.setDEF("hanim_vl2")
-HAnimJoint438.setCenter([0.0045,1.1546,-0.08])
-HAnimJoint438.setStiffness([0,0,0])
-HAnimSegment439 = HAnimSegment()
-HAnimSegment439.setName("l2")
-HAnimSegment439.setDEF("hanim_l2")
+HAnimJoint429.children.append(HAnimSegment430)
+HAnimJoint438 = x3d.HAnimJoint()
+HAnimJoint438.name = "vl2"
+HAnimJoint438.DEF = "hanim_vl2"
+HAnimJoint438.center = [0.0045,1.1546,-0.08]
+HAnimJoint438.ulimit = [0,0,0]
+HAnimJoint438.llimit = [0,0,0]
+HAnimSegment439 = x3d.HAnimSegment()
+HAnimSegment439.name = "l2"
+HAnimSegment439.DEF = "hanim_l2"
 #<HAnimJoint name='vl2'/> visualization sphere is placed within <HAnimSegment name='l2'/>
-TouchSensor440 = TouchSensor()
-TouchSensor440.setDescription("HAnimJoint vl2, HAnimSegment l2")
+TouchSensor440 = x3d.TouchSensor()
+TouchSensor440.description = "HAnimJoint vl2, HAnimSegment l2"
 
-HAnimSegment439.addChildren(TouchSensor440)
-Transform441 = Transform()
-Transform441.setTranslation([0.0045,1.1546,-0.08])
-Shape442 = Shape()
-Shape442.setUSE("HAnimJointShape")
+HAnimSegment439.children.append(TouchSensor440)
+Transform441 = x3d.Transform()
+Transform441.translation = [0.0045,1.1546,-0.08]
+Shape442 = x3d.Shape()
+Shape442.USE = "HAnimJointShape"
 
-Transform441.addChildren(Shape442)
+Transform441.children.append(Shape442)
 
-HAnimSegment439.addChildren(Transform441)
+HAnimSegment439.children.append(Transform441)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vl2'/> to <HAnimJoint name='vl1'/>
-Shape443 = Shape()
-LineSet444 = LineSet()
-LineSet444.setVertexCount([2])
-Coordinate445 = Coordinate()
-Coordinate445.setPoint([0.0045,1.1546,-0.08,0.0048,1.1912,-0.0805])
+Shape443 = x3d.Shape()
+LineSet444 = x3d.LineSet()
+LineSet444.vertexCount = [2]
+Coordinate445 = x3d.Coordinate()
+Coordinate445.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
-LineSet444.setCoord(Coordinate445)
-ColorRGBA446 = ColorRGBA()
-ColorRGBA446.setUSE("HAnimSegmentLineColorRGBA")
+LineSet444.coord.append(Coordinate445)
+ColorRGBA446 = x3d.ColorRGBA()
+ColorRGBA446.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet444.setColor(ColorRGBA446)
+LineSet444.color.append(ColorRGBA446)
 
-Shape443.setGeometry(LineSet444)
+Shape443.geometry = LineSet444
 
-HAnimSegment439.addChildren(Shape443)
+HAnimSegment439.children.append(Shape443)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vl2'/> to <HAnimSite name='r_rib10'/>
-Shape447 = Shape()
-LineSet448 = LineSet()
-LineSet448.setVertexCount([2])
-Coordinate449 = Coordinate()
-Coordinate449.setPoint([0.0045,1.1546,-0.08,-0.0711,1.1941,0.1016])
+Shape447 = x3d.Shape()
+LineSet448 = x3d.LineSet()
+LineSet448.vertexCount = [2]
+Coordinate449 = x3d.Coordinate()
+Coordinate449.point = (0.0045,1.1546,-0.0800,-0.0711,1.1941,0.1016)
 
-LineSet448.setCoord(Coordinate449)
-ColorRGBA450 = ColorRGBA()
-ColorRGBA450.setUSE("HAnimSiteLineColorRGBA")
+LineSet448.coord.append(Coordinate449)
+ColorRGBA450 = x3d.ColorRGBA()
+ColorRGBA450.USE = "HAnimSiteLineColorRGBA"
 
-LineSet448.setColor(ColorRGBA450)
+LineSet448.color.append(ColorRGBA450)
 
-Shape447.setGeometry(LineSet448)
+Shape447.geometry = LineSet448
 
-HAnimSegment439.addChildren(Shape447)
+HAnimSegment439.children.append(Shape447)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vl2'/> to <HAnimSite name='l_rib10'/>
-Shape451 = Shape()
-LineSet452 = LineSet()
-LineSet452.setVertexCount([2])
-Coordinate453 = Coordinate()
-Coordinate453.setPoint([0.0045,1.1546,-0.08,0.0871,1.1925,0.0992])
+Shape451 = x3d.Shape()
+LineSet452 = x3d.LineSet()
+LineSet452.vertexCount = [2]
+Coordinate453 = x3d.Coordinate()
+Coordinate453.point = (0.0045,1.1546,-0.0800,0.0871,1.1925,0.0992)
 
-LineSet452.setCoord(Coordinate453)
-ColorRGBA454 = ColorRGBA()
-ColorRGBA454.setUSE("HAnimSiteLineColorRGBA")
+LineSet452.coord.append(Coordinate453)
+ColorRGBA454 = x3d.ColorRGBA()
+ColorRGBA454.USE = "HAnimSiteLineColorRGBA"
 
-LineSet452.setColor(ColorRGBA454)
+LineSet452.color.append(ColorRGBA454)
 
-Shape451.setGeometry(LineSet452)
+Shape451.geometry = LineSet452
 
-HAnimSegment439.addChildren(Shape451)
+HAnimSegment439.children.append(Shape451)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vl2'/> to <HAnimSite name='rib10_midspine'/>
-Shape455 = Shape()
-LineSet456 = LineSet()
-LineSet456.setVertexCount([2])
-Coordinate457 = Coordinate()
-Coordinate457.setPoint([0.0045,1.1546,-0.08,0.0049,1.1908,-0.1113])
+Shape455 = x3d.Shape()
+LineSet456 = x3d.LineSet()
+LineSet456.vertexCount = [2]
+Coordinate457 = x3d.Coordinate()
+Coordinate457.point = (0.0045,1.1546,-0.0800,0.0049,1.1908,-0.1113)
 
-LineSet456.setCoord(Coordinate457)
-ColorRGBA458 = ColorRGBA()
-ColorRGBA458.setUSE("HAnimSiteLineColorRGBA")
+LineSet456.coord.append(Coordinate457)
+ColorRGBA458 = x3d.ColorRGBA()
+ColorRGBA458.USE = "HAnimSiteLineColorRGBA"
 
-LineSet456.setColor(ColorRGBA458)
+LineSet456.color.append(ColorRGBA458)
 
-Shape455.setGeometry(LineSet456)
+Shape455.geometry = LineSet456
 
-HAnimSegment439.addChildren(Shape455)
-HAnimSite459 = HAnimSite()
-HAnimSite459.setName("r_rib10_pt")
-HAnimSite459.setDEF("hanim_r_rib10_pt")
-HAnimSite459.setTranslation([-0.0711,1.1941,0.1016])
+HAnimSegment439.children.append(Shape455)
+HAnimSite459 = x3d.HAnimSite()
+HAnimSite459.name = "r_rib10_pt"
+HAnimSite459.DEF = "hanim_r_rib10_pt"
+HAnimSite459.translation = [-0.0711,1.1941,0.1016]
 #HAnimSite visualization shape
-TouchSensor460 = TouchSensor()
-TouchSensor460.setDescription("HAnimSite r_rib10")
+TouchSensor460 = x3d.TouchSensor()
+TouchSensor460.description = "HAnimSite r_rib10"
 
-HAnimSite459.addChildren(TouchSensor460)
-Shape461 = Shape()
-Shape461.setUSE("HAnimSiteShape")
+HAnimSite459.children.append(TouchSensor460)
+Shape461 = x3d.Shape()
+Shape461.USE = "HAnimSiteShape"
 
-HAnimSite459.addChildren(Shape461)
+HAnimSite459.children.append(Shape461)
 
-HAnimSegment439.addChildren(HAnimSite459)
-HAnimSite462 = HAnimSite()
-HAnimSite462.setName("l_rib10_pt")
-HAnimSite462.setDEF("hanim_l_rib10_pt")
-HAnimSite462.setTranslation([0.0871,1.1925,0.0992])
+HAnimSegment439.children.append(HAnimSite459)
+HAnimSite462 = x3d.HAnimSite()
+HAnimSite462.name = "l_rib10_pt"
+HAnimSite462.DEF = "hanim_l_rib10_pt"
+HAnimSite462.translation = [0.0871,1.1925,0.0992]
 #HAnimSite visualization shape
-TouchSensor463 = TouchSensor()
-TouchSensor463.setDescription("HAnimSite l_rib10")
+TouchSensor463 = x3d.TouchSensor()
+TouchSensor463.description = "HAnimSite l_rib10"
 
-HAnimSite462.addChildren(TouchSensor463)
-Shape464 = Shape()
-Shape464.setUSE("HAnimSiteShape")
+HAnimSite462.children.append(TouchSensor463)
+Shape464 = x3d.Shape()
+Shape464.USE = "HAnimSiteShape"
 
-HAnimSite462.addChildren(Shape464)
+HAnimSite462.children.append(Shape464)
 
-HAnimSegment439.addChildren(HAnimSite462)
-HAnimSite465 = HAnimSite()
-HAnimSite465.setName("rib10_midspine_pt")
-HAnimSite465.setDEF("hanim_rib10_midspine_pt")
-HAnimSite465.setTranslation([0.0049,1.1908,-0.1113])
+HAnimSegment439.children.append(HAnimSite462)
+HAnimSite465 = x3d.HAnimSite()
+HAnimSite465.name = "rib10_midspine_pt"
+HAnimSite465.DEF = "hanim_rib10_midspine_pt"
+HAnimSite465.translation = [0.0049,1.1908,-0.1113]
 #HAnimSite visualization shape
-TouchSensor466 = TouchSensor()
-TouchSensor466.setDescription("HAnimSite rib10_midspine")
+TouchSensor466 = x3d.TouchSensor()
+TouchSensor466.description = "HAnimSite rib10_midspine"
 
-HAnimSite465.addChildren(TouchSensor466)
-Shape467 = Shape()
-Shape467.setUSE("HAnimSiteShape")
+HAnimSite465.children.append(TouchSensor466)
+Shape467 = x3d.Shape()
+Shape467.USE = "HAnimSiteShape"
 
-HAnimSite465.addChildren(Shape467)
+HAnimSite465.children.append(Shape467)
 
-HAnimSegment439.addChildren(HAnimSite465)
+HAnimSegment439.children.append(HAnimSite465)
 
-HAnimJoint438.addChildren(HAnimSegment439)
-HAnimJoint468 = HAnimJoint()
-HAnimJoint468.setName("vl1")
-HAnimJoint468.setDEF("hanim_vl1")
-HAnimJoint468.setCenter([0.0048,1.1912,-0.0805])
-HAnimJoint468.setStiffness([0,0,0])
-HAnimSegment469 = HAnimSegment()
-HAnimSegment469.setName("l1")
-HAnimSegment469.setDEF("hanim_l1")
+HAnimJoint438.children.append(HAnimSegment439)
+HAnimJoint468 = x3d.HAnimJoint()
+HAnimJoint468.name = "vl1"
+HAnimJoint468.DEF = "hanim_vl1"
+HAnimJoint468.center = [0.0048,1.1912,-0.0805]
+HAnimJoint468.ulimit = [0,0,0]
+HAnimJoint468.llimit = [0,0,0]
+HAnimSegment469 = x3d.HAnimSegment()
+HAnimSegment469.name = "l1"
+HAnimSegment469.DEF = "hanim_l1"
 #<HAnimJoint name='vl1'/> visualization sphere is placed within <HAnimSegment name='l1'/>
-TouchSensor470 = TouchSensor()
-TouchSensor470.setDescription("HAnimJoint vl1, HAnimSegment l1")
+TouchSensor470 = x3d.TouchSensor()
+TouchSensor470.description = "HAnimJoint vl1, HAnimSegment l1"
 
-HAnimSegment469.addChildren(TouchSensor470)
-Transform471 = Transform()
-Transform471.setTranslation([0.0048,1.1912,-0.0805])
-Shape472 = Shape()
-Shape472.setUSE("HAnimJointShape")
+HAnimSegment469.children.append(TouchSensor470)
+Transform471 = x3d.Transform()
+Transform471.translation = [0.0048,1.1912,-0.0805]
+Shape472 = x3d.Shape()
+Shape472.USE = "HAnimJointShape"
 
-Transform471.addChildren(Shape472)
+Transform471.children.append(Shape472)
 
-HAnimSegment469.addChildren(Transform471)
+HAnimSegment469.children.append(Transform471)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vl1'/> to <HAnimJoint name='vt12'/>
-Shape473 = Shape()
-LineSet474 = LineSet()
-LineSet474.setVertexCount([2])
-Coordinate475 = Coordinate()
-Coordinate475.setPoint([0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808])
+Shape473 = x3d.Shape()
+LineSet474 = x3d.LineSet()
+LineSet474.vertexCount = [2]
+Coordinate475 = x3d.Coordinate()
+Coordinate475.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
-LineSet474.setCoord(Coordinate475)
-ColorRGBA476 = ColorRGBA()
-ColorRGBA476.setUSE("HAnimSegmentLineColorRGBA")
+LineSet474.coord.append(Coordinate475)
+ColorRGBA476 = x3d.ColorRGBA()
+ColorRGBA476.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet474.setColor(ColorRGBA476)
+LineSet474.color.append(ColorRGBA476)
 
-Shape473.setGeometry(LineSet474)
+Shape473.geometry = LineSet474
 
-HAnimSegment469.addChildren(Shape473)
+HAnimSegment469.children.append(Shape473)
 
-HAnimJoint468.addChildren(HAnimSegment469)
-HAnimJoint477 = HAnimJoint()
-HAnimJoint477.setName("vt12")
-HAnimJoint477.setDEF("hanim_vt12")
-HAnimJoint477.setCenter([0.0051,1.2278,-0.0808])
-HAnimJoint477.setStiffness([0,0,0])
-HAnimSegment478 = HAnimSegment()
-HAnimSegment478.setName("t12")
-HAnimSegment478.setDEF("hanim_t12")
+HAnimJoint468.children.append(HAnimSegment469)
+HAnimJoint477 = x3d.HAnimJoint()
+HAnimJoint477.name = "vt12"
+HAnimJoint477.DEF = "hanim_vt12"
+HAnimJoint477.center = [0.0051,1.2278,-0.0808]
+HAnimJoint477.ulimit = [0,0,0]
+HAnimJoint477.llimit = [0,0,0]
+HAnimSegment478 = x3d.HAnimSegment()
+HAnimSegment478.name = "t12"
+HAnimSegment478.DEF = "hanim_t12"
 #<HAnimJoint name='vt12'/> visualization sphere is placed within <HAnimSegment name='t12'/>
-TouchSensor479 = TouchSensor()
-TouchSensor479.setDescription("HAnimJoint vt12, HAnimSegment t12")
+TouchSensor479 = x3d.TouchSensor()
+TouchSensor479.description = "HAnimJoint vt12, HAnimSegment t12"
 
-HAnimSegment478.addChildren(TouchSensor479)
-Transform480 = Transform()
-Transform480.setTranslation([0.0051,1.2278,-0.0808])
-Shape481 = Shape()
-Shape481.setUSE("HAnimJointShape")
+HAnimSegment478.children.append(TouchSensor479)
+Transform480 = x3d.Transform()
+Transform480.translation = [0.0051,1.2278,-0.0808]
+Shape481 = x3d.Shape()
+Shape481.USE = "HAnimJointShape"
 
-Transform480.addChildren(Shape481)
+Transform480.children.append(Shape481)
 
-HAnimSegment478.addChildren(Transform480)
+HAnimSegment478.children.append(Transform480)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt12'/> to <HAnimJoint name='vt11'/>
-Shape482 = Shape()
-LineSet483 = LineSet()
-LineSet483.setVertexCount([2])
-Coordinate484 = Coordinate()
-Coordinate484.setPoint([0.0051,1.2278,-0.0808,0.0053,1.2679,-0.081])
+Shape482 = x3d.Shape()
+LineSet483 = x3d.LineSet()
+LineSet483.vertexCount = [2]
+Coordinate484 = x3d.Coordinate()
+Coordinate484.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
-LineSet483.setCoord(Coordinate484)
-ColorRGBA485 = ColorRGBA()
-ColorRGBA485.setUSE("HAnimSegmentLineColorRGBA")
+LineSet483.coord.append(Coordinate484)
+ColorRGBA485 = x3d.ColorRGBA()
+ColorRGBA485.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet483.setColor(ColorRGBA485)
+LineSet483.color.append(ColorRGBA485)
 
-Shape482.setGeometry(LineSet483)
+Shape482.geometry = LineSet483
 
-HAnimSegment478.addChildren(Shape482)
+HAnimSegment478.children.append(Shape482)
 
-HAnimJoint477.addChildren(HAnimSegment478)
-HAnimJoint486 = HAnimJoint()
-HAnimJoint486.setName("vt11")
-HAnimJoint486.setDEF("hanim_vt11")
-HAnimJoint486.setCenter([0.0053,1.2679,-0.081])
-HAnimJoint486.setStiffness([0,0,0])
-HAnimSegment487 = HAnimSegment()
-HAnimSegment487.setName("t11")
-HAnimSegment487.setDEF("hanim_t11")
+HAnimJoint477.children.append(HAnimSegment478)
+HAnimJoint486 = x3d.HAnimJoint()
+HAnimJoint486.name = "vt11"
+HAnimJoint486.DEF = "hanim_vt11"
+HAnimJoint486.center = [0.0053,1.2679,-0.081]
+HAnimJoint486.ulimit = [0,0,0]
+HAnimJoint486.llimit = [0,0,0]
+HAnimSegment487 = x3d.HAnimSegment()
+HAnimSegment487.name = "t11"
+HAnimSegment487.DEF = "hanim_t11"
 #<HAnimJoint name='vt11'/> visualization sphere is placed within <HAnimSegment name='t11'/>
-TouchSensor488 = TouchSensor()
-TouchSensor488.setDescription("HAnimJoint vt11, HAnimSegment t11")
+TouchSensor488 = x3d.TouchSensor()
+TouchSensor488.description = "HAnimJoint vt11, HAnimSegment t11"
 
-HAnimSegment487.addChildren(TouchSensor488)
-Transform489 = Transform()
-Transform489.setTranslation([0.0053,1.2679,-0.081])
-Shape490 = Shape()
-Shape490.setUSE("HAnimJointShape")
+HAnimSegment487.children.append(TouchSensor488)
+Transform489 = x3d.Transform()
+Transform489.translation = [0.0053,1.2679,-0.081]
+Shape490 = x3d.Shape()
+Shape490.USE = "HAnimJointShape"
 
-Transform489.addChildren(Shape490)
+Transform489.children.append(Shape490)
 
-HAnimSegment487.addChildren(Transform489)
+HAnimSegment487.children.append(Transform489)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt11'/> to <HAnimJoint name='vt10'/>
-Shape491 = Shape()
-LineSet492 = LineSet()
-LineSet492.setVertexCount([2])
-Coordinate493 = Coordinate()
-Coordinate493.setPoint([0.0053,1.2679,-0.081,0.0056,1.2848,-0.0822])
+Shape491 = x3d.Shape()
+LineSet492 = x3d.LineSet()
+LineSet492.vertexCount = [2]
+Coordinate493 = x3d.Coordinate()
+Coordinate493.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
-LineSet492.setCoord(Coordinate493)
-ColorRGBA494 = ColorRGBA()
-ColorRGBA494.setUSE("HAnimSegmentLineColorRGBA")
+LineSet492.coord.append(Coordinate493)
+ColorRGBA494 = x3d.ColorRGBA()
+ColorRGBA494.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet492.setColor(ColorRGBA494)
+LineSet492.color.append(ColorRGBA494)
 
-Shape491.setGeometry(LineSet492)
+Shape491.geometry = LineSet492
 
-HAnimSegment487.addChildren(Shape491)
+HAnimSegment487.children.append(Shape491)
 
-HAnimJoint486.addChildren(HAnimSegment487)
-HAnimJoint495 = HAnimJoint()
-HAnimJoint495.setName("vt10")
-HAnimJoint495.setDEF("hanim_vt10")
-HAnimJoint495.setCenter([0.0056,1.2848,-0.0822])
-HAnimJoint495.setStiffness([0,0,0])
-HAnimSegment496 = HAnimSegment()
-HAnimSegment496.setName("t10")
-HAnimSegment496.setDEF("hanim_t10")
+HAnimJoint486.children.append(HAnimSegment487)
+HAnimJoint495 = x3d.HAnimJoint()
+HAnimJoint495.name = "vt10"
+HAnimJoint495.DEF = "hanim_vt10"
+HAnimJoint495.center = [0.0056,1.2848,-0.0822]
+HAnimJoint495.ulimit = [0,0,0]
+HAnimJoint495.llimit = [0,0,0]
+HAnimSegment496 = x3d.HAnimSegment()
+HAnimSegment496.name = "t10"
+HAnimSegment496.DEF = "hanim_t10"
 #<HAnimJoint name='vt10'/> visualization sphere is placed within <HAnimSegment name='t10'/>
-TouchSensor497 = TouchSensor()
-TouchSensor497.setDescription("HAnimJoint vt10, HAnimSegment t10")
+TouchSensor497 = x3d.TouchSensor()
+TouchSensor497.description = "HAnimJoint vt10, HAnimSegment t10"
 
-HAnimSegment496.addChildren(TouchSensor497)
-Transform498 = Transform()
-Transform498.setTranslation([0.0056,1.2848,-0.0822])
-Shape499 = Shape()
-Shape499.setUSE("HAnimJointShape")
+HAnimSegment496.children.append(TouchSensor497)
+Transform498 = x3d.Transform()
+Transform498.translation = [0.0056,1.2848,-0.0822]
+Shape499 = x3d.Shape()
+Shape499.USE = "HAnimJointShape"
 
-Transform498.addChildren(Shape499)
+Transform498.children.append(Shape499)
 
-HAnimSegment496.addChildren(Transform498)
+HAnimSegment496.children.append(Transform498)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt10'/> to <HAnimJoint name='vt9'/>
-Shape500 = Shape()
-LineSet501 = LineSet()
-LineSet501.setVertexCount([2])
-Coordinate502 = Coordinate()
-Coordinate502.setPoint([0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838])
+Shape500 = x3d.Shape()
+LineSet501 = x3d.LineSet()
+LineSet501.vertexCount = [2]
+Coordinate502 = x3d.Coordinate()
+Coordinate502.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
-LineSet501.setCoord(Coordinate502)
-ColorRGBA503 = ColorRGBA()
-ColorRGBA503.setUSE("HAnimSegmentLineColorRGBA")
+LineSet501.coord.append(Coordinate502)
+ColorRGBA503 = x3d.ColorRGBA()
+ColorRGBA503.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet501.setColor(ColorRGBA503)
+LineSet501.color.append(ColorRGBA503)
 
-Shape500.setGeometry(LineSet501)
+Shape500.geometry = LineSet501
 
-HAnimSegment496.addChildren(Shape500)
+HAnimSegment496.children.append(Shape500)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vt10'/> to <HAnimSite name='substernale'/>
-Shape504 = Shape()
-LineSet505 = LineSet()
-LineSet505.setVertexCount([2])
-Coordinate506 = Coordinate()
-Coordinate506.setPoint([0.0056,1.2848,-0.0822,0.0085,1.2995,0.1147])
+Shape504 = x3d.Shape()
+LineSet505 = x3d.LineSet()
+LineSet505.vertexCount = [2]
+Coordinate506 = x3d.Coordinate()
+Coordinate506.point = (0.0056,1.2848,-0.0822,0.0085,1.2995,0.1147)
 
-LineSet505.setCoord(Coordinate506)
-ColorRGBA507 = ColorRGBA()
-ColorRGBA507.setUSE("HAnimSiteLineColorRGBA")
+LineSet505.coord.append(Coordinate506)
+ColorRGBA507 = x3d.ColorRGBA()
+ColorRGBA507.USE = "HAnimSiteLineColorRGBA"
 
-LineSet505.setColor(ColorRGBA507)
+LineSet505.color.append(ColorRGBA507)
 
-Shape504.setGeometry(LineSet505)
+Shape504.geometry = LineSet505
 
-HAnimSegment496.addChildren(Shape504)
-HAnimSite508 = HAnimSite()
-HAnimSite508.setName("substernale_pt")
-HAnimSite508.setDEF("hanim_substernale_pt")
-HAnimSite508.setTranslation([0.0085,1.2995,0.1147])
+HAnimSegment496.children.append(Shape504)
+HAnimSite508 = x3d.HAnimSite()
+HAnimSite508.name = "substernale_pt"
+HAnimSite508.DEF = "hanim_substernale_pt"
+HAnimSite508.translation = [0.0085,1.2995,0.1147]
 #HAnimSite visualization shape
-TouchSensor509 = TouchSensor()
-TouchSensor509.setDescription("HAnimSite substernale")
+TouchSensor509 = x3d.TouchSensor()
+TouchSensor509.description = "HAnimSite substernale"
 
-HAnimSite508.addChildren(TouchSensor509)
-Shape510 = Shape()
-Shape510.setUSE("HAnimSiteShape")
+HAnimSite508.children.append(TouchSensor509)
+Shape510 = x3d.Shape()
+Shape510.USE = "HAnimSiteShape"
 
-HAnimSite508.addChildren(Shape510)
+HAnimSite508.children.append(Shape510)
 
-HAnimSegment496.addChildren(HAnimSite508)
+HAnimSegment496.children.append(HAnimSite508)
 
-HAnimJoint495.addChildren(HAnimSegment496)
-HAnimJoint511 = HAnimJoint()
-HAnimJoint511.setName("vt9")
-HAnimJoint511.setDEF("hanim_vt9")
-HAnimJoint511.setCenter([0.0057,1.3126,-0.0838])
-HAnimJoint511.setStiffness([0,0,0])
-HAnimSegment512 = HAnimSegment()
-HAnimSegment512.setName("t9")
-HAnimSegment512.setDEF("hanim_t9")
+HAnimJoint495.children.append(HAnimSegment496)
+HAnimJoint511 = x3d.HAnimJoint()
+HAnimJoint511.name = "vt9"
+HAnimJoint511.DEF = "hanim_vt9"
+HAnimJoint511.center = [0.0057,1.3126,-0.0838]
+HAnimJoint511.ulimit = [0,0,0]
+HAnimJoint511.llimit = [0,0,0]
+HAnimSegment512 = x3d.HAnimSegment()
+HAnimSegment512.name = "t9"
+HAnimSegment512.DEF = "hanim_t9"
 #<HAnimJoint name='vt9'/> visualization sphere is placed within <HAnimSegment name='t9'/>
-TouchSensor513 = TouchSensor()
-TouchSensor513.setDescription("HAnimJoint vt9, HAnimSegment t9")
+TouchSensor513 = x3d.TouchSensor()
+TouchSensor513.description = "HAnimJoint vt9, HAnimSegment t9"
 
-HAnimSegment512.addChildren(TouchSensor513)
-Transform514 = Transform()
-Transform514.setTranslation([0.0057,1.3126,-0.0838])
-Shape515 = Shape()
-Shape515.setUSE("HAnimJointShape")
+HAnimSegment512.children.append(TouchSensor513)
+Transform514 = x3d.Transform()
+Transform514.translation = [0.0057,1.3126,-0.0838]
+Shape515 = x3d.Shape()
+Shape515.USE = "HAnimJointShape"
 
-Transform514.addChildren(Shape515)
+Transform514.children.append(Shape515)
 
-HAnimSegment512.addChildren(Transform514)
+HAnimSegment512.children.append(Transform514)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt9'/> to <HAnimJoint name='vt8'/>
-Shape516 = Shape()
-LineSet517 = LineSet()
-LineSet517.setVertexCount([2])
-Coordinate518 = Coordinate()
-Coordinate518.setPoint([0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845])
+Shape516 = x3d.Shape()
+LineSet517 = x3d.LineSet()
+LineSet517.vertexCount = [2]
+Coordinate518 = x3d.Coordinate()
+Coordinate518.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
-LineSet517.setCoord(Coordinate518)
-ColorRGBA519 = ColorRGBA()
-ColorRGBA519.setUSE("HAnimSegmentLineColorRGBA")
+LineSet517.coord.append(Coordinate518)
+ColorRGBA519 = x3d.ColorRGBA()
+ColorRGBA519.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet517.setColor(ColorRGBA519)
+LineSet517.color.append(ColorRGBA519)
 
-Shape516.setGeometry(LineSet517)
+Shape516.geometry = LineSet517
 
-HAnimSegment512.addChildren(Shape516)
+HAnimSegment512.children.append(Shape516)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vt9'/> to <HAnimSite name='r_thelion'/>
-Shape520 = Shape()
-LineSet521 = LineSet()
-LineSet521.setVertexCount([2])
-Coordinate522 = Coordinate()
-Coordinate522.setPoint([0.0057,1.3126,-0.0838,-0.0736,1.3385,0.1217])
+Shape520 = x3d.Shape()
+LineSet521 = x3d.LineSet()
+LineSet521.vertexCount = [2]
+Coordinate522 = x3d.Coordinate()
+Coordinate522.point = (0.0057,1.3126,-0.0838,-0.0736,1.3385,0.1217)
 
-LineSet521.setCoord(Coordinate522)
-ColorRGBA523 = ColorRGBA()
-ColorRGBA523.setUSE("HAnimSiteLineColorRGBA")
+LineSet521.coord.append(Coordinate522)
+ColorRGBA523 = x3d.ColorRGBA()
+ColorRGBA523.USE = "HAnimSiteLineColorRGBA"
 
-LineSet521.setColor(ColorRGBA523)
+LineSet521.color.append(ColorRGBA523)
 
-Shape520.setGeometry(LineSet521)
+Shape520.geometry = LineSet521
 
-HAnimSegment512.addChildren(Shape520)
+HAnimSegment512.children.append(Shape520)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vt9'/> to <HAnimSite name='l_thelion'/>
-Shape524 = Shape()
-LineSet525 = LineSet()
-LineSet525.setVertexCount([2])
-Coordinate526 = Coordinate()
-Coordinate526.setPoint([0.0057,1.3126,-0.0838,0.0918,1.3382,0.1192])
+Shape524 = x3d.Shape()
+LineSet525 = x3d.LineSet()
+LineSet525.vertexCount = [2]
+Coordinate526 = x3d.Coordinate()
+Coordinate526.point = (0.0057,1.3126,-0.0838,0.0918,1.3382,0.1192)
 
-LineSet525.setCoord(Coordinate526)
-ColorRGBA527 = ColorRGBA()
-ColorRGBA527.setUSE("HAnimSiteLineColorRGBA")
+LineSet525.coord.append(Coordinate526)
+ColorRGBA527 = x3d.ColorRGBA()
+ColorRGBA527.USE = "HAnimSiteLineColorRGBA"
 
-LineSet525.setColor(ColorRGBA527)
+LineSet525.color.append(ColorRGBA527)
 
-Shape524.setGeometry(LineSet525)
+Shape524.geometry = LineSet525
 
-HAnimSegment512.addChildren(Shape524)
-HAnimSite528 = HAnimSite()
-HAnimSite528.setName("r_thelion_pt")
-HAnimSite528.setDEF("hanim_r_thelion_pt")
-HAnimSite528.setTranslation([-0.0736,1.3385,0.1217])
+HAnimSegment512.children.append(Shape524)
+HAnimSite528 = x3d.HAnimSite()
+HAnimSite528.name = "r_thelion_pt"
+HAnimSite528.DEF = "hanim_r_thelion_pt"
+HAnimSite528.translation = [-0.0736,1.3385,0.1217]
 #HAnimSite visualization shape
-TouchSensor529 = TouchSensor()
-TouchSensor529.setDescription("HAnimSite r_thelion")
+TouchSensor529 = x3d.TouchSensor()
+TouchSensor529.description = "HAnimSite r_thelion"
 
-HAnimSite528.addChildren(TouchSensor529)
-Shape530 = Shape()
-Shape530.setUSE("HAnimSiteShape")
+HAnimSite528.children.append(TouchSensor529)
+Shape530 = x3d.Shape()
+Shape530.USE = "HAnimSiteShape"
 
-HAnimSite528.addChildren(Shape530)
+HAnimSite528.children.append(Shape530)
 
-HAnimSegment512.addChildren(HAnimSite528)
-HAnimSite531 = HAnimSite()
-HAnimSite531.setName("l_thelion_pt")
-HAnimSite531.setDEF("hanim_l_thelion_pt")
-HAnimSite531.setTranslation([0.0918,1.3382,0.1192])
+HAnimSegment512.children.append(HAnimSite528)
+HAnimSite531 = x3d.HAnimSite()
+HAnimSite531.name = "l_thelion_pt"
+HAnimSite531.DEF = "hanim_l_thelion_pt"
+HAnimSite531.translation = [0.0918,1.3382,0.1192]
 #HAnimSite visualization shape
-TouchSensor532 = TouchSensor()
-TouchSensor532.setDescription("HAnimSite l_thelion")
+TouchSensor532 = x3d.TouchSensor()
+TouchSensor532.description = "HAnimSite l_thelion"
 
-HAnimSite531.addChildren(TouchSensor532)
-Shape533 = Shape()
-Shape533.setUSE("HAnimSiteShape")
+HAnimSite531.children.append(TouchSensor532)
+Shape533 = x3d.Shape()
+Shape533.USE = "HAnimSiteShape"
 
-HAnimSite531.addChildren(Shape533)
+HAnimSite531.children.append(Shape533)
 
-HAnimSegment512.addChildren(HAnimSite531)
+HAnimSegment512.children.append(HAnimSite531)
 
-HAnimJoint511.addChildren(HAnimSegment512)
-HAnimJoint534 = HAnimJoint()
-HAnimJoint534.setName("vt8")
-HAnimJoint534.setDEF("hanim_vt8")
-HAnimJoint534.setCenter([0.0057,1.3382,-0.0845])
-HAnimJoint534.setStiffness([0,0,0])
-HAnimSegment535 = HAnimSegment()
-HAnimSegment535.setName("t8")
-HAnimSegment535.setDEF("hanim_t8")
+HAnimJoint511.children.append(HAnimSegment512)
+HAnimJoint534 = x3d.HAnimJoint()
+HAnimJoint534.name = "vt8"
+HAnimJoint534.DEF = "hanim_vt8"
+HAnimJoint534.center = [0.0057,1.3382,-0.0845]
+HAnimJoint534.ulimit = [0,0,0]
+HAnimJoint534.llimit = [0,0,0]
+HAnimSegment535 = x3d.HAnimSegment()
+HAnimSegment535.name = "t8"
+HAnimSegment535.DEF = "hanim_t8"
 #<HAnimJoint name='vt8'/> visualization sphere is placed within <HAnimSegment name='t8'/>
-TouchSensor536 = TouchSensor()
-TouchSensor536.setDescription("HAnimJoint vt8, HAnimSegment t8")
+TouchSensor536 = x3d.TouchSensor()
+TouchSensor536.description = "HAnimJoint vt8, HAnimSegment t8"
 
-HAnimSegment535.addChildren(TouchSensor536)
-Transform537 = Transform()
-Transform537.setTranslation([0.0057,1.3382,-0.0845])
-Shape538 = Shape()
-Shape538.setUSE("HAnimJointShape")
+HAnimSegment535.children.append(TouchSensor536)
+Transform537 = x3d.Transform()
+Transform537.translation = [0.0057,1.3382,-0.0845]
+Shape538 = x3d.Shape()
+Shape538.USE = "HAnimJointShape"
 
-Transform537.addChildren(Shape538)
+Transform537.children.append(Shape538)
 
-HAnimSegment535.addChildren(Transform537)
+HAnimSegment535.children.append(Transform537)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt8'/> to <HAnimJoint name='vt7'/>
-Shape539 = Shape()
-LineSet540 = LineSet()
-LineSet540.setVertexCount([2])
-Coordinate541 = Coordinate()
-Coordinate541.setPoint([0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833])
+Shape539 = x3d.Shape()
+LineSet540 = x3d.LineSet()
+LineSet540.vertexCount = [2]
+Coordinate541 = x3d.Coordinate()
+Coordinate541.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
-LineSet540.setCoord(Coordinate541)
-ColorRGBA542 = ColorRGBA()
-ColorRGBA542.setUSE("HAnimSegmentLineColorRGBA")
+LineSet540.coord.append(Coordinate541)
+ColorRGBA542 = x3d.ColorRGBA()
+ColorRGBA542.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet540.setColor(ColorRGBA542)
+LineSet540.color.append(ColorRGBA542)
 
-Shape539.setGeometry(LineSet540)
+Shape539.geometry = LineSet540
 
-HAnimSegment535.addChildren(Shape539)
+HAnimSegment535.children.append(Shape539)
 
-HAnimJoint534.addChildren(HAnimSegment535)
-HAnimJoint543 = HAnimJoint()
-HAnimJoint543.setName("vt7")
-HAnimJoint543.setDEF("hanim_vt7")
-HAnimJoint543.setCenter([0.0058,1.3625,-0.0833])
-HAnimJoint543.setStiffness([0,0,0])
-HAnimSegment544 = HAnimSegment()
-HAnimSegment544.setName("t7")
-HAnimSegment544.setDEF("hanim_t7")
+HAnimJoint534.children.append(HAnimSegment535)
+HAnimJoint543 = x3d.HAnimJoint()
+HAnimJoint543.name = "vt7"
+HAnimJoint543.DEF = "hanim_vt7"
+HAnimJoint543.center = [0.0058,1.3625,-0.0833]
+HAnimJoint543.ulimit = [0,0,0]
+HAnimJoint543.llimit = [0,0,0]
+HAnimSegment544 = x3d.HAnimSegment()
+HAnimSegment544.name = "t7"
+HAnimSegment544.DEF = "hanim_t7"
 #<HAnimJoint name='vt7'/> visualization sphere is placed within <HAnimSegment name='t7'/>
-TouchSensor545 = TouchSensor()
-TouchSensor545.setDescription("HAnimJoint vt7, HAnimSegment t7")
+TouchSensor545 = x3d.TouchSensor()
+TouchSensor545.description = "HAnimJoint vt7, HAnimSegment t7"
 
-HAnimSegment544.addChildren(TouchSensor545)
-Transform546 = Transform()
-Transform546.setTranslation([0.0058,1.3625,-0.0833])
-Shape547 = Shape()
-Shape547.setUSE("HAnimJointShape")
+HAnimSegment544.children.append(TouchSensor545)
+Transform546 = x3d.Transform()
+Transform546.translation = [0.0058,1.3625,-0.0833]
+Shape547 = x3d.Shape()
+Shape547.USE = "HAnimJointShape"
 
-Transform546.addChildren(Shape547)
+Transform546.children.append(Shape547)
 
-HAnimSegment544.addChildren(Transform546)
+HAnimSegment544.children.append(Transform546)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt7'/> to <HAnimJoint name='vt6'/>
-Shape548 = Shape()
-LineSet549 = LineSet()
-LineSet549.setVertexCount([2])
-Coordinate550 = Coordinate()
-Coordinate550.setPoint([0.0058,1.3625,-0.0833,0.0059,1.3866,-0.08])
+Shape548 = x3d.Shape()
+LineSet549 = x3d.LineSet()
+LineSet549.vertexCount = [2]
+Coordinate550 = x3d.Coordinate()
+Coordinate550.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
-LineSet549.setCoord(Coordinate550)
-ColorRGBA551 = ColorRGBA()
-ColorRGBA551.setUSE("HAnimSegmentLineColorRGBA")
+LineSet549.coord.append(Coordinate550)
+ColorRGBA551 = x3d.ColorRGBA()
+ColorRGBA551.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet549.setColor(ColorRGBA551)
+LineSet549.color.append(ColorRGBA551)
 
-Shape548.setGeometry(LineSet549)
+Shape548.geometry = LineSet549
 
-HAnimSegment544.addChildren(Shape548)
+HAnimSegment544.children.append(Shape548)
 
-HAnimJoint543.addChildren(HAnimSegment544)
-HAnimJoint552 = HAnimJoint()
-HAnimJoint552.setName("vt6")
-HAnimJoint552.setDEF("hanim_vt6")
-HAnimJoint552.setCenter([0.0059,1.3866,-0.08])
-HAnimJoint552.setStiffness([0,0,0])
-HAnimSegment553 = HAnimSegment()
-HAnimSegment553.setName("t6")
-HAnimSegment553.setDEF("hanim_t6")
+HAnimJoint543.children.append(HAnimSegment544)
+HAnimJoint552 = x3d.HAnimJoint()
+HAnimJoint552.name = "vt6"
+HAnimJoint552.DEF = "hanim_vt6"
+HAnimJoint552.center = [0.0059,1.3866,-0.08]
+HAnimJoint552.ulimit = [0,0,0]
+HAnimJoint552.llimit = [0,0,0]
+HAnimSegment553 = x3d.HAnimSegment()
+HAnimSegment553.name = "t6"
+HAnimSegment553.DEF = "hanim_t6"
 #<HAnimJoint name='vt6'/> visualization sphere is placed within <HAnimSegment name='t6'/>
-TouchSensor554 = TouchSensor()
-TouchSensor554.setDescription("HAnimJoint vt6, HAnimSegment t6")
+TouchSensor554 = x3d.TouchSensor()
+TouchSensor554.description = "HAnimJoint vt6, HAnimSegment t6"
 
-HAnimSegment553.addChildren(TouchSensor554)
-Transform555 = Transform()
-Transform555.setTranslation([0.0059,1.3866,-0.08])
-Shape556 = Shape()
-Shape556.setUSE("HAnimJointShape")
+HAnimSegment553.children.append(TouchSensor554)
+Transform555 = x3d.Transform()
+Transform555.translation = [0.0059,1.3866,-0.08]
+Shape556 = x3d.Shape()
+Shape556.USE = "HAnimJointShape"
 
-Transform555.addChildren(Shape556)
+Transform555.children.append(Shape556)
 
-HAnimSegment553.addChildren(Transform555)
+HAnimSegment553.children.append(Transform555)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt6'/> to <HAnimJoint name='vt5'/>
-Shape557 = Shape()
-LineSet558 = LineSet()
-LineSet558.setVertexCount([2])
-Coordinate559 = Coordinate()
-Coordinate559.setPoint([0.0059,1.3866,-0.08,0.006,1.4102,-0.0745])
+Shape557 = x3d.Shape()
+LineSet558 = x3d.LineSet()
+LineSet558.vertexCount = [2]
+Coordinate559 = x3d.Coordinate()
+Coordinate559.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
-LineSet558.setCoord(Coordinate559)
-ColorRGBA560 = ColorRGBA()
-ColorRGBA560.setUSE("HAnimSegmentLineColorRGBA")
+LineSet558.coord.append(Coordinate559)
+ColorRGBA560 = x3d.ColorRGBA()
+ColorRGBA560.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet558.setColor(ColorRGBA560)
+LineSet558.color.append(ColorRGBA560)
 
-Shape557.setGeometry(LineSet558)
+Shape557.geometry = LineSet558
 
-HAnimSegment553.addChildren(Shape557)
+HAnimSegment553.children.append(Shape557)
 
-HAnimJoint552.addChildren(HAnimSegment553)
-HAnimJoint561 = HAnimJoint()
-HAnimJoint561.setName("vt5")
-HAnimJoint561.setDEF("hanim_vt5")
-HAnimJoint561.setCenter([0.006,1.4102,-0.0745])
-HAnimJoint561.setStiffness([0,0,0])
-HAnimSegment562 = HAnimSegment()
-HAnimSegment562.setName("t5")
-HAnimSegment562.setDEF("hanim_t5")
+HAnimJoint552.children.append(HAnimSegment553)
+HAnimJoint561 = x3d.HAnimJoint()
+HAnimJoint561.name = "vt5"
+HAnimJoint561.DEF = "hanim_vt5"
+HAnimJoint561.center = [0.006,1.4102,-0.0745]
+HAnimJoint561.ulimit = [0,0,0]
+HAnimJoint561.llimit = [0,0,0]
+HAnimSegment562 = x3d.HAnimSegment()
+HAnimSegment562.name = "t5"
+HAnimSegment562.DEF = "hanim_t5"
 #<HAnimJoint name='vt5'/> visualization sphere is placed within <HAnimSegment name='t5'/>
-TouchSensor563 = TouchSensor()
-TouchSensor563.setDescription("HAnimJoint vt5, HAnimSegment t5")
+TouchSensor563 = x3d.TouchSensor()
+TouchSensor563.description = "HAnimJoint vt5, HAnimSegment t5"
 
-HAnimSegment562.addChildren(TouchSensor563)
-Transform564 = Transform()
-Transform564.setTranslation([0.006,1.4102,-0.0745])
-Shape565 = Shape()
-Shape565.setUSE("HAnimJointShape")
+HAnimSegment562.children.append(TouchSensor563)
+Transform564 = x3d.Transform()
+Transform564.translation = [0.006,1.4102,-0.0745]
+Shape565 = x3d.Shape()
+Shape565.USE = "HAnimJointShape"
 
-Transform564.addChildren(Shape565)
+Transform564.children.append(Shape565)
 
-HAnimSegment562.addChildren(Transform564)
+HAnimSegment562.children.append(Transform564)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt5'/> to <HAnimJoint name='vt4'/>
-Shape566 = Shape()
-LineSet567 = LineSet()
-LineSet567.setVertexCount([2])
-Coordinate568 = Coordinate()
-Coordinate568.setPoint([0.006,1.4102,-0.0745,0.0061,1.432,-0.0675])
+Shape566 = x3d.Shape()
+LineSet567 = x3d.LineSet()
+LineSet567.vertexCount = [2]
+Coordinate568 = x3d.Coordinate()
+Coordinate568.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
-LineSet567.setCoord(Coordinate568)
-ColorRGBA569 = ColorRGBA()
-ColorRGBA569.setUSE("HAnimSegmentLineColorRGBA")
+LineSet567.coord.append(Coordinate568)
+ColorRGBA569 = x3d.ColorRGBA()
+ColorRGBA569.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet567.setColor(ColorRGBA569)
+LineSet567.color.append(ColorRGBA569)
 
-Shape566.setGeometry(LineSet567)
+Shape566.geometry = LineSet567
 
-HAnimSegment562.addChildren(Shape566)
+HAnimSegment562.children.append(Shape566)
 
-HAnimJoint561.addChildren(HAnimSegment562)
-HAnimJoint570 = HAnimJoint()
-HAnimJoint570.setName("vt4")
-HAnimJoint570.setDEF("hanim_vt4")
-HAnimJoint570.setCenter([0.0061,1.432,-0.0675])
-HAnimJoint570.setStiffness([0,0,0])
-HAnimSegment571 = HAnimSegment()
-HAnimSegment571.setName("t4")
-HAnimSegment571.setDEF("hanim_t4")
+HAnimJoint561.children.append(HAnimSegment562)
+HAnimJoint570 = x3d.HAnimJoint()
+HAnimJoint570.name = "vt4"
+HAnimJoint570.DEF = "hanim_vt4"
+HAnimJoint570.center = [0.0061,1.432,-0.0675]
+HAnimJoint570.ulimit = [0,0,0]
+HAnimJoint570.llimit = [0,0,0]
+HAnimSegment571 = x3d.HAnimSegment()
+HAnimSegment571.name = "t4"
+HAnimSegment571.DEF = "hanim_t4"
 #<HAnimJoint name='vt4'/> visualization sphere is placed within <HAnimSegment name='t4'/>
-TouchSensor572 = TouchSensor()
-TouchSensor572.setDescription("HAnimJoint vt4, HAnimSegment t4")
+TouchSensor572 = x3d.TouchSensor()
+TouchSensor572.description = "HAnimJoint vt4, HAnimSegment t4"
 
-HAnimSegment571.addChildren(TouchSensor572)
-Transform573 = Transform()
-Transform573.setTranslation([0.0061,1.432,-0.0675])
-Shape574 = Shape()
-Shape574.setUSE("HAnimJointShape")
+HAnimSegment571.children.append(TouchSensor572)
+Transform573 = x3d.Transform()
+Transform573.translation = [0.0061,1.432,-0.0675]
+Shape574 = x3d.Shape()
+Shape574.USE = "HAnimJointShape"
 
-Transform573.addChildren(Shape574)
+Transform573.children.append(Shape574)
 
-HAnimSegment571.addChildren(Transform573)
+HAnimSegment571.children.append(Transform573)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt4'/> to <HAnimJoint name='vt3'/>
-Shape575 = Shape()
-LineSet576 = LineSet()
-LineSet576.setVertexCount([2])
-Coordinate577 = Coordinate()
-Coordinate577.setPoint([0.0061,1.432,-0.0675,0.0062,1.4583,-0.057])
+Shape575 = x3d.Shape()
+LineSet576 = x3d.LineSet()
+LineSet576.vertexCount = [2]
+Coordinate577 = x3d.Coordinate()
+Coordinate577.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
-LineSet576.setCoord(Coordinate577)
-ColorRGBA578 = ColorRGBA()
-ColorRGBA578.setUSE("HAnimSegmentLineColorRGBA")
+LineSet576.coord.append(Coordinate577)
+ColorRGBA578 = x3d.ColorRGBA()
+ColorRGBA578.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet576.setColor(ColorRGBA578)
+LineSet576.color.append(ColorRGBA578)
 
-Shape575.setGeometry(LineSet576)
+Shape575.geometry = LineSet576
 
-HAnimSegment571.addChildren(Shape575)
+HAnimSegment571.children.append(Shape575)
 
-HAnimJoint570.addChildren(HAnimSegment571)
-HAnimJoint579 = HAnimJoint()
-HAnimJoint579.setName("vt3")
-HAnimJoint579.setDEF("hanim_vt3")
-HAnimJoint579.setCenter([0.0062,1.4583,-0.057])
-HAnimJoint579.setStiffness([0,0,0])
-HAnimSegment580 = HAnimSegment()
-HAnimSegment580.setName("t3")
-HAnimSegment580.setDEF("hanim_t3")
+HAnimJoint570.children.append(HAnimSegment571)
+HAnimJoint579 = x3d.HAnimJoint()
+HAnimJoint579.name = "vt3"
+HAnimJoint579.DEF = "hanim_vt3"
+HAnimJoint579.center = [0.0062,1.4583,-0.057]
+HAnimJoint579.ulimit = [0,0,0]
+HAnimJoint579.llimit = [0,0,0]
+HAnimSegment580 = x3d.HAnimSegment()
+HAnimSegment580.name = "t3"
+HAnimSegment580.DEF = "hanim_t3"
 #<HAnimJoint name='vt3'/> visualization sphere is placed within <HAnimSegment name='t3'/>
-TouchSensor581 = TouchSensor()
-TouchSensor581.setDescription("HAnimJoint vt3, HAnimSegment t3")
+TouchSensor581 = x3d.TouchSensor()
+TouchSensor581.description = "HAnimJoint vt3, HAnimSegment t3"
 
-HAnimSegment580.addChildren(TouchSensor581)
-Transform582 = Transform()
-Transform582.setTranslation([0.0062,1.4583,-0.057])
-Shape583 = Shape()
-Shape583.setUSE("HAnimJointShape")
+HAnimSegment580.children.append(TouchSensor581)
+Transform582 = x3d.Transform()
+Transform582.translation = [0.0062,1.4583,-0.057]
+Shape583 = x3d.Shape()
+Shape583.USE = "HAnimJointShape"
 
-Transform582.addChildren(Shape583)
+Transform582.children.append(Shape583)
 
-HAnimSegment580.addChildren(Transform582)
+HAnimSegment580.children.append(Transform582)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt3'/> to <HAnimJoint name='vt2'/>
-Shape584 = Shape()
-LineSet585 = LineSet()
-LineSet585.setVertexCount([2])
-Coordinate586 = Coordinate()
-Coordinate586.setPoint([0.0062,1.4583,-0.057,0.0063,1.4761,-0.0484])
+Shape584 = x3d.Shape()
+LineSet585 = x3d.LineSet()
+LineSet585.vertexCount = [2]
+Coordinate586 = x3d.Coordinate()
+Coordinate586.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
-LineSet585.setCoord(Coordinate586)
-ColorRGBA587 = ColorRGBA()
-ColorRGBA587.setUSE("HAnimSegmentLineColorRGBA")
+LineSet585.coord.append(Coordinate586)
+ColorRGBA587 = x3d.ColorRGBA()
+ColorRGBA587.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet585.setColor(ColorRGBA587)
+LineSet585.color.append(ColorRGBA587)
 
-Shape584.setGeometry(LineSet585)
+Shape584.geometry = LineSet585
 
-HAnimSegment580.addChildren(Shape584)
+HAnimSegment580.children.append(Shape584)
 
-HAnimJoint579.addChildren(HAnimSegment580)
-HAnimJoint588 = HAnimJoint()
-HAnimJoint588.setName("vt2")
-HAnimJoint588.setDEF("hanim_vt2")
-HAnimJoint588.setCenter([0.0063,1.4761,-0.0484])
-HAnimJoint588.setStiffness([0,0,0])
-HAnimSegment589 = HAnimSegment()
-HAnimSegment589.setName("t2")
-HAnimSegment589.setDEF("hanim_t2")
+HAnimJoint579.children.append(HAnimSegment580)
+HAnimJoint588 = x3d.HAnimJoint()
+HAnimJoint588.name = "vt2"
+HAnimJoint588.DEF = "hanim_vt2"
+HAnimJoint588.center = [0.0063,1.4761,-0.0484]
+HAnimJoint588.ulimit = [0,0,0]
+HAnimJoint588.llimit = [0,0,0]
+HAnimSegment589 = x3d.HAnimSegment()
+HAnimSegment589.name = "t2"
+HAnimSegment589.DEF = "hanim_t2"
 #<HAnimJoint name='vt2'/> visualization sphere is placed within <HAnimSegment name='t2'/>
-TouchSensor590 = TouchSensor()
-TouchSensor590.setDescription("HAnimJoint vt2, HAnimSegment t2")
+TouchSensor590 = x3d.TouchSensor()
+TouchSensor590.description = "HAnimJoint vt2, HAnimSegment t2"
 
-HAnimSegment589.addChildren(TouchSensor590)
-Transform591 = Transform()
-Transform591.setTranslation([0.0063,1.4761,-0.0484])
-Shape592 = Shape()
-Shape592.setUSE("HAnimJointShape")
+HAnimSegment589.children.append(TouchSensor590)
+Transform591 = x3d.Transform()
+Transform591.translation = [0.0063,1.4761,-0.0484]
+Shape592 = x3d.Shape()
+Shape592.USE = "HAnimJointShape"
 
-Transform591.addChildren(Shape592)
+Transform591.children.append(Shape592)
 
-HAnimSegment589.addChildren(Transform591)
+HAnimSegment589.children.append(Transform591)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt2'/> to <HAnimJoint name='vt1'/>
-Shape593 = Shape()
-LineSet594 = LineSet()
-LineSet594.setVertexCount([2])
-Coordinate595 = Coordinate()
-Coordinate595.setPoint([0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387])
+Shape593 = x3d.Shape()
+LineSet594 = x3d.LineSet()
+LineSet594.vertexCount = [2]
+Coordinate595 = x3d.Coordinate()
+Coordinate595.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
-LineSet594.setCoord(Coordinate595)
-ColorRGBA596 = ColorRGBA()
-ColorRGBA596.setUSE("HAnimSegmentLineColorRGBA")
+LineSet594.coord.append(Coordinate595)
+ColorRGBA596 = x3d.ColorRGBA()
+ColorRGBA596.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet594.setColor(ColorRGBA596)
+LineSet594.color.append(ColorRGBA596)
 
-Shape593.setGeometry(LineSet594)
+Shape593.geometry = LineSet594
 
-HAnimSegment589.addChildren(Shape593)
+HAnimSegment589.children.append(Shape593)
 
-HAnimJoint588.addChildren(HAnimSegment589)
-HAnimJoint597 = HAnimJoint()
-HAnimJoint597.setName("vt1")
-HAnimJoint597.setDEF("hanim_vt1")
-HAnimJoint597.setCenter([0.0065,1.4951,-0.0387])
-HAnimJoint597.setStiffness([0,0,0])
-HAnimSegment598 = HAnimSegment()
-HAnimSegment598.setName("t1")
-HAnimSegment598.setDEF("hanim_t1")
+HAnimJoint588.children.append(HAnimSegment589)
+HAnimJoint597 = x3d.HAnimJoint()
+HAnimJoint597.name = "vt1"
+HAnimJoint597.DEF = "hanim_vt1"
+HAnimJoint597.center = [0.0065,1.4951,-0.0387]
+HAnimJoint597.ulimit = [0,0,0]
+HAnimJoint597.llimit = [0,0,0]
+HAnimSegment598 = x3d.HAnimSegment()
+HAnimSegment598.name = "t1"
+HAnimSegment598.DEF = "hanim_t1"
 #<HAnimJoint name='vt1'/> visualization sphere is placed within <HAnimSegment name='t1'/>
-TouchSensor599 = TouchSensor()
-TouchSensor599.setDescription("HAnimJoint vt1, HAnimSegment t1")
+TouchSensor599 = x3d.TouchSensor()
+TouchSensor599.description = "HAnimJoint vt1, HAnimSegment t1"
 
-HAnimSegment598.addChildren(TouchSensor599)
-Transform600 = Transform()
-Transform600.setTranslation([0.0065,1.4951,-0.0387])
-Shape601 = Shape()
-Shape601.setUSE("HAnimJointShape")
+HAnimSegment598.children.append(TouchSensor599)
+Transform600 = x3d.Transform()
+Transform600.translation = [0.0065,1.4951,-0.0387]
+Shape601 = x3d.Shape()
+Shape601.USE = "HAnimJointShape"
 
-Transform600.addChildren(Shape601)
+Transform600.children.append(Shape601)
 
-HAnimSegment598.addChildren(Transform600)
+HAnimSegment598.children.append(Transform600)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt1'/> to <HAnimJoint name='vc7'/>
-Shape602 = Shape()
-LineSet603 = LineSet()
-LineSet603.setVertexCount([2])
-Coordinate604 = Coordinate()
-Coordinate604.setPoint([0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301])
+Shape602 = x3d.Shape()
+LineSet603 = x3d.LineSet()
+LineSet603.vertexCount = [2]
+Coordinate604 = x3d.Coordinate()
+Coordinate604.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
-LineSet603.setCoord(Coordinate604)
-ColorRGBA605 = ColorRGBA()
-ColorRGBA605.setUSE("HAnimSegmentLineColorRGBA")
+LineSet603.coord.append(Coordinate604)
+ColorRGBA605 = x3d.ColorRGBA()
+ColorRGBA605.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet603.setColor(ColorRGBA605)
+LineSet603.color.append(ColorRGBA605)
 
-Shape602.setGeometry(LineSet603)
+Shape602.geometry = LineSet603
 
-HAnimSegment598.addChildren(Shape602)
+HAnimSegment598.children.append(Shape602)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt1'/> to <HAnimJoint name='l_sternoclavicular'/>
-Shape606 = Shape()
-LineSet607 = LineSet()
-LineSet607.setVertexCount([2])
-Coordinate608 = Coordinate()
-Coordinate608.setPoint([0.0065,1.4951,-0.0387,0.082,1.4488,-0.0353])
+Shape606 = x3d.Shape()
+LineSet607 = x3d.LineSet()
+LineSet607.vertexCount = [2]
+Coordinate608 = x3d.Coordinate()
+Coordinate608.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
-LineSet607.setCoord(Coordinate608)
-ColorRGBA609 = ColorRGBA()
-ColorRGBA609.setUSE("HAnimSegmentLineColorRGBA")
+LineSet607.coord.append(Coordinate608)
+ColorRGBA609 = x3d.ColorRGBA()
+ColorRGBA609.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet607.setColor(ColorRGBA609)
+LineSet607.color.append(ColorRGBA609)
 
-Shape606.setGeometry(LineSet607)
+Shape606.geometry = LineSet607
 
-HAnimSegment598.addChildren(Shape606)
+HAnimSegment598.children.append(Shape606)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vt1'/> to <HAnimJoint name='r_sternoclavicular'/>
-Shape610 = Shape()
-LineSet611 = LineSet()
-LineSet611.setVertexCount([2])
-Coordinate612 = Coordinate()
-Coordinate612.setPoint([0.0065,1.4951,-0.0387,-0.082,1.4488,-0.0353])
+Shape610 = x3d.Shape()
+LineSet611 = x3d.LineSet()
+LineSet611.vertexCount = [2]
+Coordinate612 = x3d.Coordinate()
+Coordinate612.point = (0.0065,1.4951,-0.0387,-0.0820,1.4488,-0.0353)
 
-LineSet611.setCoord(Coordinate612)
-ColorRGBA613 = ColorRGBA()
-ColorRGBA613.setUSE("HAnimSegmentLineColorRGBA")
+LineSet611.coord.append(Coordinate612)
+ColorRGBA613 = x3d.ColorRGBA()
+ColorRGBA613.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet611.setColor(ColorRGBA613)
+LineSet611.color.append(ColorRGBA613)
 
-Shape610.setGeometry(LineSet611)
+Shape610.geometry = LineSet611
 
-HAnimSegment598.addChildren(Shape610)
+HAnimSegment598.children.append(Shape610)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vt1'/> to <HAnimSite name='suprasternale'/>
-Shape614 = Shape()
-LineSet615 = LineSet()
-LineSet615.setVertexCount([2])
-Coordinate616 = Coordinate()
-Coordinate616.setPoint([0.0065,1.4951,-0.0387,0.0084,1.4714,0.0551])
+Shape614 = x3d.Shape()
+LineSet615 = x3d.LineSet()
+LineSet615.vertexCount = [2]
+Coordinate616 = x3d.Coordinate()
+Coordinate616.point = (0.0065,1.4951,-0.0387,0.0084,1.4714,0.0551)
 
-LineSet615.setCoord(Coordinate616)
-ColorRGBA617 = ColorRGBA()
-ColorRGBA617.setUSE("HAnimSiteLineColorRGBA")
+LineSet615.coord.append(Coordinate616)
+ColorRGBA617 = x3d.ColorRGBA()
+ColorRGBA617.USE = "HAnimSiteLineColorRGBA"
 
-LineSet615.setColor(ColorRGBA617)
+LineSet615.color.append(ColorRGBA617)
 
-Shape614.setGeometry(LineSet615)
+Shape614.geometry = LineSet615
 
-HAnimSegment598.addChildren(Shape614)
+HAnimSegment598.children.append(Shape614)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vt1'/> to <HAnimSite name='cervicale'/>
-Shape618 = Shape()
-LineSet619 = LineSet()
-LineSet619.setVertexCount([2])
-Coordinate620 = Coordinate()
-Coordinate620.setPoint([0.0065,1.4951,-0.0387,0.0064,1.52,-0.0815])
+Shape618 = x3d.Shape()
+LineSet619 = x3d.LineSet()
+LineSet619.vertexCount = [2]
+Coordinate620 = x3d.Coordinate()
+Coordinate620.point = (0.0065,1.4951,-0.0387,0.0064,1.5200,-0.0815)
 
-LineSet619.setCoord(Coordinate620)
-ColorRGBA621 = ColorRGBA()
-ColorRGBA621.setUSE("HAnimSiteLineColorRGBA")
+LineSet619.coord.append(Coordinate620)
+ColorRGBA621 = x3d.ColorRGBA()
+ColorRGBA621.USE = "HAnimSiteLineColorRGBA"
 
-LineSet619.setColor(ColorRGBA621)
+LineSet619.color.append(ColorRGBA621)
 
-Shape618.setGeometry(LineSet619)
+Shape618.geometry = LineSet619
 
-HAnimSegment598.addChildren(Shape618)
-HAnimSite622 = HAnimSite()
-HAnimSite622.setName("suprasternale_pt")
-HAnimSite622.setDEF("hanim_suprasternale_pt")
-HAnimSite622.setTranslation([0.0084,1.4714,0.0551])
+HAnimSegment598.children.append(Shape618)
+HAnimSite622 = x3d.HAnimSite()
+HAnimSite622.name = "suprasternale_pt"
+HAnimSite622.DEF = "hanim_suprasternale_pt"
+HAnimSite622.translation = [0.0084,1.4714,0.0551]
 #HAnimSite visualization shape
-TouchSensor623 = TouchSensor()
-TouchSensor623.setDescription("HAnimSite suprasternale")
+TouchSensor623 = x3d.TouchSensor()
+TouchSensor623.description = "HAnimSite suprasternale"
 
-HAnimSite622.addChildren(TouchSensor623)
-Shape624 = Shape()
-Shape624.setUSE("HAnimSiteShape")
+HAnimSite622.children.append(TouchSensor623)
+Shape624 = x3d.Shape()
+Shape624.USE = "HAnimSiteShape"
 
-HAnimSite622.addChildren(Shape624)
+HAnimSite622.children.append(Shape624)
 
-HAnimSegment598.addChildren(HAnimSite622)
-HAnimSite625 = HAnimSite()
-HAnimSite625.setName("cervicale_pt")
-HAnimSite625.setDEF("hanim_cervicale_pt")
-HAnimSite625.setTranslation([0.0064,1.52,-0.0815])
+HAnimSegment598.children.append(HAnimSite622)
+HAnimSite625 = x3d.HAnimSite()
+HAnimSite625.name = "cervicale_pt"
+HAnimSite625.DEF = "hanim_cervicale_pt"
+HAnimSite625.translation = [0.0064,1.52,-0.0815]
 #HAnimSite visualization shape
-TouchSensor626 = TouchSensor()
-TouchSensor626.setDescription("HAnimSite cervicale")
+TouchSensor626 = x3d.TouchSensor()
+TouchSensor626.description = "HAnimSite cervicale"
 
-HAnimSite625.addChildren(TouchSensor626)
-Shape627 = Shape()
-Shape627.setUSE("HAnimSiteShape")
+HAnimSite625.children.append(TouchSensor626)
+Shape627 = x3d.Shape()
+Shape627.USE = "HAnimSiteShape"
 
-HAnimSite625.addChildren(Shape627)
+HAnimSite625.children.append(Shape627)
 
-HAnimSegment598.addChildren(HAnimSite625)
+HAnimSegment598.children.append(HAnimSite625)
 
-HAnimJoint597.addChildren(HAnimSegment598)
-HAnimJoint628 = HAnimJoint()
-HAnimJoint628.setName("vc7")
-HAnimJoint628.setDEF("hanim_vc7")
-HAnimJoint628.setCenter([0.0066,1.5132,-0.0301])
-HAnimJoint628.setStiffness([0,0,0])
-HAnimSegment629 = HAnimSegment()
-HAnimSegment629.setName("c7")
-HAnimSegment629.setDEF("hanim_c7")
+HAnimJoint597.children.append(HAnimSegment598)
+HAnimJoint628 = x3d.HAnimJoint()
+HAnimJoint628.name = "vc7"
+HAnimJoint628.DEF = "hanim_vc7"
+HAnimJoint628.center = [0.0066,1.5132,-0.0301]
+HAnimJoint628.ulimit = [0,0,0]
+HAnimJoint628.llimit = [0,0,0]
+HAnimSegment629 = x3d.HAnimSegment()
+HAnimSegment629.name = "c7"
+HAnimSegment629.DEF = "hanim_c7"
 #<HAnimJoint name='vc7'/> visualization sphere is placed within <HAnimSegment name='c7'/>
-TouchSensor630 = TouchSensor()
-TouchSensor630.setDescription("HAnimJoint vc7, HAnimSegment c7")
+TouchSensor630 = x3d.TouchSensor()
+TouchSensor630.description = "HAnimJoint vc7, HAnimSegment c7"
 
-HAnimSegment629.addChildren(TouchSensor630)
-Transform631 = Transform()
-Transform631.setTranslation([0.0066,1.5132,-0.0301])
-Shape632 = Shape()
-Shape632.setUSE("HAnimJointShape")
+HAnimSegment629.children.append(TouchSensor630)
+Transform631 = x3d.Transform()
+Transform631.translation = [0.0066,1.5132,-0.0301]
+Shape632 = x3d.Shape()
+Shape632.USE = "HAnimJointShape"
 
-Transform631.addChildren(Shape632)
+Transform631.children.append(Shape632)
 
-HAnimSegment629.addChildren(Transform631)
+HAnimSegment629.children.append(Transform631)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc7'/> to <HAnimJoint name='vc6'/>
-Shape633 = Shape()
-LineSet634 = LineSet()
-LineSet634.setVertexCount([2])
-Coordinate635 = Coordinate()
-Coordinate635.setPoint([0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143])
+Shape633 = x3d.Shape()
+LineSet634 = x3d.LineSet()
+LineSet634.vertexCount = [2]
+Coordinate635 = x3d.Coordinate()
+Coordinate635.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
-LineSet634.setCoord(Coordinate635)
-ColorRGBA636 = ColorRGBA()
-ColorRGBA636.setUSE("HAnimSegmentLineColorRGBA")
+LineSet634.coord.append(Coordinate635)
+ColorRGBA636 = x3d.ColorRGBA()
+ColorRGBA636.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet634.setColor(ColorRGBA636)
+LineSet634.color.append(ColorRGBA636)
 
-Shape633.setGeometry(LineSet634)
+Shape633.geometry = LineSet634
 
-HAnimSegment629.addChildren(Shape633)
+HAnimSegment629.children.append(Shape633)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vc7'/> to <HAnimSite name='r_neck_base'/>
-Shape637 = Shape()
-LineSet638 = LineSet()
-LineSet638.setVertexCount([2])
-Coordinate639 = Coordinate()
-Coordinate639.setPoint([0.0066,1.5132,-0.0301,-0.0419,1.5149,-0.022])
+Shape637 = x3d.Shape()
+LineSet638 = x3d.LineSet()
+LineSet638.vertexCount = [2]
+Coordinate639 = x3d.Coordinate()
+Coordinate639.point = (0.0066,1.5132,-0.0301,-0.0419,1.5149,-0.0220)
 
-LineSet638.setCoord(Coordinate639)
-ColorRGBA640 = ColorRGBA()
-ColorRGBA640.setUSE("HAnimSiteLineColorRGBA")
+LineSet638.coord.append(Coordinate639)
+ColorRGBA640 = x3d.ColorRGBA()
+ColorRGBA640.USE = "HAnimSiteLineColorRGBA"
 
-LineSet638.setColor(ColorRGBA640)
+LineSet638.color.append(ColorRGBA640)
 
-Shape637.setGeometry(LineSet638)
+Shape637.geometry = LineSet638
 
-HAnimSegment629.addChildren(Shape637)
+HAnimSegment629.children.append(Shape637)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='vc7'/> to <HAnimSite name='l_neck_base'/>
-Shape641 = Shape()
-LineSet642 = LineSet()
-LineSet642.setVertexCount([2])
-Coordinate643 = Coordinate()
-Coordinate643.setPoint([0.0066,1.5132,-0.0301,0.0646,1.5141,-0.038])
+Shape641 = x3d.Shape()
+LineSet642 = x3d.LineSet()
+LineSet642.vertexCount = [2]
+Coordinate643 = x3d.Coordinate()
+Coordinate643.point = (0.0066,1.5132,-0.0301,0.0646,1.5141,-0.0380)
 
-LineSet642.setCoord(Coordinate643)
-ColorRGBA644 = ColorRGBA()
-ColorRGBA644.setUSE("HAnimSiteLineColorRGBA")
+LineSet642.coord.append(Coordinate643)
+ColorRGBA644 = x3d.ColorRGBA()
+ColorRGBA644.USE = "HAnimSiteLineColorRGBA"
 
-LineSet642.setColor(ColorRGBA644)
+LineSet642.color.append(ColorRGBA644)
 
-Shape641.setGeometry(LineSet642)
+Shape641.geometry = LineSet642
 
-HAnimSegment629.addChildren(Shape641)
-HAnimSite645 = HAnimSite()
-HAnimSite645.setName("r_neck_base_pt")
-HAnimSite645.setDEF("hanim_r_neck_base_pt")
-HAnimSite645.setTranslation([-0.0419,1.5149,-0.022])
+HAnimSegment629.children.append(Shape641)
+HAnimSite645 = x3d.HAnimSite()
+HAnimSite645.name = "r_neck_base_pt"
+HAnimSite645.DEF = "hanim_r_neck_base_pt"
+HAnimSite645.translation = [-0.0419,1.5149,-0.022]
 #HAnimSite visualization shape
-TouchSensor646 = TouchSensor()
-TouchSensor646.setDescription("HAnimSite r_neck_base")
+TouchSensor646 = x3d.TouchSensor()
+TouchSensor646.description = "HAnimSite r_neck_base"
 
-HAnimSite645.addChildren(TouchSensor646)
-Shape647 = Shape()
-Shape647.setUSE("HAnimSiteShape")
+HAnimSite645.children.append(TouchSensor646)
+Shape647 = x3d.Shape()
+Shape647.USE = "HAnimSiteShape"
 
-HAnimSite645.addChildren(Shape647)
+HAnimSite645.children.append(Shape647)
 
-HAnimSegment629.addChildren(HAnimSite645)
-HAnimSite648 = HAnimSite()
-HAnimSite648.setName("l_neck_base_pt")
-HAnimSite648.setDEF("hanim_l_neck_base_pt")
-HAnimSite648.setTranslation([0.0646,1.5141,-0.038])
+HAnimSegment629.children.append(HAnimSite645)
+HAnimSite648 = x3d.HAnimSite()
+HAnimSite648.name = "l_neck_base_pt"
+HAnimSite648.DEF = "hanim_l_neck_base_pt"
+HAnimSite648.translation = [0.0646,1.5141,-0.038]
 #HAnimSite visualization shape
-TouchSensor649 = TouchSensor()
-TouchSensor649.setDescription("HAnimSite l_neck_base")
+TouchSensor649 = x3d.TouchSensor()
+TouchSensor649.description = "HAnimSite l_neck_base"
 
-HAnimSite648.addChildren(TouchSensor649)
-Shape650 = Shape()
-Shape650.setUSE("HAnimSiteShape")
+HAnimSite648.children.append(TouchSensor649)
+Shape650 = x3d.Shape()
+Shape650.USE = "HAnimSiteShape"
 
-HAnimSite648.addChildren(Shape650)
+HAnimSite648.children.append(Shape650)
 
-HAnimSegment629.addChildren(HAnimSite648)
+HAnimSegment629.children.append(HAnimSite648)
 
-HAnimJoint628.addChildren(HAnimSegment629)
-HAnimJoint651 = HAnimJoint()
-HAnimJoint651.setName("vc6")
-HAnimJoint651.setDEF("hanim_vc6")
-HAnimJoint651.setCenter([0.0066,1.5357,-0.0143])
-HAnimJoint651.setStiffness([0,0,0])
-HAnimSegment652 = HAnimSegment()
-HAnimSegment652.setName("c6")
-HAnimSegment652.setDEF("hanim_c6")
+HAnimJoint628.children.append(HAnimSegment629)
+HAnimJoint651 = x3d.HAnimJoint()
+HAnimJoint651.name = "vc6"
+HAnimJoint651.DEF = "hanim_vc6"
+HAnimJoint651.center = [0.0066,1.5357,-0.0143]
+HAnimJoint651.ulimit = [0,0,0]
+HAnimJoint651.llimit = [0,0,0]
+HAnimSegment652 = x3d.HAnimSegment()
+HAnimSegment652.name = "c6"
+HAnimSegment652.DEF = "hanim_c6"
 #<HAnimJoint name='vc6'/> visualization sphere is placed within <HAnimSegment name='c6'/>
-TouchSensor653 = TouchSensor()
-TouchSensor653.setDescription("HAnimJoint vc6, HAnimSegment c6")
+TouchSensor653 = x3d.TouchSensor()
+TouchSensor653.description = "HAnimJoint vc6, HAnimSegment c6"
 
-HAnimSegment652.addChildren(TouchSensor653)
-Transform654 = Transform()
-Transform654.setTranslation([0.0066,1.5357,-0.0143])
-Shape655 = Shape()
-Shape655.setUSE("HAnimJointShape")
+HAnimSegment652.children.append(TouchSensor653)
+Transform654 = x3d.Transform()
+Transform654.translation = [0.0066,1.5357,-0.0143]
+Shape655 = x3d.Shape()
+Shape655.USE = "HAnimJointShape"
 
-Transform654.addChildren(Shape655)
+Transform654.children.append(Shape655)
 
-HAnimSegment652.addChildren(Transform654)
+HAnimSegment652.children.append(Transform654)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc6'/> to <HAnimJoint name='vc5'/>
-Shape656 = Shape()
-LineSet657 = LineSet()
-LineSet657.setVertexCount([2])
-Coordinate658 = Coordinate()
-Coordinate658.setPoint([0.0066,1.5357,-0.0143,0.0066,1.552,-0.0082])
+Shape656 = x3d.Shape()
+LineSet657 = x3d.LineSet()
+LineSet657.vertexCount = [2]
+Coordinate658 = x3d.Coordinate()
+Coordinate658.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
-LineSet657.setCoord(Coordinate658)
-ColorRGBA659 = ColorRGBA()
-ColorRGBA659.setUSE("HAnimSegmentLineColorRGBA")
+LineSet657.coord.append(Coordinate658)
+ColorRGBA659 = x3d.ColorRGBA()
+ColorRGBA659.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet657.setColor(ColorRGBA659)
+LineSet657.color.append(ColorRGBA659)
 
-Shape656.setGeometry(LineSet657)
+Shape656.geometry = LineSet657
 
-HAnimSegment652.addChildren(Shape656)
+HAnimSegment652.children.append(Shape656)
 
-HAnimJoint651.addChildren(HAnimSegment652)
-HAnimJoint660 = HAnimJoint()
-HAnimJoint660.setName("vc5")
-HAnimJoint660.setDEF("hanim_vc5")
-HAnimJoint660.setCenter([0.0066,1.552,-0.0082])
-HAnimJoint660.setStiffness([0,0,0])
-HAnimSegment661 = HAnimSegment()
-HAnimSegment661.setName("c5")
-HAnimSegment661.setDEF("hanim_c5")
+HAnimJoint651.children.append(HAnimSegment652)
+HAnimJoint660 = x3d.HAnimJoint()
+HAnimJoint660.name = "vc5"
+HAnimJoint660.DEF = "hanim_vc5"
+HAnimJoint660.center = [0.0066,1.552,-0.0082]
+HAnimJoint660.ulimit = [0,0,0]
+HAnimJoint660.llimit = [0,0,0]
+HAnimSegment661 = x3d.HAnimSegment()
+HAnimSegment661.name = "c5"
+HAnimSegment661.DEF = "hanim_c5"
 #<HAnimJoint name='vc5'/> visualization sphere is placed within <HAnimSegment name='c5'/>
-TouchSensor662 = TouchSensor()
-TouchSensor662.setDescription("HAnimJoint vc5, HAnimSegment c5")
+TouchSensor662 = x3d.TouchSensor()
+TouchSensor662.description = "HAnimJoint vc5, HAnimSegment c5"
 
-HAnimSegment661.addChildren(TouchSensor662)
-Transform663 = Transform()
-Transform663.setTranslation([0.0066,1.552,-0.0082])
-Shape664 = Shape()
-Shape664.setUSE("HAnimJointShape")
+HAnimSegment661.children.append(TouchSensor662)
+Transform663 = x3d.Transform()
+Transform663.translation = [0.0066,1.552,-0.0082]
+Shape664 = x3d.Shape()
+Shape664.USE = "HAnimJointShape"
 
-Transform663.addChildren(Shape664)
+Transform663.children.append(Shape664)
 
-HAnimSegment661.addChildren(Transform663)
+HAnimSegment661.children.append(Transform663)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc5'/> to <HAnimJoint name='vc4'/>
-Shape665 = Shape()
-LineSet666 = LineSet()
-LineSet666.setVertexCount([2])
-Coordinate667 = Coordinate()
-Coordinate667.setPoint([0.0066,1.552,-0.0082,0.0066,1.5662,-0.0084])
+Shape665 = x3d.Shape()
+LineSet666 = x3d.LineSet()
+LineSet666.vertexCount = [2]
+Coordinate667 = x3d.Coordinate()
+Coordinate667.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
-LineSet666.setCoord(Coordinate667)
-ColorRGBA668 = ColorRGBA()
-ColorRGBA668.setUSE("HAnimSegmentLineColorRGBA")
+LineSet666.coord.append(Coordinate667)
+ColorRGBA668 = x3d.ColorRGBA()
+ColorRGBA668.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet666.setColor(ColorRGBA668)
+LineSet666.color.append(ColorRGBA668)
 
-Shape665.setGeometry(LineSet666)
+Shape665.geometry = LineSet666
 
-HAnimSegment661.addChildren(Shape665)
+HAnimSegment661.children.append(Shape665)
 
-HAnimJoint660.addChildren(HAnimSegment661)
-HAnimJoint669 = HAnimJoint()
-HAnimJoint669.setName("vc4")
-HAnimJoint669.setDEF("hanim_vc4")
-HAnimJoint669.setCenter([0.0066,1.5662,-0.0084])
-HAnimJoint669.setStiffness([0,0,0])
-HAnimSegment670 = HAnimSegment()
-HAnimSegment670.setName("c4")
-HAnimSegment670.setDEF("hanim_c4")
+HAnimJoint660.children.append(HAnimSegment661)
+HAnimJoint669 = x3d.HAnimJoint()
+HAnimJoint669.name = "vc4"
+HAnimJoint669.DEF = "hanim_vc4"
+HAnimJoint669.center = [0.0066,1.5662,-0.0084]
+HAnimJoint669.ulimit = [0,0,0]
+HAnimJoint669.llimit = [0,0,0]
+HAnimSegment670 = x3d.HAnimSegment()
+HAnimSegment670.name = "c4"
+HAnimSegment670.DEF = "hanim_c4"
 #<HAnimJoint name='vc4'/> visualization sphere is placed within <HAnimSegment name='c4'/>
-TouchSensor671 = TouchSensor()
-TouchSensor671.setDescription("HAnimJoint vc4, HAnimSegment c4")
+TouchSensor671 = x3d.TouchSensor()
+TouchSensor671.description = "HAnimJoint vc4, HAnimSegment c4"
 
-HAnimSegment670.addChildren(TouchSensor671)
-Transform672 = Transform()
-Transform672.setTranslation([0.0066,1.5662,-0.0084])
-Shape673 = Shape()
-Shape673.setUSE("HAnimJointShape")
+HAnimSegment670.children.append(TouchSensor671)
+Transform672 = x3d.Transform()
+Transform672.translation = [0.0066,1.5662,-0.0084]
+Shape673 = x3d.Shape()
+Shape673.USE = "HAnimJointShape"
 
-Transform672.addChildren(Shape673)
+Transform672.children.append(Shape673)
 
-HAnimSegment670.addChildren(Transform672)
+HAnimSegment670.children.append(Transform672)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc4'/> to <HAnimJoint name='vc3'/>
-Shape674 = Shape()
-LineSet675 = LineSet()
-LineSet675.setVertexCount([2])
-Coordinate676 = Coordinate()
-Coordinate676.setPoint([0.0066,1.5662,-0.0084,0.0066,1.58,-0.0103])
+Shape674 = x3d.Shape()
+LineSet675 = x3d.LineSet()
+LineSet675.vertexCount = [2]
+Coordinate676 = x3d.Coordinate()
+Coordinate676.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
-LineSet675.setCoord(Coordinate676)
-ColorRGBA677 = ColorRGBA()
-ColorRGBA677.setUSE("HAnimSegmentLineColorRGBA")
+LineSet675.coord.append(Coordinate676)
+ColorRGBA677 = x3d.ColorRGBA()
+ColorRGBA677.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet675.setColor(ColorRGBA677)
+LineSet675.color.append(ColorRGBA677)
 
-Shape674.setGeometry(LineSet675)
+Shape674.geometry = LineSet675
 
-HAnimSegment670.addChildren(Shape674)
+HAnimSegment670.children.append(Shape674)
 
-HAnimJoint669.addChildren(HAnimSegment670)
-HAnimJoint678 = HAnimJoint()
-HAnimJoint678.setName("vc3")
-HAnimJoint678.setDEF("hanim_vc3")
-HAnimJoint678.setCenter([0.0066,1.58,-0.0103])
-HAnimJoint678.setStiffness([0,0,0])
-HAnimSegment679 = HAnimSegment()
-HAnimSegment679.setName("c3")
-HAnimSegment679.setDEF("hanim_c3")
+HAnimJoint669.children.append(HAnimSegment670)
+HAnimJoint678 = x3d.HAnimJoint()
+HAnimJoint678.name = "vc3"
+HAnimJoint678.DEF = "hanim_vc3"
+HAnimJoint678.center = [0.0066,1.58,-0.0103]
+HAnimJoint678.ulimit = [0,0,0]
+HAnimJoint678.llimit = [0,0,0]
+HAnimSegment679 = x3d.HAnimSegment()
+HAnimSegment679.name = "c3"
+HAnimSegment679.DEF = "hanim_c3"
 #<HAnimJoint name='vc3'/> visualization sphere is placed within <HAnimSegment name='c3'/>
-TouchSensor680 = TouchSensor()
-TouchSensor680.setDescription("HAnimJoint vc3, HAnimSegment c3")
+TouchSensor680 = x3d.TouchSensor()
+TouchSensor680.description = "HAnimJoint vc3, HAnimSegment c3"
 
-HAnimSegment679.addChildren(TouchSensor680)
-Transform681 = Transform()
-Transform681.setTranslation([0.0066,1.58,-0.0103])
-Shape682 = Shape()
-Shape682.setUSE("HAnimJointShape")
+HAnimSegment679.children.append(TouchSensor680)
+Transform681 = x3d.Transform()
+Transform681.translation = [0.0066,1.58,-0.0103]
+Shape682 = x3d.Shape()
+Shape682.USE = "HAnimJointShape"
 
-Transform681.addChildren(Shape682)
+Transform681.children.append(Shape682)
 
-HAnimSegment679.addChildren(Transform681)
+HAnimSegment679.children.append(Transform681)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc3'/> to <HAnimJoint name='vc2'/>
-Shape683 = Shape()
-LineSet684 = LineSet()
-LineSet684.setVertexCount([2])
-Coordinate685 = Coordinate()
-Coordinate685.setPoint([0.0066,1.58,-0.0103,0.0066,1.5928,-0.0103])
+Shape683 = x3d.Shape()
+LineSet684 = x3d.LineSet()
+LineSet684.vertexCount = [2]
+Coordinate685 = x3d.Coordinate()
+Coordinate685.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
-LineSet684.setCoord(Coordinate685)
-ColorRGBA686 = ColorRGBA()
-ColorRGBA686.setUSE("HAnimSegmentLineColorRGBA")
+LineSet684.coord.append(Coordinate685)
+ColorRGBA686 = x3d.ColorRGBA()
+ColorRGBA686.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet684.setColor(ColorRGBA686)
+LineSet684.color.append(ColorRGBA686)
 
-Shape683.setGeometry(LineSet684)
+Shape683.geometry = LineSet684
 
-HAnimSegment679.addChildren(Shape683)
+HAnimSegment679.children.append(Shape683)
 
-HAnimJoint678.addChildren(HAnimSegment679)
-HAnimJoint687 = HAnimJoint()
-HAnimJoint687.setName("vc2")
-HAnimJoint687.setDEF("hanim_vc2")
-HAnimJoint687.setCenter([0.0066,1.5928,-0.0103])
-HAnimJoint687.setStiffness([0,0,0])
-HAnimSegment688 = HAnimSegment()
-HAnimSegment688.setName("c2")
-HAnimSegment688.setDEF("hanim_c2")
+HAnimJoint678.children.append(HAnimSegment679)
+HAnimJoint687 = x3d.HAnimJoint()
+HAnimJoint687.name = "vc2"
+HAnimJoint687.DEF = "hanim_vc2"
+HAnimJoint687.center = [0.0066,1.5928,-0.0103]
+HAnimJoint687.ulimit = [0,0,0]
+HAnimJoint687.llimit = [0,0,0]
+HAnimSegment688 = x3d.HAnimSegment()
+HAnimSegment688.name = "c2"
+HAnimSegment688.DEF = "hanim_c2"
 #<HAnimJoint name='vc2'/> visualization sphere is placed within <HAnimSegment name='c2'/>
-TouchSensor689 = TouchSensor()
-TouchSensor689.setDescription("HAnimJoint vc2, HAnimSegment c2")
+TouchSensor689 = x3d.TouchSensor()
+TouchSensor689.description = "HAnimJoint vc2, HAnimSegment c2"
 
-HAnimSegment688.addChildren(TouchSensor689)
-Transform690 = Transform()
-Transform690.setTranslation([0.0066,1.5928,-0.0103])
-Shape691 = Shape()
-Shape691.setUSE("HAnimJointShape")
+HAnimSegment688.children.append(TouchSensor689)
+Transform690 = x3d.Transform()
+Transform690.translation = [0.0066,1.5928,-0.0103]
+Shape691 = x3d.Shape()
+Shape691.USE = "HAnimJointShape"
 
-Transform690.addChildren(Shape691)
+Transform690.children.append(Shape691)
 
-HAnimSegment688.addChildren(Transform690)
+HAnimSegment688.children.append(Transform690)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc2'/> to <HAnimJoint name='vc1'/>
-Shape692 = Shape()
-LineSet693 = LineSet()
-LineSet693.setVertexCount([2])
-Coordinate694 = Coordinate()
-Coordinate694.setPoint([0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034])
+Shape692 = x3d.Shape()
+LineSet693 = x3d.LineSet()
+LineSet693.vertexCount = [2]
+Coordinate694 = x3d.Coordinate()
+Coordinate694.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
-LineSet693.setCoord(Coordinate694)
-ColorRGBA695 = ColorRGBA()
-ColorRGBA695.setUSE("HAnimSegmentLineColorRGBA")
+LineSet693.coord.append(Coordinate694)
+ColorRGBA695 = x3d.ColorRGBA()
+ColorRGBA695.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet693.setColor(ColorRGBA695)
+LineSet693.color.append(ColorRGBA695)
 
-Shape692.setGeometry(LineSet693)
+Shape692.geometry = LineSet693
 
-HAnimSegment688.addChildren(Shape692)
+HAnimSegment688.children.append(Shape692)
 
-HAnimJoint687.addChildren(HAnimSegment688)
-HAnimJoint696 = HAnimJoint()
-HAnimJoint696.setName("vc1")
-HAnimJoint696.setDEF("hanim_vc1")
-HAnimJoint696.setCenter([0.0066,1.6144,-0.0034])
-HAnimJoint696.setStiffness([0,0,0])
-HAnimSegment697 = HAnimSegment()
-HAnimSegment697.setName("c1")
-HAnimSegment697.setDEF("hanim_c1")
+HAnimJoint687.children.append(HAnimSegment688)
+HAnimJoint696 = x3d.HAnimJoint()
+HAnimJoint696.name = "vc1"
+HAnimJoint696.DEF = "hanim_vc1"
+HAnimJoint696.center = [0.0066,1.6144,-0.0034]
+HAnimJoint696.ulimit = [0,0,0]
+HAnimJoint696.llimit = [0,0,0]
+HAnimSegment697 = x3d.HAnimSegment()
+HAnimSegment697.name = "c1"
+HAnimSegment697.DEF = "hanim_c1"
 #<HAnimJoint name='vc1'/> visualization sphere is placed within <HAnimSegment name='c1'/>
-TouchSensor698 = TouchSensor()
-TouchSensor698.setDescription("HAnimJoint vc1, HAnimSegment c1")
+TouchSensor698 = x3d.TouchSensor()
+TouchSensor698.description = "HAnimJoint vc1, HAnimSegment c1"
 
-HAnimSegment697.addChildren(TouchSensor698)
-Transform699 = Transform()
-Transform699.setTranslation([0.0066,1.6144,-0.0034])
-Shape700 = Shape()
-Shape700.setUSE("HAnimJointShape")
+HAnimSegment697.children.append(TouchSensor698)
+Transform699 = x3d.Transform()
+Transform699.translation = [0.0066,1.6144,-0.0034]
+Shape700 = x3d.Shape()
+Shape700.USE = "HAnimJointShape"
 
-Transform699.addChildren(Shape700)
+Transform699.children.append(Shape700)
 
-HAnimSegment697.addChildren(Transform699)
+HAnimSegment697.children.append(Transform699)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='vc1'/> to <HAnimJoint name='skullbase'/>
-Shape701 = Shape()
-LineSet702 = LineSet()
-LineSet702.setVertexCount([2])
-Coordinate703 = Coordinate()
-Coordinate703.setPoint([0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236])
+Shape701 = x3d.Shape()
+LineSet702 = x3d.LineSet()
+LineSet702.vertexCount = [2]
+Coordinate703 = x3d.Coordinate()
+Coordinate703.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
-LineSet702.setCoord(Coordinate703)
-ColorRGBA704 = ColorRGBA()
-ColorRGBA704.setUSE("HAnimSegmentLineColorRGBA")
+LineSet702.coord.append(Coordinate703)
+ColorRGBA704 = x3d.ColorRGBA()
+ColorRGBA704.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet702.setColor(ColorRGBA704)
+LineSet702.color.append(ColorRGBA704)
 
-Shape701.setGeometry(LineSet702)
+Shape701.geometry = LineSet702
 
-HAnimSegment697.addChildren(Shape701)
+HAnimSegment697.children.append(Shape701)
 
-HAnimJoint696.addChildren(HAnimSegment697)
-HAnimJoint705 = HAnimJoint()
-HAnimJoint705.setName("skullbase")
-HAnimJoint705.setDEF("hanim_skullbase")
-HAnimJoint705.setCenter([0.0044,1.6209,0.0236])
-HAnimJoint705.setStiffness([0,0,0])
-HAnimSegment706 = HAnimSegment()
-HAnimSegment706.setName("skull")
-HAnimSegment706.setDEF("hanim_skull")
+HAnimJoint696.children.append(HAnimSegment697)
+HAnimJoint705 = x3d.HAnimJoint()
+HAnimJoint705.name = "skullbase"
+HAnimJoint705.DEF = "hanim_skullbase"
+HAnimJoint705.center = [0.0044,1.6209,0.0236]
+HAnimJoint705.ulimit = [0,0,0]
+HAnimJoint705.llimit = [0,0,0]
+HAnimSegment706 = x3d.HAnimSegment()
+HAnimSegment706.name = "skull"
+HAnimSegment706.DEF = "hanim_skull"
 #<HAnimJoint name='skullbase'/> visualization sphere is placed within <HAnimSegment name='skull'/>
-TouchSensor707 = TouchSensor()
-TouchSensor707.setDescription("HAnimJoint skullbase, HAnimSegment skull")
+TouchSensor707 = x3d.TouchSensor()
+TouchSensor707.description = "HAnimJoint skullbase, HAnimSegment skull"
 
-HAnimSegment706.addChildren(TouchSensor707)
-Transform708 = Transform()
-Transform708.setTranslation([0.0044,1.6209,0.0236])
-Shape709 = Shape()
-Shape709.setUSE("HAnimJointShape")
+HAnimSegment706.children.append(TouchSensor707)
+Transform708 = x3d.Transform()
+Transform708.translation = [0.0044,1.6209,0.0236]
+Shape709 = x3d.Shape()
+Shape709.USE = "HAnimJointShape"
 
-Transform708.addChildren(Shape709)
+Transform708.children.append(Shape709)
 
-HAnimSegment706.addChildren(Transform708)
+HAnimSegment706.children.append(Transform708)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='l_eyeball_joint'/>
-Shape710 = Shape()
-LineSet711 = LineSet()
-LineSet711.setVertexCount([2])
-Coordinate712 = Coordinate()
-Coordinate712.setPoint([0.0044,1.6209,0.0236,0.0336,1.6332,0.0502])
+Shape710 = x3d.Shape()
+LineSet711 = x3d.LineSet()
+LineSet711.vertexCount = [2]
+Coordinate712 = x3d.Coordinate()
+Coordinate712.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
-LineSet711.setCoord(Coordinate712)
-ColorRGBA713 = ColorRGBA()
-ColorRGBA713.setUSE("HAnimSegmentLineColorRGBA")
+LineSet711.coord.append(Coordinate712)
+ColorRGBA713 = x3d.ColorRGBA()
+ColorRGBA713.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet711.setColor(ColorRGBA713)
+LineSet711.color.append(ColorRGBA713)
 
-Shape710.setGeometry(LineSet711)
+Shape710.geometry = LineSet711
 
-HAnimSegment706.addChildren(Shape710)
+HAnimSegment706.children.append(Shape710)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='l_eyelid_joint'/>
-Shape714 = Shape()
-LineSet715 = LineSet()
-LineSet715.setVertexCount([2])
-Coordinate716 = Coordinate()
-Coordinate716.setPoint([0.0044,1.6209,0.0236,0.0336,1.6332,0.0502])
+Shape714 = x3d.Shape()
+LineSet715 = x3d.LineSet()
+LineSet715.vertexCount = [2]
+Coordinate716 = x3d.Coordinate()
+Coordinate716.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
-LineSet715.setCoord(Coordinate716)
-ColorRGBA717 = ColorRGBA()
-ColorRGBA717.setUSE("HAnimSegmentLineColorRGBA")
+LineSet715.coord.append(Coordinate716)
+ColorRGBA717 = x3d.ColorRGBA()
+ColorRGBA717.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet715.setColor(ColorRGBA717)
+LineSet715.color.append(ColorRGBA717)
 
-Shape714.setGeometry(LineSet715)
+Shape714.geometry = LineSet715
 
-HAnimSegment706.addChildren(Shape714)
+HAnimSegment706.children.append(Shape714)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='l_eyebrow_joint'/>
-Shape718 = Shape()
-LineSet719 = LineSet()
-LineSet719.setVertexCount([2])
-Coordinate720 = Coordinate()
-Coordinate720.setPoint([0.0044,1.6209,0.0236,0.0336,1.635,0.0506])
+Shape718 = x3d.Shape()
+LineSet719 = x3d.LineSet()
+LineSet719.vertexCount = [2]
+Coordinate720 = x3d.Coordinate()
+Coordinate720.point = (0.0044,1.6209,0.0236,0.0336,1.6350,0.0506)
 
-LineSet719.setCoord(Coordinate720)
-ColorRGBA721 = ColorRGBA()
-ColorRGBA721.setUSE("HAnimSegmentLineColorRGBA")
+LineSet719.coord.append(Coordinate720)
+ColorRGBA721 = x3d.ColorRGBA()
+ColorRGBA721.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet719.setColor(ColorRGBA721)
+LineSet719.color.append(ColorRGBA721)
 
-Shape718.setGeometry(LineSet719)
+Shape718.geometry = LineSet719
 
-HAnimSegment706.addChildren(Shape718)
+HAnimSegment706.children.append(Shape718)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='r_eyeball_joint'/>
-Shape722 = Shape()
-LineSet723 = LineSet()
-LineSet723.setVertexCount([2])
-Coordinate724 = Coordinate()
-Coordinate724.setPoint([0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502])
+Shape722 = x3d.Shape()
+LineSet723 = x3d.LineSet()
+LineSet723.vertexCount = [2]
+Coordinate724 = x3d.Coordinate()
+Coordinate724.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
-LineSet723.setCoord(Coordinate724)
-ColorRGBA725 = ColorRGBA()
-ColorRGBA725.setUSE("HAnimSegmentLineColorRGBA")
+LineSet723.coord.append(Coordinate724)
+ColorRGBA725 = x3d.ColorRGBA()
+ColorRGBA725.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet723.setColor(ColorRGBA725)
+LineSet723.color.append(ColorRGBA725)
 
-Shape722.setGeometry(LineSet723)
+Shape722.geometry = LineSet723
 
-HAnimSegment706.addChildren(Shape722)
+HAnimSegment706.children.append(Shape722)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='r_eyelid_joint'/>
-Shape726 = Shape()
-LineSet727 = LineSet()
-LineSet727.setVertexCount([2])
-Coordinate728 = Coordinate()
-Coordinate728.setPoint([0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502])
+Shape726 = x3d.Shape()
+LineSet727 = x3d.LineSet()
+LineSet727.vertexCount = [2]
+Coordinate728 = x3d.Coordinate()
+Coordinate728.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
-LineSet727.setCoord(Coordinate728)
-ColorRGBA729 = ColorRGBA()
-ColorRGBA729.setUSE("HAnimSegmentLineColorRGBA")
+LineSet727.coord.append(Coordinate728)
+ColorRGBA729 = x3d.ColorRGBA()
+ColorRGBA729.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet727.setColor(ColorRGBA729)
+LineSet727.color.append(ColorRGBA729)
 
-Shape726.setGeometry(LineSet727)
+Shape726.geometry = LineSet727
 
-HAnimSegment706.addChildren(Shape726)
+HAnimSegment706.children.append(Shape726)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='r_eyebrow_joint'/>
-Shape730 = Shape()
-LineSet731 = LineSet()
-LineSet731.setVertexCount([2])
-Coordinate732 = Coordinate()
-Coordinate732.setPoint([0.0044,1.6209,0.0236,-0.0336,1.635,0.0506])
+Shape730 = x3d.Shape()
+LineSet731 = x3d.LineSet()
+LineSet731.vertexCount = [2]
+Coordinate732 = x3d.Coordinate()
+Coordinate732.point = (0.0044,1.6209,0.0236,-0.0336,1.6350,0.0506)
 
-LineSet731.setCoord(Coordinate732)
-ColorRGBA733 = ColorRGBA()
-ColorRGBA733.setUSE("HAnimSegmentLineColorRGBA")
+LineSet731.coord.append(Coordinate732)
+ColorRGBA733 = x3d.ColorRGBA()
+ColorRGBA733.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet731.setColor(ColorRGBA733)
+LineSet731.color.append(ColorRGBA733)
 
-Shape730.setGeometry(LineSet731)
+Shape730.geometry = LineSet731
 
-HAnimSegment706.addChildren(Shape730)
+HAnimSegment706.children.append(Shape730)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='skullbase'/> to <HAnimJoint name='temporomandibular'/>
-Shape734 = Shape()
-LineSet735 = LineSet()
-LineSet735.setVertexCount([2])
-Coordinate736 = Coordinate()
-Coordinate736.setPoint([0.0044,1.6209,0.0236,0,1.63,0.015])
+Shape734 = x3d.Shape()
+LineSet735 = x3d.LineSet()
+LineSet735.vertexCount = [2]
+Coordinate736 = x3d.Coordinate()
+Coordinate736.point = (0.0044,1.6209,0.0236,0.0000,1.6300,0.0150)
 
-LineSet735.setCoord(Coordinate736)
-ColorRGBA737 = ColorRGBA()
-ColorRGBA737.setUSE("HAnimSegmentLineColorRGBA")
+LineSet735.coord.append(Coordinate736)
+ColorRGBA737 = x3d.ColorRGBA()
+ColorRGBA737.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet735.setColor(ColorRGBA737)
+LineSet735.color.append(ColorRGBA737)
 
-Shape734.setGeometry(LineSet735)
+Shape734.geometry = LineSet735
 
-HAnimSegment706.addChildren(Shape734)
+HAnimSegment706.children.append(Shape734)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='skull_tip'/>
-Shape738 = Shape()
-LineSet739 = LineSet()
-LineSet739.setVertexCount([2])
-Coordinate740 = Coordinate()
-Coordinate740.setPoint([0.0044,1.6209,0.0236,0.005,1.7504,0.0055])
+Shape738 = x3d.Shape()
+LineSet739 = x3d.LineSet()
+LineSet739.vertexCount = [2]
+Coordinate740 = x3d.Coordinate()
+Coordinate740.point = (0.0044,1.6209,0.0236,0.0050,1.7504,0.0055)
 
-LineSet739.setCoord(Coordinate740)
-ColorRGBA741 = ColorRGBA()
-ColorRGBA741.setUSE("HAnimSiteLineColorRGBA")
+LineSet739.coord.append(Coordinate740)
+ColorRGBA741 = x3d.ColorRGBA()
+ColorRGBA741.USE = "HAnimSiteLineColorRGBA"
 
-LineSet739.setColor(ColorRGBA741)
+LineSet739.color.append(ColorRGBA741)
 
-Shape738.setGeometry(LineSet739)
+Shape738.geometry = LineSet739
 
-HAnimSegment706.addChildren(Shape738)
+HAnimSegment706.children.append(Shape738)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='sellion'/>
-Shape742 = Shape()
-LineSet743 = LineSet()
-LineSet743.setVertexCount([2])
-Coordinate744 = Coordinate()
-Coordinate744.setPoint([0.0044,1.6209,0.0236,0.0058,1.6316,0.0852])
+Shape742 = x3d.Shape()
+LineSet743 = x3d.LineSet()
+LineSet743.vertexCount = [2]
+Coordinate744 = x3d.Coordinate()
+Coordinate744.point = (0.0044,1.6209,0.0236,0.0058,1.6316,0.0852)
 
-LineSet743.setCoord(Coordinate744)
-ColorRGBA745 = ColorRGBA()
-ColorRGBA745.setUSE("HAnimSiteLineColorRGBA")
+LineSet743.coord.append(Coordinate744)
+ColorRGBA745 = x3d.ColorRGBA()
+ColorRGBA745.USE = "HAnimSiteLineColorRGBA"
 
-LineSet743.setColor(ColorRGBA745)
+LineSet743.color.append(ColorRGBA745)
 
-Shape742.setGeometry(LineSet743)
+Shape742.geometry = LineSet743
 
-HAnimSegment706.addChildren(Shape742)
+HAnimSegment706.children.append(Shape742)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='r_infraorbitale'/>
-Shape746 = Shape()
-LineSet747 = LineSet()
-LineSet747.setVertexCount([2])
-Coordinate748 = Coordinate()
-Coordinate748.setPoint([0.0044,1.6209,0.0236,-0.0237,1.6171,0.0752])
+Shape746 = x3d.Shape()
+LineSet747 = x3d.LineSet()
+LineSet747.vertexCount = [2]
+Coordinate748 = x3d.Coordinate()
+Coordinate748.point = (0.0044,1.6209,0.0236,-0.0237,1.6171,0.0752)
 
-LineSet747.setCoord(Coordinate748)
-ColorRGBA749 = ColorRGBA()
-ColorRGBA749.setUSE("HAnimSiteLineColorRGBA")
+LineSet747.coord.append(Coordinate748)
+ColorRGBA749 = x3d.ColorRGBA()
+ColorRGBA749.USE = "HAnimSiteLineColorRGBA"
 
-LineSet747.setColor(ColorRGBA749)
+LineSet747.color.append(ColorRGBA749)
 
-Shape746.setGeometry(LineSet747)
+Shape746.geometry = LineSet747
 
-HAnimSegment706.addChildren(Shape746)
+HAnimSegment706.children.append(Shape746)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='l_infraorbitale'/>
-Shape750 = Shape()
-LineSet751 = LineSet()
-LineSet751.setVertexCount([2])
-Coordinate752 = Coordinate()
-Coordinate752.setPoint([0.0044,1.6209,0.0236,0.0341,1.6171,0.0752])
+Shape750 = x3d.Shape()
+LineSet751 = x3d.LineSet()
+LineSet751.vertexCount = [2]
+Coordinate752 = x3d.Coordinate()
+Coordinate752.point = (0.0044,1.6209,0.0236,0.0341,1.6171,0.0752)
 
-LineSet751.setCoord(Coordinate752)
-ColorRGBA753 = ColorRGBA()
-ColorRGBA753.setUSE("HAnimSiteLineColorRGBA")
+LineSet751.coord.append(Coordinate752)
+ColorRGBA753 = x3d.ColorRGBA()
+ColorRGBA753.USE = "HAnimSiteLineColorRGBA"
 
-LineSet751.setColor(ColorRGBA753)
+LineSet751.color.append(ColorRGBA753)
 
-Shape750.setGeometry(LineSet751)
+Shape750.geometry = LineSet751
 
-HAnimSegment706.addChildren(Shape750)
+HAnimSegment706.children.append(Shape750)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='supramenton'/>
-Shape754 = Shape()
-LineSet755 = LineSet()
-LineSet755.setVertexCount([2])
-Coordinate756 = Coordinate()
-Coordinate756.setPoint([0.0044,1.6209,0.0236,0.0061,1.541,0.0805])
+Shape754 = x3d.Shape()
+LineSet755 = x3d.LineSet()
+LineSet755.vertexCount = [2]
+Coordinate756 = x3d.Coordinate()
+Coordinate756.point = (0.0044,1.6209,0.0236,0.0061,1.5410,0.0805)
 
-LineSet755.setCoord(Coordinate756)
-ColorRGBA757 = ColorRGBA()
-ColorRGBA757.setUSE("HAnimSiteLineColorRGBA")
+LineSet755.coord.append(Coordinate756)
+ColorRGBA757 = x3d.ColorRGBA()
+ColorRGBA757.USE = "HAnimSiteLineColorRGBA"
 
-LineSet755.setColor(ColorRGBA757)
+LineSet755.color.append(ColorRGBA757)
 
-Shape754.setGeometry(LineSet755)
+Shape754.geometry = LineSet755
 
-HAnimSegment706.addChildren(Shape754)
+HAnimSegment706.children.append(Shape754)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='r_tragion'/>
-Shape758 = Shape()
-LineSet759 = LineSet()
-LineSet759.setVertexCount([2])
-Coordinate760 = Coordinate()
-Coordinate760.setPoint([0.0044,1.6209,0.0236,-0.0646,1.6347,0.0302])
+Shape758 = x3d.Shape()
+LineSet759 = x3d.LineSet()
+LineSet759.vertexCount = [2]
+Coordinate760 = x3d.Coordinate()
+Coordinate760.point = (0.0044,1.6209,0.0236,-0.0646,1.6347,0.0302)
 
-LineSet759.setCoord(Coordinate760)
-ColorRGBA761 = ColorRGBA()
-ColorRGBA761.setUSE("HAnimSiteLineColorRGBA")
+LineSet759.coord.append(Coordinate760)
+ColorRGBA761 = x3d.ColorRGBA()
+ColorRGBA761.USE = "HAnimSiteLineColorRGBA"
 
-LineSet759.setColor(ColorRGBA761)
+LineSet759.color.append(ColorRGBA761)
 
-Shape758.setGeometry(LineSet759)
+Shape758.geometry = LineSet759
 
-HAnimSegment706.addChildren(Shape758)
+HAnimSegment706.children.append(Shape758)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='r_gonion'/>
-Shape762 = Shape()
-LineSet763 = LineSet()
-LineSet763.setVertexCount([2])
-Coordinate764 = Coordinate()
-Coordinate764.setPoint([0.0044,1.6209,0.0236,-0.052,1.5529,0.0347])
+Shape762 = x3d.Shape()
+LineSet763 = x3d.LineSet()
+LineSet763.vertexCount = [2]
+Coordinate764 = x3d.Coordinate()
+Coordinate764.point = (0.0044,1.6209,0.0236,-0.0520,1.5529,0.0347)
 
-LineSet763.setCoord(Coordinate764)
-ColorRGBA765 = ColorRGBA()
-ColorRGBA765.setUSE("HAnimSiteLineColorRGBA")
+LineSet763.coord.append(Coordinate764)
+ColorRGBA765 = x3d.ColorRGBA()
+ColorRGBA765.USE = "HAnimSiteLineColorRGBA"
 
-LineSet763.setColor(ColorRGBA765)
+LineSet763.color.append(ColorRGBA765)
 
-Shape762.setGeometry(LineSet763)
+Shape762.geometry = LineSet763
 
-HAnimSegment706.addChildren(Shape762)
+HAnimSegment706.children.append(Shape762)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='l_tragion'/>
-Shape766 = Shape()
-LineSet767 = LineSet()
-LineSet767.setVertexCount([2])
-Coordinate768 = Coordinate()
-Coordinate768.setPoint([0.0044,1.6209,0.0236,0.0739,1.6348,0.0282])
+Shape766 = x3d.Shape()
+LineSet767 = x3d.LineSet()
+LineSet767.vertexCount = [2]
+Coordinate768 = x3d.Coordinate()
+Coordinate768.point = (0.0044,1.6209,0.0236,0.0739,1.6348,0.0282)
 
-LineSet767.setCoord(Coordinate768)
-ColorRGBA769 = ColorRGBA()
-ColorRGBA769.setUSE("HAnimSiteLineColorRGBA")
+LineSet767.coord.append(Coordinate768)
+ColorRGBA769 = x3d.ColorRGBA()
+ColorRGBA769.USE = "HAnimSiteLineColorRGBA"
 
-LineSet767.setColor(ColorRGBA769)
+LineSet767.color.append(ColorRGBA769)
 
-Shape766.setGeometry(LineSet767)
+Shape766.geometry = LineSet767
 
-HAnimSegment706.addChildren(Shape766)
+HAnimSegment706.children.append(Shape766)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='l_gonion'/>
-Shape770 = Shape()
-LineSet771 = LineSet()
-LineSet771.setVertexCount([2])
-Coordinate772 = Coordinate()
-Coordinate772.setPoint([0.0044,1.6209,0.0236,0.0631,1.553,0.033])
+Shape770 = x3d.Shape()
+LineSet771 = x3d.LineSet()
+LineSet771.vertexCount = [2]
+Coordinate772 = x3d.Coordinate()
+Coordinate772.point = (0.0044,1.6209,0.0236,0.0631,1.5530,0.0330)
 
-LineSet771.setCoord(Coordinate772)
-ColorRGBA773 = ColorRGBA()
-ColorRGBA773.setUSE("HAnimSiteLineColorRGBA")
+LineSet771.coord.append(Coordinate772)
+ColorRGBA773 = x3d.ColorRGBA()
+ColorRGBA773.USE = "HAnimSiteLineColorRGBA"
 
-LineSet771.setColor(ColorRGBA773)
+LineSet771.color.append(ColorRGBA773)
 
-Shape770.setGeometry(LineSet771)
+Shape770.geometry = LineSet771
 
-HAnimSegment706.addChildren(Shape770)
+HAnimSegment706.children.append(Shape770)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='skullbase'/> to <HAnimSite name='nuchale'/>
-Shape774 = Shape()
-LineSet775 = LineSet()
-LineSet775.setVertexCount([2])
-Coordinate776 = Coordinate()
-Coordinate776.setPoint([0.0044,1.6209,0.0236,0.0039,1.5972,-0.0796])
+Shape774 = x3d.Shape()
+LineSet775 = x3d.LineSet()
+LineSet775.vertexCount = [2]
+Coordinate776 = x3d.Coordinate()
+Coordinate776.point = (0.0044,1.6209,0.0236,0.0039,1.5972,-0.0796)
 
-LineSet775.setCoord(Coordinate776)
-ColorRGBA777 = ColorRGBA()
-ColorRGBA777.setUSE("HAnimSiteLineColorRGBA")
+LineSet775.coord.append(Coordinate776)
+ColorRGBA777 = x3d.ColorRGBA()
+ColorRGBA777.USE = "HAnimSiteLineColorRGBA"
 
-LineSet775.setColor(ColorRGBA777)
+LineSet775.color.append(ColorRGBA777)
 
-Shape774.setGeometry(LineSet775)
+Shape774.geometry = LineSet775
 
-HAnimSegment706.addChildren(Shape774)
-HAnimSite778 = HAnimSite()
-HAnimSite778.setName("skull_tip")
-HAnimSite778.setDEF("hanim_skull_tip")
-HAnimSite778.setTranslation([0.005,1.7504,0.0055])
+HAnimSegment706.children.append(Shape774)
+HAnimSite778 = x3d.HAnimSite()
+HAnimSite778.name = "skull_tip"
+HAnimSite778.DEF = "hanim_skull_tip"
+HAnimSite778.translation = [0.005,1.7504,0.0055]
 #TODO move skull_tip x to zero, check others for symmetry
 #HAnimSite visualization shape
-TouchSensor779 = TouchSensor()
-TouchSensor779.setDescription("HAnimSite skull_tip")
+TouchSensor779 = x3d.TouchSensor()
+TouchSensor779.description = "HAnimSite skull_tip"
 
-HAnimSite778.addChildren(TouchSensor779)
-Shape780 = Shape()
-Shape780.setUSE("HAnimSiteShape")
+HAnimSite778.children.append(TouchSensor779)
+Shape780 = x3d.Shape()
+Shape780.USE = "HAnimSiteShape"
 
-HAnimSite778.addChildren(Shape780)
+HAnimSite778.children.append(Shape780)
 
-HAnimSegment706.addChildren(HAnimSite778)
-HAnimSite781 = HAnimSite()
-HAnimSite781.setName("sellion_pt")
-HAnimSite781.setDEF("hanim_sellion_pt")
-HAnimSite781.setTranslation([0.0058,1.6316,0.0852])
+HAnimSegment706.children.append(HAnimSite778)
+HAnimSite781 = x3d.HAnimSite()
+HAnimSite781.name = "sellion_pt"
+HAnimSite781.DEF = "hanim_sellion_pt"
+HAnimSite781.translation = [0.0058,1.6316,0.0852]
 #HAnimSite visualization shape
-TouchSensor782 = TouchSensor()
-TouchSensor782.setDescription("HAnimSite sellion")
+TouchSensor782 = x3d.TouchSensor()
+TouchSensor782.description = "HAnimSite sellion"
 
-HAnimSite781.addChildren(TouchSensor782)
-Shape783 = Shape()
-Shape783.setUSE("HAnimSiteShape")
+HAnimSite781.children.append(TouchSensor782)
+Shape783 = x3d.Shape()
+Shape783.USE = "HAnimSiteShape"
 
-HAnimSite781.addChildren(Shape783)
+HAnimSite781.children.append(Shape783)
 
-HAnimSegment706.addChildren(HAnimSite781)
-HAnimSite784 = HAnimSite()
-HAnimSite784.setName("r_infraorbitale_pt")
-HAnimSite784.setDEF("hanim_r_infraorbitale_pt")
-HAnimSite784.setTranslation([-0.0237,1.6171,0.0752])
+HAnimSegment706.children.append(HAnimSite781)
+HAnimSite784 = x3d.HAnimSite()
+HAnimSite784.name = "r_infraorbitale_pt"
+HAnimSite784.DEF = "hanim_r_infraorbitale_pt"
+HAnimSite784.translation = [-0.0237,1.6171,0.0752]
 #HAnimSite visualization shape
-TouchSensor785 = TouchSensor()
-TouchSensor785.setDescription("HAnimSite r_infraorbitale")
+TouchSensor785 = x3d.TouchSensor()
+TouchSensor785.description = "HAnimSite r_infraorbitale"
 
-HAnimSite784.addChildren(TouchSensor785)
-Shape786 = Shape()
-Shape786.setUSE("HAnimSiteShape")
+HAnimSite784.children.append(TouchSensor785)
+Shape786 = x3d.Shape()
+Shape786.USE = "HAnimSiteShape"
 
-HAnimSite784.addChildren(Shape786)
+HAnimSite784.children.append(Shape786)
 
-HAnimSegment706.addChildren(HAnimSite784)
-HAnimSite787 = HAnimSite()
-HAnimSite787.setName("l_infraorbitale_pt")
-HAnimSite787.setDEF("hanim_l_infraorbitale_pt")
-HAnimSite787.setTranslation([0.0341,1.6171,0.0752])
+HAnimSegment706.children.append(HAnimSite784)
+HAnimSite787 = x3d.HAnimSite()
+HAnimSite787.name = "l_infraorbitale_pt"
+HAnimSite787.DEF = "hanim_l_infraorbitale_pt"
+HAnimSite787.translation = [0.0341,1.6171,0.0752]
 #HAnimSite visualization shape
-TouchSensor788 = TouchSensor()
-TouchSensor788.setDescription("HAnimSite l_infraorbitale")
+TouchSensor788 = x3d.TouchSensor()
+TouchSensor788.description = "HAnimSite l_infraorbitale"
 
-HAnimSite787.addChildren(TouchSensor788)
-Shape789 = Shape()
-Shape789.setUSE("HAnimSiteShape")
+HAnimSite787.children.append(TouchSensor788)
+Shape789 = x3d.Shape()
+Shape789.USE = "HAnimSiteShape"
 
-HAnimSite787.addChildren(Shape789)
+HAnimSite787.children.append(Shape789)
 
-HAnimSegment706.addChildren(HAnimSite787)
-HAnimSite790 = HAnimSite()
-HAnimSite790.setName("supramenton_pt")
-HAnimSite790.setDEF("hanim_supramenton_pt")
-HAnimSite790.setTranslation([0.0061,1.541,0.0805])
+HAnimSegment706.children.append(HAnimSite787)
+HAnimSite790 = x3d.HAnimSite()
+HAnimSite790.name = "supramenton_pt"
+HAnimSite790.DEF = "hanim_supramenton_pt"
+HAnimSite790.translation = [0.0061,1.541,0.0805]
 #HAnimSite visualization shape
-TouchSensor791 = TouchSensor()
-TouchSensor791.setDescription("HAnimSite supramenton")
+TouchSensor791 = x3d.TouchSensor()
+TouchSensor791.description = "HAnimSite supramenton"
 
-HAnimSite790.addChildren(TouchSensor791)
-Shape792 = Shape()
-Shape792.setUSE("HAnimSiteShape")
+HAnimSite790.children.append(TouchSensor791)
+Shape792 = x3d.Shape()
+Shape792.USE = "HAnimSiteShape"
 
-HAnimSite790.addChildren(Shape792)
+HAnimSite790.children.append(Shape792)
 
-HAnimSegment706.addChildren(HAnimSite790)
-HAnimSite793 = HAnimSite()
-HAnimSite793.setName("r_tragion_pt")
-HAnimSite793.setDEF("hanim_r_tragion_pt")
-HAnimSite793.setTranslation([-0.0646,1.6347,0.0302])
+HAnimSegment706.children.append(HAnimSite790)
+HAnimSite793 = x3d.HAnimSite()
+HAnimSite793.name = "r_tragion_pt"
+HAnimSite793.DEF = "hanim_r_tragion_pt"
+HAnimSite793.translation = [-0.0646,1.6347,0.0302]
 #HAnimSite visualization shape
-TouchSensor794 = TouchSensor()
-TouchSensor794.setDescription("HAnimSite r_tragion")
+TouchSensor794 = x3d.TouchSensor()
+TouchSensor794.description = "HAnimSite r_tragion"
 
-HAnimSite793.addChildren(TouchSensor794)
-Shape795 = Shape()
-Shape795.setUSE("HAnimSiteShape")
+HAnimSite793.children.append(TouchSensor794)
+Shape795 = x3d.Shape()
+Shape795.USE = "HAnimSiteShape"
 
-HAnimSite793.addChildren(Shape795)
+HAnimSite793.children.append(Shape795)
 
-HAnimSegment706.addChildren(HAnimSite793)
-HAnimSite796 = HAnimSite()
-HAnimSite796.setName("r_gonion_pt")
-HAnimSite796.setDEF("hanim_r_gonion_pt")
-HAnimSite796.setTranslation([-0.052,1.5529,0.0347])
+HAnimSegment706.children.append(HAnimSite793)
+HAnimSite796 = x3d.HAnimSite()
+HAnimSite796.name = "r_gonion_pt"
+HAnimSite796.DEF = "hanim_r_gonion_pt"
+HAnimSite796.translation = [-0.052,1.5529,0.0347]
 #HAnimSite visualization shape
-TouchSensor797 = TouchSensor()
-TouchSensor797.setDescription("HAnimSite r_gonion")
+TouchSensor797 = x3d.TouchSensor()
+TouchSensor797.description = "HAnimSite r_gonion"
 
-HAnimSite796.addChildren(TouchSensor797)
-Shape798 = Shape()
-Shape798.setUSE("HAnimSiteShape")
+HAnimSite796.children.append(TouchSensor797)
+Shape798 = x3d.Shape()
+Shape798.USE = "HAnimSiteShape"
 
-HAnimSite796.addChildren(Shape798)
+HAnimSite796.children.append(Shape798)
 
-HAnimSegment706.addChildren(HAnimSite796)
-HAnimSite799 = HAnimSite()
-HAnimSite799.setName("l_tragion_pt")
-HAnimSite799.setDEF("hanim_l_tragion_pt")
-HAnimSite799.setTranslation([0.0739,1.6348,0.0282])
+HAnimSegment706.children.append(HAnimSite796)
+HAnimSite799 = x3d.HAnimSite()
+HAnimSite799.name = "l_tragion_pt"
+HAnimSite799.DEF = "hanim_l_tragion_pt"
+HAnimSite799.translation = [0.0739,1.6348,0.0282]
 #HAnimSite visualization shape
-TouchSensor800 = TouchSensor()
-TouchSensor800.setDescription("HAnimSite l_tragion")
+TouchSensor800 = x3d.TouchSensor()
+TouchSensor800.description = "HAnimSite l_tragion"
 
-HAnimSite799.addChildren(TouchSensor800)
-Shape801 = Shape()
-Shape801.setUSE("HAnimSiteShape")
+HAnimSite799.children.append(TouchSensor800)
+Shape801 = x3d.Shape()
+Shape801.USE = "HAnimSiteShape"
 
-HAnimSite799.addChildren(Shape801)
+HAnimSite799.children.append(Shape801)
 
-HAnimSegment706.addChildren(HAnimSite799)
-HAnimSite802 = HAnimSite()
-HAnimSite802.setName("l_gonion_pt")
-HAnimSite802.setDEF("hanim_l_gonion_pt")
-HAnimSite802.setTranslation([0.0631,1.553,0.033])
+HAnimSegment706.children.append(HAnimSite799)
+HAnimSite802 = x3d.HAnimSite()
+HAnimSite802.name = "l_gonion_pt"
+HAnimSite802.DEF = "hanim_l_gonion_pt"
+HAnimSite802.translation = [0.0631,1.553,0.033]
 #HAnimSite visualization shape
-TouchSensor803 = TouchSensor()
-TouchSensor803.setDescription("HAnimSite l_gonion")
+TouchSensor803 = x3d.TouchSensor()
+TouchSensor803.description = "HAnimSite l_gonion"
 
-HAnimSite802.addChildren(TouchSensor803)
-Shape804 = Shape()
-Shape804.setUSE("HAnimSiteShape")
+HAnimSite802.children.append(TouchSensor803)
+Shape804 = x3d.Shape()
+Shape804.USE = "HAnimSiteShape"
 
-HAnimSite802.addChildren(Shape804)
+HAnimSite802.children.append(Shape804)
 
-HAnimSegment706.addChildren(HAnimSite802)
-HAnimSite805 = HAnimSite()
-HAnimSite805.setName("nuchale_pt")
-HAnimSite805.setDEF("hanim_nuchale_pt")
-HAnimSite805.setTranslation([0.0039,1.5972,-0.0796])
+HAnimSegment706.children.append(HAnimSite802)
+HAnimSite805 = x3d.HAnimSite()
+HAnimSite805.name = "nuchale_pt"
+HAnimSite805.DEF = "hanim_nuchale_pt"
+HAnimSite805.translation = [0.0039,1.5972,-0.0796]
 #HAnimSite visualization shape
-TouchSensor806 = TouchSensor()
-TouchSensor806.setDescription("HAnimSite nuchale")
+TouchSensor806 = x3d.TouchSensor()
+TouchSensor806.description = "HAnimSite nuchale"
 
-HAnimSite805.addChildren(TouchSensor806)
-Shape807 = Shape()
-Shape807.setUSE("HAnimSiteShape")
+HAnimSite805.children.append(TouchSensor806)
+Shape807 = x3d.Shape()
+Shape807.USE = "HAnimSiteShape"
 
-HAnimSite805.addChildren(Shape807)
+HAnimSite805.children.append(Shape807)
 
-HAnimSegment706.addChildren(HAnimSite805)
+HAnimSegment706.children.append(HAnimSite805)
 
-HAnimJoint705.addChildren(HAnimSegment706)
-HAnimJoint808 = HAnimJoint()
-HAnimJoint808.setName("l_eyeball_joint")
-HAnimJoint808.setDEF("hanim_l_eyeball_joint")
-HAnimJoint808.setCenter([0.0336,1.6332,0.0502])
-HAnimJoint808.setStiffness([0,0,0])
-HAnimSegment809 = HAnimSegment()
-HAnimSegment809.setName("l_eyeball")
-HAnimSegment809.setDEF("hanim_l_eyeball")
+HAnimJoint705.children.append(HAnimSegment706)
+HAnimJoint808 = x3d.HAnimJoint()
+HAnimJoint808.name = "l_eyeball_joint"
+HAnimJoint808.DEF = "hanim_l_eyeball_joint"
+HAnimJoint808.center = [0.0336,1.6332,0.0502]
+HAnimJoint808.ulimit = [0,0,0]
+HAnimJoint808.llimit = [0,0,0]
+HAnimSegment809 = x3d.HAnimSegment()
+HAnimSegment809.name = "l_eyeball"
+HAnimSegment809.DEF = "hanim_l_eyeball"
 #<HAnimJoint name='l_eyeball_joint'/> visualization sphere is placed within <HAnimSegment name='l_eyeball'/>
-TouchSensor810 = TouchSensor()
-TouchSensor810.setDescription("HAnimJoint l_eyeball_joint, HAnimSegment l_eyeball")
+TouchSensor810 = x3d.TouchSensor()
+TouchSensor810.description = "HAnimJoint l_eyeball_joint, HAnimSegment l_eyeball"
 
-HAnimSegment809.addChildren(TouchSensor810)
-Transform811 = Transform()
-Transform811.setTranslation([0.0336,1.6332,0.0502])
-Shape812 = Shape()
-Shape812.setUSE("HAnimJointShape")
+HAnimSegment809.children.append(TouchSensor810)
+Transform811 = x3d.Transform()
+Transform811.translation = [0.0336,1.6332,0.0502]
+Shape812 = x3d.Shape()
+Shape812.USE = "HAnimJointShape"
 
-Transform811.addChildren(Shape812)
+Transform811.children.append(Shape812)
 
-HAnimSegment809.addChildren(Transform811)
+HAnimSegment809.children.append(Transform811)
 #HAnimSite/Viewpoint visualization line segment from ancestor <HAnimJoint name='l_eyeball_joint'/> to <HAnimSite name='l_eyeball_site_view'/>
-Shape813 = Shape()
-LineSet814 = LineSet()
-LineSet814.setVertexCount([2])
-Coordinate815 = Coordinate()
-Coordinate815.setPoint([0.0336,1.6332,0.0502,0.034,1.64,0.05])
+Shape813 = x3d.Shape()
+LineSet814 = x3d.LineSet()
+LineSet814.vertexCount = [2]
+Coordinate815 = x3d.Coordinate()
+Coordinate815.point = (0.0336,1.6332,0.0502,0.0340,1.6400,0.0500)
 
-LineSet814.setCoord(Coordinate815)
-ColorRGBA816 = ColorRGBA()
-ColorRGBA816.setDEF("HAnimSiteViewpointLineColorRGBA")
-ColorRGBA816.setColor([0,0,1,1,0,0,1,0.1])
+LineSet814.coord.append(Coordinate815)
+ColorRGBA816 = x3d.ColorRGBA()
+ColorRGBA816.DEF = "HAnimSiteViewpointLineColorRGBA"
+ColorRGBA816.color = [0,0,1,1,0,0,1,0.1]
 
-LineSet814.setColor(ColorRGBA816)
+LineSet814.color.append(ColorRGBA816)
 
-Shape813.setGeometry(LineSet814)
+Shape813.geometry = LineSet814
 
-HAnimSegment809.addChildren(Shape813)
-HAnimSite817 = HAnimSite()
-HAnimSite817.setName("l_eyeball_site_view")
-HAnimSite817.setDEF("hanim_l_eyeball_site_view")
-HAnimSite817.setTranslation([0.034,1.64,0.05])
+HAnimSegment809.children.append(Shape813)
+HAnimSite817 = x3d.HAnimSite()
+HAnimSite817.name = "l_eyeball_site_view"
+HAnimSite817.DEF = "hanim_l_eyeball_site_view"
+HAnimSite817.translation = [0.034,1.64,0.05]
 #HAnimSite visualization shape
-TouchSensor818 = TouchSensor()
-TouchSensor818.setDescription("HAnimSite l_eyeball_site_view")
+TouchSensor818 = x3d.TouchSensor()
+TouchSensor818.description = "HAnimSite l_eyeball_site_view"
 
-HAnimSite817.addChildren(TouchSensor818)
-Shape819 = Shape()
-Shape819.setUSE("HAnimSiteShape")
+HAnimSite817.children.append(TouchSensor818)
+Shape819 = x3d.Shape()
+Shape819.USE = "HAnimSiteShape"
 
-HAnimSite817.addChildren(Shape819)
-Viewpoint820 = Viewpoint()
-Viewpoint820.setDEF("hanim_l_eyeball_site_viewpoint")
-Viewpoint820.setDescription("l_eyeball_site_viewpoint looking forward")
-Viewpoint820.setOrientation([0,1,0,3.141593])
-Viewpoint820.setPosition([0,0,0])
+HAnimSite817.children.append(Shape819)
+Viewpoint820 = x3d.Viewpoint()
+Viewpoint820.DEF = "hanim_l_eyeball_site_viewpoint"
+Viewpoint820.description = "l_eyeball_site_viewpoint looking forward"
+Viewpoint820.orientation = [0,1,0,3.141593]
+Viewpoint820.position = [0,0,0]
 
-HAnimSite817.addChildren(Viewpoint820)
+HAnimSite817.children.append(Viewpoint820)
 #HAnimSite/Viewpoint visualization shape
-Anchor821 = Anchor()
-Anchor821.setDescription("HAnimSite hanim_l_eyeball_site_view Viewpoint")
-Anchor821.setUrl(["#hanim_l_eyeball_site_viewpoint"])
-LOD822 = LOD()
-LOD822.setForceTransitions(True)
-LOD822.setRange([0.04])
-WorldInfo823 = WorldInfo()
-WorldInfo823.setInfo(["hide diamond when close"])
+Anchor821 = x3d.Anchor()
+Anchor821.description = "HAnimSite hanim_l_eyeball_site_view Viewpoint"
+Anchor821.url = ["#hanim_l_eyeball_site_viewpoint"]
+LOD822 = x3d.LOD()
+LOD822.forceTransitions = True
+LOD822.range = [0.04]
+WorldInfo823 = x3d.WorldInfo()
+WorldInfo823.info = ["hide diamond when close"]
 
-LOD822.addChildren(WorldInfo823)
-Shape824 = Shape()
-Shape824.setDEF("HAnimSiteViewpointShape")
-IndexedFaceSet825 = IndexedFaceSet()
-IndexedFaceSet825.setDEF("SiteViewpointDiamondIFS")
-IndexedFaceSet825.setCoordIndex([0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1])
-IndexedFaceSet825.setCreaseAngle(0.5)
-Coordinate826 = Coordinate()
-Coordinate826.setPoint([0,0.01,0,-0.01,0,0,0,0,0.01,0.01,0,0,0,0,-0.01,0,-0.01,0])
+LOD822.children.append(WorldInfo823)
+Shape824 = x3d.Shape()
+Shape824.DEF = "HAnimSiteViewpointShape"
+IndexedFaceSet825 = x3d.IndexedFaceSet()
+IndexedFaceSet825.DEF = "SiteViewpointDiamondIFS"
+IndexedFaceSet825.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
+IndexedFaceSet825.creaseAngle = 0.5
+Coordinate826 = x3d.Coordinate()
+Coordinate826.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet825.setCoord(Coordinate826)
+IndexedFaceSet825.coord.append(Coordinate826)
 
-Shape824.setGeometry(IndexedFaceSet825)
-Appearance827 = Appearance()
-Material828 = Material()
-Material828.setDiffuseColor([0,0,1])
-Material828.setTransparency(0.6)
+Shape824.geometry = IndexedFaceSet825
+Appearance827 = x3d.Appearance()
+Material828 = x3d.Material()
+Material828.diffuseColor = [0,0,1]
+Material828.transparency = 0.6
 
-Appearance827.setMaterial(Material828)
+Appearance827.material = Material828
 
-Shape824.setAppearance(Appearance827)
+Shape824.appearance = Appearance827
 
-LOD822.addChildren(Shape824)
+LOD822.children.append(Shape824)
 
-Anchor821.addChildren(LOD822)
+Anchor821.children.append(LOD822)
 
-HAnimSite817.addChildren(Anchor821)
+HAnimSite817.children.append(Anchor821)
 
-HAnimSegment809.addChildren(HAnimSite817)
+HAnimSegment809.children.append(HAnimSite817)
 
-HAnimJoint808.addChildren(HAnimSegment809)
+HAnimJoint808.children.append(HAnimSegment809)
 
-HAnimJoint705.addChildren(HAnimJoint808)
-HAnimJoint829 = HAnimJoint()
-HAnimJoint829.setName("l_eyelid_joint")
-HAnimJoint829.setDEF("hanim_l_eyelid_joint")
-HAnimJoint829.setCenter([0.0336,1.6332,0.0502])
-HAnimJoint829.setStiffness([0,0,0])
-HAnimSegment830 = HAnimSegment()
-HAnimSegment830.setName("l_eyelid")
-HAnimSegment830.setDEF("hanim_l_eyelid")
+HAnimJoint705.children.append(HAnimJoint808)
+HAnimJoint829 = x3d.HAnimJoint()
+HAnimJoint829.name = "l_eyelid_joint"
+HAnimJoint829.DEF = "hanim_l_eyelid_joint"
+HAnimJoint829.center = [0.0336,1.6332,0.0502]
+HAnimJoint829.ulimit = [0,0,0]
+HAnimJoint829.llimit = [0,0,0]
+HAnimSegment830 = x3d.HAnimSegment()
+HAnimSegment830.name = "l_eyelid"
+HAnimSegment830.DEF = "hanim_l_eyelid"
 #<HAnimJoint name='l_eyelid_joint'/> visualization sphere is placed within <HAnimSegment name='l_eyelid'/>
-TouchSensor831 = TouchSensor()
-TouchSensor831.setDescription("HAnimJoint l_eyelid_joint, HAnimSegment l_eyelid")
+TouchSensor831 = x3d.TouchSensor()
+TouchSensor831.description = "HAnimJoint l_eyelid_joint, HAnimSegment l_eyelid"
 
-HAnimSegment830.addChildren(TouchSensor831)
-Transform832 = Transform()
-Transform832.setTranslation([0.0336,1.6332,0.0502])
-Shape833 = Shape()
-Shape833.setUSE("HAnimJointShape")
+HAnimSegment830.children.append(TouchSensor831)
+Transform832 = x3d.Transform()
+Transform832.translation = [0.0336,1.6332,0.0502]
+Shape833 = x3d.Shape()
+Shape833.USE = "HAnimJointShape"
 
-Transform832.addChildren(Shape833)
+Transform832.children.append(Shape833)
 
-HAnimSegment830.addChildren(Transform832)
+HAnimSegment830.children.append(Transform832)
 
-HAnimJoint829.addChildren(HAnimSegment830)
+HAnimJoint829.children.append(HAnimSegment830)
 
-HAnimJoint705.addChildren(HAnimJoint829)
-HAnimJoint834 = HAnimJoint()
-HAnimJoint834.setName("l_eyebrow_joint")
-HAnimJoint834.setDEF("hanim_l_eyebrow_joint")
-HAnimJoint834.setCenter([0.0336,1.635,0.0506])
-HAnimJoint834.setStiffness([0,0,0])
-HAnimSegment835 = HAnimSegment()
-HAnimSegment835.setName("l_eyebrow")
-HAnimSegment835.setDEF("hanim_l_eyebrow")
+HAnimJoint705.children.append(HAnimJoint829)
+HAnimJoint834 = x3d.HAnimJoint()
+HAnimJoint834.name = "l_eyebrow_joint"
+HAnimJoint834.DEF = "hanim_l_eyebrow_joint"
+HAnimJoint834.center = [0.0336,1.635,0.0506]
+HAnimJoint834.ulimit = [0,0,0]
+HAnimJoint834.llimit = [0,0,0]
+HAnimSegment835 = x3d.HAnimSegment()
+HAnimSegment835.name = "l_eyebrow"
+HAnimSegment835.DEF = "hanim_l_eyebrow"
 #<HAnimJoint name='l_eyebrow_joint'/> visualization sphere is placed within <HAnimSegment name='l_eyebrow'/>
-TouchSensor836 = TouchSensor()
-TouchSensor836.setDescription("HAnimJoint l_eyebrow_joint, HAnimSegment l_eyebrow")
+TouchSensor836 = x3d.TouchSensor()
+TouchSensor836.description = "HAnimJoint l_eyebrow_joint, HAnimSegment l_eyebrow"
 
-HAnimSegment835.addChildren(TouchSensor836)
-Transform837 = Transform()
-Transform837.setTranslation([0.0336,1.635,0.0506])
-Shape838 = Shape()
-Shape838.setUSE("HAnimJointShape")
+HAnimSegment835.children.append(TouchSensor836)
+Transform837 = x3d.Transform()
+Transform837.translation = [0.0336,1.635,0.0506]
+Shape838 = x3d.Shape()
+Shape838.USE = "HAnimJointShape"
 
-Transform837.addChildren(Shape838)
+Transform837.children.append(Shape838)
 
-HAnimSegment835.addChildren(Transform837)
+HAnimSegment835.children.append(Transform837)
 
-HAnimJoint834.addChildren(HAnimSegment835)
+HAnimJoint834.children.append(HAnimSegment835)
 
-HAnimJoint705.addChildren(HAnimJoint834)
-HAnimJoint839 = HAnimJoint()
-HAnimJoint839.setName("r_eyeball_joint")
-HAnimJoint839.setDEF("hanim_r_eyeball_joint")
-HAnimJoint839.setCenter([-0.0336,1.6332,0.0502])
-HAnimJoint839.setStiffness([0,0,0])
-HAnimSegment840 = HAnimSegment()
-HAnimSegment840.setName("r_eyeball")
-HAnimSegment840.setDEF("hanim_r_eyeball")
+HAnimJoint705.children.append(HAnimJoint834)
+HAnimJoint839 = x3d.HAnimJoint()
+HAnimJoint839.name = "r_eyeball_joint"
+HAnimJoint839.DEF = "hanim_r_eyeball_joint"
+HAnimJoint839.center = [-0.0336,1.6332,0.0502]
+HAnimJoint839.ulimit = [0,0,0]
+HAnimJoint839.llimit = [0,0,0]
+HAnimSegment840 = x3d.HAnimSegment()
+HAnimSegment840.name = "r_eyeball"
+HAnimSegment840.DEF = "hanim_r_eyeball"
 #<HAnimJoint name='r_eyeball_joint'/> visualization sphere is placed within <HAnimSegment name='r_eyeball'/>
-TouchSensor841 = TouchSensor()
-TouchSensor841.setDescription("HAnimJoint r_eyeball_joint, HAnimSegment r_eyeball")
+TouchSensor841 = x3d.TouchSensor()
+TouchSensor841.description = "HAnimJoint r_eyeball_joint, HAnimSegment r_eyeball"
 
-HAnimSegment840.addChildren(TouchSensor841)
-Transform842 = Transform()
-Transform842.setTranslation([-0.0336,1.6332,0.0502])
-Shape843 = Shape()
-Shape843.setUSE("HAnimJointShape")
+HAnimSegment840.children.append(TouchSensor841)
+Transform842 = x3d.Transform()
+Transform842.translation = [-0.0336,1.6332,0.0502]
+Shape843 = x3d.Shape()
+Shape843.USE = "HAnimJointShape"
 
-Transform842.addChildren(Shape843)
+Transform842.children.append(Shape843)
 
-HAnimSegment840.addChildren(Transform842)
+HAnimSegment840.children.append(Transform842)
 #HAnimSite/Viewpoint visualization line segment from ancestor <HAnimJoint name='r_eyeball_joint'/> to <HAnimSite name='r_eyeball_site_view'/>
-Shape844 = Shape()
-LineSet845 = LineSet()
-LineSet845.setVertexCount([2])
-Coordinate846 = Coordinate()
-Coordinate846.setPoint([-0.0336,1.6332,0.0502,-0.034,1.64,0.05])
+Shape844 = x3d.Shape()
+LineSet845 = x3d.LineSet()
+LineSet845.vertexCount = [2]
+Coordinate846 = x3d.Coordinate()
+Coordinate846.point = (-0.0336,1.6332,0.0502,-0.0340,1.6400,0.0500)
 
-LineSet845.setCoord(Coordinate846)
-ColorRGBA847 = ColorRGBA()
-ColorRGBA847.setUSE("HAnimSiteViewpointLineColorRGBA")
+LineSet845.coord.append(Coordinate846)
+ColorRGBA847 = x3d.ColorRGBA()
+ColorRGBA847.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet845.setColor(ColorRGBA847)
+LineSet845.color.append(ColorRGBA847)
 
-Shape844.setGeometry(LineSet845)
+Shape844.geometry = LineSet845
 
-HAnimSegment840.addChildren(Shape844)
-HAnimSite848 = HAnimSite()
-HAnimSite848.setName("r_eyeball_site_view")
-HAnimSite848.setDEF("hanim_r_eyeball_site_view")
-HAnimSite848.setTranslation([-0.034,1.64,0.05])
+HAnimSegment840.children.append(Shape844)
+HAnimSite848 = x3d.HAnimSite()
+HAnimSite848.name = "r_eyeball_site_view"
+HAnimSite848.DEF = "hanim_r_eyeball_site_view"
+HAnimSite848.translation = [-0.034,1.64,0.05]
 #HAnimSite visualization shape
-TouchSensor849 = TouchSensor()
-TouchSensor849.setDescription("HAnimSite r_eyeball_site_view")
+TouchSensor849 = x3d.TouchSensor()
+TouchSensor849.description = "HAnimSite r_eyeball_site_view"
 
-HAnimSite848.addChildren(TouchSensor849)
-Shape850 = Shape()
-Shape850.setUSE("HAnimSiteShape")
+HAnimSite848.children.append(TouchSensor849)
+Shape850 = x3d.Shape()
+Shape850.USE = "HAnimSiteShape"
 
-HAnimSite848.addChildren(Shape850)
-Viewpoint851 = Viewpoint()
-Viewpoint851.setDEF("hanim_r_eyeball_site_viewpoint")
-Viewpoint851.setDescription("r_eyeball_site_viewpoint looking forward")
-Viewpoint851.setOrientation([0,1,0,3.141593])
-Viewpoint851.setPosition([0,0,0])
+HAnimSite848.children.append(Shape850)
+Viewpoint851 = x3d.Viewpoint()
+Viewpoint851.DEF = "hanim_r_eyeball_site_viewpoint"
+Viewpoint851.description = "r_eyeball_site_viewpoint looking forward"
+Viewpoint851.orientation = [0,1,0,3.141593]
+Viewpoint851.position = [0,0,0]
 
-HAnimSite848.addChildren(Viewpoint851)
+HAnimSite848.children.append(Viewpoint851)
 #HAnimSite/Viewpoint visualization shape
-Anchor852 = Anchor()
-Anchor852.setDescription("HAnimSite hanim_r_eyeball_site_view Viewpoint")
-Anchor852.setUrl(["#hanim_r_eyeball_site_viewpoint"])
-LOD853 = LOD()
-LOD853.setForceTransitions(True)
-LOD853.setRange([0.04])
-WorldInfo854 = WorldInfo()
-WorldInfo854.setInfo(["hide diamond when close"])
+Anchor852 = x3d.Anchor()
+Anchor852.description = "HAnimSite hanim_r_eyeball_site_view Viewpoint"
+Anchor852.url = ["#hanim_r_eyeball_site_viewpoint"]
+LOD853 = x3d.LOD()
+LOD853.forceTransitions = True
+LOD853.range = [0.04]
+WorldInfo854 = x3d.WorldInfo()
+WorldInfo854.info = ["hide diamond when close"]
 
-LOD853.addChildren(WorldInfo854)
-Shape855 = Shape()
-Shape855.setUSE("HAnimSiteViewpointShape")
+LOD853.children.append(WorldInfo854)
+Shape855 = x3d.Shape()
+Shape855.USE = "HAnimSiteViewpointShape"
 
-LOD853.addChildren(Shape855)
+LOD853.children.append(Shape855)
 
-Anchor852.addChildren(LOD853)
+Anchor852.children.append(LOD853)
 
-HAnimSite848.addChildren(Anchor852)
+HAnimSite848.children.append(Anchor852)
 
-HAnimSegment840.addChildren(HAnimSite848)
+HAnimSegment840.children.append(HAnimSite848)
 
-HAnimJoint839.addChildren(HAnimSegment840)
+HAnimJoint839.children.append(HAnimSegment840)
 
-HAnimJoint705.addChildren(HAnimJoint839)
-HAnimJoint856 = HAnimJoint()
-HAnimJoint856.setName("r_eyelid_joint")
-HAnimJoint856.setDEF("hanim_r_eyelid_joint")
-HAnimJoint856.setCenter([-0.0336,1.6332,0.0502])
-HAnimJoint856.setStiffness([0,0,0])
-HAnimSegment857 = HAnimSegment()
-HAnimSegment857.setName("r_eyelid")
-HAnimSegment857.setDEF("hanim_r_eyelid")
+HAnimJoint705.children.append(HAnimJoint839)
+HAnimJoint856 = x3d.HAnimJoint()
+HAnimJoint856.name = "r_eyelid_joint"
+HAnimJoint856.DEF = "hanim_r_eyelid_joint"
+HAnimJoint856.center = [-0.0336,1.6332,0.0502]
+HAnimJoint856.ulimit = [0,0,0]
+HAnimJoint856.llimit = [0,0,0]
+HAnimSegment857 = x3d.HAnimSegment()
+HAnimSegment857.name = "r_eyelid"
+HAnimSegment857.DEF = "hanim_r_eyelid"
 #<HAnimJoint name='r_eyelid_joint'/> visualization sphere is placed within <HAnimSegment name='r_eyelid'/>
-TouchSensor858 = TouchSensor()
-TouchSensor858.setDescription("HAnimJoint r_eyelid_joint, HAnimSegment r_eyelid")
+TouchSensor858 = x3d.TouchSensor()
+TouchSensor858.description = "HAnimJoint r_eyelid_joint, HAnimSegment r_eyelid"
 
-HAnimSegment857.addChildren(TouchSensor858)
-Transform859 = Transform()
-Transform859.setTranslation([-0.0336,1.6332,0.0502])
-Shape860 = Shape()
-Shape860.setUSE("HAnimJointShape")
+HAnimSegment857.children.append(TouchSensor858)
+Transform859 = x3d.Transform()
+Transform859.translation = [-0.0336,1.6332,0.0502]
+Shape860 = x3d.Shape()
+Shape860.USE = "HAnimJointShape"
 
-Transform859.addChildren(Shape860)
+Transform859.children.append(Shape860)
 
-HAnimSegment857.addChildren(Transform859)
+HAnimSegment857.children.append(Transform859)
 
-HAnimJoint856.addChildren(HAnimSegment857)
+HAnimJoint856.children.append(HAnimSegment857)
 
-HAnimJoint705.addChildren(HAnimJoint856)
-HAnimJoint861 = HAnimJoint()
-HAnimJoint861.setName("r_eyebrow_joint")
-HAnimJoint861.setDEF("hanim_r_eyebrow_joint")
-HAnimJoint861.setCenter([-0.0336,1.635,0.0506])
-HAnimJoint861.setStiffness([0,0,0])
-HAnimSegment862 = HAnimSegment()
-HAnimSegment862.setName("r_eyebrow")
-HAnimSegment862.setDEF("hanim_r_eyebrow")
+HAnimJoint705.children.append(HAnimJoint856)
+HAnimJoint861 = x3d.HAnimJoint()
+HAnimJoint861.name = "r_eyebrow_joint"
+HAnimJoint861.DEF = "hanim_r_eyebrow_joint"
+HAnimJoint861.center = [-0.0336,1.635,0.0506]
+HAnimJoint861.ulimit = [0,0,0]
+HAnimJoint861.llimit = [0,0,0]
+HAnimSegment862 = x3d.HAnimSegment()
+HAnimSegment862.name = "r_eyebrow"
+HAnimSegment862.DEF = "hanim_r_eyebrow"
 #<HAnimJoint name='r_eyebrow_joint'/> visualization sphere is placed within <HAnimSegment name='r_eyebrow'/>
-TouchSensor863 = TouchSensor()
-TouchSensor863.setDescription("HAnimJoint r_eyebrow_joint, HAnimSegment r_eyebrow")
+TouchSensor863 = x3d.TouchSensor()
+TouchSensor863.description = "HAnimJoint r_eyebrow_joint, HAnimSegment r_eyebrow"
 
-HAnimSegment862.addChildren(TouchSensor863)
-Transform864 = Transform()
-Transform864.setTranslation([-0.0336,1.635,0.0506])
-Shape865 = Shape()
-Shape865.setUSE("HAnimJointShape")
+HAnimSegment862.children.append(TouchSensor863)
+Transform864 = x3d.Transform()
+Transform864.translation = [-0.0336,1.635,0.0506]
+Shape865 = x3d.Shape()
+Shape865.USE = "HAnimJointShape"
 
-Transform864.addChildren(Shape865)
+Transform864.children.append(Shape865)
 
-HAnimSegment862.addChildren(Transform864)
+HAnimSegment862.children.append(Transform864)
 
-HAnimJoint861.addChildren(HAnimSegment862)
+HAnimJoint861.children.append(HAnimSegment862)
 
-HAnimJoint705.addChildren(HAnimJoint861)
-HAnimJoint866 = HAnimJoint()
-HAnimJoint866.setName("temporomandibular")
-HAnimJoint866.setDEF("hanim_temporomandibular")
-HAnimJoint866.setCenter([0,1.63,0.015])
-HAnimJoint866.setStiffness([0,0,0])
+HAnimJoint705.children.append(HAnimJoint861)
+HAnimJoint866 = x3d.HAnimJoint()
+HAnimJoint866.name = "temporomandibular"
+HAnimJoint866.DEF = "hanim_temporomandibular"
+HAnimJoint866.center = [0,1.63,0.015]
+HAnimJoint866.ulimit = [0,0,0]
+HAnimJoint866.llimit = [0,0,0]
 #Single joint, single segment for jaw, two sites for left/right TMJs https://en.wikipedia.org/wiki/Temporomandibular_joint
-HAnimSegment867 = HAnimSegment()
-HAnimSegment867.setName("jaw")
-HAnimSegment867.setDEF("hanim_jaw")
+HAnimSegment867 = x3d.HAnimSegment()
+HAnimSegment867.name = "jaw"
+HAnimSegment867.DEF = "hanim_jaw"
 #<HAnimJoint name='temporomandibular'/> visualization sphere is placed within <HAnimSegment name='jaw'/>
-TouchSensor868 = TouchSensor()
-TouchSensor868.setDescription("HAnimJoint temporomandibular, HAnimSegment jaw")
+TouchSensor868 = x3d.TouchSensor()
+TouchSensor868.description = "HAnimJoint temporomandibular, HAnimSegment jaw"
 
-HAnimSegment867.addChildren(TouchSensor868)
-Transform869 = Transform()
-Transform869.setTranslation([0,1.63,0.015])
-Shape870 = Shape()
-Shape870.setUSE("HAnimJointShape")
+HAnimSegment867.children.append(TouchSensor868)
+Transform869 = x3d.Transform()
+Transform869.translation = [0,1.63,0.015]
+Shape870 = x3d.Shape()
+Shape870.USE = "HAnimJointShape"
 
-Transform869.addChildren(Shape870)
+Transform869.children.append(Shape870)
 
-HAnimSegment867.addChildren(Transform869)
+HAnimSegment867.children.append(Transform869)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='temporomandibular'/> to <HAnimSite name='temporomandibular_l_site'/>
-Shape871 = Shape()
-LineSet872 = LineSet()
-LineSet872.setVertexCount([2])
-Coordinate873 = Coordinate()
-Coordinate873.setPoint([0,1.63,0.015,0.045,1.63,0])
+Shape871 = x3d.Shape()
+LineSet872 = x3d.LineSet()
+LineSet872.vertexCount = [2]
+Coordinate873 = x3d.Coordinate()
+Coordinate873.point = (0.0000,1.6300,0.0150,0.0450,1.6300,0.0000)
 
-LineSet872.setCoord(Coordinate873)
-ColorRGBA874 = ColorRGBA()
-ColorRGBA874.setUSE("HAnimSiteLineColorRGBA")
+LineSet872.coord.append(Coordinate873)
+ColorRGBA874 = x3d.ColorRGBA()
+ColorRGBA874.USE = "HAnimSiteLineColorRGBA"
 
-LineSet872.setColor(ColorRGBA874)
+LineSet872.color.append(ColorRGBA874)
 
-Shape871.setGeometry(LineSet872)
+Shape871.geometry = LineSet872
 
-HAnimSegment867.addChildren(Shape871)
+HAnimSegment867.children.append(Shape871)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='temporomandibular'/> to <HAnimSite name='temporomandibular_r_site'/>
-Shape875 = Shape()
-LineSet876 = LineSet()
-LineSet876.setVertexCount([2])
-Coordinate877 = Coordinate()
-Coordinate877.setPoint([0,1.63,0.015,-0.045,1.63,0])
+Shape875 = x3d.Shape()
+LineSet876 = x3d.LineSet()
+LineSet876.vertexCount = [2]
+Coordinate877 = x3d.Coordinate()
+Coordinate877.point = (0.0000,1.6300,0.0150,-0.0450,1.6300,0.0000)
 
-LineSet876.setCoord(Coordinate877)
-ColorRGBA878 = ColorRGBA()
-ColorRGBA878.setUSE("HAnimSiteLineColorRGBA")
+LineSet876.coord.append(Coordinate877)
+ColorRGBA878 = x3d.ColorRGBA()
+ColorRGBA878.USE = "HAnimSiteLineColorRGBA"
 
-LineSet876.setColor(ColorRGBA878)
+LineSet876.color.append(ColorRGBA878)
 
-Shape875.setGeometry(LineSet876)
+Shape875.geometry = LineSet876
 
-HAnimSegment867.addChildren(Shape875)
-HAnimSite879 = HAnimSite()
-HAnimSite879.setName("temporomandibular_l_site_pt")
-HAnimSite879.setDEF("hanim_temporomandibular_l_site_pt")
-HAnimSite879.setTranslation([0.045,1.63,0])
+HAnimSegment867.children.append(Shape875)
+HAnimSite879 = x3d.HAnimSite()
+HAnimSite879.name = "temporomandibular_l_site_pt"
+HAnimSite879.DEF = "hanim_temporomandibular_l_site_pt"
+HAnimSite879.translation = [0.045,1.63,0]
 #HAnimSite visualization shape
-TouchSensor880 = TouchSensor()
-TouchSensor880.setDescription("HAnimSite temporomandibular_l_site")
+TouchSensor880 = x3d.TouchSensor()
+TouchSensor880.description = "HAnimSite temporomandibular_l_site"
 
-HAnimSite879.addChildren(TouchSensor880)
-Shape881 = Shape()
-Shape881.setUSE("HAnimSiteShape")
+HAnimSite879.children.append(TouchSensor880)
+Shape881 = x3d.Shape()
+Shape881.USE = "HAnimSiteShape"
 
-HAnimSite879.addChildren(Shape881)
+HAnimSite879.children.append(Shape881)
 
-HAnimSegment867.addChildren(HAnimSite879)
-HAnimSite882 = HAnimSite()
-HAnimSite882.setName("temporomandibular_r_site_pt")
-HAnimSite882.setDEF("hanim_temporomandibular_r_site_pt")
-HAnimSite882.setTranslation([-0.045,1.63,0])
+HAnimSegment867.children.append(HAnimSite879)
+HAnimSite882 = x3d.HAnimSite()
+HAnimSite882.name = "temporomandibular_r_site_pt"
+HAnimSite882.DEF = "hanim_temporomandibular_r_site_pt"
+HAnimSite882.translation = [-0.045,1.63,0]
 #HAnimSite visualization shape
-TouchSensor883 = TouchSensor()
-TouchSensor883.setDescription("HAnimSite temporomandibular_r_site")
+TouchSensor883 = x3d.TouchSensor()
+TouchSensor883.description = "HAnimSite temporomandibular_r_site"
 
-HAnimSite882.addChildren(TouchSensor883)
-Shape884 = Shape()
-Shape884.setUSE("HAnimSiteShape")
+HAnimSite882.children.append(TouchSensor883)
+Shape884 = x3d.Shape()
+Shape884.USE = "HAnimSiteShape"
 
-HAnimSite882.addChildren(Shape884)
+HAnimSite882.children.append(Shape884)
 
-HAnimSegment867.addChildren(HAnimSite882)
+HAnimSegment867.children.append(HAnimSite882)
 
-HAnimJoint866.addChildren(HAnimSegment867)
+HAnimJoint866.children.append(HAnimSegment867)
 
-HAnimJoint705.addChildren(HAnimJoint866)
+HAnimJoint705.children.append(HAnimJoint866)
 
-HAnimJoint696.addChildren(HAnimJoint705)
+HAnimJoint696.children.append(HAnimJoint705)
 
-HAnimJoint687.addChildren(HAnimJoint696)
+HAnimJoint687.children.append(HAnimJoint696)
 
-HAnimJoint678.addChildren(HAnimJoint687)
+HAnimJoint678.children.append(HAnimJoint687)
 
-HAnimJoint669.addChildren(HAnimJoint678)
+HAnimJoint669.children.append(HAnimJoint678)
 
-HAnimJoint660.addChildren(HAnimJoint669)
+HAnimJoint660.children.append(HAnimJoint669)
 
-HAnimJoint651.addChildren(HAnimJoint660)
+HAnimJoint651.children.append(HAnimJoint660)
 
-HAnimJoint628.addChildren(HAnimJoint651)
+HAnimJoint628.children.append(HAnimJoint651)
 
-HAnimJoint597.addChildren(HAnimJoint628)
-HAnimJoint885 = HAnimJoint()
-HAnimJoint885.setName("l_sternoclavicular")
-HAnimJoint885.setDEF("hanim_l_sternoclavicular")
-HAnimJoint885.setCenter([0.082,1.4488,-0.0353])
-HAnimJoint885.setStiffness([0,0,0])
-HAnimSegment886 = HAnimSegment()
-HAnimSegment886.setName("l_clavicle")
-HAnimSegment886.setDEF("hanim_l_clavicle")
+HAnimJoint597.children.append(HAnimJoint628)
+HAnimJoint885 = x3d.HAnimJoint()
+HAnimJoint885.name = "l_sternoclavicular"
+HAnimJoint885.DEF = "hanim_l_sternoclavicular"
+HAnimJoint885.center = [0.082,1.4488,-0.0353]
+HAnimJoint885.ulimit = [0,0,0]
+HAnimJoint885.llimit = [0,0,0]
+HAnimSegment886 = x3d.HAnimSegment()
+HAnimSegment886.name = "l_clavicle"
+HAnimSegment886.DEF = "hanim_l_clavicle"
 #<HAnimJoint name='l_sternoclavicular'/> visualization sphere is placed within <HAnimSegment name='l_clavicle'/>
-TouchSensor887 = TouchSensor()
-TouchSensor887.setDescription("HAnimJoint l_sternoclavicular, HAnimSegment l_clavicle")
+TouchSensor887 = x3d.TouchSensor()
+TouchSensor887.description = "HAnimJoint l_sternoclavicular, HAnimSegment l_clavicle"
 
-HAnimSegment886.addChildren(TouchSensor887)
-Transform888 = Transform()
-Transform888.setTranslation([0.082,1.4488,-0.0353])
-Shape889 = Shape()
-Shape889.setUSE("HAnimJointShape")
+HAnimSegment886.children.append(TouchSensor887)
+Transform888 = x3d.Transform()
+Transform888.translation = [0.082,1.4488,-0.0353]
+Shape889 = x3d.Shape()
+Shape889.USE = "HAnimJointShape"
 
-Transform888.addChildren(Shape889)
+Transform888.children.append(Shape889)
 
-HAnimSegment886.addChildren(Transform888)
+HAnimSegment886.children.append(Transform888)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_sternoclavicular'/> to <HAnimJoint name='l_acromioclavicular'/>
-Shape890 = Shape()
-LineSet891 = LineSet()
-LineSet891.setVertexCount([2])
-Coordinate892 = Coordinate()
-Coordinate892.setPoint([0.082,1.4488,-0.0353,0.0962,1.4269,-0.0424])
+Shape890 = x3d.Shape()
+LineSet891 = x3d.LineSet()
+LineSet891.vertexCount = [2]
+Coordinate892 = x3d.Coordinate()
+Coordinate892.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
-LineSet891.setCoord(Coordinate892)
-ColorRGBA893 = ColorRGBA()
-ColorRGBA893.setUSE("HAnimSegmentLineColorRGBA")
+LineSet891.coord.append(Coordinate892)
+ColorRGBA893 = x3d.ColorRGBA()
+ColorRGBA893.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet891.setColor(ColorRGBA893)
+LineSet891.color.append(ColorRGBA893)
 
-Shape890.setGeometry(LineSet891)
+Shape890.geometry = LineSet891
 
-HAnimSegment886.addChildren(Shape890)
+HAnimSegment886.children.append(Shape890)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_sternoclavicular'/> to <HAnimSite name='l_clavicale'/>
-Shape894 = Shape()
-LineSet895 = LineSet()
-LineSet895.setVertexCount([2])
-Coordinate896 = Coordinate()
-Coordinate896.setPoint([0.082,1.4488,-0.0353,0.0271,1.4943,0.0394])
+Shape894 = x3d.Shape()
+LineSet895 = x3d.LineSet()
+LineSet895.vertexCount = [2]
+Coordinate896 = x3d.Coordinate()
+Coordinate896.point = (0.0820,1.4488,-0.0353,0.0271,1.4943,0.0394)
 
-LineSet895.setCoord(Coordinate896)
-ColorRGBA897 = ColorRGBA()
-ColorRGBA897.setUSE("HAnimSiteLineColorRGBA")
+LineSet895.coord.append(Coordinate896)
+ColorRGBA897 = x3d.ColorRGBA()
+ColorRGBA897.USE = "HAnimSiteLineColorRGBA"
 
-LineSet895.setColor(ColorRGBA897)
+LineSet895.color.append(ColorRGBA897)
 
-Shape894.setGeometry(LineSet895)
+Shape894.geometry = LineSet895
 
-HAnimSegment886.addChildren(Shape894)
+HAnimSegment886.children.append(Shape894)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_sternoclavicular'/> to <HAnimSite name='l_acromion'/>
-Shape898 = Shape()
-LineSet899 = LineSet()
-LineSet899.setVertexCount([2])
-Coordinate900 = Coordinate()
-Coordinate900.setPoint([0.082,1.4488,-0.0353,0.2032,1.476,-0.049])
+Shape898 = x3d.Shape()
+LineSet899 = x3d.LineSet()
+LineSet899.vertexCount = [2]
+Coordinate900 = x3d.Coordinate()
+Coordinate900.point = (0.0820,1.4488,-0.0353,0.2032,1.4760,-0.0490)
 
-LineSet899.setCoord(Coordinate900)
-ColorRGBA901 = ColorRGBA()
-ColorRGBA901.setUSE("HAnimSiteLineColorRGBA")
+LineSet899.coord.append(Coordinate900)
+ColorRGBA901 = x3d.ColorRGBA()
+ColorRGBA901.USE = "HAnimSiteLineColorRGBA"
 
-LineSet899.setColor(ColorRGBA901)
+LineSet899.color.append(ColorRGBA901)
 
-Shape898.setGeometry(LineSet899)
+Shape898.geometry = LineSet899
 
-HAnimSegment886.addChildren(Shape898)
+HAnimSegment886.children.append(Shape898)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_sternoclavicular'/> to <HAnimSite name='l_axilla_ant'/>
-Shape902 = Shape()
-LineSet903 = LineSet()
-LineSet903.setVertexCount([2])
-Coordinate904 = Coordinate()
-Coordinate904.setPoint([0.082,1.4488,-0.0353,0.1777,1.4065,-0.0075])
+Shape902 = x3d.Shape()
+LineSet903 = x3d.LineSet()
+LineSet903.vertexCount = [2]
+Coordinate904 = x3d.Coordinate()
+Coordinate904.point = (0.0820,1.4488,-0.0353,0.1777,1.4065,-0.0075)
 
-LineSet903.setCoord(Coordinate904)
-ColorRGBA905 = ColorRGBA()
-ColorRGBA905.setUSE("HAnimSiteLineColorRGBA")
+LineSet903.coord.append(Coordinate904)
+ColorRGBA905 = x3d.ColorRGBA()
+ColorRGBA905.USE = "HAnimSiteLineColorRGBA"
 
-LineSet903.setColor(ColorRGBA905)
+LineSet903.color.append(ColorRGBA905)
 
-Shape902.setGeometry(LineSet903)
+Shape902.geometry = LineSet903
 
-HAnimSegment886.addChildren(Shape902)
+HAnimSegment886.children.append(Shape902)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_sternoclavicular'/> to <HAnimSite name='l_axilla_post'/>
-Shape906 = Shape()
-LineSet907 = LineSet()
-LineSet907.setVertexCount([2])
-Coordinate908 = Coordinate()
-Coordinate908.setPoint([0.082,1.4488,-0.0353,0.1706,1.4072,-0.0875])
+Shape906 = x3d.Shape()
+LineSet907 = x3d.LineSet()
+LineSet907.vertexCount = [2]
+Coordinate908 = x3d.Coordinate()
+Coordinate908.point = (0.0820,1.4488,-0.0353,0.1706,1.4072,-0.0875)
 
-LineSet907.setCoord(Coordinate908)
-ColorRGBA909 = ColorRGBA()
-ColorRGBA909.setUSE("HAnimSiteLineColorRGBA")
+LineSet907.coord.append(Coordinate908)
+ColorRGBA909 = x3d.ColorRGBA()
+ColorRGBA909.USE = "HAnimSiteLineColorRGBA"
 
-LineSet907.setColor(ColorRGBA909)
+LineSet907.color.append(ColorRGBA909)
 
-Shape906.setGeometry(LineSet907)
+Shape906.geometry = LineSet907
 
-HAnimSegment886.addChildren(Shape906)
-HAnimSite910 = HAnimSite()
-HAnimSite910.setName("l_clavicale_pt")
-HAnimSite910.setDEF("hanim_l_clavicale_pt")
-HAnimSite910.setTranslation([0.0271,1.4943,0.0394])
+HAnimSegment886.children.append(Shape906)
+HAnimSite910 = x3d.HAnimSite()
+HAnimSite910.name = "l_clavicale_pt"
+HAnimSite910.DEF = "hanim_l_clavicale_pt"
+HAnimSite910.translation = [0.0271,1.4943,0.0394]
 #HAnimSite visualization shape
-TouchSensor911 = TouchSensor()
-TouchSensor911.setDescription("HAnimSite l_clavicale")
+TouchSensor911 = x3d.TouchSensor()
+TouchSensor911.description = "HAnimSite l_clavicale"
 
-HAnimSite910.addChildren(TouchSensor911)
-Shape912 = Shape()
-Shape912.setUSE("HAnimSiteShape")
+HAnimSite910.children.append(TouchSensor911)
+Shape912 = x3d.Shape()
+Shape912.USE = "HAnimSiteShape"
 
-HAnimSite910.addChildren(Shape912)
+HAnimSite910.children.append(Shape912)
 
-HAnimSegment886.addChildren(HAnimSite910)
-HAnimSite913 = HAnimSite()
-HAnimSite913.setName("l_acromion_pt")
-HAnimSite913.setDEF("hanim_l_acromion_pt")
-HAnimSite913.setTranslation([0.2032,1.476,-0.049])
+HAnimSegment886.children.append(HAnimSite910)
+HAnimSite913 = x3d.HAnimSite()
+HAnimSite913.name = "l_acromion_pt"
+HAnimSite913.DEF = "hanim_l_acromion_pt"
+HAnimSite913.translation = [0.2032,1.476,-0.049]
 #HAnimSite visualization shape
-TouchSensor914 = TouchSensor()
-TouchSensor914.setDescription("HAnimSite l_acromion")
+TouchSensor914 = x3d.TouchSensor()
+TouchSensor914.description = "HAnimSite l_acromion"
 
-HAnimSite913.addChildren(TouchSensor914)
-Shape915 = Shape()
-Shape915.setUSE("HAnimSiteShape")
+HAnimSite913.children.append(TouchSensor914)
+Shape915 = x3d.Shape()
+Shape915.USE = "HAnimSiteShape"
 
-HAnimSite913.addChildren(Shape915)
+HAnimSite913.children.append(Shape915)
 
-HAnimSegment886.addChildren(HAnimSite913)
-HAnimSite916 = HAnimSite()
-HAnimSite916.setName("l_axilla_ant_pt")
-HAnimSite916.setDEF("hanim_l_axilla_ant_pt")
-HAnimSite916.setTranslation([0.1777,1.4065,-0.0075])
+HAnimSegment886.children.append(HAnimSite913)
+HAnimSite916 = x3d.HAnimSite()
+HAnimSite916.name = "l_axilla_ant_pt"
+HAnimSite916.DEF = "hanim_l_axilla_ant_pt"
+HAnimSite916.translation = [0.1777,1.4065,-0.0075]
 #HAnimSite visualization shape
-TouchSensor917 = TouchSensor()
-TouchSensor917.setDescription("HAnimSite l_axilla_ant")
+TouchSensor917 = x3d.TouchSensor()
+TouchSensor917.description = "HAnimSite l_axilla_ant"
 
-HAnimSite916.addChildren(TouchSensor917)
-Shape918 = Shape()
-Shape918.setUSE("HAnimSiteShape")
+HAnimSite916.children.append(TouchSensor917)
+Shape918 = x3d.Shape()
+Shape918.USE = "HAnimSiteShape"
 
-HAnimSite916.addChildren(Shape918)
+HAnimSite916.children.append(Shape918)
 
-HAnimSegment886.addChildren(HAnimSite916)
-HAnimSite919 = HAnimSite()
-HAnimSite919.setName("l_axilla_post_pt")
-HAnimSite919.setDEF("hanim_l_axilla_post_pt")
-HAnimSite919.setTranslation([0.1706,1.4072,-0.0875])
+HAnimSegment886.children.append(HAnimSite916)
+HAnimSite919 = x3d.HAnimSite()
+HAnimSite919.name = "l_axilla_post_pt"
+HAnimSite919.DEF = "hanim_l_axilla_post_pt"
+HAnimSite919.translation = [0.1706,1.4072,-0.0875]
 #HAnimSite visualization shape
-TouchSensor920 = TouchSensor()
-TouchSensor920.setDescription("HAnimSite l_axilla_post")
+TouchSensor920 = x3d.TouchSensor()
+TouchSensor920.description = "HAnimSite l_axilla_post"
 
-HAnimSite919.addChildren(TouchSensor920)
-Shape921 = Shape()
-Shape921.setUSE("HAnimSiteShape")
+HAnimSite919.children.append(TouchSensor920)
+Shape921 = x3d.Shape()
+Shape921.USE = "HAnimSiteShape"
 
-HAnimSite919.addChildren(Shape921)
+HAnimSite919.children.append(Shape921)
 
-HAnimSegment886.addChildren(HAnimSite919)
+HAnimSegment886.children.append(HAnimSite919)
 
-HAnimJoint885.addChildren(HAnimSegment886)
-HAnimJoint922 = HAnimJoint()
-HAnimJoint922.setName("l_acromioclavicular")
-HAnimJoint922.setDEF("hanim_l_acromioclavicular")
-HAnimJoint922.setCenter([0.0962,1.4269,-0.0424])
-HAnimJoint922.setStiffness([0,0,0])
-HAnimSegment923 = HAnimSegment()
-HAnimSegment923.setName("l_scapula")
-HAnimSegment923.setDEF("hanim_l_scapula")
+HAnimJoint885.children.append(HAnimSegment886)
+HAnimJoint922 = x3d.HAnimJoint()
+HAnimJoint922.name = "l_acromioclavicular"
+HAnimJoint922.DEF = "hanim_l_acromioclavicular"
+HAnimJoint922.center = [0.0962,1.4269,-0.0424]
+HAnimJoint922.ulimit = [0,0,0]
+HAnimJoint922.llimit = [0,0,0]
+HAnimSegment923 = x3d.HAnimSegment()
+HAnimSegment923.name = "l_scapula"
+HAnimSegment923.DEF = "hanim_l_scapula"
 #<HAnimJoint name='l_acromioclavicular'/> visualization sphere is placed within <HAnimSegment name='l_scapula'/>
-TouchSensor924 = TouchSensor()
-TouchSensor924.setDescription("HAnimJoint l_acromioclavicular, HAnimSegment l_scapula")
+TouchSensor924 = x3d.TouchSensor()
+TouchSensor924.description = "HAnimJoint l_acromioclavicular, HAnimSegment l_scapula"
 
-HAnimSegment923.addChildren(TouchSensor924)
-Transform925 = Transform()
-Transform925.setTranslation([0.0962,1.4269,-0.0424])
-Shape926 = Shape()
-Shape926.setUSE("HAnimJointShape")
+HAnimSegment923.children.append(TouchSensor924)
+Transform925 = x3d.Transform()
+Transform925.translation = [0.0962,1.4269,-0.0424]
+Shape926 = x3d.Shape()
+Shape926.USE = "HAnimJointShape"
 
-Transform925.addChildren(Shape926)
+Transform925.children.append(Shape926)
 
-HAnimSegment923.addChildren(Transform925)
+HAnimSegment923.children.append(Transform925)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_acromioclavicular'/> to <HAnimJoint name='l_shoulder'/>
-Shape927 = Shape()
-LineSet928 = LineSet()
-LineSet928.setVertexCount([2])
-Coordinate929 = Coordinate()
-Coordinate929.setPoint([0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387])
+Shape927 = x3d.Shape()
+LineSet928 = x3d.LineSet()
+LineSet928.vertexCount = [2]
+Coordinate929 = x3d.Coordinate()
+Coordinate929.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
-LineSet928.setCoord(Coordinate929)
-ColorRGBA930 = ColorRGBA()
-ColorRGBA930.setUSE("HAnimSegmentLineColorRGBA")
+LineSet928.coord.append(Coordinate929)
+ColorRGBA930 = x3d.ColorRGBA()
+ColorRGBA930.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet928.setColor(ColorRGBA930)
+LineSet928.color.append(ColorRGBA930)
 
-Shape927.setGeometry(LineSet928)
+Shape927.geometry = LineSet928
 
-HAnimSegment923.addChildren(Shape927)
+HAnimSegment923.children.append(Shape927)
 
-HAnimJoint922.addChildren(HAnimSegment923)
-HAnimJoint931 = HAnimJoint()
-HAnimJoint931.setName("l_shoulder")
-HAnimJoint931.setDEF("hanim_l_shoulder")
-HAnimJoint931.setCenter([0.2029,1.4376,-0.0387])
-HAnimJoint931.setStiffness([0,0,0])
-HAnimSegment932 = HAnimSegment()
-HAnimSegment932.setName("l_upperarm")
-HAnimSegment932.setDEF("hanim_l_upperarm")
+HAnimJoint922.children.append(HAnimSegment923)
+HAnimJoint931 = x3d.HAnimJoint()
+HAnimJoint931.name = "l_shoulder"
+HAnimJoint931.DEF = "hanim_l_shoulder"
+HAnimJoint931.center = [0.2029,1.4376,-0.0387]
+HAnimJoint931.ulimit = [0,0,0]
+HAnimJoint931.llimit = [0,0,0]
+HAnimSegment932 = x3d.HAnimSegment()
+HAnimSegment932.name = "l_upperarm"
+HAnimSegment932.DEF = "hanim_l_upperarm"
 #<HAnimJoint name='l_shoulder'/> visualization sphere is placed within <HAnimSegment name='l_upperarm'/>
-TouchSensor933 = TouchSensor()
-TouchSensor933.setDescription("HAnimJoint l_shoulder, HAnimSegment l_upperarm")
+TouchSensor933 = x3d.TouchSensor()
+TouchSensor933.description = "HAnimJoint l_shoulder, HAnimSegment l_upperarm"
 
-HAnimSegment932.addChildren(TouchSensor933)
-Transform934 = Transform()
-Transform934.setTranslation([0.2029,1.4376,-0.0387])
-Shape935 = Shape()
-Shape935.setUSE("HAnimJointShape")
+HAnimSegment932.children.append(TouchSensor933)
+Transform934 = x3d.Transform()
+Transform934.translation = [0.2029,1.4376,-0.0387]
+Shape935 = x3d.Shape()
+Shape935.USE = "HAnimJointShape"
 
-Transform934.addChildren(Shape935)
+Transform934.children.append(Shape935)
 
-HAnimSegment932.addChildren(Transform934)
+HAnimSegment932.children.append(Transform934)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_shoulder'/> to <HAnimJoint name='l_elbow'/>
-Shape936 = Shape()
-LineSet937 = LineSet()
-LineSet937.setVertexCount([2])
-Coordinate938 = Coordinate()
-Coordinate938.setPoint([0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682])
+Shape936 = x3d.Shape()
+LineSet937 = x3d.LineSet()
+LineSet937.vertexCount = [2]
+Coordinate938 = x3d.Coordinate()
+Coordinate938.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
-LineSet937.setCoord(Coordinate938)
-ColorRGBA939 = ColorRGBA()
-ColorRGBA939.setUSE("HAnimSegmentLineColorRGBA")
+LineSet937.coord.append(Coordinate938)
+ColorRGBA939 = x3d.ColorRGBA()
+ColorRGBA939.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet937.setColor(ColorRGBA939)
+LineSet937.color.append(ColorRGBA939)
 
-Shape936.setGeometry(LineSet937)
+Shape936.geometry = LineSet937
 
-HAnimSegment932.addChildren(Shape936)
+HAnimSegment932.children.append(Shape936)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_shoulder'/> to <HAnimSite name='l_humeral_lateral_epicn'/>
-Shape940 = Shape()
-LineSet941 = LineSet()
-LineSet941.setVertexCount([2])
-Coordinate942 = Coordinate()
-Coordinate942.setPoint([0.2029,1.4376,-0.0387,0.228,1.1482,-0.11])
+Shape940 = x3d.Shape()
+LineSet941 = x3d.LineSet()
+LineSet941.vertexCount = [2]
+Coordinate942 = x3d.Coordinate()
+Coordinate942.point = (0.2029,1.4376,-0.0387,0.2280,1.1482,-0.1100)
 
-LineSet941.setCoord(Coordinate942)
-ColorRGBA943 = ColorRGBA()
-ColorRGBA943.setUSE("HAnimSiteLineColorRGBA")
+LineSet941.coord.append(Coordinate942)
+ColorRGBA943 = x3d.ColorRGBA()
+ColorRGBA943.USE = "HAnimSiteLineColorRGBA"
 
-LineSet941.setColor(ColorRGBA943)
+LineSet941.color.append(ColorRGBA943)
 
-Shape940.setGeometry(LineSet941)
+Shape940.geometry = LineSet941
 
-HAnimSegment932.addChildren(Shape940)
-HAnimSite944 = HAnimSite()
-HAnimSite944.setName("l_humeral_lateral_epicn_pt")
-HAnimSite944.setDEF("hanim_l_humeral_lateral_epicn_pt")
-HAnimSite944.setTranslation([0.228,1.1482,-0.11])
+HAnimSegment932.children.append(Shape940)
+HAnimSite944 = x3d.HAnimSite()
+HAnimSite944.name = "l_humeral_lateral_epicn_pt"
+HAnimSite944.DEF = "hanim_l_humeral_lateral_epicn_pt"
+HAnimSite944.translation = [0.228,1.1482,-0.11]
 #HAnimSite visualization shape
-TouchSensor945 = TouchSensor()
-TouchSensor945.setDescription("HAnimSite l_humeral_lateral_epicn")
+TouchSensor945 = x3d.TouchSensor()
+TouchSensor945.description = "HAnimSite l_humeral_lateral_epicn"
 
-HAnimSite944.addChildren(TouchSensor945)
-Shape946 = Shape()
-Shape946.setUSE("HAnimSiteShape")
+HAnimSite944.children.append(TouchSensor945)
+Shape946 = x3d.Shape()
+Shape946.USE = "HAnimSiteShape"
 
-HAnimSite944.addChildren(Shape946)
+HAnimSite944.children.append(Shape946)
 
-HAnimSegment932.addChildren(HAnimSite944)
+HAnimSegment932.children.append(HAnimSite944)
 
-HAnimJoint931.addChildren(HAnimSegment932)
-HAnimJoint947 = HAnimJoint()
-HAnimJoint947.setName("l_elbow")
-HAnimJoint947.setDEF("hanim_l_elbow")
-HAnimJoint947.setCenter([0.2014,1.1357,-0.0682])
-HAnimJoint947.setStiffness([0,0,0])
-HAnimSegment948 = HAnimSegment()
-HAnimSegment948.setName("l_forearm")
-HAnimSegment948.setDEF("hanim_l_forearm")
+HAnimJoint931.children.append(HAnimSegment932)
+HAnimJoint947 = x3d.HAnimJoint()
+HAnimJoint947.name = "l_elbow"
+HAnimJoint947.DEF = "hanim_l_elbow"
+HAnimJoint947.center = [0.2014,1.1357,-0.0682]
+HAnimJoint947.ulimit = [0,0,0]
+HAnimJoint947.llimit = [0,0,0]
+HAnimSegment948 = x3d.HAnimSegment()
+HAnimSegment948.name = "l_forearm"
+HAnimSegment948.DEF = "hanim_l_forearm"
 #<HAnimJoint name='l_elbow'/> visualization sphere is placed within <HAnimSegment name='l_forearm'/>
-TouchSensor949 = TouchSensor()
-TouchSensor949.setDescription("HAnimJoint l_elbow, HAnimSegment l_forearm")
+TouchSensor949 = x3d.TouchSensor()
+TouchSensor949.description = "HAnimJoint l_elbow, HAnimSegment l_forearm"
 
-HAnimSegment948.addChildren(TouchSensor949)
-Transform950 = Transform()
-Transform950.setTranslation([0.2014,1.1357,-0.0682])
-Shape951 = Shape()
-Shape951.setUSE("HAnimJointShape")
+HAnimSegment948.children.append(TouchSensor949)
+Transform950 = x3d.Transform()
+Transform950.translation = [0.2014,1.1357,-0.0682]
+Shape951 = x3d.Shape()
+Shape951.USE = "HAnimJointShape"
 
-Transform950.addChildren(Shape951)
+Transform950.children.append(Shape951)
 
-HAnimSegment948.addChildren(Transform950)
+HAnimSegment948.children.append(Transform950)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_elbow'/> to <HAnimJoint name='l_wrist'/>
-Shape952 = Shape()
-LineSet953 = LineSet()
-LineSet953.setVertexCount([2])
-Coordinate954 = Coordinate()
-Coordinate954.setPoint([0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583])
+Shape952 = x3d.Shape()
+LineSet953 = x3d.LineSet()
+LineSet953.vertexCount = [2]
+Coordinate954 = x3d.Coordinate()
+Coordinate954.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
-LineSet953.setCoord(Coordinate954)
-ColorRGBA955 = ColorRGBA()
-ColorRGBA955.setUSE("HAnimSegmentLineColorRGBA")
+LineSet953.coord.append(Coordinate954)
+ColorRGBA955 = x3d.ColorRGBA()
+ColorRGBA955.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet953.setColor(ColorRGBA955)
+LineSet953.color.append(ColorRGBA955)
 
-Shape952.setGeometry(LineSet953)
+Shape952.geometry = LineSet953
 
-HAnimSegment948.addChildren(Shape952)
+HAnimSegment948.children.append(Shape952)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_elbow'/> to <HAnimSite name='l_radial_styloid'/>
-Shape956 = Shape()
-LineSet957 = LineSet()
-LineSet957.setVertexCount([2])
-Coordinate958 = Coordinate()
-Coordinate958.setPoint([0.2014,1.1357,-0.0682,0.1901,0.8645,-0.0415])
+Shape956 = x3d.Shape()
+LineSet957 = x3d.LineSet()
+LineSet957.vertexCount = [2]
+Coordinate958 = x3d.Coordinate()
+Coordinate958.point = (0.2014,1.1357,-0.0682,0.1901,0.8645,-0.0415)
 
-LineSet957.setCoord(Coordinate958)
-ColorRGBA959 = ColorRGBA()
-ColorRGBA959.setUSE("HAnimSiteLineColorRGBA")
+LineSet957.coord.append(Coordinate958)
+ColorRGBA959 = x3d.ColorRGBA()
+ColorRGBA959.USE = "HAnimSiteLineColorRGBA"
 
-LineSet957.setColor(ColorRGBA959)
+LineSet957.color.append(ColorRGBA959)
 
-Shape956.setGeometry(LineSet957)
+Shape956.geometry = LineSet957
 
-HAnimSegment948.addChildren(Shape956)
+HAnimSegment948.children.append(Shape956)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_elbow'/> to <HAnimSite name='l_olecranon'/>
-Shape960 = Shape()
-LineSet961 = LineSet()
-LineSet961.setVertexCount([2])
-Coordinate962 = Coordinate()
-Coordinate962.setPoint([0.2014,1.1357,-0.0682,0.1962,1.1375,-0.1123])
+Shape960 = x3d.Shape()
+LineSet961 = x3d.LineSet()
+LineSet961.vertexCount = [2]
+Coordinate962 = x3d.Coordinate()
+Coordinate962.point = (0.2014,1.1357,-0.0682,0.1962,1.1375,-0.1123)
 
-LineSet961.setCoord(Coordinate962)
-ColorRGBA963 = ColorRGBA()
-ColorRGBA963.setUSE("HAnimSiteLineColorRGBA")
+LineSet961.coord.append(Coordinate962)
+ColorRGBA963 = x3d.ColorRGBA()
+ColorRGBA963.USE = "HAnimSiteLineColorRGBA"
 
-LineSet961.setColor(ColorRGBA963)
+LineSet961.color.append(ColorRGBA963)
 
-Shape960.setGeometry(LineSet961)
+Shape960.geometry = LineSet961
 
-HAnimSegment948.addChildren(Shape960)
+HAnimSegment948.children.append(Shape960)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_elbow'/> to <HAnimSite name='l_humeral_medial_epicn'/>
-Shape964 = Shape()
-LineSet965 = LineSet()
-LineSet965.setVertexCount([2])
-Coordinate966 = Coordinate()
-Coordinate966.setPoint([0.2014,1.1357,-0.0682,0.1735,1.1272,-0.1113])
+Shape964 = x3d.Shape()
+LineSet965 = x3d.LineSet()
+LineSet965.vertexCount = [2]
+Coordinate966 = x3d.Coordinate()
+Coordinate966.point = (0.2014,1.1357,-0.0682,0.1735,1.1272,-0.1113)
 
-LineSet965.setCoord(Coordinate966)
-ColorRGBA967 = ColorRGBA()
-ColorRGBA967.setUSE("HAnimSiteLineColorRGBA")
+LineSet965.coord.append(Coordinate966)
+ColorRGBA967 = x3d.ColorRGBA()
+ColorRGBA967.USE = "HAnimSiteLineColorRGBA"
 
-LineSet965.setColor(ColorRGBA967)
+LineSet965.color.append(ColorRGBA967)
 
-Shape964.setGeometry(LineSet965)
+Shape964.geometry = LineSet965
 
-HAnimSegment948.addChildren(Shape964)
+HAnimSegment948.children.append(Shape964)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_elbow'/> to <HAnimSite name='l_radiale'/>
-Shape968 = Shape()
-LineSet969 = LineSet()
-LineSet969.setVertexCount([2])
-Coordinate970 = Coordinate()
-Coordinate970.setPoint([0.2014,1.1357,-0.0682,0.2182,1.1212,-0.1167])
+Shape968 = x3d.Shape()
+LineSet969 = x3d.LineSet()
+LineSet969.vertexCount = [2]
+Coordinate970 = x3d.Coordinate()
+Coordinate970.point = (0.2014,1.1357,-0.0682,0.2182,1.1212,-0.1167)
 
-LineSet969.setCoord(Coordinate970)
-ColorRGBA971 = ColorRGBA()
-ColorRGBA971.setUSE("HAnimSiteLineColorRGBA")
+LineSet969.coord.append(Coordinate970)
+ColorRGBA971 = x3d.ColorRGBA()
+ColorRGBA971.USE = "HAnimSiteLineColorRGBA"
 
-LineSet969.setColor(ColorRGBA971)
+LineSet969.color.append(ColorRGBA971)
 
-Shape968.setGeometry(LineSet969)
+Shape968.geometry = LineSet969
 
-HAnimSegment948.addChildren(Shape968)
-HAnimSite972 = HAnimSite()
-HAnimSite972.setName("l_radial_styloid_pt")
-HAnimSite972.setDEF("hanim_l_radial_styloid_pt")
-HAnimSite972.setTranslation([0.1901,0.8645,-0.0415])
+HAnimSegment948.children.append(Shape968)
+HAnimSite972 = x3d.HAnimSite()
+HAnimSite972.name = "l_radial_styloid_pt"
+HAnimSite972.DEF = "hanim_l_radial_styloid_pt"
+HAnimSite972.translation = [0.1901,0.8645,-0.0415]
 #HAnimSite visualization shape
-TouchSensor973 = TouchSensor()
-TouchSensor973.setDescription("HAnimSite l_radial_styloid")
+TouchSensor973 = x3d.TouchSensor()
+TouchSensor973.description = "HAnimSite l_radial_styloid"
 
-HAnimSite972.addChildren(TouchSensor973)
-Shape974 = Shape()
-Shape974.setUSE("HAnimSiteShape")
+HAnimSite972.children.append(TouchSensor973)
+Shape974 = x3d.Shape()
+Shape974.USE = "HAnimSiteShape"
 
-HAnimSite972.addChildren(Shape974)
+HAnimSite972.children.append(Shape974)
 
-HAnimSegment948.addChildren(HAnimSite972)
-HAnimSite975 = HAnimSite()
-HAnimSite975.setName("l_olecranon_pt")
-HAnimSite975.setDEF("hanim_l_olecranon_pt")
-HAnimSite975.setTranslation([0.1962,1.1375,-0.1123])
+HAnimSegment948.children.append(HAnimSite972)
+HAnimSite975 = x3d.HAnimSite()
+HAnimSite975.name = "l_olecranon_pt"
+HAnimSite975.DEF = "hanim_l_olecranon_pt"
+HAnimSite975.translation = [0.1962,1.1375,-0.1123]
 #HAnimSite visualization shape
-TouchSensor976 = TouchSensor()
-TouchSensor976.setDescription("HAnimSite l_olecranon")
+TouchSensor976 = x3d.TouchSensor()
+TouchSensor976.description = "HAnimSite l_olecranon"
 
-HAnimSite975.addChildren(TouchSensor976)
-Shape977 = Shape()
-Shape977.setUSE("HAnimSiteShape")
+HAnimSite975.children.append(TouchSensor976)
+Shape977 = x3d.Shape()
+Shape977.USE = "HAnimSiteShape"
 
-HAnimSite975.addChildren(Shape977)
+HAnimSite975.children.append(Shape977)
 
-HAnimSegment948.addChildren(HAnimSite975)
-HAnimSite978 = HAnimSite()
-HAnimSite978.setName("l_humeral_medial_epicn_pt")
-HAnimSite978.setDEF("hanim_l_humeral_medial_epicn_pt")
-HAnimSite978.setTranslation([0.1735,1.1272,-0.1113])
+HAnimSegment948.children.append(HAnimSite975)
+HAnimSite978 = x3d.HAnimSite()
+HAnimSite978.name = "l_humeral_medial_epicn_pt"
+HAnimSite978.DEF = "hanim_l_humeral_medial_epicn_pt"
+HAnimSite978.translation = [0.1735,1.1272,-0.1113]
 #HAnimSite visualization shape
-TouchSensor979 = TouchSensor()
-TouchSensor979.setDescription("HAnimSite l_humeral_medial_epicn")
+TouchSensor979 = x3d.TouchSensor()
+TouchSensor979.description = "HAnimSite l_humeral_medial_epicn"
 
-HAnimSite978.addChildren(TouchSensor979)
-Shape980 = Shape()
-Shape980.setUSE("HAnimSiteShape")
+HAnimSite978.children.append(TouchSensor979)
+Shape980 = x3d.Shape()
+Shape980.USE = "HAnimSiteShape"
 
-HAnimSite978.addChildren(Shape980)
+HAnimSite978.children.append(Shape980)
 
-HAnimSegment948.addChildren(HAnimSite978)
-HAnimSite981 = HAnimSite()
-HAnimSite981.setName("l_radiale_pt")
-HAnimSite981.setDEF("hanim_l_radiale_pt")
-HAnimSite981.setTranslation([0.2182,1.1212,-0.1167])
+HAnimSegment948.children.append(HAnimSite978)
+HAnimSite981 = x3d.HAnimSite()
+HAnimSite981.name = "l_radiale_pt"
+HAnimSite981.DEF = "hanim_l_radiale_pt"
+HAnimSite981.translation = [0.2182,1.1212,-0.1167]
 #HAnimSite visualization shape
-TouchSensor982 = TouchSensor()
-TouchSensor982.setDescription("HAnimSite l_radiale")
+TouchSensor982 = x3d.TouchSensor()
+TouchSensor982.description = "HAnimSite l_radiale"
 
-HAnimSite981.addChildren(TouchSensor982)
-Shape983 = Shape()
-Shape983.setUSE("HAnimSiteShape")
+HAnimSite981.children.append(TouchSensor982)
+Shape983 = x3d.Shape()
+Shape983.USE = "HAnimSiteShape"
 
-HAnimSite981.addChildren(Shape983)
+HAnimSite981.children.append(Shape983)
 
-HAnimSegment948.addChildren(HAnimSite981)
+HAnimSegment948.children.append(HAnimSite981)
 
-HAnimJoint947.addChildren(HAnimSegment948)
-HAnimJoint984 = HAnimJoint()
-HAnimJoint984.setName("l_wrist")
-HAnimJoint984.setDEF("hanim_l_wrist")
-HAnimJoint984.setCenter([0.1984,0.8663,-0.0583])
-HAnimJoint984.setStiffness([0,0,0])
-HAnimSegment985 = HAnimSegment()
-HAnimSegment985.setName("l_hand")
-HAnimSegment985.setDEF("hanim_l_hand")
+HAnimJoint947.children.append(HAnimSegment948)
+HAnimJoint984 = x3d.HAnimJoint()
+HAnimJoint984.name = "l_wrist"
+HAnimJoint984.DEF = "hanim_l_wrist"
+HAnimJoint984.center = [0.1984,0.8663,-0.0583]
+HAnimJoint984.ulimit = [0,0,0]
+HAnimJoint984.llimit = [0,0,0]
+HAnimSegment985 = x3d.HAnimSegment()
+HAnimSegment985.name = "l_hand"
+HAnimSegment985.DEF = "hanim_l_hand"
 #<HAnimJoint name='l_wrist'/> visualization sphere is placed within <HAnimSegment name='l_hand'/>
-TouchSensor986 = TouchSensor()
-TouchSensor986.setDescription("HAnimJoint l_wrist, HAnimSegment l_hand")
+TouchSensor986 = x3d.TouchSensor()
+TouchSensor986.description = "HAnimJoint l_wrist, HAnimSegment l_hand"
 
-HAnimSegment985.addChildren(TouchSensor986)
-Transform987 = Transform()
-Transform987.setTranslation([0.1984,0.8663,-0.0583])
-Shape988 = Shape()
-Shape988.setUSE("HAnimJointShape")
+HAnimSegment985.children.append(TouchSensor986)
+Transform987 = x3d.Transform()
+Transform987.translation = [0.1984,0.8663,-0.0583]
+Shape988 = x3d.Shape()
+Shape988.USE = "HAnimJointShape"
 
-Transform987.addChildren(Shape988)
+Transform987.children.append(Shape988)
 
-HAnimSegment985.addChildren(Transform987)
+HAnimSegment985.children.append(Transform987)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_wrist'/> to <HAnimJoint name='l_thumb1'/>
-Shape989 = Shape()
-LineSet990 = LineSet()
-LineSet990.setVertexCount([2])
-Coordinate991 = Coordinate()
-Coordinate991.setPoint([0.1984,0.8663,-0.0583,0.1924,0.8472,-0.0534])
+Shape989 = x3d.Shape()
+LineSet990 = x3d.LineSet()
+LineSet990.vertexCount = [2]
+Coordinate991 = x3d.Coordinate()
+Coordinate991.point = (0.1984,0.8663,-0.0583,0.1924,0.8472,-0.0534)
 
-LineSet990.setCoord(Coordinate991)
-ColorRGBA992 = ColorRGBA()
-ColorRGBA992.setUSE("HAnimSegmentLineColorRGBA")
+LineSet990.coord.append(Coordinate991)
+ColorRGBA992 = x3d.ColorRGBA()
+ColorRGBA992.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet990.setColor(ColorRGBA992)
+LineSet990.color.append(ColorRGBA992)
 
-Shape989.setGeometry(LineSet990)
+Shape989.geometry = LineSet990
 
-HAnimSegment985.addChildren(Shape989)
+HAnimSegment985.children.append(Shape989)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_wrist'/> to <HAnimJoint name='l_index0'/>
-Shape993 = Shape()
-LineSet994 = LineSet()
-LineSet994.setVertexCount([2])
-Coordinate995 = Coordinate()
-Coordinate995.setPoint([0.1984,0.8663,-0.0583,0.1983,0.8024,-0.028])
+Shape993 = x3d.Shape()
+LineSet994 = x3d.LineSet()
+LineSet994.vertexCount = [2]
+Coordinate995 = x3d.Coordinate()
+Coordinate995.point = (0.1984,0.8663,-0.0583,0.1983,0.8024,-0.0280)
 
-LineSet994.setCoord(Coordinate995)
-ColorRGBA996 = ColorRGBA()
-ColorRGBA996.setUSE("HAnimSegmentLineColorRGBA")
+LineSet994.coord.append(Coordinate995)
+ColorRGBA996 = x3d.ColorRGBA()
+ColorRGBA996.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet994.setColor(ColorRGBA996)
+LineSet994.color.append(ColorRGBA996)
 
-Shape993.setGeometry(LineSet994)
+Shape993.geometry = LineSet994
 
-HAnimSegment985.addChildren(Shape993)
+HAnimSegment985.children.append(Shape993)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_wrist'/> to <HAnimJoint name='l_middle0'/>
-Shape997 = Shape()
-LineSet998 = LineSet()
-LineSet998.setVertexCount([2])
-Coordinate999 = Coordinate()
-Coordinate999.setPoint([0.1984,0.8663,-0.0583,0.1987,0.8029,-0.053])
+Shape997 = x3d.Shape()
+LineSet998 = x3d.LineSet()
+LineSet998.vertexCount = [2]
+Coordinate999 = x3d.Coordinate()
+Coordinate999.point = (0.1984,0.8663,-0.0583,0.1987,0.8029,-0.0530)
 
-LineSet998.setCoord(Coordinate999)
-ColorRGBA1000 = ColorRGBA()
-ColorRGBA1000.setUSE("HAnimSegmentLineColorRGBA")
+LineSet998.coord.append(Coordinate999)
+ColorRGBA1000 = x3d.ColorRGBA()
+ColorRGBA1000.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet998.setColor(ColorRGBA1000)
+LineSet998.color.append(ColorRGBA1000)
 
-Shape997.setGeometry(LineSet998)
+Shape997.geometry = LineSet998
 
-HAnimSegment985.addChildren(Shape997)
+HAnimSegment985.children.append(Shape997)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_wrist'/> to <HAnimJoint name='l_ring0'/>
-Shape1001 = Shape()
-LineSet1002 = LineSet()
-LineSet1002.setVertexCount([2])
-Coordinate1003 = Coordinate()
-Coordinate1003.setPoint([0.1984,0.8663,-0.0583,0.1956,0.8019,-0.0794])
+Shape1001 = x3d.Shape()
+LineSet1002 = x3d.LineSet()
+LineSet1002.vertexCount = [2]
+Coordinate1003 = x3d.Coordinate()
+Coordinate1003.point = (0.1984,0.8663,-0.0583,0.1956,0.8019,-0.0794)
 
-LineSet1002.setCoord(Coordinate1003)
-ColorRGBA1004 = ColorRGBA()
-ColorRGBA1004.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1002.coord.append(Coordinate1003)
+ColorRGBA1004 = x3d.ColorRGBA()
+ColorRGBA1004.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1002.setColor(ColorRGBA1004)
+LineSet1002.color.append(ColorRGBA1004)
 
-Shape1001.setGeometry(LineSet1002)
+Shape1001.geometry = LineSet1002
 
-HAnimSegment985.addChildren(Shape1001)
+HAnimSegment985.children.append(Shape1001)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_wrist'/> to <HAnimJoint name='l_pinky0'/>
-Shape1005 = Shape()
-LineSet1006 = LineSet()
-LineSet1006.setVertexCount([2])
-Coordinate1007 = Coordinate()
-Coordinate1007.setPoint([0.1984,0.8663,-0.0583,0.1925,0.8066,-0.1036])
+Shape1005 = x3d.Shape()
+LineSet1006 = x3d.LineSet()
+LineSet1006.vertexCount = [2]
+Coordinate1007 = x3d.Coordinate()
+Coordinate1007.point = (0.1984,0.8663,-0.0583,0.1925,0.8066,-0.1036)
 
-LineSet1006.setCoord(Coordinate1007)
-ColorRGBA1008 = ColorRGBA()
-ColorRGBA1008.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1006.coord.append(Coordinate1007)
+ColorRGBA1008 = x3d.ColorRGBA()
+ColorRGBA1008.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1006.setColor(ColorRGBA1008)
+LineSet1006.color.append(ColorRGBA1008)
 
-Shape1005.setGeometry(LineSet1006)
+Shape1005.geometry = LineSet1006
 
-HAnimSegment985.addChildren(Shape1005)
+HAnimSegment985.children.append(Shape1005)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_wrist'/> to <HAnimSite name='l_metacarpal_pha2'/>
-Shape1009 = Shape()
-LineSet1010 = LineSet()
-LineSet1010.setVertexCount([2])
-Coordinate1011 = Coordinate()
-Coordinate1011.setPoint([0.1984,0.8663,-0.0583,0.2009,0.8139,-0.0237])
+Shape1009 = x3d.Shape()
+LineSet1010 = x3d.LineSet()
+LineSet1010.vertexCount = [2]
+Coordinate1011 = x3d.Coordinate()
+Coordinate1011.point = (0.1984,0.8663,-0.0583,0.2009,0.8139,-0.0237)
 
-LineSet1010.setCoord(Coordinate1011)
-ColorRGBA1012 = ColorRGBA()
-ColorRGBA1012.setUSE("HAnimSiteLineColorRGBA")
+LineSet1010.coord.append(Coordinate1011)
+ColorRGBA1012 = x3d.ColorRGBA()
+ColorRGBA1012.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1010.setColor(ColorRGBA1012)
+LineSet1010.color.append(ColorRGBA1012)
 
-Shape1009.setGeometry(LineSet1010)
+Shape1009.geometry = LineSet1010
 
-HAnimSegment985.addChildren(Shape1009)
+HAnimSegment985.children.append(Shape1009)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_wrist'/> to <HAnimSite name='l_ulnar_styloid'/>
-Shape1013 = Shape()
-LineSet1014 = LineSet()
-LineSet1014.setVertexCount([2])
-Coordinate1015 = Coordinate()
-Coordinate1015.setPoint([0.1984,0.8663,-0.0583,0.2142,0.8529,-0.0648])
+Shape1013 = x3d.Shape()
+LineSet1014 = x3d.LineSet()
+LineSet1014.vertexCount = [2]
+Coordinate1015 = x3d.Coordinate()
+Coordinate1015.point = (0.1984,0.8663,-0.0583,0.2142,0.8529,-0.0648)
 
-LineSet1014.setCoord(Coordinate1015)
-ColorRGBA1016 = ColorRGBA()
-ColorRGBA1016.setUSE("HAnimSiteLineColorRGBA")
+LineSet1014.coord.append(Coordinate1015)
+ColorRGBA1016 = x3d.ColorRGBA()
+ColorRGBA1016.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1014.setColor(ColorRGBA1016)
+LineSet1014.color.append(ColorRGBA1016)
 
-Shape1013.setGeometry(LineSet1014)
+Shape1013.geometry = LineSet1014
 
-HAnimSegment985.addChildren(Shape1013)
+HAnimSegment985.children.append(Shape1013)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_wrist'/> to <HAnimSite name='l_metacarpal_pha5'/>
-Shape1017 = Shape()
-LineSet1018 = LineSet()
-LineSet1018.setVertexCount([2])
-Coordinate1019 = Coordinate()
-Coordinate1019.setPoint([0.1984,0.8663,-0.0583,0.1929,0.786,-0.1122])
+Shape1017 = x3d.Shape()
+LineSet1018 = x3d.LineSet()
+LineSet1018.vertexCount = [2]
+Coordinate1019 = x3d.Coordinate()
+Coordinate1019.point = (0.1984,0.8663,-0.0583,0.1929,0.7860,-0.1122)
 
-LineSet1018.setCoord(Coordinate1019)
-ColorRGBA1020 = ColorRGBA()
-ColorRGBA1020.setUSE("HAnimSiteLineColorRGBA")
+LineSet1018.coord.append(Coordinate1019)
+ColorRGBA1020 = x3d.ColorRGBA()
+ColorRGBA1020.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1018.setColor(ColorRGBA1020)
+LineSet1018.color.append(ColorRGBA1020)
 
-Shape1017.setGeometry(LineSet1018)
+Shape1017.geometry = LineSet1018
 
-HAnimSegment985.addChildren(Shape1017)
+HAnimSegment985.children.append(Shape1017)
 #HAnimSite/Viewpoint visualization line segment from ancestor <HAnimJoint name='l_wrist'/> to <HAnimSite name='l_hand_front_view'/>
-Shape1021 = Shape()
-LineSet1022 = LineSet()
-LineSet1022.setVertexCount([2])
-Coordinate1023 = Coordinate()
-Coordinate1023.setPoint([0.1984,0.8663,-0.0583,0.3,0.75,0.45])
+Shape1021 = x3d.Shape()
+LineSet1022 = x3d.LineSet()
+LineSet1022.vertexCount = [2]
+Coordinate1023 = x3d.Coordinate()
+Coordinate1023.point = (0.1984,0.8663,-0.0583,0.3000,0.7500,0.4500)
 
-LineSet1022.setCoord(Coordinate1023)
-ColorRGBA1024 = ColorRGBA()
-ColorRGBA1024.setUSE("HAnimSiteViewpointLineColorRGBA")
+LineSet1022.coord.append(Coordinate1023)
+ColorRGBA1024 = x3d.ColorRGBA()
+ColorRGBA1024.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet1022.setColor(ColorRGBA1024)
+LineSet1022.color.append(ColorRGBA1024)
 
-Shape1021.setGeometry(LineSet1022)
+Shape1021.geometry = LineSet1022
 
-HAnimSegment985.addChildren(Shape1021)
-HAnimSite1025 = HAnimSite()
-HAnimSite1025.setName("l_metacarpal_pha2_pt")
-HAnimSite1025.setDEF("hanim_l_metacarpal_pha2_pt")
-HAnimSite1025.setTranslation([0.2009,0.8139,-0.0237])
+HAnimSegment985.children.append(Shape1021)
+HAnimSite1025 = x3d.HAnimSite()
+HAnimSite1025.name = "l_metacarpal_pha2_pt"
+HAnimSite1025.DEF = "hanim_l_metacarpal_pha2_pt"
+HAnimSite1025.translation = [0.2009,0.8139,-0.0237]
 #HAnimSite visualization shape
-TouchSensor1026 = TouchSensor()
-TouchSensor1026.setDescription("HAnimSite l_metacarpal_pha2")
+TouchSensor1026 = x3d.TouchSensor()
+TouchSensor1026.description = "HAnimSite l_metacarpal_pha2"
 
-HAnimSite1025.addChildren(TouchSensor1026)
-Shape1027 = Shape()
-Shape1027.setUSE("HAnimSiteShape")
+HAnimSite1025.children.append(TouchSensor1026)
+Shape1027 = x3d.Shape()
+Shape1027.USE = "HAnimSiteShape"
 
-HAnimSite1025.addChildren(Shape1027)
+HAnimSite1025.children.append(Shape1027)
 
-HAnimSegment985.addChildren(HAnimSite1025)
-HAnimSite1028 = HAnimSite()
-HAnimSite1028.setName("l_ulnar_styloid_pt")
-HAnimSite1028.setDEF("hanim_l_ulnar_styloid_pt")
-HAnimSite1028.setTranslation([0.2142,0.8529,-0.0648])
+HAnimSegment985.children.append(HAnimSite1025)
+HAnimSite1028 = x3d.HAnimSite()
+HAnimSite1028.name = "l_ulnar_styloid_pt"
+HAnimSite1028.DEF = "hanim_l_ulnar_styloid_pt"
+HAnimSite1028.translation = [0.2142,0.8529,-0.0648]
 #HAnimSite visualization shape
-TouchSensor1029 = TouchSensor()
-TouchSensor1029.setDescription("HAnimSite l_ulnar_styloid")
+TouchSensor1029 = x3d.TouchSensor()
+TouchSensor1029.description = "HAnimSite l_ulnar_styloid"
 
-HAnimSite1028.addChildren(TouchSensor1029)
-Shape1030 = Shape()
-Shape1030.setUSE("HAnimSiteShape")
+HAnimSite1028.children.append(TouchSensor1029)
+Shape1030 = x3d.Shape()
+Shape1030.USE = "HAnimSiteShape"
 
-HAnimSite1028.addChildren(Shape1030)
+HAnimSite1028.children.append(Shape1030)
 
-HAnimSegment985.addChildren(HAnimSite1028)
-HAnimSite1031 = HAnimSite()
-HAnimSite1031.setName("l_metacarpal_pha5_pt")
-HAnimSite1031.setDEF("hanim_l_metacarpal_pha5_pt")
-HAnimSite1031.setTranslation([0.1929,0.786,-0.1122])
+HAnimSegment985.children.append(HAnimSite1028)
+HAnimSite1031 = x3d.HAnimSite()
+HAnimSite1031.name = "l_metacarpal_pha5_pt"
+HAnimSite1031.DEF = "hanim_l_metacarpal_pha5_pt"
+HAnimSite1031.translation = [0.1929,0.786,-0.1122]
 #HAnimSite visualization shape
-TouchSensor1032 = TouchSensor()
-TouchSensor1032.setDescription("HAnimSite l_metacarpal_pha5")
+TouchSensor1032 = x3d.TouchSensor()
+TouchSensor1032.description = "HAnimSite l_metacarpal_pha5"
 
-HAnimSite1031.addChildren(TouchSensor1032)
-Shape1033 = Shape()
-Shape1033.setUSE("HAnimSiteShape")
+HAnimSite1031.children.append(TouchSensor1032)
+Shape1033 = x3d.Shape()
+Shape1033.USE = "HAnimSiteShape"
 
-HAnimSite1031.addChildren(Shape1033)
+HAnimSite1031.children.append(Shape1033)
 
-HAnimSegment985.addChildren(HAnimSite1031)
-HAnimSite1034 = HAnimSite()
-HAnimSite1034.setName("l_hand_front_view")
-HAnimSite1034.setDEF("hanim_l_hand_front_view")
-HAnimSite1034.setTranslation([0.3,0.75,0.45])
+HAnimSegment985.children.append(HAnimSite1031)
+HAnimSite1034 = x3d.HAnimSite()
+HAnimSite1034.name = "l_hand_front_view"
+HAnimSite1034.DEF = "hanim_l_hand_front_view"
+HAnimSite1034.translation = [0.3,0.75,0.45]
 #HAnimSite visualization shape
-TouchSensor1035 = TouchSensor()
-TouchSensor1035.setDescription("HAnimSite l_hand_front_view")
+TouchSensor1035 = x3d.TouchSensor()
+TouchSensor1035.description = "HAnimSite l_hand_front_view"
 
-HAnimSite1034.addChildren(TouchSensor1035)
-Shape1036 = Shape()
-Shape1036.setUSE("HAnimSiteShape")
+HAnimSite1034.children.append(TouchSensor1035)
+Shape1036 = x3d.Shape()
+Shape1036.USE = "HAnimSiteShape"
 
-HAnimSite1034.addChildren(Shape1036)
-Viewpoint1037 = Viewpoint()
-Viewpoint1037.setDEF("hanim_l_hand_front_viewpoint")
-Viewpoint1037.setCenterOfRotation([0,0.7,0])
-Viewpoint1037.setDescription("left hand front")
-Viewpoint1037.setPosition([0,0,0])
+HAnimSite1034.children.append(Shape1036)
+Viewpoint1037 = x3d.Viewpoint()
+Viewpoint1037.DEF = "hanim_l_hand_front_viewpoint"
+Viewpoint1037.centerOfRotation = [0,0.7,0]
+Viewpoint1037.description = "left hand front"
+Viewpoint1037.position = [0,0,0]
 
-HAnimSite1034.addChildren(Viewpoint1037)
+HAnimSite1034.children.append(Viewpoint1037)
 #HAnimSite/Viewpoint visualization shape
-Anchor1038 = Anchor()
-Anchor1038.setDescription("HAnimSite hanim_l_hand_front_view Viewpoint")
-Anchor1038.setUrl(["#hanim_l_hand_front_viewpoint"])
-LOD1039 = LOD()
-LOD1039.setForceTransitions(True)
-LOD1039.setRange([0.04])
-WorldInfo1040 = WorldInfo()
-WorldInfo1040.setInfo(["hide diamond when close"])
+Anchor1038 = x3d.Anchor()
+Anchor1038.description = "HAnimSite hanim_l_hand_front_view Viewpoint"
+Anchor1038.url = ["#hanim_l_hand_front_viewpoint"]
+LOD1039 = x3d.LOD()
+LOD1039.forceTransitions = True
+LOD1039.range = [0.04]
+WorldInfo1040 = x3d.WorldInfo()
+WorldInfo1040.info = ["hide diamond when close"]
 
-LOD1039.addChildren(WorldInfo1040)
-Shape1041 = Shape()
-Shape1041.setUSE("HAnimSiteViewpointShape")
+LOD1039.children.append(WorldInfo1040)
+Shape1041 = x3d.Shape()
+Shape1041.USE = "HAnimSiteViewpointShape"
 
-LOD1039.addChildren(Shape1041)
+LOD1039.children.append(Shape1041)
 
-Anchor1038.addChildren(LOD1039)
+Anchor1038.children.append(LOD1039)
 
-HAnimSite1034.addChildren(Anchor1038)
+HAnimSite1034.children.append(Anchor1038)
 
-HAnimSegment985.addChildren(HAnimSite1034)
+HAnimSegment985.children.append(HAnimSite1034)
 
-HAnimJoint984.addChildren(HAnimSegment985)
-HAnimJoint1042 = HAnimJoint()
-HAnimJoint1042.setName("l_thumb1")
-HAnimJoint1042.setDEF("hanim_l_thumb1")
-HAnimJoint1042.setCenter([0.1924,0.8472,-0.0534])
-HAnimJoint1042.setStiffness([0,0,0])
-HAnimSegment1043 = HAnimSegment()
-HAnimSegment1043.setName("l_thumb_metacarpal")
-HAnimSegment1043.setDEF("hanim_l_thumb_metacarpal")
+HAnimJoint984.children.append(HAnimSegment985)
+HAnimJoint1042 = x3d.HAnimJoint()
+HAnimJoint1042.name = "l_thumb1"
+HAnimJoint1042.DEF = "hanim_l_thumb1"
+HAnimJoint1042.center = [0.1924,0.8472,-0.0534]
+HAnimJoint1042.ulimit = [0,0,0]
+HAnimJoint1042.llimit = [0,0,0]
+HAnimSegment1043 = x3d.HAnimSegment()
+HAnimSegment1043.name = "l_thumb_metacarpal"
+HAnimSegment1043.DEF = "hanim_l_thumb_metacarpal"
 #<HAnimJoint name='l_thumb1'/> visualization sphere is placed within <HAnimSegment name='l_thumb_metacarpal'/>
-TouchSensor1044 = TouchSensor()
-TouchSensor1044.setDescription("HAnimJoint l_thumb1, HAnimSegment l_thumb_metacarpal")
+TouchSensor1044 = x3d.TouchSensor()
+TouchSensor1044.description = "HAnimJoint l_thumb1, HAnimSegment l_thumb_metacarpal"
 
-HAnimSegment1043.addChildren(TouchSensor1044)
-Transform1045 = Transform()
-Transform1045.setTranslation([0.1924,0.8472,-0.0534])
-Shape1046 = Shape()
-Shape1046.setUSE("HAnimJointShape")
+HAnimSegment1043.children.append(TouchSensor1044)
+Transform1045 = x3d.Transform()
+Transform1045.translation = [0.1924,0.8472,-0.0534]
+Shape1046 = x3d.Shape()
+Shape1046.USE = "HAnimJointShape"
 
-Transform1045.addChildren(Shape1046)
+Transform1045.children.append(Shape1046)
 
-HAnimSegment1043.addChildren(Transform1045)
+HAnimSegment1043.children.append(Transform1045)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_thumb1'/> to <HAnimJoint name='l_thumb2'/>
-Shape1047 = Shape()
-LineSet1048 = LineSet()
-LineSet1048.setVertexCount([2])
-Coordinate1049 = Coordinate()
-Coordinate1049.setPoint([0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246])
+Shape1047 = x3d.Shape()
+LineSet1048 = x3d.LineSet()
+LineSet1048.vertexCount = [2]
+Coordinate1049 = x3d.Coordinate()
+Coordinate1049.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
-LineSet1048.setCoord(Coordinate1049)
-ColorRGBA1050 = ColorRGBA()
-ColorRGBA1050.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1048.coord.append(Coordinate1049)
+ColorRGBA1050 = x3d.ColorRGBA()
+ColorRGBA1050.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1048.setColor(ColorRGBA1050)
+LineSet1048.color.append(ColorRGBA1050)
 
-Shape1047.setGeometry(LineSet1048)
+Shape1047.geometry = LineSet1048
 
-HAnimSegment1043.addChildren(Shape1047)
+HAnimSegment1043.children.append(Shape1047)
 
-HAnimJoint1042.addChildren(HAnimSegment1043)
-HAnimJoint1051 = HAnimJoint()
-HAnimJoint1051.setName("l_thumb2")
-HAnimJoint1051.setDEF("hanim_l_thumb2")
-HAnimJoint1051.setCenter([0.1951,0.8226,0.0246])
-HAnimJoint1051.setStiffness([0,0,0])
-HAnimSegment1052 = HAnimSegment()
-HAnimSegment1052.setName("l_thumb_proximal")
-HAnimSegment1052.setDEF("hanim_l_thumb_proximal")
+HAnimJoint1042.children.append(HAnimSegment1043)
+HAnimJoint1051 = x3d.HAnimJoint()
+HAnimJoint1051.name = "l_thumb2"
+HAnimJoint1051.DEF = "hanim_l_thumb2"
+HAnimJoint1051.center = [0.1951,0.8226,0.0246]
+HAnimJoint1051.ulimit = [0,0,0]
+HAnimJoint1051.llimit = [0,0,0]
+HAnimSegment1052 = x3d.HAnimSegment()
+HAnimSegment1052.name = "l_thumb_proximal"
+HAnimSegment1052.DEF = "hanim_l_thumb_proximal"
 #<HAnimJoint name='l_thumb2'/> visualization sphere is placed within <HAnimSegment name='l_thumb_proximal'/>
-TouchSensor1053 = TouchSensor()
-TouchSensor1053.setDescription("HAnimJoint l_thumb2, HAnimSegment l_thumb_proximal")
+TouchSensor1053 = x3d.TouchSensor()
+TouchSensor1053.description = "HAnimJoint l_thumb2, HAnimSegment l_thumb_proximal"
 
-HAnimSegment1052.addChildren(TouchSensor1053)
-Transform1054 = Transform()
-Transform1054.setTranslation([0.1951,0.8226,0.0246])
-Shape1055 = Shape()
-Shape1055.setUSE("HAnimJointShape")
+HAnimSegment1052.children.append(TouchSensor1053)
+Transform1054 = x3d.Transform()
+Transform1054.translation = [0.1951,0.8226,0.0246]
+Shape1055 = x3d.Shape()
+Shape1055.USE = "HAnimJointShape"
 
-Transform1054.addChildren(Shape1055)
+Transform1054.children.append(Shape1055)
 
-HAnimSegment1052.addChildren(Transform1054)
+HAnimSegment1052.children.append(Transform1054)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_thumb2'/> to <HAnimJoint name='l_thumb3'/>
-Shape1056 = Shape()
-LineSet1057 = LineSet()
-LineSet1057.setVertexCount([2])
-Coordinate1058 = Coordinate()
-Coordinate1058.setPoint([0.1951,0.8226,0.0246,0.1955,0.8159,0.0464])
+Shape1056 = x3d.Shape()
+LineSet1057 = x3d.LineSet()
+LineSet1057.vertexCount = [2]
+Coordinate1058 = x3d.Coordinate()
+Coordinate1058.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
-LineSet1057.setCoord(Coordinate1058)
-ColorRGBA1059 = ColorRGBA()
-ColorRGBA1059.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1057.coord.append(Coordinate1058)
+ColorRGBA1059 = x3d.ColorRGBA()
+ColorRGBA1059.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1057.setColor(ColorRGBA1059)
+LineSet1057.color.append(ColorRGBA1059)
 
-Shape1056.setGeometry(LineSet1057)
+Shape1056.geometry = LineSet1057
 
-HAnimSegment1052.addChildren(Shape1056)
+HAnimSegment1052.children.append(Shape1056)
 
-HAnimJoint1051.addChildren(HAnimSegment1052)
-HAnimJoint1060 = HAnimJoint()
-HAnimJoint1060.setName("l_thumb3")
-HAnimJoint1060.setDEF("hanim_l_thumb3")
-HAnimJoint1060.setCenter([0.1955,0.8159,0.0464])
-HAnimJoint1060.setStiffness([0,0,0])
-HAnimSegment1061 = HAnimSegment()
-HAnimSegment1061.setName("l_thumb_distal")
-HAnimSegment1061.setDEF("hanim_l_thumb_distal")
+HAnimJoint1051.children.append(HAnimSegment1052)
+HAnimJoint1060 = x3d.HAnimJoint()
+HAnimJoint1060.name = "l_thumb3"
+HAnimJoint1060.DEF = "hanim_l_thumb3"
+HAnimJoint1060.center = [0.1955,0.8159,0.0464]
+HAnimJoint1060.ulimit = [0,0,0]
+HAnimJoint1060.llimit = [0,0,0]
+HAnimSegment1061 = x3d.HAnimSegment()
+HAnimSegment1061.name = "l_thumb_distal"
+HAnimSegment1061.DEF = "hanim_l_thumb_distal"
 #<HAnimJoint name='l_thumb3'/> visualization sphere is placed within <HAnimSegment name='l_thumb_distal'/>
-TouchSensor1062 = TouchSensor()
-TouchSensor1062.setDescription("HAnimJoint l_thumb3, HAnimSegment l_thumb_distal")
+TouchSensor1062 = x3d.TouchSensor()
+TouchSensor1062.description = "HAnimJoint l_thumb3, HAnimSegment l_thumb_distal"
 
-HAnimSegment1061.addChildren(TouchSensor1062)
-Transform1063 = Transform()
-Transform1063.setTranslation([0.1955,0.8159,0.0464])
-Shape1064 = Shape()
-Shape1064.setUSE("HAnimJointShape")
+HAnimSegment1061.children.append(TouchSensor1062)
+Transform1063 = x3d.Transform()
+Transform1063.translation = [0.1955,0.8159,0.0464]
+Shape1064 = x3d.Shape()
+Shape1064.USE = "HAnimJointShape"
 
-Transform1063.addChildren(Shape1064)
+Transform1063.children.append(Shape1064)
 
-HAnimSegment1061.addChildren(Transform1063)
+HAnimSegment1061.children.append(Transform1063)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_thumb3'/> to <HAnimSite name='l_thumb_distal_tip'/>
-Shape1065 = Shape()
-LineSet1066 = LineSet()
-LineSet1066.setVertexCount([2])
-Coordinate1067 = Coordinate()
-Coordinate1067.setPoint([0.1955,0.8159,0.0464,0.1982,0.8061,0.0759])
+Shape1065 = x3d.Shape()
+LineSet1066 = x3d.LineSet()
+LineSet1066.vertexCount = [2]
+Coordinate1067 = x3d.Coordinate()
+Coordinate1067.point = (0.1955,0.8159,0.0464,0.1982,0.8061,0.0759)
 
-LineSet1066.setCoord(Coordinate1067)
-ColorRGBA1068 = ColorRGBA()
-ColorRGBA1068.setUSE("HAnimSiteLineColorRGBA")
+LineSet1066.coord.append(Coordinate1067)
+ColorRGBA1068 = x3d.ColorRGBA()
+ColorRGBA1068.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1066.setColor(ColorRGBA1068)
+LineSet1066.color.append(ColorRGBA1068)
 
-Shape1065.setGeometry(LineSet1066)
+Shape1065.geometry = LineSet1066
 
-HAnimSegment1061.addChildren(Shape1065)
-HAnimSite1069 = HAnimSite()
-HAnimSite1069.setName("l_thumb_distal_tip")
-HAnimSite1069.setDEF("hanim_l_thumb_distal_tip")
-HAnimSite1069.setTranslation([0.1982,0.8061,0.0759])
+HAnimSegment1061.children.append(Shape1065)
+HAnimSite1069 = x3d.HAnimSite()
+HAnimSite1069.name = "l_thumb_distal_tip"
+HAnimSite1069.DEF = "hanim_l_thumb_distal_tip"
+HAnimSite1069.translation = [0.1982,0.8061,0.0759]
 #HAnimSite visualization shape
-TouchSensor1070 = TouchSensor()
-TouchSensor1070.setDescription("HAnimSite l_thumb_distal_tip")
+TouchSensor1070 = x3d.TouchSensor()
+TouchSensor1070.description = "HAnimSite l_thumb_distal_tip"
 
-HAnimSite1069.addChildren(TouchSensor1070)
-Shape1071 = Shape()
-Shape1071.setUSE("HAnimSiteShape")
+HAnimSite1069.children.append(TouchSensor1070)
+Shape1071 = x3d.Shape()
+Shape1071.USE = "HAnimSiteShape"
 
-HAnimSite1069.addChildren(Shape1071)
+HAnimSite1069.children.append(Shape1071)
 
-HAnimSegment1061.addChildren(HAnimSite1069)
+HAnimSegment1061.children.append(HAnimSite1069)
 
-HAnimJoint1060.addChildren(HAnimSegment1061)
+HAnimJoint1060.children.append(HAnimSegment1061)
 
-HAnimJoint1051.addChildren(HAnimJoint1060)
+HAnimJoint1051.children.append(HAnimJoint1060)
 
-HAnimJoint1042.addChildren(HAnimJoint1051)
+HAnimJoint1042.children.append(HAnimJoint1051)
 
-HAnimJoint984.addChildren(HAnimJoint1042)
-HAnimJoint1072 = HAnimJoint()
-HAnimJoint1072.setName("l_index0")
-HAnimJoint1072.setDEF("hanim_l_index0")
-HAnimJoint1072.setCenter([0.1983,0.8024,-0.028])
-HAnimJoint1072.setStiffness([0,0,0])
-HAnimSegment1073 = HAnimSegment()
-HAnimSegment1073.setName("l_index_metacarpal")
-HAnimSegment1073.setDEF("hanim_l_index_metacarpal")
+HAnimJoint984.children.append(HAnimJoint1042)
+HAnimJoint1072 = x3d.HAnimJoint()
+HAnimJoint1072.name = "l_index0"
+HAnimJoint1072.DEF = "hanim_l_index0"
+HAnimJoint1072.center = [0.1983,0.8024,-0.028]
+HAnimJoint1072.ulimit = [0,0,0]
+HAnimJoint1072.llimit = [0,0,0]
+HAnimSegment1073 = x3d.HAnimSegment()
+HAnimSegment1073.name = "l_index_metacarpal"
+HAnimSegment1073.DEF = "hanim_l_index_metacarpal"
 #<HAnimJoint name='l_index0'/> visualization sphere is placed within <HAnimSegment name='l_index_metacarpal'/>
-TouchSensor1074 = TouchSensor()
-TouchSensor1074.setDescription("HAnimJoint l_index0, HAnimSegment l_index_metacarpal")
+TouchSensor1074 = x3d.TouchSensor()
+TouchSensor1074.description = "HAnimJoint l_index0, HAnimSegment l_index_metacarpal"
 
-HAnimSegment1073.addChildren(TouchSensor1074)
-Transform1075 = Transform()
-Transform1075.setTranslation([0.1983,0.8024,-0.028])
-Shape1076 = Shape()
-Shape1076.setUSE("HAnimJointShape")
+HAnimSegment1073.children.append(TouchSensor1074)
+Transform1075 = x3d.Transform()
+Transform1075.translation = [0.1983,0.8024,-0.028]
+Shape1076 = x3d.Shape()
+Shape1076.USE = "HAnimJointShape"
 
-Transform1075.addChildren(Shape1076)
+Transform1075.children.append(Shape1076)
 
-HAnimSegment1073.addChildren(Transform1075)
+HAnimSegment1073.children.append(Transform1075)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_index0'/> to <HAnimJoint name='l_index1'/>
-Shape1077 = Shape()
-LineSet1078 = LineSet()
-LineSet1078.setVertexCount([2])
-Coordinate1079 = Coordinate()
-Coordinate1079.setPoint([0.1983,0.8024,-0.028,0.1983,0.7815,-0.028])
+Shape1077 = x3d.Shape()
+LineSet1078 = x3d.LineSet()
+LineSet1078.vertexCount = [2]
+Coordinate1079 = x3d.Coordinate()
+Coordinate1079.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
-LineSet1078.setCoord(Coordinate1079)
-ColorRGBA1080 = ColorRGBA()
-ColorRGBA1080.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1078.coord.append(Coordinate1079)
+ColorRGBA1080 = x3d.ColorRGBA()
+ColorRGBA1080.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1078.setColor(ColorRGBA1080)
+LineSet1078.color.append(ColorRGBA1080)
 
-Shape1077.setGeometry(LineSet1078)
+Shape1077.geometry = LineSet1078
 
-HAnimSegment1073.addChildren(Shape1077)
+HAnimSegment1073.children.append(Shape1077)
 
-HAnimJoint1072.addChildren(HAnimSegment1073)
-HAnimJoint1081 = HAnimJoint()
-HAnimJoint1081.setName("l_index1")
-HAnimJoint1081.setDEF("hanim_l_index1")
-HAnimJoint1081.setCenter([0.1983,0.7815,-0.028])
-HAnimJoint1081.setStiffness([0,0,0])
-HAnimSegment1082 = HAnimSegment()
-HAnimSegment1082.setName("l_index_proximal")
-HAnimSegment1082.setDEF("hanim_l_index_proximal")
+HAnimJoint1072.children.append(HAnimSegment1073)
+HAnimJoint1081 = x3d.HAnimJoint()
+HAnimJoint1081.name = "l_index1"
+HAnimJoint1081.DEF = "hanim_l_index1"
+HAnimJoint1081.center = [0.1983,0.7815,-0.028]
+HAnimJoint1081.ulimit = [0,0,0]
+HAnimJoint1081.llimit = [0,0,0]
+HAnimSegment1082 = x3d.HAnimSegment()
+HAnimSegment1082.name = "l_index_proximal"
+HAnimSegment1082.DEF = "hanim_l_index_proximal"
 #<HAnimJoint name='l_index1'/> visualization sphere is placed within <HAnimSegment name='l_index_proximal'/>
-TouchSensor1083 = TouchSensor()
-TouchSensor1083.setDescription("HAnimJoint l_index1, HAnimSegment l_index_proximal")
+TouchSensor1083 = x3d.TouchSensor()
+TouchSensor1083.description = "HAnimJoint l_index1, HAnimSegment l_index_proximal"
 
-HAnimSegment1082.addChildren(TouchSensor1083)
-Transform1084 = Transform()
-Transform1084.setTranslation([0.1983,0.7815,-0.028])
-Shape1085 = Shape()
-Shape1085.setUSE("HAnimJointShape")
+HAnimSegment1082.children.append(TouchSensor1083)
+Transform1084 = x3d.Transform()
+Transform1084.translation = [0.1983,0.7815,-0.028]
+Shape1085 = x3d.Shape()
+Shape1085.USE = "HAnimJointShape"
 
-Transform1084.addChildren(Shape1085)
+Transform1084.children.append(Shape1085)
 
-HAnimSegment1082.addChildren(Transform1084)
+HAnimSegment1082.children.append(Transform1084)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_index1'/> to <HAnimJoint name='l_index2'/>
-Shape1086 = Shape()
-LineSet1087 = LineSet()
-LineSet1087.setVertexCount([2])
-Coordinate1088 = Coordinate()
-Coordinate1088.setPoint([0.1983,0.7815,-0.028,0.2017,0.7363,-0.0248])
+Shape1086 = x3d.Shape()
+LineSet1087 = x3d.LineSet()
+LineSet1087.vertexCount = [2]
+Coordinate1088 = x3d.Coordinate()
+Coordinate1088.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
-LineSet1087.setCoord(Coordinate1088)
-ColorRGBA1089 = ColorRGBA()
-ColorRGBA1089.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1087.coord.append(Coordinate1088)
+ColorRGBA1089 = x3d.ColorRGBA()
+ColorRGBA1089.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1087.setColor(ColorRGBA1089)
+LineSet1087.color.append(ColorRGBA1089)
 
-Shape1086.setGeometry(LineSet1087)
+Shape1086.geometry = LineSet1087
 
-HAnimSegment1082.addChildren(Shape1086)
+HAnimSegment1082.children.append(Shape1086)
 
-HAnimJoint1081.addChildren(HAnimSegment1082)
-HAnimJoint1090 = HAnimJoint()
-HAnimJoint1090.setName("l_index2")
-HAnimJoint1090.setDEF("hanim_l_index2")
-HAnimJoint1090.setCenter([0.2017,0.7363,-0.0248])
-HAnimJoint1090.setStiffness([0,0,0])
-HAnimSegment1091 = HAnimSegment()
-HAnimSegment1091.setName("l_index_middle")
-HAnimSegment1091.setDEF("hanim_l_index_middle")
+HAnimJoint1081.children.append(HAnimSegment1082)
+HAnimJoint1090 = x3d.HAnimJoint()
+HAnimJoint1090.name = "l_index2"
+HAnimJoint1090.DEF = "hanim_l_index2"
+HAnimJoint1090.center = [0.2017,0.7363,-0.0248]
+HAnimJoint1090.ulimit = [0,0,0]
+HAnimJoint1090.llimit = [0,0,0]
+HAnimSegment1091 = x3d.HAnimSegment()
+HAnimSegment1091.name = "l_index_middle"
+HAnimSegment1091.DEF = "hanim_l_index_middle"
 #<HAnimJoint name='l_index2'/> visualization sphere is placed within <HAnimSegment name='l_index_middle'/>
-TouchSensor1092 = TouchSensor()
-TouchSensor1092.setDescription("HAnimJoint l_index2, HAnimSegment l_index_middle")
+TouchSensor1092 = x3d.TouchSensor()
+TouchSensor1092.description = "HAnimJoint l_index2, HAnimSegment l_index_middle"
 
-HAnimSegment1091.addChildren(TouchSensor1092)
-Transform1093 = Transform()
-Transform1093.setTranslation([0.2017,0.7363,-0.0248])
-Shape1094 = Shape()
-Shape1094.setUSE("HAnimJointShape")
+HAnimSegment1091.children.append(TouchSensor1092)
+Transform1093 = x3d.Transform()
+Transform1093.translation = [0.2017,0.7363,-0.0248]
+Shape1094 = x3d.Shape()
+Shape1094.USE = "HAnimJointShape"
 
-Transform1093.addChildren(Shape1094)
+Transform1093.children.append(Shape1094)
 
-HAnimSegment1091.addChildren(Transform1093)
+HAnimSegment1091.children.append(Transform1093)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_index2'/> to <HAnimJoint name='l_index3'/>
-Shape1095 = Shape()
-LineSet1096 = LineSet()
-LineSet1096.setVertexCount([2])
-Coordinate1097 = Coordinate()
-Coordinate1097.setPoint([0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236])
+Shape1095 = x3d.Shape()
+LineSet1096 = x3d.LineSet()
+LineSet1096.vertexCount = [2]
+Coordinate1097 = x3d.Coordinate()
+Coordinate1097.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
-LineSet1096.setCoord(Coordinate1097)
-ColorRGBA1098 = ColorRGBA()
-ColorRGBA1098.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1096.coord.append(Coordinate1097)
+ColorRGBA1098 = x3d.ColorRGBA()
+ColorRGBA1098.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1096.setColor(ColorRGBA1098)
+LineSet1096.color.append(ColorRGBA1098)
 
-Shape1095.setGeometry(LineSet1096)
+Shape1095.geometry = LineSet1096
 
-HAnimSegment1091.addChildren(Shape1095)
+HAnimSegment1091.children.append(Shape1095)
 
-HAnimJoint1090.addChildren(HAnimSegment1091)
-HAnimJoint1099 = HAnimJoint()
-HAnimJoint1099.setName("l_index3")
-HAnimJoint1099.setDEF("hanim_l_index3")
-HAnimJoint1099.setCenter([0.2028,0.7139,-0.0236])
-HAnimJoint1099.setStiffness([0,0,0])
-HAnimSegment1100 = HAnimSegment()
-HAnimSegment1100.setName("l_index_distal")
-HAnimSegment1100.setDEF("hanim_l_index_distal")
+HAnimJoint1090.children.append(HAnimSegment1091)
+HAnimJoint1099 = x3d.HAnimJoint()
+HAnimJoint1099.name = "l_index3"
+HAnimJoint1099.DEF = "hanim_l_index3"
+HAnimJoint1099.center = [0.2028,0.7139,-0.0236]
+HAnimJoint1099.ulimit = [0,0,0]
+HAnimJoint1099.llimit = [0,0,0]
+HAnimSegment1100 = x3d.HAnimSegment()
+HAnimSegment1100.name = "l_index_distal"
+HAnimSegment1100.DEF = "hanim_l_index_distal"
 #<HAnimJoint name='l_index3'/> visualization sphere is placed within <HAnimSegment name='l_index_distal'/>
-TouchSensor1101 = TouchSensor()
-TouchSensor1101.setDescription("HAnimJoint l_index3, HAnimSegment l_index_distal")
+TouchSensor1101 = x3d.TouchSensor()
+TouchSensor1101.description = "HAnimJoint l_index3, HAnimSegment l_index_distal"
 
-HAnimSegment1100.addChildren(TouchSensor1101)
-Transform1102 = Transform()
-Transform1102.setTranslation([0.2028,0.7139,-0.0236])
-Shape1103 = Shape()
-Shape1103.setUSE("HAnimJointShape")
+HAnimSegment1100.children.append(TouchSensor1101)
+Transform1102 = x3d.Transform()
+Transform1102.translation = [0.2028,0.7139,-0.0236]
+Shape1103 = x3d.Shape()
+Shape1103.USE = "HAnimJointShape"
 
-Transform1102.addChildren(Shape1103)
+Transform1102.children.append(Shape1103)
 
-HAnimSegment1100.addChildren(Transform1102)
+HAnimSegment1100.children.append(Transform1102)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_index3'/> to <HAnimSite name='l_index_distal_tip'/>
-Shape1104 = Shape()
-LineSet1105 = LineSet()
-LineSet1105.setVertexCount([2])
-Coordinate1106 = Coordinate()
-Coordinate1106.setPoint([0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245])
+Shape1104 = x3d.Shape()
+LineSet1105 = x3d.LineSet()
+LineSet1105.vertexCount = [2]
+Coordinate1106 = x3d.Coordinate()
+Coordinate1106.point = (0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245)
 
-LineSet1105.setCoord(Coordinate1106)
-ColorRGBA1107 = ColorRGBA()
-ColorRGBA1107.setUSE("HAnimSiteLineColorRGBA")
+LineSet1105.coord.append(Coordinate1106)
+ColorRGBA1107 = x3d.ColorRGBA()
+ColorRGBA1107.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1105.setColor(ColorRGBA1107)
+LineSet1105.color.append(ColorRGBA1107)
 
-Shape1104.setGeometry(LineSet1105)
+Shape1104.geometry = LineSet1105
 
-HAnimSegment1100.addChildren(Shape1104)
+HAnimSegment1100.children.append(Shape1104)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_index3'/> to <HAnimSite name='l_dactylion'/>
-Shape1108 = Shape()
-LineSet1109 = LineSet()
-LineSet1109.setVertexCount([2])
-Coordinate1110 = Coordinate()
-Coordinate1110.setPoint([0.2028,0.7139,-0.0236,0.2056,0.6743,-0.0482])
+Shape1108 = x3d.Shape()
+LineSet1109 = x3d.LineSet()
+LineSet1109.vertexCount = [2]
+Coordinate1110 = x3d.Coordinate()
+Coordinate1110.point = (0.2028,0.7139,-0.0236,0.2056,0.6743,-0.0482)
 
-LineSet1109.setCoord(Coordinate1110)
-ColorRGBA1111 = ColorRGBA()
-ColorRGBA1111.setUSE("HAnimSiteLineColorRGBA")
+LineSet1109.coord.append(Coordinate1110)
+ColorRGBA1111 = x3d.ColorRGBA()
+ColorRGBA1111.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1109.setColor(ColorRGBA1111)
+LineSet1109.color.append(ColorRGBA1111)
 
-Shape1108.setGeometry(LineSet1109)
+Shape1108.geometry = LineSet1109
 
-HAnimSegment1100.addChildren(Shape1108)
-HAnimSite1112 = HAnimSite()
-HAnimSite1112.setName("l_index_distal_tip")
-HAnimSite1112.setDEF("hanim_l_index_distal_tip")
-HAnimSite1112.setTranslation([0.2089,0.6858,-0.0245])
+HAnimSegment1100.children.append(Shape1108)
+HAnimSite1112 = x3d.HAnimSite()
+HAnimSite1112.name = "l_index_distal_tip"
+HAnimSite1112.DEF = "hanim_l_index_distal_tip"
+HAnimSite1112.translation = [0.2089,0.6858,-0.0245]
 #HAnimSite visualization shape
-TouchSensor1113 = TouchSensor()
-TouchSensor1113.setDescription("HAnimSite l_index_distal_tip")
+TouchSensor1113 = x3d.TouchSensor()
+TouchSensor1113.description = "HAnimSite l_index_distal_tip"
 
-HAnimSite1112.addChildren(TouchSensor1113)
-Shape1114 = Shape()
-Shape1114.setUSE("HAnimSiteShape")
+HAnimSite1112.children.append(TouchSensor1113)
+Shape1114 = x3d.Shape()
+Shape1114.USE = "HAnimSiteShape"
 
-HAnimSite1112.addChildren(Shape1114)
+HAnimSite1112.children.append(Shape1114)
 
-HAnimSegment1100.addChildren(HAnimSite1112)
-HAnimSite1115 = HAnimSite()
-HAnimSite1115.setName("l_dactylion_pt")
-HAnimSite1115.setDEF("hanim_l_dactylion_pt")
-HAnimSite1115.setTranslation([0.2056,0.6743,-0.0482])
+HAnimSegment1100.children.append(HAnimSite1112)
+HAnimSite1115 = x3d.HAnimSite()
+HAnimSite1115.name = "l_dactylion_pt"
+HAnimSite1115.DEF = "hanim_l_dactylion_pt"
+HAnimSite1115.translation = [0.2056,0.6743,-0.0482]
 #HAnimSite visualization shape
-TouchSensor1116 = TouchSensor()
-TouchSensor1116.setDescription("HAnimSite l_dactylion")
+TouchSensor1116 = x3d.TouchSensor()
+TouchSensor1116.description = "HAnimSite l_dactylion"
 
-HAnimSite1115.addChildren(TouchSensor1116)
-Shape1117 = Shape()
-Shape1117.setUSE("HAnimSiteShape")
+HAnimSite1115.children.append(TouchSensor1116)
+Shape1117 = x3d.Shape()
+Shape1117.USE = "HAnimSiteShape"
 
-HAnimSite1115.addChildren(Shape1117)
+HAnimSite1115.children.append(Shape1117)
 
-HAnimSegment1100.addChildren(HAnimSite1115)
+HAnimSegment1100.children.append(HAnimSite1115)
 
-HAnimJoint1099.addChildren(HAnimSegment1100)
+HAnimJoint1099.children.append(HAnimSegment1100)
 
-HAnimJoint1090.addChildren(HAnimJoint1099)
+HAnimJoint1090.children.append(HAnimJoint1099)
 
-HAnimJoint1081.addChildren(HAnimJoint1090)
+HAnimJoint1081.children.append(HAnimJoint1090)
 
-HAnimJoint1072.addChildren(HAnimJoint1081)
+HAnimJoint1072.children.append(HAnimJoint1081)
 
-HAnimJoint984.addChildren(HAnimJoint1072)
-HAnimJoint1118 = HAnimJoint()
-HAnimJoint1118.setName("l_middle0")
-HAnimJoint1118.setDEF("hanim_l_middle0")
-HAnimJoint1118.setCenter([0.1987,0.8029,-0.053])
-HAnimJoint1118.setStiffness([0,0,0])
-HAnimSegment1119 = HAnimSegment()
-HAnimSegment1119.setName("l_middle_metacarpal")
-HAnimSegment1119.setDEF("hanim_l_middle_metacarpal")
+HAnimJoint984.children.append(HAnimJoint1072)
+HAnimJoint1118 = x3d.HAnimJoint()
+HAnimJoint1118.name = "l_middle0"
+HAnimJoint1118.DEF = "hanim_l_middle0"
+HAnimJoint1118.center = [0.1987,0.8029,-0.053]
+HAnimJoint1118.ulimit = [0,0,0]
+HAnimJoint1118.llimit = [0,0,0]
+HAnimSegment1119 = x3d.HAnimSegment()
+HAnimSegment1119.name = "l_middle_metacarpal"
+HAnimSegment1119.DEF = "hanim_l_middle_metacarpal"
 #<HAnimJoint name='l_middle0'/> visualization sphere is placed within <HAnimSegment name='l_middle_metacarpal'/>
-TouchSensor1120 = TouchSensor()
-TouchSensor1120.setDescription("HAnimJoint l_middle0, HAnimSegment l_middle_metacarpal")
+TouchSensor1120 = x3d.TouchSensor()
+TouchSensor1120.description = "HAnimJoint l_middle0, HAnimSegment l_middle_metacarpal"
 
-HAnimSegment1119.addChildren(TouchSensor1120)
-Transform1121 = Transform()
-Transform1121.setTranslation([0.1987,0.8029,-0.053])
-Shape1122 = Shape()
-Shape1122.setUSE("HAnimJointShape")
+HAnimSegment1119.children.append(TouchSensor1120)
+Transform1121 = x3d.Transform()
+Transform1121.translation = [0.1987,0.8029,-0.053]
+Shape1122 = x3d.Shape()
+Shape1122.USE = "HAnimJointShape"
 
-Transform1121.addChildren(Shape1122)
+Transform1121.children.append(Shape1122)
 
-HAnimSegment1119.addChildren(Transform1121)
+HAnimSegment1119.children.append(Transform1121)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_middle0'/> to <HAnimJoint name='l_middle1'/>
-Shape1123 = Shape()
-LineSet1124 = LineSet()
-LineSet1124.setVertexCount([2])
-Coordinate1125 = Coordinate()
-Coordinate1125.setPoint([0.1987,0.8029,-0.053,0.1987,0.7818,-0.053])
+Shape1123 = x3d.Shape()
+LineSet1124 = x3d.LineSet()
+LineSet1124.vertexCount = [2]
+Coordinate1125 = x3d.Coordinate()
+Coordinate1125.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
-LineSet1124.setCoord(Coordinate1125)
-ColorRGBA1126 = ColorRGBA()
-ColorRGBA1126.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1124.coord.append(Coordinate1125)
+ColorRGBA1126 = x3d.ColorRGBA()
+ColorRGBA1126.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1124.setColor(ColorRGBA1126)
+LineSet1124.color.append(ColorRGBA1126)
 
-Shape1123.setGeometry(LineSet1124)
+Shape1123.geometry = LineSet1124
 
-HAnimSegment1119.addChildren(Shape1123)
+HAnimSegment1119.children.append(Shape1123)
 
-HAnimJoint1118.addChildren(HAnimSegment1119)
-HAnimJoint1127 = HAnimJoint()
-HAnimJoint1127.setName("l_middle1")
-HAnimJoint1127.setDEF("hanim_l_middle1")
-HAnimJoint1127.setCenter([0.1987,0.7818,-0.053])
-HAnimJoint1127.setStiffness([0,0,0])
-HAnimSegment1128 = HAnimSegment()
-HAnimSegment1128.setName("l_middle_proximal")
-HAnimSegment1128.setDEF("hanim_l_middle_proximal")
+HAnimJoint1118.children.append(HAnimSegment1119)
+HAnimJoint1127 = x3d.HAnimJoint()
+HAnimJoint1127.name = "l_middle1"
+HAnimJoint1127.DEF = "hanim_l_middle1"
+HAnimJoint1127.center = [0.1987,0.7818,-0.053]
+HAnimJoint1127.ulimit = [0,0,0]
+HAnimJoint1127.llimit = [0,0,0]
+HAnimSegment1128 = x3d.HAnimSegment()
+HAnimSegment1128.name = "l_middle_proximal"
+HAnimSegment1128.DEF = "hanim_l_middle_proximal"
 #<HAnimJoint name='l_middle1'/> visualization sphere is placed within <HAnimSegment name='l_middle_proximal'/>
-TouchSensor1129 = TouchSensor()
-TouchSensor1129.setDescription("HAnimJoint l_middle1, HAnimSegment l_middle_proximal")
+TouchSensor1129 = x3d.TouchSensor()
+TouchSensor1129.description = "HAnimJoint l_middle1, HAnimSegment l_middle_proximal"
 
-HAnimSegment1128.addChildren(TouchSensor1129)
-Transform1130 = Transform()
-Transform1130.setTranslation([0.1987,0.7818,-0.053])
-Shape1131 = Shape()
-Shape1131.setUSE("HAnimJointShape")
+HAnimSegment1128.children.append(TouchSensor1129)
+Transform1130 = x3d.Transform()
+Transform1130.translation = [0.1987,0.7818,-0.053]
+Shape1131 = x3d.Shape()
+Shape1131.USE = "HAnimJointShape"
 
-Transform1130.addChildren(Shape1131)
+Transform1130.children.append(Shape1131)
 
-HAnimSegment1128.addChildren(Transform1130)
+HAnimSegment1128.children.append(Transform1130)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_middle1'/> to <HAnimJoint name='l_middle2'/>
-Shape1132 = Shape()
-LineSet1133 = LineSet()
-LineSet1133.setVertexCount([2])
-Coordinate1134 = Coordinate()
-Coordinate1134.setPoint([0.1987,0.7818,-0.053,0.2013,0.7273,-0.0503])
+Shape1132 = x3d.Shape()
+LineSet1133 = x3d.LineSet()
+LineSet1133.vertexCount = [2]
+Coordinate1134 = x3d.Coordinate()
+Coordinate1134.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
-LineSet1133.setCoord(Coordinate1134)
-ColorRGBA1135 = ColorRGBA()
-ColorRGBA1135.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1133.coord.append(Coordinate1134)
+ColorRGBA1135 = x3d.ColorRGBA()
+ColorRGBA1135.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1133.setColor(ColorRGBA1135)
+LineSet1133.color.append(ColorRGBA1135)
 
-Shape1132.setGeometry(LineSet1133)
+Shape1132.geometry = LineSet1133
 
-HAnimSegment1128.addChildren(Shape1132)
+HAnimSegment1128.children.append(Shape1132)
 
-HAnimJoint1127.addChildren(HAnimSegment1128)
-HAnimJoint1136 = HAnimJoint()
-HAnimJoint1136.setName("l_middle2")
-HAnimJoint1136.setDEF("hanim_l_middle2")
-HAnimJoint1136.setCenter([0.2013,0.7273,-0.0503])
-HAnimJoint1136.setStiffness([0,0,0])
-HAnimSegment1137 = HAnimSegment()
-HAnimSegment1137.setName("l_middle_middle")
-HAnimSegment1137.setDEF("hanim_l_middle_middle")
+HAnimJoint1127.children.append(HAnimSegment1128)
+HAnimJoint1136 = x3d.HAnimJoint()
+HAnimJoint1136.name = "l_middle2"
+HAnimJoint1136.DEF = "hanim_l_middle2"
+HAnimJoint1136.center = [0.2013,0.7273,-0.0503]
+HAnimJoint1136.ulimit = [0,0,0]
+HAnimJoint1136.llimit = [0,0,0]
+HAnimSegment1137 = x3d.HAnimSegment()
+HAnimSegment1137.name = "l_middle_middle"
+HAnimSegment1137.DEF = "hanim_l_middle_middle"
 #<HAnimJoint name='l_middle2'/> visualization sphere is placed within <HAnimSegment name='l_middle_middle'/>
-TouchSensor1138 = TouchSensor()
-TouchSensor1138.setDescription("HAnimJoint l_middle2, HAnimSegment l_middle_middle")
+TouchSensor1138 = x3d.TouchSensor()
+TouchSensor1138.description = "HAnimJoint l_middle2, HAnimSegment l_middle_middle"
 
-HAnimSegment1137.addChildren(TouchSensor1138)
-Transform1139 = Transform()
-Transform1139.setTranslation([0.2013,0.7273,-0.0503])
-Shape1140 = Shape()
-Shape1140.setUSE("HAnimJointShape")
+HAnimSegment1137.children.append(TouchSensor1138)
+Transform1139 = x3d.Transform()
+Transform1139.translation = [0.2013,0.7273,-0.0503]
+Shape1140 = x3d.Shape()
+Shape1140.USE = "HAnimJointShape"
 
-Transform1139.addChildren(Shape1140)
+Transform1139.children.append(Shape1140)
 
-HAnimSegment1137.addChildren(Transform1139)
+HAnimSegment1137.children.append(Transform1139)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_middle2'/> to <HAnimJoint name='l_middle3'/>
-Shape1141 = Shape()
-LineSet1142 = LineSet()
-LineSet1142.setVertexCount([2])
-Coordinate1143 = Coordinate()
-Coordinate1143.setPoint([0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494])
+Shape1141 = x3d.Shape()
+LineSet1142 = x3d.LineSet()
+LineSet1142.vertexCount = [2]
+Coordinate1143 = x3d.Coordinate()
+Coordinate1143.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
-LineSet1142.setCoord(Coordinate1143)
-ColorRGBA1144 = ColorRGBA()
-ColorRGBA1144.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1142.coord.append(Coordinate1143)
+ColorRGBA1144 = x3d.ColorRGBA()
+ColorRGBA1144.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1142.setColor(ColorRGBA1144)
+LineSet1142.color.append(ColorRGBA1144)
 
-Shape1141.setGeometry(LineSet1142)
+Shape1141.geometry = LineSet1142
 
-HAnimSegment1137.addChildren(Shape1141)
+HAnimSegment1137.children.append(Shape1141)
 
-HAnimJoint1136.addChildren(HAnimSegment1137)
-HAnimJoint1145 = HAnimJoint()
-HAnimJoint1145.setName("l_middle3")
-HAnimJoint1145.setDEF("hanim_l_middle3")
-HAnimJoint1145.setCenter([0.2026,0.7011,-0.0494])
-HAnimJoint1145.setStiffness([0,0,0])
-HAnimSegment1146 = HAnimSegment()
-HAnimSegment1146.setName("l_middle_distal")
-HAnimSegment1146.setDEF("hanim_l_middle_distal")
+HAnimJoint1136.children.append(HAnimSegment1137)
+HAnimJoint1145 = x3d.HAnimJoint()
+HAnimJoint1145.name = "l_middle3"
+HAnimJoint1145.DEF = "hanim_l_middle3"
+HAnimJoint1145.center = [0.2026,0.7011,-0.0494]
+HAnimJoint1145.ulimit = [0,0,0]
+HAnimJoint1145.llimit = [0,0,0]
+HAnimSegment1146 = x3d.HAnimSegment()
+HAnimSegment1146.name = "l_middle_distal"
+HAnimSegment1146.DEF = "hanim_l_middle_distal"
 #<HAnimJoint name='l_middle3'/> visualization sphere is placed within <HAnimSegment name='l_middle_distal'/>
-TouchSensor1147 = TouchSensor()
-TouchSensor1147.setDescription("HAnimJoint l_middle3, HAnimSegment l_middle_distal")
+TouchSensor1147 = x3d.TouchSensor()
+TouchSensor1147.description = "HAnimJoint l_middle3, HAnimSegment l_middle_distal"
 
-HAnimSegment1146.addChildren(TouchSensor1147)
-Transform1148 = Transform()
-Transform1148.setTranslation([0.2026,0.7011,-0.0494])
-Shape1149 = Shape()
-Shape1149.setUSE("HAnimJointShape")
+HAnimSegment1146.children.append(TouchSensor1147)
+Transform1148 = x3d.Transform()
+Transform1148.translation = [0.2026,0.7011,-0.0494]
+Shape1149 = x3d.Shape()
+Shape1149.USE = "HAnimJointShape"
 
-Transform1148.addChildren(Shape1149)
+Transform1148.children.append(Shape1149)
 
-HAnimSegment1146.addChildren(Transform1148)
+HAnimSegment1146.children.append(Transform1148)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_middle3'/> to <HAnimSite name='l_middle_distal_tip'/>
-Shape1150 = Shape()
-LineSet1151 = LineSet()
-LineSet1151.setVertexCount([2])
-Coordinate1152 = Coordinate()
-Coordinate1152.setPoint([0.2026,0.7011,-0.0494,0.208,0.6731,-0.0491])
+Shape1150 = x3d.Shape()
+LineSet1151 = x3d.LineSet()
+LineSet1151.vertexCount = [2]
+Coordinate1152 = x3d.Coordinate()
+Coordinate1152.point = (0.2026,0.7011,-0.0494,0.2080,0.6731,-0.0491)
 
-LineSet1151.setCoord(Coordinate1152)
-ColorRGBA1153 = ColorRGBA()
-ColorRGBA1153.setUSE("HAnimSiteLineColorRGBA")
+LineSet1151.coord.append(Coordinate1152)
+ColorRGBA1153 = x3d.ColorRGBA()
+ColorRGBA1153.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1151.setColor(ColorRGBA1153)
+LineSet1151.color.append(ColorRGBA1153)
 
-Shape1150.setGeometry(LineSet1151)
+Shape1150.geometry = LineSet1151
 
-HAnimSegment1146.addChildren(Shape1150)
-HAnimSite1154 = HAnimSite()
-HAnimSite1154.setName("l_middle_distal_tip")
-HAnimSite1154.setDEF("hanim_l_middle_distal_tip")
-HAnimSite1154.setTranslation([0.208,0.6731,-0.0491])
+HAnimSegment1146.children.append(Shape1150)
+HAnimSite1154 = x3d.HAnimSite()
+HAnimSite1154.name = "l_middle_distal_tip"
+HAnimSite1154.DEF = "hanim_l_middle_distal_tip"
+HAnimSite1154.translation = [0.208,0.6731,-0.0491]
 #HAnimSite visualization shape
-TouchSensor1155 = TouchSensor()
-TouchSensor1155.setDescription("HAnimSite l_middle_distal_tip")
+TouchSensor1155 = x3d.TouchSensor()
+TouchSensor1155.description = "HAnimSite l_middle_distal_tip"
 
-HAnimSite1154.addChildren(TouchSensor1155)
-Shape1156 = Shape()
-Shape1156.setUSE("HAnimSiteShape")
+HAnimSite1154.children.append(TouchSensor1155)
+Shape1156 = x3d.Shape()
+Shape1156.USE = "HAnimSiteShape"
 
-HAnimSite1154.addChildren(Shape1156)
+HAnimSite1154.children.append(Shape1156)
 
-HAnimSegment1146.addChildren(HAnimSite1154)
+HAnimSegment1146.children.append(HAnimSite1154)
 
-HAnimJoint1145.addChildren(HAnimSegment1146)
+HAnimJoint1145.children.append(HAnimSegment1146)
 
-HAnimJoint1136.addChildren(HAnimJoint1145)
+HAnimJoint1136.children.append(HAnimJoint1145)
 
-HAnimJoint1127.addChildren(HAnimJoint1136)
+HAnimJoint1127.children.append(HAnimJoint1136)
 
-HAnimJoint1118.addChildren(HAnimJoint1127)
+HAnimJoint1118.children.append(HAnimJoint1127)
 
-HAnimJoint984.addChildren(HAnimJoint1118)
-HAnimJoint1157 = HAnimJoint()
-HAnimJoint1157.setName("l_ring0")
-HAnimJoint1157.setDEF("hanim_l_ring0")
-HAnimJoint1157.setCenter([0.1956,0.8019,-0.0794])
-HAnimJoint1157.setStiffness([0,0,0])
-HAnimSegment1158 = HAnimSegment()
-HAnimSegment1158.setName("l_ring_metacarpal")
-HAnimSegment1158.setDEF("hanim_l_ring_metacarpal")
+HAnimJoint984.children.append(HAnimJoint1118)
+HAnimJoint1157 = x3d.HAnimJoint()
+HAnimJoint1157.name = "l_ring0"
+HAnimJoint1157.DEF = "hanim_l_ring0"
+HAnimJoint1157.center = [0.1956,0.8019,-0.0794]
+HAnimJoint1157.ulimit = [0,0,0]
+HAnimJoint1157.llimit = [0,0,0]
+HAnimSegment1158 = x3d.HAnimSegment()
+HAnimSegment1158.name = "l_ring_metacarpal"
+HAnimSegment1158.DEF = "hanim_l_ring_metacarpal"
 #<HAnimJoint name='l_ring0'/> visualization sphere is placed within <HAnimSegment name='l_ring_metacarpal'/>
-TouchSensor1159 = TouchSensor()
-TouchSensor1159.setDescription("HAnimJoint l_ring0, HAnimSegment l_ring_metacarpal")
+TouchSensor1159 = x3d.TouchSensor()
+TouchSensor1159.description = "HAnimJoint l_ring0, HAnimSegment l_ring_metacarpal"
 
-HAnimSegment1158.addChildren(TouchSensor1159)
-Transform1160 = Transform()
-Transform1160.setTranslation([0.1956,0.8019,-0.0794])
-Shape1161 = Shape()
-Shape1161.setUSE("HAnimJointShape")
+HAnimSegment1158.children.append(TouchSensor1159)
+Transform1160 = x3d.Transform()
+Transform1160.translation = [0.1956,0.8019,-0.0794]
+Shape1161 = x3d.Shape()
+Shape1161.USE = "HAnimJointShape"
 
-Transform1160.addChildren(Shape1161)
+Transform1160.children.append(Shape1161)
 
-HAnimSegment1158.addChildren(Transform1160)
+HAnimSegment1158.children.append(Transform1160)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_ring0'/> to <HAnimJoint name='l_ring1'/>
-Shape1162 = Shape()
-LineSet1163 = LineSet()
-LineSet1163.setVertexCount([2])
-Coordinate1164 = Coordinate()
-Coordinate1164.setPoint([0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794])
+Shape1162 = x3d.Shape()
+LineSet1163 = x3d.LineSet()
+LineSet1163.vertexCount = [2]
+Coordinate1164 = x3d.Coordinate()
+Coordinate1164.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
-LineSet1163.setCoord(Coordinate1164)
-ColorRGBA1165 = ColorRGBA()
-ColorRGBA1165.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1163.coord.append(Coordinate1164)
+ColorRGBA1165 = x3d.ColorRGBA()
+ColorRGBA1165.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1163.setColor(ColorRGBA1165)
+LineSet1163.color.append(ColorRGBA1165)
 
-Shape1162.setGeometry(LineSet1163)
+Shape1162.geometry = LineSet1163
 
-HAnimSegment1158.addChildren(Shape1162)
+HAnimSegment1158.children.append(Shape1162)
 
-HAnimJoint1157.addChildren(HAnimSegment1158)
-HAnimJoint1166 = HAnimJoint()
-HAnimJoint1166.setName("l_ring1")
-HAnimJoint1166.setDEF("hanim_l_ring1")
-HAnimJoint1166.setCenter([0.1956,0.7815,-0.0794])
-HAnimJoint1166.setStiffness([0,0,0])
-HAnimSegment1167 = HAnimSegment()
-HAnimSegment1167.setName("l_ring_proximal")
-HAnimSegment1167.setDEF("hanim_l_ring_proximal")
+HAnimJoint1157.children.append(HAnimSegment1158)
+HAnimJoint1166 = x3d.HAnimJoint()
+HAnimJoint1166.name = "l_ring1"
+HAnimJoint1166.DEF = "hanim_l_ring1"
+HAnimJoint1166.center = [0.1956,0.7815,-0.0794]
+HAnimJoint1166.ulimit = [0,0,0]
+HAnimJoint1166.llimit = [0,0,0]
+HAnimSegment1167 = x3d.HAnimSegment()
+HAnimSegment1167.name = "l_ring_proximal"
+HAnimSegment1167.DEF = "hanim_l_ring_proximal"
 #<HAnimJoint name='l_ring1'/> visualization sphere is placed within <HAnimSegment name='l_ring_proximal'/>
-TouchSensor1168 = TouchSensor()
-TouchSensor1168.setDescription("HAnimJoint l_ring1, HAnimSegment l_ring_proximal")
+TouchSensor1168 = x3d.TouchSensor()
+TouchSensor1168.description = "HAnimJoint l_ring1, HAnimSegment l_ring_proximal"
 
-HAnimSegment1167.addChildren(TouchSensor1168)
-Transform1169 = Transform()
-Transform1169.setTranslation([0.1956,0.7815,-0.0794])
-Shape1170 = Shape()
-Shape1170.setUSE("HAnimJointShape")
+HAnimSegment1167.children.append(TouchSensor1168)
+Transform1169 = x3d.Transform()
+Transform1169.translation = [0.1956,0.7815,-0.0794]
+Shape1170 = x3d.Shape()
+Shape1170.USE = "HAnimJointShape"
 
-Transform1169.addChildren(Shape1170)
+Transform1169.children.append(Shape1170)
 
-HAnimSegment1167.addChildren(Transform1169)
+HAnimSegment1167.children.append(Transform1169)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_ring1'/> to <HAnimJoint name='l_ring2'/>
-Shape1171 = Shape()
-LineSet1172 = LineSet()
-LineSet1172.setVertexCount([2])
-Coordinate1173 = Coordinate()
-Coordinate1173.setPoint([0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777])
+Shape1171 = x3d.Shape()
+LineSet1172 = x3d.LineSet()
+LineSet1172.vertexCount = [2]
+Coordinate1173 = x3d.Coordinate()
+Coordinate1173.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
-LineSet1172.setCoord(Coordinate1173)
-ColorRGBA1174 = ColorRGBA()
-ColorRGBA1174.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1172.coord.append(Coordinate1173)
+ColorRGBA1174 = x3d.ColorRGBA()
+ColorRGBA1174.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1172.setColor(ColorRGBA1174)
+LineSet1172.color.append(ColorRGBA1174)
 
-Shape1171.setGeometry(LineSet1172)
+Shape1171.geometry = LineSet1172
 
-HAnimSegment1167.addChildren(Shape1171)
+HAnimSegment1167.children.append(Shape1171)
 
-HAnimJoint1166.addChildren(HAnimSegment1167)
-HAnimJoint1175 = HAnimJoint()
-HAnimJoint1175.setName("l_ring2")
-HAnimJoint1175.setDEF("hanim_l_ring2")
-HAnimJoint1175.setCenter([0.1973,0.7287,-0.0777])
-HAnimJoint1175.setStiffness([0,0,0])
-HAnimSegment1176 = HAnimSegment()
-HAnimSegment1176.setName("l_ring_middle")
-HAnimSegment1176.setDEF("hanim_l_ring_middle")
+HAnimJoint1166.children.append(HAnimSegment1167)
+HAnimJoint1175 = x3d.HAnimJoint()
+HAnimJoint1175.name = "l_ring2"
+HAnimJoint1175.DEF = "hanim_l_ring2"
+HAnimJoint1175.center = [0.1973,0.7287,-0.0777]
+HAnimJoint1175.ulimit = [0,0,0]
+HAnimJoint1175.llimit = [0,0,0]
+HAnimSegment1176 = x3d.HAnimSegment()
+HAnimSegment1176.name = "l_ring_middle"
+HAnimSegment1176.DEF = "hanim_l_ring_middle"
 #<HAnimJoint name='l_ring2'/> visualization sphere is placed within <HAnimSegment name='l_ring_middle'/>
-TouchSensor1177 = TouchSensor()
-TouchSensor1177.setDescription("HAnimJoint l_ring2, HAnimSegment l_ring_middle")
+TouchSensor1177 = x3d.TouchSensor()
+TouchSensor1177.description = "HAnimJoint l_ring2, HAnimSegment l_ring_middle"
 
-HAnimSegment1176.addChildren(TouchSensor1177)
-Transform1178 = Transform()
-Transform1178.setTranslation([0.1973,0.7287,-0.0777])
-Shape1179 = Shape()
-Shape1179.setUSE("HAnimJointShape")
+HAnimSegment1176.children.append(TouchSensor1177)
+Transform1178 = x3d.Transform()
+Transform1178.translation = [0.1973,0.7287,-0.0777]
+Shape1179 = x3d.Shape()
+Shape1179.USE = "HAnimJointShape"
 
-Transform1178.addChildren(Shape1179)
+Transform1178.children.append(Shape1179)
 
-HAnimSegment1176.addChildren(Transform1178)
+HAnimSegment1176.children.append(Transform1178)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_ring2'/> to <HAnimJoint name='l_ring3'/>
-Shape1180 = Shape()
-LineSet1181 = LineSet()
-LineSet1181.setVertexCount([2])
-Coordinate1182 = Coordinate()
-Coordinate1182.setPoint([0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767])
+Shape1180 = x3d.Shape()
+LineSet1181 = x3d.LineSet()
+LineSet1181.vertexCount = [2]
+Coordinate1182 = x3d.Coordinate()
+Coordinate1182.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
-LineSet1181.setCoord(Coordinate1182)
-ColorRGBA1183 = ColorRGBA()
-ColorRGBA1183.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1181.coord.append(Coordinate1182)
+ColorRGBA1183 = x3d.ColorRGBA()
+ColorRGBA1183.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1181.setColor(ColorRGBA1183)
+LineSet1181.color.append(ColorRGBA1183)
 
-Shape1180.setGeometry(LineSet1181)
+Shape1180.geometry = LineSet1181
 
-HAnimSegment1176.addChildren(Shape1180)
+HAnimSegment1176.children.append(Shape1180)
 
-HAnimJoint1175.addChildren(HAnimSegment1176)
-HAnimJoint1184 = HAnimJoint()
-HAnimJoint1184.setName("l_ring3")
-HAnimJoint1184.setDEF("hanim_l_ring3")
-HAnimJoint1184.setCenter([0.1983,0.7045,-0.0767])
-HAnimJoint1184.setStiffness([0,0,0])
-HAnimSegment1185 = HAnimSegment()
-HAnimSegment1185.setName("l_ring_distal")
-HAnimSegment1185.setDEF("hanim_l_ring_distal")
+HAnimJoint1175.children.append(HAnimSegment1176)
+HAnimJoint1184 = x3d.HAnimJoint()
+HAnimJoint1184.name = "l_ring3"
+HAnimJoint1184.DEF = "hanim_l_ring3"
+HAnimJoint1184.center = [0.1983,0.7045,-0.0767]
+HAnimJoint1184.ulimit = [0,0,0]
+HAnimJoint1184.llimit = [0,0,0]
+HAnimSegment1185 = x3d.HAnimSegment()
+HAnimSegment1185.name = "l_ring_distal"
+HAnimSegment1185.DEF = "hanim_l_ring_distal"
 #<HAnimJoint name='l_ring3'/> visualization sphere is placed within <HAnimSegment name='l_ring_distal'/>
-TouchSensor1186 = TouchSensor()
-TouchSensor1186.setDescription("HAnimJoint l_ring3, HAnimSegment l_ring_distal")
+TouchSensor1186 = x3d.TouchSensor()
+TouchSensor1186.description = "HAnimJoint l_ring3, HAnimSegment l_ring_distal"
 
-HAnimSegment1185.addChildren(TouchSensor1186)
-Transform1187 = Transform()
-Transform1187.setTranslation([0.1983,0.7045,-0.0767])
-Shape1188 = Shape()
-Shape1188.setUSE("HAnimJointShape")
+HAnimSegment1185.children.append(TouchSensor1186)
+Transform1187 = x3d.Transform()
+Transform1187.translation = [0.1983,0.7045,-0.0767]
+Shape1188 = x3d.Shape()
+Shape1188.USE = "HAnimJointShape"
 
-Transform1187.addChildren(Shape1188)
+Transform1187.children.append(Shape1188)
 
-HAnimSegment1185.addChildren(Transform1187)
+HAnimSegment1185.children.append(Transform1187)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_ring3'/> to <HAnimSite name='l_ring_distal_tip'/>
-Shape1189 = Shape()
-LineSet1190 = LineSet()
-LineSet1190.setVertexCount([2])
-Coordinate1191 = Coordinate()
-Coordinate1191.setPoint([0.1983,0.7045,-0.0767,0.2035,0.675,-0.0756])
+Shape1189 = x3d.Shape()
+LineSet1190 = x3d.LineSet()
+LineSet1190.vertexCount = [2]
+Coordinate1191 = x3d.Coordinate()
+Coordinate1191.point = (0.1983,0.7045,-0.0767,0.2035,0.6750,-0.0756)
 
-LineSet1190.setCoord(Coordinate1191)
-ColorRGBA1192 = ColorRGBA()
-ColorRGBA1192.setUSE("HAnimSiteLineColorRGBA")
+LineSet1190.coord.append(Coordinate1191)
+ColorRGBA1192 = x3d.ColorRGBA()
+ColorRGBA1192.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1190.setColor(ColorRGBA1192)
+LineSet1190.color.append(ColorRGBA1192)
 
-Shape1189.setGeometry(LineSet1190)
+Shape1189.geometry = LineSet1190
 
-HAnimSegment1185.addChildren(Shape1189)
-HAnimSite1193 = HAnimSite()
-HAnimSite1193.setName("l_ring_distal_tip")
-HAnimSite1193.setDEF("hanim_l_ring_distal_tip")
-HAnimSite1193.setTranslation([0.2035,0.675,-0.0756])
+HAnimSegment1185.children.append(Shape1189)
+HAnimSite1193 = x3d.HAnimSite()
+HAnimSite1193.name = "l_ring_distal_tip"
+HAnimSite1193.DEF = "hanim_l_ring_distal_tip"
+HAnimSite1193.translation = [0.2035,0.675,-0.0756]
 #HAnimSite visualization shape
-TouchSensor1194 = TouchSensor()
-TouchSensor1194.setDescription("HAnimSite l_ring_distal_tip")
+TouchSensor1194 = x3d.TouchSensor()
+TouchSensor1194.description = "HAnimSite l_ring_distal_tip"
 
-HAnimSite1193.addChildren(TouchSensor1194)
-Shape1195 = Shape()
-Shape1195.setUSE("HAnimSiteShape")
+HAnimSite1193.children.append(TouchSensor1194)
+Shape1195 = x3d.Shape()
+Shape1195.USE = "HAnimSiteShape"
 
-HAnimSite1193.addChildren(Shape1195)
+HAnimSite1193.children.append(Shape1195)
 
-HAnimSegment1185.addChildren(HAnimSite1193)
+HAnimSegment1185.children.append(HAnimSite1193)
 
-HAnimJoint1184.addChildren(HAnimSegment1185)
+HAnimJoint1184.children.append(HAnimSegment1185)
 
-HAnimJoint1175.addChildren(HAnimJoint1184)
+HAnimJoint1175.children.append(HAnimJoint1184)
 
-HAnimJoint1166.addChildren(HAnimJoint1175)
+HAnimJoint1166.children.append(HAnimJoint1175)
 
-HAnimJoint1157.addChildren(HAnimJoint1166)
+HAnimJoint1157.children.append(HAnimJoint1166)
 
-HAnimJoint984.addChildren(HAnimJoint1157)
-HAnimJoint1196 = HAnimJoint()
-HAnimJoint1196.setName("l_pinky0")
-HAnimJoint1196.setDEF("hanim_l_pinky0")
-HAnimJoint1196.setCenter([0.1925,0.8066,-0.1036])
-HAnimJoint1196.setStiffness([0,0,0])
-HAnimSegment1197 = HAnimSegment()
-HAnimSegment1197.setName("l_pinky_metacarpal")
-HAnimSegment1197.setDEF("hanim_l_pinky_metacarpal")
+HAnimJoint984.children.append(HAnimJoint1157)
+HAnimJoint1196 = x3d.HAnimJoint()
+HAnimJoint1196.name = "l_pinky0"
+HAnimJoint1196.DEF = "hanim_l_pinky0"
+HAnimJoint1196.center = [0.1925,0.8066,-0.1036]
+HAnimJoint1196.ulimit = [0,0,0]
+HAnimJoint1196.llimit = [0,0,0]
+HAnimSegment1197 = x3d.HAnimSegment()
+HAnimSegment1197.name = "l_pinky_metacarpal"
+HAnimSegment1197.DEF = "hanim_l_pinky_metacarpal"
 #<HAnimJoint name='l_pinky0'/> visualization sphere is placed within <HAnimSegment name='l_pinky_metacarpal'/>
-TouchSensor1198 = TouchSensor()
-TouchSensor1198.setDescription("HAnimJoint l_pinky0, HAnimSegment l_pinky_metacarpal")
+TouchSensor1198 = x3d.TouchSensor()
+TouchSensor1198.description = "HAnimJoint l_pinky0, HAnimSegment l_pinky_metacarpal"
 
-HAnimSegment1197.addChildren(TouchSensor1198)
-Transform1199 = Transform()
-Transform1199.setTranslation([0.1925,0.8066,-0.1036])
-Shape1200 = Shape()
-Shape1200.setUSE("HAnimJointShape")
+HAnimSegment1197.children.append(TouchSensor1198)
+Transform1199 = x3d.Transform()
+Transform1199.translation = [0.1925,0.8066,-0.1036]
+Shape1200 = x3d.Shape()
+Shape1200.USE = "HAnimJointShape"
 
-Transform1199.addChildren(Shape1200)
+Transform1199.children.append(Shape1200)
 
-HAnimSegment1197.addChildren(Transform1199)
+HAnimSegment1197.children.append(Transform1199)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_pinky0'/> to <HAnimJoint name='l_pinky1'/>
-Shape1201 = Shape()
-LineSet1202 = LineSet()
-LineSet1202.setVertexCount([2])
-Coordinate1203 = Coordinate()
-Coordinate1203.setPoint([0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036])
+Shape1201 = x3d.Shape()
+LineSet1202 = x3d.LineSet()
+LineSet1202.vertexCount = [2]
+Coordinate1203 = x3d.Coordinate()
+Coordinate1203.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
-LineSet1202.setCoord(Coordinate1203)
-ColorRGBA1204 = ColorRGBA()
-ColorRGBA1204.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1202.coord.append(Coordinate1203)
+ColorRGBA1204 = x3d.ColorRGBA()
+ColorRGBA1204.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1202.setColor(ColorRGBA1204)
+LineSet1202.color.append(ColorRGBA1204)
 
-Shape1201.setGeometry(LineSet1202)
+Shape1201.geometry = LineSet1202
 
-HAnimSegment1197.addChildren(Shape1201)
+HAnimSegment1197.children.append(Shape1201)
 
-HAnimJoint1196.addChildren(HAnimSegment1197)
-HAnimJoint1205 = HAnimJoint()
-HAnimJoint1205.setName("l_pinky1")
-HAnimJoint1205.setDEF("hanim_l_pinky1")
-HAnimJoint1205.setCenter([0.1925,0.7866,-0.1036])
-HAnimJoint1205.setStiffness([0,0,0])
-HAnimSegment1206 = HAnimSegment()
-HAnimSegment1206.setName("l_pinky_proximal")
-HAnimSegment1206.setDEF("hanim_l_pinky_proximal")
+HAnimJoint1196.children.append(HAnimSegment1197)
+HAnimJoint1205 = x3d.HAnimJoint()
+HAnimJoint1205.name = "l_pinky1"
+HAnimJoint1205.DEF = "hanim_l_pinky1"
+HAnimJoint1205.center = [0.1925,0.7866,-0.1036]
+HAnimJoint1205.ulimit = [0,0,0]
+HAnimJoint1205.llimit = [0,0,0]
+HAnimSegment1206 = x3d.HAnimSegment()
+HAnimSegment1206.name = "l_pinky_proximal"
+HAnimSegment1206.DEF = "hanim_l_pinky_proximal"
 #<HAnimJoint name='l_pinky1'/> visualization sphere is placed within <HAnimSegment name='l_pinky_proximal'/>
-TouchSensor1207 = TouchSensor()
-TouchSensor1207.setDescription("HAnimJoint l_pinky1, HAnimSegment l_pinky_proximal")
+TouchSensor1207 = x3d.TouchSensor()
+TouchSensor1207.description = "HAnimJoint l_pinky1, HAnimSegment l_pinky_proximal"
 
-HAnimSegment1206.addChildren(TouchSensor1207)
-Transform1208 = Transform()
-Transform1208.setTranslation([0.1925,0.7866,-0.1036])
-Shape1209 = Shape()
-Shape1209.setUSE("HAnimJointShape")
+HAnimSegment1206.children.append(TouchSensor1207)
+Transform1208 = x3d.Transform()
+Transform1208.translation = [0.1925,0.7866,-0.1036]
+Shape1209 = x3d.Shape()
+Shape1209.USE = "HAnimJointShape"
 
-Transform1208.addChildren(Shape1209)
+Transform1208.children.append(Shape1209)
 
-HAnimSegment1206.addChildren(Transform1208)
+HAnimSegment1206.children.append(Transform1208)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_pinky1'/> to <HAnimJoint name='l_pinky2'/>
-Shape1210 = Shape()
-LineSet1211 = LineSet()
-LineSet1211.setVertexCount([2])
-Coordinate1212 = Coordinate()
-Coordinate1212.setPoint([0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024])
+Shape1210 = x3d.Shape()
+LineSet1211 = x3d.LineSet()
+LineSet1211.vertexCount = [2]
+Coordinate1212 = x3d.Coordinate()
+Coordinate1212.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
-LineSet1211.setCoord(Coordinate1212)
-ColorRGBA1213 = ColorRGBA()
-ColorRGBA1213.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1211.coord.append(Coordinate1212)
+ColorRGBA1213 = x3d.ColorRGBA()
+ColorRGBA1213.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1211.setColor(ColorRGBA1213)
+LineSet1211.color.append(ColorRGBA1213)
 
-Shape1210.setGeometry(LineSet1211)
+Shape1210.geometry = LineSet1211
 
-HAnimSegment1206.addChildren(Shape1210)
+HAnimSegment1206.children.append(Shape1210)
 
-HAnimJoint1205.addChildren(HAnimSegment1206)
-HAnimJoint1214 = HAnimJoint()
-HAnimJoint1214.setName("l_pinky2")
-HAnimJoint1214.setDEF("hanim_l_pinky2")
-HAnimJoint1214.setCenter([0.1938,0.7452,-0.1024])
-HAnimJoint1214.setStiffness([0,0,0])
-HAnimSegment1215 = HAnimSegment()
-HAnimSegment1215.setName("l_pinky_middle")
-HAnimSegment1215.setDEF("hanim_l_pinky_middle")
+HAnimJoint1205.children.append(HAnimSegment1206)
+HAnimJoint1214 = x3d.HAnimJoint()
+HAnimJoint1214.name = "l_pinky2"
+HAnimJoint1214.DEF = "hanim_l_pinky2"
+HAnimJoint1214.center = [0.1938,0.7452,-0.1024]
+HAnimJoint1214.ulimit = [0,0,0]
+HAnimJoint1214.llimit = [0,0,0]
+HAnimSegment1215 = x3d.HAnimSegment()
+HAnimSegment1215.name = "l_pinky_middle"
+HAnimSegment1215.DEF = "hanim_l_pinky_middle"
 #<HAnimJoint name='l_pinky2'/> visualization sphere is placed within <HAnimSegment name='l_pinky_middle'/>
-TouchSensor1216 = TouchSensor()
-TouchSensor1216.setDescription("HAnimJoint l_pinky2, HAnimSegment l_pinky_middle")
+TouchSensor1216 = x3d.TouchSensor()
+TouchSensor1216.description = "HAnimJoint l_pinky2, HAnimSegment l_pinky_middle"
 
-HAnimSegment1215.addChildren(TouchSensor1216)
-Transform1217 = Transform()
-Transform1217.setTranslation([0.1938,0.7452,-0.1024])
-Shape1218 = Shape()
-Shape1218.setUSE("HAnimJointShape")
+HAnimSegment1215.children.append(TouchSensor1216)
+Transform1217 = x3d.Transform()
+Transform1217.translation = [0.1938,0.7452,-0.1024]
+Shape1218 = x3d.Shape()
+Shape1218.USE = "HAnimJointShape"
 
-Transform1217.addChildren(Shape1218)
+Transform1217.children.append(Shape1218)
 
-HAnimSegment1215.addChildren(Transform1217)
+HAnimSegment1215.children.append(Transform1217)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='l_pinky2'/> to <HAnimJoint name='l_pinky3'/>
-Shape1219 = Shape()
-LineSet1220 = LineSet()
-LineSet1220.setVertexCount([2])
-Coordinate1221 = Coordinate()
-Coordinate1221.setPoint([0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017])
+Shape1219 = x3d.Shape()
+LineSet1220 = x3d.LineSet()
+LineSet1220.vertexCount = [2]
+Coordinate1221 = x3d.Coordinate()
+Coordinate1221.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
-LineSet1220.setCoord(Coordinate1221)
-ColorRGBA1222 = ColorRGBA()
-ColorRGBA1222.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1220.coord.append(Coordinate1221)
+ColorRGBA1222 = x3d.ColorRGBA()
+ColorRGBA1222.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1220.setColor(ColorRGBA1222)
+LineSet1220.color.append(ColorRGBA1222)
 
-Shape1219.setGeometry(LineSet1220)
+Shape1219.geometry = LineSet1220
 
-HAnimSegment1215.addChildren(Shape1219)
+HAnimSegment1215.children.append(Shape1219)
 
-HAnimJoint1214.addChildren(HAnimSegment1215)
-HAnimJoint1223 = HAnimJoint()
-HAnimJoint1223.setName("l_pinky3")
-HAnimJoint1223.setDEF("hanim_l_pinky3")
-HAnimJoint1223.setCenter([0.1948,0.7277,-0.1017])
-HAnimJoint1223.setStiffness([0,0,0])
-HAnimSegment1224 = HAnimSegment()
-HAnimSegment1224.setName("l_pinky_distal")
-HAnimSegment1224.setDEF("hanim_l_pinky_distal")
+HAnimJoint1214.children.append(HAnimSegment1215)
+HAnimJoint1223 = x3d.HAnimJoint()
+HAnimJoint1223.name = "l_pinky3"
+HAnimJoint1223.DEF = "hanim_l_pinky3"
+HAnimJoint1223.center = [0.1948,0.7277,-0.1017]
+HAnimJoint1223.ulimit = [0,0,0]
+HAnimJoint1223.llimit = [0,0,0]
+HAnimSegment1224 = x3d.HAnimSegment()
+HAnimSegment1224.name = "l_pinky_distal"
+HAnimSegment1224.DEF = "hanim_l_pinky_distal"
 #<HAnimJoint name='l_pinky3'/> visualization sphere is placed within <HAnimSegment name='l_pinky_distal'/>
-TouchSensor1225 = TouchSensor()
-TouchSensor1225.setDescription("HAnimJoint l_pinky3, HAnimSegment l_pinky_distal")
+TouchSensor1225 = x3d.TouchSensor()
+TouchSensor1225.description = "HAnimJoint l_pinky3, HAnimSegment l_pinky_distal"
 
-HAnimSegment1224.addChildren(TouchSensor1225)
-Transform1226 = Transform()
-Transform1226.setTranslation([0.1948,0.7277,-0.1017])
-Shape1227 = Shape()
-Shape1227.setUSE("HAnimJointShape")
+HAnimSegment1224.children.append(TouchSensor1225)
+Transform1226 = x3d.Transform()
+Transform1226.translation = [0.1948,0.7277,-0.1017]
+Shape1227 = x3d.Shape()
+Shape1227.USE = "HAnimJointShape"
 
-Transform1226.addChildren(Shape1227)
+Transform1226.children.append(Shape1227)
 
-HAnimSegment1224.addChildren(Transform1226)
+HAnimSegment1224.children.append(Transform1226)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='l_pinky3'/> to <HAnimSite name='l_pinky_distal_tip'/>
-Shape1228 = Shape()
-LineSet1229 = LineSet()
-LineSet1229.setVertexCount([2])
-Coordinate1230 = Coordinate()
-Coordinate1230.setPoint([0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012])
+Shape1228 = x3d.Shape()
+LineSet1229 = x3d.LineSet()
+LineSet1229.vertexCount = [2]
+Coordinate1230 = x3d.Coordinate()
+Coordinate1230.point = (0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012)
 
-LineSet1229.setCoord(Coordinate1230)
-ColorRGBA1231 = ColorRGBA()
-ColorRGBA1231.setUSE("HAnimSiteLineColorRGBA")
+LineSet1229.coord.append(Coordinate1230)
+ColorRGBA1231 = x3d.ColorRGBA()
+ColorRGBA1231.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1229.setColor(ColorRGBA1231)
+LineSet1229.color.append(ColorRGBA1231)
 
-Shape1228.setGeometry(LineSet1229)
+Shape1228.geometry = LineSet1229
 
-HAnimSegment1224.addChildren(Shape1228)
-HAnimSite1232 = HAnimSite()
-HAnimSite1232.setName("l_pinky_distal_tip")
-HAnimSite1232.setDEF("hanim_l_pinky_distal_tip")
-HAnimSite1232.setTranslation([0.2014,0.7009,-0.1012])
+HAnimSegment1224.children.append(Shape1228)
+HAnimSite1232 = x3d.HAnimSite()
+HAnimSite1232.name = "l_pinky_distal_tip"
+HAnimSite1232.DEF = "hanim_l_pinky_distal_tip"
+HAnimSite1232.translation = [0.2014,0.7009,-0.1012]
 #HAnimSite visualization shape
-TouchSensor1233 = TouchSensor()
-TouchSensor1233.setDescription("HAnimSite l_pinky_distal_tip")
+TouchSensor1233 = x3d.TouchSensor()
+TouchSensor1233.description = "HAnimSite l_pinky_distal_tip"
 
-HAnimSite1232.addChildren(TouchSensor1233)
-Shape1234 = Shape()
-Shape1234.setUSE("HAnimSiteShape")
+HAnimSite1232.children.append(TouchSensor1233)
+Shape1234 = x3d.Shape()
+Shape1234.USE = "HAnimSiteShape"
 
-HAnimSite1232.addChildren(Shape1234)
+HAnimSite1232.children.append(Shape1234)
 
-HAnimSegment1224.addChildren(HAnimSite1232)
+HAnimSegment1224.children.append(HAnimSite1232)
 
-HAnimJoint1223.addChildren(HAnimSegment1224)
+HAnimJoint1223.children.append(HAnimSegment1224)
 
-HAnimJoint1214.addChildren(HAnimJoint1223)
+HAnimJoint1214.children.append(HAnimJoint1223)
 
-HAnimJoint1205.addChildren(HAnimJoint1214)
+HAnimJoint1205.children.append(HAnimJoint1214)
 
-HAnimJoint1196.addChildren(HAnimJoint1205)
+HAnimJoint1196.children.append(HAnimJoint1205)
 
-HAnimJoint984.addChildren(HAnimJoint1196)
+HAnimJoint984.children.append(HAnimJoint1196)
 
-HAnimJoint947.addChildren(HAnimJoint984)
+HAnimJoint947.children.append(HAnimJoint984)
 
-HAnimJoint931.addChildren(HAnimJoint947)
+HAnimJoint931.children.append(HAnimJoint947)
 
-HAnimJoint922.addChildren(HAnimJoint931)
+HAnimJoint922.children.append(HAnimJoint931)
 
-HAnimJoint885.addChildren(HAnimJoint922)
+HAnimJoint885.children.append(HAnimJoint922)
 
-HAnimJoint597.addChildren(HAnimJoint885)
-HAnimJoint1235 = HAnimJoint()
-HAnimJoint1235.setName("r_sternoclavicular")
-HAnimJoint1235.setDEF("hanim_r_sternoclavicular")
-HAnimJoint1235.setCenter([-0.082,1.4488,-0.0353])
-HAnimJoint1235.setStiffness([0,0,0])
-HAnimSegment1236 = HAnimSegment()
-HAnimSegment1236.setName("r_clavicle")
-HAnimSegment1236.setDEF("hanim_r_clavicle")
+HAnimJoint597.children.append(HAnimJoint885)
+HAnimJoint1235 = x3d.HAnimJoint()
+HAnimJoint1235.name = "r_sternoclavicular"
+HAnimJoint1235.DEF = "hanim_r_sternoclavicular"
+HAnimJoint1235.center = [-0.082,1.4488,-0.0353]
+HAnimJoint1235.ulimit = [0,0,0]
+HAnimJoint1235.llimit = [0,0,0]
+HAnimSegment1236 = x3d.HAnimSegment()
+HAnimSegment1236.name = "r_clavicle"
+HAnimSegment1236.DEF = "hanim_r_clavicle"
 #<HAnimJoint name='r_sternoclavicular'/> visualization sphere is placed within <HAnimSegment name='r_clavicle'/>
-TouchSensor1237 = TouchSensor()
-TouchSensor1237.setDescription("HAnimJoint r_sternoclavicular, HAnimSegment r_clavicle")
+TouchSensor1237 = x3d.TouchSensor()
+TouchSensor1237.description = "HAnimJoint r_sternoclavicular, HAnimSegment r_clavicle"
 
-HAnimSegment1236.addChildren(TouchSensor1237)
-Transform1238 = Transform()
-Transform1238.setTranslation([-0.082,1.4488,-0.0353])
-Shape1239 = Shape()
-Shape1239.setUSE("HAnimJointShape")
+HAnimSegment1236.children.append(TouchSensor1237)
+Transform1238 = x3d.Transform()
+Transform1238.translation = [-0.082,1.4488,-0.0353]
+Shape1239 = x3d.Shape()
+Shape1239.USE = "HAnimJointShape"
 
-Transform1238.addChildren(Shape1239)
+Transform1238.children.append(Shape1239)
 
-HAnimSegment1236.addChildren(Transform1238)
+HAnimSegment1236.children.append(Transform1238)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_sternoclavicular'/> to <HAnimJoint name='r_acromioclavicular'/>
-Shape1240 = Shape()
-LineSet1241 = LineSet()
-LineSet1241.setVertexCount([2])
-Coordinate1242 = Coordinate()
-Coordinate1242.setPoint([-0.082,1.4488,-0.0353,-0.0962,1.4269,-0.0424])
+Shape1240 = x3d.Shape()
+LineSet1241 = x3d.LineSet()
+LineSet1241.vertexCount = [2]
+Coordinate1242 = x3d.Coordinate()
+Coordinate1242.point = (-0.0820,1.4488,-0.0353,-0.0962,1.4269,-0.0424)
 
-LineSet1241.setCoord(Coordinate1242)
-ColorRGBA1243 = ColorRGBA()
-ColorRGBA1243.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1241.coord.append(Coordinate1242)
+ColorRGBA1243 = x3d.ColorRGBA()
+ColorRGBA1243.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1241.setColor(ColorRGBA1243)
+LineSet1241.color.append(ColorRGBA1243)
 
-Shape1240.setGeometry(LineSet1241)
+Shape1240.geometry = LineSet1241
 
-HAnimSegment1236.addChildren(Shape1240)
+HAnimSegment1236.children.append(Shape1240)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_sternoclavicular'/> to <HAnimSite name='r_clavicale'/>
-Shape1244 = Shape()
-LineSet1245 = LineSet()
-LineSet1245.setVertexCount([2])
-Coordinate1246 = Coordinate()
-Coordinate1246.setPoint([-0.082,1.4488,-0.0353,-0.0115,1.4943,0.04])
+Shape1244 = x3d.Shape()
+LineSet1245 = x3d.LineSet()
+LineSet1245.vertexCount = [2]
+Coordinate1246 = x3d.Coordinate()
+Coordinate1246.point = (-0.0820,1.4488,-0.0353,-0.0115,1.4943,0.0400)
 
-LineSet1245.setCoord(Coordinate1246)
-ColorRGBA1247 = ColorRGBA()
-ColorRGBA1247.setUSE("HAnimSiteLineColorRGBA")
+LineSet1245.coord.append(Coordinate1246)
+ColorRGBA1247 = x3d.ColorRGBA()
+ColorRGBA1247.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1245.setColor(ColorRGBA1247)
+LineSet1245.color.append(ColorRGBA1247)
 
-Shape1244.setGeometry(LineSet1245)
+Shape1244.geometry = LineSet1245
 
-HAnimSegment1236.addChildren(Shape1244)
+HAnimSegment1236.children.append(Shape1244)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_sternoclavicular'/> to <HAnimSite name='r_acromion'/>
-Shape1248 = Shape()
-LineSet1249 = LineSet()
-LineSet1249.setVertexCount([2])
-Coordinate1250 = Coordinate()
-Coordinate1250.setPoint([-0.082,1.4488,-0.0353,-0.1905,1.4791,-0.0431])
+Shape1248 = x3d.Shape()
+LineSet1249 = x3d.LineSet()
+LineSet1249.vertexCount = [2]
+Coordinate1250 = x3d.Coordinate()
+Coordinate1250.point = (-0.0820,1.4488,-0.0353,-0.1905,1.4791,-0.0431)
 
-LineSet1249.setCoord(Coordinate1250)
-ColorRGBA1251 = ColorRGBA()
-ColorRGBA1251.setUSE("HAnimSiteLineColorRGBA")
+LineSet1249.coord.append(Coordinate1250)
+ColorRGBA1251 = x3d.ColorRGBA()
+ColorRGBA1251.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1249.setColor(ColorRGBA1251)
+LineSet1249.color.append(ColorRGBA1251)
 
-Shape1248.setGeometry(LineSet1249)
+Shape1248.geometry = LineSet1249
 
-HAnimSegment1236.addChildren(Shape1248)
+HAnimSegment1236.children.append(Shape1248)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_sternoclavicular'/> to <HAnimSite name='r_axilla_ant'/>
-Shape1252 = Shape()
-LineSet1253 = LineSet()
-LineSet1253.setVertexCount([2])
-Coordinate1254 = Coordinate()
-Coordinate1254.setPoint([-0.082,1.4488,-0.0353,-0.1626,1.4072,-0.0031])
+Shape1252 = x3d.Shape()
+LineSet1253 = x3d.LineSet()
+LineSet1253.vertexCount = [2]
+Coordinate1254 = x3d.Coordinate()
+Coordinate1254.point = (-0.0820,1.4488,-0.0353,-0.1626,1.4072,-0.0031)
 
-LineSet1253.setCoord(Coordinate1254)
-ColorRGBA1255 = ColorRGBA()
-ColorRGBA1255.setUSE("HAnimSiteLineColorRGBA")
+LineSet1253.coord.append(Coordinate1254)
+ColorRGBA1255 = x3d.ColorRGBA()
+ColorRGBA1255.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1253.setColor(ColorRGBA1255)
+LineSet1253.color.append(ColorRGBA1255)
 
-Shape1252.setGeometry(LineSet1253)
+Shape1252.geometry = LineSet1253
 
-HAnimSegment1236.addChildren(Shape1252)
+HAnimSegment1236.children.append(Shape1252)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_sternoclavicular'/> to <HAnimSite name='r_axilla_post'/>
-Shape1256 = Shape()
-LineSet1257 = LineSet()
-LineSet1257.setVertexCount([2])
-Coordinate1258 = Coordinate()
-Coordinate1258.setPoint([-0.082,1.4488,-0.0353,-0.1603,1.4098,-0.0826])
+Shape1256 = x3d.Shape()
+LineSet1257 = x3d.LineSet()
+LineSet1257.vertexCount = [2]
+Coordinate1258 = x3d.Coordinate()
+Coordinate1258.point = (-0.0820,1.4488,-0.0353,-0.1603,1.4098,-0.0826)
 
-LineSet1257.setCoord(Coordinate1258)
-ColorRGBA1259 = ColorRGBA()
-ColorRGBA1259.setUSE("HAnimSiteLineColorRGBA")
+LineSet1257.coord.append(Coordinate1258)
+ColorRGBA1259 = x3d.ColorRGBA()
+ColorRGBA1259.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1257.setColor(ColorRGBA1259)
+LineSet1257.color.append(ColorRGBA1259)
 
-Shape1256.setGeometry(LineSet1257)
+Shape1256.geometry = LineSet1257
 
-HAnimSegment1236.addChildren(Shape1256)
-HAnimSite1260 = HAnimSite()
-HAnimSite1260.setName("r_clavicale_pt")
-HAnimSite1260.setDEF("hanim_r_clavicale_pt")
-HAnimSite1260.setTranslation([-0.0115,1.4943,0.04])
+HAnimSegment1236.children.append(Shape1256)
+HAnimSite1260 = x3d.HAnimSite()
+HAnimSite1260.name = "r_clavicale_pt"
+HAnimSite1260.DEF = "hanim_r_clavicale_pt"
+HAnimSite1260.translation = [-0.0115,1.4943,0.04]
 #HAnimSite visualization shape
-TouchSensor1261 = TouchSensor()
-TouchSensor1261.setDescription("HAnimSite r_clavicale")
+TouchSensor1261 = x3d.TouchSensor()
+TouchSensor1261.description = "HAnimSite r_clavicale"
 
-HAnimSite1260.addChildren(TouchSensor1261)
-Shape1262 = Shape()
-Shape1262.setUSE("HAnimSiteShape")
+HAnimSite1260.children.append(TouchSensor1261)
+Shape1262 = x3d.Shape()
+Shape1262.USE = "HAnimSiteShape"
 
-HAnimSite1260.addChildren(Shape1262)
+HAnimSite1260.children.append(Shape1262)
 
-HAnimSegment1236.addChildren(HAnimSite1260)
-HAnimSite1263 = HAnimSite()
-HAnimSite1263.setName("r_acromion_pt")
-HAnimSite1263.setDEF("hanim_r_acromion_pt")
-HAnimSite1263.setTranslation([-0.1905,1.4791,-0.0431])
+HAnimSegment1236.children.append(HAnimSite1260)
+HAnimSite1263 = x3d.HAnimSite()
+HAnimSite1263.name = "r_acromion_pt"
+HAnimSite1263.DEF = "hanim_r_acromion_pt"
+HAnimSite1263.translation = [-0.1905,1.4791,-0.0431]
 #HAnimSite visualization shape
-TouchSensor1264 = TouchSensor()
-TouchSensor1264.setDescription("HAnimSite r_acromion")
+TouchSensor1264 = x3d.TouchSensor()
+TouchSensor1264.description = "HAnimSite r_acromion"
 
-HAnimSite1263.addChildren(TouchSensor1264)
-Shape1265 = Shape()
-Shape1265.setUSE("HAnimSiteShape")
+HAnimSite1263.children.append(TouchSensor1264)
+Shape1265 = x3d.Shape()
+Shape1265.USE = "HAnimSiteShape"
 
-HAnimSite1263.addChildren(Shape1265)
+HAnimSite1263.children.append(Shape1265)
 
-HAnimSegment1236.addChildren(HAnimSite1263)
-HAnimSite1266 = HAnimSite()
-HAnimSite1266.setName("r_axilla_ant_pt")
-HAnimSite1266.setDEF("hanim_r_axilla_ant_pt")
-HAnimSite1266.setTranslation([-0.1626,1.4072,-0.0031])
+HAnimSegment1236.children.append(HAnimSite1263)
+HAnimSite1266 = x3d.HAnimSite()
+HAnimSite1266.name = "r_axilla_ant_pt"
+HAnimSite1266.DEF = "hanim_r_axilla_ant_pt"
+HAnimSite1266.translation = [-0.1626,1.4072,-0.0031]
 #HAnimSite visualization shape
-TouchSensor1267 = TouchSensor()
-TouchSensor1267.setDescription("HAnimSite r_axilla_ant")
+TouchSensor1267 = x3d.TouchSensor()
+TouchSensor1267.description = "HAnimSite r_axilla_ant"
 
-HAnimSite1266.addChildren(TouchSensor1267)
-Shape1268 = Shape()
-Shape1268.setUSE("HAnimSiteShape")
+HAnimSite1266.children.append(TouchSensor1267)
+Shape1268 = x3d.Shape()
+Shape1268.USE = "HAnimSiteShape"
 
-HAnimSite1266.addChildren(Shape1268)
+HAnimSite1266.children.append(Shape1268)
 
-HAnimSegment1236.addChildren(HAnimSite1266)
-HAnimSite1269 = HAnimSite()
-HAnimSite1269.setName("r_axilla_post_pt")
-HAnimSite1269.setDEF("hanim_r_axilla_post_pt")
-HAnimSite1269.setTranslation([-0.1603,1.4098,-0.0826])
+HAnimSegment1236.children.append(HAnimSite1266)
+HAnimSite1269 = x3d.HAnimSite()
+HAnimSite1269.name = "r_axilla_post_pt"
+HAnimSite1269.DEF = "hanim_r_axilla_post_pt"
+HAnimSite1269.translation = [-0.1603,1.4098,-0.0826]
 #HAnimSite visualization shape
-TouchSensor1270 = TouchSensor()
-TouchSensor1270.setDescription("HAnimSite r_axilla_post")
+TouchSensor1270 = x3d.TouchSensor()
+TouchSensor1270.description = "HAnimSite r_axilla_post"
 
-HAnimSite1269.addChildren(TouchSensor1270)
-Shape1271 = Shape()
-Shape1271.setUSE("HAnimSiteShape")
+HAnimSite1269.children.append(TouchSensor1270)
+Shape1271 = x3d.Shape()
+Shape1271.USE = "HAnimSiteShape"
 
-HAnimSite1269.addChildren(Shape1271)
+HAnimSite1269.children.append(Shape1271)
 
-HAnimSegment1236.addChildren(HAnimSite1269)
+HAnimSegment1236.children.append(HAnimSite1269)
 
-HAnimJoint1235.addChildren(HAnimSegment1236)
-HAnimJoint1272 = HAnimJoint()
-HAnimJoint1272.setName("r_acromioclavicular")
-HAnimJoint1272.setDEF("hanim_r_acromioclavicular")
-HAnimJoint1272.setCenter([-0.0962,1.4269,-0.0424])
-HAnimJoint1272.setStiffness([0,0,0])
-HAnimSegment1273 = HAnimSegment()
-HAnimSegment1273.setName("r_scapula")
-HAnimSegment1273.setDEF("hanim_r_scapula")
+HAnimJoint1235.children.append(HAnimSegment1236)
+HAnimJoint1272 = x3d.HAnimJoint()
+HAnimJoint1272.name = "r_acromioclavicular"
+HAnimJoint1272.DEF = "hanim_r_acromioclavicular"
+HAnimJoint1272.center = [-0.0962,1.4269,-0.0424]
+HAnimJoint1272.ulimit = [0,0,0]
+HAnimJoint1272.llimit = [0,0,0]
+HAnimSegment1273 = x3d.HAnimSegment()
+HAnimSegment1273.name = "r_scapula"
+HAnimSegment1273.DEF = "hanim_r_scapula"
 #<HAnimJoint name='r_acromioclavicular'/> visualization sphere is placed within <HAnimSegment name='r_scapula'/>
-TouchSensor1274 = TouchSensor()
-TouchSensor1274.setDescription("HAnimJoint r_acromioclavicular, HAnimSegment r_scapula")
+TouchSensor1274 = x3d.TouchSensor()
+TouchSensor1274.description = "HAnimJoint r_acromioclavicular, HAnimSegment r_scapula"
 
-HAnimSegment1273.addChildren(TouchSensor1274)
-Transform1275 = Transform()
-Transform1275.setTranslation([-0.0962,1.4269,-0.0424])
-Shape1276 = Shape()
-Shape1276.setUSE("HAnimJointShape")
+HAnimSegment1273.children.append(TouchSensor1274)
+Transform1275 = x3d.Transform()
+Transform1275.translation = [-0.0962,1.4269,-0.0424]
+Shape1276 = x3d.Shape()
+Shape1276.USE = "HAnimJointShape"
 
-Transform1275.addChildren(Shape1276)
+Transform1275.children.append(Shape1276)
 
-HAnimSegment1273.addChildren(Transform1275)
+HAnimSegment1273.children.append(Transform1275)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_acromioclavicular'/> to <HAnimJoint name='r_shoulder'/>
-Shape1277 = Shape()
-LineSet1278 = LineSet()
-LineSet1278.setVertexCount([2])
-Coordinate1279 = Coordinate()
-Coordinate1279.setPoint([-0.0962,1.4269,-0.0424,-0.2029,1.4376,-0.0387])
+Shape1277 = x3d.Shape()
+LineSet1278 = x3d.LineSet()
+LineSet1278.vertexCount = [2]
+Coordinate1279 = x3d.Coordinate()
+Coordinate1279.point = (-0.0962,1.4269,-0.0424,-0.2029,1.4376,-0.0387)
 
-LineSet1278.setCoord(Coordinate1279)
-ColorRGBA1280 = ColorRGBA()
-ColorRGBA1280.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1278.coord.append(Coordinate1279)
+ColorRGBA1280 = x3d.ColorRGBA()
+ColorRGBA1280.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1278.setColor(ColorRGBA1280)
+LineSet1278.color.append(ColorRGBA1280)
 
-Shape1277.setGeometry(LineSet1278)
+Shape1277.geometry = LineSet1278
 
-HAnimSegment1273.addChildren(Shape1277)
+HAnimSegment1273.children.append(Shape1277)
 
-HAnimJoint1272.addChildren(HAnimSegment1273)
-HAnimJoint1281 = HAnimJoint()
-HAnimJoint1281.setName("r_shoulder")
-HAnimJoint1281.setDEF("hanim_r_shoulder")
-HAnimJoint1281.setCenter([-0.2029,1.4376,-0.0387])
-HAnimJoint1281.setStiffness([0,0,0])
-HAnimSegment1282 = HAnimSegment()
-HAnimSegment1282.setName("r_upperarm")
-HAnimSegment1282.setDEF("hanim_r_upperarm")
+HAnimJoint1272.children.append(HAnimSegment1273)
+HAnimJoint1281 = x3d.HAnimJoint()
+HAnimJoint1281.name = "r_shoulder"
+HAnimJoint1281.DEF = "hanim_r_shoulder"
+HAnimJoint1281.center = [-0.2029,1.4376,-0.0387]
+HAnimJoint1281.ulimit = [0,0,0]
+HAnimJoint1281.llimit = [0,0,0]
+HAnimSegment1282 = x3d.HAnimSegment()
+HAnimSegment1282.name = "r_upperarm"
+HAnimSegment1282.DEF = "hanim_r_upperarm"
 #<HAnimJoint name='r_shoulder'/> visualization sphere is placed within <HAnimSegment name='r_upperarm'/>
-TouchSensor1283 = TouchSensor()
-TouchSensor1283.setDescription("HAnimJoint r_shoulder, HAnimSegment r_upperarm")
+TouchSensor1283 = x3d.TouchSensor()
+TouchSensor1283.description = "HAnimJoint r_shoulder, HAnimSegment r_upperarm"
 
-HAnimSegment1282.addChildren(TouchSensor1283)
-Transform1284 = Transform()
-Transform1284.setTranslation([-0.2029,1.4376,-0.0387])
-Shape1285 = Shape()
-Shape1285.setUSE("HAnimJointShape")
+HAnimSegment1282.children.append(TouchSensor1283)
+Transform1284 = x3d.Transform()
+Transform1284.translation = [-0.2029,1.4376,-0.0387]
+Shape1285 = x3d.Shape()
+Shape1285.USE = "HAnimJointShape"
 
-Transform1284.addChildren(Shape1285)
+Transform1284.children.append(Shape1285)
 
-HAnimSegment1282.addChildren(Transform1284)
+HAnimSegment1282.children.append(Transform1284)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_shoulder'/> to <HAnimJoint name='r_elbow'/>
-Shape1286 = Shape()
-LineSet1287 = LineSet()
-LineSet1287.setVertexCount([2])
-Coordinate1288 = Coordinate()
-Coordinate1288.setPoint([-0.2029,1.4376,-0.0387,-0.2014,1.1357,-0.0682])
+Shape1286 = x3d.Shape()
+LineSet1287 = x3d.LineSet()
+LineSet1287.vertexCount = [2]
+Coordinate1288 = x3d.Coordinate()
+Coordinate1288.point = (-0.2029,1.4376,-0.0387,-0.2014,1.1357,-0.0682)
 
-LineSet1287.setCoord(Coordinate1288)
-ColorRGBA1289 = ColorRGBA()
-ColorRGBA1289.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1287.coord.append(Coordinate1288)
+ColorRGBA1289 = x3d.ColorRGBA()
+ColorRGBA1289.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1287.setColor(ColorRGBA1289)
+LineSet1287.color.append(ColorRGBA1289)
 
-Shape1286.setGeometry(LineSet1287)
+Shape1286.geometry = LineSet1287
 
-HAnimSegment1282.addChildren(Shape1286)
+HAnimSegment1282.children.append(Shape1286)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_shoulder'/> to <HAnimSite name='r_humeral_lateral_epicn'/>
-Shape1290 = Shape()
-LineSet1291 = LineSet()
-LineSet1291.setVertexCount([2])
-Coordinate1292 = Coordinate()
-Coordinate1292.setPoint([-0.2029,1.4376,-0.0387,-0.2224,1.1517,-0.1033])
+Shape1290 = x3d.Shape()
+LineSet1291 = x3d.LineSet()
+LineSet1291.vertexCount = [2]
+Coordinate1292 = x3d.Coordinate()
+Coordinate1292.point = (-0.2029,1.4376,-0.0387,-0.2224,1.1517,-0.1033)
 
-LineSet1291.setCoord(Coordinate1292)
-ColorRGBA1293 = ColorRGBA()
-ColorRGBA1293.setUSE("HAnimSiteLineColorRGBA")
+LineSet1291.coord.append(Coordinate1292)
+ColorRGBA1293 = x3d.ColorRGBA()
+ColorRGBA1293.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1291.setColor(ColorRGBA1293)
+LineSet1291.color.append(ColorRGBA1293)
 
-Shape1290.setGeometry(LineSet1291)
+Shape1290.geometry = LineSet1291
 
-HAnimSegment1282.addChildren(Shape1290)
-HAnimSite1294 = HAnimSite()
-HAnimSite1294.setName("r_humeral_lateral_epicn_pt")
-HAnimSite1294.setDEF("hanim_r_humeral_lateral_epicn_pt")
-HAnimSite1294.setTranslation([-0.2224,1.1517,-0.1033])
+HAnimSegment1282.children.append(Shape1290)
+HAnimSite1294 = x3d.HAnimSite()
+HAnimSite1294.name = "r_humeral_lateral_epicn_pt"
+HAnimSite1294.DEF = "hanim_r_humeral_lateral_epicn_pt"
+HAnimSite1294.translation = [-0.2224,1.1517,-0.1033]
 #HAnimSite visualization shape
-TouchSensor1295 = TouchSensor()
-TouchSensor1295.setDescription("HAnimSite r_humeral_lateral_epicn")
+TouchSensor1295 = x3d.TouchSensor()
+TouchSensor1295.description = "HAnimSite r_humeral_lateral_epicn"
 
-HAnimSite1294.addChildren(TouchSensor1295)
-Shape1296 = Shape()
-Shape1296.setUSE("HAnimSiteShape")
+HAnimSite1294.children.append(TouchSensor1295)
+Shape1296 = x3d.Shape()
+Shape1296.USE = "HAnimSiteShape"
 
-HAnimSite1294.addChildren(Shape1296)
+HAnimSite1294.children.append(Shape1296)
 
-HAnimSegment1282.addChildren(HAnimSite1294)
+HAnimSegment1282.children.append(HAnimSite1294)
 
-HAnimJoint1281.addChildren(HAnimSegment1282)
-HAnimJoint1297 = HAnimJoint()
-HAnimJoint1297.setName("r_elbow")
-HAnimJoint1297.setDEF("hanim_r_elbow")
-HAnimJoint1297.setCenter([-0.2014,1.1357,-0.0682])
-HAnimJoint1297.setStiffness([0,0,0])
-HAnimSegment1298 = HAnimSegment()
-HAnimSegment1298.setName("r_forearm")
-HAnimSegment1298.setDEF("hanim_r_forearm")
+HAnimJoint1281.children.append(HAnimSegment1282)
+HAnimJoint1297 = x3d.HAnimJoint()
+HAnimJoint1297.name = "r_elbow"
+HAnimJoint1297.DEF = "hanim_r_elbow"
+HAnimJoint1297.center = [-0.2014,1.1357,-0.0682]
+HAnimJoint1297.ulimit = [0,0,0]
+HAnimJoint1297.llimit = [0,0,0]
+HAnimSegment1298 = x3d.HAnimSegment()
+HAnimSegment1298.name = "r_forearm"
+HAnimSegment1298.DEF = "hanim_r_forearm"
 #<HAnimJoint name='r_elbow'/> visualization sphere is placed within <HAnimSegment name='r_forearm'/>
-TouchSensor1299 = TouchSensor()
-TouchSensor1299.setDescription("HAnimJoint r_elbow, HAnimSegment r_forearm")
+TouchSensor1299 = x3d.TouchSensor()
+TouchSensor1299.description = "HAnimJoint r_elbow, HAnimSegment r_forearm"
 
-HAnimSegment1298.addChildren(TouchSensor1299)
-Transform1300 = Transform()
-Transform1300.setTranslation([-0.2014,1.1357,-0.0682])
-Shape1301 = Shape()
-Shape1301.setUSE("HAnimJointShape")
+HAnimSegment1298.children.append(TouchSensor1299)
+Transform1300 = x3d.Transform()
+Transform1300.translation = [-0.2014,1.1357,-0.0682]
+Shape1301 = x3d.Shape()
+Shape1301.USE = "HAnimJointShape"
 
-Transform1300.addChildren(Shape1301)
+Transform1300.children.append(Shape1301)
 
-HAnimSegment1298.addChildren(Transform1300)
+HAnimSegment1298.children.append(Transform1300)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_elbow'/> to <HAnimJoint name='r_wrist'/>
-Shape1302 = Shape()
-LineSet1303 = LineSet()
-LineSet1303.setVertexCount([2])
-Coordinate1304 = Coordinate()
-Coordinate1304.setPoint([-0.2014,1.1357,-0.0682,-0.1984,0.8663,-0.0583])
+Shape1302 = x3d.Shape()
+LineSet1303 = x3d.LineSet()
+LineSet1303.vertexCount = [2]
+Coordinate1304 = x3d.Coordinate()
+Coordinate1304.point = (-0.2014,1.1357,-0.0682,-0.1984,0.8663,-0.0583)
 
-LineSet1303.setCoord(Coordinate1304)
-ColorRGBA1305 = ColorRGBA()
-ColorRGBA1305.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1303.coord.append(Coordinate1304)
+ColorRGBA1305 = x3d.ColorRGBA()
+ColorRGBA1305.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1303.setColor(ColorRGBA1305)
+LineSet1303.color.append(ColorRGBA1305)
 
-Shape1302.setGeometry(LineSet1303)
+Shape1302.geometry = LineSet1303
 
-HAnimSegment1298.addChildren(Shape1302)
+HAnimSegment1298.children.append(Shape1302)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_elbow'/> to <HAnimSite name='r_radial_styloid'/>
-Shape1306 = Shape()
-LineSet1307 = LineSet()
-LineSet1307.setVertexCount([2])
-Coordinate1308 = Coordinate()
-Coordinate1308.setPoint([-0.2014,1.1357,-0.0682,-0.1884,0.8676,-0.036])
+Shape1306 = x3d.Shape()
+LineSet1307 = x3d.LineSet()
+LineSet1307.vertexCount = [2]
+Coordinate1308 = x3d.Coordinate()
+Coordinate1308.point = (-0.2014,1.1357,-0.0682,-0.1884,0.8676,-0.0360)
 
-LineSet1307.setCoord(Coordinate1308)
-ColorRGBA1309 = ColorRGBA()
-ColorRGBA1309.setUSE("HAnimSiteLineColorRGBA")
+LineSet1307.coord.append(Coordinate1308)
+ColorRGBA1309 = x3d.ColorRGBA()
+ColorRGBA1309.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1307.setColor(ColorRGBA1309)
+LineSet1307.color.append(ColorRGBA1309)
 
-Shape1306.setGeometry(LineSet1307)
+Shape1306.geometry = LineSet1307
 
-HAnimSegment1298.addChildren(Shape1306)
+HAnimSegment1298.children.append(Shape1306)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_elbow'/> to <HAnimSite name='r_olecranon'/>
-Shape1310 = Shape()
-LineSet1311 = LineSet()
-LineSet1311.setVertexCount([2])
-Coordinate1312 = Coordinate()
-Coordinate1312.setPoint([-0.2014,1.1357,-0.0682,-0.1907,1.1405,-0.1065])
+Shape1310 = x3d.Shape()
+LineSet1311 = x3d.LineSet()
+LineSet1311.vertexCount = [2]
+Coordinate1312 = x3d.Coordinate()
+Coordinate1312.point = (-0.2014,1.1357,-0.0682,-0.1907,1.1405,-0.1065)
 
-LineSet1311.setCoord(Coordinate1312)
-ColorRGBA1313 = ColorRGBA()
-ColorRGBA1313.setUSE("HAnimSiteLineColorRGBA")
+LineSet1311.coord.append(Coordinate1312)
+ColorRGBA1313 = x3d.ColorRGBA()
+ColorRGBA1313.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1311.setColor(ColorRGBA1313)
+LineSet1311.color.append(ColorRGBA1313)
 
-Shape1310.setGeometry(LineSet1311)
+Shape1310.geometry = LineSet1311
 
-HAnimSegment1298.addChildren(Shape1310)
+HAnimSegment1298.children.append(Shape1310)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_elbow'/> to <HAnimSite name='r_humeral_medial_epicn'/>
-Shape1314 = Shape()
-LineSet1315 = LineSet()
-LineSet1315.setVertexCount([2])
-Coordinate1316 = Coordinate()
-Coordinate1316.setPoint([-0.2014,1.1357,-0.0682,-0.168,1.1298,-0.1062])
+Shape1314 = x3d.Shape()
+LineSet1315 = x3d.LineSet()
+LineSet1315.vertexCount = [2]
+Coordinate1316 = x3d.Coordinate()
+Coordinate1316.point = (-0.2014,1.1357,-0.0682,-0.1680,1.1298,-0.1062)
 
-LineSet1315.setCoord(Coordinate1316)
-ColorRGBA1317 = ColorRGBA()
-ColorRGBA1317.setUSE("HAnimSiteLineColorRGBA")
+LineSet1315.coord.append(Coordinate1316)
+ColorRGBA1317 = x3d.ColorRGBA()
+ColorRGBA1317.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1315.setColor(ColorRGBA1317)
+LineSet1315.color.append(ColorRGBA1317)
 
-Shape1314.setGeometry(LineSet1315)
+Shape1314.geometry = LineSet1315
 
-HAnimSegment1298.addChildren(Shape1314)
+HAnimSegment1298.children.append(Shape1314)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_elbow'/> to <HAnimSite name='r_radiale'/>
-Shape1318 = Shape()
-LineSet1319 = LineSet()
-LineSet1319.setVertexCount([2])
-Coordinate1320 = Coordinate()
-Coordinate1320.setPoint([-0.2014,1.1357,-0.0682,-0.213,1.1305,-0.1091])
+Shape1318 = x3d.Shape()
+LineSet1319 = x3d.LineSet()
+LineSet1319.vertexCount = [2]
+Coordinate1320 = x3d.Coordinate()
+Coordinate1320.point = (-0.2014,1.1357,-0.0682,-0.2130,1.1305,-0.1091)
 
-LineSet1319.setCoord(Coordinate1320)
-ColorRGBA1321 = ColorRGBA()
-ColorRGBA1321.setUSE("HAnimSiteLineColorRGBA")
+LineSet1319.coord.append(Coordinate1320)
+ColorRGBA1321 = x3d.ColorRGBA()
+ColorRGBA1321.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1319.setColor(ColorRGBA1321)
+LineSet1319.color.append(ColorRGBA1321)
 
-Shape1318.setGeometry(LineSet1319)
+Shape1318.geometry = LineSet1319
 
-HAnimSegment1298.addChildren(Shape1318)
-HAnimSite1322 = HAnimSite()
-HAnimSite1322.setName("r_radial_styloid_pt")
-HAnimSite1322.setDEF("hanim_r_radial_styloid_pt")
-HAnimSite1322.setTranslation([-0.1884,0.8676,-0.036])
+HAnimSegment1298.children.append(Shape1318)
+HAnimSite1322 = x3d.HAnimSite()
+HAnimSite1322.name = "r_radial_styloid_pt"
+HAnimSite1322.DEF = "hanim_r_radial_styloid_pt"
+HAnimSite1322.translation = [-0.1884,0.8676,-0.036]
 #HAnimSite visualization shape
-TouchSensor1323 = TouchSensor()
-TouchSensor1323.setDescription("HAnimSite r_radial_styloid")
+TouchSensor1323 = x3d.TouchSensor()
+TouchSensor1323.description = "HAnimSite r_radial_styloid"
 
-HAnimSite1322.addChildren(TouchSensor1323)
-Shape1324 = Shape()
-Shape1324.setUSE("HAnimSiteShape")
+HAnimSite1322.children.append(TouchSensor1323)
+Shape1324 = x3d.Shape()
+Shape1324.USE = "HAnimSiteShape"
 
-HAnimSite1322.addChildren(Shape1324)
+HAnimSite1322.children.append(Shape1324)
 
-HAnimSegment1298.addChildren(HAnimSite1322)
-HAnimSite1325 = HAnimSite()
-HAnimSite1325.setName("r_olecranon_pt")
-HAnimSite1325.setDEF("hanim_r_olecranon_pt")
-HAnimSite1325.setTranslation([-0.1907,1.1405,-0.1065])
+HAnimSegment1298.children.append(HAnimSite1322)
+HAnimSite1325 = x3d.HAnimSite()
+HAnimSite1325.name = "r_olecranon_pt"
+HAnimSite1325.DEF = "hanim_r_olecranon_pt"
+HAnimSite1325.translation = [-0.1907,1.1405,-0.1065]
 #HAnimSite visualization shape
-TouchSensor1326 = TouchSensor()
-TouchSensor1326.setDescription("HAnimSite r_olecranon")
+TouchSensor1326 = x3d.TouchSensor()
+TouchSensor1326.description = "HAnimSite r_olecranon"
 
-HAnimSite1325.addChildren(TouchSensor1326)
-Shape1327 = Shape()
-Shape1327.setUSE("HAnimSiteShape")
+HAnimSite1325.children.append(TouchSensor1326)
+Shape1327 = x3d.Shape()
+Shape1327.USE = "HAnimSiteShape"
 
-HAnimSite1325.addChildren(Shape1327)
+HAnimSite1325.children.append(Shape1327)
 
-HAnimSegment1298.addChildren(HAnimSite1325)
-HAnimSite1328 = HAnimSite()
-HAnimSite1328.setName("r_humeral_medial_epicn_pt")
-HAnimSite1328.setDEF("hanim_r_humeral_medial_epicn_pt")
-HAnimSite1328.setTranslation([-0.168,1.1298,-0.1062])
+HAnimSegment1298.children.append(HAnimSite1325)
+HAnimSite1328 = x3d.HAnimSite()
+HAnimSite1328.name = "r_humeral_medial_epicn_pt"
+HAnimSite1328.DEF = "hanim_r_humeral_medial_epicn_pt"
+HAnimSite1328.translation = [-0.168,1.1298,-0.1062]
 #HAnimSite visualization shape
-TouchSensor1329 = TouchSensor()
-TouchSensor1329.setDescription("HAnimSite r_humeral_medial_epicn")
+TouchSensor1329 = x3d.TouchSensor()
+TouchSensor1329.description = "HAnimSite r_humeral_medial_epicn"
 
-HAnimSite1328.addChildren(TouchSensor1329)
-Shape1330 = Shape()
-Shape1330.setUSE("HAnimSiteShape")
+HAnimSite1328.children.append(TouchSensor1329)
+Shape1330 = x3d.Shape()
+Shape1330.USE = "HAnimSiteShape"
 
-HAnimSite1328.addChildren(Shape1330)
+HAnimSite1328.children.append(Shape1330)
 
-HAnimSegment1298.addChildren(HAnimSite1328)
-HAnimSite1331 = HAnimSite()
-HAnimSite1331.setName("r_radiale_pt")
-HAnimSite1331.setDEF("hanim_r_radiale_pt")
-HAnimSite1331.setTranslation([-0.213,1.1305,-0.1091])
+HAnimSegment1298.children.append(HAnimSite1328)
+HAnimSite1331 = x3d.HAnimSite()
+HAnimSite1331.name = "r_radiale_pt"
+HAnimSite1331.DEF = "hanim_r_radiale_pt"
+HAnimSite1331.translation = [-0.213,1.1305,-0.1091]
 #HAnimSite visualization shape
-TouchSensor1332 = TouchSensor()
-TouchSensor1332.setDescription("HAnimSite r_radiale")
+TouchSensor1332 = x3d.TouchSensor()
+TouchSensor1332.description = "HAnimSite r_radiale"
 
-HAnimSite1331.addChildren(TouchSensor1332)
-Shape1333 = Shape()
-Shape1333.setUSE("HAnimSiteShape")
+HAnimSite1331.children.append(TouchSensor1332)
+Shape1333 = x3d.Shape()
+Shape1333.USE = "HAnimSiteShape"
 
-HAnimSite1331.addChildren(Shape1333)
+HAnimSite1331.children.append(Shape1333)
 
-HAnimSegment1298.addChildren(HAnimSite1331)
+HAnimSegment1298.children.append(HAnimSite1331)
 
-HAnimJoint1297.addChildren(HAnimSegment1298)
-HAnimJoint1334 = HAnimJoint()
-HAnimJoint1334.setName("r_wrist")
-HAnimJoint1334.setDEF("hanim_r_wrist")
-HAnimJoint1334.setCenter([-0.1984,0.8663,-0.0583])
-HAnimJoint1334.setStiffness([0,0,0])
-HAnimSegment1335 = HAnimSegment()
-HAnimSegment1335.setName("r_hand")
-HAnimSegment1335.setDEF("hanim_r_hand")
+HAnimJoint1297.children.append(HAnimSegment1298)
+HAnimJoint1334 = x3d.HAnimJoint()
+HAnimJoint1334.name = "r_wrist"
+HAnimJoint1334.DEF = "hanim_r_wrist"
+HAnimJoint1334.center = [-0.1984,0.8663,-0.0583]
+HAnimJoint1334.ulimit = [0,0,0]
+HAnimJoint1334.llimit = [0,0,0]
+HAnimSegment1335 = x3d.HAnimSegment()
+HAnimSegment1335.name = "r_hand"
+HAnimSegment1335.DEF = "hanim_r_hand"
 #<HAnimJoint name='r_wrist'/> visualization sphere is placed within <HAnimSegment name='r_hand'/>
-TouchSensor1336 = TouchSensor()
-TouchSensor1336.setDescription("HAnimJoint r_wrist, HAnimSegment r_hand")
+TouchSensor1336 = x3d.TouchSensor()
+TouchSensor1336.description = "HAnimJoint r_wrist, HAnimSegment r_hand"
 
-HAnimSegment1335.addChildren(TouchSensor1336)
-Transform1337 = Transform()
-Transform1337.setTranslation([-0.1984,0.8663,-0.0583])
-Shape1338 = Shape()
-Shape1338.setUSE("HAnimJointShape")
+HAnimSegment1335.children.append(TouchSensor1336)
+Transform1337 = x3d.Transform()
+Transform1337.translation = [-0.1984,0.8663,-0.0583]
+Shape1338 = x3d.Shape()
+Shape1338.USE = "HAnimJointShape"
 
-Transform1337.addChildren(Shape1338)
+Transform1337.children.append(Shape1338)
 
-HAnimSegment1335.addChildren(Transform1337)
+HAnimSegment1335.children.append(Transform1337)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_wrist'/> to <HAnimJoint name='r_thumb1'/>
-Shape1339 = Shape()
-LineSet1340 = LineSet()
-LineSet1340.setVertexCount([2])
-Coordinate1341 = Coordinate()
-Coordinate1341.setPoint([-0.1984,0.8663,-0.0583,-0.1924,0.8472,-0.0534])
+Shape1339 = x3d.Shape()
+LineSet1340 = x3d.LineSet()
+LineSet1340.vertexCount = [2]
+Coordinate1341 = x3d.Coordinate()
+Coordinate1341.point = (-0.1984,0.8663,-0.0583,-0.1924,0.8472,-0.0534)
 
-LineSet1340.setCoord(Coordinate1341)
-ColorRGBA1342 = ColorRGBA()
-ColorRGBA1342.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1340.coord.append(Coordinate1341)
+ColorRGBA1342 = x3d.ColorRGBA()
+ColorRGBA1342.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1340.setColor(ColorRGBA1342)
+LineSet1340.color.append(ColorRGBA1342)
 
-Shape1339.setGeometry(LineSet1340)
+Shape1339.geometry = LineSet1340
 
-HAnimSegment1335.addChildren(Shape1339)
+HAnimSegment1335.children.append(Shape1339)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_wrist'/> to <HAnimJoint name='r_index0'/>
-Shape1343 = Shape()
-LineSet1344 = LineSet()
-LineSet1344.setVertexCount([2])
-Coordinate1345 = Coordinate()
-Coordinate1345.setPoint([-0.1984,0.8663,-0.0583,-0.1983,0.8024,-0.028])
+Shape1343 = x3d.Shape()
+LineSet1344 = x3d.LineSet()
+LineSet1344.vertexCount = [2]
+Coordinate1345 = x3d.Coordinate()
+Coordinate1345.point = (-0.1984,0.8663,-0.0583,-0.1983,0.8024,-0.0280)
 
-LineSet1344.setCoord(Coordinate1345)
-ColorRGBA1346 = ColorRGBA()
-ColorRGBA1346.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1344.coord.append(Coordinate1345)
+ColorRGBA1346 = x3d.ColorRGBA()
+ColorRGBA1346.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1344.setColor(ColorRGBA1346)
+LineSet1344.color.append(ColorRGBA1346)
 
-Shape1343.setGeometry(LineSet1344)
+Shape1343.geometry = LineSet1344
 
-HAnimSegment1335.addChildren(Shape1343)
+HAnimSegment1335.children.append(Shape1343)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_wrist'/> to <HAnimJoint name='r_middle0'/>
-Shape1347 = Shape()
-LineSet1348 = LineSet()
-LineSet1348.setVertexCount([2])
-Coordinate1349 = Coordinate()
-Coordinate1349.setPoint([-0.1984,0.8663,-0.0583,-0.1987,0.8029,-0.053])
+Shape1347 = x3d.Shape()
+LineSet1348 = x3d.LineSet()
+LineSet1348.vertexCount = [2]
+Coordinate1349 = x3d.Coordinate()
+Coordinate1349.point = (-0.1984,0.8663,-0.0583,-0.1987,0.8029,-0.0530)
 
-LineSet1348.setCoord(Coordinate1349)
-ColorRGBA1350 = ColorRGBA()
-ColorRGBA1350.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1348.coord.append(Coordinate1349)
+ColorRGBA1350 = x3d.ColorRGBA()
+ColorRGBA1350.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1348.setColor(ColorRGBA1350)
+LineSet1348.color.append(ColorRGBA1350)
 
-Shape1347.setGeometry(LineSet1348)
+Shape1347.geometry = LineSet1348
 
-HAnimSegment1335.addChildren(Shape1347)
+HAnimSegment1335.children.append(Shape1347)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_wrist'/> to <HAnimJoint name='r_ring0'/>
-Shape1351 = Shape()
-LineSet1352 = LineSet()
-LineSet1352.setVertexCount([2])
-Coordinate1353 = Coordinate()
-Coordinate1353.setPoint([-0.1984,0.8663,-0.0583,-0.1956,0.8019,-0.0794])
+Shape1351 = x3d.Shape()
+LineSet1352 = x3d.LineSet()
+LineSet1352.vertexCount = [2]
+Coordinate1353 = x3d.Coordinate()
+Coordinate1353.point = (-0.1984,0.8663,-0.0583,-0.1956,0.8019,-0.0794)
 
-LineSet1352.setCoord(Coordinate1353)
-ColorRGBA1354 = ColorRGBA()
-ColorRGBA1354.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1352.coord.append(Coordinate1353)
+ColorRGBA1354 = x3d.ColorRGBA()
+ColorRGBA1354.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1352.setColor(ColorRGBA1354)
+LineSet1352.color.append(ColorRGBA1354)
 
-Shape1351.setGeometry(LineSet1352)
+Shape1351.geometry = LineSet1352
 
-HAnimSegment1335.addChildren(Shape1351)
+HAnimSegment1335.children.append(Shape1351)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_wrist'/> to <HAnimJoint name='r_pinky0'/>
-Shape1355 = Shape()
-LineSet1356 = LineSet()
-LineSet1356.setVertexCount([2])
-Coordinate1357 = Coordinate()
-Coordinate1357.setPoint([-0.1984,0.8663,-0.0583,-0.1925,0.8066,-0.1036])
+Shape1355 = x3d.Shape()
+LineSet1356 = x3d.LineSet()
+LineSet1356.vertexCount = [2]
+Coordinate1357 = x3d.Coordinate()
+Coordinate1357.point = (-0.1984,0.8663,-0.0583,-0.1925,0.8066,-0.1036)
 
-LineSet1356.setCoord(Coordinate1357)
-ColorRGBA1358 = ColorRGBA()
-ColorRGBA1358.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1356.coord.append(Coordinate1357)
+ColorRGBA1358 = x3d.ColorRGBA()
+ColorRGBA1358.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1356.setColor(ColorRGBA1358)
+LineSet1356.color.append(ColorRGBA1358)
 
-Shape1355.setGeometry(LineSet1356)
+Shape1355.geometry = LineSet1356
 
-HAnimSegment1335.addChildren(Shape1355)
+HAnimSegment1335.children.append(Shape1355)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_wrist'/> to <HAnimSite name='r_metacarpal_pha2'/>
-Shape1359 = Shape()
-LineSet1360 = LineSet()
-LineSet1360.setVertexCount([2])
-Coordinate1361 = Coordinate()
-Coordinate1361.setPoint([-0.1984,0.8663,-0.0583,-0.1977,0.8169,-0.0177])
+Shape1359 = x3d.Shape()
+LineSet1360 = x3d.LineSet()
+LineSet1360.vertexCount = [2]
+Coordinate1361 = x3d.Coordinate()
+Coordinate1361.point = (-0.1984,0.8663,-0.0583,-0.1977,0.8169,-0.0177)
 
-LineSet1360.setCoord(Coordinate1361)
-ColorRGBA1362 = ColorRGBA()
-ColorRGBA1362.setUSE("HAnimSiteLineColorRGBA")
+LineSet1360.coord.append(Coordinate1361)
+ColorRGBA1362 = x3d.ColorRGBA()
+ColorRGBA1362.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1360.setColor(ColorRGBA1362)
+LineSet1360.color.append(ColorRGBA1362)
 
-Shape1359.setGeometry(LineSet1360)
+Shape1359.geometry = LineSet1360
 
-HAnimSegment1335.addChildren(Shape1359)
+HAnimSegment1335.children.append(Shape1359)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_wrist'/> to <HAnimSite name='r_ulnar_styloid'/>
-Shape1363 = Shape()
-LineSet1364 = LineSet()
-LineSet1364.setVertexCount([2])
-Coordinate1365 = Coordinate()
-Coordinate1365.setPoint([-0.1984,0.8663,-0.0583,-0.2117,0.8562,-0.0584])
+Shape1363 = x3d.Shape()
+LineSet1364 = x3d.LineSet()
+LineSet1364.vertexCount = [2]
+Coordinate1365 = x3d.Coordinate()
+Coordinate1365.point = (-0.1984,0.8663,-0.0583,-0.2117,0.8562,-0.0584)
 
-LineSet1364.setCoord(Coordinate1365)
-ColorRGBA1366 = ColorRGBA()
-ColorRGBA1366.setUSE("HAnimSiteLineColorRGBA")
+LineSet1364.coord.append(Coordinate1365)
+ColorRGBA1366 = x3d.ColorRGBA()
+ColorRGBA1366.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1364.setColor(ColorRGBA1366)
+LineSet1364.color.append(ColorRGBA1366)
 
-Shape1363.setGeometry(LineSet1364)
+Shape1363.geometry = LineSet1364
 
-HAnimSegment1335.addChildren(Shape1363)
+HAnimSegment1335.children.append(Shape1363)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_wrist'/> to <HAnimSite name='r_metacarpal_pha5'/>
-Shape1367 = Shape()
-LineSet1368 = LineSet()
-LineSet1368.setVertexCount([2])
-Coordinate1369 = Coordinate()
-Coordinate1369.setPoint([-0.1984,0.8663,-0.0583,-0.1929,0.789,-0.1064])
+Shape1367 = x3d.Shape()
+LineSet1368 = x3d.LineSet()
+LineSet1368.vertexCount = [2]
+Coordinate1369 = x3d.Coordinate()
+Coordinate1369.point = (-0.1984,0.8663,-0.0583,-0.1929,0.7890,-0.1064)
 
-LineSet1368.setCoord(Coordinate1369)
-ColorRGBA1370 = ColorRGBA()
-ColorRGBA1370.setUSE("HAnimSiteLineColorRGBA")
+LineSet1368.coord.append(Coordinate1369)
+ColorRGBA1370 = x3d.ColorRGBA()
+ColorRGBA1370.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1368.setColor(ColorRGBA1370)
+LineSet1368.color.append(ColorRGBA1370)
 
-Shape1367.setGeometry(LineSet1368)
+Shape1367.geometry = LineSet1368
 
-HAnimSegment1335.addChildren(Shape1367)
+HAnimSegment1335.children.append(Shape1367)
 #HAnimSite/Viewpoint visualization line segment from ancestor <HAnimJoint name='r_wrist'/> to <HAnimSite name='r_hand_front_view'/>
-Shape1371 = Shape()
-LineSet1372 = LineSet()
-LineSet1372.setVertexCount([2])
-Coordinate1373 = Coordinate()
-Coordinate1373.setPoint([-0.1984,0.8663,-0.0583,-0.3,0.75,0.45])
+Shape1371 = x3d.Shape()
+LineSet1372 = x3d.LineSet()
+LineSet1372.vertexCount = [2]
+Coordinate1373 = x3d.Coordinate()
+Coordinate1373.point = (-0.1984,0.8663,-0.0583,-0.3000,0.7500,0.4500)
 
-LineSet1372.setCoord(Coordinate1373)
-ColorRGBA1374 = ColorRGBA()
-ColorRGBA1374.setUSE("HAnimSiteViewpointLineColorRGBA")
+LineSet1372.coord.append(Coordinate1373)
+ColorRGBA1374 = x3d.ColorRGBA()
+ColorRGBA1374.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet1372.setColor(ColorRGBA1374)
+LineSet1372.color.append(ColorRGBA1374)
 
-Shape1371.setGeometry(LineSet1372)
+Shape1371.geometry = LineSet1372
 
-HAnimSegment1335.addChildren(Shape1371)
-HAnimSite1375 = HAnimSite()
-HAnimSite1375.setName("r_metacarpal_pha2_pt")
-HAnimSite1375.setDEF("hanim_r_metacarpal_pha2_pt")
-HAnimSite1375.setTranslation([-0.1977,0.8169,-0.0177])
+HAnimSegment1335.children.append(Shape1371)
+HAnimSite1375 = x3d.HAnimSite()
+HAnimSite1375.name = "r_metacarpal_pha2_pt"
+HAnimSite1375.DEF = "hanim_r_metacarpal_pha2_pt"
+HAnimSite1375.translation = [-0.1977,0.8169,-0.0177]
 #HAnimSite visualization shape
-TouchSensor1376 = TouchSensor()
-TouchSensor1376.setDescription("HAnimSite r_metacarpal_pha2")
+TouchSensor1376 = x3d.TouchSensor()
+TouchSensor1376.description = "HAnimSite r_metacarpal_pha2"
 
-HAnimSite1375.addChildren(TouchSensor1376)
-Shape1377 = Shape()
-Shape1377.setUSE("HAnimSiteShape")
+HAnimSite1375.children.append(TouchSensor1376)
+Shape1377 = x3d.Shape()
+Shape1377.USE = "HAnimSiteShape"
 
-HAnimSite1375.addChildren(Shape1377)
+HAnimSite1375.children.append(Shape1377)
 
-HAnimSegment1335.addChildren(HAnimSite1375)
-HAnimSite1378 = HAnimSite()
-HAnimSite1378.setName("r_ulnar_styloid_pt")
-HAnimSite1378.setDEF("hanim_r_ulnar_styloid_pt")
-HAnimSite1378.setTranslation([-0.2117,0.8562,-0.0584])
+HAnimSegment1335.children.append(HAnimSite1375)
+HAnimSite1378 = x3d.HAnimSite()
+HAnimSite1378.name = "r_ulnar_styloid_pt"
+HAnimSite1378.DEF = "hanim_r_ulnar_styloid_pt"
+HAnimSite1378.translation = [-0.2117,0.8562,-0.0584]
 #HAnimSite visualization shape
-TouchSensor1379 = TouchSensor()
-TouchSensor1379.setDescription("HAnimSite r_ulnar_styloid")
+TouchSensor1379 = x3d.TouchSensor()
+TouchSensor1379.description = "HAnimSite r_ulnar_styloid"
 
-HAnimSite1378.addChildren(TouchSensor1379)
-Shape1380 = Shape()
-Shape1380.setUSE("HAnimSiteShape")
+HAnimSite1378.children.append(TouchSensor1379)
+Shape1380 = x3d.Shape()
+Shape1380.USE = "HAnimSiteShape"
 
-HAnimSite1378.addChildren(Shape1380)
+HAnimSite1378.children.append(Shape1380)
 
-HAnimSegment1335.addChildren(HAnimSite1378)
-HAnimSite1381 = HAnimSite()
-HAnimSite1381.setName("r_metacarpal_pha5_pt")
-HAnimSite1381.setDEF("hanim_r_metacarpal_pha5_pt")
-HAnimSite1381.setTranslation([-0.1929,0.789,-0.1064])
+HAnimSegment1335.children.append(HAnimSite1378)
+HAnimSite1381 = x3d.HAnimSite()
+HAnimSite1381.name = "r_metacarpal_pha5_pt"
+HAnimSite1381.DEF = "hanim_r_metacarpal_pha5_pt"
+HAnimSite1381.translation = [-0.1929,0.789,-0.1064]
 #HAnimSite visualization shape
-TouchSensor1382 = TouchSensor()
-TouchSensor1382.setDescription("HAnimSite r_metacarpal_pha5")
+TouchSensor1382 = x3d.TouchSensor()
+TouchSensor1382.description = "HAnimSite r_metacarpal_pha5"
 
-HAnimSite1381.addChildren(TouchSensor1382)
-Shape1383 = Shape()
-Shape1383.setUSE("HAnimSiteShape")
+HAnimSite1381.children.append(TouchSensor1382)
+Shape1383 = x3d.Shape()
+Shape1383.USE = "HAnimSiteShape"
 
-HAnimSite1381.addChildren(Shape1383)
+HAnimSite1381.children.append(Shape1383)
 
-HAnimSegment1335.addChildren(HAnimSite1381)
-HAnimSite1384 = HAnimSite()
-HAnimSite1384.setName("r_hand_front_view")
-HAnimSite1384.setDEF("hanim_r_hand_front_view")
-HAnimSite1384.setTranslation([-0.3,0.75,0.45])
+HAnimSegment1335.children.append(HAnimSite1381)
+HAnimSite1384 = x3d.HAnimSite()
+HAnimSite1384.name = "r_hand_front_view"
+HAnimSite1384.DEF = "hanim_r_hand_front_view"
+HAnimSite1384.translation = [-0.3,0.75,0.45]
 #HAnimSite visualization shape
-TouchSensor1385 = TouchSensor()
-TouchSensor1385.setDescription("HAnimSite r_hand_front_view")
+TouchSensor1385 = x3d.TouchSensor()
+TouchSensor1385.description = "HAnimSite r_hand_front_view"
 
-HAnimSite1384.addChildren(TouchSensor1385)
-Shape1386 = Shape()
-Shape1386.setUSE("HAnimSiteShape")
+HAnimSite1384.children.append(TouchSensor1385)
+Shape1386 = x3d.Shape()
+Shape1386.USE = "HAnimSiteShape"
 
-HAnimSite1384.addChildren(Shape1386)
-Viewpoint1387 = Viewpoint()
-Viewpoint1387.setDEF("hanim_r_hand_front_viewpoint")
-Viewpoint1387.setCenterOfRotation([0,0.7,0])
-Viewpoint1387.setDescription("right hand front")
-Viewpoint1387.setPosition([0,0,0])
+HAnimSite1384.children.append(Shape1386)
+Viewpoint1387 = x3d.Viewpoint()
+Viewpoint1387.DEF = "hanim_r_hand_front_viewpoint"
+Viewpoint1387.centerOfRotation = [0,0.7,0]
+Viewpoint1387.description = "right hand front"
+Viewpoint1387.position = [0,0,0]
 
-HAnimSite1384.addChildren(Viewpoint1387)
+HAnimSite1384.children.append(Viewpoint1387)
 #HAnimSite/Viewpoint visualization shape
-Anchor1388 = Anchor()
-Anchor1388.setDescription("HAnimSite hanim_r_hand_front_view Viewpoint")
-Anchor1388.setUrl(["#hanim_r_hand_front_viewpoint"])
-LOD1389 = LOD()
-LOD1389.setForceTransitions(True)
-LOD1389.setRange([0.04])
-WorldInfo1390 = WorldInfo()
-WorldInfo1390.setInfo(["hide diamond when close"])
+Anchor1388 = x3d.Anchor()
+Anchor1388.description = "HAnimSite hanim_r_hand_front_view Viewpoint"
+Anchor1388.url = ["#hanim_r_hand_front_viewpoint"]
+LOD1389 = x3d.LOD()
+LOD1389.forceTransitions = True
+LOD1389.range = [0.04]
+WorldInfo1390 = x3d.WorldInfo()
+WorldInfo1390.info = ["hide diamond when close"]
 
-LOD1389.addChildren(WorldInfo1390)
-Shape1391 = Shape()
-Shape1391.setUSE("HAnimSiteViewpointShape")
+LOD1389.children.append(WorldInfo1390)
+Shape1391 = x3d.Shape()
+Shape1391.USE = "HAnimSiteViewpointShape"
 
-LOD1389.addChildren(Shape1391)
+LOD1389.children.append(Shape1391)
 
-Anchor1388.addChildren(LOD1389)
+Anchor1388.children.append(LOD1389)
 
-HAnimSite1384.addChildren(Anchor1388)
+HAnimSite1384.children.append(Anchor1388)
 
-HAnimSegment1335.addChildren(HAnimSite1384)
+HAnimSegment1335.children.append(HAnimSite1384)
 
-HAnimJoint1334.addChildren(HAnimSegment1335)
-HAnimJoint1392 = HAnimJoint()
-HAnimJoint1392.setName("r_thumb1")
-HAnimJoint1392.setDEF("hanim_r_thumb1")
-HAnimJoint1392.setCenter([-0.1924,0.8472,-0.0534])
-HAnimJoint1392.setStiffness([0,0,0])
-HAnimSegment1393 = HAnimSegment()
-HAnimSegment1393.setName("r_thumb_metacarpal")
-HAnimSegment1393.setDEF("hanim_r_thumb_metacarpal")
+HAnimJoint1334.children.append(HAnimSegment1335)
+HAnimJoint1392 = x3d.HAnimJoint()
+HAnimJoint1392.name = "r_thumb1"
+HAnimJoint1392.DEF = "hanim_r_thumb1"
+HAnimJoint1392.center = [-0.1924,0.8472,-0.0534]
+HAnimJoint1392.ulimit = [0,0,0]
+HAnimJoint1392.llimit = [0,0,0]
+HAnimSegment1393 = x3d.HAnimSegment()
+HAnimSegment1393.name = "r_thumb_metacarpal"
+HAnimSegment1393.DEF = "hanim_r_thumb_metacarpal"
 #<HAnimJoint name='r_thumb1'/> visualization sphere is placed within <HAnimSegment name='r_thumb_metacarpal'/>
-TouchSensor1394 = TouchSensor()
-TouchSensor1394.setDescription("HAnimJoint r_thumb1, HAnimSegment r_thumb_metacarpal")
+TouchSensor1394 = x3d.TouchSensor()
+TouchSensor1394.description = "HAnimJoint r_thumb1, HAnimSegment r_thumb_metacarpal"
 
-HAnimSegment1393.addChildren(TouchSensor1394)
-Transform1395 = Transform()
-Transform1395.setTranslation([-0.1924,0.8472,-0.0534])
-Shape1396 = Shape()
-Shape1396.setUSE("HAnimJointShape")
+HAnimSegment1393.children.append(TouchSensor1394)
+Transform1395 = x3d.Transform()
+Transform1395.translation = [-0.1924,0.8472,-0.0534]
+Shape1396 = x3d.Shape()
+Shape1396.USE = "HAnimJointShape"
 
-Transform1395.addChildren(Shape1396)
+Transform1395.children.append(Shape1396)
 
-HAnimSegment1393.addChildren(Transform1395)
+HAnimSegment1393.children.append(Transform1395)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_thumb1'/> to <HAnimJoint name='r_thumb2'/>
-Shape1397 = Shape()
-LineSet1398 = LineSet()
-LineSet1398.setVertexCount([2])
-Coordinate1399 = Coordinate()
-Coordinate1399.setPoint([-0.1924,0.8472,-0.0534,-0.1951,0.8226,0.0246])
+Shape1397 = x3d.Shape()
+LineSet1398 = x3d.LineSet()
+LineSet1398.vertexCount = [2]
+Coordinate1399 = x3d.Coordinate()
+Coordinate1399.point = (-0.1924,0.8472,-0.0534,-0.1951,0.8226,0.0246)
 
-LineSet1398.setCoord(Coordinate1399)
-ColorRGBA1400 = ColorRGBA()
-ColorRGBA1400.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1398.coord.append(Coordinate1399)
+ColorRGBA1400 = x3d.ColorRGBA()
+ColorRGBA1400.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1398.setColor(ColorRGBA1400)
+LineSet1398.color.append(ColorRGBA1400)
 
-Shape1397.setGeometry(LineSet1398)
+Shape1397.geometry = LineSet1398
 
-HAnimSegment1393.addChildren(Shape1397)
+HAnimSegment1393.children.append(Shape1397)
 
-HAnimJoint1392.addChildren(HAnimSegment1393)
-HAnimJoint1401 = HAnimJoint()
-HAnimJoint1401.setName("r_thumb2")
-HAnimJoint1401.setDEF("hanim_r_thumb2")
-HAnimJoint1401.setCenter([-0.1951,0.8226,0.0246])
-HAnimJoint1401.setStiffness([0,0,0])
-HAnimSegment1402 = HAnimSegment()
-HAnimSegment1402.setName("r_thumb_proximal")
-HAnimSegment1402.setDEF("hanim_r_thumb_proximal")
+HAnimJoint1392.children.append(HAnimSegment1393)
+HAnimJoint1401 = x3d.HAnimJoint()
+HAnimJoint1401.name = "r_thumb2"
+HAnimJoint1401.DEF = "hanim_r_thumb2"
+HAnimJoint1401.center = [-0.1951,0.8226,0.0246]
+HAnimJoint1401.ulimit = [0,0,0]
+HAnimJoint1401.llimit = [0,0,0]
+HAnimSegment1402 = x3d.HAnimSegment()
+HAnimSegment1402.name = "r_thumb_proximal"
+HAnimSegment1402.DEF = "hanim_r_thumb_proximal"
 #<HAnimJoint name='r_thumb2'/> visualization sphere is placed within <HAnimSegment name='r_thumb_proximal'/>
-TouchSensor1403 = TouchSensor()
-TouchSensor1403.setDescription("HAnimJoint r_thumb2, HAnimSegment r_thumb_proximal")
+TouchSensor1403 = x3d.TouchSensor()
+TouchSensor1403.description = "HAnimJoint r_thumb2, HAnimSegment r_thumb_proximal"
 
-HAnimSegment1402.addChildren(TouchSensor1403)
-Transform1404 = Transform()
-Transform1404.setTranslation([-0.1951,0.8226,0.0246])
-Shape1405 = Shape()
-Shape1405.setUSE("HAnimJointShape")
+HAnimSegment1402.children.append(TouchSensor1403)
+Transform1404 = x3d.Transform()
+Transform1404.translation = [-0.1951,0.8226,0.0246]
+Shape1405 = x3d.Shape()
+Shape1405.USE = "HAnimJointShape"
 
-Transform1404.addChildren(Shape1405)
+Transform1404.children.append(Shape1405)
 
-HAnimSegment1402.addChildren(Transform1404)
+HAnimSegment1402.children.append(Transform1404)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_thumb2'/> to <HAnimJoint name='r_thumb3'/>
-Shape1406 = Shape()
-LineSet1407 = LineSet()
-LineSet1407.setVertexCount([2])
-Coordinate1408 = Coordinate()
-Coordinate1408.setPoint([-0.1951,0.8226,0.0246,-0.1955,0.8159,0.0464])
+Shape1406 = x3d.Shape()
+LineSet1407 = x3d.LineSet()
+LineSet1407.vertexCount = [2]
+Coordinate1408 = x3d.Coordinate()
+Coordinate1408.point = (-0.1951,0.8226,0.0246,-0.1955,0.8159,0.0464)
 
-LineSet1407.setCoord(Coordinate1408)
-ColorRGBA1409 = ColorRGBA()
-ColorRGBA1409.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1407.coord.append(Coordinate1408)
+ColorRGBA1409 = x3d.ColorRGBA()
+ColorRGBA1409.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1407.setColor(ColorRGBA1409)
+LineSet1407.color.append(ColorRGBA1409)
 
-Shape1406.setGeometry(LineSet1407)
+Shape1406.geometry = LineSet1407
 
-HAnimSegment1402.addChildren(Shape1406)
+HAnimSegment1402.children.append(Shape1406)
 
-HAnimJoint1401.addChildren(HAnimSegment1402)
-HAnimJoint1410 = HAnimJoint()
-HAnimJoint1410.setName("r_thumb3")
-HAnimJoint1410.setDEF("hanim_r_thumb3")
-HAnimJoint1410.setCenter([-0.1955,0.8159,0.0464])
-HAnimJoint1410.setStiffness([0,0,0])
-HAnimSegment1411 = HAnimSegment()
-HAnimSegment1411.setName("r_thumb_distal")
-HAnimSegment1411.setDEF("hanim_r_thumb_distal")
+HAnimJoint1401.children.append(HAnimSegment1402)
+HAnimJoint1410 = x3d.HAnimJoint()
+HAnimJoint1410.name = "r_thumb3"
+HAnimJoint1410.DEF = "hanim_r_thumb3"
+HAnimJoint1410.center = [-0.1955,0.8159,0.0464]
+HAnimJoint1410.ulimit = [0,0,0]
+HAnimJoint1410.llimit = [0,0,0]
+HAnimSegment1411 = x3d.HAnimSegment()
+HAnimSegment1411.name = "r_thumb_distal"
+HAnimSegment1411.DEF = "hanim_r_thumb_distal"
 #<HAnimJoint name='r_thumb3'/> visualization sphere is placed within <HAnimSegment name='r_thumb_distal'/>
-TouchSensor1412 = TouchSensor()
-TouchSensor1412.setDescription("HAnimJoint r_thumb3, HAnimSegment r_thumb_distal")
+TouchSensor1412 = x3d.TouchSensor()
+TouchSensor1412.description = "HAnimJoint r_thumb3, HAnimSegment r_thumb_distal"
 
-HAnimSegment1411.addChildren(TouchSensor1412)
-Transform1413 = Transform()
-Transform1413.setTranslation([-0.1955,0.8159,0.0464])
-Shape1414 = Shape()
-Shape1414.setUSE("HAnimJointShape")
+HAnimSegment1411.children.append(TouchSensor1412)
+Transform1413 = x3d.Transform()
+Transform1413.translation = [-0.1955,0.8159,0.0464]
+Shape1414 = x3d.Shape()
+Shape1414.USE = "HAnimJointShape"
 
-Transform1413.addChildren(Shape1414)
+Transform1413.children.append(Shape1414)
 
-HAnimSegment1411.addChildren(Transform1413)
+HAnimSegment1411.children.append(Transform1413)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_thumb3'/> to <HAnimSite name='r_thumb_distal_tip'/>
-Shape1415 = Shape()
-LineSet1416 = LineSet()
-LineSet1416.setVertexCount([2])
-Coordinate1417 = Coordinate()
-Coordinate1417.setPoint([-0.1955,0.8159,0.0464,-0.1869,0.809,0.082])
+Shape1415 = x3d.Shape()
+LineSet1416 = x3d.LineSet()
+LineSet1416.vertexCount = [2]
+Coordinate1417 = x3d.Coordinate()
+Coordinate1417.point = (-0.1955,0.8159,0.0464,-0.1869,0.8090,0.0820)
 
-LineSet1416.setCoord(Coordinate1417)
-ColorRGBA1418 = ColorRGBA()
-ColorRGBA1418.setUSE("HAnimSiteLineColorRGBA")
+LineSet1416.coord.append(Coordinate1417)
+ColorRGBA1418 = x3d.ColorRGBA()
+ColorRGBA1418.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1416.setColor(ColorRGBA1418)
+LineSet1416.color.append(ColorRGBA1418)
 
-Shape1415.setGeometry(LineSet1416)
+Shape1415.geometry = LineSet1416
 
-HAnimSegment1411.addChildren(Shape1415)
-HAnimSite1419 = HAnimSite()
-HAnimSite1419.setName("r_thumb_distal_tip")
-HAnimSite1419.setDEF("hanim_r_thumb_distal_tip")
-HAnimSite1419.setTranslation([-0.1869,0.809,0.082])
+HAnimSegment1411.children.append(Shape1415)
+HAnimSite1419 = x3d.HAnimSite()
+HAnimSite1419.name = "r_thumb_distal_tip"
+HAnimSite1419.DEF = "hanim_r_thumb_distal_tip"
+HAnimSite1419.translation = [-0.1869,0.809,0.082]
 #HAnimSite visualization shape
-TouchSensor1420 = TouchSensor()
-TouchSensor1420.setDescription("HAnimSite r_thumb_distal_tip")
+TouchSensor1420 = x3d.TouchSensor()
+TouchSensor1420.description = "HAnimSite r_thumb_distal_tip"
 
-HAnimSite1419.addChildren(TouchSensor1420)
-Shape1421 = Shape()
-Shape1421.setUSE("HAnimSiteShape")
+HAnimSite1419.children.append(TouchSensor1420)
+Shape1421 = x3d.Shape()
+Shape1421.USE = "HAnimSiteShape"
 
-HAnimSite1419.addChildren(Shape1421)
+HAnimSite1419.children.append(Shape1421)
 
-HAnimSegment1411.addChildren(HAnimSite1419)
+HAnimSegment1411.children.append(HAnimSite1419)
 
-HAnimJoint1410.addChildren(HAnimSegment1411)
+HAnimJoint1410.children.append(HAnimSegment1411)
 
-HAnimJoint1401.addChildren(HAnimJoint1410)
+HAnimJoint1401.children.append(HAnimJoint1410)
 
-HAnimJoint1392.addChildren(HAnimJoint1401)
+HAnimJoint1392.children.append(HAnimJoint1401)
 
-HAnimJoint1334.addChildren(HAnimJoint1392)
-HAnimJoint1422 = HAnimJoint()
-HAnimJoint1422.setName("r_index0")
-HAnimJoint1422.setDEF("hanim_r_index0")
-HAnimJoint1422.setCenter([-0.1983,0.8024,-0.028])
-HAnimJoint1422.setStiffness([0,0,0])
-HAnimSegment1423 = HAnimSegment()
-HAnimSegment1423.setName("r_index_metacarpal")
-HAnimSegment1423.setDEF("hanim_r_index_metacarpal")
+HAnimJoint1334.children.append(HAnimJoint1392)
+HAnimJoint1422 = x3d.HAnimJoint()
+HAnimJoint1422.name = "r_index0"
+HAnimJoint1422.DEF = "hanim_r_index0"
+HAnimJoint1422.center = [-0.1983,0.8024,-0.028]
+HAnimJoint1422.ulimit = [0,0,0]
+HAnimJoint1422.llimit = [0,0,0]
+HAnimSegment1423 = x3d.HAnimSegment()
+HAnimSegment1423.name = "r_index_metacarpal"
+HAnimSegment1423.DEF = "hanim_r_index_metacarpal"
 #<HAnimJoint name='r_index0'/> visualization sphere is placed within <HAnimSegment name='r_index_metacarpal'/>
-TouchSensor1424 = TouchSensor()
-TouchSensor1424.setDescription("HAnimJoint r_index0, HAnimSegment r_index_metacarpal")
+TouchSensor1424 = x3d.TouchSensor()
+TouchSensor1424.description = "HAnimJoint r_index0, HAnimSegment r_index_metacarpal"
 
-HAnimSegment1423.addChildren(TouchSensor1424)
-Transform1425 = Transform()
-Transform1425.setTranslation([-0.1983,0.8024,-0.028])
-Shape1426 = Shape()
-Shape1426.setUSE("HAnimJointShape")
+HAnimSegment1423.children.append(TouchSensor1424)
+Transform1425 = x3d.Transform()
+Transform1425.translation = [-0.1983,0.8024,-0.028]
+Shape1426 = x3d.Shape()
+Shape1426.USE = "HAnimJointShape"
 
-Transform1425.addChildren(Shape1426)
+Transform1425.children.append(Shape1426)
 
-HAnimSegment1423.addChildren(Transform1425)
+HAnimSegment1423.children.append(Transform1425)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_index0'/> to <HAnimJoint name='r_index1'/>
-Shape1427 = Shape()
-LineSet1428 = LineSet()
-LineSet1428.setVertexCount([2])
-Coordinate1429 = Coordinate()
-Coordinate1429.setPoint([-0.1983,0.8024,-0.028,-0.1983,0.7815,-0.028])
+Shape1427 = x3d.Shape()
+LineSet1428 = x3d.LineSet()
+LineSet1428.vertexCount = [2]
+Coordinate1429 = x3d.Coordinate()
+Coordinate1429.point = (-0.1983,0.8024,-0.0280,-0.1983,0.7815,-0.0280)
 
-LineSet1428.setCoord(Coordinate1429)
-ColorRGBA1430 = ColorRGBA()
-ColorRGBA1430.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1428.coord.append(Coordinate1429)
+ColorRGBA1430 = x3d.ColorRGBA()
+ColorRGBA1430.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1428.setColor(ColorRGBA1430)
+LineSet1428.color.append(ColorRGBA1430)
 
-Shape1427.setGeometry(LineSet1428)
+Shape1427.geometry = LineSet1428
 
-HAnimSegment1423.addChildren(Shape1427)
+HAnimSegment1423.children.append(Shape1427)
 
-HAnimJoint1422.addChildren(HAnimSegment1423)
-HAnimJoint1431 = HAnimJoint()
-HAnimJoint1431.setName("r_index1")
-HAnimJoint1431.setDEF("hanim_r_index1")
-HAnimJoint1431.setCenter([-0.1983,0.7815,-0.028])
-HAnimJoint1431.setStiffness([0,0,0])
-HAnimSegment1432 = HAnimSegment()
-HAnimSegment1432.setName("r_index_proximal")
-HAnimSegment1432.setDEF("hanim_r_index_proximal")
+HAnimJoint1422.children.append(HAnimSegment1423)
+HAnimJoint1431 = x3d.HAnimJoint()
+HAnimJoint1431.name = "r_index1"
+HAnimJoint1431.DEF = "hanim_r_index1"
+HAnimJoint1431.center = [-0.1983,0.7815,-0.028]
+HAnimJoint1431.ulimit = [0,0,0]
+HAnimJoint1431.llimit = [0,0,0]
+HAnimSegment1432 = x3d.HAnimSegment()
+HAnimSegment1432.name = "r_index_proximal"
+HAnimSegment1432.DEF = "hanim_r_index_proximal"
 #<HAnimJoint name='r_index1'/> visualization sphere is placed within <HAnimSegment name='r_index_proximal'/>
-TouchSensor1433 = TouchSensor()
-TouchSensor1433.setDescription("HAnimJoint r_index1, HAnimSegment r_index_proximal")
+TouchSensor1433 = x3d.TouchSensor()
+TouchSensor1433.description = "HAnimJoint r_index1, HAnimSegment r_index_proximal"
 
-HAnimSegment1432.addChildren(TouchSensor1433)
-Transform1434 = Transform()
-Transform1434.setTranslation([-0.1983,0.7815,-0.028])
-Shape1435 = Shape()
-Shape1435.setUSE("HAnimJointShape")
+HAnimSegment1432.children.append(TouchSensor1433)
+Transform1434 = x3d.Transform()
+Transform1434.translation = [-0.1983,0.7815,-0.028]
+Shape1435 = x3d.Shape()
+Shape1435.USE = "HAnimJointShape"
 
-Transform1434.addChildren(Shape1435)
+Transform1434.children.append(Shape1435)
 
-HAnimSegment1432.addChildren(Transform1434)
+HAnimSegment1432.children.append(Transform1434)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_index1'/> to <HAnimJoint name='r_index2'/>
-Shape1436 = Shape()
-LineSet1437 = LineSet()
-LineSet1437.setVertexCount([2])
-Coordinate1438 = Coordinate()
-Coordinate1438.setPoint([-0.1983,0.7815,-0.028,-0.2017,0.7363,-0.0248])
+Shape1436 = x3d.Shape()
+LineSet1437 = x3d.LineSet()
+LineSet1437.vertexCount = [2]
+Coordinate1438 = x3d.Coordinate()
+Coordinate1438.point = (-0.1983,0.7815,-0.0280,-0.2017,0.7363,-0.0248)
 
-LineSet1437.setCoord(Coordinate1438)
-ColorRGBA1439 = ColorRGBA()
-ColorRGBA1439.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1437.coord.append(Coordinate1438)
+ColorRGBA1439 = x3d.ColorRGBA()
+ColorRGBA1439.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1437.setColor(ColorRGBA1439)
+LineSet1437.color.append(ColorRGBA1439)
 
-Shape1436.setGeometry(LineSet1437)
+Shape1436.geometry = LineSet1437
 
-HAnimSegment1432.addChildren(Shape1436)
+HAnimSegment1432.children.append(Shape1436)
 
-HAnimJoint1431.addChildren(HAnimSegment1432)
-HAnimJoint1440 = HAnimJoint()
-HAnimJoint1440.setName("r_index2")
-HAnimJoint1440.setDEF("hanim_r_index2")
-HAnimJoint1440.setCenter([-0.2017,0.7363,-0.0248])
-HAnimJoint1440.setStiffness([0,0,0])
-HAnimSegment1441 = HAnimSegment()
-HAnimSegment1441.setName("r_index_middle")
-HAnimSegment1441.setDEF("hanim_r_index_middle")
+HAnimJoint1431.children.append(HAnimSegment1432)
+HAnimJoint1440 = x3d.HAnimJoint()
+HAnimJoint1440.name = "r_index2"
+HAnimJoint1440.DEF = "hanim_r_index2"
+HAnimJoint1440.center = [-0.2017,0.7363,-0.0248]
+HAnimJoint1440.ulimit = [0,0,0]
+HAnimJoint1440.llimit = [0,0,0]
+HAnimSegment1441 = x3d.HAnimSegment()
+HAnimSegment1441.name = "r_index_middle"
+HAnimSegment1441.DEF = "hanim_r_index_middle"
 #<HAnimJoint name='r_index2'/> visualization sphere is placed within <HAnimSegment name='r_index_middle'/>
-TouchSensor1442 = TouchSensor()
-TouchSensor1442.setDescription("HAnimJoint r_index2, HAnimSegment r_index_middle")
+TouchSensor1442 = x3d.TouchSensor()
+TouchSensor1442.description = "HAnimJoint r_index2, HAnimSegment r_index_middle"
 
-HAnimSegment1441.addChildren(TouchSensor1442)
-Transform1443 = Transform()
-Transform1443.setTranslation([-0.2017,0.7363,-0.0248])
-Shape1444 = Shape()
-Shape1444.setUSE("HAnimJointShape")
+HAnimSegment1441.children.append(TouchSensor1442)
+Transform1443 = x3d.Transform()
+Transform1443.translation = [-0.2017,0.7363,-0.0248]
+Shape1444 = x3d.Shape()
+Shape1444.USE = "HAnimJointShape"
 
-Transform1443.addChildren(Shape1444)
+Transform1443.children.append(Shape1444)
 
-HAnimSegment1441.addChildren(Transform1443)
+HAnimSegment1441.children.append(Transform1443)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_index2'/> to <HAnimJoint name='r_index3'/>
-Shape1445 = Shape()
-LineSet1446 = LineSet()
-LineSet1446.setVertexCount([2])
-Coordinate1447 = Coordinate()
-Coordinate1447.setPoint([-0.2017,0.7363,-0.0248,-0.2028,0.7139,-0.0236])
+Shape1445 = x3d.Shape()
+LineSet1446 = x3d.LineSet()
+LineSet1446.vertexCount = [2]
+Coordinate1447 = x3d.Coordinate()
+Coordinate1447.point = (-0.2017,0.7363,-0.0248,-0.2028,0.7139,-0.0236)
 
-LineSet1446.setCoord(Coordinate1447)
-ColorRGBA1448 = ColorRGBA()
-ColorRGBA1448.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1446.coord.append(Coordinate1447)
+ColorRGBA1448 = x3d.ColorRGBA()
+ColorRGBA1448.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1446.setColor(ColorRGBA1448)
+LineSet1446.color.append(ColorRGBA1448)
 
-Shape1445.setGeometry(LineSet1446)
+Shape1445.geometry = LineSet1446
 
-HAnimSegment1441.addChildren(Shape1445)
+HAnimSegment1441.children.append(Shape1445)
 
-HAnimJoint1440.addChildren(HAnimSegment1441)
-HAnimJoint1449 = HAnimJoint()
-HAnimJoint1449.setName("r_index3")
-HAnimJoint1449.setDEF("hanim_r_index3")
-HAnimJoint1449.setCenter([-0.2028,0.7139,-0.0236])
-HAnimJoint1449.setStiffness([0,0,0])
-HAnimSegment1450 = HAnimSegment()
-HAnimSegment1450.setName("r_index_distal")
-HAnimSegment1450.setDEF("hanim_r_index_distal")
+HAnimJoint1440.children.append(HAnimSegment1441)
+HAnimJoint1449 = x3d.HAnimJoint()
+HAnimJoint1449.name = "r_index3"
+HAnimJoint1449.DEF = "hanim_r_index3"
+HAnimJoint1449.center = [-0.2028,0.7139,-0.0236]
+HAnimJoint1449.ulimit = [0,0,0]
+HAnimJoint1449.llimit = [0,0,0]
+HAnimSegment1450 = x3d.HAnimSegment()
+HAnimSegment1450.name = "r_index_distal"
+HAnimSegment1450.DEF = "hanim_r_index_distal"
 #<HAnimJoint name='r_index3'/> visualization sphere is placed within <HAnimSegment name='r_index_distal'/>
-TouchSensor1451 = TouchSensor()
-TouchSensor1451.setDescription("HAnimJoint r_index3, HAnimSegment r_index_distal")
+TouchSensor1451 = x3d.TouchSensor()
+TouchSensor1451.description = "HAnimJoint r_index3, HAnimSegment r_index_distal"
 
-HAnimSegment1450.addChildren(TouchSensor1451)
-Transform1452 = Transform()
-Transform1452.setTranslation([-0.2028,0.7139,-0.0236])
-Shape1453 = Shape()
-Shape1453.setUSE("HAnimJointShape")
+HAnimSegment1450.children.append(TouchSensor1451)
+Transform1452 = x3d.Transform()
+Transform1452.translation = [-0.2028,0.7139,-0.0236]
+Shape1453 = x3d.Shape()
+Shape1453.USE = "HAnimJointShape"
 
-Transform1452.addChildren(Shape1453)
+Transform1452.children.append(Shape1453)
 
-HAnimSegment1450.addChildren(Transform1452)
+HAnimSegment1450.children.append(Transform1452)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_index3'/> to <HAnimSite name='r_index_distal_tip'/>
-Shape1454 = Shape()
-LineSet1455 = LineSet()
-LineSet1455.setVertexCount([2])
-Coordinate1456 = Coordinate()
-Coordinate1456.setPoint([-0.2028,0.7139,-0.0236,-0.198,0.6883,-0.018])
+Shape1454 = x3d.Shape()
+LineSet1455 = x3d.LineSet()
+LineSet1455.vertexCount = [2]
+Coordinate1456 = x3d.Coordinate()
+Coordinate1456.point = (-0.2028,0.7139,-0.0236,-0.1980,0.6883,-0.0180)
 
-LineSet1455.setCoord(Coordinate1456)
-ColorRGBA1457 = ColorRGBA()
-ColorRGBA1457.setUSE("HAnimSiteLineColorRGBA")
+LineSet1455.coord.append(Coordinate1456)
+ColorRGBA1457 = x3d.ColorRGBA()
+ColorRGBA1457.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1455.setColor(ColorRGBA1457)
+LineSet1455.color.append(ColorRGBA1457)
 
-Shape1454.setGeometry(LineSet1455)
+Shape1454.geometry = LineSet1455
 
-HAnimSegment1450.addChildren(Shape1454)
+HAnimSegment1450.children.append(Shape1454)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_index3'/> to <HAnimSite name='r_dactylion'/>
-Shape1458 = Shape()
-LineSet1459 = LineSet()
-LineSet1459.setVertexCount([2])
-Coordinate1460 = Coordinate()
-Coordinate1460.setPoint([-0.2028,0.7139,-0.0236,-0.1941,0.6772,-0.0423])
+Shape1458 = x3d.Shape()
+LineSet1459 = x3d.LineSet()
+LineSet1459.vertexCount = [2]
+Coordinate1460 = x3d.Coordinate()
+Coordinate1460.point = (-0.2028,0.7139,-0.0236,-0.1941,0.6772,-0.0423)
 
-LineSet1459.setCoord(Coordinate1460)
-ColorRGBA1461 = ColorRGBA()
-ColorRGBA1461.setUSE("HAnimSiteLineColorRGBA")
+LineSet1459.coord.append(Coordinate1460)
+ColorRGBA1461 = x3d.ColorRGBA()
+ColorRGBA1461.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1459.setColor(ColorRGBA1461)
+LineSet1459.color.append(ColorRGBA1461)
 
-Shape1458.setGeometry(LineSet1459)
+Shape1458.geometry = LineSet1459
 
-HAnimSegment1450.addChildren(Shape1458)
-HAnimSite1462 = HAnimSite()
-HAnimSite1462.setName("r_index_distal_tip")
-HAnimSite1462.setDEF("hanim_r_index_distal_tip")
-HAnimSite1462.setTranslation([-0.198,0.6883,-0.018])
+HAnimSegment1450.children.append(Shape1458)
+HAnimSite1462 = x3d.HAnimSite()
+HAnimSite1462.name = "r_index_distal_tip"
+HAnimSite1462.DEF = "hanim_r_index_distal_tip"
+HAnimSite1462.translation = [-0.198,0.6883,-0.018]
 #HAnimSite visualization shape
-TouchSensor1463 = TouchSensor()
-TouchSensor1463.setDescription("HAnimSite r_index_distal_tip")
+TouchSensor1463 = x3d.TouchSensor()
+TouchSensor1463.description = "HAnimSite r_index_distal_tip"
 
-HAnimSite1462.addChildren(TouchSensor1463)
-Shape1464 = Shape()
-Shape1464.setUSE("HAnimSiteShape")
+HAnimSite1462.children.append(TouchSensor1463)
+Shape1464 = x3d.Shape()
+Shape1464.USE = "HAnimSiteShape"
 
-HAnimSite1462.addChildren(Shape1464)
+HAnimSite1462.children.append(Shape1464)
 
-HAnimSegment1450.addChildren(HAnimSite1462)
-HAnimSite1465 = HAnimSite()
-HAnimSite1465.setName("r_dactylion_pt")
-HAnimSite1465.setDEF("hanim_r_dactylion_pt")
-HAnimSite1465.setTranslation([-0.1941,0.6772,-0.0423])
+HAnimSegment1450.children.append(HAnimSite1462)
+HAnimSite1465 = x3d.HAnimSite()
+HAnimSite1465.name = "r_dactylion_pt"
+HAnimSite1465.DEF = "hanim_r_dactylion_pt"
+HAnimSite1465.translation = [-0.1941,0.6772,-0.0423]
 #HAnimSite visualization shape
-TouchSensor1466 = TouchSensor()
-TouchSensor1466.setDescription("HAnimSite r_dactylion")
+TouchSensor1466 = x3d.TouchSensor()
+TouchSensor1466.description = "HAnimSite r_dactylion"
 
-HAnimSite1465.addChildren(TouchSensor1466)
-Shape1467 = Shape()
-Shape1467.setUSE("HAnimSiteShape")
+HAnimSite1465.children.append(TouchSensor1466)
+Shape1467 = x3d.Shape()
+Shape1467.USE = "HAnimSiteShape"
 
-HAnimSite1465.addChildren(Shape1467)
+HAnimSite1465.children.append(Shape1467)
 
-HAnimSegment1450.addChildren(HAnimSite1465)
+HAnimSegment1450.children.append(HAnimSite1465)
 
-HAnimJoint1449.addChildren(HAnimSegment1450)
+HAnimJoint1449.children.append(HAnimSegment1450)
 
-HAnimJoint1440.addChildren(HAnimJoint1449)
+HAnimJoint1440.children.append(HAnimJoint1449)
 
-HAnimJoint1431.addChildren(HAnimJoint1440)
+HAnimJoint1431.children.append(HAnimJoint1440)
 
-HAnimJoint1422.addChildren(HAnimJoint1431)
+HAnimJoint1422.children.append(HAnimJoint1431)
 
-HAnimJoint1334.addChildren(HAnimJoint1422)
-HAnimJoint1468 = HAnimJoint()
-HAnimJoint1468.setName("r_middle0")
-HAnimJoint1468.setDEF("hanim_r_middle0")
-HAnimJoint1468.setCenter([-0.1987,0.8029,-0.053])
-HAnimJoint1468.setStiffness([0,0,0])
-HAnimSegment1469 = HAnimSegment()
-HAnimSegment1469.setName("r_middle_metacarpal")
-HAnimSegment1469.setDEF("hanim_r_middle_metacarpal")
+HAnimJoint1334.children.append(HAnimJoint1422)
+HAnimJoint1468 = x3d.HAnimJoint()
+HAnimJoint1468.name = "r_middle0"
+HAnimJoint1468.DEF = "hanim_r_middle0"
+HAnimJoint1468.center = [-0.1987,0.8029,-0.053]
+HAnimJoint1468.ulimit = [0,0,0]
+HAnimJoint1468.llimit = [0,0,0]
+HAnimSegment1469 = x3d.HAnimSegment()
+HAnimSegment1469.name = "r_middle_metacarpal"
+HAnimSegment1469.DEF = "hanim_r_middle_metacarpal"
 #<HAnimJoint name='r_middle0'/> visualization sphere is placed within <HAnimSegment name='r_middle_metacarpal'/>
-TouchSensor1470 = TouchSensor()
-TouchSensor1470.setDescription("HAnimJoint r_middle0, HAnimSegment r_middle_metacarpal")
+TouchSensor1470 = x3d.TouchSensor()
+TouchSensor1470.description = "HAnimJoint r_middle0, HAnimSegment r_middle_metacarpal"
 
-HAnimSegment1469.addChildren(TouchSensor1470)
-Transform1471 = Transform()
-Transform1471.setTranslation([-0.1987,0.8029,-0.053])
-Shape1472 = Shape()
-Shape1472.setUSE("HAnimJointShape")
+HAnimSegment1469.children.append(TouchSensor1470)
+Transform1471 = x3d.Transform()
+Transform1471.translation = [-0.1987,0.8029,-0.053]
+Shape1472 = x3d.Shape()
+Shape1472.USE = "HAnimJointShape"
 
-Transform1471.addChildren(Shape1472)
+Transform1471.children.append(Shape1472)
 
-HAnimSegment1469.addChildren(Transform1471)
+HAnimSegment1469.children.append(Transform1471)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_middle0'/> to <HAnimJoint name='r_middle1'/>
-Shape1473 = Shape()
-LineSet1474 = LineSet()
-LineSet1474.setVertexCount([2])
-Coordinate1475 = Coordinate()
-Coordinate1475.setPoint([-0.1987,0.8029,-0.053,-0.1987,0.7818,-0.053])
+Shape1473 = x3d.Shape()
+LineSet1474 = x3d.LineSet()
+LineSet1474.vertexCount = [2]
+Coordinate1475 = x3d.Coordinate()
+Coordinate1475.point = (-0.1987,0.8029,-0.0530,-0.1987,0.7818,-0.0530)
 
-LineSet1474.setCoord(Coordinate1475)
-ColorRGBA1476 = ColorRGBA()
-ColorRGBA1476.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1474.coord.append(Coordinate1475)
+ColorRGBA1476 = x3d.ColorRGBA()
+ColorRGBA1476.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1474.setColor(ColorRGBA1476)
+LineSet1474.color.append(ColorRGBA1476)
 
-Shape1473.setGeometry(LineSet1474)
+Shape1473.geometry = LineSet1474
 
-HAnimSegment1469.addChildren(Shape1473)
+HAnimSegment1469.children.append(Shape1473)
 
-HAnimJoint1468.addChildren(HAnimSegment1469)
-HAnimJoint1477 = HAnimJoint()
-HAnimJoint1477.setName("r_middle1")
-HAnimJoint1477.setDEF("hanim_r_middle1")
-HAnimJoint1477.setCenter([-0.1987,0.7818,-0.053])
-HAnimJoint1477.setStiffness([0,0,0])
-HAnimSegment1478 = HAnimSegment()
-HAnimSegment1478.setName("r_middle_proximal")
-HAnimSegment1478.setDEF("hanim_r_middle_proximal")
+HAnimJoint1468.children.append(HAnimSegment1469)
+HAnimJoint1477 = x3d.HAnimJoint()
+HAnimJoint1477.name = "r_middle1"
+HAnimJoint1477.DEF = "hanim_r_middle1"
+HAnimJoint1477.center = [-0.1987,0.7818,-0.053]
+HAnimJoint1477.ulimit = [0,0,0]
+HAnimJoint1477.llimit = [0,0,0]
+HAnimSegment1478 = x3d.HAnimSegment()
+HAnimSegment1478.name = "r_middle_proximal"
+HAnimSegment1478.DEF = "hanim_r_middle_proximal"
 #<HAnimJoint name='r_middle1'/> visualization sphere is placed within <HAnimSegment name='r_middle_proximal'/>
-TouchSensor1479 = TouchSensor()
-TouchSensor1479.setDescription("HAnimJoint r_middle1, HAnimSegment r_middle_proximal")
+TouchSensor1479 = x3d.TouchSensor()
+TouchSensor1479.description = "HAnimJoint r_middle1, HAnimSegment r_middle_proximal"
 
-HAnimSegment1478.addChildren(TouchSensor1479)
-Transform1480 = Transform()
-Transform1480.setTranslation([-0.1987,0.7818,-0.053])
-Shape1481 = Shape()
-Shape1481.setUSE("HAnimJointShape")
+HAnimSegment1478.children.append(TouchSensor1479)
+Transform1480 = x3d.Transform()
+Transform1480.translation = [-0.1987,0.7818,-0.053]
+Shape1481 = x3d.Shape()
+Shape1481.USE = "HAnimJointShape"
 
-Transform1480.addChildren(Shape1481)
+Transform1480.children.append(Shape1481)
 
-HAnimSegment1478.addChildren(Transform1480)
+HAnimSegment1478.children.append(Transform1480)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_middle1'/> to <HAnimJoint name='r_middle2'/>
-Shape1482 = Shape()
-LineSet1483 = LineSet()
-LineSet1483.setVertexCount([2])
-Coordinate1484 = Coordinate()
-Coordinate1484.setPoint([-0.1987,0.7818,-0.053,-0.2013,0.7273,-0.0503])
+Shape1482 = x3d.Shape()
+LineSet1483 = x3d.LineSet()
+LineSet1483.vertexCount = [2]
+Coordinate1484 = x3d.Coordinate()
+Coordinate1484.point = (-0.1987,0.7818,-0.0530,-0.2013,0.7273,-0.0503)
 
-LineSet1483.setCoord(Coordinate1484)
-ColorRGBA1485 = ColorRGBA()
-ColorRGBA1485.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1483.coord.append(Coordinate1484)
+ColorRGBA1485 = x3d.ColorRGBA()
+ColorRGBA1485.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1483.setColor(ColorRGBA1485)
+LineSet1483.color.append(ColorRGBA1485)
 
-Shape1482.setGeometry(LineSet1483)
+Shape1482.geometry = LineSet1483
 
-HAnimSegment1478.addChildren(Shape1482)
+HAnimSegment1478.children.append(Shape1482)
 
-HAnimJoint1477.addChildren(HAnimSegment1478)
-HAnimJoint1486 = HAnimJoint()
-HAnimJoint1486.setName("r_middle2")
-HAnimJoint1486.setDEF("hanim_r_middle2")
-HAnimJoint1486.setCenter([-0.2013,0.7273,-0.0503])
-HAnimJoint1486.setStiffness([0,0,0])
-HAnimSegment1487 = HAnimSegment()
-HAnimSegment1487.setName("r_middle_middle")
-HAnimSegment1487.setDEF("hanim_r_middle_middle")
+HAnimJoint1477.children.append(HAnimSegment1478)
+HAnimJoint1486 = x3d.HAnimJoint()
+HAnimJoint1486.name = "r_middle2"
+HAnimJoint1486.DEF = "hanim_r_middle2"
+HAnimJoint1486.center = [-0.2013,0.7273,-0.0503]
+HAnimJoint1486.ulimit = [0,0,0]
+HAnimJoint1486.llimit = [0,0,0]
+HAnimSegment1487 = x3d.HAnimSegment()
+HAnimSegment1487.name = "r_middle_middle"
+HAnimSegment1487.DEF = "hanim_r_middle_middle"
 #<HAnimJoint name='r_middle2'/> visualization sphere is placed within <HAnimSegment name='r_middle_middle'/>
-TouchSensor1488 = TouchSensor()
-TouchSensor1488.setDescription("HAnimJoint r_middle2, HAnimSegment r_middle_middle")
+TouchSensor1488 = x3d.TouchSensor()
+TouchSensor1488.description = "HAnimJoint r_middle2, HAnimSegment r_middle_middle"
 
-HAnimSegment1487.addChildren(TouchSensor1488)
-Transform1489 = Transform()
-Transform1489.setTranslation([-0.2013,0.7273,-0.0503])
-Shape1490 = Shape()
-Shape1490.setUSE("HAnimJointShape")
+HAnimSegment1487.children.append(TouchSensor1488)
+Transform1489 = x3d.Transform()
+Transform1489.translation = [-0.2013,0.7273,-0.0503]
+Shape1490 = x3d.Shape()
+Shape1490.USE = "HAnimJointShape"
 
-Transform1489.addChildren(Shape1490)
+Transform1489.children.append(Shape1490)
 
-HAnimSegment1487.addChildren(Transform1489)
+HAnimSegment1487.children.append(Transform1489)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_middle2'/> to <HAnimJoint name='r_middle3'/>
-Shape1491 = Shape()
-LineSet1492 = LineSet()
-LineSet1492.setVertexCount([2])
-Coordinate1493 = Coordinate()
-Coordinate1493.setPoint([-0.2013,0.7273,-0.0503,-0.2026,0.7011,-0.0494])
+Shape1491 = x3d.Shape()
+LineSet1492 = x3d.LineSet()
+LineSet1492.vertexCount = [2]
+Coordinate1493 = x3d.Coordinate()
+Coordinate1493.point = (-0.2013,0.7273,-0.0503,-0.2026,0.7011,-0.0494)
 
-LineSet1492.setCoord(Coordinate1493)
-ColorRGBA1494 = ColorRGBA()
-ColorRGBA1494.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1492.coord.append(Coordinate1493)
+ColorRGBA1494 = x3d.ColorRGBA()
+ColorRGBA1494.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1492.setColor(ColorRGBA1494)
+LineSet1492.color.append(ColorRGBA1494)
 
-Shape1491.setGeometry(LineSet1492)
+Shape1491.geometry = LineSet1492
 
-HAnimSegment1487.addChildren(Shape1491)
+HAnimSegment1487.children.append(Shape1491)
 
-HAnimJoint1486.addChildren(HAnimSegment1487)
-HAnimJoint1495 = HAnimJoint()
-HAnimJoint1495.setName("r_middle3")
-HAnimJoint1495.setDEF("hanim_r_middle3")
-HAnimJoint1495.setCenter([-0.2026,0.7011,-0.0494])
-HAnimJoint1495.setStiffness([0,0,0])
-HAnimSegment1496 = HAnimSegment()
-HAnimSegment1496.setName("r_middle_distal")
-HAnimSegment1496.setDEF("hanim_r_middle_distal")
+HAnimJoint1486.children.append(HAnimSegment1487)
+HAnimJoint1495 = x3d.HAnimJoint()
+HAnimJoint1495.name = "r_middle3"
+HAnimJoint1495.DEF = "hanim_r_middle3"
+HAnimJoint1495.center = [-0.2026,0.7011,-0.0494]
+HAnimJoint1495.ulimit = [0,0,0]
+HAnimJoint1495.llimit = [0,0,0]
+HAnimSegment1496 = x3d.HAnimSegment()
+HAnimSegment1496.name = "r_middle_distal"
+HAnimSegment1496.DEF = "hanim_r_middle_distal"
 #<HAnimJoint name='r_middle3'/> visualization sphere is placed within <HAnimSegment name='r_middle_distal'/>
-TouchSensor1497 = TouchSensor()
-TouchSensor1497.setDescription("HAnimJoint r_middle3, HAnimSegment r_middle_distal")
+TouchSensor1497 = x3d.TouchSensor()
+TouchSensor1497.description = "HAnimJoint r_middle3, HAnimSegment r_middle_distal"
 
-HAnimSegment1496.addChildren(TouchSensor1497)
-Transform1498 = Transform()
-Transform1498.setTranslation([-0.2026,0.7011,-0.0494])
-Shape1499 = Shape()
-Shape1499.setUSE("HAnimJointShape")
+HAnimSegment1496.children.append(TouchSensor1497)
+Transform1498 = x3d.Transform()
+Transform1498.translation = [-0.2026,0.7011,-0.0494]
+Shape1499 = x3d.Shape()
+Shape1499.USE = "HAnimJointShape"
 
-Transform1498.addChildren(Shape1499)
+Transform1498.children.append(Shape1499)
 
-HAnimSegment1496.addChildren(Transform1498)
+HAnimSegment1496.children.append(Transform1498)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_middle3'/> to <HAnimSite name='r_middle_distal_tip'/>
-Shape1500 = Shape()
-LineSet1501 = LineSet()
-LineSet1501.setVertexCount([2])
-Coordinate1502 = Coordinate()
-Coordinate1502.setPoint([-0.2026,0.7011,-0.0494,-0.1969,0.6758,-0.0427])
+Shape1500 = x3d.Shape()
+LineSet1501 = x3d.LineSet()
+LineSet1501.vertexCount = [2]
+Coordinate1502 = x3d.Coordinate()
+Coordinate1502.point = (-0.2026,0.7011,-0.0494,-0.1969,0.6758,-0.0427)
 
-LineSet1501.setCoord(Coordinate1502)
-ColorRGBA1503 = ColorRGBA()
-ColorRGBA1503.setUSE("HAnimSiteLineColorRGBA")
+LineSet1501.coord.append(Coordinate1502)
+ColorRGBA1503 = x3d.ColorRGBA()
+ColorRGBA1503.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1501.setColor(ColorRGBA1503)
+LineSet1501.color.append(ColorRGBA1503)
 
-Shape1500.setGeometry(LineSet1501)
+Shape1500.geometry = LineSet1501
 
-HAnimSegment1496.addChildren(Shape1500)
-HAnimSite1504 = HAnimSite()
-HAnimSite1504.setName("r_middle_distal_tip")
-HAnimSite1504.setDEF("hanim_r_middle_distal_tip")
-HAnimSite1504.setTranslation([-0.1969,0.6758,-0.0427])
+HAnimSegment1496.children.append(Shape1500)
+HAnimSite1504 = x3d.HAnimSite()
+HAnimSite1504.name = "r_middle_distal_tip"
+HAnimSite1504.DEF = "hanim_r_middle_distal_tip"
+HAnimSite1504.translation = [-0.1969,0.6758,-0.0427]
 #HAnimSite visualization shape
-TouchSensor1505 = TouchSensor()
-TouchSensor1505.setDescription("HAnimSite r_middle_distal_tip")
+TouchSensor1505 = x3d.TouchSensor()
+TouchSensor1505.description = "HAnimSite r_middle_distal_tip"
 
-HAnimSite1504.addChildren(TouchSensor1505)
-Shape1506 = Shape()
-Shape1506.setUSE("HAnimSiteShape")
+HAnimSite1504.children.append(TouchSensor1505)
+Shape1506 = x3d.Shape()
+Shape1506.USE = "HAnimSiteShape"
 
-HAnimSite1504.addChildren(Shape1506)
+HAnimSite1504.children.append(Shape1506)
 
-HAnimSegment1496.addChildren(HAnimSite1504)
+HAnimSegment1496.children.append(HAnimSite1504)
 
-HAnimJoint1495.addChildren(HAnimSegment1496)
+HAnimJoint1495.children.append(HAnimSegment1496)
 
-HAnimJoint1486.addChildren(HAnimJoint1495)
+HAnimJoint1486.children.append(HAnimJoint1495)
 
-HAnimJoint1477.addChildren(HAnimJoint1486)
+HAnimJoint1477.children.append(HAnimJoint1486)
 
-HAnimJoint1468.addChildren(HAnimJoint1477)
+HAnimJoint1468.children.append(HAnimJoint1477)
 
-HAnimJoint1334.addChildren(HAnimJoint1468)
-HAnimJoint1507 = HAnimJoint()
-HAnimJoint1507.setName("r_ring0")
-HAnimJoint1507.setDEF("hanim_r_ring0")
-HAnimJoint1507.setCenter([-0.1956,0.8019,-0.0794])
-HAnimJoint1507.setStiffness([0,0,0])
-HAnimSegment1508 = HAnimSegment()
-HAnimSegment1508.setName("r_ring_metacarpal")
-HAnimSegment1508.setDEF("hanim_r_ring_metacarpal")
+HAnimJoint1334.children.append(HAnimJoint1468)
+HAnimJoint1507 = x3d.HAnimJoint()
+HAnimJoint1507.name = "r_ring0"
+HAnimJoint1507.DEF = "hanim_r_ring0"
+HAnimJoint1507.center = [-0.1956,0.8019,-0.0794]
+HAnimJoint1507.ulimit = [0,0,0]
+HAnimJoint1507.llimit = [0,0,0]
+HAnimSegment1508 = x3d.HAnimSegment()
+HAnimSegment1508.name = "r_ring_metacarpal"
+HAnimSegment1508.DEF = "hanim_r_ring_metacarpal"
 #<HAnimJoint name='r_ring0'/> visualization sphere is placed within <HAnimSegment name='r_ring_metacarpal'/>
-TouchSensor1509 = TouchSensor()
-TouchSensor1509.setDescription("HAnimJoint r_ring0, HAnimSegment r_ring_metacarpal")
+TouchSensor1509 = x3d.TouchSensor()
+TouchSensor1509.description = "HAnimJoint r_ring0, HAnimSegment r_ring_metacarpal"
 
-HAnimSegment1508.addChildren(TouchSensor1509)
-Transform1510 = Transform()
-Transform1510.setTranslation([-0.1956,0.8019,-0.0794])
-Shape1511 = Shape()
-Shape1511.setUSE("HAnimJointShape")
+HAnimSegment1508.children.append(TouchSensor1509)
+Transform1510 = x3d.Transform()
+Transform1510.translation = [-0.1956,0.8019,-0.0794]
+Shape1511 = x3d.Shape()
+Shape1511.USE = "HAnimJointShape"
 
-Transform1510.addChildren(Shape1511)
+Transform1510.children.append(Shape1511)
 
-HAnimSegment1508.addChildren(Transform1510)
+HAnimSegment1508.children.append(Transform1510)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_ring0'/> to <HAnimJoint name='r_ring1'/>
-Shape1512 = Shape()
-LineSet1513 = LineSet()
-LineSet1513.setVertexCount([2])
-Coordinate1514 = Coordinate()
-Coordinate1514.setPoint([-0.1956,0.8019,-0.0794,-0.1956,0.7815,-0.0794])
+Shape1512 = x3d.Shape()
+LineSet1513 = x3d.LineSet()
+LineSet1513.vertexCount = [2]
+Coordinate1514 = x3d.Coordinate()
+Coordinate1514.point = (-0.1956,0.8019,-0.0794,-0.1956,0.7815,-0.0794)
 
-LineSet1513.setCoord(Coordinate1514)
-ColorRGBA1515 = ColorRGBA()
-ColorRGBA1515.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1513.coord.append(Coordinate1514)
+ColorRGBA1515 = x3d.ColorRGBA()
+ColorRGBA1515.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1513.setColor(ColorRGBA1515)
+LineSet1513.color.append(ColorRGBA1515)
 
-Shape1512.setGeometry(LineSet1513)
+Shape1512.geometry = LineSet1513
 
-HAnimSegment1508.addChildren(Shape1512)
+HAnimSegment1508.children.append(Shape1512)
 
-HAnimJoint1507.addChildren(HAnimSegment1508)
-HAnimJoint1516 = HAnimJoint()
-HAnimJoint1516.setName("r_ring1")
-HAnimJoint1516.setDEF("hanim_r_ring1")
-HAnimJoint1516.setCenter([-0.1956,0.7815,-0.0794])
-HAnimJoint1516.setStiffness([0,0,0])
-HAnimSegment1517 = HAnimSegment()
-HAnimSegment1517.setName("r_ring_proximal")
-HAnimSegment1517.setDEF("hanim_r_ring_proximal")
+HAnimJoint1507.children.append(HAnimSegment1508)
+HAnimJoint1516 = x3d.HAnimJoint()
+HAnimJoint1516.name = "r_ring1"
+HAnimJoint1516.DEF = "hanim_r_ring1"
+HAnimJoint1516.center = [-0.1956,0.7815,-0.0794]
+HAnimJoint1516.ulimit = [0,0,0]
+HAnimJoint1516.llimit = [0,0,0]
+HAnimSegment1517 = x3d.HAnimSegment()
+HAnimSegment1517.name = "r_ring_proximal"
+HAnimSegment1517.DEF = "hanim_r_ring_proximal"
 #<HAnimJoint name='r_ring1'/> visualization sphere is placed within <HAnimSegment name='r_ring_proximal'/>
-TouchSensor1518 = TouchSensor()
-TouchSensor1518.setDescription("HAnimJoint r_ring1, HAnimSegment r_ring_proximal")
+TouchSensor1518 = x3d.TouchSensor()
+TouchSensor1518.description = "HAnimJoint r_ring1, HAnimSegment r_ring_proximal"
 
-HAnimSegment1517.addChildren(TouchSensor1518)
-Transform1519 = Transform()
-Transform1519.setTranslation([-0.1956,0.7815,-0.0794])
-Shape1520 = Shape()
-Shape1520.setUSE("HAnimJointShape")
+HAnimSegment1517.children.append(TouchSensor1518)
+Transform1519 = x3d.Transform()
+Transform1519.translation = [-0.1956,0.7815,-0.0794]
+Shape1520 = x3d.Shape()
+Shape1520.USE = "HAnimJointShape"
 
-Transform1519.addChildren(Shape1520)
+Transform1519.children.append(Shape1520)
 
-HAnimSegment1517.addChildren(Transform1519)
+HAnimSegment1517.children.append(Transform1519)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_ring1'/> to <HAnimJoint name='r_ring2'/>
-Shape1521 = Shape()
-LineSet1522 = LineSet()
-LineSet1522.setVertexCount([2])
-Coordinate1523 = Coordinate()
-Coordinate1523.setPoint([-0.1956,0.7815,-0.0794,-0.1973,0.7287,-0.0777])
+Shape1521 = x3d.Shape()
+LineSet1522 = x3d.LineSet()
+LineSet1522.vertexCount = [2]
+Coordinate1523 = x3d.Coordinate()
+Coordinate1523.point = (-0.1956,0.7815,-0.0794,-0.1973,0.7287,-0.0777)
 
-LineSet1522.setCoord(Coordinate1523)
-ColorRGBA1524 = ColorRGBA()
-ColorRGBA1524.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1522.coord.append(Coordinate1523)
+ColorRGBA1524 = x3d.ColorRGBA()
+ColorRGBA1524.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1522.setColor(ColorRGBA1524)
+LineSet1522.color.append(ColorRGBA1524)
 
-Shape1521.setGeometry(LineSet1522)
+Shape1521.geometry = LineSet1522
 
-HAnimSegment1517.addChildren(Shape1521)
+HAnimSegment1517.children.append(Shape1521)
 
-HAnimJoint1516.addChildren(HAnimSegment1517)
-HAnimJoint1525 = HAnimJoint()
-HAnimJoint1525.setName("r_ring2")
-HAnimJoint1525.setDEF("hanim_r_ring2")
-HAnimJoint1525.setCenter([-0.1973,0.7287,-0.0777])
-HAnimJoint1525.setStiffness([0,0,0])
-HAnimSegment1526 = HAnimSegment()
-HAnimSegment1526.setName("r_ring_middle")
-HAnimSegment1526.setDEF("hanim_r_ring_middle")
+HAnimJoint1516.children.append(HAnimSegment1517)
+HAnimJoint1525 = x3d.HAnimJoint()
+HAnimJoint1525.name = "r_ring2"
+HAnimJoint1525.DEF = "hanim_r_ring2"
+HAnimJoint1525.center = [-0.1973,0.7287,-0.0777]
+HAnimJoint1525.ulimit = [0,0,0]
+HAnimJoint1525.llimit = [0,0,0]
+HAnimSegment1526 = x3d.HAnimSegment()
+HAnimSegment1526.name = "r_ring_middle"
+HAnimSegment1526.DEF = "hanim_r_ring_middle"
 #<HAnimJoint name='r_ring2'/> visualization sphere is placed within <HAnimSegment name='r_ring_middle'/>
-TouchSensor1527 = TouchSensor()
-TouchSensor1527.setDescription("HAnimJoint r_ring2, HAnimSegment r_ring_middle")
+TouchSensor1527 = x3d.TouchSensor()
+TouchSensor1527.description = "HAnimJoint r_ring2, HAnimSegment r_ring_middle"
 
-HAnimSegment1526.addChildren(TouchSensor1527)
-Transform1528 = Transform()
-Transform1528.setTranslation([-0.1973,0.7287,-0.0777])
-Shape1529 = Shape()
-Shape1529.setUSE("HAnimJointShape")
+HAnimSegment1526.children.append(TouchSensor1527)
+Transform1528 = x3d.Transform()
+Transform1528.translation = [-0.1973,0.7287,-0.0777]
+Shape1529 = x3d.Shape()
+Shape1529.USE = "HAnimJointShape"
 
-Transform1528.addChildren(Shape1529)
+Transform1528.children.append(Shape1529)
 
-HAnimSegment1526.addChildren(Transform1528)
+HAnimSegment1526.children.append(Transform1528)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_ring2'/> to <HAnimJoint name='r_ring3'/>
-Shape1530 = Shape()
-LineSet1531 = LineSet()
-LineSet1531.setVertexCount([2])
-Coordinate1532 = Coordinate()
-Coordinate1532.setPoint([-0.1973,0.7287,-0.0777,-0.1983,0.7045,-0.0767])
+Shape1530 = x3d.Shape()
+LineSet1531 = x3d.LineSet()
+LineSet1531.vertexCount = [2]
+Coordinate1532 = x3d.Coordinate()
+Coordinate1532.point = (-0.1973,0.7287,-0.0777,-0.1983,0.7045,-0.0767)
 
-LineSet1531.setCoord(Coordinate1532)
-ColorRGBA1533 = ColorRGBA()
-ColorRGBA1533.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1531.coord.append(Coordinate1532)
+ColorRGBA1533 = x3d.ColorRGBA()
+ColorRGBA1533.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1531.setColor(ColorRGBA1533)
+LineSet1531.color.append(ColorRGBA1533)
 
-Shape1530.setGeometry(LineSet1531)
+Shape1530.geometry = LineSet1531
 
-HAnimSegment1526.addChildren(Shape1530)
+HAnimSegment1526.children.append(Shape1530)
 
-HAnimJoint1525.addChildren(HAnimSegment1526)
-HAnimJoint1534 = HAnimJoint()
-HAnimJoint1534.setName("r_ring3")
-HAnimJoint1534.setDEF("hanim_r_ring3")
-HAnimJoint1534.setCenter([-0.1983,0.7045,-0.0767])
-HAnimJoint1534.setStiffness([0,0,0])
-HAnimSegment1535 = HAnimSegment()
-HAnimSegment1535.setName("r_ring_distal")
-HAnimSegment1535.setDEF("hanim_r_ring_distal")
+HAnimJoint1525.children.append(HAnimSegment1526)
+HAnimJoint1534 = x3d.HAnimJoint()
+HAnimJoint1534.name = "r_ring3"
+HAnimJoint1534.DEF = "hanim_r_ring3"
+HAnimJoint1534.center = [-0.1983,0.7045,-0.0767]
+HAnimJoint1534.ulimit = [0,0,0]
+HAnimJoint1534.llimit = [0,0,0]
+HAnimSegment1535 = x3d.HAnimSegment()
+HAnimSegment1535.name = "r_ring_distal"
+HAnimSegment1535.DEF = "hanim_r_ring_distal"
 #<HAnimJoint name='r_ring3'/> visualization sphere is placed within <HAnimSegment name='r_ring_distal'/>
-TouchSensor1536 = TouchSensor()
-TouchSensor1536.setDescription("HAnimJoint r_ring3, HAnimSegment r_ring_distal")
+TouchSensor1536 = x3d.TouchSensor()
+TouchSensor1536.description = "HAnimJoint r_ring3, HAnimSegment r_ring_distal"
 
-HAnimSegment1535.addChildren(TouchSensor1536)
-Transform1537 = Transform()
-Transform1537.setTranslation([-0.1983,0.7045,-0.0767])
-Shape1538 = Shape()
-Shape1538.setUSE("HAnimJointShape")
+HAnimSegment1535.children.append(TouchSensor1536)
+Transform1537 = x3d.Transform()
+Transform1537.translation = [-0.1983,0.7045,-0.0767]
+Shape1538 = x3d.Shape()
+Shape1538.USE = "HAnimJointShape"
 
-Transform1537.addChildren(Shape1538)
+Transform1537.children.append(Shape1538)
 
-HAnimSegment1535.addChildren(Transform1537)
+HAnimSegment1535.children.append(Transform1537)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_ring3'/> to <HAnimSite name='r_ring_distal_tip'/>
-Shape1539 = Shape()
-LineSet1540 = LineSet()
-LineSet1540.setVertexCount([2])
-Coordinate1541 = Coordinate()
-Coordinate1541.setPoint([-0.1983,0.7045,-0.0767,-0.1934,0.6778,-0.0693])
+Shape1539 = x3d.Shape()
+LineSet1540 = x3d.LineSet()
+LineSet1540.vertexCount = [2]
+Coordinate1541 = x3d.Coordinate()
+Coordinate1541.point = (-0.1983,0.7045,-0.0767,-0.1934,0.6778,-0.0693)
 
-LineSet1540.setCoord(Coordinate1541)
-ColorRGBA1542 = ColorRGBA()
-ColorRGBA1542.setUSE("HAnimSiteLineColorRGBA")
+LineSet1540.coord.append(Coordinate1541)
+ColorRGBA1542 = x3d.ColorRGBA()
+ColorRGBA1542.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1540.setColor(ColorRGBA1542)
+LineSet1540.color.append(ColorRGBA1542)
 
-Shape1539.setGeometry(LineSet1540)
+Shape1539.geometry = LineSet1540
 
-HAnimSegment1535.addChildren(Shape1539)
-HAnimSite1543 = HAnimSite()
-HAnimSite1543.setName("r_ring_distal_tip")
-HAnimSite1543.setDEF("hanim_r_ring_distal_tip")
-HAnimSite1543.setTranslation([-0.1934,0.6778,-0.0693])
+HAnimSegment1535.children.append(Shape1539)
+HAnimSite1543 = x3d.HAnimSite()
+HAnimSite1543.name = "r_ring_distal_tip"
+HAnimSite1543.DEF = "hanim_r_ring_distal_tip"
+HAnimSite1543.translation = [-0.1934,0.6778,-0.0693]
 #HAnimSite visualization shape
-TouchSensor1544 = TouchSensor()
-TouchSensor1544.setDescription("HAnimSite r_ring_distal_tip")
+TouchSensor1544 = x3d.TouchSensor()
+TouchSensor1544.description = "HAnimSite r_ring_distal_tip"
 
-HAnimSite1543.addChildren(TouchSensor1544)
-Shape1545 = Shape()
-Shape1545.setUSE("HAnimSiteShape")
+HAnimSite1543.children.append(TouchSensor1544)
+Shape1545 = x3d.Shape()
+Shape1545.USE = "HAnimSiteShape"
 
-HAnimSite1543.addChildren(Shape1545)
+HAnimSite1543.children.append(Shape1545)
 
-HAnimSegment1535.addChildren(HAnimSite1543)
+HAnimSegment1535.children.append(HAnimSite1543)
 
-HAnimJoint1534.addChildren(HAnimSegment1535)
+HAnimJoint1534.children.append(HAnimSegment1535)
 
-HAnimJoint1525.addChildren(HAnimJoint1534)
+HAnimJoint1525.children.append(HAnimJoint1534)
 
-HAnimJoint1516.addChildren(HAnimJoint1525)
+HAnimJoint1516.children.append(HAnimJoint1525)
 
-HAnimJoint1507.addChildren(HAnimJoint1516)
+HAnimJoint1507.children.append(HAnimJoint1516)
 
-HAnimJoint1334.addChildren(HAnimJoint1507)
-HAnimJoint1546 = HAnimJoint()
-HAnimJoint1546.setName("r_pinky0")
-HAnimJoint1546.setDEF("hanim_r_pinky0")
-HAnimJoint1546.setCenter([-0.1925,0.8066,-0.1036])
-HAnimJoint1546.setStiffness([0,0,0])
-HAnimSegment1547 = HAnimSegment()
-HAnimSegment1547.setName("r_pinky_metacarpal")
-HAnimSegment1547.setDEF("hanim_r_pinky_metacarpal")
+HAnimJoint1334.children.append(HAnimJoint1507)
+HAnimJoint1546 = x3d.HAnimJoint()
+HAnimJoint1546.name = "r_pinky0"
+HAnimJoint1546.DEF = "hanim_r_pinky0"
+HAnimJoint1546.center = [-0.1925,0.8066,-0.1036]
+HAnimJoint1546.ulimit = [0,0,0]
+HAnimJoint1546.llimit = [0,0,0]
+HAnimSegment1547 = x3d.HAnimSegment()
+HAnimSegment1547.name = "r_pinky_metacarpal"
+HAnimSegment1547.DEF = "hanim_r_pinky_metacarpal"
 #<HAnimJoint name='r_pinky0'/> visualization sphere is placed within <HAnimSegment name='r_pinky_metacarpal'/>
-TouchSensor1548 = TouchSensor()
-TouchSensor1548.setDescription("HAnimJoint r_pinky0, HAnimSegment r_pinky_metacarpal")
+TouchSensor1548 = x3d.TouchSensor()
+TouchSensor1548.description = "HAnimJoint r_pinky0, HAnimSegment r_pinky_metacarpal"
 
-HAnimSegment1547.addChildren(TouchSensor1548)
-Transform1549 = Transform()
-Transform1549.setTranslation([-0.1925,0.8066,-0.1036])
-Shape1550 = Shape()
-Shape1550.setUSE("HAnimJointShape")
+HAnimSegment1547.children.append(TouchSensor1548)
+Transform1549 = x3d.Transform()
+Transform1549.translation = [-0.1925,0.8066,-0.1036]
+Shape1550 = x3d.Shape()
+Shape1550.USE = "HAnimJointShape"
 
-Transform1549.addChildren(Shape1550)
+Transform1549.children.append(Shape1550)
 
-HAnimSegment1547.addChildren(Transform1549)
+HAnimSegment1547.children.append(Transform1549)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_pinky0'/> to <HAnimJoint name='r_pinky1'/>
-Shape1551 = Shape()
-LineSet1552 = LineSet()
-LineSet1552.setVertexCount([2])
-Coordinate1553 = Coordinate()
-Coordinate1553.setPoint([-0.1925,0.8066,-0.1036,-0.1925,0.7866,-0.1036])
+Shape1551 = x3d.Shape()
+LineSet1552 = x3d.LineSet()
+LineSet1552.vertexCount = [2]
+Coordinate1553 = x3d.Coordinate()
+Coordinate1553.point = (-0.1925,0.8066,-0.1036,-0.1925,0.7866,-0.1036)
 
-LineSet1552.setCoord(Coordinate1553)
-ColorRGBA1554 = ColorRGBA()
-ColorRGBA1554.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1552.coord.append(Coordinate1553)
+ColorRGBA1554 = x3d.ColorRGBA()
+ColorRGBA1554.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1552.setColor(ColorRGBA1554)
+LineSet1552.color.append(ColorRGBA1554)
 
-Shape1551.setGeometry(LineSet1552)
+Shape1551.geometry = LineSet1552
 
-HAnimSegment1547.addChildren(Shape1551)
+HAnimSegment1547.children.append(Shape1551)
 
-HAnimJoint1546.addChildren(HAnimSegment1547)
-HAnimJoint1555 = HAnimJoint()
-HAnimJoint1555.setName("r_pinky1")
-HAnimJoint1555.setDEF("hanim_r_pinky1")
-HAnimJoint1555.setCenter([-0.1925,0.7866,-0.1036])
-HAnimJoint1555.setStiffness([0,0,0])
-HAnimSegment1556 = HAnimSegment()
-HAnimSegment1556.setName("r_pinky_proximal")
-HAnimSegment1556.setDEF("hanim_r_pinky_proximal")
+HAnimJoint1546.children.append(HAnimSegment1547)
+HAnimJoint1555 = x3d.HAnimJoint()
+HAnimJoint1555.name = "r_pinky1"
+HAnimJoint1555.DEF = "hanim_r_pinky1"
+HAnimJoint1555.center = [-0.1925,0.7866,-0.1036]
+HAnimJoint1555.ulimit = [0,0,0]
+HAnimJoint1555.llimit = [0,0,0]
+HAnimSegment1556 = x3d.HAnimSegment()
+HAnimSegment1556.name = "r_pinky_proximal"
+HAnimSegment1556.DEF = "hanim_r_pinky_proximal"
 #<HAnimJoint name='r_pinky1'/> visualization sphere is placed within <HAnimSegment name='r_pinky_proximal'/>
-TouchSensor1557 = TouchSensor()
-TouchSensor1557.setDescription("HAnimJoint r_pinky1, HAnimSegment r_pinky_proximal")
+TouchSensor1557 = x3d.TouchSensor()
+TouchSensor1557.description = "HAnimJoint r_pinky1, HAnimSegment r_pinky_proximal"
 
-HAnimSegment1556.addChildren(TouchSensor1557)
-Transform1558 = Transform()
-Transform1558.setTranslation([-0.1925,0.7866,-0.1036])
-Shape1559 = Shape()
-Shape1559.setUSE("HAnimJointShape")
+HAnimSegment1556.children.append(TouchSensor1557)
+Transform1558 = x3d.Transform()
+Transform1558.translation = [-0.1925,0.7866,-0.1036]
+Shape1559 = x3d.Shape()
+Shape1559.USE = "HAnimJointShape"
 
-Transform1558.addChildren(Shape1559)
+Transform1558.children.append(Shape1559)
 
-HAnimSegment1556.addChildren(Transform1558)
+HAnimSegment1556.children.append(Transform1558)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_pinky1'/> to <HAnimJoint name='r_pinky2'/>
-Shape1560 = Shape()
-LineSet1561 = LineSet()
-LineSet1561.setVertexCount([2])
-Coordinate1562 = Coordinate()
-Coordinate1562.setPoint([-0.1925,0.7866,-0.1036,-0.1938,0.7452,-0.1024])
+Shape1560 = x3d.Shape()
+LineSet1561 = x3d.LineSet()
+LineSet1561.vertexCount = [2]
+Coordinate1562 = x3d.Coordinate()
+Coordinate1562.point = (-0.1925,0.7866,-0.1036,-0.1938,0.7452,-0.1024)
 
-LineSet1561.setCoord(Coordinate1562)
-ColorRGBA1563 = ColorRGBA()
-ColorRGBA1563.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1561.coord.append(Coordinate1562)
+ColorRGBA1563 = x3d.ColorRGBA()
+ColorRGBA1563.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1561.setColor(ColorRGBA1563)
+LineSet1561.color.append(ColorRGBA1563)
 
-Shape1560.setGeometry(LineSet1561)
+Shape1560.geometry = LineSet1561
 
-HAnimSegment1556.addChildren(Shape1560)
+HAnimSegment1556.children.append(Shape1560)
 
-HAnimJoint1555.addChildren(HAnimSegment1556)
-HAnimJoint1564 = HAnimJoint()
-HAnimJoint1564.setName("r_pinky2")
-HAnimJoint1564.setDEF("hanim_r_pinky2")
-HAnimJoint1564.setCenter([-0.1938,0.7452,-0.1024])
-HAnimJoint1564.setStiffness([0,0,0])
-HAnimSegment1565 = HAnimSegment()
-HAnimSegment1565.setName("r_pinky_middle")
-HAnimSegment1565.setDEF("hanim_r_pinky_middle")
+HAnimJoint1555.children.append(HAnimSegment1556)
+HAnimJoint1564 = x3d.HAnimJoint()
+HAnimJoint1564.name = "r_pinky2"
+HAnimJoint1564.DEF = "hanim_r_pinky2"
+HAnimJoint1564.center = [-0.1938,0.7452,-0.1024]
+HAnimJoint1564.ulimit = [0,0,0]
+HAnimJoint1564.llimit = [0,0,0]
+HAnimSegment1565 = x3d.HAnimSegment()
+HAnimSegment1565.name = "r_pinky_middle"
+HAnimSegment1565.DEF = "hanim_r_pinky_middle"
 #<HAnimJoint name='r_pinky2'/> visualization sphere is placed within <HAnimSegment name='r_pinky_middle'/>
-TouchSensor1566 = TouchSensor()
-TouchSensor1566.setDescription("HAnimJoint r_pinky2, HAnimSegment r_pinky_middle")
+TouchSensor1566 = x3d.TouchSensor()
+TouchSensor1566.description = "HAnimJoint r_pinky2, HAnimSegment r_pinky_middle"
 
-HAnimSegment1565.addChildren(TouchSensor1566)
-Transform1567 = Transform()
-Transform1567.setTranslation([-0.1938,0.7452,-0.1024])
-Shape1568 = Shape()
-Shape1568.setUSE("HAnimJointShape")
+HAnimSegment1565.children.append(TouchSensor1566)
+Transform1567 = x3d.Transform()
+Transform1567.translation = [-0.1938,0.7452,-0.1024]
+Shape1568 = x3d.Shape()
+Shape1568.USE = "HAnimJointShape"
 
-Transform1567.addChildren(Shape1568)
+Transform1567.children.append(Shape1568)
 
-HAnimSegment1565.addChildren(Transform1567)
+HAnimSegment1565.children.append(Transform1567)
 #HAnimSegment visualization line segment from parent <HAnimJoint name='r_pinky2'/> to <HAnimJoint name='r_pinky3'/>
-Shape1569 = Shape()
-LineSet1570 = LineSet()
-LineSet1570.setVertexCount([2])
-Coordinate1571 = Coordinate()
-Coordinate1571.setPoint([-0.1938,0.7452,-0.1024,-0.1948,0.7277,-0.1017])
+Shape1569 = x3d.Shape()
+LineSet1570 = x3d.LineSet()
+LineSet1570.vertexCount = [2]
+Coordinate1571 = x3d.Coordinate()
+Coordinate1571.point = (-0.1938,0.7452,-0.1024,-0.1948,0.7277,-0.1017)
 
-LineSet1570.setCoord(Coordinate1571)
-ColorRGBA1572 = ColorRGBA()
-ColorRGBA1572.setUSE("HAnimSegmentLineColorRGBA")
+LineSet1570.coord.append(Coordinate1571)
+ColorRGBA1572 = x3d.ColorRGBA()
+ColorRGBA1572.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1570.setColor(ColorRGBA1572)
+LineSet1570.color.append(ColorRGBA1572)
 
-Shape1569.setGeometry(LineSet1570)
+Shape1569.geometry = LineSet1570
 
-HAnimSegment1565.addChildren(Shape1569)
+HAnimSegment1565.children.append(Shape1569)
 
-HAnimJoint1564.addChildren(HAnimSegment1565)
-HAnimJoint1573 = HAnimJoint()
-HAnimJoint1573.setName("r_pinky3")
-HAnimJoint1573.setDEF("hanim_r_pinky3")
-HAnimJoint1573.setCenter([-0.1948,0.7277,-0.1017])
-HAnimJoint1573.setStiffness([0,0,0])
-HAnimSegment1574 = HAnimSegment()
-HAnimSegment1574.setName("r_pinky_distal")
-HAnimSegment1574.setDEF("hanim_r_pinky_distal")
+HAnimJoint1564.children.append(HAnimSegment1565)
+HAnimJoint1573 = x3d.HAnimJoint()
+HAnimJoint1573.name = "r_pinky3"
+HAnimJoint1573.DEF = "hanim_r_pinky3"
+HAnimJoint1573.center = [-0.1948,0.7277,-0.1017]
+HAnimJoint1573.ulimit = [0,0,0]
+HAnimJoint1573.llimit = [0,0,0]
+HAnimSegment1574 = x3d.HAnimSegment()
+HAnimSegment1574.name = "r_pinky_distal"
+HAnimSegment1574.DEF = "hanim_r_pinky_distal"
 #<HAnimJoint name='r_pinky3'/> visualization sphere is placed within <HAnimSegment name='r_pinky_distal'/>
-TouchSensor1575 = TouchSensor()
-TouchSensor1575.setDescription("HAnimJoint r_pinky3, HAnimSegment r_pinky_distal")
+TouchSensor1575 = x3d.TouchSensor()
+TouchSensor1575.description = "HAnimJoint r_pinky3, HAnimSegment r_pinky_distal"
 
-HAnimSegment1574.addChildren(TouchSensor1575)
-Transform1576 = Transform()
-Transform1576.setTranslation([-0.1948,0.7277,-0.1017])
-Shape1577 = Shape()
-Shape1577.setUSE("HAnimJointShape")
+HAnimSegment1574.children.append(TouchSensor1575)
+Transform1576 = x3d.Transform()
+Transform1576.translation = [-0.1948,0.7277,-0.1017]
+Shape1577 = x3d.Shape()
+Shape1577.USE = "HAnimJointShape"
 
-Transform1576.addChildren(Shape1577)
+Transform1576.children.append(Shape1577)
 
-HAnimSegment1574.addChildren(Transform1576)
+HAnimSegment1574.children.append(Transform1576)
 #HAnimSite visualization line segment from ancestor <HAnimJoint name='r_pinky3'/> to <HAnimSite name='r_pinky_distal_tip'/>
-Shape1578 = Shape()
-LineSet1579 = LineSet()
-LineSet1579.setVertexCount([2])
-Coordinate1580 = Coordinate()
-Coordinate1580.setPoint([-0.1948,0.7277,-0.1017,-0.1938,0.7035,-0.0949])
+Shape1578 = x3d.Shape()
+LineSet1579 = x3d.LineSet()
+LineSet1579.vertexCount = [2]
+Coordinate1580 = x3d.Coordinate()
+Coordinate1580.point = (-0.1948,0.7277,-0.1017,-0.1938,0.7035,-0.0949)
 
-LineSet1579.setCoord(Coordinate1580)
-ColorRGBA1581 = ColorRGBA()
-ColorRGBA1581.setUSE("HAnimSiteLineColorRGBA")
+LineSet1579.coord.append(Coordinate1580)
+ColorRGBA1581 = x3d.ColorRGBA()
+ColorRGBA1581.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1579.setColor(ColorRGBA1581)
+LineSet1579.color.append(ColorRGBA1581)
 
-Shape1578.setGeometry(LineSet1579)
+Shape1578.geometry = LineSet1579
 
-HAnimSegment1574.addChildren(Shape1578)
-HAnimSite1582 = HAnimSite()
-HAnimSite1582.setName("r_pinky_distal_tip")
-HAnimSite1582.setDEF("hanim_r_pinky_distal_tip")
-HAnimSite1582.setTranslation([-0.1938,0.7035,-0.0949])
+HAnimSegment1574.children.append(Shape1578)
+HAnimSite1582 = x3d.HAnimSite()
+HAnimSite1582.name = "r_pinky_distal_tip"
+HAnimSite1582.DEF = "hanim_r_pinky_distal_tip"
+HAnimSite1582.translation = [-0.1938,0.7035,-0.0949]
 #HAnimSite visualization shape
-TouchSensor1583 = TouchSensor()
-TouchSensor1583.setDescription("HAnimSite r_pinky_distal_tip")
+TouchSensor1583 = x3d.TouchSensor()
+TouchSensor1583.description = "HAnimSite r_pinky_distal_tip"
 
-HAnimSite1582.addChildren(TouchSensor1583)
-Shape1584 = Shape()
-Shape1584.setUSE("HAnimSiteShape")
+HAnimSite1582.children.append(TouchSensor1583)
+Shape1584 = x3d.Shape()
+Shape1584.USE = "HAnimSiteShape"
 
-HAnimSite1582.addChildren(Shape1584)
+HAnimSite1582.children.append(Shape1584)
 
-HAnimSegment1574.addChildren(HAnimSite1582)
+HAnimSegment1574.children.append(HAnimSite1582)
 
-HAnimJoint1573.addChildren(HAnimSegment1574)
+HAnimJoint1573.children.append(HAnimSegment1574)
 
-HAnimJoint1564.addChildren(HAnimJoint1573)
+HAnimJoint1564.children.append(HAnimJoint1573)
 
-HAnimJoint1555.addChildren(HAnimJoint1564)
+HAnimJoint1555.children.append(HAnimJoint1564)
 
-HAnimJoint1546.addChildren(HAnimJoint1555)
+HAnimJoint1546.children.append(HAnimJoint1555)
 
-HAnimJoint1334.addChildren(HAnimJoint1546)
+HAnimJoint1334.children.append(HAnimJoint1546)
 
-HAnimJoint1297.addChildren(HAnimJoint1334)
+HAnimJoint1297.children.append(HAnimJoint1334)
 
-HAnimJoint1281.addChildren(HAnimJoint1297)
+HAnimJoint1281.children.append(HAnimJoint1297)
 
-HAnimJoint1272.addChildren(HAnimJoint1281)
+HAnimJoint1272.children.append(HAnimJoint1281)
 
-HAnimJoint1235.addChildren(HAnimJoint1272)
+HAnimJoint1235.children.append(HAnimJoint1272)
 
-HAnimJoint597.addChildren(HAnimJoint1235)
+HAnimJoint597.children.append(HAnimJoint1235)
 
-HAnimJoint588.addChildren(HAnimJoint597)
+HAnimJoint588.children.append(HAnimJoint597)
 
-HAnimJoint579.addChildren(HAnimJoint588)
+HAnimJoint579.children.append(HAnimJoint588)
 
-HAnimJoint570.addChildren(HAnimJoint579)
+HAnimJoint570.children.append(HAnimJoint579)
 
-HAnimJoint561.addChildren(HAnimJoint570)
+HAnimJoint561.children.append(HAnimJoint570)
 
-HAnimJoint552.addChildren(HAnimJoint561)
+HAnimJoint552.children.append(HAnimJoint561)
 
-HAnimJoint543.addChildren(HAnimJoint552)
+HAnimJoint543.children.append(HAnimJoint552)
 
-HAnimJoint534.addChildren(HAnimJoint543)
+HAnimJoint534.children.append(HAnimJoint543)
 
-HAnimJoint511.addChildren(HAnimJoint534)
+HAnimJoint511.children.append(HAnimJoint534)
 
-HAnimJoint495.addChildren(HAnimJoint511)
+HAnimJoint495.children.append(HAnimJoint511)
 
-HAnimJoint486.addChildren(HAnimJoint495)
+HAnimJoint486.children.append(HAnimJoint495)
 
-HAnimJoint477.addChildren(HAnimJoint486)
+HAnimJoint477.children.append(HAnimJoint486)
 
-HAnimJoint468.addChildren(HAnimJoint477)
+HAnimJoint468.children.append(HAnimJoint477)
 
-HAnimJoint438.addChildren(HAnimJoint468)
+HAnimJoint438.children.append(HAnimJoint468)
 
-HAnimJoint429.addChildren(HAnimJoint438)
+HAnimJoint429.children.append(HAnimJoint438)
 
-HAnimJoint420.addChildren(HAnimJoint429)
+HAnimJoint420.children.append(HAnimJoint429)
 
-HAnimJoint397.addChildren(HAnimJoint420)
+HAnimJoint397.children.append(HAnimJoint420)
 
-HAnimJoint47.addChildren(HAnimJoint397)
+HAnimJoint47.children.append(HAnimJoint397)
 
-HAnimHumanoid46.setSkeleton(HAnimJoint47)
-HAnimSite1585 = HAnimSite()
-HAnimSite1585.setName("l_inclined_view")
-HAnimSite1585.setDEF("hanim_l_inclined_view")
-HAnimSite1585.setRotation([-0.113,0.993,0.0347,0.671])
-HAnimSite1585.setTranslation([1.62,1.05,2.06])
+HAnimHumanoid46.skeleton.append(HAnimJoint47)
+HAnimSite1585 = x3d.HAnimSite()
+HAnimSite1585.name = "l_inclined_view"
+HAnimSite1585.DEF = "hanim_l_inclined_view"
+HAnimSite1585.rotation = [-0.113,0.993,0.0347,0.671]
+HAnimSite1585.translation = [1.62,1.05,2.06]
 #HAnimSite visualization shape
-TouchSensor1586 = TouchSensor()
-TouchSensor1586.setDescription("HAnimSite l_inclined_view")
+TouchSensor1586 = x3d.TouchSensor()
+TouchSensor1586.description = "HAnimSite l_inclined_view"
 
-HAnimSite1585.addChildren(TouchSensor1586)
-Shape1587 = Shape()
-Shape1587.setUSE("HAnimSiteShape")
+HAnimSite1585.children.append(TouchSensor1586)
+Shape1587 = x3d.Shape()
+Shape1587.USE = "HAnimSiteShape"
 
-HAnimSite1585.addChildren(Shape1587)
-Viewpoint1588 = Viewpoint()
-Viewpoint1588.setDEF("hanim_l_inclined_viewpoint")
-Viewpoint1588.setDescription("left inclined")
-Viewpoint1588.setPosition([0,0,0])
+HAnimSite1585.children.append(Shape1587)
+Viewpoint1588 = x3d.Viewpoint()
+Viewpoint1588.DEF = "hanim_l_inclined_viewpoint"
+Viewpoint1588.description = "left inclined"
+Viewpoint1588.position = [0,0,0]
 
-HAnimSite1585.addChildren(Viewpoint1588)
+HAnimSite1585.children.append(Viewpoint1588)
 #HAnimSite/Viewpoint visualization shape
-Anchor1589 = Anchor()
-Anchor1589.setDescription("HAnimSite hanim_l_inclined_view Viewpoint")
-Anchor1589.setUrl(["#hanim_l_inclined_viewpoint"])
-LOD1590 = LOD()
-LOD1590.setForceTransitions(True)
-LOD1590.setRange([0.04])
-WorldInfo1591 = WorldInfo()
-WorldInfo1591.setInfo(["hide diamond when close"])
+Anchor1589 = x3d.Anchor()
+Anchor1589.description = "HAnimSite hanim_l_inclined_view Viewpoint"
+Anchor1589.url = ["#hanim_l_inclined_viewpoint"]
+LOD1590 = x3d.LOD()
+LOD1590.forceTransitions = True
+LOD1590.range = [0.04]
+WorldInfo1591 = x3d.WorldInfo()
+WorldInfo1591.info = ["hide diamond when close"]
 
-LOD1590.addChildren(WorldInfo1591)
-Shape1592 = Shape()
-Shape1592.setUSE("HAnimSiteViewpointShape")
+LOD1590.children.append(WorldInfo1591)
+Shape1592 = x3d.Shape()
+Shape1592.USE = "HAnimSiteViewpointShape"
 
-LOD1590.addChildren(Shape1592)
+LOD1590.children.append(Shape1592)
 
-Anchor1589.addChildren(LOD1590)
+Anchor1589.children.append(LOD1590)
 
-HAnimSite1585.addChildren(Anchor1589)
+HAnimSite1585.children.append(Anchor1589)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1585)
-HAnimSite1593 = HAnimSite()
-HAnimSite1593.setName("r_inclined_view")
-HAnimSite1593.setDEF("hanim_r_inclined_view")
-HAnimSite1593.setRotation([-0.113,-0.993,0.0347,0.671])
-HAnimSite1593.setTranslation([-1.62,1.05,2.06])
+HAnimHumanoid46.viewpoints.append(HAnimSite1585)
+HAnimSite1593 = x3d.HAnimSite()
+HAnimSite1593.name = "r_inclined_view"
+HAnimSite1593.DEF = "hanim_r_inclined_view"
+HAnimSite1593.rotation = [-0.113,-0.993,0.0347,0.671]
+HAnimSite1593.translation = [-1.62,1.05,2.06]
 #HAnimSite visualization shape
-TouchSensor1594 = TouchSensor()
-TouchSensor1594.setDescription("HAnimSite r_inclined_view")
+TouchSensor1594 = x3d.TouchSensor()
+TouchSensor1594.description = "HAnimSite r_inclined_view"
 
-HAnimSite1593.addChildren(TouchSensor1594)
-Shape1595 = Shape()
-Shape1595.setUSE("HAnimSiteShape")
+HAnimSite1593.children.append(TouchSensor1594)
+Shape1595 = x3d.Shape()
+Shape1595.USE = "HAnimSiteShape"
 
-HAnimSite1593.addChildren(Shape1595)
-Viewpoint1596 = Viewpoint()
-Viewpoint1596.setDEF("hanim_r_inclined_viewpoint")
-Viewpoint1596.setCenterOfRotation([0,0.9,0])
-Viewpoint1596.setDescription("right inclined")
-Viewpoint1596.setPosition([0,0,0])
+HAnimSite1593.children.append(Shape1595)
+Viewpoint1596 = x3d.Viewpoint()
+Viewpoint1596.DEF = "hanim_r_inclined_viewpoint"
+Viewpoint1596.centerOfRotation = [0,0.9,0]
+Viewpoint1596.description = "right inclined"
+Viewpoint1596.position = [0,0,0]
 
-HAnimSite1593.addChildren(Viewpoint1596)
+HAnimSite1593.children.append(Viewpoint1596)
 #HAnimSite/Viewpoint visualization shape
-Anchor1597 = Anchor()
-Anchor1597.setDescription("HAnimSite hanim_r_inclined_view Viewpoint")
-Anchor1597.setUrl(["#hanim_r_inclined_viewpoint"])
-LOD1598 = LOD()
-LOD1598.setForceTransitions(True)
-LOD1598.setRange([0.04])
-WorldInfo1599 = WorldInfo()
-WorldInfo1599.setInfo(["hide diamond when close"])
+Anchor1597 = x3d.Anchor()
+Anchor1597.description = "HAnimSite hanim_r_inclined_view Viewpoint"
+Anchor1597.url = ["#hanim_r_inclined_viewpoint"]
+LOD1598 = x3d.LOD()
+LOD1598.forceTransitions = True
+LOD1598.range = [0.04]
+WorldInfo1599 = x3d.WorldInfo()
+WorldInfo1599.info = ["hide diamond when close"]
 
-LOD1598.addChildren(WorldInfo1599)
-Shape1600 = Shape()
-Shape1600.setUSE("HAnimSiteViewpointShape")
+LOD1598.children.append(WorldInfo1599)
+Shape1600 = x3d.Shape()
+Shape1600.USE = "HAnimSiteViewpointShape"
 
-LOD1598.addChildren(Shape1600)
+LOD1598.children.append(Shape1600)
 
-Anchor1597.addChildren(LOD1598)
+Anchor1597.children.append(LOD1598)
 
-HAnimSite1593.addChildren(Anchor1597)
+HAnimSite1593.children.append(Anchor1597)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1593)
-HAnimSite1601 = HAnimSite()
-HAnimSite1601.setName("front_view")
-HAnimSite1601.setDEF("hanim_front_view")
-HAnimSite1601.setTranslation([0,0.85,2.58])
+HAnimHumanoid46.viewpoints.append(HAnimSite1593)
+HAnimSite1601 = x3d.HAnimSite()
+HAnimSite1601.name = "front_view"
+HAnimSite1601.DEF = "hanim_front_view"
+HAnimSite1601.translation = [0,0.85,2.58]
 #HAnimSite visualization shape
-TouchSensor1602 = TouchSensor()
-TouchSensor1602.setDescription("HAnimSite front_view")
+TouchSensor1602 = x3d.TouchSensor()
+TouchSensor1602.description = "HAnimSite front_view"
 
-HAnimSite1601.addChildren(TouchSensor1602)
-Shape1603 = Shape()
-Shape1603.setUSE("HAnimSiteShape")
+HAnimSite1601.children.append(TouchSensor1602)
+Shape1603 = x3d.Shape()
+Shape1603.USE = "HAnimSiteShape"
 
-HAnimSite1601.addChildren(Shape1603)
-Viewpoint1604 = Viewpoint()
-Viewpoint1604.setDEF("hanim_front_viewpoint")
-Viewpoint1604.setCenterOfRotation([0,0.9,0])
-Viewpoint1604.setDescription("front")
-Viewpoint1604.setPosition([0,0,0])
+HAnimSite1601.children.append(Shape1603)
+Viewpoint1604 = x3d.Viewpoint()
+Viewpoint1604.DEF = "hanim_front_viewpoint"
+Viewpoint1604.centerOfRotation = [0,0.9,0]
+Viewpoint1604.description = "front"
+Viewpoint1604.position = [0,0,0]
 
-HAnimSite1601.addChildren(Viewpoint1604)
+HAnimSite1601.children.append(Viewpoint1604)
 #HAnimSite/Viewpoint visualization shape
-Anchor1605 = Anchor()
-Anchor1605.setDescription("HAnimSite hanim_front_view Viewpoint")
-Anchor1605.setUrl(["#hanim_front_viewpoint"])
-LOD1606 = LOD()
-LOD1606.setForceTransitions(True)
-LOD1606.setRange([0.04])
-WorldInfo1607 = WorldInfo()
-WorldInfo1607.setInfo(["hide diamond when close"])
+Anchor1605 = x3d.Anchor()
+Anchor1605.description = "HAnimSite hanim_front_view Viewpoint"
+Anchor1605.url = ["#hanim_front_viewpoint"]
+LOD1606 = x3d.LOD()
+LOD1606.forceTransitions = True
+LOD1606.range = [0.04]
+WorldInfo1607 = x3d.WorldInfo()
+WorldInfo1607.info = ["hide diamond when close"]
 
-LOD1606.addChildren(WorldInfo1607)
-Shape1608 = Shape()
-Shape1608.setUSE("HAnimSiteViewpointShape")
+LOD1606.children.append(WorldInfo1607)
+Shape1608 = x3d.Shape()
+Shape1608.USE = "HAnimSiteViewpointShape"
 
-LOD1606.addChildren(Shape1608)
+LOD1606.children.append(Shape1608)
 
-Anchor1605.addChildren(LOD1606)
+Anchor1605.children.append(LOD1606)
 
-HAnimSite1601.addChildren(Anchor1605)
+HAnimSite1601.children.append(Anchor1605)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1601)
-HAnimSite1609 = HAnimSite()
-HAnimSite1609.setName("back_view")
-HAnimSite1609.setDEF("hanim_back_view")
-HAnimSite1609.setRotation([0,1,0,3.14])
-HAnimSite1609.setTranslation([0,0.85,-2.58])
+HAnimHumanoid46.viewpoints.append(HAnimSite1601)
+HAnimSite1609 = x3d.HAnimSite()
+HAnimSite1609.name = "back_view"
+HAnimSite1609.DEF = "hanim_back_view"
+HAnimSite1609.rotation = [0,1,0,3.14]
+HAnimSite1609.translation = [0,0.85,-2.58]
 #HAnimSite visualization shape
-TouchSensor1610 = TouchSensor()
-TouchSensor1610.setDescription("HAnimSite back_view")
+TouchSensor1610 = x3d.TouchSensor()
+TouchSensor1610.description = "HAnimSite back_view"
 
-HAnimSite1609.addChildren(TouchSensor1610)
-Shape1611 = Shape()
-Shape1611.setUSE("HAnimSiteShape")
+HAnimSite1609.children.append(TouchSensor1610)
+Shape1611 = x3d.Shape()
+Shape1611.USE = "HAnimSiteShape"
 
-HAnimSite1609.addChildren(Shape1611)
-Viewpoint1612 = Viewpoint()
-Viewpoint1612.setDEF("hanim_back_viewpoint")
-Viewpoint1612.setCenterOfRotation([0,0.9,0])
-Viewpoint1612.setDescription("back")
-Viewpoint1612.setPosition([0,0,0])
+HAnimSite1609.children.append(Shape1611)
+Viewpoint1612 = x3d.Viewpoint()
+Viewpoint1612.DEF = "hanim_back_viewpoint"
+Viewpoint1612.centerOfRotation = [0,0.9,0]
+Viewpoint1612.description = "back"
+Viewpoint1612.position = [0,0,0]
 
-HAnimSite1609.addChildren(Viewpoint1612)
+HAnimSite1609.children.append(Viewpoint1612)
 #HAnimSite/Viewpoint visualization shape
-Anchor1613 = Anchor()
-Anchor1613.setDescription("HAnimSite hanim_back_view Viewpoint")
-Anchor1613.setUrl(["#hanim_back_viewpoint"])
-LOD1614 = LOD()
-LOD1614.setForceTransitions(True)
-LOD1614.setRange([0.04])
-WorldInfo1615 = WorldInfo()
-WorldInfo1615.setInfo(["hide diamond when close"])
+Anchor1613 = x3d.Anchor()
+Anchor1613.description = "HAnimSite hanim_back_view Viewpoint"
+Anchor1613.url = ["#hanim_back_viewpoint"]
+LOD1614 = x3d.LOD()
+LOD1614.forceTransitions = True
+LOD1614.range = [0.04]
+WorldInfo1615 = x3d.WorldInfo()
+WorldInfo1615.info = ["hide diamond when close"]
 
-LOD1614.addChildren(WorldInfo1615)
-Shape1616 = Shape()
-Shape1616.setUSE("HAnimSiteViewpointShape")
+LOD1614.children.append(WorldInfo1615)
+Shape1616 = x3d.Shape()
+Shape1616.USE = "HAnimSiteViewpointShape"
 
-LOD1614.addChildren(Shape1616)
+LOD1614.children.append(Shape1616)
 
-Anchor1613.addChildren(LOD1614)
+Anchor1613.children.append(LOD1614)
 
-HAnimSite1609.addChildren(Anchor1613)
+HAnimSite1609.children.append(Anchor1613)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1609)
-HAnimSite1617 = HAnimSite()
-HAnimSite1617.setName("l_side_view")
-HAnimSite1617.setDEF("hanim_l_side_view")
-HAnimSite1617.setRotation([0,1,0,1.5708])
-HAnimSite1617.setTranslation([2.6,0.854,0])
+HAnimHumanoid46.viewpoints.append(HAnimSite1609)
+HAnimSite1617 = x3d.HAnimSite()
+HAnimSite1617.name = "l_side_view"
+HAnimSite1617.DEF = "hanim_l_side_view"
+HAnimSite1617.rotation = [0,1,0,1.5708]
+HAnimSite1617.translation = [2.6,0.854,0]
 #HAnimSite visualization shape
-TouchSensor1618 = TouchSensor()
-TouchSensor1618.setDescription("HAnimSite l_side_view")
+TouchSensor1618 = x3d.TouchSensor()
+TouchSensor1618.description = "HAnimSite l_side_view"
 
-HAnimSite1617.addChildren(TouchSensor1618)
-Shape1619 = Shape()
-Shape1619.setUSE("HAnimSiteShape")
+HAnimSite1617.children.append(TouchSensor1618)
+Shape1619 = x3d.Shape()
+Shape1619.USE = "HAnimSiteShape"
 
-HAnimSite1617.addChildren(Shape1619)
-Viewpoint1620 = Viewpoint()
-Viewpoint1620.setDEF("hanim_l_side_viewpoint")
-Viewpoint1620.setCenterOfRotation([0,0.9,0])
-Viewpoint1620.setDescription("left side")
-Viewpoint1620.setPosition([0,0,0])
+HAnimSite1617.children.append(Shape1619)
+Viewpoint1620 = x3d.Viewpoint()
+Viewpoint1620.DEF = "hanim_l_side_viewpoint"
+Viewpoint1620.centerOfRotation = [0,0.9,0]
+Viewpoint1620.description = "left side"
+Viewpoint1620.position = [0,0,0]
 
-HAnimSite1617.addChildren(Viewpoint1620)
+HAnimSite1617.children.append(Viewpoint1620)
 #HAnimSite/Viewpoint visualization shape
-Anchor1621 = Anchor()
-Anchor1621.setDescription("HAnimSite hanim_l_side_view Viewpoint")
-Anchor1621.setUrl(["#hanim_l_side_viewpoint"])
-LOD1622 = LOD()
-LOD1622.setForceTransitions(True)
-LOD1622.setRange([0.04])
-WorldInfo1623 = WorldInfo()
-WorldInfo1623.setInfo(["hide diamond when close"])
+Anchor1621 = x3d.Anchor()
+Anchor1621.description = "HAnimSite hanim_l_side_view Viewpoint"
+Anchor1621.url = ["#hanim_l_side_viewpoint"]
+LOD1622 = x3d.LOD()
+LOD1622.forceTransitions = True
+LOD1622.range = [0.04]
+WorldInfo1623 = x3d.WorldInfo()
+WorldInfo1623.info = ["hide diamond when close"]
 
-LOD1622.addChildren(WorldInfo1623)
-Shape1624 = Shape()
-Shape1624.setUSE("HAnimSiteViewpointShape")
+LOD1622.children.append(WorldInfo1623)
+Shape1624 = x3d.Shape()
+Shape1624.USE = "HAnimSiteViewpointShape"
 
-LOD1622.addChildren(Shape1624)
+LOD1622.children.append(Shape1624)
 
-Anchor1621.addChildren(LOD1622)
+Anchor1621.children.append(LOD1622)
 
-HAnimSite1617.addChildren(Anchor1621)
+HAnimSite1617.children.append(Anchor1621)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1617)
-HAnimSite1625 = HAnimSite()
-HAnimSite1625.setName("Top_view")
-HAnimSite1625.setDEF("hanim_Top_view")
-HAnimSite1625.setRotation([1,0,0,-1.57])
-HAnimSite1625.setTranslation([0,3.5,0])
+HAnimHumanoid46.viewpoints.append(HAnimSite1617)
+HAnimSite1625 = x3d.HAnimSite()
+HAnimSite1625.name = "Top_view"
+HAnimSite1625.DEF = "hanim_Top_view"
+HAnimSite1625.rotation = [1,0,0,-1.57]
+HAnimSite1625.translation = [0,3.5,0]
 #HAnimSite visualization shape
-TouchSensor1626 = TouchSensor()
-TouchSensor1626.setDescription("HAnimSite Top_view")
+TouchSensor1626 = x3d.TouchSensor()
+TouchSensor1626.description = "HAnimSite Top_view"
 
-HAnimSite1625.addChildren(TouchSensor1626)
-Shape1627 = Shape()
-Shape1627.setUSE("HAnimSiteShape")
+HAnimSite1625.children.append(TouchSensor1626)
+Shape1627 = x3d.Shape()
+Shape1627.USE = "HAnimSiteShape"
 
-HAnimSite1625.addChildren(Shape1627)
-Viewpoint1628 = Viewpoint()
-Viewpoint1628.setDEF("hanim_Top_viewpoint")
-Viewpoint1628.setCenterOfRotation([0,0.9,0])
-Viewpoint1628.setDescription("Top")
-Viewpoint1628.setPosition([0,0,0])
+HAnimSite1625.children.append(Shape1627)
+Viewpoint1628 = x3d.Viewpoint()
+Viewpoint1628.DEF = "hanim_Top_viewpoint"
+Viewpoint1628.centerOfRotation = [0,0.9,0]
+Viewpoint1628.description = "Top"
+Viewpoint1628.position = [0,0,0]
 
-HAnimSite1625.addChildren(Viewpoint1628)
+HAnimSite1625.children.append(Viewpoint1628)
 #HAnimSite/Viewpoint visualization shape
-Anchor1629 = Anchor()
-Anchor1629.setDescription("HAnimSite hanim_Top_view Viewpoint")
-Anchor1629.setUrl(["#hanim_Top_viewpoint"])
-LOD1630 = LOD()
-LOD1630.setForceTransitions(True)
-LOD1630.setRange([0.04])
-WorldInfo1631 = WorldInfo()
-WorldInfo1631.setInfo(["hide diamond when close"])
+Anchor1629 = x3d.Anchor()
+Anchor1629.description = "HAnimSite hanim_Top_view Viewpoint"
+Anchor1629.url = ["#hanim_Top_viewpoint"]
+LOD1630 = x3d.LOD()
+LOD1630.forceTransitions = True
+LOD1630.range = [0.04]
+WorldInfo1631 = x3d.WorldInfo()
+WorldInfo1631.info = ["hide diamond when close"]
 
-LOD1630.addChildren(WorldInfo1631)
-Shape1632 = Shape()
-Shape1632.setUSE("HAnimSiteViewpointShape")
+LOD1630.children.append(WorldInfo1631)
+Shape1632 = x3d.Shape()
+Shape1632.USE = "HAnimSiteViewpointShape"
 
-LOD1630.addChildren(Shape1632)
+LOD1630.children.append(Shape1632)
 
-Anchor1629.addChildren(LOD1630)
+Anchor1629.children.append(LOD1630)
 
-HAnimSite1625.addChildren(Anchor1629)
+HAnimSite1625.children.append(Anchor1629)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1625)
-HAnimSite1633 = HAnimSite()
-HAnimSite1633.setName("front_close_view")
-HAnimSite1633.setDEF("hanim_front_close_view")
-HAnimSite1633.setTranslation([0,0.854,1.575])
+HAnimHumanoid46.viewpoints.append(HAnimSite1625)
+HAnimSite1633 = x3d.HAnimSite()
+HAnimSite1633.name = "front_close_view"
+HAnimSite1633.DEF = "hanim_front_close_view"
+HAnimSite1633.translation = [0,0.854,1.575]
 #HAnimSite visualization shape
-TouchSensor1634 = TouchSensor()
-TouchSensor1634.setDescription("HAnimSite front_close_view")
+TouchSensor1634 = x3d.TouchSensor()
+TouchSensor1634.description = "HAnimSite front_close_view"
 
-HAnimSite1633.addChildren(TouchSensor1634)
-Shape1635 = Shape()
-Shape1635.setUSE("HAnimSiteShape")
+HAnimSite1633.children.append(TouchSensor1634)
+Shape1635 = x3d.Shape()
+Shape1635.USE = "HAnimSiteShape"
 
-HAnimSite1633.addChildren(Shape1635)
-Viewpoint1636 = Viewpoint()
-Viewpoint1636.setDEF("hanim_front_close_viewpoint")
-Viewpoint1636.setCenterOfRotation([0,0,1.575])
-Viewpoint1636.setDescription("front close")
-Viewpoint1636.setPosition([0,0,0])
+HAnimSite1633.children.append(Shape1635)
+Viewpoint1636 = x3d.Viewpoint()
+Viewpoint1636.DEF = "hanim_front_close_viewpoint"
+Viewpoint1636.centerOfRotation = [0,0,1.575]
+Viewpoint1636.description = "front close"
+Viewpoint1636.position = [0,0,0]
 
-HAnimSite1633.addChildren(Viewpoint1636)
+HAnimSite1633.children.append(Viewpoint1636)
 #HAnimSite/Viewpoint visualization shape
-Anchor1637 = Anchor()
-Anchor1637.setDescription("HAnimSite hanim_front_close_view Viewpoint")
-Anchor1637.setUrl(["#hanim_front_close_viewpoint"])
-LOD1638 = LOD()
-LOD1638.setForceTransitions(True)
-LOD1638.setRange([0.04])
-WorldInfo1639 = WorldInfo()
-WorldInfo1639.setInfo(["hide diamond when close"])
+Anchor1637 = x3d.Anchor()
+Anchor1637.description = "HAnimSite hanim_front_close_view Viewpoint"
+Anchor1637.url = ["#hanim_front_close_viewpoint"]
+LOD1638 = x3d.LOD()
+LOD1638.forceTransitions = True
+LOD1638.range = [0.04]
+WorldInfo1639 = x3d.WorldInfo()
+WorldInfo1639.info = ["hide diamond when close"]
 
-LOD1638.addChildren(WorldInfo1639)
-Shape1640 = Shape()
-Shape1640.setUSE("HAnimSiteViewpointShape")
+LOD1638.children.append(WorldInfo1639)
+Shape1640 = x3d.Shape()
+Shape1640.USE = "HAnimSiteViewpointShape"
 
-LOD1638.addChildren(Shape1640)
+LOD1638.children.append(Shape1640)
 
-Anchor1637.addChildren(LOD1638)
+Anchor1637.children.append(LOD1638)
 
-HAnimSite1633.addChildren(Anchor1637)
+HAnimSite1633.children.append(Anchor1637)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1633)
-HAnimSite1641 = HAnimSite()
-HAnimSite1641.setName("side_close_view")
-HAnimSite1641.setDEF("hanim_side_close_view")
-HAnimSite1641.setRotation([0,1,0,1.5708])
-HAnimSite1641.setTranslation([1.56,0.854,0])
+HAnimHumanoid46.viewpoints.append(HAnimSite1633)
+HAnimSite1641 = x3d.HAnimSite()
+HAnimSite1641.name = "side_close_view"
+HAnimSite1641.DEF = "hanim_side_close_view"
+HAnimSite1641.rotation = [0,1,0,1.5708]
+HAnimSite1641.translation = [1.56,0.854,0]
 #HAnimSite visualization shape
-TouchSensor1642 = TouchSensor()
-TouchSensor1642.setDescription("HAnimSite side_close_view")
+TouchSensor1642 = x3d.TouchSensor()
+TouchSensor1642.description = "HAnimSite side_close_view"
 
-HAnimSite1641.addChildren(TouchSensor1642)
-Shape1643 = Shape()
-Shape1643.setUSE("HAnimSiteShape")
+HAnimSite1641.children.append(TouchSensor1642)
+Shape1643 = x3d.Shape()
+Shape1643.USE = "HAnimSiteShape"
 
-HAnimSite1641.addChildren(Shape1643)
-Viewpoint1644 = Viewpoint()
-Viewpoint1644.setDEF("hanim_side_close_viewpoint")
-Viewpoint1644.setCenterOfRotation([1.6,0,0])
-Viewpoint1644.setDescription("side close")
-Viewpoint1644.setPosition([0,0,0])
+HAnimSite1641.children.append(Shape1643)
+Viewpoint1644 = x3d.Viewpoint()
+Viewpoint1644.DEF = "hanim_side_close_viewpoint"
+Viewpoint1644.centerOfRotation = [1.6,0,0]
+Viewpoint1644.description = "side close"
+Viewpoint1644.position = [0,0,0]
 
-HAnimSite1641.addChildren(Viewpoint1644)
+HAnimSite1641.children.append(Viewpoint1644)
 #HAnimSite/Viewpoint visualization shape
-Anchor1645 = Anchor()
-Anchor1645.setDescription("HAnimSite hanim_side_close_view Viewpoint")
-Anchor1645.setUrl(["#hanim_side_close_viewpoint"])
-LOD1646 = LOD()
-LOD1646.setForceTransitions(True)
-LOD1646.setRange([0.04])
-WorldInfo1647 = WorldInfo()
-WorldInfo1647.setInfo(["hide diamond when close"])
+Anchor1645 = x3d.Anchor()
+Anchor1645.description = "HAnimSite hanim_side_close_view Viewpoint"
+Anchor1645.url = ["#hanim_side_close_viewpoint"]
+LOD1646 = x3d.LOD()
+LOD1646.forceTransitions = True
+LOD1646.range = [0.04]
+WorldInfo1647 = x3d.WorldInfo()
+WorldInfo1647.info = ["hide diamond when close"]
 
-LOD1646.addChildren(WorldInfo1647)
-Shape1648 = Shape()
-Shape1648.setUSE("HAnimSiteViewpointShape")
+LOD1646.children.append(WorldInfo1647)
+Shape1648 = x3d.Shape()
+Shape1648.USE = "HAnimSiteViewpointShape"
 
-LOD1646.addChildren(Shape1648)
+LOD1646.children.append(Shape1648)
 
-Anchor1645.addChildren(LOD1646)
+Anchor1645.children.append(LOD1646)
 
-HAnimSite1641.addChildren(Anchor1645)
+HAnimSite1641.children.append(Anchor1645)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1641)
-HAnimSite1649 = HAnimSite()
-HAnimSite1649.setName("head_front_close_view")
-HAnimSite1649.setDEF("hanim_head_front_close_view")
-HAnimSite1649.setTranslation([0,1.5,1])
+HAnimHumanoid46.viewpoints.append(HAnimSite1641)
+HAnimSite1649 = x3d.HAnimSite()
+HAnimSite1649.name = "head_front_close_view"
+HAnimSite1649.DEF = "hanim_head_front_close_view"
+HAnimSite1649.translation = [0,1.5,1]
 #HAnimSite visualization shape
-TouchSensor1650 = TouchSensor()
-TouchSensor1650.setDescription("HAnimSite head_front_close_view")
+TouchSensor1650 = x3d.TouchSensor()
+TouchSensor1650.description = "HAnimSite head_front_close_view"
 
-HAnimSite1649.addChildren(TouchSensor1650)
-Shape1651 = Shape()
-Shape1651.setUSE("HAnimSiteShape")
+HAnimSite1649.children.append(TouchSensor1650)
+Shape1651 = x3d.Shape()
+Shape1651.USE = "HAnimSiteShape"
 
-HAnimSite1649.addChildren(Shape1651)
-Viewpoint1652 = Viewpoint()
-Viewpoint1652.setDEF("hanim_head_front_close_viewpoint")
-Viewpoint1652.setCenterOfRotation([0,0,1])
-Viewpoint1652.setDescription("head front close")
-Viewpoint1652.setPosition([0,0,0])
+HAnimSite1649.children.append(Shape1651)
+Viewpoint1652 = x3d.Viewpoint()
+Viewpoint1652.DEF = "hanim_head_front_close_viewpoint"
+Viewpoint1652.centerOfRotation = [0,0,1]
+Viewpoint1652.description = "head front close"
+Viewpoint1652.position = [0,0,0]
 
-HAnimSite1649.addChildren(Viewpoint1652)
+HAnimSite1649.children.append(Viewpoint1652)
 #HAnimSite/Viewpoint visualization shape
-Anchor1653 = Anchor()
-Anchor1653.setDescription("HAnimSite hanim_head_front_close_view Viewpoint")
-Anchor1653.setUrl(["#hanim_head_front_close_viewpoint"])
-LOD1654 = LOD()
-LOD1654.setForceTransitions(True)
-LOD1654.setRange([0.04])
-WorldInfo1655 = WorldInfo()
-WorldInfo1655.setInfo(["hide diamond when close"])
+Anchor1653 = x3d.Anchor()
+Anchor1653.description = "HAnimSite hanim_head_front_close_view Viewpoint"
+Anchor1653.url = ["#hanim_head_front_close_viewpoint"]
+LOD1654 = x3d.LOD()
+LOD1654.forceTransitions = True
+LOD1654.range = [0.04]
+WorldInfo1655 = x3d.WorldInfo()
+WorldInfo1655.info = ["hide diamond when close"]
 
-LOD1654.addChildren(WorldInfo1655)
-Shape1656 = Shape()
-Shape1656.setUSE("HAnimSiteViewpointShape")
+LOD1654.children.append(WorldInfo1655)
+Shape1656 = x3d.Shape()
+Shape1656.USE = "HAnimSiteViewpointShape"
 
-LOD1654.addChildren(Shape1656)
+LOD1654.children.append(Shape1656)
 
-Anchor1653.addChildren(LOD1654)
+Anchor1653.children.append(LOD1654)
 
-HAnimSite1649.addChildren(Anchor1653)
+HAnimSite1649.children.append(Anchor1653)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1649)
-HAnimSite1657 = HAnimSite()
-HAnimSite1657.setName("chest_front_close_view")
-HAnimSite1657.setDEF("hanim_chest_front_close_view")
-HAnimSite1657.setTranslation([0,1.2,1])
+HAnimHumanoid46.viewpoints.append(HAnimSite1649)
+HAnimSite1657 = x3d.HAnimSite()
+HAnimSite1657.name = "chest_front_close_view"
+HAnimSite1657.DEF = "hanim_chest_front_close_view"
+HAnimSite1657.translation = [0,1.2,1]
 #HAnimSite visualization shape
-TouchSensor1658 = TouchSensor()
-TouchSensor1658.setDescription("HAnimSite chest_front_close_view")
+TouchSensor1658 = x3d.TouchSensor()
+TouchSensor1658.description = "HAnimSite chest_front_close_view"
 
-HAnimSite1657.addChildren(TouchSensor1658)
-Shape1659 = Shape()
-Shape1659.setUSE("HAnimSiteShape")
+HAnimSite1657.children.append(TouchSensor1658)
+Shape1659 = x3d.Shape()
+Shape1659.USE = "HAnimSiteShape"
 
-HAnimSite1657.addChildren(Shape1659)
-Viewpoint1660 = Viewpoint()
-Viewpoint1660.setDEF("hanim_chest_front_close_viewpoint")
-Viewpoint1660.setCenterOfRotation([0,0,1])
-Viewpoint1660.setDescription("chest front close")
-Viewpoint1660.setPosition([0,0,0])
+HAnimSite1657.children.append(Shape1659)
+Viewpoint1660 = x3d.Viewpoint()
+Viewpoint1660.DEF = "hanim_chest_front_close_viewpoint"
+Viewpoint1660.centerOfRotation = [0,0,1]
+Viewpoint1660.description = "chest front close"
+Viewpoint1660.position = [0,0,0]
 
-HAnimSite1657.addChildren(Viewpoint1660)
+HAnimSite1657.children.append(Viewpoint1660)
 #HAnimSite/Viewpoint visualization shape
-Anchor1661 = Anchor()
-Anchor1661.setDescription("HAnimSite hanim_chest_front_close_view Viewpoint")
-Anchor1661.setUrl(["#hanim_chest_front_close_viewpoint"])
-LOD1662 = LOD()
-LOD1662.setForceTransitions(True)
-LOD1662.setRange([0.04])
-WorldInfo1663 = WorldInfo()
-WorldInfo1663.setInfo(["hide diamond when close"])
+Anchor1661 = x3d.Anchor()
+Anchor1661.description = "HAnimSite hanim_chest_front_close_view Viewpoint"
+Anchor1661.url = ["#hanim_chest_front_close_viewpoint"]
+LOD1662 = x3d.LOD()
+LOD1662.forceTransitions = True
+LOD1662.range = [0.04]
+WorldInfo1663 = x3d.WorldInfo()
+WorldInfo1663.info = ["hide diamond when close"]
 
-LOD1662.addChildren(WorldInfo1663)
-Shape1664 = Shape()
-Shape1664.setUSE("HAnimSiteViewpointShape")
+LOD1662.children.append(WorldInfo1663)
+Shape1664 = x3d.Shape()
+Shape1664.USE = "HAnimSiteViewpointShape"
 
-LOD1662.addChildren(Shape1664)
+LOD1662.children.append(Shape1664)
 
-Anchor1661.addChildren(LOD1662)
+Anchor1661.children.append(LOD1662)
 
-HAnimSite1657.addChildren(Anchor1661)
+HAnimSite1657.children.append(Anchor1661)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1657)
-HAnimSite1665 = HAnimSite()
-HAnimSite1665.setName("pelvis_front_close_view")
-HAnimSite1665.setDEF("hanim_pelvis_front_close_view")
-HAnimSite1665.setTranslation([0,0.8,1])
+HAnimHumanoid46.viewpoints.append(HAnimSite1657)
+HAnimSite1665 = x3d.HAnimSite()
+HAnimSite1665.name = "pelvis_front_close_view"
+HAnimSite1665.DEF = "hanim_pelvis_front_close_view"
+HAnimSite1665.translation = [0,0.8,1]
 #HAnimSite visualization shape
-TouchSensor1666 = TouchSensor()
-TouchSensor1666.setDescription("HAnimSite pelvis_front_close_view")
+TouchSensor1666 = x3d.TouchSensor()
+TouchSensor1666.description = "HAnimSite pelvis_front_close_view"
 
-HAnimSite1665.addChildren(TouchSensor1666)
-Shape1667 = Shape()
-Shape1667.setUSE("HAnimSiteShape")
+HAnimSite1665.children.append(TouchSensor1666)
+Shape1667 = x3d.Shape()
+Shape1667.USE = "HAnimSiteShape"
 
-HAnimSite1665.addChildren(Shape1667)
-Viewpoint1668 = Viewpoint()
-Viewpoint1668.setDEF("hanim_pelvis_front_close_viewpoint")
-Viewpoint1668.setCenterOfRotation([0,0,1])
-Viewpoint1668.setDescription("pelvis front close")
-Viewpoint1668.setPosition([0,0,0])
+HAnimSite1665.children.append(Shape1667)
+Viewpoint1668 = x3d.Viewpoint()
+Viewpoint1668.DEF = "hanim_pelvis_front_close_viewpoint"
+Viewpoint1668.centerOfRotation = [0,0,1]
+Viewpoint1668.description = "pelvis front close"
+Viewpoint1668.position = [0,0,0]
 
-HAnimSite1665.addChildren(Viewpoint1668)
+HAnimSite1665.children.append(Viewpoint1668)
 #HAnimSite/Viewpoint visualization shape
-Anchor1669 = Anchor()
-Anchor1669.setDescription("HAnimSite hanim_pelvis_front_close_view Viewpoint")
-Anchor1669.setUrl(["#hanim_pelvis_front_close_viewpoint"])
-LOD1670 = LOD()
-LOD1670.setForceTransitions(True)
-LOD1670.setRange([0.04])
-WorldInfo1671 = WorldInfo()
-WorldInfo1671.setInfo(["hide diamond when close"])
+Anchor1669 = x3d.Anchor()
+Anchor1669.description = "HAnimSite hanim_pelvis_front_close_view Viewpoint"
+Anchor1669.url = ["#hanim_pelvis_front_close_viewpoint"]
+LOD1670 = x3d.LOD()
+LOD1670.forceTransitions = True
+LOD1670.range = [0.04]
+WorldInfo1671 = x3d.WorldInfo()
+WorldInfo1671.info = ["hide diamond when close"]
 
-LOD1670.addChildren(WorldInfo1671)
-Shape1672 = Shape()
-Shape1672.setUSE("HAnimSiteViewpointShape")
+LOD1670.children.append(WorldInfo1671)
+Shape1672 = x3d.Shape()
+Shape1672.USE = "HAnimSiteViewpointShape"
 
-LOD1670.addChildren(Shape1672)
+LOD1670.children.append(Shape1672)
 
-Anchor1669.addChildren(LOD1670)
+Anchor1669.children.append(LOD1670)
 
-HAnimSite1665.addChildren(Anchor1669)
+HAnimSite1665.children.append(Anchor1669)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1665)
-HAnimSite1673 = HAnimSite()
-HAnimSite1673.setName("knees_front_close_view")
-HAnimSite1673.setDEF("hanim_knees_front_close_view")
-HAnimSite1673.setTranslation([0,0.4,1])
+HAnimHumanoid46.viewpoints.append(HAnimSite1665)
+HAnimSite1673 = x3d.HAnimSite()
+HAnimSite1673.name = "knees_front_close_view"
+HAnimSite1673.DEF = "hanim_knees_front_close_view"
+HAnimSite1673.translation = [0,0.4,1]
 #HAnimSite visualization shape
-TouchSensor1674 = TouchSensor()
-TouchSensor1674.setDescription("HAnimSite knees_front_close_view")
+TouchSensor1674 = x3d.TouchSensor()
+TouchSensor1674.description = "HAnimSite knees_front_close_view"
 
-HAnimSite1673.addChildren(TouchSensor1674)
-Shape1675 = Shape()
-Shape1675.setUSE("HAnimSiteShape")
+HAnimSite1673.children.append(TouchSensor1674)
+Shape1675 = x3d.Shape()
+Shape1675.USE = "HAnimSiteShape"
 
-HAnimSite1673.addChildren(Shape1675)
-Viewpoint1676 = Viewpoint()
-Viewpoint1676.setDEF("hanim_knees_front_close_viewpoint")
-Viewpoint1676.setCenterOfRotation([0,0.4,0])
-Viewpoint1676.setDescription("knees front close")
-Viewpoint1676.setPosition([0,0,0])
+HAnimSite1673.children.append(Shape1675)
+Viewpoint1676 = x3d.Viewpoint()
+Viewpoint1676.DEF = "hanim_knees_front_close_viewpoint"
+Viewpoint1676.centerOfRotation = [0,0.4,0]
+Viewpoint1676.description = "knees front close"
+Viewpoint1676.position = [0,0,0]
 
-HAnimSite1673.addChildren(Viewpoint1676)
+HAnimSite1673.children.append(Viewpoint1676)
 #HAnimSite/Viewpoint visualization shape
-Anchor1677 = Anchor()
-Anchor1677.setDescription("HAnimSite hanim_knees_front_close_view Viewpoint")
-Anchor1677.setUrl(["#hanim_knees_front_close_viewpoint"])
-LOD1678 = LOD()
-LOD1678.setForceTransitions(True)
-LOD1678.setRange([0.04])
-WorldInfo1679 = WorldInfo()
-WorldInfo1679.setInfo(["hide diamond when close"])
+Anchor1677 = x3d.Anchor()
+Anchor1677.description = "HAnimSite hanim_knees_front_close_view Viewpoint"
+Anchor1677.url = ["#hanim_knees_front_close_viewpoint"]
+LOD1678 = x3d.LOD()
+LOD1678.forceTransitions = True
+LOD1678.range = [0.04]
+WorldInfo1679 = x3d.WorldInfo()
+WorldInfo1679.info = ["hide diamond when close"]
 
-LOD1678.addChildren(WorldInfo1679)
-Shape1680 = Shape()
-Shape1680.setUSE("HAnimSiteViewpointShape")
+LOD1678.children.append(WorldInfo1679)
+Shape1680 = x3d.Shape()
+Shape1680.USE = "HAnimSiteViewpointShape"
 
-LOD1678.addChildren(Shape1680)
+LOD1678.children.append(Shape1680)
 
-Anchor1677.addChildren(LOD1678)
+Anchor1677.children.append(LOD1678)
 
-HAnimSite1673.addChildren(Anchor1677)
+HAnimSite1673.children.append(Anchor1677)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1673)
-HAnimSite1681 = HAnimSite()
-HAnimSite1681.setName("feet_front_close_view")
-HAnimSite1681.setDEF("hanim_feet_front_close_view")
-HAnimSite1681.setTranslation([0,0,1])
+HAnimHumanoid46.viewpoints.append(HAnimSite1673)
+HAnimSite1681 = x3d.HAnimSite()
+HAnimSite1681.name = "feet_front_close_view"
+HAnimSite1681.DEF = "hanim_feet_front_close_view"
+HAnimSite1681.translation = [0,0,1]
 #HAnimSite visualization shape
-TouchSensor1682 = TouchSensor()
-TouchSensor1682.setDescription("HAnimSite feet_front_close_view")
+TouchSensor1682 = x3d.TouchSensor()
+TouchSensor1682.description = "HAnimSite feet_front_close_view"
 
-HAnimSite1681.addChildren(TouchSensor1682)
-Shape1683 = Shape()
-Shape1683.setUSE("HAnimSiteShape")
+HAnimSite1681.children.append(TouchSensor1682)
+Shape1683 = x3d.Shape()
+Shape1683.USE = "HAnimSiteShape"
 
-HAnimSite1681.addChildren(Shape1683)
-Viewpoint1684 = Viewpoint()
-Viewpoint1684.setDEF("hanim_feet_front_close_viewpoint")
-Viewpoint1684.setDescription("feet front close")
-Viewpoint1684.setPosition([0,0,0])
+HAnimSite1681.children.append(Shape1683)
+Viewpoint1684 = x3d.Viewpoint()
+Viewpoint1684.DEF = "hanim_feet_front_close_viewpoint"
+Viewpoint1684.description = "feet front close"
+Viewpoint1684.position = [0,0,0]
 
-HAnimSite1681.addChildren(Viewpoint1684)
+HAnimSite1681.children.append(Viewpoint1684)
 #HAnimSite/Viewpoint visualization shape
-Anchor1685 = Anchor()
-Anchor1685.setDescription("HAnimSite hanim_feet_front_close_view Viewpoint")
-Anchor1685.setUrl(["#hanim_feet_front_close_viewpoint"])
-LOD1686 = LOD()
-LOD1686.setForceTransitions(True)
-LOD1686.setRange([0.04])
-WorldInfo1687 = WorldInfo()
-WorldInfo1687.setInfo(["hide diamond when close"])
+Anchor1685 = x3d.Anchor()
+Anchor1685.description = "HAnimSite hanim_feet_front_close_view Viewpoint"
+Anchor1685.url = ["#hanim_feet_front_close_viewpoint"]
+LOD1686 = x3d.LOD()
+LOD1686.forceTransitions = True
+LOD1686.range = [0.04]
+WorldInfo1687 = x3d.WorldInfo()
+WorldInfo1687.info = ["hide diamond when close"]
 
-LOD1686.addChildren(WorldInfo1687)
-Shape1688 = Shape()
-Shape1688.setUSE("HAnimSiteViewpointShape")
+LOD1686.children.append(WorldInfo1687)
+Shape1688 = x3d.Shape()
+Shape1688.USE = "HAnimSiteViewpointShape"
 
-LOD1686.addChildren(Shape1688)
+LOD1686.children.append(Shape1688)
 
-Anchor1685.addChildren(LOD1686)
+Anchor1685.children.append(LOD1686)
 
-HAnimSite1681.addChildren(Anchor1685)
+HAnimSite1681.children.append(Anchor1685)
 
-HAnimHumanoid46.addViewpoints(HAnimSite1681)
-HAnimSite1689 = HAnimSite()
-HAnimSite1689.setName("eye_level_view")
-HAnimSite1689.setDEF("hanim_eye_level_view")
-HAnimSite1689.setTranslation([0,1.6332,0.0502])
+HAnimHumanoid46.viewpoints.append(HAnimSite1681)
+HAnimSite1689 = x3d.HAnimSite()
+HAnimSite1689.name = "eye_level_view"
+HAnimSite1689.DEF = "hanim_eye_level_view"
+HAnimSite1689.translation = [0,1.6332,0.0502]
 #HAnimSite visualization shape
-TouchSensor1690 = TouchSensor()
-TouchSensor1690.setDescription("HAnimSite eye_level_view")
+TouchSensor1690 = x3d.TouchSensor()
+TouchSensor1690.description = "HAnimSite eye_level_view"
 
-HAnimSite1689.addChildren(TouchSensor1690)
-Shape1691 = Shape()
-Shape1691.setUSE("HAnimSiteShape")
+HAnimSite1689.children.append(TouchSensor1690)
+Shape1691 = x3d.Shape()
+Shape1691.USE = "HAnimSiteShape"
 
-HAnimSite1689.addChildren(Shape1691)
-Viewpoint1692 = Viewpoint()
-Viewpoint1692.setDEF("hanim_eye_level_viewpoint")
-Viewpoint1692.setDescription("eye level looking forward")
-Viewpoint1692.setOrientation([0,1,0,3.141593])
-Viewpoint1692.setPosition([0,0,0])
+HAnimSite1689.children.append(Shape1691)
+Viewpoint1692 = x3d.Viewpoint()
+Viewpoint1692.DEF = "hanim_eye_level_viewpoint"
+Viewpoint1692.description = "eye level looking forward"
+Viewpoint1692.orientation = [0,1,0,3.141593]
+Viewpoint1692.position = [0,0,0]
 
-HAnimSite1689.addChildren(Viewpoint1692)
+HAnimSite1689.children.append(Viewpoint1692)
 #HAnimSite/Viewpoint visualization shape
-Anchor1693 = Anchor()
-Anchor1693.setDescription("HAnimSite hanim_eye_level_view Viewpoint")
-Anchor1693.setUrl(["#hanim_eye_level_viewpoint"])
-LOD1694 = LOD()
-LOD1694.setForceTransitions(True)
-LOD1694.setRange([0.04])
-WorldInfo1695 = WorldInfo()
-WorldInfo1695.setInfo(["hide diamond when close"])
+Anchor1693 = x3d.Anchor()
+Anchor1693.description = "HAnimSite hanim_eye_level_view Viewpoint"
+Anchor1693.url = ["#hanim_eye_level_viewpoint"]
+LOD1694 = x3d.LOD()
+LOD1694.forceTransitions = True
+LOD1694.range = [0.04]
+WorldInfo1695 = x3d.WorldInfo()
+WorldInfo1695.info = ["hide diamond when close"]
 
-LOD1694.addChildren(WorldInfo1695)
-Shape1696 = Shape()
-Shape1696.setUSE("HAnimSiteViewpointShape")
+LOD1694.children.append(WorldInfo1695)
+Shape1696 = x3d.Shape()
+Shape1696.USE = "HAnimSiteViewpointShape"
 
-LOD1694.addChildren(Shape1696)
-
-Anchor1693.addChildren(LOD1694)
+LOD1694.children.append(Shape1696)
+
+Anchor1693.children.append(LOD1694)
 
-HAnimSite1689.addChildren(Anchor1693)
-
-HAnimHumanoid46.addViewpoints(HAnimSite1689)
-HAnimSite1697 = HAnimSite()
-HAnimSite1697.setUSE("hanim_l_eyeball_site_view")
-
-HAnimHumanoid46.addSites(HAnimSite1697)
-HAnimSite1698 = HAnimSite()
-HAnimSite1698.setUSE("hanim_r_eyeball_site_view")
-
-HAnimHumanoid46.addSites(HAnimSite1698)
-HAnimSite1699 = HAnimSite()
-HAnimSite1699.setUSE("hanim_l_hand_front_view")
-
-HAnimHumanoid46.addSites(HAnimSite1699)
-HAnimSite1700 = HAnimSite()
-HAnimSite1700.setUSE("hanim_r_hand_front_view")
-
-HAnimHumanoid46.addSites(HAnimSite1700)
-HAnimJoint1701 = HAnimJoint()
-HAnimJoint1701.setUSE("hanim_humanoid_root")
-
-HAnimHumanoid46.addJoints(HAnimJoint1701)
-HAnimJoint1702 = HAnimJoint()
-HAnimJoint1702.setUSE("hanim_sacroiliac")
-
-HAnimHumanoid46.addJoints(HAnimJoint1702)
-HAnimJoint1703 = HAnimJoint()
-HAnimJoint1703.setUSE("hanim_vl5")
-
-HAnimHumanoid46.addJoints(HAnimJoint1703)
-HAnimJoint1704 = HAnimJoint()
-HAnimJoint1704.setUSE("hanim_vl4")
-
-HAnimHumanoid46.addJoints(HAnimJoint1704)
-HAnimJoint1705 = HAnimJoint()
-HAnimJoint1705.setUSE("hanim_vl3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1705)
-HAnimJoint1706 = HAnimJoint()
-HAnimJoint1706.setUSE("hanim_vl2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1706)
-HAnimJoint1707 = HAnimJoint()
-HAnimJoint1707.setUSE("hanim_vl1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1707)
-HAnimJoint1708 = HAnimJoint()
-HAnimJoint1708.setUSE("hanim_vt12")
-
-HAnimHumanoid46.addJoints(HAnimJoint1708)
-HAnimJoint1709 = HAnimJoint()
-HAnimJoint1709.setUSE("hanim_vt11")
-
-HAnimHumanoid46.addJoints(HAnimJoint1709)
-HAnimJoint1710 = HAnimJoint()
-HAnimJoint1710.setUSE("hanim_vt10")
-
-HAnimHumanoid46.addJoints(HAnimJoint1710)
-HAnimJoint1711 = HAnimJoint()
-HAnimJoint1711.setUSE("hanim_vt9")
-
-HAnimHumanoid46.addJoints(HAnimJoint1711)
-HAnimJoint1712 = HAnimJoint()
-HAnimJoint1712.setUSE("hanim_vt8")
-
-HAnimHumanoid46.addJoints(HAnimJoint1712)
-HAnimJoint1713 = HAnimJoint()
-HAnimJoint1713.setUSE("hanim_vt7")
-
-HAnimHumanoid46.addJoints(HAnimJoint1713)
-HAnimJoint1714 = HAnimJoint()
-HAnimJoint1714.setUSE("hanim_vt6")
-
-HAnimHumanoid46.addJoints(HAnimJoint1714)
-HAnimJoint1715 = HAnimJoint()
-HAnimJoint1715.setUSE("hanim_vt5")
-
-HAnimHumanoid46.addJoints(HAnimJoint1715)
-HAnimJoint1716 = HAnimJoint()
-HAnimJoint1716.setUSE("hanim_vt4")
-
-HAnimHumanoid46.addJoints(HAnimJoint1716)
-HAnimJoint1717 = HAnimJoint()
-HAnimJoint1717.setUSE("hanim_vt3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1717)
-HAnimJoint1718 = HAnimJoint()
-HAnimJoint1718.setUSE("hanim_vt2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1718)
-HAnimJoint1719 = HAnimJoint()
-HAnimJoint1719.setUSE("hanim_vt1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1719)
-HAnimJoint1720 = HAnimJoint()
-HAnimJoint1720.setUSE("hanim_vc7")
-
-HAnimHumanoid46.addJoints(HAnimJoint1720)
-HAnimJoint1721 = HAnimJoint()
-HAnimJoint1721.setUSE("hanim_vc6")
-
-HAnimHumanoid46.addJoints(HAnimJoint1721)
-HAnimJoint1722 = HAnimJoint()
-HAnimJoint1722.setUSE("hanim_vc5")
-
-HAnimHumanoid46.addJoints(HAnimJoint1722)
-HAnimJoint1723 = HAnimJoint()
-HAnimJoint1723.setUSE("hanim_vc4")
-
-HAnimHumanoid46.addJoints(HAnimJoint1723)
-HAnimJoint1724 = HAnimJoint()
-HAnimJoint1724.setUSE("hanim_vc3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1724)
-HAnimJoint1725 = HAnimJoint()
-HAnimJoint1725.setUSE("hanim_vc2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1725)
-HAnimJoint1726 = HAnimJoint()
-HAnimJoint1726.setUSE("hanim_vc1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1726)
-HAnimJoint1727 = HAnimJoint()
-HAnimJoint1727.setUSE("hanim_skullbase")
-
-HAnimHumanoid46.addJoints(HAnimJoint1727)
-HAnimJoint1728 = HAnimJoint()
-HAnimJoint1728.setUSE("hanim_temporomandibular")
-
-HAnimHumanoid46.addJoints(HAnimJoint1728)
-HAnimJoint1729 = HAnimJoint()
-HAnimJoint1729.setUSE("hanim_l_acromioclavicular")
-
-HAnimHumanoid46.addJoints(HAnimJoint1729)
-HAnimJoint1730 = HAnimJoint()
-HAnimJoint1730.setUSE("hanim_r_acromioclavicular")
-
-HAnimHumanoid46.addJoints(HAnimJoint1730)
-HAnimJoint1731 = HAnimJoint()
-HAnimJoint1731.setUSE("hanim_l_ankle")
-
-HAnimHumanoid46.addJoints(HAnimJoint1731)
-HAnimJoint1732 = HAnimJoint()
-HAnimJoint1732.setUSE("hanim_r_ankle")
-
-HAnimHumanoid46.addJoints(HAnimJoint1732)
-HAnimJoint1733 = HAnimJoint()
-HAnimJoint1733.setUSE("hanim_l_elbow")
-
-HAnimHumanoid46.addJoints(HAnimJoint1733)
-HAnimJoint1734 = HAnimJoint()
-HAnimJoint1734.setUSE("hanim_r_elbow")
-
-HAnimHumanoid46.addJoints(HAnimJoint1734)
-HAnimJoint1735 = HAnimJoint()
-HAnimJoint1735.setUSE("hanim_l_eyeball_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1735)
-HAnimJoint1736 = HAnimJoint()
-HAnimJoint1736.setUSE("hanim_r_eyeball_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1736)
-HAnimJoint1737 = HAnimJoint()
-HAnimJoint1737.setUSE("hanim_l_eyebrow_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1737)
-HAnimJoint1738 = HAnimJoint()
-HAnimJoint1738.setUSE("hanim_r_eyebrow_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1738)
-HAnimJoint1739 = HAnimJoint()
-HAnimJoint1739.setUSE("hanim_l_eyelid_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1739)
-HAnimJoint1740 = HAnimJoint()
-HAnimJoint1740.setUSE("hanim_r_eyelid_joint")
-
-HAnimHumanoid46.addJoints(HAnimJoint1740)
-HAnimJoint1741 = HAnimJoint()
-HAnimJoint1741.setUSE("hanim_l_hip")
-
-HAnimHumanoid46.addJoints(HAnimJoint1741)
-HAnimJoint1742 = HAnimJoint()
-HAnimJoint1742.setUSE("hanim_r_hip")
-
-HAnimHumanoid46.addJoints(HAnimJoint1742)
-HAnimJoint1743 = HAnimJoint()
-HAnimJoint1743.setUSE("hanim_l_index0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1743)
-HAnimJoint1744 = HAnimJoint()
-HAnimJoint1744.setUSE("hanim_r_index0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1744)
-HAnimJoint1745 = HAnimJoint()
-HAnimJoint1745.setUSE("hanim_l_index1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1745)
-HAnimJoint1746 = HAnimJoint()
-HAnimJoint1746.setUSE("hanim_r_index1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1746)
-HAnimJoint1747 = HAnimJoint()
-HAnimJoint1747.setUSE("hanim_l_index2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1747)
-HAnimJoint1748 = HAnimJoint()
-HAnimJoint1748.setUSE("hanim_r_index2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1748)
-HAnimJoint1749 = HAnimJoint()
-HAnimJoint1749.setUSE("hanim_l_index3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1749)
-HAnimJoint1750 = HAnimJoint()
-HAnimJoint1750.setUSE("hanim_r_index3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1750)
-HAnimJoint1751 = HAnimJoint()
-HAnimJoint1751.setUSE("hanim_l_knee")
-
-HAnimHumanoid46.addJoints(HAnimJoint1751)
-HAnimJoint1752 = HAnimJoint()
-HAnimJoint1752.setUSE("hanim_r_knee")
-
-HAnimHumanoid46.addJoints(HAnimJoint1752)
-HAnimJoint1753 = HAnimJoint()
-HAnimJoint1753.setUSE("hanim_l_metatarsal")
-
-HAnimHumanoid46.addJoints(HAnimJoint1753)
-HAnimJoint1754 = HAnimJoint()
-HAnimJoint1754.setUSE("hanim_r_metatarsal")
-
-HAnimHumanoid46.addJoints(HAnimJoint1754)
-HAnimJoint1755 = HAnimJoint()
-HAnimJoint1755.setUSE("hanim_l_middle0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1755)
-HAnimJoint1756 = HAnimJoint()
-HAnimJoint1756.setUSE("hanim_r_middle0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1756)
-HAnimJoint1757 = HAnimJoint()
-HAnimJoint1757.setUSE("hanim_l_middle1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1757)
-HAnimJoint1758 = HAnimJoint()
-HAnimJoint1758.setUSE("hanim_r_middle1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1758)
-HAnimJoint1759 = HAnimJoint()
-HAnimJoint1759.setUSE("hanim_l_middle2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1759)
-HAnimJoint1760 = HAnimJoint()
-HAnimJoint1760.setUSE("hanim_r_middle2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1760)
-HAnimJoint1761 = HAnimJoint()
-HAnimJoint1761.setUSE("hanim_l_middle3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1761)
-HAnimJoint1762 = HAnimJoint()
-HAnimJoint1762.setUSE("hanim_r_middle3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1762)
-HAnimJoint1763 = HAnimJoint()
-HAnimJoint1763.setUSE("hanim_l_midtarsal")
-
-HAnimHumanoid46.addJoints(HAnimJoint1763)
-HAnimJoint1764 = HAnimJoint()
-HAnimJoint1764.setUSE("hanim_r_midtarsal")
-
-HAnimHumanoid46.addJoints(HAnimJoint1764)
-HAnimJoint1765 = HAnimJoint()
-HAnimJoint1765.setUSE("hanim_l_pinky0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1765)
-HAnimJoint1766 = HAnimJoint()
-HAnimJoint1766.setUSE("hanim_r_pinky0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1766)
-HAnimJoint1767 = HAnimJoint()
-HAnimJoint1767.setUSE("hanim_l_pinky1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1767)
-HAnimJoint1768 = HAnimJoint()
-HAnimJoint1768.setUSE("hanim_r_pinky1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1768)
-HAnimJoint1769 = HAnimJoint()
-HAnimJoint1769.setUSE("hanim_l_pinky2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1769)
-HAnimJoint1770 = HAnimJoint()
-HAnimJoint1770.setUSE("hanim_r_pinky2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1770)
-HAnimJoint1771 = HAnimJoint()
-HAnimJoint1771.setUSE("hanim_l_pinky3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1771)
-HAnimJoint1772 = HAnimJoint()
-HAnimJoint1772.setUSE("hanim_r_pinky3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1772)
-HAnimJoint1773 = HAnimJoint()
-HAnimJoint1773.setUSE("hanim_l_ring0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1773)
-HAnimJoint1774 = HAnimJoint()
-HAnimJoint1774.setUSE("hanim_r_ring0")
-
-HAnimHumanoid46.addJoints(HAnimJoint1774)
-HAnimJoint1775 = HAnimJoint()
-HAnimJoint1775.setUSE("hanim_l_ring1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1775)
-HAnimJoint1776 = HAnimJoint()
-HAnimJoint1776.setUSE("hanim_r_ring1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1776)
-HAnimJoint1777 = HAnimJoint()
-HAnimJoint1777.setUSE("hanim_l_ring2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1777)
-HAnimJoint1778 = HAnimJoint()
-HAnimJoint1778.setUSE("hanim_r_ring2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1778)
-HAnimJoint1779 = HAnimJoint()
-HAnimJoint1779.setUSE("hanim_l_ring3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1779)
-HAnimJoint1780 = HAnimJoint()
-HAnimJoint1780.setUSE("hanim_r_ring3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1780)
-HAnimJoint1781 = HAnimJoint()
-HAnimJoint1781.setUSE("hanim_l_shoulder")
-
-HAnimHumanoid46.addJoints(HAnimJoint1781)
-HAnimJoint1782 = HAnimJoint()
-HAnimJoint1782.setUSE("hanim_r_shoulder")
-
-HAnimHumanoid46.addJoints(HAnimJoint1782)
-HAnimJoint1783 = HAnimJoint()
-HAnimJoint1783.setUSE("hanim_l_sternoclavicular")
-
-HAnimHumanoid46.addJoints(HAnimJoint1783)
-HAnimJoint1784 = HAnimJoint()
-HAnimJoint1784.setUSE("hanim_r_sternoclavicular")
-
-HAnimHumanoid46.addJoints(HAnimJoint1784)
-HAnimJoint1785 = HAnimJoint()
-HAnimJoint1785.setUSE("hanim_l_subtalar")
-
-HAnimHumanoid46.addJoints(HAnimJoint1785)
-HAnimJoint1786 = HAnimJoint()
-HAnimJoint1786.setUSE("hanim_r_subtalar")
-
-HAnimHumanoid46.addJoints(HAnimJoint1786)
-HAnimJoint1787 = HAnimJoint()
-HAnimJoint1787.setUSE("hanim_l_thumb1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1787)
-HAnimJoint1788 = HAnimJoint()
-HAnimJoint1788.setUSE("hanim_r_thumb1")
-
-HAnimHumanoid46.addJoints(HAnimJoint1788)
-HAnimJoint1789 = HAnimJoint()
-HAnimJoint1789.setUSE("hanim_l_thumb2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1789)
-HAnimJoint1790 = HAnimJoint()
-HAnimJoint1790.setUSE("hanim_r_thumb2")
-
-HAnimHumanoid46.addJoints(HAnimJoint1790)
-HAnimJoint1791 = HAnimJoint()
-HAnimJoint1791.setUSE("hanim_l_thumb3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1791)
-HAnimJoint1792 = HAnimJoint()
-HAnimJoint1792.setUSE("hanim_r_thumb3")
-
-HAnimHumanoid46.addJoints(HAnimJoint1792)
-HAnimJoint1793 = HAnimJoint()
-HAnimJoint1793.setUSE("hanim_l_wrist")
-
-HAnimHumanoid46.addJoints(HAnimJoint1793)
-HAnimJoint1794 = HAnimJoint()
-HAnimJoint1794.setUSE("hanim_r_wrist")
-
-HAnimHumanoid46.addJoints(HAnimJoint1794)
-HAnimSegment1795 = HAnimSegment()
-HAnimSegment1795.setUSE("hanim_pelvis")
-
-HAnimHumanoid46.addSegments(HAnimSegment1795)
-HAnimSegment1796 = HAnimSegment()
-HAnimSegment1796.setUSE("hanim_skull")
-
-HAnimHumanoid46.addSegments(HAnimSegment1796)
-HAnimSegment1797 = HAnimSegment()
-HAnimSegment1797.setUSE("hanim_jaw")
-
-HAnimHumanoid46.addSegments(HAnimSegment1797)
-HAnimSegment1798 = HAnimSegment()
-HAnimSegment1798.setUSE("hanim_c1")
-
-HAnimHumanoid46.addSegments(HAnimSegment1798)
-HAnimSegment1799 = HAnimSegment()
-HAnimSegment1799.setUSE("hanim_c2")
-
-HAnimHumanoid46.addSegments(HAnimSegment1799)
-HAnimSegment1800 = HAnimSegment()
-HAnimSegment1800.setUSE("hanim_c3")
-
-HAnimHumanoid46.addSegments(HAnimSegment1800)
-HAnimSegment1801 = HAnimSegment()
-HAnimSegment1801.setUSE("hanim_c4")
-
-HAnimHumanoid46.addSegments(HAnimSegment1801)
-HAnimSegment1802 = HAnimSegment()
-HAnimSegment1802.setUSE("hanim_c5")
-
-HAnimHumanoid46.addSegments(HAnimSegment1802)
-HAnimSegment1803 = HAnimSegment()
-HAnimSegment1803.setUSE("hanim_c6")
-
-HAnimHumanoid46.addSegments(HAnimSegment1803)
-HAnimSegment1804 = HAnimSegment()
-HAnimSegment1804.setUSE("hanim_c7")
-
-HAnimHumanoid46.addSegments(HAnimSegment1804)
-HAnimSegment1805 = HAnimSegment()
-HAnimSegment1805.setUSE("hanim_t1")
-
-HAnimHumanoid46.addSegments(HAnimSegment1805)
-HAnimSegment1806 = HAnimSegment()
-HAnimSegment1806.setUSE("hanim_t2")
-
-HAnimHumanoid46.addSegments(HAnimSegment1806)
-HAnimSegment1807 = HAnimSegment()
-HAnimSegment1807.setUSE("hanim_t3")
-
-HAnimHumanoid46.addSegments(HAnimSegment1807)
-HAnimSegment1808 = HAnimSegment()
-HAnimSegment1808.setUSE("hanim_t4")
-
-HAnimHumanoid46.addSegments(HAnimSegment1808)
-HAnimSegment1809 = HAnimSegment()
-HAnimSegment1809.setUSE("hanim_t5")
-
-HAnimHumanoid46.addSegments(HAnimSegment1809)
-HAnimSegment1810 = HAnimSegment()
-HAnimSegment1810.setUSE("hanim_t6")
-
-HAnimHumanoid46.addSegments(HAnimSegment1810)
-HAnimSegment1811 = HAnimSegment()
-HAnimSegment1811.setUSE("hanim_t7")
-
-HAnimHumanoid46.addSegments(HAnimSegment1811)
-HAnimSegment1812 = HAnimSegment()
-HAnimSegment1812.setUSE("hanim_t8")
-
-HAnimHumanoid46.addSegments(HAnimSegment1812)
-HAnimSegment1813 = HAnimSegment()
-HAnimSegment1813.setUSE("hanim_t9")
-
-HAnimHumanoid46.addSegments(HAnimSegment1813)
-HAnimSegment1814 = HAnimSegment()
-HAnimSegment1814.setUSE("hanim_t10")
-
-HAnimHumanoid46.addSegments(HAnimSegment1814)
-HAnimSegment1815 = HAnimSegment()
-HAnimSegment1815.setUSE("hanim_t11")
-
-HAnimHumanoid46.addSegments(HAnimSegment1815)
-HAnimSegment1816 = HAnimSegment()
-HAnimSegment1816.setUSE("hanim_t12")
-
-HAnimHumanoid46.addSegments(HAnimSegment1816)
-HAnimSegment1817 = HAnimSegment()
-HAnimSegment1817.setUSE("hanim_l1")
-
-HAnimHumanoid46.addSegments(HAnimSegment1817)
-HAnimSegment1818 = HAnimSegment()
-HAnimSegment1818.setUSE("hanim_l2")
-
-HAnimHumanoid46.addSegments(HAnimSegment1818)
-HAnimSegment1819 = HAnimSegment()
-HAnimSegment1819.setUSE("hanim_l3")
-
-HAnimHumanoid46.addSegments(HAnimSegment1819)
-HAnimSegment1820 = HAnimSegment()
-HAnimSegment1820.setUSE("hanim_l4")
-
-HAnimHumanoid46.addSegments(HAnimSegment1820)
-HAnimSegment1821 = HAnimSegment()
-HAnimSegment1821.setUSE("hanim_l5")
-
-HAnimHumanoid46.addSegments(HAnimSegment1821)
-HAnimSegment1822 = HAnimSegment()
-HAnimSegment1822.setUSE("hanim_sacrum")
-
-HAnimHumanoid46.addSegments(HAnimSegment1822)
-HAnimSegment1823 = HAnimSegment()
-HAnimSegment1823.setUSE("hanim_l_calf")
-
-HAnimHumanoid46.addSegments(HAnimSegment1823)
-HAnimSegment1824 = HAnimSegment()
-HAnimSegment1824.setUSE("hanim_r_calf")
-
-HAnimHumanoid46.addSegments(HAnimSegment1824)
-HAnimSegment1825 = HAnimSegment()
-HAnimSegment1825.setUSE("hanim_l_clavicle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1825)
-HAnimSegment1826 = HAnimSegment()
-HAnimSegment1826.setUSE("hanim_r_clavicle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1826)
-HAnimSegment1827 = HAnimSegment()
-HAnimSegment1827.setUSE("hanim_l_eyeball")
-
-HAnimHumanoid46.addSegments(HAnimSegment1827)
-HAnimSegment1828 = HAnimSegment()
-HAnimSegment1828.setUSE("hanim_r_eyeball")
-
-HAnimHumanoid46.addSegments(HAnimSegment1828)
-HAnimSegment1829 = HAnimSegment()
-HAnimSegment1829.setUSE("hanim_l_eyebrow")
-
-HAnimHumanoid46.addSegments(HAnimSegment1829)
-HAnimSegment1830 = HAnimSegment()
-HAnimSegment1830.setUSE("hanim_r_eyebrow")
-
-HAnimHumanoid46.addSegments(HAnimSegment1830)
-HAnimSegment1831 = HAnimSegment()
-HAnimSegment1831.setUSE("hanim_l_eyelid")
-
-HAnimHumanoid46.addSegments(HAnimSegment1831)
-HAnimSegment1832 = HAnimSegment()
-HAnimSegment1832.setUSE("hanim_r_eyelid")
-
-HAnimHumanoid46.addSegments(HAnimSegment1832)
-HAnimSegment1833 = HAnimSegment()
-HAnimSegment1833.setUSE("hanim_l_forearm")
-
-HAnimHumanoid46.addSegments(HAnimSegment1833)
-HAnimSegment1834 = HAnimSegment()
-HAnimSegment1834.setUSE("hanim_r_forearm")
-
-HAnimHumanoid46.addSegments(HAnimSegment1834)
-HAnimSegment1835 = HAnimSegment()
-HAnimSegment1835.setUSE("hanim_l_forefoot")
-
-HAnimHumanoid46.addSegments(HAnimSegment1835)
-HAnimSegment1836 = HAnimSegment()
-HAnimSegment1836.setUSE("hanim_r_forefoot")
-
-HAnimHumanoid46.addSegments(HAnimSegment1836)
-HAnimSegment1837 = HAnimSegment()
-HAnimSegment1837.setUSE("hanim_l_hand")
-
-HAnimHumanoid46.addSegments(HAnimSegment1837)
-HAnimSegment1838 = HAnimSegment()
-HAnimSegment1838.setUSE("hanim_r_hand")
-
-HAnimHumanoid46.addSegments(HAnimSegment1838)
-HAnimSegment1839 = HAnimSegment()
-HAnimSegment1839.setUSE("hanim_l_hindfoot")
-
-HAnimHumanoid46.addSegments(HAnimSegment1839)
-HAnimSegment1840 = HAnimSegment()
-HAnimSegment1840.setUSE("hanim_r_hindfoot")
-
-HAnimHumanoid46.addSegments(HAnimSegment1840)
-HAnimSegment1841 = HAnimSegment()
-HAnimSegment1841.setUSE("hanim_l_index_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1841)
-HAnimSegment1842 = HAnimSegment()
-HAnimSegment1842.setUSE("hanim_r_index_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1842)
-HAnimSegment1843 = HAnimSegment()
-HAnimSegment1843.setUSE("hanim_l_index_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1843)
-HAnimSegment1844 = HAnimSegment()
-HAnimSegment1844.setUSE("hanim_r_index_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1844)
-HAnimSegment1845 = HAnimSegment()
-HAnimSegment1845.setUSE("hanim_l_index_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1845)
-HAnimSegment1846 = HAnimSegment()
-HAnimSegment1846.setUSE("hanim_r_index_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1846)
-HAnimSegment1847 = HAnimSegment()
-HAnimSegment1847.setUSE("hanim_l_index_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1847)
-HAnimSegment1848 = HAnimSegment()
-HAnimSegment1848.setUSE("hanim_r_index_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1848)
-HAnimSegment1849 = HAnimSegment()
-HAnimSegment1849.setUSE("hanim_l_middistal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1849)
-HAnimSegment1850 = HAnimSegment()
-HAnimSegment1850.setUSE("hanim_r_middistal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1850)
-HAnimSegment1851 = HAnimSegment()
-HAnimSegment1851.setUSE("hanim_l_middle_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1851)
-HAnimSegment1852 = HAnimSegment()
-HAnimSegment1852.setUSE("hanim_r_middle_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1852)
-HAnimSegment1853 = HAnimSegment()
-HAnimSegment1853.setUSE("hanim_l_middle_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1853)
-HAnimSegment1854 = HAnimSegment()
-HAnimSegment1854.setUSE("hanim_r_middle_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1854)
-HAnimSegment1855 = HAnimSegment()
-HAnimSegment1855.setUSE("hanim_l_middle_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1855)
-HAnimSegment1856 = HAnimSegment()
-HAnimSegment1856.setUSE("hanim_r_middle_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1856)
-HAnimSegment1857 = HAnimSegment()
-HAnimSegment1857.setUSE("hanim_l_middle_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1857)
-HAnimSegment1858 = HAnimSegment()
-HAnimSegment1858.setUSE("hanim_r_middle_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1858)
-HAnimSegment1859 = HAnimSegment()
-HAnimSegment1859.setUSE("hanim_l_midproximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1859)
-HAnimSegment1860 = HAnimSegment()
-HAnimSegment1860.setUSE("hanim_r_midproximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1860)
-HAnimSegment1861 = HAnimSegment()
-HAnimSegment1861.setUSE("hanim_l_pinky_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1861)
-HAnimSegment1862 = HAnimSegment()
-HAnimSegment1862.setUSE("hanim_r_pinky_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1862)
-HAnimSegment1863 = HAnimSegment()
-HAnimSegment1863.setUSE("hanim_l_pinky_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1863)
-HAnimSegment1864 = HAnimSegment()
-HAnimSegment1864.setUSE("hanim_r_pinky_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1864)
-HAnimSegment1865 = HAnimSegment()
-HAnimSegment1865.setUSE("hanim_l_pinky_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1865)
-HAnimSegment1866 = HAnimSegment()
-HAnimSegment1866.setUSE("hanim_r_pinky_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1866)
-HAnimSegment1867 = HAnimSegment()
-HAnimSegment1867.setUSE("hanim_l_pinky_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1867)
-HAnimSegment1868 = HAnimSegment()
-HAnimSegment1868.setUSE("hanim_r_pinky_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1868)
-HAnimSegment1869 = HAnimSegment()
-HAnimSegment1869.setUSE("hanim_l_ring_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1869)
-HAnimSegment1870 = HAnimSegment()
-HAnimSegment1870.setUSE("hanim_r_ring_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1870)
-HAnimSegment1871 = HAnimSegment()
-HAnimSegment1871.setUSE("hanim_l_ring_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1871)
-HAnimSegment1872 = HAnimSegment()
-HAnimSegment1872.setUSE("hanim_r_ring_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1872)
-HAnimSegment1873 = HAnimSegment()
-HAnimSegment1873.setUSE("hanim_l_ring_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1873)
-HAnimSegment1874 = HAnimSegment()
-HAnimSegment1874.setUSE("hanim_r_ring_middle")
-
-HAnimHumanoid46.addSegments(HAnimSegment1874)
-HAnimSegment1875 = HAnimSegment()
-HAnimSegment1875.setUSE("hanim_l_ring_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1875)
-HAnimSegment1876 = HAnimSegment()
-HAnimSegment1876.setUSE("hanim_r_ring_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1876)
-HAnimSegment1877 = HAnimSegment()
-HAnimSegment1877.setUSE("hanim_l_scapula")
-
-HAnimHumanoid46.addSegments(HAnimSegment1877)
-HAnimSegment1878 = HAnimSegment()
-HAnimSegment1878.setUSE("hanim_r_scapula")
-
-HAnimHumanoid46.addSegments(HAnimSegment1878)
-HAnimSegment1879 = HAnimSegment()
-HAnimSegment1879.setUSE("hanim_l_thigh")
-
-HAnimHumanoid46.addSegments(HAnimSegment1879)
-HAnimSegment1880 = HAnimSegment()
-HAnimSegment1880.setUSE("hanim_r_thigh")
-
-HAnimHumanoid46.addSegments(HAnimSegment1880)
-HAnimSegment1881 = HAnimSegment()
-HAnimSegment1881.setUSE("hanim_l_thumb_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1881)
-HAnimSegment1882 = HAnimSegment()
-HAnimSegment1882.setUSE("hanim_r_thumb_distal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1882)
-HAnimSegment1883 = HAnimSegment()
-HAnimSegment1883.setUSE("hanim_l_thumb_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1883)
-HAnimSegment1884 = HAnimSegment()
-HAnimSegment1884.setUSE("hanim_r_thumb_metacarpal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1884)
-HAnimSegment1885 = HAnimSegment()
-HAnimSegment1885.setUSE("hanim_l_thumb_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1885)
-HAnimSegment1886 = HAnimSegment()
-HAnimSegment1886.setUSE("hanim_r_thumb_proximal")
-
-HAnimHumanoid46.addSegments(HAnimSegment1886)
-HAnimSegment1887 = HAnimSegment()
-HAnimSegment1887.setUSE("hanim_l_upperarm")
-
-HAnimHumanoid46.addSegments(HAnimSegment1887)
-HAnimSegment1888 = HAnimSegment()
-HAnimSegment1888.setUSE("hanim_r_upperarm")
-
-HAnimHumanoid46.addSegments(HAnimSegment1888)
-HAnimSite1889 = HAnimSite()
-HAnimSite1889.setUSE("hanim_crotch_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1889)
-HAnimSite1890 = HAnimSite()
-HAnimSite1890.setUSE("hanim_skull_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1890)
-HAnimSite1891 = HAnimSite()
-HAnimSite1891.setUSE("hanim_sellion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1891)
-HAnimSite1892 = HAnimSite()
-HAnimSite1892.setUSE("hanim_supramenton_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1892)
-HAnimSite1893 = HAnimSite()
-HAnimSite1893.setUSE("hanim_nuchale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1893)
-HAnimSite1894 = HAnimSite()
-HAnimSite1894.setUSE("hanim_suprasternale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1894)
-HAnimSite1895 = HAnimSite()
-HAnimSite1895.setUSE("hanim_cervicale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1895)
-HAnimSite1896 = HAnimSite()
-HAnimSite1896.setUSE("hanim_substernale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1896)
-HAnimSite1897 = HAnimSite()
-HAnimSite1897.setUSE("hanim_rib10_midspine_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1897)
-HAnimSite1898 = HAnimSite()
-HAnimSite1898.setUSE("hanim_waist_preferred_post_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1898)
-HAnimSite1899 = HAnimSite()
-HAnimSite1899.setUSE("hanim_navel_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1899)
-HAnimSite1900 = HAnimSite()
-HAnimSite1900.setUSE("hanim_l_acromion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1900)
-HAnimSite1901 = HAnimSite()
-HAnimSite1901.setUSE("hanim_r_acromion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1901)
-HAnimSite1902 = HAnimSite()
-HAnimSite1902.setUSE("hanim_r_asis_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1902)
-HAnimSite1903 = HAnimSite()
-HAnimSite1903.setUSE("hanim_l_asis_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1903)
-HAnimSite1904 = HAnimSite()
-HAnimSite1904.setUSE("hanim_l_axilla_ant_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1904)
-HAnimSite1905 = HAnimSite()
-HAnimSite1905.setUSE("hanim_r_axilla_ant_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1905)
-HAnimSite1906 = HAnimSite()
-HAnimSite1906.setUSE("hanim_l_axilla_post_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1906)
-HAnimSite1907 = HAnimSite()
-HAnimSite1907.setUSE("hanim_r_axilla_post_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1907)
-HAnimSite1908 = HAnimSite()
-HAnimSite1908.setUSE("hanim_l_calcaneous_post_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1908)
-HAnimSite1909 = HAnimSite()
-HAnimSite1909.setUSE("hanim_r_calcaneous_post_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1909)
-HAnimSite1910 = HAnimSite()
-HAnimSite1910.setUSE("hanim_l_clavicale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1910)
-HAnimSite1911 = HAnimSite()
-HAnimSite1911.setUSE("hanim_r_clavicale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1911)
-HAnimSite1912 = HAnimSite()
-HAnimSite1912.setUSE("hanim_l_dactylion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1912)
-HAnimSite1913 = HAnimSite()
-HAnimSite1913.setUSE("hanim_r_dactylion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1913)
-HAnimSite1914 = HAnimSite()
-HAnimSite1914.setUSE("hanim_l_digit2_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1914)
-HAnimSite1915 = HAnimSite()
-HAnimSite1915.setUSE("hanim_r_digit2_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1915)
-HAnimSite1916 = HAnimSite()
-HAnimSite1916.setUSE("hanim_l_femoral_lateral_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1916)
-HAnimSite1917 = HAnimSite()
-HAnimSite1917.setUSE("hanim_r_femoral_lateral_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1917)
-HAnimSite1918 = HAnimSite()
-HAnimSite1918.setUSE("hanim_l_femoral_medial_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1918)
-HAnimSite1919 = HAnimSite()
-HAnimSite1919.setUSE("hanim_r_femoral_medial_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1919)
-HAnimSite1920 = HAnimSite()
-HAnimSite1920.setUSE("hanim_l_forefoot_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1920)
-HAnimSite1921 = HAnimSite()
-HAnimSite1921.setUSE("hanim_r_forefoot_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1921)
-HAnimSite1922 = HAnimSite()
-HAnimSite1922.setUSE("hanim_r_gonion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1922)
-HAnimSite1923 = HAnimSite()
-HAnimSite1923.setUSE("hanim_l_gonion_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1923)
-HAnimSite1924 = HAnimSite()
-HAnimSite1924.setUSE("hanim_l_humeral_lateral_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1924)
-HAnimSite1925 = HAnimSite()
-HAnimSite1925.setUSE("hanim_r_humeral_lateral_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1925)
-HAnimSite1926 = HAnimSite()
-HAnimSite1926.setUSE("hanim_l_humeral_medial_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1926)
-HAnimSite1927 = HAnimSite()
-HAnimSite1927.setUSE("hanim_r_humeral_medial_epicn_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1927)
-HAnimSite1928 = HAnimSite()
-HAnimSite1928.setUSE("hanim_r_iliocristale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1928)
-HAnimSite1929 = HAnimSite()
-HAnimSite1929.setUSE("hanim_l_iliocristale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1929)
-HAnimSite1930 = HAnimSite()
-HAnimSite1930.setUSE("hanim_l_index_distal_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1930)
-HAnimSite1931 = HAnimSite()
-HAnimSite1931.setUSE("hanim_r_index_distal_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1931)
-HAnimSite1932 = HAnimSite()
-HAnimSite1932.setUSE("hanim_r_infraorbitale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1932)
-HAnimSite1933 = HAnimSite()
-HAnimSite1933.setUSE("hanim_l_infraorbitale_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1933)
-HAnimSite1934 = HAnimSite()
-HAnimSite1934.setUSE("hanim_l_knee_crease_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1934)
-HAnimSite1935 = HAnimSite()
-HAnimSite1935.setUSE("hanim_r_knee_crease_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1935)
-HAnimSite1936 = HAnimSite()
-HAnimSite1936.setUSE("hanim_l_lateral_malleolus_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1936)
-HAnimSite1937 = HAnimSite()
-HAnimSite1937.setUSE("hanim_r_lateral_malleolus_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1937)
-HAnimSite1938 = HAnimSite()
-HAnimSite1938.setUSE("hanim_l_medial_malleolus_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1938)
-HAnimSite1939 = HAnimSite()
-HAnimSite1939.setUSE("hanim_r_medial_malleolus_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1939)
-HAnimSite1940 = HAnimSite()
-HAnimSite1940.setUSE("hanim_l_metacarpal_pha2_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1940)
-HAnimSite1941 = HAnimSite()
-HAnimSite1941.setUSE("hanim_r_metacarpal_pha2_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1941)
-HAnimSite1942 = HAnimSite()
-HAnimSite1942.setUSE("hanim_l_metacarpal_pha5_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1942)
-HAnimSite1943 = HAnimSite()
-HAnimSite1943.setUSE("hanim_r_metacarpal_pha5_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1943)
-HAnimSite1944 = HAnimSite()
-HAnimSite1944.setUSE("hanim_l_metatarsal_pha1_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1944)
-HAnimSite1945 = HAnimSite()
-HAnimSite1945.setUSE("hanim_r_metatarsal_pha1_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1945)
-HAnimSite1946 = HAnimSite()
-HAnimSite1946.setUSE("hanim_l_metatarsal_pha5_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1946)
-HAnimSite1947 = HAnimSite()
-HAnimSite1947.setUSE("hanim_r_metatarsal_pha5_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1947)
-HAnimSite1948 = HAnimSite()
-HAnimSite1948.setUSE("hanim_l_middle_distal_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1948)
-HAnimSite1949 = HAnimSite()
-HAnimSite1949.setUSE("hanim_r_middle_distal_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1949)
-HAnimSite1950 = HAnimSite()
-HAnimSite1950.setUSE("hanim_r_neck_base_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1950)
-HAnimSite1951 = HAnimSite()
-HAnimSite1951.setUSE("hanim_l_neck_base_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1951)
-HAnimSite1952 = HAnimSite()
-HAnimSite1952.setUSE("hanim_l_olecranon_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1952)
-HAnimSite1953 = HAnimSite()
-HAnimSite1953.setUSE("hanim_r_olecranon_pt")
-
-HAnimHumanoid46.addSites(HAnimSite1953)
-HAnimSite1954 = HAnimSite()
-HAnimSite1954.setUSE("hanim_l_pinky_distal_tip")
-
-HAnimHumanoid46.addSites(HAnimSite1954)
-HAnimSite1955 = HAnimSite()
-HAnimSite1955.setUSE("hanim_r_pinky_distal_tip")
+HAnimSite1689.children.append(Anchor1693)
+
+HAnimHumanoid46.viewpoints.append(HAnimSite1689)
+HAnimSite1697 = x3d.HAnimSite()
+HAnimSite1697.USE = "hanim_l_eyeball_site_view"
+
+HAnimHumanoid46.sites.append(HAnimSite1697)
+HAnimSite1698 = x3d.HAnimSite()
+HAnimSite1698.USE = "hanim_r_eyeball_site_view"
+
+HAnimHumanoid46.sites.append(HAnimSite1698)
+HAnimSite1699 = x3d.HAnimSite()
+HAnimSite1699.USE = "hanim_l_hand_front_view"
+
+HAnimHumanoid46.sites.append(HAnimSite1699)
+HAnimSite1700 = x3d.HAnimSite()
+HAnimSite1700.USE = "hanim_r_hand_front_view"
+
+HAnimHumanoid46.sites.append(HAnimSite1700)
+HAnimJoint1701 = x3d.HAnimJoint()
+HAnimJoint1701.USE = "hanim_humanoid_root"
+
+HAnimHumanoid46.joints.append(HAnimJoint1701)
+HAnimJoint1702 = x3d.HAnimJoint()
+HAnimJoint1702.USE = "hanim_sacroiliac"
+
+HAnimHumanoid46.joints.append(HAnimJoint1702)
+HAnimJoint1703 = x3d.HAnimJoint()
+HAnimJoint1703.USE = "hanim_vl5"
+
+HAnimHumanoid46.joints.append(HAnimJoint1703)
+HAnimJoint1704 = x3d.HAnimJoint()
+HAnimJoint1704.USE = "hanim_vl4"
+
+HAnimHumanoid46.joints.append(HAnimJoint1704)
+HAnimJoint1705 = x3d.HAnimJoint()
+HAnimJoint1705.USE = "hanim_vl3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1705)
+HAnimJoint1706 = x3d.HAnimJoint()
+HAnimJoint1706.USE = "hanim_vl2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1706)
+HAnimJoint1707 = x3d.HAnimJoint()
+HAnimJoint1707.USE = "hanim_vl1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1707)
+HAnimJoint1708 = x3d.HAnimJoint()
+HAnimJoint1708.USE = "hanim_vt12"
+
+HAnimHumanoid46.joints.append(HAnimJoint1708)
+HAnimJoint1709 = x3d.HAnimJoint()
+HAnimJoint1709.USE = "hanim_vt11"
+
+HAnimHumanoid46.joints.append(HAnimJoint1709)
+HAnimJoint1710 = x3d.HAnimJoint()
+HAnimJoint1710.USE = "hanim_vt10"
+
+HAnimHumanoid46.joints.append(HAnimJoint1710)
+HAnimJoint1711 = x3d.HAnimJoint()
+HAnimJoint1711.USE = "hanim_vt9"
+
+HAnimHumanoid46.joints.append(HAnimJoint1711)
+HAnimJoint1712 = x3d.HAnimJoint()
+HAnimJoint1712.USE = "hanim_vt8"
+
+HAnimHumanoid46.joints.append(HAnimJoint1712)
+HAnimJoint1713 = x3d.HAnimJoint()
+HAnimJoint1713.USE = "hanim_vt7"
+
+HAnimHumanoid46.joints.append(HAnimJoint1713)
+HAnimJoint1714 = x3d.HAnimJoint()
+HAnimJoint1714.USE = "hanim_vt6"
+
+HAnimHumanoid46.joints.append(HAnimJoint1714)
+HAnimJoint1715 = x3d.HAnimJoint()
+HAnimJoint1715.USE = "hanim_vt5"
+
+HAnimHumanoid46.joints.append(HAnimJoint1715)
+HAnimJoint1716 = x3d.HAnimJoint()
+HAnimJoint1716.USE = "hanim_vt4"
+
+HAnimHumanoid46.joints.append(HAnimJoint1716)
+HAnimJoint1717 = x3d.HAnimJoint()
+HAnimJoint1717.USE = "hanim_vt3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1717)
+HAnimJoint1718 = x3d.HAnimJoint()
+HAnimJoint1718.USE = "hanim_vt2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1718)
+HAnimJoint1719 = x3d.HAnimJoint()
+HAnimJoint1719.USE = "hanim_vt1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1719)
+HAnimJoint1720 = x3d.HAnimJoint()
+HAnimJoint1720.USE = "hanim_vc7"
+
+HAnimHumanoid46.joints.append(HAnimJoint1720)
+HAnimJoint1721 = x3d.HAnimJoint()
+HAnimJoint1721.USE = "hanim_vc6"
+
+HAnimHumanoid46.joints.append(HAnimJoint1721)
+HAnimJoint1722 = x3d.HAnimJoint()
+HAnimJoint1722.USE = "hanim_vc5"
+
+HAnimHumanoid46.joints.append(HAnimJoint1722)
+HAnimJoint1723 = x3d.HAnimJoint()
+HAnimJoint1723.USE = "hanim_vc4"
+
+HAnimHumanoid46.joints.append(HAnimJoint1723)
+HAnimJoint1724 = x3d.HAnimJoint()
+HAnimJoint1724.USE = "hanim_vc3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1724)
+HAnimJoint1725 = x3d.HAnimJoint()
+HAnimJoint1725.USE = "hanim_vc2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1725)
+HAnimJoint1726 = x3d.HAnimJoint()
+HAnimJoint1726.USE = "hanim_vc1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1726)
+HAnimJoint1727 = x3d.HAnimJoint()
+HAnimJoint1727.USE = "hanim_skullbase"
+
+HAnimHumanoid46.joints.append(HAnimJoint1727)
+HAnimJoint1728 = x3d.HAnimJoint()
+HAnimJoint1728.USE = "hanim_temporomandibular"
+
+HAnimHumanoid46.joints.append(HAnimJoint1728)
+HAnimJoint1729 = x3d.HAnimJoint()
+HAnimJoint1729.USE = "hanim_l_acromioclavicular"
+
+HAnimHumanoid46.joints.append(HAnimJoint1729)
+HAnimJoint1730 = x3d.HAnimJoint()
+HAnimJoint1730.USE = "hanim_r_acromioclavicular"
+
+HAnimHumanoid46.joints.append(HAnimJoint1730)
+HAnimJoint1731 = x3d.HAnimJoint()
+HAnimJoint1731.USE = "hanim_l_ankle"
+
+HAnimHumanoid46.joints.append(HAnimJoint1731)
+HAnimJoint1732 = x3d.HAnimJoint()
+HAnimJoint1732.USE = "hanim_r_ankle"
+
+HAnimHumanoid46.joints.append(HAnimJoint1732)
+HAnimJoint1733 = x3d.HAnimJoint()
+HAnimJoint1733.USE = "hanim_l_elbow"
+
+HAnimHumanoid46.joints.append(HAnimJoint1733)
+HAnimJoint1734 = x3d.HAnimJoint()
+HAnimJoint1734.USE = "hanim_r_elbow"
+
+HAnimHumanoid46.joints.append(HAnimJoint1734)
+HAnimJoint1735 = x3d.HAnimJoint()
+HAnimJoint1735.USE = "hanim_l_eyeball_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1735)
+HAnimJoint1736 = x3d.HAnimJoint()
+HAnimJoint1736.USE = "hanim_r_eyeball_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1736)
+HAnimJoint1737 = x3d.HAnimJoint()
+HAnimJoint1737.USE = "hanim_l_eyebrow_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1737)
+HAnimJoint1738 = x3d.HAnimJoint()
+HAnimJoint1738.USE = "hanim_r_eyebrow_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1738)
+HAnimJoint1739 = x3d.HAnimJoint()
+HAnimJoint1739.USE = "hanim_l_eyelid_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1739)
+HAnimJoint1740 = x3d.HAnimJoint()
+HAnimJoint1740.USE = "hanim_r_eyelid_joint"
+
+HAnimHumanoid46.joints.append(HAnimJoint1740)
+HAnimJoint1741 = x3d.HAnimJoint()
+HAnimJoint1741.USE = "hanim_l_hip"
+
+HAnimHumanoid46.joints.append(HAnimJoint1741)
+HAnimJoint1742 = x3d.HAnimJoint()
+HAnimJoint1742.USE = "hanim_r_hip"
+
+HAnimHumanoid46.joints.append(HAnimJoint1742)
+HAnimJoint1743 = x3d.HAnimJoint()
+HAnimJoint1743.USE = "hanim_l_index0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1743)
+HAnimJoint1744 = x3d.HAnimJoint()
+HAnimJoint1744.USE = "hanim_r_index0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1744)
+HAnimJoint1745 = x3d.HAnimJoint()
+HAnimJoint1745.USE = "hanim_l_index1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1745)
+HAnimJoint1746 = x3d.HAnimJoint()
+HAnimJoint1746.USE = "hanim_r_index1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1746)
+HAnimJoint1747 = x3d.HAnimJoint()
+HAnimJoint1747.USE = "hanim_l_index2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1747)
+HAnimJoint1748 = x3d.HAnimJoint()
+HAnimJoint1748.USE = "hanim_r_index2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1748)
+HAnimJoint1749 = x3d.HAnimJoint()
+HAnimJoint1749.USE = "hanim_l_index3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1749)
+HAnimJoint1750 = x3d.HAnimJoint()
+HAnimJoint1750.USE = "hanim_r_index3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1750)
+HAnimJoint1751 = x3d.HAnimJoint()
+HAnimJoint1751.USE = "hanim_l_knee"
+
+HAnimHumanoid46.joints.append(HAnimJoint1751)
+HAnimJoint1752 = x3d.HAnimJoint()
+HAnimJoint1752.USE = "hanim_r_knee"
+
+HAnimHumanoid46.joints.append(HAnimJoint1752)
+HAnimJoint1753 = x3d.HAnimJoint()
+HAnimJoint1753.USE = "hanim_l_metatarsal"
+
+HAnimHumanoid46.joints.append(HAnimJoint1753)
+HAnimJoint1754 = x3d.HAnimJoint()
+HAnimJoint1754.USE = "hanim_r_metatarsal"
+
+HAnimHumanoid46.joints.append(HAnimJoint1754)
+HAnimJoint1755 = x3d.HAnimJoint()
+HAnimJoint1755.USE = "hanim_l_middle0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1755)
+HAnimJoint1756 = x3d.HAnimJoint()
+HAnimJoint1756.USE = "hanim_r_middle0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1756)
+HAnimJoint1757 = x3d.HAnimJoint()
+HAnimJoint1757.USE = "hanim_l_middle1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1757)
+HAnimJoint1758 = x3d.HAnimJoint()
+HAnimJoint1758.USE = "hanim_r_middle1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1758)
+HAnimJoint1759 = x3d.HAnimJoint()
+HAnimJoint1759.USE = "hanim_l_middle2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1759)
+HAnimJoint1760 = x3d.HAnimJoint()
+HAnimJoint1760.USE = "hanim_r_middle2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1760)
+HAnimJoint1761 = x3d.HAnimJoint()
+HAnimJoint1761.USE = "hanim_l_middle3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1761)
+HAnimJoint1762 = x3d.HAnimJoint()
+HAnimJoint1762.USE = "hanim_r_middle3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1762)
+HAnimJoint1763 = x3d.HAnimJoint()
+HAnimJoint1763.USE = "hanim_l_midtarsal"
+
+HAnimHumanoid46.joints.append(HAnimJoint1763)
+HAnimJoint1764 = x3d.HAnimJoint()
+HAnimJoint1764.USE = "hanim_r_midtarsal"
+
+HAnimHumanoid46.joints.append(HAnimJoint1764)
+HAnimJoint1765 = x3d.HAnimJoint()
+HAnimJoint1765.USE = "hanim_l_pinky0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1765)
+HAnimJoint1766 = x3d.HAnimJoint()
+HAnimJoint1766.USE = "hanim_r_pinky0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1766)
+HAnimJoint1767 = x3d.HAnimJoint()
+HAnimJoint1767.USE = "hanim_l_pinky1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1767)
+HAnimJoint1768 = x3d.HAnimJoint()
+HAnimJoint1768.USE = "hanim_r_pinky1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1768)
+HAnimJoint1769 = x3d.HAnimJoint()
+HAnimJoint1769.USE = "hanim_l_pinky2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1769)
+HAnimJoint1770 = x3d.HAnimJoint()
+HAnimJoint1770.USE = "hanim_r_pinky2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1770)
+HAnimJoint1771 = x3d.HAnimJoint()
+HAnimJoint1771.USE = "hanim_l_pinky3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1771)
+HAnimJoint1772 = x3d.HAnimJoint()
+HAnimJoint1772.USE = "hanim_r_pinky3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1772)
+HAnimJoint1773 = x3d.HAnimJoint()
+HAnimJoint1773.USE = "hanim_l_ring0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1773)
+HAnimJoint1774 = x3d.HAnimJoint()
+HAnimJoint1774.USE = "hanim_r_ring0"
+
+HAnimHumanoid46.joints.append(HAnimJoint1774)
+HAnimJoint1775 = x3d.HAnimJoint()
+HAnimJoint1775.USE = "hanim_l_ring1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1775)
+HAnimJoint1776 = x3d.HAnimJoint()
+HAnimJoint1776.USE = "hanim_r_ring1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1776)
+HAnimJoint1777 = x3d.HAnimJoint()
+HAnimJoint1777.USE = "hanim_l_ring2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1777)
+HAnimJoint1778 = x3d.HAnimJoint()
+HAnimJoint1778.USE = "hanim_r_ring2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1778)
+HAnimJoint1779 = x3d.HAnimJoint()
+HAnimJoint1779.USE = "hanim_l_ring3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1779)
+HAnimJoint1780 = x3d.HAnimJoint()
+HAnimJoint1780.USE = "hanim_r_ring3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1780)
+HAnimJoint1781 = x3d.HAnimJoint()
+HAnimJoint1781.USE = "hanim_l_shoulder"
+
+HAnimHumanoid46.joints.append(HAnimJoint1781)
+HAnimJoint1782 = x3d.HAnimJoint()
+HAnimJoint1782.USE = "hanim_r_shoulder"
+
+HAnimHumanoid46.joints.append(HAnimJoint1782)
+HAnimJoint1783 = x3d.HAnimJoint()
+HAnimJoint1783.USE = "hanim_l_sternoclavicular"
+
+HAnimHumanoid46.joints.append(HAnimJoint1783)
+HAnimJoint1784 = x3d.HAnimJoint()
+HAnimJoint1784.USE = "hanim_r_sternoclavicular"
+
+HAnimHumanoid46.joints.append(HAnimJoint1784)
+HAnimJoint1785 = x3d.HAnimJoint()
+HAnimJoint1785.USE = "hanim_l_subtalar"
+
+HAnimHumanoid46.joints.append(HAnimJoint1785)
+HAnimJoint1786 = x3d.HAnimJoint()
+HAnimJoint1786.USE = "hanim_r_subtalar"
+
+HAnimHumanoid46.joints.append(HAnimJoint1786)
+HAnimJoint1787 = x3d.HAnimJoint()
+HAnimJoint1787.USE = "hanim_l_thumb1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1787)
+HAnimJoint1788 = x3d.HAnimJoint()
+HAnimJoint1788.USE = "hanim_r_thumb1"
+
+HAnimHumanoid46.joints.append(HAnimJoint1788)
+HAnimJoint1789 = x3d.HAnimJoint()
+HAnimJoint1789.USE = "hanim_l_thumb2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1789)
+HAnimJoint1790 = x3d.HAnimJoint()
+HAnimJoint1790.USE = "hanim_r_thumb2"
+
+HAnimHumanoid46.joints.append(HAnimJoint1790)
+HAnimJoint1791 = x3d.HAnimJoint()
+HAnimJoint1791.USE = "hanim_l_thumb3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1791)
+HAnimJoint1792 = x3d.HAnimJoint()
+HAnimJoint1792.USE = "hanim_r_thumb3"
+
+HAnimHumanoid46.joints.append(HAnimJoint1792)
+HAnimJoint1793 = x3d.HAnimJoint()
+HAnimJoint1793.USE = "hanim_l_wrist"
+
+HAnimHumanoid46.joints.append(HAnimJoint1793)
+HAnimJoint1794 = x3d.HAnimJoint()
+HAnimJoint1794.USE = "hanim_r_wrist"
+
+HAnimHumanoid46.joints.append(HAnimJoint1794)
+HAnimSegment1795 = x3d.HAnimSegment()
+HAnimSegment1795.USE = "hanim_pelvis"
+
+HAnimHumanoid46.segments.append(HAnimSegment1795)
+HAnimSegment1796 = x3d.HAnimSegment()
+HAnimSegment1796.USE = "hanim_skull"
+
+HAnimHumanoid46.segments.append(HAnimSegment1796)
+HAnimSegment1797 = x3d.HAnimSegment()
+HAnimSegment1797.USE = "hanim_jaw"
+
+HAnimHumanoid46.segments.append(HAnimSegment1797)
+HAnimSegment1798 = x3d.HAnimSegment()
+HAnimSegment1798.USE = "hanim_c1"
+
+HAnimHumanoid46.segments.append(HAnimSegment1798)
+HAnimSegment1799 = x3d.HAnimSegment()
+HAnimSegment1799.USE = "hanim_c2"
+
+HAnimHumanoid46.segments.append(HAnimSegment1799)
+HAnimSegment1800 = x3d.HAnimSegment()
+HAnimSegment1800.USE = "hanim_c3"
+
+HAnimHumanoid46.segments.append(HAnimSegment1800)
+HAnimSegment1801 = x3d.HAnimSegment()
+HAnimSegment1801.USE = "hanim_c4"
+
+HAnimHumanoid46.segments.append(HAnimSegment1801)
+HAnimSegment1802 = x3d.HAnimSegment()
+HAnimSegment1802.USE = "hanim_c5"
+
+HAnimHumanoid46.segments.append(HAnimSegment1802)
+HAnimSegment1803 = x3d.HAnimSegment()
+HAnimSegment1803.USE = "hanim_c6"
+
+HAnimHumanoid46.segments.append(HAnimSegment1803)
+HAnimSegment1804 = x3d.HAnimSegment()
+HAnimSegment1804.USE = "hanim_c7"
+
+HAnimHumanoid46.segments.append(HAnimSegment1804)
+HAnimSegment1805 = x3d.HAnimSegment()
+HAnimSegment1805.USE = "hanim_t1"
+
+HAnimHumanoid46.segments.append(HAnimSegment1805)
+HAnimSegment1806 = x3d.HAnimSegment()
+HAnimSegment1806.USE = "hanim_t2"
+
+HAnimHumanoid46.segments.append(HAnimSegment1806)
+HAnimSegment1807 = x3d.HAnimSegment()
+HAnimSegment1807.USE = "hanim_t3"
+
+HAnimHumanoid46.segments.append(HAnimSegment1807)
+HAnimSegment1808 = x3d.HAnimSegment()
+HAnimSegment1808.USE = "hanim_t4"
+
+HAnimHumanoid46.segments.append(HAnimSegment1808)
+HAnimSegment1809 = x3d.HAnimSegment()
+HAnimSegment1809.USE = "hanim_t5"
+
+HAnimHumanoid46.segments.append(HAnimSegment1809)
+HAnimSegment1810 = x3d.HAnimSegment()
+HAnimSegment1810.USE = "hanim_t6"
+
+HAnimHumanoid46.segments.append(HAnimSegment1810)
+HAnimSegment1811 = x3d.HAnimSegment()
+HAnimSegment1811.USE = "hanim_t7"
+
+HAnimHumanoid46.segments.append(HAnimSegment1811)
+HAnimSegment1812 = x3d.HAnimSegment()
+HAnimSegment1812.USE = "hanim_t8"
+
+HAnimHumanoid46.segments.append(HAnimSegment1812)
+HAnimSegment1813 = x3d.HAnimSegment()
+HAnimSegment1813.USE = "hanim_t9"
+
+HAnimHumanoid46.segments.append(HAnimSegment1813)
+HAnimSegment1814 = x3d.HAnimSegment()
+HAnimSegment1814.USE = "hanim_t10"
+
+HAnimHumanoid46.segments.append(HAnimSegment1814)
+HAnimSegment1815 = x3d.HAnimSegment()
+HAnimSegment1815.USE = "hanim_t11"
+
+HAnimHumanoid46.segments.append(HAnimSegment1815)
+HAnimSegment1816 = x3d.HAnimSegment()
+HAnimSegment1816.USE = "hanim_t12"
+
+HAnimHumanoid46.segments.append(HAnimSegment1816)
+HAnimSegment1817 = x3d.HAnimSegment()
+HAnimSegment1817.USE = "hanim_l1"
+
+HAnimHumanoid46.segments.append(HAnimSegment1817)
+HAnimSegment1818 = x3d.HAnimSegment()
+HAnimSegment1818.USE = "hanim_l2"
+
+HAnimHumanoid46.segments.append(HAnimSegment1818)
+HAnimSegment1819 = x3d.HAnimSegment()
+HAnimSegment1819.USE = "hanim_l3"
+
+HAnimHumanoid46.segments.append(HAnimSegment1819)
+HAnimSegment1820 = x3d.HAnimSegment()
+HAnimSegment1820.USE = "hanim_l4"
+
+HAnimHumanoid46.segments.append(HAnimSegment1820)
+HAnimSegment1821 = x3d.HAnimSegment()
+HAnimSegment1821.USE = "hanim_l5"
+
+HAnimHumanoid46.segments.append(HAnimSegment1821)
+HAnimSegment1822 = x3d.HAnimSegment()
+HAnimSegment1822.USE = "hanim_sacrum"
+
+HAnimHumanoid46.segments.append(HAnimSegment1822)
+HAnimSegment1823 = x3d.HAnimSegment()
+HAnimSegment1823.USE = "hanim_l_calf"
+
+HAnimHumanoid46.segments.append(HAnimSegment1823)
+HAnimSegment1824 = x3d.HAnimSegment()
+HAnimSegment1824.USE = "hanim_r_calf"
+
+HAnimHumanoid46.segments.append(HAnimSegment1824)
+HAnimSegment1825 = x3d.HAnimSegment()
+HAnimSegment1825.USE = "hanim_l_clavicle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1825)
+HAnimSegment1826 = x3d.HAnimSegment()
+HAnimSegment1826.USE = "hanim_r_clavicle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1826)
+HAnimSegment1827 = x3d.HAnimSegment()
+HAnimSegment1827.USE = "hanim_l_eyeball"
+
+HAnimHumanoid46.segments.append(HAnimSegment1827)
+HAnimSegment1828 = x3d.HAnimSegment()
+HAnimSegment1828.USE = "hanim_r_eyeball"
+
+HAnimHumanoid46.segments.append(HAnimSegment1828)
+HAnimSegment1829 = x3d.HAnimSegment()
+HAnimSegment1829.USE = "hanim_l_eyebrow"
+
+HAnimHumanoid46.segments.append(HAnimSegment1829)
+HAnimSegment1830 = x3d.HAnimSegment()
+HAnimSegment1830.USE = "hanim_r_eyebrow"
+
+HAnimHumanoid46.segments.append(HAnimSegment1830)
+HAnimSegment1831 = x3d.HAnimSegment()
+HAnimSegment1831.USE = "hanim_l_eyelid"
+
+HAnimHumanoid46.segments.append(HAnimSegment1831)
+HAnimSegment1832 = x3d.HAnimSegment()
+HAnimSegment1832.USE = "hanim_r_eyelid"
+
+HAnimHumanoid46.segments.append(HAnimSegment1832)
+HAnimSegment1833 = x3d.HAnimSegment()
+HAnimSegment1833.USE = "hanim_l_forearm"
+
+HAnimHumanoid46.segments.append(HAnimSegment1833)
+HAnimSegment1834 = x3d.HAnimSegment()
+HAnimSegment1834.USE = "hanim_r_forearm"
+
+HAnimHumanoid46.segments.append(HAnimSegment1834)
+HAnimSegment1835 = x3d.HAnimSegment()
+HAnimSegment1835.USE = "hanim_l_forefoot"
+
+HAnimHumanoid46.segments.append(HAnimSegment1835)
+HAnimSegment1836 = x3d.HAnimSegment()
+HAnimSegment1836.USE = "hanim_r_forefoot"
+
+HAnimHumanoid46.segments.append(HAnimSegment1836)
+HAnimSegment1837 = x3d.HAnimSegment()
+HAnimSegment1837.USE = "hanim_l_hand"
+
+HAnimHumanoid46.segments.append(HAnimSegment1837)
+HAnimSegment1838 = x3d.HAnimSegment()
+HAnimSegment1838.USE = "hanim_r_hand"
+
+HAnimHumanoid46.segments.append(HAnimSegment1838)
+HAnimSegment1839 = x3d.HAnimSegment()
+HAnimSegment1839.USE = "hanim_l_hindfoot"
+
+HAnimHumanoid46.segments.append(HAnimSegment1839)
+HAnimSegment1840 = x3d.HAnimSegment()
+HAnimSegment1840.USE = "hanim_r_hindfoot"
+
+HAnimHumanoid46.segments.append(HAnimSegment1840)
+HAnimSegment1841 = x3d.HAnimSegment()
+HAnimSegment1841.USE = "hanim_l_index_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1841)
+HAnimSegment1842 = x3d.HAnimSegment()
+HAnimSegment1842.USE = "hanim_r_index_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1842)
+HAnimSegment1843 = x3d.HAnimSegment()
+HAnimSegment1843.USE = "hanim_l_index_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1843)
+HAnimSegment1844 = x3d.HAnimSegment()
+HAnimSegment1844.USE = "hanim_r_index_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1844)
+HAnimSegment1845 = x3d.HAnimSegment()
+HAnimSegment1845.USE = "hanim_l_index_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1845)
+HAnimSegment1846 = x3d.HAnimSegment()
+HAnimSegment1846.USE = "hanim_r_index_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1846)
+HAnimSegment1847 = x3d.HAnimSegment()
+HAnimSegment1847.USE = "hanim_l_index_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1847)
+HAnimSegment1848 = x3d.HAnimSegment()
+HAnimSegment1848.USE = "hanim_r_index_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1848)
+HAnimSegment1849 = x3d.HAnimSegment()
+HAnimSegment1849.USE = "hanim_l_middistal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1849)
+HAnimSegment1850 = x3d.HAnimSegment()
+HAnimSegment1850.USE = "hanim_r_middistal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1850)
+HAnimSegment1851 = x3d.HAnimSegment()
+HAnimSegment1851.USE = "hanim_l_middle_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1851)
+HAnimSegment1852 = x3d.HAnimSegment()
+HAnimSegment1852.USE = "hanim_r_middle_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1852)
+HAnimSegment1853 = x3d.HAnimSegment()
+HAnimSegment1853.USE = "hanim_l_middle_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1853)
+HAnimSegment1854 = x3d.HAnimSegment()
+HAnimSegment1854.USE = "hanim_r_middle_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1854)
+HAnimSegment1855 = x3d.HAnimSegment()
+HAnimSegment1855.USE = "hanim_l_middle_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1855)
+HAnimSegment1856 = x3d.HAnimSegment()
+HAnimSegment1856.USE = "hanim_r_middle_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1856)
+HAnimSegment1857 = x3d.HAnimSegment()
+HAnimSegment1857.USE = "hanim_l_middle_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1857)
+HAnimSegment1858 = x3d.HAnimSegment()
+HAnimSegment1858.USE = "hanim_r_middle_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1858)
+HAnimSegment1859 = x3d.HAnimSegment()
+HAnimSegment1859.USE = "hanim_l_midproximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1859)
+HAnimSegment1860 = x3d.HAnimSegment()
+HAnimSegment1860.USE = "hanim_r_midproximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1860)
+HAnimSegment1861 = x3d.HAnimSegment()
+HAnimSegment1861.USE = "hanim_l_pinky_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1861)
+HAnimSegment1862 = x3d.HAnimSegment()
+HAnimSegment1862.USE = "hanim_r_pinky_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1862)
+HAnimSegment1863 = x3d.HAnimSegment()
+HAnimSegment1863.USE = "hanim_l_pinky_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1863)
+HAnimSegment1864 = x3d.HAnimSegment()
+HAnimSegment1864.USE = "hanim_r_pinky_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1864)
+HAnimSegment1865 = x3d.HAnimSegment()
+HAnimSegment1865.USE = "hanim_l_pinky_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1865)
+HAnimSegment1866 = x3d.HAnimSegment()
+HAnimSegment1866.USE = "hanim_r_pinky_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1866)
+HAnimSegment1867 = x3d.HAnimSegment()
+HAnimSegment1867.USE = "hanim_l_pinky_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1867)
+HAnimSegment1868 = x3d.HAnimSegment()
+HAnimSegment1868.USE = "hanim_r_pinky_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1868)
+HAnimSegment1869 = x3d.HAnimSegment()
+HAnimSegment1869.USE = "hanim_l_ring_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1869)
+HAnimSegment1870 = x3d.HAnimSegment()
+HAnimSegment1870.USE = "hanim_r_ring_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1870)
+HAnimSegment1871 = x3d.HAnimSegment()
+HAnimSegment1871.USE = "hanim_l_ring_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1871)
+HAnimSegment1872 = x3d.HAnimSegment()
+HAnimSegment1872.USE = "hanim_r_ring_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1872)
+HAnimSegment1873 = x3d.HAnimSegment()
+HAnimSegment1873.USE = "hanim_l_ring_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1873)
+HAnimSegment1874 = x3d.HAnimSegment()
+HAnimSegment1874.USE = "hanim_r_ring_middle"
+
+HAnimHumanoid46.segments.append(HAnimSegment1874)
+HAnimSegment1875 = x3d.HAnimSegment()
+HAnimSegment1875.USE = "hanim_l_ring_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1875)
+HAnimSegment1876 = x3d.HAnimSegment()
+HAnimSegment1876.USE = "hanim_r_ring_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1876)
+HAnimSegment1877 = x3d.HAnimSegment()
+HAnimSegment1877.USE = "hanim_l_scapula"
+
+HAnimHumanoid46.segments.append(HAnimSegment1877)
+HAnimSegment1878 = x3d.HAnimSegment()
+HAnimSegment1878.USE = "hanim_r_scapula"
+
+HAnimHumanoid46.segments.append(HAnimSegment1878)
+HAnimSegment1879 = x3d.HAnimSegment()
+HAnimSegment1879.USE = "hanim_l_thigh"
+
+HAnimHumanoid46.segments.append(HAnimSegment1879)
+HAnimSegment1880 = x3d.HAnimSegment()
+HAnimSegment1880.USE = "hanim_r_thigh"
+
+HAnimHumanoid46.segments.append(HAnimSegment1880)
+HAnimSegment1881 = x3d.HAnimSegment()
+HAnimSegment1881.USE = "hanim_l_thumb_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1881)
+HAnimSegment1882 = x3d.HAnimSegment()
+HAnimSegment1882.USE = "hanim_r_thumb_distal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1882)
+HAnimSegment1883 = x3d.HAnimSegment()
+HAnimSegment1883.USE = "hanim_l_thumb_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1883)
+HAnimSegment1884 = x3d.HAnimSegment()
+HAnimSegment1884.USE = "hanim_r_thumb_metacarpal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1884)
+HAnimSegment1885 = x3d.HAnimSegment()
+HAnimSegment1885.USE = "hanim_l_thumb_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1885)
+HAnimSegment1886 = x3d.HAnimSegment()
+HAnimSegment1886.USE = "hanim_r_thumb_proximal"
+
+HAnimHumanoid46.segments.append(HAnimSegment1886)
+HAnimSegment1887 = x3d.HAnimSegment()
+HAnimSegment1887.USE = "hanim_l_upperarm"
+
+HAnimHumanoid46.segments.append(HAnimSegment1887)
+HAnimSegment1888 = x3d.HAnimSegment()
+HAnimSegment1888.USE = "hanim_r_upperarm"
+
+HAnimHumanoid46.segments.append(HAnimSegment1888)
+HAnimSite1889 = x3d.HAnimSite()
+HAnimSite1889.USE = "hanim_crotch_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1889)
+HAnimSite1890 = x3d.HAnimSite()
+HAnimSite1890.USE = "hanim_skull_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1890)
+HAnimSite1891 = x3d.HAnimSite()
+HAnimSite1891.USE = "hanim_sellion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1891)
+HAnimSite1892 = x3d.HAnimSite()
+HAnimSite1892.USE = "hanim_supramenton_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1892)
+HAnimSite1893 = x3d.HAnimSite()
+HAnimSite1893.USE = "hanim_nuchale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1893)
+HAnimSite1894 = x3d.HAnimSite()
+HAnimSite1894.USE = "hanim_suprasternale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1894)
+HAnimSite1895 = x3d.HAnimSite()
+HAnimSite1895.USE = "hanim_cervicale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1895)
+HAnimSite1896 = x3d.HAnimSite()
+HAnimSite1896.USE = "hanim_substernale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1896)
+HAnimSite1897 = x3d.HAnimSite()
+HAnimSite1897.USE = "hanim_rib10_midspine_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1897)
+HAnimSite1898 = x3d.HAnimSite()
+HAnimSite1898.USE = "hanim_waist_preferred_post_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1898)
+HAnimSite1899 = x3d.HAnimSite()
+HAnimSite1899.USE = "hanim_navel_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1899)
+HAnimSite1900 = x3d.HAnimSite()
+HAnimSite1900.USE = "hanim_l_acromion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1900)
+HAnimSite1901 = x3d.HAnimSite()
+HAnimSite1901.USE = "hanim_r_acromion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1901)
+HAnimSite1902 = x3d.HAnimSite()
+HAnimSite1902.USE = "hanim_r_asis_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1902)
+HAnimSite1903 = x3d.HAnimSite()
+HAnimSite1903.USE = "hanim_l_asis_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1903)
+HAnimSite1904 = x3d.HAnimSite()
+HAnimSite1904.USE = "hanim_l_axilla_ant_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1904)
+HAnimSite1905 = x3d.HAnimSite()
+HAnimSite1905.USE = "hanim_r_axilla_ant_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1905)
+HAnimSite1906 = x3d.HAnimSite()
+HAnimSite1906.USE = "hanim_l_axilla_post_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1906)
+HAnimSite1907 = x3d.HAnimSite()
+HAnimSite1907.USE = "hanim_r_axilla_post_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1907)
+HAnimSite1908 = x3d.HAnimSite()
+HAnimSite1908.USE = "hanim_l_calcaneous_post_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1908)
+HAnimSite1909 = x3d.HAnimSite()
+HAnimSite1909.USE = "hanim_r_calcaneous_post_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1909)
+HAnimSite1910 = x3d.HAnimSite()
+HAnimSite1910.USE = "hanim_l_clavicale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1910)
+HAnimSite1911 = x3d.HAnimSite()
+HAnimSite1911.USE = "hanim_r_clavicale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1911)
+HAnimSite1912 = x3d.HAnimSite()
+HAnimSite1912.USE = "hanim_l_dactylion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1912)
+HAnimSite1913 = x3d.HAnimSite()
+HAnimSite1913.USE = "hanim_r_dactylion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1913)
+HAnimSite1914 = x3d.HAnimSite()
+HAnimSite1914.USE = "hanim_l_digit2_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1914)
+HAnimSite1915 = x3d.HAnimSite()
+HAnimSite1915.USE = "hanim_r_digit2_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1915)
+HAnimSite1916 = x3d.HAnimSite()
+HAnimSite1916.USE = "hanim_l_femoral_lateral_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1916)
+HAnimSite1917 = x3d.HAnimSite()
+HAnimSite1917.USE = "hanim_r_femoral_lateral_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1917)
+HAnimSite1918 = x3d.HAnimSite()
+HAnimSite1918.USE = "hanim_l_femoral_medial_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1918)
+HAnimSite1919 = x3d.HAnimSite()
+HAnimSite1919.USE = "hanim_r_femoral_medial_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1919)
+HAnimSite1920 = x3d.HAnimSite()
+HAnimSite1920.USE = "hanim_l_forefoot_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1920)
+HAnimSite1921 = x3d.HAnimSite()
+HAnimSite1921.USE = "hanim_r_forefoot_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1921)
+HAnimSite1922 = x3d.HAnimSite()
+HAnimSite1922.USE = "hanim_r_gonion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1922)
+HAnimSite1923 = x3d.HAnimSite()
+HAnimSite1923.USE = "hanim_l_gonion_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1923)
+HAnimSite1924 = x3d.HAnimSite()
+HAnimSite1924.USE = "hanim_l_humeral_lateral_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1924)
+HAnimSite1925 = x3d.HAnimSite()
+HAnimSite1925.USE = "hanim_r_humeral_lateral_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1925)
+HAnimSite1926 = x3d.HAnimSite()
+HAnimSite1926.USE = "hanim_l_humeral_medial_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1926)
+HAnimSite1927 = x3d.HAnimSite()
+HAnimSite1927.USE = "hanim_r_humeral_medial_epicn_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1927)
+HAnimSite1928 = x3d.HAnimSite()
+HAnimSite1928.USE = "hanim_r_iliocristale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1928)
+HAnimSite1929 = x3d.HAnimSite()
+HAnimSite1929.USE = "hanim_l_iliocristale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1929)
+HAnimSite1930 = x3d.HAnimSite()
+HAnimSite1930.USE = "hanim_l_index_distal_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1930)
+HAnimSite1931 = x3d.HAnimSite()
+HAnimSite1931.USE = "hanim_r_index_distal_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1931)
+HAnimSite1932 = x3d.HAnimSite()
+HAnimSite1932.USE = "hanim_r_infraorbitale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1932)
+HAnimSite1933 = x3d.HAnimSite()
+HAnimSite1933.USE = "hanim_l_infraorbitale_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1933)
+HAnimSite1934 = x3d.HAnimSite()
+HAnimSite1934.USE = "hanim_l_knee_crease_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1934)
+HAnimSite1935 = x3d.HAnimSite()
+HAnimSite1935.USE = "hanim_r_knee_crease_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1935)
+HAnimSite1936 = x3d.HAnimSite()
+HAnimSite1936.USE = "hanim_l_lateral_malleolus_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1936)
+HAnimSite1937 = x3d.HAnimSite()
+HAnimSite1937.USE = "hanim_r_lateral_malleolus_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1937)
+HAnimSite1938 = x3d.HAnimSite()
+HAnimSite1938.USE = "hanim_l_medial_malleolus_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1938)
+HAnimSite1939 = x3d.HAnimSite()
+HAnimSite1939.USE = "hanim_r_medial_malleolus_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1939)
+HAnimSite1940 = x3d.HAnimSite()
+HAnimSite1940.USE = "hanim_l_metacarpal_pha2_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1940)
+HAnimSite1941 = x3d.HAnimSite()
+HAnimSite1941.USE = "hanim_r_metacarpal_pha2_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1941)
+HAnimSite1942 = x3d.HAnimSite()
+HAnimSite1942.USE = "hanim_l_metacarpal_pha5_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1942)
+HAnimSite1943 = x3d.HAnimSite()
+HAnimSite1943.USE = "hanim_r_metacarpal_pha5_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1943)
+HAnimSite1944 = x3d.HAnimSite()
+HAnimSite1944.USE = "hanim_l_metatarsal_pha1_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1944)
+HAnimSite1945 = x3d.HAnimSite()
+HAnimSite1945.USE = "hanim_r_metatarsal_pha1_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1945)
+HAnimSite1946 = x3d.HAnimSite()
+HAnimSite1946.USE = "hanim_l_metatarsal_pha5_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1946)
+HAnimSite1947 = x3d.HAnimSite()
+HAnimSite1947.USE = "hanim_r_metatarsal_pha5_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1947)
+HAnimSite1948 = x3d.HAnimSite()
+HAnimSite1948.USE = "hanim_l_middle_distal_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1948)
+HAnimSite1949 = x3d.HAnimSite()
+HAnimSite1949.USE = "hanim_r_middle_distal_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1949)
+HAnimSite1950 = x3d.HAnimSite()
+HAnimSite1950.USE = "hanim_r_neck_base_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1950)
+HAnimSite1951 = x3d.HAnimSite()
+HAnimSite1951.USE = "hanim_l_neck_base_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1951)
+HAnimSite1952 = x3d.HAnimSite()
+HAnimSite1952.USE = "hanim_l_olecranon_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1952)
+HAnimSite1953 = x3d.HAnimSite()
+HAnimSite1953.USE = "hanim_r_olecranon_pt"
+
+HAnimHumanoid46.sites.append(HAnimSite1953)
+HAnimSite1954 = x3d.HAnimSite()
+HAnimSite1954.USE = "hanim_l_pinky_distal_tip"
+
+HAnimHumanoid46.sites.append(HAnimSite1954)
+HAnimSite1955 = x3d.HAnimSite()
+HAnimSite1955.USE = "hanim_r_pinky_distal_tip"
 
-HAnimHumanoid46.addSites(HAnimSite1955)
-HAnimSite1956 = HAnimSite()
-HAnimSite1956.setUSE("hanim_r_psis_pt")
+HAnimHumanoid46.sites.append(HAnimSite1955)
+HAnimSite1956 = x3d.HAnimSite()
+HAnimSite1956.USE = "hanim_r_psis_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1956)
-HAnimSite1957 = HAnimSite()
-HAnimSite1957.setUSE("hanim_l_psis_pt")
+HAnimHumanoid46.sites.append(HAnimSite1956)
+HAnimSite1957 = x3d.HAnimSite()
+HAnimSite1957.USE = "hanim_l_psis_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1957)
-HAnimSite1958 = HAnimSite()
-HAnimSite1958.setUSE("hanim_l_radial_styloid_pt")
+HAnimHumanoid46.sites.append(HAnimSite1957)
+HAnimSite1958 = x3d.HAnimSite()
+HAnimSite1958.USE = "hanim_l_radial_styloid_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1958)
-HAnimSite1959 = HAnimSite()
-HAnimSite1959.setUSE("hanim_r_radial_styloid_pt")
+HAnimHumanoid46.sites.append(HAnimSite1958)
+HAnimSite1959 = x3d.HAnimSite()
+HAnimSite1959.USE = "hanim_r_radial_styloid_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1959)
-HAnimSite1960 = HAnimSite()
-HAnimSite1960.setUSE("hanim_l_radiale_pt")
+HAnimHumanoid46.sites.append(HAnimSite1959)
+HAnimSite1960 = x3d.HAnimSite()
+HAnimSite1960.USE = "hanim_l_radiale_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1960)
-HAnimSite1961 = HAnimSite()
-HAnimSite1961.setUSE("hanim_r_radiale_pt")
+HAnimHumanoid46.sites.append(HAnimSite1960)
+HAnimSite1961 = x3d.HAnimSite()
+HAnimSite1961.USE = "hanim_r_radiale_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1961)
-HAnimSite1962 = HAnimSite()
-HAnimSite1962.setUSE("hanim_r_rib10_pt")
+HAnimHumanoid46.sites.append(HAnimSite1961)
+HAnimSite1962 = x3d.HAnimSite()
+HAnimSite1962.USE = "hanim_r_rib10_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1962)
-HAnimSite1963 = HAnimSite()
-HAnimSite1963.setUSE("hanim_l_rib10_pt")
+HAnimHumanoid46.sites.append(HAnimSite1962)
+HAnimSite1963 = x3d.HAnimSite()
+HAnimSite1963.USE = "hanim_l_rib10_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1963)
-HAnimSite1964 = HAnimSite()
-HAnimSite1964.setUSE("hanim_l_ring_distal_tip")
+HAnimHumanoid46.sites.append(HAnimSite1963)
+HAnimSite1964 = x3d.HAnimSite()
+HAnimSite1964.USE = "hanim_l_ring_distal_tip"
 
-HAnimHumanoid46.addSites(HAnimSite1964)
-HAnimSite1965 = HAnimSite()
-HAnimSite1965.setUSE("hanim_r_ring_distal_tip")
+HAnimHumanoid46.sites.append(HAnimSite1964)
+HAnimSite1965 = x3d.HAnimSite()
+HAnimSite1965.USE = "hanim_r_ring_distal_tip"
 
-HAnimHumanoid46.addSites(HAnimSite1965)
-HAnimSite1966 = HAnimSite()
-HAnimSite1966.setUSE("hanim_temporomandibular_l_site_pt")
+HAnimHumanoid46.sites.append(HAnimSite1965)
+HAnimSite1966 = x3d.HAnimSite()
+HAnimSite1966.USE = "hanim_temporomandibular_l_site_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1966)
-HAnimSite1967 = HAnimSite()
-HAnimSite1967.setUSE("hanim_temporomandibular_r_site_pt")
+HAnimHumanoid46.sites.append(HAnimSite1966)
+HAnimSite1967 = x3d.HAnimSite()
+HAnimSite1967.USE = "hanim_temporomandibular_r_site_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1967)
-HAnimSite1968 = HAnimSite()
-HAnimSite1968.setUSE("hanim_l_sphyrion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1967)
+HAnimSite1968 = x3d.HAnimSite()
+HAnimSite1968.USE = "hanim_l_sphyrion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1968)
-HAnimSite1969 = HAnimSite()
-HAnimSite1969.setUSE("hanim_r_sphyrion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1968)
+HAnimSite1969 = x3d.HAnimSite()
+HAnimSite1969.USE = "hanim_r_sphyrion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1969)
-HAnimSite1970 = HAnimSite()
-HAnimSite1970.setUSE("hanim_r_thelion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1969)
+HAnimSite1970 = x3d.HAnimSite()
+HAnimSite1970.USE = "hanim_r_thelion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1970)
-HAnimSite1971 = HAnimSite()
-HAnimSite1971.setUSE("hanim_l_thelion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1970)
+HAnimSite1971 = x3d.HAnimSite()
+HAnimSite1971.USE = "hanim_l_thelion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1971)
-HAnimSite1972 = HAnimSite()
-HAnimSite1972.setUSE("hanim_l_thumb_distal_tip")
+HAnimHumanoid46.sites.append(HAnimSite1971)
+HAnimSite1972 = x3d.HAnimSite()
+HAnimSite1972.USE = "hanim_l_thumb_distal_tip"
 
-HAnimHumanoid46.addSites(HAnimSite1972)
-HAnimSite1973 = HAnimSite()
-HAnimSite1973.setUSE("hanim_r_thumb_distal_tip")
+HAnimHumanoid46.sites.append(HAnimSite1972)
+HAnimSite1973 = x3d.HAnimSite()
+HAnimSite1973.USE = "hanim_r_thumb_distal_tip"
 
-HAnimHumanoid46.addSites(HAnimSite1973)
-HAnimSite1974 = HAnimSite()
-HAnimSite1974.setUSE("hanim_r_tragion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1973)
+HAnimSite1974 = x3d.HAnimSite()
+HAnimSite1974.USE = "hanim_r_tragion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1974)
-HAnimSite1975 = HAnimSite()
-HAnimSite1975.setUSE("hanim_l_tragion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1974)
+HAnimSite1975 = x3d.HAnimSite()
+HAnimSite1975.USE = "hanim_l_tragion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1975)
-HAnimSite1976 = HAnimSite()
-HAnimSite1976.setUSE("hanim_r_trochanterion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1975)
+HAnimSite1976 = x3d.HAnimSite()
+HAnimSite1976.USE = "hanim_r_trochanterion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1976)
-HAnimSite1977 = HAnimSite()
-HAnimSite1977.setUSE("hanim_l_trochanterion_pt")
+HAnimHumanoid46.sites.append(HAnimSite1976)
+HAnimSite1977 = x3d.HAnimSite()
+HAnimSite1977.USE = "hanim_l_trochanterion_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1977)
-HAnimSite1978 = HAnimSite()
-HAnimSite1978.setUSE("hanim_l_ulnar_styloid_pt")
+HAnimHumanoid46.sites.append(HAnimSite1977)
+HAnimSite1978 = x3d.HAnimSite()
+HAnimSite1978.USE = "hanim_l_ulnar_styloid_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1978)
-HAnimSite1979 = HAnimSite()
-HAnimSite1979.setUSE("hanim_r_ulnar_styloid_pt")
+HAnimHumanoid46.sites.append(HAnimSite1978)
+HAnimSite1979 = x3d.HAnimSite()
+HAnimSite1979.USE = "hanim_r_ulnar_styloid_pt"
 
-HAnimHumanoid46.addSites(HAnimSite1979)
+HAnimHumanoid46.sites.append(HAnimSite1979)
 
-Scene32.addChildren(HAnimHumanoid46)
+Scene32.children.append(HAnimHumanoid46)
 
-X3D0.setScene(Scene32)
-X3D0.toFileX3D("././HAnim1SpecificationLOA3Illustrated_RoundTrip.x3d")
+X3D0.Scene = Scene32
+f = open("././HAnim1SpecificationLOA3Illustrated_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

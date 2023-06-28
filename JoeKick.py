@@ -1,3576 +1,3673 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("4.0")
-head1 = head()
-component2 = component()
-component2.setName("HAnim")
-component2.setLevel(1)
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "4.0"
+head1 = x3d.head()
+component2 = x3d.component()
+component2.name = "HAnim"
+component2.level = 1
 
-head1.addComponent(component2)
-meta3 = meta()
-meta3.setName("title")
-meta3.setContent("JoeKick.x3d")
+head1.children.append(component2)
+meta3 = x3d.meta()
+meta3.name = "title"
+meta3.content = "JoeKick.x3d"
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("description")
-meta4.setContent("This Joe model is a HAnim version 2 LOA-3 Humanoid with textured skin based on the original HAnim Specification and data from CAESAR models.")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "description"
+meta4.content = "This Joe model is a HAnim version 2 LOA-3 Humanoid with textured skin based on the original HAnim Specification and data from CAESAR models."
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("creator")
-meta5.setContent("Joe Williams")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "creator"
+meta5.content = "Joe D. Williams"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("created")
-meta6.setContent("9 January 2004")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "created"
+meta6.content = "9 January 2004"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("translated")
-meta7.setContent("12 January 2017")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "translated"
+meta7.content = "12 January 2017"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("modified")
-meta8.setContent("5 July 2020")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "modified"
+meta8.content = "29 January 2023"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("TODO")
-meta9.setContent("Record information about skin coordinates (found in comment at end of scene) as a structured MetadataSet containing MetadataString nodes")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "TODO"
+meta9.content = "Record information about skin coordinates (found in comment at end of scene) as a structured MetadataSet containing MetadataString nodes"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("translators")
-meta10.setContent("Roy Walmsley, Don Brutzman, John Carlson")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "translators"
+meta10.content = "Roy Walmsley, Don Brutzman, John Carlson"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("reference")
-meta11.setContent("../Characters/JoeSkinTexcoordDisplacerKick.x3d")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "reference"
+meta11.content = "../Characters/JoeSkinTexcoordDisplacerKick.x3d"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("identifier")
-meta12.setContent("https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JoeKick.x3d")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "identifier"
+meta12.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JoeKick.x3d"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("generator")
-meta13.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "generator"
+meta13.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta13)
-meta14 = meta()
-meta14.setName("generator")
-meta14.setContent("BS studio translation from .x3dv by Joe using BS Contact")
+head1.children.append(meta13)
+meta14 = x3d.meta()
+meta14.name = "generator"
+meta14.content = "BS studio translation from .x3dv by Joe using BS Contact"
 
-head1.addMeta(meta14)
-meta15 = meta()
-meta15.setName("license")
-meta15.setContent("../license.html")
+head1.children.append(meta14)
+meta15 = x3d.meta()
+meta15.name = "license"
+meta15.content = "../license.html"
 
-head1.addMeta(meta15)
+head1.children.append(meta15)
 
-X3D0.setHead(head1)
-Scene16 = Scene()
-WorldInfo17 = WorldInfo()
-WorldInfo17.setInfo(["X3D Humanoid LOA3 skeleton","skin from hanim sites, surface features, and some added points","390 points"])
-WorldInfo17.setTitle("X3D HANIM LOA3 Skeleton, 390 point Skin, texcoords, Displacer, teTrans for Joe_ by Joe")
+X3D0.head = head1
+Scene16 = x3d.Scene()
+WorldInfo17 = x3d.WorldInfo()
+WorldInfo17.info = ["X3D Humanoid LOA3 skeleton","skin from hanim sites, surface features, and some added points","390 points"]
+WorldInfo17.title = "X3D HANIM LOA3 Skeleton, 390 point Skin, texcoords, Displacer, teTrans for Joe_ by Joe"
 
-Scene16.addChildren(WorldInfo17)
-NavigationInfo18 = NavigationInfo()
-NavigationInfo18.setDEF("Start_NavigationInfo")
-NavigationInfo18.setHeadlight(False)
-NavigationInfo18.setSpeed(2.5)
+Scene16.children.append(WorldInfo17)
+NavigationInfo18 = x3d.NavigationInfo()
+NavigationInfo18.DEF = "Start_NavigationInfo"
+NavigationInfo18.headlight = False
+NavigationInfo18.speed = 2.5
 
-Scene16.addChildren(NavigationInfo18)
-Background19 = Background()
-Background19.setDEF("blue_Background")
+Scene16.children.append(NavigationInfo18)
+Background19 = x3d.Background()
+Background19.DEF = "blue_Background"
 
-Scene16.addChildren(Background19)
-SpotLight20 = SpotLight()
-SpotLight20.setDEF("light1")
-SpotLight20.setAmbientIntensity(0.7)
-SpotLight20.setBeamWidth(1.5)
-SpotLight20.setColor([0.8,0.8,1])
-SpotLight20.setCutOffAngle(0.6)
-SpotLight20.setDirection([0,0,0])
-SpotLight20.setLocation([0,3,3])
-SpotLight20.setRadius(10)
+Scene16.children.append(Background19)
+SpotLight20 = x3d.SpotLight()
+SpotLight20.DEF = "light1"
+SpotLight20.ambientIntensity = 0.7
+SpotLight20.beamWidth = 1.5
+SpotLight20.color = [0.8,0.8,1]
+SpotLight20.cutOffAngle = 0.6
+SpotLight20.direction = [0,0,0]
+SpotLight20.location = [0,3,3]
+SpotLight20.radius = 10
 
-Scene16.addChildren(SpotLight20)
-PointLight21 = PointLight()
-PointLight21.setDEF("light2")
-PointLight21.setAmbientIntensity(0.7)
-PointLight21.setColor([0.8,0.8,1])
-PointLight21.setLocation([0,10,-7])
+Scene16.children.append(SpotLight20)
+PointLight21 = x3d.PointLight()
+PointLight21.DEF = "light2"
+PointLight21.ambientIntensity = 0.7
+PointLight21.color = [0.8,0.8,1]
+PointLight21.location = [0,10,-7]
 
-Scene16.addChildren(PointLight21)
+Scene16.children.append(PointLight21)
 #External from the Humanoid viewpoints
-Viewpoint22 = Viewpoint()
-Viewpoint22.setDEF("Scene_InclinedView")
-Viewpoint22.setCenterOfRotation([0,0.85,0])
-Viewpoint22.setDescription("Scene_Inclined View")
-Viewpoint22.setOrientation([-0.113,0.993,0.0347,0.671])
-Viewpoint22.setPosition([1.62,1.05,3.06])
+Viewpoint22 = x3d.Viewpoint()
+Viewpoint22.DEF = "Scene_InclinedView"
+Viewpoint22.centerOfRotation = [0,0.85,0]
+Viewpoint22.description = "Scene_Inclined View"
+Viewpoint22.orientation = [-0.113,0.993,0.0347,0.671]
+Viewpoint22.position = [1.62,1.05,3.06]
 
-Scene16.addChildren(Viewpoint22)
-Viewpoint23 = Viewpoint()
-Viewpoint23.setDEF("Scene_IFrontView")
-Viewpoint23.setCenterOfRotation([0,0.8,0])
-Viewpoint23.setDescription("Scene_Front View")
-Viewpoint23.setPosition([0,0.8,2.58])
+Scene16.children.append(Viewpoint22)
+Viewpoint23 = x3d.Viewpoint()
+Viewpoint23.DEF = "Scene_IFrontView"
+Viewpoint23.centerOfRotation = [0,0.8,0]
+Viewpoint23.description = "Scene_Front View"
+Viewpoint23.position = [0,0.8,2.58]
 
-Scene16.addChildren(Viewpoint23)
-Viewpoint24 = Viewpoint()
-Viewpoint24.setDEF("Scene_ISideView")
-Viewpoint24.setCenterOfRotation([0,0.8,0])
-Viewpoint24.setDescription("Scene_Side View")
-Viewpoint24.setOrientation([0,1,0,1.5708])
-Viewpoint24.setPosition([2.6,0.8,0])
+Scene16.children.append(Viewpoint23)
+Viewpoint24 = x3d.Viewpoint()
+Viewpoint24.DEF = "Scene_ISideView"
+Viewpoint24.centerOfRotation = [0,0.8,0]
+Viewpoint24.description = "Scene_Side View"
+Viewpoint24.orientation = [0,1,0,1.5708]
+Viewpoint24.position = [2.6,0.8,0]
 
-Scene16.addChildren(Viewpoint24)
-Viewpoint25 = Viewpoint()
-Viewpoint25.setDEF("Scene_BackView")
-Viewpoint25.setCenterOfRotation([0,1.5,0])
-Viewpoint25.setDescription("Scene_Back View")
-Viewpoint25.setOrientation([0,1,0,3.14])
-Viewpoint25.setPosition([0,1.5,-3])
+Scene16.children.append(Viewpoint24)
+Viewpoint25 = x3d.Viewpoint()
+Viewpoint25.DEF = "Scene_BackView"
+Viewpoint25.centerOfRotation = [0,1.5,0]
+Viewpoint25.description = "Scene_Back View"
+Viewpoint25.orientation = [0,1,0,3.14]
+Viewpoint25.position = [0,1.5,-3]
 
-Scene16.addChildren(Viewpoint25)
-Viewpoint26 = Viewpoint()
-Viewpoint26.setDEF("Scene_TopView")
-Viewpoint26.setCenterOfRotation([0,1.5,0])
-Viewpoint26.setDescription("Scene_Top View")
-Viewpoint26.setOrientation([1,0,0,-1.5708])
-Viewpoint26.setPosition([0,3.5,0])
+Scene16.children.append(Viewpoint25)
+Viewpoint26 = x3d.Viewpoint()
+Viewpoint26.DEF = "Scene_TopView"
+Viewpoint26.centerOfRotation = [0,1.5,0]
+Viewpoint26.description = "Scene_Top View"
+Viewpoint26.orientation = [1,0,0,-1.5708]
+Viewpoint26.position = [0,3.5,0]
 
-Scene16.addChildren(Viewpoint26)
-Group27 = Group()
-Group27.setDEF("Joe_Humanoid")
-HAnimHumanoid28 = HAnimHumanoid()
-HAnimHumanoid28.setName("Human")
-HAnimHumanoid28.setDEF("Joe_Human")
-HAnimHumanoid28.setLoa(3)
-HAnimHumanoid28.setVersion("2.0")
-MetadataSet29 = MetadataSet()
-MetadataSet29.setName("warnings")
-MetadataSet29.setReference("HAnim")
-MetadataString30 = MetadataString()
-MetadataString30.setName("SymmetricalLeftRight")
-MetadataString30.setReference("correction options: ignore, warn, average, left, right, largest, smallest")
-MetadataString30.setValue(["ignore"])
+Scene16.children.append(Viewpoint26)
+Group27 = x3d.Group()
+Group27.DEF = "Joe_Humanoid"
+HAnimHumanoid28 = x3d.HAnimHumanoid()
+HAnimHumanoid28.name = "Kick"
+HAnimHumanoid28.DEF = "Joe_Kick"
+HAnimHumanoid28.loa = 3
+HAnimHumanoid28.version = "2.0"
+MetadataSet29 = x3d.MetadataSet()
+MetadataSet29.name = "warnings"
+MetadataSet29.reference = "HAnim"
+MetadataString30 = x3d.MetadataString()
+MetadataString30.name = "SymmetricalLeftRight"
+MetadataString30.reference = "correction options: ignore, warn, average, left, right, largest, smallest"
+MetadataString30.value = ["ignore"]
 
-MetadataSet29.setValue(MetadataString30)
+MetadataSet29.value.append(MetadataString30)
 
-HAnimHumanoid28.setValue(MetadataSet29)
-HAnimJoint31 = HAnimJoint()
-HAnimJoint31.setName("humanoid_root")
-HAnimJoint31.setDEF("Joe_humanoid_root")
-HAnimJoint31.setCenter([0,0.875,0])
-HAnimJoint31.setStiffness([0,0,0])
-HAnimSegment32 = HAnimSegment()
-HAnimSegment32.setName("sacrum")
-HAnimSegment32.setDEF("Joe_sacrum")
-HAnimSite33 = HAnimSite()
-HAnimSite33.setName("RootFront_view")
-HAnimSite33.setDEF("Joe_RootFront_view")
-Transform34 = Transform()
-Transform34.setDEF("hanimcordsys")
-Transform34.setScale([0.175,0.175,0.175])
-Viewpoint35 = Viewpoint()
-Viewpoint35.setDEF("ViewBodyRootAxes")
-Viewpoint35.setDescription("Joe_HAnim Root HAnimSite Coordinate Axes View")
+HAnimHumanoid28.metadata.append(MetadataSet29)
+HAnimJoint31 = x3d.HAnimJoint()
+HAnimJoint31.name = "humanoid_root"
+HAnimJoint31.DEF = "Joe_humanoid_root"
+HAnimJoint31.center = [0,0.875,0]
+HAnimJoint31.ulimit = [0,0,0]
+HAnimJoint31.llimit = [0,0,0]
+HAnimSegment32 = x3d.HAnimSegment()
+HAnimSegment32.name = "sacrum"
+HAnimSegment32.DEF = "Joe_sacrum"
+HAnimSite33 = x3d.HAnimSite()
+HAnimSite33.name = "RootFront_view"
+HAnimSite33.DEF = "Joe_RootFront_view"
+Transform34 = x3d.Transform()
+Transform34.DEF = "hanimcordsys"
+Transform34.scale = [0.175,0.175,0.175]
+Viewpoint35 = x3d.Viewpoint()
+Viewpoint35.DEF = "ViewBodyRootAxes"
+Viewpoint35.description = "Joe_HAnim Root HAnimSite Coordinate Axes View"
 
-Transform34.addChildren(Viewpoint35)
-Shape36 = Shape()
-Shape36.setDEF("AxisLinesShape")
+Transform34.children.append(Viewpoint35)
+Shape36 = x3d.Shape()
+Shape36.DEF = "AxisLinesShape"
 #RGB lines showing XYZ axes
-IndexedLineSet37 = IndexedLineSet()
-IndexedLineSet37.setColorIndex([0,1,2])
-IndexedLineSet37.setColorPerVertex(False)
-IndexedLineSet37.setCoordIndex([0,1,-1,0,2,-1,0,3,-1])
-Coordinate38 = Coordinate()
-Coordinate38.setPoint([0,0,0,1,0,0,0,1,0,0,0,1])
-
-IndexedLineSet37.setCoord(Coordinate38)
-Color39 = Color()
-Color39.setColor([1,0,0,0,0.6,0,0,0,1])
-
-IndexedLineSet37.setColor(Color39)
-
-Shape36.setGeometry(IndexedLineSet37)
-
-Transform34.addChildren(Shape36)
-
-HAnimSite33.addChildren(Transform34)
-
-HAnimSegment32.addChildren(HAnimSite33)
-
-HAnimJoint31.addChildren(HAnimSegment32)
-HAnimJoint40 = HAnimJoint()
-HAnimJoint40.setName("sacroiliac")
-HAnimJoint40.setDEF("Joe_sacroiliac")
-HAnimJoint40.setCenter([0,0.92,0])
-HAnimJoint40.setSkinCoordIndex([17,19,20,21,22,23,26,27,73,82,89,91,93])
-HAnimJoint40.setSkinCoordWeight([1,1,1,1,1,1,1,1,1,1,0.35,0.35,1])
-HAnimJoint40.setStiffness([0,0,0])
-HAnimJoint41 = HAnimJoint()
-HAnimJoint41.setName("l_hip")
-HAnimJoint41.setDEF("Joe_l_hip")
-HAnimJoint41.setCenter([0.1,0.92,0])
-HAnimJoint41.setSkinCoordIndex([89,90,94,95,96,97])
-HAnimJoint41.setSkinCoordWeight([0.65,1,1,1,1,1])
-HAnimJoint41.setStiffness([0,0,0])
-HAnimJoint42 = HAnimJoint()
-HAnimJoint42.setName("l_knee")
-HAnimJoint42.setDEF("Joe_l_knee")
-HAnimJoint42.setCenter([0.115,0.466,0])
-HAnimJoint42.setSkinCoordIndex([334,335,336,337,338,339,340,341])
-HAnimJoint42.setSkinCoordWeight([1,1,1,1,1,1,1,1])
-HAnimJoint42.setStiffness([0,0,0])
-HAnimJoint43 = HAnimJoint()
-HAnimJoint43.setName("l_talocrural")
-HAnimJoint43.setDEF("Joe_l_talocrural")
-HAnimJoint43.setCenter([0.115,0.069,0])
-HAnimJoint43.setSkinCoordIndex([342,343,344,345])
-HAnimJoint43.setSkinCoordWeight([1,1,1,1])
-HAnimJoint43.setStiffness([0,0,0])
-HAnimJoint44 = HAnimJoint()
-HAnimJoint44.setName("l_tarsometatarsal_2")
-HAnimJoint44.setDEF("Joe_l_tarsometatarsal_2")
-HAnimJoint44.setCenter([0.115,0.031,0.03])
-HAnimJoint44.setSkinCoordIndex([346,347,348,71])
-HAnimJoint44.setSkinCoordWeight([1,1,1,1])
-HAnimJoint44.setStiffness([0,0,0])
-HAnimJoint45 = HAnimJoint()
-HAnimJoint45.setName("l_metatarsophalangeal_2")
-HAnimJoint45.setDEF("Joe_l_metatarsophalangeal_2")
-HAnimJoint45.setCenter([0.115,0.037,0.09])
-HAnimJoint45.setSkinCoordIndex([349,350,351,352])
-HAnimJoint45.setSkinCoordWeight([1,1,1,1])
-HAnimJoint45.setStiffness([0,0,0])
-HAnimJoint46 = HAnimJoint()
-HAnimJoint46.setName("l_tarsal_distal_interphalangeal_2")
-HAnimJoint46.setDEF("Joe_l_tarsal_distal_interphalangeal_2")
-HAnimJoint46.setCenter([0.115,0.02,0.122])
-HAnimJoint46.setSkinCoordIndex([353,354,355,356,357,358,359,360,361])
-HAnimJoint46.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint46.setStiffness([0,0,0])
-
-HAnimJoint45.addChildren(HAnimJoint46)
-
-HAnimJoint44.addChildren(HAnimJoint45)
-
-HAnimJoint43.addChildren(HAnimJoint44)
-
-HAnimJoint42.addChildren(HAnimJoint43)
-
-HAnimJoint41.addChildren(HAnimJoint42)
-
-HAnimJoint40.addChildren(HAnimJoint41)
-HAnimJoint47 = HAnimJoint()
-HAnimJoint47.setName("r_hip")
-HAnimJoint47.setDEF("Joe_r_hip")
-HAnimJoint47.setCenter([-0.1,0.92,0])
-HAnimJoint47.setSkinCoordIndex([91,92,98,99,100,101,362,363])
-HAnimJoint47.setSkinCoordWeight([0.65,1,0.8,1,1,1,0.4,0.8])
-HAnimJoint47.setStiffness([0,0,0])
-HAnimJoint48 = HAnimJoint()
-HAnimJoint48.setName("r_knee")
-HAnimJoint48.setDEF("Joe_r_knee")
-HAnimJoint48.setCenter([-0.05,0.466,0])
-HAnimJoint48.setSkinCoordIndex([362,363,364,365,366,367,368,369,98])
-HAnimJoint48.setSkinCoordWeight([0.6,0.2,1,1,1,1,1,1,0.2])
-HAnimJoint48.setStiffness([0,0,0])
-HAnimJoint49 = HAnimJoint()
-HAnimJoint49.setName("r_talocrural")
-HAnimJoint49.setDEF("Joe_r_talocrural")
-HAnimJoint49.setCenter([-0.115,0.069,0])
-HAnimJoint49.setSkinCoordIndex([370,371,372,373])
-HAnimJoint49.setSkinCoordWeight([1,1,1,1])
-HAnimJoint49.setStiffness([0,0,0])
-HAnimJoint50 = HAnimJoint()
-HAnimJoint50.setName("r_tarsometatarsal_2")
-HAnimJoint50.setDEF("Joe_r_tarsometatarsal_2")
-HAnimJoint50.setCenter([-0.1,0.015,-0.01])
-HAnimJoint50.setSkinCoordIndex([374,375,376])
-HAnimJoint50.setSkinCoordWeight([1,1,1])
-HAnimJoint50.setStiffness([0,0,0])
-HAnimJoint51 = HAnimJoint()
-HAnimJoint51.setName("r_metatarsophalangeal_2")
-HAnimJoint51.setDEF("Joe_r_metatarsophalangeal_2")
-HAnimJoint51.setCenter([-0.115,0.037,0.09])
-HAnimJoint51.setSkinCoordIndex([377,378,379,380])
-HAnimJoint51.setSkinCoordWeight([1,1,1,1])
-HAnimJoint51.setStiffness([0,0,0])
-HAnimJoint52 = HAnimJoint()
-HAnimJoint52.setName("r_tarsal_distal_interphalangeal_2")
-HAnimJoint52.setDEF("Joe_r_tarsal_distal_interphalangeal_2")
-HAnimJoint52.setCenter([-0.1,0.01,0.14])
-HAnimJoint52.setSkinCoordIndex([381,382,383,384,385,386,387,388,389])
-HAnimJoint52.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint52.setStiffness([0,0,0])
-
-HAnimJoint51.addChildren(HAnimJoint52)
-
-HAnimJoint50.addChildren(HAnimJoint51)
-
-HAnimJoint49.addChildren(HAnimJoint50)
-
-HAnimJoint48.addChildren(HAnimJoint49)
-
-HAnimJoint47.addChildren(HAnimJoint48)
-
-HAnimJoint40.addChildren(HAnimJoint47)
-
-HAnimJoint31.addChildren(HAnimJoint40)
-HAnimJoint53 = HAnimJoint()
-HAnimJoint53.setName("vl5")
-HAnimJoint53.setDEF("Joe_vl5")
-HAnimJoint53.setCenter([0,1.045,-0.095])
-HAnimJoint53.setSkinCoordIndex([28,76])
-HAnimJoint53.setSkinCoordWeight([1,1])
-HAnimJoint53.setStiffness([0,0,0])
-HAnimJoint54 = HAnimJoint()
-HAnimJoint54.setName("vl4")
-HAnimJoint54.setDEF("Joe_vl4")
-HAnimJoint54.setCenter([0,1.068,-0.085])
-HAnimJoint54.setStiffness([0,0,0])
-HAnimJoint55 = HAnimJoint()
-HAnimJoint55.setName("vl3")
-HAnimJoint55.setDEF("Joe_vl3")
-HAnimJoint55.setCenter([0,1.092,-0.0725])
-HAnimJoint55.setStiffness([0,0,0])
-HAnimJoint56 = HAnimJoint()
-HAnimJoint56.setName("vl2")
-HAnimJoint56.setDEF("Joe_vl2")
-HAnimJoint56.setCenter([0,1.12,-0.065])
-HAnimJoint56.setSkinCoordIndex([16,18,25,83,84,85,86,87,88])
-HAnimJoint56.setSkinCoordWeight([1,1,1,1,1,1,0.7,1,0.8])
-HAnimJoint56.setStiffness([0,0,0])
-HAnimJoint57 = HAnimJoint()
-HAnimJoint57.setName("vl1")
-HAnimJoint57.setDEF("Joe_vl1")
-HAnimJoint57.setCenter([0,1.1459,-0.0625])
-HAnimJoint57.setStiffness([0,0,0])
-HAnimJoint58 = HAnimJoint()
-HAnimJoint58.setName("vt12")
-HAnimJoint58.setDEF("Joe_vt12")
-HAnimJoint58.setCenter([0,1.179,-0.068])
-HAnimJoint58.setStiffness([0,0,0])
-HAnimJoint59 = HAnimJoint()
-HAnimJoint59.setName("vt11")
-HAnimJoint59.setDEF("Joe_vt11")
-HAnimJoint59.setCenter([0,1.2679,-0.081])
-HAnimJoint59.setStiffness([0,0,0])
-HAnimJoint60 = HAnimJoint()
-HAnimJoint60.setName("vt10")
-HAnimJoint60.setDEF("Joe_vt10")
-HAnimJoint60.setCenter([0,1.242,-0.09])
-HAnimJoint60.setSkinCoordIndex([15])
-HAnimJoint60.setSkinCoordWeight([1])
-HAnimJoint60.setStiffness([0,0,0])
-HAnimJoint61 = HAnimJoint()
-HAnimJoint61.setName("vt9")
-HAnimJoint61.setDEF("Joe_vt9")
-HAnimJoint61.setCenter([0,1.268,-0.1])
-HAnimJoint61.setSkinCoordIndex([13,14])
-HAnimJoint61.setSkinCoordWeight([1,1])
-HAnimJoint61.setStiffness([0,0,0])
-HAnimJoint62 = HAnimJoint()
-HAnimJoint62.setName("vt8")
-HAnimJoint62.setDEF("Joe_vt8")
-HAnimJoint62.setCenter([0,1.294,-0.11])
-HAnimJoint62.setStiffness([0,0,0])
-HAnimJoint63 = HAnimJoint()
-HAnimJoint63.setName("vt7")
-HAnimJoint63.setDEF("Joe_vt7")
-HAnimJoint63.setCenter([0,1.323,-0.1155])
-HAnimJoint63.setStiffness([0,0,0])
-HAnimJoint64 = HAnimJoint()
-HAnimJoint64.setName("vt6")
-HAnimJoint64.setDEF("Joe_vt6")
-HAnimJoint64.setCenter([0,1.352,-0.12])
-HAnimJoint64.setStiffness([0,0,0])
-HAnimJoint65 = HAnimJoint()
-HAnimJoint65.setName("vt5")
-HAnimJoint65.setDEF("Joe_vt5")
-HAnimJoint65.setCenter([0,1.381,-0.1235])
-HAnimJoint65.setStiffness([0,0,0])
-HAnimJoint66 = HAnimJoint()
-HAnimJoint66.setName("vt4")
-HAnimJoint66.setDEF("Joe_vt4")
-HAnimJoint66.setCenter([0,1.41,-0.1235])
-HAnimJoint66.setSkinCoordIndex([81])
-HAnimJoint66.setSkinCoordWeight([1])
-HAnimJoint66.setStiffness([0,0,0])
-HAnimJoint67 = HAnimJoint()
-HAnimJoint67.setName("vt3")
-HAnimJoint67.setDEF("Joe_vt3")
-HAnimJoint67.setCenter([0,1.438,-0.12])
-HAnimJoint67.setStiffness([0,0,0])
-HAnimJoint68 = HAnimJoint()
-HAnimJoint68.setName("vt2")
-HAnimJoint68.setDEF("Joe_vt2")
-HAnimJoint68.setCenter([0,1.468,-0.105])
-HAnimJoint68.setStiffness([0,0,0])
-HAnimJoint69 = HAnimJoint()
-HAnimJoint69.setName("vt1")
-HAnimJoint69.setDEF("Joe_vt1")
-HAnimJoint69.setCenter([0,1.497,-0.09])
-HAnimJoint69.setSkinCoordIndex([11,24])
-HAnimJoint69.setSkinCoordWeight([1,1])
-HAnimJoint69.setStiffness([0,0,0])
-HAnimJoint70 = HAnimJoint()
-HAnimJoint70.setName("vc7")
-HAnimJoint70.setDEF("Joe_vc7")
-HAnimJoint70.setCenter([0,1.525,-0.072])
-HAnimJoint70.setSkinCoordIndex([74,75])
-HAnimJoint70.setSkinCoordWeight([1,1])
-HAnimJoint70.setStiffness([0,0,0])
-HAnimJoint71 = HAnimJoint()
-HAnimJoint71.setName("vc6")
-HAnimJoint71.setDEF("Joe_vc6")
-HAnimJoint71.setCenter([0,1.54,-0.05])
-HAnimJoint71.setStiffness([0,0,0])
-HAnimJoint72 = HAnimJoint()
-HAnimJoint72.setName("vc5")
-HAnimJoint72.setDEF("Joe_vc5")
-HAnimJoint72.setCenter([0,1.552,-0.035])
-HAnimJoint72.setStiffness([0,0,0])
-HAnimJoint73 = HAnimJoint()
-HAnimJoint73.setName("vc4")
-HAnimJoint73.setDEF("Joe_vc4")
-HAnimJoint73.setCenter([0,1.5675,-0.0256])
-HAnimJoint73.setStiffness([0,0,0])
-HAnimJoint74 = HAnimJoint()
-HAnimJoint74.setName("vc3")
-HAnimJoint74.setDEF("Joe_vc3")
-HAnimJoint74.setCenter([0,1.58225,-0.0185])
-HAnimJoint74.setStiffness([0,0,0])
-HAnimJoint75 = HAnimJoint()
-HAnimJoint75.setName("vc2")
-HAnimJoint75.setDEF("Joe_vc2")
-HAnimJoint75.setCenter([0,1.595,-0.0175])
-HAnimJoint75.setStiffness([0,0,0])
-HAnimJoint76 = HAnimJoint()
-HAnimJoint76.setName("vc1")
-HAnimJoint76.setDEF("Joe_vc1")
-HAnimJoint76.setCenter([0,1.61,-0.015])
-HAnimJoint76.setStiffness([0,0,0])
-HAnimJoint77 = HAnimJoint()
-HAnimJoint77.setName("skullbase")
-HAnimJoint77.setDEF("Joe_skullbase")
-HAnimJoint77.setCenter([0,1.63,-0.01])
-HAnimJoint77.setSkinCoordIndex([0,1,2,3,4,5,6,7,8,9])
-HAnimJoint77.setSkinCoordWeight([1,1,1,1,1,1,1,1,1,1])
-HAnimJoint77.setStiffness([0,0,0])
-HAnimDisplacer78 = HAnimDisplacer()
-HAnimDisplacer78.setName("skull_tip_raiser_action")
-HAnimDisplacer78.setDEF("Joe_skull_tip_raiser_action")
-HAnimDisplacer78.setCoordIndex([0,1,2,3,4,5,6,7,8,9])
-HAnimDisplacer78.setDisplacements([0,0.15,0,0,0,0.15,-0.1,0,0.15,0.1,0,0.05,0,-0.02,0.05,-0.15,0,0,-0.05,0,0,0.15,0,0,0.05,0,0,0,0,-0.15])
-
-HAnimJoint77.addDisplacers(HAnimDisplacer78)
-HAnimJoint79 = HAnimJoint()
-HAnimJoint79.setName("l_eyelid_joint")
-HAnimJoint79.setDEF("Joe_l_eyelid_joint")
-HAnimJoint79.setCenter([0.034,1.659,0.06])
-HAnimJoint79.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint79)
-HAnimJoint80 = HAnimJoint()
-HAnimJoint80.setName("l_eyeball_joint")
-HAnimJoint80.setDEF("Joe_l_eyeball_joint")
-HAnimJoint80.setCenter([0.034,1.659,0.06])
-HAnimJoint80.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint80)
-HAnimJoint81 = HAnimJoint()
-HAnimJoint81.setName("l_eyebrow_joint")
-HAnimJoint81.setDEF("Joe_l_eyebrow_joint")
-HAnimJoint81.setCenter([0.034,1.659,0.06])
-HAnimJoint81.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint81)
-HAnimJoint82 = HAnimJoint()
-HAnimJoint82.setName("r_eyelid_joint")
-HAnimJoint82.setDEF("Joe_r_eyelid_joint")
-HAnimJoint82.setCenter([-0.034,1.659,0.06])
-HAnimJoint82.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint82)
-HAnimJoint83 = HAnimJoint()
-HAnimJoint83.setName("r_eyeball_joint")
-HAnimJoint83.setDEF("Joe_r_eyeball_joint")
-HAnimJoint83.setCenter([-0.034,1.659,0.06])
-HAnimJoint83.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint83)
-HAnimJoint84 = HAnimJoint()
-HAnimJoint84.setName("r_eyebrow_joint")
-HAnimJoint84.setDEF("Joe_r_eyebrow_joint")
-HAnimJoint84.setCenter([-0.034,1.659,0.06])
-HAnimJoint84.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint84)
-HAnimJoint85 = HAnimJoint()
-HAnimJoint85.setName("temporomandibular")
-HAnimJoint85.setDEF("Joe_temporomandibular")
-HAnimJoint85.setCenter([0.034,1.659,0.06])
-HAnimJoint85.setStiffness([0,0,0])
-
-HAnimJoint77.addChildren(HAnimJoint85)
-
-HAnimJoint76.addChildren(HAnimJoint77)
-
-HAnimJoint75.addChildren(HAnimJoint76)
-
-HAnimJoint74.addChildren(HAnimJoint75)
-
-HAnimJoint73.addChildren(HAnimJoint74)
-
-HAnimJoint72.addChildren(HAnimJoint73)
-
-HAnimJoint71.addChildren(HAnimJoint72)
-
-HAnimJoint70.addChildren(HAnimJoint71)
-HAnimJoint86 = HAnimJoint()
-HAnimJoint86.setName("l_sternoclavicular")
-HAnimJoint86.setDEF("Joe_l_sternoclavicular")
-HAnimJoint86.setCenter([0.082,1.4488,-0.0353])
-HAnimJoint86.setSkinCoordIndex([12])
-HAnimJoint86.setSkinCoordWeight([1])
-HAnimJoint86.setStiffness([0,0,0])
-HAnimJoint87 = HAnimJoint()
-HAnimJoint87.setName("l_acromioclavicular")
-HAnimJoint87.setDEF("Joe_l_acromioclavicular")
-HAnimJoint87.setCenter([0.0962,1.4269,-0.0424])
-HAnimJoint87.setSkinCoordIndex([79])
-HAnimJoint87.setSkinCoordWeight([1])
-HAnimJoint87.setStiffness([0,0,0])
-HAnimJoint88 = HAnimJoint()
-HAnimJoint88.setName("l_shoulder")
-HAnimJoint88.setDEF("Joe_l_shoulder")
-HAnimJoint88.setCenter([0.2,1.44,-0.04])
-HAnimJoint88.setSkinCoordIndex([41,42,44,80,102,103,104,105])
-HAnimJoint88.setSkinCoordWeight([1,1,1,1,1,1,1,1])
-HAnimJoint88.setStiffness([0,0,0])
-HAnimJoint89 = HAnimJoint()
-HAnimJoint89.setName("l_elbow")
-HAnimJoint89.setDEF("Joe_l_elbow")
-HAnimJoint89.setCenter([0.2,1.1388,-0.04])
-HAnimJoint89.setSkinCoordIndex([45,46,47,109,110,111,112,113,115,116,117,118])
-HAnimJoint89.setSkinCoordWeight([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1])
-HAnimJoint89.setStiffness([0,0,0])
-HAnimJoint90 = HAnimJoint()
-HAnimJoint90.setName("l_radiocarpal")
-HAnimJoint90.setDEF("Joe_l_radiocarpal")
-HAnimJoint90.setCenter([0.2,0.87,-0.04])
-HAnimJoint90.setSkinCoordIndex([119,120,121,122,123,124,125,126])
-HAnimJoint90.setSkinCoordWeight([1,1,1,1,1,1,1,1])
-HAnimJoint90.setStiffness([0,0,0])
-HAnimJoint91 = HAnimJoint()
-HAnimJoint91.setName("l_carpometacarpal_1")
-HAnimJoint91.setDEF("Joe_l_carpometacarpal_1")
-HAnimJoint91.setCenter([0.1924,0.8472,-0.0534])
-HAnimJoint91.setSkinCoordIndex([127,128])
-HAnimJoint91.setSkinCoordWeight([1,1])
-HAnimJoint91.setStiffness([0,0,0])
-HAnimJoint92 = HAnimJoint()
-HAnimJoint92.setName("l_metacarpophalangeal_1")
-HAnimJoint92.setDEF("Joe_l_metacarpophalangeal_1")
-HAnimJoint92.setCenter([0.1951,0.8226,0.0246])
-HAnimJoint92.setSkinCoordIndex([138,139,140,141,142,143])
-HAnimJoint92.setSkinCoordWeight([0.5,0.5,0.5,1,1,1])
-HAnimJoint92.setStiffness([0,0,0])
-HAnimJoint93 = HAnimJoint()
-HAnimJoint93.setName("l_carpal_interphalangeal_1")
-HAnimJoint93.setDEF("Joe_l_carpal_interphalangeal_1")
-HAnimJoint93.setCenter([0.1955,0.8159,0.0464])
-HAnimJoint93.setSkinCoordIndex([144,145,146,147,148,149,150,151,152])
-HAnimJoint93.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint93.setStiffness([0,0,0])
-
-HAnimJoint92.addChildren(HAnimJoint93)
-
-HAnimJoint91.addChildren(HAnimJoint92)
-
-HAnimJoint90.addChildren(HAnimJoint91)
-HAnimJoint94 = HAnimJoint()
-HAnimJoint94.setName("l_carpometacarpal_2")
-HAnimJoint94.setDEF("Joe_l_carpometacarpal_2")
-HAnimJoint94.setCenter([0.1983,0.8024,-0.028])
-HAnimJoint94.setSkinCoordIndex([129,130])
-HAnimJoint94.setSkinCoordWeight([1,1])
-HAnimJoint94.setStiffness([0,0,0])
-HAnimJoint95 = HAnimJoint()
-HAnimJoint95.setName("l_metacarpophalangeal_2")
-HAnimJoint95.setDEF("Joe_l_metacarpophalangeal_2")
-HAnimJoint95.setCenter([0.1983,0.7815,-0.028])
-HAnimJoint95.setSkinCoordIndex([138,139,140,153,154,155,163])
-HAnimJoint95.setSkinCoordWeight([0.5,0.5,0.5,1,1,1,0.5])
-HAnimJoint95.setStiffness([0,0,0])
-HAnimJoint96 = HAnimJoint()
-HAnimJoint96.setName("l_carpal_proximal_interphalangeal_2")
-HAnimJoint96.setDEF("Joe_l_carpal_proximal_interphalangeal_2")
-HAnimJoint96.setCenter([0.2017,0.7363,-0.0248])
-HAnimJoint96.setSkinCoordIndex([166,167,168,169])
-HAnimJoint96.setSkinCoordWeight([1,1,1,1])
-HAnimJoint96.setStiffness([0,0,0])
-HAnimJoint97 = HAnimJoint()
-HAnimJoint97.setName("l_carpal_distal_interphalangeal_2")
-HAnimJoint97.setDEF("Joe_l_carpal_distal_interphalangeal_2")
-HAnimJoint97.setCenter([0.2028,0.7139,-0.0236])
-HAnimJoint97.setSkinCoordIndex([170,171,172,173,174,175,176,177,178])
-HAnimJoint97.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint97.setStiffness([0,0,0])
-
-HAnimJoint96.addChildren(HAnimJoint97)
-
-HAnimJoint95.addChildren(HAnimJoint96)
-
-HAnimJoint94.addChildren(HAnimJoint95)
-
-HAnimJoint90.addChildren(HAnimJoint94)
-HAnimJoint98 = HAnimJoint()
-HAnimJoint98.setName("l_carpometacarpal_3")
-HAnimJoint98.setDEF("Joe_l_carpometacarpal_3")
-HAnimJoint98.setCenter([0.1987,0.8029,-0.053])
-HAnimJoint98.setSkinCoordIndex([131,132])
-HAnimJoint98.setSkinCoordWeight([1,1])
-HAnimJoint98.setStiffness([0,0,0])
-HAnimJoint99 = HAnimJoint()
-HAnimJoint99.setName("l_metacarpophalangeal_3")
-HAnimJoint99.setDEF("Joe_l_metacarpophalangeal_3")
-HAnimJoint99.setCenter([0.1987,0.7818,-0.053])
-HAnimJoint99.setSkinCoordIndex([156,157,163,164])
-HAnimJoint99.setSkinCoordWeight([1,1,0.5,0.5])
-HAnimJoint99.setStiffness([0,0,0])
-HAnimJoint100 = HAnimJoint()
-HAnimJoint100.setName("l_carpal_proximal_interphalangeal_3")
-HAnimJoint100.setDEF("Joe_l_carpal_proximal_interphalangeal_3")
-HAnimJoint100.setCenter([0.2013,0.7273,-0.0503])
-HAnimJoint100.setSkinCoordIndex([179,180,181,182])
-HAnimJoint100.setSkinCoordWeight([1,1,1,1])
-HAnimJoint100.setStiffness([0,0,0])
-HAnimJoint101 = HAnimJoint()
-HAnimJoint101.setName("l_carpal_distal_interphalangeal_3")
-HAnimJoint101.setDEF("Joe_l_carpal_distal_interphalangeal_3")
-HAnimJoint101.setCenter([0.2026,0.7011,-0.0494])
-HAnimJoint101.setSkinCoordIndex([183,184,185,186,187,188,189,190,191])
-HAnimJoint101.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint101.setStiffness([0,0,0])
-
-HAnimJoint100.addChildren(HAnimJoint101)
-
-HAnimJoint99.addChildren(HAnimJoint100)
-
-HAnimJoint98.addChildren(HAnimJoint99)
-
-HAnimJoint90.addChildren(HAnimJoint98)
-HAnimJoint102 = HAnimJoint()
-HAnimJoint102.setName("l_carpometacarpal_4")
-HAnimJoint102.setDEF("Joe_l_carpometacarpal_4")
-HAnimJoint102.setCenter([0.1956,0.8019,-0.0794])
-HAnimJoint102.setSkinCoordIndex([133,134])
-HAnimJoint102.setSkinCoordWeight([1,1])
-HAnimJoint102.setStiffness([0,0,0])
-HAnimJoint103 = HAnimJoint()
-HAnimJoint103.setName("l_metacarpophalangeal_4")
-HAnimJoint103.setDEF("Joe_l_metacarpophalangeal_4")
-HAnimJoint103.setCenter([0.1956,0.7815,-0.0794])
-HAnimJoint103.setSkinCoordIndex([158,159,164,165])
-HAnimJoint103.setSkinCoordWeight([1,1,0.5,0.5])
-HAnimJoint103.setStiffness([0,0,0])
-HAnimJoint104 = HAnimJoint()
-HAnimJoint104.setName("l_carpal_proximal_interphalangeal_4")
-HAnimJoint104.setDEF("Joe_l_carpal_proximal_interphalangeal_4")
-HAnimJoint104.setCenter([0.1973,0.7287,-0.0777])
-HAnimJoint104.setSkinCoordIndex([192,193,194,195])
-HAnimJoint104.setSkinCoordWeight([1,1,1,1])
-HAnimJoint104.setStiffness([0,0,0])
-HAnimJoint105 = HAnimJoint()
-HAnimJoint105.setName("l_carpal_distal_interphalangeal_4")
-HAnimJoint105.setDEF("Joe_l_carpal_distal_interphalangeal_4")
-HAnimJoint105.setCenter([0.1983,0.7045,-0.0767])
-HAnimJoint105.setSkinCoordIndex([196,197,198,199,200,201,202,203,204])
-HAnimJoint105.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint105.setStiffness([0,0,0])
-
-HAnimJoint104.addChildren(HAnimJoint105)
-
-HAnimJoint103.addChildren(HAnimJoint104)
-
-HAnimJoint102.addChildren(HAnimJoint103)
-
-HAnimJoint90.addChildren(HAnimJoint102)
-HAnimJoint106 = HAnimJoint()
-HAnimJoint106.setName("l_carpometacarpal_5")
-HAnimJoint106.setDEF("Joe_l_carpometacarpal_5")
-HAnimJoint106.setCenter([0.1925,0.8066,-0.1036])
-HAnimJoint106.setSkinCoordIndex([135,136,137,165])
-HAnimJoint106.setSkinCoordWeight([1,1,1,0.5])
-HAnimJoint106.setStiffness([0,0,0])
-HAnimJoint107 = HAnimJoint()
-HAnimJoint107.setName("l_metacarpophalangeal_5")
-HAnimJoint107.setDEF("Joe_l_metacarpophalangeal_5")
-HAnimJoint107.setCenter([0.1925,0.7866,-0.1036])
-HAnimJoint107.setSkinCoordIndex([160,161,162])
-HAnimJoint107.setSkinCoordWeight([1,1,1])
-HAnimJoint107.setStiffness([0,0,0])
-HAnimJoint108 = HAnimJoint()
-HAnimJoint108.setName("l_carpal_proximal_interphalangeal_5")
-HAnimJoint108.setDEF("Joe_l_carpal_proximal_interphalangeal_5")
-HAnimJoint108.setCenter([0.1938,0.7452,-0.1024])
-HAnimJoint108.setSkinCoordIndex([205,206,207,208])
-HAnimJoint108.setSkinCoordWeight([1,1,1,1])
-HAnimJoint108.setStiffness([0,0,0])
-HAnimJoint109 = HAnimJoint()
-HAnimJoint109.setName("l_carpal_distal_interphalangeal_5")
-HAnimJoint109.setDEF("Joe_l_carpal_distal_interphalangeal_5")
-HAnimJoint109.setCenter([0.1948,0.7277,-0.1017])
-HAnimJoint109.setSkinCoordIndex([209,210,211,212,213,214,215,216,217])
-HAnimJoint109.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint109.setStiffness([0,0,0])
-
-HAnimJoint108.addChildren(HAnimJoint109)
-
-HAnimJoint107.addChildren(HAnimJoint108)
-
-HAnimJoint106.addChildren(HAnimJoint107)
-
-HAnimJoint90.addChildren(HAnimJoint106)
-
-HAnimJoint89.addChildren(HAnimJoint90)
-
-HAnimJoint88.addChildren(HAnimJoint89)
-
-HAnimJoint87.addChildren(HAnimJoint88)
-
-HAnimJoint86.addChildren(HAnimJoint87)
-
-HAnimJoint70.addChildren(HAnimJoint86)
-HAnimJoint110 = HAnimJoint()
-HAnimJoint110.setName("r_sternoclavicular")
-HAnimJoint110.setDEF("Joe_r_sternoclavicular")
-HAnimJoint110.setCenter([-0.03,1.46,0])
-HAnimJoint110.setSkinCoordIndex([10])
-HAnimJoint110.setSkinCoordWeight([1])
-HAnimJoint110.setStiffness([0,0,0])
-HAnimJoint111 = HAnimJoint()
-HAnimJoint111.setName("r_acromioclavicular")
-HAnimJoint111.setDEF("Joe_r_acromioclavicular")
-HAnimJoint111.setCenter([-0.09,1.41,-0.11])
-HAnimJoint111.setSkinCoordIndex([77,29])
-HAnimJoint111.setSkinCoordWeight([1,0.9])
-HAnimJoint111.setStiffness([0,0,0])
-HAnimJoint112 = HAnimJoint()
-HAnimJoint112.setName("r_shoulder")
-HAnimJoint112.setDEF("Joe_r_shoulder")
-HAnimJoint112.setCenter([-0.2,1.44,-0.04])
-HAnimJoint112.setSkinCoordIndex([29,30,32,78,218,219,220,221,86,88])
-HAnimJoint112.setSkinCoordWeight([0.1,1,1,1,1,1,1,1,0.3,0.2])
-HAnimJoint112.setStiffness([0,0,0])
-HAnimJoint113 = HAnimJoint()
-HAnimJoint113.setName("r_elbow")
-HAnimJoint113.setDEF("Joe_r_elbow")
-HAnimJoint113.setCenter([-0.2,1.1388,-0.04])
-HAnimJoint113.setSkinCoordIndex([33,34,35,225,226,227,228,229,231,232,233,234])
-HAnimJoint113.setSkinCoordWeight([1,1,1,1,1,1,1,1,1,1,1,1])
-HAnimJoint113.setStiffness([0,0,0])
-HAnimJoint114 = HAnimJoint()
-HAnimJoint114.setName("r_radiocarpal")
-HAnimJoint114.setDEF("Joe_r_radiocarpal")
-HAnimJoint114.setCenter([-0.2,0.89,-0.04])
-HAnimJoint114.setSkinCoordIndex([235,236,237,238,239,240,241,242])
-HAnimJoint114.setSkinCoordWeight([1,1,1,1,1,1,1,1])
-HAnimJoint114.setStiffness([0,0,0])
-HAnimJoint115 = HAnimJoint()
-HAnimJoint115.setName("r_carpometacarpal_1")
-HAnimJoint115.setDEF("Joe_r_carpometacarpal_1")
-HAnimJoint115.setCenter([-0.2,0.85,0])
-HAnimJoint115.setSkinCoordIndex([243,244])
-HAnimJoint115.setSkinCoordWeight([1,1])
-HAnimJoint115.setStiffness([0,0,0])
-HAnimJoint116 = HAnimJoint()
-HAnimJoint116.setName("r_metacarpophalangeal_1")
-HAnimJoint116.setDEF("Joe_r_metacarpophalangeal_1")
-HAnimJoint116.setCenter([-0.2,0.82,0.03])
-HAnimJoint116.setSkinCoordIndex([254,255,256,257,258,259])
-HAnimJoint116.setSkinCoordWeight([0.5,0.5,0.5,1,1,1])
-HAnimJoint116.setStiffness([0,0,0])
-HAnimJoint117 = HAnimJoint()
-HAnimJoint117.setName("r_carpal_interphalangeal_1")
-HAnimJoint117.setDEF("Joe_r_carpal_interphalangeal_1")
-HAnimJoint117.setCenter([-0.2,0.8,0.05])
-HAnimJoint117.setSkinCoordIndex([260,261,262,263,264,265,266,267,268])
-HAnimJoint117.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint117.setStiffness([0,0,0])
-
-HAnimJoint116.addChildren(HAnimJoint117)
-
-HAnimJoint115.addChildren(HAnimJoint116)
-
-HAnimJoint114.addChildren(HAnimJoint115)
-HAnimJoint118 = HAnimJoint()
-HAnimJoint118.setName("r_carpometacarpal_2")
-HAnimJoint118.setDEF("Joe_r_carpometacarpal_2")
-HAnimJoint118.setCenter([-0.2,0.84,-0.015])
-HAnimJoint118.setSkinCoordIndex([245,246])
-HAnimJoint118.setSkinCoordWeight([1,1])
-HAnimJoint118.setStiffness([0,0,0])
-HAnimJoint119 = HAnimJoint()
-HAnimJoint119.setName("r_metacarpophalangeal_2")
-HAnimJoint119.setDEF("Joe_r_metacarpophalangeal_2")
-HAnimJoint119.setCenter([-0.2,0.793,-0.015])
-HAnimJoint119.setSkinCoordIndex([254,255,256,269,270,271,279])
-HAnimJoint119.setSkinCoordWeight([0.5,0.5,0.5,1,1,1,0.5])
-HAnimJoint119.setStiffness([0,0,0])
-HAnimJoint120 = HAnimJoint()
-HAnimJoint120.setName("r_carpal_proximal_interphalangeal_2")
-HAnimJoint120.setDEF("Joe_r_carpal_proximal_interphalangeal_2")
-HAnimJoint120.setCenter([-0.2,0.745,-0.015])
-HAnimJoint120.setSkinCoordIndex([282,283,284,285])
-HAnimJoint120.setSkinCoordWeight([1,1,1,1])
-HAnimJoint120.setStiffness([0,0,0])
-HAnimJoint121 = HAnimJoint()
-HAnimJoint121.setName("r_carpal_distal_interphalangeal_2")
-HAnimJoint121.setDEF("Joe_r_carpal_distal_interphalangeal_2")
-HAnimJoint121.setCenter([-0.2,0.72,-0.015])
-HAnimJoint121.setSkinCoordIndex([286,287,288,289,290,291,292,293,294])
-HAnimJoint121.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint121.setStiffness([0,0,0])
-
-HAnimJoint120.addChildren(HAnimJoint121)
-
-HAnimJoint119.addChildren(HAnimJoint120)
-
-HAnimJoint118.addChildren(HAnimJoint119)
-
-HAnimJoint114.addChildren(HAnimJoint118)
-HAnimJoint122 = HAnimJoint()
-HAnimJoint122.setName("r_carpometacarpal_3")
-HAnimJoint122.setDEF("Joe_r_carpometacarpal_3")
-HAnimJoint122.setCenter([-0.2,0.835,-0.04])
-HAnimJoint122.setSkinCoordIndex([247,248])
-HAnimJoint122.setSkinCoordWeight([1,1])
-HAnimJoint122.setStiffness([0,0,0])
-HAnimJoint123 = HAnimJoint()
-HAnimJoint123.setName("r_metacarpophalangeal_3")
-HAnimJoint123.setDEF("Joe_r_metacarpophalangeal_3")
-HAnimJoint123.setCenter([-0.2,0.788,-0.04])
-HAnimJoint123.setSkinCoordIndex([272,273,279,280])
-HAnimJoint123.setSkinCoordWeight([1,1,0.5,0.5])
-HAnimJoint123.setStiffness([0,0,0])
-HAnimJoint124 = HAnimJoint()
-HAnimJoint124.setName("r_carpal_proximal_interphalangeal_3")
-HAnimJoint124.setDEF("Joe_r_carpal_proximal_interphalangeal_3")
-HAnimJoint124.setCenter([-0.2,0.74,-0.04])
-HAnimJoint124.setSkinCoordIndex([295,296,297,298])
-HAnimJoint124.setSkinCoordWeight([1,1,1,1])
-HAnimJoint124.setStiffness([0,0,0])
-HAnimJoint125 = HAnimJoint()
-HAnimJoint125.setName("r_carpal_distal_interphalangeal_3")
-HAnimJoint125.setDEF("Joe_r_carpal_distal_interphalangeal_3")
-HAnimJoint125.setCenter([-0.2,0.7142,-0.04])
-HAnimJoint125.setSkinCoordIndex([299,300,301,302,303,304,305,306,307])
-HAnimJoint125.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint125.setStiffness([0,0,0])
-
-HAnimJoint124.addChildren(HAnimJoint125)
-
-HAnimJoint123.addChildren(HAnimJoint124)
-
-HAnimJoint122.addChildren(HAnimJoint123)
-
-HAnimJoint114.addChildren(HAnimJoint122)
-HAnimJoint126 = HAnimJoint()
-HAnimJoint126.setName("r_carpometacarpal_4")
-HAnimJoint126.setDEF("Joe_r_carpometacarpal_4")
-HAnimJoint126.setCenter([-0.2,0.835,-0.065])
-HAnimJoint126.setSkinCoordIndex([249,250])
-HAnimJoint126.setSkinCoordWeight([1,1])
-HAnimJoint126.setStiffness([0,0,0])
-HAnimJoint127 = HAnimJoint()
-HAnimJoint127.setName("r_metacarpophalangeal_4")
-HAnimJoint127.setDEF("Joe_r_metacarpophalangeal_4")
-HAnimJoint127.setCenter([-0.2,0.793,-0.065])
-HAnimJoint127.setSkinCoordIndex([274,275,280,281])
-HAnimJoint127.setSkinCoordWeight([1,1,0.5,0.5])
-HAnimJoint127.setStiffness([0,0,0])
-HAnimJoint128 = HAnimJoint()
-HAnimJoint128.setName("r_carpal_proximal_interphalangeal_4")
-HAnimJoint128.setDEF("Joe_r_carpal_proximal_interphalangeal_4")
-HAnimJoint128.setCenter([-0.2,0.74,-0.065])
-HAnimJoint128.setSkinCoordIndex([308,309,310,311])
-HAnimJoint128.setSkinCoordWeight([1,1,1,1])
-HAnimJoint128.setStiffness([0,0,0])
-HAnimJoint129 = HAnimJoint()
-HAnimJoint129.setName("r_carpal_distal_interphalangeal_4")
-HAnimJoint129.setDEF("Joe_r_carpal_distal_interphalangeal_4")
-HAnimJoint129.setCenter([-0.2,0.7177,-0.065])
-HAnimJoint129.setSkinCoordIndex([312,313,314,315,316,317,318,319,320])
-HAnimJoint129.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint129.setStiffness([0,0,0])
-
-HAnimJoint128.addChildren(HAnimJoint129)
-
-HAnimJoint127.addChildren(HAnimJoint128)
-
-HAnimJoint126.addChildren(HAnimJoint127)
-
-HAnimJoint114.addChildren(HAnimJoint126)
-HAnimJoint130 = HAnimJoint()
-HAnimJoint130.setName("r_carpometacarpal_5")
-HAnimJoint130.setDEF("Joe_r_carpometacarpal_5")
-HAnimJoint130.setCenter([-0.2,0.84,-0.085])
-HAnimJoint130.setSkinCoordIndex([251,252,253,281])
-HAnimJoint130.setSkinCoordWeight([1,1,1,0.5])
-HAnimJoint130.setStiffness([0,0,0])
-HAnimJoint131 = HAnimJoint()
-HAnimJoint131.setName("r_metacarpophalangeal_5")
-HAnimJoint131.setDEF("Joe_r_metacarpophalangeal_5")
-HAnimJoint131.setCenter([-0.2,0.79,-0.085])
-HAnimJoint131.setSkinCoordIndex([276,277,278])
-HAnimJoint131.setSkinCoordWeight([1,1,1])
-HAnimJoint131.setStiffness([0,0,0])
-HAnimJoint132 = HAnimJoint()
-HAnimJoint132.setName("r_carpal_proximal_interphalangeal_5")
-HAnimJoint132.setDEF("Joe_r_carpal_proximal_interphalangeal_5")
-HAnimJoint132.setCenter([-0.2,0.755,-0.085])
-HAnimJoint132.setSkinCoordIndex([321,322,323,324])
-HAnimJoint132.setSkinCoordWeight([1,1,1,1])
-HAnimJoint132.setStiffness([0,0,0])
-HAnimJoint133 = HAnimJoint()
-HAnimJoint133.setName("r_carpal_distal_interphalangeal_5")
-HAnimJoint133.setDEF("Joe_r_carpal_distal_interphalangeal_5")
-HAnimJoint133.setCenter([-0.2,0.735,-0.09])
-HAnimJoint133.setSkinCoordIndex([325,326,327,328,329,330,331,332,333])
-HAnimJoint133.setSkinCoordWeight([1,1,1,1,1,1,1,1,1])
-HAnimJoint133.setStiffness([0,0,0])
-
-HAnimJoint132.addChildren(HAnimJoint133)
-
-HAnimJoint131.addChildren(HAnimJoint132)
-
-HAnimJoint130.addChildren(HAnimJoint131)
-
-HAnimJoint114.addChildren(HAnimJoint130)
-
-HAnimJoint113.addChildren(HAnimJoint114)
-
-HAnimJoint112.addChildren(HAnimJoint113)
-
-HAnimJoint111.addChildren(HAnimJoint112)
-
-HAnimJoint110.addChildren(HAnimJoint111)
-
-HAnimJoint70.addChildren(HAnimJoint110)
-
-HAnimJoint69.addChildren(HAnimJoint70)
-
-HAnimJoint68.addChildren(HAnimJoint69)
-
-HAnimJoint67.addChildren(HAnimJoint68)
-
-HAnimJoint66.addChildren(HAnimJoint67)
-
-HAnimJoint65.addChildren(HAnimJoint66)
-
-HAnimJoint64.addChildren(HAnimJoint65)
-
-HAnimJoint63.addChildren(HAnimJoint64)
-
-HAnimJoint62.addChildren(HAnimJoint63)
-
-HAnimJoint61.addChildren(HAnimJoint62)
-
-HAnimJoint60.addChildren(HAnimJoint61)
-
-HAnimJoint59.addChildren(HAnimJoint60)
-
-HAnimJoint58.addChildren(HAnimJoint59)
-
-HAnimJoint57.addChildren(HAnimJoint58)
-
-HAnimJoint56.addChildren(HAnimJoint57)
-
-HAnimJoint55.addChildren(HAnimJoint56)
-
-HAnimJoint54.addChildren(HAnimJoint55)
-
-HAnimJoint53.addChildren(HAnimJoint54)
-
-HAnimJoint31.addChildren(HAnimJoint53)
-
-HAnimHumanoid28.setSkeleton(HAnimJoint31)
-Shape134 = Shape()
-Shape134.setDEF("Joe_Shape")
-Appearance135 = Appearance()
-Appearance135.setDEF("Joe_skin_Appearance")
-Material136 = Material()
-Material136.setDEF("Joe_skin_Material")
-Material136.setDiffuseColor([0.3,0.3,0.6])
-Material136.setEmissiveColor([0.3,0.3,0.6])
-
-Appearance135.setMaterial(Material136)
-ImageTexture137 = ImageTexture()
-ImageTexture137.setDEF("JoeSkinImageTexture")
-ImageTexture137.setUrl(["JoeBodyTexture29.png","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JoeBodyTexture29.png"])
-
-Appearance135.setTexture(ImageTexture137)
-TextureTransform138 = TextureTransform()
-TextureTransform138.setDEF("KickTextureTransform")
-
-Appearance135.setTextureTransform(TextureTransform138)
-
-Shape134.setAppearance(Appearance135)
-IndexedFaceSet139 = IndexedFaceSet()
-IndexedFaceSet139.setDEF("Joe_skin_IndexedFaceSet")
-IndexedFaceSet139.setCoordIndex([0,9,5,-1,0,7,9,-1,0,5,1,-1,1,5,2,-1,1,3,7,-1,2,4,3,-1,0,1,7,-1,1,2,3,-1,5,6,2,-1,7,3,8,-1,6,4,2,-1,3,4,8,-1,9,6,5,-1,9,7,8,-1,4,6,10,-1,4,10,12,-1,4,12,8,-1,10,11,12,-1,9,75,24,-1,9,24,74,-1,9,8,75,-1,9,74,6,-1,10,6,74,-1,12,75,8,-1,74,24,29,-1,24,77,29,-1,10,74,29,-1,77,32,29,-1,32,78,29,-1,78,30,29,-1,30,10,29,-1,41,24,75,-1,41,75,12,-1,41,12,42,-1,41,42,80,-1,41,80,44,-1,41,44,79,-1,41,79,24,-1,81,24,79,-1,81,77,24,-1,81,25,77,-1,81,79,25,-1,25,79,44,-1,25,32,77,-1,25,83,32,-1,25,26,83,-1,25,27,26,-1,25,84,27,-1,25,44,84,-1,11,10,30,-1,11,30,13,-1,11,13,15,-1,11,15,14,-1,11,14,42,-1,11,42,12,-1,15,13,16,-1,15,18,14,-1,15,16,76,-1,15,76,18,-1,76,16,17,-1,76,17,82,-1,76,82,19,-1,76,19,18,-1,22,18,19,-1,22,87,18,-1,22,27,84,-1,22,84,87,-1,87,84,85,-1,85,84,44,-1,85,42,14,-1,87,14,18,-1,87,85,14,-1,20,83,26,-1,20,17,16,-1,20,16,88,-1,20,88,83,-1,88,16,13,-1,88,13,86,-1,88,86,83,-1,86,13,30,-1,86,32,83,-1,23,89,22,-1,89,27,22,-1,89,91,27,-1,91,26,27,-1,91,20,26,-1,21,20,91,-1,21,17,20,-1,21,92,17,-1,82,17,92,-1,82,90,19,-1,23,22,19,-1,23,19,90,-1,82,92,101,-1,82,101,99,-1,82,99,93,-1,82,93,95,-1,82,95,97,-1,82,97,90,-1,23,90,97,-1,23,97,94,-1,23,94,89,-1,89,94,96,-1,89,96,95,-1,89,95,93,-1,89,93,91,-1,91,93,99,-1,91,99,100,-1,91,100,98,-1,21,91,98,-1,21,98,101,-1,21,101,92,-1,85,105,42,-1,85,103,105,-1,85,44,103,-1,103,44,104,-1,80,42,105,-1,80,105,102,-1,80,102,104,-1,80,104,44,-1,105,109,102,-1,102,109,47,-1,47,104,102,-1,104,47,45,-1,104,45,103,-1,103,45,46,-1,103,46,109,-1,103,109,105,-1,109,112,110,-1,109,110,47,-1,47,110,111,-1,47,111,45,-1,45,111,113,-1,113,46,45,-1,46,113,112,-1,112,109,46,-1,112,118,110,-1,110,118,115,-1,110,115,111,-1,111,115,117,-1,111,117,113,-1,113,117,116,-1,113,116,112,-1,112,116,118,-1,115,118,119,-1,119,118,122,-1,118,116,122,-1,122,116,120,-1,116,117,120,-1,120,117,121,-1,117,115,121,-1,115,119,121,-1,119,127,123,-1,119,122,127,-1,122,126,127,-1,122,128,126,-1,122,120,128,-1,120,124,128,-1,120,121,124,-1,121,125,124,-1,121,119,125,-1,119,123,125,-1,127,129,123,-1,127,126,129,-1,129,126,141,-1,141,126,143,-1,126,142,143,-1,126,128,142,-1,128,124,130,-1,142,128,130,-1,124,132,130,-1,124,134,132,-1,125,134,124,-1,125,136,134,-1,125,137,136,-1,125,135,137,-1,125,133,135,-1,125,123,133,-1,123,131,133,-1,123,129,131,-1,131,129,138,-1,129,141,138,-1,138,141,144,-1,141,143,144,-1,143,146,144,-1,142,146,143,-1,142,145,146,-1,139,145,142,-1,130,139,142,-1,139,130,132,-1,139,132,154,-1,132,157,154,-1,132,159,157,-1,132,134,159,-1,134,136,159,-1,136,161,159,-1,136,137,161,-1,137,162,161,-1,160,162,137,-1,135,160,137,-1,133,160,135,-1,133,158,160,-1,131,158,133,-1,156,158,131,-1,153,156,131,-1,131,138,153,-1,138,155,153,-1,140,155,138,-1,138,144,140,-1,144,147,140,-1,140,147,145,-1,140,145,139,-1,139,155,140,-1,154,155,139,-1,146,149,144,-1,146,151,149,-1,145,151,146,-1,150,151,145,-1,145,152,150,-1,147,152,145,-1,147,149,152,-1,147,144,149,-1,148,149,151,-1,148,152,149,-1,148,150,152,-1,148,151,150,-1,160,207,162,-1,160,205,207,-1,165,208,205,-1,160,165,205,-1,158,165,160,-1,161,162,207,-1,161,207,206,-1,165,206,208,-1,206,165,161,-1,161,165,159,-1,207,209,211,-1,205,209,207,-1,205,212,209,-1,205,208,212,-1,206,212,208,-1,206,210,212,-1,206,207,210,-1,207,211,210,-1,209,212,213,-1,212,216,213,-1,212,214,216,-1,210,214,212,-1,210,215,214,-1,210,211,215,-1,209,215,211,-1,209,213,215,-1,217,213,216,-1,217,215,213,-1,217,214,215,-1,217,216,214,-1,158,194,165,-1,192,194,158,-1,164,195,192,-1,158,164,192,-1,156,164,158,-1,159,194,165,-1,159,194,193,-1,159,193,195,-1,159,195,164,-1,159,164,157,-1,157,164,180,-1,192,198,194,-1,192,196,198,-1,192,195,196,-1,195,199,196,-1,196,199,200,-1,199,203,200,-1,193,199,195,-1,193,197,199,-1,193,198,197,-1,193,194,198,-1,199,201,203,-1,197,201,199,-1,197,198,201,-1,198,202,201,-1,196,202,198,-1,200,202,196,-1,204,202,200,-1,204,201,202,-1,204,203,201,-1,204,200,203,-1,156,181,164,-1,156,179,181,-1,156,182,179,-1,156,163,182,-1,163,180,182,-1,157,180,163,-1,164,181,180,-1,179,182,183,-1,182,186,183,-1,182,184,186,-1,180,184,182,-1,180,181,184,-1,181,185,184,-1,179,185,181,-1,183,185,179,-1,183,186,187,-1,186,190,187,-1,184,190,186,-1,184,188,190,-1,184,185,188,-1,185,189,188,-1,185,183,189,-1,183,187,189,-1,191,189,187,-1,191,188,189,-1,191,190,188,-1,191,187,190,-1,153,163,156,-1,153,168,163,-1,153,166,168,-1,153,169,166,-1,155,169,153,-1,155,167,169,-1,154,167,155,-1,154,163,167,-1,154,157,163,-1,163,168,167,-1,166,169,170,-1,169,173,170,-1,169,171,173,-1,169,167,171,-1,167,168,171,-1,168,172,171,-1,168,170,172,-1,170,168,166,-1,170,173,174,-1,173,177,174,-1,173,175,177,-1,173,171,175,-1,171,172,175,-1,172,176,175,-1,172,174,176,-1,170,174,172,-1,178,176,174,-1,178,175,176,-1,178,177,175,-1,178,174,177,-1,86,30,221,-1,86,221,219,-1,86,219,32,-1,32,219,220,-1,78,32,220,-1,78,220,218,-1,78,218,221,-1,78,221,30,-1,221,225,219,-1,219,225,35,-1,35,33,219,-1,33,220,219,-1,33,34,220,-1,220,34,218,-1,221,218,34,-1,34,225,221,-1,225,226,228,-1,225,228,35,-1,35,228,229,-1,35,229,33,-1,33,229,227,-1,33,227,34,-1,34,227,226,-1,34,226,225,-1,226,234,228,-1,228,234,232,-1,232,229,228,-1,232,233,229,-1,229,233,227,-1,227,233,231,-1,227,231,226,-1,226,231,234,-1,231,235,234,-1,235,238,234,-1,234,238,232,-1,238,236,232,-1,232,236,233,-1,236,237,233,-1,233,237,231,-1,231,237,235,-1,235,239,243,-1,235,243,238,-1,238,243,242,-1,238,242,244,-1,238,244,236,-1,236,244,240,-1,236,240,237,-1,237,240,241,-1,237,241,235,-1,235,241,239,-1,243,239,245,-1,243,245,242,-1,245,257,242,-1,257,259,242,-1,242,259,258,-1,242,258,244,-1,244,246,240,-1,258,246,244,-1,240,246,248,-1,240,248,250,-1,241,240,250,-1,241,250,252,-1,241,252,253,-1,241,253,251,-1,241,251,249,-1,241,249,239,-1,239,249,247,-1,239,247,245,-1,247,254,245,-1,245,254,257,-1,254,260,257,-1,257,260,259,-1,259,260,262,-1,258,259,262,-1,258,262,261,-1,255,258,261,-1,246,258,255,-1,255,248,246,-1,255,270,248,-1,248,270,273,-1,248,273,275,-1,248,275,250,-1,250,275,252,-1,252,275,277,-1,252,277,253,-1,253,277,278,-1,276,253,278,-1,251,253,276,-1,249,251,276,-1,249,276,274,-1,247,249,274,-1,272,247,274,-1,269,247,272,-1,247,269,254,-1,254,269,271,-1,256,254,271,-1,254,256,260,-1,260,256,263,-1,256,261,263,-1,256,255,261,-1,255,256,271,-1,270,255,271,-1,262,260,265,-1,262,265,267,-1,261,262,267,-1,266,261,267,-1,261,266,268,-1,263,261,268,-1,263,268,265,-1,263,265,260,-1,264,267,265,-1,264,265,268,-1,264,268,266,-1,264,266,267,-1,276,278,323,-1,276,323,321,-1,281,321,324,-1,276,321,281,-1,274,276,281,-1,277,323,278,-1,277,322,323,-1,281,324,322,-1,322,277,281,-1,277,275,281,-1,323,327,325,-1,321,323,325,-1,321,325,328,-1,321,328,324,-1,322,324,328,-1,322,328,326,-1,322,326,323,-1,323,326,327,-1,325,329,328,-1,328,329,332,-1,328,332,330,-1,326,328,330,-1,326,330,331,-1,326,331,327,-1,325,327,331,-1,325,331,329,-1,333,332,329,-1,333,329,331,-1,333,331,330,-1,333,330,332,-1,274,281,310,-1,308,274,310,-1,280,308,311,-1,274,308,280,-1,272,274,280,-1,275,310,281,-1,275,309,310,-1,275,311,309,-1,275,280,311,-1,275,273,280,-1,273,296,280,-1,308,310,314,-1,308,314,312,-1,308,312,311,-1,311,312,315,-1,312,316,315,-1,315,316,319,-1,309,311,315,-1,309,315,313,-1,309,313,314,-1,309,314,310,-1,315,319,317,-1,313,315,317,-1,313,317,314,-1,314,317,318,-1,312,314,318,-1,316,312,318,-1,320,316,318,-1,320,318,317,-1,320,317,319,-1,320,319,316,-1,272,280,297,-1,272,297,295,-1,272,295,298,-1,272,298,279,-1,279,298,296,-1,273,279,296,-1,280,296,297,-1,295,299,298,-1,298,299,302,-1,298,302,300,-1,296,298,300,-1,296,300,297,-1,297,300,301,-1,295,297,301,-1,299,295,301,-1,299,303,302,-1,302,303,306,-1,300,302,306,-1,300,306,304,-1,300,304,301,-1,301,304,305,-1,301,305,299,-1,299,305,303,-1,307,303,305,-1,307,305,304,-1,307,304,306,-1,307,306,303,-1,269,272,279,-1,269,279,284,-1,269,284,282,-1,269,282,285,-1,271,269,285,-1,271,285,283,-1,270,271,283,-1,270,283,279,-1,270,279,273,-1,279,283,284,-1,282,286,285,-1,285,286,289,-1,285,289,287,-1,285,287,283,-1,283,287,284,-1,284,287,288,-1,284,288,286,-1,286,282,284,-1,286,290,289,-1,289,290,293,-1,289,293,291,-1,289,291,287,-1,287,291,288,-1,288,291,292,-1,288,292,290,-1,286,288,290,-1,294,290,292,-1,294,292,291,-1,294,291,293,-1,294,293,290,-1,97,334,336,-1,97,336,94,-1,94,336,96,-1,336,335,96,-1,96,335,95,-1,95,335,337,-1,95,337,334,-1,95,334,97,-1,334,341,336,-1,336,341,338,-1,336,338,335,-1,335,338,340,-1,335,340,337,-1,337,340,339,-1,337,339,334,-1,334,339,341,-1,341,345,342,-1,341,342,338,-1,338,342,340,-1,340,342,344,-1,340,344,339,-1,339,344,343,-1,339,343,345,-1,339,345,341,-1,345,349,342,-1,342,349,351,-1,342,351,346,-1,342,346,344,-1,71,346,348,-1,71,344,346,-1,71,348,347,-1,71,347,344,-1,344,347,343,-1,343,347,352,-1,343,352,349,-1,343,349,345,-1,349,352,356,-1,349,356,353,-1,349,353,355,-1,349,355,351,-1,354,356,352,-1,354,352,350,-1,354,350,351,-1,354,351,355,-1,353,356,357,-1,353,357,358,-1,353,358,359,-1,353,359,360,-1,353,360,361,-1,353,361,355,-1,354,357,356,-1,350,346,351,-1,348,346,347,-1,350,347,346,-1,350,352,347,-1,354,358,357,-1,354,359,358,-1,354,360,359,-1,354,361,360,-1,354,355,361,-1,101,362,365,-1,101,365,99,-1,99,365,100,-1,100,365,363,-1,100,363,98,-1,98,363,364,-1,98,364,101,-1,101,364,362,-1,362,369,367,-1,362,367,365,-1,365,367,363,-1,363,367,368,-1,363,367,368,-1,363,368,366,-1,363,366,364,-1,364,366,362,-1,362,366,369,-1,369,373,371,-1,369,371,367,-1,367,371,368,-1,368,371,372,-1,368,372,366,-1,366,372,370,-1,366,370,369,-1,369,370,373,-1,373,377,380,-1,373,380,375,-1,373,375,371,-1,371,375,372,-1,372,375,376,-1,372,376,374,-1,372,374,370,-1,370,374,379,-1,373,370,379,-1,373,379,377,-1,377,379,383,-1,377,383,381,-1,377,381,384,-1,377,384,380,-1,381,383,389,-1,381,389,388,-1,381,388,387,-1,381,387,386,-1,381,386,385,-1,381,385,384,-1,376,375,374,-1,378,379,374,-1,378,374,375,-1,378,375,380,-1,382,386,387,-1,382,387,388,-1,382,388,389,-1,382,389,383,-1,382,383,379,-1,382,379,378,-1,382,378,380,-1,382,380,384,-1,382,384,385,-1,382,385,386,-1])
-IndexedFaceSet139.setCreaseAngle(3.14)
-Coordinate140 = Coordinate()
-Coordinate140.setDEF("Joe_SkinCoord")
-Coordinate140.setPoint([0,1.77,0,0,1.665,0.09,-0.033,1.62,0.087,0.033,1.62,0.087,0,1.55,0.097,-0.077,1.64,-0.01,-0.0527,1.58,0.015,0.077,1.64,-0.01,0.0527,1.58,0.015,0,1.625,-0.0925,-0.03,1.46,0.035,0,1.44,0.03,0.03,1.46,0.035,-0.1135,1.318,0.095,0.1135,1.318,0.095,0,1.25,0.113,-0.087,1.19,0.09,-0.0935,1.03,0.075,0.087,1.19,0.09,0.0935,1.03,0.075,-0.1425,1.065,0.0033,-0.15,0.9,-0.01,0.1425,1.065,0.0033,0.15,0.9,-0.01,0,1.53,-0.084,0.0049,1.1908,-0.1113,-0.0773,1.019,-0.12,0.0773,1.019,-0.12,0.005,1.0915,-0.1091,-0.178,1.4825,-0.0625,-0.17,1.38,0.007,-0.1884,0.8676,-0.036,-0.16,1.38,-0.127,-0.2,1.1388,-0.08,-0.244,1.1388,-0.04,-0.165,1.1388,-0.04,-0.23,1.133,-0.055,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.789,-0.1064,0.175,1.4825,-0.06,0.17,1.38,0.007,0.1901,0.8645,-0.0415,0.16,1.38,-0.125,0.2,1.1388,-0.08,0.165,1.1388,-0.04,0.244,1.1388,-0.04,0.23,1.133,-0.055,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.786,-0.1122,-0.1,0.4913,-0.03,-0.17,0.466,0,-0.05,0.466,0,-0.165,0.01,0.12,-0.15,0.07,0,-0.085,0.086,0.0125,-0.09,0.056,0.0125,-0.115,0.02,0.122,-0.115,0.04,-0.055,-0.11,0.011,0.19,0.0993,0.4881,-0.0309,0.17,0.466,0,0.05,0.4867,0,0.165,0.01,0.12,0.15,0.07,0,0.085,0.086,0.0125,0.09,0.056,0.0125,0.115,0.02,0.122,0.115,0.04,-0.055,0.11,0.011,0.19,0,0.875,0,-0.0646,1.5149,-0.038,0.0646,1.5149,-0.038,0,1.07225,0.09,-0.11,1.427,-0.1375,-0.235,1.42,-0.0625,0.11,1.427,-0.1375,0.235,1.42,-0.0625,0,1.41,-0.145,0,0.925,0.08,-0.087,1.19,-0.09,0.087,1.19,-0.09,0.172,1.32,-0.03,-0.172,1.32,-0.03,0.15,1.23,-0.015,-0.15,1.23,-0.015,0.079,0.92,-0.14,0.1,0.9,0.077,-0.079,0.92,-0.14,-0.1,0.9,0.075,0,0.87,0,0.171,0.65,0,0.02,0.65,0,0.1,0.65,-0.08,0.1,0.65,0.07,-0.171,0.65,0,-0.02,0.65,0,-0.1,0.65,-0.08,-0.1,0.65,0.07,0.25,1.27,-0.04,0.17,1.27,-0.04,0.2,1.27,-0.09,0.2,1.27,0.02,0.244,1.1388,-0.04,0.165,1.1388,-0.04,0.2,1.1388,-0.08,0.2,1.1388,-0.013,0.225,1,-0.01,0.225,1,-0.07,0.185,1,-0.01,0.185,1,-0.07,0.2,1.1388,-0.04,0.225,0.92,-0.04,0.175,0.92,-0.04,0.2,0.92,-0.065,0.2,0.92,-0.015,0.225,0.89,-0.04,0.175,0.89,-0.04,0.2,0.89,-0.065,0.2,0.89,-0.015,0.218,0.86,-0.04,0.184,0.86,-0.04,0.2,0.87,-0.07,0.2,0.87,0,0.21,0.85,0,0.1854,0.85,0,0.212,0.84,-0.015,0.183,0.84,-0.015,0.213,0.835,-0.04,0.19,0.835,-0.04,0.211,0.835,-0.065,0.192,0.835,-0.065,0.208,0.84,-0.085,0.19,0.84,-0.085,0.2,0.84,-0.095,0.215,0.82,0,0.193,0.815,0.005,0.198,0.8,0.012,0.21,0.82,0.03,0.19,0.82,0.03,0.2,0.835,0.039,0.212,0.8,0.05,0.188,0.8,0.05,0.2,0.807,0.057,0.2,0.793,0.035,0.2,0.774,0.076,0.212,0.78,0.07,0.188,0.78,0.07,0.2,0.785,0.075,0.2,0.77,0.062,0.215,0.793,-0.015,0.187,0.793,-0.015,0.2,0.793,-0.005,0.215,0.788,-0.04,0.187,0.788,-0.04,0.215,0.793,-0.065,0.187,0.793,-0.065,0.21,0.79,-0.085,0.19,0.79,-0.085,0.2,0.79,-0.095,0.19,0.77,-0.0275,0.19,0.77,-0.0525,0.19,0.78,-0.0775,0.212,0.745,-0.015,0.188,0.745,-0.02,0.2,0.745,-0.0255,0.2,0.745,-0.0045,0.211,0.72,-0.015,0.189,0.72,-0.015,0.2,0.72,-0.0252,0.2,0.72,-0.0048,0.21,0.695,-0.015,0.19,0.695,-0.015,0.2,0.695,-0.025,0.2,0.695,-0.005,0.2,0.685,-0.015,0.215,0.74,-0.04,0.185,0.74,-0.04,0.2,0.74,-0.055,0.2,0.74,-0.025,0.21,0.7142,-0.04,0.19,0.7142,-0.04,0.2,0.7142,-0.053,0.2,0.7142,-0.027,0.21,0.68,-0.04,0.19,0.68,-0.04,0.2,0.68,-0.05,0.2,0.68,-0.03,0.2,0.67,-0.04,0.212,0.74,-0.065,0.188,0.74,-0.065,0.2,0.74,-0.0756,0.2,0.74,-0.0542,0.21,0.7177,-0.065,0.19,0.7177,-0.065,0.2,0.7177,-0.0751,0.2,0.7177,-0.0549,0.21,0.695,-0.065,0.19,0.695,-0.065,0.2,0.695,-0.075,0.2,0.695,-0.055,0.2,0.685,-0.065,0.211,0.755,-0.085,0.189,0.755,-0.085,0.2,0.755,-0.0952,0.2,0.755,-0.0748,0.21,0.735,-0.085,0.19,0.735,-0.085,0.2,0.735,-0.0951,0.2,0.735,-0.0749,0.21,0.72,-0.085,0.19,0.72,-0.085,0.2,0.72,-0.095,0.2,0.72,-0.075,0.2,0.71,-0.085,-0.23,1.23,-0.04,-0.16,1.23,-0.04,-0.2,1.235,-0.105,-0.2,1.255,0.02,-0.244,1.1388,-0.04,-0.165,1.1388,-0.04,-0.2,1.1388,-0.08,-0.2,1.1388,0.013,-0.225,1,-0.01,-0.225,1,-0.07,-0.185,1,-0.01,-0.185,1,-0.07,-0.2,1.1388,-0.04,-0.225,0.92,-0.04,-0.175,0.92,-0.04,-0.2,0.92,-0.065,-0.2,0.92,-0.015,-0.225,0.89,-0.04,-0.175,0.89,-0.04,-0.2,0.89,-0.065,-0.2,0.89,-0.015,-0.218,0.86,-0.04,-0.184,0.86,-0.04,-0.2,0.87,-0.07,-0.2,0.87,0,-0.21,0.85,0,-0.1854,0.85,0,-0.212,0.84,-0.015,-0.183,0.84,-0.015,-0.213,0.835,-0.04,-0.19,0.835,-0.04,-0.211,0.835,-0.065,-0.192,0.835,-0.065,-0.208,0.84,-0.085,-0.19,0.84,-0.085,-0.2,0.84,-0.095,-0.215,0.82,0,-0.193,0.815,0.005,-0.198,0.8,0.012,-0.21,0.82,0.03,-0.19,0.82,0.03,-0.2,0.835,0.039,-0.212,0.8,0.05,-0.188,0.8,0.05,-0.2,0.807,0.057,-0.2,0.793,0.035,-0.2,0.774,0.076,-0.212,0.78,0.07,-0.188,0.78,0.07,-0.2,0.785,0.075,-0.2,0.77,0.062,-0.215,0.793,-0.015,-0.187,0.793,-0.015,-0.2,0.793,-0.005,-0.215,0.788,-0.04,-0.187,0.788,-0.04,-0.215,0.793,-0.065,-0.187,0.793,-0.065,-0.21,0.79,-0.085,-0.19,0.79,-0.085,-0.2,0.79,-0.095,-0.19,0.77,-0.0275,-0.19,0.77,-0.0525,-0.19,0.78,-0.0775,-0.212,0.745,-0.015,-0.188,0.745,-0.02,-0.2,0.745,-0.0255,-0.2,0.745,-0.0045,-0.211,0.72,-0.015,-0.189,0.72,-0.015,-0.2,0.72,-0.0252,-0.2,0.72,-0.0048,-0.21,0.695,-0.015,-0.19,0.695,-0.015,-0.2,0.695,-0.025,-0.2,0.695,-0.005,-0.2,0.685,-0.015,-0.215,0.74,-0.04,-0.185,0.74,-0.04,-0.2,0.74,-0.055,-0.2,0.74,-0.025,-0.21,0.7142,-0.04,-0.19,0.7142,-0.04,-0.2,0.7142,-0.053,-0.2,0.7142,-0.027,-0.21,0.68,-0.04,-0.19,0.68,-0.04,-0.2,0.68,-0.05,-0.2,0.68,-0.03,-0.2,0.67,-0.04,-0.212,0.74,-0.065,-0.188,0.74,-0.065,-0.2,0.74,-0.0756,-0.2,0.74,-0.0542,-0.21,0.7177,-0.065,-0.19,0.7177,-0.065,-0.2,0.7177,-0.0751,-0.2,0.7177,-0.0549,-0.21,0.695,-0.065,-0.19,0.695,-0.065,-0.2,0.695,-0.075,-0.2,0.695,-0.055,-0.2,0.685,-0.065,-0.211,0.755,-0.085,-0.189,0.755,-0.085,-0.2,0.755,-0.0952,-0.2,0.755,-0.0748,-0.21,0.735,-0.085,-0.19,0.735,-0.085,-0.2,0.735,-0.0951,-0.2,0.735,-0.0749,-0.21,0.72,-0.085,-0.19,0.72,-0.085,-0.2,0.72,-0.095,-0.2,0.72,-0.075,-0.2,0.71,-0.085,0.115,0.466,0.06,0.115,0.466,-0.055,0.15,0.466,0,0.05,0.466,0,0.17,0.3,0,0.06,0.3,0,0.1,0.3,-0.05,0.1,0.3,0.05,0.15,0.07,0,0.085,0.086,0.0125,0.115,0.069,-0.045,0.117,0.0975,0.0615,0.1375,0.006,-0.03,0.095,0.006,-0.03,0.115,0.015,-0.045,0.115,0.06,0.1,0.115,0,0.07,0.165,0,0.07,0.095,0,0.07,0.115,0.04,0.13,0.125,0,0.12,0.165,0,0.12,0.087,0,0.122,0.09,0.012,0.188,0.11,0.011,0.19,0.128,0.011,0.185,0.142,0.011,0.178,0.154,0.01,0.168,-0.115,0.466,0.06,-0.115,0.466,-0.055,-0.17,0.466,0,-0.05,0.466,0,-0.17,0.3,0,-0.06,0.3,0,-0.1,0.3,-0.05,-0.1,0.3,0.05,-0.15,0.07,0,-0.085,0.086,0.0125,-0.115,0.069,-0.045,-0.117,0.0975,0.0615,-0.1375,0.006,-0.03,-0.095,0.006,-0.03,-0.095,0.006,-0.03,-0.115,0.06,0.1,-0.115,0,0.07,-0.165,0,0.07,-0.095,0,0.07,-0.115,0.04,0.13,-0.125,0,0.12,-0.165,0,0.12,-0.087,0,0.122,-0.09,0.012,0.188,-0.11,0.011,0.19,-0.128,0.011,0.185,-0.142,0.011,0.178,-0.154,0.01,0.168])
-
-IndexedFaceSet139.setCoord(Coordinate140)
-TextureCoordinate141 = TextureCoordinate()
-TextureCoordinate141.setPoint([0,0,0.5,0.5,0.5,0,0,0.5])
-
-IndexedFaceSet139.setTexCoord(TextureCoordinate141)
-
-Shape134.setGeometry(IndexedFaceSet139)
-
-HAnimHumanoid28.setSkin(Shape134)
-Coordinate142 = Coordinate()
-Coordinate142.setUSE("Joe_SkinCoord")
-
-HAnimHumanoid28.setSkinCoord(Coordinate142)
-HAnimJoint143 = HAnimJoint()
-HAnimJoint143.setUSE("Joe_humanoid_root")
-
-HAnimHumanoid28.addJoints(HAnimJoint143)
-HAnimJoint144 = HAnimJoint()
-HAnimJoint144.setUSE("Joe_sacroiliac")
-
-HAnimHumanoid28.addJoints(HAnimJoint144)
-HAnimJoint145 = HAnimJoint()
-HAnimJoint145.setUSE("Joe_skullbase")
-
-HAnimHumanoid28.addJoints(HAnimJoint145)
-HAnimJoint146 = HAnimJoint()
-HAnimJoint146.setUSE("Joe_temporomandibular")
-
-HAnimHumanoid28.addJoints(HAnimJoint146)
-HAnimJoint147 = HAnimJoint()
-HAnimJoint147.setUSE("Joe_vc1")
-
-HAnimHumanoid28.addJoints(HAnimJoint147)
-HAnimJoint148 = HAnimJoint()
-HAnimJoint148.setUSE("Joe_vc2")
-
-HAnimHumanoid28.addJoints(HAnimJoint148)
-HAnimJoint149 = HAnimJoint()
-HAnimJoint149.setUSE("Joe_vc3")
-
-HAnimHumanoid28.addJoints(HAnimJoint149)
-HAnimJoint150 = HAnimJoint()
-HAnimJoint150.setUSE("Joe_vc4")
-
-HAnimHumanoid28.addJoints(HAnimJoint150)
-HAnimJoint151 = HAnimJoint()
-HAnimJoint151.setUSE("Joe_vc5")
-
-HAnimHumanoid28.addJoints(HAnimJoint151)
-HAnimJoint152 = HAnimJoint()
-HAnimJoint152.setUSE("Joe_vc6")
-
-HAnimHumanoid28.addJoints(HAnimJoint152)
-HAnimJoint153 = HAnimJoint()
-HAnimJoint153.setUSE("Joe_vc7")
-
-HAnimHumanoid28.addJoints(HAnimJoint153)
-HAnimJoint154 = HAnimJoint()
-HAnimJoint154.setUSE("Joe_vl1")
-
-HAnimHumanoid28.addJoints(HAnimJoint154)
-HAnimJoint155 = HAnimJoint()
-HAnimJoint155.setUSE("Joe_vl2")
-
-HAnimHumanoid28.addJoints(HAnimJoint155)
-HAnimJoint156 = HAnimJoint()
-HAnimJoint156.setUSE("Joe_vl3")
-
-HAnimHumanoid28.addJoints(HAnimJoint156)
-HAnimJoint157 = HAnimJoint()
-HAnimJoint157.setUSE("Joe_vl4")
-
-HAnimHumanoid28.addJoints(HAnimJoint157)
-HAnimJoint158 = HAnimJoint()
-HAnimJoint158.setUSE("Joe_vl5")
-
-HAnimHumanoid28.addJoints(HAnimJoint158)
-HAnimJoint159 = HAnimJoint()
-HAnimJoint159.setUSE("Joe_vt1")
-
-HAnimHumanoid28.addJoints(HAnimJoint159)
-HAnimJoint160 = HAnimJoint()
-HAnimJoint160.setUSE("Joe_vt10")
-
-HAnimHumanoid28.addJoints(HAnimJoint160)
-HAnimJoint161 = HAnimJoint()
-HAnimJoint161.setUSE("Joe_vt11")
-
-HAnimHumanoid28.addJoints(HAnimJoint161)
-HAnimJoint162 = HAnimJoint()
-HAnimJoint162.setUSE("Joe_vt12")
-
-HAnimHumanoid28.addJoints(HAnimJoint162)
-HAnimJoint163 = HAnimJoint()
-HAnimJoint163.setUSE("Joe_vt2")
-
-HAnimHumanoid28.addJoints(HAnimJoint163)
-HAnimJoint164 = HAnimJoint()
-HAnimJoint164.setUSE("Joe_vt3")
-
-HAnimHumanoid28.addJoints(HAnimJoint164)
-HAnimJoint165 = HAnimJoint()
-HAnimJoint165.setUSE("Joe_vt4")
-
-HAnimHumanoid28.addJoints(HAnimJoint165)
-HAnimJoint166 = HAnimJoint()
-HAnimJoint166.setUSE("Joe_vt5")
-
-HAnimHumanoid28.addJoints(HAnimJoint166)
-HAnimJoint167 = HAnimJoint()
-HAnimJoint167.setUSE("Joe_vt6")
-
-HAnimHumanoid28.addJoints(HAnimJoint167)
-HAnimJoint168 = HAnimJoint()
-HAnimJoint168.setUSE("Joe_vt7")
-
-HAnimHumanoid28.addJoints(HAnimJoint168)
-HAnimJoint169 = HAnimJoint()
-HAnimJoint169.setUSE("Joe_vt8")
-
-HAnimHumanoid28.addJoints(HAnimJoint169)
-HAnimJoint170 = HAnimJoint()
-HAnimJoint170.setUSE("Joe_vt9")
-
-HAnimHumanoid28.addJoints(HAnimJoint170)
-HAnimJoint171 = HAnimJoint()
-HAnimJoint171.setUSE("Joe_l_acromioclavicular")
-
-HAnimHumanoid28.addJoints(HAnimJoint171)
-HAnimJoint172 = HAnimJoint()
-HAnimJoint172.setUSE("Joe_r_acromioclavicular")
-
-HAnimHumanoid28.addJoints(HAnimJoint172)
-HAnimJoint173 = HAnimJoint()
-HAnimJoint173.setUSE("Joe_l_carpal_distal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint173)
-HAnimJoint174 = HAnimJoint()
-HAnimJoint174.setUSE("Joe_r_carpal_distal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint174)
-HAnimJoint175 = HAnimJoint()
-HAnimJoint175.setUSE("Joe_l_carpal_distal_interphalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint175)
-HAnimJoint176 = HAnimJoint()
-HAnimJoint176.setUSE("Joe_r_carpal_distal_interphalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint176)
-HAnimJoint177 = HAnimJoint()
-HAnimJoint177.setUSE("Joe_l_carpal_distal_interphalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint177)
-HAnimJoint178 = HAnimJoint()
-HAnimJoint178.setUSE("Joe_r_carpal_distal_interphalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint178)
-HAnimJoint179 = HAnimJoint()
-HAnimJoint179.setUSE("Joe_l_carpal_distal_interphalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint179)
-HAnimJoint180 = HAnimJoint()
-HAnimJoint180.setUSE("Joe_r_carpal_distal_interphalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint180)
-HAnimJoint181 = HAnimJoint()
-HAnimJoint181.setUSE("Joe_l_carpal_interphalangeal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint181)
-HAnimJoint182 = HAnimJoint()
-HAnimJoint182.setUSE("Joe_r_carpal_interphalangeal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint182)
-HAnimJoint183 = HAnimJoint()
-HAnimJoint183.setUSE("Joe_l_carpal_proximal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint183)
-HAnimJoint184 = HAnimJoint()
-HAnimJoint184.setUSE("Joe_r_carpal_proximal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint184)
-HAnimJoint185 = HAnimJoint()
-HAnimJoint185.setUSE("Joe_l_carpal_proximal_interphalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint185)
-HAnimJoint186 = HAnimJoint()
-HAnimJoint186.setUSE("Joe_r_carpal_proximal_interphalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint186)
-HAnimJoint187 = HAnimJoint()
-HAnimJoint187.setUSE("Joe_l_carpal_proximal_interphalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint187)
-HAnimJoint188 = HAnimJoint()
-HAnimJoint188.setUSE("Joe_r_carpal_proximal_interphalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint188)
-HAnimJoint189 = HAnimJoint()
-HAnimJoint189.setUSE("Joe_l_carpal_proximal_interphalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint189)
-HAnimJoint190 = HAnimJoint()
-HAnimJoint190.setUSE("Joe_r_carpal_proximal_interphalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint190)
-HAnimJoint191 = HAnimJoint()
-HAnimJoint191.setUSE("Joe_l_carpometacarpal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint191)
-HAnimJoint192 = HAnimJoint()
-HAnimJoint192.setUSE("Joe_r_carpometacarpal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint192)
-HAnimJoint193 = HAnimJoint()
-HAnimJoint193.setUSE("Joe_l_carpometacarpal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint193)
-HAnimJoint194 = HAnimJoint()
-HAnimJoint194.setUSE("Joe_r_carpometacarpal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint194)
-HAnimJoint195 = HAnimJoint()
-HAnimJoint195.setUSE("Joe_l_carpometacarpal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint195)
-HAnimJoint196 = HAnimJoint()
-HAnimJoint196.setUSE("Joe_r_carpometacarpal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint196)
-HAnimJoint197 = HAnimJoint()
-HAnimJoint197.setUSE("Joe_l_carpometacarpal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint197)
-HAnimJoint198 = HAnimJoint()
-HAnimJoint198.setUSE("Joe_r_carpometacarpal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint198)
-HAnimJoint199 = HAnimJoint()
-HAnimJoint199.setUSE("Joe_l_carpometacarpal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint199)
-HAnimJoint200 = HAnimJoint()
-HAnimJoint200.setUSE("Joe_r_carpometacarpal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint200)
-HAnimJoint201 = HAnimJoint()
-HAnimJoint201.setUSE("Joe_l_elbow")
-
-HAnimHumanoid28.addJoints(HAnimJoint201)
-HAnimJoint202 = HAnimJoint()
-HAnimJoint202.setUSE("Joe_r_elbow")
-
-HAnimHumanoid28.addJoints(HAnimJoint202)
-HAnimJoint203 = HAnimJoint()
-HAnimJoint203.setUSE("Joe_l_eyeball_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint203)
-HAnimJoint204 = HAnimJoint()
-HAnimJoint204.setUSE("Joe_r_eyeball_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint204)
-HAnimJoint205 = HAnimJoint()
-HAnimJoint205.setUSE("Joe_l_eyebrow_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint205)
-HAnimJoint206 = HAnimJoint()
-HAnimJoint206.setUSE("Joe_r_eyebrow_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint206)
-HAnimJoint207 = HAnimJoint()
-HAnimJoint207.setUSE("Joe_l_eyelid_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint207)
-HAnimJoint208 = HAnimJoint()
-HAnimJoint208.setUSE("Joe_r_eyelid_joint")
-
-HAnimHumanoid28.addJoints(HAnimJoint208)
-HAnimJoint209 = HAnimJoint()
-HAnimJoint209.setUSE("Joe_l_hip")
-
-HAnimHumanoid28.addJoints(HAnimJoint209)
-HAnimJoint210 = HAnimJoint()
-HAnimJoint210.setUSE("Joe_r_hip")
-
-HAnimHumanoid28.addJoints(HAnimJoint210)
-HAnimJoint211 = HAnimJoint()
-HAnimJoint211.setUSE("Joe_l_knee")
-
-HAnimHumanoid28.addJoints(HAnimJoint211)
-HAnimJoint212 = HAnimJoint()
-HAnimJoint212.setUSE("Joe_r_knee")
-
-HAnimHumanoid28.addJoints(HAnimJoint212)
-HAnimJoint213 = HAnimJoint()
-HAnimJoint213.setUSE("Joe_l_metacarpophalangeal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint213)
-HAnimJoint214 = HAnimJoint()
-HAnimJoint214.setUSE("Joe_r_metacarpophalangeal_1")
-
-HAnimHumanoid28.addJoints(HAnimJoint214)
-HAnimJoint215 = HAnimJoint()
-HAnimJoint215.setUSE("Joe_l_metacarpophalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint215)
-HAnimJoint216 = HAnimJoint()
-HAnimJoint216.setUSE("Joe_r_metacarpophalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint216)
-HAnimJoint217 = HAnimJoint()
-HAnimJoint217.setUSE("Joe_l_metacarpophalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint217)
-HAnimJoint218 = HAnimJoint()
-HAnimJoint218.setUSE("Joe_r_metacarpophalangeal_3")
-
-HAnimHumanoid28.addJoints(HAnimJoint218)
-HAnimJoint219 = HAnimJoint()
-HAnimJoint219.setUSE("Joe_l_metacarpophalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint219)
-HAnimJoint220 = HAnimJoint()
-HAnimJoint220.setUSE("Joe_r_metacarpophalangeal_4")
-
-HAnimHumanoid28.addJoints(HAnimJoint220)
-HAnimJoint221 = HAnimJoint()
-HAnimJoint221.setUSE("Joe_l_metacarpophalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint221)
-HAnimJoint222 = HAnimJoint()
-HAnimJoint222.setUSE("Joe_r_metacarpophalangeal_5")
-
-HAnimHumanoid28.addJoints(HAnimJoint222)
-HAnimJoint223 = HAnimJoint()
-HAnimJoint223.setUSE("Joe_l_metatarsophalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint223)
-HAnimJoint224 = HAnimJoint()
-HAnimJoint224.setUSE("Joe_r_metatarsophalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint224)
-HAnimJoint225 = HAnimJoint()
-HAnimJoint225.setUSE("Joe_l_radiocarpal")
-
-HAnimHumanoid28.addJoints(HAnimJoint225)
-HAnimJoint226 = HAnimJoint()
-HAnimJoint226.setUSE("Joe_r_radiocarpal")
-
-HAnimHumanoid28.addJoints(HAnimJoint226)
-HAnimJoint227 = HAnimJoint()
-HAnimJoint227.setUSE("Joe_l_shoulder")
-
-HAnimHumanoid28.addJoints(HAnimJoint227)
-HAnimJoint228 = HAnimJoint()
-HAnimJoint228.setUSE("Joe_r_shoulder")
-
-HAnimHumanoid28.addJoints(HAnimJoint228)
-HAnimJoint229 = HAnimJoint()
-HAnimJoint229.setUSE("Joe_l_sternoclavicular")
-
-HAnimHumanoid28.addJoints(HAnimJoint229)
-HAnimJoint230 = HAnimJoint()
-HAnimJoint230.setUSE("Joe_r_sternoclavicular")
-
-HAnimHumanoid28.addJoints(HAnimJoint230)
-HAnimJoint231 = HAnimJoint()
-HAnimJoint231.setUSE("Joe_l_talocrural")
-
-HAnimHumanoid28.addJoints(HAnimJoint231)
-HAnimJoint232 = HAnimJoint()
-HAnimJoint232.setUSE("Joe_r_talocrural")
-
-HAnimHumanoid28.addJoints(HAnimJoint232)
-HAnimJoint233 = HAnimJoint()
-HAnimJoint233.setUSE("Joe_l_tarsal_distal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint233)
-HAnimJoint234 = HAnimJoint()
-HAnimJoint234.setUSE("Joe_r_tarsal_distal_interphalangeal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint234)
-HAnimJoint235 = HAnimJoint()
-HAnimJoint235.setUSE("Joe_l_tarsometatarsal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint235)
-HAnimJoint236 = HAnimJoint()
-HAnimJoint236.setUSE("Joe_r_tarsometatarsal_2")
-
-HAnimHumanoid28.addJoints(HAnimJoint236)
-HAnimSegment237 = HAnimSegment()
-HAnimSegment237.setUSE("Joe_sacrum")
-
-HAnimHumanoid28.addSegments(HAnimSegment237)
-HAnimSite238 = HAnimSite()
-HAnimSite238.setUSE("Joe_RootFront_view")
-
-HAnimHumanoid28.addSites(HAnimSite238)
-
-Group27.addChildren(HAnimHumanoid28)
-
-Scene16.addChildren(Group27)
-Group239 = Group()
-TimeSensor240 = TimeSensor()
-TimeSensor240.setDEF("KickTimer")
-TimeSensor240.setCycleInterval(3.73)
-TimeSensor240.setLoop(True)
-
-Group239.addChildren(TimeSensor240)
+IndexedLineSet37 = x3d.IndexedLineSet()
+IndexedLineSet37.colorIndex = [0,1,2]
+IndexedLineSet37.colorPerVertex = False
+IndexedLineSet37.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
+Coordinate38 = x3d.Coordinate()
+Coordinate38.point = (0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000)
+
+IndexedLineSet37.coord.append(Coordinate38)
+Color39 = x3d.Color()
+Color39.color = [1,0,0,0,0.6,0,0,0,1]
+
+IndexedLineSet37.color.append(Color39)
+
+Shape36.geometry = IndexedLineSet37
+
+Transform34.children.append(Shape36)
+
+HAnimSite33.children.append(Transform34)
+
+HAnimSegment32.children.append(HAnimSite33)
+
+HAnimJoint31.children.append(HAnimSegment32)
+HAnimJoint40 = x3d.HAnimJoint()
+HAnimJoint40.name = "sacroiliac"
+HAnimJoint40.DEF = "Joe_sacroiliac"
+HAnimJoint40.center = [0,0.92,0]
+HAnimJoint40.skinCoordIndex = [17,19,20,21,22,23,26,27,73,82,89,91,93]
+HAnimJoint40.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,0.35,0.35,1]
+HAnimJoint40.ulimit = [0,0,0]
+HAnimJoint40.llimit = [0,0,0]
+HAnimJoint41 = x3d.HAnimJoint()
+HAnimJoint41.name = "l_hip"
+HAnimJoint41.DEF = "Joe_l_hip"
+HAnimJoint41.center = [0.1,0.92,0]
+HAnimJoint41.skinCoordIndex = [89,90,94,95,96,97]
+HAnimJoint41.skinCoordWeight = [0.65,1,1,1,1,1]
+HAnimJoint41.ulimit = [0,0,0]
+HAnimJoint41.llimit = [0,0,0]
+HAnimJoint42 = x3d.HAnimJoint()
+HAnimJoint42.name = "l_knee"
+HAnimJoint42.DEF = "Joe_l_knee"
+HAnimJoint42.center = [0.115,0.466,0]
+HAnimJoint42.skinCoordIndex = [334,335,336,337,338,339,340,341]
+HAnimJoint42.skinCoordWeight = [1,1,1,1,1,1,1,1]
+HAnimJoint42.ulimit = [0,0,0]
+HAnimJoint42.llimit = [0,0,0]
+HAnimJoint43 = x3d.HAnimJoint()
+HAnimJoint43.name = "l_talocrural"
+HAnimJoint43.DEF = "Joe_l_talocrural"
+HAnimJoint43.center = [0.115,0.069,0]
+HAnimJoint43.skinCoordIndex = [342,343,344,345]
+HAnimJoint43.skinCoordWeight = [1,1,1,1]
+HAnimJoint43.ulimit = [0,0,0]
+HAnimJoint43.llimit = [0,0,0]
+HAnimJoint44 = x3d.HAnimJoint()
+HAnimJoint44.name = "l_tarsometatarsal_2"
+HAnimJoint44.DEF = "Joe_l_tarsometatarsal_2"
+HAnimJoint44.center = [0.115,0.031,0.03]
+HAnimJoint44.skinCoordIndex = [346,347,348,71]
+HAnimJoint44.skinCoordWeight = [1,1,1,1]
+HAnimJoint44.ulimit = [0,0,0]
+HAnimJoint44.llimit = [0,0,0]
+HAnimJoint45 = x3d.HAnimJoint()
+HAnimJoint45.name = "l_metatarsophalangeal_2"
+HAnimJoint45.DEF = "Joe_l_metatarsophalangeal_2"
+HAnimJoint45.center = [0.115,0.037,0.09]
+HAnimJoint45.skinCoordIndex = [349,350,351,352]
+HAnimJoint45.skinCoordWeight = [1,1,1,1]
+HAnimJoint45.ulimit = [0,0,0]
+HAnimJoint45.llimit = [0,0,0]
+HAnimJoint46 = x3d.HAnimJoint()
+HAnimJoint46.name = "l_tarsal_distal_interphalangeal_2"
+HAnimJoint46.DEF = "Joe_l_tarsal_distal_interphalangeal_2"
+HAnimJoint46.center = [0.115,0.02,0.122]
+HAnimJoint46.skinCoordIndex = [353,354,355,356,357,358,359,360,361]
+HAnimJoint46.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint46.ulimit = [0,0,0]
+HAnimJoint46.llimit = [0,0,0]
+
+HAnimJoint45.children.append(HAnimJoint46)
+
+HAnimJoint44.children.append(HAnimJoint45)
+
+HAnimJoint43.children.append(HAnimJoint44)
+
+HAnimJoint42.children.append(HAnimJoint43)
+
+HAnimJoint41.children.append(HAnimJoint42)
+
+HAnimJoint40.children.append(HAnimJoint41)
+HAnimJoint47 = x3d.HAnimJoint()
+HAnimJoint47.name = "r_hip"
+HAnimJoint47.DEF = "Joe_r_hip"
+HAnimJoint47.center = [-0.1,0.92,0]
+HAnimJoint47.skinCoordIndex = [91,92,98,99,100,101,362,363]
+HAnimJoint47.skinCoordWeight = [0.65,1,0.8,1,1,1,0.4,0.8]
+HAnimJoint47.ulimit = [0,0,0]
+HAnimJoint47.llimit = [0,0,0]
+HAnimJoint48 = x3d.HAnimJoint()
+HAnimJoint48.name = "r_knee"
+HAnimJoint48.DEF = "Joe_r_knee"
+HAnimJoint48.center = [-0.05,0.466,0]
+HAnimJoint48.skinCoordIndex = [362,363,364,365,366,367,368,369,98]
+HAnimJoint48.skinCoordWeight = [0.6,0.2,1,1,1,1,1,1,0.2]
+HAnimJoint48.ulimit = [0,0,0]
+HAnimJoint48.llimit = [0,0,0]
+HAnimJoint49 = x3d.HAnimJoint()
+HAnimJoint49.name = "r_talocrural"
+HAnimJoint49.DEF = "Joe_r_talocrural"
+HAnimJoint49.center = [-0.115,0.069,0]
+HAnimJoint49.skinCoordIndex = [370,371,372,373]
+HAnimJoint49.skinCoordWeight = [1,1,1,1]
+HAnimJoint49.ulimit = [0,0,0]
+HAnimJoint49.llimit = [0,0,0]
+HAnimJoint50 = x3d.HAnimJoint()
+HAnimJoint50.name = "r_tarsometatarsal_2"
+HAnimJoint50.DEF = "Joe_r_tarsometatarsal_2"
+HAnimJoint50.center = [-0.1,0.015,-0.01]
+HAnimJoint50.skinCoordIndex = [374,375,376]
+HAnimJoint50.skinCoordWeight = [1,1,1]
+HAnimJoint50.ulimit = [0,0,0]
+HAnimJoint50.llimit = [0,0,0]
+HAnimJoint51 = x3d.HAnimJoint()
+HAnimJoint51.name = "r_metatarsophalangeal_2"
+HAnimJoint51.DEF = "Joe_r_metatarsophalangeal_2"
+HAnimJoint51.center = [-0.115,0.037,0.09]
+HAnimJoint51.skinCoordIndex = [377,378,379,380]
+HAnimJoint51.skinCoordWeight = [1,1,1,1]
+HAnimJoint51.ulimit = [0,0,0]
+HAnimJoint51.llimit = [0,0,0]
+HAnimJoint52 = x3d.HAnimJoint()
+HAnimJoint52.name = "r_tarsal_distal_interphalangeal_2"
+HAnimJoint52.DEF = "Joe_r_tarsal_distal_interphalangeal_2"
+HAnimJoint52.center = [-0.1,0.01,0.14]
+HAnimJoint52.skinCoordIndex = [381,382,383,384,385,386,387,388,389]
+HAnimJoint52.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint52.ulimit = [0,0,0]
+HAnimJoint52.llimit = [0,0,0]
+
+HAnimJoint51.children.append(HAnimJoint52)
+
+HAnimJoint50.children.append(HAnimJoint51)
+
+HAnimJoint49.children.append(HAnimJoint50)
+
+HAnimJoint48.children.append(HAnimJoint49)
+
+HAnimJoint47.children.append(HAnimJoint48)
+
+HAnimJoint40.children.append(HAnimJoint47)
+
+HAnimJoint31.children.append(HAnimJoint40)
+HAnimJoint53 = x3d.HAnimJoint()
+HAnimJoint53.name = "vl5"
+HAnimJoint53.DEF = "Joe_vl5"
+HAnimJoint53.center = [0,1.045,-0.095]
+HAnimJoint53.skinCoordIndex = [28,76]
+HAnimJoint53.skinCoordWeight = [1,1]
+HAnimJoint53.ulimit = [0,0,0]
+HAnimJoint53.llimit = [0,0,0]
+HAnimJoint54 = x3d.HAnimJoint()
+HAnimJoint54.name = "vl4"
+HAnimJoint54.DEF = "Joe_vl4"
+HAnimJoint54.center = [0,1.068,-0.085]
+HAnimJoint54.ulimit = [0,0,0]
+HAnimJoint54.llimit = [0,0,0]
+HAnimJoint55 = x3d.HAnimJoint()
+HAnimJoint55.name = "vl3"
+HAnimJoint55.DEF = "Joe_vl3"
+HAnimJoint55.center = [0,1.092,-0.0725]
+HAnimJoint55.ulimit = [0,0,0]
+HAnimJoint55.llimit = [0,0,0]
+HAnimJoint56 = x3d.HAnimJoint()
+HAnimJoint56.name = "vl2"
+HAnimJoint56.DEF = "Joe_vl2"
+HAnimJoint56.center = [0,1.12,-0.065]
+HAnimJoint56.skinCoordIndex = [16,18,25,83,84,85,86,87,88]
+HAnimJoint56.skinCoordWeight = [1,1,1,1,1,1,0.7,1,0.8]
+HAnimJoint56.ulimit = [0,0,0]
+HAnimJoint56.llimit = [0,0,0]
+HAnimJoint57 = x3d.HAnimJoint()
+HAnimJoint57.name = "vl1"
+HAnimJoint57.DEF = "Joe_vl1"
+HAnimJoint57.center = [0,1.1459,-0.0625]
+HAnimJoint57.ulimit = [0,0,0]
+HAnimJoint57.llimit = [0,0,0]
+HAnimJoint58 = x3d.HAnimJoint()
+HAnimJoint58.name = "vt12"
+HAnimJoint58.DEF = "Joe_vt12"
+HAnimJoint58.center = [0,1.179,-0.068]
+HAnimJoint58.ulimit = [0,0,0]
+HAnimJoint58.llimit = [0,0,0]
+HAnimJoint59 = x3d.HAnimJoint()
+HAnimJoint59.name = "vt11"
+HAnimJoint59.DEF = "Joe_vt11"
+HAnimJoint59.center = [0,1.2679,-0.081]
+HAnimJoint59.ulimit = [0,0,0]
+HAnimJoint59.llimit = [0,0,0]
+HAnimJoint60 = x3d.HAnimJoint()
+HAnimJoint60.name = "vt10"
+HAnimJoint60.DEF = "Joe_vt10"
+HAnimJoint60.center = [0,1.242,-0.09]
+HAnimJoint60.skinCoordIndex = [15]
+HAnimJoint60.skinCoordWeight = [1]
+HAnimJoint60.ulimit = [0,0,0]
+HAnimJoint60.llimit = [0,0,0]
+HAnimJoint61 = x3d.HAnimJoint()
+HAnimJoint61.name = "vt9"
+HAnimJoint61.DEF = "Joe_vt9"
+HAnimJoint61.center = [0,1.268,-0.1]
+HAnimJoint61.skinCoordIndex = [13,14]
+HAnimJoint61.skinCoordWeight = [1,1]
+HAnimJoint61.ulimit = [0,0,0]
+HAnimJoint61.llimit = [0,0,0]
+HAnimJoint62 = x3d.HAnimJoint()
+HAnimJoint62.name = "vt8"
+HAnimJoint62.DEF = "Joe_vt8"
+HAnimJoint62.center = [0,1.294,-0.11]
+HAnimJoint62.ulimit = [0,0,0]
+HAnimJoint62.llimit = [0,0,0]
+HAnimJoint63 = x3d.HAnimJoint()
+HAnimJoint63.name = "vt7"
+HAnimJoint63.DEF = "Joe_vt7"
+HAnimJoint63.center = [0,1.323,-0.1155]
+HAnimJoint63.ulimit = [0,0,0]
+HAnimJoint63.llimit = [0,0,0]
+HAnimJoint64 = x3d.HAnimJoint()
+HAnimJoint64.name = "vt6"
+HAnimJoint64.DEF = "Joe_vt6"
+HAnimJoint64.center = [0,1.352,-0.12]
+HAnimJoint64.ulimit = [0,0,0]
+HAnimJoint64.llimit = [0,0,0]
+HAnimJoint65 = x3d.HAnimJoint()
+HAnimJoint65.name = "vt5"
+HAnimJoint65.DEF = "Joe_vt5"
+HAnimJoint65.center = [0,1.381,-0.1235]
+HAnimJoint65.ulimit = [0,0,0]
+HAnimJoint65.llimit = [0,0,0]
+HAnimJoint66 = x3d.HAnimJoint()
+HAnimJoint66.name = "vt4"
+HAnimJoint66.DEF = "Joe_vt4"
+HAnimJoint66.center = [0,1.41,-0.1235]
+HAnimJoint66.skinCoordIndex = [81]
+HAnimJoint66.skinCoordWeight = [1]
+HAnimJoint66.ulimit = [0,0,0]
+HAnimJoint66.llimit = [0,0,0]
+HAnimJoint67 = x3d.HAnimJoint()
+HAnimJoint67.name = "vt3"
+HAnimJoint67.DEF = "Joe_vt3"
+HAnimJoint67.center = [0,1.438,-0.12]
+HAnimJoint67.ulimit = [0,0,0]
+HAnimJoint67.llimit = [0,0,0]
+HAnimJoint68 = x3d.HAnimJoint()
+HAnimJoint68.name = "vt2"
+HAnimJoint68.DEF = "Joe_vt2"
+HAnimJoint68.center = [0,1.468,-0.105]
+HAnimJoint68.ulimit = [0,0,0]
+HAnimJoint68.llimit = [0,0,0]
+HAnimJoint69 = x3d.HAnimJoint()
+HAnimJoint69.name = "vt1"
+HAnimJoint69.DEF = "Joe_vt1"
+HAnimJoint69.center = [0,1.497,-0.09]
+HAnimJoint69.skinCoordIndex = [11,24]
+HAnimJoint69.skinCoordWeight = [1,1]
+HAnimJoint69.ulimit = [0,0,0]
+HAnimJoint69.llimit = [0,0,0]
+HAnimJoint70 = x3d.HAnimJoint()
+HAnimJoint70.name = "vc7"
+HAnimJoint70.DEF = "Joe_vc7"
+HAnimJoint70.center = [0,1.525,-0.072]
+HAnimJoint70.skinCoordIndex = [74,75]
+HAnimJoint70.skinCoordWeight = [1,1]
+HAnimJoint70.ulimit = [0,0,0]
+HAnimJoint70.llimit = [0,0,0]
+HAnimJoint71 = x3d.HAnimJoint()
+HAnimJoint71.name = "vc6"
+HAnimJoint71.DEF = "Joe_vc6"
+HAnimJoint71.center = [0,1.54,-0.05]
+HAnimJoint71.ulimit = [0,0,0]
+HAnimJoint71.llimit = [0,0,0]
+HAnimJoint72 = x3d.HAnimJoint()
+HAnimJoint72.name = "vc5"
+HAnimJoint72.DEF = "Joe_vc5"
+HAnimJoint72.center = [0,1.552,-0.035]
+HAnimJoint72.ulimit = [0,0,0]
+HAnimJoint72.llimit = [0,0,0]
+HAnimJoint73 = x3d.HAnimJoint()
+HAnimJoint73.name = "vc4"
+HAnimJoint73.DEF = "Joe_vc4"
+HAnimJoint73.center = [0,1.5675,-0.0256]
+HAnimJoint73.ulimit = [0,0,0]
+HAnimJoint73.llimit = [0,0,0]
+HAnimJoint74 = x3d.HAnimJoint()
+HAnimJoint74.name = "vc3"
+HAnimJoint74.DEF = "Joe_vc3"
+HAnimJoint74.center = [0,1.58225,-0.0185]
+HAnimJoint74.ulimit = [0,0,0]
+HAnimJoint74.llimit = [0,0,0]
+HAnimJoint75 = x3d.HAnimJoint()
+HAnimJoint75.name = "vc2"
+HAnimJoint75.DEF = "Joe_vc2"
+HAnimJoint75.center = [0,1.595,-0.0175]
+HAnimJoint75.ulimit = [0,0,0]
+HAnimJoint75.llimit = [0,0,0]
+HAnimJoint76 = x3d.HAnimJoint()
+HAnimJoint76.name = "vc1"
+HAnimJoint76.DEF = "Joe_vc1"
+HAnimJoint76.center = [0,1.61,-0.015]
+HAnimJoint76.ulimit = [0,0,0]
+HAnimJoint76.llimit = [0,0,0]
+HAnimJoint77 = x3d.HAnimJoint()
+HAnimJoint77.name = "skullbase"
+HAnimJoint77.DEF = "Joe_skullbase"
+HAnimJoint77.center = [0,1.63,-0.01]
+HAnimJoint77.skinCoordIndex = [0,1,2,3,4,5,6,7,8,9]
+HAnimJoint77.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1]
+HAnimJoint77.ulimit = [0,0,0]
+HAnimJoint77.llimit = [0,0,0]
+HAnimDisplacer78 = x3d.HAnimDisplacer()
+HAnimDisplacer78.name = "skull_tip_raiser_action"
+HAnimDisplacer78.DEF = "Joe_skull_tip_raiser_action"
+HAnimDisplacer78.coordIndex = [0,1,2,3,4,5,6,7,8,9]
+HAnimDisplacer78.displacements = (0.0000,0.1500,0.0000,0.0000,0.0000,0.1500,-0.1000,0.0000,0.1500,0.1000,0.0000,0.0500,0.0000,-0.0200,0.0500,-0.1500,0.0000,0.0000,-0.0500,0.0000,0.0000,0.1500,0.0000,0.0000,0.0500,0.0000,0.0000,0.0000,0.0000,-0.1500)
+
+HAnimJoint77.displacers.append(HAnimDisplacer78)
+HAnimJoint79 = x3d.HAnimJoint()
+HAnimJoint79.name = "l_eyelid_joint"
+HAnimJoint79.DEF = "Joe_l_eyelid_joint"
+HAnimJoint79.center = [0.034,1.659,0.06]
+HAnimJoint79.ulimit = [0,0,0]
+HAnimJoint79.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint79)
+HAnimJoint80 = x3d.HAnimJoint()
+HAnimJoint80.name = "l_eyeball_joint"
+HAnimJoint80.DEF = "Joe_l_eyeball_joint"
+HAnimJoint80.center = [0.034,1.659,0.06]
+HAnimJoint80.ulimit = [0,0,0]
+HAnimJoint80.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint80)
+HAnimJoint81 = x3d.HAnimJoint()
+HAnimJoint81.name = "l_eyebrow_joint"
+HAnimJoint81.DEF = "Joe_l_eyebrow_joint"
+HAnimJoint81.center = [0.034,1.659,0.06]
+HAnimJoint81.ulimit = [0,0,0]
+HAnimJoint81.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint81)
+HAnimJoint82 = x3d.HAnimJoint()
+HAnimJoint82.name = "r_eyelid_joint"
+HAnimJoint82.DEF = "Joe_r_eyelid_joint"
+HAnimJoint82.center = [-0.034,1.659,0.06]
+HAnimJoint82.ulimit = [0,0,0]
+HAnimJoint82.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint82)
+HAnimJoint83 = x3d.HAnimJoint()
+HAnimJoint83.name = "r_eyeball_joint"
+HAnimJoint83.DEF = "Joe_r_eyeball_joint"
+HAnimJoint83.center = [-0.034,1.659,0.06]
+HAnimJoint83.ulimit = [0,0,0]
+HAnimJoint83.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint83)
+HAnimJoint84 = x3d.HAnimJoint()
+HAnimJoint84.name = "r_eyebrow_joint"
+HAnimJoint84.DEF = "Joe_r_eyebrow_joint"
+HAnimJoint84.center = [-0.034,1.659,0.06]
+HAnimJoint84.ulimit = [0,0,0]
+HAnimJoint84.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint84)
+HAnimJoint85 = x3d.HAnimJoint()
+HAnimJoint85.name = "temporomandibular"
+HAnimJoint85.DEF = "Joe_temporomandibular"
+HAnimJoint85.center = [0.034,1.659,0.06]
+HAnimJoint85.ulimit = [0,0,0]
+HAnimJoint85.llimit = [0,0,0]
+
+HAnimJoint77.children.append(HAnimJoint85)
+
+HAnimJoint76.children.append(HAnimJoint77)
+
+HAnimJoint75.children.append(HAnimJoint76)
+
+HAnimJoint74.children.append(HAnimJoint75)
+
+HAnimJoint73.children.append(HAnimJoint74)
+
+HAnimJoint72.children.append(HAnimJoint73)
+
+HAnimJoint71.children.append(HAnimJoint72)
+
+HAnimJoint70.children.append(HAnimJoint71)
+
+HAnimJoint69.children.append(HAnimJoint70)
+HAnimJoint86 = x3d.HAnimJoint()
+HAnimJoint86.DEF = "Joe_l_acromioclavicular"
+HAnimJoint86.center = [0.082,1.4488,-0.0353]
+HAnimJoint86.skinCoordIndex = [12]
+HAnimJoint86.skinCoordWeight = [1]
+HAnimJoint86.ulimit = [0,0,0]
+HAnimJoint86.llimit = [0,0,0]
+HAnimJoint87 = x3d.HAnimJoint()
+HAnimJoint87.name = "l_acromioclavicular"
+HAnimJoint87.DEF = "Joe_l_sternoclavicular"
+HAnimJoint87.center = [0.0962,1.4269,-0.0424]
+HAnimJoint87.skinCoordIndex = [79]
+HAnimJoint87.skinCoordWeight = [1]
+HAnimJoint87.ulimit = [0,0,0]
+HAnimJoint87.llimit = [0,0,0]
+HAnimJoint88 = x3d.HAnimJoint()
+HAnimJoint88.name = "l_shoulder"
+HAnimJoint88.DEF = "Joe_l_shoulder"
+HAnimJoint88.center = [0.2,1.44,-0.04]
+HAnimJoint88.skinCoordIndex = [41,42,44,80,102,103,104,105]
+HAnimJoint88.skinCoordWeight = [1,1,1,1,1,1,1,1]
+HAnimJoint88.ulimit = [0,0,0]
+HAnimJoint88.llimit = [0,0,0]
+HAnimJoint89 = x3d.HAnimJoint()
+HAnimJoint89.name = "l_elbow"
+HAnimJoint89.DEF = "Joe_l_elbow"
+HAnimJoint89.center = [0.2,1.1388,-0.04]
+HAnimJoint89.skinCoordIndex = [45,46,47,109,110,111,112,113,115,116,117,118]
+HAnimJoint89.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+HAnimJoint89.ulimit = [0,0,0]
+HAnimJoint89.llimit = [0,0,0]
+HAnimJoint90 = x3d.HAnimJoint()
+HAnimJoint90.name = "l_radiocarpal"
+HAnimJoint90.DEF = "Joe_l_radiocarpal"
+HAnimJoint90.center = [0.2,0.87,-0.04]
+HAnimJoint90.skinCoordIndex = [119,120,121,122,123,124,125,126]
+HAnimJoint90.skinCoordWeight = [1,1,1,1,1,1,1,1]
+HAnimJoint90.ulimit = [0,0,0]
+HAnimJoint90.llimit = [0,0,0]
+HAnimJoint91 = x3d.HAnimJoint()
+HAnimJoint91.name = "l_carpometacarpal_1"
+HAnimJoint91.DEF = "Joe_l_carpometacarpal_1"
+HAnimJoint91.center = [0.1924,0.8472,-0.0534]
+HAnimJoint91.skinCoordIndex = [127,128]
+HAnimJoint91.skinCoordWeight = [1,1]
+HAnimJoint91.ulimit = [0,0,0]
+HAnimJoint91.llimit = [0,0,0]
+HAnimJoint92 = x3d.HAnimJoint()
+HAnimJoint92.name = "l_metacarpophalangeal_1"
+HAnimJoint92.DEF = "Joe_l_metacarpophalangeal_1"
+HAnimJoint92.center = [0.1951,0.8226,0.0246]
+HAnimJoint92.skinCoordIndex = [138,139,140,141,142,143]
+HAnimJoint92.skinCoordWeight = [0.5,0.5,0.5,1,1,1]
+HAnimJoint92.ulimit = [0,0,0]
+HAnimJoint92.llimit = [0,0,0]
+HAnimJoint93 = x3d.HAnimJoint()
+HAnimJoint93.name = "l_carpal_interphalangeal_1"
+HAnimJoint93.DEF = "Joe_l_carpal_interphalangeal_1"
+HAnimJoint93.center = [0.1955,0.8159,0.0464]
+HAnimJoint93.skinCoordIndex = [144,145,146,147,148,149,150,151,152]
+HAnimJoint93.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint93.ulimit = [0,0,0]
+HAnimJoint93.llimit = [0,0,0]
+
+HAnimJoint92.children.append(HAnimJoint93)
+
+HAnimJoint91.children.append(HAnimJoint92)
+
+HAnimJoint90.children.append(HAnimJoint91)
+HAnimJoint94 = x3d.HAnimJoint()
+HAnimJoint94.name = "l_carpometacarpal_2"
+HAnimJoint94.DEF = "Joe_l_carpometacarpal_2"
+HAnimJoint94.center = [0.1983,0.8024,-0.028]
+HAnimJoint94.skinCoordIndex = [129,130]
+HAnimJoint94.skinCoordWeight = [1,1]
+HAnimJoint94.ulimit = [0,0,0]
+HAnimJoint94.llimit = [0,0,0]
+HAnimJoint95 = x3d.HAnimJoint()
+HAnimJoint95.name = "l_metacarpophalangeal_2"
+HAnimJoint95.DEF = "Joe_l_metacarpophalangeal_2"
+HAnimJoint95.center = [0.1983,0.7815,-0.028]
+HAnimJoint95.skinCoordIndex = [138,139,140,153,154,155,163]
+HAnimJoint95.skinCoordWeight = [0.5,0.5,0.5,1,1,1,0.5]
+HAnimJoint95.ulimit = [0,0,0]
+HAnimJoint95.llimit = [0,0,0]
+HAnimJoint96 = x3d.HAnimJoint()
+HAnimJoint96.name = "l_carpal_proximal_interphalangeal_2"
+HAnimJoint96.DEF = "Joe_l_carpal_proximal_interphalangeal_2"
+HAnimJoint96.center = [0.2017,0.7363,-0.0248]
+HAnimJoint96.skinCoordIndex = [166,167,168,169]
+HAnimJoint96.skinCoordWeight = [1,1,1,1]
+HAnimJoint96.ulimit = [0,0,0]
+HAnimJoint96.llimit = [0,0,0]
+HAnimJoint97 = x3d.HAnimJoint()
+HAnimJoint97.name = "l_carpal_distal_interphalangeal_2"
+HAnimJoint97.DEF = "Joe_l_carpal_distal_interphalangeal_2"
+HAnimJoint97.center = [0.2028,0.7139,-0.0236]
+HAnimJoint97.skinCoordIndex = [170,171,172,173,174,175,176,177,178]
+HAnimJoint97.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint97.ulimit = [0,0,0]
+HAnimJoint97.llimit = [0,0,0]
+
+HAnimJoint96.children.append(HAnimJoint97)
+
+HAnimJoint95.children.append(HAnimJoint96)
+
+HAnimJoint94.children.append(HAnimJoint95)
+
+HAnimJoint90.children.append(HAnimJoint94)
+HAnimJoint98 = x3d.HAnimJoint()
+HAnimJoint98.name = "l_carpometacarpal_3"
+HAnimJoint98.DEF = "Joe_l_carpometacarpal_3"
+HAnimJoint98.center = [0.1987,0.8029,-0.053]
+HAnimJoint98.skinCoordIndex = [131,132]
+HAnimJoint98.skinCoordWeight = [1,1]
+HAnimJoint98.ulimit = [0,0,0]
+HAnimJoint98.llimit = [0,0,0]
+HAnimJoint99 = x3d.HAnimJoint()
+HAnimJoint99.name = "l_metacarpophalangeal_3"
+HAnimJoint99.DEF = "Joe_l_metacarpophalangeal_3"
+HAnimJoint99.center = [0.1987,0.7818,-0.053]
+HAnimJoint99.skinCoordIndex = [156,157,163,164]
+HAnimJoint99.skinCoordWeight = [1,1,0.5,0.5]
+HAnimJoint99.ulimit = [0,0,0]
+HAnimJoint99.llimit = [0,0,0]
+HAnimJoint100 = x3d.HAnimJoint()
+HAnimJoint100.name = "l_carpal_proximal_interphalangeal_3"
+HAnimJoint100.DEF = "Joe_l_carpal_proximal_interphalangeal_3"
+HAnimJoint100.center = [0.2013,0.7273,-0.0503]
+HAnimJoint100.skinCoordIndex = [179,180,181,182]
+HAnimJoint100.skinCoordWeight = [1,1,1,1]
+HAnimJoint100.ulimit = [0,0,0]
+HAnimJoint100.llimit = [0,0,0]
+HAnimJoint101 = x3d.HAnimJoint()
+HAnimJoint101.name = "l_carpal_distal_interphalangeal_3"
+HAnimJoint101.DEF = "Joe_l_carpal_distal_interphalangeal_3"
+HAnimJoint101.center = [0.2026,0.7011,-0.0494]
+HAnimJoint101.skinCoordIndex = [183,184,185,186,187,188,189,190,191]
+HAnimJoint101.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint101.ulimit = [0,0,0]
+HAnimJoint101.llimit = [0,0,0]
+
+HAnimJoint100.children.append(HAnimJoint101)
+
+HAnimJoint99.children.append(HAnimJoint100)
+
+HAnimJoint98.children.append(HAnimJoint99)
+
+HAnimJoint90.children.append(HAnimJoint98)
+HAnimJoint102 = x3d.HAnimJoint()
+HAnimJoint102.name = "l_carpometacarpal_4"
+HAnimJoint102.DEF = "Joe_l_carpometacarpal_4"
+HAnimJoint102.center = [0.1956,0.8019,-0.0794]
+HAnimJoint102.skinCoordIndex = [133,134]
+HAnimJoint102.skinCoordWeight = [1,1]
+HAnimJoint102.ulimit = [0,0,0]
+HAnimJoint102.llimit = [0,0,0]
+HAnimJoint103 = x3d.HAnimJoint()
+HAnimJoint103.name = "l_metacarpophalangeal_4"
+HAnimJoint103.DEF = "Joe_l_metacarpophalangeal_4"
+HAnimJoint103.center = [0.1956,0.7815,-0.0794]
+HAnimJoint103.skinCoordIndex = [158,159,164,165]
+HAnimJoint103.skinCoordWeight = [1,1,0.5,0.5]
+HAnimJoint103.ulimit = [0,0,0]
+HAnimJoint103.llimit = [0,0,0]
+HAnimJoint104 = x3d.HAnimJoint()
+HAnimJoint104.name = "l_carpal_proximal_interphalangeal_4"
+HAnimJoint104.DEF = "Joe_l_carpal_proximal_interphalangeal_4"
+HAnimJoint104.center = [0.1973,0.7287,-0.0777]
+HAnimJoint104.skinCoordIndex = [192,193,194,195]
+HAnimJoint104.skinCoordWeight = [1,1,1,1]
+HAnimJoint104.ulimit = [0,0,0]
+HAnimJoint104.llimit = [0,0,0]
+HAnimJoint105 = x3d.HAnimJoint()
+HAnimJoint105.name = "l_carpal_distal_interphalangeal_4"
+HAnimJoint105.DEF = "Joe_l_carpal_distal_interphalangeal_4"
+HAnimJoint105.center = [0.1983,0.7045,-0.0767]
+HAnimJoint105.skinCoordIndex = [196,197,198,199,200,201,202,203,204]
+HAnimJoint105.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint105.ulimit = [0,0,0]
+HAnimJoint105.llimit = [0,0,0]
+
+HAnimJoint104.children.append(HAnimJoint105)
+
+HAnimJoint103.children.append(HAnimJoint104)
+
+HAnimJoint102.children.append(HAnimJoint103)
+
+HAnimJoint90.children.append(HAnimJoint102)
+HAnimJoint106 = x3d.HAnimJoint()
+HAnimJoint106.name = "l_carpometacarpal_5"
+HAnimJoint106.DEF = "Joe_l_carpometacarpal_5"
+HAnimJoint106.center = [0.1925,0.8066,-0.1036]
+HAnimJoint106.skinCoordIndex = [135,136,137,165]
+HAnimJoint106.skinCoordWeight = [1,1,1,0.5]
+HAnimJoint106.ulimit = [0,0,0]
+HAnimJoint106.llimit = [0,0,0]
+HAnimJoint107 = x3d.HAnimJoint()
+HAnimJoint107.name = "l_metacarpophalangeal_5"
+HAnimJoint107.DEF = "Joe_l_metacarpophalangeal_5"
+HAnimJoint107.center = [0.1925,0.7866,-0.1036]
+HAnimJoint107.skinCoordIndex = [160,161,162]
+HAnimJoint107.skinCoordWeight = [1,1,1]
+HAnimJoint107.ulimit = [0,0,0]
+HAnimJoint107.llimit = [0,0,0]
+HAnimJoint108 = x3d.HAnimJoint()
+HAnimJoint108.name = "l_carpal_proximal_interphalangeal_5"
+HAnimJoint108.DEF = "Joe_l_carpal_proximal_interphalangeal_5"
+HAnimJoint108.center = [0.1938,0.7452,-0.1024]
+HAnimJoint108.skinCoordIndex = [205,206,207,208]
+HAnimJoint108.skinCoordWeight = [1,1,1,1]
+HAnimJoint108.ulimit = [0,0,0]
+HAnimJoint108.llimit = [0,0,0]
+HAnimJoint109 = x3d.HAnimJoint()
+HAnimJoint109.name = "l_carpal_distal_interphalangeal_5"
+HAnimJoint109.DEF = "Joe_l_carpal_distal_interphalangeal_5"
+HAnimJoint109.center = [0.1948,0.7277,-0.1017]
+HAnimJoint109.skinCoordIndex = [209,210,211,212,213,214,215,216,217]
+HAnimJoint109.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint109.ulimit = [0,0,0]
+HAnimJoint109.llimit = [0,0,0]
+
+HAnimJoint108.children.append(HAnimJoint109)
+
+HAnimJoint107.children.append(HAnimJoint108)
+
+HAnimJoint106.children.append(HAnimJoint107)
+
+HAnimJoint90.children.append(HAnimJoint106)
+
+HAnimJoint89.children.append(HAnimJoint90)
+
+HAnimJoint88.children.append(HAnimJoint89)
+
+HAnimJoint87.children.append(HAnimJoint88)
+
+HAnimJoint86.children.append(HAnimJoint87)
+
+HAnimJoint69.children.append(HAnimJoint86)
+HAnimJoint110 = x3d.HAnimJoint()
+HAnimJoint110.name = "r_sternoclavicular"
+HAnimJoint110.DEF = "Joe_r_sternoclavicular"
+HAnimJoint110.center = [-0.03,1.46,0]
+HAnimJoint110.skinCoordIndex = [10]
+HAnimJoint110.skinCoordWeight = [1]
+HAnimJoint110.ulimit = [0,0,0]
+HAnimJoint110.llimit = [0,0,0]
+HAnimJoint111 = x3d.HAnimJoint()
+HAnimJoint111.name = "r_acromioclavicular"
+HAnimJoint111.DEF = "Joe_r_acromioclavicular"
+HAnimJoint111.center = [-0.09,1.41,-0.11]
+HAnimJoint111.skinCoordIndex = [77,29]
+HAnimJoint111.skinCoordWeight = [1,0.9]
+HAnimJoint111.ulimit = [0,0,0]
+HAnimJoint111.llimit = [0,0,0]
+HAnimJoint112 = x3d.HAnimJoint()
+HAnimJoint112.name = "r_shoulder"
+HAnimJoint112.DEF = "Joe_r_shoulder"
+HAnimJoint112.center = [-0.2,1.44,-0.04]
+HAnimJoint112.skinCoordIndex = [29,30,32,78,218,219,220,221,86,88]
+HAnimJoint112.skinCoordWeight = [0.1,1,1,1,1,1,1,1,0.3,0.2]
+HAnimJoint112.ulimit = [0,0,0]
+HAnimJoint112.llimit = [0,0,0]
+HAnimJoint113 = x3d.HAnimJoint()
+HAnimJoint113.name = "r_elbow"
+HAnimJoint113.DEF = "Joe_r_elbow"
+HAnimJoint113.center = [-0.2,1.1388,-0.04]
+HAnimJoint113.skinCoordIndex = [33,34,35,225,226,227,228,229,231,232,233,234]
+HAnimJoint113.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,1,1]
+HAnimJoint113.ulimit = [0,0,0]
+HAnimJoint113.llimit = [0,0,0]
+HAnimJoint114 = x3d.HAnimJoint()
+HAnimJoint114.name = "r_radiocarpal"
+HAnimJoint114.DEF = "Joe_r_radiocarpal"
+HAnimJoint114.center = [-0.2,0.89,-0.04]
+HAnimJoint114.skinCoordIndex = [235,236,237,238,239,240,241,242]
+HAnimJoint114.skinCoordWeight = [1,1,1,1,1,1,1,1]
+HAnimJoint114.ulimit = [0,0,0]
+HAnimJoint114.llimit = [0,0,0]
+HAnimJoint115 = x3d.HAnimJoint()
+HAnimJoint115.name = "r_carpometacarpal_1"
+HAnimJoint115.DEF = "Joe_r_carpometacarpal_1"
+HAnimJoint115.center = [-0.2,0.85,0]
+HAnimJoint115.skinCoordIndex = [243,244]
+HAnimJoint115.skinCoordWeight = [1,1]
+HAnimJoint115.ulimit = [0,0,0]
+HAnimJoint115.llimit = [0,0,0]
+HAnimJoint116 = x3d.HAnimJoint()
+HAnimJoint116.name = "r_metacarpophalangeal_1"
+HAnimJoint116.DEF = "Joe_r_metacarpophalangeal_1"
+HAnimJoint116.center = [-0.2,0.82,0.03]
+HAnimJoint116.skinCoordIndex = [254,255,256,257,258,259]
+HAnimJoint116.skinCoordWeight = [0.5,0.5,0.5,1,1,1]
+HAnimJoint116.ulimit = [0,0,0]
+HAnimJoint116.llimit = [0,0,0]
+HAnimJoint117 = x3d.HAnimJoint()
+HAnimJoint117.name = "r_carpal_interphalangeal_1"
+HAnimJoint117.DEF = "Joe_r_carpal_interphalangeal_1"
+HAnimJoint117.center = [-0.2,0.8,0.05]
+HAnimJoint117.skinCoordIndex = [260,261,262,263,264,265,266,267,268]
+HAnimJoint117.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint117.ulimit = [0,0,0]
+HAnimJoint117.llimit = [0,0,0]
+
+HAnimJoint116.children.append(HAnimJoint117)
+
+HAnimJoint115.children.append(HAnimJoint116)
+
+HAnimJoint114.children.append(HAnimJoint115)
+HAnimJoint118 = x3d.HAnimJoint()
+HAnimJoint118.name = "r_carpometacarpal_2"
+HAnimJoint118.DEF = "Joe_r_carpometacarpal_2"
+HAnimJoint118.center = [-0.2,0.84,-0.015]
+HAnimJoint118.skinCoordIndex = [245,246]
+HAnimJoint118.skinCoordWeight = [1,1]
+HAnimJoint118.ulimit = [0,0,0]
+HAnimJoint118.llimit = [0,0,0]
+HAnimJoint119 = x3d.HAnimJoint()
+HAnimJoint119.name = "r_metacarpophalangeal_2"
+HAnimJoint119.DEF = "Joe_r_metacarpophalangeal_2"
+HAnimJoint119.center = [-0.2,0.793,-0.015]
+HAnimJoint119.skinCoordIndex = [254,255,256,269,270,271,279]
+HAnimJoint119.skinCoordWeight = [0.5,0.5,0.5,1,1,1,0.5]
+HAnimJoint119.ulimit = [0,0,0]
+HAnimJoint119.llimit = [0,0,0]
+HAnimJoint120 = x3d.HAnimJoint()
+HAnimJoint120.name = "r_carpal_proximal_interphalangeal_2"
+HAnimJoint120.DEF = "Joe_r_carpal_proximal_interphalangeal_2"
+HAnimJoint120.center = [-0.2,0.745,-0.015]
+HAnimJoint120.skinCoordIndex = [282,283,284,285]
+HAnimJoint120.skinCoordWeight = [1,1,1,1]
+HAnimJoint120.ulimit = [0,0,0]
+HAnimJoint120.llimit = [0,0,0]
+HAnimJoint121 = x3d.HAnimJoint()
+HAnimJoint121.name = "r_carpal_distal_interphalangeal_2"
+HAnimJoint121.DEF = "Joe_r_carpal_distal_interphalangeal_2"
+HAnimJoint121.center = [-0.2,0.72,-0.015]
+HAnimJoint121.skinCoordIndex = [286,287,288,289,290,291,292,293,294]
+HAnimJoint121.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint121.ulimit = [0,0,0]
+HAnimJoint121.llimit = [0,0,0]
+
+HAnimJoint120.children.append(HAnimJoint121)
+
+HAnimJoint119.children.append(HAnimJoint120)
+
+HAnimJoint118.children.append(HAnimJoint119)
+
+HAnimJoint114.children.append(HAnimJoint118)
+HAnimJoint122 = x3d.HAnimJoint()
+HAnimJoint122.name = "r_carpometacarpal_3"
+HAnimJoint122.DEF = "Joe_r_carpometacarpal_3"
+HAnimJoint122.center = [-0.2,0.835,-0.04]
+HAnimJoint122.skinCoordIndex = [247,248]
+HAnimJoint122.skinCoordWeight = [1,1]
+HAnimJoint122.ulimit = [0,0,0]
+HAnimJoint122.llimit = [0,0,0]
+HAnimJoint123 = x3d.HAnimJoint()
+HAnimJoint123.name = "r_metacarpophalangeal_3"
+HAnimJoint123.DEF = "Joe_r_metacarpophalangeal_3"
+HAnimJoint123.center = [-0.2,0.788,-0.04]
+HAnimJoint123.skinCoordIndex = [272,273,279,280]
+HAnimJoint123.skinCoordWeight = [1,1,0.5,0.5]
+HAnimJoint123.ulimit = [0,0,0]
+HAnimJoint123.llimit = [0,0,0]
+HAnimJoint124 = x3d.HAnimJoint()
+HAnimJoint124.name = "r_carpal_proximal_interphalangeal_3"
+HAnimJoint124.DEF = "Joe_r_carpal_proximal_interphalangeal_3"
+HAnimJoint124.center = [-0.2,0.74,-0.04]
+HAnimJoint124.skinCoordIndex = [295,296,297,298]
+HAnimJoint124.skinCoordWeight = [1,1,1,1]
+HAnimJoint124.ulimit = [0,0,0]
+HAnimJoint124.llimit = [0,0,0]
+HAnimJoint125 = x3d.HAnimJoint()
+HAnimJoint125.name = "r_carpal_distal_interphalangeal_3"
+HAnimJoint125.DEF = "Joe_r_carpal_distal_interphalangeal_3"
+HAnimJoint125.center = [-0.2,0.7142,-0.04]
+HAnimJoint125.skinCoordIndex = [299,300,301,302,303,304,305,306,307]
+HAnimJoint125.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint125.ulimit = [0,0,0]
+HAnimJoint125.llimit = [0,0,0]
+
+HAnimJoint124.children.append(HAnimJoint125)
+
+HAnimJoint123.children.append(HAnimJoint124)
+
+HAnimJoint122.children.append(HAnimJoint123)
+
+HAnimJoint114.children.append(HAnimJoint122)
+HAnimJoint126 = x3d.HAnimJoint()
+HAnimJoint126.name = "r_carpometacarpal_4"
+HAnimJoint126.DEF = "Joe_r_carpometacarpal_4"
+HAnimJoint126.center = [-0.2,0.835,-0.065]
+HAnimJoint126.skinCoordIndex = [249,250]
+HAnimJoint126.skinCoordWeight = [1,1]
+HAnimJoint126.ulimit = [0,0,0]
+HAnimJoint126.llimit = [0,0,0]
+HAnimJoint127 = x3d.HAnimJoint()
+HAnimJoint127.name = "r_metacarpophalangeal_4"
+HAnimJoint127.DEF = "Joe_r_metacarpophalangeal_4"
+HAnimJoint127.center = [-0.2,0.793,-0.065]
+HAnimJoint127.skinCoordIndex = [274,275,280,281]
+HAnimJoint127.skinCoordWeight = [1,1,0.5,0.5]
+HAnimJoint127.ulimit = [0,0,0]
+HAnimJoint127.llimit = [0,0,0]
+HAnimJoint128 = x3d.HAnimJoint()
+HAnimJoint128.name = "r_carpal_proximal_interphalangeal_4"
+HAnimJoint128.DEF = "Joe_r_carpal_proximal_interphalangeal_4"
+HAnimJoint128.center = [-0.2,0.74,-0.065]
+HAnimJoint128.skinCoordIndex = [308,309,310,311]
+HAnimJoint128.skinCoordWeight = [1,1,1,1]
+HAnimJoint128.ulimit = [0,0,0]
+HAnimJoint128.llimit = [0,0,0]
+HAnimJoint129 = x3d.HAnimJoint()
+HAnimJoint129.name = "r_carpal_distal_interphalangeal_4"
+HAnimJoint129.DEF = "Joe_r_carpal_distal_interphalangeal_4"
+HAnimJoint129.center = [-0.2,0.7177,-0.065]
+HAnimJoint129.skinCoordIndex = [312,313,314,315,316,317,318,319,320]
+HAnimJoint129.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint129.ulimit = [0,0,0]
+HAnimJoint129.llimit = [0,0,0]
+
+HAnimJoint128.children.append(HAnimJoint129)
+
+HAnimJoint127.children.append(HAnimJoint128)
+
+HAnimJoint126.children.append(HAnimJoint127)
+
+HAnimJoint114.children.append(HAnimJoint126)
+HAnimJoint130 = x3d.HAnimJoint()
+HAnimJoint130.name = "r_carpometacarpal_5"
+HAnimJoint130.DEF = "Joe_r_carpometacarpal_5"
+HAnimJoint130.center = [-0.2,0.84,-0.085]
+HAnimJoint130.skinCoordIndex = [251,252,253,281]
+HAnimJoint130.skinCoordWeight = [1,1,1,0.5]
+HAnimJoint130.ulimit = [0,0,0]
+HAnimJoint130.llimit = [0,0,0]
+HAnimJoint131 = x3d.HAnimJoint()
+HAnimJoint131.name = "r_metacarpophalangeal_5"
+HAnimJoint131.DEF = "Joe_r_metacarpophalangeal_5"
+HAnimJoint131.center = [-0.2,0.79,-0.085]
+HAnimJoint131.skinCoordIndex = [276,277,278]
+HAnimJoint131.skinCoordWeight = [1,1,1]
+HAnimJoint131.ulimit = [0,0,0]
+HAnimJoint131.llimit = [0,0,0]
+HAnimJoint132 = x3d.HAnimJoint()
+HAnimJoint132.name = "r_carpal_proximal_interphalangeal_5"
+HAnimJoint132.DEF = "Joe_r_carpal_proximal_interphalangeal_5"
+HAnimJoint132.center = [-0.2,0.755,-0.085]
+HAnimJoint132.skinCoordIndex = [321,322,323,324]
+HAnimJoint132.skinCoordWeight = [1,1,1,1]
+HAnimJoint132.ulimit = [0,0,0]
+HAnimJoint132.llimit = [0,0,0]
+HAnimJoint133 = x3d.HAnimJoint()
+HAnimJoint133.name = "r_carpal_distal_interphalangeal_5"
+HAnimJoint133.DEF = "Joe_r_carpal_distal_interphalangeal_5"
+HAnimJoint133.center = [-0.2,0.735,-0.09]
+HAnimJoint133.skinCoordIndex = [325,326,327,328,329,330,331,332,333]
+HAnimJoint133.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
+HAnimJoint133.ulimit = [0,0,0]
+HAnimJoint133.llimit = [0,0,0]
+
+HAnimJoint132.children.append(HAnimJoint133)
+
+HAnimJoint131.children.append(HAnimJoint132)
+
+HAnimJoint130.children.append(HAnimJoint131)
+
+HAnimJoint114.children.append(HAnimJoint130)
+
+HAnimJoint113.children.append(HAnimJoint114)
+
+HAnimJoint112.children.append(HAnimJoint113)
+
+HAnimJoint111.children.append(HAnimJoint112)
+
+HAnimJoint110.children.append(HAnimJoint111)
+
+HAnimJoint69.children.append(HAnimJoint110)
+
+HAnimJoint68.children.append(HAnimJoint69)
+
+HAnimJoint67.children.append(HAnimJoint68)
+
+HAnimJoint66.children.append(HAnimJoint67)
+
+HAnimJoint65.children.append(HAnimJoint66)
+
+HAnimJoint64.children.append(HAnimJoint65)
+
+HAnimJoint63.children.append(HAnimJoint64)
+
+HAnimJoint62.children.append(HAnimJoint63)
+
+HAnimJoint61.children.append(HAnimJoint62)
+
+HAnimJoint60.children.append(HAnimJoint61)
+
+HAnimJoint59.children.append(HAnimJoint60)
+
+HAnimJoint58.children.append(HAnimJoint59)
+
+HAnimJoint57.children.append(HAnimJoint58)
+
+HAnimJoint56.children.append(HAnimJoint57)
+
+HAnimJoint55.children.append(HAnimJoint56)
+
+HAnimJoint54.children.append(HAnimJoint55)
+
+HAnimJoint53.children.append(HAnimJoint54)
+
+HAnimJoint31.children.append(HAnimJoint53)
+
+HAnimHumanoid28.skeleton.append(HAnimJoint31)
+Shape134 = x3d.Shape()
+Shape134.DEF = "Joe_Shape"
+Appearance135 = x3d.Appearance()
+Appearance135.DEF = "Joe_skin_Appearance"
+Material136 = x3d.Material()
+Material136.DEF = "Joe_skin_Material"
+Material136.diffuseColor = [0.3,0.3,0.6]
+Material136.emissiveColor = [0.3,0.3,0.6]
+
+Appearance135.material = Material136
+ImageTexture137 = x3d.ImageTexture()
+ImageTexture137.DEF = "JoeSkinImageTexture"
+ImageTexture137.url = ["JoeBodyTexture29.png","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/JoeBodyTexture29.png"]
+
+Appearance135.texture = ImageTexture137
+TextureTransform138 = x3d.TextureTransform()
+TextureTransform138.DEF = "KickTextureTransform"
+
+Appearance135.textureTransform.append(TextureTransform138)
+
+Shape134.appearance = Appearance135
+IndexedFaceSet139 = x3d.IndexedFaceSet()
+IndexedFaceSet139.DEF = "Joe_skin_IndexedFaceSet"
+IndexedFaceSet139.coordIndex = [0,9,5,-1,0,7,9,-1,0,5,1,-1,1,5,2,-1,1,3,7,-1,2,4,3,-1,0,1,7,-1,1,2,3,-1,5,6,2,-1,7,3,8,-1,6,4,2,-1,3,4,8,-1,9,6,5,-1,9,7,8,-1,4,6,10,-1,4,10,12,-1,4,12,8,-1,10,11,12,-1,9,75,24,-1,9,24,74,-1,9,8,75,-1,9,74,6,-1,10,6,74,-1,12,75,8,-1,74,24,29,-1,24,77,29,-1,10,74,29,-1,77,32,29,-1,32,78,29,-1,78,30,29,-1,30,10,29,-1,41,24,75,-1,41,75,12,-1,41,12,42,-1,41,42,80,-1,41,80,44,-1,41,44,79,-1,41,79,24,-1,81,24,79,-1,81,77,24,-1,81,25,77,-1,81,79,25,-1,25,79,44,-1,25,32,77,-1,25,83,32,-1,25,26,83,-1,25,27,26,-1,25,84,27,-1,25,44,84,-1,11,10,30,-1,11,30,13,-1,11,13,15,-1,11,15,14,-1,11,14,42,-1,11,42,12,-1,15,13,16,-1,15,18,14,-1,15,16,76,-1,15,76,18,-1,76,16,17,-1,76,17,82,-1,76,82,19,-1,76,19,18,-1,22,18,19,-1,22,87,18,-1,22,27,84,-1,22,84,87,-1,87,84,85,-1,85,84,44,-1,85,42,14,-1,87,14,18,-1,87,85,14,-1,20,83,26,-1,20,17,16,-1,20,16,88,-1,20,88,83,-1,88,16,13,-1,88,13,86,-1,88,86,83,-1,86,13,30,-1,86,32,83,-1,23,89,22,-1,89,27,22,-1,89,91,27,-1,91,26,27,-1,91,20,26,-1,21,20,91,-1,21,17,20,-1,21,92,17,-1,82,17,92,-1,82,90,19,-1,23,22,19,-1,23,19,90,-1,82,92,101,-1,82,101,99,-1,82,99,93,-1,82,93,95,-1,82,95,97,-1,82,97,90,-1,23,90,97,-1,23,97,94,-1,23,94,89,-1,89,94,96,-1,89,96,95,-1,89,95,93,-1,89,93,91,-1,91,93,99,-1,91,99,100,-1,91,100,98,-1,21,91,98,-1,21,98,101,-1,21,101,92,-1,85,105,42,-1,85,103,105,-1,85,44,103,-1,103,44,104,-1,80,42,105,-1,80,105,102,-1,80,102,104,-1,80,104,44,-1,105,109,102,-1,102,109,47,-1,47,104,102,-1,104,47,45,-1,104,45,103,-1,103,45,46,-1,103,46,109,-1,103,109,105,-1,109,112,110,-1,109,110,47,-1,47,110,111,-1,47,111,45,-1,45,111,113,-1,113,46,45,-1,46,113,112,-1,112,109,46,-1,112,118,110,-1,110,118,115,-1,110,115,111,-1,111,115,117,-1,111,117,113,-1,113,117,116,-1,113,116,112,-1,112,116,118,-1,115,118,119,-1,119,118,122,-1,118,116,122,-1,122,116,120,-1,116,117,120,-1,120,117,121,-1,117,115,121,-1,115,119,121,-1,119,127,123,-1,119,122,127,-1,122,126,127,-1,122,128,126,-1,122,120,128,-1,120,124,128,-1,120,121,124,-1,121,125,124,-1,121,119,125,-1,119,123,125,-1,127,129,123,-1,127,126,129,-1,129,126,141,-1,141,126,143,-1,126,142,143,-1,126,128,142,-1,128,124,130,-1,142,128,130,-1,124,132,130,-1,124,134,132,-1,125,134,124,-1,125,136,134,-1,125,137,136,-1,125,135,137,-1,125,133,135,-1,125,123,133,-1,123,131,133,-1,123,129,131,-1,131,129,138,-1,129,141,138,-1,138,141,144,-1,141,143,144,-1,143,146,144,-1,142,146,143,-1,142,145,146,-1,139,145,142,-1,130,139,142,-1,139,130,132,-1,139,132,154,-1,132,157,154,-1,132,159,157,-1,132,134,159,-1,134,136,159,-1,136,161,159,-1,136,137,161,-1,137,162,161,-1,160,162,137,-1,135,160,137,-1,133,160,135,-1,133,158,160,-1,131,158,133,-1,156,158,131,-1,153,156,131,-1,131,138,153,-1,138,155,153,-1,140,155,138,-1,138,144,140,-1,144,147,140,-1,140,147,145,-1,140,145,139,-1,139,155,140,-1,154,155,139,-1,146,149,144,-1,146,151,149,-1,145,151,146,-1,150,151,145,-1,145,152,150,-1,147,152,145,-1,147,149,152,-1,147,144,149,-1,148,149,151,-1,148,152,149,-1,148,150,152,-1,148,151,150,-1,160,207,162,-1,160,205,207,-1,165,208,205,-1,160,165,205,-1,158,165,160,-1,161,162,207,-1,161,207,206,-1,165,206,208,-1,206,165,161,-1,161,165,159,-1,207,209,211,-1,205,209,207,-1,205,212,209,-1,205,208,212,-1,206,212,208,-1,206,210,212,-1,206,207,210,-1,207,211,210,-1,209,212,213,-1,212,216,213,-1,212,214,216,-1,210,214,212,-1,210,215,214,-1,210,211,215,-1,209,215,211,-1,209,213,215,-1,217,213,216,-1,217,215,213,-1,217,214,215,-1,217,216,214,-1,158,194,165,-1,192,194,158,-1,164,195,192,-1,158,164,192,-1,156,164,158,-1,159,194,165,-1,159,194,193,-1,159,193,195,-1,159,195,164,-1,159,164,157,-1,157,164,180,-1,192,198,194,-1,192,196,198,-1,192,195,196,-1,195,199,196,-1,196,199,200,-1,199,203,200,-1,193,199,195,-1,193,197,199,-1,193,198,197,-1,193,194,198,-1,199,201,203,-1,197,201,199,-1,197,198,201,-1,198,202,201,-1,196,202,198,-1,200,202,196,-1,204,202,200,-1,204,201,202,-1,204,203,201,-1,204,200,203,-1,156,181,164,-1,156,179,181,-1,156,182,179,-1,156,163,182,-1,163,180,182,-1,157,180,163,-1,164,181,180,-1,179,182,183,-1,182,186,183,-1,182,184,186,-1,180,184,182,-1,180,181,184,-1,181,185,184,-1,179,185,181,-1,183,185,179,-1,183,186,187,-1,186,190,187,-1,184,190,186,-1,184,188,190,-1,184,185,188,-1,185,189,188,-1,185,183,189,-1,183,187,189,-1,191,189,187,-1,191,188,189,-1,191,190,188,-1,191,187,190,-1,153,163,156,-1,153,168,163,-1,153,166,168,-1,153,169,166,-1,155,169,153,-1,155,167,169,-1,154,167,155,-1,154,163,167,-1,154,157,163,-1,163,168,167,-1,166,169,170,-1,169,173,170,-1,169,171,173,-1,169,167,171,-1,167,168,171,-1,168,172,171,-1,168,170,172,-1,170,168,166,-1,170,173,174,-1,173,177,174,-1,173,175,177,-1,173,171,175,-1,171,172,175,-1,172,176,175,-1,172,174,176,-1,170,174,172,-1,178,176,174,-1,178,175,176,-1,178,177,175,-1,178,174,177,-1,86,30,221,-1,86,221,219,-1,86,219,32,-1,32,219,220,-1,78,32,220,-1,78,220,218,-1,78,218,221,-1,78,221,30,-1,221,225,219,-1,219,225,35,-1,35,33,219,-1,33,220,219,-1,33,34,220,-1,220,34,218,-1,221,218,34,-1,34,225,221,-1,225,226,228,-1,225,228,35,-1,35,228,229,-1,35,229,33,-1,33,229,227,-1,33,227,34,-1,34,227,226,-1,34,226,225,-1,226,234,228,-1,228,234,232,-1,232,229,228,-1,232,233,229,-1,229,233,227,-1,227,233,231,-1,227,231,226,-1,226,231,234,-1,231,235,234,-1,235,238,234,-1,234,238,232,-1,238,236,232,-1,232,236,233,-1,236,237,233,-1,233,237,231,-1,231,237,235,-1,235,239,243,-1,235,243,238,-1,238,243,242,-1,238,242,244,-1,238,244,236,-1,236,244,240,-1,236,240,237,-1,237,240,241,-1,237,241,235,-1,235,241,239,-1,243,239,245,-1,243,245,242,-1,245,257,242,-1,257,259,242,-1,242,259,258,-1,242,258,244,-1,244,246,240,-1,258,246,244,-1,240,246,248,-1,240,248,250,-1,241,240,250,-1,241,250,252,-1,241,252,253,-1,241,253,251,-1,241,251,249,-1,241,249,239,-1,239,249,247,-1,239,247,245,-1,247,254,245,-1,245,254,257,-1,254,260,257,-1,257,260,259,-1,259,260,262,-1,258,259,262,-1,258,262,261,-1,255,258,261,-1,246,258,255,-1,255,248,246,-1,255,270,248,-1,248,270,273,-1,248,273,275,-1,248,275,250,-1,250,275,252,-1,252,275,277,-1,252,277,253,-1,253,277,278,-1,276,253,278,-1,251,253,276,-1,249,251,276,-1,249,276,274,-1,247,249,274,-1,272,247,274,-1,269,247,272,-1,247,269,254,-1,254,269,271,-1,256,254,271,-1,254,256,260,-1,260,256,263,-1,256,261,263,-1,256,255,261,-1,255,256,271,-1,270,255,271,-1,262,260,265,-1,262,265,267,-1,261,262,267,-1,266,261,267,-1,261,266,268,-1,263,261,268,-1,263,268,265,-1,263,265,260,-1,264,267,265,-1,264,265,268,-1,264,268,266,-1,264,266,267,-1,276,278,323,-1,276,323,321,-1,281,321,324,-1,276,321,281,-1,274,276,281,-1,277,323,278,-1,277,322,323,-1,281,324,322,-1,322,277,281,-1,277,275,281,-1,323,327,325,-1,321,323,325,-1,321,325,328,-1,321,328,324,-1,322,324,328,-1,322,328,326,-1,322,326,323,-1,323,326,327,-1,325,329,328,-1,328,329,332,-1,328,332,330,-1,326,328,330,-1,326,330,331,-1,326,331,327,-1,325,327,331,-1,325,331,329,-1,333,332,329,-1,333,329,331,-1,333,331,330,-1,333,330,332,-1,274,281,310,-1,308,274,310,-1,280,308,311,-1,274,308,280,-1,272,274,280,-1,275,310,281,-1,275,309,310,-1,275,311,309,-1,275,280,311,-1,275,273,280,-1,273,296,280,-1,308,310,314,-1,308,314,312,-1,308,312,311,-1,311,312,315,-1,312,316,315,-1,315,316,319,-1,309,311,315,-1,309,315,313,-1,309,313,314,-1,309,314,310,-1,315,319,317,-1,313,315,317,-1,313,317,314,-1,314,317,318,-1,312,314,318,-1,316,312,318,-1,320,316,318,-1,320,318,317,-1,320,317,319,-1,320,319,316,-1,272,280,297,-1,272,297,295,-1,272,295,298,-1,272,298,279,-1,279,298,296,-1,273,279,296,-1,280,296,297,-1,295,299,298,-1,298,299,302,-1,298,302,300,-1,296,298,300,-1,296,300,297,-1,297,300,301,-1,295,297,301,-1,299,295,301,-1,299,303,302,-1,302,303,306,-1,300,302,306,-1,300,306,304,-1,300,304,301,-1,301,304,305,-1,301,305,299,-1,299,305,303,-1,307,303,305,-1,307,305,304,-1,307,304,306,-1,307,306,303,-1,269,272,279,-1,269,279,284,-1,269,284,282,-1,269,282,285,-1,271,269,285,-1,271,285,283,-1,270,271,283,-1,270,283,279,-1,270,279,273,-1,279,283,284,-1,282,286,285,-1,285,286,289,-1,285,289,287,-1,285,287,283,-1,283,287,284,-1,284,287,288,-1,284,288,286,-1,286,282,284,-1,286,290,289,-1,289,290,293,-1,289,293,291,-1,289,291,287,-1,287,291,288,-1,288,291,292,-1,288,292,290,-1,286,288,290,-1,294,290,292,-1,294,292,291,-1,294,291,293,-1,294,293,290,-1,97,334,336,-1,97,336,94,-1,94,336,96,-1,336,335,96,-1,96,335,95,-1,95,335,337,-1,95,337,334,-1,95,334,97,-1,334,341,336,-1,336,341,338,-1,336,338,335,-1,335,338,340,-1,335,340,337,-1,337,340,339,-1,337,339,334,-1,334,339,341,-1,341,345,342,-1,341,342,338,-1,338,342,340,-1,340,342,344,-1,340,344,339,-1,339,344,343,-1,339,343,345,-1,339,345,341,-1,345,349,342,-1,342,349,351,-1,342,351,346,-1,342,346,344,-1,71,346,348,-1,71,344,346,-1,71,348,347,-1,71,347,344,-1,344,347,343,-1,343,347,352,-1,343,352,349,-1,343,349,345,-1,349,352,356,-1,349,356,353,-1,349,353,355,-1,349,355,351,-1,354,356,352,-1,354,352,350,-1,354,350,351,-1,354,351,355,-1,353,356,357,-1,353,357,358,-1,353,358,359,-1,353,359,360,-1,353,360,361,-1,353,361,355,-1,354,357,356,-1,350,346,351,-1,348,346,347,-1,350,347,346,-1,350,352,347,-1,354,358,357,-1,354,359,358,-1,354,360,359,-1,354,361,360,-1,354,355,361,-1,101,362,365,-1,101,365,99,-1,99,365,100,-1,100,365,363,-1,100,363,98,-1,98,363,364,-1,98,364,101,-1,101,364,362,-1,362,369,367,-1,362,367,365,-1,365,367,363,-1,363,367,368,-1,363,367,368,-1,363,368,366,-1,363,366,364,-1,364,366,362,-1,362,366,369,-1,369,373,371,-1,369,371,367,-1,367,371,368,-1,368,371,372,-1,368,372,366,-1,366,372,370,-1,366,370,369,-1,369,370,373,-1,373,377,380,-1,373,380,375,-1,373,375,371,-1,371,375,372,-1,372,375,376,-1,372,376,374,-1,372,374,370,-1,370,374,379,-1,373,370,379,-1,373,379,377,-1,377,379,383,-1,377,383,381,-1,377,381,384,-1,377,384,380,-1,381,383,389,-1,381,389,388,-1,381,388,387,-1,381,387,386,-1,381,386,385,-1,381,385,384,-1,376,375,374,-1,378,379,374,-1,378,374,375,-1,378,375,380,-1,382,386,387,-1,382,387,388,-1,382,388,389,-1,382,389,383,-1,382,383,379,-1,382,379,378,-1,382,378,380,-1,382,380,384,-1,382,384,385,-1,382,385,386,-1]
+IndexedFaceSet139.creaseAngle = 3.14
+Coordinate140 = x3d.Coordinate()
+Coordinate140.DEF = "Joe_SkinCoord"
+Coordinate140.point = (0.0000,1.7700,0.0000,0.0000,1.6650,0.0900,-0.0330,1.6200,0.0870,0.0330,1.6200,0.0870,0.0000,1.5500,0.0970,-0.0770,1.6400,-0.0100,-0.0527,1.5800,0.0150,0.0770,1.6400,-0.0100,0.0527,1.5800,0.0150,0.0000,1.6250,-0.0925,-0.0300,1.4600,0.0350,0.0000,1.4400,0.0300,0.0300,1.4600,0.0350,-0.1135,1.3180,0.0950,0.1135,1.3180,0.0950,0.0000,1.2500,0.1130,-0.0870,1.1900,0.0900,-0.0935,1.0300,0.0750,0.0870,1.1900,0.0900,0.0935,1.0300,0.0750,-0.1425,1.0650,0.0033,-0.1500,0.9000,-0.0100,0.1425,1.0650,0.0033,0.1500,0.9000,-0.0100,0.0000,1.5300,-0.0840,0.0049,1.1908,-0.1113,-0.0773,1.0190,-0.1200,0.0773,1.0190,-0.1200,0.0050,1.0915,-0.1091,-0.1780,1.4825,-0.0625,-0.1700,1.3800,0.0070,-0.1884,0.8676,-0.0360,-0.1600,1.3800,-0.1270,-0.2000,1.1388,-0.0800,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2300,1.1330,-0.0550,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.7890,-0.1064,0.1750,1.4825,-0.0600,0.1700,1.3800,0.0070,0.1901,0.8645,-0.0415,0.1600,1.3800,-0.1250,0.2000,1.1388,-0.0800,0.1650,1.1388,-0.0400,0.2440,1.1388,-0.0400,0.2300,1.1330,-0.0550,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.7860,-0.1122,-0.1000,0.4913,-0.0300,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1650,0.0100,0.1200,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.0900,0.0560,0.0125,-0.1150,0.0200,0.1220,-0.1150,0.0400,-0.0550,-0.1100,0.0110,0.1900,0.0993,0.4881,-0.0309,0.1700,0.4660,0.0000,0.0500,0.4867,0.0000,0.1650,0.0100,0.1200,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.0900,0.0560,0.0125,0.1150,0.0200,0.1220,0.1150,0.0400,-0.0550,0.1100,0.0110,0.1900,0.0000,0.8750,0.0000,-0.0646,1.5149,-0.0380,0.0646,1.5149,-0.0380,0.0000,1.0722,0.0900,-0.1100,1.4270,-0.1375,-0.2350,1.4200,-0.0625,0.1100,1.4270,-0.1375,0.2350,1.4200,-0.0625,0.0000,1.4100,-0.1450,0.0000,0.9250,0.0800,-0.0870,1.1900,-0.0900,0.0870,1.1900,-0.0900,0.1720,1.3200,-0.0300,-0.1720,1.3200,-0.0300,0.1500,1.2300,-0.0150,-0.1500,1.2300,-0.0150,0.0790,0.9200,-0.1400,0.1000,0.9000,0.0770,-0.0790,0.9200,-0.1400,-0.1000,0.9000,0.0750,0.0000,0.8700,0.0000,0.1710,0.6500,0.0000,0.0200,0.6500,0.0000,0.1000,0.6500,-0.0800,0.1000,0.6500,0.0700,-0.1710,0.6500,0.0000,-0.0200,0.6500,0.0000,-0.1000,0.6500,-0.0800,-0.1000,0.6500,0.0700,0.2500,1.2700,-0.0400,0.1700,1.2700,-0.0400,0.2000,1.2700,-0.0900,0.2000,1.2700,0.0200,0.2440,1.1388,-0.0400,0.1650,1.1388,-0.0400,0.2000,1.1388,-0.0800,0.2000,1.1388,-0.0130,0.2250,1.0000,-0.0100,0.2250,1.0000,-0.0700,0.1850,1.0000,-0.0100,0.1850,1.0000,-0.0700,0.2000,1.1388,-0.0400,0.2250,0.9200,-0.0400,0.1750,0.9200,-0.0400,0.2000,0.9200,-0.0650,0.2000,0.9200,-0.0150,0.2250,0.8900,-0.0400,0.1750,0.8900,-0.0400,0.2000,0.8900,-0.0650,0.2000,0.8900,-0.0150,0.2180,0.8600,-0.0400,0.1840,0.8600,-0.0400,0.2000,0.8700,-0.0700,0.2000,0.8700,0.0000,0.2100,0.8500,0.0000,0.1854,0.8500,0.0000,0.2120,0.8400,-0.0150,0.1830,0.8400,-0.0150,0.2130,0.8350,-0.0400,0.1900,0.8350,-0.0400,0.2110,0.8350,-0.0650,0.1920,0.8350,-0.0650,0.2080,0.8400,-0.0850,0.1900,0.8400,-0.0850,0.2000,0.8400,-0.0950,0.2150,0.8200,0.0000,0.1930,0.8150,0.0050,0.1980,0.8000,0.0120,0.2100,0.8200,0.0300,0.1900,0.8200,0.0300,0.2000,0.8350,0.0390,0.2120,0.8000,0.0500,0.1880,0.8000,0.0500,0.2000,0.8070,0.0570,0.2000,0.7930,0.0350,0.2000,0.7740,0.0760,0.2120,0.7800,0.0700,0.1880,0.7800,0.0700,0.2000,0.7850,0.0750,0.2000,0.7700,0.0620,0.2150,0.7930,-0.0150,0.1870,0.7930,-0.0150,0.2000,0.7930,-0.0050,0.2150,0.7880,-0.0400,0.1870,0.7880,-0.0400,0.2150,0.7930,-0.0650,0.1870,0.7930,-0.0650,0.2100,0.7900,-0.0850,0.1900,0.7900,-0.0850,0.2000,0.7900,-0.0950,0.1900,0.7700,-0.0275,0.1900,0.7700,-0.0525,0.1900,0.7800,-0.0775,0.2120,0.7450,-0.0150,0.1880,0.7450,-0.0200,0.2000,0.7450,-0.0255,0.2000,0.7450,-0.0045,0.2110,0.7200,-0.0150,0.1890,0.7200,-0.0150,0.2000,0.7200,-0.0252,0.2000,0.7200,-0.0048,0.2100,0.6950,-0.0150,0.1900,0.6950,-0.0150,0.2000,0.6950,-0.0250,0.2000,0.6950,-0.0050,0.2000,0.6850,-0.0150,0.2150,0.7400,-0.0400,0.1850,0.7400,-0.0400,0.2000,0.7400,-0.0550,0.2000,0.7400,-0.0250,0.2100,0.7142,-0.0400,0.1900,0.7142,-0.0400,0.2000,0.7142,-0.0530,0.2000,0.7142,-0.0270,0.2100,0.6800,-0.0400,0.1900,0.6800,-0.0400,0.2000,0.6800,-0.0500,0.2000,0.6800,-0.0300,0.2000,0.6700,-0.0400,0.2120,0.7400,-0.0650,0.1880,0.7400,-0.0650,0.2000,0.7400,-0.0756,0.2000,0.7400,-0.0542,0.2100,0.7177,-0.0650,0.1900,0.7177,-0.0650,0.2000,0.7177,-0.0751,0.2000,0.7177,-0.0549,0.2100,0.6950,-0.0650,0.1900,0.6950,-0.0650,0.2000,0.6950,-0.0750,0.2000,0.6950,-0.0550,0.2000,0.6850,-0.0650,0.2110,0.7550,-0.0850,0.1890,0.7550,-0.0850,0.2000,0.7550,-0.0952,0.2000,0.7550,-0.0748,0.2100,0.7350,-0.0850,0.1900,0.7350,-0.0850,0.2000,0.7350,-0.0951,0.2000,0.7350,-0.0749,0.2100,0.7200,-0.0850,0.1900,0.7200,-0.0850,0.2000,0.7200,-0.0950,0.2000,0.7200,-0.0750,0.2000,0.7100,-0.0850,-0.2300,1.2300,-0.0400,-0.1600,1.2300,-0.0400,-0.2000,1.2350,-0.1050,-0.2000,1.2550,0.0200,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2000,1.1388,-0.0800,-0.2000,1.1388,0.0130,-0.2250,1.0000,-0.0100,-0.2250,1.0000,-0.0700,-0.1850,1.0000,-0.0100,-0.1850,1.0000,-0.0700,-0.2000,1.1388,-0.0400,-0.2250,0.9200,-0.0400,-0.1750,0.9200,-0.0400,-0.2000,0.9200,-0.0650,-0.2000,0.9200,-0.0150,-0.2250,0.8900,-0.0400,-0.1750,0.8900,-0.0400,-0.2000,0.8900,-0.0650,-0.2000,0.8900,-0.0150,-0.2180,0.8600,-0.0400,-0.1840,0.8600,-0.0400,-0.2000,0.8700,-0.0700,-0.2000,0.8700,0.0000,-0.2100,0.8500,0.0000,-0.1854,0.8500,0.0000,-0.2120,0.8400,-0.0150,-0.1830,0.8400,-0.0150,-0.2130,0.8350,-0.0400,-0.1900,0.8350,-0.0400,-0.2110,0.8350,-0.0650,-0.1920,0.8350,-0.0650,-0.2080,0.8400,-0.0850,-0.1900,0.8400,-0.0850,-0.2000,0.8400,-0.0950,-0.2150,0.8200,0.0000,-0.1930,0.8150,0.0050,-0.1980,0.8000,0.0120,-0.2100,0.8200,0.0300,-0.1900,0.8200,0.0300,-0.2000,0.8350,0.0390,-0.2120,0.8000,0.0500,-0.1880,0.8000,0.0500,-0.2000,0.8070,0.0570,-0.2000,0.7930,0.0350,-0.2000,0.7740,0.0760,-0.2120,0.7800,0.0700,-0.1880,0.7800,0.0700,-0.2000,0.7850,0.0750,-0.2000,0.7700,0.0620,-0.2150,0.7930,-0.0150,-0.1870,0.7930,-0.0150,-0.2000,0.7930,-0.0050,-0.2150,0.7880,-0.0400,-0.1870,0.7880,-0.0400,-0.2150,0.7930,-0.0650,-0.1870,0.7930,-0.0650,-0.2100,0.7900,-0.0850,-0.1900,0.7900,-0.0850,-0.2000,0.7900,-0.0950,-0.1900,0.7700,-0.0275,-0.1900,0.7700,-0.0525,-0.1900,0.7800,-0.0775,-0.2120,0.7450,-0.0150,-0.1880,0.7450,-0.0200,-0.2000,0.7450,-0.0255,-0.2000,0.7450,-0.0045,-0.2110,0.7200,-0.0150,-0.1890,0.7200,-0.0150,-0.2000,0.7200,-0.0252,-0.2000,0.7200,-0.0048,-0.2100,0.6950,-0.0150,-0.1900,0.6950,-0.0150,-0.2000,0.6950,-0.0250,-0.2000,0.6950,-0.0050,-0.2000,0.6850,-0.0150,-0.2150,0.7400,-0.0400,-0.1850,0.7400,-0.0400,-0.2000,0.7400,-0.0550,-0.2000,0.7400,-0.0250,-0.2100,0.7142,-0.0400,-0.1900,0.7142,-0.0400,-0.2000,0.7142,-0.0530,-0.2000,0.7142,-0.0270,-0.2100,0.6800,-0.0400,-0.1900,0.6800,-0.0400,-0.2000,0.6800,-0.0500,-0.2000,0.6800,-0.0300,-0.2000,0.6700,-0.0400,-0.2120,0.7400,-0.0650,-0.1880,0.7400,-0.0650,-0.2000,0.7400,-0.0756,-0.2000,0.7400,-0.0542,-0.2100,0.7177,-0.0650,-0.1900,0.7177,-0.0650,-0.2000,0.7177,-0.0751,-0.2000,0.7177,-0.0549,-0.2100,0.6950,-0.0650,-0.1900,0.6950,-0.0650,-0.2000,0.6950,-0.0750,-0.2000,0.6950,-0.0550,-0.2000,0.6850,-0.0650,-0.2110,0.7550,-0.0850,-0.1890,0.7550,-0.0850,-0.2000,0.7550,-0.0952,-0.2000,0.7550,-0.0748,-0.2100,0.7350,-0.0850,-0.1900,0.7350,-0.0850,-0.2000,0.7350,-0.0951,-0.2000,0.7350,-0.0749,-0.2100,0.7200,-0.0850,-0.1900,0.7200,-0.0850,-0.2000,0.7200,-0.0950,-0.2000,0.7200,-0.0750,-0.2000,0.7100,-0.0850,0.1150,0.4660,0.0600,0.1150,0.4660,-0.0550,0.1500,0.4660,0.0000,0.0500,0.4660,0.0000,0.1700,0.3000,0.0000,0.0600,0.3000,0.0000,0.1000,0.3000,-0.0500,0.1000,0.3000,0.0500,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.1150,0.0690,-0.0450,0.1170,0.0975,0.0615,0.1375,0.0060,-0.0300,0.0950,0.0060,-0.0300,0.1150,0.0150,-0.0450,0.1150,0.0600,0.1000,0.1150,0.0000,0.0700,0.1650,0.0000,0.0700,0.0950,0.0000,0.0700,0.1150,0.0400,0.1300,0.1250,0.0000,0.1200,0.1650,0.0000,0.1200,0.0870,0.0000,0.1220,0.0900,0.0120,0.1880,0.1100,0.0110,0.1900,0.1280,0.0110,0.1850,0.1420,0.0110,0.1780,0.1540,0.0100,0.1680,-0.1150,0.4660,0.0600,-0.1150,0.4660,-0.0550,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1700,0.3000,0.0000,-0.0600,0.3000,0.0000,-0.1000,0.3000,-0.0500,-0.1000,0.3000,0.0500,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.1150,0.0690,-0.0450,-0.1170,0.0975,0.0615,-0.1375,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.1150,0.0600,0.1000,-0.1150,0.0000,0.0700,-0.1650,0.0000,0.0700,-0.0950,0.0000,0.0700,-0.1150,0.0400,0.1300,-0.1250,0.0000,0.1200,-0.1650,0.0000,0.1200,-0.0870,0.0000,0.1220,-0.0900,0.0120,0.1880,-0.1100,0.0110,0.1900,-0.1280,0.0110,0.1850,-0.1420,0.0110,0.1780,-0.1540,0.0100,0.1680)
+
+IndexedFaceSet139.coord.append(Coordinate140)
+TextureCoordinate141 = x3d.TextureCoordinate()
+TextureCoordinate141.point = [0,0,0.5,0.5,0.5,0,0,0.5]
+
+IndexedFaceSet139.texCoord.append(TextureCoordinate141)
+
+Shape134.geometry = IndexedFaceSet139
+
+HAnimHumanoid28.skin.append(Shape134)
+Coordinate142 = x3d.Coordinate()
+Coordinate142.USE = "Joe_SkinCoord"
+
+HAnimHumanoid28.skinCoord.append(Coordinate142)
+HAnimJoint143 = x3d.HAnimJoint()
+HAnimJoint143.USE = "Joe_humanoid_root"
+
+HAnimHumanoid28.joints.append(HAnimJoint143)
+HAnimJoint144 = x3d.HAnimJoint()
+HAnimJoint144.USE = "Joe_sacroiliac"
+
+HAnimHumanoid28.joints.append(HAnimJoint144)
+HAnimJoint145 = x3d.HAnimJoint()
+HAnimJoint145.USE = "Joe_skullbase"
+
+HAnimHumanoid28.joints.append(HAnimJoint145)
+HAnimJoint146 = x3d.HAnimJoint()
+HAnimJoint146.USE = "Joe_temporomandibular"
+
+HAnimHumanoid28.joints.append(HAnimJoint146)
+HAnimJoint147 = x3d.HAnimJoint()
+HAnimJoint147.USE = "Joe_vc1"
+
+HAnimHumanoid28.joints.append(HAnimJoint147)
+HAnimJoint148 = x3d.HAnimJoint()
+HAnimJoint148.USE = "Joe_vc2"
+
+HAnimHumanoid28.joints.append(HAnimJoint148)
+HAnimJoint149 = x3d.HAnimJoint()
+HAnimJoint149.USE = "Joe_vc3"
+
+HAnimHumanoid28.joints.append(HAnimJoint149)
+HAnimJoint150 = x3d.HAnimJoint()
+HAnimJoint150.USE = "Joe_vc4"
+
+HAnimHumanoid28.joints.append(HAnimJoint150)
+HAnimJoint151 = x3d.HAnimJoint()
+HAnimJoint151.USE = "Joe_vc5"
+
+HAnimHumanoid28.joints.append(HAnimJoint151)
+HAnimJoint152 = x3d.HAnimJoint()
+HAnimJoint152.USE = "Joe_vc6"
+
+HAnimHumanoid28.joints.append(HAnimJoint152)
+HAnimJoint153 = x3d.HAnimJoint()
+HAnimJoint153.USE = "Joe_vc7"
+
+HAnimHumanoid28.joints.append(HAnimJoint153)
+HAnimJoint154 = x3d.HAnimJoint()
+HAnimJoint154.USE = "Joe_vl1"
+
+HAnimHumanoid28.joints.append(HAnimJoint154)
+HAnimJoint155 = x3d.HAnimJoint()
+HAnimJoint155.USE = "Joe_vl2"
+
+HAnimHumanoid28.joints.append(HAnimJoint155)
+HAnimJoint156 = x3d.HAnimJoint()
+HAnimJoint156.USE = "Joe_vl3"
+
+HAnimHumanoid28.joints.append(HAnimJoint156)
+HAnimJoint157 = x3d.HAnimJoint()
+HAnimJoint157.USE = "Joe_vl4"
+
+HAnimHumanoid28.joints.append(HAnimJoint157)
+HAnimJoint158 = x3d.HAnimJoint()
+HAnimJoint158.USE = "Joe_vl5"
+
+HAnimHumanoid28.joints.append(HAnimJoint158)
+HAnimJoint159 = x3d.HAnimJoint()
+HAnimJoint159.USE = "Joe_vt1"
+
+HAnimHumanoid28.joints.append(HAnimJoint159)
+HAnimJoint160 = x3d.HAnimJoint()
+HAnimJoint160.USE = "Joe_vt10"
+
+HAnimHumanoid28.joints.append(HAnimJoint160)
+HAnimJoint161 = x3d.HAnimJoint()
+HAnimJoint161.USE = "Joe_vt11"
+
+HAnimHumanoid28.joints.append(HAnimJoint161)
+HAnimJoint162 = x3d.HAnimJoint()
+HAnimJoint162.USE = "Joe_vt12"
+
+HAnimHumanoid28.joints.append(HAnimJoint162)
+HAnimJoint163 = x3d.HAnimJoint()
+HAnimJoint163.USE = "Joe_vt2"
+
+HAnimHumanoid28.joints.append(HAnimJoint163)
+HAnimJoint164 = x3d.HAnimJoint()
+HAnimJoint164.USE = "Joe_vt3"
+
+HAnimHumanoid28.joints.append(HAnimJoint164)
+HAnimJoint165 = x3d.HAnimJoint()
+HAnimJoint165.USE = "Joe_vt4"
+
+HAnimHumanoid28.joints.append(HAnimJoint165)
+HAnimJoint166 = x3d.HAnimJoint()
+HAnimJoint166.USE = "Joe_vt5"
+
+HAnimHumanoid28.joints.append(HAnimJoint166)
+HAnimJoint167 = x3d.HAnimJoint()
+HAnimJoint167.USE = "Joe_vt6"
+
+HAnimHumanoid28.joints.append(HAnimJoint167)
+HAnimJoint168 = x3d.HAnimJoint()
+HAnimJoint168.USE = "Joe_vt7"
+
+HAnimHumanoid28.joints.append(HAnimJoint168)
+HAnimJoint169 = x3d.HAnimJoint()
+HAnimJoint169.USE = "Joe_vt8"
+
+HAnimHumanoid28.joints.append(HAnimJoint169)
+HAnimJoint170 = x3d.HAnimJoint()
+HAnimJoint170.USE = "Joe_vt9"
+
+HAnimHumanoid28.joints.append(HAnimJoint170)
+HAnimJoint171 = x3d.HAnimJoint()
+HAnimJoint171.USE = "Joe_l_acromioclavicular"
+
+HAnimHumanoid28.joints.append(HAnimJoint171)
+HAnimJoint172 = x3d.HAnimJoint()
+HAnimJoint172.USE = "Joe_r_acromioclavicular"
+
+HAnimHumanoid28.joints.append(HAnimJoint172)
+HAnimJoint173 = x3d.HAnimJoint()
+HAnimJoint173.USE = "Joe_l_carpal_distal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint173)
+HAnimJoint174 = x3d.HAnimJoint()
+HAnimJoint174.USE = "Joe_r_carpal_distal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint174)
+HAnimJoint175 = x3d.HAnimJoint()
+HAnimJoint175.USE = "Joe_l_carpal_distal_interphalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint175)
+HAnimJoint176 = x3d.HAnimJoint()
+HAnimJoint176.USE = "Joe_r_carpal_distal_interphalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint176)
+HAnimJoint177 = x3d.HAnimJoint()
+HAnimJoint177.USE = "Joe_l_carpal_distal_interphalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint177)
+HAnimJoint178 = x3d.HAnimJoint()
+HAnimJoint178.USE = "Joe_r_carpal_distal_interphalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint178)
+HAnimJoint179 = x3d.HAnimJoint()
+HAnimJoint179.USE = "Joe_l_carpal_distal_interphalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint179)
+HAnimJoint180 = x3d.HAnimJoint()
+HAnimJoint180.USE = "Joe_r_carpal_distal_interphalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint180)
+HAnimJoint181 = x3d.HAnimJoint()
+HAnimJoint181.USE = "Joe_l_carpal_interphalangeal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint181)
+HAnimJoint182 = x3d.HAnimJoint()
+HAnimJoint182.USE = "Joe_r_carpal_interphalangeal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint182)
+HAnimJoint183 = x3d.HAnimJoint()
+HAnimJoint183.USE = "Joe_l_carpal_proximal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint183)
+HAnimJoint184 = x3d.HAnimJoint()
+HAnimJoint184.USE = "Joe_r_carpal_proximal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint184)
+HAnimJoint185 = x3d.HAnimJoint()
+HAnimJoint185.USE = "Joe_l_carpal_proximal_interphalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint185)
+HAnimJoint186 = x3d.HAnimJoint()
+HAnimJoint186.USE = "Joe_r_carpal_proximal_interphalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint186)
+HAnimJoint187 = x3d.HAnimJoint()
+HAnimJoint187.USE = "Joe_l_carpal_proximal_interphalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint187)
+HAnimJoint188 = x3d.HAnimJoint()
+HAnimJoint188.USE = "Joe_r_carpal_proximal_interphalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint188)
+HAnimJoint189 = x3d.HAnimJoint()
+HAnimJoint189.USE = "Joe_l_carpal_proximal_interphalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint189)
+HAnimJoint190 = x3d.HAnimJoint()
+HAnimJoint190.USE = "Joe_r_carpal_proximal_interphalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint190)
+HAnimJoint191 = x3d.HAnimJoint()
+HAnimJoint191.USE = "Joe_l_carpometacarpal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint191)
+HAnimJoint192 = x3d.HAnimJoint()
+HAnimJoint192.USE = "Joe_r_carpometacarpal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint192)
+HAnimJoint193 = x3d.HAnimJoint()
+HAnimJoint193.USE = "Joe_l_carpometacarpal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint193)
+HAnimJoint194 = x3d.HAnimJoint()
+HAnimJoint194.USE = "Joe_r_carpometacarpal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint194)
+HAnimJoint195 = x3d.HAnimJoint()
+HAnimJoint195.USE = "Joe_l_carpometacarpal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint195)
+HAnimJoint196 = x3d.HAnimJoint()
+HAnimJoint196.USE = "Joe_r_carpometacarpal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint196)
+HAnimJoint197 = x3d.HAnimJoint()
+HAnimJoint197.USE = "Joe_l_carpometacarpal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint197)
+HAnimJoint198 = x3d.HAnimJoint()
+HAnimJoint198.USE = "Joe_r_carpometacarpal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint198)
+HAnimJoint199 = x3d.HAnimJoint()
+HAnimJoint199.USE = "Joe_l_carpometacarpal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint199)
+HAnimJoint200 = x3d.HAnimJoint()
+HAnimJoint200.USE = "Joe_r_carpometacarpal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint200)
+HAnimJoint201 = x3d.HAnimJoint()
+HAnimJoint201.USE = "Joe_l_elbow"
+
+HAnimHumanoid28.joints.append(HAnimJoint201)
+HAnimJoint202 = x3d.HAnimJoint()
+HAnimJoint202.USE = "Joe_r_elbow"
+
+HAnimHumanoid28.joints.append(HAnimJoint202)
+HAnimJoint203 = x3d.HAnimJoint()
+HAnimJoint203.USE = "Joe_l_eyeball_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint203)
+HAnimJoint204 = x3d.HAnimJoint()
+HAnimJoint204.USE = "Joe_r_eyeball_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint204)
+HAnimJoint205 = x3d.HAnimJoint()
+HAnimJoint205.USE = "Joe_l_eyebrow_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint205)
+HAnimJoint206 = x3d.HAnimJoint()
+HAnimJoint206.USE = "Joe_r_eyebrow_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint206)
+HAnimJoint207 = x3d.HAnimJoint()
+HAnimJoint207.USE = "Joe_l_eyelid_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint207)
+HAnimJoint208 = x3d.HAnimJoint()
+HAnimJoint208.USE = "Joe_r_eyelid_joint"
+
+HAnimHumanoid28.joints.append(HAnimJoint208)
+HAnimJoint209 = x3d.HAnimJoint()
+HAnimJoint209.USE = "Joe_l_hip"
+
+HAnimHumanoid28.joints.append(HAnimJoint209)
+HAnimJoint210 = x3d.HAnimJoint()
+HAnimJoint210.USE = "Joe_r_hip"
+
+HAnimHumanoid28.joints.append(HAnimJoint210)
+HAnimJoint211 = x3d.HAnimJoint()
+HAnimJoint211.USE = "Joe_l_knee"
+
+HAnimHumanoid28.joints.append(HAnimJoint211)
+HAnimJoint212 = x3d.HAnimJoint()
+HAnimJoint212.USE = "Joe_r_knee"
+
+HAnimHumanoid28.joints.append(HAnimJoint212)
+HAnimJoint213 = x3d.HAnimJoint()
+HAnimJoint213.USE = "Joe_l_metacarpophalangeal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint213)
+HAnimJoint214 = x3d.HAnimJoint()
+HAnimJoint214.USE = "Joe_r_metacarpophalangeal_1"
+
+HAnimHumanoid28.joints.append(HAnimJoint214)
+HAnimJoint215 = x3d.HAnimJoint()
+HAnimJoint215.USE = "Joe_l_metacarpophalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint215)
+HAnimJoint216 = x3d.HAnimJoint()
+HAnimJoint216.USE = "Joe_r_metacarpophalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint216)
+HAnimJoint217 = x3d.HAnimJoint()
+HAnimJoint217.USE = "Joe_l_metacarpophalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint217)
+HAnimJoint218 = x3d.HAnimJoint()
+HAnimJoint218.USE = "Joe_r_metacarpophalangeal_3"
+
+HAnimHumanoid28.joints.append(HAnimJoint218)
+HAnimJoint219 = x3d.HAnimJoint()
+HAnimJoint219.USE = "Joe_l_metacarpophalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint219)
+HAnimJoint220 = x3d.HAnimJoint()
+HAnimJoint220.USE = "Joe_r_metacarpophalangeal_4"
+
+HAnimHumanoid28.joints.append(HAnimJoint220)
+HAnimJoint221 = x3d.HAnimJoint()
+HAnimJoint221.USE = "Joe_l_metacarpophalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint221)
+HAnimJoint222 = x3d.HAnimJoint()
+HAnimJoint222.USE = "Joe_r_metacarpophalangeal_5"
+
+HAnimHumanoid28.joints.append(HAnimJoint222)
+HAnimJoint223 = x3d.HAnimJoint()
+HAnimJoint223.USE = "Joe_l_metatarsophalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint223)
+HAnimJoint224 = x3d.HAnimJoint()
+HAnimJoint224.USE = "Joe_r_metatarsophalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint224)
+HAnimJoint225 = x3d.HAnimJoint()
+HAnimJoint225.USE = "Joe_l_radiocarpal"
+
+HAnimHumanoid28.joints.append(HAnimJoint225)
+HAnimJoint226 = x3d.HAnimJoint()
+HAnimJoint226.USE = "Joe_r_radiocarpal"
+
+HAnimHumanoid28.joints.append(HAnimJoint226)
+HAnimJoint227 = x3d.HAnimJoint()
+HAnimJoint227.USE = "Joe_l_shoulder"
+
+HAnimHumanoid28.joints.append(HAnimJoint227)
+HAnimJoint228 = x3d.HAnimJoint()
+HAnimJoint228.USE = "Joe_r_shoulder"
+
+HAnimHumanoid28.joints.append(HAnimJoint228)
+HAnimJoint229 = x3d.HAnimJoint()
+HAnimJoint229.USE = "Joe_l_sternoclavicular"
+
+HAnimHumanoid28.joints.append(HAnimJoint229)
+HAnimJoint230 = x3d.HAnimJoint()
+HAnimJoint230.USE = "Joe_r_sternoclavicular"
+
+HAnimHumanoid28.joints.append(HAnimJoint230)
+HAnimJoint231 = x3d.HAnimJoint()
+HAnimJoint231.USE = "Joe_l_talocrural"
+
+HAnimHumanoid28.joints.append(HAnimJoint231)
+HAnimJoint232 = x3d.HAnimJoint()
+HAnimJoint232.USE = "Joe_r_talocrural"
+
+HAnimHumanoid28.joints.append(HAnimJoint232)
+HAnimJoint233 = x3d.HAnimJoint()
+HAnimJoint233.USE = "Joe_l_tarsal_distal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint233)
+HAnimJoint234 = x3d.HAnimJoint()
+HAnimJoint234.USE = "Joe_r_tarsal_distal_interphalangeal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint234)
+HAnimJoint235 = x3d.HAnimJoint()
+HAnimJoint235.USE = "Joe_l_tarsometatarsal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint235)
+HAnimJoint236 = x3d.HAnimJoint()
+HAnimJoint236.USE = "Joe_r_tarsometatarsal_2"
+
+HAnimHumanoid28.joints.append(HAnimJoint236)
+HAnimSegment237 = x3d.HAnimSegment()
+HAnimSegment237.USE = "Joe_sacrum"
+
+HAnimHumanoid28.segments.append(HAnimSegment237)
+HAnimSite238 = x3d.HAnimSite()
+HAnimSite238.USE = "Joe_RootFront_view"
+
+HAnimHumanoid28.sites.append(HAnimSite238)
+
+Group27.children.append(HAnimHumanoid28)
+
+Scene16.children.append(Group27)
+Group239 = x3d.Group()
+TimeSensor240 = x3d.TimeSensor()
+TimeSensor240.DEF = "KickTimer"
+TimeSensor240.cycleInterval = 3.73
+TimeSensor240.loop = True
+
+Group239.children.append(TimeSensor240)
 #Interpolators
-OrientationInterpolator241 = OrientationInterpolator()
-OrientationInterpolator241.setDEF("HumanoidRoot_RotationInterpolator")
-OrientationInterpolator241.setKey([0,0.1,0.4,0.6,1])
-OrientationInterpolator241.setKeyValue([1,0,0,0.5,1,0,0,0.5,-1,0,0,0.1,-1,0,0,0.5,-1,0,0,0.5])
-
-Group239.addChildren(OrientationInterpolator241)
-PositionInterpolator242 = PositionInterpolator()
-PositionInterpolator242.setDEF("HumanoidRoot_TranslationInterpolator")
-PositionInterpolator242.setKey([0,0.2,0.6,1])
-PositionInterpolator242.setKeyValue([1,0.3,-1,0.4,-0.04,-0.4,-0.18,0.1,0,-0.2,0.15,0.15])
-
-Group239.addChildren(PositionInterpolator242)
-OrientationInterpolator243 = OrientationInterpolator()
-OrientationInterpolator243.setDEF("sacroiliac_RotationInterpolator")
-OrientationInterpolator243.setKey([0,0.5,1])
-OrientationInterpolator243.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator243)
-OrientationInterpolator244 = OrientationInterpolator()
-OrientationInterpolator244.setDEF("l_hip_RotationInterpolator")
-OrientationInterpolator244.setKey([0,0.1,0.3,0.45,1])
-OrientationInterpolator244.setKeyValue([-1,0,0,1.5,-1,0,0,1,0,0,1,0,1,0,0,0.5,1,0,0,1])
-
-Group239.addChildren(OrientationInterpolator244)
-OrientationInterpolator245 = OrientationInterpolator()
-OrientationInterpolator245.setDEF("l_knee_RotationInterpolator")
-OrientationInterpolator245.setKey([0,0.2,0.35,0.5,1])
-OrientationInterpolator245.setKeyValue([1,0,0,1,0,0,1,0,0,0,1,0.2,1,0,1,0.5,1,0,0,1.4])
-
-Group239.addChildren(OrientationInterpolator245)
-OrientationInterpolator246 = OrientationInterpolator()
-OrientationInterpolator246.setDEF("l_ankle_RotationInterpolator")
-OrientationInterpolator246.setKey([0,0.25,1])
-OrientationInterpolator246.setKeyValue([-1,0,0,1,0,0,1,0,1,0,0,1])
-
-Group239.addChildren(OrientationInterpolator246)
-OrientationInterpolator247 = OrientationInterpolator()
-OrientationInterpolator247.setDEF("l_subtalar_RotationInterpolator")
-OrientationInterpolator247.setKey([0,0.5,1])
-OrientationInterpolator247.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator247)
-OrientationInterpolator248 = OrientationInterpolator()
-OrientationInterpolator248.setDEF("l_midtarsal_RotationInterpolator")
-OrientationInterpolator248.setKey([0,0.5,1])
-OrientationInterpolator248.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator248)
-OrientationInterpolator249 = OrientationInterpolator()
-OrientationInterpolator249.setDEF("l_metatarsal_RotationInterpolator")
-OrientationInterpolator249.setKey([0,0.5,1])
-OrientationInterpolator249.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator249)
-OrientationInterpolator250 = OrientationInterpolator()
-OrientationInterpolator250.setDEF("r_hip_RotationInterpolator")
-OrientationInterpolator250.setKey([0,0.25,0.5,0.75,1])
-OrientationInterpolator250.setKeyValue([1,0,0,1,1,0,0,1,-1,0,0,1,-1,0,0,1,-1,0,0,1])
-
-Group239.addChildren(OrientationInterpolator250)
-OrientationInterpolator251 = OrientationInterpolator()
-OrientationInterpolator251.setDEF("r_knee_RotationInterpolator")
-OrientationInterpolator251.setKey([0,0.25,0.5,0.75,1])
-OrientationInterpolator251.setKeyValue([1,0,0,0.1,0,0,1,0,1,0,0,1,1,0,0,1,1,0,0,1.5])
-
-Group239.addChildren(OrientationInterpolator251)
-OrientationInterpolator252 = OrientationInterpolator()
-OrientationInterpolator252.setDEF("r_ankle_RotationInterpolator")
-OrientationInterpolator252.setKey([0,0.25,0.5,0.75,1])
-OrientationInterpolator252.setKeyValue([-1,0,0,1,0,0,1,0,1,0,0,1,1,0,0,1,1,0,0,0.5])
-
-Group239.addChildren(OrientationInterpolator252)
-OrientationInterpolator253 = OrientationInterpolator()
-OrientationInterpolator253.setDEF("r_subtalar_RotationInterpolator")
-OrientationInterpolator253.setKey([0,0.5,1])
-OrientationInterpolator253.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator253)
-OrientationInterpolator254 = OrientationInterpolator()
-OrientationInterpolator254.setDEF("r_midtarsal_RotationInterpolator")
-OrientationInterpolator254.setKey([0,0.5,1])
-OrientationInterpolator254.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator254)
-OrientationInterpolator255 = OrientationInterpolator()
-OrientationInterpolator255.setDEF("r_metatarsal_RotationInterpolator")
-OrientationInterpolator255.setKey([0,0.5,1])
-OrientationInterpolator255.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator255)
-OrientationInterpolator256 = OrientationInterpolator()
-OrientationInterpolator256.setDEF("vl5_RotationInterpolator")
-OrientationInterpolator256.setKey([0,0.5,1])
-OrientationInterpolator256.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator256)
-OrientationInterpolator257 = OrientationInterpolator()
-OrientationInterpolator257.setDEF("vl4_RotationInterpolator")
-OrientationInterpolator257.setKey([0,0.5,1])
-OrientationInterpolator257.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator257)
-OrientationInterpolator258 = OrientationInterpolator()
-OrientationInterpolator258.setDEF("vl3_RotationInterpolator")
-OrientationInterpolator258.setKey([0,0.5,1])
-OrientationInterpolator258.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator258)
-OrientationInterpolator259 = OrientationInterpolator()
-OrientationInterpolator259.setDEF("vl2_RotationInterpolator")
-OrientationInterpolator259.setKey([0,0.5,1])
-OrientationInterpolator259.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator259)
-OrientationInterpolator260 = OrientationInterpolator()
-OrientationInterpolator260.setDEF("vl1_RotationInterpolator")
-OrientationInterpolator260.setKey([0,0.5,1])
-OrientationInterpolator260.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator260)
-OrientationInterpolator261 = OrientationInterpolator()
-OrientationInterpolator261.setDEF("vt12_RotationInterpolator")
-OrientationInterpolator261.setKey([0,0.5,1])
-OrientationInterpolator261.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator261)
-OrientationInterpolator262 = OrientationInterpolator()
-OrientationInterpolator262.setDEF("vt11_RotationInterpolator")
-OrientationInterpolator262.setKey([0,0.5,1])
-OrientationInterpolator262.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator262)
-OrientationInterpolator263 = OrientationInterpolator()
-OrientationInterpolator263.setDEF("vt10_RotationInterpolator")
-OrientationInterpolator263.setKey([0,0.5,1])
-OrientationInterpolator263.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator263)
-OrientationInterpolator264 = OrientationInterpolator()
-OrientationInterpolator264.setDEF("vt9_RotationInterpolator")
-OrientationInterpolator264.setKey([0,0.5,1])
-OrientationInterpolator264.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator264)
-OrientationInterpolator265 = OrientationInterpolator()
-OrientationInterpolator265.setDEF("vt8_RotationInterpolator")
-OrientationInterpolator265.setKey([0,0.5,1])
-OrientationInterpolator265.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator265)
-OrientationInterpolator266 = OrientationInterpolator()
-OrientationInterpolator266.setDEF("vt7_RotationInterpolator")
-OrientationInterpolator266.setKey([0,0.5,1])
-OrientationInterpolator266.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator266)
-OrientationInterpolator267 = OrientationInterpolator()
-OrientationInterpolator267.setDEF("vt6_RotationInterpolator")
-OrientationInterpolator267.setKey([0,0.5,1])
-OrientationInterpolator267.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator267)
-OrientationInterpolator268 = OrientationInterpolator()
-OrientationInterpolator268.setDEF("vt5_RotationInterpolator")
-OrientationInterpolator268.setKey([0,0.5,1])
-OrientationInterpolator268.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator268)
-OrientationInterpolator269 = OrientationInterpolator()
-OrientationInterpolator269.setDEF("vt4_RotationInterpolator")
-OrientationInterpolator269.setKey([0,0.5,1])
-OrientationInterpolator269.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator269)
-OrientationInterpolator270 = OrientationInterpolator()
-OrientationInterpolator270.setDEF("vt3_RotationInterpolator")
-OrientationInterpolator270.setKey([0,0.5,1])
-OrientationInterpolator270.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator270)
-OrientationInterpolator271 = OrientationInterpolator()
-OrientationInterpolator271.setDEF("vt2_RotationInterpolator")
-OrientationInterpolator271.setKey([0,0.5,1])
-OrientationInterpolator271.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator271)
-OrientationInterpolator272 = OrientationInterpolator()
-OrientationInterpolator272.setDEF("vt1_RotationInterpolator")
-OrientationInterpolator272.setKey([0,0.5,1])
-OrientationInterpolator272.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator272)
-OrientationInterpolator273 = OrientationInterpolator()
-OrientationInterpolator273.setDEF("vc7_RotationInterpolator")
-OrientationInterpolator273.setKey([0,0.5,1])
-OrientationInterpolator273.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator273)
-OrientationInterpolator274 = OrientationInterpolator()
-OrientationInterpolator274.setDEF("vc6_RotationInterpolator")
-OrientationInterpolator274.setKey([0,0.5,1])
-OrientationInterpolator274.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator274)
-OrientationInterpolator275 = OrientationInterpolator()
-OrientationInterpolator275.setDEF("vc5_RotationInterpolator")
-OrientationInterpolator275.setKey([0,0.5,1])
-OrientationInterpolator275.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator275)
-OrientationInterpolator276 = OrientationInterpolator()
-OrientationInterpolator276.setDEF("vc4_RotationInterpolator")
-OrientationInterpolator276.setKey([0,0.3,0.4,1])
-OrientationInterpolator276.setKeyValue([1,0,1,0.25,-1,0,-1,0.35,1,0,0,0.75,1,0,1,0.5])
-
-Group239.addChildren(OrientationInterpolator276)
-OrientationInterpolator277 = OrientationInterpolator()
-OrientationInterpolator277.setDEF("vc3_RotationInterpolator")
-OrientationInterpolator277.setKey([0,0.5,1])
-OrientationInterpolator277.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator277)
-OrientationInterpolator278 = OrientationInterpolator()
-OrientationInterpolator278.setDEF("vc2_RotationInterpolator")
-OrientationInterpolator278.setKey([0,0.5,1])
-OrientationInterpolator278.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator278)
-OrientationInterpolator279 = OrientationInterpolator()
-OrientationInterpolator279.setDEF("vc1_RotationInterpolator")
-OrientationInterpolator279.setKey([0,0.5,1])
-OrientationInterpolator279.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator279)
-OrientationInterpolator280 = OrientationInterpolator()
-OrientationInterpolator280.setDEF("skullbase_RotationInterpolator")
-OrientationInterpolator280.setKey([0,0.2,0.75,1])
-OrientationInterpolator280.setKeyValue([0,-1,0,0.5,0,0,1,0,0,0,1,0,0,1,0,0.35])
-
-Group239.addChildren(OrientationInterpolator280)
-OrientationInterpolator281 = OrientationInterpolator()
-OrientationInterpolator281.setDEF("l_eyelid_joint_RotationInterpolator")
-OrientationInterpolator281.setKey([0,0.5,1])
-OrientationInterpolator281.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator281)
-OrientationInterpolator282 = OrientationInterpolator()
-OrientationInterpolator282.setDEF("l_eyeball_joint_RotationInterpolator")
-OrientationInterpolator282.setKey([0,0.5,1])
-OrientationInterpolator282.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator282)
-OrientationInterpolator283 = OrientationInterpolator()
-OrientationInterpolator283.setDEF("l_eyebrow_joint_RotationInterpolator")
-OrientationInterpolator283.setKey([0,0.5,1])
-OrientationInterpolator283.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator283)
-OrientationInterpolator284 = OrientationInterpolator()
-OrientationInterpolator284.setDEF("r_eyelid_joint_RotationInterpolator")
-OrientationInterpolator284.setKey([0,0.5,1])
-OrientationInterpolator284.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator284)
-OrientationInterpolator285 = OrientationInterpolator()
-OrientationInterpolator285.setDEF("r_eyeball_joint_RotationInterpolator")
-OrientationInterpolator285.setKey([0,0.5,1])
-OrientationInterpolator285.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator285)
-OrientationInterpolator286 = OrientationInterpolator()
-OrientationInterpolator286.setDEF("r_eyebrow_joint_RotationInterpolator")
-OrientationInterpolator286.setKey([0,0.5,1])
-OrientationInterpolator286.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator286)
-OrientationInterpolator287 = OrientationInterpolator()
-OrientationInterpolator287.setDEF("temporomandibular_RotationInterpolator")
-OrientationInterpolator287.setKey([0,0.5,1])
-OrientationInterpolator287.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator287)
-OrientationInterpolator288 = OrientationInterpolator()
-OrientationInterpolator288.setDEF("l_sternoclavicular_RotationInterpolator")
-OrientationInterpolator288.setKey([0,0.5,1])
-OrientationInterpolator288.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator288)
-OrientationInterpolator289 = OrientationInterpolator()
-OrientationInterpolator289.setDEF("l_acromioclavicular_RotationInterpolator")
-OrientationInterpolator289.setKey([0,0.5,1])
-OrientationInterpolator289.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator289)
-OrientationInterpolator290 = OrientationInterpolator()
-OrientationInterpolator290.setDEF("l_shoulder_RotationInterpolator")
-OrientationInterpolator290.setKey([0,0.4,1])
-OrientationInterpolator290.setKeyValue([0,0,1,0,0,0,1,1.5,-1,0,1,1.75])
-
-Group239.addChildren(OrientationInterpolator290)
-OrientationInterpolator291 = OrientationInterpolator()
-OrientationInterpolator291.setDEF("l_elbow_RotationInterpolator")
-OrientationInterpolator291.setKey([0,0.5,1])
-OrientationInterpolator291.setKeyValue([-1,0,0,3,-1,0,0,0.75,-1,-1,0,0.5])
-
-Group239.addChildren(OrientationInterpolator291)
-OrientationInterpolator292 = OrientationInterpolator()
-OrientationInterpolator292.setDEF("l_wrist_RotationInterpolator")
-OrientationInterpolator292.setKey([0,0.4,0.8,1])
-OrientationInterpolator292.setKeyValue([0,0,1,0,0,1,0,1.3,0,-0.5,1,1.3,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator292)
-OrientationInterpolator293 = OrientationInterpolator()
-OrientationInterpolator293.setDEF("l_thumb1_RotationInterpolator")
-OrientationInterpolator293.setKey([0,0.5,1])
-OrientationInterpolator293.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator293)
-OrientationInterpolator294 = OrientationInterpolator()
-OrientationInterpolator294.setDEF("l_thumb2_RotationInterpolator")
-OrientationInterpolator294.setKey([0,0.5,1])
-OrientationInterpolator294.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator294)
-OrientationInterpolator295 = OrientationInterpolator()
-OrientationInterpolator295.setDEF("l_thumb3_RotationInterpolator")
-OrientationInterpolator295.setKey([0,0.5,1])
-OrientationInterpolator295.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator295)
-OrientationInterpolator296 = OrientationInterpolator()
-OrientationInterpolator296.setDEF("l_index0_RotationInterpolator")
-OrientationInterpolator296.setKey([0,0.5,1])
-OrientationInterpolator296.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator296)
-OrientationInterpolator297 = OrientationInterpolator()
-OrientationInterpolator297.setDEF("l_index1_RotationInterpolator")
-OrientationInterpolator297.setKey([0,0.5,1])
-OrientationInterpolator297.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator297)
-OrientationInterpolator298 = OrientationInterpolator()
-OrientationInterpolator298.setDEF("l_index2_RotationInterpolator")
-OrientationInterpolator298.setKey([0,0.5,1])
-OrientationInterpolator298.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator298)
-OrientationInterpolator299 = OrientationInterpolator()
-OrientationInterpolator299.setDEF("l_index3_RotationInterpolator")
-OrientationInterpolator299.setKey([0,0.5,1])
-OrientationInterpolator299.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator299)
-OrientationInterpolator300 = OrientationInterpolator()
-OrientationInterpolator300.setDEF("l_middle0_RotationInterpolator")
-OrientationInterpolator300.setKey([0,0.5,1])
-OrientationInterpolator300.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator300)
-OrientationInterpolator301 = OrientationInterpolator()
-OrientationInterpolator301.setDEF("l_middle1_RotationInterpolator")
-OrientationInterpolator301.setKey([0,0.5,1])
-OrientationInterpolator301.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator301)
-OrientationInterpolator302 = OrientationInterpolator()
-OrientationInterpolator302.setDEF("l_middle2_RotationInterpolator")
-OrientationInterpolator302.setKey([0,0.5,1])
-OrientationInterpolator302.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator302)
-OrientationInterpolator303 = OrientationInterpolator()
-OrientationInterpolator303.setDEF("l_middle3_RotationInterpolator")
-OrientationInterpolator303.setKey([0,0.5,1])
-OrientationInterpolator303.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator303)
-OrientationInterpolator304 = OrientationInterpolator()
-OrientationInterpolator304.setDEF("l_ring0_RotationInterpolator")
-OrientationInterpolator304.setKey([0,0.5,1])
-OrientationInterpolator304.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator304)
-OrientationInterpolator305 = OrientationInterpolator()
-OrientationInterpolator305.setDEF("l_ring1_RotationInterpolator")
-OrientationInterpolator305.setKey([0,0.5,1])
-OrientationInterpolator305.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator305)
-OrientationInterpolator306 = OrientationInterpolator()
-OrientationInterpolator306.setDEF("l_ring2_RotationInterpolator")
-OrientationInterpolator306.setKey([0,0.5,1])
-OrientationInterpolator306.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator306)
-OrientationInterpolator307 = OrientationInterpolator()
-OrientationInterpolator307.setDEF("l_ring3_RotationInterpolator")
-OrientationInterpolator307.setKey([0,0.5,1])
-OrientationInterpolator307.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator307)
-OrientationInterpolator308 = OrientationInterpolator()
-OrientationInterpolator308.setDEF("l_pinky0_RotationInterpolator")
-OrientationInterpolator308.setKey([0,0.5,1])
-OrientationInterpolator308.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator308)
-OrientationInterpolator309 = OrientationInterpolator()
-OrientationInterpolator309.setDEF("l_pinky1_RotationInterpolator")
-OrientationInterpolator309.setKey([0,0.5,1])
-OrientationInterpolator309.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator309)
-OrientationInterpolator310 = OrientationInterpolator()
-OrientationInterpolator310.setDEF("l_pinky2_RotationInterpolator")
-OrientationInterpolator310.setKey([0,0.5,1])
-OrientationInterpolator310.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator310)
-OrientationInterpolator311 = OrientationInterpolator()
-OrientationInterpolator311.setDEF("l_pinky3_RotationInterpolator")
-OrientationInterpolator311.setKey([0,0.5,1])
-OrientationInterpolator311.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator311)
-OrientationInterpolator312 = OrientationInterpolator()
-OrientationInterpolator312.setDEF("r_sternoclavicular_RotationInterpolator")
-OrientationInterpolator312.setKey([0,0.5,1])
-OrientationInterpolator312.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator312)
-OrientationInterpolator313 = OrientationInterpolator()
-OrientationInterpolator313.setDEF("r_acromioclavicular_RotationInterpolator")
-OrientationInterpolator313.setKey([0,0.5,1])
-OrientationInterpolator313.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator313)
-OrientationInterpolator314 = OrientationInterpolator()
-OrientationInterpolator314.setDEF("r_shoulder_RotationInterpolator")
-OrientationInterpolator314.setKey([0,0.5,1])
-OrientationInterpolator314.setKeyValue([0,0,-1,2.5,0,0,-1,1.5,0,0,-1,1.75])
-
-Group239.addChildren(OrientationInterpolator314)
-OrientationInterpolator315 = OrientationInterpolator()
-OrientationInterpolator315.setDEF("r_elbow_RotationInterpolator")
-OrientationInterpolator315.setKey([0,0.5,1])
-OrientationInterpolator315.setKeyValue([-1,0,0,3,-1,0,0,0.75,-1,-1,0,0.5])
-
-Group239.addChildren(OrientationInterpolator315)
-OrientationInterpolator316 = OrientationInterpolator()
-OrientationInterpolator316.setDEF("r_wrist_RotationInterpolator")
-OrientationInterpolator316.setKey([0,0.5,0.7,1])
-OrientationInterpolator316.setKeyValue([0,1,0,0.3,0,0,1,0,0,0,-1,1,0,-1,0,0.3])
-
-Group239.addChildren(OrientationInterpolator316)
-OrientationInterpolator317 = OrientationInterpolator()
-OrientationInterpolator317.setDEF("r_thumb1_RotationInterpolator")
-OrientationInterpolator317.setKey([0,0.5,1])
-OrientationInterpolator317.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator317)
-OrientationInterpolator318 = OrientationInterpolator()
-OrientationInterpolator318.setDEF("r_thumb2_RotationInterpolator")
-OrientationInterpolator318.setKey([0,0.5,1])
-OrientationInterpolator318.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator318)
-OrientationInterpolator319 = OrientationInterpolator()
-OrientationInterpolator319.setDEF("r_thumb3_RotationInterpolator")
-OrientationInterpolator319.setKey([0,0.5,1])
-OrientationInterpolator319.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator319)
-OrientationInterpolator320 = OrientationInterpolator()
-OrientationInterpolator320.setDEF("r_index0_RotationInterpolator")
-OrientationInterpolator320.setKey([0,0.5,0.75,1])
-OrientationInterpolator320.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator320)
-OrientationInterpolator321 = OrientationInterpolator()
-OrientationInterpolator321.setDEF("r_index1_RotationInterpolator")
-OrientationInterpolator321.setKey([0,0.5,0.75,1])
-OrientationInterpolator321.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator321)
-OrientationInterpolator322 = OrientationInterpolator()
-OrientationInterpolator322.setDEF("r_index2_RotationInterpolator")
-OrientationInterpolator322.setKey([0,0.5,0.75,1])
-OrientationInterpolator322.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator322)
-OrientationInterpolator323 = OrientationInterpolator()
-OrientationInterpolator323.setDEF("r_index3_RotationInterpolator")
-OrientationInterpolator323.setKey([0,0.5,0.75,1])
-OrientationInterpolator323.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator323)
-OrientationInterpolator324 = OrientationInterpolator()
-OrientationInterpolator324.setDEF("r_middle0_RotationInterpolator")
-OrientationInterpolator324.setKey([0,0.5,0.75,1])
-OrientationInterpolator324.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator324)
-OrientationInterpolator325 = OrientationInterpolator()
-OrientationInterpolator325.setDEF("r_middle1_RotationInterpolator")
-OrientationInterpolator325.setKey([0,0.5,0.75,1])
-OrientationInterpolator325.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator325)
-OrientationInterpolator326 = OrientationInterpolator()
-OrientationInterpolator326.setDEF("r_middle2_RotationInterpolator")
-OrientationInterpolator326.setKey([0,0.5,0.75,1])
-OrientationInterpolator326.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator326)
-OrientationInterpolator327 = OrientationInterpolator()
-OrientationInterpolator327.setDEF("r_middle3_RotationInterpolator")
-OrientationInterpolator327.setKey([0,0.5,0.75,1])
-OrientationInterpolator327.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator327)
-OrientationInterpolator328 = OrientationInterpolator()
-OrientationInterpolator328.setDEF("r_ring0_RotationInterpolator")
-OrientationInterpolator328.setKey([0,0.5,0.75,1])
-OrientationInterpolator328.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator328)
-OrientationInterpolator329 = OrientationInterpolator()
-OrientationInterpolator329.setDEF("r_ring1_RotationInterpolator")
-OrientationInterpolator329.setKey([0,0.5,0.75,1])
-OrientationInterpolator329.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator329)
-OrientationInterpolator330 = OrientationInterpolator()
-OrientationInterpolator330.setDEF("r_ring2_RotationInterpolator")
-OrientationInterpolator330.setKey([0,0.5,0.75,1])
-OrientationInterpolator330.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator330)
-OrientationInterpolator331 = OrientationInterpolator()
-OrientationInterpolator331.setDEF("r_ring3_RotationInterpolator")
-OrientationInterpolator331.setKey([0,0.5,0.75,1])
-OrientationInterpolator331.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator331)
-OrientationInterpolator332 = OrientationInterpolator()
-OrientationInterpolator332.setDEF("r_pinky0_RotationInterpolator")
-OrientationInterpolator332.setKey([0,0.5,0.75,1])
-OrientationInterpolator332.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator332)
-OrientationInterpolator333 = OrientationInterpolator()
-OrientationInterpolator333.setDEF("r_pinky1_RotationInterpolator")
-OrientationInterpolator333.setKey([0,0.5,0.75,1])
-OrientationInterpolator333.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator333)
-OrientationInterpolator334 = OrientationInterpolator()
-OrientationInterpolator334.setDEF("r_pinky2_RotationInterpolator")
-OrientationInterpolator334.setKey([0,0.5,0.75,1])
-OrientationInterpolator334.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator334)
-OrientationInterpolator335 = OrientationInterpolator()
-OrientationInterpolator335.setDEF("r_pinky3_RotationInterpolator")
-OrientationInterpolator335.setKey([0,0.5,0.75,1])
-OrientationInterpolator335.setKeyValue([0,0,1,0,0,0,1,0,0,0,1,1.5,0,0,1,0])
-
-Group239.addChildren(OrientationInterpolator335)
-
-Scene16.addChildren(Group239)
+OrientationInterpolator241 = x3d.OrientationInterpolator()
+OrientationInterpolator241.DEF = "HumanoidRoot_RotationInterpolator"
+OrientationInterpolator241.key = [0,0.1,0.4,0.6,1]
+OrientationInterpolator241.keyValue = (1.0000,0.0000,0.0000,0.5000,1.0000,0.0000,0.0000,0.5000,-1.0000,0.0000,0.0000,0.1000,-1.0000,0.0000,0.0000,0.5000,-1.0000,0.0000,0.0000,0.5000)
+
+Group239.children.append(OrientationInterpolator241)
+PositionInterpolator242 = x3d.PositionInterpolator()
+PositionInterpolator242.DEF = "HumanoidRoot_TranslationInterpolator"
+PositionInterpolator242.key = [0,0.2,0.6,1]
+PositionInterpolator242.keyValue = (1.0000,0.3000,-1.0000,0.4000,-0.0400,-0.4000,-0.1800,0.1000,0.0000,-0.2000,0.1500,0.1500)
+
+Group239.children.append(PositionInterpolator242)
+OrientationInterpolator243 = x3d.OrientationInterpolator()
+OrientationInterpolator243.DEF = "sacroiliac_RotationInterpolator"
+OrientationInterpolator243.key = [0,0.5,1]
+OrientationInterpolator243.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator243)
+OrientationInterpolator244 = x3d.OrientationInterpolator()
+OrientationInterpolator244.DEF = "l_hip_RotationInterpolator"
+OrientationInterpolator244.key = [0,0.1,0.3,0.45,1]
+OrientationInterpolator244.keyValue = (-1.0000,0.0000,0.0000,1.5000,-1.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.5000,1.0000,0.0000,0.0000,1.0000)
+
+Group239.children.append(OrientationInterpolator244)
+OrientationInterpolator245 = x3d.OrientationInterpolator()
+OrientationInterpolator245.DEF = "l_knee_RotationInterpolator"
+OrientationInterpolator245.key = [0,0.2,0.35,0.5,1]
+OrientationInterpolator245.keyValue = (1.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.2000,1.0000,0.0000,1.0000,0.5000,1.0000,0.0000,0.0000,1.4000)
+
+Group239.children.append(OrientationInterpolator245)
+OrientationInterpolator246 = x3d.OrientationInterpolator()
+OrientationInterpolator246.DEF = "l_ankle_RotationInterpolator"
+OrientationInterpolator246.key = [0,0.25,1]
+OrientationInterpolator246.keyValue = (-1.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,1.0000)
+
+Group239.children.append(OrientationInterpolator246)
+OrientationInterpolator247 = x3d.OrientationInterpolator()
+OrientationInterpolator247.DEF = "l_subtalar_RotationInterpolator"
+OrientationInterpolator247.key = [0,0.5,1]
+OrientationInterpolator247.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator247)
+OrientationInterpolator248 = x3d.OrientationInterpolator()
+OrientationInterpolator248.DEF = "l_midtarsal_RotationInterpolator"
+OrientationInterpolator248.key = [0,0.5,1]
+OrientationInterpolator248.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator248)
+OrientationInterpolator249 = x3d.OrientationInterpolator()
+OrientationInterpolator249.DEF = "l_metatarsal_RotationInterpolator"
+OrientationInterpolator249.key = [0,0.5,1]
+OrientationInterpolator249.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator249)
+OrientationInterpolator250 = x3d.OrientationInterpolator()
+OrientationInterpolator250.DEF = "r_hip_RotationInterpolator"
+OrientationInterpolator250.key = [0,0.25,0.5,0.75,1]
+OrientationInterpolator250.keyValue = (1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,-1.0000,0.0000,0.0000,1.0000,-1.0000,0.0000,0.0000,1.0000,-1.0000,0.0000,0.0000,1.0000)
+
+Group239.children.append(OrientationInterpolator250)
+OrientationInterpolator251 = x3d.OrientationInterpolator()
+OrientationInterpolator251.DEF = "r_knee_RotationInterpolator"
+OrientationInterpolator251.key = [0,0.25,0.5,0.75,1]
+OrientationInterpolator251.keyValue = (1.0000,0.0000,0.0000,0.1000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.5000)
+
+Group239.children.append(OrientationInterpolator251)
+OrientationInterpolator252 = x3d.OrientationInterpolator()
+OrientationInterpolator252.DEF = "r_ankle_RotationInterpolator"
+OrientationInterpolator252.key = [0,0.25,0.5,0.75,1]
+OrientationInterpolator252.keyValue = (-1.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,0.5000)
+
+Group239.children.append(OrientationInterpolator252)
+OrientationInterpolator253 = x3d.OrientationInterpolator()
+OrientationInterpolator253.DEF = "r_subtalar_RotationInterpolator"
+OrientationInterpolator253.key = [0,0.5,1]
+OrientationInterpolator253.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator253)
+OrientationInterpolator254 = x3d.OrientationInterpolator()
+OrientationInterpolator254.DEF = "r_midtarsal_RotationInterpolator"
+OrientationInterpolator254.key = [0,0.5,1]
+OrientationInterpolator254.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator254)
+OrientationInterpolator255 = x3d.OrientationInterpolator()
+OrientationInterpolator255.DEF = "r_metatarsal_RotationInterpolator"
+OrientationInterpolator255.key = [0,0.5,1]
+OrientationInterpolator255.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator255)
+OrientationInterpolator256 = x3d.OrientationInterpolator()
+OrientationInterpolator256.DEF = "vl5_RotationInterpolator"
+OrientationInterpolator256.key = [0,0.5,1]
+OrientationInterpolator256.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator256)
+OrientationInterpolator257 = x3d.OrientationInterpolator()
+OrientationInterpolator257.DEF = "vl4_RotationInterpolator"
+OrientationInterpolator257.key = [0,0.5,1]
+OrientationInterpolator257.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator257)
+OrientationInterpolator258 = x3d.OrientationInterpolator()
+OrientationInterpolator258.DEF = "vl3_RotationInterpolator"
+OrientationInterpolator258.key = [0,0.5,1]
+OrientationInterpolator258.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator258)
+OrientationInterpolator259 = x3d.OrientationInterpolator()
+OrientationInterpolator259.DEF = "vl2_RotationInterpolator"
+OrientationInterpolator259.key = [0,0.5,1]
+OrientationInterpolator259.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator259)
+OrientationInterpolator260 = x3d.OrientationInterpolator()
+OrientationInterpolator260.DEF = "vl1_RotationInterpolator"
+OrientationInterpolator260.key = [0,0.5,1]
+OrientationInterpolator260.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator260)
+OrientationInterpolator261 = x3d.OrientationInterpolator()
+OrientationInterpolator261.DEF = "vt12_RotationInterpolator"
+OrientationInterpolator261.key = [0,0.5,1]
+OrientationInterpolator261.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator261)
+OrientationInterpolator262 = x3d.OrientationInterpolator()
+OrientationInterpolator262.DEF = "vt11_RotationInterpolator"
+OrientationInterpolator262.key = [0,0.5,1]
+OrientationInterpolator262.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator262)
+OrientationInterpolator263 = x3d.OrientationInterpolator()
+OrientationInterpolator263.DEF = "vt10_RotationInterpolator"
+OrientationInterpolator263.key = [0,0.5,1]
+OrientationInterpolator263.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator263)
+OrientationInterpolator264 = x3d.OrientationInterpolator()
+OrientationInterpolator264.DEF = "vt9_RotationInterpolator"
+OrientationInterpolator264.key = [0,0.5,1]
+OrientationInterpolator264.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator264)
+OrientationInterpolator265 = x3d.OrientationInterpolator()
+OrientationInterpolator265.DEF = "vt8_RotationInterpolator"
+OrientationInterpolator265.key = [0,0.5,1]
+OrientationInterpolator265.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator265)
+OrientationInterpolator266 = x3d.OrientationInterpolator()
+OrientationInterpolator266.DEF = "vt7_RotationInterpolator"
+OrientationInterpolator266.key = [0,0.5,1]
+OrientationInterpolator266.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator266)
+OrientationInterpolator267 = x3d.OrientationInterpolator()
+OrientationInterpolator267.DEF = "vt6_RotationInterpolator"
+OrientationInterpolator267.key = [0,0.5,1]
+OrientationInterpolator267.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator267)
+OrientationInterpolator268 = x3d.OrientationInterpolator()
+OrientationInterpolator268.DEF = "vt5_RotationInterpolator"
+OrientationInterpolator268.key = [0,0.5,1]
+OrientationInterpolator268.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator268)
+OrientationInterpolator269 = x3d.OrientationInterpolator()
+OrientationInterpolator269.DEF = "vt4_RotationInterpolator"
+OrientationInterpolator269.key = [0,0.5,1]
+OrientationInterpolator269.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator269)
+OrientationInterpolator270 = x3d.OrientationInterpolator()
+OrientationInterpolator270.DEF = "vt3_RotationInterpolator"
+OrientationInterpolator270.key = [0,0.5,1]
+OrientationInterpolator270.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator270)
+OrientationInterpolator271 = x3d.OrientationInterpolator()
+OrientationInterpolator271.DEF = "vt2_RotationInterpolator"
+OrientationInterpolator271.key = [0,0.5,1]
+OrientationInterpolator271.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator271)
+OrientationInterpolator272 = x3d.OrientationInterpolator()
+OrientationInterpolator272.DEF = "vt1_RotationInterpolator"
+OrientationInterpolator272.key = [0,0.5,1]
+OrientationInterpolator272.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator272)
+OrientationInterpolator273 = x3d.OrientationInterpolator()
+OrientationInterpolator273.DEF = "vc7_RotationInterpolator"
+OrientationInterpolator273.key = [0,0.5,1]
+OrientationInterpolator273.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator273)
+OrientationInterpolator274 = x3d.OrientationInterpolator()
+OrientationInterpolator274.DEF = "vc6_RotationInterpolator"
+OrientationInterpolator274.key = [0,0.5,1]
+OrientationInterpolator274.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator274)
+OrientationInterpolator275 = x3d.OrientationInterpolator()
+OrientationInterpolator275.DEF = "vc5_RotationInterpolator"
+OrientationInterpolator275.key = [0,0.5,1]
+OrientationInterpolator275.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator275)
+OrientationInterpolator276 = x3d.OrientationInterpolator()
+OrientationInterpolator276.DEF = "vc4_RotationInterpolator"
+OrientationInterpolator276.key = [0,0.3,0.4,1]
+OrientationInterpolator276.keyValue = (1.0000,0.0000,1.0000,0.2500,-1.0000,0.0000,-1.0000,0.3500,1.0000,0.0000,0.0000,0.7500,1.0000,0.0000,1.0000,0.5000)
+
+Group239.children.append(OrientationInterpolator276)
+OrientationInterpolator277 = x3d.OrientationInterpolator()
+OrientationInterpolator277.DEF = "vc3_RotationInterpolator"
+OrientationInterpolator277.key = [0,0.5,1]
+OrientationInterpolator277.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator277)
+OrientationInterpolator278 = x3d.OrientationInterpolator()
+OrientationInterpolator278.DEF = "vc2_RotationInterpolator"
+OrientationInterpolator278.key = [0,0.5,1]
+OrientationInterpolator278.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator278)
+OrientationInterpolator279 = x3d.OrientationInterpolator()
+OrientationInterpolator279.DEF = "vc1_RotationInterpolator"
+OrientationInterpolator279.key = [0,0.5,1]
+OrientationInterpolator279.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator279)
+OrientationInterpolator280 = x3d.OrientationInterpolator()
+OrientationInterpolator280.DEF = "skullbase_RotationInterpolator"
+OrientationInterpolator280.key = [0,0.2,0.75,1]
+OrientationInterpolator280.keyValue = (0.0000,-1.0000,0.0000,0.5000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,0.3500)
+
+Group239.children.append(OrientationInterpolator280)
+OrientationInterpolator281 = x3d.OrientationInterpolator()
+OrientationInterpolator281.DEF = "l_eyelid_joint_RotationInterpolator"
+OrientationInterpolator281.key = [0,0.5,1]
+OrientationInterpolator281.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator281)
+OrientationInterpolator282 = x3d.OrientationInterpolator()
+OrientationInterpolator282.DEF = "l_eyeball_joint_RotationInterpolator"
+OrientationInterpolator282.key = [0,0.5,1]
+OrientationInterpolator282.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator282)
+OrientationInterpolator283 = x3d.OrientationInterpolator()
+OrientationInterpolator283.DEF = "l_eyebrow_joint_RotationInterpolator"
+OrientationInterpolator283.key = [0,0.5,1]
+OrientationInterpolator283.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator283)
+OrientationInterpolator284 = x3d.OrientationInterpolator()
+OrientationInterpolator284.DEF = "r_eyelid_joint_RotationInterpolator"
+OrientationInterpolator284.key = [0,0.5,1]
+OrientationInterpolator284.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator284)
+OrientationInterpolator285 = x3d.OrientationInterpolator()
+OrientationInterpolator285.DEF = "r_eyeball_joint_RotationInterpolator"
+OrientationInterpolator285.key = [0,0.5,1]
+OrientationInterpolator285.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator285)
+OrientationInterpolator286 = x3d.OrientationInterpolator()
+OrientationInterpolator286.DEF = "r_eyebrow_joint_RotationInterpolator"
+OrientationInterpolator286.key = [0,0.5,1]
+OrientationInterpolator286.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator286)
+OrientationInterpolator287 = x3d.OrientationInterpolator()
+OrientationInterpolator287.DEF = "temporomandibular_RotationInterpolator"
+OrientationInterpolator287.key = [0,0.5,1]
+OrientationInterpolator287.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator287)
+OrientationInterpolator288 = x3d.OrientationInterpolator()
+OrientationInterpolator288.DEF = "l_sternoclavicular_RotationInterpolator"
+OrientationInterpolator288.key = [0,0.5,1]
+OrientationInterpolator288.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator288)
+OrientationInterpolator289 = x3d.OrientationInterpolator()
+OrientationInterpolator289.DEF = "l_acromioclavicular_RotationInterpolator"
+OrientationInterpolator289.key = [0,0.5,1]
+OrientationInterpolator289.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator289)
+OrientationInterpolator290 = x3d.OrientationInterpolator()
+OrientationInterpolator290.DEF = "l_shoulder_RotationInterpolator"
+OrientationInterpolator290.key = [0,0.4,1]
+OrientationInterpolator290.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,-1.0000,0.0000,1.0000,1.7500)
+
+Group239.children.append(OrientationInterpolator290)
+OrientationInterpolator291 = x3d.OrientationInterpolator()
+OrientationInterpolator291.DEF = "l_elbow_RotationInterpolator"
+OrientationInterpolator291.key = [0,0.5,1]
+OrientationInterpolator291.keyValue = (-1.0000,0.0000,0.0000,3.0000,-1.0000,0.0000,0.0000,0.7500,-1.0000,-1.0000,0.0000,0.5000)
+
+Group239.children.append(OrientationInterpolator291)
+OrientationInterpolator292 = x3d.OrientationInterpolator()
+OrientationInterpolator292.DEF = "l_wrist_RotationInterpolator"
+OrientationInterpolator292.key = [0,0.4,0.8,1]
+OrientationInterpolator292.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,1.3000,0.0000,-0.5000,1.0000,1.3000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator292)
+OrientationInterpolator293 = x3d.OrientationInterpolator()
+OrientationInterpolator293.DEF = "l_thumb1_RotationInterpolator"
+OrientationInterpolator293.key = [0,0.5,1]
+OrientationInterpolator293.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator293)
+OrientationInterpolator294 = x3d.OrientationInterpolator()
+OrientationInterpolator294.DEF = "l_thumb2_RotationInterpolator"
+OrientationInterpolator294.key = [0,0.5,1]
+OrientationInterpolator294.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator294)
+OrientationInterpolator295 = x3d.OrientationInterpolator()
+OrientationInterpolator295.DEF = "l_thumb3_RotationInterpolator"
+OrientationInterpolator295.key = [0,0.5,1]
+OrientationInterpolator295.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator295)
+OrientationInterpolator296 = x3d.OrientationInterpolator()
+OrientationInterpolator296.DEF = "l_index0_RotationInterpolator"
+OrientationInterpolator296.key = [0,0.5,1]
+OrientationInterpolator296.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator296)
+OrientationInterpolator297 = x3d.OrientationInterpolator()
+OrientationInterpolator297.DEF = "l_index1_RotationInterpolator"
+OrientationInterpolator297.key = [0,0.5,1]
+OrientationInterpolator297.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator297)
+OrientationInterpolator298 = x3d.OrientationInterpolator()
+OrientationInterpolator298.DEF = "l_index2_RotationInterpolator"
+OrientationInterpolator298.key = [0,0.5,1]
+OrientationInterpolator298.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator298)
+OrientationInterpolator299 = x3d.OrientationInterpolator()
+OrientationInterpolator299.DEF = "l_index3_RotationInterpolator"
+OrientationInterpolator299.key = [0,0.5,1]
+OrientationInterpolator299.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator299)
+OrientationInterpolator300 = x3d.OrientationInterpolator()
+OrientationInterpolator300.DEF = "l_middle0_RotationInterpolator"
+OrientationInterpolator300.key = [0,0.5,1]
+OrientationInterpolator300.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator300)
+OrientationInterpolator301 = x3d.OrientationInterpolator()
+OrientationInterpolator301.DEF = "l_middle1_RotationInterpolator"
+OrientationInterpolator301.key = [0,0.5,1]
+OrientationInterpolator301.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator301)
+OrientationInterpolator302 = x3d.OrientationInterpolator()
+OrientationInterpolator302.DEF = "l_middle2_RotationInterpolator"
+OrientationInterpolator302.key = [0,0.5,1]
+OrientationInterpolator302.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator302)
+OrientationInterpolator303 = x3d.OrientationInterpolator()
+OrientationInterpolator303.DEF = "l_middle3_RotationInterpolator"
+OrientationInterpolator303.key = [0,0.5,1]
+OrientationInterpolator303.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator303)
+OrientationInterpolator304 = x3d.OrientationInterpolator()
+OrientationInterpolator304.DEF = "l_ring0_RotationInterpolator"
+OrientationInterpolator304.key = [0,0.5,1]
+OrientationInterpolator304.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator304)
+OrientationInterpolator305 = x3d.OrientationInterpolator()
+OrientationInterpolator305.DEF = "l_ring1_RotationInterpolator"
+OrientationInterpolator305.key = [0,0.5,1]
+OrientationInterpolator305.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator305)
+OrientationInterpolator306 = x3d.OrientationInterpolator()
+OrientationInterpolator306.DEF = "l_ring2_RotationInterpolator"
+OrientationInterpolator306.key = [0,0.5,1]
+OrientationInterpolator306.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator306)
+OrientationInterpolator307 = x3d.OrientationInterpolator()
+OrientationInterpolator307.DEF = "l_ring3_RotationInterpolator"
+OrientationInterpolator307.key = [0,0.5,1]
+OrientationInterpolator307.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator307)
+OrientationInterpolator308 = x3d.OrientationInterpolator()
+OrientationInterpolator308.DEF = "l_pinky0_RotationInterpolator"
+OrientationInterpolator308.key = [0,0.5,1]
+OrientationInterpolator308.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator308)
+OrientationInterpolator309 = x3d.OrientationInterpolator()
+OrientationInterpolator309.DEF = "l_pinky1_RotationInterpolator"
+OrientationInterpolator309.key = [0,0.5,1]
+OrientationInterpolator309.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator309)
+OrientationInterpolator310 = x3d.OrientationInterpolator()
+OrientationInterpolator310.DEF = "l_pinky2_RotationInterpolator"
+OrientationInterpolator310.key = [0,0.5,1]
+OrientationInterpolator310.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator310)
+OrientationInterpolator311 = x3d.OrientationInterpolator()
+OrientationInterpolator311.DEF = "l_pinky3_RotationInterpolator"
+OrientationInterpolator311.key = [0,0.5,1]
+OrientationInterpolator311.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator311)
+OrientationInterpolator312 = x3d.OrientationInterpolator()
+OrientationInterpolator312.DEF = "r_sternoclavicular_RotationInterpolator"
+OrientationInterpolator312.key = [0,0.5,1]
+OrientationInterpolator312.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator312)
+OrientationInterpolator313 = x3d.OrientationInterpolator()
+OrientationInterpolator313.DEF = "r_acromioclavicular_RotationInterpolator"
+OrientationInterpolator313.key = [0,0.5,1]
+OrientationInterpolator313.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator313)
+OrientationInterpolator314 = x3d.OrientationInterpolator()
+OrientationInterpolator314.DEF = "r_shoulder_RotationInterpolator"
+OrientationInterpolator314.key = [0,0.5,1]
+OrientationInterpolator314.keyValue = (0.0000,0.0000,-1.0000,2.5000,0.0000,0.0000,-1.0000,1.5000,0.0000,0.0000,-1.0000,1.7500)
+
+Group239.children.append(OrientationInterpolator314)
+OrientationInterpolator315 = x3d.OrientationInterpolator()
+OrientationInterpolator315.DEF = "r_elbow_RotationInterpolator"
+OrientationInterpolator315.key = [0,0.5,1]
+OrientationInterpolator315.keyValue = (-1.0000,0.0000,0.0000,3.0000,-1.0000,0.0000,0.0000,0.7500,-1.0000,-1.0000,0.0000,0.5000)
+
+Group239.children.append(OrientationInterpolator315)
+OrientationInterpolator316 = x3d.OrientationInterpolator()
+OrientationInterpolator316.DEF = "r_wrist_RotationInterpolator"
+OrientationInterpolator316.key = [0,0.5,0.7,1]
+OrientationInterpolator316.keyValue = (0.0000,1.0000,0.0000,0.3000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,-1.0000,1.0000,0.0000,-1.0000,0.0000,0.3000)
+
+Group239.children.append(OrientationInterpolator316)
+OrientationInterpolator317 = x3d.OrientationInterpolator()
+OrientationInterpolator317.DEF = "r_thumb1_RotationInterpolator"
+OrientationInterpolator317.key = [0,0.5,1]
+OrientationInterpolator317.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator317)
+OrientationInterpolator318 = x3d.OrientationInterpolator()
+OrientationInterpolator318.DEF = "r_thumb2_RotationInterpolator"
+OrientationInterpolator318.key = [0,0.5,1]
+OrientationInterpolator318.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator318)
+OrientationInterpolator319 = x3d.OrientationInterpolator()
+OrientationInterpolator319.DEF = "r_thumb3_RotationInterpolator"
+OrientationInterpolator319.key = [0,0.5,1]
+OrientationInterpolator319.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator319)
+OrientationInterpolator320 = x3d.OrientationInterpolator()
+OrientationInterpolator320.DEF = "r_index0_RotationInterpolator"
+OrientationInterpolator320.key = [0,0.5,0.75,1]
+OrientationInterpolator320.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator320)
+OrientationInterpolator321 = x3d.OrientationInterpolator()
+OrientationInterpolator321.DEF = "r_index1_RotationInterpolator"
+OrientationInterpolator321.key = [0,0.5,0.75,1]
+OrientationInterpolator321.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator321)
+OrientationInterpolator322 = x3d.OrientationInterpolator()
+OrientationInterpolator322.DEF = "r_index2_RotationInterpolator"
+OrientationInterpolator322.key = [0,0.5,0.75,1]
+OrientationInterpolator322.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator322)
+OrientationInterpolator323 = x3d.OrientationInterpolator()
+OrientationInterpolator323.DEF = "r_index3_RotationInterpolator"
+OrientationInterpolator323.key = [0,0.5,0.75,1]
+OrientationInterpolator323.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator323)
+OrientationInterpolator324 = x3d.OrientationInterpolator()
+OrientationInterpolator324.DEF = "r_middle0_RotationInterpolator"
+OrientationInterpolator324.key = [0,0.5,0.75,1]
+OrientationInterpolator324.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator324)
+OrientationInterpolator325 = x3d.OrientationInterpolator()
+OrientationInterpolator325.DEF = "r_middle1_RotationInterpolator"
+OrientationInterpolator325.key = [0,0.5,0.75,1]
+OrientationInterpolator325.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator325)
+OrientationInterpolator326 = x3d.OrientationInterpolator()
+OrientationInterpolator326.DEF = "r_middle2_RotationInterpolator"
+OrientationInterpolator326.key = [0,0.5,0.75,1]
+OrientationInterpolator326.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator326)
+OrientationInterpolator327 = x3d.OrientationInterpolator()
+OrientationInterpolator327.DEF = "r_middle3_RotationInterpolator"
+OrientationInterpolator327.key = [0,0.5,0.75,1]
+OrientationInterpolator327.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator327)
+OrientationInterpolator328 = x3d.OrientationInterpolator()
+OrientationInterpolator328.DEF = "r_ring0_RotationInterpolator"
+OrientationInterpolator328.key = [0,0.5,0.75,1]
+OrientationInterpolator328.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator328)
+OrientationInterpolator329 = x3d.OrientationInterpolator()
+OrientationInterpolator329.DEF = "r_ring1_RotationInterpolator"
+OrientationInterpolator329.key = [0,0.5,0.75,1]
+OrientationInterpolator329.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator329)
+OrientationInterpolator330 = x3d.OrientationInterpolator()
+OrientationInterpolator330.DEF = "r_ring2_RotationInterpolator"
+OrientationInterpolator330.key = [0,0.5,0.75,1]
+OrientationInterpolator330.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator330)
+OrientationInterpolator331 = x3d.OrientationInterpolator()
+OrientationInterpolator331.DEF = "r_ring3_RotationInterpolator"
+OrientationInterpolator331.key = [0,0.5,0.75,1]
+OrientationInterpolator331.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator331)
+OrientationInterpolator332 = x3d.OrientationInterpolator()
+OrientationInterpolator332.DEF = "r_pinky0_RotationInterpolator"
+OrientationInterpolator332.key = [0,0.5,0.75,1]
+OrientationInterpolator332.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator332)
+OrientationInterpolator333 = x3d.OrientationInterpolator()
+OrientationInterpolator333.DEF = "r_pinky1_RotationInterpolator"
+OrientationInterpolator333.key = [0,0.5,0.75,1]
+OrientationInterpolator333.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator333)
+OrientationInterpolator334 = x3d.OrientationInterpolator()
+OrientationInterpolator334.DEF = "r_pinky2_RotationInterpolator"
+OrientationInterpolator334.key = [0,0.5,0.75,1]
+OrientationInterpolator334.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator334)
+OrientationInterpolator335 = x3d.OrientationInterpolator()
+OrientationInterpolator335.DEF = "r_pinky3_RotationInterpolator"
+OrientationInterpolator335.key = [0,0.5,0.75,1]
+OrientationInterpolator335.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.5000,0.0000,0.0000,1.0000,0.0000)
+
+Group239.children.append(OrientationInterpolator335)
+
+Scene16.children.append(Group239)
 #TimeSensor to Interpolators
-ROUTE336 = ROUTE()
-ROUTE336.setFromField("fraction_changed")
-ROUTE336.setFromNode("KickTimer")
-ROUTE336.setToField("set_fraction")
-ROUTE336.setToNode("HumanoidRoot_RotationInterpolator")
-
-Scene16.addChildren(ROUTE336)
-ROUTE337 = ROUTE()
-ROUTE337.setFromField("fraction_changed")
-ROUTE337.setFromNode("KickTimer")
-ROUTE337.setToField("set_fraction")
-ROUTE337.setToNode("HumanoidRoot_TranslationInterpolator")
-
-Scene16.addChildren(ROUTE337)
-ROUTE338 = ROUTE()
-ROUTE338.setFromField("fraction_changed")
-ROUTE338.setFromNode("KickTimer")
-ROUTE338.setToField("set_fraction")
-ROUTE338.setToNode("sacroiliac_RotationInterpolator")
-
-Scene16.addChildren(ROUTE338)
-ROUTE339 = ROUTE()
-ROUTE339.setFromField("fraction_changed")
-ROUTE339.setFromNode("KickTimer")
-ROUTE339.setToField("set_fraction")
-ROUTE339.setToNode("l_hip_RotationInterpolator")
-
-Scene16.addChildren(ROUTE339)
-ROUTE340 = ROUTE()
-ROUTE340.setFromField("fraction_changed")
-ROUTE340.setFromNode("KickTimer")
-ROUTE340.setToField("set_fraction")
-ROUTE340.setToNode("l_knee_RotationInterpolator")
-
-Scene16.addChildren(ROUTE340)
-ROUTE341 = ROUTE()
-ROUTE341.setFromField("fraction_changed")
-ROUTE341.setFromNode("KickTimer")
-ROUTE341.setToField("set_fraction")
-ROUTE341.setToNode("l_ankle_RotationInterpolator")
-
-Scene16.addChildren(ROUTE341)
-ROUTE342 = ROUTE()
-ROUTE342.setFromField("fraction_changed")
-ROUTE342.setFromNode("KickTimer")
-ROUTE342.setToField("set_fraction")
-ROUTE342.setToNode("l_subtalar_RotationInterpolator")
-
-Scene16.addChildren(ROUTE342)
-ROUTE343 = ROUTE()
-ROUTE343.setFromField("fraction_changed")
-ROUTE343.setFromNode("KickTimer")
-ROUTE343.setToField("set_fraction")
-ROUTE343.setToNode("l_midtarsal_RotationInterpolator")
-
-Scene16.addChildren(ROUTE343)
-ROUTE344 = ROUTE()
-ROUTE344.setFromField("fraction_changed")
-ROUTE344.setFromNode("KickTimer")
-ROUTE344.setToField("set_fraction")
-ROUTE344.setToNode("l_metatarsal_RotationInterpolator")
-
-Scene16.addChildren(ROUTE344)
-ROUTE345 = ROUTE()
-ROUTE345.setFromField("fraction_changed")
-ROUTE345.setFromNode("KickTimer")
-ROUTE345.setToField("set_fraction")
-ROUTE345.setToNode("r_hip_RotationInterpolator")
-
-Scene16.addChildren(ROUTE345)
-ROUTE346 = ROUTE()
-ROUTE346.setFromField("fraction_changed")
-ROUTE346.setFromNode("KickTimer")
-ROUTE346.setToField("set_fraction")
-ROUTE346.setToNode("r_knee_RotationInterpolator")
-
-Scene16.addChildren(ROUTE346)
-ROUTE347 = ROUTE()
-ROUTE347.setFromField("fraction_changed")
-ROUTE347.setFromNode("KickTimer")
-ROUTE347.setToField("set_fraction")
-ROUTE347.setToNode("r_ankle_RotationInterpolator")
-
-Scene16.addChildren(ROUTE347)
-ROUTE348 = ROUTE()
-ROUTE348.setFromField("fraction_changed")
-ROUTE348.setFromNode("KickTimer")
-ROUTE348.setToField("set_fraction")
-ROUTE348.setToNode("r_subtalar_RotationInterpolator")
-
-Scene16.addChildren(ROUTE348)
-ROUTE349 = ROUTE()
-ROUTE349.setFromField("fraction_changed")
-ROUTE349.setFromNode("KickTimer")
-ROUTE349.setToField("set_fraction")
-ROUTE349.setToNode("r_midtarsal_RotationInterpolator")
-
-Scene16.addChildren(ROUTE349)
-ROUTE350 = ROUTE()
-ROUTE350.setFromField("fraction_changed")
-ROUTE350.setFromNode("KickTimer")
-ROUTE350.setToField("set_fraction")
-ROUTE350.setToNode("r_metatarsal_RotationInterpolator")
-
-Scene16.addChildren(ROUTE350)
-ROUTE351 = ROUTE()
-ROUTE351.setFromField("fraction_changed")
-ROUTE351.setFromNode("KickTimer")
-ROUTE351.setToField("set_fraction")
-ROUTE351.setToNode("vl5_RotationInterpolator")
-
-Scene16.addChildren(ROUTE351)
-ROUTE352 = ROUTE()
-ROUTE352.setFromField("fraction_changed")
-ROUTE352.setFromNode("KickTimer")
-ROUTE352.setToField("set_fraction")
-ROUTE352.setToNode("vl4_RotationInterpolator")
-
-Scene16.addChildren(ROUTE352)
-ROUTE353 = ROUTE()
-ROUTE353.setFromField("fraction_changed")
-ROUTE353.setFromNode("KickTimer")
-ROUTE353.setToField("set_fraction")
-ROUTE353.setToNode("vl3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE353)
-ROUTE354 = ROUTE()
-ROUTE354.setFromField("fraction_changed")
-ROUTE354.setFromNode("KickTimer")
-ROUTE354.setToField("set_fraction")
-ROUTE354.setToNode("vl2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE354)
-ROUTE355 = ROUTE()
-ROUTE355.setFromField("fraction_changed")
-ROUTE355.setFromNode("KickTimer")
-ROUTE355.setToField("set_fraction")
-ROUTE355.setToNode("vl1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE355)
-ROUTE356 = ROUTE()
-ROUTE356.setFromField("fraction_changed")
-ROUTE356.setFromNode("KickTimer")
-ROUTE356.setToField("set_fraction")
-ROUTE356.setToNode("vt12_RotationInterpolator")
-
-Scene16.addChildren(ROUTE356)
-ROUTE357 = ROUTE()
-ROUTE357.setFromField("fraction_changed")
-ROUTE357.setFromNode("KickTimer")
-ROUTE357.setToField("set_fraction")
-ROUTE357.setToNode("vt11_RotationInterpolator")
-
-Scene16.addChildren(ROUTE357)
-ROUTE358 = ROUTE()
-ROUTE358.setFromField("fraction_changed")
-ROUTE358.setFromNode("KickTimer")
-ROUTE358.setToField("set_fraction")
-ROUTE358.setToNode("vt10_RotationInterpolator")
-
-Scene16.addChildren(ROUTE358)
-ROUTE359 = ROUTE()
-ROUTE359.setFromField("fraction_changed")
-ROUTE359.setFromNode("KickTimer")
-ROUTE359.setToField("set_fraction")
-ROUTE359.setToNode("vt9_RotationInterpolator")
-
-Scene16.addChildren(ROUTE359)
-ROUTE360 = ROUTE()
-ROUTE360.setFromField("fraction_changed")
-ROUTE360.setFromNode("KickTimer")
-ROUTE360.setToField("set_fraction")
-ROUTE360.setToNode("vt8_RotationInterpolator")
-
-Scene16.addChildren(ROUTE360)
-ROUTE361 = ROUTE()
-ROUTE361.setFromField("fraction_changed")
-ROUTE361.setFromNode("KickTimer")
-ROUTE361.setToField("set_fraction")
-ROUTE361.setToNode("vt7_RotationInterpolator")
-
-Scene16.addChildren(ROUTE361)
-ROUTE362 = ROUTE()
-ROUTE362.setFromField("fraction_changed")
-ROUTE362.setFromNode("KickTimer")
-ROUTE362.setToField("set_fraction")
-ROUTE362.setToNode("vt6_RotationInterpolator")
-
-Scene16.addChildren(ROUTE362)
-ROUTE363 = ROUTE()
-ROUTE363.setFromField("fraction_changed")
-ROUTE363.setFromNode("KickTimer")
-ROUTE363.setToField("set_fraction")
-ROUTE363.setToNode("vt5_RotationInterpolator")
-
-Scene16.addChildren(ROUTE363)
-ROUTE364 = ROUTE()
-ROUTE364.setFromField("fraction_changed")
-ROUTE364.setFromNode("KickTimer")
-ROUTE364.setToField("set_fraction")
-ROUTE364.setToNode("vt4_RotationInterpolator")
-
-Scene16.addChildren(ROUTE364)
-ROUTE365 = ROUTE()
-ROUTE365.setFromField("fraction_changed")
-ROUTE365.setFromNode("KickTimer")
-ROUTE365.setToField("set_fraction")
-ROUTE365.setToNode("vt3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE365)
-ROUTE366 = ROUTE()
-ROUTE366.setFromField("fraction_changed")
-ROUTE366.setFromNode("KickTimer")
-ROUTE366.setToField("set_fraction")
-ROUTE366.setToNode("vt2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE366)
-ROUTE367 = ROUTE()
-ROUTE367.setFromField("fraction_changed")
-ROUTE367.setFromNode("KickTimer")
-ROUTE367.setToField("set_fraction")
-ROUTE367.setToNode("vt1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE367)
-ROUTE368 = ROUTE()
-ROUTE368.setFromField("fraction_changed")
-ROUTE368.setFromNode("KickTimer")
-ROUTE368.setToField("set_fraction")
-ROUTE368.setToNode("vc7_RotationInterpolator")
-
-Scene16.addChildren(ROUTE368)
-ROUTE369 = ROUTE()
-ROUTE369.setFromField("fraction_changed")
-ROUTE369.setFromNode("KickTimer")
-ROUTE369.setToField("set_fraction")
-ROUTE369.setToNode("vc6_RotationInterpolator")
-
-Scene16.addChildren(ROUTE369)
-ROUTE370 = ROUTE()
-ROUTE370.setFromField("fraction_changed")
-ROUTE370.setFromNode("KickTimer")
-ROUTE370.setToField("set_fraction")
-ROUTE370.setToNode("vc5_RotationInterpolator")
-
-Scene16.addChildren(ROUTE370)
-ROUTE371 = ROUTE()
-ROUTE371.setFromField("fraction_changed")
-ROUTE371.setFromNode("KickTimer")
-ROUTE371.setToField("set_fraction")
-ROUTE371.setToNode("vc4_RotationInterpolator")
-
-Scene16.addChildren(ROUTE371)
-ROUTE372 = ROUTE()
-ROUTE372.setFromField("fraction_changed")
-ROUTE372.setFromNode("KickTimer")
-ROUTE372.setToField("set_fraction")
-ROUTE372.setToNode("vc3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE372)
-ROUTE373 = ROUTE()
-ROUTE373.setFromField("fraction_changed")
-ROUTE373.setFromNode("KickTimer")
-ROUTE373.setToField("set_fraction")
-ROUTE373.setToNode("vc2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE373)
-ROUTE374 = ROUTE()
-ROUTE374.setFromField("fraction_changed")
-ROUTE374.setFromNode("KickTimer")
-ROUTE374.setToField("set_fraction")
-ROUTE374.setToNode("vc1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE374)
-ROUTE375 = ROUTE()
-ROUTE375.setFromField("fraction_changed")
-ROUTE375.setFromNode("KickTimer")
-ROUTE375.setToField("set_fraction")
-ROUTE375.setToNode("skullbase_RotationInterpolator")
-
-Scene16.addChildren(ROUTE375)
-ROUTE376 = ROUTE()
-ROUTE376.setFromField("fraction_changed")
-ROUTE376.setFromNode("KickTimer")
-ROUTE376.setToField("set_fraction")
-ROUTE376.setToNode("l_eyelid_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE376)
-ROUTE377 = ROUTE()
-ROUTE377.setFromField("fraction_changed")
-ROUTE377.setFromNode("KickTimer")
-ROUTE377.setToField("set_fraction")
-ROUTE377.setToNode("l_eyeball_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE377)
-ROUTE378 = ROUTE()
-ROUTE378.setFromField("fraction_changed")
-ROUTE378.setFromNode("KickTimer")
-ROUTE378.setToField("set_fraction")
-ROUTE378.setToNode("l_eyebrow_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE378)
-ROUTE379 = ROUTE()
-ROUTE379.setFromField("fraction_changed")
-ROUTE379.setFromNode("KickTimer")
-ROUTE379.setToField("set_fraction")
-ROUTE379.setToNode("r_eyelid_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE379)
-ROUTE380 = ROUTE()
-ROUTE380.setFromField("fraction_changed")
-ROUTE380.setFromNode("KickTimer")
-ROUTE380.setToField("set_fraction")
-ROUTE380.setToNode("r_eyeball_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE380)
-ROUTE381 = ROUTE()
-ROUTE381.setFromField("fraction_changed")
-ROUTE381.setFromNode("KickTimer")
-ROUTE381.setToField("set_fraction")
-ROUTE381.setToNode("r_eyebrow_joint_RotationInterpolator")
-
-Scene16.addChildren(ROUTE381)
-ROUTE382 = ROUTE()
-ROUTE382.setFromField("fraction_changed")
-ROUTE382.setFromNode("KickTimer")
-ROUTE382.setToField("set_fraction")
-ROUTE382.setToNode("temporomandibular_RotationInterpolator")
-
-Scene16.addChildren(ROUTE382)
-ROUTE383 = ROUTE()
-ROUTE383.setFromField("fraction_changed")
-ROUTE383.setFromNode("KickTimer")
-ROUTE383.setToField("set_fraction")
-ROUTE383.setToNode("l_sternoclavicular_RotationInterpolator")
-
-Scene16.addChildren(ROUTE383)
-ROUTE384 = ROUTE()
-ROUTE384.setFromField("fraction_changed")
-ROUTE384.setFromNode("KickTimer")
-ROUTE384.setToField("set_fraction")
-ROUTE384.setToNode("l_acromioclavicular_RotationInterpolator")
-
-Scene16.addChildren(ROUTE384)
-ROUTE385 = ROUTE()
-ROUTE385.setFromField("fraction_changed")
-ROUTE385.setFromNode("KickTimer")
-ROUTE385.setToField("set_fraction")
-ROUTE385.setToNode("l_shoulder_RotationInterpolator")
-
-Scene16.addChildren(ROUTE385)
-ROUTE386 = ROUTE()
-ROUTE386.setFromField("fraction_changed")
-ROUTE386.setFromNode("KickTimer")
-ROUTE386.setToField("set_fraction")
-ROUTE386.setToNode("l_elbow_RotationInterpolator")
-
-Scene16.addChildren(ROUTE386)
-ROUTE387 = ROUTE()
-ROUTE387.setFromField("fraction_changed")
-ROUTE387.setFromNode("KickTimer")
-ROUTE387.setToField("set_fraction")
-ROUTE387.setToNode("l_wrist_RotationInterpolator")
-
-Scene16.addChildren(ROUTE387)
-ROUTE388 = ROUTE()
-ROUTE388.setFromField("fraction_changed")
-ROUTE388.setFromNode("KickTimer")
-ROUTE388.setToField("set_fraction")
-ROUTE388.setToNode("l_thumb1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE388)
-ROUTE389 = ROUTE()
-ROUTE389.setFromField("fraction_changed")
-ROUTE389.setFromNode("KickTimer")
-ROUTE389.setToField("set_fraction")
-ROUTE389.setToNode("l_thumb2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE389)
-ROUTE390 = ROUTE()
-ROUTE390.setFromField("fraction_changed")
-ROUTE390.setFromNode("KickTimer")
-ROUTE390.setToField("set_fraction")
-ROUTE390.setToNode("l_thumb3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE390)
-ROUTE391 = ROUTE()
-ROUTE391.setFromField("fraction_changed")
-ROUTE391.setFromNode("KickTimer")
-ROUTE391.setToField("set_fraction")
-ROUTE391.setToNode("l_index0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE391)
-ROUTE392 = ROUTE()
-ROUTE392.setFromField("fraction_changed")
-ROUTE392.setFromNode("KickTimer")
-ROUTE392.setToField("set_fraction")
-ROUTE392.setToNode("l_index1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE392)
-ROUTE393 = ROUTE()
-ROUTE393.setFromField("fraction_changed")
-ROUTE393.setFromNode("KickTimer")
-ROUTE393.setToField("set_fraction")
-ROUTE393.setToNode("l_index2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE393)
-ROUTE394 = ROUTE()
-ROUTE394.setFromField("fraction_changed")
-ROUTE394.setFromNode("KickTimer")
-ROUTE394.setToField("set_fraction")
-ROUTE394.setToNode("l_index3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE394)
-ROUTE395 = ROUTE()
-ROUTE395.setFromField("fraction_changed")
-ROUTE395.setFromNode("KickTimer")
-ROUTE395.setToField("set_fraction")
-ROUTE395.setToNode("l_middle0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE395)
-ROUTE396 = ROUTE()
-ROUTE396.setFromField("fraction_changed")
-ROUTE396.setFromNode("KickTimer")
-ROUTE396.setToField("set_fraction")
-ROUTE396.setToNode("l_middle1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE396)
-ROUTE397 = ROUTE()
-ROUTE397.setFromField("fraction_changed")
-ROUTE397.setFromNode("KickTimer")
-ROUTE397.setToField("set_fraction")
-ROUTE397.setToNode("l_middle2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE397)
-ROUTE398 = ROUTE()
-ROUTE398.setFromField("fraction_changed")
-ROUTE398.setFromNode("KickTimer")
-ROUTE398.setToField("set_fraction")
-ROUTE398.setToNode("l_middle3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE398)
-ROUTE399 = ROUTE()
-ROUTE399.setFromField("fraction_changed")
-ROUTE399.setFromNode("KickTimer")
-ROUTE399.setToField("set_fraction")
-ROUTE399.setToNode("l_ring0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE399)
-ROUTE400 = ROUTE()
-ROUTE400.setFromField("fraction_changed")
-ROUTE400.setFromNode("KickTimer")
-ROUTE400.setToField("set_fraction")
-ROUTE400.setToNode("l_ring1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE400)
-ROUTE401 = ROUTE()
-ROUTE401.setFromField("fraction_changed")
-ROUTE401.setFromNode("KickTimer")
-ROUTE401.setToField("set_fraction")
-ROUTE401.setToNode("l_ring2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE401)
-ROUTE402 = ROUTE()
-ROUTE402.setFromField("fraction_changed")
-ROUTE402.setFromNode("KickTimer")
-ROUTE402.setToField("set_fraction")
-ROUTE402.setToNode("l_ring3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE402)
-ROUTE403 = ROUTE()
-ROUTE403.setFromField("fraction_changed")
-ROUTE403.setFromNode("KickTimer")
-ROUTE403.setToField("set_fraction")
-ROUTE403.setToNode("l_pinky0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE403)
-ROUTE404 = ROUTE()
-ROUTE404.setFromField("fraction_changed")
-ROUTE404.setFromNode("KickTimer")
-ROUTE404.setToField("set_fraction")
-ROUTE404.setToNode("l_pinky1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE404)
-ROUTE405 = ROUTE()
-ROUTE405.setFromField("fraction_changed")
-ROUTE405.setFromNode("KickTimer")
-ROUTE405.setToField("set_fraction")
-ROUTE405.setToNode("l_pinky2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE405)
-ROUTE406 = ROUTE()
-ROUTE406.setFromField("fraction_changed")
-ROUTE406.setFromNode("KickTimer")
-ROUTE406.setToField("set_fraction")
-ROUTE406.setToNode("l_pinky3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE406)
-ROUTE407 = ROUTE()
-ROUTE407.setFromField("fraction_changed")
-ROUTE407.setFromNode("KickTimer")
-ROUTE407.setToField("set_fraction")
-ROUTE407.setToNode("r_sternoclavicular_RotationInterpolator")
-
-Scene16.addChildren(ROUTE407)
-ROUTE408 = ROUTE()
-ROUTE408.setFromField("fraction_changed")
-ROUTE408.setFromNode("KickTimer")
-ROUTE408.setToField("set_fraction")
-ROUTE408.setToNode("r_acromioclavicular_RotationInterpolator")
-
-Scene16.addChildren(ROUTE408)
-ROUTE409 = ROUTE()
-ROUTE409.setFromField("fraction_changed")
-ROUTE409.setFromNode("KickTimer")
-ROUTE409.setToField("set_fraction")
-ROUTE409.setToNode("r_shoulder_RotationInterpolator")
-
-Scene16.addChildren(ROUTE409)
-ROUTE410 = ROUTE()
-ROUTE410.setFromField("fraction_changed")
-ROUTE410.setFromNode("KickTimer")
-ROUTE410.setToField("set_fraction")
-ROUTE410.setToNode("r_elbow_RotationInterpolator")
-
-Scene16.addChildren(ROUTE410)
-ROUTE411 = ROUTE()
-ROUTE411.setFromField("fraction_changed")
-ROUTE411.setFromNode("KickTimer")
-ROUTE411.setToField("set_fraction")
-ROUTE411.setToNode("r_wrist_RotationInterpolator")
-
-Scene16.addChildren(ROUTE411)
-ROUTE412 = ROUTE()
-ROUTE412.setFromField("fraction_changed")
-ROUTE412.setFromNode("KickTimer")
-ROUTE412.setToField("set_fraction")
-ROUTE412.setToNode("r_thumb1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE412)
-ROUTE413 = ROUTE()
-ROUTE413.setFromField("fraction_changed")
-ROUTE413.setFromNode("KickTimer")
-ROUTE413.setToField("set_fraction")
-ROUTE413.setToNode("r_thumb2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE413)
-ROUTE414 = ROUTE()
-ROUTE414.setFromField("fraction_changed")
-ROUTE414.setFromNode("KickTimer")
-ROUTE414.setToField("set_fraction")
-ROUTE414.setToNode("r_thumb3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE414)
-ROUTE415 = ROUTE()
-ROUTE415.setFromField("fraction_changed")
-ROUTE415.setFromNode("KickTimer")
-ROUTE415.setToField("set_fraction")
-ROUTE415.setToNode("r_index0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE415)
-ROUTE416 = ROUTE()
-ROUTE416.setFromField("fraction_changed")
-ROUTE416.setFromNode("KickTimer")
-ROUTE416.setToField("set_fraction")
-ROUTE416.setToNode("r_index1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE416)
-ROUTE417 = ROUTE()
-ROUTE417.setFromField("fraction_changed")
-ROUTE417.setFromNode("KickTimer")
-ROUTE417.setToField("set_fraction")
-ROUTE417.setToNode("r_index2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE417)
-ROUTE418 = ROUTE()
-ROUTE418.setFromField("fraction_changed")
-ROUTE418.setFromNode("KickTimer")
-ROUTE418.setToField("set_fraction")
-ROUTE418.setToNode("r_index3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE418)
-ROUTE419 = ROUTE()
-ROUTE419.setFromField("fraction_changed")
-ROUTE419.setFromNode("KickTimer")
-ROUTE419.setToField("set_fraction")
-ROUTE419.setToNode("r_middle0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE419)
-ROUTE420 = ROUTE()
-ROUTE420.setFromField("fraction_changed")
-ROUTE420.setFromNode("KickTimer")
-ROUTE420.setToField("set_fraction")
-ROUTE420.setToNode("r_middle1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE420)
-ROUTE421 = ROUTE()
-ROUTE421.setFromField("fraction_changed")
-ROUTE421.setFromNode("KickTimer")
-ROUTE421.setToField("set_fraction")
-ROUTE421.setToNode("r_middle2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE421)
-ROUTE422 = ROUTE()
-ROUTE422.setFromField("fraction_changed")
-ROUTE422.setFromNode("KickTimer")
-ROUTE422.setToField("set_fraction")
-ROUTE422.setToNode("r_middle3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE422)
-ROUTE423 = ROUTE()
-ROUTE423.setFromField("fraction_changed")
-ROUTE423.setFromNode("KickTimer")
-ROUTE423.setToField("set_fraction")
-ROUTE423.setToNode("r_ring0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE423)
-ROUTE424 = ROUTE()
-ROUTE424.setFromField("fraction_changed")
-ROUTE424.setFromNode("KickTimer")
-ROUTE424.setToField("set_fraction")
-ROUTE424.setToNode("r_ring1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE424)
-ROUTE425 = ROUTE()
-ROUTE425.setFromField("fraction_changed")
-ROUTE425.setFromNode("KickTimer")
-ROUTE425.setToField("set_fraction")
-ROUTE425.setToNode("r_ring2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE425)
-ROUTE426 = ROUTE()
-ROUTE426.setFromField("fraction_changed")
-ROUTE426.setFromNode("KickTimer")
-ROUTE426.setToField("set_fraction")
-ROUTE426.setToNode("r_ring3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE426)
-ROUTE427 = ROUTE()
-ROUTE427.setFromField("fraction_changed")
-ROUTE427.setFromNode("KickTimer")
-ROUTE427.setToField("set_fraction")
-ROUTE427.setToNode("r_pinky0_RotationInterpolator")
-
-Scene16.addChildren(ROUTE427)
-ROUTE428 = ROUTE()
-ROUTE428.setFromField("fraction_changed")
-ROUTE428.setFromNode("KickTimer")
-ROUTE428.setToField("set_fraction")
-ROUTE428.setToNode("r_pinky1_RotationInterpolator")
-
-Scene16.addChildren(ROUTE428)
-ROUTE429 = ROUTE()
-ROUTE429.setFromField("fraction_changed")
-ROUTE429.setFromNode("KickTimer")
-ROUTE429.setToField("set_fraction")
-ROUTE429.setToNode("r_pinky2_RotationInterpolator")
-
-Scene16.addChildren(ROUTE429)
-ROUTE430 = ROUTE()
-ROUTE430.setFromField("fraction_changed")
-ROUTE430.setFromNode("KickTimer")
-ROUTE430.setToField("set_fraction")
-ROUTE430.setToNode("r_pinky3_RotationInterpolator")
-
-Scene16.addChildren(ROUTE430)
+ROUTE336 = x3d.ROUTE()
+ROUTE336.fromField = "fraction_changed"
+ROUTE336.fromNode = "KickTimer"
+ROUTE336.toField = "set_fraction"
+ROUTE336.toNode = "HumanoidRoot_RotationInterpolator"
+
+Scene16.children.append(ROUTE336)
+ROUTE337 = x3d.ROUTE()
+ROUTE337.fromField = "fraction_changed"
+ROUTE337.fromNode = "KickTimer"
+ROUTE337.toField = "set_fraction"
+ROUTE337.toNode = "HumanoidRoot_TranslationInterpolator"
+
+Scene16.children.append(ROUTE337)
+ROUTE338 = x3d.ROUTE()
+ROUTE338.fromField = "fraction_changed"
+ROUTE338.fromNode = "KickTimer"
+ROUTE338.toField = "set_fraction"
+ROUTE338.toNode = "sacroiliac_RotationInterpolator"
+
+Scene16.children.append(ROUTE338)
+ROUTE339 = x3d.ROUTE()
+ROUTE339.fromField = "fraction_changed"
+ROUTE339.fromNode = "KickTimer"
+ROUTE339.toField = "set_fraction"
+ROUTE339.toNode = "l_hip_RotationInterpolator"
+
+Scene16.children.append(ROUTE339)
+ROUTE340 = x3d.ROUTE()
+ROUTE340.fromField = "fraction_changed"
+ROUTE340.fromNode = "KickTimer"
+ROUTE340.toField = "set_fraction"
+ROUTE340.toNode = "l_knee_RotationInterpolator"
+
+Scene16.children.append(ROUTE340)
+ROUTE341 = x3d.ROUTE()
+ROUTE341.fromField = "fraction_changed"
+ROUTE341.fromNode = "KickTimer"
+ROUTE341.toField = "set_fraction"
+ROUTE341.toNode = "l_ankle_RotationInterpolator"
+
+Scene16.children.append(ROUTE341)
+ROUTE342 = x3d.ROUTE()
+ROUTE342.fromField = "fraction_changed"
+ROUTE342.fromNode = "KickTimer"
+ROUTE342.toField = "set_fraction"
+ROUTE342.toNode = "l_subtalar_RotationInterpolator"
+
+Scene16.children.append(ROUTE342)
+ROUTE343 = x3d.ROUTE()
+ROUTE343.fromField = "fraction_changed"
+ROUTE343.fromNode = "KickTimer"
+ROUTE343.toField = "set_fraction"
+ROUTE343.toNode = "l_midtarsal_RotationInterpolator"
+
+Scene16.children.append(ROUTE343)
+ROUTE344 = x3d.ROUTE()
+ROUTE344.fromField = "fraction_changed"
+ROUTE344.fromNode = "KickTimer"
+ROUTE344.toField = "set_fraction"
+ROUTE344.toNode = "l_metatarsal_RotationInterpolator"
+
+Scene16.children.append(ROUTE344)
+ROUTE345 = x3d.ROUTE()
+ROUTE345.fromField = "fraction_changed"
+ROUTE345.fromNode = "KickTimer"
+ROUTE345.toField = "set_fraction"
+ROUTE345.toNode = "r_hip_RotationInterpolator"
+
+Scene16.children.append(ROUTE345)
+ROUTE346 = x3d.ROUTE()
+ROUTE346.fromField = "fraction_changed"
+ROUTE346.fromNode = "KickTimer"
+ROUTE346.toField = "set_fraction"
+ROUTE346.toNode = "r_knee_RotationInterpolator"
+
+Scene16.children.append(ROUTE346)
+ROUTE347 = x3d.ROUTE()
+ROUTE347.fromField = "fraction_changed"
+ROUTE347.fromNode = "KickTimer"
+ROUTE347.toField = "set_fraction"
+ROUTE347.toNode = "r_ankle_RotationInterpolator"
+
+Scene16.children.append(ROUTE347)
+ROUTE348 = x3d.ROUTE()
+ROUTE348.fromField = "fraction_changed"
+ROUTE348.fromNode = "KickTimer"
+ROUTE348.toField = "set_fraction"
+ROUTE348.toNode = "r_subtalar_RotationInterpolator"
+
+Scene16.children.append(ROUTE348)
+ROUTE349 = x3d.ROUTE()
+ROUTE349.fromField = "fraction_changed"
+ROUTE349.fromNode = "KickTimer"
+ROUTE349.toField = "set_fraction"
+ROUTE349.toNode = "r_midtarsal_RotationInterpolator"
+
+Scene16.children.append(ROUTE349)
+ROUTE350 = x3d.ROUTE()
+ROUTE350.fromField = "fraction_changed"
+ROUTE350.fromNode = "KickTimer"
+ROUTE350.toField = "set_fraction"
+ROUTE350.toNode = "r_metatarsal_RotationInterpolator"
+
+Scene16.children.append(ROUTE350)
+ROUTE351 = x3d.ROUTE()
+ROUTE351.fromField = "fraction_changed"
+ROUTE351.fromNode = "KickTimer"
+ROUTE351.toField = "set_fraction"
+ROUTE351.toNode = "vl5_RotationInterpolator"
+
+Scene16.children.append(ROUTE351)
+ROUTE352 = x3d.ROUTE()
+ROUTE352.fromField = "fraction_changed"
+ROUTE352.fromNode = "KickTimer"
+ROUTE352.toField = "set_fraction"
+ROUTE352.toNode = "vl4_RotationInterpolator"
+
+Scene16.children.append(ROUTE352)
+ROUTE353 = x3d.ROUTE()
+ROUTE353.fromField = "fraction_changed"
+ROUTE353.fromNode = "KickTimer"
+ROUTE353.toField = "set_fraction"
+ROUTE353.toNode = "vl3_RotationInterpolator"
+
+Scene16.children.append(ROUTE353)
+ROUTE354 = x3d.ROUTE()
+ROUTE354.fromField = "fraction_changed"
+ROUTE354.fromNode = "KickTimer"
+ROUTE354.toField = "set_fraction"
+ROUTE354.toNode = "vl2_RotationInterpolator"
+
+Scene16.children.append(ROUTE354)
+ROUTE355 = x3d.ROUTE()
+ROUTE355.fromField = "fraction_changed"
+ROUTE355.fromNode = "KickTimer"
+ROUTE355.toField = "set_fraction"
+ROUTE355.toNode = "vl1_RotationInterpolator"
+
+Scene16.children.append(ROUTE355)
+ROUTE356 = x3d.ROUTE()
+ROUTE356.fromField = "fraction_changed"
+ROUTE356.fromNode = "KickTimer"
+ROUTE356.toField = "set_fraction"
+ROUTE356.toNode = "vt12_RotationInterpolator"
+
+Scene16.children.append(ROUTE356)
+ROUTE357 = x3d.ROUTE()
+ROUTE357.fromField = "fraction_changed"
+ROUTE357.fromNode = "KickTimer"
+ROUTE357.toField = "set_fraction"
+ROUTE357.toNode = "vt11_RotationInterpolator"
+
+Scene16.children.append(ROUTE357)
+ROUTE358 = x3d.ROUTE()
+ROUTE358.fromField = "fraction_changed"
+ROUTE358.fromNode = "KickTimer"
+ROUTE358.toField = "set_fraction"
+ROUTE358.toNode = "vt10_RotationInterpolator"
+
+Scene16.children.append(ROUTE358)
+ROUTE359 = x3d.ROUTE()
+ROUTE359.fromField = "fraction_changed"
+ROUTE359.fromNode = "KickTimer"
+ROUTE359.toField = "set_fraction"
+ROUTE359.toNode = "vt9_RotationInterpolator"
+
+Scene16.children.append(ROUTE359)
+ROUTE360 = x3d.ROUTE()
+ROUTE360.fromField = "fraction_changed"
+ROUTE360.fromNode = "KickTimer"
+ROUTE360.toField = "set_fraction"
+ROUTE360.toNode = "vt8_RotationInterpolator"
+
+Scene16.children.append(ROUTE360)
+ROUTE361 = x3d.ROUTE()
+ROUTE361.fromField = "fraction_changed"
+ROUTE361.fromNode = "KickTimer"
+ROUTE361.toField = "set_fraction"
+ROUTE361.toNode = "vt7_RotationInterpolator"
+
+Scene16.children.append(ROUTE361)
+ROUTE362 = x3d.ROUTE()
+ROUTE362.fromField = "fraction_changed"
+ROUTE362.fromNode = "KickTimer"
+ROUTE362.toField = "set_fraction"
+ROUTE362.toNode = "vt6_RotationInterpolator"
+
+Scene16.children.append(ROUTE362)
+ROUTE363 = x3d.ROUTE()
+ROUTE363.fromField = "fraction_changed"
+ROUTE363.fromNode = "KickTimer"
+ROUTE363.toField = "set_fraction"
+ROUTE363.toNode = "vt5_RotationInterpolator"
+
+Scene16.children.append(ROUTE363)
+ROUTE364 = x3d.ROUTE()
+ROUTE364.fromField = "fraction_changed"
+ROUTE364.fromNode = "KickTimer"
+ROUTE364.toField = "set_fraction"
+ROUTE364.toNode = "vt4_RotationInterpolator"
+
+Scene16.children.append(ROUTE364)
+ROUTE365 = x3d.ROUTE()
+ROUTE365.fromField = "fraction_changed"
+ROUTE365.fromNode = "KickTimer"
+ROUTE365.toField = "set_fraction"
+ROUTE365.toNode = "vt3_RotationInterpolator"
+
+Scene16.children.append(ROUTE365)
+ROUTE366 = x3d.ROUTE()
+ROUTE366.fromField = "fraction_changed"
+ROUTE366.fromNode = "KickTimer"
+ROUTE366.toField = "set_fraction"
+ROUTE366.toNode = "vt2_RotationInterpolator"
+
+Scene16.children.append(ROUTE366)
+ROUTE367 = x3d.ROUTE()
+ROUTE367.fromField = "fraction_changed"
+ROUTE367.fromNode = "KickTimer"
+ROUTE367.toField = "set_fraction"
+ROUTE367.toNode = "vt1_RotationInterpolator"
+
+Scene16.children.append(ROUTE367)
+ROUTE368 = x3d.ROUTE()
+ROUTE368.fromField = "fraction_changed"
+ROUTE368.fromNode = "KickTimer"
+ROUTE368.toField = "set_fraction"
+ROUTE368.toNode = "vc7_RotationInterpolator"
+
+Scene16.children.append(ROUTE368)
+ROUTE369 = x3d.ROUTE()
+ROUTE369.fromField = "fraction_changed"
+ROUTE369.fromNode = "KickTimer"
+ROUTE369.toField = "set_fraction"
+ROUTE369.toNode = "vc6_RotationInterpolator"
+
+Scene16.children.append(ROUTE369)
+ROUTE370 = x3d.ROUTE()
+ROUTE370.fromField = "fraction_changed"
+ROUTE370.fromNode = "KickTimer"
+ROUTE370.toField = "set_fraction"
+ROUTE370.toNode = "vc5_RotationInterpolator"
+
+Scene16.children.append(ROUTE370)
+ROUTE371 = x3d.ROUTE()
+ROUTE371.fromField = "fraction_changed"
+ROUTE371.fromNode = "KickTimer"
+ROUTE371.toField = "set_fraction"
+ROUTE371.toNode = "vc4_RotationInterpolator"
+
+Scene16.children.append(ROUTE371)
+ROUTE372 = x3d.ROUTE()
+ROUTE372.fromField = "fraction_changed"
+ROUTE372.fromNode = "KickTimer"
+ROUTE372.toField = "set_fraction"
+ROUTE372.toNode = "vc3_RotationInterpolator"
+
+Scene16.children.append(ROUTE372)
+ROUTE373 = x3d.ROUTE()
+ROUTE373.fromField = "fraction_changed"
+ROUTE373.fromNode = "KickTimer"
+ROUTE373.toField = "set_fraction"
+ROUTE373.toNode = "vc2_RotationInterpolator"
+
+Scene16.children.append(ROUTE373)
+ROUTE374 = x3d.ROUTE()
+ROUTE374.fromField = "fraction_changed"
+ROUTE374.fromNode = "KickTimer"
+ROUTE374.toField = "set_fraction"
+ROUTE374.toNode = "vc1_RotationInterpolator"
+
+Scene16.children.append(ROUTE374)
+ROUTE375 = x3d.ROUTE()
+ROUTE375.fromField = "fraction_changed"
+ROUTE375.fromNode = "KickTimer"
+ROUTE375.toField = "set_fraction"
+ROUTE375.toNode = "skullbase_RotationInterpolator"
+
+Scene16.children.append(ROUTE375)
+ROUTE376 = x3d.ROUTE()
+ROUTE376.fromField = "fraction_changed"
+ROUTE376.fromNode = "KickTimer"
+ROUTE376.toField = "set_fraction"
+ROUTE376.toNode = "l_eyelid_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE376)
+ROUTE377 = x3d.ROUTE()
+ROUTE377.fromField = "fraction_changed"
+ROUTE377.fromNode = "KickTimer"
+ROUTE377.toField = "set_fraction"
+ROUTE377.toNode = "l_eyeball_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE377)
+ROUTE378 = x3d.ROUTE()
+ROUTE378.fromField = "fraction_changed"
+ROUTE378.fromNode = "KickTimer"
+ROUTE378.toField = "set_fraction"
+ROUTE378.toNode = "l_eyebrow_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE378)
+ROUTE379 = x3d.ROUTE()
+ROUTE379.fromField = "fraction_changed"
+ROUTE379.fromNode = "KickTimer"
+ROUTE379.toField = "set_fraction"
+ROUTE379.toNode = "r_eyelid_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE379)
+ROUTE380 = x3d.ROUTE()
+ROUTE380.fromField = "fraction_changed"
+ROUTE380.fromNode = "KickTimer"
+ROUTE380.toField = "set_fraction"
+ROUTE380.toNode = "r_eyeball_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE380)
+ROUTE381 = x3d.ROUTE()
+ROUTE381.fromField = "fraction_changed"
+ROUTE381.fromNode = "KickTimer"
+ROUTE381.toField = "set_fraction"
+ROUTE381.toNode = "r_eyebrow_joint_RotationInterpolator"
+
+Scene16.children.append(ROUTE381)
+ROUTE382 = x3d.ROUTE()
+ROUTE382.fromField = "fraction_changed"
+ROUTE382.fromNode = "KickTimer"
+ROUTE382.toField = "set_fraction"
+ROUTE382.toNode = "temporomandibular_RotationInterpolator"
+
+Scene16.children.append(ROUTE382)
+ROUTE383 = x3d.ROUTE()
+ROUTE383.fromField = "fraction_changed"
+ROUTE383.fromNode = "KickTimer"
+ROUTE383.toField = "set_fraction"
+ROUTE383.toNode = "l_sternoclavicular_RotationInterpolator"
+
+Scene16.children.append(ROUTE383)
+ROUTE384 = x3d.ROUTE()
+ROUTE384.fromField = "fraction_changed"
+ROUTE384.fromNode = "KickTimer"
+ROUTE384.toField = "set_fraction"
+ROUTE384.toNode = "l_acromioclavicular_RotationInterpolator"
+
+Scene16.children.append(ROUTE384)
+ROUTE385 = x3d.ROUTE()
+ROUTE385.fromField = "fraction_changed"
+ROUTE385.fromNode = "KickTimer"
+ROUTE385.toField = "set_fraction"
+ROUTE385.toNode = "l_shoulder_RotationInterpolator"
+
+Scene16.children.append(ROUTE385)
+ROUTE386 = x3d.ROUTE()
+ROUTE386.fromField = "fraction_changed"
+ROUTE386.fromNode = "KickTimer"
+ROUTE386.toField = "set_fraction"
+ROUTE386.toNode = "l_elbow_RotationInterpolator"
+
+Scene16.children.append(ROUTE386)
+ROUTE387 = x3d.ROUTE()
+ROUTE387.fromField = "fraction_changed"
+ROUTE387.fromNode = "KickTimer"
+ROUTE387.toField = "set_fraction"
+ROUTE387.toNode = "l_wrist_RotationInterpolator"
+
+Scene16.children.append(ROUTE387)
+ROUTE388 = x3d.ROUTE()
+ROUTE388.fromField = "fraction_changed"
+ROUTE388.fromNode = "KickTimer"
+ROUTE388.toField = "set_fraction"
+ROUTE388.toNode = "l_thumb1_RotationInterpolator"
+
+Scene16.children.append(ROUTE388)
+ROUTE389 = x3d.ROUTE()
+ROUTE389.fromField = "fraction_changed"
+ROUTE389.fromNode = "KickTimer"
+ROUTE389.toField = "set_fraction"
+ROUTE389.toNode = "l_thumb2_RotationInterpolator"
+
+Scene16.children.append(ROUTE389)
+ROUTE390 = x3d.ROUTE()
+ROUTE390.fromField = "fraction_changed"
+ROUTE390.fromNode = "KickTimer"
+ROUTE390.toField = "set_fraction"
+ROUTE390.toNode = "l_thumb3_RotationInterpolator"
+
+Scene16.children.append(ROUTE390)
+ROUTE391 = x3d.ROUTE()
+ROUTE391.fromField = "fraction_changed"
+ROUTE391.fromNode = "KickTimer"
+ROUTE391.toField = "set_fraction"
+ROUTE391.toNode = "l_index0_RotationInterpolator"
+
+Scene16.children.append(ROUTE391)
+ROUTE392 = x3d.ROUTE()
+ROUTE392.fromField = "fraction_changed"
+ROUTE392.fromNode = "KickTimer"
+ROUTE392.toField = "set_fraction"
+ROUTE392.toNode = "l_index1_RotationInterpolator"
+
+Scene16.children.append(ROUTE392)
+ROUTE393 = x3d.ROUTE()
+ROUTE393.fromField = "fraction_changed"
+ROUTE393.fromNode = "KickTimer"
+ROUTE393.toField = "set_fraction"
+ROUTE393.toNode = "l_index2_RotationInterpolator"
+
+Scene16.children.append(ROUTE393)
+ROUTE394 = x3d.ROUTE()
+ROUTE394.fromField = "fraction_changed"
+ROUTE394.fromNode = "KickTimer"
+ROUTE394.toField = "set_fraction"
+ROUTE394.toNode = "l_index3_RotationInterpolator"
+
+Scene16.children.append(ROUTE394)
+ROUTE395 = x3d.ROUTE()
+ROUTE395.fromField = "fraction_changed"
+ROUTE395.fromNode = "KickTimer"
+ROUTE395.toField = "set_fraction"
+ROUTE395.toNode = "l_middle0_RotationInterpolator"
+
+Scene16.children.append(ROUTE395)
+ROUTE396 = x3d.ROUTE()
+ROUTE396.fromField = "fraction_changed"
+ROUTE396.fromNode = "KickTimer"
+ROUTE396.toField = "set_fraction"
+ROUTE396.toNode = "l_middle1_RotationInterpolator"
+
+Scene16.children.append(ROUTE396)
+ROUTE397 = x3d.ROUTE()
+ROUTE397.fromField = "fraction_changed"
+ROUTE397.fromNode = "KickTimer"
+ROUTE397.toField = "set_fraction"
+ROUTE397.toNode = "l_middle2_RotationInterpolator"
+
+Scene16.children.append(ROUTE397)
+ROUTE398 = x3d.ROUTE()
+ROUTE398.fromField = "fraction_changed"
+ROUTE398.fromNode = "KickTimer"
+ROUTE398.toField = "set_fraction"
+ROUTE398.toNode = "l_middle3_RotationInterpolator"
+
+Scene16.children.append(ROUTE398)
+ROUTE399 = x3d.ROUTE()
+ROUTE399.fromField = "fraction_changed"
+ROUTE399.fromNode = "KickTimer"
+ROUTE399.toField = "set_fraction"
+ROUTE399.toNode = "l_ring0_RotationInterpolator"
+
+Scene16.children.append(ROUTE399)
+ROUTE400 = x3d.ROUTE()
+ROUTE400.fromField = "fraction_changed"
+ROUTE400.fromNode = "KickTimer"
+ROUTE400.toField = "set_fraction"
+ROUTE400.toNode = "l_ring1_RotationInterpolator"
+
+Scene16.children.append(ROUTE400)
+ROUTE401 = x3d.ROUTE()
+ROUTE401.fromField = "fraction_changed"
+ROUTE401.fromNode = "KickTimer"
+ROUTE401.toField = "set_fraction"
+ROUTE401.toNode = "l_ring2_RotationInterpolator"
+
+Scene16.children.append(ROUTE401)
+ROUTE402 = x3d.ROUTE()
+ROUTE402.fromField = "fraction_changed"
+ROUTE402.fromNode = "KickTimer"
+ROUTE402.toField = "set_fraction"
+ROUTE402.toNode = "l_ring3_RotationInterpolator"
+
+Scene16.children.append(ROUTE402)
+ROUTE403 = x3d.ROUTE()
+ROUTE403.fromField = "fraction_changed"
+ROUTE403.fromNode = "KickTimer"
+ROUTE403.toField = "set_fraction"
+ROUTE403.toNode = "l_pinky0_RotationInterpolator"
+
+Scene16.children.append(ROUTE403)
+ROUTE404 = x3d.ROUTE()
+ROUTE404.fromField = "fraction_changed"
+ROUTE404.fromNode = "KickTimer"
+ROUTE404.toField = "set_fraction"
+ROUTE404.toNode = "l_pinky1_RotationInterpolator"
+
+Scene16.children.append(ROUTE404)
+ROUTE405 = x3d.ROUTE()
+ROUTE405.fromField = "fraction_changed"
+ROUTE405.fromNode = "KickTimer"
+ROUTE405.toField = "set_fraction"
+ROUTE405.toNode = "l_pinky2_RotationInterpolator"
+
+Scene16.children.append(ROUTE405)
+ROUTE406 = x3d.ROUTE()
+ROUTE406.fromField = "fraction_changed"
+ROUTE406.fromNode = "KickTimer"
+ROUTE406.toField = "set_fraction"
+ROUTE406.toNode = "l_pinky3_RotationInterpolator"
+
+Scene16.children.append(ROUTE406)
+ROUTE407 = x3d.ROUTE()
+ROUTE407.fromField = "fraction_changed"
+ROUTE407.fromNode = "KickTimer"
+ROUTE407.toField = "set_fraction"
+ROUTE407.toNode = "r_sternoclavicular_RotationInterpolator"
+
+Scene16.children.append(ROUTE407)
+ROUTE408 = x3d.ROUTE()
+ROUTE408.fromField = "fraction_changed"
+ROUTE408.fromNode = "KickTimer"
+ROUTE408.toField = "set_fraction"
+ROUTE408.toNode = "r_acromioclavicular_RotationInterpolator"
+
+Scene16.children.append(ROUTE408)
+ROUTE409 = x3d.ROUTE()
+ROUTE409.fromField = "fraction_changed"
+ROUTE409.fromNode = "KickTimer"
+ROUTE409.toField = "set_fraction"
+ROUTE409.toNode = "r_shoulder_RotationInterpolator"
+
+Scene16.children.append(ROUTE409)
+ROUTE410 = x3d.ROUTE()
+ROUTE410.fromField = "fraction_changed"
+ROUTE410.fromNode = "KickTimer"
+ROUTE410.toField = "set_fraction"
+ROUTE410.toNode = "r_elbow_RotationInterpolator"
+
+Scene16.children.append(ROUTE410)
+ROUTE411 = x3d.ROUTE()
+ROUTE411.fromField = "fraction_changed"
+ROUTE411.fromNode = "KickTimer"
+ROUTE411.toField = "set_fraction"
+ROUTE411.toNode = "r_wrist_RotationInterpolator"
+
+Scene16.children.append(ROUTE411)
+ROUTE412 = x3d.ROUTE()
+ROUTE412.fromField = "fraction_changed"
+ROUTE412.fromNode = "KickTimer"
+ROUTE412.toField = "set_fraction"
+ROUTE412.toNode = "r_thumb1_RotationInterpolator"
+
+Scene16.children.append(ROUTE412)
+ROUTE413 = x3d.ROUTE()
+ROUTE413.fromField = "fraction_changed"
+ROUTE413.fromNode = "KickTimer"
+ROUTE413.toField = "set_fraction"
+ROUTE413.toNode = "r_thumb2_RotationInterpolator"
+
+Scene16.children.append(ROUTE413)
+ROUTE414 = x3d.ROUTE()
+ROUTE414.fromField = "fraction_changed"
+ROUTE414.fromNode = "KickTimer"
+ROUTE414.toField = "set_fraction"
+ROUTE414.toNode = "r_thumb3_RotationInterpolator"
+
+Scene16.children.append(ROUTE414)
+ROUTE415 = x3d.ROUTE()
+ROUTE415.fromField = "fraction_changed"
+ROUTE415.fromNode = "KickTimer"
+ROUTE415.toField = "set_fraction"
+ROUTE415.toNode = "r_index0_RotationInterpolator"
+
+Scene16.children.append(ROUTE415)
+ROUTE416 = x3d.ROUTE()
+ROUTE416.fromField = "fraction_changed"
+ROUTE416.fromNode = "KickTimer"
+ROUTE416.toField = "set_fraction"
+ROUTE416.toNode = "r_index1_RotationInterpolator"
+
+Scene16.children.append(ROUTE416)
+ROUTE417 = x3d.ROUTE()
+ROUTE417.fromField = "fraction_changed"
+ROUTE417.fromNode = "KickTimer"
+ROUTE417.toField = "set_fraction"
+ROUTE417.toNode = "r_index2_RotationInterpolator"
+
+Scene16.children.append(ROUTE417)
+ROUTE418 = x3d.ROUTE()
+ROUTE418.fromField = "fraction_changed"
+ROUTE418.fromNode = "KickTimer"
+ROUTE418.toField = "set_fraction"
+ROUTE418.toNode = "r_index3_RotationInterpolator"
+
+Scene16.children.append(ROUTE418)
+ROUTE419 = x3d.ROUTE()
+ROUTE419.fromField = "fraction_changed"
+ROUTE419.fromNode = "KickTimer"
+ROUTE419.toField = "set_fraction"
+ROUTE419.toNode = "r_middle0_RotationInterpolator"
+
+Scene16.children.append(ROUTE419)
+ROUTE420 = x3d.ROUTE()
+ROUTE420.fromField = "fraction_changed"
+ROUTE420.fromNode = "KickTimer"
+ROUTE420.toField = "set_fraction"
+ROUTE420.toNode = "r_middle1_RotationInterpolator"
+
+Scene16.children.append(ROUTE420)
+ROUTE421 = x3d.ROUTE()
+ROUTE421.fromField = "fraction_changed"
+ROUTE421.fromNode = "KickTimer"
+ROUTE421.toField = "set_fraction"
+ROUTE421.toNode = "r_middle2_RotationInterpolator"
+
+Scene16.children.append(ROUTE421)
+ROUTE422 = x3d.ROUTE()
+ROUTE422.fromField = "fraction_changed"
+ROUTE422.fromNode = "KickTimer"
+ROUTE422.toField = "set_fraction"
+ROUTE422.toNode = "r_middle3_RotationInterpolator"
+
+Scene16.children.append(ROUTE422)
+ROUTE423 = x3d.ROUTE()
+ROUTE423.fromField = "fraction_changed"
+ROUTE423.fromNode = "KickTimer"
+ROUTE423.toField = "set_fraction"
+ROUTE423.toNode = "r_ring0_RotationInterpolator"
+
+Scene16.children.append(ROUTE423)
+ROUTE424 = x3d.ROUTE()
+ROUTE424.fromField = "fraction_changed"
+ROUTE424.fromNode = "KickTimer"
+ROUTE424.toField = "set_fraction"
+ROUTE424.toNode = "r_ring1_RotationInterpolator"
+
+Scene16.children.append(ROUTE424)
+ROUTE425 = x3d.ROUTE()
+ROUTE425.fromField = "fraction_changed"
+ROUTE425.fromNode = "KickTimer"
+ROUTE425.toField = "set_fraction"
+ROUTE425.toNode = "r_ring2_RotationInterpolator"
+
+Scene16.children.append(ROUTE425)
+ROUTE426 = x3d.ROUTE()
+ROUTE426.fromField = "fraction_changed"
+ROUTE426.fromNode = "KickTimer"
+ROUTE426.toField = "set_fraction"
+ROUTE426.toNode = "r_ring3_RotationInterpolator"
+
+Scene16.children.append(ROUTE426)
+ROUTE427 = x3d.ROUTE()
+ROUTE427.fromField = "fraction_changed"
+ROUTE427.fromNode = "KickTimer"
+ROUTE427.toField = "set_fraction"
+ROUTE427.toNode = "r_pinky0_RotationInterpolator"
+
+Scene16.children.append(ROUTE427)
+ROUTE428 = x3d.ROUTE()
+ROUTE428.fromField = "fraction_changed"
+ROUTE428.fromNode = "KickTimer"
+ROUTE428.toField = "set_fraction"
+ROUTE428.toNode = "r_pinky1_RotationInterpolator"
+
+Scene16.children.append(ROUTE428)
+ROUTE429 = x3d.ROUTE()
+ROUTE429.fromField = "fraction_changed"
+ROUTE429.fromNode = "KickTimer"
+ROUTE429.toField = "set_fraction"
+ROUTE429.toNode = "r_pinky2_RotationInterpolator"
+
+Scene16.children.append(ROUTE429)
+ROUTE430 = x3d.ROUTE()
+ROUTE430.fromField = "fraction_changed"
+ROUTE430.fromNode = "KickTimer"
+ROUTE430.toField = "set_fraction"
+ROUTE430.toNode = "r_pinky3_RotationInterpolator"
+
+Scene16.children.append(ROUTE430)
 #Routes from Interpolators to Joe_ model Joints
-ROUTE431 = ROUTE()
-ROUTE431.setFromField("value_changed")
-ROUTE431.setFromNode("HumanoidRoot_RotationInterpolator")
-ROUTE431.setToField("set_rotation")
-ROUTE431.setToNode("Joe_humanoid_root")
-
-Scene16.addChildren(ROUTE431)
-ROUTE432 = ROUTE()
-ROUTE432.setFromField("value_changed")
-ROUTE432.setFromNode("HumanoidRoot_TranslationInterpolator")
-ROUTE432.setToField("set_translation")
-ROUTE432.setToNode("Joe_humanoid_root")
-
-Scene16.addChildren(ROUTE432)
-ROUTE433 = ROUTE()
-ROUTE433.setFromField("value_changed")
-ROUTE433.setFromNode("sacroiliac_RotationInterpolator")
-ROUTE433.setToField("set_rotation")
-ROUTE433.setToNode("Joe_sacroiliac")
-
-Scene16.addChildren(ROUTE433)
-ROUTE434 = ROUTE()
-ROUTE434.setFromField("value_changed")
-ROUTE434.setFromNode("l_hip_RotationInterpolator")
-ROUTE434.setToField("set_rotation")
-ROUTE434.setToNode("Joe_l_hip")
-
-Scene16.addChildren(ROUTE434)
-ROUTE435 = ROUTE()
-ROUTE435.setFromField("value_changed")
-ROUTE435.setFromNode("l_knee_RotationInterpolator")
-ROUTE435.setToField("set_rotation")
-ROUTE435.setToNode("Joe_l_knee")
-
-Scene16.addChildren(ROUTE435)
-ROUTE436 = ROUTE()
-ROUTE436.setFromField("value_changed")
-ROUTE436.setFromNode("l_ankle_RotationInterpolator")
-ROUTE436.setToField("set_rotation")
-ROUTE436.setToNode("Joe_l_talocrural")
-
-Scene16.addChildren(ROUTE436)
-ROUTE437 = ROUTE()
-ROUTE437.setFromField("value_changed")
-ROUTE437.setFromNode("l_subtalar_RotationInterpolator")
-ROUTE437.setToField("set_rotation")
-ROUTE437.setToNode("Joe_l_tarsometatarsal_2")
-
-Scene16.addChildren(ROUTE437)
-ROUTE438 = ROUTE()
-ROUTE438.setFromField("value_changed")
-ROUTE438.setFromNode("l_midtarsal_RotationInterpolator")
-ROUTE438.setToField("set_rotation")
-ROUTE438.setToNode("Joe_l_metatarsophalangeal_2")
-
-Scene16.addChildren(ROUTE438)
-ROUTE439 = ROUTE()
-ROUTE439.setFromField("value_changed")
-ROUTE439.setFromNode("l_metatarsal_RotationInterpolator")
-ROUTE439.setToField("set_rotation")
-ROUTE439.setToNode("Joe_l_tarsal_distal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE439)
-ROUTE440 = ROUTE()
-ROUTE440.setFromField("value_changed")
-ROUTE440.setFromNode("r_hip_RotationInterpolator")
-ROUTE440.setToField("set_rotation")
-ROUTE440.setToNode("Joe_r_hip")
-
-Scene16.addChildren(ROUTE440)
-ROUTE441 = ROUTE()
-ROUTE441.setFromField("value_changed")
-ROUTE441.setFromNode("r_knee_RotationInterpolator")
-ROUTE441.setToField("set_rotation")
-ROUTE441.setToNode("Joe_r_knee")
-
-Scene16.addChildren(ROUTE441)
-ROUTE442 = ROUTE()
-ROUTE442.setFromField("value_changed")
-ROUTE442.setFromNode("r_ankle_RotationInterpolator")
-ROUTE442.setToField("set_rotation")
-ROUTE442.setToNode("Joe_r_talocrural")
-
-Scene16.addChildren(ROUTE442)
-ROUTE443 = ROUTE()
-ROUTE443.setFromField("value_changed")
-ROUTE443.setFromNode("r_subtalar_RotationInterpolator")
-ROUTE443.setToField("set_rotation")
-ROUTE443.setToNode("Joe_r_tarsometatarsal_2")
-
-Scene16.addChildren(ROUTE443)
-ROUTE444 = ROUTE()
-ROUTE444.setFromField("value_changed")
-ROUTE444.setFromNode("r_midtarsal_RotationInterpolator")
-ROUTE444.setToField("set_rotation")
-ROUTE444.setToNode("Joe_r_metatarsophalangeal_2")
-
-Scene16.addChildren(ROUTE444)
-ROUTE445 = ROUTE()
-ROUTE445.setFromField("value_changed")
-ROUTE445.setFromNode("r_metatarsal_RotationInterpolator")
-ROUTE445.setToField("set_rotation")
-ROUTE445.setToNode("Joe_r_tarsal_distal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE445)
-ROUTE446 = ROUTE()
-ROUTE446.setFromField("value_changed")
-ROUTE446.setFromNode("vl5_RotationInterpolator")
-ROUTE446.setToField("set_rotation")
-ROUTE446.setToNode("Joe_vl5")
-
-Scene16.addChildren(ROUTE446)
-ROUTE447 = ROUTE()
-ROUTE447.setFromField("value_changed")
-ROUTE447.setFromNode("vl4_RotationInterpolator")
-ROUTE447.setToField("set_rotation")
-ROUTE447.setToNode("Joe_vl4")
-
-Scene16.addChildren(ROUTE447)
-ROUTE448 = ROUTE()
-ROUTE448.setFromField("value_changed")
-ROUTE448.setFromNode("vl3_RotationInterpolator")
-ROUTE448.setToField("set_rotation")
-ROUTE448.setToNode("Joe_vl3")
-
-Scene16.addChildren(ROUTE448)
-ROUTE449 = ROUTE()
-ROUTE449.setFromField("value_changed")
-ROUTE449.setFromNode("vl2_RotationInterpolator")
-ROUTE449.setToField("set_rotation")
-ROUTE449.setToNode("Joe_vl2")
-
-Scene16.addChildren(ROUTE449)
-ROUTE450 = ROUTE()
-ROUTE450.setFromField("value_changed")
-ROUTE450.setFromNode("vl1_RotationInterpolator")
-ROUTE450.setToField("set_rotation")
-ROUTE450.setToNode("Joe_vl1")
-
-Scene16.addChildren(ROUTE450)
-ROUTE451 = ROUTE()
-ROUTE451.setFromField("value_changed")
-ROUTE451.setFromNode("vt12_RotationInterpolator")
-ROUTE451.setToField("set_rotation")
-ROUTE451.setToNode("Joe_vt12")
-
-Scene16.addChildren(ROUTE451)
-ROUTE452 = ROUTE()
-ROUTE452.setFromField("value_changed")
-ROUTE452.setFromNode("vt11_RotationInterpolator")
-ROUTE452.setToField("set_rotation")
-ROUTE452.setToNode("Joe_vt11")
-
-Scene16.addChildren(ROUTE452)
-ROUTE453 = ROUTE()
-ROUTE453.setFromField("value_changed")
-ROUTE453.setFromNode("vt10_RotationInterpolator")
-ROUTE453.setToField("set_rotation")
-ROUTE453.setToNode("Joe_vt10")
-
-Scene16.addChildren(ROUTE453)
-ROUTE454 = ROUTE()
-ROUTE454.setFromField("value_changed")
-ROUTE454.setFromNode("vt9_RotationInterpolator")
-ROUTE454.setToField("set_rotation")
-ROUTE454.setToNode("Joe_vt9")
-
-Scene16.addChildren(ROUTE454)
-ROUTE455 = ROUTE()
-ROUTE455.setFromField("value_changed")
-ROUTE455.setFromNode("vt8_RotationInterpolator")
-ROUTE455.setToField("set_rotation")
-ROUTE455.setToNode("Joe_vt8")
-
-Scene16.addChildren(ROUTE455)
-ROUTE456 = ROUTE()
-ROUTE456.setFromField("value_changed")
-ROUTE456.setFromNode("vt7_RotationInterpolator")
-ROUTE456.setToField("set_rotation")
-ROUTE456.setToNode("Joe_vt7")
-
-Scene16.addChildren(ROUTE456)
-ROUTE457 = ROUTE()
-ROUTE457.setFromField("value_changed")
-ROUTE457.setFromNode("vt6_RotationInterpolator")
-ROUTE457.setToField("set_rotation")
-ROUTE457.setToNode("Joe_vt6")
-
-Scene16.addChildren(ROUTE457)
-ROUTE458 = ROUTE()
-ROUTE458.setFromField("value_changed")
-ROUTE458.setFromNode("vt5_RotationInterpolator")
-ROUTE458.setToField("set_rotation")
-ROUTE458.setToNode("Joe_vt5")
-
-Scene16.addChildren(ROUTE458)
-ROUTE459 = ROUTE()
-ROUTE459.setFromField("value_changed")
-ROUTE459.setFromNode("vt4_RotationInterpolator")
-ROUTE459.setToField("set_rotation")
-ROUTE459.setToNode("Joe_vt4")
-
-Scene16.addChildren(ROUTE459)
-ROUTE460 = ROUTE()
-ROUTE460.setFromField("value_changed")
-ROUTE460.setFromNode("vt3_RotationInterpolator")
-ROUTE460.setToField("set_rotation")
-ROUTE460.setToNode("Joe_vt3")
-
-Scene16.addChildren(ROUTE460)
-ROUTE461 = ROUTE()
-ROUTE461.setFromField("value_changed")
-ROUTE461.setFromNode("vt2_RotationInterpolator")
-ROUTE461.setToField("set_rotation")
-ROUTE461.setToNode("Joe_vt2")
-
-Scene16.addChildren(ROUTE461)
-ROUTE462 = ROUTE()
-ROUTE462.setFromField("value_changed")
-ROUTE462.setFromNode("vt1_RotationInterpolator")
-ROUTE462.setToField("set_rotation")
-ROUTE462.setToNode("Joe_vt1")
-
-Scene16.addChildren(ROUTE462)
-ROUTE463 = ROUTE()
-ROUTE463.setFromField("value_changed")
-ROUTE463.setFromNode("vc7_RotationInterpolator")
-ROUTE463.setToField("set_rotation")
-ROUTE463.setToNode("Joe_vc7")
-
-Scene16.addChildren(ROUTE463)
-ROUTE464 = ROUTE()
-ROUTE464.setFromField("value_changed")
-ROUTE464.setFromNode("vc6_RotationInterpolator")
-ROUTE464.setToField("set_rotation")
-ROUTE464.setToNode("Joe_vc6")
-
-Scene16.addChildren(ROUTE464)
-ROUTE465 = ROUTE()
-ROUTE465.setFromField("value_changed")
-ROUTE465.setFromNode("vc5_RotationInterpolator")
-ROUTE465.setToField("set_rotation")
-ROUTE465.setToNode("Joe_vc5")
-
-Scene16.addChildren(ROUTE465)
-ROUTE466 = ROUTE()
-ROUTE466.setFromField("value_changed")
-ROUTE466.setFromNode("vc4_RotationInterpolator")
-ROUTE466.setToField("set_rotation")
-ROUTE466.setToNode("Joe_vc4")
-
-Scene16.addChildren(ROUTE466)
-ROUTE467 = ROUTE()
-ROUTE467.setFromField("value_changed")
-ROUTE467.setFromNode("vc3_RotationInterpolator")
-ROUTE467.setToField("set_rotation")
-ROUTE467.setToNode("Joe_vc3")
-
-Scene16.addChildren(ROUTE467)
-ROUTE468 = ROUTE()
-ROUTE468.setFromField("value_changed")
-ROUTE468.setFromNode("vc2_RotationInterpolator")
-ROUTE468.setToField("set_rotation")
-ROUTE468.setToNode("Joe_vc2")
-
-Scene16.addChildren(ROUTE468)
-ROUTE469 = ROUTE()
-ROUTE469.setFromField("value_changed")
-ROUTE469.setFromNode("vc1_RotationInterpolator")
-ROUTE469.setToField("set_rotation")
-ROUTE469.setToNode("Joe_vc1")
-
-Scene16.addChildren(ROUTE469)
-ROUTE470 = ROUTE()
-ROUTE470.setFromField("value_changed")
-ROUTE470.setFromNode("skullbase_RotationInterpolator")
-ROUTE470.setToField("set_rotation")
-ROUTE470.setToNode("Joe_skullbase")
-
-Scene16.addChildren(ROUTE470)
-ROUTE471 = ROUTE()
-ROUTE471.setFromField("value_changed")
-ROUTE471.setFromNode("l_eyelid_joint_RotationInterpolator")
-ROUTE471.setToField("set_rotation")
-ROUTE471.setToNode("Joe_l_eyelid_joint")
-
-Scene16.addChildren(ROUTE471)
-ROUTE472 = ROUTE()
-ROUTE472.setFromField("value_changed")
-ROUTE472.setFromNode("l_eyeball_joint_RotationInterpolator")
-ROUTE472.setToField("set_rotation")
-ROUTE472.setToNode("Joe_l_eyeball_joint")
-
-Scene16.addChildren(ROUTE472)
-ROUTE473 = ROUTE()
-ROUTE473.setFromField("value_changed")
-ROUTE473.setFromNode("l_eyebrow_joint_RotationInterpolator")
-ROUTE473.setToField("set_rotation")
-ROUTE473.setToNode("Joe_l_eyebrow_joint")
-
-Scene16.addChildren(ROUTE473)
-ROUTE474 = ROUTE()
-ROUTE474.setFromField("value_changed")
-ROUTE474.setFromNode("r_eyelid_joint_RotationInterpolator")
-ROUTE474.setToField("set_rotation")
-ROUTE474.setToNode("Joe_r_eyelid_joint")
-
-Scene16.addChildren(ROUTE474)
-ROUTE475 = ROUTE()
-ROUTE475.setFromField("value_changed")
-ROUTE475.setFromNode("r_eyeball_joint_RotationInterpolator")
-ROUTE475.setToField("set_rotation")
-ROUTE475.setToNode("Joe_r_eyeball_joint")
-
-Scene16.addChildren(ROUTE475)
-ROUTE476 = ROUTE()
-ROUTE476.setFromField("value_changed")
-ROUTE476.setFromNode("r_eyebrow_joint_RotationInterpolator")
-ROUTE476.setToField("set_rotation")
-ROUTE476.setToNode("Joe_r_eyebrow_joint")
-
-Scene16.addChildren(ROUTE476)
-ROUTE477 = ROUTE()
-ROUTE477.setFromField("value_changed")
-ROUTE477.setFromNode("temporomandibular_RotationInterpolator")
-ROUTE477.setToField("set_rotation")
-ROUTE477.setToNode("Joe_temporomandibular")
-
-Scene16.addChildren(ROUTE477)
-ROUTE478 = ROUTE()
-ROUTE478.setFromField("value_changed")
-ROUTE478.setFromNode("l_sternoclavicular_RotationInterpolator")
-ROUTE478.setToField("set_rotation")
-ROUTE478.setToNode("Joe_l_sternoclavicular")
-
-Scene16.addChildren(ROUTE478)
-ROUTE479 = ROUTE()
-ROUTE479.setFromField("value_changed")
-ROUTE479.setFromNode("l_acromioclavicular_RotationInterpolator")
-ROUTE479.setToField("set_rotation")
-ROUTE479.setToNode("Joe_l_acromioclavicular")
-
-Scene16.addChildren(ROUTE479)
-ROUTE480 = ROUTE()
-ROUTE480.setFromField("value_changed")
-ROUTE480.setFromNode("l_shoulder_RotationInterpolator")
-ROUTE480.setToField("set_rotation")
-ROUTE480.setToNode("Joe_l_shoulder")
-
-Scene16.addChildren(ROUTE480)
-ROUTE481 = ROUTE()
-ROUTE481.setFromField("value_changed")
-ROUTE481.setFromNode("l_elbow_RotationInterpolator")
-ROUTE481.setToField("set_rotation")
-ROUTE481.setToNode("Joe_l_elbow")
-
-Scene16.addChildren(ROUTE481)
-ROUTE482 = ROUTE()
-ROUTE482.setFromField("value_changed")
-ROUTE482.setFromNode("l_wrist_RotationInterpolator")
-ROUTE482.setToField("set_rotation")
-ROUTE482.setToNode("Joe_l_radiocarpal")
-
-Scene16.addChildren(ROUTE482)
-ROUTE483 = ROUTE()
-ROUTE483.setFromField("value_changed")
-ROUTE483.setFromNode("l_thumb1_RotationInterpolator")
-ROUTE483.setToField("set_rotation")
-ROUTE483.setToNode("Joe_l_carpometacarpal_1")
-
-Scene16.addChildren(ROUTE483)
-ROUTE484 = ROUTE()
-ROUTE484.setFromField("value_changed")
-ROUTE484.setFromNode("l_thumb2_RotationInterpolator")
-ROUTE484.setToField("set_rotation")
-ROUTE484.setToNode("Joe_l_metacarpophalangeal_1")
-
-Scene16.addChildren(ROUTE484)
-ROUTE485 = ROUTE()
-ROUTE485.setFromField("value_changed")
-ROUTE485.setFromNode("l_thumb3_RotationInterpolator")
-ROUTE485.setToField("set_rotation")
-ROUTE485.setToNode("Joe_l_carpal_interphalangeal_1")
-
-Scene16.addChildren(ROUTE485)
-ROUTE486 = ROUTE()
-ROUTE486.setFromField("value_changed")
-ROUTE486.setFromNode("l_index0_RotationInterpolator")
-ROUTE486.setToField("set_rotation")
-ROUTE486.setToNode("Joe_l_carpometacarpal_2")
-
-Scene16.addChildren(ROUTE486)
-ROUTE487 = ROUTE()
-ROUTE487.setFromField("value_changed")
-ROUTE487.setFromNode("l_index1_RotationInterpolator")
-ROUTE487.setToField("set_rotation")
-ROUTE487.setToNode("Joe_l_metacarpophalangeal_2")
-
-Scene16.addChildren(ROUTE487)
-ROUTE488 = ROUTE()
-ROUTE488.setFromField("value_changed")
-ROUTE488.setFromNode("l_index2_RotationInterpolator")
-ROUTE488.setToField("set_rotation")
-ROUTE488.setToNode("Joe_l_carpal_proximal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE488)
-ROUTE489 = ROUTE()
-ROUTE489.setFromField("value_changed")
-ROUTE489.setFromNode("l_index3_RotationInterpolator")
-ROUTE489.setToField("set_rotation")
-ROUTE489.setToNode("Joe_l_carpal_distal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE489)
-ROUTE490 = ROUTE()
-ROUTE490.setFromField("value_changed")
-ROUTE490.setFromNode("l_middle0_RotationInterpolator")
-ROUTE490.setToField("set_rotation")
-ROUTE490.setToNode("Joe_l_carpometacarpal_3")
-
-Scene16.addChildren(ROUTE490)
-ROUTE491 = ROUTE()
-ROUTE491.setFromField("value_changed")
-ROUTE491.setFromNode("l_middle1_RotationInterpolator")
-ROUTE491.setToField("set_rotation")
-ROUTE491.setToNode("Joe_l_metacarpophalangeal_3")
-
-Scene16.addChildren(ROUTE491)
-ROUTE492 = ROUTE()
-ROUTE492.setFromField("value_changed")
-ROUTE492.setFromNode("l_middle2_RotationInterpolator")
-ROUTE492.setToField("set_rotation")
-ROUTE492.setToNode("Joe_l_carpal_proximal_interphalangeal_3")
-
-Scene16.addChildren(ROUTE492)
-ROUTE493 = ROUTE()
-ROUTE493.setFromField("value_changed")
-ROUTE493.setFromNode("l_middle3_RotationInterpolator")
-ROUTE493.setToField("set_rotation")
-ROUTE493.setToNode("Joe_l_carpal_distal_interphalangeal_3")
-
-Scene16.addChildren(ROUTE493)
-ROUTE494 = ROUTE()
-ROUTE494.setFromField("value_changed")
-ROUTE494.setFromNode("l_ring0_RotationInterpolator")
-ROUTE494.setToField("set_rotation")
-ROUTE494.setToNode("Joe_l_carpometacarpal_4")
-
-Scene16.addChildren(ROUTE494)
-ROUTE495 = ROUTE()
-ROUTE495.setFromField("value_changed")
-ROUTE495.setFromNode("l_ring1_RotationInterpolator")
-ROUTE495.setToField("set_rotation")
-ROUTE495.setToNode("Joe_l_metacarpophalangeal_4")
-
-Scene16.addChildren(ROUTE495)
-ROUTE496 = ROUTE()
-ROUTE496.setFromField("value_changed")
-ROUTE496.setFromNode("l_ring2_RotationInterpolator")
-ROUTE496.setToField("set_rotation")
-ROUTE496.setToNode("Joe_l_carpal_proximal_interphalangeal_4")
-
-Scene16.addChildren(ROUTE496)
-ROUTE497 = ROUTE()
-ROUTE497.setFromField("value_changed")
-ROUTE497.setFromNode("l_ring3_RotationInterpolator")
-ROUTE497.setToField("set_rotation")
-ROUTE497.setToNode("Joe_l_carpal_distal_interphalangeal_4")
-
-Scene16.addChildren(ROUTE497)
-ROUTE498 = ROUTE()
-ROUTE498.setFromField("value_changed")
-ROUTE498.setFromNode("l_pinky0_RotationInterpolator")
-ROUTE498.setToField("set_rotation")
-ROUTE498.setToNode("Joe_l_carpometacarpal_5")
-
-Scene16.addChildren(ROUTE498)
-ROUTE499 = ROUTE()
-ROUTE499.setFromField("value_changed")
-ROUTE499.setFromNode("l_pinky1_RotationInterpolator")
-ROUTE499.setToField("set_rotation")
-ROUTE499.setToNode("Joe_l_metacarpophalangeal_5")
-
-Scene16.addChildren(ROUTE499)
-ROUTE500 = ROUTE()
-ROUTE500.setFromField("value_changed")
-ROUTE500.setFromNode("l_pinky2_RotationInterpolator")
-ROUTE500.setToField("set_rotation")
-ROUTE500.setToNode("Joe_l_carpal_proximal_interphalangeal_5")
-
-Scene16.addChildren(ROUTE500)
-ROUTE501 = ROUTE()
-ROUTE501.setFromField("value_changed")
-ROUTE501.setFromNode("l_pinky3_RotationInterpolator")
-ROUTE501.setToField("set_rotation")
-ROUTE501.setToNode("Joe_l_carpal_distal_interphalangeal_5")
-
-Scene16.addChildren(ROUTE501)
-ROUTE502 = ROUTE()
-ROUTE502.setFromField("value_changed")
-ROUTE502.setFromNode("r_sternoclavicular_RotationInterpolator")
-ROUTE502.setToField("set_rotation")
-ROUTE502.setToNode("Joe_r_sternoclavicular")
-
-Scene16.addChildren(ROUTE502)
-ROUTE503 = ROUTE()
-ROUTE503.setFromField("value_changed")
-ROUTE503.setFromNode("r_acromioclavicular_RotationInterpolator")
-ROUTE503.setToField("set_rotation")
-ROUTE503.setToNode("Joe_r_acromioclavicular")
-
-Scene16.addChildren(ROUTE503)
-ROUTE504 = ROUTE()
-ROUTE504.setFromField("value_changed")
-ROUTE504.setFromNode("r_shoulder_RotationInterpolator")
-ROUTE504.setToField("set_rotation")
-ROUTE504.setToNode("Joe_r_shoulder")
-
-Scene16.addChildren(ROUTE504)
-ROUTE505 = ROUTE()
-ROUTE505.setFromField("value_changed")
-ROUTE505.setFromNode("r_elbow_RotationInterpolator")
-ROUTE505.setToField("set_rotation")
-ROUTE505.setToNode("Joe_r_elbow")
-
-Scene16.addChildren(ROUTE505)
-ROUTE506 = ROUTE()
-ROUTE506.setFromField("value_changed")
-ROUTE506.setFromNode("r_wrist_RotationInterpolator")
-ROUTE506.setToField("set_rotation")
-ROUTE506.setToNode("Joe_r_radiocarpal")
-
-Scene16.addChildren(ROUTE506)
-ROUTE507 = ROUTE()
-ROUTE507.setFromField("value_changed")
-ROUTE507.setFromNode("r_thumb1_RotationInterpolator")
-ROUTE507.setToField("set_rotation")
-ROUTE507.setToNode("Joe_r_carpometacarpal_1")
-
-Scene16.addChildren(ROUTE507)
-ROUTE508 = ROUTE()
-ROUTE508.setFromField("value_changed")
-ROUTE508.setFromNode("r_thumb2_RotationInterpolator")
-ROUTE508.setToField("set_rotation")
-ROUTE508.setToNode("Joe_r_metacarpophalangeal_1")
-
-Scene16.addChildren(ROUTE508)
-ROUTE509 = ROUTE()
-ROUTE509.setFromField("value_changed")
-ROUTE509.setFromNode("r_thumb3_RotationInterpolator")
-ROUTE509.setToField("set_rotation")
-ROUTE509.setToNode("Joe_r_carpal_interphalangeal_1")
-
-Scene16.addChildren(ROUTE509)
-ROUTE510 = ROUTE()
-ROUTE510.setFromField("value_changed")
-ROUTE510.setFromNode("r_index0_RotationInterpolator")
-ROUTE510.setToField("set_rotation")
-ROUTE510.setToNode("Joe_r_carpometacarpal_2")
-
-Scene16.addChildren(ROUTE510)
-ROUTE511 = ROUTE()
-ROUTE511.setFromField("value_changed")
-ROUTE511.setFromNode("r_index1_RotationInterpolator")
-ROUTE511.setToField("set_rotation")
-ROUTE511.setToNode("Joe_r_metacarpophalangeal_2")
-
-Scene16.addChildren(ROUTE511)
-ROUTE512 = ROUTE()
-ROUTE512.setFromField("value_changed")
-ROUTE512.setFromNode("r_index2_RotationInterpolator")
-ROUTE512.setToField("set_rotation")
-ROUTE512.setToNode("Joe_r_carpal_proximal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE512)
-ROUTE513 = ROUTE()
-ROUTE513.setFromField("value_changed")
-ROUTE513.setFromNode("r_index3_RotationInterpolator")
-ROUTE513.setToField("set_rotation")
-ROUTE513.setToNode("Joe_r_carpal_distal_interphalangeal_2")
-
-Scene16.addChildren(ROUTE513)
-ROUTE514 = ROUTE()
-ROUTE514.setFromField("value_changed")
-ROUTE514.setFromNode("r_middle0_RotationInterpolator")
-ROUTE514.setToField("set_rotation")
-ROUTE514.setToNode("Joe_r_carpometacarpal_3")
-
-Scene16.addChildren(ROUTE514)
-ROUTE515 = ROUTE()
-ROUTE515.setFromField("value_changed")
-ROUTE515.setFromNode("r_middle1_RotationInterpolator")
-ROUTE515.setToField("set_rotation")
-ROUTE515.setToNode("Joe_r_metacarpophalangeal_3")
-
-Scene16.addChildren(ROUTE515)
-ROUTE516 = ROUTE()
-ROUTE516.setFromField("value_changed")
-ROUTE516.setFromNode("r_middle2_RotationInterpolator")
-ROUTE516.setToField("set_rotation")
-ROUTE516.setToNode("Joe_r_carpal_proximal_interphalangeal_3")
-
-Scene16.addChildren(ROUTE516)
-ROUTE517 = ROUTE()
-ROUTE517.setFromField("value_changed")
-ROUTE517.setFromNode("r_middle3_RotationInterpolator")
-ROUTE517.setToField("set_rotation")
-ROUTE517.setToNode("Joe_r_carpal_distal_interphalangeal_3")
-
-Scene16.addChildren(ROUTE517)
-ROUTE518 = ROUTE()
-ROUTE518.setFromField("value_changed")
-ROUTE518.setFromNode("r_ring0_RotationInterpolator")
-ROUTE518.setToField("set_rotation")
-ROUTE518.setToNode("Joe_r_carpometacarpal_4")
-
-Scene16.addChildren(ROUTE518)
-ROUTE519 = ROUTE()
-ROUTE519.setFromField("value_changed")
-ROUTE519.setFromNode("r_ring1_RotationInterpolator")
-ROUTE519.setToField("set_rotation")
-ROUTE519.setToNode("Joe_r_metacarpophalangeal_4")
-
-Scene16.addChildren(ROUTE519)
-ROUTE520 = ROUTE()
-ROUTE520.setFromField("value_changed")
-ROUTE520.setFromNode("r_ring2_RotationInterpolator")
-ROUTE520.setToField("set_rotation")
-ROUTE520.setToNode("Joe_r_carpal_proximal_interphalangeal_4")
-
-Scene16.addChildren(ROUTE520)
-ROUTE521 = ROUTE()
-ROUTE521.setFromField("value_changed")
-ROUTE521.setFromNode("r_ring3_RotationInterpolator")
-ROUTE521.setToField("set_rotation")
-ROUTE521.setToNode("Joe_r_carpal_distal_interphalangeal_4")
-
-Scene16.addChildren(ROUTE521)
-ROUTE522 = ROUTE()
-ROUTE522.setFromField("value_changed")
-ROUTE522.setFromNode("r_pinky0_RotationInterpolator")
-ROUTE522.setToField("set_rotation")
-ROUTE522.setToNode("Joe_r_carpometacarpal_5")
-
-Scene16.addChildren(ROUTE522)
-ROUTE523 = ROUTE()
-ROUTE523.setFromField("value_changed")
-ROUTE523.setFromNode("r_pinky1_RotationInterpolator")
-ROUTE523.setToField("set_rotation")
-ROUTE523.setToNode("Joe_r_metacarpophalangeal_5")
-
-Scene16.addChildren(ROUTE523)
-ROUTE524 = ROUTE()
-ROUTE524.setFromField("value_changed")
-ROUTE524.setFromNode("r_pinky2_RotationInterpolator")
-ROUTE524.setToField("set_rotation")
-ROUTE524.setToNode("Joe_r_carpal_proximal_interphalangeal_5")
-
-Scene16.addChildren(ROUTE524)
-ROUTE525 = ROUTE()
-ROUTE525.setFromField("value_changed")
-ROUTE525.setFromNode("r_pinky3_RotationInterpolator")
-ROUTE525.setToField("set_rotation")
-ROUTE525.setToNode("Joe_r_carpal_distal_interphalangeal_5")
-
-Scene16.addChildren(ROUTE525)
-Group526 = Group()
-Group526.setDEF("DisplacersAnimationGroup")
-ScalarInterpolator527 = ScalarInterpolator()
-ScalarInterpolator527.setDEF("skull_tipInterpolator")
-ScalarInterpolator527.setKey([0,0.1,0.2,0.35,0.6,0.7,0.85,0.88,0.94,0.97,1])
-ScalarInterpolator527.setKeyValue([0,0,0,0,0.2,0.4,1,0,1,0.4,0])
-
-Group526.addChildren(ScalarInterpolator527)
-ROUTE528 = ROUTE()
-ROUTE528.setFromField("fraction_changed")
-ROUTE528.setFromNode("KickTimer")
-ROUTE528.setToField("set_fraction")
-ROUTE528.setToNode("skull_tipInterpolator")
-
-Group526.addChildren(ROUTE528)
-ROUTE529 = ROUTE()
-ROUTE529.setFromField("value_changed")
-ROUTE529.setFromNode("skull_tipInterpolator")
-ROUTE529.setToField("weight")
-ROUTE529.setToNode("Joe_skull_tip_raiser_action")
-
-Group526.addChildren(ROUTE529)
-
-Scene16.addChildren(Group526)
-Group530 = Group()
-Group530.setDEF("SkinTextureTransformAnimationGroup")
-ScalarInterpolator531 = ScalarInterpolator()
-ScalarInterpolator531.setDEF("SkinInterpolator")
-ScalarInterpolator531.setKey([0,0.2,0.4,0.5,0.6,0.7,0.8,1])
-ScalarInterpolator531.setKeyValue([0,0,0,0,0,1,2,0])
-
-Group530.addChildren(ScalarInterpolator531)
-ROUTE532 = ROUTE()
-ROUTE532.setFromField("fraction_changed")
-ROUTE532.setFromNode("KickTimer")
-ROUTE532.setToField("set_fraction")
-ROUTE532.setToNode("SkinInterpolator")
-
-Group530.addChildren(ROUTE532)
-ROUTE533 = ROUTE()
-ROUTE533.setFromField("value_changed")
-ROUTE533.setFromNode("SkinInterpolator")
-ROUTE533.setToField("rotation")
-ROUTE533.setToNode("KickTextureTransform")
-
-Group530.addChildren(ROUTE533)
-
-Scene16.addChildren(Group530)
-Group534 = Group()
-Transform535 = Transform()
-Transform535.setDEF("SBall")
-Transform535.setRotation([0.7,0,0.7,0.1])
-Transform535.setScale([0.23,0.23,0.23])
-Transform535.setTranslation([-0.916,0.37,-0.92])
-Shape536 = Shape()
-Shape536.setDEF("ball_Shape")
-Appearance537 = Appearance()
-Appearance537.setDEF("ball_Appearance")
-Material538 = Material()
-Material538.setDEF("ball_Material")
-Material538.setDiffuseColor([0.3,0.3,1])
-Material538.setEmissiveColor([0.3,0.3,0.33])
-
-Appearance537.setMaterial(Material538)
-ImageTexture539 = ImageTexture()
-ImageTexture539.setUSE("JoeSkinImageTexture")
-
-Appearance537.setTexture(ImageTexture539)
-
-Shape536.setAppearance(Appearance537)
-IndexedFaceSet540 = IndexedFaceSet()
-IndexedFaceSet540.setDEF("ball_IndexedFaceSet")
-IndexedFaceSet540.setCoordIndex([0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,5,-1,0,5,6,-1,0,6,7,-1,0,7,8,-1,0,8,9,-1,0,9,10,-1,0,10,11,-1,0,11,12,-1,0,12,1,-1,1,13,14,-1,1,14,2,-1,2,14,15,-1,2,15,3,-1,3,15,16,-1,3,16,4,-1,4,16,17,-1,4,17,5,-1,5,17,18,-1,5,18,6,-1,6,18,19,-1,6,19,7,-1,7,19,20,-1,7,20,8,-1,8,20,21,-1,8,21,9,-1,9,21,22,-1,9,22,10,-1,10,22,23,-1,10,23,11,-1,11,23,24,-1,11,24,12,-1,12,24,13,-1,12,13,1,-1,13,25,26,-1,13,26,14,-1,14,26,27,-1,14,27,15,-1,15,27,28,-1,15,28,16,-1,16,28,29,-1,16,29,17,-1,17,29,30,-1,17,30,18,-1,18,30,31,-1,18,31,19,-1,19,31,32,-1,19,32,20,-1,20,32,33,-1,20,33,21,-1,21,33,34,-1,21,34,22,-1,22,34,35,-1,22,35,23,-1,23,35,36,-1,23,36,24,-1,24,36,25,-1,24,25,13,-1,25,37,38,-1,25,38,26,-1,26,38,39,-1,26,39,27,-1,27,39,40,-1,27,40,28,-1,28,40,41,-1,28,41,29,-1,29,41,42,-1,29,42,30,-1,30,42,43,-1,30,43,31,-1,31,43,44,-1,31,44,32,-1,32,44,45,-1,32,45,33,-1,33,45,46,-1,33,46,34,-1,34,46,47,-1,34,47,35,-1,35,47,48,-1,35,48,36,-1,36,48,37,-1,36,37,25,-1,37,49,50,-1,37,50,38,-1,38,50,51,-1,38,51,39,-1,39,51,52,-1,39,52,40,-1,40,52,53,-1,40,53,41,-1,41,53,54,-1,41,54,42,-1,42,54,55,-1,42,55,43,-1,43,55,56,-1,43,56,44,-1,44,56,57,-1,44,57,45,-1,45,57,58,-1,45,58,46,-1,46,58,59,-1,46,59,47,-1,47,59,60,-1,47,60,48,-1,48,60,49,-1,48,49,37,-1,61,50,49,-1,61,51,50,-1,61,52,51,-1,61,53,52,-1,61,54,53,-1,61,55,54,-1,61,56,55,-1,61,57,56,-1,61,58,57,-1,61,59,58,-1,61,60,59,-1,61,49,60,-1])
-Coordinate541 = Coordinate()
-Coordinate541.setDEF("Ball_Coordinates")
-Coordinate541.setPoint([0,0.4675,0,0,0.4049,-0.2338,-0.1169,0.4049,-0.2024,-0.2024,0.4049,-0.1169,-0.2338,0.4049,0,-0.2024,0.4049,0.1169,-0.1169,0.4049,0.2024,0,0.4049,0.2338,0.1169,0.4049,0.2024,0.2024,0.4049,0.1169,0.2338,0.4049,0,0.2024,0.4049,-0.1169,0.1169,0.4049,-0.2024,0,0.2338,-0.4049,-0.2024,0.2338,-0.3506,-0.3506,0.2338,-0.2024,-0.4049,0.2338,0,-0.3506,0.2338,0.2024,-0.2024,0.2338,0.3506,0,0.2338,0.4049,0.2024,0.2338,0.3506,0.3506,0.2338,0.2024,0.4049,0.2338,0,0.3506,0.2338,-0.2024,0.2024,0.2338,-0.3506,0,0,-0.4675,-0.2338,0,-0.4049,-0.4049,0,-0.2338,-0.4675,0,0,-0.4049,0,0.2338,-0.2338,0,0.4049,0,0,0.4675,0.2338,0,0.4049,0.4049,0,0.2338,0.4675,0,0,0.4049,0,-0.2338,0.2338,0,-0.4049,0,-0.2338,-0.4049,-0.2024,-0.2338,-0.3506,-0.3506,-0.2338,-0.2024,-0.4049,-0.2338,0,-0.3506,-0.2338,0.2024,-0.2024,-0.2338,0.3506,0,-0.2338,0.4049,0.2024,-0.2338,0.3506,0.3506,-0.2338,0.2024,0.4049,-0.2338,0,0.3506,-0.2338,-0.2024,0.2024,-0.2338,-0.3506,0,-0.4049,-0.2338,-0.1169,-0.4049,-0.2024,-0.2024,-0.4049,-0.1169,-0.2338,-0.4049,0,-0.2024,-0.4049,0.1169,-0.1169,-0.4049,0.2024,0,-0.4049,0.2338,0.1169,-0.4049,0.2024,0.2024,-0.4049,0.1169,0.2338,-0.4049,0,0.2024,-0.4049,-0.1169,0.1169,-0.4049,-0.2024,0,-0.4675,0])
-
-IndexedFaceSet540.setCoord(Coordinate541)
-
-Shape536.setGeometry(IndexedFaceSet540)
-
-Transform535.addChildren(Shape536)
-Viewpoint542 = Viewpoint()
-Viewpoint542.setDEF("ballView_1")
-Viewpoint542.setDescription("Ball View")
-
-Transform535.addChildren(Viewpoint542)
-
-Group534.addChildren(Transform535)
+ROUTE431 = x3d.ROUTE()
+ROUTE431.fromField = "value_changed"
+ROUTE431.fromNode = "HumanoidRoot_RotationInterpolator"
+ROUTE431.toField = "set_rotation"
+ROUTE431.toNode = "Joe_humanoid_root"
+
+Scene16.children.append(ROUTE431)
+ROUTE432 = x3d.ROUTE()
+ROUTE432.fromField = "value_changed"
+ROUTE432.fromNode = "HumanoidRoot_TranslationInterpolator"
+ROUTE432.toField = "set_translation"
+ROUTE432.toNode = "Joe_humanoid_root"
+
+Scene16.children.append(ROUTE432)
+ROUTE433 = x3d.ROUTE()
+ROUTE433.fromField = "value_changed"
+ROUTE433.fromNode = "sacroiliac_RotationInterpolator"
+ROUTE433.toField = "set_rotation"
+ROUTE433.toNode = "Joe_sacroiliac"
+
+Scene16.children.append(ROUTE433)
+ROUTE434 = x3d.ROUTE()
+ROUTE434.fromField = "value_changed"
+ROUTE434.fromNode = "l_hip_RotationInterpolator"
+ROUTE434.toField = "set_rotation"
+ROUTE434.toNode = "Joe_l_hip"
+
+Scene16.children.append(ROUTE434)
+ROUTE435 = x3d.ROUTE()
+ROUTE435.fromField = "value_changed"
+ROUTE435.fromNode = "l_knee_RotationInterpolator"
+ROUTE435.toField = "set_rotation"
+ROUTE435.toNode = "Joe_l_knee"
+
+Scene16.children.append(ROUTE435)
+ROUTE436 = x3d.ROUTE()
+ROUTE436.fromField = "value_changed"
+ROUTE436.fromNode = "l_ankle_RotationInterpolator"
+ROUTE436.toField = "set_rotation"
+ROUTE436.toNode = "Joe_l_talocrural"
+
+Scene16.children.append(ROUTE436)
+ROUTE437 = x3d.ROUTE()
+ROUTE437.fromField = "value_changed"
+ROUTE437.fromNode = "l_subtalar_RotationInterpolator"
+ROUTE437.toField = "set_rotation"
+ROUTE437.toNode = "Joe_l_tarsometatarsal_2"
+
+Scene16.children.append(ROUTE437)
+ROUTE438 = x3d.ROUTE()
+ROUTE438.fromField = "value_changed"
+ROUTE438.fromNode = "l_midtarsal_RotationInterpolator"
+ROUTE438.toField = "set_rotation"
+ROUTE438.toNode = "Joe_l_metatarsophalangeal_2"
+
+Scene16.children.append(ROUTE438)
+ROUTE439 = x3d.ROUTE()
+ROUTE439.fromField = "value_changed"
+ROUTE439.fromNode = "l_metatarsal_RotationInterpolator"
+ROUTE439.toField = "set_rotation"
+ROUTE439.toNode = "Joe_l_tarsal_distal_interphalangeal_2"
+
+Scene16.children.append(ROUTE439)
+ROUTE440 = x3d.ROUTE()
+ROUTE440.fromField = "value_changed"
+ROUTE440.fromNode = "r_hip_RotationInterpolator"
+ROUTE440.toField = "set_rotation"
+ROUTE440.toNode = "Joe_r_hip"
+
+Scene16.children.append(ROUTE440)
+ROUTE441 = x3d.ROUTE()
+ROUTE441.fromField = "value_changed"
+ROUTE441.fromNode = "r_knee_RotationInterpolator"
+ROUTE441.toField = "set_rotation"
+ROUTE441.toNode = "Joe_r_knee"
+
+Scene16.children.append(ROUTE441)
+ROUTE442 = x3d.ROUTE()
+ROUTE442.fromField = "value_changed"
+ROUTE442.fromNode = "r_ankle_RotationInterpolator"
+ROUTE442.toField = "set_rotation"
+ROUTE442.toNode = "Joe_r_talocrural"
+
+Scene16.children.append(ROUTE442)
+ROUTE443 = x3d.ROUTE()
+ROUTE443.fromField = "value_changed"
+ROUTE443.fromNode = "r_subtalar_RotationInterpolator"
+ROUTE443.toField = "set_rotation"
+ROUTE443.toNode = "Joe_r_tarsometatarsal_2"
+
+Scene16.children.append(ROUTE443)
+ROUTE444 = x3d.ROUTE()
+ROUTE444.fromField = "value_changed"
+ROUTE444.fromNode = "r_midtarsal_RotationInterpolator"
+ROUTE444.toField = "set_rotation"
+ROUTE444.toNode = "Joe_r_metatarsophalangeal_2"
+
+Scene16.children.append(ROUTE444)
+ROUTE445 = x3d.ROUTE()
+ROUTE445.fromField = "value_changed"
+ROUTE445.fromNode = "r_metatarsal_RotationInterpolator"
+ROUTE445.toField = "set_rotation"
+ROUTE445.toNode = "Joe_r_tarsal_distal_interphalangeal_2"
+
+Scene16.children.append(ROUTE445)
+ROUTE446 = x3d.ROUTE()
+ROUTE446.fromField = "value_changed"
+ROUTE446.fromNode = "vl5_RotationInterpolator"
+ROUTE446.toField = "set_rotation"
+ROUTE446.toNode = "Joe_vl5"
+
+Scene16.children.append(ROUTE446)
+ROUTE447 = x3d.ROUTE()
+ROUTE447.fromField = "value_changed"
+ROUTE447.fromNode = "vl4_RotationInterpolator"
+ROUTE447.toField = "set_rotation"
+ROUTE447.toNode = "Joe_vl4"
+
+Scene16.children.append(ROUTE447)
+ROUTE448 = x3d.ROUTE()
+ROUTE448.fromField = "value_changed"
+ROUTE448.fromNode = "vl3_RotationInterpolator"
+ROUTE448.toField = "set_rotation"
+ROUTE448.toNode = "Joe_vl3"
+
+Scene16.children.append(ROUTE448)
+ROUTE449 = x3d.ROUTE()
+ROUTE449.fromField = "value_changed"
+ROUTE449.fromNode = "vl2_RotationInterpolator"
+ROUTE449.toField = "set_rotation"
+ROUTE449.toNode = "Joe_vl2"
+
+Scene16.children.append(ROUTE449)
+ROUTE450 = x3d.ROUTE()
+ROUTE450.fromField = "value_changed"
+ROUTE450.fromNode = "vl1_RotationInterpolator"
+ROUTE450.toField = "set_rotation"
+ROUTE450.toNode = "Joe_vl1"
+
+Scene16.children.append(ROUTE450)
+ROUTE451 = x3d.ROUTE()
+ROUTE451.fromField = "value_changed"
+ROUTE451.fromNode = "vt12_RotationInterpolator"
+ROUTE451.toField = "set_rotation"
+ROUTE451.toNode = "Joe_vt12"
+
+Scene16.children.append(ROUTE451)
+ROUTE452 = x3d.ROUTE()
+ROUTE452.fromField = "value_changed"
+ROUTE452.fromNode = "vt11_RotationInterpolator"
+ROUTE452.toField = "set_rotation"
+ROUTE452.toNode = "Joe_vt11"
+
+Scene16.children.append(ROUTE452)
+ROUTE453 = x3d.ROUTE()
+ROUTE453.fromField = "value_changed"
+ROUTE453.fromNode = "vt10_RotationInterpolator"
+ROUTE453.toField = "set_rotation"
+ROUTE453.toNode = "Joe_vt10"
+
+Scene16.children.append(ROUTE453)
+ROUTE454 = x3d.ROUTE()
+ROUTE454.fromField = "value_changed"
+ROUTE454.fromNode = "vt9_RotationInterpolator"
+ROUTE454.toField = "set_rotation"
+ROUTE454.toNode = "Joe_vt9"
+
+Scene16.children.append(ROUTE454)
+ROUTE455 = x3d.ROUTE()
+ROUTE455.fromField = "value_changed"
+ROUTE455.fromNode = "vt8_RotationInterpolator"
+ROUTE455.toField = "set_rotation"
+ROUTE455.toNode = "Joe_vt8"
+
+Scene16.children.append(ROUTE455)
+ROUTE456 = x3d.ROUTE()
+ROUTE456.fromField = "value_changed"
+ROUTE456.fromNode = "vt7_RotationInterpolator"
+ROUTE456.toField = "set_rotation"
+ROUTE456.toNode = "Joe_vt7"
+
+Scene16.children.append(ROUTE456)
+ROUTE457 = x3d.ROUTE()
+ROUTE457.fromField = "value_changed"
+ROUTE457.fromNode = "vt6_RotationInterpolator"
+ROUTE457.toField = "set_rotation"
+ROUTE457.toNode = "Joe_vt6"
+
+Scene16.children.append(ROUTE457)
+ROUTE458 = x3d.ROUTE()
+ROUTE458.fromField = "value_changed"
+ROUTE458.fromNode = "vt5_RotationInterpolator"
+ROUTE458.toField = "set_rotation"
+ROUTE458.toNode = "Joe_vt5"
+
+Scene16.children.append(ROUTE458)
+ROUTE459 = x3d.ROUTE()
+ROUTE459.fromField = "value_changed"
+ROUTE459.fromNode = "vt4_RotationInterpolator"
+ROUTE459.toField = "set_rotation"
+ROUTE459.toNode = "Joe_vt4"
+
+Scene16.children.append(ROUTE459)
+ROUTE460 = x3d.ROUTE()
+ROUTE460.fromField = "value_changed"
+ROUTE460.fromNode = "vt3_RotationInterpolator"
+ROUTE460.toField = "set_rotation"
+ROUTE460.toNode = "Joe_vt3"
+
+Scene16.children.append(ROUTE460)
+ROUTE461 = x3d.ROUTE()
+ROUTE461.fromField = "value_changed"
+ROUTE461.fromNode = "vt2_RotationInterpolator"
+ROUTE461.toField = "set_rotation"
+ROUTE461.toNode = "Joe_vt2"
+
+Scene16.children.append(ROUTE461)
+ROUTE462 = x3d.ROUTE()
+ROUTE462.fromField = "value_changed"
+ROUTE462.fromNode = "vt1_RotationInterpolator"
+ROUTE462.toField = "set_rotation"
+ROUTE462.toNode = "Joe_vt1"
+
+Scene16.children.append(ROUTE462)
+ROUTE463 = x3d.ROUTE()
+ROUTE463.fromField = "value_changed"
+ROUTE463.fromNode = "vc7_RotationInterpolator"
+ROUTE463.toField = "set_rotation"
+ROUTE463.toNode = "Joe_vc7"
+
+Scene16.children.append(ROUTE463)
+ROUTE464 = x3d.ROUTE()
+ROUTE464.fromField = "value_changed"
+ROUTE464.fromNode = "vc6_RotationInterpolator"
+ROUTE464.toField = "set_rotation"
+ROUTE464.toNode = "Joe_vc6"
+
+Scene16.children.append(ROUTE464)
+ROUTE465 = x3d.ROUTE()
+ROUTE465.fromField = "value_changed"
+ROUTE465.fromNode = "vc5_RotationInterpolator"
+ROUTE465.toField = "set_rotation"
+ROUTE465.toNode = "Joe_vc5"
+
+Scene16.children.append(ROUTE465)
+ROUTE466 = x3d.ROUTE()
+ROUTE466.fromField = "value_changed"
+ROUTE466.fromNode = "vc4_RotationInterpolator"
+ROUTE466.toField = "set_rotation"
+ROUTE466.toNode = "Joe_vc4"
+
+Scene16.children.append(ROUTE466)
+ROUTE467 = x3d.ROUTE()
+ROUTE467.fromField = "value_changed"
+ROUTE467.fromNode = "vc3_RotationInterpolator"
+ROUTE467.toField = "set_rotation"
+ROUTE467.toNode = "Joe_vc3"
+
+Scene16.children.append(ROUTE467)
+ROUTE468 = x3d.ROUTE()
+ROUTE468.fromField = "value_changed"
+ROUTE468.fromNode = "vc2_RotationInterpolator"
+ROUTE468.toField = "set_rotation"
+ROUTE468.toNode = "Joe_vc2"
+
+Scene16.children.append(ROUTE468)
+ROUTE469 = x3d.ROUTE()
+ROUTE469.fromField = "value_changed"
+ROUTE469.fromNode = "vc1_RotationInterpolator"
+ROUTE469.toField = "set_rotation"
+ROUTE469.toNode = "Joe_vc1"
+
+Scene16.children.append(ROUTE469)
+ROUTE470 = x3d.ROUTE()
+ROUTE470.fromField = "value_changed"
+ROUTE470.fromNode = "skullbase_RotationInterpolator"
+ROUTE470.toField = "set_rotation"
+ROUTE470.toNode = "Joe_skullbase"
+
+Scene16.children.append(ROUTE470)
+ROUTE471 = x3d.ROUTE()
+ROUTE471.fromField = "value_changed"
+ROUTE471.fromNode = "l_eyelid_joint_RotationInterpolator"
+ROUTE471.toField = "set_rotation"
+ROUTE471.toNode = "Joe_l_eyelid_joint"
+
+Scene16.children.append(ROUTE471)
+ROUTE472 = x3d.ROUTE()
+ROUTE472.fromField = "value_changed"
+ROUTE472.fromNode = "l_eyeball_joint_RotationInterpolator"
+ROUTE472.toField = "set_rotation"
+ROUTE472.toNode = "Joe_l_eyeball_joint"
+
+Scene16.children.append(ROUTE472)
+ROUTE473 = x3d.ROUTE()
+ROUTE473.fromField = "value_changed"
+ROUTE473.fromNode = "l_eyebrow_joint_RotationInterpolator"
+ROUTE473.toField = "set_rotation"
+ROUTE473.toNode = "Joe_l_eyebrow_joint"
+
+Scene16.children.append(ROUTE473)
+ROUTE474 = x3d.ROUTE()
+ROUTE474.fromField = "value_changed"
+ROUTE474.fromNode = "r_eyelid_joint_RotationInterpolator"
+ROUTE474.toField = "set_rotation"
+ROUTE474.toNode = "Joe_r_eyelid_joint"
+
+Scene16.children.append(ROUTE474)
+ROUTE475 = x3d.ROUTE()
+ROUTE475.fromField = "value_changed"
+ROUTE475.fromNode = "r_eyeball_joint_RotationInterpolator"
+ROUTE475.toField = "set_rotation"
+ROUTE475.toNode = "Joe_r_eyeball_joint"
+
+Scene16.children.append(ROUTE475)
+ROUTE476 = x3d.ROUTE()
+ROUTE476.fromField = "value_changed"
+ROUTE476.fromNode = "r_eyebrow_joint_RotationInterpolator"
+ROUTE476.toField = "set_rotation"
+ROUTE476.toNode = "Joe_r_eyebrow_joint"
+
+Scene16.children.append(ROUTE476)
+ROUTE477 = x3d.ROUTE()
+ROUTE477.fromField = "value_changed"
+ROUTE477.fromNode = "temporomandibular_RotationInterpolator"
+ROUTE477.toField = "set_rotation"
+ROUTE477.toNode = "Joe_temporomandibular"
+
+Scene16.children.append(ROUTE477)
+ROUTE478 = x3d.ROUTE()
+ROUTE478.fromField = "value_changed"
+ROUTE478.fromNode = "l_sternoclavicular_RotationInterpolator"
+ROUTE478.toField = "set_rotation"
+ROUTE478.toNode = "Joe_l_sternoclavicular"
+
+Scene16.children.append(ROUTE478)
+ROUTE479 = x3d.ROUTE()
+ROUTE479.fromField = "value_changed"
+ROUTE479.fromNode = "l_acromioclavicular_RotationInterpolator"
+ROUTE479.toField = "set_rotation"
+ROUTE479.toNode = "Joe_l_acromioclavicular"
+
+Scene16.children.append(ROUTE479)
+ROUTE480 = x3d.ROUTE()
+ROUTE480.fromField = "value_changed"
+ROUTE480.fromNode = "l_shoulder_RotationInterpolator"
+ROUTE480.toField = "set_rotation"
+ROUTE480.toNode = "Joe_l_shoulder"
+
+Scene16.children.append(ROUTE480)
+ROUTE481 = x3d.ROUTE()
+ROUTE481.fromField = "value_changed"
+ROUTE481.fromNode = "l_elbow_RotationInterpolator"
+ROUTE481.toField = "set_rotation"
+ROUTE481.toNode = "Joe_l_elbow"
+
+Scene16.children.append(ROUTE481)
+ROUTE482 = x3d.ROUTE()
+ROUTE482.fromField = "value_changed"
+ROUTE482.fromNode = "l_wrist_RotationInterpolator"
+ROUTE482.toField = "set_rotation"
+ROUTE482.toNode = "Joe_l_radiocarpal"
+
+Scene16.children.append(ROUTE482)
+ROUTE483 = x3d.ROUTE()
+ROUTE483.fromField = "value_changed"
+ROUTE483.fromNode = "l_thumb1_RotationInterpolator"
+ROUTE483.toField = "set_rotation"
+ROUTE483.toNode = "Joe_l_carpometacarpal_1"
+
+Scene16.children.append(ROUTE483)
+ROUTE484 = x3d.ROUTE()
+ROUTE484.fromField = "value_changed"
+ROUTE484.fromNode = "l_thumb2_RotationInterpolator"
+ROUTE484.toField = "set_rotation"
+ROUTE484.toNode = "Joe_l_metacarpophalangeal_1"
+
+Scene16.children.append(ROUTE484)
+ROUTE485 = x3d.ROUTE()
+ROUTE485.fromField = "value_changed"
+ROUTE485.fromNode = "l_thumb3_RotationInterpolator"
+ROUTE485.toField = "set_rotation"
+ROUTE485.toNode = "Joe_l_carpal_interphalangeal_1"
+
+Scene16.children.append(ROUTE485)
+ROUTE486 = x3d.ROUTE()
+ROUTE486.fromField = "value_changed"
+ROUTE486.fromNode = "l_index0_RotationInterpolator"
+ROUTE486.toField = "set_rotation"
+ROUTE486.toNode = "Joe_l_carpometacarpal_2"
+
+Scene16.children.append(ROUTE486)
+ROUTE487 = x3d.ROUTE()
+ROUTE487.fromField = "value_changed"
+ROUTE487.fromNode = "l_index1_RotationInterpolator"
+ROUTE487.toField = "set_rotation"
+ROUTE487.toNode = "Joe_l_metacarpophalangeal_2"
+
+Scene16.children.append(ROUTE487)
+ROUTE488 = x3d.ROUTE()
+ROUTE488.fromField = "value_changed"
+ROUTE488.fromNode = "l_index2_RotationInterpolator"
+ROUTE488.toField = "set_rotation"
+ROUTE488.toNode = "Joe_l_carpal_proximal_interphalangeal_2"
+
+Scene16.children.append(ROUTE488)
+ROUTE489 = x3d.ROUTE()
+ROUTE489.fromField = "value_changed"
+ROUTE489.fromNode = "l_index3_RotationInterpolator"
+ROUTE489.toField = "set_rotation"
+ROUTE489.toNode = "Joe_l_carpal_distal_interphalangeal_2"
+
+Scene16.children.append(ROUTE489)
+ROUTE490 = x3d.ROUTE()
+ROUTE490.fromField = "value_changed"
+ROUTE490.fromNode = "l_middle0_RotationInterpolator"
+ROUTE490.toField = "set_rotation"
+ROUTE490.toNode = "Joe_l_carpometacarpal_3"
+
+Scene16.children.append(ROUTE490)
+ROUTE491 = x3d.ROUTE()
+ROUTE491.fromField = "value_changed"
+ROUTE491.fromNode = "l_middle1_RotationInterpolator"
+ROUTE491.toField = "set_rotation"
+ROUTE491.toNode = "Joe_l_metacarpophalangeal_3"
+
+Scene16.children.append(ROUTE491)
+ROUTE492 = x3d.ROUTE()
+ROUTE492.fromField = "value_changed"
+ROUTE492.fromNode = "l_middle2_RotationInterpolator"
+ROUTE492.toField = "set_rotation"
+ROUTE492.toNode = "Joe_l_carpal_proximal_interphalangeal_3"
+
+Scene16.children.append(ROUTE492)
+ROUTE493 = x3d.ROUTE()
+ROUTE493.fromField = "value_changed"
+ROUTE493.fromNode = "l_middle3_RotationInterpolator"
+ROUTE493.toField = "set_rotation"
+ROUTE493.toNode = "Joe_l_carpal_distal_interphalangeal_3"
+
+Scene16.children.append(ROUTE493)
+ROUTE494 = x3d.ROUTE()
+ROUTE494.fromField = "value_changed"
+ROUTE494.fromNode = "l_ring0_RotationInterpolator"
+ROUTE494.toField = "set_rotation"
+ROUTE494.toNode = "Joe_l_carpometacarpal_4"
+
+Scene16.children.append(ROUTE494)
+ROUTE495 = x3d.ROUTE()
+ROUTE495.fromField = "value_changed"
+ROUTE495.fromNode = "l_ring1_RotationInterpolator"
+ROUTE495.toField = "set_rotation"
+ROUTE495.toNode = "Joe_l_metacarpophalangeal_4"
+
+Scene16.children.append(ROUTE495)
+ROUTE496 = x3d.ROUTE()
+ROUTE496.fromField = "value_changed"
+ROUTE496.fromNode = "l_ring2_RotationInterpolator"
+ROUTE496.toField = "set_rotation"
+ROUTE496.toNode = "Joe_l_carpal_proximal_interphalangeal_4"
+
+Scene16.children.append(ROUTE496)
+ROUTE497 = x3d.ROUTE()
+ROUTE497.fromField = "value_changed"
+ROUTE497.fromNode = "l_ring3_RotationInterpolator"
+ROUTE497.toField = "set_rotation"
+ROUTE497.toNode = "Joe_l_carpal_distal_interphalangeal_4"
+
+Scene16.children.append(ROUTE497)
+ROUTE498 = x3d.ROUTE()
+ROUTE498.fromField = "value_changed"
+ROUTE498.fromNode = "l_pinky0_RotationInterpolator"
+ROUTE498.toField = "set_rotation"
+ROUTE498.toNode = "Joe_l_carpometacarpal_5"
+
+Scene16.children.append(ROUTE498)
+ROUTE499 = x3d.ROUTE()
+ROUTE499.fromField = "value_changed"
+ROUTE499.fromNode = "l_pinky1_RotationInterpolator"
+ROUTE499.toField = "set_rotation"
+ROUTE499.toNode = "Joe_l_metacarpophalangeal_5"
+
+Scene16.children.append(ROUTE499)
+ROUTE500 = x3d.ROUTE()
+ROUTE500.fromField = "value_changed"
+ROUTE500.fromNode = "l_pinky2_RotationInterpolator"
+ROUTE500.toField = "set_rotation"
+ROUTE500.toNode = "Joe_l_carpal_proximal_interphalangeal_5"
+
+Scene16.children.append(ROUTE500)
+ROUTE501 = x3d.ROUTE()
+ROUTE501.fromField = "value_changed"
+ROUTE501.fromNode = "l_pinky3_RotationInterpolator"
+ROUTE501.toField = "set_rotation"
+ROUTE501.toNode = "Joe_l_carpal_distal_interphalangeal_5"
+
+Scene16.children.append(ROUTE501)
+ROUTE502 = x3d.ROUTE()
+ROUTE502.fromField = "value_changed"
+ROUTE502.fromNode = "r_sternoclavicular_RotationInterpolator"
+ROUTE502.toField = "set_rotation"
+ROUTE502.toNode = "Joe_r_sternoclavicular"
+
+Scene16.children.append(ROUTE502)
+ROUTE503 = x3d.ROUTE()
+ROUTE503.fromField = "value_changed"
+ROUTE503.fromNode = "r_acromioclavicular_RotationInterpolator"
+ROUTE503.toField = "set_rotation"
+ROUTE503.toNode = "Joe_r_acromioclavicular"
+
+Scene16.children.append(ROUTE503)
+ROUTE504 = x3d.ROUTE()
+ROUTE504.fromField = "value_changed"
+ROUTE504.fromNode = "r_shoulder_RotationInterpolator"
+ROUTE504.toField = "set_rotation"
+ROUTE504.toNode = "Joe_r_shoulder"
+
+Scene16.children.append(ROUTE504)
+ROUTE505 = x3d.ROUTE()
+ROUTE505.fromField = "value_changed"
+ROUTE505.fromNode = "r_elbow_RotationInterpolator"
+ROUTE505.toField = "set_rotation"
+ROUTE505.toNode = "Joe_r_elbow"
+
+Scene16.children.append(ROUTE505)
+ROUTE506 = x3d.ROUTE()
+ROUTE506.fromField = "value_changed"
+ROUTE506.fromNode = "r_wrist_RotationInterpolator"
+ROUTE506.toField = "set_rotation"
+ROUTE506.toNode = "Joe_r_radiocarpal"
+
+Scene16.children.append(ROUTE506)
+ROUTE507 = x3d.ROUTE()
+ROUTE507.fromField = "value_changed"
+ROUTE507.fromNode = "r_thumb1_RotationInterpolator"
+ROUTE507.toField = "set_rotation"
+ROUTE507.toNode = "Joe_r_carpometacarpal_1"
+
+Scene16.children.append(ROUTE507)
+ROUTE508 = x3d.ROUTE()
+ROUTE508.fromField = "value_changed"
+ROUTE508.fromNode = "r_thumb2_RotationInterpolator"
+ROUTE508.toField = "set_rotation"
+ROUTE508.toNode = "Joe_r_metacarpophalangeal_1"
+
+Scene16.children.append(ROUTE508)
+ROUTE509 = x3d.ROUTE()
+ROUTE509.fromField = "value_changed"
+ROUTE509.fromNode = "r_thumb3_RotationInterpolator"
+ROUTE509.toField = "set_rotation"
+ROUTE509.toNode = "Joe_r_carpal_interphalangeal_1"
+
+Scene16.children.append(ROUTE509)
+ROUTE510 = x3d.ROUTE()
+ROUTE510.fromField = "value_changed"
+ROUTE510.fromNode = "r_index0_RotationInterpolator"
+ROUTE510.toField = "set_rotation"
+ROUTE510.toNode = "Joe_r_carpometacarpal_2"
+
+Scene16.children.append(ROUTE510)
+ROUTE511 = x3d.ROUTE()
+ROUTE511.fromField = "value_changed"
+ROUTE511.fromNode = "r_index1_RotationInterpolator"
+ROUTE511.toField = "set_rotation"
+ROUTE511.toNode = "Joe_r_metacarpophalangeal_2"
+
+Scene16.children.append(ROUTE511)
+ROUTE512 = x3d.ROUTE()
+ROUTE512.fromField = "value_changed"
+ROUTE512.fromNode = "r_index2_RotationInterpolator"
+ROUTE512.toField = "set_rotation"
+ROUTE512.toNode = "Joe_r_carpal_proximal_interphalangeal_2"
+
+Scene16.children.append(ROUTE512)
+ROUTE513 = x3d.ROUTE()
+ROUTE513.fromField = "value_changed"
+ROUTE513.fromNode = "r_index3_RotationInterpolator"
+ROUTE513.toField = "set_rotation"
+ROUTE513.toNode = "Joe_r_carpal_distal_interphalangeal_2"
+
+Scene16.children.append(ROUTE513)
+ROUTE514 = x3d.ROUTE()
+ROUTE514.fromField = "value_changed"
+ROUTE514.fromNode = "r_middle0_RotationInterpolator"
+ROUTE514.toField = "set_rotation"
+ROUTE514.toNode = "Joe_r_carpometacarpal_3"
+
+Scene16.children.append(ROUTE514)
+ROUTE515 = x3d.ROUTE()
+ROUTE515.fromField = "value_changed"
+ROUTE515.fromNode = "r_middle1_RotationInterpolator"
+ROUTE515.toField = "set_rotation"
+ROUTE515.toNode = "Joe_r_metacarpophalangeal_3"
+
+Scene16.children.append(ROUTE515)
+ROUTE516 = x3d.ROUTE()
+ROUTE516.fromField = "value_changed"
+ROUTE516.fromNode = "r_middle2_RotationInterpolator"
+ROUTE516.toField = "set_rotation"
+ROUTE516.toNode = "Joe_r_carpal_proximal_interphalangeal_3"
+
+Scene16.children.append(ROUTE516)
+ROUTE517 = x3d.ROUTE()
+ROUTE517.fromField = "value_changed"
+ROUTE517.fromNode = "r_middle3_RotationInterpolator"
+ROUTE517.toField = "set_rotation"
+ROUTE517.toNode = "Joe_r_carpal_distal_interphalangeal_3"
+
+Scene16.children.append(ROUTE517)
+ROUTE518 = x3d.ROUTE()
+ROUTE518.fromField = "value_changed"
+ROUTE518.fromNode = "r_ring0_RotationInterpolator"
+ROUTE518.toField = "set_rotation"
+ROUTE518.toNode = "Joe_r_carpometacarpal_4"
+
+Scene16.children.append(ROUTE518)
+ROUTE519 = x3d.ROUTE()
+ROUTE519.fromField = "value_changed"
+ROUTE519.fromNode = "r_ring1_RotationInterpolator"
+ROUTE519.toField = "set_rotation"
+ROUTE519.toNode = "Joe_r_metacarpophalangeal_4"
+
+Scene16.children.append(ROUTE519)
+ROUTE520 = x3d.ROUTE()
+ROUTE520.fromField = "value_changed"
+ROUTE520.fromNode = "r_ring2_RotationInterpolator"
+ROUTE520.toField = "set_rotation"
+ROUTE520.toNode = "Joe_r_carpal_proximal_interphalangeal_4"
+
+Scene16.children.append(ROUTE520)
+ROUTE521 = x3d.ROUTE()
+ROUTE521.fromField = "value_changed"
+ROUTE521.fromNode = "r_ring3_RotationInterpolator"
+ROUTE521.toField = "set_rotation"
+ROUTE521.toNode = "Joe_r_carpal_distal_interphalangeal_4"
+
+Scene16.children.append(ROUTE521)
+ROUTE522 = x3d.ROUTE()
+ROUTE522.fromField = "value_changed"
+ROUTE522.fromNode = "r_pinky0_RotationInterpolator"
+ROUTE522.toField = "set_rotation"
+ROUTE522.toNode = "Joe_r_carpometacarpal_5"
+
+Scene16.children.append(ROUTE522)
+ROUTE523 = x3d.ROUTE()
+ROUTE523.fromField = "value_changed"
+ROUTE523.fromNode = "r_pinky1_RotationInterpolator"
+ROUTE523.toField = "set_rotation"
+ROUTE523.toNode = "Joe_r_metacarpophalangeal_5"
+
+Scene16.children.append(ROUTE523)
+ROUTE524 = x3d.ROUTE()
+ROUTE524.fromField = "value_changed"
+ROUTE524.fromNode = "r_pinky2_RotationInterpolator"
+ROUTE524.toField = "set_rotation"
+ROUTE524.toNode = "Joe_r_carpal_proximal_interphalangeal_5"
+
+Scene16.children.append(ROUTE524)
+ROUTE525 = x3d.ROUTE()
+ROUTE525.fromField = "value_changed"
+ROUTE525.fromNode = "r_pinky3_RotationInterpolator"
+ROUTE525.toField = "set_rotation"
+ROUTE525.toNode = "Joe_r_carpal_distal_interphalangeal_5"
+
+Scene16.children.append(ROUTE525)
+Group526 = x3d.Group()
+Group526.DEF = "DisplacersAnimationGroup"
+ScalarInterpolator527 = x3d.ScalarInterpolator()
+ScalarInterpolator527.DEF = "skull_tipInterpolator"
+ScalarInterpolator527.key = [0,0.1,0.2,0.35,0.6,0.7,0.85,0.88,0.94,0.97,1]
+ScalarInterpolator527.keyValue = [0,0,0,0,0.2,0.4,1,0,1,0.4,0]
+
+Group526.children.append(ScalarInterpolator527)
+ROUTE528 = x3d.ROUTE()
+ROUTE528.fromField = "fraction_changed"
+ROUTE528.fromNode = "KickTimer"
+ROUTE528.toField = "set_fraction"
+ROUTE528.toNode = "skull_tipInterpolator"
+
+Group526.children.append(ROUTE528)
+ROUTE529 = x3d.ROUTE()
+ROUTE529.fromField = "value_changed"
+ROUTE529.fromNode = "skull_tipInterpolator"
+ROUTE529.toField = "weight"
+ROUTE529.toNode = "Joe_skull_tip_raiser_action"
+
+Group526.children.append(ROUTE529)
+
+Scene16.children.append(Group526)
+Group530 = x3d.Group()
+Group530.DEF = "SkinTextureTransformAnimationGroup"
+ScalarInterpolator531 = x3d.ScalarInterpolator()
+ScalarInterpolator531.DEF = "SkinInterpolator"
+ScalarInterpolator531.key = [0,0.2,0.4,0.5,0.6,0.7,0.8,1]
+ScalarInterpolator531.keyValue = [0,0,0,0,0,1,2,0]
+
+Group530.children.append(ScalarInterpolator531)
+ROUTE532 = x3d.ROUTE()
+ROUTE532.fromField = "fraction_changed"
+ROUTE532.fromNode = "KickTimer"
+ROUTE532.toField = "set_fraction"
+ROUTE532.toNode = "SkinInterpolator"
+
+Group530.children.append(ROUTE532)
+ROUTE533 = x3d.ROUTE()
+ROUTE533.fromField = "value_changed"
+ROUTE533.fromNode = "SkinInterpolator"
+ROUTE533.toField = "rotation"
+ROUTE533.toNode = "KickTextureTransform"
+
+Group530.children.append(ROUTE533)
+
+Scene16.children.append(Group530)
+Group534 = x3d.Group()
+Transform535 = x3d.Transform()
+Transform535.DEF = "SBall"
+Transform535.rotation = [0.7,0,0.7,0.1]
+Transform535.scale = [0.23,0.23,0.23]
+Transform535.translation = [-0.916,0.37,-0.92]
+Shape536 = x3d.Shape()
+Shape536.DEF = "ball_Shape"
+Appearance537 = x3d.Appearance()
+Appearance537.DEF = "ball_Appearance"
+Material538 = x3d.Material()
+Material538.DEF = "ball_Material"
+Material538.diffuseColor = [0.3,0.3,1]
+Material538.emissiveColor = [0.3,0.3,0.33]
+
+Appearance537.material = Material538
+ImageTexture539 = x3d.ImageTexture()
+ImageTexture539.USE = "JoeSkinImageTexture"
+
+Appearance537.texture = ImageTexture539
+
+Shape536.appearance = Appearance537
+IndexedFaceSet540 = x3d.IndexedFaceSet()
+IndexedFaceSet540.DEF = "ball_IndexedFaceSet"
+IndexedFaceSet540.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,5,-1,0,5,6,-1,0,6,7,-1,0,7,8,-1,0,8,9,-1,0,9,10,-1,0,10,11,-1,0,11,12,-1,0,12,1,-1,1,13,14,-1,1,14,2,-1,2,14,15,-1,2,15,3,-1,3,15,16,-1,3,16,4,-1,4,16,17,-1,4,17,5,-1,5,17,18,-1,5,18,6,-1,6,18,19,-1,6,19,7,-1,7,19,20,-1,7,20,8,-1,8,20,21,-1,8,21,9,-1,9,21,22,-1,9,22,10,-1,10,22,23,-1,10,23,11,-1,11,23,24,-1,11,24,12,-1,12,24,13,-1,12,13,1,-1,13,25,26,-1,13,26,14,-1,14,26,27,-1,14,27,15,-1,15,27,28,-1,15,28,16,-1,16,28,29,-1,16,29,17,-1,17,29,30,-1,17,30,18,-1,18,30,31,-1,18,31,19,-1,19,31,32,-1,19,32,20,-1,20,32,33,-1,20,33,21,-1,21,33,34,-1,21,34,22,-1,22,34,35,-1,22,35,23,-1,23,35,36,-1,23,36,24,-1,24,36,25,-1,24,25,13,-1,25,37,38,-1,25,38,26,-1,26,38,39,-1,26,39,27,-1,27,39,40,-1,27,40,28,-1,28,40,41,-1,28,41,29,-1,29,41,42,-1,29,42,30,-1,30,42,43,-1,30,43,31,-1,31,43,44,-1,31,44,32,-1,32,44,45,-1,32,45,33,-1,33,45,46,-1,33,46,34,-1,34,46,47,-1,34,47,35,-1,35,47,48,-1,35,48,36,-1,36,48,37,-1,36,37,25,-1,37,49,50,-1,37,50,38,-1,38,50,51,-1,38,51,39,-1,39,51,52,-1,39,52,40,-1,40,52,53,-1,40,53,41,-1,41,53,54,-1,41,54,42,-1,42,54,55,-1,42,55,43,-1,43,55,56,-1,43,56,44,-1,44,56,57,-1,44,57,45,-1,45,57,58,-1,45,58,46,-1,46,58,59,-1,46,59,47,-1,47,59,60,-1,47,60,48,-1,48,60,49,-1,48,49,37,-1,61,50,49,-1,61,51,50,-1,61,52,51,-1,61,53,52,-1,61,54,53,-1,61,55,54,-1,61,56,55,-1,61,57,56,-1,61,58,57,-1,61,59,58,-1,61,60,59,-1,61,49,60,-1]
+Coordinate541 = x3d.Coordinate()
+Coordinate541.DEF = "Ball_Coordinates"
+Coordinate541.point = (0.0000,0.4675,0.0000,0.0000,0.4049,-0.2338,-0.1169,0.4049,-0.2024,-0.2024,0.4049,-0.1169,-0.2338,0.4049,0.0000,-0.2024,0.4049,0.1169,-0.1169,0.4049,0.2024,0.0000,0.4049,0.2338,0.1169,0.4049,0.2024,0.2024,0.4049,0.1169,0.2338,0.4049,0.0000,0.2024,0.4049,-0.1169,0.1169,0.4049,-0.2024,0.0000,0.2338,-0.4049,-0.2024,0.2338,-0.3506,-0.3506,0.2338,-0.2024,-0.4049,0.2338,0.0000,-0.3506,0.2338,0.2024,-0.2024,0.2338,0.3506,0.0000,0.2338,0.4049,0.2024,0.2338,0.3506,0.3506,0.2338,0.2024,0.4049,0.2338,0.0000,0.3506,0.2338,-0.2024,0.2024,0.2338,-0.3506,0.0000,0.0000,-0.4675,-0.2338,0.0000,-0.4049,-0.4049,0.0000,-0.2338,-0.4675,0.0000,0.0000,-0.4049,0.0000,0.2338,-0.2338,0.0000,0.4049,0.0000,0.0000,0.4675,0.2338,0.0000,0.4049,0.4049,0.0000,0.2338,0.4675,0.0000,0.0000,0.4049,0.0000,-0.2338,0.2338,0.0000,-0.4049,0.0000,-0.2338,-0.4049,-0.2024,-0.2338,-0.3506,-0.3506,-0.2338,-0.2024,-0.4049,-0.2338,0.0000,-0.3506,-0.2338,0.2024,-0.2024,-0.2338,0.3506,0.0000,-0.2338,0.4049,0.2024,-0.2338,0.3506,0.3506,-0.2338,0.2024,0.4049,-0.2338,0.0000,0.3506,-0.2338,-0.2024,0.2024,-0.2338,-0.3506,0.0000,-0.4049,-0.2338,-0.1169,-0.4049,-0.2024,-0.2024,-0.4049,-0.1169,-0.2338,-0.4049,0.0000,-0.2024,-0.4049,0.1169,-0.1169,-0.4049,0.2024,0.0000,-0.4049,0.2338,0.1169,-0.4049,0.2024,0.2024,-0.4049,0.1169,0.2338,-0.4049,0.0000,0.2024,-0.4049,-0.1169,0.1169,-0.4049,-0.2024,0.0000,-0.4675,0.0000)
+
+IndexedFaceSet540.coord.append(Coordinate541)
+
+Shape536.geometry = IndexedFaceSet540
+
+Transform535.children.append(Shape536)
+Viewpoint542 = x3d.Viewpoint()
+Viewpoint542.DEF = "ballView_1"
+Viewpoint542.description = "Ball View"
+
+Transform535.children.append(Viewpoint542)
+
+Group534.children.append(Transform535)
 #Ball Animation interpolators
-PositionInterpolator543 = PositionInterpolator()
-PositionInterpolator543.setDEF("ball_TranslationInterpolator")
-PositionInterpolator543.setKey([0,0.4,0.409,1])
-PositionInterpolator543.setKeyValue([-1,0.4,-1,0,0.07,0,0.05,0.06,0.05,2,4,10])
+PositionInterpolator543 = x3d.PositionInterpolator()
+PositionInterpolator543.DEF = "ball_TranslationInterpolator"
+PositionInterpolator543.key = [0,0.4,0.409,1]
+PositionInterpolator543.keyValue = (-1.0000,0.4000,-1.0000,0.0000,0.0700,0.0000,0.0500,0.0600,0.0500,2.0000,4.0000,10.0000)
 
-Group534.addChildren(PositionInterpolator543)
-OrientationInterpolator544 = OrientationInterpolator()
-OrientationInterpolator544.setDEF("ball_RotationInterpolator")
-OrientationInterpolator544.setKey([0,0.4,0.41,0.71,1])
-OrientationInterpolator544.setKeyValue([1,0,1,0.25,-1,0,-1,1.35,-1,1,-1,3.35,-1,0.2,-1,3,-1,0.2,-1,3])
+Group534.children.append(PositionInterpolator543)
+OrientationInterpolator544 = x3d.OrientationInterpolator()
+OrientationInterpolator544.DEF = "ball_RotationInterpolator"
+OrientationInterpolator544.key = [0,0.4,0.41,0.71,1]
+OrientationInterpolator544.keyValue = (1.0000,0.0000,1.0000,0.2500,-1.0000,0.0000,-1.0000,1.3500,-1.0000,1.0000,-1.0000,3.3500,-1.0000,0.2000,-1.0000,3.0000,-1.0000,0.2000,-1.0000,3.0000)
 
-Group534.addChildren(OrientationInterpolator544)
+Group534.children.append(OrientationInterpolator544)
 #Ball Animation Routes
-ROUTE545 = ROUTE()
-ROUTE545.setFromField("fraction_changed")
-ROUTE545.setFromNode("KickTimer")
-ROUTE545.setToField("set_fraction")
-ROUTE545.setToNode("ball_TranslationInterpolator")
+ROUTE545 = x3d.ROUTE()
+ROUTE545.fromField = "fraction_changed"
+ROUTE545.fromNode = "KickTimer"
+ROUTE545.toField = "set_fraction"
+ROUTE545.toNode = "ball_TranslationInterpolator"
 
-Group534.addChildren(ROUTE545)
-ROUTE546 = ROUTE()
-ROUTE546.setFromField("value_changed")
-ROUTE546.setFromNode("ball_TranslationInterpolator")
-ROUTE546.setToField("set_translation")
-ROUTE546.setToNode("SBall")
+Group534.children.append(ROUTE545)
+ROUTE546 = x3d.ROUTE()
+ROUTE546.fromField = "value_changed"
+ROUTE546.fromNode = "ball_TranslationInterpolator"
+ROUTE546.toField = "set_translation"
+ROUTE546.toNode = "SBall"
 
-Group534.addChildren(ROUTE546)
-ROUTE547 = ROUTE()
-ROUTE547.setFromField("fraction_changed")
-ROUTE547.setFromNode("KickTimer")
-ROUTE547.setToField("set_fraction")
-ROUTE547.setToNode("ball_RotationInterpolator")
+Group534.children.append(ROUTE546)
+ROUTE547 = x3d.ROUTE()
+ROUTE547.fromField = "fraction_changed"
+ROUTE547.fromNode = "KickTimer"
+ROUTE547.toField = "set_fraction"
+ROUTE547.toNode = "ball_RotationInterpolator"
 
-Group534.addChildren(ROUTE547)
-ROUTE548 = ROUTE()
-ROUTE548.setFromField("value_changed")
-ROUTE548.setFromNode("ball_RotationInterpolator")
-ROUTE548.setToField("set_rotation")
-ROUTE548.setToNode("SBall")
+Group534.children.append(ROUTE547)
+ROUTE548 = x3d.ROUTE()
+ROUTE548.fromField = "value_changed"
+ROUTE548.fromNode = "ball_RotationInterpolator"
+ROUTE548.toField = "set_rotation"
+ROUTE548.toNode = "SBall"
 
-Group534.addChildren(ROUTE548)
+Group534.children.append(ROUTE548)
 
-Scene16.addChildren(Group534)
-Group549 = Group()
-Transform550 = Transform()
-Transform550.setScale([0.2,0.2,0.2])
-Shape551 = Shape()
-Shape551.setUSE("AxisLinesShape")
+Scene16.children.append(Group534)
+Group549 = x3d.Group()
+Transform550 = x3d.Transform()
+Transform550.scale = [0.2,0.2,0.2]
+Shape551 = x3d.Shape()
+Shape551.USE = "AxisLinesShape"
 
-Transform550.addChildren(Shape551)
+Transform550.children.append(Shape551)
 
-Group549.addChildren(Transform550)
-Transform552 = Transform()
-Transform552.setDEF("Circle0")
-Transform552.setScale([1.175,1,1.175])
-Shape553 = Shape()
-Shape553.setDEF("circle_Shape")
-Appearance554 = Appearance()
-Appearance554.setDEF("circle0_Appearance")
-Material555 = Material()
-Material555.setDEF("circle0_Material")
-Material555.setAmbientIntensity(0.9)
-Material555.setDiffuseColor([0.9,0,0.7])
-Material555.setEmissiveColor([0.425,0.486,1])
+Group549.children.append(Transform550)
+Transform552 = x3d.Transform()
+Transform552.DEF = "Circle0"
+Transform552.scale = [1.175,1,1.175]
+Shape553 = x3d.Shape()
+Shape553.DEF = "circle_Shape"
+Appearance554 = x3d.Appearance()
+Appearance554.DEF = "circle0_Appearance"
+Material555 = x3d.Material()
+Material555.DEF = "circle0_Material"
+Material555.ambientIntensity = 0.9
+Material555.diffuseColor = [0.9,0,0.7]
+Material555.emissiveColor = [0.425,0.486,1]
 
-Appearance554.setMaterial(Material555)
+Appearance554.material = Material555
 
-Shape553.setAppearance(Appearance554)
-IndexedLineSet556 = IndexedLineSet()
-IndexedLineSet556.setDEF("Orbit1")
-IndexedLineSet556.setCoordIndex([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,-1])
-Coordinate557 = Coordinate()
-Coordinate557.setDEF("circle_Coordinates")
-Coordinate557.setPoint([1,0,0,0.995,0,-0.105,0.979,0,-0.208,0.951,0,-0.309,0.914,0,-0.407,0.866,0,-0.5,0.809,0,-0.588,0.743,0,-0.669,0.669,0,-0.743,0.588,0,-0.809,0.5,0,-0.866,0.407,0,-0.914,0.309,0,-0.951,0.208,0,-0.978,0.105,0,-0.995,0,0,-1,-0.105,0,-0.994522,-0.208,0,-0.978,-0.309,0,-0.951,-0.407,0,-0.914,-0.5,0,-0.866,-0.588,0,-0.809,-0.669,0,-0.743,-0.743,0,-0.669,-0.809,0,-0.588,-0.866,0,-0.5,-0.914,0,-0.407,-0.951,0,-0.309,-0.978,0,-0.208,-0.995,0,-0.105,-1,0,0,-0.995,0,0.105,-0.978,0,0.208,-0.951,0,0.309,-0.914,0,0.407,-0.866,0,0.5,-0.809,0,0.588,-0.743,0,0.669,-0.669,0,0.743,-0.588,0,0.809,-0.5,0,0.866,-0.407,0,0.914,-0.309,0,0.951,-0.208,0,0.978,-0.105,0,0.995,0,0,1,0.105,0,0.995,0.208,0,0.978,0.309,0,0.951,0.407,0,0.914,0.5,0,0.866,0.588,0,0.809,0.669,0,0.743,0.743,0,0.669,0.809,0,0.588,0.866,0,0.5,0.914,0,0.407,0.951,0,0.309,0.978,0,0.208,0.995,0,0.104,1,0,0])
+Shape553.appearance = Appearance554
+IndexedLineSet556 = x3d.IndexedLineSet()
+IndexedLineSet556.DEF = "Orbit1"
+IndexedLineSet556.coordIndex = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,-1]
+Coordinate557 = x3d.Coordinate()
+Coordinate557.DEF = "circle_Coordinates"
+Coordinate557.point = (1.0000,0.0000,0.0000,0.9950,0.0000,-0.1050,0.9790,0.0000,-0.2080,0.9510,0.0000,-0.3090,0.9140,0.0000,-0.4070,0.8660,0.0000,-0.5000,0.8090,0.0000,-0.5880,0.7430,0.0000,-0.6690,0.6690,0.0000,-0.7430,0.5880,0.0000,-0.8090,0.5000,0.0000,-0.8660,0.4070,0.0000,-0.9140,0.3090,0.0000,-0.9510,0.2080,0.0000,-0.9780,0.1050,0.0000,-0.9950,0.0000,0.0000,-1.0000,-0.1050,0.0000,-0.9945,-0.2080,0.0000,-0.9780,-0.3090,0.0000,-0.9510,-0.4070,0.0000,-0.9140,-0.5000,0.0000,-0.8660,-0.5880,0.0000,-0.8090,-0.6690,0.0000,-0.7430,-0.7430,0.0000,-0.6690,-0.8090,0.0000,-0.5880,-0.8660,0.0000,-0.5000,-0.9140,0.0000,-0.4070,-0.9510,0.0000,-0.3090,-0.9780,0.0000,-0.2080,-0.9950,0.0000,-0.1050,-1.0000,0.0000,0.0000,-0.9950,0.0000,0.1050,-0.9780,0.0000,0.2080,-0.9510,0.0000,0.3090,-0.9140,0.0000,0.4070,-0.8660,0.0000,0.5000,-0.8090,0.0000,0.5880,-0.7430,0.0000,0.6690,-0.6690,0.0000,0.7430,-0.5880,0.0000,0.8090,-0.5000,0.0000,0.8660,-0.4070,0.0000,0.9140,-0.3090,0.0000,0.9510,-0.2080,0.0000,0.9780,-0.1050,0.0000,0.9950,0.0000,0.0000,1.0000,0.1050,0.0000,0.9950,0.2080,0.0000,0.9780,0.3090,0.0000,0.9510,0.4070,0.0000,0.9140,0.5000,0.0000,0.8660,0.5880,0.0000,0.8090,0.6690,0.0000,0.7430,0.7430,0.0000,0.6690,0.8090,0.0000,0.5880,0.8660,0.0000,0.5000,0.9140,0.0000,0.4070,0.9510,0.0000,0.3090,0.9780,0.0000,0.2080,0.9950,0.0000,0.1040,1.0000,0.0000,0.0000)
 
-IndexedLineSet556.setCoord(Coordinate557)
+IndexedLineSet556.coord.append(Coordinate557)
 
-Shape553.setGeometry(IndexedLineSet556)
+Shape553.geometry = IndexedLineSet556
 
-Transform552.addChildren(Shape553)
+Transform552.children.append(Shape553)
 
-Group549.addChildren(Transform552)
-Transform558 = Transform()
-Transform558.setDEF("Circle1")
-Transform558.setScale([0.5,1,0.5])
-Shape559 = Shape()
-Shape559.setDEF("circle1_Shape")
-Appearance560 = Appearance()
-Appearance560.setDEF("circle1_Appearance")
-Material561 = Material()
-Material561.setDEF("circle1_Material")
-Material561.setDiffuseColor([0.9,0,0.7])
-Material561.setEmissiveColor([0.424956,0.483976,1])
+Group549.children.append(Transform552)
+Transform558 = x3d.Transform()
+Transform558.DEF = "Circle1"
+Transform558.scale = [0.5,1,0.5]
+Shape559 = x3d.Shape()
+Shape559.DEF = "circle1_Shape"
+Appearance560 = x3d.Appearance()
+Appearance560.DEF = "circle1_Appearance"
+Material561 = x3d.Material()
+Material561.DEF = "circle1_Material"
+Material561.diffuseColor = [0.9,0,0.7]
+Material561.emissiveColor = [0.424956,0.483976,1]
 
-Appearance560.setMaterial(Material561)
+Appearance560.material = Material561
 
-Shape559.setAppearance(Appearance560)
-IndexedLineSet562 = IndexedLineSet()
-IndexedLineSet562.setUSE("Orbit1")
+Shape559.appearance = Appearance560
+IndexedLineSet562 = x3d.IndexedLineSet()
+IndexedLineSet562.USE = "Orbit1"
 
-Shape559.setGeometry(IndexedLineSet562)
+Shape559.geometry = IndexedLineSet562
 
-Transform558.addChildren(Shape559)
+Transform558.children.append(Shape559)
 
-Group549.addChildren(Transform558)
-Transform563 = Transform()
-Transform563.setDEF("Circle2")
-Transform563.setScale([0.25,1,0.25])
-Shape564 = Shape()
-Shape564.setDEF("circle2_Shape")
-Appearance565 = Appearance()
-Appearance565.setDEF("circle2_Appearance")
-Material566 = Material()
-Material566.setDEF("circle2_Material")
-Material566.setDiffuseColor([0.9,0,0.7])
-Material566.setEmissiveColor([0.424956,0.483976,1])
+Group549.children.append(Transform558)
+Transform563 = x3d.Transform()
+Transform563.DEF = "Circle2"
+Transform563.scale = [0.25,1,0.25]
+Shape564 = x3d.Shape()
+Shape564.DEF = "circle2_Shape"
+Appearance565 = x3d.Appearance()
+Appearance565.DEF = "circle2_Appearance"
+Material566 = x3d.Material()
+Material566.DEF = "circle2_Material"
+Material566.diffuseColor = [0.9,0,0.7]
+Material566.emissiveColor = [0.424956,0.483976,1]
 
-Appearance565.setMaterial(Material566)
+Appearance565.material = Material566
 
-Shape564.setAppearance(Appearance565)
-IndexedLineSet567 = IndexedLineSet()
-IndexedLineSet567.setUSE("Orbit1")
+Shape564.appearance = Appearance565
+IndexedLineSet567 = x3d.IndexedLineSet()
+IndexedLineSet567.USE = "Orbit1"
 
-Shape564.setGeometry(IndexedLineSet567)
+Shape564.geometry = IndexedLineSet567
 
-Transform563.addChildren(Shape564)
+Transform563.children.append(Shape564)
 
-Group549.addChildren(Transform563)
+Group549.children.append(Transform563)
 
-Scene16.addChildren(Group549)
+Scene16.children.append(Group549)
 
-X3D0.setScene(Scene16)
-X3D0.toFileX3D("././JoeKick_RoundTrip.x3d")
+X3D0.Scene = Scene16
+f = open("././JoeKick_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

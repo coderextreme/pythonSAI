@@ -9,7 +9,9 @@ if (typeof require === 'function' && typeof load !== 'function') {
 	var http = require("http");
 	var https = require("https");
 	// TODO this causes node-java 0.12.2 to hang
+	/*
 	var runAndSend = require("./runAndSend");
+	*/
 	var xmldom = require('@xmldom/xmldom');
 	var domserializer = new xmldom.XMLSerializer();
 	var DOMParser = xmldom.DOMParser;
@@ -203,13 +205,15 @@ loadURLs : function(loadpath, urls, loadedCallback, protoexp, done, externProtoD
 							var filename = url;
 							if (filename.endsWith(".json")) {
 								filename = filename.substring(0, filename.lastIndexOf("."))+".x3d";
-								// console.error("converting possible X3D to JSON", filename);
+								console.error("Not converting possible X3D to JSON", filename);
+								/*
 								if (typeof runAndSend === 'function') {
 									runAndSend(['---silent', filename], function(jsobj) {
 										data = JSON.stringify(jsobj);
 										loadedCallback(data, filename, protoexp, done, externProtoDeclare, obj);
 									});
 								}
+								*/
 							}
 						}
 					} else if (typeof $ !== 'undefined' && typeof $.get === 'function') {
@@ -350,7 +354,7 @@ ConvertObject : function(xmlDoc, key, object, element, path, containerField) {
 				}
 			});
 			*/
-		} else if (key === '#sourceText') {
+		} else if (key === '#sourceCode') {
 			this.CDATACreateFunction(xmlDoc, element, object[key].join("\r\n")+"\r\n");
 		} else {
 			if (key === 'connect' || key === 'fieldValue' || key === 'field' || key === 'meta' || key === 'component' || key === 'unit') {

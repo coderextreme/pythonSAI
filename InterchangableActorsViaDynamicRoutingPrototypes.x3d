@@ -740,7 +740,7 @@
       <ProtoInstance DEF='Nancy' name='Humanoid1_1'>
         <fieldValue name='name' value='nancy'/>
         <fieldValue name='version' value='1.1'/>
-        <fieldValue name='info' value='"humanoidVersion=Nancy V1.2b" "authorName=Cindy Ballreich" "authorEmail=cindy@ballreich.net" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo &lt;www.ballreich.net/vrml/HAnim/small_logo.gif> is present and proper credit is given."'/>
+        <fieldValue name='info' value='"humanoidVersion=Nancy V1.2b" "authorName=Cindy Ballreich" "authorEmail=cindy@ballreich.net" "copyright=1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved." "creationDate=Tue Dec 30 08:30:08 PST 1997" "usageRestrictions=Noncommercial usage is ok if 3Name3D name and logo www.ballreich.net/vrml/HAnim/small_logo.gif is present and proper credit is given."'/>
         <fieldValue name='humanoidBody'>
           <ProtoInstance DEF='Nancy_hanim_humanoid_root' name='Joint'>
             <fieldValue name='name' value='humanoid_root'/>

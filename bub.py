@@ -1,262 +1,264 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("4.0")
-head1 = head()
-component2 = component()
-component2.setName("Shaders")
-component2.setLevel(1)
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "4.0"
+head1 = x3d.head()
+component2 = x3d.component()
+component2.name = "Shaders"
+component2.level = 1
 
-head1.addComponent(component2)
-component3 = component()
-component3.setName("CubeMapTexturing")
-component3.setLevel(1)
+head1.children.append(component2)
+component3 = x3d.component()
+component3.name = "CubeMapTexturing"
+component3.level = 1
 
-head1.addComponent(component3)
-component4 = component()
-component4.setName("Texturing")
-component4.setLevel(1)
+head1.children.append(component3)
+component4 = x3d.component()
+component4.name = "Texturing"
+component4.level = 1
 
-head1.addComponent(component4)
-component5 = component()
-component5.setName("Rendering")
-component5.setLevel(1)
+head1.children.append(component4)
+component5 = x3d.component()
+component5.name = "Rendering"
+component5.level = 1
 
-head1.addComponent(component5)
-component6 = component()
-component6.setName("Shape")
-component6.setLevel(4)
+head1.children.append(component5)
+component6 = x3d.component()
+component6.name = "Shape"
+component6.level = 4
 
-head1.addComponent(component6)
-component7 = component()
-component7.setName("Grouping")
-component7.setLevel(3)
+head1.children.append(component6)
+component7 = x3d.component()
+component7.name = "Grouping"
+component7.level = 3
 
-head1.addComponent(component7)
-meta8 = meta()
-meta8.setName("title")
-meta8.setContent("bub.x3d")
+head1.children.append(component7)
+meta8 = x3d.meta()
+meta8.name = "title"
+meta8.content = "bub.x3d"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("creator")
-meta9.setContent("John Carlson")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "creator"
+meta9.content = "John Carlson"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("description")
-meta10.setContent("3 prismatic spheres")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "description"
+meta10.content = "3 prismatic spheres"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("generator")
-meta11.setContent("X3D-Edit, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "generator"
+meta11.content = "X3D-Edit, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("identifier")
-meta12.setContent("https://coderextreme.net/X3DJSONLD/bub.x3d")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "identifier"
+meta12.content = "https://coderextreme.net/X3DJSONLD/bub.x3d"
 
-head1.addMeta(meta12)
+head1.children.append(meta12)
 
-X3D0.setHead(head1)
-Scene13 = Scene()
-NavigationInfo14 = NavigationInfo()
+X3D0.head = head1
+Scene13 = x3d.Scene()
+NavigationInfo14 = x3d.NavigationInfo()
 
-Scene13.addChildren(NavigationInfo14)
-Background15 = Background()
-Background15.setBackUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])
-Background15.setBottomUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])
-Background15.setFrontUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"])
-Background15.setLeftUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"])
-Background15.setRightUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"])
-Background15.setTopUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"])
+Scene13.children.append(NavigationInfo14)
+Background15 = x3d.Background()
+Background15.backUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]
+Background15.bottomUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]
+Background15.frontUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
+Background15.leftUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
+Background15.rightUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
+Background15.topUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]
 
-Scene13.addChildren(Background15)
-Viewpoint16 = Viewpoint()
-Viewpoint16.setPosition([0,0,20])
-Viewpoint16.setDescription("Look at the bubbles flying")
+Scene13.children.append(Background15)
+Viewpoint16 = x3d.Viewpoint()
+Viewpoint16.position = [0,0,20]
+Viewpoint16.description = "Look at the bubbles flying"
 
-Scene13.addChildren(Viewpoint16)
-ProtoDeclare17 = ProtoDeclare()
-ProtoDeclare17.setName("Bubble")
-ProtoBody18 = ProtoBody()
-Transform19 = Transform()
-Transform19.setDEF("transform")
-Shape20 = Shape()
-Shape20.setDEF("myShape")
-Appearance21 = Appearance()
-Material22 = Material()
-Material22.setDiffuseColor([0.7,0.7,0.7])
-Material22.setSpecularColor([0.5,0.5,0.5])
+Scene13.children.append(Viewpoint16)
+ProtoDeclare17 = x3d.ProtoDeclare()
+ProtoDeclare17.name = "Bubble"
+ProtoBody18 = x3d.ProtoBody()
+Transform19 = x3d.Transform()
+Transform19.DEF = "transform"
+Shape20 = x3d.Shape()
+Shape20.DEF = "myShape"
+Appearance21 = x3d.Appearance()
+Material22 = x3d.Material()
+Material22.diffuseColor = [0.7,0.7,0.7]
+Material22.specularColor = [0.5,0.5,0.5]
 
-Appearance21.setMaterial(Material22)
-ComposedCubeMapTexture23 = ComposedCubeMapTexture()
-ComposedCubeMapTexture23.setDEF("texture")
-ImageTexture24 = ImageTexture()
-ImageTexture24.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"])
+Appearance21.material = Material22
+ComposedCubeMapTexture23 = x3d.ComposedCubeMapTexture()
+ComposedCubeMapTexture23.DEF = "texture"
+ImageTexture24 = x3d.ImageTexture()
+ImageTexture24.url = ["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]
 
-ComposedCubeMapTexture23.setBackTexture(ImageTexture24)
-ImageTexture25 = ImageTexture()
-ImageTexture25.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"])
+ComposedCubeMapTexture23.backTexture.append(ImageTexture24)
+ImageTexture25 = x3d.ImageTexture()
+ImageTexture25.url = ["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]
 
-ComposedCubeMapTexture23.setBottomTexture(ImageTexture25)
-ImageTexture26 = ImageTexture()
-ImageTexture26.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"])
+ComposedCubeMapTexture23.bottomTexture.append(ImageTexture25)
+ImageTexture26 = x3d.ImageTexture()
+ImageTexture26.url = ["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
 
-ComposedCubeMapTexture23.setFrontTexture(ImageTexture26)
-ImageTexture27 = ImageTexture()
-ImageTexture27.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"])
+ComposedCubeMapTexture23.frontTexture.append(ImageTexture26)
+ImageTexture27 = x3d.ImageTexture()
+ImageTexture27.url = ["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
 
-ComposedCubeMapTexture23.setLeftTexture(ImageTexture27)
-ImageTexture28 = ImageTexture()
-ImageTexture28.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"])
+ComposedCubeMapTexture23.leftTexture.append(ImageTexture27)
+ImageTexture28 = x3d.ImageTexture()
+ImageTexture28.url = ["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
 
-ComposedCubeMapTexture23.setRightTexture(ImageTexture28)
-ImageTexture29 = ImageTexture()
-ImageTexture29.setUrl(["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"])
+ComposedCubeMapTexture23.rightTexture.append(ImageTexture28)
+ImageTexture29 = x3d.ImageTexture()
+ImageTexture29.url = ["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]
 
-ComposedCubeMapTexture23.setTopTexture(ImageTexture29)
+ComposedCubeMapTexture23.topTexture.append(ImageTexture29)
 
-Appearance21.setTexture(ComposedCubeMapTexture23)
+Appearance21.texture = ComposedCubeMapTexture23
 #<ComposedShader DEF='gl' language=\"GLSL\"> <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/gl.vs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/gl.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader> <ComposedShader DEF='freewrl' language=\"GLSL\"> <field name='fw_textureCoodGenType' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/freewrl.vs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/freewrl.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader>
 #<ComposedShader DEF='instant' language=\"GLSL\"> <field name='cube' type='SFInt32' accessType=\"inputOutput\" value='0'/> <field name='chromaticDispertion' type='SFVec3f' accessType=\"inputOutput\" value='0.98 1.0 1.033'/> <field name='bias' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='scale' type='SFFloat' accessType=\"inputOutput\" value='0.5'/> <field name='power' type='SFFloat' accessType=\"inputOutput\" value='2.0'/> <ShaderPart url='\"../shaders/instant.vs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/instant.vs\"' type='VERTEX'></ShaderPart> <ShaderPart url='\"../shaders/pc_bubbles.fs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs\"' type='FRAGMENT'></ShaderPart> </ComposedShader>
-ComposedShader30 = ComposedShader()
-ComposedShader30.setDEF("x3dom")
-ComposedShader30.setLanguage("GLSL")
-field31 = field()
-field31.setName("cube")
-field31.setType("SFInt32")
-field31.setAccessType("inputOutput")
-field31.setValue("0")
+ComposedShader30 = x3d.ComposedShader()
+ComposedShader30.DEF = "x3dom"
+ComposedShader30.language = "GLSL"
+field31 = x3d.field()
+field31.name = "cube"
+field31.type = "SFInt32"
+field31.accessType = "inputOutput"
+field31.value = 0
 
-ComposedShader30.addField(field31)
-field32 = field()
-field32.setName("chromaticDispertion")
-field32.setType("SFVec3f")
-field32.setAccessType("inputOutput")
-field32.setValue("0.98 1 1.033")
+ComposedShader30.field.append(field31)
+field32 = x3d.field()
+field32.name = "chromaticDispertion"
+field32.type = "SFVec3f"
+field32.accessType = "inputOutput"
+field32.value = [0.98,1,1.033]
 
-ComposedShader30.addField(field32)
-field33 = field()
-field33.setName("bias")
-field33.setType("SFFloat")
-field33.setAccessType("inputOutput")
-field33.setValue("0.5")
+ComposedShader30.field.append(field32)
+field33 = x3d.field()
+field33.name = "bias"
+field33.type = "SFFloat"
+field33.accessType = "inputOutput"
+field33.value = 0.5
 
-ComposedShader30.addField(field33)
-field34 = field()
-field34.setName("scale")
-field34.setType("SFFloat")
-field34.setAccessType("inputOutput")
-field34.setValue("0.5")
+ComposedShader30.field.append(field33)
+field34 = x3d.field()
+field34.name = "scale"
+field34.type = "SFFloat"
+field34.accessType = "inputOutput"
+field34.value = 0.5
 
-ComposedShader30.addField(field34)
-field35 = field()
-field35.setName("power")
-field35.setType("SFFloat")
-field35.setAccessType("inputOutput")
-field35.setValue("2")
+ComposedShader30.field.append(field34)
+field35 = x3d.field()
+field35.name = "power"
+field35.type = "SFFloat"
+field35.accessType = "inputOutput"
+field35.value = 2
 
-ComposedShader30.addField(field35)
-ShaderPart36 = ShaderPart()
-ShaderPart36.setUrl(["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"])
-ShaderPart36.setType("VERTEX")
+ComposedShader30.field.append(field35)
+ShaderPart36 = x3d.ShaderPart()
+ShaderPart36.url = ["../shaders/x3dom.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom.vs"]
+ShaderPart36.type = "VERTEX"
 
-ComposedShader30.addParts(ShaderPart36)
-ShaderPart37 = ShaderPart()
-ShaderPart37.setUrl(["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"])
-ShaderPart37.setType("FRAGMENT")
+ComposedShader30.parts.append(ShaderPart36)
+ShaderPart37 = x3d.ShaderPart()
+ShaderPart37.url = ["../shaders/pc_bubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/pc_bubbles.fs"]
+ShaderPart37.type = "FRAGMENT"
 
-ComposedShader30.addParts(ShaderPart37)
+ComposedShader30.parts.append(ShaderPart37)
 
-Appearance21.addShaders(ComposedShader30)
-ComposedShader38 = ComposedShader()
-ComposedShader38.setDEF("x_ite")
-ComposedShader38.setLanguage("GLSL")
-field39 = field()
-field39.setName("cube")
-field39.setType("SFNode")
-field39.setAccessType("inputOutput")
-ComposedCubeMapTexture40 = ComposedCubeMapTexture()
-ComposedCubeMapTexture40.setUSE("texture")
+Appearance21.shaders.append(ComposedShader30)
+ComposedShader38 = x3d.ComposedShader()
+ComposedShader38.DEF = "x_ite"
+ComposedShader38.language = "GLSL"
+field39 = x3d.field()
+field39.name = "cube"
+field39.type = "SFNode"
+field39.accessType = "inputOutput"
+ComposedCubeMapTexture40 = x3d.ComposedCubeMapTexture()
+ComposedCubeMapTexture40.USE = "texture"
 
-field39.addChildren(ComposedCubeMapTexture40)
+field39.children.append(ComposedCubeMapTexture40)
 
-ComposedShader38.addField(field39)
-field41 = field()
-field41.setName("chromaticDispertion")
-field41.setType("SFVec3f")
-field41.setAccessType("inputOutput")
-field41.setValue("0.98 1 1.033")
+ComposedShader38.field.append(field39)
+field41 = x3d.field()
+field41.name = "chromaticDispertion"
+field41.type = "SFVec3f"
+field41.accessType = "inputOutput"
+field41.value = [0.98,1,1.033]
 
-ComposedShader38.addField(field41)
-field42 = field()
-field42.setName("bias")
-field42.setType("SFFloat")
-field42.setAccessType("inputOutput")
-field42.setValue("0.5")
+ComposedShader38.field.append(field41)
+field42 = x3d.field()
+field42.name = "bias"
+field42.type = "SFFloat"
+field42.accessType = "inputOutput"
+field42.value = 0.5
 
-ComposedShader38.addField(field42)
-field43 = field()
-field43.setName("scale")
-field43.setType("SFFloat")
-field43.setAccessType("inputOutput")
-field43.setValue("0.5")
+ComposedShader38.field.append(field42)
+field43 = x3d.field()
+field43.name = "scale"
+field43.type = "SFFloat"
+field43.accessType = "inputOutput"
+field43.value = 0.5
 
-ComposedShader38.addField(field43)
-field44 = field()
-field44.setName("power")
-field44.setType("SFFloat")
-field44.setAccessType("inputOutput")
-field44.setValue("2")
+ComposedShader38.field.append(field43)
+field44 = x3d.field()
+field44.name = "power"
+field44.type = "SFFloat"
+field44.accessType = "inputOutput"
+field44.value = 2
 
-ComposedShader38.addField(field44)
-ShaderPart45 = ShaderPart()
-ShaderPart45.setUrl(["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs"])
-ShaderPart45.setType("VERTEX")
+ComposedShader38.field.append(field44)
+ShaderPart45 = x3d.ShaderPart()
+ShaderPart45.url = ["../shaders/x_ite.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_ite.vs"]
+ShaderPart45.type = "VERTEX"
 
-ComposedShader38.addParts(ShaderPart45)
-ShaderPart46 = ShaderPart()
-ShaderPart46.setUrl(["../shaders/x_itebubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_itebubbles.fs"])
-ShaderPart46.setType("FRAGMENT")
+ComposedShader38.parts.append(ShaderPart45)
+ShaderPart46 = x3d.ShaderPart()
+ShaderPart46.url = ["../shaders/x_itebubbles.fs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x_itebubbles.fs"]
+ShaderPart46.type = "FRAGMENT"
 
-ComposedShader38.addParts(ShaderPart46)
+ComposedShader38.parts.append(ShaderPart46)
 
-Appearance21.addShaders(ComposedShader38)
+Appearance21.shaders.append(ComposedShader38)
 
-Shape20.setAppearance(Appearance21)
-Sphere47 = Sphere()
+Shape20.appearance = Appearance21
+Sphere47 = x3d.Sphere()
 
-Shape20.setGeometry(Sphere47)
+Shape20.geometry = Sphere47
 
-Transform19.addChildren(Shape20)
+Transform19.children.append(Shape20)
 
-ProtoBody18.addChildren(Transform19)
-Script48 = Script()
-Script48.setDEF("Bounce")
-field49 = field()
-field49.setName("translation")
-field49.setAccessType("inputOutput")
-field49.setType("SFVec3f")
-field49.setValue("0 0 0")
+ProtoBody18.children.append(Transform19)
+Script48 = x3d.Script()
+Script48.DEF = "Bounce"
+field49 = x3d.field()
+field49.name = "translation"
+field49.accessType = "inputOutput"
+field49.type = "SFVec3f"
+field49.value = [0,0,0]
 
-Script48.addField(field49)
-field50 = field()
-field50.setName("velocity")
-field50.setAccessType("inputOutput")
-field50.setType("SFVec3f")
-field50.setValue("0 0 0")
+Script48.field.append(field49)
+field50 = x3d.field()
+field50.name = "velocity"
+field50.accessType = "inputOutput"
+field50.type = "SFVec3f"
+field50.value = [0,0,0]
 
-Script48.addField(field50)
-field51 = field()
-field51.setName("set_fraction")
-field51.setAccessType("inputOnly")
-field51.setType("SFTime")
+Script48.field.append(field50)
+field51 = x3d.field()
+field51.name = "set_fraction"
+field51.accessType = "inputOnly"
+field51.type = "SFTime"
 
-Script48.addField(field51)
+Script48.field.append(field51)
 
-Script48.setSourceCode('''ecmascript:\n"+
+Script48.sourceCode = '''ecmascript:\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -280,45 +282,47 @@ Script48.setSourceCode('''ecmascript:\n"+
 "				velocity.y += Math.random() * 0.2 - 0.1;\n"+
 "				velocity.z += Math.random() * 0.2 - 0.1;\n"+
 "			    }\n"+
-"			}''')
+"			}'''
 
-ProtoBody18.addChildren(Script48)
-TimeSensor52 = TimeSensor()
-TimeSensor52.setDEF("TourTime")
-TimeSensor52.setCycleInterval(0.15)
-TimeSensor52.setLoop(True)
+ProtoBody18.children.append(Script48)
+TimeSensor52 = x3d.TimeSensor()
+TimeSensor52.DEF = "TourTime"
+TimeSensor52.cycleInterval = 0.15
+TimeSensor52.loop = True
 
-ProtoBody18.addChildren(TimeSensor52)
-ROUTE53 = ROUTE()
-ROUTE53.setFromNode("TourTime")
-ROUTE53.setFromField("cycleTime")
-ROUTE53.setToNode("Bounce")
-ROUTE53.setToField("set_fraction")
+ProtoBody18.children.append(TimeSensor52)
+ROUTE53 = x3d.ROUTE()
+ROUTE53.fromNode = "TourTime"
+ROUTE53.fromField = "cycleTime"
+ROUTE53.toNode = "Bounce"
+ROUTE53.toField = "set_fraction"
 
-ProtoBody18.addChildren(ROUTE53)
-ROUTE54 = ROUTE()
-ROUTE54.setFromNode("Bounce")
-ROUTE54.setFromField("translation_changed")
-ROUTE54.setToNode("transform")
-ROUTE54.setToField("set_translation")
+ProtoBody18.children.append(ROUTE53)
+ROUTE54 = x3d.ROUTE()
+ROUTE54.fromNode = "Bounce"
+ROUTE54.fromField = "translation_changed"
+ROUTE54.toNode = "transform"
+ROUTE54.toField = "set_translation"
 
-ProtoBody18.addChildren(ROUTE54)
+ProtoBody18.children.append(ROUTE54)
 
-ProtoDeclare17.setProtoBody(ProtoBody18)
+ProtoDeclare17.ProtoBody = ProtoBody18
 
-Scene13.addChildren(ProtoDeclare17)
-ProtoInstance55 = ProtoInstance()
-ProtoInstance55.setName("Bubble")
+Scene13.children.append(ProtoDeclare17)
+ProtoInstance55 = x3d.ProtoInstance()
+ProtoInstance55.name = "Bubble"
 
-Scene13.addChildren(ProtoInstance55)
-ProtoInstance56 = ProtoInstance()
-ProtoInstance56.setName("Bubble")
+Scene13.children.append(ProtoInstance55)
+ProtoInstance56 = x3d.ProtoInstance()
+ProtoInstance56.name = "Bubble"
 
-Scene13.addChildren(ProtoInstance56)
-ProtoInstance57 = ProtoInstance()
-ProtoInstance57.setName("Bubble")
+Scene13.children.append(ProtoInstance56)
+ProtoInstance57 = x3d.ProtoInstance()
+ProtoInstance57.name = "Bubble"
 
-Scene13.addChildren(ProtoInstance57)
+Scene13.children.append(ProtoInstance57)
 
-X3D0.setScene(Scene13)
-X3D0.toFileX3D("././bub_RoundTrip.x3d")
+X3D0.Scene = Scene13
+f = open("././bub_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

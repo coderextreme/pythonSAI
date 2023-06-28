@@ -3,7 +3,7 @@ source ../X3DJSONLD/venv/Scripts/activate
 . ./profile.sh
 npm install
 
-javac -cp "saxon-he-10.6.jar:." RunSaxon.java
+javac -cp "saxon-he-12.1.jar;." RunSaxon.java
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius
@@ -17,11 +17,10 @@ echo did not cp x3dpsail.py fieldTypes.js mapToMethod.js ../X3DJSONLD
 rm *new* *Round*
 
 
-# sh x3d2py.sh
+bash x3d2py.sh
 
 for i in *.py
 do
 	FILE=$i
-	echo ========================================$FILE
-	${PYTHON} $FILE
+	${PYTHON} $FILE 1> /dev/null 2> /dev/null || echo ========================================ERROR $FILE && ${PYTHON} $FILE
 done

@@ -1,337 +1,341 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("rubik2x2x2.x3d")
-
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("creator")
-meta3.setContent("John Carlson")
-
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("generator")
-meta4.setContent("manual")
-
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("identifier")
-meta5.setContent("https://coderextreme.net/X3DJSONLD/rubik.x3d")
-
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("description")
-meta6.setContent("a kind of 2x2x2 rubik cube")
-
-head1.addMeta(meta6)
-
-X3D0.setHead(head1)
-Scene7 = Scene()
-NavigationInfo8 = NavigationInfo()
-NavigationInfo8.setType(["EXAMINE"])
-
-Scene7.addChildren(NavigationInfo8)
-Viewpoint9 = Viewpoint()
-Viewpoint9.setDescription("Rubiks Cube")
-Viewpoint9.setPosition([0,0,12])
-
-Scene7.addChildren(Viewpoint9)
-ProtoDeclare10 = ProtoDeclare()
-ProtoDeclare10.setName("boxproto")
-ProtoInterface11 = ProtoInterface()
-field12 = field()
-field12.setName("xtranslation")
-field12.setAccessType("inputOutput")
-field12.setType("SFVec3f")
-field12.setValue("0 0 0")
-
-ProtoInterface11.addField(field12)
-field13 = field()
-field13.setName("diffuseColor")
-field13.setAccessType("inputOutput")
-field13.setType("SFColor")
-field13.setValue("1 1 1")
-
-ProtoInterface11.addField(field13)
-
-ProtoDeclare10.setProtoInterface(ProtoInterface11)
-ProtoBody14 = ProtoBody()
-Transform15 = Transform()
-IS16 = IS()
-connect17 = connect()
-connect17.setNodeField("translation")
-connect17.setProtoField("xtranslation")
-
-IS16.addConnect(connect17)
-
-Transform15.setIS(IS16)
-Shape18 = Shape()
-Box19 = Box()
-
-Shape18.setGeometry(Box19)
-Appearance20 = Appearance()
-Material21 = Material()
-Material21.setDiffuseColor([1,1,1])
-IS22 = IS()
-connect23 = connect()
-connect23.setNodeField("diffuseColor")
-connect23.setProtoField("diffuseColor")
-
-IS22.addConnect(connect23)
-
-Material21.setIS(IS22)
-
-Appearance20.setMaterial(Material21)
-
-Shape18.setAppearance(Appearance20)
-
-Transform15.addChildren(Shape18)
-
-ProtoBody14.addChildren(Transform15)
-
-ProtoDeclare10.setProtoBody(ProtoBody14)
-
-Scene7.addChildren(ProtoDeclare10)
-ProtoDeclare24 = ProtoDeclare()
-ProtoDeclare24.setName("two")
-ProtoInterface25 = ProtoInterface()
-field26 = field()
-field26.setName("ytranslation")
-field26.setAccessType("inputOutput")
-field26.setType("SFVec3f")
-field26.setValue("0 0 0")
-
-ProtoInterface25.addField(field26)
-field27 = field()
-field27.setName("diffuseColor")
-field27.setAccessType("inputOutput")
-field27.setType("SFColor")
-field27.setValue("1 0 0")
-
-ProtoInterface25.addField(field27)
-
-ProtoDeclare24.setProtoInterface(ProtoInterface25)
-ProtoBody28 = ProtoBody()
-Transform29 = Transform()
-IS30 = IS()
-connect31 = connect()
-connect31.setNodeField("translation")
-connect31.setProtoField("ytranslation")
-
-IS30.addConnect(connect31)
-
-Transform29.setIS(IS30)
-ProtoInstance32 = ProtoInstance()
-ProtoInstance32.setName("boxproto")
-fieldValue33 = fieldValue()
-fieldValue33.setName("xtranslation")
-fieldValue33.setValue("0 0 0")
-
-ProtoInstance32.addFieldValue(fieldValue33)
-fieldValue34 = fieldValue()
-fieldValue34.setName("diffuseColor")
-IS35 = IS()
-connect36 = connect()
-connect36.setNodeField("diffuseColor")
-connect36.setProtoField("diffuseColor")
-
-IS35.addConnect(connect36)
-
-fieldValue34.setIS(IS35)
-
-ProtoInstance32.addFieldValue(fieldValue34)
-
-Transform29.addChildren(ProtoInstance32)
-ProtoInstance37 = ProtoInstance()
-ProtoInstance37.setName("boxproto")
-fieldValue38 = fieldValue()
-fieldValue38.setName("xtranslation")
-fieldValue38.setValue("2 0 0")
-
-ProtoInstance37.addFieldValue(fieldValue38)
-fieldValue39 = fieldValue()
-fieldValue39.setName("diffuseColor")
-IS40 = IS()
-connect41 = connect()
-connect41.setNodeField("diffuseColor")
-connect41.setProtoField("diffuseColor")
-
-IS40.addConnect(connect41)
-
-fieldValue39.setIS(IS40)
-
-ProtoInstance37.addFieldValue(fieldValue39)
-
-Transform29.addChildren(ProtoInstance37)
-
-ProtoBody28.addChildren(Transform29)
-
-ProtoDeclare24.setProtoBody(ProtoBody28)
-
-Scene7.addChildren(ProtoDeclare24)
-ProtoDeclare42 = ProtoDeclare()
-ProtoDeclare42.setName("four")
-ProtoInterface43 = ProtoInterface()
-field44 = field()
-field44.setName("ztranslation")
-field44.setAccessType("inputOutput")
-field44.setType("SFVec3f")
-field44.setValue("0 0 0")
-
-ProtoInterface43.addField(field44)
-field45 = field()
-field45.setName("x1diffuseColor")
-field45.setAccessType("inputOutput")
-field45.setType("SFColor")
-field45.setValue("1 0 0")
-
-ProtoInterface43.addField(field45)
-field46 = field()
-field46.setName("x2diffuseColor")
-field46.setAccessType("inputOutput")
-field46.setType("SFColor")
-field46.setValue("0 1 0")
-
-ProtoInterface43.addField(field46)
-
-ProtoDeclare42.setProtoInterface(ProtoInterface43)
-ProtoBody47 = ProtoBody()
-Transform48 = Transform()
-IS49 = IS()
-connect50 = connect()
-connect50.setNodeField("translation")
-connect50.setProtoField("ztranslation")
-
-IS49.addConnect(connect50)
-
-Transform48.setIS(IS49)
-ProtoInstance51 = ProtoInstance()
-ProtoInstance51.setName("two")
-fieldValue52 = fieldValue()
-fieldValue52.setName("ytranslation")
-fieldValue52.setValue("0 0 0")
-
-ProtoInstance51.addFieldValue(fieldValue52)
-fieldValue53 = fieldValue()
-fieldValue53.setName("diffuseColor")
-IS54 = IS()
-connect55 = connect()
-connect55.setNodeField("diffuseColor")
-connect55.setProtoField("x1diffuseColor")
-
-IS54.addConnect(connect55)
-
-fieldValue53.setIS(IS54)
-
-ProtoInstance51.addFieldValue(fieldValue53)
-
-Transform48.addChildren(ProtoInstance51)
-ProtoInstance56 = ProtoInstance()
-ProtoInstance56.setName("two")
-fieldValue57 = fieldValue()
-fieldValue57.setName("ytranslation")
-fieldValue57.setValue("0 2 0")
-
-ProtoInstance56.addFieldValue(fieldValue57)
-fieldValue58 = fieldValue()
-fieldValue58.setName("diffuseColor")
-IS59 = IS()
-connect60 = connect()
-connect60.setNodeField("diffuseColor")
-connect60.setProtoField("x2diffuseColor")
-
-IS59.addConnect(connect60)
-
-fieldValue58.setIS(IS59)
-
-ProtoInstance56.addFieldValue(fieldValue58)
-
-Transform48.addChildren(ProtoInstance56)
-
-ProtoBody47.addChildren(Transform48)
-
-ProtoDeclare42.setProtoBody(ProtoBody47)
-
-Scene7.addChildren(ProtoDeclare42)
-ProtoDeclare61 = ProtoDeclare()
-ProtoDeclare61.setName("eight")
-ProtoInterface62 = ProtoInterface()
-field63 = field()
-field63.setName("ttranslation")
-field63.setAccessType("inputOutput")
-field63.setType("SFVec3f")
-field63.setValue("0 0 0")
-
-ProtoInterface62.addField(field63)
-
-ProtoDeclare61.setProtoInterface(ProtoInterface62)
-ProtoBody64 = ProtoBody()
-Transform65 = Transform()
-IS66 = IS()
-connect67 = connect()
-connect67.setNodeField("translation")
-connect67.setProtoField("ttranslation")
-
-IS66.addConnect(connect67)
-
-Transform65.setIS(IS66)
-ProtoInstance68 = ProtoInstance()
-ProtoInstance68.setName("four")
-fieldValue69 = fieldValue()
-fieldValue69.setName("ztranslation")
-fieldValue69.setValue("0 0 0")
-
-ProtoInstance68.addFieldValue(fieldValue69)
-fieldValue70 = fieldValue()
-fieldValue70.setName("x1diffuseColor")
-fieldValue70.setValue("1 0 0")
-
-ProtoInstance68.addFieldValue(fieldValue70)
-fieldValue71 = fieldValue()
-fieldValue71.setName("x2diffuseColor")
-fieldValue71.setValue("0 1 0")
-
-ProtoInstance68.addFieldValue(fieldValue71)
-
-Transform65.addChildren(ProtoInstance68)
-ProtoInstance72 = ProtoInstance()
-ProtoInstance72.setName("four")
-fieldValue73 = fieldValue()
-fieldValue73.setName("ztranslation")
-fieldValue73.setValue("0 0 2")
-
-ProtoInstance72.addFieldValue(fieldValue73)
-fieldValue74 = fieldValue()
-fieldValue74.setName("x1diffuseColor")
-fieldValue74.setValue("0 0 1")
-
-ProtoInstance72.addFieldValue(fieldValue74)
-fieldValue75 = fieldValue()
-fieldValue75.setName("x2diffuseColor")
-fieldValue75.setValue("1 1 0")
-
-ProtoInstance72.addFieldValue(fieldValue75)
-
-Transform65.addChildren(ProtoInstance72)
-
-ProtoBody64.addChildren(Transform65)
-
-ProtoDeclare61.setProtoBody(ProtoBody64)
-
-Scene7.addChildren(ProtoDeclare61)
-ProtoInstance76 = ProtoInstance()
-ProtoInstance76.setName("eight")
-fieldValue77 = fieldValue()
-fieldValue77.setName("ttranslation")
-fieldValue77.setValue("0 0 0")
-
-ProtoInstance76.addFieldValue(fieldValue77)
-
-Scene7.addChildren(ProtoInstance76)
-
-X3D0.setScene(Scene7)
-X3D0.toFileX3D("././rubik2x2x2_RoundTrip.x3d")
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "rubik2x2x2.x3d"
+
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "creator"
+meta3.content = "John Carlson"
+
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "generator"
+meta4.content = "manual"
+
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "identifier"
+meta5.content = "https://coderextreme.net/X3DJSONLD/rubik.x3d"
+
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "description"
+meta6.content = "a kind of 2x2x2 rubik cube"
+
+head1.children.append(meta6)
+
+X3D0.head = head1
+Scene7 = x3d.Scene()
+NavigationInfo8 = x3d.NavigationInfo()
+NavigationInfo8.type = ["EXAMINE"]
+
+Scene7.children.append(NavigationInfo8)
+Viewpoint9 = x3d.Viewpoint()
+Viewpoint9.description = "Rubiks Cube"
+Viewpoint9.position = [0,0,12]
+
+Scene7.children.append(Viewpoint9)
+ProtoDeclare10 = x3d.ProtoDeclare()
+ProtoDeclare10.name = "boxproto"
+ProtoInterface11 = x3d.ProtoInterface()
+field12 = x3d.field()
+field12.name = "xtranslation"
+field12.accessType = "inputOutput"
+field12.type = "SFVec3f"
+field12.value = [0,0,0]
+
+ProtoInterface11.field.append(field12)
+field13 = x3d.field()
+field13.name = "diffuseColor"
+field13.accessType = "inputOutput"
+field13.type = "SFColor"
+field13.value = [1,1,1]
+
+ProtoInterface11.field.append(field13)
+
+ProtoDeclare10.ProtoInterface = ProtoInterface11
+ProtoBody14 = x3d.ProtoBody()
+Transform15 = x3d.Transform()
+IS16 = x3d.IS()
+connect17 = x3d.connect()
+connect17.nodeField = "translation"
+connect17.protoField = "xtranslation"
+
+IS16.connect.append(connect17)
+
+Transform15.IS = IS16
+Shape18 = x3d.Shape()
+Box19 = x3d.Box()
+
+Shape18.geometry = Box19
+Appearance20 = x3d.Appearance()
+Material21 = x3d.Material()
+Material21.diffuseColor = [1,1,1]
+IS22 = x3d.IS()
+connect23 = x3d.connect()
+connect23.nodeField = "diffuseColor"
+connect23.protoField = "diffuseColor"
+
+IS22.connect.append(connect23)
+
+Material21.IS = IS22
+
+Appearance20.material = Material21
+
+Shape18.appearance = Appearance20
+
+Transform15.children.append(Shape18)
+
+ProtoBody14.children.append(Transform15)
+
+ProtoDeclare10.ProtoBody = ProtoBody14
+
+Scene7.children.append(ProtoDeclare10)
+ProtoDeclare24 = x3d.ProtoDeclare()
+ProtoDeclare24.name = "two"
+ProtoInterface25 = x3d.ProtoInterface()
+field26 = x3d.field()
+field26.name = "ytranslation"
+field26.accessType = "inputOutput"
+field26.type = "SFVec3f"
+field26.value = [0,0,0]
+
+ProtoInterface25.field.append(field26)
+field27 = x3d.field()
+field27.name = "diffuseColor"
+field27.accessType = "inputOutput"
+field27.type = "SFColor"
+field27.value = [1,0,0]
+
+ProtoInterface25.field.append(field27)
+
+ProtoDeclare24.ProtoInterface = ProtoInterface25
+ProtoBody28 = x3d.ProtoBody()
+Transform29 = x3d.Transform()
+IS30 = x3d.IS()
+connect31 = x3d.connect()
+connect31.nodeField = "translation"
+connect31.protoField = "ytranslation"
+
+IS30.connect.append(connect31)
+
+Transform29.IS = IS30
+ProtoInstance32 = x3d.ProtoInstance()
+ProtoInstance32.name = "boxproto"
+fieldValue33 = x3d.fieldValue()
+fieldValue33.name = "xtranslation"
+fieldValue33.value = "0 0 0"
+
+ProtoInstance32.fieldValue.append(fieldValue33)
+fieldValue34 = x3d.fieldValue()
+fieldValue34.name = "diffuseColor"
+IS35 = x3d.IS()
+connect36 = x3d.connect()
+connect36.nodeField = "diffuseColor"
+connect36.protoField = "diffuseColor"
+
+IS35.connect.append(connect36)
+
+fieldValue34.children.append(IS35)
+
+ProtoInstance32.fieldValue.append(fieldValue34)
+
+Transform29.children.append(ProtoInstance32)
+ProtoInstance37 = x3d.ProtoInstance()
+ProtoInstance37.name = "boxproto"
+fieldValue38 = x3d.fieldValue()
+fieldValue38.name = "xtranslation"
+fieldValue38.value = "2 0 0"
+
+ProtoInstance37.fieldValue.append(fieldValue38)
+fieldValue39 = x3d.fieldValue()
+fieldValue39.name = "diffuseColor"
+IS40 = x3d.IS()
+connect41 = x3d.connect()
+connect41.nodeField = "diffuseColor"
+connect41.protoField = "diffuseColor"
+
+IS40.connect.append(connect41)
+
+fieldValue39.children.append(IS40)
+
+ProtoInstance37.fieldValue.append(fieldValue39)
+
+Transform29.children.append(ProtoInstance37)
+
+ProtoBody28.children.append(Transform29)
+
+ProtoDeclare24.ProtoBody = ProtoBody28
+
+Scene7.children.append(ProtoDeclare24)
+ProtoDeclare42 = x3d.ProtoDeclare()
+ProtoDeclare42.name = "four"
+ProtoInterface43 = x3d.ProtoInterface()
+field44 = x3d.field()
+field44.name = "ztranslation"
+field44.accessType = "inputOutput"
+field44.type = "SFVec3f"
+field44.value = [0,0,0]
+
+ProtoInterface43.field.append(field44)
+field45 = x3d.field()
+field45.name = "x1diffuseColor"
+field45.accessType = "inputOutput"
+field45.type = "SFColor"
+field45.value = [1,0,0]
+
+ProtoInterface43.field.append(field45)
+field46 = x3d.field()
+field46.name = "x2diffuseColor"
+field46.accessType = "inputOutput"
+field46.type = "SFColor"
+field46.value = [0,1,0]
+
+ProtoInterface43.field.append(field46)
+
+ProtoDeclare42.ProtoInterface = ProtoInterface43
+ProtoBody47 = x3d.ProtoBody()
+Transform48 = x3d.Transform()
+IS49 = x3d.IS()
+connect50 = x3d.connect()
+connect50.nodeField = "translation"
+connect50.protoField = "ztranslation"
+
+IS49.connect.append(connect50)
+
+Transform48.IS = IS49
+ProtoInstance51 = x3d.ProtoInstance()
+ProtoInstance51.name = "two"
+fieldValue52 = x3d.fieldValue()
+fieldValue52.name = "ytranslation"
+fieldValue52.value = "0 0 0"
+
+ProtoInstance51.fieldValue.append(fieldValue52)
+fieldValue53 = x3d.fieldValue()
+fieldValue53.name = "diffuseColor"
+IS54 = x3d.IS()
+connect55 = x3d.connect()
+connect55.nodeField = "diffuseColor"
+connect55.protoField = "x1diffuseColor"
+
+IS54.connect.append(connect55)
+
+fieldValue53.children.append(IS54)
+
+ProtoInstance51.fieldValue.append(fieldValue53)
+
+Transform48.children.append(ProtoInstance51)
+ProtoInstance56 = x3d.ProtoInstance()
+ProtoInstance56.name = "two"
+fieldValue57 = x3d.fieldValue()
+fieldValue57.name = "ytranslation"
+fieldValue57.value = "0 2 0"
+
+ProtoInstance56.fieldValue.append(fieldValue57)
+fieldValue58 = x3d.fieldValue()
+fieldValue58.name = "diffuseColor"
+IS59 = x3d.IS()
+connect60 = x3d.connect()
+connect60.nodeField = "diffuseColor"
+connect60.protoField = "x2diffuseColor"
+
+IS59.connect.append(connect60)
+
+fieldValue58.children.append(IS59)
+
+ProtoInstance56.fieldValue.append(fieldValue58)
+
+Transform48.children.append(ProtoInstance56)
+
+ProtoBody47.children.append(Transform48)
+
+ProtoDeclare42.ProtoBody = ProtoBody47
+
+Scene7.children.append(ProtoDeclare42)
+ProtoDeclare61 = x3d.ProtoDeclare()
+ProtoDeclare61.name = "eight"
+ProtoInterface62 = x3d.ProtoInterface()
+field63 = x3d.field()
+field63.name = "ttranslation"
+field63.accessType = "inputOutput"
+field63.type = "SFVec3f"
+field63.value = [0,0,0]
+
+ProtoInterface62.field.append(field63)
+
+ProtoDeclare61.ProtoInterface = ProtoInterface62
+ProtoBody64 = x3d.ProtoBody()
+Transform65 = x3d.Transform()
+IS66 = x3d.IS()
+connect67 = x3d.connect()
+connect67.nodeField = "translation"
+connect67.protoField = "ttranslation"
+
+IS66.connect.append(connect67)
+
+Transform65.IS = IS66
+ProtoInstance68 = x3d.ProtoInstance()
+ProtoInstance68.name = "four"
+fieldValue69 = x3d.fieldValue()
+fieldValue69.name = "ztranslation"
+fieldValue69.value = "0 0 0"
+
+ProtoInstance68.fieldValue.append(fieldValue69)
+fieldValue70 = x3d.fieldValue()
+fieldValue70.name = "x1diffuseColor"
+fieldValue70.value = "1 0 0"
+
+ProtoInstance68.fieldValue.append(fieldValue70)
+fieldValue71 = x3d.fieldValue()
+fieldValue71.name = "x2diffuseColor"
+fieldValue71.value = "0 1 0"
+
+ProtoInstance68.fieldValue.append(fieldValue71)
+
+Transform65.children.append(ProtoInstance68)
+ProtoInstance72 = x3d.ProtoInstance()
+ProtoInstance72.name = "four"
+fieldValue73 = x3d.fieldValue()
+fieldValue73.name = "ztranslation"
+fieldValue73.value = "0 0 2"
+
+ProtoInstance72.fieldValue.append(fieldValue73)
+fieldValue74 = x3d.fieldValue()
+fieldValue74.name = "x1diffuseColor"
+fieldValue74.value = "0 0 1"
+
+ProtoInstance72.fieldValue.append(fieldValue74)
+fieldValue75 = x3d.fieldValue()
+fieldValue75.name = "x2diffuseColor"
+fieldValue75.value = "1 1 0"
+
+ProtoInstance72.fieldValue.append(fieldValue75)
+
+Transform65.children.append(ProtoInstance72)
+
+ProtoBody64.children.append(Transform65)
+
+ProtoDeclare61.ProtoBody = ProtoBody64
+
+Scene7.children.append(ProtoDeclare61)
+ProtoInstance76 = x3d.ProtoInstance()
+ProtoInstance76.name = "eight"
+fieldValue77 = x3d.fieldValue()
+fieldValue77.name = "ttranslation"
+fieldValue77.value = "0 0 0"
+
+ProtoInstance76.fieldValue.append(fieldValue77)
+
+Scene7.children.append(ProtoInstance76)
+
+X3D0.Scene = Scene7
+f = open("././rubik2x2x2_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

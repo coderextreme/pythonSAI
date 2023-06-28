@@ -1,1461 +1,1492 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("4.0")
-head1 = head()
-component2 = component()
-component2.setName("HAnim")
-component2.setLevel(1)
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "4.0"
+head1 = x3d.head()
+component2 = x3d.component()
+component2.name = "HAnim"
+component2.level = 1
 
-head1.addComponent(component2)
-meta3 = meta()
-meta3.setName("title")
-meta3.setContent("HAnimModelFootLeft.x3d")
+head1.children.append(component2)
+meta3 = x3d.meta()
+meta3.name = "title"
+meta3.content = "HAnimModelFootLeft.x3d"
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("description")
-meta4.setContent("Left foot, using high-fidelity definitions for HAnim version 2.0")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "description"
+meta4.content = "Left foot, using high-fidelity definitions for HAnim version 2.0"
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("creator")
-meta5.setContent("Kwan-Hee YOO, Don Brutzman and Joe Williams")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "creator"
+meta5.content = "Kwan-Hee YOO, Don Brutzman and Joe Williams"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("created")
-meta6.setContent("26 January 2015")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "created"
+meta6.content = "26 January 2015"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("modified")
-meta7.setContent("8 March 2021")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "modified"
+meta7.content = "23 December 2021"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("warning")
-meta8.setContent("not yet to scale")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "warning"
+meta8.content = "not yet to scale"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("warning")
-meta9.setContent("TODO will X3D HAnim component add a new level to support LOA-4 functionality?")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "warning"
+meta9.content = "TODO will X3D HAnim component add a new level to support LOA-4 functionality?"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("info")
-meta10.setContent("TODO describe how to compute and apply offsets for center values whenever attaching this appendage to a body")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "info"
+meta10.content = "TODO describe how to compute and apply offsets for center values whenever attaching this appendage to a body"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("reference")
-meta11.setContent("https://www.web3d.org/working-groups/humanoid-animation-HAnim")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "reference"
+meta11.content = "https://www.web3d.org/working-groups/humanoid-animation-HAnim"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("reference")
-meta12.setContent("https://www.web3d.org/documents/specifications/19774/V2.0")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "reference"
+meta12.content = "https://www.web3d.org/documents/specifications/19774/V2.0"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("reference")
-meta13.setContent("https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#TheFeet")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "reference"
+meta13.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#TheFeet"
 
-head1.addMeta(meta13)
-meta14 = meta()
-meta14.setName("reference")
-meta14.setContent("https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#f-FootJoints")
+head1.children.append(meta13)
+meta14 = x3d.meta()
+meta14.name = "reference"
+meta14.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#f-FootJoints"
 
-head1.addMeta(meta14)
-meta15 = meta()
-meta15.setName("reference")
-meta15.setContent("https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#Hierarchy4")
+head1.children.append(meta14)
+meta15 = x3d.meta()
+meta15.name = "reference"
+meta15.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#Hierarchy4"
 
-head1.addMeta(meta15)
-meta16 = meta()
-meta16.setName("reference")
-meta16.setContent("https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-WD2/Part01/components/hanim.html")
+head1.children.append(meta15)
+meta16 = x3d.meta()
+meta16.name = "reference"
+meta16.content = "https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-WD2/Part01/components/hanim.html"
 
-head1.addMeta(meta16)
-meta17 = meta()
-meta17.setName("subject")
-meta17.setContent("X3D HAnim humanoid animation")
+head1.children.append(meta16)
+meta17 = x3d.meta()
+meta17.name = "subject"
+meta17.content = "X3D HAnim humanoid animation"
 
-head1.addMeta(meta17)
-meta18 = meta()
-meta18.setName("TODO")
-meta18.setContent("Integrate and confirm Segment/Joint names, Viewpoints.")
+head1.children.append(meta17)
+meta18 = x3d.meta()
+meta18.name = "TODO"
+meta18.content = "Integrate and confirm Segment/Joint names, Viewpoints."
 
-head1.addMeta(meta18)
-meta19 = meta()
-meta19.setName("identifier")
-meta19.setContent("https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelFootLeft.x3d")
+head1.children.append(meta18)
+meta19 = x3d.meta()
+meta19.name = "identifier"
+meta19.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelFootLeft.x3d"
 
-head1.addMeta(meta19)
-meta20 = meta()
-meta20.setName("generator")
-meta20.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta19)
+meta20 = x3d.meta()
+meta20.name = "generator"
+meta20.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta20)
-meta21 = meta()
-meta21.setName("license")
-meta21.setContent("../license.html")
+head1.children.append(meta20)
+meta21 = x3d.meta()
+meta21.name = "license"
+meta21.content = "../license.html"
 
-head1.addMeta(meta21)
+head1.children.append(meta21)
 
-X3D0.setHead(head1)
-Scene22 = Scene()
-WorldInfo23 = WorldInfo()
-WorldInfo23.setTitle("HAnimModelFootLeft.x3d")
+X3D0.head = head1
+Scene22 = x3d.Scene()
+WorldInfo23 = x3d.WorldInfo()
+WorldInfo23.title = "HAnimModelFootLeft.x3d"
 
-Scene22.addChildren(WorldInfo23)
-HAnimHumanoid24 = HAnimHumanoid()
-HAnimHumanoid24.setName("Foot_Left")
-HAnimHumanoid24.setDEF("hanim_Foot_Left")
-HAnimHumanoid24.setLoa(4)
-HAnimHumanoid24.setVersion("2.0")
-#HAnimHumanoid original info='\"authorName=Kwan-Hee YOO, Don Brutzman and Joe Williams\"'
-MetadataSet25 = MetadataSet()
-MetadataSet25.setName("HAnimHumanoid.info")
-MetadataSet25.setReference("https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/ObjectInterfaces.html#Humanoid")
-MetadataString26 = MetadataString()
-MetadataString26.setName("authorName")
-MetadataString26.setValue(["Kwan-Hee YOO, Don Brutzman and Joe Williams"])
+Scene22.children.append(WorldInfo23)
+HAnimHumanoid24 = x3d.HAnimHumanoid()
+HAnimHumanoid24.name = "Foot_Left"
+HAnimHumanoid24.DEF = "hanim_Foot_Left"
+HAnimHumanoid24.loa = 4
+HAnimHumanoid24.version = "2.0"
+#original HAnimHumanoid info='\"authorName=Kwan-Hee YOO, Don Brutzman and Joe Williams\"'
+MetadataSet25 = x3d.MetadataSet()
+MetadataSet25.name = "HAnimHumanoid.info"
+MetadataSet25.reference = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/ObjectInterfaces.html#Humanoid"
+MetadataString26 = x3d.MetadataString()
+MetadataString26.name = "authorName"
+MetadataString26.value = ["Kwan-Hee YOO, Don Brutzman and Joe Williams"]
 
-MetadataSet25.setValue(MetadataString26)
+MetadataSet25.value.append(MetadataString26)
 
-HAnimHumanoid24.setValue(MetadataSet25)
-HAnimJoint27 = HAnimJoint()
-HAnimJoint27.setName("humanoid_root")
-HAnimJoint27.setDEF("hanim_humanoid_root")
-HAnimJoint27.setStiffness([0,0,0])
+HAnimHumanoid24.metadata.append(MetadataSet25)
+HAnimJoint27 = x3d.HAnimJoint()
+HAnimJoint27.name = "humanoid_root"
+HAnimJoint27.DEF = "hanim_humanoid_root"
+HAnimJoint27.ulimit = [0,0,0]
+HAnimJoint27.llimit = [0,0,0]
 #Might consider putting a HAnimSegment here, but that doesn't help with re-use of this foot model
-HAnimJoint28 = HAnimJoint()
-HAnimJoint28.setName("l_talocrural")
-HAnimJoint28.setDEF("hanim_l_talocrural")
-HAnimJoint28.setDescription("connection joint of foot to leg above")
-HAnimJoint28.setStiffness([0,0,0])
-HAnimSegment29 = HAnimSegment()
-HAnimSegment29.setName("l_talus")
-HAnimSegment29.setDEF("hanim_l_talus")
-Transform30 = Transform()
-Shape31 = Shape()
-Shape31.setDEF("HAnimJointShape")
-Sphere32 = Sphere()
-Sphere32.setRadius(0.025)
+HAnimJoint28 = x3d.HAnimJoint()
+HAnimJoint28.name = "l_talocrural"
+HAnimJoint28.DEF = "hanim_l_talocrural"
+HAnimJoint28.description = "connection joint of foot to leg above"
+HAnimJoint28.ulimit = [0,0,0]
+HAnimJoint28.llimit = [0,0,0]
+HAnimSegment29 = x3d.HAnimSegment()
+HAnimSegment29.name = "l_talus"
+HAnimSegment29.DEF = "hanim_l_talus"
+Transform30 = x3d.Transform()
+Shape31 = x3d.Shape()
+Shape31.DEF = "HAnimJointShape"
+Sphere32 = x3d.Sphere()
+Sphere32.radius = 0.025
 
-Shape31.setGeometry(Sphere32)
-Appearance33 = Appearance()
-Appearance33.setDEF("HAnimJointAppearance")
-Material34 = Material()
-Material34.setDiffuseColor([0,0,1])
+Shape31.geometry = Sphere32
+Appearance33 = x3d.Appearance()
+Appearance33.DEF = "HAnimJointAppearance"
+Material34 = x3d.Material()
+Material34.diffuseColor = [0,0,1]
 
-Appearance33.setMaterial(Material34)
+Appearance33.material = Material34
 
-Shape31.setAppearance(Appearance33)
+Shape31.appearance = Appearance33
 
-Transform30.addChildren(Shape31)
+Transform30.children.append(Shape31)
 
-HAnimSegment29.addChildren(Transform30)
-Shape35 = Shape()
-Appearance36 = Appearance()
-Material37 = Material()
-Material37.setEmissiveColor([1,1,1])
+HAnimSegment29.children.append(Transform30)
+Shape35 = x3d.Shape()
+Appearance36 = x3d.Appearance()
+Material37 = x3d.Material()
+Material37.emissiveColor = [1,1,1]
 
-Appearance36.setMaterial(Material37)
+Appearance36.material = Material37
 
-Shape35.setAppearance(Appearance36)
-IndexedLineSet38 = IndexedLineSet()
-IndexedLineSet38.setDEF("TCtoTCN")
-IndexedLineSet38.setCoordIndex([0,1])
-Coordinate39 = Coordinate()
-Coordinate39.setPoint([0,0,0,0,-0.3,0])
+Shape35.appearance = Appearance36
+IndexedLineSet38 = x3d.IndexedLineSet()
+IndexedLineSet38.DEF = "TCtoTCN"
+IndexedLineSet38.coordIndex = [0,1]
+Coordinate39 = x3d.Coordinate()
+Coordinate39.point = (0.0000,0.0000,0.0000,0.0000,-0.3000,0.0000)
 
-IndexedLineSet38.setCoord(Coordinate39)
+IndexedLineSet38.coord.append(Coordinate39)
 
-Shape35.setGeometry(IndexedLineSet38)
+Shape35.geometry = IndexedLineSet38
 
-HAnimSegment29.addChildren(Shape35)
-Shape40 = Shape()
-Appearance41 = Appearance()
-Material42 = Material()
-Material42.setEmissiveColor([1,1,1])
+HAnimSegment29.children.append(Shape35)
+Shape40 = x3d.Shape()
+Appearance41 = x3d.Appearance()
+Material42 = x3d.Material()
+Material42.emissiveColor = [1,1,1]
 
-Appearance41.setMaterial(Material42)
+Appearance41.material = Material42
 
-Shape40.setAppearance(Appearance41)
-IndexedLineSet43 = IndexedLineSet()
-IndexedLineSet43.setDEF("TCtoCC")
-IndexedLineSet43.setCoordIndex([0,1])
-Coordinate44 = Coordinate()
-Coordinate44.setPoint([0,0,0,0.2,0.3,0])
+Shape40.appearance = Appearance41
+IndexedLineSet43 = x3d.IndexedLineSet()
+IndexedLineSet43.DEF = "TCtoCC"
+IndexedLineSet43.coordIndex = [0,1]
+Coordinate44 = x3d.Coordinate()
+Coordinate44.point = (0.0000,0.0000,0.0000,0.2000,0.3000,0.0000)
 
-IndexedLineSet43.setCoord(Coordinate44)
+IndexedLineSet43.coord.append(Coordinate44)
 
-Shape40.setGeometry(IndexedLineSet43)
+Shape40.geometry = IndexedLineSet43
 
-HAnimSegment29.addChildren(Shape40)
+HAnimSegment29.children.append(Shape40)
 
-HAnimJoint28.addChildren(HAnimSegment29)
+HAnimJoint28.children.append(HAnimSegment29)
 #TCN
-HAnimJoint45 = HAnimJoint()
-HAnimJoint45.setName("l_talocalcaneonavicular")
-HAnimJoint45.setDEF("hanim_l_talocalcaneonavicular")
-HAnimJoint45.setCenter([0,-0.3,0])
-HAnimJoint45.setStiffness([0,0,0])
-HAnimSegment46 = HAnimSegment()
-HAnimSegment46.setName("l_navicular")
-HAnimSegment46.setDEF("hanim_l_navicular")
-Transform47 = Transform()
-Transform47.setTranslation([0,-0.3,0])
-Shape48 = Shape()
-Shape48.setUSE("HAnimJointShape")
+HAnimJoint45 = x3d.HAnimJoint()
+HAnimJoint45.name = "l_talocalcaneonavicular"
+HAnimJoint45.DEF = "hanim_l_talocalcaneonavicular"
+HAnimJoint45.center = [0,-0.3,0]
+HAnimJoint45.ulimit = [0,0,0]
+HAnimJoint45.llimit = [0,0,0]
+HAnimSegment46 = x3d.HAnimSegment()
+HAnimSegment46.name = "l_navicular"
+HAnimSegment46.DEF = "hanim_l_navicular"
+Transform47 = x3d.Transform()
+Transform47.translation = [0,-0.3,0]
+Shape48 = x3d.Shape()
+Shape48.USE = "HAnimJointShape"
 
-Transform47.addChildren(Shape48)
+Transform47.children.append(Shape48)
 
-HAnimSegment46.addChildren(Transform47)
-Shape49 = Shape()
-Appearance50 = Appearance()
-Material51 = Material()
-Material51.setEmissiveColor([1,1,1])
+HAnimSegment46.children.append(Transform47)
+Shape49 = x3d.Shape()
+Appearance50 = x3d.Appearance()
+Material51 = x3d.Material()
+Material51.emissiveColor = [1,1,1]
 
-Appearance50.setMaterial(Material51)
+Appearance50.material = Material51
 
-Shape49.setAppearance(Appearance50)
-IndexedLineSet52 = IndexedLineSet()
-IndexedLineSet52.setDEF("TCNtoCN1")
-IndexedLineSet52.setCoordIndex([0,1])
-Coordinate53 = Coordinate()
-Coordinate53.setPoint([0,-0.3,0,-0.1,-0.45,0])
+Shape49.appearance = Appearance50
+IndexedLineSet52 = x3d.IndexedLineSet()
+IndexedLineSet52.DEF = "TCNtoCN1"
+IndexedLineSet52.coordIndex = [0,1]
+Coordinate53 = x3d.Coordinate()
+Coordinate53.point = (0.0000,-0.3000,0.0000,-0.1000,-0.4500,0.0000)
 
-IndexedLineSet52.setCoord(Coordinate53)
+IndexedLineSet52.coord.append(Coordinate53)
 
-Shape49.setGeometry(IndexedLineSet52)
+Shape49.geometry = IndexedLineSet52
 
-HAnimSegment46.addChildren(Shape49)
-Shape54 = Shape()
-Appearance55 = Appearance()
-Material56 = Material()
-Material56.setEmissiveColor([1,1,1])
+HAnimSegment46.children.append(Shape49)
+Shape54 = x3d.Shape()
+Appearance55 = x3d.Appearance()
+Material56 = x3d.Material()
+Material56.emissiveColor = [1,1,1]
 
-Appearance55.setMaterial(Material56)
+Appearance55.material = Material56
 
-Shape54.setAppearance(Appearance55)
-IndexedLineSet57 = IndexedLineSet()
-IndexedLineSet57.setDEF("TCNtoCN2")
-IndexedLineSet57.setCoordIndex([0,1])
-Coordinate58 = Coordinate()
-Coordinate58.setPoint([0,-0.3,0,0,-0.45,0])
+Shape54.appearance = Appearance55
+IndexedLineSet57 = x3d.IndexedLineSet()
+IndexedLineSet57.DEF = "TCNtoCN2"
+IndexedLineSet57.coordIndex = [0,1]
+Coordinate58 = x3d.Coordinate()
+Coordinate58.point = (0.0000,-0.3000,0.0000,0.0000,-0.4500,0.0000)
 
-IndexedLineSet57.setCoord(Coordinate58)
+IndexedLineSet57.coord.append(Coordinate58)
 
-Shape54.setGeometry(IndexedLineSet57)
+Shape54.geometry = IndexedLineSet57
 
-HAnimSegment46.addChildren(Shape54)
-Shape59 = Shape()
-Appearance60 = Appearance()
-Material61 = Material()
-Material61.setEmissiveColor([1,1,1])
+HAnimSegment46.children.append(Shape54)
+Shape59 = x3d.Shape()
+Appearance60 = x3d.Appearance()
+Material61 = x3d.Material()
+Material61.emissiveColor = [1,1,1]
 
-Appearance60.setMaterial(Material61)
+Appearance60.material = Material61
 
-Shape59.setAppearance(Appearance60)
-IndexedLineSet62 = IndexedLineSet()
-IndexedLineSet62.setDEF("TCNtoCN3")
-IndexedLineSet62.setCoordIndex([0,1])
-Coordinate63 = Coordinate()
-Coordinate63.setPoint([0,-0.3,0,0.1,-0.4,0])
+Shape59.appearance = Appearance60
+IndexedLineSet62 = x3d.IndexedLineSet()
+IndexedLineSet62.DEF = "TCNtoCN3"
+IndexedLineSet62.coordIndex = [0,1]
+Coordinate63 = x3d.Coordinate()
+Coordinate63.point = (0.0000,-0.3000,0.0000,0.1000,-0.4000,0.0000)
 
-IndexedLineSet62.setCoord(Coordinate63)
+IndexedLineSet62.coord.append(Coordinate63)
 
-Shape59.setGeometry(IndexedLineSet62)
+Shape59.geometry = IndexedLineSet62
 
-HAnimSegment46.addChildren(Shape59)
+HAnimSegment46.children.append(Shape59)
 
-HAnimJoint45.addChildren(HAnimSegment46)
+HAnimJoint45.children.append(HAnimSegment46)
 #CN1
-HAnimJoint64 = HAnimJoint()
-HAnimJoint64.setName("l_cuneonavicular_1")
-HAnimJoint64.setDEF("hanim_l_cuneonavicular_1")
-HAnimJoint64.setCenter([-0.1,-0.45,0])
-HAnimJoint64.setStiffness([0,0,0])
-HAnimSegment65 = HAnimSegment()
-HAnimSegment65.setName("l_cuneiform_1")
-HAnimSegment65.setDEF("hanim_l_cuneiform_1")
-Transform66 = Transform()
-Transform66.setTranslation([-0.1,-0.45,0])
-Shape67 = Shape()
-Shape67.setUSE("HAnimJointShape")
+HAnimJoint64 = x3d.HAnimJoint()
+HAnimJoint64.name = "l_cuneonavicular_1"
+HAnimJoint64.DEF = "hanim_l_cuneonavicular_1"
+HAnimJoint64.center = [-0.1,-0.45,0]
+HAnimJoint64.ulimit = [0,0,0]
+HAnimJoint64.llimit = [0,0,0]
+HAnimSegment65 = x3d.HAnimSegment()
+HAnimSegment65.name = "l_cuneiform_1"
+HAnimSegment65.DEF = "hanim_l_cuneiform_1"
+Transform66 = x3d.Transform()
+Transform66.translation = [-0.1,-0.45,0]
+Shape67 = x3d.Shape()
+Shape67.USE = "HAnimJointShape"
 
-Transform66.addChildren(Shape67)
+Transform66.children.append(Shape67)
 
-HAnimSegment65.addChildren(Transform66)
-Shape68 = Shape()
-Appearance69 = Appearance()
-Material70 = Material()
-Material70.setEmissiveColor([1,1,1])
+HAnimSegment65.children.append(Transform66)
+Shape68 = x3d.Shape()
+Appearance69 = x3d.Appearance()
+Material70 = x3d.Material()
+Material70.emissiveColor = [1,1,1]
 
-Appearance69.setMaterial(Material70)
+Appearance69.material = Material70
 
-Shape68.setAppearance(Appearance69)
-IndexedLineSet71 = IndexedLineSet()
-IndexedLineSet71.setDEF("CN1toTMT1")
-IndexedLineSet71.setCoordIndex([0,1])
-Coordinate72 = Coordinate()
-Coordinate72.setPoint([-0.1,-0.45,0,-0.1,-0.6,0])
+Shape68.appearance = Appearance69
+IndexedLineSet71 = x3d.IndexedLineSet()
+IndexedLineSet71.DEF = "CN1toTMT1"
+IndexedLineSet71.coordIndex = [0,1]
+Coordinate72 = x3d.Coordinate()
+Coordinate72.point = (-0.1000,-0.4500,0.0000,-0.1000,-0.6000,0.0000)
 
-IndexedLineSet71.setCoord(Coordinate72)
+IndexedLineSet71.coord.append(Coordinate72)
 
-Shape68.setGeometry(IndexedLineSet71)
+Shape68.geometry = IndexedLineSet71
 
-HAnimSegment65.addChildren(Shape68)
+HAnimSegment65.children.append(Shape68)
 
-HAnimJoint64.addChildren(HAnimSegment65)
-HAnimJoint73 = HAnimJoint()
-HAnimJoint73.setName("l_tarsometatarsal_1")
-HAnimJoint73.setDEF("hanim_l_tarsometatarsal_1")
-HAnimJoint73.setCenter([-0.1,-0.6,0])
-HAnimJoint73.setStiffness([0,0,0])
-HAnimSegment74 = HAnimSegment()
-HAnimSegment74.setName("l_metatarsal_1")
-HAnimSegment74.setDEF("hanim_l_metatarsal_1")
-Transform75 = Transform()
-Transform75.setTranslation([-0.1,-0.6,0])
-Shape76 = Shape()
-Shape76.setUSE("HAnimJointShape")
+HAnimJoint64.children.append(HAnimSegment65)
+HAnimJoint73 = x3d.HAnimJoint()
+HAnimJoint73.name = "l_tarsometatarsal_1"
+HAnimJoint73.DEF = "hanim_l_tarsometatarsal_1"
+HAnimJoint73.center = [-0.1,-0.6,0]
+HAnimJoint73.ulimit = [0,0,0]
+HAnimJoint73.llimit = [0,0,0]
+HAnimSegment74 = x3d.HAnimSegment()
+HAnimSegment74.name = "l_metatarsal_1"
+HAnimSegment74.DEF = "hanim_l_metatarsal_1"
+Transform75 = x3d.Transform()
+Transform75.translation = [-0.1,-0.6,0]
+Shape76 = x3d.Shape()
+Shape76.USE = "HAnimJointShape"
 
-Transform75.addChildren(Shape76)
+Transform75.children.append(Shape76)
 
-HAnimSegment74.addChildren(Transform75)
-Shape77 = Shape()
-Appearance78 = Appearance()
-Material79 = Material()
-Material79.setEmissiveColor([1,1,1])
+HAnimSegment74.children.append(Transform75)
+Shape77 = x3d.Shape()
+Appearance78 = x3d.Appearance()
+Material79 = x3d.Material()
+Material79.emissiveColor = [1,1,1]
 
-Appearance78.setMaterial(Material79)
+Appearance78.material = Material79
 
-Shape77.setAppearance(Appearance78)
-IndexedLineSet80 = IndexedLineSet()
-IndexedLineSet80.setDEF("TMT1toMTP1")
-IndexedLineSet80.setCoordIndex([0,1])
-Coordinate81 = Coordinate()
-Coordinate81.setPoint([-0.1,-0.6,0,-0.1,-0.9,0])
+Shape77.appearance = Appearance78
+IndexedLineSet80 = x3d.IndexedLineSet()
+IndexedLineSet80.DEF = "TMT1toMTP1"
+IndexedLineSet80.coordIndex = [0,1]
+Coordinate81 = x3d.Coordinate()
+Coordinate81.point = (-0.1000,-0.6000,0.0000,-0.1000,-0.9000,0.0000)
 
-IndexedLineSet80.setCoord(Coordinate81)
+IndexedLineSet80.coord.append(Coordinate81)
 
-Shape77.setGeometry(IndexedLineSet80)
+Shape77.geometry = IndexedLineSet80
 
-HAnimSegment74.addChildren(Shape77)
+HAnimSegment74.children.append(Shape77)
 
-HAnimJoint73.addChildren(HAnimSegment74)
-HAnimJoint82 = HAnimJoint()
-HAnimJoint82.setName("l_metatarsophalangeal_1")
-HAnimJoint82.setDEF("hanim_l_metatarsophalangeal_1")
-HAnimJoint82.setCenter([-0.1,-0.9,0])
-HAnimJoint82.setStiffness([0,0,0])
-HAnimSegment83 = HAnimSegment()
-HAnimSegment83.setName("l_tarsal_proximal_phalanx_1")
-HAnimSegment83.setDEF("hanim_l_tarsal_proximal_phalanx_1")
-Transform84 = Transform()
-Transform84.setTranslation([-0.1,-0.9,0])
-Shape85 = Shape()
-Shape85.setUSE("HAnimJointShape")
+HAnimJoint73.children.append(HAnimSegment74)
+HAnimJoint82 = x3d.HAnimJoint()
+HAnimJoint82.name = "l_metatarsophalangeal_1"
+HAnimJoint82.DEF = "hanim_l_metatarsophalangeal_1"
+HAnimJoint82.center = [-0.1,-0.9,0]
+HAnimJoint82.ulimit = [0,0,0]
+HAnimJoint82.llimit = [0,0,0]
+HAnimSegment83 = x3d.HAnimSegment()
+HAnimSegment83.name = "l_tarsal_proximal_phalanx_1"
+HAnimSegment83.DEF = "hanim_l_tarsal_proximal_phalanx_1"
+Transform84 = x3d.Transform()
+Transform84.translation = [-0.1,-0.9,0]
+Shape85 = x3d.Shape()
+Shape85.USE = "HAnimJointShape"
 
-Transform84.addChildren(Shape85)
+Transform84.children.append(Shape85)
 
-HAnimSegment83.addChildren(Transform84)
-Shape86 = Shape()
-Appearance87 = Appearance()
-Material88 = Material()
-Material88.setEmissiveColor([1,1,1])
+HAnimSegment83.children.append(Transform84)
+Shape86 = x3d.Shape()
+Appearance87 = x3d.Appearance()
+Material88 = x3d.Material()
+Material88.emissiveColor = [1,1,1]
 
-Appearance87.setMaterial(Material88)
+Appearance87.material = Material88
 
-Shape86.setAppearance(Appearance87)
-IndexedLineSet89 = IndexedLineSet()
-IndexedLineSet89.setDEF("MTP1toIP1")
-IndexedLineSet89.setCoordIndex([0,1])
-Coordinate90 = Coordinate()
-Coordinate90.setPoint([-0.1,-0.9,0,-0.1,-1.05,0])
+Shape86.appearance = Appearance87
+IndexedLineSet89 = x3d.IndexedLineSet()
+IndexedLineSet89.DEF = "MTP1toIP1"
+IndexedLineSet89.coordIndex = [0,1]
+Coordinate90 = x3d.Coordinate()
+Coordinate90.point = (-0.1000,-0.9000,0.0000,-0.1000,-1.0500,0.0000)
 
-IndexedLineSet89.setCoord(Coordinate90)
+IndexedLineSet89.coord.append(Coordinate90)
 
-Shape86.setGeometry(IndexedLineSet89)
+Shape86.geometry = IndexedLineSet89
 
-HAnimSegment83.addChildren(Shape86)
+HAnimSegment83.children.append(Shape86)
 
-HAnimJoint82.addChildren(HAnimSegment83)
-HAnimJoint91 = HAnimJoint()
-HAnimJoint91.setName("l_tarsal_interphalangeal_1")
-HAnimJoint91.setDEF("hanim_l_tarsal_interphalangeal_1")
-HAnimJoint91.setCenter([-0.1,-1.05,0])
-HAnimJoint91.setStiffness([0,0,0])
-HAnimSegment92 = HAnimSegment()
-HAnimSegment92.setName("l_tarsal_distal_phalanx_1")
-HAnimSegment92.setDEF("hanim_l_tarsal_distal_phalanx_1")
-Transform93 = Transform()
-Transform93.setTranslation([-0.1,-1.05,0])
-Shape94 = Shape()
-Shape94.setUSE("HAnimJointShape")
+HAnimJoint82.children.append(HAnimSegment83)
+HAnimJoint91 = x3d.HAnimJoint()
+HAnimJoint91.name = "l_tarsal_interphalangeal_1"
+HAnimJoint91.DEF = "hanim_l_tarsal_interphalangeal_1"
+HAnimJoint91.center = [-0.1,-1.05,0]
+HAnimJoint91.ulimit = [0,0,0]
+HAnimJoint91.llimit = [0,0,0]
+HAnimSegment92 = x3d.HAnimSegment()
+HAnimSegment92.name = "l_tarsal_distal_phalanx_1"
+HAnimSegment92.DEF = "hanim_l_tarsal_distal_phalanx_1"
+Transform93 = x3d.Transform()
+Transform93.translation = [-0.1,-1.05,0]
+Shape94 = x3d.Shape()
+Shape94.USE = "HAnimJointShape"
 
-Transform93.addChildren(Shape94)
+Transform93.children.append(Shape94)
 
-HAnimSegment92.addChildren(Transform93)
-Shape95 = Shape()
-Appearance96 = Appearance()
-Material97 = Material()
-Material97.setEmissiveColor([1,1,1])
+HAnimSegment92.children.append(Transform93)
+Shape95 = x3d.Shape()
+Appearance96 = x3d.Appearance()
+Material97 = x3d.Material()
+Material97.emissiveColor = [1,1,1]
 
-Appearance96.setMaterial(Material97)
+Appearance96.material = Material97
 
-Shape95.setAppearance(Appearance96)
-IndexedLineSet98 = IndexedLineSet()
-IndexedLineSet98.setDEF("tiptoe_l_tarsal_distal_interphalangeal_1")
-IndexedLineSet98.setCoordIndex([0,1])
-Coordinate99 = Coordinate()
-Coordinate99.setPoint([-0.1,-1.05,0,-0.1,-1.1,0])
+Shape95.appearance = Appearance96
+IndexedLineSet98 = x3d.IndexedLineSet()
+IndexedLineSet98.DEF = "tiptoe_l_tarsal_distal_interphalangeal_1"
+IndexedLineSet98.coordIndex = [0,1]
+Coordinate99 = x3d.Coordinate()
+Coordinate99.point = (-0.1000,-1.0500,0.0000,-0.1000,-1.1000,0.0000)
 
-IndexedLineSet98.setCoord(Coordinate99)
+IndexedLineSet98.coord.append(Coordinate99)
 
-Shape95.setGeometry(IndexedLineSet98)
+Shape95.geometry = IndexedLineSet98
 
-HAnimSegment92.addChildren(Shape95)
+HAnimSegment92.children.append(Shape95)
 
-HAnimJoint91.addChildren(HAnimSegment92)
+HAnimJoint91.children.append(HAnimSegment92)
 
-HAnimJoint82.addChildren(HAnimJoint91)
+HAnimJoint82.children.append(HAnimJoint91)
 
-HAnimJoint73.addChildren(HAnimJoint82)
+HAnimJoint73.children.append(HAnimJoint82)
 
-HAnimJoint64.addChildren(HAnimJoint73)
+HAnimJoint64.children.append(HAnimJoint73)
 
-HAnimJoint45.addChildren(HAnimJoint64)
+HAnimJoint45.children.append(HAnimJoint64)
 #CN2
-HAnimJoint100 = HAnimJoint()
-HAnimJoint100.setName("l_cuneonavicular_2")
-HAnimJoint100.setDEF("hanim_l_cuneonavicular_2")
-HAnimJoint100.setCenter([0,-0.45,0])
-HAnimJoint100.setStiffness([0,0,0])
-HAnimSegment101 = HAnimSegment()
-HAnimSegment101.setName("l_cuneiform_2")
-HAnimSegment101.setDEF("hanim_l_cuneiform_2")
-Transform102 = Transform()
-Transform102.setTranslation([0,-0.45,0])
-Shape103 = Shape()
-Shape103.setUSE("HAnimJointShape")
+HAnimJoint100 = x3d.HAnimJoint()
+HAnimJoint100.name = "l_cuneonavicular_2"
+HAnimJoint100.DEF = "hanim_l_cuneonavicular_2"
+HAnimJoint100.center = [0,-0.45,0]
+HAnimJoint100.ulimit = [0,0,0]
+HAnimJoint100.llimit = [0,0,0]
+HAnimSegment101 = x3d.HAnimSegment()
+HAnimSegment101.name = "l_cuneiform_2"
+HAnimSegment101.DEF = "hanim_l_cuneiform_2"
+Transform102 = x3d.Transform()
+Transform102.translation = [0,-0.45,0]
+Shape103 = x3d.Shape()
+Shape103.USE = "HAnimJointShape"
 
-Transform102.addChildren(Shape103)
+Transform102.children.append(Shape103)
 
-HAnimSegment101.addChildren(Transform102)
-Shape104 = Shape()
-Appearance105 = Appearance()
-Material106 = Material()
-Material106.setEmissiveColor([1,1,1])
+HAnimSegment101.children.append(Transform102)
+Shape104 = x3d.Shape()
+Appearance105 = x3d.Appearance()
+Material106 = x3d.Material()
+Material106.emissiveColor = [1,1,1]
 
-Appearance105.setMaterial(Material106)
+Appearance105.material = Material106
 
-Shape104.setAppearance(Appearance105)
-IndexedLineSet107 = IndexedLineSet()
-IndexedLineSet107.setDEF("CN2toTMT2")
-IndexedLineSet107.setCoordIndex([0,1])
-Coordinate108 = Coordinate()
-Coordinate108.setPoint([0,-0.45,0,0.05,-0.6,0])
+Shape104.appearance = Appearance105
+IndexedLineSet107 = x3d.IndexedLineSet()
+IndexedLineSet107.DEF = "CN2toTMT2"
+IndexedLineSet107.coordIndex = [0,1]
+Coordinate108 = x3d.Coordinate()
+Coordinate108.point = (0.0000,-0.4500,0.0000,0.0500,-0.6000,0.0000)
 
-IndexedLineSet107.setCoord(Coordinate108)
+IndexedLineSet107.coord.append(Coordinate108)
 
-Shape104.setGeometry(IndexedLineSet107)
+Shape104.geometry = IndexedLineSet107
 
-HAnimSegment101.addChildren(Shape104)
+HAnimSegment101.children.append(Shape104)
 
-HAnimJoint100.addChildren(HAnimSegment101)
-HAnimJoint109 = HAnimJoint()
-HAnimJoint109.setName("l_tarsometatarsal_2")
-HAnimJoint109.setDEF("hanim_l_tarsometatarsal_2")
-HAnimJoint109.setCenter([0.05,-0.6,0])
-HAnimJoint109.setStiffness([0,0,0])
-HAnimSegment110 = HAnimSegment()
-HAnimSegment110.setName("l_metatarsal_2")
-HAnimSegment110.setDEF("hanim_l_metatarsal_2")
-Transform111 = Transform()
-Transform111.setTranslation([0.05,-0.6,0])
-Shape112 = Shape()
-Shape112.setUSE("HAnimJointShape")
+HAnimJoint100.children.append(HAnimSegment101)
+HAnimJoint109 = x3d.HAnimJoint()
+HAnimJoint109.name = "l_tarsometatarsal_2"
+HAnimJoint109.DEF = "hanim_l_tarsometatarsal_2"
+HAnimJoint109.center = [0.05,-0.6,0]
+HAnimJoint109.ulimit = [0,0,0]
+HAnimJoint109.llimit = [0,0,0]
+HAnimSegment110 = x3d.HAnimSegment()
+HAnimSegment110.name = "l_metatarsal_2"
+HAnimSegment110.DEF = "hanim_l_metatarsal_2"
+Transform111 = x3d.Transform()
+Transform111.translation = [0.05,-0.6,0]
+Shape112 = x3d.Shape()
+Shape112.USE = "HAnimJointShape"
 
-Transform111.addChildren(Shape112)
+Transform111.children.append(Shape112)
 
-HAnimSegment110.addChildren(Transform111)
-Shape113 = Shape()
-Appearance114 = Appearance()
-Material115 = Material()
-Material115.setEmissiveColor([1,1,1])
+HAnimSegment110.children.append(Transform111)
+Shape113 = x3d.Shape()
+Appearance114 = x3d.Appearance()
+Material115 = x3d.Material()
+Material115.emissiveColor = [1,1,1]
 
-Appearance114.setMaterial(Material115)
+Appearance114.material = Material115
 
-Shape113.setAppearance(Appearance114)
-IndexedLineSet116 = IndexedLineSet()
-IndexedLineSet116.setDEF("TMT2toMTP2")
-IndexedLineSet116.setCoordIndex([0,1])
-Coordinate117 = Coordinate()
-Coordinate117.setPoint([0.05,-0.6,0,0.05,-0.9,0])
+Shape113.appearance = Appearance114
+IndexedLineSet116 = x3d.IndexedLineSet()
+IndexedLineSet116.DEF = "TMT2toMTP2"
+IndexedLineSet116.coordIndex = [0,1]
+Coordinate117 = x3d.Coordinate()
+Coordinate117.point = (0.0500,-0.6000,0.0000,0.0500,-0.9000,0.0000)
 
-IndexedLineSet116.setCoord(Coordinate117)
+IndexedLineSet116.coord.append(Coordinate117)
 
-Shape113.setGeometry(IndexedLineSet116)
+Shape113.geometry = IndexedLineSet116
 
-HAnimSegment110.addChildren(Shape113)
+HAnimSegment110.children.append(Shape113)
 
-HAnimJoint109.addChildren(HAnimSegment110)
-HAnimJoint118 = HAnimJoint()
-HAnimJoint118.setName("l_metatarsophalangeal_2")
-HAnimJoint118.setDEF("hanim_l_metatarsophalangeal_2")
-HAnimJoint118.setCenter([0.05,-0.9,0])
-HAnimJoint118.setStiffness([0,0,0])
-HAnimSegment119 = HAnimSegment()
-HAnimSegment119.setName("l_tarsal_proximal_phalanx_2")
-HAnimSegment119.setDEF("hanim_l_tarsal_proximal_phalanx_2")
-Transform120 = Transform()
-Transform120.setTranslation([0.05,-0.9,0])
-Shape121 = Shape()
-Shape121.setUSE("HAnimJointShape")
+HAnimJoint109.children.append(HAnimSegment110)
+HAnimJoint118 = x3d.HAnimJoint()
+HAnimJoint118.name = "l_metatarsophalangeal_2"
+HAnimJoint118.DEF = "hanim_l_metatarsophalangeal_2"
+HAnimJoint118.center = [0.05,-0.9,0]
+HAnimJoint118.ulimit = [0,0,0]
+HAnimJoint118.llimit = [0,0,0]
+HAnimSegment119 = x3d.HAnimSegment()
+HAnimSegment119.name = "l_tarsal_proximal_phalanx_2"
+HAnimSegment119.DEF = "hanim_l_tarsal_proximal_phalanx_2"
+Transform120 = x3d.Transform()
+Transform120.translation = [0.05,-0.9,0]
+Shape121 = x3d.Shape()
+Shape121.USE = "HAnimJointShape"
 
-Transform120.addChildren(Shape121)
+Transform120.children.append(Shape121)
 
-HAnimSegment119.addChildren(Transform120)
-Shape122 = Shape()
-Appearance123 = Appearance()
-Material124 = Material()
-Material124.setEmissiveColor([1,1,1])
+HAnimSegment119.children.append(Transform120)
+Shape122 = x3d.Shape()
+Appearance123 = x3d.Appearance()
+Material124 = x3d.Material()
+Material124.emissiveColor = [1,1,1]
 
-Appearance123.setMaterial(Material124)
+Appearance123.material = Material124
 
-Shape122.setAppearance(Appearance123)
-IndexedLineSet125 = IndexedLineSet()
-IndexedLineSet125.setDEF("MTP2toPIP2")
-IndexedLineSet125.setCoordIndex([0,1])
-Coordinate126 = Coordinate()
-Coordinate126.setPoint([0.05,-0.9,0,0.05,-1.05,0])
+Shape122.appearance = Appearance123
+IndexedLineSet125 = x3d.IndexedLineSet()
+IndexedLineSet125.DEF = "MTP2toPIP2"
+IndexedLineSet125.coordIndex = [0,1]
+Coordinate126 = x3d.Coordinate()
+Coordinate126.point = (0.0500,-0.9000,0.0000,0.0500,-1.0500,0.0000)
 
-IndexedLineSet125.setCoord(Coordinate126)
+IndexedLineSet125.coord.append(Coordinate126)
 
-Shape122.setGeometry(IndexedLineSet125)
+Shape122.geometry = IndexedLineSet125
 
-HAnimSegment119.addChildren(Shape122)
+HAnimSegment119.children.append(Shape122)
 
-HAnimJoint118.addChildren(HAnimSegment119)
-HAnimJoint127 = HAnimJoint()
-HAnimJoint127.setName("l_tarsal_proximal_interphalangeal_2")
-HAnimJoint127.setDEF("hanim_l_tarsal_proximal_interphalangeal_2")
-HAnimJoint127.setCenter([0.05,-1.05,0])
-HAnimJoint127.setStiffness([0,0,0])
-HAnimSegment128 = HAnimSegment()
-HAnimSegment128.setName("l_tarsal_middle_phalanx_2")
-HAnimSegment128.setDEF("hanim_l_tarsal_middle_phalanx_2")
-Transform129 = Transform()
-Transform129.setTranslation([0.05,-1.05,0])
-Shape130 = Shape()
-Shape130.setUSE("HAnimJointShape")
+HAnimJoint118.children.append(HAnimSegment119)
+HAnimJoint127 = x3d.HAnimJoint()
+HAnimJoint127.name = "l_tarsal_proximal_interphalangeal_2"
+HAnimJoint127.DEF = "hanim_l_tarsal_proximal_interphalangeal_2"
+HAnimJoint127.center = [0.05,-1.05,0]
+HAnimJoint127.ulimit = [0,0,0]
+HAnimJoint127.llimit = [0,0,0]
+HAnimSegment128 = x3d.HAnimSegment()
+HAnimSegment128.name = "l_tarsal_middle_phalanx_2"
+HAnimSegment128.DEF = "hanim_l_tarsal_middle_phalanx_2"
+Transform129 = x3d.Transform()
+Transform129.translation = [0.05,-1.05,0]
+Shape130 = x3d.Shape()
+Shape130.USE = "HAnimJointShape"
 
-Transform129.addChildren(Shape130)
+Transform129.children.append(Shape130)
 
-HAnimSegment128.addChildren(Transform129)
-Shape131 = Shape()
-Appearance132 = Appearance()
-Material133 = Material()
-Material133.setEmissiveColor([1,1,1])
+HAnimSegment128.children.append(Transform129)
+Shape131 = x3d.Shape()
+Appearance132 = x3d.Appearance()
+Material133 = x3d.Material()
+Material133.emissiveColor = [1,1,1]
 
-Appearance132.setMaterial(Material133)
+Appearance132.material = Material133
 
-Shape131.setAppearance(Appearance132)
-IndexedLineSet134 = IndexedLineSet()
-IndexedLineSet134.setDEF("PIP2toDIP2")
-IndexedLineSet134.setCoordIndex([0,1])
-Coordinate135 = Coordinate()
-Coordinate135.setPoint([0.05,-1.05,0,0.05,-1.12,0])
+Shape131.appearance = Appearance132
+IndexedLineSet134 = x3d.IndexedLineSet()
+IndexedLineSet134.DEF = "PIP2toDIP2"
+IndexedLineSet134.coordIndex = [0,1]
+Coordinate135 = x3d.Coordinate()
+Coordinate135.point = (0.0500,-1.0500,0.0000,0.0500,-1.1200,0.0000)
 
-IndexedLineSet134.setCoord(Coordinate135)
+IndexedLineSet134.coord.append(Coordinate135)
 
-Shape131.setGeometry(IndexedLineSet134)
+Shape131.geometry = IndexedLineSet134
 
-HAnimSegment128.addChildren(Shape131)
+HAnimSegment128.children.append(Shape131)
 
-HAnimJoint127.addChildren(HAnimSegment128)
-HAnimJoint136 = HAnimJoint()
-HAnimJoint136.setName("l_tarsal_distal_interphalangeal_2")
-HAnimJoint136.setDEF("hanim_l_tarsal_distal_interphalangeal_2")
-HAnimJoint136.setCenter([0.05,-1.12,0])
-HAnimJoint136.setStiffness([0,0,0])
-HAnimSegment137 = HAnimSegment()
-HAnimSegment137.setName("l_tarsal_distal_phalanx_2")
-HAnimSegment137.setDEF("hanim_l_tarsal_distal_phalanx_2")
-Transform138 = Transform()
-Transform138.setTranslation([0.05,-1.12,0])
-Shape139 = Shape()
-Shape139.setUSE("HAnimJointShape")
+HAnimJoint127.children.append(HAnimSegment128)
+HAnimJoint136 = x3d.HAnimJoint()
+HAnimJoint136.name = "l_tarsal_distal_interphalangeal_2"
+HAnimJoint136.DEF = "hanim_l_tarsal_distal_interphalangeal_2"
+HAnimJoint136.center = [0.05,-1.12,0]
+HAnimJoint136.ulimit = [0,0,0]
+HAnimJoint136.llimit = [0,0,0]
+HAnimSegment137 = x3d.HAnimSegment()
+HAnimSegment137.name = "l_tarsal_distal_phalanx_2"
+HAnimSegment137.DEF = "hanim_l_tarsal_distal_phalanx_2"
+Transform138 = x3d.Transform()
+Transform138.translation = [0.05,-1.12,0]
+Shape139 = x3d.Shape()
+Shape139.USE = "HAnimJointShape"
 
-Transform138.addChildren(Shape139)
+Transform138.children.append(Shape139)
 
-HAnimSegment137.addChildren(Transform138)
-Shape140 = Shape()
-Appearance141 = Appearance()
-Material142 = Material()
-Material142.setEmissiveColor([1,1,1])
+HAnimSegment137.children.append(Transform138)
+Shape140 = x3d.Shape()
+Appearance141 = x3d.Appearance()
+Material142 = x3d.Material()
+Material142.emissiveColor = [1,1,1]
 
-Appearance141.setMaterial(Material142)
+Appearance141.material = Material142
 
-Shape140.setAppearance(Appearance141)
-IndexedLineSet143 = IndexedLineSet()
-IndexedLineSet143.setDEF("tiptoe_l_tarsal_distal_phalanx_2")
-IndexedLineSet143.setCoordIndex([0,1])
-Coordinate144 = Coordinate()
-Coordinate144.setPoint([0.05,-1.12,0,0.05,-1.16,0])
+Shape140.appearance = Appearance141
+IndexedLineSet143 = x3d.IndexedLineSet()
+IndexedLineSet143.DEF = "tiptoe_l_tarsal_distal_phalanx_2"
+IndexedLineSet143.coordIndex = [0,1]
+Coordinate144 = x3d.Coordinate()
+Coordinate144.point = (0.0500,-1.1200,0.0000,0.0500,-1.1600,0.0000)
 
-IndexedLineSet143.setCoord(Coordinate144)
+IndexedLineSet143.coord.append(Coordinate144)
 
-Shape140.setGeometry(IndexedLineSet143)
+Shape140.geometry = IndexedLineSet143
 
-HAnimSegment137.addChildren(Shape140)
+HAnimSegment137.children.append(Shape140)
 
-HAnimJoint136.addChildren(HAnimSegment137)
+HAnimJoint136.children.append(HAnimSegment137)
 
-HAnimJoint127.addChildren(HAnimJoint136)
+HAnimJoint127.children.append(HAnimJoint136)
 
-HAnimJoint118.addChildren(HAnimJoint127)
+HAnimJoint118.children.append(HAnimJoint127)
 
-HAnimJoint109.addChildren(HAnimJoint118)
+HAnimJoint109.children.append(HAnimJoint118)
 
-HAnimJoint100.addChildren(HAnimJoint109)
+HAnimJoint100.children.append(HAnimJoint109)
 
-HAnimJoint45.addChildren(HAnimJoint100)
+HAnimJoint45.children.append(HAnimJoint100)
 #CN3
-HAnimJoint145 = HAnimJoint()
-HAnimJoint145.setName("l_cuneonavicular_3")
-HAnimJoint145.setDEF("hanim_l_cuneonavicular_3")
-HAnimJoint145.setCenter([0.1,-0.4,0])
-HAnimJoint145.setStiffness([0,0,0])
-HAnimSegment146 = HAnimSegment()
-HAnimSegment146.setName("l_cuneiform_3")
-HAnimSegment146.setDEF("hanim_l_cuneiform_3")
-Transform147 = Transform()
-Transform147.setTranslation([0.1,-0.4,0])
-Shape148 = Shape()
-Shape148.setUSE("HAnimJointShape")
+HAnimJoint145 = x3d.HAnimJoint()
+HAnimJoint145.name = "l_cuneonavicular_3"
+HAnimJoint145.DEF = "hanim_l_cuneonavicular_3"
+HAnimJoint145.center = [0.1,-0.4,0]
+HAnimJoint145.ulimit = [0,0,0]
+HAnimJoint145.llimit = [0,0,0]
+HAnimSegment146 = x3d.HAnimSegment()
+HAnimSegment146.name = "l_cuneiform_3"
+HAnimSegment146.DEF = "hanim_l_cuneiform_3"
+Transform147 = x3d.Transform()
+Transform147.translation = [0.1,-0.4,0]
+Shape148 = x3d.Shape()
+Shape148.USE = "HAnimJointShape"
 
-Transform147.addChildren(Shape148)
+Transform147.children.append(Shape148)
 
-HAnimSegment146.addChildren(Transform147)
-Shape149 = Shape()
-Appearance150 = Appearance()
-Material151 = Material()
-Material151.setEmissiveColor([1,1,1])
+HAnimSegment146.children.append(Transform147)
+Shape149 = x3d.Shape()
+Appearance150 = x3d.Appearance()
+Material151 = x3d.Material()
+Material151.emissiveColor = [1,1,1]
 
-Appearance150.setMaterial(Material151)
+Appearance150.material = Material151
 
-Shape149.setAppearance(Appearance150)
-IndexedLineSet152 = IndexedLineSet()
-IndexedLineSet152.setDEF("CN3toTMT3")
-IndexedLineSet152.setCoordIndex([0,1])
-Coordinate153 = Coordinate()
-Coordinate153.setPoint([0.1,-0.4,0,0.15,-0.6,0])
+Shape149.appearance = Appearance150
+IndexedLineSet152 = x3d.IndexedLineSet()
+IndexedLineSet152.DEF = "CN3toTMT3"
+IndexedLineSet152.coordIndex = [0,1]
+Coordinate153 = x3d.Coordinate()
+Coordinate153.point = (0.1000,-0.4000,0.0000,0.1500,-0.6000,0.0000)
 
-IndexedLineSet152.setCoord(Coordinate153)
+IndexedLineSet152.coord.append(Coordinate153)
 
-Shape149.setGeometry(IndexedLineSet152)
+Shape149.geometry = IndexedLineSet152
 
-HAnimSegment146.addChildren(Shape149)
+HAnimSegment146.children.append(Shape149)
 
-HAnimJoint145.addChildren(HAnimSegment146)
-HAnimJoint154 = HAnimJoint()
-HAnimJoint154.setName("l_tarsometatarsal_3")
-HAnimJoint154.setDEF("hanim_l_tarsometatarsal_3")
-HAnimJoint154.setCenter([0.15,-0.6,0])
-HAnimJoint154.setStiffness([0,0,0])
-HAnimSegment155 = HAnimSegment()
-HAnimSegment155.setName("l_metatarsal_3")
-HAnimSegment155.setDEF("hanim_l_metatarsal_3")
-Transform156 = Transform()
-Transform156.setTranslation([0.15,-0.6,0])
-Shape157 = Shape()
-Shape157.setUSE("HAnimJointShape")
+HAnimJoint145.children.append(HAnimSegment146)
+HAnimJoint154 = x3d.HAnimJoint()
+HAnimJoint154.name = "l_tarsometatarsal_3"
+HAnimJoint154.DEF = "hanim_l_tarsometatarsal_3"
+HAnimJoint154.center = [0.15,-0.6,0]
+HAnimJoint154.ulimit = [0,0,0]
+HAnimJoint154.llimit = [0,0,0]
+HAnimSegment155 = x3d.HAnimSegment()
+HAnimSegment155.name = "l_metatarsal_3"
+HAnimSegment155.DEF = "hanim_l_metatarsal_3"
+Transform156 = x3d.Transform()
+Transform156.translation = [0.15,-0.6,0]
+Shape157 = x3d.Shape()
+Shape157.USE = "HAnimJointShape"
 
-Transform156.addChildren(Shape157)
+Transform156.children.append(Shape157)
 
-HAnimSegment155.addChildren(Transform156)
-Shape158 = Shape()
-Appearance159 = Appearance()
-Material160 = Material()
-Material160.setEmissiveColor([1,1,1])
+HAnimSegment155.children.append(Transform156)
+Shape158 = x3d.Shape()
+Appearance159 = x3d.Appearance()
+Material160 = x3d.Material()
+Material160.emissiveColor = [1,1,1]
 
-Appearance159.setMaterial(Material160)
+Appearance159.material = Material160
 
-Shape158.setAppearance(Appearance159)
-IndexedLineSet161 = IndexedLineSet()
-IndexedLineSet161.setDEF("TMT3toMTP3")
-IndexedLineSet161.setCoordIndex([0,1])
-Coordinate162 = Coordinate()
-Coordinate162.setPoint([0.15,-0.6,0,0.15,-0.9,0])
+Shape158.appearance = Appearance159
+IndexedLineSet161 = x3d.IndexedLineSet()
+IndexedLineSet161.DEF = "TMT3toMTP3"
+IndexedLineSet161.coordIndex = [0,1]
+Coordinate162 = x3d.Coordinate()
+Coordinate162.point = (0.1500,-0.6000,0.0000,0.1500,-0.9000,0.0000)
 
-IndexedLineSet161.setCoord(Coordinate162)
+IndexedLineSet161.coord.append(Coordinate162)
 
-Shape158.setGeometry(IndexedLineSet161)
+Shape158.geometry = IndexedLineSet161
 
-HAnimSegment155.addChildren(Shape158)
+HAnimSegment155.children.append(Shape158)
 
-HAnimJoint154.addChildren(HAnimSegment155)
-HAnimJoint163 = HAnimJoint()
-HAnimJoint163.setName("l_metatarsophalangeal_3")
-HAnimJoint163.setDEF("hanim_l_metatarsophalangeal_3")
-HAnimJoint163.setCenter([0.15,-0.9,0])
-HAnimJoint163.setStiffness([0,0,0])
-HAnimSegment164 = HAnimSegment()
-HAnimSegment164.setName("l_tarsal_proximal_phalanx_3")
-HAnimSegment164.setDEF("hanim_l_tarsal_proximal_phalanx_3")
-Transform165 = Transform()
-Transform165.setTranslation([0.15,-0.9,0])
-Shape166 = Shape()
-Shape166.setUSE("HAnimJointShape")
+HAnimJoint154.children.append(HAnimSegment155)
+HAnimJoint163 = x3d.HAnimJoint()
+HAnimJoint163.name = "l_metatarsophalangeal_3"
+HAnimJoint163.DEF = "hanim_l_metatarsophalangeal_3"
+HAnimJoint163.center = [0.15,-0.9,0]
+HAnimJoint163.ulimit = [0,0,0]
+HAnimJoint163.llimit = [0,0,0]
+HAnimSegment164 = x3d.HAnimSegment()
+HAnimSegment164.name = "l_tarsal_proximal_phalanx_3"
+HAnimSegment164.DEF = "hanim_l_tarsal_proximal_phalanx_3"
+Transform165 = x3d.Transform()
+Transform165.translation = [0.15,-0.9,0]
+Shape166 = x3d.Shape()
+Shape166.USE = "HAnimJointShape"
 
-Transform165.addChildren(Shape166)
+Transform165.children.append(Shape166)
 
-HAnimSegment164.addChildren(Transform165)
-Shape167 = Shape()
-Appearance168 = Appearance()
-Material169 = Material()
-Material169.setEmissiveColor([1,1,1])
+HAnimSegment164.children.append(Transform165)
+Shape167 = x3d.Shape()
+Appearance168 = x3d.Appearance()
+Material169 = x3d.Material()
+Material169.emissiveColor = [1,1,1]
 
-Appearance168.setMaterial(Material169)
+Appearance168.material = Material169
 
-Shape167.setAppearance(Appearance168)
-IndexedLineSet170 = IndexedLineSet()
-IndexedLineSet170.setDEF("MTP3toPIP3")
-IndexedLineSet170.setCoordIndex([0,1])
-Coordinate171 = Coordinate()
-Coordinate171.setPoint([0.15,-0.9,0,0.15,-1.05,0])
+Shape167.appearance = Appearance168
+IndexedLineSet170 = x3d.IndexedLineSet()
+IndexedLineSet170.DEF = "MTP3toPIP3"
+IndexedLineSet170.coordIndex = [0,1]
+Coordinate171 = x3d.Coordinate()
+Coordinate171.point = (0.1500,-0.9000,0.0000,0.1500,-1.0500,0.0000)
 
-IndexedLineSet170.setCoord(Coordinate171)
+IndexedLineSet170.coord.append(Coordinate171)
 
-Shape167.setGeometry(IndexedLineSet170)
+Shape167.geometry = IndexedLineSet170
 
-HAnimSegment164.addChildren(Shape167)
+HAnimSegment164.children.append(Shape167)
 
-HAnimJoint163.addChildren(HAnimSegment164)
-HAnimJoint172 = HAnimJoint()
-HAnimJoint172.setName("l_tarsal_proximal_interphalangeal_3")
-HAnimJoint172.setDEF("hanim_l_tarsal_proximal_interphalangeal_3")
-HAnimJoint172.setCenter([0.15,-1.05,0])
-HAnimJoint172.setStiffness([0,0,0])
-HAnimSegment173 = HAnimSegment()
-HAnimSegment173.setName("l_tarsal_middle_phalanx_3")
-HAnimSegment173.setDEF("hanim_l_tarsal_middle_phalanx_3")
-Transform174 = Transform()
-Transform174.setTranslation([0.15,-1.05,0])
-Shape175 = Shape()
-Shape175.setUSE("HAnimJointShape")
+HAnimJoint163.children.append(HAnimSegment164)
+HAnimJoint172 = x3d.HAnimJoint()
+HAnimJoint172.name = "l_tarsal_proximal_interphalangeal_3"
+HAnimJoint172.DEF = "hanim_l_tarsal_proximal_interphalangeal_3"
+HAnimJoint172.center = [0.15,-1.05,0]
+HAnimJoint172.ulimit = [0,0,0]
+HAnimJoint172.llimit = [0,0,0]
+HAnimSegment173 = x3d.HAnimSegment()
+HAnimSegment173.name = "l_tarsal_middle_phalanx_3"
+HAnimSegment173.DEF = "hanim_l_tarsal_middle_phalanx_3"
+Transform174 = x3d.Transform()
+Transform174.translation = [0.15,-1.05,0]
+Shape175 = x3d.Shape()
+Shape175.USE = "HAnimJointShape"
 
-Transform174.addChildren(Shape175)
+Transform174.children.append(Shape175)
 
-HAnimSegment173.addChildren(Transform174)
-Shape176 = Shape()
-Appearance177 = Appearance()
-Material178 = Material()
-Material178.setEmissiveColor([1,1,1])
+HAnimSegment173.children.append(Transform174)
+Shape176 = x3d.Shape()
+Appearance177 = x3d.Appearance()
+Material178 = x3d.Material()
+Material178.emissiveColor = [1,1,1]
 
-Appearance177.setMaterial(Material178)
+Appearance177.material = Material178
 
-Shape176.setAppearance(Appearance177)
-IndexedLineSet179 = IndexedLineSet()
-IndexedLineSet179.setDEF("PIP3toDIP3")
-IndexedLineSet179.setCoordIndex([0,1])
-Coordinate180 = Coordinate()
-Coordinate180.setPoint([0.15,-1.05,0,0.15,-1.13,0])
+Shape176.appearance = Appearance177
+IndexedLineSet179 = x3d.IndexedLineSet()
+IndexedLineSet179.DEF = "PIP3toDIP3"
+IndexedLineSet179.coordIndex = [0,1]
+Coordinate180 = x3d.Coordinate()
+Coordinate180.point = (0.1500,-1.0500,0.0000,0.1500,-1.1300,0.0000)
 
-IndexedLineSet179.setCoord(Coordinate180)
+IndexedLineSet179.coord.append(Coordinate180)
 
-Shape176.setGeometry(IndexedLineSet179)
+Shape176.geometry = IndexedLineSet179
 
-HAnimSegment173.addChildren(Shape176)
+HAnimSegment173.children.append(Shape176)
 
-HAnimJoint172.addChildren(HAnimSegment173)
-HAnimJoint181 = HAnimJoint()
-HAnimJoint181.setName("l_tarsal_distal_interphalangeal_3")
-HAnimJoint181.setDEF("hanim_l_tarsal_distal_interphalangeal_3")
-HAnimJoint181.setCenter([0.15,-1.13,0])
-HAnimJoint181.setStiffness([0,0,0])
-HAnimSegment182 = HAnimSegment()
-HAnimSegment182.setName("l_tarsal_distal_phalanx_3")
-HAnimSegment182.setDEF("hanim_l_tarsal_distal_phalanx_3")
-Transform183 = Transform()
-Transform183.setTranslation([0.15,-1.13,0])
-Shape184 = Shape()
-Shape184.setUSE("HAnimJointShape")
+HAnimJoint172.children.append(HAnimSegment173)
+HAnimJoint181 = x3d.HAnimJoint()
+HAnimJoint181.name = "l_tarsal_distal_interphalangeal_3"
+HAnimJoint181.DEF = "hanim_l_tarsal_distal_interphalangeal_3"
+HAnimJoint181.center = [0.15,-1.13,0]
+HAnimJoint181.ulimit = [0,0,0]
+HAnimJoint181.llimit = [0,0,0]
+HAnimSegment182 = x3d.HAnimSegment()
+HAnimSegment182.name = "l_tarsal_distal_phalanx_3"
+HAnimSegment182.DEF = "hanim_l_tarsal_distal_phalanx_3"
+Transform183 = x3d.Transform()
+Transform183.translation = [0.15,-1.13,0]
+Shape184 = x3d.Shape()
+Shape184.USE = "HAnimJointShape"
 
-Transform183.addChildren(Shape184)
+Transform183.children.append(Shape184)
 
-HAnimSegment182.addChildren(Transform183)
-Shape185 = Shape()
-Appearance186 = Appearance()
-Material187 = Material()
-Material187.setEmissiveColor([1,1,1])
+HAnimSegment182.children.append(Transform183)
+Shape185 = x3d.Shape()
+Appearance186 = x3d.Appearance()
+Material187 = x3d.Material()
+Material187.emissiveColor = [1,1,1]
 
-Appearance186.setMaterial(Material187)
+Appearance186.material = Material187
 
-Shape185.setAppearance(Appearance186)
-IndexedLineSet188 = IndexedLineSet()
-IndexedLineSet188.setDEF("tiptoe_l_tarsal_distal_interphalangeal_3")
-IndexedLineSet188.setCoordIndex([0,1])
-Coordinate189 = Coordinate()
-Coordinate189.setPoint([0.15,-1.13,0,0.15,-1.16,0])
+Shape185.appearance = Appearance186
+IndexedLineSet188 = x3d.IndexedLineSet()
+IndexedLineSet188.DEF = "tiptoe_l_tarsal_distal_interphalangeal_3"
+IndexedLineSet188.coordIndex = [0,1]
+Coordinate189 = x3d.Coordinate()
+Coordinate189.point = (0.1500,-1.1300,0.0000,0.1500,-1.1600,0.0000)
 
-IndexedLineSet188.setCoord(Coordinate189)
+IndexedLineSet188.coord.append(Coordinate189)
 
-Shape185.setGeometry(IndexedLineSet188)
+Shape185.geometry = IndexedLineSet188
 
-HAnimSegment182.addChildren(Shape185)
+HAnimSegment182.children.append(Shape185)
 
-HAnimJoint181.addChildren(HAnimSegment182)
+HAnimJoint181.children.append(HAnimSegment182)
 
-HAnimJoint172.addChildren(HAnimJoint181)
+HAnimJoint172.children.append(HAnimJoint181)
 
-HAnimJoint163.addChildren(HAnimJoint172)
+HAnimJoint163.children.append(HAnimJoint172)
 
-HAnimJoint154.addChildren(HAnimJoint163)
+HAnimJoint154.children.append(HAnimJoint163)
 
-HAnimJoint145.addChildren(HAnimJoint154)
+HAnimJoint145.children.append(HAnimJoint154)
 
-HAnimJoint45.addChildren(HAnimJoint145)
+HAnimJoint45.children.append(HAnimJoint145)
 
-HAnimJoint28.addChildren(HAnimJoint45)
+HAnimJoint28.children.append(HAnimJoint45)
 #CC
-HAnimJoint190 = HAnimJoint()
-HAnimJoint190.setName("l_calcaneocuboid")
-HAnimJoint190.setDEF("hanim_l_calcaneocuboid")
-HAnimJoint190.setCenter([0.2,0.3,0])
-HAnimJoint190.setStiffness([0,0,0])
-HAnimSegment191 = HAnimSegment()
-HAnimSegment191.setName("l_calcaneus")
-HAnimSegment191.setDEF("hanim_l_calcaneus")
-Transform192 = Transform()
-Transform192.setTranslation([0.2,0.3,0])
-Shape193 = Shape()
-Shape193.setUSE("HAnimJointShape")
+HAnimJoint190 = x3d.HAnimJoint()
+HAnimJoint190.name = "l_calcaneocuboid"
+HAnimJoint190.DEF = "hanim_l_calcaneocuboid"
+HAnimJoint190.center = [0.2,0.3,0]
+HAnimJoint190.ulimit = [0,0,0]
+HAnimJoint190.llimit = [0,0,0]
+HAnimSegment191 = x3d.HAnimSegment()
+HAnimSegment191.name = "l_calcaneus"
+HAnimSegment191.DEF = "hanim_l_calcaneus"
+Transform192 = x3d.Transform()
+Transform192.translation = [0.2,0.3,0]
+Shape193 = x3d.Shape()
+Shape193.USE = "HAnimJointShape"
 
-Transform192.addChildren(Shape193)
+Transform192.children.append(Shape193)
 
-HAnimSegment191.addChildren(Transform192)
-Shape194 = Shape()
-Appearance195 = Appearance()
-Material196 = Material()
-Material196.setEmissiveColor([1,1,1])
+HAnimSegment191.children.append(Transform192)
+Shape194 = x3d.Shape()
+Appearance195 = x3d.Appearance()
+Material196 = x3d.Material()
+Material196.emissiveColor = [1,1,1]
 
-Appearance195.setMaterial(Material196)
+Appearance195.material = Material196
 
-Shape194.setAppearance(Appearance195)
-IndexedLineSet197 = IndexedLineSet()
-IndexedLineSet197.setDEF("CCtoTT")
-IndexedLineSet197.setCoordIndex([0,1])
-Coordinate198 = Coordinate()
-Coordinate198.setPoint([0.2,0.3,0,0.21,-0.3,0])
+Shape194.appearance = Appearance195
+IndexedLineSet197 = x3d.IndexedLineSet()
+IndexedLineSet197.DEF = "CCtoTT"
+IndexedLineSet197.coordIndex = [0,1]
+Coordinate198 = x3d.Coordinate()
+Coordinate198.point = (0.2000,0.3000,0.0000,0.2100,-0.3000,0.0000)
 
-IndexedLineSet197.setCoord(Coordinate198)
+IndexedLineSet197.coord.append(Coordinate198)
 
-Shape194.setGeometry(IndexedLineSet197)
+Shape194.geometry = IndexedLineSet197
 
-HAnimSegment191.addChildren(Shape194)
+HAnimSegment191.children.append(Shape194)
 
-HAnimJoint190.addChildren(HAnimSegment191)
+HAnimJoint190.children.append(HAnimSegment191)
 #TT
-HAnimJoint199 = HAnimJoint()
-HAnimJoint199.setName("l_transversetarsal")
-HAnimJoint199.setDEF("hanim_l_transversetarsal")
-HAnimJoint199.setCenter([0.21,-0.3,0])
-HAnimJoint199.setStiffness([0,0,0])
-HAnimSegment200 = HAnimSegment()
-HAnimSegment200.setName("l_cuboid")
-HAnimSegment200.setDEF("hanim_l_cuboid")
-Transform201 = Transform()
-Transform201.setTranslation([0.21,-0.3,0])
-Shape202 = Shape()
-Shape202.setUSE("HAnimJointShape")
+HAnimJoint199 = x3d.HAnimJoint()
+HAnimJoint199.name = "l_transversetarsal"
+HAnimJoint199.DEF = "hanim_l_transversetarsal"
+HAnimJoint199.center = [0.21,-0.3,0]
+HAnimJoint199.ulimit = [0,0,0]
+HAnimJoint199.llimit = [0,0,0]
+HAnimSegment200 = x3d.HAnimSegment()
+HAnimSegment200.name = "l_cuboid"
+HAnimSegment200.DEF = "hanim_l_cuboid"
+Transform201 = x3d.Transform()
+Transform201.translation = [0.21,-0.3,0]
+Shape202 = x3d.Shape()
+Shape202.USE = "HAnimJointShape"
 
-Transform201.addChildren(Shape202)
+Transform201.children.append(Shape202)
 
-HAnimSegment200.addChildren(Transform201)
-Shape203 = Shape()
-Appearance204 = Appearance()
-Material205 = Material()
-Material205.setEmissiveColor([1,1,1])
+HAnimSegment200.children.append(Transform201)
+Shape203 = x3d.Shape()
+Appearance204 = x3d.Appearance()
+Material205 = x3d.Material()
+Material205.emissiveColor = [1,1,1]
 
-Appearance204.setMaterial(Material205)
+Appearance204.material = Material205
 
-Shape203.setAppearance(Appearance204)
-IndexedLineSet206 = IndexedLineSet()
-IndexedLineSet206.setDEF("TTtoTMT4")
-IndexedLineSet206.setCoordIndex([0,1])
-Coordinate207 = Coordinate()
-Coordinate207.setPoint([0.21,-0.3,0,0.25,-0.58,0])
+Shape203.appearance = Appearance204
+IndexedLineSet206 = x3d.IndexedLineSet()
+IndexedLineSet206.DEF = "TTtoTMT4"
+IndexedLineSet206.coordIndex = [0,1]
+Coordinate207 = x3d.Coordinate()
+Coordinate207.point = (0.2100,-0.3000,0.0000,0.2500,-0.5800,0.0000)
 
-IndexedLineSet206.setCoord(Coordinate207)
+IndexedLineSet206.coord.append(Coordinate207)
 
-Shape203.setGeometry(IndexedLineSet206)
+Shape203.geometry = IndexedLineSet206
 
-HAnimSegment200.addChildren(Shape203)
-Shape208 = Shape()
-Appearance209 = Appearance()
-Material210 = Material()
-Material210.setEmissiveColor([1,1,1])
+HAnimSegment200.children.append(Shape203)
+Shape208 = x3d.Shape()
+Appearance209 = x3d.Appearance()
+Material210 = x3d.Material()
+Material210.emissiveColor = [1,1,1]
 
-Appearance209.setMaterial(Material210)
+Appearance209.material = Material210
 
-Shape208.setAppearance(Appearance209)
-IndexedLineSet211 = IndexedLineSet()
-IndexedLineSet211.setDEF("TTtoTMT5")
-IndexedLineSet211.setCoordIndex([0,1])
-Coordinate212 = Coordinate()
-Coordinate212.setPoint([0.21,-0.3,0,0.33,-0.52,0])
+Shape208.appearance = Appearance209
+IndexedLineSet211 = x3d.IndexedLineSet()
+IndexedLineSet211.DEF = "TTtoTMT5"
+IndexedLineSet211.coordIndex = [0,1]
+Coordinate212 = x3d.Coordinate()
+Coordinate212.point = (0.2100,-0.3000,0.0000,0.3300,-0.5200,0.0000)
 
-IndexedLineSet211.setCoord(Coordinate212)
+IndexedLineSet211.coord.append(Coordinate212)
 
-Shape208.setGeometry(IndexedLineSet211)
+Shape208.geometry = IndexedLineSet211
 
-HAnimSegment200.addChildren(Shape208)
+HAnimSegment200.children.append(Shape208)
 
-HAnimJoint199.addChildren(HAnimSegment200)
+HAnimJoint199.children.append(HAnimSegment200)
 #TMT4
-HAnimJoint213 = HAnimJoint()
-HAnimJoint213.setName("l_tarsometatarsal_4")
-HAnimJoint213.setDEF("hanim_l_tarsometatarsal_4")
-HAnimJoint213.setCenter([0.25,-0.58,0])
-HAnimJoint213.setStiffness([0,0,0])
-HAnimSegment214 = HAnimSegment()
-HAnimSegment214.setName("l_metatarsal_4")
-HAnimSegment214.setDEF("hanim_l_metatarsal_4")
-Transform215 = Transform()
-Transform215.setTranslation([0.25,-0.58,0])
-Shape216 = Shape()
-Shape216.setUSE("HAnimJointShape")
+HAnimJoint213 = x3d.HAnimJoint()
+HAnimJoint213.name = "l_tarsometatarsal_4"
+HAnimJoint213.DEF = "hanim_l_tarsometatarsal_4"
+HAnimJoint213.center = [0.25,-0.58,0]
+HAnimJoint213.ulimit = [0,0,0]
+HAnimJoint213.llimit = [0,0,0]
+HAnimSegment214 = x3d.HAnimSegment()
+HAnimSegment214.name = "l_metatarsal_4"
+HAnimSegment214.DEF = "hanim_l_metatarsal_4"
+Transform215 = x3d.Transform()
+Transform215.translation = [0.25,-0.58,0]
+Shape216 = x3d.Shape()
+Shape216.USE = "HAnimJointShape"
 
-Transform215.addChildren(Shape216)
+Transform215.children.append(Shape216)
 
-HAnimSegment214.addChildren(Transform215)
-Shape217 = Shape()
-Appearance218 = Appearance()
-Material219 = Material()
-Material219.setEmissiveColor([1,1,1])
+HAnimSegment214.children.append(Transform215)
+Shape217 = x3d.Shape()
+Appearance218 = x3d.Appearance()
+Material219 = x3d.Material()
+Material219.emissiveColor = [1,1,1]
 
-Appearance218.setMaterial(Material219)
+Appearance218.material = Material219
 
-Shape217.setAppearance(Appearance218)
-IndexedLineSet220 = IndexedLineSet()
-IndexedLineSet220.setDEF("TMT4toMTP4")
-IndexedLineSet220.setCoordIndex([0,1])
-Coordinate221 = Coordinate()
-Coordinate221.setPoint([0.25,-0.58,0,0.25,-0.87,0])
+Shape217.appearance = Appearance218
+IndexedLineSet220 = x3d.IndexedLineSet()
+IndexedLineSet220.DEF = "TMT4toMTP4"
+IndexedLineSet220.coordIndex = [0,1]
+Coordinate221 = x3d.Coordinate()
+Coordinate221.point = (0.2500,-0.5800,0.0000,0.2500,-0.8700,0.0000)
 
-IndexedLineSet220.setCoord(Coordinate221)
+IndexedLineSet220.coord.append(Coordinate221)
 
-Shape217.setGeometry(IndexedLineSet220)
+Shape217.geometry = IndexedLineSet220
 
-HAnimSegment214.addChildren(Shape217)
+HAnimSegment214.children.append(Shape217)
 
-HAnimJoint213.addChildren(HAnimSegment214)
-HAnimJoint222 = HAnimJoint()
-HAnimJoint222.setName("l_metatarsophalangeal_4")
-HAnimJoint222.setDEF("hanim_l_metatarsophalangeal_4")
-HAnimJoint222.setCenter([0.25,-0.87,0])
-HAnimJoint222.setStiffness([0,0,0])
-HAnimSegment223 = HAnimSegment()
-HAnimSegment223.setName("l_tarsal_proximal_phalanx_4")
-HAnimSegment223.setDEF("hanim_l_tarsal_proximal_phalanx_4")
-Transform224 = Transform()
-Transform224.setTranslation([0.25,-0.87,0])
-Shape225 = Shape()
-Shape225.setUSE("HAnimJointShape")
+HAnimJoint213.children.append(HAnimSegment214)
+HAnimJoint222 = x3d.HAnimJoint()
+HAnimJoint222.name = "l_metatarsophalangeal_4"
+HAnimJoint222.DEF = "hanim_l_metatarsophalangeal_4"
+HAnimJoint222.center = [0.25,-0.87,0]
+HAnimJoint222.ulimit = [0,0,0]
+HAnimJoint222.llimit = [0,0,0]
+HAnimSegment223 = x3d.HAnimSegment()
+HAnimSegment223.name = "l_tarsal_proximal_phalanx_4"
+HAnimSegment223.DEF = "hanim_l_tarsal_proximal_phalanx_4"
+Transform224 = x3d.Transform()
+Transform224.translation = [0.25,-0.87,0]
+Shape225 = x3d.Shape()
+Shape225.USE = "HAnimJointShape"
 
-Transform224.addChildren(Shape225)
+Transform224.children.append(Shape225)
 
-HAnimSegment223.addChildren(Transform224)
-Shape226 = Shape()
-Appearance227 = Appearance()
-Material228 = Material()
-Material228.setEmissiveColor([1,1,1])
+HAnimSegment223.children.append(Transform224)
+Shape226 = x3d.Shape()
+Appearance227 = x3d.Appearance()
+Material228 = x3d.Material()
+Material228.emissiveColor = [1,1,1]
 
-Appearance227.setMaterial(Material228)
+Appearance227.material = Material228
 
-Shape226.setAppearance(Appearance227)
-IndexedLineSet229 = IndexedLineSet()
-IndexedLineSet229.setDEF("MTP4toPIP4")
-IndexedLineSet229.setCoordIndex([0,1])
-Coordinate230 = Coordinate()
-Coordinate230.setPoint([0.25,-0.87,0,0.25,-1,0])
+Shape226.appearance = Appearance227
+IndexedLineSet229 = x3d.IndexedLineSet()
+IndexedLineSet229.DEF = "MTP4toPIP4"
+IndexedLineSet229.coordIndex = [0,1]
+Coordinate230 = x3d.Coordinate()
+Coordinate230.point = (0.2500,-0.8700,0.0000,0.2500,-1.0000,0.0000)
 
-IndexedLineSet229.setCoord(Coordinate230)
+IndexedLineSet229.coord.append(Coordinate230)
 
-Shape226.setGeometry(IndexedLineSet229)
+Shape226.geometry = IndexedLineSet229
 
-HAnimSegment223.addChildren(Shape226)
+HAnimSegment223.children.append(Shape226)
 
-HAnimJoint222.addChildren(HAnimSegment223)
-HAnimJoint231 = HAnimJoint()
-HAnimJoint231.setName("l_tarsal_proximal_interphalangeal_4")
-HAnimJoint231.setDEF("hanim_l_tarsal_proximal_interphalangeal_4")
-HAnimJoint231.setCenter([0.25,-1,0])
-HAnimJoint231.setStiffness([0,0,0])
-HAnimSegment232 = HAnimSegment()
-HAnimSegment232.setName("l_tarsal_middle_phalanx_4")
-HAnimSegment232.setDEF("hanim_l_tarsal_middle_phalanx_4")
-Transform233 = Transform()
-Transform233.setTranslation([0.25,-1,0])
-Shape234 = Shape()
-Shape234.setUSE("HAnimJointShape")
+HAnimJoint222.children.append(HAnimSegment223)
+HAnimJoint231 = x3d.HAnimJoint()
+HAnimJoint231.name = "l_tarsal_proximal_interphalangeal_4"
+HAnimJoint231.DEF = "hanim_l_tarsal_proximal_interphalangeal_4"
+HAnimJoint231.center = [0.25,-1,0]
+HAnimJoint231.ulimit = [0,0,0]
+HAnimJoint231.llimit = [0,0,0]
+HAnimSegment232 = x3d.HAnimSegment()
+HAnimSegment232.name = "l_tarsal_middle_phalanx_4"
+HAnimSegment232.DEF = "hanim_l_tarsal_middle_phalanx_4"
+Transform233 = x3d.Transform()
+Transform233.translation = [0.25,-1,0]
+Shape234 = x3d.Shape()
+Shape234.USE = "HAnimJointShape"
 
-Transform233.addChildren(Shape234)
+Transform233.children.append(Shape234)
 
-HAnimSegment232.addChildren(Transform233)
-Shape235 = Shape()
-Appearance236 = Appearance()
-Material237 = Material()
-Material237.setEmissiveColor([1,1,1])
+HAnimSegment232.children.append(Transform233)
+Shape235 = x3d.Shape()
+Appearance236 = x3d.Appearance()
+Material237 = x3d.Material()
+Material237.emissiveColor = [1,1,1]
 
-Appearance236.setMaterial(Material237)
+Appearance236.material = Material237
 
-Shape235.setAppearance(Appearance236)
-IndexedLineSet238 = IndexedLineSet()
-IndexedLineSet238.setDEF("PIP4toDIP4")
-IndexedLineSet238.setCoordIndex([0,1])
-Coordinate239 = Coordinate()
-Coordinate239.setPoint([0.25,-1,0,0.25,-1.1,0])
+Shape235.appearance = Appearance236
+IndexedLineSet238 = x3d.IndexedLineSet()
+IndexedLineSet238.DEF = "PIP4toDIP4"
+IndexedLineSet238.coordIndex = [0,1]
+Coordinate239 = x3d.Coordinate()
+Coordinate239.point = (0.2500,-1.0000,0.0000,0.2500,-1.1000,0.0000)
 
-IndexedLineSet238.setCoord(Coordinate239)
+IndexedLineSet238.coord.append(Coordinate239)
 
-Shape235.setGeometry(IndexedLineSet238)
+Shape235.geometry = IndexedLineSet238
 
-HAnimSegment232.addChildren(Shape235)
+HAnimSegment232.children.append(Shape235)
 
-HAnimJoint231.addChildren(HAnimSegment232)
-HAnimJoint240 = HAnimJoint()
-HAnimJoint240.setName("l_tarsal_distal_interphalangeal_4")
-HAnimJoint240.setDEF("hanim_l_tarsal_distal_interphalangeal_4")
-HAnimJoint240.setCenter([0.25,-1.1,0])
-HAnimJoint240.setStiffness([0,0,0])
-HAnimSegment241 = HAnimSegment()
-HAnimSegment241.setName("l_tarsal_distal_phalanx_4")
-HAnimSegment241.setDEF("hanim_l_tarsal_distal_phalanx_4")
-Transform242 = Transform()
-Transform242.setTranslation([0.25,-1.1,0])
-Shape243 = Shape()
-Shape243.setUSE("HAnimJointShape")
+HAnimJoint231.children.append(HAnimSegment232)
+HAnimJoint240 = x3d.HAnimJoint()
+HAnimJoint240.name = "l_tarsal_distal_interphalangeal_4"
+HAnimJoint240.DEF = "hanim_l_tarsal_distal_interphalangeal_4"
+HAnimJoint240.center = [0.25,-1.1,0]
+HAnimJoint240.ulimit = [0,0,0]
+HAnimJoint240.llimit = [0,0,0]
+HAnimSegment241 = x3d.HAnimSegment()
+HAnimSegment241.name = "l_tarsal_distal_phalanx_4"
+HAnimSegment241.DEF = "hanim_l_tarsal_distal_phalanx_4"
+Transform242 = x3d.Transform()
+Transform242.translation = [0.25,-1.1,0]
+Shape243 = x3d.Shape()
+Shape243.USE = "HAnimJointShape"
 
-Transform242.addChildren(Shape243)
+Transform242.children.append(Shape243)
 
-HAnimSegment241.addChildren(Transform242)
-Shape244 = Shape()
-Appearance245 = Appearance()
-Material246 = Material()
-Material246.setEmissiveColor([1,1,1])
+HAnimSegment241.children.append(Transform242)
+Shape244 = x3d.Shape()
+Appearance245 = x3d.Appearance()
+Material246 = x3d.Material()
+Material246.emissiveColor = [1,1,1]
 
-Appearance245.setMaterial(Material246)
+Appearance245.material = Material246
 
-Shape244.setAppearance(Appearance245)
-IndexedLineSet247 = IndexedLineSet()
-IndexedLineSet247.setDEF("tiptoe_l_tarsal_distal_interphalangeal_4")
-IndexedLineSet247.setCoordIndex([0,1])
-Coordinate248 = Coordinate()
-Coordinate248.setPoint([0.25,-1.1,0,0.25,-1.15,0])
+Shape244.appearance = Appearance245
+IndexedLineSet247 = x3d.IndexedLineSet()
+IndexedLineSet247.DEF = "tiptoe_l_tarsal_distal_interphalangeal_4"
+IndexedLineSet247.coordIndex = [0,1]
+Coordinate248 = x3d.Coordinate()
+Coordinate248.point = (0.2500,-1.1000,0.0000,0.2500,-1.1500,0.0000)
 
-IndexedLineSet247.setCoord(Coordinate248)
+IndexedLineSet247.coord.append(Coordinate248)
 
-Shape244.setGeometry(IndexedLineSet247)
+Shape244.geometry = IndexedLineSet247
 
-HAnimSegment241.addChildren(Shape244)
+HAnimSegment241.children.append(Shape244)
 
-HAnimJoint240.addChildren(HAnimSegment241)
+HAnimJoint240.children.append(HAnimSegment241)
 
-HAnimJoint231.addChildren(HAnimJoint240)
+HAnimJoint231.children.append(HAnimJoint240)
 
-HAnimJoint222.addChildren(HAnimJoint231)
+HAnimJoint222.children.append(HAnimJoint231)
 
-HAnimJoint213.addChildren(HAnimJoint222)
+HAnimJoint213.children.append(HAnimJoint222)
 
-HAnimJoint199.addChildren(HAnimJoint213)
+HAnimJoint199.children.append(HAnimJoint213)
 #TMT5
-HAnimJoint249 = HAnimJoint()
-HAnimJoint249.setName("l_tarsometatarsal_5")
-HAnimJoint249.setDEF("hanim_l_tarsometatarsal_5")
-HAnimJoint249.setCenter([0.33,-0.52,0])
-HAnimJoint249.setStiffness([0,0,0])
-HAnimSegment250 = HAnimSegment()
-HAnimSegment250.setName("l_metatarsal_5")
-HAnimSegment250.setDEF("hanim_l_metatarsal_5")
-Transform251 = Transform()
-Transform251.setTranslation([0.33,-0.52,0])
-Shape252 = Shape()
-Shape252.setUSE("HAnimJointShape")
-
-Transform251.addChildren(Shape252)
-
-HAnimSegment250.addChildren(Transform251)
-Shape253 = Shape()
-Appearance254 = Appearance()
-Material255 = Material()
-Material255.setEmissiveColor([1,1,1])
-
-Appearance254.setMaterial(Material255)
-
-Shape253.setAppearance(Appearance254)
-IndexedLineSet256 = IndexedLineSet()
-IndexedLineSet256.setDEF("TMT5toMTP5")
-IndexedLineSet256.setCoordIndex([0,1])
-Coordinate257 = Coordinate()
-Coordinate257.setPoint([0.33,-0.52,0,0.34,-0.8,0])
-
-IndexedLineSet256.setCoord(Coordinate257)
-
-Shape253.setGeometry(IndexedLineSet256)
-
-HAnimSegment250.addChildren(Shape253)
-
-HAnimJoint249.addChildren(HAnimSegment250)
-HAnimJoint258 = HAnimJoint()
-HAnimJoint258.setName("l_metatarsophalangeal_5")
-HAnimJoint258.setDEF("hanim_l_metatarsophalangeal_5")
-HAnimJoint258.setCenter([0.34,-0.8,0])
-HAnimJoint258.setStiffness([0,0,0])
-HAnimSegment259 = HAnimSegment()
-HAnimSegment259.setName("l_tarsal_proximal_phalanx_5")
-HAnimSegment259.setDEF("hanim_l_tarsal_proximal_phalanx_5")
-Transform260 = Transform()
-Transform260.setTranslation([0.34,-0.8,0])
-Shape261 = Shape()
-Shape261.setUSE("HAnimJointShape")
-
-Transform260.addChildren(Shape261)
-
-HAnimSegment259.addChildren(Transform260)
-Shape262 = Shape()
-Appearance263 = Appearance()
-Material264 = Material()
-Material264.setEmissiveColor([1,1,1])
-
-Appearance263.setMaterial(Material264)
-
-Shape262.setAppearance(Appearance263)
-IndexedLineSet265 = IndexedLineSet()
-IndexedLineSet265.setDEF("MTP5toPIP5")
-IndexedLineSet265.setCoordIndex([0,1])
-Coordinate266 = Coordinate()
-Coordinate266.setPoint([0.34,-0.8,0,0.34,-0.95,0])
-
-IndexedLineSet265.setCoord(Coordinate266)
-
-Shape262.setGeometry(IndexedLineSet265)
-
-HAnimSegment259.addChildren(Shape262)
-
-HAnimJoint258.addChildren(HAnimSegment259)
-HAnimJoint267 = HAnimJoint()
-HAnimJoint267.setName("l_tarsal_proximal_interphalangeal_5")
-HAnimJoint267.setDEF("hanim_l_tarsal_proximal_interphalangeal_5")
-HAnimJoint267.setCenter([0.34,-0.95,0])
-HAnimJoint267.setStiffness([0,0,0])
-HAnimSegment268 = HAnimSegment()
-HAnimSegment268.setName("l_tarsal_middle_phalanx_5")
-HAnimSegment268.setDEF("hanim_l_tarsal_middle_phalanx_5")
-Transform269 = Transform()
-Transform269.setTranslation([0.34,-0.95,0])
-Shape270 = Shape()
-Shape270.setUSE("HAnimJointShape")
-
-Transform269.addChildren(Shape270)
-
-HAnimSegment268.addChildren(Transform269)
-Shape271 = Shape()
-Appearance272 = Appearance()
-Material273 = Material()
-Material273.setEmissiveColor([1,1,1])
-
-Appearance272.setMaterial(Material273)
-
-Shape271.setAppearance(Appearance272)
-IndexedLineSet274 = IndexedLineSet()
-IndexedLineSet274.setDEF("PIP5toDIP5")
-IndexedLineSet274.setCoordIndex([0,1])
-Coordinate275 = Coordinate()
-Coordinate275.setPoint([0.34,-0.95,0,0.34,-1.05,0])
+HAnimJoint249 = x3d.HAnimJoint()
+HAnimJoint249.name = "l_tarsometatarsal_5"
+HAnimJoint249.DEF = "hanim_l_tarsometatarsal_5"
+HAnimJoint249.center = [0.33,-0.52,0]
+HAnimJoint249.ulimit = [0,0,0]
+HAnimJoint249.llimit = [0,0,0]
+HAnimSegment250 = x3d.HAnimSegment()
+HAnimSegment250.name = "l_metatarsal_5"
+HAnimSegment250.DEF = "hanim_l_metatarsal_5"
+Transform251 = x3d.Transform()
+Transform251.translation = [0.33,-0.52,0]
+Shape252 = x3d.Shape()
+Shape252.USE = "HAnimJointShape"
+
+Transform251.children.append(Shape252)
+
+HAnimSegment250.children.append(Transform251)
+Shape253 = x3d.Shape()
+Appearance254 = x3d.Appearance()
+Material255 = x3d.Material()
+Material255.emissiveColor = [1,1,1]
+
+Appearance254.material = Material255
+
+Shape253.appearance = Appearance254
+IndexedLineSet256 = x3d.IndexedLineSet()
+IndexedLineSet256.DEF = "TMT5toMTP5"
+IndexedLineSet256.coordIndex = [0,1]
+Coordinate257 = x3d.Coordinate()
+Coordinate257.point = (0.3300,-0.5200,0.0000,0.3400,-0.8000,0.0000)
+
+IndexedLineSet256.coord.append(Coordinate257)
+
+Shape253.geometry = IndexedLineSet256
+
+HAnimSegment250.children.append(Shape253)
+
+HAnimJoint249.children.append(HAnimSegment250)
+HAnimJoint258 = x3d.HAnimJoint()
+HAnimJoint258.name = "l_metatarsophalangeal_5"
+HAnimJoint258.DEF = "hanim_l_metatarsophalangeal_5"
+HAnimJoint258.center = [0.34,-0.8,0]
+HAnimJoint258.ulimit = [0,0,0]
+HAnimJoint258.llimit = [0,0,0]
+HAnimSegment259 = x3d.HAnimSegment()
+HAnimSegment259.name = "l_tarsal_proximal_phalanx_5"
+HAnimSegment259.DEF = "hanim_l_tarsal_proximal_phalanx_5"
+Transform260 = x3d.Transform()
+Transform260.translation = [0.34,-0.8,0]
+Shape261 = x3d.Shape()
+Shape261.USE = "HAnimJointShape"
+
+Transform260.children.append(Shape261)
+
+HAnimSegment259.children.append(Transform260)
+Shape262 = x3d.Shape()
+Appearance263 = x3d.Appearance()
+Material264 = x3d.Material()
+Material264.emissiveColor = [1,1,1]
+
+Appearance263.material = Material264
+
+Shape262.appearance = Appearance263
+IndexedLineSet265 = x3d.IndexedLineSet()
+IndexedLineSet265.DEF = "MTP5toPIP5"
+IndexedLineSet265.coordIndex = [0,1]
+Coordinate266 = x3d.Coordinate()
+Coordinate266.point = (0.3400,-0.8000,0.0000,0.3400,-0.9500,0.0000)
+
+IndexedLineSet265.coord.append(Coordinate266)
+
+Shape262.geometry = IndexedLineSet265
+
+HAnimSegment259.children.append(Shape262)
+
+HAnimJoint258.children.append(HAnimSegment259)
+HAnimJoint267 = x3d.HAnimJoint()
+HAnimJoint267.name = "l_tarsal_proximal_interphalangeal_5"
+HAnimJoint267.DEF = "hanim_l_tarsal_proximal_interphalangeal_5"
+HAnimJoint267.center = [0.34,-0.95,0]
+HAnimJoint267.ulimit = [0,0,0]
+HAnimJoint267.llimit = [0,0,0]
+HAnimSegment268 = x3d.HAnimSegment()
+HAnimSegment268.name = "l_tarsal_middle_phalanx_5"
+HAnimSegment268.DEF = "hanim_l_tarsal_middle_phalanx_5"
+Transform269 = x3d.Transform()
+Transform269.translation = [0.34,-0.95,0]
+Shape270 = x3d.Shape()
+Shape270.USE = "HAnimJointShape"
+
+Transform269.children.append(Shape270)
+
+HAnimSegment268.children.append(Transform269)
+Shape271 = x3d.Shape()
+Appearance272 = x3d.Appearance()
+Material273 = x3d.Material()
+Material273.emissiveColor = [1,1,1]
+
+Appearance272.material = Material273
+
+Shape271.appearance = Appearance272
+IndexedLineSet274 = x3d.IndexedLineSet()
+IndexedLineSet274.DEF = "PIP5toDIP5"
+IndexedLineSet274.coordIndex = [0,1]
+Coordinate275 = x3d.Coordinate()
+Coordinate275.point = (0.3400,-0.9500,0.0000,0.3400,-1.0500,0.0000)
 
-IndexedLineSet274.setCoord(Coordinate275)
+IndexedLineSet274.coord.append(Coordinate275)
 
-Shape271.setGeometry(IndexedLineSet274)
+Shape271.geometry = IndexedLineSet274
 
-HAnimSegment268.addChildren(Shape271)
+HAnimSegment268.children.append(Shape271)
 
-HAnimJoint267.addChildren(HAnimSegment268)
-HAnimJoint276 = HAnimJoint()
-HAnimJoint276.setName("l_tarsal_distal_interphalangeal_5")
-HAnimJoint276.setDEF("hanim_l_tarsal_distal_interphalangeal_5")
-HAnimJoint276.setCenter([0.34,-1.05,0])
-HAnimJoint276.setStiffness([0,0,0])
-HAnimSegment277 = HAnimSegment()
-HAnimSegment277.setName("l_tarsal_distal_phalanx_5")
-HAnimSegment277.setDEF("hanim_l_tarsal_distal_phalanx_5")
-Transform278 = Transform()
-Transform278.setTranslation([0.34,-1.05,0])
-Shape279 = Shape()
-Shape279.setUSE("HAnimJointShape")
+HAnimJoint267.children.append(HAnimSegment268)
+HAnimJoint276 = x3d.HAnimJoint()
+HAnimJoint276.name = "l_tarsal_distal_interphalangeal_5"
+HAnimJoint276.DEF = "hanim_l_tarsal_distal_interphalangeal_5"
+HAnimJoint276.center = [0.34,-1.05,0]
+HAnimJoint276.ulimit = [0,0,0]
+HAnimJoint276.llimit = [0,0,0]
+HAnimSegment277 = x3d.HAnimSegment()
+HAnimSegment277.name = "l_tarsal_distal_phalanx_5"
+HAnimSegment277.DEF = "hanim_l_tarsal_distal_phalanx_5"
+Transform278 = x3d.Transform()
+Transform278.translation = [0.34,-1.05,0]
+Shape279 = x3d.Shape()
+Shape279.USE = "HAnimJointShape"
 
-Transform278.addChildren(Shape279)
+Transform278.children.append(Shape279)
 
-HAnimSegment277.addChildren(Transform278)
-Shape280 = Shape()
-Appearance281 = Appearance()
-Material282 = Material()
-Material282.setEmissiveColor([1,1,1])
+HAnimSegment277.children.append(Transform278)
+Shape280 = x3d.Shape()
+Appearance281 = x3d.Appearance()
+Material282 = x3d.Material()
+Material282.emissiveColor = [1,1,1]
 
-Appearance281.setMaterial(Material282)
+Appearance281.material = Material282
 
-Shape280.setAppearance(Appearance281)
-IndexedLineSet283 = IndexedLineSet()
-IndexedLineSet283.setDEF("tiptoe_l_tarsal_distal_interphalangeal_5")
-IndexedLineSet283.setCoordIndex([0,1])
-Coordinate284 = Coordinate()
-Coordinate284.setPoint([0.34,-1.05,0,0.34,-1.08,0])
+Shape280.appearance = Appearance281
+IndexedLineSet283 = x3d.IndexedLineSet()
+IndexedLineSet283.DEF = "tiptoe_l_tarsal_distal_interphalangeal_5"
+IndexedLineSet283.coordIndex = [0,1]
+Coordinate284 = x3d.Coordinate()
+Coordinate284.point = (0.3400,-1.0500,0.0000,0.3400,-1.0800,0.0000)
 
-IndexedLineSet283.setCoord(Coordinate284)
+IndexedLineSet283.coord.append(Coordinate284)
 
-Shape280.setGeometry(IndexedLineSet283)
+Shape280.geometry = IndexedLineSet283
 
-HAnimSegment277.addChildren(Shape280)
+HAnimSegment277.children.append(Shape280)
 
-HAnimJoint276.addChildren(HAnimSegment277)
+HAnimJoint276.children.append(HAnimSegment277)
 
-HAnimJoint267.addChildren(HAnimJoint276)
+HAnimJoint267.children.append(HAnimJoint276)
 
-HAnimJoint258.addChildren(HAnimJoint267)
+HAnimJoint258.children.append(HAnimJoint267)
 
-HAnimJoint249.addChildren(HAnimJoint258)
+HAnimJoint249.children.append(HAnimJoint258)
 
-HAnimJoint199.addChildren(HAnimJoint249)
+HAnimJoint199.children.append(HAnimJoint249)
 
-HAnimJoint190.addChildren(HAnimJoint199)
+HAnimJoint190.children.append(HAnimJoint199)
 
-HAnimJoint28.addChildren(HAnimJoint190)
+HAnimJoint28.children.append(HAnimJoint190)
 
-HAnimJoint27.addChildren(HAnimJoint28)
+HAnimJoint27.children.append(HAnimJoint28)
 
-HAnimHumanoid24.setSkeleton(HAnimJoint27)
-HAnimJoint285 = HAnimJoint()
-HAnimJoint285.setUSE("hanim_humanoid_root")
+HAnimHumanoid24.skeleton.append(HAnimJoint27)
+HAnimJoint285 = x3d.HAnimJoint()
+HAnimJoint285.USE = "hanim_humanoid_root"
 
-HAnimHumanoid24.addJoints(HAnimJoint285)
-HAnimJoint286 = HAnimJoint()
-HAnimJoint286.setUSE("hanim_l_calcaneocuboid")
+HAnimHumanoid24.joints.append(HAnimJoint285)
+HAnimJoint286 = x3d.HAnimJoint()
+HAnimJoint286.USE = "hanim_l_calcaneocuboid"
 
-HAnimHumanoid24.addJoints(HAnimJoint286)
-HAnimJoint287 = HAnimJoint()
-HAnimJoint287.setUSE("hanim_l_cuneonavicular_1")
+HAnimHumanoid24.joints.append(HAnimJoint286)
+HAnimJoint287 = x3d.HAnimJoint()
+HAnimJoint287.USE = "hanim_l_cuneonavicular_1"
 
-HAnimHumanoid24.addJoints(HAnimJoint287)
-HAnimJoint288 = HAnimJoint()
-HAnimJoint288.setUSE("hanim_l_cuneonavicular_2")
+HAnimHumanoid24.joints.append(HAnimJoint287)
+HAnimJoint288 = x3d.HAnimJoint()
+HAnimJoint288.USE = "hanim_l_cuneonavicular_2"
 
-HAnimHumanoid24.addJoints(HAnimJoint288)
-HAnimJoint289 = HAnimJoint()
-HAnimJoint289.setUSE("hanim_l_cuneonavicular_3")
+HAnimHumanoid24.joints.append(HAnimJoint288)
+HAnimJoint289 = x3d.HAnimJoint()
+HAnimJoint289.USE = "hanim_l_cuneonavicular_3"
 
-HAnimHumanoid24.addJoints(HAnimJoint289)
-HAnimJoint290 = HAnimJoint()
-HAnimJoint290.setUSE("hanim_l_metatarsophalangeal_1")
+HAnimHumanoid24.joints.append(HAnimJoint289)
+HAnimJoint290 = x3d.HAnimJoint()
+HAnimJoint290.USE = "hanim_l_metatarsophalangeal_1"
 
-HAnimHumanoid24.addJoints(HAnimJoint290)
-HAnimJoint291 = HAnimJoint()
-HAnimJoint291.setUSE("hanim_l_metatarsophalangeal_2")
+HAnimHumanoid24.joints.append(HAnimJoint290)
+HAnimJoint291 = x3d.HAnimJoint()
+HAnimJoint291.USE = "hanim_l_metatarsophalangeal_2"
 
-HAnimHumanoid24.addJoints(HAnimJoint291)
-HAnimJoint292 = HAnimJoint()
-HAnimJoint292.setUSE("hanim_l_metatarsophalangeal_3")
+HAnimHumanoid24.joints.append(HAnimJoint291)
+HAnimJoint292 = x3d.HAnimJoint()
+HAnimJoint292.USE = "hanim_l_metatarsophalangeal_3"
 
-HAnimHumanoid24.addJoints(HAnimJoint292)
-HAnimJoint293 = HAnimJoint()
-HAnimJoint293.setUSE("hanim_l_metatarsophalangeal_4")
+HAnimHumanoid24.joints.append(HAnimJoint292)
+HAnimJoint293 = x3d.HAnimJoint()
+HAnimJoint293.USE = "hanim_l_metatarsophalangeal_4"
 
-HAnimHumanoid24.addJoints(HAnimJoint293)
-HAnimJoint294 = HAnimJoint()
-HAnimJoint294.setUSE("hanim_l_metatarsophalangeal_5")
+HAnimHumanoid24.joints.append(HAnimJoint293)
+HAnimJoint294 = x3d.HAnimJoint()
+HAnimJoint294.USE = "hanim_l_metatarsophalangeal_5"
 
-HAnimHumanoid24.addJoints(HAnimJoint294)
-HAnimJoint295 = HAnimJoint()
-HAnimJoint295.setUSE("hanim_l_talocalcaneonavicular")
+HAnimHumanoid24.joints.append(HAnimJoint294)
+HAnimJoint295 = x3d.HAnimJoint()
+HAnimJoint295.USE = "hanim_l_talocalcaneonavicular"
 
-HAnimHumanoid24.addJoints(HAnimJoint295)
-HAnimJoint296 = HAnimJoint()
-HAnimJoint296.setUSE("hanim_l_talocrural")
+HAnimHumanoid24.joints.append(HAnimJoint295)
+HAnimJoint296 = x3d.HAnimJoint()
+HAnimJoint296.USE = "hanim_l_talocrural"
 
-HAnimHumanoid24.addJoints(HAnimJoint296)
-HAnimJoint297 = HAnimJoint()
-HAnimJoint297.setUSE("hanim_l_tarsal_distal_interphalangeal_2")
+HAnimHumanoid24.joints.append(HAnimJoint296)
+HAnimJoint297 = x3d.HAnimJoint()
+HAnimJoint297.USE = "hanim_l_tarsal_distal_interphalangeal_2"
 
-HAnimHumanoid24.addJoints(HAnimJoint297)
-HAnimJoint298 = HAnimJoint()
-HAnimJoint298.setUSE("hanim_l_tarsal_distal_interphalangeal_3")
+HAnimHumanoid24.joints.append(HAnimJoint297)
+HAnimJoint298 = x3d.HAnimJoint()
+HAnimJoint298.USE = "hanim_l_tarsal_distal_interphalangeal_3"
 
-HAnimHumanoid24.addJoints(HAnimJoint298)
-HAnimJoint299 = HAnimJoint()
-HAnimJoint299.setUSE("hanim_l_tarsal_distal_interphalangeal_4")
+HAnimHumanoid24.joints.append(HAnimJoint298)
+HAnimJoint299 = x3d.HAnimJoint()
+HAnimJoint299.USE = "hanim_l_tarsal_distal_interphalangeal_4"
 
-HAnimHumanoid24.addJoints(HAnimJoint299)
-HAnimJoint300 = HAnimJoint()
-HAnimJoint300.setUSE("hanim_l_tarsal_distal_interphalangeal_5")
+HAnimHumanoid24.joints.append(HAnimJoint299)
+HAnimJoint300 = x3d.HAnimJoint()
+HAnimJoint300.USE = "hanim_l_tarsal_distal_interphalangeal_5"
 
-HAnimHumanoid24.addJoints(HAnimJoint300)
-HAnimJoint301 = HAnimJoint()
-HAnimJoint301.setUSE("hanim_l_tarsal_interphalangeal_1")
+HAnimHumanoid24.joints.append(HAnimJoint300)
+HAnimJoint301 = x3d.HAnimJoint()
+HAnimJoint301.USE = "hanim_l_tarsal_interphalangeal_1"
 
-HAnimHumanoid24.addJoints(HAnimJoint301)
-HAnimJoint302 = HAnimJoint()
-HAnimJoint302.setUSE("hanim_l_tarsal_proximal_interphalangeal_2")
+HAnimHumanoid24.joints.append(HAnimJoint301)
+HAnimJoint302 = x3d.HAnimJoint()
+HAnimJoint302.USE = "hanim_l_tarsal_proximal_interphalangeal_2"
 
-HAnimHumanoid24.addJoints(HAnimJoint302)
-HAnimJoint303 = HAnimJoint()
-HAnimJoint303.setUSE("hanim_l_tarsal_proximal_interphalangeal_3")
+HAnimHumanoid24.joints.append(HAnimJoint302)
+HAnimJoint303 = x3d.HAnimJoint()
+HAnimJoint303.USE = "hanim_l_tarsal_proximal_interphalangeal_3"
 
-HAnimHumanoid24.addJoints(HAnimJoint303)
-HAnimJoint304 = HAnimJoint()
-HAnimJoint304.setUSE("hanim_l_tarsal_proximal_interphalangeal_4")
+HAnimHumanoid24.joints.append(HAnimJoint303)
+HAnimJoint304 = x3d.HAnimJoint()
+HAnimJoint304.USE = "hanim_l_tarsal_proximal_interphalangeal_4"
 
-HAnimHumanoid24.addJoints(HAnimJoint304)
-HAnimJoint305 = HAnimJoint()
-HAnimJoint305.setUSE("hanim_l_tarsal_proximal_interphalangeal_5")
+HAnimHumanoid24.joints.append(HAnimJoint304)
+HAnimJoint305 = x3d.HAnimJoint()
+HAnimJoint305.USE = "hanim_l_tarsal_proximal_interphalangeal_5"
 
-HAnimHumanoid24.addJoints(HAnimJoint305)
-HAnimJoint306 = HAnimJoint()
-HAnimJoint306.setUSE("hanim_l_tarsometatarsal_1")
+HAnimHumanoid24.joints.append(HAnimJoint305)
+HAnimJoint306 = x3d.HAnimJoint()
+HAnimJoint306.USE = "hanim_l_tarsometatarsal_1"
 
-HAnimHumanoid24.addJoints(HAnimJoint306)
-HAnimJoint307 = HAnimJoint()
-HAnimJoint307.setUSE("hanim_l_tarsometatarsal_2")
+HAnimHumanoid24.joints.append(HAnimJoint306)
+HAnimJoint307 = x3d.HAnimJoint()
+HAnimJoint307.USE = "hanim_l_tarsometatarsal_2"
 
-HAnimHumanoid24.addJoints(HAnimJoint307)
-HAnimJoint308 = HAnimJoint()
-HAnimJoint308.setUSE("hanim_l_tarsometatarsal_3")
+HAnimHumanoid24.joints.append(HAnimJoint307)
+HAnimJoint308 = x3d.HAnimJoint()
+HAnimJoint308.USE = "hanim_l_tarsometatarsal_3"
 
-HAnimHumanoid24.addJoints(HAnimJoint308)
-HAnimJoint309 = HAnimJoint()
-HAnimJoint309.setUSE("hanim_l_tarsometatarsal_4")
+HAnimHumanoid24.joints.append(HAnimJoint308)
+HAnimJoint309 = x3d.HAnimJoint()
+HAnimJoint309.USE = "hanim_l_tarsometatarsal_4"
 
-HAnimHumanoid24.addJoints(HAnimJoint309)
-HAnimJoint310 = HAnimJoint()
-HAnimJoint310.setUSE("hanim_l_tarsometatarsal_5")
+HAnimHumanoid24.joints.append(HAnimJoint309)
+HAnimJoint310 = x3d.HAnimJoint()
+HAnimJoint310.USE = "hanim_l_tarsometatarsal_5"
 
-HAnimHumanoid24.addJoints(HAnimJoint310)
-HAnimJoint311 = HAnimJoint()
-HAnimJoint311.setUSE("hanim_l_transversetarsal")
+HAnimHumanoid24.joints.append(HAnimJoint310)
+HAnimJoint311 = x3d.HAnimJoint()
+HAnimJoint311.USE = "hanim_l_transversetarsal"
 
-HAnimHumanoid24.addJoints(HAnimJoint311)
-HAnimSegment312 = HAnimSegment()
-HAnimSegment312.setUSE("hanim_l_calcaneus")
+HAnimHumanoid24.joints.append(HAnimJoint311)
+HAnimSegment312 = x3d.HAnimSegment()
+HAnimSegment312.USE = "hanim_l_calcaneus"
 
-HAnimHumanoid24.addSegments(HAnimSegment312)
-HAnimSegment313 = HAnimSegment()
-HAnimSegment313.setUSE("hanim_l_cuboid")
+HAnimHumanoid24.segments.append(HAnimSegment312)
+HAnimSegment313 = x3d.HAnimSegment()
+HAnimSegment313.USE = "hanim_l_cuboid"
 
-HAnimHumanoid24.addSegments(HAnimSegment313)
-HAnimSegment314 = HAnimSegment()
-HAnimSegment314.setUSE("hanim_l_cuneiform_1")
+HAnimHumanoid24.segments.append(HAnimSegment313)
+HAnimSegment314 = x3d.HAnimSegment()
+HAnimSegment314.USE = "hanim_l_cuneiform_1"
 
-HAnimHumanoid24.addSegments(HAnimSegment314)
-HAnimSegment315 = HAnimSegment()
-HAnimSegment315.setUSE("hanim_l_cuneiform_2")
+HAnimHumanoid24.segments.append(HAnimSegment314)
+HAnimSegment315 = x3d.HAnimSegment()
+HAnimSegment315.USE = "hanim_l_cuneiform_2"
 
-HAnimHumanoid24.addSegments(HAnimSegment315)
-HAnimSegment316 = HAnimSegment()
-HAnimSegment316.setUSE("hanim_l_cuneiform_3")
+HAnimHumanoid24.segments.append(HAnimSegment315)
+HAnimSegment316 = x3d.HAnimSegment()
+HAnimSegment316.USE = "hanim_l_cuneiform_3"
 
-HAnimHumanoid24.addSegments(HAnimSegment316)
-HAnimSegment317 = HAnimSegment()
-HAnimSegment317.setUSE("hanim_l_metatarsal_1")
+HAnimHumanoid24.segments.append(HAnimSegment316)
+HAnimSegment317 = x3d.HAnimSegment()
+HAnimSegment317.USE = "hanim_l_metatarsal_1"
 
-HAnimHumanoid24.addSegments(HAnimSegment317)
-HAnimSegment318 = HAnimSegment()
-HAnimSegment318.setUSE("hanim_l_metatarsal_2")
+HAnimHumanoid24.segments.append(HAnimSegment317)
+HAnimSegment318 = x3d.HAnimSegment()
+HAnimSegment318.USE = "hanim_l_metatarsal_2"
 
-HAnimHumanoid24.addSegments(HAnimSegment318)
-HAnimSegment319 = HAnimSegment()
-HAnimSegment319.setUSE("hanim_l_metatarsal_3")
+HAnimHumanoid24.segments.append(HAnimSegment318)
+HAnimSegment319 = x3d.HAnimSegment()
+HAnimSegment319.USE = "hanim_l_metatarsal_3"
 
-HAnimHumanoid24.addSegments(HAnimSegment319)
-HAnimSegment320 = HAnimSegment()
-HAnimSegment320.setUSE("hanim_l_metatarsal_4")
+HAnimHumanoid24.segments.append(HAnimSegment319)
+HAnimSegment320 = x3d.HAnimSegment()
+HAnimSegment320.USE = "hanim_l_metatarsal_4"
 
-HAnimHumanoid24.addSegments(HAnimSegment320)
-HAnimSegment321 = HAnimSegment()
-HAnimSegment321.setUSE("hanim_l_metatarsal_5")
+HAnimHumanoid24.segments.append(HAnimSegment320)
+HAnimSegment321 = x3d.HAnimSegment()
+HAnimSegment321.USE = "hanim_l_metatarsal_5"
 
-HAnimHumanoid24.addSegments(HAnimSegment321)
-HAnimSegment322 = HAnimSegment()
-HAnimSegment322.setUSE("hanim_l_navicular")
+HAnimHumanoid24.segments.append(HAnimSegment321)
+HAnimSegment322 = x3d.HAnimSegment()
+HAnimSegment322.USE = "hanim_l_navicular"
 
-HAnimHumanoid24.addSegments(HAnimSegment322)
-HAnimSegment323 = HAnimSegment()
-HAnimSegment323.setUSE("hanim_l_talus")
+HAnimHumanoid24.segments.append(HAnimSegment322)
+HAnimSegment323 = x3d.HAnimSegment()
+HAnimSegment323.USE = "hanim_l_talus"
 
-HAnimHumanoid24.addSegments(HAnimSegment323)
-HAnimSegment324 = HAnimSegment()
-HAnimSegment324.setUSE("hanim_l_tarsal_distal_phalanx_1")
+HAnimHumanoid24.segments.append(HAnimSegment323)
+HAnimSegment324 = x3d.HAnimSegment()
+HAnimSegment324.USE = "hanim_l_tarsal_distal_phalanx_1"
 
-HAnimHumanoid24.addSegments(HAnimSegment324)
-HAnimSegment325 = HAnimSegment()
-HAnimSegment325.setUSE("hanim_l_tarsal_distal_phalanx_2")
+HAnimHumanoid24.segments.append(HAnimSegment324)
+HAnimSegment325 = x3d.HAnimSegment()
+HAnimSegment325.USE = "hanim_l_tarsal_distal_phalanx_2"
 
-HAnimHumanoid24.addSegments(HAnimSegment325)
-HAnimSegment326 = HAnimSegment()
-HAnimSegment326.setUSE("hanim_l_tarsal_distal_phalanx_3")
+HAnimHumanoid24.segments.append(HAnimSegment325)
+HAnimSegment326 = x3d.HAnimSegment()
+HAnimSegment326.USE = "hanim_l_tarsal_distal_phalanx_3"
 
-HAnimHumanoid24.addSegments(HAnimSegment326)
-HAnimSegment327 = HAnimSegment()
-HAnimSegment327.setUSE("hanim_l_tarsal_distal_phalanx_4")
+HAnimHumanoid24.segments.append(HAnimSegment326)
+HAnimSegment327 = x3d.HAnimSegment()
+HAnimSegment327.USE = "hanim_l_tarsal_distal_phalanx_4"
 
-HAnimHumanoid24.addSegments(HAnimSegment327)
-HAnimSegment328 = HAnimSegment()
-HAnimSegment328.setUSE("hanim_l_tarsal_distal_phalanx_5")
+HAnimHumanoid24.segments.append(HAnimSegment327)
+HAnimSegment328 = x3d.HAnimSegment()
+HAnimSegment328.USE = "hanim_l_tarsal_distal_phalanx_5"
 
-HAnimHumanoid24.addSegments(HAnimSegment328)
-HAnimSegment329 = HAnimSegment()
-HAnimSegment329.setUSE("hanim_l_tarsal_middle_phalanx_2")
+HAnimHumanoid24.segments.append(HAnimSegment328)
+HAnimSegment329 = x3d.HAnimSegment()
+HAnimSegment329.USE = "hanim_l_tarsal_middle_phalanx_2"
 
-HAnimHumanoid24.addSegments(HAnimSegment329)
-HAnimSegment330 = HAnimSegment()
-HAnimSegment330.setUSE("hanim_l_tarsal_middle_phalanx_3")
+HAnimHumanoid24.segments.append(HAnimSegment329)
+HAnimSegment330 = x3d.HAnimSegment()
+HAnimSegment330.USE = "hanim_l_tarsal_middle_phalanx_3"
 
-HAnimHumanoid24.addSegments(HAnimSegment330)
-HAnimSegment331 = HAnimSegment()
-HAnimSegment331.setUSE("hanim_l_tarsal_middle_phalanx_4")
+HAnimHumanoid24.segments.append(HAnimSegment330)
+HAnimSegment331 = x3d.HAnimSegment()
+HAnimSegment331.USE = "hanim_l_tarsal_middle_phalanx_4"
 
-HAnimHumanoid24.addSegments(HAnimSegment331)
-HAnimSegment332 = HAnimSegment()
-HAnimSegment332.setUSE("hanim_l_tarsal_middle_phalanx_5")
+HAnimHumanoid24.segments.append(HAnimSegment331)
+HAnimSegment332 = x3d.HAnimSegment()
+HAnimSegment332.USE = "hanim_l_tarsal_middle_phalanx_5"
 
-HAnimHumanoid24.addSegments(HAnimSegment332)
-HAnimSegment333 = HAnimSegment()
-HAnimSegment333.setUSE("hanim_l_tarsal_proximal_phalanx_1")
+HAnimHumanoid24.segments.append(HAnimSegment332)
+HAnimSegment333 = x3d.HAnimSegment()
+HAnimSegment333.USE = "hanim_l_tarsal_proximal_phalanx_1"
 
-HAnimHumanoid24.addSegments(HAnimSegment333)
-HAnimSegment334 = HAnimSegment()
-HAnimSegment334.setUSE("hanim_l_tarsal_proximal_phalanx_2")
+HAnimHumanoid24.segments.append(HAnimSegment333)
+HAnimSegment334 = x3d.HAnimSegment()
+HAnimSegment334.USE = "hanim_l_tarsal_proximal_phalanx_2"
 
-HAnimHumanoid24.addSegments(HAnimSegment334)
-HAnimSegment335 = HAnimSegment()
-HAnimSegment335.setUSE("hanim_l_tarsal_proximal_phalanx_3")
+HAnimHumanoid24.segments.append(HAnimSegment334)
+HAnimSegment335 = x3d.HAnimSegment()
+HAnimSegment335.USE = "hanim_l_tarsal_proximal_phalanx_3"
 
-HAnimHumanoid24.addSegments(HAnimSegment335)
-HAnimSegment336 = HAnimSegment()
-HAnimSegment336.setUSE("hanim_l_tarsal_proximal_phalanx_4")
+HAnimHumanoid24.segments.append(HAnimSegment335)
+HAnimSegment336 = x3d.HAnimSegment()
+HAnimSegment336.USE = "hanim_l_tarsal_proximal_phalanx_4"
 
-HAnimHumanoid24.addSegments(HAnimSegment336)
-HAnimSegment337 = HAnimSegment()
-HAnimSegment337.setUSE("hanim_l_tarsal_proximal_phalanx_5")
+HAnimHumanoid24.segments.append(HAnimSegment336)
+HAnimSegment337 = x3d.HAnimSegment()
+HAnimSegment337.USE = "hanim_l_tarsal_proximal_phalanx_5"
 
-HAnimHumanoid24.addSegments(HAnimSegment337)
+HAnimHumanoid24.segments.append(HAnimSegment337)
 
-Scene22.addChildren(HAnimHumanoid24)
+Scene22.children.append(HAnimHumanoid24)
 
-X3D0.setScene(Scene22)
-X3D0.toFileX3D("././HAnimModelFootLeft_RoundTrip.x3d")
+X3D0.Scene = Scene22
+f = open("././HAnimModelFootLeft_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()

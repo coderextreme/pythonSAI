@@ -27,6 +27,7 @@ class MyTrustManager extends X509TrustManager {
 */
 
 class RunSaxon {
+/*
 protected static class ExitException extends SecurityException 
     {
         public final int status;
@@ -36,7 +37,9 @@ protected static class ExitException extends SecurityException
             this.status = status;
         }
     }
+*/
 
+/*
     private static class NoExitSecurityManager extends SecurityManager 
     {
         @Override
@@ -56,6 +59,7 @@ protected static class ExitException extends SecurityException
             throw new ExitException(status);
         }
     }
+ */
 
 	public static void main(String args[]) {
 		try {
@@ -191,7 +195,7 @@ protected static class ExitException extends SecurityException
 				}
 			}
 			//System.setSecurityManager(null); // or save and restore original
-		} catch (ExitException ee) {
+		} catch (Exception ee) {
 			ee.printStackTrace();
 		}
 	}

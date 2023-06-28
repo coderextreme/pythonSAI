@@ -63,7 +63,7 @@ POSSIBILITY OF SUCH DAMAGE.
     <property name="src.org.web3d.x3d.sai"   value="${java.src.dir}/org/web3d/x3d/sai"/>  <!-- interfaces -->
     <property name="jsai.classes.archive.jar.name" value="X3DJSAIL.4.0.classes.jar"/>
     <property name=   "jsai.full.archive.jar.name" value="X3DJSAIL.4.0.full.jar"/>
-    <property name=   "saxon.jar.name" value="saxon-he-10.6.jar"/>
+    <property name=   "saxon.jar.name" value="saxon-he-12.1.jar"/>
     <property name=   "node" value="node.exe"/>
 	
     <target name="default" depends="build.all"/>

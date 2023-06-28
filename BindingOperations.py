@@ -1,354 +1,356 @@
-from x3dpsail import *
-X3D0 = X3D()
-X3D0.setProfile("Immersive")
-X3D0.setVersion("3.3")
-head1 = head()
-meta2 = meta()
-meta2.setName("title")
-meta2.setContent("BindingOperations.x3d")
+print('<!--')
+import x3d
+print('-->')
+X3D0 = x3d.X3D()
+X3D0.profile = "Immersive"
+X3D0.version = "3.3"
+head1 = x3d.head()
+meta2 = x3d.meta()
+meta2.name = "title"
+meta2.content = "BindingOperations.x3d"
 
-head1.addMeta(meta2)
-meta3 = meta()
-meta3.setName("description")
-meta3.setContent("Illustrate Viewpoint binding operations (in gory detail!) as described in Chapter 4 concepts. Scene design: a TimeSensor clock drives and IntegerSequencer for each t0/t1/etc. event, and a customized Script node sends bind/unbind events to the correct Viewpoint. Display the browser console to see occurrence of each event.")
+head1.children.append(meta2)
+meta3 = x3d.meta()
+meta3.name = "description"
+meta3.content = "Illustrate Viewpoint binding operations (in gory detail!) as described in Chapter 4 concepts. Scene design: a TimeSensor clock drives and IntegerSequencer for each t0/t1/etc. event, and a customized Script node sends bind/unbind events to the correct Viewpoint. Display the browser console to see occurrence of each event."
 
-head1.addMeta(meta3)
-meta4 = meta()
-meta4.setName("creator")
-meta4.setContent("Don Brutzman")
+head1.children.append(meta3)
+meta4 = x3d.meta()
+meta4.name = "creator"
+meta4.content = "Don Brutzman"
 
-head1.addMeta(meta4)
-meta5 = meta()
-meta5.setName("created")
-meta5.setContent("5 January 2008")
+head1.children.append(meta4)
+meta5 = x3d.meta()
+meta5.name = "created"
+meta5.content = "5 January 2008"
 
-head1.addMeta(meta5)
-meta6 = meta()
-meta6.setName("modified")
-meta6.setContent("22 July 2013")
+head1.children.append(meta5)
+meta6 = x3d.meta()
+meta6.name = "modified"
+meta6.content = "22 July 2013"
 
-head1.addMeta(meta6)
-meta7 = meta()
-meta7.setName("reference")
-meta7.setContent("BindingOperations.console.txt")
+head1.children.append(meta6)
+meta7 = x3d.meta()
+meta7.name = "reference"
+meta7.content = "BindingOperations.console.txt"
 
-head1.addMeta(meta7)
-meta8 = meta()
-meta8.setName("reference")
-meta8.setContent("BindingStackOperations.png")
+head1.children.append(meta7)
+meta8 = x3d.meta()
+meta8.name = "reference"
+meta8.content = "BindingStackOperations.png"
 
-head1.addMeta(meta8)
-meta9 = meta()
-meta9.setName("reference")
-meta9.setContent("X3D for Web Authors, Section 2.5.1, Figure 4.1")
+head1.children.append(meta8)
+meta9 = x3d.meta()
+meta9.name = "reference"
+meta9.content = "X3D for Web Authors, Section 2.5.1, Figure 4.1"
 
-head1.addMeta(meta9)
-meta10 = meta()
-meta10.setName("reference")
-meta10.setContent("http://X3dGraphics.com")
+head1.children.append(meta9)
+meta10 = x3d.meta()
+meta10.name = "reference"
+meta10.content = "http://X3dGraphics.com"
 
-head1.addMeta(meta10)
-meta11 = meta()
-meta11.setName("reference")
-meta11.setContent("https://www.web3d.org/x3d/content/examples/X3dResources.html")
+head1.children.append(meta10)
+meta11 = x3d.meta()
+meta11.name = "reference"
+meta11.content = "https://www.web3d.org/x3d/content/examples/X3dResources.html"
 
-head1.addMeta(meta11)
-meta12 = meta()
-meta12.setName("rights")
-meta12.setContent("Copyright Don Brutzman and Leonard Daly 2007")
+head1.children.append(meta11)
+meta12 = x3d.meta()
+meta12.name = "rights"
+meta12.content = "Copyright Don Brutzman and Leonard Daly 2007"
 
-head1.addMeta(meta12)
-meta13 = meta()
-meta13.setName("subject")
-meta13.setContent("X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com")
+head1.children.append(meta12)
+meta13 = x3d.meta()
+meta13.name = "subject"
+meta13.content = "X3D book, X3D graphics, X3D-Edit, http://www.x3dGraphics.com"
 
-head1.addMeta(meta13)
-meta14 = meta()
-meta14.setName("identifier")
-meta14.setContent("http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter04ViewingNavigation/BindingOperations.x3d")
+head1.children.append(meta13)
+meta14 = x3d.meta()
+meta14.name = "identifier"
+meta14.content = "http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter04ViewingNavigation/BindingOperations.x3d"
 
-head1.addMeta(meta14)
-meta15 = meta()
-meta15.setName("generator")
-meta15.setContent("X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit")
+head1.children.append(meta14)
+meta15 = x3d.meta()
+meta15.name = "generator"
+meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
 
-head1.addMeta(meta15)
-meta16 = meta()
-meta16.setName("license")
-meta16.setContent("../license.html")
+head1.children.append(meta15)
+meta16 = x3d.meta()
+meta16.name = "license"
+meta16.content = "../license.html"
 
-head1.addMeta(meta16)
+head1.children.append(meta16)
 
-X3D0.setHead(head1)
-Scene17 = Scene()
-Viewpoint18 = Viewpoint()
-Viewpoint18.setDEF("View1")
-Viewpoint18.setCenterOfRotation([-6,0,0])
-Viewpoint18.setDescription("Viewpoint 1")
-Viewpoint18.setPosition([-6,0,5])
+X3D0.head = head1
+Scene17 = x3d.Scene()
+Viewpoint18 = x3d.Viewpoint()
+Viewpoint18.DEF = "View1"
+Viewpoint18.centerOfRotation = [-6,0,0]
+Viewpoint18.description = "Viewpoint 1"
+Viewpoint18.position = [-6,0,5]
 
-Scene17.addChildren(Viewpoint18)
-Viewpoint19 = Viewpoint()
-Viewpoint19.setDEF("View2")
-Viewpoint19.setCenterOfRotation([-2,0,0])
-Viewpoint19.setDescription("Viewpoint 2")
-Viewpoint19.setPosition([-2,0,5])
+Scene17.children.append(Viewpoint18)
+Viewpoint19 = x3d.Viewpoint()
+Viewpoint19.DEF = "View2"
+Viewpoint19.centerOfRotation = [-2,0,0]
+Viewpoint19.description = "Viewpoint 2"
+Viewpoint19.position = [-2,0,5]
 
-Scene17.addChildren(Viewpoint19)
-Viewpoint20 = Viewpoint()
-Viewpoint20.setDEF("View3")
-Viewpoint20.setCenterOfRotation([2,0,0])
-Viewpoint20.setDescription("Viewpoint 3")
-Viewpoint20.setPosition([2,0,5])
+Scene17.children.append(Viewpoint19)
+Viewpoint20 = x3d.Viewpoint()
+Viewpoint20.DEF = "View3"
+Viewpoint20.centerOfRotation = [2,0,0]
+Viewpoint20.description = "Viewpoint 3"
+Viewpoint20.position = [2,0,5]
 
-Scene17.addChildren(Viewpoint20)
-Viewpoint21 = Viewpoint()
-Viewpoint21.setDEF("View4")
-Viewpoint21.setCenterOfRotation([6,0,0])
-Viewpoint21.setDescription("Viewpoint 4")
-Viewpoint21.setPosition([6,0,5])
+Scene17.children.append(Viewpoint20)
+Viewpoint21 = x3d.Viewpoint()
+Viewpoint21.DEF = "View4"
+Viewpoint21.centerOfRotation = [6,0,0]
+Viewpoint21.description = "Viewpoint 4"
+Viewpoint21.position = [6,0,5]
 
-Scene17.addChildren(Viewpoint21)
+Scene17.children.append(Viewpoint21)
 #Script initialization ought to first bind view5 below.
-Group22 = Group()
-Transform23 = Transform()
-Transform23.setDEF("Text1")
-Transform23.setTranslation([-6,0,0])
-Shape24 = Shape()
-Text25 = Text()
-Text25.setString(["View","# 1"])
-FontStyle26 = FontStyle()
-FontStyle26.setDEF("CenterJustify")
-FontStyle26.setJustify(["MIDDLE","MIDDLE"])
+Group22 = x3d.Group()
+Transform23 = x3d.Transform()
+Transform23.DEF = "Text1"
+Transform23.translation = [-6,0,0]
+Shape24 = x3d.Shape()
+Text25 = x3d.Text()
+Text25.string = ["View","# 1"]
+FontStyle26 = x3d.FontStyle()
+FontStyle26.DEF = "CenterJustify"
+FontStyle26.justify = ["MIDDLE","MIDDLE"]
 
-Text25.setFontStyle(FontStyle26)
+Text25.fontStyle = FontStyle26
 
-Shape24.setGeometry(Text25)
-Appearance27 = Appearance()
-Material28 = Material()
-Material28.setDiffuseColor([1,0,0])
+Shape24.geometry = Text25
+Appearance27 = x3d.Appearance()
+Material28 = x3d.Material()
+Material28.diffuseColor = [1,0,0]
 
-Appearance27.setMaterial(Material28)
+Appearance27.material = Material28
 
-Shape24.setAppearance(Appearance27)
+Shape24.appearance = Appearance27
 
-Transform23.addChildren(Shape24)
+Transform23.children.append(Shape24)
 
-Group22.addChildren(Transform23)
-Transform29 = Transform()
-Transform29.setDEF("Text2")
-Transform29.setTranslation([-2,0,0])
-Shape30 = Shape()
-Text31 = Text()
-Text31.setString(["View","# 2"])
-FontStyle32 = FontStyle()
-FontStyle32.setUSE("CenterJustify")
+Group22.children.append(Transform23)
+Transform29 = x3d.Transform()
+Transform29.DEF = "Text2"
+Transform29.translation = [-2,0,0]
+Shape30 = x3d.Shape()
+Text31 = x3d.Text()
+Text31.string = ["View","# 2"]
+FontStyle32 = x3d.FontStyle()
+FontStyle32.USE = "CenterJustify"
 
-Text31.setFontStyle(FontStyle32)
+Text31.fontStyle = FontStyle32
 
-Shape30.setGeometry(Text31)
-Appearance33 = Appearance()
-Material34 = Material()
-Material34.setDiffuseColor([0,1,0])
+Shape30.geometry = Text31
+Appearance33 = x3d.Appearance()
+Material34 = x3d.Material()
+Material34.diffuseColor = [0,1,0]
 
-Appearance33.setMaterial(Material34)
+Appearance33.material = Material34
 
-Shape30.setAppearance(Appearance33)
+Shape30.appearance = Appearance33
 
-Transform29.addChildren(Shape30)
+Transform29.children.append(Shape30)
 
-Group22.addChildren(Transform29)
-Transform35 = Transform()
-Transform35.setDEF("Text3")
-Transform35.setTranslation([2,0,0])
-Shape36 = Shape()
-Text37 = Text()
-Text37.setString(["View","# 3"])
-FontStyle38 = FontStyle()
-FontStyle38.setUSE("CenterJustify")
+Group22.children.append(Transform29)
+Transform35 = x3d.Transform()
+Transform35.DEF = "Text3"
+Transform35.translation = [2,0,0]
+Shape36 = x3d.Shape()
+Text37 = x3d.Text()
+Text37.string = ["View","# 3"]
+FontStyle38 = x3d.FontStyle()
+FontStyle38.USE = "CenterJustify"
 
-Text37.setFontStyle(FontStyle38)
+Text37.fontStyle = FontStyle38
 
-Shape36.setGeometry(Text37)
-Appearance39 = Appearance()
-Material40 = Material()
-Material40.setDiffuseColor([0,0,1])
+Shape36.geometry = Text37
+Appearance39 = x3d.Appearance()
+Material40 = x3d.Material()
+Material40.diffuseColor = [0,0,1]
 
-Appearance39.setMaterial(Material40)
+Appearance39.material = Material40
 
-Shape36.setAppearance(Appearance39)
+Shape36.appearance = Appearance39
 
-Transform35.addChildren(Shape36)
+Transform35.children.append(Shape36)
 
-Group22.addChildren(Transform35)
-Transform41 = Transform()
-Transform41.setDEF("Text4")
-Transform41.setTranslation([6,0,0])
-Shape42 = Shape()
-Text43 = Text()
-Text43.setString(["View","# 4"])
-FontStyle44 = FontStyle()
-FontStyle44.setUSE("CenterJustify")
+Group22.children.append(Transform35)
+Transform41 = x3d.Transform()
+Transform41.DEF = "Text4"
+Transform41.translation = [6,0,0]
+Shape42 = x3d.Shape()
+Text43 = x3d.Text()
+Text43.string = ["View","# 4"]
+FontStyle44 = x3d.FontStyle()
+FontStyle44.USE = "CenterJustify"
 
-Text43.setFontStyle(FontStyle44)
+Text43.fontStyle = FontStyle44
 
-Shape42.setGeometry(Text43)
-Appearance45 = Appearance()
-Material46 = Material()
+Shape42.geometry = Text43
+Appearance45 = x3d.Appearance()
+Material46 = x3d.Material()
 
-Appearance45.setMaterial(Material46)
+Appearance45.material = Material46
 
-Shape42.setAppearance(Appearance45)
+Shape42.appearance = Appearance45
 
-Transform41.addChildren(Shape42)
+Transform41.children.append(Shape42)
 
-Group22.addChildren(Transform41)
+Group22.children.append(Transform41)
 
-Scene17.addChildren(Group22)
+Scene17.children.append(Group22)
 #The following advanced animation sequence uses nodes covered in Chapters 7, 8 and 9.
 #It does not need to be studied in this chapter.
-Transform47 = Transform()
-Transform47.setTranslation([0,-3,8])
+Transform47 = x3d.Transform()
+Transform47.translation = [0,-3,8]
 #notice this next Viewpoint has been transformed with the text, so its position is relative. it is called view5 in the Script.
-Viewpoint48 = Viewpoint()
-Viewpoint48.setDEF("ClickToAnimateView")
-Viewpoint48.setDescription("Select animation sequence")
-Viewpoint48.setPosition([0,0,7])
+Viewpoint48 = x3d.Viewpoint()
+Viewpoint48.DEF = "ClickToAnimateView"
+Viewpoint48.description = "Select animation sequence"
+Viewpoint48.position = [0,0,7]
 
-Transform47.addChildren(Viewpoint48)
-Shape49 = Shape()
-Text50 = Text()
-Text50.setString(["Click here to animate"])
-FontStyle51 = FontStyle()
-FontStyle51.setJustify(["MIDDLE","BEGIN"])
+Transform47.children.append(Viewpoint48)
+Shape49 = x3d.Shape()
+Text50 = x3d.Text()
+Text50.string = ["Click here to animate"]
+FontStyle51 = x3d.FontStyle()
+FontStyle51.justify = ["MIDDLE","BEGIN"]
 
-Text50.setFontStyle(FontStyle51)
+Text50.fontStyle = FontStyle51
 
-Shape49.setGeometry(Text50)
-Appearance52 = Appearance()
-Material53 = Material()
-Material53.setDiffuseColor([0.8,0.4,0])
+Shape49.geometry = Text50
+Appearance52 = x3d.Appearance()
+Material53 = x3d.Material()
+Material53.diffuseColor = [0.8,0.4,0]
 
-Appearance52.setMaterial(Material53)
+Appearance52.material = Material53
 
-Shape49.setAppearance(Appearance52)
+Shape49.appearance = Appearance52
 
-Transform47.addChildren(Shape49)
-Shape54 = Shape()
-Box55 = Box()
-Box55.setSize([7,1,0.02])
+Transform47.children.append(Shape49)
+Shape54 = x3d.Shape()
+Box55 = x3d.Box()
+Box55.size = [7,1,0.02]
 
-Shape54.setGeometry(Box55)
-Appearance56 = Appearance()
-Material57 = Material()
-Material57.setTransparency(1)
+Shape54.geometry = Box55
+Appearance56 = x3d.Appearance()
+Material57 = x3d.Material()
+Material57.transparency = 1
 
-Appearance56.setMaterial(Material57)
+Appearance56.material = Material57
 
-Shape54.setAppearance(Appearance56)
+Shape54.appearance = Appearance56
 
-Transform47.addChildren(Shape54)
-TouchSensor58 = TouchSensor()
-TouchSensor58.setDEF("TextTouchSensor")
-TouchSensor58.setDescription("Click to begin animating viewpoint selections")
+Transform47.children.append(Shape54)
+TouchSensor58 = x3d.TouchSensor()
+TouchSensor58.DEF = "TextTouchSensor"
+TouchSensor58.description = "Click to begin animating viewpoint selections"
 
-Transform47.addChildren(TouchSensor58)
-TimeSensor59 = TimeSensor()
-TimeSensor59.setDEF("Clock")
-TimeSensor59.setCycleInterval(10)
+Transform47.children.append(TouchSensor58)
+TimeSensor59 = x3d.TimeSensor()
+TimeSensor59.DEF = "Clock"
+TimeSensor59.cycleInterval = 10
 
-Transform47.addChildren(TimeSensor59)
-ROUTE60 = ROUTE()
-ROUTE60.setFromField("touchTime")
-ROUTE60.setFromNode("TextTouchSensor")
-ROUTE60.setToField("set_startTime")
-ROUTE60.setToNode("Clock")
+Transform47.children.append(TimeSensor59)
+ROUTE60 = x3d.ROUTE()
+ROUTE60.fromField = "touchTime"
+ROUTE60.fromNode = "TextTouchSensor"
+ROUTE60.toField = "set_startTime"
+ROUTE60.toNode = "Clock"
 
-Transform47.addChildren(ROUTE60)
-IntegerSequencer61 = IntegerSequencer()
-IntegerSequencer61.setDEF("TimingSequencer")
-IntegerSequencer61.setKey([0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,1])
-IntegerSequencer61.setKeyValue([0,1,2,3,4,5,6,7,8,10])
+Transform47.children.append(ROUTE60)
+IntegerSequencer61 = x3d.IntegerSequencer()
+IntegerSequencer61.DEF = "TimingSequencer"
+IntegerSequencer61.key = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,1]
+IntegerSequencer61.keyValue = [0,1,2,3,4,5,6,7,8,10]
 
-Transform47.addChildren(IntegerSequencer61)
-ROUTE62 = ROUTE()
-ROUTE62.setFromField("fraction_changed")
-ROUTE62.setFromNode("Clock")
-ROUTE62.setToField("set_fraction")
-ROUTE62.setToNode("TimingSequencer")
+Transform47.children.append(IntegerSequencer61)
+ROUTE62 = x3d.ROUTE()
+ROUTE62.fromField = "fraction_changed"
+ROUTE62.fromNode = "Clock"
+ROUTE62.toField = "set_fraction"
+ROUTE62.toNode = "TimingSequencer"
 
-Transform47.addChildren(ROUTE62)
-Script63 = Script()
-Script63.setDEF("BindingSequencerEngine")
-field64 = field()
-field64.setName("set_timeEvent")
-field64.setAccessType("inputOnly")
-field64.setType("SFInt32")
+Transform47.children.append(ROUTE62)
+Script63 = x3d.Script()
+Script63.DEF = "BindingSequencerEngine"
+field64 = x3d.field()
+field64.name = "set_timeEvent"
+field64.accessType = "inputOnly"
+field64.type = "SFInt32"
 
-Script63.addField(field64)
-field65 = field()
-field65.setName("bindView1")
-field65.setAccessType("outputOnly")
-field65.setType("SFBool")
+Script63.field.append(field64)
+field65 = x3d.field()
+field65.name = "bindView1"
+field65.accessType = "outputOnly"
+field65.type = "SFBool"
 
-Script63.addField(field65)
-field66 = field()
-field66.setName("bindView2")
-field66.setAccessType("outputOnly")
-field66.setType("SFBool")
+Script63.field.append(field65)
+field66 = x3d.field()
+field66.name = "bindView2"
+field66.accessType = "outputOnly"
+field66.type = "SFBool"
 
-Script63.addField(field66)
-field67 = field()
-field67.setName("bindView3")
-field67.setAccessType("outputOnly")
-field67.setType("SFBool")
+Script63.field.append(field66)
+field67 = x3d.field()
+field67.name = "bindView3"
+field67.accessType = "outputOnly"
+field67.type = "SFBool"
 
-Script63.addField(field67)
-field68 = field()
-field68.setName("bindView4")
-field68.setAccessType("outputOnly")
-field68.setType("SFBool")
+Script63.field.append(field67)
+field68 = x3d.field()
+field68.name = "bindView4"
+field68.accessType = "outputOnly"
+field68.type = "SFBool"
 
-Script63.addField(field68)
-field69 = field()
-field69.setName("bindView5")
-field69.setAccessType("outputOnly")
-field69.setType("SFBool")
+Script63.field.append(field68)
+field69 = x3d.field()
+field69.name = "bindView5"
+field69.accessType = "outputOnly"
+field69.type = "SFBool"
 
-Script63.addField(field69)
-field70 = field()
-field70.setName("view1Bound")
-field70.setAccessType("inputOnly")
-field70.setType("SFBool")
+Script63.field.append(field69)
+field70 = x3d.field()
+field70.name = "view1Bound"
+field70.accessType = "inputOnly"
+field70.type = "SFBool"
 
-Script63.addField(field70)
-field71 = field()
-field71.setName("view2Bound")
-field71.setAccessType("inputOnly")
-field71.setType("SFBool")
+Script63.field.append(field70)
+field71 = x3d.field()
+field71.name = "view2Bound"
+field71.accessType = "inputOnly"
+field71.type = "SFBool"
 
-Script63.addField(field71)
-field72 = field()
-field72.setName("view3Bound")
-field72.setAccessType("inputOnly")
-field72.setType("SFBool")
+Script63.field.append(field71)
+field72 = x3d.field()
+field72.name = "view3Bound"
+field72.accessType = "inputOnly"
+field72.type = "SFBool"
 
-Script63.addField(field72)
-field73 = field()
-field73.setName("view4Bound")
-field73.setAccessType("inputOnly")
-field73.setType("SFBool")
+Script63.field.append(field72)
+field73 = x3d.field()
+field73.name = "view4Bound"
+field73.accessType = "inputOnly"
+field73.type = "SFBool"
 
-Script63.addField(field73)
-field74 = field()
-field74.setName("priorInputvalue")
-field74.setAccessType("initializeOnly")
-field74.setType("SFInt32")
-field74.setValue("-1")
+Script63.field.append(field73)
+field74 = x3d.field()
+field74.name = "priorInputvalue"
+field74.accessType = "initializeOnly"
+field74.type = "SFInt32"
+field74.value = -1
 
-Script63.addField(field74)
+Script63.field.append(field74)
 
-Script63.setSourceCode('''ecmascript:\n"+
+Script63.sourceCode = '''ecmascript:\n"+
 "\n"+
 "function initialize ()\n"+
 "{\n"+
@@ -435,84 +437,86 @@ Script63.setSourceCode('''ecmascript:\n"+
 "function view5Bound (inputValue)\n"+
 "{\n"+
 "    Browser.print (', view5Bound ' + (inputValue));\n"+
-"}''')
+"}'''
 
-Transform47.addChildren(Script63)
+Transform47.children.append(Script63)
 #drive Script with TimeSensor clock
-ROUTE75 = ROUTE()
-ROUTE75.setFromField("value_changed")
-ROUTE75.setFromNode("TimingSequencer")
-ROUTE75.setToField("set_timeEvent")
-ROUTE75.setToNode("BindingSequencerEngine")
+ROUTE75 = x3d.ROUTE()
+ROUTE75.fromField = "value_changed"
+ROUTE75.fromNode = "TimingSequencer"
+ROUTE75.toField = "set_timeEvent"
+ROUTE75.toNode = "BindingSequencerEngine"
 
-Transform47.addChildren(ROUTE75)
+Transform47.children.append(ROUTE75)
 #Script will bind and unbind Viewpoint nodes
-ROUTE76 = ROUTE()
-ROUTE76.setFromField("bindView1")
-ROUTE76.setFromNode("BindingSequencerEngine")
-ROUTE76.setToField("set_bind")
-ROUTE76.setToNode("View1")
+ROUTE76 = x3d.ROUTE()
+ROUTE76.fromField = "bindView1"
+ROUTE76.fromNode = "BindingSequencerEngine"
+ROUTE76.toField = "set_bind"
+ROUTE76.toNode = "View1"
 
-Transform47.addChildren(ROUTE76)
-ROUTE77 = ROUTE()
-ROUTE77.setFromField("bindView2")
-ROUTE77.setFromNode("BindingSequencerEngine")
-ROUTE77.setToField("set_bind")
-ROUTE77.setToNode("View2")
+Transform47.children.append(ROUTE76)
+ROUTE77 = x3d.ROUTE()
+ROUTE77.fromField = "bindView2"
+ROUTE77.fromNode = "BindingSequencerEngine"
+ROUTE77.toField = "set_bind"
+ROUTE77.toNode = "View2"
 
-Transform47.addChildren(ROUTE77)
-ROUTE78 = ROUTE()
-ROUTE78.setFromField("bindView3")
-ROUTE78.setFromNode("BindingSequencerEngine")
-ROUTE78.setToField("set_bind")
-ROUTE78.setToNode("View3")
+Transform47.children.append(ROUTE77)
+ROUTE78 = x3d.ROUTE()
+ROUTE78.fromField = "bindView3"
+ROUTE78.fromNode = "BindingSequencerEngine"
+ROUTE78.toField = "set_bind"
+ROUTE78.toNode = "View3"
 
-Transform47.addChildren(ROUTE78)
-ROUTE79 = ROUTE()
-ROUTE79.setFromField("bindView4")
-ROUTE79.setFromNode("BindingSequencerEngine")
-ROUTE79.setToField("set_bind")
-ROUTE79.setToNode("View4")
+Transform47.children.append(ROUTE78)
+ROUTE79 = x3d.ROUTE()
+ROUTE79.fromField = "bindView4"
+ROUTE79.fromNode = "BindingSequencerEngine"
+ROUTE79.toField = "set_bind"
+ROUTE79.toNode = "View4"
 
-Transform47.addChildren(ROUTE79)
-ROUTE80 = ROUTE()
-ROUTE80.setFromField("bindView5")
-ROUTE80.setFromNode("BindingSequencerEngine")
-ROUTE80.setToField("set_bind")
-ROUTE80.setToNode("ClickToAnimateView")
+Transform47.children.append(ROUTE79)
+ROUTE80 = x3d.ROUTE()
+ROUTE80.fromField = "bindView5"
+ROUTE80.fromNode = "BindingSequencerEngine"
+ROUTE80.toField = "set_bind"
+ROUTE80.toNode = "ClickToAnimateView"
 
-Transform47.addChildren(ROUTE80)
+Transform47.children.append(ROUTE80)
 #Viewpoint nodes report bind and unbind events
-ROUTE81 = ROUTE()
-ROUTE81.setFromField("isBound")
-ROUTE81.setFromNode("View1")
-ROUTE81.setToField("view1Bound")
-ROUTE81.setToNode("BindingSequencerEngine")
+ROUTE81 = x3d.ROUTE()
+ROUTE81.fromField = "isBound"
+ROUTE81.fromNode = "View1"
+ROUTE81.toField = "view1Bound"
+ROUTE81.toNode = "BindingSequencerEngine"
 
-Transform47.addChildren(ROUTE81)
-ROUTE82 = ROUTE()
-ROUTE82.setFromField("isBound")
-ROUTE82.setFromNode("View2")
-ROUTE82.setToField("view2Bound")
-ROUTE82.setToNode("BindingSequencerEngine")
+Transform47.children.append(ROUTE81)
+ROUTE82 = x3d.ROUTE()
+ROUTE82.fromField = "isBound"
+ROUTE82.fromNode = "View2"
+ROUTE82.toField = "view2Bound"
+ROUTE82.toNode = "BindingSequencerEngine"
 
-Transform47.addChildren(ROUTE82)
-ROUTE83 = ROUTE()
-ROUTE83.setFromField("isBound")
-ROUTE83.setFromNode("View3")
-ROUTE83.setToField("view3Bound")
-ROUTE83.setToNode("BindingSequencerEngine")
+Transform47.children.append(ROUTE82)
+ROUTE83 = x3d.ROUTE()
+ROUTE83.fromField = "isBound"
+ROUTE83.fromNode = "View3"
+ROUTE83.toField = "view3Bound"
+ROUTE83.toNode = "BindingSequencerEngine"
 
-Transform47.addChildren(ROUTE83)
-ROUTE84 = ROUTE()
-ROUTE84.setFromField("isBound")
-ROUTE84.setFromNode("View4")
-ROUTE84.setToField("view4Bound")
-ROUTE84.setToNode("BindingSequencerEngine")
+Transform47.children.append(ROUTE83)
+ROUTE84 = x3d.ROUTE()
+ROUTE84.fromField = "isBound"
+ROUTE84.fromNode = "View4"
+ROUTE84.toField = "view4Bound"
+ROUTE84.toNode = "BindingSequencerEngine"
 
-Transform47.addChildren(ROUTE84)
+Transform47.children.append(ROUTE84)
 
-Scene17.addChildren(Transform47)
+Scene17.children.append(Transform47)
 
-X3D0.setScene(Scene17)
-X3D0.toFileX3D("././BindingOperations_RoundTrip.x3d")
+X3D0.Scene = Scene17
+f = open("././BindingOperations_RoundTrip.x3d", "w")
+f.write(X3D0.XML())
+f.close()
