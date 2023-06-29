@@ -3,7 +3,7 @@ import x3d
 print('-->')
 X3D0 = x3d.X3D()
 X3D0.profile = "Immersive"
-X3D0.version = "3.3"
+X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
 meta2.name = "title"
@@ -48,7 +48,7 @@ Scene7.children.append(Background9)
 Group10 = x3d.Group()
 ExternProtoDeclare11 = x3d.ExternProtoDeclare()
 ExternProtoDeclare11.name = "FlowerProto"
-ExternProtoDeclare11.url = ["../data/flowerproto.json#FlowerProto"]
+ExternProtoDeclare11.url = ["../personal/flowerproto.json#FlowerProto","https://coderextreme.net/X3DJSONLD/src/main/personal/flowerproto.json#FlowerProto","https://localhost:3000/src/main/personal/flowerproto.json#FlowerProto"]
 field12 = x3d.field()
 field12.name = "vertex"
 field12.accessType = "inputOutput"
@@ -126,7 +126,7 @@ AudioClip28.DEF = "AudioClip"
 AudioClip28.description = "Chandubabamusic #1"
 AudioClip28.url = ["../resources/chandubabamusic1.wav"]
 
-Sound27.source.append(AudioClip28)
+Sound27.source = AudioClip28
 
 Group10.children.append(Sound27)
 ROUTE29 = x3d.ROUTE()

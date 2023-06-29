@@ -68,7 +68,7 @@ AcousticProperties16.diffuse = 0.25
 AcousticProperties16.refraction = 0.5
 AcousticProperties16.specular = 1
 
-Appearance15.acousticProperties.append(AcousticProperties16)
+Appearance15.acousticProperties = AcousticProperties16
 Material17 = x3d.Material()
 
 Appearance15.material = Material17
@@ -82,7 +82,7 @@ AudioClip19 = x3d.AudioClip()
 AudioClip19.description = "testing"
 AudioClip19.url = ["sound/saxophone.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/saxophone.mp3"]
 
-Sound18.source.append(AudioClip19)
+Sound18.source = AudioClip19
 
 Scene11.children.append(Sound18)
 Sound20 = x3d.Sound()
@@ -91,7 +91,7 @@ MovieTexture21 = x3d.MovieTexture()
 MovieTexture21.description = "testing"
 MovieTexture21.url = ["bogus.mpg","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/bogus.mpg"]
 
-Sound20.source.append(MovieTexture21)
+Sound20.source = MovieTexture21
 
 Scene11.children.append(Sound20)
 SpatialSound22 = x3d.SpatialSound()

@@ -165,11 +165,11 @@ IndexedFaceSet34.texCoordIndex = [0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,
 Color35 = x3d.Color()
 Color35.color = [0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0]
 
-IndexedFaceSet34.color.append(Color35)
+IndexedFaceSet34.color = Color35
 Coordinate36 = x3d.Coordinate()
 Coordinate36.point = (-2.0000,1.0000,1.0000,-2.0000,-1.0000,1.0000,2.0000,1.0000,1.0000,2.0000,-1.0000,1.0000,2.0000,1.0000,-1.0000,2.0000,-1.0000,-1.0000,-2.0000,1.0000,-1.0000,-2.0000,-1.0000,-1.0000)
 
-IndexedFaceSet34.coord.append(Coordinate36)
+IndexedFaceSet34.coord = Coordinate36
 TextureCoordinate37 = x3d.TextureCoordinate()
 TextureCoordinate37.point = [-1,2,-1,-1,2,2,2,-1]
 

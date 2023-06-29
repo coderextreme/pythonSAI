@@ -299,39 +299,39 @@ MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "authorName"
 MetadataString45.value = ["Matthew T. Beitler Joe D. Williams Don Brutzman"]
 
-MetadataSet44.value.append(MetadataString45)
+MetadataSet44.value = MetadataString45
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "authorEmail"
 MetadataString46.value = ["HAnim@web3D.org"]
 
-MetadataSet44.value.append(MetadataString46)
+MetadataSet44.value = MetadataString46
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "copyright"
 MetadataString47.value = ["none"]
 
-MetadataSet44.value.append(MetadataString47)
+MetadataSet44.value = MetadataString47
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "creationDate"
 MetadataString48.value = ["12 May 1999"]
 
-MetadataSet44.value.append(MetadataString48)
+MetadataSet44.value = MetadataString48
 MetadataFloat49 = x3d.MetadataFloat()
 MetadataFloat49.name = "height"
 MetadataFloat49.value = [1.7504]
 
-MetadataSet44.value.append(MetadataFloat49)
+MetadataSet44.value = MetadataFloat49
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "humanoidVersion"
 MetadataString50.value = ["2.0"]
 
-MetadataSet44.value.append(MetadataString50)
+MetadataSet44.value = MetadataString50
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "usageRestrictions"
 MetadataString51.value = ["none"]
 
-MetadataSet44.value.append(MetadataString51)
+MetadataSet44.value = MetadataString51
 
-HAnimHumanoid43.metadata.append(MetadataSet44)
+HAnimHumanoid43.metadata = MetadataSet44
 HAnimJoint52 = x3d.HAnimJoint()
 HAnimJoint52.name = "humanoid_root"
 HAnimJoint52.DEF = "hanim_humanoid_root"
@@ -374,12 +374,12 @@ LineSet61.vertexCount = [2]
 Coordinate62 = x3d.Coordinate()
 Coordinate62.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
-LineSet61.coord.append(Coordinate62)
+LineSet61.coord = Coordinate62
 ColorRGBA63 = x3d.ColorRGBA()
 ColorRGBA63.DEF = "HAnimSegmentLineColorRGBA"
 ColorRGBA63.color = [1,1,0,1,1,1,0,0.1]
 
-LineSet61.color.append(ColorRGBA63)
+LineSet61.color = ColorRGBA63
 
 Shape60.geometry = LineSet61
 
@@ -391,11 +391,11 @@ LineSet65.vertexCount = [2]
 Coordinate66 = x3d.Coordinate()
 Coordinate66.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
-LineSet65.coord.append(Coordinate66)
+LineSet65.coord = Coordinate66
 ColorRGBA67 = x3d.ColorRGBA()
 ColorRGBA67.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet65.color.append(ColorRGBA67)
+LineSet65.color = ColorRGBA67
 
 Shape64.geometry = LineSet65
 
@@ -431,11 +431,11 @@ LineSet74.vertexCount = [2]
 Coordinate75 = x3d.Coordinate()
 Coordinate75.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
-LineSet74.coord.append(Coordinate75)
+LineSet74.coord = Coordinate75
 ColorRGBA76 = x3d.ColorRGBA()
 ColorRGBA76.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet74.color.append(ColorRGBA76)
+LineSet74.color = ColorRGBA76
 
 Shape73.geometry = LineSet74
 
@@ -447,11 +447,11 @@ LineSet78.vertexCount = [2]
 Coordinate79 = x3d.Coordinate()
 Coordinate79.point = (0.0000,0.9149,0.0016,-0.0961,0.9124,-0.0001)
 
-LineSet78.coord.append(Coordinate79)
+LineSet78.coord = Coordinate79
 ColorRGBA80 = x3d.ColorRGBA()
 ColorRGBA80.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet78.color.append(ColorRGBA80)
+LineSet78.color = ColorRGBA80
 
 Shape77.geometry = LineSet78
 
@@ -463,12 +463,12 @@ LineSet82.vertexCount = [2]
 Coordinate83 = x3d.Coordinate()
 Coordinate83.point = (0.0000,0.9149,0.0016,-0.1525,1.0628,0.0035)
 
-LineSet82.coord.append(Coordinate83)
+LineSet82.coord = Coordinate83
 ColorRGBA84 = x3d.ColorRGBA()
 ColorRGBA84.DEF = "HAnimSiteLineColorRGBA"
 ColorRGBA84.color = [1,0,0,1,1,0,0,0.1]
 
-LineSet82.color.append(ColorRGBA84)
+LineSet82.color = ColorRGBA84
 
 Shape81.geometry = LineSet82
 
@@ -480,11 +480,11 @@ LineSet86.vertexCount = [2]
 Coordinate87 = x3d.Coordinate()
 Coordinate87.point = (0.0000,0.9149,0.0016,-0.1689,0.8419,0.0352)
 
-LineSet86.coord.append(Coordinate87)
+LineSet86.coord = Coordinate87
 ColorRGBA88 = x3d.ColorRGBA()
 ColorRGBA88.USE = "HAnimSiteLineColorRGBA"
 
-LineSet86.color.append(ColorRGBA88)
+LineSet86.color = ColorRGBA88
 
 Shape85.geometry = LineSet86
 
@@ -496,11 +496,11 @@ LineSet90.vertexCount = [2]
 Coordinate91 = x3d.Coordinate()
 Coordinate91.point = (0.0000,0.9149,0.0016,0.1612,1.0537,0.0008)
 
-LineSet90.coord.append(Coordinate91)
+LineSet90.coord = Coordinate91
 ColorRGBA92 = x3d.ColorRGBA()
 ColorRGBA92.USE = "HAnimSiteLineColorRGBA"
 
-LineSet90.color.append(ColorRGBA92)
+LineSet90.color = ColorRGBA92
 
 Shape89.geometry = LineSet90
 
@@ -512,11 +512,11 @@ LineSet94.vertexCount = [2]
 Coordinate95 = x3d.Coordinate()
 Coordinate95.point = (0.0000,0.9149,0.0016,0.1677,0.8336,0.0303)
 
-LineSet94.coord.append(Coordinate95)
+LineSet94.coord = Coordinate95
 ColorRGBA96 = x3d.ColorRGBA()
 ColorRGBA96.USE = "HAnimSiteLineColorRGBA"
 
-LineSet94.color.append(ColorRGBA96)
+LineSet94.color = ColorRGBA96
 
 Shape93.geometry = LineSet94
 
@@ -528,11 +528,11 @@ LineSet98.vertexCount = [2]
 Coordinate99 = x3d.Coordinate()
 Coordinate99.point = (0.0000,0.9149,0.0016,-0.0887,1.0021,0.1112)
 
-LineSet98.coord.append(Coordinate99)
+LineSet98.coord = Coordinate99
 ColorRGBA100 = x3d.ColorRGBA()
 ColorRGBA100.USE = "HAnimSiteLineColorRGBA"
 
-LineSet98.color.append(ColorRGBA100)
+LineSet98.color = ColorRGBA100
 
 Shape97.geometry = LineSet98
 
@@ -544,11 +544,11 @@ LineSet102.vertexCount = [2]
 Coordinate103 = x3d.Coordinate()
 Coordinate103.point = (0.0000,0.9149,0.0016,0.0925,0.9983,0.1052)
 
-LineSet102.coord.append(Coordinate103)
+LineSet102.coord = Coordinate103
 ColorRGBA104 = x3d.ColorRGBA()
 ColorRGBA104.USE = "HAnimSiteLineColorRGBA"
 
-LineSet102.color.append(ColorRGBA104)
+LineSet102.color = ColorRGBA104
 
 Shape101.geometry = LineSet102
 
@@ -560,11 +560,11 @@ LineSet106.vertexCount = [2]
 Coordinate107 = x3d.Coordinate()
 Coordinate107.point = (0.0000,0.9149,0.0016,-0.0716,1.0190,-0.1138)
 
-LineSet106.coord.append(Coordinate107)
+LineSet106.coord = Coordinate107
 ColorRGBA108 = x3d.ColorRGBA()
 ColorRGBA108.USE = "HAnimSiteLineColorRGBA"
 
-LineSet106.color.append(ColorRGBA108)
+LineSet106.color = ColorRGBA108
 
 Shape105.geometry = LineSet106
 
@@ -576,11 +576,11 @@ LineSet110.vertexCount = [2]
 Coordinate111 = x3d.Coordinate()
 Coordinate111.point = (0.0000,0.9149,0.0016,0.0774,1.0190,-0.1151)
 
-LineSet110.coord.append(Coordinate111)
+LineSet110.coord = Coordinate111
 ColorRGBA112 = x3d.ColorRGBA()
 ColorRGBA112.USE = "HAnimSiteLineColorRGBA"
 
-LineSet110.color.append(ColorRGBA112)
+LineSet110.color = ColorRGBA112
 
 Shape109.geometry = LineSet110
 
@@ -592,11 +592,11 @@ LineSet114.vertexCount = [2]
 Coordinate115 = x3d.Coordinate()
 Coordinate115.point = (0.0000,0.9149,0.0016,0.0034,0.8266,0.0257)
 
-LineSet114.coord.append(Coordinate115)
+LineSet114.coord = Coordinate115
 ColorRGBA116 = x3d.ColorRGBA()
 ColorRGBA116.USE = "HAnimSiteLineColorRGBA"
 
-LineSet114.color.append(ColorRGBA116)
+LineSet114.color = ColorRGBA116
 
 Shape113.geometry = LineSet114
 
@@ -620,7 +620,7 @@ IndexedFaceSet120.solid = False
 Coordinate121 = x3d.Coordinate()
 Coordinate121.point = (0.0000,0.0080,0.0000,-0.0080,0.0000,0.0000,0.0000,0.0000,0.0080,0.0080,0.0000,0.0000,0.0000,0.0000,-0.0080,0.0000,-0.0080,0.0000)
 
-IndexedFaceSet120.coord.append(Coordinate121)
+IndexedFaceSet120.coord = Coordinate121
 
 Shape119.geometry = IndexedFaceSet120
 Appearance122 = x3d.Appearance()
@@ -785,11 +785,11 @@ LineSet154.vertexCount = [2]
 Coordinate155 = x3d.Coordinate()
 Coordinate155.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
-LineSet154.coord.append(Coordinate155)
+LineSet154.coord = Coordinate155
 ColorRGBA156 = x3d.ColorRGBA()
 ColorRGBA156.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet154.color.append(ColorRGBA156)
+LineSet154.color = ColorRGBA156
 
 Shape153.geometry = LineSet154
 
@@ -801,11 +801,11 @@ LineSet158.vertexCount = [2]
 Coordinate159 = x3d.Coordinate()
 Coordinate159.point = (0.0961,0.9124,-0.0001,0.0993,0.4881,-0.0309)
 
-LineSet158.coord.append(Coordinate159)
+LineSet158.coord = Coordinate159
 ColorRGBA160 = x3d.ColorRGBA()
 ColorRGBA160.USE = "HAnimSiteLineColorRGBA"
 
-LineSet158.color.append(ColorRGBA160)
+LineSet158.color = ColorRGBA160
 
 Shape157.geometry = LineSet158
 
@@ -817,11 +817,11 @@ LineSet162.vertexCount = [2]
 Coordinate163 = x3d.Coordinate()
 Coordinate163.point = (0.0961,0.9124,-0.0001,0.1598,0.4967,0.0297)
 
-LineSet162.coord.append(Coordinate163)
+LineSet162.coord = Coordinate163
 ColorRGBA164 = x3d.ColorRGBA()
 ColorRGBA164.USE = "HAnimSiteLineColorRGBA"
 
-LineSet162.color.append(ColorRGBA164)
+LineSet162.color = ColorRGBA164
 
 Shape161.geometry = LineSet162
 
@@ -833,11 +833,11 @@ LineSet166.vertexCount = [2]
 Coordinate167 = x3d.Coordinate()
 Coordinate167.point = (0.0961,0.9124,-0.0001,0.0398,0.4946,0.0303)
 
-LineSet166.coord.append(Coordinate167)
+LineSet166.coord = Coordinate167
 ColorRGBA168 = x3d.ColorRGBA()
 ColorRGBA168.USE = "HAnimSiteLineColorRGBA"
 
-LineSet166.color.append(ColorRGBA168)
+LineSet166.color = ColorRGBA168
 
 Shape165.geometry = LineSet166
 
@@ -918,11 +918,11 @@ LineSet184.vertexCount = [2]
 Coordinate185 = x3d.Coordinate()
 Coordinate185.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
-LineSet184.coord.append(Coordinate185)
+LineSet184.coord = Coordinate185
 ColorRGBA186 = x3d.ColorRGBA()
 ColorRGBA186.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet184.color.append(ColorRGBA186)
+LineSet184.color = ColorRGBA186
 
 Shape183.geometry = LineSet184
 
@@ -958,11 +958,11 @@ LineSet193.vertexCount = [2]
 Coordinate194 = x3d.Coordinate()
 Coordinate194.point = (0.1101,0.0656,-0.0736,0.1086,0.0001,-0.0368)
 
-LineSet193.coord.append(Coordinate194)
+LineSet193.coord = Coordinate194
 ColorRGBA195 = x3d.ColorRGBA()
 ColorRGBA195.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet193.color.append(ColorRGBA195)
+LineSet193.color = ColorRGBA195
 
 Shape192.geometry = LineSet193
 
@@ -974,11 +974,11 @@ LineSet197.vertexCount = [2]
 Coordinate198 = x3d.Coordinate()
 Coordinate198.point = (0.1101,0.0656,-0.0736,0.1308,0.0597,-0.1032)
 
-LineSet197.coord.append(Coordinate198)
+LineSet197.coord = Coordinate198
 ColorRGBA199 = x3d.ColorRGBA()
 ColorRGBA199.USE = "HAnimSiteLineColorRGBA"
 
-LineSet197.color.append(ColorRGBA199)
+LineSet197.color = ColorRGBA199
 
 Shape196.geometry = LineSet197
 
@@ -990,11 +990,11 @@ LineSet201.vertexCount = [2]
 Coordinate202 = x3d.Coordinate()
 Coordinate202.point = (0.1101,0.0656,-0.0736,0.0890,0.0716,-0.0881)
 
-LineSet201.coord.append(Coordinate202)
+LineSet201.coord = Coordinate202
 ColorRGBA203 = x3d.ColorRGBA()
 ColorRGBA203.USE = "HAnimSiteLineColorRGBA"
 
-LineSet201.color.append(ColorRGBA203)
+LineSet201.color = ColorRGBA203
 
 Shape200.geometry = LineSet201
 
@@ -1006,11 +1006,11 @@ LineSet205.vertexCount = [2]
 Coordinate206 = x3d.Coordinate()
 Coordinate206.point = (0.1101,0.0656,-0.0736,0.0890,0.0575,-0.0943)
 
-LineSet205.coord.append(Coordinate206)
+LineSet205.coord = Coordinate206
 ColorRGBA207 = x3d.ColorRGBA()
 ColorRGBA207.USE = "HAnimSiteLineColorRGBA"
 
-LineSet205.color.append(ColorRGBA207)
+LineSet205.color = ColorRGBA207
 
 Shape204.geometry = LineSet205
 
@@ -1022,11 +1022,11 @@ LineSet209.vertexCount = [2]
 Coordinate210 = x3d.Coordinate()
 Coordinate210.point = (0.1101,0.0656,-0.0736,0.0974,0.0259,-0.1171)
 
-LineSet209.coord.append(Coordinate210)
+LineSet209.coord = Coordinate210
 ColorRGBA211 = x3d.ColorRGBA()
 ColorRGBA211.USE = "HAnimSiteLineColorRGBA"
 
-LineSet209.color.append(ColorRGBA211)
+LineSet209.color = ColorRGBA211
 
 Shape208.geometry = LineSet209
 
@@ -1122,11 +1122,11 @@ LineSet230.vertexCount = [2]
 Coordinate231 = x3d.Coordinate()
 Coordinate231.point = (0.1086,0.0001,-0.0368,0.1086,0.0001,0.0368)
 
-LineSet230.coord.append(Coordinate231)
+LineSet230.coord = Coordinate231
 ColorRGBA232 = x3d.ColorRGBA()
 ColorRGBA232.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet230.color.append(ColorRGBA232)
+LineSet230.color = ColorRGBA232
 
 Shape229.geometry = LineSet230
 
@@ -1162,11 +1162,11 @@ LineSet239.vertexCount = [2]
 Coordinate240 = x3d.Coordinate()
 Coordinate240.point = (0.1086,0.0001,0.0368,0.1086,0.0000,0.0762)
 
-LineSet239.coord.append(Coordinate240)
+LineSet239.coord = Coordinate240
 ColorRGBA241 = x3d.ColorRGBA()
 ColorRGBA241.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet239.color.append(ColorRGBA241)
+LineSet239.color = ColorRGBA241
 
 Shape238.geometry = LineSet239
 
@@ -1178,11 +1178,11 @@ LineSet243.vertexCount = [2]
 Coordinate244 = x3d.Coordinate()
 Coordinate244.point = (0.1086,0.0001,0.0368,0.0816,0.0232,0.0106)
 
-LineSet243.coord.append(Coordinate244)
+LineSet243.coord = Coordinate244
 ColorRGBA245 = x3d.ColorRGBA()
 ColorRGBA245.USE = "HAnimSiteLineColorRGBA"
 
-LineSet243.color.append(ColorRGBA245)
+LineSet243.color = ColorRGBA245
 
 Shape242.geometry = LineSet243
 
@@ -1233,11 +1233,11 @@ LineSet255.vertexCount = [2]
 Coordinate256 = x3d.Coordinate()
 Coordinate256.point = (0.1086,0.0000,0.0762,0.1354,0.0016,0.1476)
 
-LineSet255.coord.append(Coordinate256)
+LineSet255.coord = Coordinate256
 ColorRGBA257 = x3d.ColorRGBA()
 ColorRGBA257.USE = "HAnimSiteLineColorRGBA"
 
-LineSet255.color.append(ColorRGBA257)
+LineSet255.color = ColorRGBA257
 
 Shape254.geometry = LineSet255
 
@@ -1249,11 +1249,11 @@ LineSet259.vertexCount = [2]
 Coordinate260 = x3d.Coordinate()
 Coordinate260.point = (0.1086,0.0000,0.0762,0.1825,0.0070,0.0928)
 
-LineSet259.coord.append(Coordinate260)
+LineSet259.coord = Coordinate260
 ColorRGBA261 = x3d.ColorRGBA()
 ColorRGBA261.USE = "HAnimSiteLineColorRGBA"
 
-LineSet259.color.append(ColorRGBA261)
+LineSet259.color = ColorRGBA261
 
 Shape258.geometry = LineSet259
 
@@ -1265,11 +1265,11 @@ LineSet263.vertexCount = [2]
 Coordinate264 = x3d.Coordinate()
 Coordinate264.point = (0.1086,0.0000,0.0762,0.1195,0.0079,0.1433)
 
-LineSet263.coord.append(Coordinate264)
+LineSet263.coord = Coordinate264
 ColorRGBA265 = x3d.ColorRGBA()
 ColorRGBA265.USE = "HAnimSiteLineColorRGBA"
 
-LineSet263.color.append(ColorRGBA265)
+LineSet263.color = ColorRGBA265
 
 Shape262.geometry = LineSet263
 
@@ -1362,11 +1362,11 @@ LineSet281.vertexCount = [2]
 Coordinate282 = x3d.Coordinate()
 Coordinate282.point = (-0.0961,0.9124,-0.0001,-0.1040,0.4867,0.0308)
 
-LineSet281.coord.append(Coordinate282)
+LineSet281.coord = Coordinate282
 ColorRGBA283 = x3d.ColorRGBA()
 ColorRGBA283.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet281.color.append(ColorRGBA283)
+LineSet281.color = ColorRGBA283
 
 Shape280.geometry = LineSet281
 
@@ -1378,11 +1378,11 @@ LineSet285.vertexCount = [2]
 Coordinate286 = x3d.Coordinate()
 Coordinate286.point = (-0.0961,0.9124,-0.0001,-0.0825,0.4932,-0.0326)
 
-LineSet285.coord.append(Coordinate286)
+LineSet285.coord = Coordinate286
 ColorRGBA287 = x3d.ColorRGBA()
 ColorRGBA287.USE = "HAnimSiteLineColorRGBA"
 
-LineSet285.color.append(ColorRGBA287)
+LineSet285.color = ColorRGBA287
 
 Shape284.geometry = LineSet285
 
@@ -1394,11 +1394,11 @@ LineSet289.vertexCount = [2]
 Coordinate290 = x3d.Coordinate()
 Coordinate290.point = (-0.0961,0.9124,-0.0001,-0.1421,0.4992,0.0310)
 
-LineSet289.coord.append(Coordinate290)
+LineSet289.coord = Coordinate290
 ColorRGBA291 = x3d.ColorRGBA()
 ColorRGBA291.USE = "HAnimSiteLineColorRGBA"
 
-LineSet289.color.append(ColorRGBA291)
+LineSet289.color = ColorRGBA291
 
 Shape288.geometry = LineSet289
 
@@ -1410,11 +1410,11 @@ LineSet293.vertexCount = [2]
 Coordinate294 = x3d.Coordinate()
 Coordinate294.point = (-0.0961,0.9124,-0.0001,-0.0221,0.5014,0.0289)
 
-LineSet293.coord.append(Coordinate294)
+LineSet293.coord = Coordinate294
 ColorRGBA295 = x3d.ColorRGBA()
 ColorRGBA295.USE = "HAnimSiteLineColorRGBA"
 
-LineSet293.color.append(ColorRGBA295)
+LineSet293.color = ColorRGBA295
 
 Shape292.geometry = LineSet293
 
@@ -1495,11 +1495,11 @@ LineSet311.vertexCount = [2]
 Coordinate312 = x3d.Coordinate()
 Coordinate312.point = (-0.1040,0.4867,0.0308,-0.1101,0.0656,-0.0736)
 
-LineSet311.coord.append(Coordinate312)
+LineSet311.coord = Coordinate312
 ColorRGBA313 = x3d.ColorRGBA()
 ColorRGBA313.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet311.color.append(ColorRGBA313)
+LineSet311.color = ColorRGBA313
 
 Shape310.geometry = LineSet311
 
@@ -1535,11 +1535,11 @@ LineSet320.vertexCount = [2]
 Coordinate321 = x3d.Coordinate()
 Coordinate321.point = (-0.1101,0.0656,-0.0736,-0.1086,0.0001,-0.0368)
 
-LineSet320.coord.append(Coordinate321)
+LineSet320.coord = Coordinate321
 ColorRGBA322 = x3d.ColorRGBA()
 ColorRGBA322.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet320.color.append(ColorRGBA322)
+LineSet320.color = ColorRGBA322
 
 Shape319.geometry = LineSet320
 
@@ -1551,11 +1551,11 @@ LineSet324.vertexCount = [2]
 Coordinate325 = x3d.Coordinate()
 Coordinate325.point = (-0.1101,0.0656,-0.0736,-0.1006,0.0658,-0.1075)
 
-LineSet324.coord.append(Coordinate325)
+LineSet324.coord = Coordinate325
 ColorRGBA326 = x3d.ColorRGBA()
 ColorRGBA326.USE = "HAnimSiteLineColorRGBA"
 
-LineSet324.color.append(ColorRGBA326)
+LineSet324.color = ColorRGBA326
 
 Shape323.geometry = LineSet324
 
@@ -1567,11 +1567,11 @@ LineSet328.vertexCount = [2]
 Coordinate329 = x3d.Coordinate()
 Coordinate329.point = (-0.1101,0.0656,-0.0736,-0.0591,0.0760,-0.0928)
 
-LineSet328.coord.append(Coordinate329)
+LineSet328.coord = Coordinate329
 ColorRGBA330 = x3d.ColorRGBA()
 ColorRGBA330.USE = "HAnimSiteLineColorRGBA"
 
-LineSet328.color.append(ColorRGBA330)
+LineSet328.color = ColorRGBA330
 
 Shape327.geometry = LineSet328
 
@@ -1583,11 +1583,11 @@ LineSet332.vertexCount = [2]
 Coordinate333 = x3d.Coordinate()
 Coordinate333.point = (-0.1101,0.0656,-0.0736,-0.0603,0.0610,-0.1002)
 
-LineSet332.coord.append(Coordinate333)
+LineSet332.coord = Coordinate333
 ColorRGBA334 = x3d.ColorRGBA()
 ColorRGBA334.USE = "HAnimSiteLineColorRGBA"
 
-LineSet332.color.append(ColorRGBA334)
+LineSet332.color = ColorRGBA334
 
 Shape331.geometry = LineSet332
 
@@ -1599,11 +1599,11 @@ LineSet336.vertexCount = [2]
 Coordinate337 = x3d.Coordinate()
 Coordinate337.point = (-0.1101,0.0656,-0.0736,-0.0692,0.0297,-0.1221)
 
-LineSet336.coord.append(Coordinate337)
+LineSet336.coord = Coordinate337
 ColorRGBA338 = x3d.ColorRGBA()
 ColorRGBA338.USE = "HAnimSiteLineColorRGBA"
 
-LineSet336.color.append(ColorRGBA338)
+LineSet336.color = ColorRGBA338
 
 Shape335.geometry = LineSet336
 
@@ -1699,11 +1699,11 @@ LineSet357.vertexCount = [2]
 Coordinate358 = x3d.Coordinate()
 Coordinate358.point = (-0.1086,0.0001,-0.0368,-0.1086,0.0001,0.0368)
 
-LineSet357.coord.append(Coordinate358)
+LineSet357.coord = Coordinate358
 ColorRGBA359 = x3d.ColorRGBA()
 ColorRGBA359.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet357.color.append(ColorRGBA359)
+LineSet357.color = ColorRGBA359
 
 Shape356.geometry = LineSet357
 
@@ -1739,11 +1739,11 @@ LineSet366.vertexCount = [2]
 Coordinate367 = x3d.Coordinate()
 Coordinate367.point = (-0.1086,0.0001,0.0368,-0.1086,0.0000,0.0762)
 
-LineSet366.coord.append(Coordinate367)
+LineSet366.coord = Coordinate367
 ColorRGBA368 = x3d.ColorRGBA()
 ColorRGBA368.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet366.color.append(ColorRGBA368)
+LineSet366.color = ColorRGBA368
 
 Shape365.geometry = LineSet366
 
@@ -1755,11 +1755,11 @@ LineSet370.vertexCount = [2]
 Coordinate371 = x3d.Coordinate()
 Coordinate371.point = (-0.1086,0.0001,0.0368,-0.0521,0.0260,0.0127)
 
-LineSet370.coord.append(Coordinate371)
+LineSet370.coord = Coordinate371
 ColorRGBA372 = x3d.ColorRGBA()
 ColorRGBA372.USE = "HAnimSiteLineColorRGBA"
 
-LineSet370.color.append(ColorRGBA372)
+LineSet370.color = ColorRGBA372
 
 Shape369.geometry = LineSet370
 
@@ -1810,11 +1810,11 @@ LineSet382.vertexCount = [2]
 Coordinate383 = x3d.Coordinate()
 Coordinate383.point = (-0.1086,0.0000,0.0762,-0.1043,0.0227,0.1450)
 
-LineSet382.coord.append(Coordinate383)
+LineSet382.coord = Coordinate383
 ColorRGBA384 = x3d.ColorRGBA()
 ColorRGBA384.USE = "HAnimSiteLineColorRGBA"
 
-LineSet382.color.append(ColorRGBA384)
+LineSet382.color = ColorRGBA384
 
 Shape381.geometry = LineSet382
 
@@ -1826,11 +1826,11 @@ LineSet386.vertexCount = [2]
 Coordinate387 = x3d.Coordinate()
 Coordinate387.point = (-0.1086,0.0000,0.0762,-0.1523,0.0166,0.0895)
 
-LineSet386.coord.append(Coordinate387)
+LineSet386.coord = Coordinate387
 ColorRGBA388 = x3d.ColorRGBA()
 ColorRGBA388.USE = "HAnimSiteLineColorRGBA"
 
-LineSet386.color.append(ColorRGBA388)
+LineSet386.color = ColorRGBA388
 
 Shape385.geometry = LineSet386
 
@@ -1842,11 +1842,11 @@ LineSet390.vertexCount = [2]
 Coordinate391 = x3d.Coordinate()
 Coordinate391.point = (-0.1086,0.0000,0.0762,-0.0883,0.0134,0.1383)
 
-LineSet390.coord.append(Coordinate391)
+LineSet390.coord = Coordinate391
 ColorRGBA392 = x3d.ColorRGBA()
 ColorRGBA392.USE = "HAnimSiteLineColorRGBA"
 
-LineSet390.color.append(ColorRGBA392)
+LineSet390.color = ColorRGBA392
 
 Shape389.geometry = LineSet390
 
@@ -1941,11 +1941,11 @@ LineSet408.vertexCount = [2]
 Coordinate409 = x3d.Coordinate()
 Coordinate409.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
-LineSet408.coord.append(Coordinate409)
+LineSet408.coord = Coordinate409
 ColorRGBA410 = x3d.ColorRGBA()
 ColorRGBA410.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet408.color.append(ColorRGBA410)
+LineSet408.color = ColorRGBA410
 
 Shape407.geometry = LineSet408
 
@@ -1957,11 +1957,11 @@ LineSet412.vertexCount = [2]
 Coordinate413 = x3d.Coordinate()
 Coordinate413.point = (0.0028,1.0568,-0.0776,0.0000,1.0915,-0.1091)
 
-LineSet412.coord.append(Coordinate413)
+LineSet412.coord = Coordinate413
 ColorRGBA414 = x3d.ColorRGBA()
 ColorRGBA414.USE = "HAnimSiteLineColorRGBA"
 
-LineSet412.color.append(ColorRGBA414)
+LineSet412.color = ColorRGBA414
 
 Shape411.geometry = LineSet412
 
@@ -1973,11 +1973,11 @@ LineSet416.vertexCount = [2]
 Coordinate417 = x3d.Coordinate()
 Coordinate417.point = (0.0028,1.0568,-0.0776,0.0069,1.0966,0.1017)
 
-LineSet416.coord.append(Coordinate417)
+LineSet416.coord = Coordinate417
 ColorRGBA418 = x3d.ColorRGBA()
 ColorRGBA418.USE = "HAnimSiteLineColorRGBA"
 
-LineSet416.color.append(ColorRGBA418)
+LineSet416.color = ColorRGBA418
 
 Shape415.geometry = LineSet416
 
@@ -2043,11 +2043,11 @@ LineSet431.vertexCount = [2]
 Coordinate432 = x3d.Coordinate()
 Coordinate432.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
-LineSet431.coord.append(Coordinate432)
+LineSet431.coord = Coordinate432
 ColorRGBA433 = x3d.ColorRGBA()
 ColorRGBA433.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet431.color.append(ColorRGBA433)
+LineSet431.color = ColorRGBA433
 
 Shape430.geometry = LineSet431
 
@@ -2083,11 +2083,11 @@ LineSet440.vertexCount = [2]
 Coordinate441 = x3d.Coordinate()
 Coordinate441.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
-LineSet440.coord.append(Coordinate441)
+LineSet440.coord = Coordinate441
 ColorRGBA442 = x3d.ColorRGBA()
 ColorRGBA442.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet440.color.append(ColorRGBA442)
+LineSet440.color = ColorRGBA442
 
 Shape439.geometry = LineSet440
 
@@ -2123,11 +2123,11 @@ LineSet449.vertexCount = [2]
 Coordinate450 = x3d.Coordinate()
 Coordinate450.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
-LineSet449.coord.append(Coordinate450)
+LineSet449.coord = Coordinate450
 ColorRGBA451 = x3d.ColorRGBA()
 ColorRGBA451.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet449.color.append(ColorRGBA451)
+LineSet449.color = ColorRGBA451
 
 Shape448.geometry = LineSet449
 
@@ -2139,11 +2139,11 @@ LineSet453.vertexCount = [2]
 Coordinate454 = x3d.Coordinate()
 Coordinate454.point = (0.0045,1.1546,-0.0800,-0.0711,1.1941,0.1016)
 
-LineSet453.coord.append(Coordinate454)
+LineSet453.coord = Coordinate454
 ColorRGBA455 = x3d.ColorRGBA()
 ColorRGBA455.USE = "HAnimSiteLineColorRGBA"
 
-LineSet453.color.append(ColorRGBA455)
+LineSet453.color = ColorRGBA455
 
 Shape452.geometry = LineSet453
 
@@ -2155,11 +2155,11 @@ LineSet457.vertexCount = [2]
 Coordinate458 = x3d.Coordinate()
 Coordinate458.point = (0.0045,1.1546,-0.0800,0.0871,1.1925,0.0992)
 
-LineSet457.coord.append(Coordinate458)
+LineSet457.coord = Coordinate458
 ColorRGBA459 = x3d.ColorRGBA()
 ColorRGBA459.USE = "HAnimSiteLineColorRGBA"
 
-LineSet457.color.append(ColorRGBA459)
+LineSet457.color = ColorRGBA459
 
 Shape456.geometry = LineSet457
 
@@ -2171,11 +2171,11 @@ LineSet461.vertexCount = [2]
 Coordinate462 = x3d.Coordinate()
 Coordinate462.point = (0.0045,1.1546,-0.0800,0.0049,1.1908,-0.1113)
 
-LineSet461.coord.append(Coordinate462)
+LineSet461.coord = Coordinate462
 ColorRGBA463 = x3d.ColorRGBA()
 ColorRGBA463.USE = "HAnimSiteLineColorRGBA"
 
-LineSet461.color.append(ColorRGBA463)
+LineSet461.color = ColorRGBA463
 
 Shape460.geometry = LineSet461
 
@@ -2256,11 +2256,11 @@ LineSet479.vertexCount = [2]
 Coordinate480 = x3d.Coordinate()
 Coordinate480.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
-LineSet479.coord.append(Coordinate480)
+LineSet479.coord = Coordinate480
 ColorRGBA481 = x3d.ColorRGBA()
 ColorRGBA481.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet479.color.append(ColorRGBA481)
+LineSet479.color = ColorRGBA481
 
 Shape478.geometry = LineSet479
 
@@ -2296,11 +2296,11 @@ LineSet488.vertexCount = [2]
 Coordinate489 = x3d.Coordinate()
 Coordinate489.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
-LineSet488.coord.append(Coordinate489)
+LineSet488.coord = Coordinate489
 ColorRGBA490 = x3d.ColorRGBA()
 ColorRGBA490.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet488.color.append(ColorRGBA490)
+LineSet488.color = ColorRGBA490
 
 Shape487.geometry = LineSet488
 
@@ -2336,11 +2336,11 @@ LineSet497.vertexCount = [2]
 Coordinate498 = x3d.Coordinate()
 Coordinate498.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
-LineSet497.coord.append(Coordinate498)
+LineSet497.coord = Coordinate498
 ColorRGBA499 = x3d.ColorRGBA()
 ColorRGBA499.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet497.color.append(ColorRGBA499)
+LineSet497.color = ColorRGBA499
 
 Shape496.geometry = LineSet497
 
@@ -2376,11 +2376,11 @@ LineSet506.vertexCount = [2]
 Coordinate507 = x3d.Coordinate()
 Coordinate507.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
-LineSet506.coord.append(Coordinate507)
+LineSet506.coord = Coordinate507
 ColorRGBA508 = x3d.ColorRGBA()
 ColorRGBA508.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet506.color.append(ColorRGBA508)
+LineSet506.color = ColorRGBA508
 
 Shape505.geometry = LineSet506
 
@@ -2392,11 +2392,11 @@ LineSet510.vertexCount = [2]
 Coordinate511 = x3d.Coordinate()
 Coordinate511.point = (0.0056,1.2848,-0.0822,0.0085,1.2995,0.1147)
 
-LineSet510.coord.append(Coordinate511)
+LineSet510.coord = Coordinate511
 ColorRGBA512 = x3d.ColorRGBA()
 ColorRGBA512.USE = "HAnimSiteLineColorRGBA"
 
-LineSet510.color.append(ColorRGBA512)
+LineSet510.color = ColorRGBA512
 
 Shape509.geometry = LineSet510
 
@@ -2447,11 +2447,11 @@ LineSet522.vertexCount = [2]
 Coordinate523 = x3d.Coordinate()
 Coordinate523.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
-LineSet522.coord.append(Coordinate523)
+LineSet522.coord = Coordinate523
 ColorRGBA524 = x3d.ColorRGBA()
 ColorRGBA524.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet522.color.append(ColorRGBA524)
+LineSet522.color = ColorRGBA524
 
 Shape521.geometry = LineSet522
 
@@ -2463,11 +2463,11 @@ LineSet526.vertexCount = [2]
 Coordinate527 = x3d.Coordinate()
 Coordinate527.point = (0.0057,1.3126,-0.0838,-0.0736,1.3385,0.1217)
 
-LineSet526.coord.append(Coordinate527)
+LineSet526.coord = Coordinate527
 ColorRGBA528 = x3d.ColorRGBA()
 ColorRGBA528.USE = "HAnimSiteLineColorRGBA"
 
-LineSet526.color.append(ColorRGBA528)
+LineSet526.color = ColorRGBA528
 
 Shape525.geometry = LineSet526
 
@@ -2479,11 +2479,11 @@ LineSet530.vertexCount = [2]
 Coordinate531 = x3d.Coordinate()
 Coordinate531.point = (0.0057,1.3126,-0.0838,0.0918,1.3382,0.1192)
 
-LineSet530.coord.append(Coordinate531)
+LineSet530.coord = Coordinate531
 ColorRGBA532 = x3d.ColorRGBA()
 ColorRGBA532.USE = "HAnimSiteLineColorRGBA"
 
-LineSet530.color.append(ColorRGBA532)
+LineSet530.color = ColorRGBA532
 
 Shape529.geometry = LineSet530
 
@@ -2549,11 +2549,11 @@ LineSet545.vertexCount = [2]
 Coordinate546 = x3d.Coordinate()
 Coordinate546.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
-LineSet545.coord.append(Coordinate546)
+LineSet545.coord = Coordinate546
 ColorRGBA547 = x3d.ColorRGBA()
 ColorRGBA547.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet545.color.append(ColorRGBA547)
+LineSet545.color = ColorRGBA547
 
 Shape544.geometry = LineSet545
 
@@ -2589,11 +2589,11 @@ LineSet554.vertexCount = [2]
 Coordinate555 = x3d.Coordinate()
 Coordinate555.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
-LineSet554.coord.append(Coordinate555)
+LineSet554.coord = Coordinate555
 ColorRGBA556 = x3d.ColorRGBA()
 ColorRGBA556.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet554.color.append(ColorRGBA556)
+LineSet554.color = ColorRGBA556
 
 Shape553.geometry = LineSet554
 
@@ -2629,11 +2629,11 @@ LineSet563.vertexCount = [2]
 Coordinate564 = x3d.Coordinate()
 Coordinate564.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
-LineSet563.coord.append(Coordinate564)
+LineSet563.coord = Coordinate564
 ColorRGBA565 = x3d.ColorRGBA()
 ColorRGBA565.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet563.color.append(ColorRGBA565)
+LineSet563.color = ColorRGBA565
 
 Shape562.geometry = LineSet563
 
@@ -2669,11 +2669,11 @@ LineSet572.vertexCount = [2]
 Coordinate573 = x3d.Coordinate()
 Coordinate573.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
-LineSet572.coord.append(Coordinate573)
+LineSet572.coord = Coordinate573
 ColorRGBA574 = x3d.ColorRGBA()
 ColorRGBA574.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet572.color.append(ColorRGBA574)
+LineSet572.color = ColorRGBA574
 
 Shape571.geometry = LineSet572
 
@@ -2709,11 +2709,11 @@ LineSet581.vertexCount = [2]
 Coordinate582 = x3d.Coordinate()
 Coordinate582.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
-LineSet581.coord.append(Coordinate582)
+LineSet581.coord = Coordinate582
 ColorRGBA583 = x3d.ColorRGBA()
 ColorRGBA583.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet581.color.append(ColorRGBA583)
+LineSet581.color = ColorRGBA583
 
 Shape580.geometry = LineSet581
 
@@ -2749,11 +2749,11 @@ LineSet590.vertexCount = [2]
 Coordinate591 = x3d.Coordinate()
 Coordinate591.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
-LineSet590.coord.append(Coordinate591)
+LineSet590.coord = Coordinate591
 ColorRGBA592 = x3d.ColorRGBA()
 ColorRGBA592.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet590.color.append(ColorRGBA592)
+LineSet590.color = ColorRGBA592
 
 Shape589.geometry = LineSet590
 
@@ -2789,11 +2789,11 @@ LineSet599.vertexCount = [2]
 Coordinate600 = x3d.Coordinate()
 Coordinate600.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
-LineSet599.coord.append(Coordinate600)
+LineSet599.coord = Coordinate600
 ColorRGBA601 = x3d.ColorRGBA()
 ColorRGBA601.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet599.color.append(ColorRGBA601)
+LineSet599.color = ColorRGBA601
 
 Shape598.geometry = LineSet599
 
@@ -2829,11 +2829,11 @@ LineSet608.vertexCount = [2]
 Coordinate609 = x3d.Coordinate()
 Coordinate609.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
-LineSet608.coord.append(Coordinate609)
+LineSet608.coord = Coordinate609
 ColorRGBA610 = x3d.ColorRGBA()
 ColorRGBA610.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet608.color.append(ColorRGBA610)
+LineSet608.color = ColorRGBA610
 
 Shape607.geometry = LineSet608
 
@@ -2845,11 +2845,11 @@ LineSet612.vertexCount = [2]
 Coordinate613 = x3d.Coordinate()
 Coordinate613.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
-LineSet612.coord.append(Coordinate613)
+LineSet612.coord = Coordinate613
 ColorRGBA614 = x3d.ColorRGBA()
 ColorRGBA614.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet612.color.append(ColorRGBA614)
+LineSet612.color = ColorRGBA614
 
 Shape611.geometry = LineSet612
 
@@ -2861,11 +2861,11 @@ LineSet616.vertexCount = [2]
 Coordinate617 = x3d.Coordinate()
 Coordinate617.point = (0.0065,1.4951,-0.0387,-0.0820,1.4488,-0.0353)
 
-LineSet616.coord.append(Coordinate617)
+LineSet616.coord = Coordinate617
 ColorRGBA618 = x3d.ColorRGBA()
 ColorRGBA618.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet616.color.append(ColorRGBA618)
+LineSet616.color = ColorRGBA618
 
 Shape615.geometry = LineSet616
 
@@ -2877,11 +2877,11 @@ LineSet620.vertexCount = [2]
 Coordinate621 = x3d.Coordinate()
 Coordinate621.point = (0.0065,1.4951,-0.0387,0.0084,1.4714,0.0551)
 
-LineSet620.coord.append(Coordinate621)
+LineSet620.coord = Coordinate621
 ColorRGBA622 = x3d.ColorRGBA()
 ColorRGBA622.USE = "HAnimSiteLineColorRGBA"
 
-LineSet620.color.append(ColorRGBA622)
+LineSet620.color = ColorRGBA622
 
 Shape619.geometry = LineSet620
 
@@ -2893,11 +2893,11 @@ LineSet624.vertexCount = [2]
 Coordinate625 = x3d.Coordinate()
 Coordinate625.point = (0.0065,1.4951,-0.0387,0.0064,1.5200,-0.0815)
 
-LineSet624.coord.append(Coordinate625)
+LineSet624.coord = Coordinate625
 ColorRGBA626 = x3d.ColorRGBA()
 ColorRGBA626.USE = "HAnimSiteLineColorRGBA"
 
-LineSet624.color.append(ColorRGBA626)
+LineSet624.color = ColorRGBA626
 
 Shape623.geometry = LineSet624
 
@@ -2963,11 +2963,11 @@ LineSet639.vertexCount = [2]
 Coordinate640 = x3d.Coordinate()
 Coordinate640.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
-LineSet639.coord.append(Coordinate640)
+LineSet639.coord = Coordinate640
 ColorRGBA641 = x3d.ColorRGBA()
 ColorRGBA641.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet639.color.append(ColorRGBA641)
+LineSet639.color = ColorRGBA641
 
 Shape638.geometry = LineSet639
 
@@ -2979,11 +2979,11 @@ LineSet643.vertexCount = [2]
 Coordinate644 = x3d.Coordinate()
 Coordinate644.point = (0.0066,1.5132,-0.0301,-0.0419,1.5149,-0.0220)
 
-LineSet643.coord.append(Coordinate644)
+LineSet643.coord = Coordinate644
 ColorRGBA645 = x3d.ColorRGBA()
 ColorRGBA645.USE = "HAnimSiteLineColorRGBA"
 
-LineSet643.color.append(ColorRGBA645)
+LineSet643.color = ColorRGBA645
 
 Shape642.geometry = LineSet643
 
@@ -2995,11 +2995,11 @@ LineSet647.vertexCount = [2]
 Coordinate648 = x3d.Coordinate()
 Coordinate648.point = (0.0066,1.5132,-0.0301,0.0646,1.5141,-0.0380)
 
-LineSet647.coord.append(Coordinate648)
+LineSet647.coord = Coordinate648
 ColorRGBA649 = x3d.ColorRGBA()
 ColorRGBA649.USE = "HAnimSiteLineColorRGBA"
 
-LineSet647.color.append(ColorRGBA649)
+LineSet647.color = ColorRGBA649
 
 Shape646.geometry = LineSet647
 
@@ -3065,11 +3065,11 @@ LineSet662.vertexCount = [2]
 Coordinate663 = x3d.Coordinate()
 Coordinate663.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
-LineSet662.coord.append(Coordinate663)
+LineSet662.coord = Coordinate663
 ColorRGBA664 = x3d.ColorRGBA()
 ColorRGBA664.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet662.color.append(ColorRGBA664)
+LineSet662.color = ColorRGBA664
 
 Shape661.geometry = LineSet662
 
@@ -3105,11 +3105,11 @@ LineSet671.vertexCount = [2]
 Coordinate672 = x3d.Coordinate()
 Coordinate672.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
-LineSet671.coord.append(Coordinate672)
+LineSet671.coord = Coordinate672
 ColorRGBA673 = x3d.ColorRGBA()
 ColorRGBA673.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet671.color.append(ColorRGBA673)
+LineSet671.color = ColorRGBA673
 
 Shape670.geometry = LineSet671
 
@@ -3145,11 +3145,11 @@ LineSet680.vertexCount = [2]
 Coordinate681 = x3d.Coordinate()
 Coordinate681.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
-LineSet680.coord.append(Coordinate681)
+LineSet680.coord = Coordinate681
 ColorRGBA682 = x3d.ColorRGBA()
 ColorRGBA682.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet680.color.append(ColorRGBA682)
+LineSet680.color = ColorRGBA682
 
 Shape679.geometry = LineSet680
 
@@ -3185,11 +3185,11 @@ LineSet689.vertexCount = [2]
 Coordinate690 = x3d.Coordinate()
 Coordinate690.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
-LineSet689.coord.append(Coordinate690)
+LineSet689.coord = Coordinate690
 ColorRGBA691 = x3d.ColorRGBA()
 ColorRGBA691.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet689.color.append(ColorRGBA691)
+LineSet689.color = ColorRGBA691
 
 Shape688.geometry = LineSet689
 
@@ -3225,11 +3225,11 @@ LineSet698.vertexCount = [2]
 Coordinate699 = x3d.Coordinate()
 Coordinate699.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
-LineSet698.coord.append(Coordinate699)
+LineSet698.coord = Coordinate699
 ColorRGBA700 = x3d.ColorRGBA()
 ColorRGBA700.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet698.color.append(ColorRGBA700)
+LineSet698.color = ColorRGBA700
 
 Shape697.geometry = LineSet698
 
@@ -3265,11 +3265,11 @@ LineSet707.vertexCount = [2]
 Coordinate708 = x3d.Coordinate()
 Coordinate708.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
-LineSet707.coord.append(Coordinate708)
+LineSet707.coord = Coordinate708
 ColorRGBA709 = x3d.ColorRGBA()
 ColorRGBA709.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet707.color.append(ColorRGBA709)
+LineSet707.color = ColorRGBA709
 
 Shape706.geometry = LineSet707
 
@@ -3305,11 +3305,11 @@ LineSet716.vertexCount = [2]
 Coordinate717 = x3d.Coordinate()
 Coordinate717.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
-LineSet716.coord.append(Coordinate717)
+LineSet716.coord = Coordinate717
 ColorRGBA718 = x3d.ColorRGBA()
 ColorRGBA718.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet716.color.append(ColorRGBA718)
+LineSet716.color = ColorRGBA718
 
 Shape715.geometry = LineSet716
 
@@ -3321,11 +3321,11 @@ LineSet720.vertexCount = [2]
 Coordinate721 = x3d.Coordinate()
 Coordinate721.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
-LineSet720.coord.append(Coordinate721)
+LineSet720.coord = Coordinate721
 ColorRGBA722 = x3d.ColorRGBA()
 ColorRGBA722.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet720.color.append(ColorRGBA722)
+LineSet720.color = ColorRGBA722
 
 Shape719.geometry = LineSet720
 
@@ -3337,11 +3337,11 @@ LineSet724.vertexCount = [2]
 Coordinate725 = x3d.Coordinate()
 Coordinate725.point = (0.0044,1.6209,0.0236,0.0336,1.6350,0.0506)
 
-LineSet724.coord.append(Coordinate725)
+LineSet724.coord = Coordinate725
 ColorRGBA726 = x3d.ColorRGBA()
 ColorRGBA726.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet724.color.append(ColorRGBA726)
+LineSet724.color = ColorRGBA726
 
 Shape723.geometry = LineSet724
 
@@ -3353,11 +3353,11 @@ LineSet728.vertexCount = [2]
 Coordinate729 = x3d.Coordinate()
 Coordinate729.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
-LineSet728.coord.append(Coordinate729)
+LineSet728.coord = Coordinate729
 ColorRGBA730 = x3d.ColorRGBA()
 ColorRGBA730.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet728.color.append(ColorRGBA730)
+LineSet728.color = ColorRGBA730
 
 Shape727.geometry = LineSet728
 
@@ -3369,11 +3369,11 @@ LineSet732.vertexCount = [2]
 Coordinate733 = x3d.Coordinate()
 Coordinate733.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
-LineSet732.coord.append(Coordinate733)
+LineSet732.coord = Coordinate733
 ColorRGBA734 = x3d.ColorRGBA()
 ColorRGBA734.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet732.color.append(ColorRGBA734)
+LineSet732.color = ColorRGBA734
 
 Shape731.geometry = LineSet732
 
@@ -3385,11 +3385,11 @@ LineSet736.vertexCount = [2]
 Coordinate737 = x3d.Coordinate()
 Coordinate737.point = (0.0044,1.6209,0.0236,-0.0336,1.6350,0.0506)
 
-LineSet736.coord.append(Coordinate737)
+LineSet736.coord = Coordinate737
 ColorRGBA738 = x3d.ColorRGBA()
 ColorRGBA738.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet736.color.append(ColorRGBA738)
+LineSet736.color = ColorRGBA738
 
 Shape735.geometry = LineSet736
 
@@ -3401,11 +3401,11 @@ LineSet740.vertexCount = [2]
 Coordinate741 = x3d.Coordinate()
 Coordinate741.point = (0.0044,1.6209,0.0236,0.0000,1.6300,0.0150)
 
-LineSet740.coord.append(Coordinate741)
+LineSet740.coord = Coordinate741
 ColorRGBA742 = x3d.ColorRGBA()
 ColorRGBA742.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet740.color.append(ColorRGBA742)
+LineSet740.color = ColorRGBA742
 
 Shape739.geometry = LineSet740
 
@@ -3417,11 +3417,11 @@ LineSet744.vertexCount = [2]
 Coordinate745 = x3d.Coordinate()
 Coordinate745.point = (0.0044,1.6209,0.0236,0.0050,1.7504,0.0055)
 
-LineSet744.coord.append(Coordinate745)
+LineSet744.coord = Coordinate745
 ColorRGBA746 = x3d.ColorRGBA()
 ColorRGBA746.USE = "HAnimSiteLineColorRGBA"
 
-LineSet744.color.append(ColorRGBA746)
+LineSet744.color = ColorRGBA746
 
 Shape743.geometry = LineSet744
 
@@ -3433,11 +3433,11 @@ LineSet748.vertexCount = [2]
 Coordinate749 = x3d.Coordinate()
 Coordinate749.point = (0.0044,1.6209,0.0236,0.0058,1.6316,0.0852)
 
-LineSet748.coord.append(Coordinate749)
+LineSet748.coord = Coordinate749
 ColorRGBA750 = x3d.ColorRGBA()
 ColorRGBA750.USE = "HAnimSiteLineColorRGBA"
 
-LineSet748.color.append(ColorRGBA750)
+LineSet748.color = ColorRGBA750
 
 Shape747.geometry = LineSet748
 
@@ -3449,11 +3449,11 @@ LineSet752.vertexCount = [2]
 Coordinate753 = x3d.Coordinate()
 Coordinate753.point = (0.0044,1.6209,0.0236,-0.0237,1.6171,0.0752)
 
-LineSet752.coord.append(Coordinate753)
+LineSet752.coord = Coordinate753
 ColorRGBA754 = x3d.ColorRGBA()
 ColorRGBA754.USE = "HAnimSiteLineColorRGBA"
 
-LineSet752.color.append(ColorRGBA754)
+LineSet752.color = ColorRGBA754
 
 Shape751.geometry = LineSet752
 
@@ -3465,11 +3465,11 @@ LineSet756.vertexCount = [2]
 Coordinate757 = x3d.Coordinate()
 Coordinate757.point = (0.0044,1.6209,0.0236,0.0341,1.6171,0.0752)
 
-LineSet756.coord.append(Coordinate757)
+LineSet756.coord = Coordinate757
 ColorRGBA758 = x3d.ColorRGBA()
 ColorRGBA758.USE = "HAnimSiteLineColorRGBA"
 
-LineSet756.color.append(ColorRGBA758)
+LineSet756.color = ColorRGBA758
 
 Shape755.geometry = LineSet756
 
@@ -3481,11 +3481,11 @@ LineSet760.vertexCount = [2]
 Coordinate761 = x3d.Coordinate()
 Coordinate761.point = (0.0044,1.6209,0.0236,0.0061,1.5410,0.0805)
 
-LineSet760.coord.append(Coordinate761)
+LineSet760.coord = Coordinate761
 ColorRGBA762 = x3d.ColorRGBA()
 ColorRGBA762.USE = "HAnimSiteLineColorRGBA"
 
-LineSet760.color.append(ColorRGBA762)
+LineSet760.color = ColorRGBA762
 
 Shape759.geometry = LineSet760
 
@@ -3497,11 +3497,11 @@ LineSet764.vertexCount = [2]
 Coordinate765 = x3d.Coordinate()
 Coordinate765.point = (0.0044,1.6209,0.0236,-0.0646,1.6347,0.0302)
 
-LineSet764.coord.append(Coordinate765)
+LineSet764.coord = Coordinate765
 ColorRGBA766 = x3d.ColorRGBA()
 ColorRGBA766.USE = "HAnimSiteLineColorRGBA"
 
-LineSet764.color.append(ColorRGBA766)
+LineSet764.color = ColorRGBA766
 
 Shape763.geometry = LineSet764
 
@@ -3513,11 +3513,11 @@ LineSet768.vertexCount = [2]
 Coordinate769 = x3d.Coordinate()
 Coordinate769.point = (0.0044,1.6209,0.0236,-0.0520,1.5529,0.0347)
 
-LineSet768.coord.append(Coordinate769)
+LineSet768.coord = Coordinate769
 ColorRGBA770 = x3d.ColorRGBA()
 ColorRGBA770.USE = "HAnimSiteLineColorRGBA"
 
-LineSet768.color.append(ColorRGBA770)
+LineSet768.color = ColorRGBA770
 
 Shape767.geometry = LineSet768
 
@@ -3529,11 +3529,11 @@ LineSet772.vertexCount = [2]
 Coordinate773 = x3d.Coordinate()
 Coordinate773.point = (0.0044,1.6209,0.0236,0.0739,1.6348,0.0282)
 
-LineSet772.coord.append(Coordinate773)
+LineSet772.coord = Coordinate773
 ColorRGBA774 = x3d.ColorRGBA()
 ColorRGBA774.USE = "HAnimSiteLineColorRGBA"
 
-LineSet772.color.append(ColorRGBA774)
+LineSet772.color = ColorRGBA774
 
 Shape771.geometry = LineSet772
 
@@ -3545,11 +3545,11 @@ LineSet776.vertexCount = [2]
 Coordinate777 = x3d.Coordinate()
 Coordinate777.point = (0.0044,1.6209,0.0236,0.0631,1.5530,0.0330)
 
-LineSet776.coord.append(Coordinate777)
+LineSet776.coord = Coordinate777
 ColorRGBA778 = x3d.ColorRGBA()
 ColorRGBA778.USE = "HAnimSiteLineColorRGBA"
 
-LineSet776.color.append(ColorRGBA778)
+LineSet776.color = ColorRGBA778
 
 Shape775.geometry = LineSet776
 
@@ -3561,11 +3561,11 @@ LineSet780.vertexCount = [2]
 Coordinate781 = x3d.Coordinate()
 Coordinate781.point = (0.0044,1.6209,0.0236,0.0039,1.5972,-0.0796)
 
-LineSet780.coord.append(Coordinate781)
+LineSet780.coord = Coordinate781
 ColorRGBA782 = x3d.ColorRGBA()
 ColorRGBA782.USE = "HAnimSiteLineColorRGBA"
 
-LineSet780.color.append(ColorRGBA782)
+LineSet780.color = ColorRGBA782
 
 Shape779.geometry = LineSet780
 
@@ -3752,12 +3752,12 @@ LineSet819.vertexCount = [2]
 Coordinate820 = x3d.Coordinate()
 Coordinate820.point = (0.0336,1.6332,0.0502,0.0340,1.6400,0.0500)
 
-LineSet819.coord.append(Coordinate820)
+LineSet819.coord = Coordinate820
 ColorRGBA821 = x3d.ColorRGBA()
 ColorRGBA821.DEF = "HAnimSiteViewpointLineColorRGBA"
 ColorRGBA821.color = [1,1,0,1,1,1,0,0.1]
 
-LineSet819.color.append(ColorRGBA821)
+LineSet819.color = ColorRGBA821
 
 Shape818.geometry = LineSet819
 
@@ -3802,7 +3802,7 @@ IndexedFaceSet830.creaseAngle = 0.5
 Coordinate831 = x3d.Coordinate()
 Coordinate831.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet830.coord.append(Coordinate831)
+IndexedFaceSet830.coord = Coordinate831
 
 Shape829.geometry = IndexedFaceSet830
 Appearance832 = x3d.Appearance()
@@ -3906,11 +3906,11 @@ LineSet850.vertexCount = [2]
 Coordinate851 = x3d.Coordinate()
 Coordinate851.point = (-0.0336,1.6332,0.0502,-0.0340,1.6400,0.0500)
 
-LineSet850.coord.append(Coordinate851)
+LineSet850.coord = Coordinate851
 ColorRGBA852 = x3d.ColorRGBA()
 ColorRGBA852.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet850.color.append(ColorRGBA852)
+LineSet850.color = ColorRGBA852
 
 Shape849.geometry = LineSet850
 
@@ -4042,11 +4042,11 @@ LineSet877.vertexCount = [2]
 Coordinate878 = x3d.Coordinate()
 Coordinate878.point = (0.0000,1.6300,0.0150,0.0450,1.6300,0.0000)
 
-LineSet877.coord.append(Coordinate878)
+LineSet877.coord = Coordinate878
 ColorRGBA879 = x3d.ColorRGBA()
 ColorRGBA879.USE = "HAnimSiteLineColorRGBA"
 
-LineSet877.color.append(ColorRGBA879)
+LineSet877.color = ColorRGBA879
 
 Shape876.geometry = LineSet877
 
@@ -4058,11 +4058,11 @@ LineSet881.vertexCount = [2]
 Coordinate882 = x3d.Coordinate()
 Coordinate882.point = (0.0000,1.6300,0.0150,-0.0450,1.6300,0.0000)
 
-LineSet881.coord.append(Coordinate882)
+LineSet881.coord = Coordinate882
 ColorRGBA883 = x3d.ColorRGBA()
 ColorRGBA883.USE = "HAnimSiteLineColorRGBA"
 
-LineSet881.color.append(ColorRGBA883)
+LineSet881.color = ColorRGBA883
 
 Shape880.geometry = LineSet881
 
@@ -4146,11 +4146,11 @@ LineSet896.vertexCount = [2]
 Coordinate897 = x3d.Coordinate()
 Coordinate897.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
-LineSet896.coord.append(Coordinate897)
+LineSet896.coord = Coordinate897
 ColorRGBA898 = x3d.ColorRGBA()
 ColorRGBA898.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet896.color.append(ColorRGBA898)
+LineSet896.color = ColorRGBA898
 
 Shape895.geometry = LineSet896
 
@@ -4162,11 +4162,11 @@ LineSet900.vertexCount = [2]
 Coordinate901 = x3d.Coordinate()
 Coordinate901.point = (0.0820,1.4488,-0.0353,0.0271,1.4943,0.0394)
 
-LineSet900.coord.append(Coordinate901)
+LineSet900.coord = Coordinate901
 ColorRGBA902 = x3d.ColorRGBA()
 ColorRGBA902.USE = "HAnimSiteLineColorRGBA"
 
-LineSet900.color.append(ColorRGBA902)
+LineSet900.color = ColorRGBA902
 
 Shape899.geometry = LineSet900
 
@@ -4178,11 +4178,11 @@ LineSet904.vertexCount = [2]
 Coordinate905 = x3d.Coordinate()
 Coordinate905.point = (0.0820,1.4488,-0.0353,0.2032,1.4760,-0.0490)
 
-LineSet904.coord.append(Coordinate905)
+LineSet904.coord = Coordinate905
 ColorRGBA906 = x3d.ColorRGBA()
 ColorRGBA906.USE = "HAnimSiteLineColorRGBA"
 
-LineSet904.color.append(ColorRGBA906)
+LineSet904.color = ColorRGBA906
 
 Shape903.geometry = LineSet904
 
@@ -4194,11 +4194,11 @@ LineSet908.vertexCount = [2]
 Coordinate909 = x3d.Coordinate()
 Coordinate909.point = (0.0820,1.4488,-0.0353,0.1777,1.4065,-0.0075)
 
-LineSet908.coord.append(Coordinate909)
+LineSet908.coord = Coordinate909
 ColorRGBA910 = x3d.ColorRGBA()
 ColorRGBA910.USE = "HAnimSiteLineColorRGBA"
 
-LineSet908.color.append(ColorRGBA910)
+LineSet908.color = ColorRGBA910
 
 Shape907.geometry = LineSet908
 
@@ -4210,11 +4210,11 @@ LineSet912.vertexCount = [2]
 Coordinate913 = x3d.Coordinate()
 Coordinate913.point = (0.0820,1.4488,-0.0353,0.1706,1.4072,-0.0875)
 
-LineSet912.coord.append(Coordinate913)
+LineSet912.coord = Coordinate913
 ColorRGBA914 = x3d.ColorRGBA()
 ColorRGBA914.USE = "HAnimSiteLineColorRGBA"
 
-LineSet912.color.append(ColorRGBA914)
+LineSet912.color = ColorRGBA914
 
 Shape911.geometry = LineSet912
 
@@ -4310,11 +4310,11 @@ LineSet933.vertexCount = [2]
 Coordinate934 = x3d.Coordinate()
 Coordinate934.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
-LineSet933.coord.append(Coordinate934)
+LineSet933.coord = Coordinate934
 ColorRGBA935 = x3d.ColorRGBA()
 ColorRGBA935.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet933.color.append(ColorRGBA935)
+LineSet933.color = ColorRGBA935
 
 Shape932.geometry = LineSet933
 
@@ -4350,11 +4350,11 @@ LineSet942.vertexCount = [2]
 Coordinate943 = x3d.Coordinate()
 Coordinate943.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
-LineSet942.coord.append(Coordinate943)
+LineSet942.coord = Coordinate943
 ColorRGBA944 = x3d.ColorRGBA()
 ColorRGBA944.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet942.color.append(ColorRGBA944)
+LineSet942.color = ColorRGBA944
 
 Shape941.geometry = LineSet942
 
@@ -4366,11 +4366,11 @@ LineSet946.vertexCount = [2]
 Coordinate947 = x3d.Coordinate()
 Coordinate947.point = (0.2029,1.4376,-0.0387,0.2280,1.1482,-0.1100)
 
-LineSet946.coord.append(Coordinate947)
+LineSet946.coord = Coordinate947
 ColorRGBA948 = x3d.ColorRGBA()
 ColorRGBA948.USE = "HAnimSiteLineColorRGBA"
 
-LineSet946.color.append(ColorRGBA948)
+LineSet946.color = ColorRGBA948
 
 Shape945.geometry = LineSet946
 
@@ -4421,11 +4421,11 @@ LineSet958.vertexCount = [2]
 Coordinate959 = x3d.Coordinate()
 Coordinate959.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
-LineSet958.coord.append(Coordinate959)
+LineSet958.coord = Coordinate959
 ColorRGBA960 = x3d.ColorRGBA()
 ColorRGBA960.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet958.color.append(ColorRGBA960)
+LineSet958.color = ColorRGBA960
 
 Shape957.geometry = LineSet958
 
@@ -4437,11 +4437,11 @@ LineSet962.vertexCount = [2]
 Coordinate963 = x3d.Coordinate()
 Coordinate963.point = (0.2014,1.1357,-0.0682,0.1901,0.8645,-0.0415)
 
-LineSet962.coord.append(Coordinate963)
+LineSet962.coord = Coordinate963
 ColorRGBA964 = x3d.ColorRGBA()
 ColorRGBA964.USE = "HAnimSiteLineColorRGBA"
 
-LineSet962.color.append(ColorRGBA964)
+LineSet962.color = ColorRGBA964
 
 Shape961.geometry = LineSet962
 
@@ -4453,11 +4453,11 @@ LineSet966.vertexCount = [2]
 Coordinate967 = x3d.Coordinate()
 Coordinate967.point = (0.2014,1.1357,-0.0682,0.1962,1.1375,-0.1123)
 
-LineSet966.coord.append(Coordinate967)
+LineSet966.coord = Coordinate967
 ColorRGBA968 = x3d.ColorRGBA()
 ColorRGBA968.USE = "HAnimSiteLineColorRGBA"
 
-LineSet966.color.append(ColorRGBA968)
+LineSet966.color = ColorRGBA968
 
 Shape965.geometry = LineSet966
 
@@ -4469,11 +4469,11 @@ LineSet970.vertexCount = [2]
 Coordinate971 = x3d.Coordinate()
 Coordinate971.point = (0.2014,1.1357,-0.0682,0.1735,1.1272,-0.1113)
 
-LineSet970.coord.append(Coordinate971)
+LineSet970.coord = Coordinate971
 ColorRGBA972 = x3d.ColorRGBA()
 ColorRGBA972.USE = "HAnimSiteLineColorRGBA"
 
-LineSet970.color.append(ColorRGBA972)
+LineSet970.color = ColorRGBA972
 
 Shape969.geometry = LineSet970
 
@@ -4485,11 +4485,11 @@ LineSet974.vertexCount = [2]
 Coordinate975 = x3d.Coordinate()
 Coordinate975.point = (0.2014,1.1357,-0.0682,0.2182,1.1212,-0.1167)
 
-LineSet974.coord.append(Coordinate975)
+LineSet974.coord = Coordinate975
 ColorRGBA976 = x3d.ColorRGBA()
 ColorRGBA976.USE = "HAnimSiteLineColorRGBA"
 
-LineSet974.color.append(ColorRGBA976)
+LineSet974.color = ColorRGBA976
 
 Shape973.geometry = LineSet974
 
@@ -4585,11 +4585,11 @@ LineSet995.vertexCount = [2]
 Coordinate996 = x3d.Coordinate()
 Coordinate996.point = (0.1984,0.8663,-0.0583,0.1924,0.8472,-0.0534)
 
-LineSet995.coord.append(Coordinate996)
+LineSet995.coord = Coordinate996
 ColorRGBA997 = x3d.ColorRGBA()
 ColorRGBA997.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet995.color.append(ColorRGBA997)
+LineSet995.color = ColorRGBA997
 
 Shape994.geometry = LineSet995
 
@@ -4601,11 +4601,11 @@ LineSet999.vertexCount = [2]
 Coordinate1000 = x3d.Coordinate()
 Coordinate1000.point = (0.1984,0.8663,-0.0583,0.1983,0.8024,-0.0280)
 
-LineSet999.coord.append(Coordinate1000)
+LineSet999.coord = Coordinate1000
 ColorRGBA1001 = x3d.ColorRGBA()
 ColorRGBA1001.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet999.color.append(ColorRGBA1001)
+LineSet999.color = ColorRGBA1001
 
 Shape998.geometry = LineSet999
 
@@ -4617,11 +4617,11 @@ LineSet1003.vertexCount = [2]
 Coordinate1004 = x3d.Coordinate()
 Coordinate1004.point = (0.1984,0.8663,-0.0583,0.1987,0.8029,-0.0530)
 
-LineSet1003.coord.append(Coordinate1004)
+LineSet1003.coord = Coordinate1004
 ColorRGBA1005 = x3d.ColorRGBA()
 ColorRGBA1005.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1003.color.append(ColorRGBA1005)
+LineSet1003.color = ColorRGBA1005
 
 Shape1002.geometry = LineSet1003
 
@@ -4633,11 +4633,11 @@ LineSet1007.vertexCount = [2]
 Coordinate1008 = x3d.Coordinate()
 Coordinate1008.point = (0.1984,0.8663,-0.0583,0.1956,0.8019,-0.0794)
 
-LineSet1007.coord.append(Coordinate1008)
+LineSet1007.coord = Coordinate1008
 ColorRGBA1009 = x3d.ColorRGBA()
 ColorRGBA1009.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1007.color.append(ColorRGBA1009)
+LineSet1007.color = ColorRGBA1009
 
 Shape1006.geometry = LineSet1007
 
@@ -4649,11 +4649,11 @@ LineSet1011.vertexCount = [2]
 Coordinate1012 = x3d.Coordinate()
 Coordinate1012.point = (0.1984,0.8663,-0.0583,0.1925,0.8066,-0.1036)
 
-LineSet1011.coord.append(Coordinate1012)
+LineSet1011.coord = Coordinate1012
 ColorRGBA1013 = x3d.ColorRGBA()
 ColorRGBA1013.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1011.color.append(ColorRGBA1013)
+LineSet1011.color = ColorRGBA1013
 
 Shape1010.geometry = LineSet1011
 
@@ -4665,11 +4665,11 @@ LineSet1015.vertexCount = [2]
 Coordinate1016 = x3d.Coordinate()
 Coordinate1016.point = (0.1984,0.8663,-0.0583,0.2009,0.8139,-0.0237)
 
-LineSet1015.coord.append(Coordinate1016)
+LineSet1015.coord = Coordinate1016
 ColorRGBA1017 = x3d.ColorRGBA()
 ColorRGBA1017.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1015.color.append(ColorRGBA1017)
+LineSet1015.color = ColorRGBA1017
 
 Shape1014.geometry = LineSet1015
 
@@ -4681,11 +4681,11 @@ LineSet1019.vertexCount = [2]
 Coordinate1020 = x3d.Coordinate()
 Coordinate1020.point = (0.1984,0.8663,-0.0583,0.2142,0.8529,-0.0648)
 
-LineSet1019.coord.append(Coordinate1020)
+LineSet1019.coord = Coordinate1020
 ColorRGBA1021 = x3d.ColorRGBA()
 ColorRGBA1021.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1019.color.append(ColorRGBA1021)
+LineSet1019.color = ColorRGBA1021
 
 Shape1018.geometry = LineSet1019
 
@@ -4697,11 +4697,11 @@ LineSet1023.vertexCount = [2]
 Coordinate1024 = x3d.Coordinate()
 Coordinate1024.point = (0.1984,0.8663,-0.0583,0.1929,0.7860,-0.1122)
 
-LineSet1023.coord.append(Coordinate1024)
+LineSet1023.coord = Coordinate1024
 ColorRGBA1025 = x3d.ColorRGBA()
 ColorRGBA1025.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1023.color.append(ColorRGBA1025)
+LineSet1023.color = ColorRGBA1025
 
 Shape1022.geometry = LineSet1023
 
@@ -4713,11 +4713,11 @@ LineSet1027.vertexCount = [2]
 Coordinate1028 = x3d.Coordinate()
 Coordinate1028.point = (0.1984,0.8663,-0.0583,0.3000,0.7500,0.4500)
 
-LineSet1027.coord.append(Coordinate1028)
+LineSet1027.coord = Coordinate1028
 ColorRGBA1029 = x3d.ColorRGBA()
 ColorRGBA1029.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet1027.color.append(ColorRGBA1029)
+LineSet1027.color = ColorRGBA1029
 
 Shape1026.geometry = LineSet1027
 
@@ -4839,11 +4839,11 @@ LineSet1053.vertexCount = [2]
 Coordinate1054 = x3d.Coordinate()
 Coordinate1054.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
-LineSet1053.coord.append(Coordinate1054)
+LineSet1053.coord = Coordinate1054
 ColorRGBA1055 = x3d.ColorRGBA()
 ColorRGBA1055.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1053.color.append(ColorRGBA1055)
+LineSet1053.color = ColorRGBA1055
 
 Shape1052.geometry = LineSet1053
 
@@ -4879,11 +4879,11 @@ LineSet1062.vertexCount = [2]
 Coordinate1063 = x3d.Coordinate()
 Coordinate1063.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
-LineSet1062.coord.append(Coordinate1063)
+LineSet1062.coord = Coordinate1063
 ColorRGBA1064 = x3d.ColorRGBA()
 ColorRGBA1064.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1062.color.append(ColorRGBA1064)
+LineSet1062.color = ColorRGBA1064
 
 Shape1061.geometry = LineSet1062
 
@@ -4919,11 +4919,11 @@ LineSet1071.vertexCount = [2]
 Coordinate1072 = x3d.Coordinate()
 Coordinate1072.point = (0.1955,0.8159,0.0464,0.1982,0.8061,0.0759)
 
-LineSet1071.coord.append(Coordinate1072)
+LineSet1071.coord = Coordinate1072
 ColorRGBA1073 = x3d.ColorRGBA()
 ColorRGBA1073.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1071.color.append(ColorRGBA1073)
+LineSet1071.color = ColorRGBA1073
 
 Shape1070.geometry = LineSet1071
 
@@ -4980,11 +4980,11 @@ LineSet1083.vertexCount = [2]
 Coordinate1084 = x3d.Coordinate()
 Coordinate1084.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
-LineSet1083.coord.append(Coordinate1084)
+LineSet1083.coord = Coordinate1084
 ColorRGBA1085 = x3d.ColorRGBA()
 ColorRGBA1085.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1083.color.append(ColorRGBA1085)
+LineSet1083.color = ColorRGBA1085
 
 Shape1082.geometry = LineSet1083
 
@@ -5020,11 +5020,11 @@ LineSet1092.vertexCount = [2]
 Coordinate1093 = x3d.Coordinate()
 Coordinate1093.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
-LineSet1092.coord.append(Coordinate1093)
+LineSet1092.coord = Coordinate1093
 ColorRGBA1094 = x3d.ColorRGBA()
 ColorRGBA1094.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1092.color.append(ColorRGBA1094)
+LineSet1092.color = ColorRGBA1094
 
 Shape1091.geometry = LineSet1092
 
@@ -5060,11 +5060,11 @@ LineSet1101.vertexCount = [2]
 Coordinate1102 = x3d.Coordinate()
 Coordinate1102.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
-LineSet1101.coord.append(Coordinate1102)
+LineSet1101.coord = Coordinate1102
 ColorRGBA1103 = x3d.ColorRGBA()
 ColorRGBA1103.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1101.color.append(ColorRGBA1103)
+LineSet1101.color = ColorRGBA1103
 
 Shape1100.geometry = LineSet1101
 
@@ -5100,11 +5100,11 @@ LineSet1110.vertexCount = [2]
 Coordinate1111 = x3d.Coordinate()
 Coordinate1111.point = (0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245)
 
-LineSet1110.coord.append(Coordinate1111)
+LineSet1110.coord = Coordinate1111
 ColorRGBA1112 = x3d.ColorRGBA()
 ColorRGBA1112.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1110.color.append(ColorRGBA1112)
+LineSet1110.color = ColorRGBA1112
 
 Shape1109.geometry = LineSet1110
 
@@ -5116,11 +5116,11 @@ LineSet1114.vertexCount = [2]
 Coordinate1115 = x3d.Coordinate()
 Coordinate1115.point = (0.2028,0.7139,-0.0236,0.2056,0.6743,-0.0482)
 
-LineSet1114.coord.append(Coordinate1115)
+LineSet1114.coord = Coordinate1115
 ColorRGBA1116 = x3d.ColorRGBA()
 ColorRGBA1116.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1114.color.append(ColorRGBA1116)
+LineSet1114.color = ColorRGBA1116
 
 Shape1113.geometry = LineSet1114
 
@@ -5194,11 +5194,11 @@ LineSet1129.vertexCount = [2]
 Coordinate1130 = x3d.Coordinate()
 Coordinate1130.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
-LineSet1129.coord.append(Coordinate1130)
+LineSet1129.coord = Coordinate1130
 ColorRGBA1131 = x3d.ColorRGBA()
 ColorRGBA1131.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1129.color.append(ColorRGBA1131)
+LineSet1129.color = ColorRGBA1131
 
 Shape1128.geometry = LineSet1129
 
@@ -5234,11 +5234,11 @@ LineSet1138.vertexCount = [2]
 Coordinate1139 = x3d.Coordinate()
 Coordinate1139.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
-LineSet1138.coord.append(Coordinate1139)
+LineSet1138.coord = Coordinate1139
 ColorRGBA1140 = x3d.ColorRGBA()
 ColorRGBA1140.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1138.color.append(ColorRGBA1140)
+LineSet1138.color = ColorRGBA1140
 
 Shape1137.geometry = LineSet1138
 
@@ -5274,11 +5274,11 @@ LineSet1147.vertexCount = [2]
 Coordinate1148 = x3d.Coordinate()
 Coordinate1148.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
-LineSet1147.coord.append(Coordinate1148)
+LineSet1147.coord = Coordinate1148
 ColorRGBA1149 = x3d.ColorRGBA()
 ColorRGBA1149.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1147.color.append(ColorRGBA1149)
+LineSet1147.color = ColorRGBA1149
 
 Shape1146.geometry = LineSet1147
 
@@ -5314,11 +5314,11 @@ LineSet1156.vertexCount = [2]
 Coordinate1157 = x3d.Coordinate()
 Coordinate1157.point = (0.2026,0.7011,-0.0494,0.2080,0.6731,-0.0491)
 
-LineSet1156.coord.append(Coordinate1157)
+LineSet1156.coord = Coordinate1157
 ColorRGBA1158 = x3d.ColorRGBA()
 ColorRGBA1158.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1156.color.append(ColorRGBA1158)
+LineSet1156.color = ColorRGBA1158
 
 Shape1155.geometry = LineSet1156
 
@@ -5377,11 +5377,11 @@ LineSet1168.vertexCount = [2]
 Coordinate1169 = x3d.Coordinate()
 Coordinate1169.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
-LineSet1168.coord.append(Coordinate1169)
+LineSet1168.coord = Coordinate1169
 ColorRGBA1170 = x3d.ColorRGBA()
 ColorRGBA1170.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1168.color.append(ColorRGBA1170)
+LineSet1168.color = ColorRGBA1170
 
 Shape1167.geometry = LineSet1168
 
@@ -5417,11 +5417,11 @@ LineSet1177.vertexCount = [2]
 Coordinate1178 = x3d.Coordinate()
 Coordinate1178.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
-LineSet1177.coord.append(Coordinate1178)
+LineSet1177.coord = Coordinate1178
 ColorRGBA1179 = x3d.ColorRGBA()
 ColorRGBA1179.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1177.color.append(ColorRGBA1179)
+LineSet1177.color = ColorRGBA1179
 
 Shape1176.geometry = LineSet1177
 
@@ -5457,11 +5457,11 @@ LineSet1186.vertexCount = [2]
 Coordinate1187 = x3d.Coordinate()
 Coordinate1187.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
-LineSet1186.coord.append(Coordinate1187)
+LineSet1186.coord = Coordinate1187
 ColorRGBA1188 = x3d.ColorRGBA()
 ColorRGBA1188.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1186.color.append(ColorRGBA1188)
+LineSet1186.color = ColorRGBA1188
 
 Shape1185.geometry = LineSet1186
 
@@ -5497,11 +5497,11 @@ LineSet1195.vertexCount = [2]
 Coordinate1196 = x3d.Coordinate()
 Coordinate1196.point = (0.1983,0.7045,-0.0767,0.2035,0.6750,-0.0756)
 
-LineSet1195.coord.append(Coordinate1196)
+LineSet1195.coord = Coordinate1196
 ColorRGBA1197 = x3d.ColorRGBA()
 ColorRGBA1197.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1195.color.append(ColorRGBA1197)
+LineSet1195.color = ColorRGBA1197
 
 Shape1194.geometry = LineSet1195
 
@@ -5560,11 +5560,11 @@ LineSet1207.vertexCount = [2]
 Coordinate1208 = x3d.Coordinate()
 Coordinate1208.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
-LineSet1207.coord.append(Coordinate1208)
+LineSet1207.coord = Coordinate1208
 ColorRGBA1209 = x3d.ColorRGBA()
 ColorRGBA1209.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1207.color.append(ColorRGBA1209)
+LineSet1207.color = ColorRGBA1209
 
 Shape1206.geometry = LineSet1207
 
@@ -5600,11 +5600,11 @@ LineSet1216.vertexCount = [2]
 Coordinate1217 = x3d.Coordinate()
 Coordinate1217.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
-LineSet1216.coord.append(Coordinate1217)
+LineSet1216.coord = Coordinate1217
 ColorRGBA1218 = x3d.ColorRGBA()
 ColorRGBA1218.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1216.color.append(ColorRGBA1218)
+LineSet1216.color = ColorRGBA1218
 
 Shape1215.geometry = LineSet1216
 
@@ -5640,11 +5640,11 @@ LineSet1225.vertexCount = [2]
 Coordinate1226 = x3d.Coordinate()
 Coordinate1226.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
-LineSet1225.coord.append(Coordinate1226)
+LineSet1225.coord = Coordinate1226
 ColorRGBA1227 = x3d.ColorRGBA()
 ColorRGBA1227.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1225.color.append(ColorRGBA1227)
+LineSet1225.color = ColorRGBA1227
 
 Shape1224.geometry = LineSet1225
 
@@ -5680,11 +5680,11 @@ LineSet1234.vertexCount = [2]
 Coordinate1235 = x3d.Coordinate()
 Coordinate1235.point = (0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012)
 
-LineSet1234.coord.append(Coordinate1235)
+LineSet1234.coord = Coordinate1235
 ColorRGBA1236 = x3d.ColorRGBA()
 ColorRGBA1236.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1234.color.append(ColorRGBA1236)
+LineSet1234.color = ColorRGBA1236
 
 Shape1233.geometry = LineSet1234
 
@@ -5753,11 +5753,11 @@ LineSet1246.vertexCount = [2]
 Coordinate1247 = x3d.Coordinate()
 Coordinate1247.point = (-0.0820,1.4488,-0.0353,-0.0962,1.4269,-0.0424)
 
-LineSet1246.coord.append(Coordinate1247)
+LineSet1246.coord = Coordinate1247
 ColorRGBA1248 = x3d.ColorRGBA()
 ColorRGBA1248.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1246.color.append(ColorRGBA1248)
+LineSet1246.color = ColorRGBA1248
 
 Shape1245.geometry = LineSet1246
 
@@ -5769,11 +5769,11 @@ LineSet1250.vertexCount = [2]
 Coordinate1251 = x3d.Coordinate()
 Coordinate1251.point = (-0.0820,1.4488,-0.0353,-0.0115,1.4943,0.0400)
 
-LineSet1250.coord.append(Coordinate1251)
+LineSet1250.coord = Coordinate1251
 ColorRGBA1252 = x3d.ColorRGBA()
 ColorRGBA1252.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1250.color.append(ColorRGBA1252)
+LineSet1250.color = ColorRGBA1252
 
 Shape1249.geometry = LineSet1250
 
@@ -5785,11 +5785,11 @@ LineSet1254.vertexCount = [2]
 Coordinate1255 = x3d.Coordinate()
 Coordinate1255.point = (-0.0820,1.4488,-0.0353,-0.1905,1.4791,-0.0431)
 
-LineSet1254.coord.append(Coordinate1255)
+LineSet1254.coord = Coordinate1255
 ColorRGBA1256 = x3d.ColorRGBA()
 ColorRGBA1256.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1254.color.append(ColorRGBA1256)
+LineSet1254.color = ColorRGBA1256
 
 Shape1253.geometry = LineSet1254
 
@@ -5801,11 +5801,11 @@ LineSet1258.vertexCount = [2]
 Coordinate1259 = x3d.Coordinate()
 Coordinate1259.point = (-0.0820,1.4488,-0.0353,-0.1626,1.4072,-0.0031)
 
-LineSet1258.coord.append(Coordinate1259)
+LineSet1258.coord = Coordinate1259
 ColorRGBA1260 = x3d.ColorRGBA()
 ColorRGBA1260.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1258.color.append(ColorRGBA1260)
+LineSet1258.color = ColorRGBA1260
 
 Shape1257.geometry = LineSet1258
 
@@ -5817,11 +5817,11 @@ LineSet1262.vertexCount = [2]
 Coordinate1263 = x3d.Coordinate()
 Coordinate1263.point = (-0.0820,1.4488,-0.0353,-0.1603,1.4098,-0.0826)
 
-LineSet1262.coord.append(Coordinate1263)
+LineSet1262.coord = Coordinate1263
 ColorRGBA1264 = x3d.ColorRGBA()
 ColorRGBA1264.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1262.color.append(ColorRGBA1264)
+LineSet1262.color = ColorRGBA1264
 
 Shape1261.geometry = LineSet1262
 
@@ -5917,11 +5917,11 @@ LineSet1283.vertexCount = [2]
 Coordinate1284 = x3d.Coordinate()
 Coordinate1284.point = (-0.0962,1.4269,-0.0424,-0.2029,1.4376,-0.0387)
 
-LineSet1283.coord.append(Coordinate1284)
+LineSet1283.coord = Coordinate1284
 ColorRGBA1285 = x3d.ColorRGBA()
 ColorRGBA1285.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1283.color.append(ColorRGBA1285)
+LineSet1283.color = ColorRGBA1285
 
 Shape1282.geometry = LineSet1283
 
@@ -5957,11 +5957,11 @@ LineSet1292.vertexCount = [2]
 Coordinate1293 = x3d.Coordinate()
 Coordinate1293.point = (-0.2029,1.4376,-0.0387,-0.2014,1.1357,-0.0682)
 
-LineSet1292.coord.append(Coordinate1293)
+LineSet1292.coord = Coordinate1293
 ColorRGBA1294 = x3d.ColorRGBA()
 ColorRGBA1294.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1292.color.append(ColorRGBA1294)
+LineSet1292.color = ColorRGBA1294
 
 Shape1291.geometry = LineSet1292
 
@@ -5973,11 +5973,11 @@ LineSet1296.vertexCount = [2]
 Coordinate1297 = x3d.Coordinate()
 Coordinate1297.point = (-0.2029,1.4376,-0.0387,-0.2224,1.1517,-0.1033)
 
-LineSet1296.coord.append(Coordinate1297)
+LineSet1296.coord = Coordinate1297
 ColorRGBA1298 = x3d.ColorRGBA()
 ColorRGBA1298.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1296.color.append(ColorRGBA1298)
+LineSet1296.color = ColorRGBA1298
 
 Shape1295.geometry = LineSet1296
 
@@ -6028,11 +6028,11 @@ LineSet1308.vertexCount = [2]
 Coordinate1309 = x3d.Coordinate()
 Coordinate1309.point = (-0.2014,1.1357,-0.0682,-0.1984,0.8663,-0.0583)
 
-LineSet1308.coord.append(Coordinate1309)
+LineSet1308.coord = Coordinate1309
 ColorRGBA1310 = x3d.ColorRGBA()
 ColorRGBA1310.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1308.color.append(ColorRGBA1310)
+LineSet1308.color = ColorRGBA1310
 
 Shape1307.geometry = LineSet1308
 
@@ -6044,11 +6044,11 @@ LineSet1312.vertexCount = [2]
 Coordinate1313 = x3d.Coordinate()
 Coordinate1313.point = (-0.2014,1.1357,-0.0682,-0.1884,0.8676,-0.0360)
 
-LineSet1312.coord.append(Coordinate1313)
+LineSet1312.coord = Coordinate1313
 ColorRGBA1314 = x3d.ColorRGBA()
 ColorRGBA1314.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1312.color.append(ColorRGBA1314)
+LineSet1312.color = ColorRGBA1314
 
 Shape1311.geometry = LineSet1312
 
@@ -6060,11 +6060,11 @@ LineSet1316.vertexCount = [2]
 Coordinate1317 = x3d.Coordinate()
 Coordinate1317.point = (-0.2014,1.1357,-0.0682,-0.1907,1.1405,-0.1065)
 
-LineSet1316.coord.append(Coordinate1317)
+LineSet1316.coord = Coordinate1317
 ColorRGBA1318 = x3d.ColorRGBA()
 ColorRGBA1318.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1316.color.append(ColorRGBA1318)
+LineSet1316.color = ColorRGBA1318
 
 Shape1315.geometry = LineSet1316
 
@@ -6076,11 +6076,11 @@ LineSet1320.vertexCount = [2]
 Coordinate1321 = x3d.Coordinate()
 Coordinate1321.point = (-0.2014,1.1357,-0.0682,-0.1680,1.1298,-0.1062)
 
-LineSet1320.coord.append(Coordinate1321)
+LineSet1320.coord = Coordinate1321
 ColorRGBA1322 = x3d.ColorRGBA()
 ColorRGBA1322.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1320.color.append(ColorRGBA1322)
+LineSet1320.color = ColorRGBA1322
 
 Shape1319.geometry = LineSet1320
 
@@ -6092,11 +6092,11 @@ LineSet1324.vertexCount = [2]
 Coordinate1325 = x3d.Coordinate()
 Coordinate1325.point = (-0.2014,1.1357,-0.0682,-0.2130,1.1305,-0.1091)
 
-LineSet1324.coord.append(Coordinate1325)
+LineSet1324.coord = Coordinate1325
 ColorRGBA1326 = x3d.ColorRGBA()
 ColorRGBA1326.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1324.color.append(ColorRGBA1326)
+LineSet1324.color = ColorRGBA1326
 
 Shape1323.geometry = LineSet1324
 
@@ -6192,11 +6192,11 @@ LineSet1345.vertexCount = [2]
 Coordinate1346 = x3d.Coordinate()
 Coordinate1346.point = (-0.1984,0.8663,-0.0583,-0.1924,0.8472,-0.0534)
 
-LineSet1345.coord.append(Coordinate1346)
+LineSet1345.coord = Coordinate1346
 ColorRGBA1347 = x3d.ColorRGBA()
 ColorRGBA1347.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1345.color.append(ColorRGBA1347)
+LineSet1345.color = ColorRGBA1347
 
 Shape1344.geometry = LineSet1345
 
@@ -6208,11 +6208,11 @@ LineSet1349.vertexCount = [2]
 Coordinate1350 = x3d.Coordinate()
 Coordinate1350.point = (-0.1984,0.8663,-0.0583,-0.1983,0.8024,-0.0280)
 
-LineSet1349.coord.append(Coordinate1350)
+LineSet1349.coord = Coordinate1350
 ColorRGBA1351 = x3d.ColorRGBA()
 ColorRGBA1351.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1349.color.append(ColorRGBA1351)
+LineSet1349.color = ColorRGBA1351
 
 Shape1348.geometry = LineSet1349
 
@@ -6224,11 +6224,11 @@ LineSet1353.vertexCount = [2]
 Coordinate1354 = x3d.Coordinate()
 Coordinate1354.point = (-0.1984,0.8663,-0.0583,-0.1987,0.8029,-0.0530)
 
-LineSet1353.coord.append(Coordinate1354)
+LineSet1353.coord = Coordinate1354
 ColorRGBA1355 = x3d.ColorRGBA()
 ColorRGBA1355.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1353.color.append(ColorRGBA1355)
+LineSet1353.color = ColorRGBA1355
 
 Shape1352.geometry = LineSet1353
 
@@ -6240,11 +6240,11 @@ LineSet1357.vertexCount = [2]
 Coordinate1358 = x3d.Coordinate()
 Coordinate1358.point = (-0.1984,0.8663,-0.0583,-0.1956,0.8019,-0.0794)
 
-LineSet1357.coord.append(Coordinate1358)
+LineSet1357.coord = Coordinate1358
 ColorRGBA1359 = x3d.ColorRGBA()
 ColorRGBA1359.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1357.color.append(ColorRGBA1359)
+LineSet1357.color = ColorRGBA1359
 
 Shape1356.geometry = LineSet1357
 
@@ -6256,11 +6256,11 @@ LineSet1361.vertexCount = [2]
 Coordinate1362 = x3d.Coordinate()
 Coordinate1362.point = (-0.1984,0.8663,-0.0583,-0.1925,0.8066,-0.1036)
 
-LineSet1361.coord.append(Coordinate1362)
+LineSet1361.coord = Coordinate1362
 ColorRGBA1363 = x3d.ColorRGBA()
 ColorRGBA1363.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1361.color.append(ColorRGBA1363)
+LineSet1361.color = ColorRGBA1363
 
 Shape1360.geometry = LineSet1361
 
@@ -6272,11 +6272,11 @@ LineSet1365.vertexCount = [2]
 Coordinate1366 = x3d.Coordinate()
 Coordinate1366.point = (-0.1984,0.8663,-0.0583,-0.1977,0.8169,-0.0177)
 
-LineSet1365.coord.append(Coordinate1366)
+LineSet1365.coord = Coordinate1366
 ColorRGBA1367 = x3d.ColorRGBA()
 ColorRGBA1367.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1365.color.append(ColorRGBA1367)
+LineSet1365.color = ColorRGBA1367
 
 Shape1364.geometry = LineSet1365
 
@@ -6288,11 +6288,11 @@ LineSet1369.vertexCount = [2]
 Coordinate1370 = x3d.Coordinate()
 Coordinate1370.point = (-0.1984,0.8663,-0.0583,-0.2117,0.8562,-0.0584)
 
-LineSet1369.coord.append(Coordinate1370)
+LineSet1369.coord = Coordinate1370
 ColorRGBA1371 = x3d.ColorRGBA()
 ColorRGBA1371.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1369.color.append(ColorRGBA1371)
+LineSet1369.color = ColorRGBA1371
 
 Shape1368.geometry = LineSet1369
 
@@ -6304,11 +6304,11 @@ LineSet1373.vertexCount = [2]
 Coordinate1374 = x3d.Coordinate()
 Coordinate1374.point = (-0.1984,0.8663,-0.0583,-0.1929,0.7890,-0.1064)
 
-LineSet1373.coord.append(Coordinate1374)
+LineSet1373.coord = Coordinate1374
 ColorRGBA1375 = x3d.ColorRGBA()
 ColorRGBA1375.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1373.color.append(ColorRGBA1375)
+LineSet1373.color = ColorRGBA1375
 
 Shape1372.geometry = LineSet1373
 
@@ -6320,11 +6320,11 @@ LineSet1377.vertexCount = [2]
 Coordinate1378 = x3d.Coordinate()
 Coordinate1378.point = (-0.1984,0.8663,-0.0583,-0.3000,0.7500,0.4500)
 
-LineSet1377.coord.append(Coordinate1378)
+LineSet1377.coord = Coordinate1378
 ColorRGBA1379 = x3d.ColorRGBA()
 ColorRGBA1379.USE = "HAnimSiteViewpointLineColorRGBA"
 
-LineSet1377.color.append(ColorRGBA1379)
+LineSet1377.color = ColorRGBA1379
 
 Shape1376.geometry = LineSet1377
 
@@ -6446,11 +6446,11 @@ LineSet1403.vertexCount = [2]
 Coordinate1404 = x3d.Coordinate()
 Coordinate1404.point = (-0.1924,0.8472,-0.0534,-0.1951,0.8226,0.0246)
 
-LineSet1403.coord.append(Coordinate1404)
+LineSet1403.coord = Coordinate1404
 ColorRGBA1405 = x3d.ColorRGBA()
 ColorRGBA1405.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1403.color.append(ColorRGBA1405)
+LineSet1403.color = ColorRGBA1405
 
 Shape1402.geometry = LineSet1403
 
@@ -6486,11 +6486,11 @@ LineSet1412.vertexCount = [2]
 Coordinate1413 = x3d.Coordinate()
 Coordinate1413.point = (-0.1951,0.8226,0.0246,-0.1955,0.8159,0.0464)
 
-LineSet1412.coord.append(Coordinate1413)
+LineSet1412.coord = Coordinate1413
 ColorRGBA1414 = x3d.ColorRGBA()
 ColorRGBA1414.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1412.color.append(ColorRGBA1414)
+LineSet1412.color = ColorRGBA1414
 
 Shape1411.geometry = LineSet1412
 
@@ -6526,11 +6526,11 @@ LineSet1421.vertexCount = [2]
 Coordinate1422 = x3d.Coordinate()
 Coordinate1422.point = (-0.1955,0.8159,0.0464,-0.1869,0.8090,0.0820)
 
-LineSet1421.coord.append(Coordinate1422)
+LineSet1421.coord = Coordinate1422
 ColorRGBA1423 = x3d.ColorRGBA()
 ColorRGBA1423.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1421.color.append(ColorRGBA1423)
+LineSet1421.color = ColorRGBA1423
 
 Shape1420.geometry = LineSet1421
 
@@ -6587,11 +6587,11 @@ LineSet1433.vertexCount = [2]
 Coordinate1434 = x3d.Coordinate()
 Coordinate1434.point = (-0.1983,0.8024,-0.0280,-0.1983,0.7815,-0.0280)
 
-LineSet1433.coord.append(Coordinate1434)
+LineSet1433.coord = Coordinate1434
 ColorRGBA1435 = x3d.ColorRGBA()
 ColorRGBA1435.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1433.color.append(ColorRGBA1435)
+LineSet1433.color = ColorRGBA1435
 
 Shape1432.geometry = LineSet1433
 
@@ -6627,11 +6627,11 @@ LineSet1442.vertexCount = [2]
 Coordinate1443 = x3d.Coordinate()
 Coordinate1443.point = (-0.1983,0.7815,-0.0280,-0.2017,0.7363,-0.0248)
 
-LineSet1442.coord.append(Coordinate1443)
+LineSet1442.coord = Coordinate1443
 ColorRGBA1444 = x3d.ColorRGBA()
 ColorRGBA1444.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1442.color.append(ColorRGBA1444)
+LineSet1442.color = ColorRGBA1444
 
 Shape1441.geometry = LineSet1442
 
@@ -6667,11 +6667,11 @@ LineSet1451.vertexCount = [2]
 Coordinate1452 = x3d.Coordinate()
 Coordinate1452.point = (-0.2017,0.7363,-0.0248,-0.2028,0.7139,-0.0236)
 
-LineSet1451.coord.append(Coordinate1452)
+LineSet1451.coord = Coordinate1452
 ColorRGBA1453 = x3d.ColorRGBA()
 ColorRGBA1453.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1451.color.append(ColorRGBA1453)
+LineSet1451.color = ColorRGBA1453
 
 Shape1450.geometry = LineSet1451
 
@@ -6707,11 +6707,11 @@ LineSet1460.vertexCount = [2]
 Coordinate1461 = x3d.Coordinate()
 Coordinate1461.point = (-0.2028,0.7139,-0.0236,-0.1980,0.6883,-0.0180)
 
-LineSet1460.coord.append(Coordinate1461)
+LineSet1460.coord = Coordinate1461
 ColorRGBA1462 = x3d.ColorRGBA()
 ColorRGBA1462.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1460.color.append(ColorRGBA1462)
+LineSet1460.color = ColorRGBA1462
 
 Shape1459.geometry = LineSet1460
 
@@ -6723,11 +6723,11 @@ LineSet1464.vertexCount = [2]
 Coordinate1465 = x3d.Coordinate()
 Coordinate1465.point = (-0.2028,0.7139,-0.0236,-0.1941,0.6772,-0.0423)
 
-LineSet1464.coord.append(Coordinate1465)
+LineSet1464.coord = Coordinate1465
 ColorRGBA1466 = x3d.ColorRGBA()
 ColorRGBA1466.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1464.color.append(ColorRGBA1466)
+LineSet1464.color = ColorRGBA1466
 
 Shape1463.geometry = LineSet1464
 
@@ -6801,11 +6801,11 @@ LineSet1479.vertexCount = [2]
 Coordinate1480 = x3d.Coordinate()
 Coordinate1480.point = (-0.1987,0.8029,-0.0530,-0.1987,0.7818,-0.0530)
 
-LineSet1479.coord.append(Coordinate1480)
+LineSet1479.coord = Coordinate1480
 ColorRGBA1481 = x3d.ColorRGBA()
 ColorRGBA1481.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1479.color.append(ColorRGBA1481)
+LineSet1479.color = ColorRGBA1481
 
 Shape1478.geometry = LineSet1479
 
@@ -6841,11 +6841,11 @@ LineSet1488.vertexCount = [2]
 Coordinate1489 = x3d.Coordinate()
 Coordinate1489.point = (-0.1987,0.7818,-0.0530,-0.2013,0.7273,-0.0503)
 
-LineSet1488.coord.append(Coordinate1489)
+LineSet1488.coord = Coordinate1489
 ColorRGBA1490 = x3d.ColorRGBA()
 ColorRGBA1490.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1488.color.append(ColorRGBA1490)
+LineSet1488.color = ColorRGBA1490
 
 Shape1487.geometry = LineSet1488
 
@@ -6881,11 +6881,11 @@ LineSet1497.vertexCount = [2]
 Coordinate1498 = x3d.Coordinate()
 Coordinate1498.point = (-0.2013,0.7273,-0.0503,-0.2026,0.7011,-0.0494)
 
-LineSet1497.coord.append(Coordinate1498)
+LineSet1497.coord = Coordinate1498
 ColorRGBA1499 = x3d.ColorRGBA()
 ColorRGBA1499.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1497.color.append(ColorRGBA1499)
+LineSet1497.color = ColorRGBA1499
 
 Shape1496.geometry = LineSet1497
 
@@ -6921,11 +6921,11 @@ LineSet1506.vertexCount = [2]
 Coordinate1507 = x3d.Coordinate()
 Coordinate1507.point = (-0.2026,0.7011,-0.0494,-0.1969,0.6758,-0.0427)
 
-LineSet1506.coord.append(Coordinate1507)
+LineSet1506.coord = Coordinate1507
 ColorRGBA1508 = x3d.ColorRGBA()
 ColorRGBA1508.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1506.color.append(ColorRGBA1508)
+LineSet1506.color = ColorRGBA1508
 
 Shape1505.geometry = LineSet1506
 
@@ -6984,11 +6984,11 @@ LineSet1518.vertexCount = [2]
 Coordinate1519 = x3d.Coordinate()
 Coordinate1519.point = (-0.1956,0.8019,-0.0794,-0.1956,0.7815,-0.0794)
 
-LineSet1518.coord.append(Coordinate1519)
+LineSet1518.coord = Coordinate1519
 ColorRGBA1520 = x3d.ColorRGBA()
 ColorRGBA1520.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1518.color.append(ColorRGBA1520)
+LineSet1518.color = ColorRGBA1520
 
 Shape1517.geometry = LineSet1518
 
@@ -7024,11 +7024,11 @@ LineSet1527.vertexCount = [2]
 Coordinate1528 = x3d.Coordinate()
 Coordinate1528.point = (-0.1956,0.7815,-0.0794,-0.1973,0.7287,-0.0777)
 
-LineSet1527.coord.append(Coordinate1528)
+LineSet1527.coord = Coordinate1528
 ColorRGBA1529 = x3d.ColorRGBA()
 ColorRGBA1529.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1527.color.append(ColorRGBA1529)
+LineSet1527.color = ColorRGBA1529
 
 Shape1526.geometry = LineSet1527
 
@@ -7064,11 +7064,11 @@ LineSet1536.vertexCount = [2]
 Coordinate1537 = x3d.Coordinate()
 Coordinate1537.point = (-0.1973,0.7287,-0.0777,-0.1983,0.7045,-0.0767)
 
-LineSet1536.coord.append(Coordinate1537)
+LineSet1536.coord = Coordinate1537
 ColorRGBA1538 = x3d.ColorRGBA()
 ColorRGBA1538.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1536.color.append(ColorRGBA1538)
+LineSet1536.color = ColorRGBA1538
 
 Shape1535.geometry = LineSet1536
 
@@ -7104,11 +7104,11 @@ LineSet1545.vertexCount = [2]
 Coordinate1546 = x3d.Coordinate()
 Coordinate1546.point = (-0.1983,0.7045,-0.0767,-0.1934,0.6778,-0.0693)
 
-LineSet1545.coord.append(Coordinate1546)
+LineSet1545.coord = Coordinate1546
 ColorRGBA1547 = x3d.ColorRGBA()
 ColorRGBA1547.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1545.color.append(ColorRGBA1547)
+LineSet1545.color = ColorRGBA1547
 
 Shape1544.geometry = LineSet1545
 
@@ -7167,11 +7167,11 @@ LineSet1557.vertexCount = [2]
 Coordinate1558 = x3d.Coordinate()
 Coordinate1558.point = (-0.1925,0.8066,-0.1036,-0.1925,0.7866,-0.1036)
 
-LineSet1557.coord.append(Coordinate1558)
+LineSet1557.coord = Coordinate1558
 ColorRGBA1559 = x3d.ColorRGBA()
 ColorRGBA1559.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1557.color.append(ColorRGBA1559)
+LineSet1557.color = ColorRGBA1559
 
 Shape1556.geometry = LineSet1557
 
@@ -7207,11 +7207,11 @@ LineSet1566.vertexCount = [2]
 Coordinate1567 = x3d.Coordinate()
 Coordinate1567.point = (-0.1925,0.7866,-0.1036,-0.1938,0.7452,-0.1024)
 
-LineSet1566.coord.append(Coordinate1567)
+LineSet1566.coord = Coordinate1567
 ColorRGBA1568 = x3d.ColorRGBA()
 ColorRGBA1568.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1566.color.append(ColorRGBA1568)
+LineSet1566.color = ColorRGBA1568
 
 Shape1565.geometry = LineSet1566
 
@@ -7247,11 +7247,11 @@ LineSet1575.vertexCount = [2]
 Coordinate1576 = x3d.Coordinate()
 Coordinate1576.point = (-0.1938,0.7452,-0.1024,-0.1948,0.7277,-0.1017)
 
-LineSet1575.coord.append(Coordinate1576)
+LineSet1575.coord = Coordinate1576
 ColorRGBA1577 = x3d.ColorRGBA()
 ColorRGBA1577.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet1575.color.append(ColorRGBA1577)
+LineSet1575.color = ColorRGBA1577
 
 Shape1574.geometry = LineSet1575
 
@@ -7287,11 +7287,11 @@ LineSet1584.vertexCount = [2]
 Coordinate1585 = x3d.Coordinate()
 Coordinate1585.point = (-0.1948,0.7277,-0.1017,-0.1938,0.7035,-0.0949)
 
-LineSet1584.coord.append(Coordinate1585)
+LineSet1584.coord = Coordinate1585
 ColorRGBA1586 = x3d.ColorRGBA()
 ColorRGBA1586.USE = "HAnimSiteLineColorRGBA"
 
-LineSet1584.color.append(ColorRGBA1586)
+LineSet1584.color = ColorRGBA1586
 
 Shape1583.geometry = LineSet1584
 

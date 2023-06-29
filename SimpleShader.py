@@ -207,9 +207,9 @@ MetadataSet45.DEF = "nodes"
 MetadataSet45.reference = "http://titania.create3000.de"
 #NULL
 
-MetadataSet44.value.append(MetadataSet45)
+MetadataSet44.value = MetadataSet45
 
-MetadataSet43.value.append(MetadataSet44)
+MetadataSet43.value = MetadataSet44
 MetadataSet46 = x3d.MetadataSet()
 MetadataSet46.name = "NavigationInfo"
 MetadataSet46.DEF = "NavigationInfo"
@@ -220,9 +220,9 @@ MetadataString47.DEF = "type"
 MetadataString47.reference = "http://titania.create3000.de"
 MetadataString47.value = ["EXAMINE"]
 
-MetadataSet46.value.append(MetadataString47)
+MetadataSet46.value = MetadataString47
 
-MetadataSet43.value.append(MetadataSet46)
+MetadataSet43.value = MetadataSet46
 MetadataSet48 = x3d.MetadataSet()
 MetadataSet48.name = "Viewpoint"
 MetadataSet48.DEF = "Viewpoint"
@@ -233,25 +233,25 @@ MetadataDouble49.DEF = "position"
 MetadataDouble49.reference = "http://titania.create3000.de"
 MetadataDouble49.value = [6.24067728185014,0.00250837343276661,2.92117542307615]
 
-MetadataSet48.value.append(MetadataDouble49)
+MetadataSet48.value = MetadataDouble49
 MetadataDouble50 = x3d.MetadataDouble()
 MetadataDouble50.name = "orientation"
 MetadataDouble50.DEF = "orientation"
 MetadataDouble50.reference = "http://titania.create3000.de"
 MetadataDouble50.value = [-0.110173424710488,0.990158061907379,-0.0863065984000336,1.21146676119191]
 
-MetadataSet48.value.append(MetadataDouble50)
+MetadataSet48.value = MetadataDouble50
 MetadataDouble51 = x3d.MetadataDouble()
 MetadataDouble51.name = "centerOfRotation"
 MetadataDouble51.DEF = "centerOfRotation"
 MetadataDouble51.reference = "http://titania.create3000.de"
 MetadataDouble51.value = [-0.808320198626341,-0.358072370409949,0.22817191560906]
 
-MetadataSet48.value.append(MetadataDouble51)
+MetadataSet48.value = MetadataDouble51
 
-MetadataSet43.value.append(MetadataSet48)
+MetadataSet43.value = MetadataSet48
 
-WorldInfo42.metadata.append(MetadataSet43)
+WorldInfo42.metadata = MetadataSet43
 
 Scene22.children.append(WorldInfo42)
 ProtoInstance52 = x3d.ProtoInstance()

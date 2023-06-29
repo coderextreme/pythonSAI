@@ -74,7 +74,7 @@
           },
           {
             "@name":"translated",
-            "@content":"28 June 2023"
+            "@content":"29 June 2023"
           },
           {
             "@name":"generator",
@@ -296,7 +296,7 @@
           },
           { "HAnimHumanoid":
             {
-              "@version":"1.0",
+              "@version":"2.0",
               "-skin":[
                 { "Shape":
                   {

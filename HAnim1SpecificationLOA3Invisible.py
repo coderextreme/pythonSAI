@@ -223,8 +223,8 @@ Scene29.children.append(Viewpoint42)
 HAnimHumanoid43 = x3d.HAnimHumanoid()
 HAnimHumanoid43.name = "humanoid"
 HAnimHumanoid43.DEF = "hanim_humanoid"
-HAnimHumanoid43.info = ["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=1.0","height=1.7504"]
-HAnimHumanoid43.version = "1.0"
+HAnimHumanoid43.info = ["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=2.0","height=1.7504"]
+HAnimHumanoid43.version = "2.0"
 #Only one root HAnimJoint is expected
 #USE nodes go here for access by inverse kinematics (IK) engines and other tools
 #Top-level HAnimSite/Viewpoint nodes that move with the human center but are unaffected by body animation

@@ -3,7 +3,7 @@ source ../X3DJSONLD/venv/Scripts/activate
 . ./profile.sh
 npm install
 
-javac -cp "saxon-he-12.1.jar;." RunSaxon.java
+javac -cp "saxon-he-12.1.jar;.;xmlresolver-5.1.1.jar;xmlresolver-5.1.1-data.jar" RunSaxon.java
 ${PYTHON} -m pip install --upgrade pip setuptools
 ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius

@@ -135,9 +135,9 @@ MetadataString28 = x3d.MetadataString()
 MetadataString28.name = "authorName"
 MetadataString28.value = ["Kwan-Hee YOO, Don Brutzman and Joe Williams"]
 
-MetadataSet27.value.append(MetadataString28)
+MetadataSet27.value = MetadataString28
 
-HAnimHumanoid26.metadata.append(MetadataSet27)
+HAnimHumanoid26.metadata = MetadataSet27
 HAnimJoint29 = x3d.HAnimJoint()
 HAnimJoint29.name = "humanoid_root"
 HAnimJoint29.DEF = "hanim_humanoid_root"
@@ -186,7 +186,7 @@ IndexedLineSet40.coordIndex = [0,1]
 Coordinate41 = x3d.Coordinate()
 Coordinate41.point = (0.0000,0.0000,0.0000,0.1000,0.1000,0.0000)
 
-IndexedLineSet40.coord.append(Coordinate41)
+IndexedLineSet40.coord = Coordinate41
 
 Shape37.geometry = IndexedLineSet40
 
@@ -205,7 +205,7 @@ IndexedLineSet45.coordIndex = [0,1]
 Coordinate46 = x3d.Coordinate()
 Coordinate46.point = (0.0000,0.0000,0.0000,0.0000,0.0700,0.0000)
 
-IndexedLineSet45.coord.append(Coordinate46)
+IndexedLineSet45.coord = Coordinate46
 
 Shape42.geometry = IndexedLineSet45
 
@@ -224,7 +224,7 @@ IndexedLineSet50.coordIndex = [0,1]
 Coordinate51 = x3d.Coordinate()
 Coordinate51.point = (0.0000,0.0000,0.0000,-0.1000,0.1000,0.0000)
 
-IndexedLineSet50.coord.append(Coordinate51)
+IndexedLineSet50.coord = Coordinate51
 
 Shape47.geometry = IndexedLineSet50
 
@@ -275,7 +275,7 @@ IndexedLineSet62.coordIndex = [0,1]
 Coordinate63 = x3d.Coordinate()
 Coordinate63.point = (0.1000,0.1000,0.0000,0.2000,0.1500,0.0000)
 
-IndexedLineSet62.coord.append(Coordinate63)
+IndexedLineSet62.coord = Coordinate63
 
 Shape59.geometry = IndexedLineSet62
 
@@ -294,7 +294,7 @@ IndexedLineSet67.coordIndex = [0,1]
 Coordinate68 = x3d.Coordinate()
 Coordinate68.point = (0.1000,0.1000,0.0000,0.1000,0.2000,0.0000)
 
-IndexedLineSet67.coord.append(Coordinate68)
+IndexedLineSet67.coord = Coordinate68
 
 Shape64.geometry = IndexedLineSet67
 
@@ -333,7 +333,7 @@ IndexedLineSet76.coordIndex = [0,1]
 Coordinate77 = x3d.Coordinate()
 Coordinate77.point = (0.2000,0.1500,0.0000,0.3000,0.3000,0.0000)
 
-IndexedLineSet76.coord.append(Coordinate77)
+IndexedLineSet76.coord = Coordinate77
 
 Shape73.geometry = IndexedLineSet76
 
@@ -371,7 +371,7 @@ IndexedLineSet85.coordIndex = [0,1]
 Coordinate86 = x3d.Coordinate()
 Coordinate86.point = (0.3000,0.3000,0.0000,0.3500,0.4000,0.0000)
 
-IndexedLineSet85.coord.append(Coordinate86)
+IndexedLineSet85.coord = Coordinate86
 
 Shape82.geometry = IndexedLineSet85
 
@@ -409,7 +409,7 @@ IndexedLineSet94.coordIndex = [0,1]
 Coordinate95 = x3d.Coordinate()
 Coordinate95.point = (0.3500,0.4000,0.0000,0.3600,0.4500,0.0000)
 
-IndexedLineSet94.coord.append(Coordinate95)
+IndexedLineSet94.coord = Coordinate95
 
 Shape91.geometry = IndexedLineSet94
 
@@ -456,7 +456,7 @@ IndexedLineSet103.coordIndex = [0,1]
 Coordinate104 = x3d.Coordinate()
 Coordinate104.point = (-0.1000,0.1000,0.0000,-0.1000,0.2000,0.0000)
 
-IndexedLineSet103.coord.append(Coordinate104)
+IndexedLineSet103.coord = Coordinate104
 
 Shape100.geometry = IndexedLineSet103
 
@@ -495,7 +495,7 @@ IndexedLineSet112.coordIndex = [0,1]
 Coordinate113 = x3d.Coordinate()
 Coordinate113.point = (0.1000,0.2000,0.0000,0.1500,0.5000,0.0000)
 
-IndexedLineSet112.coord.append(Coordinate113)
+IndexedLineSet112.coord = Coordinate113
 
 Shape109.geometry = IndexedLineSet112
 
@@ -533,7 +533,7 @@ IndexedLineSet121.coordIndex = [0,1]
 Coordinate122 = x3d.Coordinate()
 Coordinate122.point = (0.1500,0.5000,0.0000,0.2000,0.7000,0.0000)
 
-IndexedLineSet121.coord.append(Coordinate122)
+IndexedLineSet121.coord = Coordinate122
 
 Shape118.geometry = IndexedLineSet121
 
@@ -571,7 +571,7 @@ IndexedLineSet130.coordIndex = [0,1]
 Coordinate131 = x3d.Coordinate()
 Coordinate131.point = (0.2000,0.7000,0.0000,0.2400,0.8700,0.0000)
 
-IndexedLineSet130.coord.append(Coordinate131)
+IndexedLineSet130.coord = Coordinate131
 
 Shape127.geometry = IndexedLineSet130
 
@@ -609,7 +609,7 @@ IndexedLineSet139.coordIndex = [0,1]
 Coordinate140 = x3d.Coordinate()
 Coordinate140.point = (0.2400,0.8700,0.0000,0.2600,0.9300,0.0000)
 
-IndexedLineSet139.coord.append(Coordinate140)
+IndexedLineSet139.coord = Coordinate140
 
 Shape136.geometry = IndexedLineSet139
 
@@ -658,7 +658,7 @@ IndexedLineSet148.coordIndex = [0,1]
 Coordinate149 = x3d.Coordinate()
 Coordinate149.point = (0.0000,0.0700,0.0000,0.0000,0.2000,0.0000)
 
-IndexedLineSet148.coord.append(Coordinate149)
+IndexedLineSet148.coord = Coordinate149
 
 Shape145.geometry = IndexedLineSet148
 
@@ -697,7 +697,7 @@ IndexedLineSet157.coordIndex = [0,1]
 Coordinate158 = x3d.Coordinate()
 Coordinate158.point = (0.0000,0.2000,0.0000,0.0300,0.5000,0.0000)
 
-IndexedLineSet157.coord.append(Coordinate158)
+IndexedLineSet157.coord = Coordinate158
 
 Shape154.geometry = IndexedLineSet157
 
@@ -735,7 +735,7 @@ IndexedLineSet166.coordIndex = [0,1]
 Coordinate167 = x3d.Coordinate()
 Coordinate167.point = (0.0300,0.5000,0.0000,0.0500,0.7500,0.0000)
 
-IndexedLineSet166.coord.append(Coordinate167)
+IndexedLineSet166.coord = Coordinate167
 
 Shape163.geometry = IndexedLineSet166
 
@@ -773,7 +773,7 @@ IndexedLineSet175.coordIndex = [0,1]
 Coordinate176 = x3d.Coordinate()
 Coordinate176.point = (0.0500,0.7500,0.0000,0.0800,0.9600,0.0000)
 
-IndexedLineSet175.coord.append(Coordinate176)
+IndexedLineSet175.coord = Coordinate176
 
 Shape172.geometry = IndexedLineSet175
 
@@ -811,7 +811,7 @@ IndexedLineSet184.coordIndex = [0,1]
 Coordinate185 = x3d.Coordinate()
 Coordinate185.point = (0.0800,0.9600,0.0000,0.0900,1.0500,0.0000)
 
-IndexedLineSet184.coord.append(Coordinate185)
+IndexedLineSet184.coord = Coordinate185
 
 Shape181.geometry = IndexedLineSet184
 
@@ -860,7 +860,7 @@ IndexedLineSet193.coordIndex = [0,1]
 Coordinate194 = x3d.Coordinate()
 Coordinate194.point = (-0.1000,0.1000,0.0000,-0.1000,0.2000,0.0000)
 
-IndexedLineSet193.coord.append(Coordinate194)
+IndexedLineSet193.coord = Coordinate194
 
 Shape190.geometry = IndexedLineSet193
 
@@ -879,7 +879,7 @@ IndexedLineSet198.coordIndex = [0,1]
 Coordinate199 = x3d.Coordinate()
 Coordinate199.point = (-0.1000,0.1000,0.0000,-0.1500,0.1700,0.0000)
 
-IndexedLineSet198.coord.append(Coordinate199)
+IndexedLineSet198.coord = Coordinate199
 
 Shape195.geometry = IndexedLineSet198
 
@@ -918,7 +918,7 @@ IndexedLineSet207.coordIndex = [0,1]
 Coordinate208 = x3d.Coordinate()
 Coordinate208.point = (-0.1000,0.2000,0.0000,-0.1000,0.4700,0.0000)
 
-IndexedLineSet207.coord.append(Coordinate208)
+IndexedLineSet207.coord = Coordinate208
 
 Shape204.geometry = IndexedLineSet207
 
@@ -956,7 +956,7 @@ IndexedLineSet216.coordIndex = [0,1]
 Coordinate217 = x3d.Coordinate()
 Coordinate217.point = (-0.1000,0.4700,0.0000,-0.1000,0.7000,0.0000)
 
-IndexedLineSet216.coord.append(Coordinate217)
+IndexedLineSet216.coord = Coordinate217
 
 Shape213.geometry = IndexedLineSet216
 
@@ -994,7 +994,7 @@ IndexedLineSet225.coordIndex = [0,1]
 Coordinate226 = x3d.Coordinate()
 Coordinate226.point = (-0.1000,0.7000,0.0000,-0.1000,0.9300,0.0000)
 
-IndexedLineSet225.coord.append(Coordinate226)
+IndexedLineSet225.coord = Coordinate226
 
 Shape222.geometry = IndexedLineSet225
 
@@ -1032,7 +1032,7 @@ IndexedLineSet234.coordIndex = [0,1]
 Coordinate235 = x3d.Coordinate()
 Coordinate235.point = (-0.1000,0.9300,0.0000,-0.1000,1.0000,0.0000)
 
-IndexedLineSet234.coord.append(Coordinate235)
+IndexedLineSet234.coord = Coordinate235
 
 Shape231.geometry = IndexedLineSet234
 
@@ -1079,7 +1079,7 @@ IndexedLineSet243.coordIndex = [0,1]
 Coordinate244 = x3d.Coordinate()
 Coordinate244.point = (-0.1500,0.1700,0.0000,-0.2000,0.4000,0.0000)
 
-IndexedLineSet243.coord.append(Coordinate244)
+IndexedLineSet243.coord = Coordinate244
 
 Shape240.geometry = IndexedLineSet243
 
@@ -1117,7 +1117,7 @@ IndexedLineSet252.coordIndex = [0,1]
 Coordinate253 = x3d.Coordinate()
 Coordinate253.point = (-0.2000,0.4000,0.0000,-0.2300,0.6300,0.0000)
 
-IndexedLineSet252.coord.append(Coordinate253)
+IndexedLineSet252.coord = Coordinate253
 
 Shape249.geometry = IndexedLineSet252
 
@@ -1155,7 +1155,7 @@ IndexedLineSet261.coordIndex = [0,1]
 Coordinate262 = x3d.Coordinate()
 Coordinate262.point = (-0.2300,0.6300,0.0000,-0.2500,0.7900,0.0000)
 
-IndexedLineSet261.coord.append(Coordinate262)
+IndexedLineSet261.coord = Coordinate262
 
 Shape258.geometry = IndexedLineSet261
 
@@ -1193,7 +1193,7 @@ IndexedLineSet270.coordIndex = [0,1]
 Coordinate271 = x3d.Coordinate()
 Coordinate271.point = (-0.2500,0.7900,0.0000,-0.2600,0.8500,0.0000)
 
-IndexedLineSet270.coord.append(Coordinate271)
+IndexedLineSet270.coord = Coordinate271
 
 Shape267.geometry = IndexedLineSet270
 

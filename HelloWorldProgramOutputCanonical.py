@@ -39,7 +39,7 @@ unit6.conversionFactor = 1
 head1.children.append(unit6)
 meta7 = x3d.meta()
 meta7.name = "title"
-meta7.content = "HelloWorldProgramOutput.x3d"
+meta7.content = "HelloWorldProgramOutputCanonical.x3d"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
@@ -49,7 +49,7 @@ meta8.content = "Example HelloWorldProgram creates an X3D model using the X3D Ja
 head1.children.append(meta8)
 meta9 = x3d.meta()
 meta9.name = "reference"
-meta9.content = "https://www.web3d.org/specifications/java/X3DJSAIL.html"
+meta9.content = "http://www.web3d.org/specifications/java/X3DJSAIL.html"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
@@ -74,12 +74,12 @@ meta13.content = "X3D Java Scene Access Interface Library (X3DJSAIL)"
 head1.children.append(meta13)
 meta14 = x3d.meta()
 meta14.name = "generator"
-meta14.content = "https://www.web3d.org/specifications/java/examples/HelloWorldProgram.java"
+meta14.content = "http://www.web3d.org/specifications/java/examples/HelloWorldProgram.java"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
 meta15.name = "generator"
-meta15.content = "Netbeans https://www.netbeans.org"
+meta15.content = "Netbeans http://www.netbeans.org"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
@@ -119,12 +119,12 @@ meta22.content = "HelloWorldProgramOutput.html"
 head1.children.append(meta22)
 meta23 = x3d.meta()
 meta23.name = "reference"
-meta23.content = "https://savage.nps.edu/X3dValidator?url=https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
+meta23.content = "https://savage.nps.edu/X3dValidator?url=http://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
 
 head1.children.append(meta23)
 meta24 = x3d.meta()
 meta24.name = "identifier"
-meta24.content = "https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
+meta24.content = "http://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
 
 head1.children.append(meta24)
 meta25 = x3d.meta()
@@ -173,17 +173,17 @@ MetadataString34.name = "test"
 MetadataString34.DEF = "scene.addChildMetadata"
 MetadataString34.value = ["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
 
-Scene26.metadata.append(MetadataString34)
+Scene26.metadata = MetadataString34
 LayerSet35 = x3d.LayerSet()
 LayerSet35.DEF = "scene.addChildLayerSetTest"
 
-Scene26.layerSet.append(LayerSet35)
+Scene26.layerSet = LayerSet35
 Transform36 = x3d.Transform()
 Transform36.DEF = "LogoGeometryTransform"
 Transform36.translation = [0,1.5,0]
 Anchor37 = x3d.Anchor()
 Anchor37.description = "select for X3D Java SAI Library (X3DJSAIL) description"
-Anchor37.url = ["../X3DJSAIL.html","https://www.web3d.org/specifications/java/X3DJSAIL.html"]
+Anchor37.url = ["../X3DJSAIL.html","http://www.web3d.org/specifications/java/X3DJSAIL.html"]
 Shape38 = x3d.Shape()
 Shape38.DEF = "BoxShape"
 Appearance39 = x3d.Appearance()
@@ -195,7 +195,7 @@ Material40.transparency = 0.1
 
 Appearance39.material = Material40
 ImageTexture41 = x3d.ImageTexture()
-ImageTexture41.url = ["images/X3dJavaSceneAccessInterfaceSaiLibrary.png","https://www.web3d.org/specifications/java/examples/images/X3dJavaSceneAccessInterfaceSaiLibrary.png"]
+ImageTexture41.url = ["images/X3dJavaSceneAccessInterfaceSaiLibrary.png","http://www.web3d.org/specifications/java/examples/images/X3dJavaSceneAccessInterfaceSaiLibrary.png"]
 
 Appearance39.texture = ImageTexture41
 
@@ -226,7 +226,7 @@ IndexedLineSet46.coordIndex = [0,1,2,3,4,0]
 Coordinate47 = x3d.Coordinate()
 Coordinate47.point = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
-IndexedLineSet46.coord.append(Coordinate47)
+IndexedLineSet46.coord = Coordinate47
 
 Shape43.geometry = IndexedLineSet46
 
@@ -278,14 +278,14 @@ MetadataString58 = x3d.MetadataString()
 MetadataString58.name = "quotesTestC"
 MetadataString58.value = ["MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""]
 
-MetadataSet57.value.append(MetadataString58)
+MetadataSet57.value = MetadataString58
 MetadataString59 = x3d.MetadataString()
 MetadataString59.name = "extraChildTest"
 MetadataString59.value = ["checks MetadataSetObject addValue() method"]
 
-MetadataSet57.value.append(MetadataString59)
+MetadataSet57.value = MetadataString59
 
-Text56.metadata.append(MetadataSet57)
+Text56.metadata = MetadataSet57
 FontStyle60 = x3d.FontStyle()
 FontStyle60.justify = ["MIDDLE","MIDDLE"]
 
@@ -301,7 +301,7 @@ Shape62.DEF = "ProxyShape"
 #alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'
 #alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'
 #alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})
-#reference: https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html
+#reference: http://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html
 Text63 = x3d.Text()
 Text63.string = ["One, Two, Text","","He said, \"Immel did it!\" \"\""]
 
@@ -464,7 +464,7 @@ Scene26.children.append(ProtoDeclare78)
 ExternProtoDeclare88 = x3d.ExternProtoDeclare()
 ExternProtoDeclare88.name = "ArtDeco02Material"
 ExternProtoDeclare88.appinfo = "this is a different Material node"
-ExternProtoDeclare88.url = ["https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"]
+ExternProtoDeclare88.url = ["http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"]
 #[HelloWorldProgram diagnostic] artDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\"
 field89 = x3d.field()
 field89.name = "description"
@@ -544,7 +544,7 @@ Shape100.geometry = Cylinder103
 Scene26.children.append(Shape100)
 Inline104 = x3d.Inline()
 Inline104.DEF = "inlineSceneDef"
-Inline104.url = ["someOtherScene.x3d","https://www.web3d.org/specifications/java/examples/someOtherScene.x3d"]
+Inline104.url = ["someOtherScene.x3d","http://www.web3d.org/specifications/java/examples/someOtherScene.x3d"]
 
 Scene26.children.append(Inline104)
 IMPORT105 = x3d.IMPORT()
@@ -561,7 +561,7 @@ Scene26.children.append(EXPORT106)
 ProtoDeclare107 = x3d.ProtoDeclare()
 ProtoDeclare107.name = "MaterialModulator"
 ProtoDeclare107.appinfo = "mimic a Material node and modulate fields as an animation effect"
-ProtoDeclare107.documentation = "https://x3dgraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/MaterialModulatorIndex.html"
+ProtoDeclare107.documentation = "http://x3dgraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/MaterialModulatorIndex.html"
 ProtoInterface108 = x3d.ProtoInterface()
 field109 = x3d.field()
 field109.name = "enabled"
@@ -731,7 +731,7 @@ MetadataString135.name = "findThisNameValue"
 MetadataString135.DEF = "FindableMetadataStringTest"
 MetadataString135.value = ["test case"]
 
-Shape134.metadata.append(MetadataString135)
+Shape134.metadata = MetadataString135
 Appearance136 = x3d.Appearance()
 Appearance136.DEF = "DeclarativeAppearanceExample"
 #DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance
@@ -776,10 +776,10 @@ Sound140.location = [0,1.6,0]
 #set sound-ellipsoid location height at 1.6m to match typical avatar height
 AudioClip141 = x3d.AudioClip()
 AudioClip141.description = "chimes"
-AudioClip141.url = ["chimes.wav","https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]
-#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
+AudioClip141.url = ["chimes.wav","http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]
+#Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
 
-Sound140.source.append(AudioClip141)
+Sound140.source = AudioClip141
 
 Scene26.children.append(Sound140)
 Sound142 = x3d.Sound()
@@ -787,11 +787,11 @@ Sound142.location = [0,1.6,0]
 #set sound-ellipsoid location height at 1.6m to match typical avatar height
 MovieTexture143 = x3d.MovieTexture()
 MovieTexture143.description = "mpgsys.mpg from ConformanceNist suite"
-MovieTexture143.url = ["mpgsys.mpg","https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"]
-#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
+MovieTexture143.url = ["mpgsys.mpg","http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"]
+#Scene example fragment from http://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
 #Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"
 
-Sound142.source.append(MovieTexture143)
+Sound142.source = MovieTexture143
 
 Scene26.children.append(Sound142)
 #Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true

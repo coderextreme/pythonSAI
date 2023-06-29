@@ -8,7 +8,7 @@
         "meta": [
           {
             "@name":"title",
-            "@content":"gridBack.json"
+            "@content":"gridBack.x3d"
           },
           {
             "@name":"description",
@@ -52,7 +52,7 @@
           },
           {
             "@name":"translated",
-            "@content":"28 June 2023"
+            "@content":"29 June 2023"
           },
           {
             "@name":"generator",

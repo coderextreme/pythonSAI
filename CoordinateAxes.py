@@ -32,12 +32,12 @@ meta6.content = "X Y Z axis arrows and labels in X3D coordinate system. See Coor
 head1.children.append(meta6)
 meta7 = x3d.meta()
 meta7.name = "reference"
-meta7.content = "http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
+meta7.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
 meta8.name = "reference"
-meta8.content = "http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxesNSEW.x3d"
+meta8.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxesNSEW.x3d"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
@@ -52,7 +52,7 @@ meta10.content = "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxesNS
 head1.children.append(meta10)
 meta11 = x3d.meta()
 meta11.name = "identifier"
-meta11.content = "http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
+meta11.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()

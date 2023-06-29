@@ -7,9 +7,9 @@ export PROCESSORS=${PROCESSORS-8}
 
 . ./profile.sh
 
-javac -cp "saxon-he-12.1.jar;." RunSaxon.java
+javac -cp "saxon-he-12.1.jar;.;xmlresolver-5.1.1.jar;xmlresolver-5.1.1-data.jar" RunSaxon.java
 
-ls *.x3d | xargs -P $PROCESSORS java -cp "saxon-he-12.1.jar;." RunSaxon ---overwrite | xargs -P $PROCESSORS ${NODE} json2py.js
+ls *.x3d | xargs -P $PROCESSORS java -cp "saxon-he-12.1.jar;.;xmlresolver-5.1.1.jar;xmlresolver-5.1.1-data.jar" RunSaxon ---overwrite | xargs -P $PROCESSORS ${NODE} json2py.js
 
 #for i in *.x3d
 #do

@@ -68,7 +68,7 @@ IndexedFaceSet16.DEF = "Orbit"
 Coordinate17 = x3d.Coordinate()
 Coordinate17.DEF = "OrbitCoordinates"
 
-IndexedFaceSet16.coord.append(Coordinate17)
+IndexedFaceSet16.coord = Coordinate17
 
 Shape13.geometry = IndexedFaceSet16
 

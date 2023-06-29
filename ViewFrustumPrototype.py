@@ -164,7 +164,7 @@ Coordinate33 = x3d.Coordinate()
 Coordinate33.DEF = "FrustumCoordinate"
 Coordinate33.point = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
-IndexedLineSet32.coord.append(Coordinate33)
+IndexedLineSet32.coord = Coordinate33
 
 Shape31.geometry = IndexedLineSet32
 Appearance34 = x3d.Appearance()

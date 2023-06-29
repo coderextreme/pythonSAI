@@ -214,7 +214,7 @@ IndexedFaceSet46.solid = False
 Coordinate47 = x3d.Coordinate()
 Coordinate47.point = (1.0000,1.0000,0.0000,1.0000,-1.0000,0.0000,-1.0000,-1.0000,0.0000,-1.0000,1.0000,0.0000)
 
-IndexedFaceSet46.coord.append(Coordinate47)
+IndexedFaceSet46.coord = Coordinate47
 
 Shape45.geometry = IndexedFaceSet46
 Appearance48 = x3d.Appearance()
@@ -342,7 +342,7 @@ AudioClip67.DEF = "TextToSpeechAudioClip"
 AudioClip67.description = "sends strategy text google translate"
 AudioClip67.url = ["http://translate.google.com/translate_tts?tl=en&amp;q=Feed%20the%20recording%20back%20out%20of%20the%20medium","translate_tts_mp3FileFormatNotSupported.wav","https://x3dgraphics.com/examples/X3dForAdvancedModeling/Inspiration/translate_tts_mp3FileFormatNotSupported.wav"]
 
-Sound66.source.append(AudioClip67)
+Sound66.source = AudioClip67
 
 Transform59.children.append(Sound66)
 ROUTE68 = x3d.ROUTE()
@@ -406,7 +406,7 @@ IndexedFaceSet80.solid = False
 Coordinate81 = x3d.Coordinate()
 Coordinate81.point = (1.0000,1.0000,0.0000,1.0000,-1.0000,0.0000,-1.0000,-1.0000,0.0000,-1.0000,1.0000,0.0000)
 
-IndexedFaceSet80.coord.append(Coordinate81)
+IndexedFaceSet80.coord = Coordinate81
 
 Shape79.geometry = IndexedFaceSet80
 Appearance82 = x3d.Appearance()

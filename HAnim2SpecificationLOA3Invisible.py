@@ -238,39 +238,39 @@ MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "authorName"
 MetadataString45.value = ["Matthew T. Beitler Joe D. Williams Don Brutzman"]
 
-MetadataSet44.value.append(MetadataString45)
+MetadataSet44.value = MetadataString45
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "authorEmail"
 MetadataString46.value = ["HAnim@web3D.org"]
 
-MetadataSet44.value.append(MetadataString46)
+MetadataSet44.value = MetadataString46
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "copyright"
 MetadataString47.value = ["none"]
 
-MetadataSet44.value.append(MetadataString47)
+MetadataSet44.value = MetadataString47
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "creationDate"
 MetadataString48.value = ["12 May 1999"]
 
-MetadataSet44.value.append(MetadataString48)
+MetadataSet44.value = MetadataString48
 MetadataFloat49 = x3d.MetadataFloat()
 MetadataFloat49.name = "height"
 MetadataFloat49.value = [1.7504]
 
-MetadataSet44.value.append(MetadataFloat49)
+MetadataSet44.value = MetadataFloat49
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "humanoidVersion"
 MetadataString50.value = ["2.0"]
 
-MetadataSet44.value.append(MetadataString50)
+MetadataSet44.value = MetadataString50
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "usageRestrictions"
 MetadataString51.value = ["none"]
 
-MetadataSet44.value.append(MetadataString51)
+MetadataSet44.value = MetadataString51
 
-HAnimHumanoid43.metadata.append(MetadataSet44)
+HAnimHumanoid43.metadata = MetadataSet44
 HAnimJoint52 = x3d.HAnimJoint()
 HAnimJoint52.name = "humanoid_root"
 HAnimJoint52.DEF = "hanim_humanoid_root"

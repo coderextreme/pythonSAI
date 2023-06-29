@@ -159,345 +159,345 @@ MetadataString33.name = "ROOT_hip"
 MetadataString33.reference = "ROOT"
 MetadataString33.value = ["humanoid_root","sacrum"]
 
-MetadataSet32.value.append(MetadataString33)
+MetadataSet32.value = MetadataString33
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "abdomen"
 MetadataString34.reference = "JOINT"
 MetadataString34.value = ["abdomen","humanoid_root_to_abdomen"]
 
-MetadataSet32.value.append(MetadataString34)
+MetadataSet32.value = MetadataString34
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "chest"
 MetadataString35.reference = "JOINT"
 MetadataString35.value = ["vl5","l5"]
 
-MetadataSet32.value.append(MetadataString35)
+MetadataSet32.value = MetadataString35
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "neck"
 MetadataString36.reference = "JOINT"
 MetadataString36.value = ["neck","vl5_to_neck"]
 
-MetadataSet32.value.append(MetadataString36)
+MetadataSet32.value = MetadataString36
 MetadataString37 = x3d.MetadataString()
 MetadataString37.name = "head"
 MetadataString37.reference = "JOINT"
 MetadataString37.value = ["skullbase","skull"]
 
-MetadataSet32.value.append(MetadataString37)
+MetadataSet32.value = MetadataString37
 MetadataString38 = x3d.MetadataString()
 MetadataString38.name = "leftEye"
 MetadataString38.reference = "JOINT"
 MetadataString38.value = ["leftEye","skullbase_to_leftEye"]
 
-MetadataSet32.value.append(MetadataString38)
+MetadataSet32.value = MetadataString38
 MetadataString39 = x3d.MetadataString()
 MetadataString39.name = "leftEyeSite"
 MetadataString39.reference = "Site"
 MetadataString39.value = ["leftEye_tip"]
 
-MetadataSet32.value.append(MetadataString39)
+MetadataSet32.value = MetadataString39
 MetadataString40 = x3d.MetadataString()
 MetadataString40.name = "rightEye"
 MetadataString40.reference = "JOINT"
 MetadataString40.value = ["rightEye","skullbase_to_rightEye"]
 
-MetadataSet32.value.append(MetadataString40)
+MetadataSet32.value = MetadataString40
 MetadataString41 = x3d.MetadataString()
 MetadataString41.name = "rightEyeSite"
 MetadataString41.reference = "Site"
 MetadataString41.value = ["rightEye_tip"]
 
-MetadataSet32.value.append(MetadataString41)
+MetadataSet32.value = MetadataString41
 MetadataString42 = x3d.MetadataString()
 MetadataString42.name = "rCollar"
 MetadataString42.reference = "JOINT"
 MetadataString42.value = ["rCollar","vl5_to_rCollar"]
 
-MetadataSet32.value.append(MetadataString42)
+MetadataSet32.value = MetadataString42
 MetadataString43 = x3d.MetadataString()
 MetadataString43.name = "rShldr"
 MetadataString43.reference = "JOINT"
 MetadataString43.value = ["rShldr","rCollar_to_rShldr"]
 
-MetadataSet32.value.append(MetadataString43)
+MetadataSet32.value = MetadataString43
 MetadataString44 = x3d.MetadataString()
 MetadataString44.name = "rForeArm"
 MetadataString44.reference = "JOINT"
 MetadataString44.value = ["rForeArm","rShldr_to_rForeArm"]
 
-MetadataSet32.value.append(MetadataString44)
+MetadataSet32.value = MetadataString44
 MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "rHand"
 MetadataString45.reference = "JOINT"
 MetadataString45.value = ["rHand","rForeArm_to_rHand"]
 
-MetadataSet32.value.append(MetadataString45)
+MetadataSet32.value = MetadataString45
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "rThumb1"
 MetadataString46.reference = "JOINT"
 MetadataString46.value = ["rThumb1","rHand_to_rThumb1"]
 
-MetadataSet32.value.append(MetadataString46)
+MetadataSet32.value = MetadataString46
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "rThumb2"
 MetadataString47.reference = "JOINT"
 MetadataString47.value = ["rThumb2","rThumb1_to_rThumb2"]
 
-MetadataSet32.value.append(MetadataString47)
+MetadataSet32.value = MetadataString47
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "rThumb2Site"
 MetadataString48.reference = "Site"
 MetadataString48.value = ["rThumb2_tip"]
 
-MetadataSet32.value.append(MetadataString48)
+MetadataSet32.value = MetadataString48
 MetadataString49 = x3d.MetadataString()
 MetadataString49.name = "rIndex1"
 MetadataString49.reference = "JOINT"
 MetadataString49.value = ["rIndex1","rHand_to_rIndex1"]
 
-MetadataSet32.value.append(MetadataString49)
+MetadataSet32.value = MetadataString49
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "rIndex2"
 MetadataString50.reference = "JOINT"
 MetadataString50.value = ["rIndex2","rIndex1_to_rIndex2"]
 
-MetadataSet32.value.append(MetadataString50)
+MetadataSet32.value = MetadataString50
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "rIndex2Site"
 MetadataString51.reference = "Site"
 MetadataString51.value = ["rIndex2_tip"]
 
-MetadataSet32.value.append(MetadataString51)
+MetadataSet32.value = MetadataString51
 MetadataString52 = x3d.MetadataString()
 MetadataString52.name = "rMid1"
 MetadataString52.reference = "JOINT"
 MetadataString52.value = ["rMid1","rHand_to_rMid1"]
 
-MetadataSet32.value.append(MetadataString52)
+MetadataSet32.value = MetadataString52
 MetadataString53 = x3d.MetadataString()
 MetadataString53.name = "rMid2"
 MetadataString53.reference = "JOINT"
 MetadataString53.value = ["rMid2","rMid1_to_rMid2"]
 
-MetadataSet32.value.append(MetadataString53)
+MetadataSet32.value = MetadataString53
 MetadataString54 = x3d.MetadataString()
 MetadataString54.name = "rMid2Site"
 MetadataString54.reference = "Site"
 MetadataString54.value = ["rMid2_tip"]
 
-MetadataSet32.value.append(MetadataString54)
+MetadataSet32.value = MetadataString54
 MetadataString55 = x3d.MetadataString()
 MetadataString55.name = "rRing1"
 MetadataString55.reference = "JOINT"
 MetadataString55.value = ["rRing1","rHand_to_rRing1"]
 
-MetadataSet32.value.append(MetadataString55)
+MetadataSet32.value = MetadataString55
 MetadataString56 = x3d.MetadataString()
 MetadataString56.name = "rRing2"
 MetadataString56.reference = "JOINT"
 MetadataString56.value = ["rRing2","rRing1_to_rRing2"]
 
-MetadataSet32.value.append(MetadataString56)
+MetadataSet32.value = MetadataString56
 MetadataString57 = x3d.MetadataString()
 MetadataString57.name = "rRing2Site"
 MetadataString57.reference = "Site"
 MetadataString57.value = ["rRing2_tip"]
 
-MetadataSet32.value.append(MetadataString57)
+MetadataSet32.value = MetadataString57
 MetadataString58 = x3d.MetadataString()
 MetadataString58.name = "rPinky1"
 MetadataString58.reference = "JOINT"
 MetadataString58.value = ["rPinky1","rHand_to_rPinky1"]
 
-MetadataSet32.value.append(MetadataString58)
+MetadataSet32.value = MetadataString58
 MetadataString59 = x3d.MetadataString()
 MetadataString59.name = "rPinky2"
 MetadataString59.reference = "JOINT"
 MetadataString59.value = ["rPinky2","rPinky1_to_rPinky2"]
 
-MetadataSet32.value.append(MetadataString59)
+MetadataSet32.value = MetadataString59
 MetadataString60 = x3d.MetadataString()
 MetadataString60.name = "rPinky2Site"
 MetadataString60.reference = "Site"
 MetadataString60.value = ["rPinky2_tip"]
 
-MetadataSet32.value.append(MetadataString60)
+MetadataSet32.value = MetadataString60
 MetadataString61 = x3d.MetadataString()
 MetadataString61.name = "lCollar"
 MetadataString61.reference = "JOINT"
 MetadataString61.value = ["lCollar","vl5_to_lCollar"]
 
-MetadataSet32.value.append(MetadataString61)
+MetadataSet32.value = MetadataString61
 MetadataString62 = x3d.MetadataString()
 MetadataString62.name = "lShldr"
 MetadataString62.reference = "JOINT"
 MetadataString62.value = ["lShldr","lCollar_to_lShldr"]
 
-MetadataSet32.value.append(MetadataString62)
+MetadataSet32.value = MetadataString62
 MetadataString63 = x3d.MetadataString()
 MetadataString63.name = "lForeArm"
 MetadataString63.reference = "JOINT"
 MetadataString63.value = ["lForeArm","lShldr_to_lForeArm"]
 
-MetadataSet32.value.append(MetadataString63)
+MetadataSet32.value = MetadataString63
 MetadataString64 = x3d.MetadataString()
 MetadataString64.name = "lHand"
 MetadataString64.reference = "JOINT"
 MetadataString64.value = ["lHand","lForeArm_to_lHand"]
 
-MetadataSet32.value.append(MetadataString64)
+MetadataSet32.value = MetadataString64
 MetadataString65 = x3d.MetadataString()
 MetadataString65.name = "lThumb1"
 MetadataString65.reference = "JOINT"
 MetadataString65.value = ["lThumb1","lHand_to_lThumb1"]
 
-MetadataSet32.value.append(MetadataString65)
+MetadataSet32.value = MetadataString65
 MetadataString66 = x3d.MetadataString()
 MetadataString66.name = "lThumb2"
 MetadataString66.reference = "JOINT"
 MetadataString66.value = ["lThumb2","lThumb1_to_lThumb2"]
 
-MetadataSet32.value.append(MetadataString66)
+MetadataSet32.value = MetadataString66
 MetadataString67 = x3d.MetadataString()
 MetadataString67.name = "lThumb2Site"
 MetadataString67.reference = "Site"
 MetadataString67.value = ["lThumb2_tip"]
 
-MetadataSet32.value.append(MetadataString67)
+MetadataSet32.value = MetadataString67
 MetadataString68 = x3d.MetadataString()
 MetadataString68.name = "lIndex1"
 MetadataString68.reference = "JOINT"
 MetadataString68.value = ["lIndex1","lHand_to_lIndex1"]
 
-MetadataSet32.value.append(MetadataString68)
+MetadataSet32.value = MetadataString68
 MetadataString69 = x3d.MetadataString()
 MetadataString69.name = "lIndex2"
 MetadataString69.reference = "JOINT"
 MetadataString69.value = ["lIndex2","lIndex1_to_lIndex2"]
 
-MetadataSet32.value.append(MetadataString69)
+MetadataSet32.value = MetadataString69
 MetadataString70 = x3d.MetadataString()
 MetadataString70.name = "lIndex2Site"
 MetadataString70.reference = "Site"
 MetadataString70.value = ["lIndex2_tip"]
 
-MetadataSet32.value.append(MetadataString70)
+MetadataSet32.value = MetadataString70
 MetadataString71 = x3d.MetadataString()
 MetadataString71.name = "lMid1"
 MetadataString71.reference = "JOINT"
 MetadataString71.value = ["lMid1","lHand_to_lMid1"]
 
-MetadataSet32.value.append(MetadataString71)
+MetadataSet32.value = MetadataString71
 MetadataString72 = x3d.MetadataString()
 MetadataString72.name = "lMid2"
 MetadataString72.reference = "JOINT"
 MetadataString72.value = ["lMid2","lMid1_to_lMid2"]
 
-MetadataSet32.value.append(MetadataString72)
+MetadataSet32.value = MetadataString72
 MetadataString73 = x3d.MetadataString()
 MetadataString73.name = "lMid2Site"
 MetadataString73.reference = "Site"
 MetadataString73.value = ["lMid2_tip"]
 
-MetadataSet32.value.append(MetadataString73)
+MetadataSet32.value = MetadataString73
 MetadataString74 = x3d.MetadataString()
 MetadataString74.name = "lRing1"
 MetadataString74.reference = "JOINT"
 MetadataString74.value = ["lRing1","lHand_to_lRing1"]
 
-MetadataSet32.value.append(MetadataString74)
+MetadataSet32.value = MetadataString74
 MetadataString75 = x3d.MetadataString()
 MetadataString75.name = "lRing2"
 MetadataString75.reference = "JOINT"
 MetadataString75.value = ["lRing2","lRing1_to_lRing2"]
 
-MetadataSet32.value.append(MetadataString75)
+MetadataSet32.value = MetadataString75
 MetadataString76 = x3d.MetadataString()
 MetadataString76.name = "lRing2Site"
 MetadataString76.reference = "Site"
 MetadataString76.value = ["lRing2_tip"]
 
-MetadataSet32.value.append(MetadataString76)
+MetadataSet32.value = MetadataString76
 MetadataString77 = x3d.MetadataString()
 MetadataString77.name = "lPinky1"
 MetadataString77.reference = "JOINT"
 MetadataString77.value = ["lPinky1","lHand_to_lPinky1"]
 
-MetadataSet32.value.append(MetadataString77)
+MetadataSet32.value = MetadataString77
 MetadataString78 = x3d.MetadataString()
 MetadataString78.name = "lPinky2"
 MetadataString78.reference = "JOINT"
 MetadataString78.value = ["lPinky2","lPinky1_to_lPinky2"]
 
-MetadataSet32.value.append(MetadataString78)
+MetadataSet32.value = MetadataString78
 MetadataString79 = x3d.MetadataString()
 MetadataString79.name = "lPinky2Site"
 MetadataString79.reference = "Site"
 MetadataString79.value = ["lPinky2_tip"]
 
-MetadataSet32.value.append(MetadataString79)
+MetadataSet32.value = MetadataString79
 MetadataString80 = x3d.MetadataString()
 MetadataString80.name = "rButtock"
 MetadataString80.reference = "JOINT"
 MetadataString80.value = ["rButtock","humanoid_root_to_rButtock"]
 
-MetadataSet32.value.append(MetadataString80)
+MetadataSet32.value = MetadataString80
 MetadataString81 = x3d.MetadataString()
 MetadataString81.name = "rThigh"
 MetadataString81.reference = "JOINT"
 MetadataString81.value = ["rThigh","rButtock_to_rThigh"]
 
-MetadataSet32.value.append(MetadataString81)
+MetadataSet32.value = MetadataString81
 MetadataString82 = x3d.MetadataString()
 MetadataString82.name = "rShin"
 MetadataString82.reference = "JOINT"
 MetadataString82.value = ["rShin","rThigh_to_rShin"]
 
-MetadataSet32.value.append(MetadataString82)
+MetadataSet32.value = MetadataString82
 MetadataString83 = x3d.MetadataString()
 MetadataString83.name = "rFoot"
 MetadataString83.reference = "JOINT"
 MetadataString83.value = ["rFoot","rShin_to_rFoot"]
 
-MetadataSet32.value.append(MetadataString83)
+MetadataSet32.value = MetadataString83
 MetadataString84 = x3d.MetadataString()
 MetadataString84.name = "rFootSite"
 MetadataString84.reference = "Site"
 MetadataString84.value = ["rFoot_tip"]
 
-MetadataSet32.value.append(MetadataString84)
+MetadataSet32.value = MetadataString84
 MetadataString85 = x3d.MetadataString()
 MetadataString85.name = "lButtock"
 MetadataString85.reference = "JOINT"
 MetadataString85.value = ["lButtock","humanoid_root_to_lButtock"]
 
-MetadataSet32.value.append(MetadataString85)
+MetadataSet32.value = MetadataString85
 MetadataString86 = x3d.MetadataString()
 MetadataString86.name = "lThigh"
 MetadataString86.reference = "JOINT"
 MetadataString86.value = ["lThigh","lButtock_to_lThigh"]
 
-MetadataSet32.value.append(MetadataString86)
+MetadataSet32.value = MetadataString86
 MetadataString87 = x3d.MetadataString()
 MetadataString87.name = "lShin"
 MetadataString87.reference = "JOINT"
 MetadataString87.value = ["lShin","lThigh_to_lShin"]
 
-MetadataSet32.value.append(MetadataString87)
+MetadataSet32.value = MetadataString87
 MetadataString88 = x3d.MetadataString()
 MetadataString88.name = "lFoot"
 MetadataString88.reference = "JOINT"
 MetadataString88.value = ["lFoot","lShin_to_lFoot"]
 
-MetadataSet32.value.append(MetadataString88)
+MetadataSet32.value = MetadataString88
 MetadataString89 = x3d.MetadataString()
 MetadataString89.name = "lFootSite"
 MetadataString89.reference = "Site"
 MetadataString89.value = ["lFoot_tip"]
 
-MetadataSet32.value.append(MetadataString89)
+MetadataSet32.value = MetadataString89
 
-Group31.value.append(MetadataSet32)
+Group31.value = MetadataSet32
 
 Scene28.children.append(Group31)
 #initialPositionOffset computation: 1.243 2.220 6.355, initialPositionScaled computation: 0.124 0.555 0.636
@@ -536,29 +536,29 @@ MetadataString96 = x3d.MetadataString()
 MetadataString96.name = "authorEmail"
 MetadataString96.value = ["*TODO*"]
 
-MetadataSet95.value.append(MetadataString96)
+MetadataSet95.value = MetadataString96
 MetadataString97 = x3d.MetadataString()
 MetadataString97.name = "authorName"
 MetadataString97.value = ["*TODO*"]
 
-MetadataSet95.value.append(MetadataString97)
+MetadataSet95.value = MetadataString97
 MetadataString98 = x3d.MetadataString()
 MetadataString98.name = "copyright"
 MetadataString98.value = ["Copyright (c) 2022"]
 
-MetadataSet95.value.append(MetadataString98)
+MetadataSet95.value = MetadataString98
 MetadataString99 = x3d.MetadataString()
 MetadataString99.name = "humanoidVersion"
 MetadataString99.value = ["*TODO*"]
 
-MetadataSet95.value.append(MetadataString99)
+MetadataSet95.value = MetadataString99
 MetadataString100 = x3d.MetadataString()
 MetadataString100.name = "usageDescription"
 MetadataString100.value = ["*TODO*"]
 
-MetadataSet95.value.append(MetadataString100)
+MetadataSet95.value = MetadataString100
 
-HAnimHumanoid94.value.append(MetadataSet95)
+HAnimHumanoid94.value = MetadataSet95
 HAnimSite101 = x3d.HAnimSite()
 HAnimSite101.name = "humanoid_root_view"
 HAnimSite101.DEF = "BvhPirouette_humanoid_root_view"
@@ -632,12 +632,12 @@ LineSet117.vertexCount = [2]
 Coordinate118 = x3d.Coordinate()
 Coordinate118.point = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
-LineSet117.coord.append(Coordinate118)
+LineSet117.coord = Coordinate118
 ColorRGBA119 = x3d.ColorRGBA()
 ColorRGBA119.DEF = "HAnimSegmentLineColorRGBA"
 ColorRGBA119.color = [1,1,0,1,1,1,0,0.1]
 
-LineSet117.color.append(ColorRGBA119)
+LineSet117.color = ColorRGBA119
 
 Shape116.geometry = LineSet117
 
@@ -652,7 +652,7 @@ IndexedFaceSet121.solid = False
 Coordinate122 = x3d.Coordinate()
 Coordinate122.point = (0.0000,0.2540,0.0000,-0.2540,0.0000,0.0000,0.0000,0.0000,0.2540,0.2540,0.0000,0.0000,0.0000,0.0000,-0.2540,0.0000,-0.2540,0.0000)
 
-IndexedFaceSet121.coord.append(Coordinate122)
+IndexedFaceSet121.coord = Coordinate122
 
 Shape120.geometry = IndexedFaceSet121
 Appearance123 = x3d.Appearance()
@@ -671,12 +671,12 @@ LineSet126.vertexCount = [2]
 Coordinate127 = x3d.Coordinate()
 Coordinate127.point = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
-LineSet126.coord.append(Coordinate127)
+LineSet126.coord = Coordinate127
 ColorRGBA128 = x3d.ColorRGBA()
 ColorRGBA128.DEF = "HAnimSiteLineColorRGBA"
 ColorRGBA128.color = [1,0.5,0,1,1,0.5,0,0.1]
 
-LineSet126.color.append(ColorRGBA128)
+LineSet126.color = ColorRGBA128
 
 Shape125.geometry = LineSet126
 
@@ -690,11 +690,11 @@ LineSet130.vertexCount = [2]
 Coordinate131 = x3d.Coordinate()
 Coordinate131.point = (0.0000,0.0000,0.0000,0.0000,20.6881,-0.7315)
 
-LineSet130.coord.append(Coordinate131)
+LineSet130.coord = Coordinate131
 ColorRGBA132 = x3d.ColorRGBA()
 ColorRGBA132.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet130.color.append(ColorRGBA132)
+LineSet130.color = ColorRGBA132
 
 Shape129.geometry = LineSet130
 
@@ -706,11 +706,11 @@ LineSet134.vertexCount = [2]
 Coordinate135 = x3d.Coordinate()
 Coordinate135.point = (0.0000,0.0000,0.0000,-8.7782,4.3508,1.2192)
 
-LineSet134.coord.append(Coordinate135)
+LineSet134.coord = Coordinate135
 ColorRGBA136 = x3d.ColorRGBA()
 ColorRGBA136.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet134.color.append(ColorRGBA136)
+LineSet134.color = ColorRGBA136
 
 Shape133.geometry = LineSet134
 
@@ -722,11 +722,11 @@ LineSet138.vertexCount = [2]
 Coordinate139 = x3d.Coordinate()
 Coordinate139.point = (0.0000,0.0000,0.0000,8.7782,4.3508,1.2192)
 
-LineSet138.coord.append(Coordinate139)
+LineSet138.coord = Coordinate139
 ColorRGBA140 = x3d.ColorRGBA()
 ColorRGBA140.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet138.color.append(ColorRGBA140)
+LineSet138.color = ColorRGBA140
 
 Shape137.geometry = LineSet138
 
@@ -762,11 +762,11 @@ LineSet147.vertexCount = [2]
 Coordinate148 = x3d.Coordinate()
 Coordinate148.point = (0.0000,0.0000,0.0000,0.0000,11.7043,-0.4877)
 
-LineSet147.coord.append(Coordinate148)
+LineSet147.coord = Coordinate148
 ColorRGBA149 = x3d.ColorRGBA()
 ColorRGBA149.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet147.color.append(ColorRGBA149)
+LineSet147.color = ColorRGBA149
 
 Shape146.geometry = LineSet147
 
@@ -804,11 +804,11 @@ LineSet156.vertexCount = [2]
 Coordinate157 = x3d.Coordinate()
 Coordinate157.point = (0.0000,0.0000,0.0000,0.0000,22.1894,-2.1946)
 
-LineSet156.coord.append(Coordinate157)
+LineSet156.coord = Coordinate157
 ColorRGBA158 = x3d.ColorRGBA()
 ColorRGBA158.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet156.color.append(ColorRGBA158)
+LineSet156.color = ColorRGBA158
 
 Shape155.geometry = LineSet156
 
@@ -820,11 +820,11 @@ LineSet160.vertexCount = [2]
 Coordinate161 = x3d.Coordinate()
 Coordinate161.point = (0.0000,0.0000,0.0000,-2.6822,19.2634,-4.8768)
 
-LineSet160.coord.append(Coordinate161)
+LineSet160.coord = Coordinate161
 ColorRGBA162 = x3d.ColorRGBA()
 ColorRGBA162.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet160.color.append(ColorRGBA162)
+LineSet160.color = ColorRGBA162
 
 Shape159.geometry = LineSet160
 
@@ -836,11 +836,11 @@ LineSet164.vertexCount = [2]
 Coordinate165 = x3d.Coordinate()
 Coordinate165.point = (0.0000,0.0000,0.0000,2.6822,19.2634,-4.8768)
 
-LineSet164.coord.append(Coordinate165)
+LineSet164.coord = Coordinate165
 ColorRGBA166 = x3d.ColorRGBA()
 ColorRGBA166.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet164.color.append(ColorRGBA166)
+LineSet164.color = ColorRGBA166
 
 Shape163.geometry = LineSet164
 
@@ -878,11 +878,11 @@ LineSet173.vertexCount = [2]
 Coordinate174 = x3d.Coordinate()
 Coordinate174.point = (0.0000,0.0000,0.0000,-0.2438,7.0713,1.2192)
 
-LineSet173.coord.append(Coordinate174)
+LineSet173.coord = Coordinate174
 ColorRGBA175 = x3d.ColorRGBA()
 ColorRGBA175.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet173.color.append(ColorRGBA175)
+LineSet173.color = ColorRGBA175
 
 Shape172.geometry = LineSet173
 
@@ -920,11 +920,11 @@ LineSet182.vertexCount = [2]
 Coordinate183 = x3d.Coordinate()
 Coordinate183.point = (0.0000,0.0000,0.0000,4.1453,8.0467,8.0467)
 
-LineSet182.coord.append(Coordinate183)
+LineSet182.coord = Coordinate183
 ColorRGBA184 = x3d.ColorRGBA()
 ColorRGBA184.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet182.color.append(ColorRGBA184)
+LineSet182.color = ColorRGBA184
 
 Shape181.geometry = LineSet182
 
@@ -936,11 +936,11 @@ LineSet186.vertexCount = [2]
 Coordinate187 = x3d.Coordinate()
 Coordinate187.point = (0.0000,0.0000,0.0000,-3.6576,8.0467,8.0467)
 
-LineSet186.coord.append(Coordinate187)
+LineSet186.coord = Coordinate187
 ColorRGBA188 = x3d.ColorRGBA()
 ColorRGBA188.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet186.color.append(ColorRGBA188)
+LineSet186.color = ColorRGBA188
 
 Shape185.geometry = LineSet186
 
@@ -982,11 +982,11 @@ LineSet196.vertexCount = [2]
 Coordinate197 = x3d.Coordinate()
 Coordinate197.point = (-1.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
-LineSet196.coord.append(Coordinate197)
+LineSet196.coord = Coordinate197
 ColorRGBA198 = x3d.ColorRGBA()
 ColorRGBA198.USE = "HAnimSiteLineColorRGBA"
 
-LineSet196.color.append(ColorRGBA198)
+LineSet196.color = ColorRGBA198
 
 Shape195.geometry = LineSet196
 
@@ -1041,11 +1041,11 @@ LineSet208.vertexCount = [2]
 Coordinate209 = x3d.Coordinate()
 Coordinate209.point = (-1.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
-LineSet208.coord.append(Coordinate209)
+LineSet208.coord = Coordinate209
 ColorRGBA210 = x3d.ColorRGBA()
 ColorRGBA210.USE = "HAnimSiteLineColorRGBA"
 
-LineSet208.color.append(ColorRGBA210)
+LineSet208.color = ColorRGBA210
 
 Shape207.geometry = LineSet208
 
@@ -1100,11 +1100,11 @@ LineSet219.vertexCount = [2]
 Coordinate220 = x3d.Coordinate()
 Coordinate220.point = (0.0000,0.0000,0.0000,-8.7782,-1.9507,1.4630)
 
-LineSet219.coord.append(Coordinate220)
+LineSet219.coord = Coordinate220
 ColorRGBA221 = x3d.ColorRGBA()
 ColorRGBA221.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet219.color.append(ColorRGBA221)
+LineSet219.color = ColorRGBA221
 
 Shape218.geometry = LineSet219
 
@@ -1142,11 +1142,11 @@ LineSet228.vertexCount = [2]
 Coordinate229 = x3d.Coordinate()
 Coordinate229.point = (0.0000,0.0000,0.0000,-28.1742,-1.7115,0.4877)
 
-LineSet228.coord.append(Coordinate229)
+LineSet228.coord = Coordinate229
 ColorRGBA230 = x3d.ColorRGBA()
 ColorRGBA230.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet228.color.append(ColorRGBA230)
+LineSet228.color = ColorRGBA230
 
 Shape227.geometry = LineSet228
 
@@ -1184,11 +1184,11 @@ LineSet237.vertexCount = [2]
 Coordinate238 = x3d.Coordinate()
 Coordinate238.point = (0.0000,0.0000,0.0000,-22.5879,0.7732,7.0714)
 
-LineSet237.coord.append(Coordinate238)
+LineSet237.coord = Coordinate238
 ColorRGBA239 = x3d.ColorRGBA()
 ColorRGBA239.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet237.color.append(ColorRGBA239)
+LineSet237.color = ColorRGBA239
 
 Shape236.geometry = LineSet237
 
@@ -1226,11 +1226,11 @@ LineSet246.vertexCount = [2]
 Coordinate247 = x3d.Coordinate()
 Coordinate247.point = (0.0000,0.0000,0.0000,-1.2192,-0.4879,3.4138)
 
-LineSet246.coord.append(Coordinate247)
+LineSet246.coord = Coordinate247
 ColorRGBA248 = x3d.ColorRGBA()
 ColorRGBA248.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet246.color.append(ColorRGBA248)
+LineSet246.color = ColorRGBA248
 
 Shape245.geometry = LineSet246
 
@@ -1242,11 +1242,11 @@ LineSet250.vertexCount = [2]
 Coordinate251 = x3d.Coordinate()
 Coordinate251.point = (0.0000,0.0000,0.0000,-7.7595,0.9383,5.6083)
 
-LineSet250.coord.append(Coordinate251)
+LineSet250.coord = Coordinate251
 ColorRGBA252 = x3d.ColorRGBA()
 ColorRGBA252.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet250.color.append(ColorRGBA252)
+LineSet250.color = ColorRGBA252
 
 Shape249.geometry = LineSet250
 
@@ -1258,11 +1258,11 @@ LineSet254.vertexCount = [2]
 Coordinate255 = x3d.Coordinate()
 Coordinate255.point = (0.0000,0.0000,0.0000,-8.2471,1.1821,3.4138)
 
-LineSet254.coord.append(Coordinate255)
+LineSet254.coord = Coordinate255
 ColorRGBA256 = x3d.ColorRGBA()
 ColorRGBA256.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet254.color.append(ColorRGBA256)
+LineSet254.color = ColorRGBA256
 
 Shape253.geometry = LineSet254
 
@@ -1274,11 +1274,11 @@ LineSet258.vertexCount = [2]
 Coordinate259 = x3d.Coordinate()
 Coordinate259.point = (0.0000,0.0000,0.0000,-8.8282,0.5467,1.5168)
 
-LineSet258.coord.append(Coordinate259)
+LineSet258.coord = Coordinate259
 ColorRGBA260 = x3d.ColorRGBA()
 ColorRGBA260.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet258.color.append(ColorRGBA260)
+LineSet258.color = ColorRGBA260
 
 Shape257.geometry = LineSet258
 
@@ -1290,11 +1290,11 @@ LineSet262.vertexCount = [2]
 Coordinate263 = x3d.Coordinate()
 Coordinate263.point = (0.0000,0.0000,0.0000,-8.2720,-0.0478,-0.4584)
 
-LineSet262.coord.append(Coordinate263)
+LineSet262.coord = Coordinate263
 ColorRGBA264 = x3d.ColorRGBA()
 ColorRGBA264.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet262.color.append(ColorRGBA264)
+LineSet262.color = ColorRGBA264
 
 Shape261.geometry = LineSet262
 
@@ -1332,11 +1332,11 @@ LineSet271.vertexCount = [2]
 Coordinate272 = x3d.Coordinate()
 Coordinate272.point = (0.0000,0.0000,0.0000,-3.3704,-0.5245,3.4138)
 
-LineSet271.coord.append(Coordinate272)
+LineSet271.coord = Coordinate272
 ColorRGBA273 = x3d.ColorRGBA()
 ColorRGBA273.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet271.color.append(ColorRGBA273)
+LineSet271.color = ColorRGBA273
 
 Shape270.geometry = LineSet271
 
@@ -1378,11 +1378,11 @@ LineSet281.vertexCount = [2]
 Coordinate282 = x3d.Coordinate()
 Coordinate282.point = (1.7827,1.1821,-1.4305,0.0000,0.0000,0.0000)
 
-LineSet281.coord.append(Coordinate282)
+LineSet281.coord = Coordinate282
 ColorRGBA283 = x3d.ColorRGBA()
 ColorRGBA283.USE = "HAnimSiteLineColorRGBA"
 
-LineSet281.color.append(ColorRGBA283)
+LineSet281.color = ColorRGBA283
 
 Shape280.geometry = LineSet281
 
@@ -1435,11 +1435,11 @@ LineSet292.vertexCount = [2]
 Coordinate293 = x3d.Coordinate()
 Coordinate293.point = (0.0000,0.0000,0.0000,-2.5406,-0.8842,1.5654)
 
-LineSet292.coord.append(Coordinate293)
+LineSet292.coord = Coordinate293
 ColorRGBA294 = x3d.ColorRGBA()
 ColorRGBA294.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet292.color.append(ColorRGBA294)
+LineSet292.color = ColorRGBA294
 
 Shape291.geometry = LineSet292
 
@@ -1481,11 +1481,11 @@ LineSet302.vertexCount = [2]
 Coordinate303 = x3d.Coordinate()
 Coordinate303.point = (1.6252,0.2348,-1.1650,0.0000,0.0000,0.0000)
 
-LineSet302.coord.append(Coordinate303)
+LineSet302.coord = Coordinate303
 ColorRGBA304 = x3d.ColorRGBA()
 ColorRGBA304.USE = "HAnimSiteLineColorRGBA"
 
-LineSet302.color.append(ColorRGBA304)
+LineSet302.color = ColorRGBA304
 
 Shape301.geometry = LineSet302
 
@@ -1538,11 +1538,11 @@ LineSet313.vertexCount = [2]
 Coordinate314 = x3d.Coordinate()
 Coordinate314.point = (0.0000,0.0000,0.0000,-3.1016,-0.5901,1.0647)
 
-LineSet313.coord.append(Coordinate314)
+LineSet313.coord = Coordinate314
 ColorRGBA315 = x3d.ColorRGBA()
 ColorRGBA315.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet313.color.append(ColorRGBA315)
+LineSet313.color = ColorRGBA315
 
 Shape312.geometry = LineSet313
 
@@ -1584,11 +1584,11 @@ LineSet323.vertexCount = [2]
 Coordinate324 = x3d.Coordinate()
 Coordinate324.point = (2.4855,0.3289,-0.8374,0.0000,0.0000,0.0000)
 
-LineSet323.coord.append(Coordinate324)
+LineSet323.coord = Coordinate324
 ColorRGBA325 = x3d.ColorRGBA()
 ColorRGBA325.USE = "HAnimSiteLineColorRGBA"
 
-LineSet323.color.append(ColorRGBA325)
+LineSet323.color = ColorRGBA325
 
 Shape322.geometry = LineSet323
 
@@ -1641,11 +1641,11 @@ LineSet334.vertexCount = [2]
 Coordinate335 = x3d.Coordinate()
 Coordinate335.point = (0.0000,0.0000,0.0000,-2.6093,-0.8198,-0.0198)
 
-LineSet334.coord.append(Coordinate335)
+LineSet334.coord = Coordinate335
 ColorRGBA336 = x3d.ColorRGBA()
 ColorRGBA336.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet334.color.append(ColorRGBA336)
+LineSet334.color = ColorRGBA336
 
 Shape333.geometry = LineSet334
 
@@ -1687,11 +1687,11 @@ LineSet344.vertexCount = [2]
 Coordinate345 = x3d.Coordinate()
 Coordinate345.point = (2.3384,0.2941,-0.1681,0.0000,0.0000,0.0000)
 
-LineSet344.coord.append(Coordinate345)
+LineSet344.coord = Coordinate345
 ColorRGBA346 = x3d.ColorRGBA()
 ColorRGBA346.USE = "HAnimSiteLineColorRGBA"
 
-LineSet344.color.append(ColorRGBA346)
+LineSet344.color = ColorRGBA346
 
 Shape343.geometry = LineSet344
 
@@ -1744,11 +1744,11 @@ LineSet355.vertexCount = [2]
 Coordinate356 = x3d.Coordinate()
 Coordinate356.point = (0.0000,0.0000,0.0000,-1.8273,-0.6474,-0.7010)
 
-LineSet355.coord.append(Coordinate356)
+LineSet355.coord = Coordinate356
 ColorRGBA357 = x3d.ColorRGBA()
 ColorRGBA357.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet355.color.append(ColorRGBA357)
+LineSet355.color = ColorRGBA357
 
 Shape354.geometry = LineSet355
 
@@ -1790,11 +1790,11 @@ LineSet365.vertexCount = [2]
 Coordinate366 = x3d.Coordinate()
 Coordinate366.point = (1.6923,0.5177,0.6072,0.0000,0.0000,0.0000)
 
-LineSet365.coord.append(Coordinate366)
+LineSet365.coord = Coordinate366
 ColorRGBA367 = x3d.ColorRGBA()
 ColorRGBA367.USE = "HAnimSiteLineColorRGBA"
 
-LineSet365.color.append(ColorRGBA367)
+LineSet365.color = ColorRGBA367
 
 Shape364.geometry = LineSet365
 
@@ -1855,11 +1855,11 @@ LineSet376.vertexCount = [2]
 Coordinate377 = x3d.Coordinate()
 Coordinate377.point = (0.0000,0.0000,0.0000,8.7782,-1.9507,1.4630)
 
-LineSet376.coord.append(Coordinate377)
+LineSet376.coord = Coordinate377
 ColorRGBA378 = x3d.ColorRGBA()
 ColorRGBA378.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet376.color.append(ColorRGBA378)
+LineSet376.color = ColorRGBA378
 
 Shape375.geometry = LineSet376
 
@@ -1897,11 +1897,11 @@ LineSet385.vertexCount = [2]
 Coordinate386 = x3d.Coordinate()
 Coordinate386.point = (0.0000,0.0000,0.0000,28.1742,-1.7115,0.4877)
 
-LineSet385.coord.append(Coordinate386)
+LineSet385.coord = Coordinate386
 ColorRGBA387 = x3d.ColorRGBA()
 ColorRGBA387.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet385.color.append(ColorRGBA387)
+LineSet385.color = ColorRGBA387
 
 Shape384.geometry = LineSet385
 
@@ -1939,11 +1939,11 @@ LineSet394.vertexCount = [2]
 Coordinate395 = x3d.Coordinate()
 Coordinate395.point = (0.0000,0.0000,0.0000,22.5879,0.7732,7.0714)
 
-LineSet394.coord.append(Coordinate395)
+LineSet394.coord = Coordinate395
 ColorRGBA396 = x3d.ColorRGBA()
 ColorRGBA396.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet394.color.append(ColorRGBA396)
+LineSet394.color = ColorRGBA396
 
 Shape393.geometry = LineSet394
 
@@ -1981,11 +1981,11 @@ LineSet403.vertexCount = [2]
 Coordinate404 = x3d.Coordinate()
 Coordinate404.point = (0.0000,0.0000,0.0000,1.2192,-0.4879,3.4138)
 
-LineSet403.coord.append(Coordinate404)
+LineSet403.coord = Coordinate404
 ColorRGBA405 = x3d.ColorRGBA()
 ColorRGBA405.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet403.color.append(ColorRGBA405)
+LineSet403.color = ColorRGBA405
 
 Shape402.geometry = LineSet403
 
@@ -1997,11 +1997,11 @@ LineSet407.vertexCount = [2]
 Coordinate408 = x3d.Coordinate()
 Coordinate408.point = (0.0000,0.0000,0.0000,7.7595,0.9383,5.6083)
 
-LineSet407.coord.append(Coordinate408)
+LineSet407.coord = Coordinate408
 ColorRGBA409 = x3d.ColorRGBA()
 ColorRGBA409.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet407.color.append(ColorRGBA409)
+LineSet407.color = ColorRGBA409
 
 Shape406.geometry = LineSet407
 
@@ -2013,11 +2013,11 @@ LineSet411.vertexCount = [2]
 Coordinate412 = x3d.Coordinate()
 Coordinate412.point = (0.0000,0.0000,0.0000,8.2471,1.1821,3.4138)
 
-LineSet411.coord.append(Coordinate412)
+LineSet411.coord = Coordinate412
 ColorRGBA413 = x3d.ColorRGBA()
 ColorRGBA413.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet411.color.append(ColorRGBA413)
+LineSet411.color = ColorRGBA413
 
 Shape410.geometry = LineSet411
 
@@ -2029,11 +2029,11 @@ LineSet415.vertexCount = [2]
 Coordinate416 = x3d.Coordinate()
 Coordinate416.point = (0.0000,0.0000,0.0000,8.8282,0.5467,1.5168)
 
-LineSet415.coord.append(Coordinate416)
+LineSet415.coord = Coordinate416
 ColorRGBA417 = x3d.ColorRGBA()
 ColorRGBA417.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet415.color.append(ColorRGBA417)
+LineSet415.color = ColorRGBA417
 
 Shape414.geometry = LineSet415
 
@@ -2045,11 +2045,11 @@ LineSet419.vertexCount = [2]
 Coordinate420 = x3d.Coordinate()
 Coordinate420.point = (0.0000,0.0000,0.0000,8.2720,-0.0478,-0.4584)
 
-LineSet419.coord.append(Coordinate420)
+LineSet419.coord = Coordinate420
 ColorRGBA421 = x3d.ColorRGBA()
 ColorRGBA421.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet419.color.append(ColorRGBA421)
+LineSet419.color = ColorRGBA421
 
 Shape418.geometry = LineSet419
 
@@ -2087,11 +2087,11 @@ LineSet428.vertexCount = [2]
 Coordinate429 = x3d.Coordinate()
 Coordinate429.point = (0.0000,0.0000,0.0000,3.3704,-0.5245,3.4138)
 
-LineSet428.coord.append(Coordinate429)
+LineSet428.coord = Coordinate429
 ColorRGBA430 = x3d.ColorRGBA()
 ColorRGBA430.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet428.color.append(ColorRGBA430)
+LineSet428.color = ColorRGBA430
 
 Shape427.geometry = LineSet428
 
@@ -2133,11 +2133,11 @@ LineSet438.vertexCount = [2]
 Coordinate439 = x3d.Coordinate()
 Coordinate439.point = (-1.7827,1.1821,-1.4305,0.0000,0.0000,0.0000)
 
-LineSet438.coord.append(Coordinate439)
+LineSet438.coord = Coordinate439
 ColorRGBA440 = x3d.ColorRGBA()
 ColorRGBA440.USE = "HAnimSiteLineColorRGBA"
 
-LineSet438.color.append(ColorRGBA440)
+LineSet438.color = ColorRGBA440
 
 Shape437.geometry = LineSet438
 
@@ -2190,11 +2190,11 @@ LineSet449.vertexCount = [2]
 Coordinate450 = x3d.Coordinate()
 Coordinate450.point = (0.0000,0.0000,0.0000,2.5406,-0.8842,1.5654)
 
-LineSet449.coord.append(Coordinate450)
+LineSet449.coord = Coordinate450
 ColorRGBA451 = x3d.ColorRGBA()
 ColorRGBA451.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet449.color.append(ColorRGBA451)
+LineSet449.color = ColorRGBA451
 
 Shape448.geometry = LineSet449
 
@@ -2236,11 +2236,11 @@ LineSet459.vertexCount = [2]
 Coordinate460 = x3d.Coordinate()
 Coordinate460.point = (-1.6252,0.2348,-1.1650,0.0000,0.0000,0.0000)
 
-LineSet459.coord.append(Coordinate460)
+LineSet459.coord = Coordinate460
 ColorRGBA461 = x3d.ColorRGBA()
 ColorRGBA461.USE = "HAnimSiteLineColorRGBA"
 
-LineSet459.color.append(ColorRGBA461)
+LineSet459.color = ColorRGBA461
 
 Shape458.geometry = LineSet459
 
@@ -2293,11 +2293,11 @@ LineSet470.vertexCount = [2]
 Coordinate471 = x3d.Coordinate()
 Coordinate471.point = (0.0000,0.0000,0.0000,3.1016,-0.5901,1.0647)
 
-LineSet470.coord.append(Coordinate471)
+LineSet470.coord = Coordinate471
 ColorRGBA472 = x3d.ColorRGBA()
 ColorRGBA472.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet470.color.append(ColorRGBA472)
+LineSet470.color = ColorRGBA472
 
 Shape469.geometry = LineSet470
 
@@ -2339,11 +2339,11 @@ LineSet480.vertexCount = [2]
 Coordinate481 = x3d.Coordinate()
 Coordinate481.point = (-2.4855,0.3289,-0.8374,0.0000,0.0000,0.0000)
 
-LineSet480.coord.append(Coordinate481)
+LineSet480.coord = Coordinate481
 ColorRGBA482 = x3d.ColorRGBA()
 ColorRGBA482.USE = "HAnimSiteLineColorRGBA"
 
-LineSet480.color.append(ColorRGBA482)
+LineSet480.color = ColorRGBA482
 
 Shape479.geometry = LineSet480
 
@@ -2396,11 +2396,11 @@ LineSet491.vertexCount = [2]
 Coordinate492 = x3d.Coordinate()
 Coordinate492.point = (0.0000,0.0000,0.0000,2.6093,-0.8198,-0.0198)
 
-LineSet491.coord.append(Coordinate492)
+LineSet491.coord = Coordinate492
 ColorRGBA493 = x3d.ColorRGBA()
 ColorRGBA493.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet491.color.append(ColorRGBA493)
+LineSet491.color = ColorRGBA493
 
 Shape490.geometry = LineSet491
 
@@ -2442,11 +2442,11 @@ LineSet501.vertexCount = [2]
 Coordinate502 = x3d.Coordinate()
 Coordinate502.point = (-2.3384,0.2941,-0.1681,0.0000,0.0000,0.0000)
 
-LineSet501.coord.append(Coordinate502)
+LineSet501.coord = Coordinate502
 ColorRGBA503 = x3d.ColorRGBA()
 ColorRGBA503.USE = "HAnimSiteLineColorRGBA"
 
-LineSet501.color.append(ColorRGBA503)
+LineSet501.color = ColorRGBA503
 
 Shape500.geometry = LineSet501
 
@@ -2499,11 +2499,11 @@ LineSet512.vertexCount = [2]
 Coordinate513 = x3d.Coordinate()
 Coordinate513.point = (0.0000,0.0000,0.0000,1.8273,-0.6474,-0.7010)
 
-LineSet512.coord.append(Coordinate513)
+LineSet512.coord = Coordinate513
 ColorRGBA514 = x3d.ColorRGBA()
 ColorRGBA514.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet512.color.append(ColorRGBA514)
+LineSet512.color = ColorRGBA514
 
 Shape511.geometry = LineSet512
 
@@ -2545,11 +2545,11 @@ LineSet522.vertexCount = [2]
 Coordinate523 = x3d.Coordinate()
 Coordinate523.point = (-1.6923,0.5177,0.6072,0.0000,0.0000,0.0000)
 
-LineSet522.coord.append(Coordinate523)
+LineSet522.coord = Coordinate523
 ColorRGBA524 = x3d.ColorRGBA()
 ColorRGBA524.USE = "HAnimSiteLineColorRGBA"
 
-LineSet522.color.append(ColorRGBA524)
+LineSet522.color = ColorRGBA524
 
 Shape521.geometry = LineSet522
 
@@ -2614,11 +2614,11 @@ LineSet533.vertexCount = [2]
 Coordinate534 = x3d.Coordinate()
 Coordinate534.point = (0.0000,0.0000,0.0000,0.0000,-1.7069,-2.1946)
 
-LineSet533.coord.append(Coordinate534)
+LineSet533.coord = Coordinate534
 ColorRGBA535 = x3d.ColorRGBA()
 ColorRGBA535.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet533.color.append(ColorRGBA535)
+LineSet533.color = ColorRGBA535
 
 Shape532.geometry = LineSet533
 
@@ -2656,11 +2656,11 @@ LineSet542.vertexCount = [2]
 Coordinate543 = x3d.Coordinate()
 Coordinate543.point = (0.0000,0.0000,0.0000,0.0000,-36.8199,0.7315)
 
-LineSet542.coord.append(Coordinate543)
+LineSet542.coord = Coordinate543
 ColorRGBA544 = x3d.ColorRGBA()
 ColorRGBA544.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet542.color.append(ColorRGBA544)
+LineSet542.color = ColorRGBA544
 
 Shape541.geometry = LineSet542
 
@@ -2698,11 +2698,11 @@ LineSet551.vertexCount = [2]
 Coordinate552 = x3d.Coordinate()
 Coordinate552.point = (0.0000,0.0000,0.0000,0.7315,-45.1104,-5.1206)
 
-LineSet551.coord.append(Coordinate552)
+LineSet551.coord = Coordinate552
 ColorRGBA553 = x3d.ColorRGBA()
 ColorRGBA553.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet551.color.append(ColorRGBA553)
+LineSet551.color = ColorRGBA553
 
 Shape550.geometry = LineSet551
 
@@ -2744,11 +2744,11 @@ LineSet561.vertexCount = [2]
 Coordinate562 = x3d.Coordinate()
 Coordinate562.point = (1.1221,3.6996,-12.1030,0.0000,0.0000,0.0000)
 
-LineSet561.coord.append(Coordinate562)
+LineSet561.coord = Coordinate562
 ColorRGBA563 = x3d.ColorRGBA()
 ColorRGBA563.USE = "HAnimSiteLineColorRGBA"
 
-LineSet561.color.append(ColorRGBA563)
+LineSet561.color = ColorRGBA563
 
 Shape560.geometry = LineSet561
 
@@ -2805,11 +2805,11 @@ LineSet572.vertexCount = [2]
 Coordinate573 = x3d.Coordinate()
 Coordinate573.point = (0.0000,0.0000,0.0000,0.0000,-1.7069,-2.1946)
 
-LineSet572.coord.append(Coordinate573)
+LineSet572.coord = Coordinate573
 ColorRGBA574 = x3d.ColorRGBA()
 ColorRGBA574.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet572.color.append(ColorRGBA574)
+LineSet572.color = ColorRGBA574
 
 Shape571.geometry = LineSet572
 
@@ -2847,11 +2847,11 @@ LineSet581.vertexCount = [2]
 Coordinate582 = x3d.Coordinate()
 Coordinate582.point = (0.0000,0.0000,0.0000,0.0000,-36.8199,0.7315)
 
-LineSet581.coord.append(Coordinate582)
+LineSet581.coord = Coordinate582
 ColorRGBA583 = x3d.ColorRGBA()
 ColorRGBA583.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet581.color.append(ColorRGBA583)
+LineSet581.color = ColorRGBA583
 
 Shape580.geometry = LineSet581
 
@@ -2889,11 +2889,11 @@ LineSet590.vertexCount = [2]
 Coordinate591 = x3d.Coordinate()
 Coordinate591.point = (0.0000,0.0000,0.0000,-0.7315,-45.1104,-5.1206)
 
-LineSet590.coord.append(Coordinate591)
+LineSet590.coord = Coordinate591
 ColorRGBA592 = x3d.ColorRGBA()
 ColorRGBA592.USE = "HAnimSegmentLineColorRGBA"
 
-LineSet590.color.append(ColorRGBA592)
+LineSet590.color = ColorRGBA592
 
 Shape589.geometry = LineSet590
 
@@ -2935,11 +2935,11 @@ LineSet600.vertexCount = [2]
 Coordinate601 = x3d.Coordinate()
 Coordinate601.point = (-1.1221,3.6996,-12.1030,0.0000,0.0000,0.0000)
 
-LineSet600.coord.append(Coordinate601)
+LineSet600.coord = Coordinate601
 ColorRGBA602 = x3d.ColorRGBA()
 ColorRGBA602.USE = "HAnimSiteLineColorRGBA"
 
-LineSet600.color.append(ColorRGBA602)
+LineSet600.color = ColorRGBA602
 
 Shape599.geometry = LineSet600
 

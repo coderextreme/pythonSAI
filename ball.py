@@ -116,11 +116,11 @@ ComposedCubeMapTexture26.DEF = "texture"
 ImageTexture27 = x3d.ImageTexture()
 ImageTexture27.url = ["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]
 
-ComposedCubeMapTexture26.backTexture.append(ImageTexture27)
+ComposedCubeMapTexture26.backTexture = ImageTexture27
 ImageTexture28 = x3d.ImageTexture()
 ImageTexture28.url = ["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]
 
-ComposedCubeMapTexture26.bottomTexture.append(ImageTexture28)
+ComposedCubeMapTexture26.bottomTexture = ImageTexture28
 ImageTexture29 = x3d.ImageTexture()
 ImageTexture29.url = ["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
 
@@ -128,7 +128,7 @@ ComposedCubeMapTexture26.frontTexture.append(ImageTexture29)
 ImageTexture30 = x3d.ImageTexture()
 ImageTexture30.url = ["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
 
-ComposedCubeMapTexture26.leftTexture.append(ImageTexture30)
+ComposedCubeMapTexture26.leftTexture = ImageTexture30
 ImageTexture31 = x3d.ImageTexture()
 ImageTexture31.url = ["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
 

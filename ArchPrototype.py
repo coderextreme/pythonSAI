@@ -200,7 +200,7 @@ IndexedFaceSet33.solid = False
 Coordinate34 = x3d.Coordinate()
 Coordinate34.DEF = "ArchChord"
 
-IndexedFaceSet33.coord.append(Coordinate34)
+IndexedFaceSet33.coord = Coordinate34
 
 Shape32.geometry = IndexedFaceSet33
 Appearance35 = x3d.Appearance()

@@ -144,159 +144,159 @@ MetadataString30.name = "ROOT_Hips"
 MetadataString30.reference = "ROOT"
 MetadataString30.value = ["humanoid_root","sacrum"]
 
-MetadataSet29.value.append(MetadataString30)
+MetadataSet29.value = MetadataString30
 MetadataString31 = x3d.MetadataString()
 MetadataString31.name = "LeftHip"
 MetadataString31.reference = "JOINT"
 MetadataString31.value = ["l_hip","l_thigh"]
 
-MetadataSet29.value.append(MetadataString31)
+MetadataSet29.value = MetadataString31
 MetadataString32 = x3d.MetadataString()
 MetadataString32.name = "LeftKnee"
 MetadataString32.reference = "JOINT"
 MetadataString32.value = ["l_knee","l_calf"]
 
-MetadataSet29.value.append(MetadataString32)
+MetadataSet29.value = MetadataString32
 MetadataString33 = x3d.MetadataString()
 MetadataString33.name = "LeftAnkle"
 MetadataString33.reference = "JOINT"
 MetadataString33.value = ["l_ankle","l_hindfoot"]
 
-MetadataSet29.value.append(MetadataString33)
+MetadataSet29.value = MetadataString33
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "LeftAnkleEnd"
 MetadataString34.reference = "JOINT"
 MetadataString34.value = ["l_midtarsal","l_middistal"]
 
-MetadataSet29.value.append(MetadataString34)
+MetadataSet29.value = MetadataString34
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "LeftAnkleEndSite"
 MetadataString35.reference = "Site"
 MetadataString35.value = ["l_midtarsal_tip"]
 
-MetadataSet29.value.append(MetadataString35)
+MetadataSet29.value = MetadataString35
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "RightHip"
 MetadataString36.reference = "JOINT"
 MetadataString36.value = ["r_hip","r_thigh"]
 
-MetadataSet29.value.append(MetadataString36)
+MetadataSet29.value = MetadataString36
 MetadataString37 = x3d.MetadataString()
 MetadataString37.name = "RightKnee"
 MetadataString37.reference = "JOINT"
 MetadataString37.value = ["r_knee","r_calf"]
 
-MetadataSet29.value.append(MetadataString37)
+MetadataSet29.value = MetadataString37
 MetadataString38 = x3d.MetadataString()
 MetadataString38.name = "RightAnkle"
 MetadataString38.reference = "JOINT"
 MetadataString38.value = ["r_ankle","r_hindfoot"]
 
-MetadataSet29.value.append(MetadataString38)
+MetadataSet29.value = MetadataString38
 MetadataString39 = x3d.MetadataString()
 MetadataString39.name = "RightAnkleEnd"
 MetadataString39.reference = "JOINT"
 MetadataString39.value = ["r_midtarsal","r_middistal"]
 
-MetadataSet29.value.append(MetadataString39)
+MetadataSet29.value = MetadataString39
 MetadataString40 = x3d.MetadataString()
 MetadataString40.name = "RightAnkleEndSite"
 MetadataString40.reference = "Site"
 MetadataString40.value = ["r_midtarsal_tip"]
 
-MetadataSet29.value.append(MetadataString40)
+MetadataSet29.value = MetadataString40
 MetadataString41 = x3d.MetadataString()
 MetadataString41.name = "Chest"
 MetadataString41.reference = "JOINT"
 MetadataString41.value = ["vl5","l5"]
 
-MetadataSet29.value.append(MetadataString41)
+MetadataSet29.value = MetadataString41
 MetadataString42 = x3d.MetadataString()
 MetadataString42.name = "Chest2"
 MetadataString42.reference = "JOINT"
 MetadataString42.value = ["Chest2","vl5_to_Chest2"]
 
-MetadataSet29.value.append(MetadataString42)
+MetadataSet29.value = MetadataString42
 MetadataString43 = x3d.MetadataString()
 MetadataString43.name = "LeftCollar"
 MetadataString43.reference = "JOINT"
 MetadataString43.value = ["LeftCollar","Chest2_to_LeftCollar"]
 
-MetadataSet29.value.append(MetadataString43)
+MetadataSet29.value = MetadataString43
 MetadataString44 = x3d.MetadataString()
 MetadataString44.name = "LeftShoulder"
 MetadataString44.reference = "JOINT"
 MetadataString44.value = ["l_shoulder","l_upperarm"]
 
-MetadataSet29.value.append(MetadataString44)
+MetadataSet29.value = MetadataString44
 MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "LeftElbow"
 MetadataString45.reference = "JOINT"
 MetadataString45.value = ["l_elbow","l_forearm"]
 
-MetadataSet29.value.append(MetadataString45)
+MetadataSet29.value = MetadataString45
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "LeftWrist"
 MetadataString46.reference = "JOINT"
 MetadataString46.value = ["l_wrist","l_hand"]
 
-MetadataSet29.value.append(MetadataString46)
+MetadataSet29.value = MetadataString46
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "LeftWristSite"
 MetadataString47.reference = "Site"
 MetadataString47.value = ["l_wrist_tip"]
 
-MetadataSet29.value.append(MetadataString47)
+MetadataSet29.value = MetadataString47
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "RightCollar"
 MetadataString48.reference = "JOINT"
 MetadataString48.value = ["RightCollar","Chest2_to_RightCollar"]
 
-MetadataSet29.value.append(MetadataString48)
+MetadataSet29.value = MetadataString48
 MetadataString49 = x3d.MetadataString()
 MetadataString49.name = "RightShoulder"
 MetadataString49.reference = "JOINT"
 MetadataString49.value = ["r_shoulder","r_upperarm"]
 
-MetadataSet29.value.append(MetadataString49)
+MetadataSet29.value = MetadataString49
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "RightElbow"
 MetadataString50.reference = "JOINT"
 MetadataString50.value = ["r_elbow","r_forearm"]
 
-MetadataSet29.value.append(MetadataString50)
+MetadataSet29.value = MetadataString50
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "RightWrist"
 MetadataString51.reference = "JOINT"
 MetadataString51.value = ["r_wrist","r_hand"]
 
-MetadataSet29.value.append(MetadataString51)
+MetadataSet29.value = MetadataString51
 MetadataString52 = x3d.MetadataString()
 MetadataString52.name = "RightWristSite"
 MetadataString52.reference = "Site"
 MetadataString52.value = ["r_wrist_tip"]
 
-MetadataSet29.value.append(MetadataString52)
+MetadataSet29.value = MetadataString52
 MetadataString53 = x3d.MetadataString()
 MetadataString53.name = "Neck"
 MetadataString53.reference = "JOINT"
 MetadataString53.value = ["Neck","Chest2_to_Neck"]
 
-MetadataSet29.value.append(MetadataString53)
+MetadataSet29.value = MetadataString53
 MetadataString54 = x3d.MetadataString()
 MetadataString54.name = "Head"
 MetadataString54.reference = "JOINT"
 MetadataString54.value = ["skullbase","skull"]
 
-MetadataSet29.value.append(MetadataString54)
+MetadataSet29.value = MetadataString54
 MetadataString55 = x3d.MetadataString()
 MetadataString55.name = "HeadSite"
 MetadataString55.reference = "Site"
 MetadataString55.value = ["skullbase_tip"]
 
-MetadataSet29.value.append(MetadataString55)
+MetadataSet29.value = MetadataString55
 
-Group28.metadata.append(MetadataSet29)
+Group28.metadata = MetadataSet29
 
 Scene25.children.append(Group28)
 #initialPositionOffset computation: 0.000 14.422 7.620, initialPositionScaled computation: 0.000 0.806 0.194
@@ -337,29 +337,29 @@ MetadataString62 = x3d.MetadataString()
 MetadataString62.name = "authorEmail"
 MetadataString62.value = ["*TODO*"]
 
-MetadataSet61.value.append(MetadataString62)
+MetadataSet61.value = MetadataString62
 MetadataString63 = x3d.MetadataString()
 MetadataString63.name = "authorName"
 MetadataString63.value = ["*TODO*"]
 
-MetadataSet61.value.append(MetadataString63)
+MetadataSet61.value = MetadataString63
 MetadataString64 = x3d.MetadataString()
 MetadataString64.name = "copyright"
 MetadataString64.value = ["Copyright (c) 2022"]
 
-MetadataSet61.value.append(MetadataString64)
+MetadataSet61.value = MetadataString64
 MetadataString65 = x3d.MetadataString()
 MetadataString65.name = "humanoidVersion"
 MetadataString65.value = ["*TODO*"]
 
-MetadataSet61.value.append(MetadataString65)
+MetadataSet61.value = MetadataString65
 MetadataString66 = x3d.MetadataString()
 MetadataString66.name = "usageDescription"
 MetadataString66.value = ["*TODO*"]
 
-MetadataSet61.value.append(MetadataString66)
+MetadataSet61.value = MetadataString66
 
-HAnimHumanoid60.metadata.append(MetadataSet61)
+HAnimHumanoid60.metadata = MetadataSet61
 HAnimSite67 = x3d.HAnimSite()
 HAnimSite67.name = "humanoid_root_view"
 HAnimSite67.DEF = "BvhConversion1_humanoid_root_view"

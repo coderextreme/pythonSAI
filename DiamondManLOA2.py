@@ -390,34 +390,34 @@ MetadataString96 = x3d.MetadataString()
 MetadataString96.name = "humanoidVersion"
 MetadataString96.value = ["Nancy V1.2b"]
 
-MetadataSet95.value.append(MetadataString96)
+MetadataSet95.value = MetadataString96
 MetadataString97 = x3d.MetadataString()
 MetadataString97.name = "authorEmail"
 MetadataString97.value = ["cindy@ballreich.net"]
 
-MetadataSet95.value.append(MetadataString97)
+MetadataSet95.value = MetadataString97
 MetadataString98 = x3d.MetadataString()
 MetadataString98.name = "authorName"
 MetadataString98.value = ["Cindy Ballreich"]
 
-MetadataSet95.value.append(MetadataString98)
+MetadataSet95.value = MetadataString98
 MetadataString99 = x3d.MetadataString()
 MetadataString99.name = "copyright"
 MetadataString99.value = ["1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved."]
 
-MetadataSet95.value.append(MetadataString99)
+MetadataSet95.value = MetadataString99
 MetadataString100 = x3d.MetadataString()
 MetadataString100.name = "creationDate"
 MetadataString100.value = ["Tue Dec 30 08:30:08 PST 1997"]
 
-MetadataSet95.value.append(MetadataString100)
+MetadataSet95.value = MetadataString100
 MetadataString101 = x3d.MetadataString()
 MetadataString101.name = "usageRestrictions"
 MetadataString101.value = ["Noncommercial usage is ok if 3Name3D name and logo www.ballreich.net/vrml/HAnim/small_logo.gif is present and proper credit is given."]
 
-MetadataSet95.value.append(MetadataString101)
+MetadataSet95.value = MetadataString101
 
-HAnimHumanoid94.metadata.append(MetadataSet95)
+HAnimHumanoid94.metadata = MetadataSet95
 HAnimJoint102 = x3d.HAnimJoint()
 HAnimJoint102.name = "humanoid_root"
 HAnimJoint102.DEF = "hanim_humanoid_root"
@@ -438,7 +438,7 @@ Coordinate107 = x3d.Coordinate()
 Coordinate107.DEF = "points"
 Coordinate107.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet106.coord.append(Coordinate107)
+IndexedFaceSet106.coord = Coordinate107
 
 Shape105.geometry = IndexedFaceSet106
 Appearance108 = x3d.Appearance()
@@ -501,7 +501,7 @@ IndexedFaceSet121.creaseAngle = 0.5
 Coordinate122 = x3d.Coordinate()
 Coordinate122.USE = "points"
 
-IndexedFaceSet121.coord.append(Coordinate122)
+IndexedFaceSet121.coord = Coordinate122
 
 Shape120.geometry = IndexedFaceSet121
 Appearance123 = x3d.Appearance()
@@ -526,7 +526,7 @@ IndexedFaceSet127.creaseAngle = 0.5
 Coordinate128 = x3d.Coordinate()
 Coordinate128.USE = "points"
 
-IndexedFaceSet127.coord.append(Coordinate128)
+IndexedFaceSet127.coord = Coordinate128
 
 Shape126.geometry = IndexedFaceSet127
 Appearance129 = x3d.Appearance()
@@ -551,7 +551,7 @@ IndexedFaceSet133.creaseAngle = 0.5
 Coordinate134 = x3d.Coordinate()
 Coordinate134.USE = "points"
 
-IndexedFaceSet133.coord.append(Coordinate134)
+IndexedFaceSet133.coord = Coordinate134
 
 Shape132.geometry = IndexedFaceSet133
 Appearance135 = x3d.Appearance()
@@ -576,7 +576,7 @@ IndexedFaceSet139.creaseAngle = 0.5
 Coordinate140 = x3d.Coordinate()
 Coordinate140.USE = "points"
 
-IndexedFaceSet139.coord.append(Coordinate140)
+IndexedFaceSet139.coord = Coordinate140
 
 Shape138.geometry = IndexedFaceSet139
 Appearance141 = x3d.Appearance()
@@ -601,7 +601,7 @@ IndexedFaceSet145.creaseAngle = 0.5
 Coordinate146 = x3d.Coordinate()
 Coordinate146.USE = "points"
 
-IndexedFaceSet145.coord.append(Coordinate146)
+IndexedFaceSet145.coord = Coordinate146
 
 Shape144.geometry = IndexedFaceSet145
 Appearance147 = x3d.Appearance()
@@ -626,7 +626,7 @@ IndexedFaceSet151.creaseAngle = 0.5
 Coordinate152 = x3d.Coordinate()
 Coordinate152.USE = "points"
 
-IndexedFaceSet151.coord.append(Coordinate152)
+IndexedFaceSet151.coord = Coordinate152
 
 Shape150.geometry = IndexedFaceSet151
 Appearance153 = x3d.Appearance()
@@ -651,7 +651,7 @@ IndexedFaceSet157.creaseAngle = 0.5
 Coordinate158 = x3d.Coordinate()
 Coordinate158.USE = "points"
 
-IndexedFaceSet157.coord.append(Coordinate158)
+IndexedFaceSet157.coord = Coordinate158
 
 Shape156.geometry = IndexedFaceSet157
 Appearance159 = x3d.Appearance()
@@ -676,7 +676,7 @@ IndexedFaceSet163.creaseAngle = 0.5
 Coordinate164 = x3d.Coordinate()
 Coordinate164.USE = "points"
 
-IndexedFaceSet163.coord.append(Coordinate164)
+IndexedFaceSet163.coord = Coordinate164
 
 Shape162.geometry = IndexedFaceSet163
 Appearance165 = x3d.Appearance()
@@ -701,7 +701,7 @@ IndexedFaceSet169.creaseAngle = 0.5
 Coordinate170 = x3d.Coordinate()
 Coordinate170.USE = "points"
 
-IndexedFaceSet169.coord.append(Coordinate170)
+IndexedFaceSet169.coord = Coordinate170
 
 Shape168.geometry = IndexedFaceSet169
 Appearance171 = x3d.Appearance()
@@ -726,7 +726,7 @@ IndexedFaceSet175.creaseAngle = 0.5
 Coordinate176 = x3d.Coordinate()
 Coordinate176.USE = "points"
 
-IndexedFaceSet175.coord.append(Coordinate176)
+IndexedFaceSet175.coord = Coordinate176
 
 Shape174.geometry = IndexedFaceSet175
 Appearance177 = x3d.Appearance()
@@ -760,7 +760,7 @@ IndexedFaceSet183.creaseAngle = 0.5
 Coordinate184 = x3d.Coordinate()
 Coordinate184.USE = "points"
 
-IndexedFaceSet183.coord.append(Coordinate184)
+IndexedFaceSet183.coord = Coordinate184
 
 Shape182.geometry = IndexedFaceSet183
 Appearance185 = x3d.Appearance()
@@ -785,7 +785,7 @@ IndexedFaceSet189.creaseAngle = 0.5
 Coordinate190 = x3d.Coordinate()
 Coordinate190.USE = "points"
 
-IndexedFaceSet189.coord.append(Coordinate190)
+IndexedFaceSet189.coord = Coordinate190
 
 Shape188.geometry = IndexedFaceSet189
 Appearance191 = x3d.Appearance()
@@ -810,7 +810,7 @@ IndexedFaceSet195.creaseAngle = 0.5
 Coordinate196 = x3d.Coordinate()
 Coordinate196.USE = "points"
 
-IndexedFaceSet195.coord.append(Coordinate196)
+IndexedFaceSet195.coord = Coordinate196
 
 Shape194.geometry = IndexedFaceSet195
 Appearance197 = x3d.Appearance()
@@ -835,7 +835,7 @@ IndexedFaceSet201.creaseAngle = 0.5
 Coordinate202 = x3d.Coordinate()
 Coordinate202.USE = "points"
 
-IndexedFaceSet201.coord.append(Coordinate202)
+IndexedFaceSet201.coord = Coordinate202
 
 Shape200.geometry = IndexedFaceSet201
 Appearance203 = x3d.Appearance()
@@ -869,7 +869,7 @@ IndexedFaceSet209.creaseAngle = 0.5
 Coordinate210 = x3d.Coordinate()
 Coordinate210.USE = "points"
 
-IndexedFaceSet209.coord.append(Coordinate210)
+IndexedFaceSet209.coord = Coordinate210
 
 Shape208.geometry = IndexedFaceSet209
 Appearance211 = x3d.Appearance()
@@ -903,7 +903,7 @@ IndexedFaceSet217.creaseAngle = 0.5
 Coordinate218 = x3d.Coordinate()
 Coordinate218.USE = "points"
 
-IndexedFaceSet217.coord.append(Coordinate218)
+IndexedFaceSet217.coord = Coordinate218
 
 Shape216.geometry = IndexedFaceSet217
 Appearance219 = x3d.Appearance()
@@ -928,7 +928,7 @@ IndexedFaceSet223.creaseAngle = 0.5
 Coordinate224 = x3d.Coordinate()
 Coordinate224.USE = "points"
 
-IndexedFaceSet223.coord.append(Coordinate224)
+IndexedFaceSet223.coord = Coordinate224
 
 Shape222.geometry = IndexedFaceSet223
 Appearance225 = x3d.Appearance()
@@ -953,7 +953,7 @@ IndexedFaceSet229.creaseAngle = 0.5
 Coordinate230 = x3d.Coordinate()
 Coordinate230.USE = "points"
 
-IndexedFaceSet229.coord.append(Coordinate230)
+IndexedFaceSet229.coord = Coordinate230
 
 Shape228.geometry = IndexedFaceSet229
 Appearance231 = x3d.Appearance()
@@ -978,7 +978,7 @@ IndexedFaceSet235.creaseAngle = 0.5
 Coordinate236 = x3d.Coordinate()
 Coordinate236.USE = "points"
 
-IndexedFaceSet235.coord.append(Coordinate236)
+IndexedFaceSet235.coord = Coordinate236
 
 Shape234.geometry = IndexedFaceSet235
 Appearance237 = x3d.Appearance()
@@ -1003,7 +1003,7 @@ IndexedFaceSet241.creaseAngle = 0.5
 Coordinate242 = x3d.Coordinate()
 Coordinate242.USE = "points"
 
-IndexedFaceSet241.coord.append(Coordinate242)
+IndexedFaceSet241.coord = Coordinate242
 
 Shape240.geometry = IndexedFaceSet241
 Appearance243 = x3d.Appearance()
@@ -1037,7 +1037,7 @@ IndexedFaceSet249.creaseAngle = 0.5
 Coordinate250 = x3d.Coordinate()
 Coordinate250.USE = "points"
 
-IndexedFaceSet249.coord.append(Coordinate250)
+IndexedFaceSet249.coord = Coordinate250
 
 Shape248.geometry = IndexedFaceSet249
 Appearance251 = x3d.Appearance()
@@ -1071,7 +1071,7 @@ IndexedFaceSet257.creaseAngle = 0.5
 Coordinate258 = x3d.Coordinate()
 Coordinate258.USE = "points"
 
-IndexedFaceSet257.coord.append(Coordinate258)
+IndexedFaceSet257.coord = Coordinate258
 
 Shape256.geometry = IndexedFaceSet257
 Appearance259 = x3d.Appearance()
@@ -1096,7 +1096,7 @@ IndexedFaceSet263.creaseAngle = 0.5
 Coordinate264 = x3d.Coordinate()
 Coordinate264.USE = "points"
 
-IndexedFaceSet263.coord.append(Coordinate264)
+IndexedFaceSet263.coord = Coordinate264
 
 Shape262.geometry = IndexedFaceSet263
 Appearance265 = x3d.Appearance()
@@ -1121,7 +1121,7 @@ IndexedFaceSet269.creaseAngle = 0.5
 Coordinate270 = x3d.Coordinate()
 Coordinate270.USE = "points"
 
-IndexedFaceSet269.coord.append(Coordinate270)
+IndexedFaceSet269.coord = Coordinate270
 
 Shape268.geometry = IndexedFaceSet269
 Appearance271 = x3d.Appearance()
@@ -1155,7 +1155,7 @@ IndexedFaceSet277.creaseAngle = 0.5
 Coordinate278 = x3d.Coordinate()
 Coordinate278.USE = "points"
 
-IndexedFaceSet277.coord.append(Coordinate278)
+IndexedFaceSet277.coord = Coordinate278
 
 Shape276.geometry = IndexedFaceSet277
 Appearance279 = x3d.Appearance()
@@ -1180,7 +1180,7 @@ IndexedFaceSet283.creaseAngle = 0.5
 Coordinate284 = x3d.Coordinate()
 Coordinate284.USE = "points"
 
-IndexedFaceSet283.coord.append(Coordinate284)
+IndexedFaceSet283.coord = Coordinate284
 
 Shape282.geometry = IndexedFaceSet283
 Appearance285 = x3d.Appearance()
@@ -1206,7 +1206,7 @@ IndexedFaceSet289.creaseAngle = 0.5
 Coordinate290 = x3d.Coordinate()
 Coordinate290.USE = "points"
 
-IndexedFaceSet289.coord.append(Coordinate290)
+IndexedFaceSet289.coord = Coordinate290
 
 Shape288.geometry = IndexedFaceSet289
 Appearance291 = x3d.Appearance()
@@ -1232,7 +1232,7 @@ IndexedFaceSet295.creaseAngle = 0.5
 Coordinate296 = x3d.Coordinate()
 Coordinate296.USE = "points"
 
-IndexedFaceSet295.coord.append(Coordinate296)
+IndexedFaceSet295.coord = Coordinate296
 
 Shape294.geometry = IndexedFaceSet295
 Appearance297 = x3d.Appearance()
@@ -1278,7 +1278,7 @@ IndexedFaceSet303.creaseAngle = 0.5
 Coordinate304 = x3d.Coordinate()
 Coordinate304.USE = "points"
 
-IndexedFaceSet303.coord.append(Coordinate304)
+IndexedFaceSet303.coord = Coordinate304
 
 Shape302.geometry = IndexedFaceSet303
 Appearance305 = x3d.Appearance()
@@ -1303,7 +1303,7 @@ IndexedFaceSet309.creaseAngle = 0.5
 Coordinate310 = x3d.Coordinate()
 Coordinate310.USE = "points"
 
-IndexedFaceSet309.coord.append(Coordinate310)
+IndexedFaceSet309.coord = Coordinate310
 
 Shape308.geometry = IndexedFaceSet309
 Appearance311 = x3d.Appearance()
@@ -1328,7 +1328,7 @@ IndexedFaceSet315.creaseAngle = 0.5
 Coordinate316 = x3d.Coordinate()
 Coordinate316.USE = "points"
 
-IndexedFaceSet315.coord.append(Coordinate316)
+IndexedFaceSet315.coord = Coordinate316
 
 Shape314.geometry = IndexedFaceSet315
 Appearance317 = x3d.Appearance()
@@ -1353,7 +1353,7 @@ IndexedFaceSet321.creaseAngle = 0.5
 Coordinate322 = x3d.Coordinate()
 Coordinate322.USE = "points"
 
-IndexedFaceSet321.coord.append(Coordinate322)
+IndexedFaceSet321.coord = Coordinate322
 
 Shape320.geometry = IndexedFaceSet321
 Appearance323 = x3d.Appearance()
@@ -1387,7 +1387,7 @@ IndexedFaceSet329.creaseAngle = 0.5
 Coordinate330 = x3d.Coordinate()
 Coordinate330.USE = "points"
 
-IndexedFaceSet329.coord.append(Coordinate330)
+IndexedFaceSet329.coord = Coordinate330
 
 Shape328.geometry = IndexedFaceSet329
 Appearance331 = x3d.Appearance()
@@ -1421,7 +1421,7 @@ IndexedFaceSet337.creaseAngle = 0.5
 Coordinate338 = x3d.Coordinate()
 Coordinate338.USE = "points"
 
-IndexedFaceSet337.coord.append(Coordinate338)
+IndexedFaceSet337.coord = Coordinate338
 
 Shape336.geometry = IndexedFaceSet337
 Appearance339 = x3d.Appearance()
@@ -1446,7 +1446,7 @@ IndexedFaceSet343.creaseAngle = 0.5
 Coordinate344 = x3d.Coordinate()
 Coordinate344.USE = "points"
 
-IndexedFaceSet343.coord.append(Coordinate344)
+IndexedFaceSet343.coord = Coordinate344
 
 Shape342.geometry = IndexedFaceSet343
 Appearance345 = x3d.Appearance()
@@ -1471,7 +1471,7 @@ IndexedFaceSet349.creaseAngle = 0.5
 Coordinate350 = x3d.Coordinate()
 Coordinate350.USE = "points"
 
-IndexedFaceSet349.coord.append(Coordinate350)
+IndexedFaceSet349.coord = Coordinate350
 
 Shape348.geometry = IndexedFaceSet349
 Appearance351 = x3d.Appearance()
@@ -1496,7 +1496,7 @@ IndexedFaceSet355.creaseAngle = 0.5
 Coordinate356 = x3d.Coordinate()
 Coordinate356.USE = "points"
 
-IndexedFaceSet355.coord.append(Coordinate356)
+IndexedFaceSet355.coord = Coordinate356
 
 Shape354.geometry = IndexedFaceSet355
 Appearance357 = x3d.Appearance()
@@ -1521,7 +1521,7 @@ IndexedFaceSet361.creaseAngle = 0.5
 Coordinate362 = x3d.Coordinate()
 Coordinate362.USE = "points"
 
-IndexedFaceSet361.coord.append(Coordinate362)
+IndexedFaceSet361.coord = Coordinate362
 
 Shape360.geometry = IndexedFaceSet361
 Appearance363 = x3d.Appearance()
@@ -1555,7 +1555,7 @@ IndexedFaceSet369.creaseAngle = 0.5
 Coordinate370 = x3d.Coordinate()
 Coordinate370.USE = "points"
 
-IndexedFaceSet369.coord.append(Coordinate370)
+IndexedFaceSet369.coord = Coordinate370
 
 Shape368.geometry = IndexedFaceSet369
 Appearance371 = x3d.Appearance()
@@ -1580,7 +1580,7 @@ IndexedFaceSet375.creaseAngle = 0.5
 Coordinate376 = x3d.Coordinate()
 Coordinate376.USE = "points"
 
-IndexedFaceSet375.coord.append(Coordinate376)
+IndexedFaceSet375.coord = Coordinate376
 
 Shape374.geometry = IndexedFaceSet375
 Appearance377 = x3d.Appearance()
@@ -1605,7 +1605,7 @@ IndexedFaceSet381.creaseAngle = 0.5
 Coordinate382 = x3d.Coordinate()
 Coordinate382.USE = "points"
 
-IndexedFaceSet381.coord.append(Coordinate382)
+IndexedFaceSet381.coord = Coordinate382
 
 Shape380.geometry = IndexedFaceSet381
 Appearance383 = x3d.Appearance()
@@ -1630,7 +1630,7 @@ IndexedFaceSet387.creaseAngle = 0.5
 Coordinate388 = x3d.Coordinate()
 Coordinate388.USE = "points"
 
-IndexedFaceSet387.coord.append(Coordinate388)
+IndexedFaceSet387.coord = Coordinate388
 
 Shape386.geometry = IndexedFaceSet387
 Appearance389 = x3d.Appearance()
@@ -1655,7 +1655,7 @@ IndexedFaceSet393.creaseAngle = 0.5
 Coordinate394 = x3d.Coordinate()
 Coordinate394.USE = "points"
 
-IndexedFaceSet393.coord.append(Coordinate394)
+IndexedFaceSet393.coord = Coordinate394
 
 Shape392.geometry = IndexedFaceSet393
 Appearance395 = x3d.Appearance()
@@ -1699,7 +1699,7 @@ IndexedFaceSet401.creaseAngle = 0.5
 Coordinate402 = x3d.Coordinate()
 Coordinate402.USE = "points"
 
-IndexedFaceSet401.coord.append(Coordinate402)
+IndexedFaceSet401.coord = Coordinate402
 
 Shape400.geometry = IndexedFaceSet401
 Appearance403 = x3d.Appearance()
@@ -1733,7 +1733,7 @@ IndexedFaceSet409.creaseAngle = 0.5
 Coordinate410 = x3d.Coordinate()
 Coordinate410.USE = "points"
 
-IndexedFaceSet409.coord.append(Coordinate410)
+IndexedFaceSet409.coord = Coordinate410
 
 Shape408.geometry = IndexedFaceSet409
 Appearance411 = x3d.Appearance()
@@ -1767,7 +1767,7 @@ IndexedFaceSet417.creaseAngle = 0.5
 Coordinate418 = x3d.Coordinate()
 Coordinate418.USE = "points"
 
-IndexedFaceSet417.coord.append(Coordinate418)
+IndexedFaceSet417.coord = Coordinate418
 
 Shape416.geometry = IndexedFaceSet417
 Appearance419 = x3d.Appearance()
@@ -1801,7 +1801,7 @@ IndexedFaceSet425.creaseAngle = 0.5
 Coordinate426 = x3d.Coordinate()
 Coordinate426.USE = "points"
 
-IndexedFaceSet425.coord.append(Coordinate426)
+IndexedFaceSet425.coord = Coordinate426
 
 Shape424.geometry = IndexedFaceSet425
 Appearance427 = x3d.Appearance()
@@ -1835,7 +1835,7 @@ IndexedFaceSet433.creaseAngle = 0.5
 Coordinate434 = x3d.Coordinate()
 Coordinate434.USE = "points"
 
-IndexedFaceSet433.coord.append(Coordinate434)
+IndexedFaceSet433.coord = Coordinate434
 
 Shape432.geometry = IndexedFaceSet433
 Appearance435 = x3d.Appearance()
@@ -1869,7 +1869,7 @@ IndexedFaceSet441.creaseAngle = 0.5
 Coordinate442 = x3d.Coordinate()
 Coordinate442.USE = "points"
 
-IndexedFaceSet441.coord.append(Coordinate442)
+IndexedFaceSet441.coord = Coordinate442
 
 Shape440.geometry = IndexedFaceSet441
 Appearance443 = x3d.Appearance()
@@ -1903,7 +1903,7 @@ IndexedFaceSet449.creaseAngle = 0.5
 Coordinate450 = x3d.Coordinate()
 Coordinate450.USE = "points"
 
-IndexedFaceSet449.coord.append(Coordinate450)
+IndexedFaceSet449.coord = Coordinate450
 
 Shape448.geometry = IndexedFaceSet449
 Appearance451 = x3d.Appearance()
@@ -1937,7 +1937,7 @@ IndexedFaceSet457.creaseAngle = 0.5
 Coordinate458 = x3d.Coordinate()
 Coordinate458.USE = "points"
 
-IndexedFaceSet457.coord.append(Coordinate458)
+IndexedFaceSet457.coord = Coordinate458
 
 Shape456.geometry = IndexedFaceSet457
 Appearance459 = x3d.Appearance()
@@ -1971,7 +1971,7 @@ IndexedFaceSet465.creaseAngle = 0.5
 Coordinate466 = x3d.Coordinate()
 Coordinate466.USE = "points"
 
-IndexedFaceSet465.coord.append(Coordinate466)
+IndexedFaceSet465.coord = Coordinate466
 
 Shape464.geometry = IndexedFaceSet465
 Appearance467 = x3d.Appearance()
@@ -2005,7 +2005,7 @@ IndexedFaceSet473.creaseAngle = 0.5
 Coordinate474 = x3d.Coordinate()
 Coordinate474.USE = "points"
 
-IndexedFaceSet473.coord.append(Coordinate474)
+IndexedFaceSet473.coord = Coordinate474
 
 Shape472.geometry = IndexedFaceSet473
 Appearance475 = x3d.Appearance()
@@ -2039,7 +2039,7 @@ IndexedFaceSet481.creaseAngle = 0.5
 Coordinate482 = x3d.Coordinate()
 Coordinate482.USE = "points"
 
-IndexedFaceSet481.coord.append(Coordinate482)
+IndexedFaceSet481.coord = Coordinate482
 
 Shape480.geometry = IndexedFaceSet481
 Appearance483 = x3d.Appearance()
@@ -2073,7 +2073,7 @@ IndexedFaceSet489.creaseAngle = 0.5
 Coordinate490 = x3d.Coordinate()
 Coordinate490.USE = "points"
 
-IndexedFaceSet489.coord.append(Coordinate490)
+IndexedFaceSet489.coord = Coordinate490
 
 Shape488.geometry = IndexedFaceSet489
 Appearance491 = x3d.Appearance()
@@ -2107,7 +2107,7 @@ IndexedFaceSet497.creaseAngle = 0.5
 Coordinate498 = x3d.Coordinate()
 Coordinate498.USE = "points"
 
-IndexedFaceSet497.coord.append(Coordinate498)
+IndexedFaceSet497.coord = Coordinate498
 
 Shape496.geometry = IndexedFaceSet497
 Appearance499 = x3d.Appearance()
@@ -2141,7 +2141,7 @@ IndexedFaceSet505.creaseAngle = 0.5
 Coordinate506 = x3d.Coordinate()
 Coordinate506.USE = "points"
 
-IndexedFaceSet505.coord.append(Coordinate506)
+IndexedFaceSet505.coord = Coordinate506
 
 Shape504.geometry = IndexedFaceSet505
 Appearance507 = x3d.Appearance()
@@ -2175,7 +2175,7 @@ IndexedFaceSet513.creaseAngle = 0.5
 Coordinate514 = x3d.Coordinate()
 Coordinate514.USE = "points"
 
-IndexedFaceSet513.coord.append(Coordinate514)
+IndexedFaceSet513.coord = Coordinate514
 
 Shape512.geometry = IndexedFaceSet513
 Appearance515 = x3d.Appearance()
@@ -2209,7 +2209,7 @@ IndexedFaceSet521.creaseAngle = 0.5
 Coordinate522 = x3d.Coordinate()
 Coordinate522.USE = "points"
 
-IndexedFaceSet521.coord.append(Coordinate522)
+IndexedFaceSet521.coord = Coordinate522
 
 Shape520.geometry = IndexedFaceSet521
 Appearance523 = x3d.Appearance()
@@ -2243,7 +2243,7 @@ IndexedFaceSet529.creaseAngle = 0.5
 Coordinate530 = x3d.Coordinate()
 Coordinate530.USE = "points"
 
-IndexedFaceSet529.coord.append(Coordinate530)
+IndexedFaceSet529.coord = Coordinate530
 
 Shape528.geometry = IndexedFaceSet529
 Appearance531 = x3d.Appearance()
@@ -2277,7 +2277,7 @@ IndexedFaceSet537.creaseAngle = 0.5
 Coordinate538 = x3d.Coordinate()
 Coordinate538.USE = "points"
 
-IndexedFaceSet537.coord.append(Coordinate538)
+IndexedFaceSet537.coord = Coordinate538
 
 Shape536.geometry = IndexedFaceSet537
 Appearance539 = x3d.Appearance()
@@ -2309,7 +2309,7 @@ IndexedFaceSet544.creaseAngle = 0.5
 Coordinate545 = x3d.Coordinate()
 Coordinate545.USE = "points"
 
-IndexedFaceSet544.coord.append(Coordinate545)
+IndexedFaceSet544.coord = Coordinate545
 
 Shape543.geometry = IndexedFaceSet544
 Appearance546 = x3d.Appearance()
@@ -2343,7 +2343,7 @@ IndexedFaceSet552.creaseAngle = 0.5
 Coordinate553 = x3d.Coordinate()
 Coordinate553.USE = "points"
 
-IndexedFaceSet552.coord.append(Coordinate553)
+IndexedFaceSet552.coord = Coordinate553
 
 Shape551.geometry = IndexedFaceSet552
 Appearance554 = x3d.Appearance()
@@ -2375,7 +2375,7 @@ IndexedFaceSet559.creaseAngle = 0.5
 Coordinate560 = x3d.Coordinate()
 Coordinate560.USE = "points"
 
-IndexedFaceSet559.coord.append(Coordinate560)
+IndexedFaceSet559.coord = Coordinate560
 
 Shape558.geometry = IndexedFaceSet559
 Appearance561 = x3d.Appearance()
@@ -2400,7 +2400,7 @@ IndexedFaceSet565.creaseAngle = 0.5
 Coordinate566 = x3d.Coordinate()
 Coordinate566.USE = "points"
 
-IndexedFaceSet565.coord.append(Coordinate566)
+IndexedFaceSet565.coord = Coordinate566
 
 Shape564.geometry = IndexedFaceSet565
 Appearance567 = x3d.Appearance()
@@ -2425,7 +2425,7 @@ IndexedFaceSet571.creaseAngle = 0.5
 Coordinate572 = x3d.Coordinate()
 Coordinate572.USE = "points"
 
-IndexedFaceSet571.coord.append(Coordinate572)
+IndexedFaceSet571.coord = Coordinate572
 
 Shape570.geometry = IndexedFaceSet571
 Appearance573 = x3d.Appearance()
@@ -2450,7 +2450,7 @@ IndexedFaceSet577.creaseAngle = 0.5
 Coordinate578 = x3d.Coordinate()
 Coordinate578.USE = "points"
 
-IndexedFaceSet577.coord.append(Coordinate578)
+IndexedFaceSet577.coord = Coordinate578
 
 Shape576.geometry = IndexedFaceSet577
 Appearance579 = x3d.Appearance()
@@ -2484,7 +2484,7 @@ IndexedFaceSet585.creaseAngle = 0.5
 Coordinate586 = x3d.Coordinate()
 Coordinate586.USE = "points"
 
-IndexedFaceSet585.coord.append(Coordinate586)
+IndexedFaceSet585.coord = Coordinate586
 
 Shape584.geometry = IndexedFaceSet585
 Appearance587 = x3d.Appearance()
@@ -2516,7 +2516,7 @@ IndexedFaceSet592.creaseAngle = 0.5
 Coordinate593 = x3d.Coordinate()
 Coordinate593.USE = "points"
 
-IndexedFaceSet592.coord.append(Coordinate593)
+IndexedFaceSet592.coord = Coordinate593
 
 Shape591.geometry = IndexedFaceSet592
 Appearance594 = x3d.Appearance()
@@ -2541,7 +2541,7 @@ IndexedFaceSet598.creaseAngle = 0.5
 Coordinate599 = x3d.Coordinate()
 Coordinate599.USE = "points"
 
-IndexedFaceSet598.coord.append(Coordinate599)
+IndexedFaceSet598.coord = Coordinate599
 
 Shape597.geometry = IndexedFaceSet598
 Appearance600 = x3d.Appearance()
@@ -2566,7 +2566,7 @@ IndexedFaceSet604.creaseAngle = 0.5
 Coordinate605 = x3d.Coordinate()
 Coordinate605.USE = "points"
 
-IndexedFaceSet604.coord.append(Coordinate605)
+IndexedFaceSet604.coord = Coordinate605
 
 Shape603.geometry = IndexedFaceSet604
 Appearance606 = x3d.Appearance()
@@ -2591,7 +2591,7 @@ IndexedFaceSet610.creaseAngle = 0.5
 Coordinate611 = x3d.Coordinate()
 Coordinate611.USE = "points"
 
-IndexedFaceSet610.coord.append(Coordinate611)
+IndexedFaceSet610.coord = Coordinate611
 
 Shape609.geometry = IndexedFaceSet610
 Appearance612 = x3d.Appearance()
@@ -2616,7 +2616,7 @@ IndexedFaceSet616.creaseAngle = 0.5
 Coordinate617 = x3d.Coordinate()
 Coordinate617.USE = "points"
 
-IndexedFaceSet616.coord.append(Coordinate617)
+IndexedFaceSet616.coord = Coordinate617
 
 Shape615.geometry = IndexedFaceSet616
 Appearance618 = x3d.Appearance()
@@ -2650,7 +2650,7 @@ IndexedFaceSet624.creaseAngle = 0.5
 Coordinate625 = x3d.Coordinate()
 Coordinate625.USE = "points"
 
-IndexedFaceSet624.coord.append(Coordinate625)
+IndexedFaceSet624.coord = Coordinate625
 
 Shape623.geometry = IndexedFaceSet624
 Appearance626 = x3d.Appearance()
@@ -2684,7 +2684,7 @@ IndexedFaceSet632.creaseAngle = 0.5
 Coordinate633 = x3d.Coordinate()
 Coordinate633.USE = "points"
 
-IndexedFaceSet632.coord.append(Coordinate633)
+IndexedFaceSet632.coord = Coordinate633
 
 Shape631.geometry = IndexedFaceSet632
 Appearance634 = x3d.Appearance()
@@ -2718,7 +2718,7 @@ IndexedFaceSet640.creaseAngle = 0.5
 Coordinate641 = x3d.Coordinate()
 Coordinate641.USE = "points"
 
-IndexedFaceSet640.coord.append(Coordinate641)
+IndexedFaceSet640.coord = Coordinate641
 
 Shape639.geometry = IndexedFaceSet640
 Appearance642 = x3d.Appearance()
@@ -2743,7 +2743,7 @@ IndexedFaceSet646.creaseAngle = 0.5
 Coordinate647 = x3d.Coordinate()
 Coordinate647.USE = "points"
 
-IndexedFaceSet646.coord.append(Coordinate647)
+IndexedFaceSet646.coord = Coordinate647
 
 Shape645.geometry = IndexedFaceSet646
 Appearance648 = x3d.Appearance()
@@ -2783,7 +2783,7 @@ IndexedFaceSet654.creaseAngle = 0.5
 Coordinate655 = x3d.Coordinate()
 Coordinate655.USE = "points"
 
-IndexedFaceSet654.coord.append(Coordinate655)
+IndexedFaceSet654.coord = Coordinate655
 
 Shape653.geometry = IndexedFaceSet654
 Appearance656 = x3d.Appearance()
@@ -2817,7 +2817,7 @@ IndexedFaceSet662.creaseAngle = 0.5
 Coordinate663 = x3d.Coordinate()
 Coordinate663.USE = "points"
 
-IndexedFaceSet662.coord.append(Coordinate663)
+IndexedFaceSet662.coord = Coordinate663
 
 Shape661.geometry = IndexedFaceSet662
 Appearance664 = x3d.Appearance()
@@ -2851,7 +2851,7 @@ IndexedFaceSet670.creaseAngle = 0.5
 Coordinate671 = x3d.Coordinate()
 Coordinate671.USE = "points"
 
-IndexedFaceSet670.coord.append(Coordinate671)
+IndexedFaceSet670.coord = Coordinate671
 
 Shape669.geometry = IndexedFaceSet670
 Appearance672 = x3d.Appearance()
@@ -2885,7 +2885,7 @@ IndexedFaceSet678.creaseAngle = 0.5
 Coordinate679 = x3d.Coordinate()
 Coordinate679.USE = "points"
 
-IndexedFaceSet678.coord.append(Coordinate679)
+IndexedFaceSet678.coord = Coordinate679
 
 Shape677.geometry = IndexedFaceSet678
 Appearance680 = x3d.Appearance()
@@ -2910,7 +2910,7 @@ IndexedFaceSet684.creaseAngle = 0.5
 Coordinate685 = x3d.Coordinate()
 Coordinate685.USE = "points"
 
-IndexedFaceSet684.coord.append(Coordinate685)
+IndexedFaceSet684.coord = Coordinate685
 
 Shape683.geometry = IndexedFaceSet684
 Appearance686 = x3d.Appearance()
@@ -2958,7 +2958,7 @@ IndexedFaceSet692.creaseAngle = 0.5
 Coordinate693 = x3d.Coordinate()
 Coordinate693.USE = "points"
 
-IndexedFaceSet692.coord.append(Coordinate693)
+IndexedFaceSet692.coord = Coordinate693
 
 Shape691.geometry = IndexedFaceSet692
 Appearance694 = x3d.Appearance()
@@ -2990,7 +2990,7 @@ IndexedFaceSet699.creaseAngle = 0.5
 Coordinate700 = x3d.Coordinate()
 Coordinate700.USE = "points"
 
-IndexedFaceSet699.coord.append(Coordinate700)
+IndexedFaceSet699.coord = Coordinate700
 
 Shape698.geometry = IndexedFaceSet699
 Appearance701 = x3d.Appearance()
@@ -3024,7 +3024,7 @@ IndexedFaceSet707.creaseAngle = 0.5
 Coordinate708 = x3d.Coordinate()
 Coordinate708.USE = "points"
 
-IndexedFaceSet707.coord.append(Coordinate708)
+IndexedFaceSet707.coord = Coordinate708
 
 Shape706.geometry = IndexedFaceSet707
 Appearance709 = x3d.Appearance()
@@ -3056,7 +3056,7 @@ IndexedFaceSet714.creaseAngle = 0.5
 Coordinate715 = x3d.Coordinate()
 Coordinate715.USE = "points"
 
-IndexedFaceSet714.coord.append(Coordinate715)
+IndexedFaceSet714.coord = Coordinate715
 
 Shape713.geometry = IndexedFaceSet714
 Appearance716 = x3d.Appearance()
@@ -3081,7 +3081,7 @@ IndexedFaceSet720.creaseAngle = 0.5
 Coordinate721 = x3d.Coordinate()
 Coordinate721.USE = "points"
 
-IndexedFaceSet720.coord.append(Coordinate721)
+IndexedFaceSet720.coord = Coordinate721
 
 Shape719.geometry = IndexedFaceSet720
 Appearance722 = x3d.Appearance()
@@ -3106,7 +3106,7 @@ IndexedFaceSet726.creaseAngle = 0.5
 Coordinate727 = x3d.Coordinate()
 Coordinate727.USE = "points"
 
-IndexedFaceSet726.coord.append(Coordinate727)
+IndexedFaceSet726.coord = Coordinate727
 
 Shape725.geometry = IndexedFaceSet726
 Appearance728 = x3d.Appearance()
@@ -3131,7 +3131,7 @@ IndexedFaceSet732.creaseAngle = 0.5
 Coordinate733 = x3d.Coordinate()
 Coordinate733.USE = "points"
 
-IndexedFaceSet732.coord.append(Coordinate733)
+IndexedFaceSet732.coord = Coordinate733
 
 Shape731.geometry = IndexedFaceSet732
 Appearance734 = x3d.Appearance()
@@ -3165,7 +3165,7 @@ IndexedFaceSet740.creaseAngle = 0.5
 Coordinate741 = x3d.Coordinate()
 Coordinate741.USE = "points"
 
-IndexedFaceSet740.coord.append(Coordinate741)
+IndexedFaceSet740.coord = Coordinate741
 
 Shape739.geometry = IndexedFaceSet740
 Appearance742 = x3d.Appearance()
@@ -3196,7 +3196,7 @@ IndexedFaceSet747.creaseAngle = 0.5
 Coordinate748 = x3d.Coordinate()
 Coordinate748.USE = "points"
 
-IndexedFaceSet747.coord.append(Coordinate748)
+IndexedFaceSet747.coord = Coordinate748
 
 Shape746.geometry = IndexedFaceSet747
 Appearance749 = x3d.Appearance()
@@ -3221,7 +3221,7 @@ IndexedFaceSet753.creaseAngle = 0.5
 Coordinate754 = x3d.Coordinate()
 Coordinate754.USE = "points"
 
-IndexedFaceSet753.coord.append(Coordinate754)
+IndexedFaceSet753.coord = Coordinate754
 
 Shape752.geometry = IndexedFaceSet753
 Appearance755 = x3d.Appearance()
@@ -3246,7 +3246,7 @@ IndexedFaceSet759.creaseAngle = 0.5
 Coordinate760 = x3d.Coordinate()
 Coordinate760.USE = "points"
 
-IndexedFaceSet759.coord.append(Coordinate760)
+IndexedFaceSet759.coord = Coordinate760
 
 Shape758.geometry = IndexedFaceSet759
 Appearance761 = x3d.Appearance()
@@ -3271,7 +3271,7 @@ IndexedFaceSet765.creaseAngle = 0.5
 Coordinate766 = x3d.Coordinate()
 Coordinate766.USE = "points"
 
-IndexedFaceSet765.coord.append(Coordinate766)
+IndexedFaceSet765.coord = Coordinate766
 
 Shape764.geometry = IndexedFaceSet765
 Appearance767 = x3d.Appearance()
@@ -3296,7 +3296,7 @@ IndexedFaceSet771.creaseAngle = 0.5
 Coordinate772 = x3d.Coordinate()
 Coordinate772.USE = "points"
 
-IndexedFaceSet771.coord.append(Coordinate772)
+IndexedFaceSet771.coord = Coordinate772
 
 Shape770.geometry = IndexedFaceSet771
 Appearance773 = x3d.Appearance()
@@ -3336,7 +3336,7 @@ IndexedFaceSet779.creaseAngle = 0.5
 Coordinate780 = x3d.Coordinate()
 Coordinate780.USE = "points"
 
-IndexedFaceSet779.coord.append(Coordinate780)
+IndexedFaceSet779.coord = Coordinate780
 
 Shape778.geometry = IndexedFaceSet779
 Appearance781 = x3d.Appearance()
@@ -3370,7 +3370,7 @@ IndexedFaceSet787.creaseAngle = 0.5
 Coordinate788 = x3d.Coordinate()
 Coordinate788.USE = "points"
 
-IndexedFaceSet787.coord.append(Coordinate788)
+IndexedFaceSet787.coord = Coordinate788
 
 Shape786.geometry = IndexedFaceSet787
 Appearance789 = x3d.Appearance()
@@ -3404,7 +3404,7 @@ IndexedFaceSet795.creaseAngle = 0.5
 Coordinate796 = x3d.Coordinate()
 Coordinate796.USE = "points"
 
-IndexedFaceSet795.coord.append(Coordinate796)
+IndexedFaceSet795.coord = Coordinate796
 
 Shape794.geometry = IndexedFaceSet795
 Appearance797 = x3d.Appearance()
@@ -3438,7 +3438,7 @@ IndexedFaceSet803.creaseAngle = 0.5
 Coordinate804 = x3d.Coordinate()
 Coordinate804.USE = "points"
 
-IndexedFaceSet803.coord.append(Coordinate804)
+IndexedFaceSet803.coord = Coordinate804
 
 Shape802.geometry = IndexedFaceSet803
 Appearance805 = x3d.Appearance()
@@ -3472,7 +3472,7 @@ IndexedFaceSet811.creaseAngle = 0.5
 Coordinate812 = x3d.Coordinate()
 Coordinate812.USE = "points"
 
-IndexedFaceSet811.coord.append(Coordinate812)
+IndexedFaceSet811.coord = Coordinate812
 
 Shape810.geometry = IndexedFaceSet811
 Appearance813 = x3d.Appearance()
@@ -3506,7 +3506,7 @@ IndexedFaceSet819.creaseAngle = 0.5
 Coordinate820 = x3d.Coordinate()
 Coordinate820.USE = "points"
 
-IndexedFaceSet819.coord.append(Coordinate820)
+IndexedFaceSet819.coord = Coordinate820
 
 Shape818.geometry = IndexedFaceSet819
 Appearance821 = x3d.Appearance()
@@ -3540,7 +3540,7 @@ IndexedFaceSet827.creaseAngle = 0.5
 Coordinate828 = x3d.Coordinate()
 Coordinate828.USE = "points"
 
-IndexedFaceSet827.coord.append(Coordinate828)
+IndexedFaceSet827.coord = Coordinate828
 
 Shape826.geometry = IndexedFaceSet827
 Appearance829 = x3d.Appearance()
@@ -3574,7 +3574,7 @@ IndexedFaceSet835.creaseAngle = 0.5
 Coordinate836 = x3d.Coordinate()
 Coordinate836.USE = "points"
 
-IndexedFaceSet835.coord.append(Coordinate836)
+IndexedFaceSet835.coord = Coordinate836
 
 Shape834.geometry = IndexedFaceSet835
 Appearance837 = x3d.Appearance()
@@ -3599,7 +3599,7 @@ IndexedFaceSet841.creaseAngle = 0.5
 Coordinate842 = x3d.Coordinate()
 Coordinate842.USE = "points"
 
-IndexedFaceSet841.coord.append(Coordinate842)
+IndexedFaceSet841.coord = Coordinate842
 
 Shape840.geometry = IndexedFaceSet841
 Appearance843 = x3d.Appearance()
@@ -3624,7 +3624,7 @@ IndexedFaceSet847.creaseAngle = 0.5
 Coordinate848 = x3d.Coordinate()
 Coordinate848.USE = "points"
 
-IndexedFaceSet847.coord.append(Coordinate848)
+IndexedFaceSet847.coord = Coordinate848
 
 Shape846.geometry = IndexedFaceSet847
 Appearance849 = x3d.Appearance()
@@ -3649,7 +3649,7 @@ IndexedFaceSet853.creaseAngle = 0.5
 Coordinate854 = x3d.Coordinate()
 Coordinate854.USE = "points"
 
-IndexedFaceSet853.coord.append(Coordinate854)
+IndexedFaceSet853.coord = Coordinate854
 
 Shape852.geometry = IndexedFaceSet853
 Appearance855 = x3d.Appearance()
@@ -3674,7 +3674,7 @@ IndexedFaceSet859.creaseAngle = 0.5
 Coordinate860 = x3d.Coordinate()
 Coordinate860.USE = "points"
 
-IndexedFaceSet859.coord.append(Coordinate860)
+IndexedFaceSet859.coord = Coordinate860
 
 Shape858.geometry = IndexedFaceSet859
 Appearance861 = x3d.Appearance()
@@ -3699,7 +3699,7 @@ IndexedFaceSet865.creaseAngle = 0.5
 Coordinate866 = x3d.Coordinate()
 Coordinate866.USE = "points"
 
-IndexedFaceSet865.coord.append(Coordinate866)
+IndexedFaceSet865.coord = Coordinate866
 
 Shape864.geometry = IndexedFaceSet865
 Appearance867 = x3d.Appearance()
@@ -3724,7 +3724,7 @@ IndexedFaceSet871.creaseAngle = 0.5
 Coordinate872 = x3d.Coordinate()
 Coordinate872.USE = "points"
 
-IndexedFaceSet871.coord.append(Coordinate872)
+IndexedFaceSet871.coord = Coordinate872
 
 Shape870.geometry = IndexedFaceSet871
 Appearance873 = x3d.Appearance()
@@ -3749,7 +3749,7 @@ IndexedFaceSet877.creaseAngle = 0.5
 Coordinate878 = x3d.Coordinate()
 Coordinate878.USE = "points"
 
-IndexedFaceSet877.coord.append(Coordinate878)
+IndexedFaceSet877.coord = Coordinate878
 
 Shape876.geometry = IndexedFaceSet877
 Appearance879 = x3d.Appearance()
@@ -3774,7 +3774,7 @@ IndexedFaceSet883.creaseAngle = 0.5
 Coordinate884 = x3d.Coordinate()
 Coordinate884.USE = "points"
 
-IndexedFaceSet883.coord.append(Coordinate884)
+IndexedFaceSet883.coord = Coordinate884
 
 Shape882.geometry = IndexedFaceSet883
 Appearance885 = x3d.Appearance()
@@ -3799,7 +3799,7 @@ IndexedFaceSet889.creaseAngle = 0.5
 Coordinate890 = x3d.Coordinate()
 Coordinate890.USE = "points"
 
-IndexedFaceSet889.coord.append(Coordinate890)
+IndexedFaceSet889.coord = Coordinate890
 
 Shape888.geometry = IndexedFaceSet889
 Appearance891 = x3d.Appearance()
@@ -3824,7 +3824,7 @@ IndexedFaceSet895.creaseAngle = 0.5
 Coordinate896 = x3d.Coordinate()
 Coordinate896.USE = "points"
 
-IndexedFaceSet895.coord.append(Coordinate896)
+IndexedFaceSet895.coord = Coordinate896
 
 Shape894.geometry = IndexedFaceSet895
 Appearance897 = x3d.Appearance()

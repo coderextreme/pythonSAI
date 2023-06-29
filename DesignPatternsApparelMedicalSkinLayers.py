@@ -98,7 +98,7 @@ MetadataString21.name = "HAnimArchitecture"
 MetadataString21.reference = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/Guidelines.html#MultipleHumanoidsPerFile"
 MetadataString21.value = ["E.4 Multiple humanoids per file"]
 
-Group20.value.append(MetadataString21)
+Group20.value = MetadataString21
 #==============================
 HAnimHumanoid22 = x3d.HAnimHumanoid()
 HAnimHumanoid22.name = "SimpleSkeleton"
@@ -224,7 +224,7 @@ IndexedFaceSet47.DEF = "IndexedSkinMeshIFS"
 Coordinate48 = x3d.Coordinate()
 Coordinate48.DEF = "SkinMeshCoordinate"
 
-IndexedFaceSet47.coord.append(Coordinate48)
+IndexedFaceSet47.coord = Coordinate48
 
 Shape46.geometry = IndexedFaceSet47
 
@@ -254,7 +254,7 @@ IndexedFaceSet53.DEF = "TwoPartIndexedSkinMesh"
 Coordinate54 = x3d.Coordinate()
 Coordinate54.DEF = "TwoPartSkinMesh"
 
-IndexedFaceSet53.coord.append(Coordinate54)
+IndexedFaceSet53.coord = Coordinate54
 
 Shape52.geometry = IndexedFaceSet53
 

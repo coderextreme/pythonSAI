@@ -156,29 +156,29 @@ MetadataString32 = x3d.MetadataString()
 MetadataString32.name = "authorEmail"
 MetadataString32.value = ["beitler@graphics.cis.upenn.edu beitler@acm.org"]
 
-MetadataSet31.value.append(MetadataString32)
+MetadataSet31.value = MetadataString32
 MetadataString33 = x3d.MetadataString()
 MetadataString33.name = "authorName"
 MetadataString33.value = ["Matthew T. Beitler"]
 
-MetadataSet31.value.append(MetadataString33)
+MetadataSet31.value = MetadataString33
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "copyright"
 MetadataString34.value = ["Copyright 1999 Matthew T. Beitler"]
 
-MetadataSet31.value.append(MetadataString34)
+MetadataSet31.value = MetadataString34
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "humanoidVersion"
 MetadataString35.value = ["JointCenters 1.1 LOA1"]
 
-MetadataSet31.value.append(MetadataString35)
+MetadataSet31.value = MetadataString35
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "usageRestrictions"
 MetadataString36.value = ["PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided _as-is_ and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose."]
 
-MetadataSet31.value.append(MetadataString36)
+MetadataSet31.value = MetadataString36
 
-HAnimHumanoid30.metadata.append(MetadataSet31)
+HAnimHumanoid30.metadata = MetadataSet31
 HAnimJoint37 = x3d.HAnimJoint()
 HAnimJoint37.name = "humanoid_root"
 HAnimJoint37.DEF = "hanim_humanoid_root"
@@ -205,7 +205,7 @@ Coordinate43 = x3d.Coordinate()
 Coordinate43.DEF = "points"
 Coordinate43.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet42.coord.append(Coordinate43)
+IndexedFaceSet42.coord = Coordinate43
 
 Shape41.geometry = IndexedFaceSet42
 Appearance44 = x3d.Appearance()

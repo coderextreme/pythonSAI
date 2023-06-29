@@ -122,7 +122,7 @@
           },
           {
             "@name":"translated",
-            "@content":"28 June 2023"
+            "@content":"29 June 2023"
           },
           {
             "@name":"generator",
@@ -236,8 +236,8 @@
             {
               "@name":"humanoid",
               "@DEF":"hanim_humanoid",
-              "@info":["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=1.0","height=1.7504"],
-              "@version":"1.0",
+              "@info":["authorName=Matthew T. Beitler Joe D. Williams Don Brutzman","authorEmail=HAnim@web3D.org","copyright=none","creationDate=12 May 1999","usageRestrictions=none","humanoidVersion=2.0","height=1.7504"],
+              "@version":"2.0",
               "-skeleton":[
                 { "HAnimJoint":
                   {

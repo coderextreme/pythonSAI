@@ -119,11 +119,11 @@ IndexedLineSet25.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate26 = x3d.Coordinate()
 Coordinate26.point = (0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000)
 
-IndexedLineSet25.coord.append(Coordinate26)
+IndexedLineSet25.coord = Coordinate26
 Color27 = x3d.Color()
 Color27.color = [1,0,0,0,0.6,0,0,0,1]
 
-IndexedLineSet25.color.append(Color27)
+IndexedLineSet25.color = Color27
 
 Shape24.geometry = IndexedLineSet25
 

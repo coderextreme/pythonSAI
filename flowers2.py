@@ -163,7 +163,7 @@ Coordinate38 = x3d.Coordinate()
 Coordinate38.DEF = "OrbitCoordinates"
 Coordinate38.point = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000)
 
-IndexedFaceSet37.coord.append(Coordinate38)
+IndexedFaceSet37.coord = Coordinate38
 
 Shape30.geometry = IndexedFaceSet37
 

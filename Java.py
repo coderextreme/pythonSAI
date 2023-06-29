@@ -171,11 +171,11 @@ MetadataString34.name = "test"
 MetadataString34.DEF = "scene.addChildMetadata"
 MetadataString34.value = ["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
 
-Scene29.metadata.append(MetadataString34)
+Scene29.metadata = MetadataString34
 LayerSet35 = x3d.LayerSet()
 LayerSet35.DEF = "scene.addChildLayerSetTest"
 
-Scene29.layerSet.append(LayerSet35)
+Scene29.layerSet = LayerSet35
 Transform36 = x3d.Transform()
 Transform36.DEF = "LogoGeometryTransform"
 Transform36.translation = [0,1.5,0]
@@ -224,7 +224,7 @@ IndexedLineSet46.coordIndex = [0,1,2,3,4,0]
 Coordinate47 = x3d.Coordinate()
 Coordinate47.point = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
-IndexedLineSet46.coord.append(Coordinate47)
+IndexedLineSet46.coord = Coordinate47
 
 Shape43.geometry = IndexedLineSet46
 
@@ -276,14 +276,14 @@ MetadataString58 = x3d.MetadataString()
 MetadataString58.name = "quotesTestC"
 MetadataString58.value = ["MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""]
 
-MetadataSet57.value.append(MetadataString58)
+MetadataSet57.value = MetadataString58
 MetadataString59 = x3d.MetadataString()
 MetadataString59.name = "extraChildTest"
 MetadataString59.value = ["checks MetadataSetObject addValue() method"]
 
-MetadataSet57.value.append(MetadataString59)
+MetadataSet57.value = MetadataString59
 
-Text56.metadata.append(MetadataSet57)
+Text56.metadata = MetadataSet57
 FontStyle60 = x3d.FontStyle()
 FontStyle60.justify = ["MIDDLE","MIDDLE"]
 
@@ -729,7 +729,7 @@ MetadataString135.name = "findThisNameValue"
 MetadataString135.DEF = "FindableMetadataStringTest"
 MetadataString135.value = ["test case"]
 
-Shape134.metadata.append(MetadataString135)
+Shape134.metadata = MetadataString135
 Appearance136 = x3d.Appearance()
 Appearance136.DEF = "DeclarativeAppearanceExample"
 #DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance
@@ -776,7 +776,7 @@ AudioClip141.description = "chimes"
 AudioClip141.url = ["chimes.wav","https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]
 #Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
 
-Sound140.source.append(AudioClip141)
+Sound140.source = AudioClip141
 
 Scene29.children.append(Sound140)
 Sound142 = x3d.Sound()
@@ -788,7 +788,7 @@ MovieTexture143.url = ["mpgsys.mpg","https://www.web3d.org/x3d/content/examples/
 #Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
 #Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\"
 
-Sound142.source.append(MovieTexture143)
+Sound142.source = MovieTexture143
 
 Scene29.children.append(Sound142)
 #Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true

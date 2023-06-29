@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "https://www.web3d.org/specifications/x3d-3.3.dtd">
-<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-3.3.xsd'>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
+<X3D profile='Immersive' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <!-- x3dVersionComparisonTest for this model: supportsX3dVersion(X3D.VERSION_3_0)=true -->
   <head>
     <!-- comment #1 -->
@@ -17,7 +17,7 @@
     <unit name='AngleUnitConversion' category='angle' conversionFactor='1.0'/>
     <unit name='LengthUnitConversion' category='length' conversionFactor='1.0'/>
     <unit name='ForceFromPoundsToNewtons' category='force' conversionFactor='4.4482'/>
-    <meta content='HelloWorldProgramOutput.x3d' name='title'/>
+    <meta content='Json.x3d' name='title'/>
     <meta content='continued development and testing in progress' name='info'/>
     <meta content='Example HelloWorldProgram creates an X3D model using the X3D Java Scene Access Interface Library (X3DJSAIL)' name='description'/>
     <meta content='https://www.web3d.org/specifications/java/X3DJSAIL.html' name='reference'/>
@@ -84,7 +84,7 @@
         <Text string='"X3D Java" "SAI Library" "X3DJSAIL"'>
           <!-- Comment example A, plain quotation marks: He said, "Immel did it!" -->
           <!-- Comment example B, XML character entities: He said, &quot;Immel did it!&quot; -->
-          <MetadataSet name='EscapedQuotationMarksMetadataSet'>
+          <MetadataSet containerField='metadata' name='EscapedQuotationMarksMetadataSet'>
             <MetadataString name='quotesTestC' containerField='value' value='"MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""'/>
             <MetadataString name='extraChildTest' containerField='value' value='"checks MetadataSetObject addValue() method"'/>
           </MetadataSet>

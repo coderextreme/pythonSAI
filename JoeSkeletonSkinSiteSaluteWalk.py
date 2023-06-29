@@ -285,11 +285,11 @@ Coordinate58 = x3d.Coordinate()
 Coordinate58.DEF = "boxCoords"
 Coordinate58.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0157,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet57.coord.append(Coordinate58)
+IndexedFaceSet57.coord = Coordinate58
 Color59 = x3d.Color()
 Color59.color = [1,0,0,0,0,1,0,1,0,1,1,1,0,1,1,1,1,0]
 
-IndexedFaceSet57.color.append(Color59)
+IndexedFaceSet57.color = Color59
 
 Shape56.geometry = IndexedFaceSet57
 Appearance60 = x3d.Appearance()
@@ -316,7 +316,7 @@ IndexedFaceSet64.creaseAngle = 0.10000000149011612
 Coordinate65 = x3d.Coordinate()
 Coordinate65.USE = "boxCoords"
 
-IndexedFaceSet64.coord.append(Coordinate65)
+IndexedFaceSet64.coord = Coordinate65
 
 Shape63.geometry = IndexedFaceSet64
 Appearance66 = x3d.Appearance()
@@ -343,7 +343,7 @@ IndexedLineSet70.coordIndex = [0,1,-1]
 Coordinate71 = x3d.Coordinate()
 Coordinate71.point = (0.0000,0.0000,0.0000,0.0000,0.0001,0.0000)
 
-IndexedLineSet70.coord.append(Coordinate71)
+IndexedLineSet70.coord = Coordinate71
 
 Shape69.geometry = IndexedLineSet70
 Appearance72 = x3d.Appearance()
@@ -406,11 +406,11 @@ Coordinate84 = x3d.Coordinate()
 Coordinate84.DEF = "TheSkinCoord"
 Coordinate84.point = (0.0000,1.7700,0.0000,0.0000,1.6650,0.0900,-0.0330,1.6200,0.0870,0.0330,1.6200,0.0870,0.0000,1.5500,0.0970,-0.0770,1.6400,-0.0100,-0.0527,1.5800,0.0150,0.0770,1.6400,-0.0100,0.0527,1.5800,0.0150,0.0000,1.6250,-0.0925,-0.0300,1.4600,0.0350,0.0000,1.4400,0.0300,0.0300,1.4600,0.0350,-0.1135,1.3180,0.0950,0.1135,1.3180,0.0950,0.0000,1.2500,0.1130,-0.0870,1.1900,0.0900,-0.0935,1.0300,0.0750,0.0870,1.1900,0.0900,0.0935,1.0300,0.0750,-0.1425,1.0650,0.0033,-0.1500,0.9000,-0.0100,0.1425,1.0650,0.0033,0.1500,0.9000,-0.0100,0.0000,1.5300,-0.0840,0.0049,1.1908,-0.1113,-0.0773,1.0190,-0.1200,0.0773,1.0190,-0.1200,0.0050,1.0915,-0.1091,-0.1780,1.4825,-0.0625,-0.1700,1.3800,0.0070,-0.1884,0.8676,-0.0360,-0.1600,1.3800,-0.1270,-0.2000,1.1388,-0.0800,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2300,1.1330,-0.0550,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.7890,-0.1064,0.1750,1.4825,-0.0600,0.1700,1.3800,0.0070,0.1901,0.8645,-0.0415,0.1600,1.3800,-0.1250,0.2000,1.1388,-0.0800,0.1650,1.1388,-0.0400,0.2440,1.1388,-0.0400,0.2300,1.1330,-0.0550,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.7860,-0.1122,-0.1000,0.4913,-0.0300,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1650,0.0100,0.1200,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.0900,0.0560,0.0125,-0.1150,0.0200,0.1220,-0.1150,0.0400,-0.0550,-0.1100,0.0110,0.1900,0.0993,0.4881,-0.0309,0.1700,0.4660,0.0000,0.0500,0.4867,0.0000,0.1650,0.0100,0.1200,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.0900,0.0560,0.0125,0.1150,0.0200,0.1220,0.1150,0.0400,-0.0550,0.1100,0.0110,0.1900,0.0000,0.8750,0.0000,-0.0646,1.5149,-0.0380,0.0646,1.5149,-0.0380,0.0000,1.0722,0.0900,-0.1100,1.4270,-0.1375,-0.2350,1.4200,-0.0625,0.1100,1.4270,-0.1375,0.2350,1.4200,-0.0625,0.0000,1.4100,-0.1450,0.0000,0.9250,0.0800,-0.0870,1.1900,-0.0900,0.0870,1.1900,-0.0900,0.1720,1.3200,-0.0300,-0.1720,1.3200,-0.0300,0.1500,1.2300,-0.0150,-0.1500,1.2300,-0.0150,0.0790,0.9200,-0.1400,0.1000,0.9000,0.0770,-0.0790,0.9200,-0.1400,-0.1000,0.9000,0.0750,0.0000,0.8700,0.0000,0.1710,0.6500,0.0000,0.0200,0.6500,0.0000,0.1000,0.6500,-0.0800,0.1000,0.6500,0.0700,-0.1710,0.6500,0.0000,-0.0200,0.6500,0.0000,-0.1000,0.6500,-0.0800,-0.1000,0.6500,0.0700,0.2500,1.2700,-0.0400,0.1700,1.2700,-0.0400,0.2000,1.2700,-0.0900,0.2000,1.2700,0.0200,0.2440,1.1388,-0.0400,0.1650,1.1388,-0.0400,0.2000,1.1388,-0.0800,0.2000,1.1388,-0.0130,0.2250,1.0000,-0.0100,0.2250,1.0000,-0.0700,0.1850,1.0000,-0.0100,0.1850,1.0000,-0.0700,0.2000,1.1388,-0.0400,0.2250,0.9200,-0.0400,0.1750,0.9200,-0.0400,0.2000,0.9200,-0.0650,0.2000,0.9200,-0.0150,0.2250,0.8900,-0.0400,0.1750,0.8900,-0.0400,0.2000,0.8900,-0.0650,0.2000,0.8900,-0.0150,0.2180,0.8600,-0.0400,0.1840,0.8600,-0.0400,0.2000,0.8700,-0.0700,0.2000,0.8700,0.0000,0.2100,0.8500,0.0000,0.1854,0.8500,0.0000,0.2120,0.8400,-0.0150,0.1830,0.8400,-0.0150,0.2130,0.8350,-0.0400,0.1900,0.8350,-0.0400,0.2110,0.8350,-0.0650,0.1920,0.8350,-0.0650,0.2080,0.8400,-0.0850,0.1900,0.8400,-0.0850,0.2000,0.8400,-0.0950,0.2150,0.8200,0.0000,0.1930,0.8150,0.0050,0.1980,0.8000,0.0120,0.2100,0.8200,0.0300,0.1900,0.8200,0.0300,0.2000,0.8350,0.0390,0.2120,0.8000,0.0500,0.1880,0.8000,0.0500,0.2000,0.8070,0.0570,0.2000,0.7930,0.0350,0.2000,0.7740,0.0760,0.2120,0.7800,0.0700,0.1880,0.7800,0.0700,0.2000,0.7850,0.0750,0.2000,0.7700,0.0620,0.2150,0.7930,-0.0150,0.1870,0.7930,-0.0150,0.2000,0.7930,-0.0050,0.2150,0.7880,-0.0400,0.1870,0.7880,-0.0400,0.2150,0.7930,-0.0650,0.1870,0.7930,-0.0650,0.2100,0.7900,-0.0850,0.1900,0.7900,-0.0850,0.2000,0.7900,-0.0950,0.1900,0.7700,-0.0275,0.1900,0.7700,-0.0525,0.1900,0.7800,-0.0775,0.2120,0.7450,-0.0150,0.1880,0.7450,-0.0200,0.2000,0.7450,-0.0255,0.2000,0.7450,-0.0045,0.2110,0.7200,-0.0150,0.1890,0.7200,-0.0150,0.2000,0.7200,-0.0252,0.2000,0.7200,-0.0048,0.2100,0.6950,-0.0150,0.1900,0.6950,-0.0150,0.2000,0.6950,-0.0250,0.2000,0.6950,-0.0050,0.2000,0.6850,-0.0150,0.2150,0.7400,-0.0400,0.1850,0.7400,-0.0400,0.2000,0.7400,-0.0550,0.2000,0.7400,-0.0250,0.2100,0.7142,-0.0400,0.1900,0.7142,-0.0400,0.2000,0.7142,-0.0530,0.2000,0.7142,-0.0270,0.2100,0.6800,-0.0400,0.1900,0.6800,-0.0400,0.2000,0.6800,-0.0500,0.2000,0.6800,-0.0300,0.2000,0.6700,-0.0400,0.2120,0.7400,-0.0650,0.1880,0.7400,-0.0650,0.2000,0.7400,-0.0756,0.2000,0.7400,-0.0542,0.2100,0.7177,-0.0650,0.1900,0.7177,-0.0650,0.2000,0.7177,-0.0751,0.2000,0.7177,-0.0549,0.2100,0.6950,-0.0650,0.1900,0.6950,-0.0650,0.2000,0.6950,-0.0750,0.2000,0.6950,-0.0550,0.2000,0.6850,-0.0650,0.2110,0.7550,-0.0850,0.1890,0.7550,-0.0850,0.2000,0.7550,-0.0952,0.2000,0.7550,-0.0748,0.2100,0.7350,-0.0850,0.1900,0.7350,-0.0850,0.2000,0.7350,-0.0951,0.2000,0.7350,-0.0749,0.2100,0.7200,-0.0850,0.1900,0.7200,-0.0850,0.2000,0.7200,-0.0950,0.2000,0.7200,-0.0750,0.2000,0.7100,-0.0850,-0.2300,1.2300,-0.0400,-0.1600,1.2300,-0.0400,-0.2000,1.2350,-0.1050,-0.2000,1.2350,0.0200,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2000,1.1388,-0.0800,-0.2000,1.1388,0.0130,-0.2250,1.0000,-0.0100,-0.2250,1.0000,-0.0700,-0.1850,1.0000,-0.0100,-0.1850,1.0000,-0.0700,-0.2000,1.1388,-0.0400,-0.2250,0.9200,-0.0400,-0.1750,0.9200,-0.0400,-0.2000,0.9200,-0.0650,-0.2000,0.9200,-0.0150,-0.2250,0.8900,-0.0400,-0.1750,0.8900,-0.0400,-0.2000,0.8900,-0.0650,-0.2000,0.8900,-0.0150,-0.2180,0.8600,-0.0400,-0.1840,0.8600,-0.0400,-0.2000,0.8700,-0.0700,-0.2000,0.8700,0.0000,-0.2100,0.8500,0.0000,-0.1854,0.8500,0.0000,-0.2120,0.8400,-0.0150,-0.1830,0.8400,-0.0150,-0.2130,0.8350,-0.0400,-0.1900,0.8350,-0.0400,-0.2110,0.8350,-0.0650,-0.1920,0.8350,-0.0650,-0.2080,0.8400,-0.0850,-0.1900,0.8400,-0.0850,-0.2000,0.8400,-0.0950,-0.2150,0.8200,0.0000,-0.1930,0.8150,0.0050,-0.1980,0.8000,0.0120,-0.2100,0.8200,0.0300,-0.1900,0.8200,0.0300,-0.2000,0.8350,0.0390,-0.2120,0.8000,0.0500,-0.1880,0.8000,0.0500,-0.2000,0.8070,0.0570,-0.2000,0.7930,0.0350,-0.2000,0.7740,0.0760,-0.2120,0.7800,0.0700,-0.1880,0.7800,0.0700,-0.2000,0.7850,0.0750,-0.2000,0.7700,0.0620,-0.2150,0.7930,-0.0150,-0.1870,0.7930,-0.0150,-0.2000,0.7930,-0.0050,-0.2150,0.7880,-0.0400,-0.1870,0.7880,-0.0400,-0.2150,0.7930,-0.0650,-0.1870,0.7930,-0.0650,-0.2100,0.7900,-0.0850,-0.1900,0.7900,-0.0850,-0.2000,0.7900,-0.0950,-0.1900,0.7700,-0.0275,-0.1900,0.7700,-0.0525,-0.1900,0.7800,-0.0775,-0.2120,0.7450,-0.0150,-0.1880,0.7450,-0.0200,-0.2000,0.7450,-0.0255,-0.2000,0.7450,-0.0045,-0.2110,0.7200,-0.0150,-0.1890,0.7200,-0.0150,-0.2000,0.7200,-0.0252,-0.2000,0.7200,-0.0048,-0.2100,0.6950,-0.0150,-0.1900,0.6950,-0.0150,-0.2000,0.6950,-0.0250,-0.2000,0.6950,-0.0050,-0.2000,0.6850,-0.0150,-0.2150,0.7400,-0.0400,-0.1850,0.7400,-0.0400,-0.2000,0.7400,-0.0550,-0.2000,0.7400,-0.0250,-0.2100,0.7142,-0.0400,-0.1900,0.7142,-0.0400,-0.2000,0.7142,-0.0530,-0.2000,0.7142,-0.0270,-0.2100,0.6800,-0.0400,-0.1900,0.6800,-0.0400,-0.2000,0.6800,-0.0500,-0.2000,0.6800,-0.0300,-0.2000,0.6700,-0.0400,-0.2120,0.7400,-0.0650,-0.1880,0.7400,-0.0650,-0.2000,0.7400,-0.0756,-0.2000,0.7400,-0.0542,-0.2100,0.7177,-0.0650,-0.1900,0.7177,-0.0650,-0.2000,0.7177,-0.0751,-0.2000,0.7177,-0.0549,-0.2100,0.6950,-0.0650,-0.1900,0.6950,-0.0650,-0.2000,0.6950,-0.0750,-0.2000,0.6950,-0.0550,-0.2000,0.6850,-0.0650,-0.2110,0.7550,-0.0850,-0.1890,0.7550,-0.0850,-0.2000,0.7550,-0.0952,-0.2000,0.7550,-0.0748,-0.2100,0.7350,-0.0850,-0.1900,0.7350,-0.0850,-0.2000,0.7350,-0.0951,-0.2000,0.7350,-0.0749,-0.2100,0.7200,-0.0850,-0.1900,0.7200,-0.0850,-0.2000,0.7200,-0.0950,-0.2000,0.7200,-0.0750,-0.2000,0.7100,-0.0850,0.1150,0.4660,0.0600,0.1150,0.4660,-0.0550,0.1500,0.4660,0.0000,0.0500,0.4660,0.0000,0.1700,0.3000,0.0000,0.0600,0.3000,0.0000,0.1000,0.3000,-0.0500,0.1000,0.3000,0.0500,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.1150,0.0690,-0.0450,0.1170,0.0975,0.0615,0.1375,0.0060,-0.0300,0.0950,0.0060,-0.0300,0.1150,0.0150,-0.0450,0.1150,0.0600,0.1000,0.1150,0.0000,0.0700,0.1650,0.0000,0.0700,0.0950,0.0000,0.0700,0.1150,0.0400,0.1300,0.1250,0.0000,0.1200,0.1650,0.0000,0.1200,0.0870,0.0000,0.1220,0.0900,0.0120,0.1880,0.1100,0.0110,0.1900,0.1280,0.0110,0.1850,0.1420,0.0110,0.1780,0.1540,0.0100,0.1680,-0.1150,0.4660,0.0600,-0.1150,0.4660,-0.0550,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1700,0.3000,0.0000,-0.0600,0.3000,0.0000,-0.1000,0.3000,-0.0500,-0.1000,0.3000,0.0500,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.1150,0.0690,-0.0450,-0.1170,0.0975,0.0615,-0.1375,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.1150,0.0600,0.1000,-0.1150,0.0000,0.0700,-0.1650,0.0000,0.0700,-0.0950,0.0000,0.0700,-0.1150,0.0400,0.1300,-0.1250,0.0000,0.1200,-0.1650,0.0000,0.1200,-0.0870,0.0000,0.1220,-0.0900,0.0120,0.1880,-0.1100,0.0110,0.1900,-0.1280,0.0110,0.1850,-0.1420,0.0110,0.1780,-0.1540,0.0100,0.1680)
 
-IndexedFaceSet83.coord.append(Coordinate84)
+IndexedFaceSet83.coord = Coordinate84
 Color85 = x3d.Color()
 Color85.color = [1,0,0,0,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,1,0,1,1,0,1,1,1,1,0,0,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,1,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1]
 
-IndexedFaceSet83.color.append(Color85)
+IndexedFaceSet83.color = Color85
 
 Shape82.geometry = IndexedFaceSet83
 Appearance86 = x3d.Appearance()
@@ -436,7 +436,7 @@ HAnimHumanoid81.skin.append(Shape82)
 Coordinate89 = x3d.Coordinate()
 Coordinate89.USE = "TheSkinCoord"
 
-HAnimHumanoid81.skinCoord.append(Coordinate89)
+HAnimHumanoid81.skinCoord = Coordinate89
 HAnimJoint90 = x3d.HAnimJoint()
 HAnimJoint90.name = "HumanoidRoot"
 HAnimJoint90.DEF = "Joe_HumanoidRoot"
@@ -460,7 +460,7 @@ IndexedLineSet95.coordIndex = [0,1,-1]
 Coordinate96 = x3d.Coordinate()
 Coordinate96.point = (0.0000,0.8750,0.0000,0.0000,0.9200,0.0000)
 
-IndexedLineSet95.coord.append(Coordinate96)
+IndexedLineSet95.coord = Coordinate96
 
 Shape94.geometry = IndexedLineSet95
 Appearance97 = x3d.Appearance()
@@ -515,7 +515,7 @@ IndexedLineSet108.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate109 = x3d.Coordinate()
 Coordinate109.point = (0.0000,0.9200,0.0000,0.0961,0.9124,0.0000,-0.0950,0.9171,0.0029,0.0000,1.0450,-0.0950)
 
-IndexedLineSet108.coord.append(Coordinate109)
+IndexedLineSet108.coord = Coordinate109
 
 Shape107.geometry = IndexedLineSet108
 Appearance110 = x3d.Appearance()
@@ -654,7 +654,7 @@ IndexedLineSet137.coordIndex = [0,1,-1]
 Coordinate138 = x3d.Coordinate()
 Coordinate138.point = (0.1000,0.9200,0.0000,0.1150,0.4660,0.0000)
 
-IndexedLineSet137.coord.append(Coordinate138)
+IndexedLineSet137.coord = Coordinate138
 
 Shape136.geometry = IndexedLineSet137
 Appearance139 = x3d.Appearance()
@@ -768,7 +768,7 @@ IndexedLineSet163.coordIndex = [0,1,-1]
 Coordinate164 = x3d.Coordinate()
 Coordinate164.point = (0.1150,0.4660,0.0000,0.1000,0.0690,0.0000)
 
-IndexedLineSet163.coord.append(Coordinate164)
+IndexedLineSet163.coord = Coordinate164
 
 Shape162.geometry = IndexedLineSet163
 Appearance165 = x3d.Appearance()
@@ -888,7 +888,7 @@ IndexedLineSet191.coordIndex = [0,1,-1]
 Coordinate192 = x3d.Coordinate()
 Coordinate192.point = (0.1000,0.0690,0.0000,0.1150,0.0310,0.0300)
 
-IndexedLineSet191.coord.append(Coordinate192)
+IndexedLineSet191.coord = Coordinate192
 
 Shape190.geometry = IndexedLineSet191
 Appearance193 = x3d.Appearance()
@@ -976,7 +976,7 @@ IndexedLineSet211.coordIndex = [0,1,-1]
 Coordinate212 = x3d.Coordinate()
 Coordinate212.point = (0.1150,0.0310,0.0300,0.1150,0.0370,0.0900)
 
-IndexedLineSet211.coord.append(Coordinate212)
+IndexedLineSet211.coord = Coordinate212
 
 Shape210.geometry = IndexedLineSet211
 Appearance213 = x3d.Appearance()
@@ -1036,7 +1036,7 @@ IndexedLineSet225.coordIndex = [0,1,-1]
 Coordinate226 = x3d.Coordinate()
 Coordinate226.point = (0.1150,0.0370,0.0900,0.1150,0.0200,0.1220)
 
-IndexedLineSet225.coord.append(Coordinate226)
+IndexedLineSet225.coord = Coordinate226
 
 Shape224.geometry = IndexedLineSet225
 Appearance227 = x3d.Appearance()
@@ -1114,7 +1114,7 @@ IndexedLineSet243.coordIndex = [0,1,-1]
 Coordinate244 = x3d.Coordinate()
 Coordinate244.point = (0.1150,0.0200,0.1220,0.1320,0.0130,0.1900)
 
-IndexedLineSet243.coord.append(Coordinate244)
+IndexedLineSet243.coord = Coordinate244
 
 Shape242.geometry = IndexedLineSet243
 Appearance245 = x3d.Appearance()
@@ -1254,7 +1254,7 @@ IndexedLineSet273.coordIndex = [0,1,-1]
 Coordinate274 = x3d.Coordinate()
 Coordinate274.point = (-0.1000,0.9200,0.0000,-0.1000,0.4913,0.0000)
 
-IndexedLineSet273.coord.append(Coordinate274)
+IndexedLineSet273.coord = Coordinate274
 
 Shape272.geometry = IndexedLineSet273
 Appearance275 = x3d.Appearance()
@@ -1368,7 +1368,7 @@ IndexedLineSet299.coordIndex = [0,1,-1]
 Coordinate300 = x3d.Coordinate()
 Coordinate300.point = (-0.1000,0.4913,0.0000,-0.1000,0.0712,0.0000)
 
-IndexedLineSet299.coord.append(Coordinate300)
+IndexedLineSet299.coord = Coordinate300
 
 Shape298.geometry = IndexedLineSet299
 Appearance301 = x3d.Appearance()
@@ -1488,7 +1488,7 @@ IndexedLineSet327.coordIndex = [0,1,-1]
 Coordinate328 = x3d.Coordinate()
 Coordinate328.point = (-0.1000,0.0712,0.0000,-0.1000,0.0150,-0.0100)
 
-IndexedLineSet327.coord.append(Coordinate328)
+IndexedLineSet327.coord = Coordinate328
 
 Shape326.geometry = IndexedLineSet327
 Appearance329 = x3d.Appearance()
@@ -1576,7 +1576,7 @@ IndexedLineSet347.coordIndex = [0,1,-1]
 Coordinate348 = x3d.Coordinate()
 Coordinate348.point = (-0.1000,0.0150,-0.0100,-0.1000,0.0200,0.0700)
 
-IndexedLineSet347.coord.append(Coordinate348)
+IndexedLineSet347.coord = Coordinate348
 
 Shape346.geometry = IndexedLineSet347
 Appearance349 = x3d.Appearance()
@@ -1636,7 +1636,7 @@ IndexedLineSet361.coordIndex = [0,1,-1]
 Coordinate362 = x3d.Coordinate()
 Coordinate362.point = (-0.1000,0.0200,0.0700,-0.1000,0.0100,0.1400)
 
-IndexedLineSet361.coord.append(Coordinate362)
+IndexedLineSet361.coord = Coordinate362
 
 Shape360.geometry = IndexedLineSet361
 Appearance363 = x3d.Appearance()
@@ -1714,7 +1714,7 @@ IndexedLineSet379.coordIndex = [0,1,-1]
 Coordinate380 = x3d.Coordinate()
 Coordinate380.point = (-0.1000,0.0100,0.1400,-0.1043,0.0016,0.2000)
 
-IndexedLineSet379.coord.append(Coordinate380)
+IndexedLineSet379.coord = Coordinate380
 
 Shape378.geometry = IndexedLineSet379
 Appearance381 = x3d.Appearance()
@@ -1848,7 +1848,7 @@ IndexedLineSet407.coordIndex = [0,1,-1]
 Coordinate408 = x3d.Coordinate()
 Coordinate408.point = (0.0000,1.0450,-0.0950,0.0000,0.9149,0.0016)
 
-IndexedLineSet407.coord.append(Coordinate408)
+IndexedLineSet407.coord = Coordinate408
 
 Shape406.geometry = IndexedLineSet407
 Appearance409 = x3d.Appearance()
@@ -1868,7 +1868,7 @@ IndexedLineSet412.coordIndex = [0,1,-1]
 Coordinate413 = x3d.Coordinate()
 Coordinate413.point = (0.0000,1.0450,-0.0950,0.0000,1.0680,-0.0850)
 
-IndexedLineSet412.coord.append(Coordinate413)
+IndexedLineSet412.coord = Coordinate413
 
 Shape411.geometry = IndexedLineSet412
 Appearance414 = x3d.Appearance()
@@ -1914,7 +1914,7 @@ IndexedLineSet422.coordIndex = [0,1,-1]
 Coordinate423 = x3d.Coordinate()
 Coordinate423.point = (0.0000,1.0680,-0.0850,0.0000,1.0920,-0.0725)
 
-IndexedLineSet422.coord.append(Coordinate423)
+IndexedLineSet422.coord = Coordinate423
 
 Shape421.geometry = IndexedLineSet422
 Appearance424 = x3d.Appearance()
@@ -1948,7 +1948,7 @@ IndexedLineSet430.coordIndex = [0,1,-1]
 Coordinate431 = x3d.Coordinate()
 Coordinate431.point = (0.0000,1.0920,-0.0725,0.0000,1.1200,-0.0650)
 
-IndexedLineSet430.coord.append(Coordinate431)
+IndexedLineSet430.coord = Coordinate431
 
 Shape429.geometry = IndexedLineSet430
 Appearance432 = x3d.Appearance()
@@ -1984,7 +1984,7 @@ IndexedLineSet438.coordIndex = [0,1,-1]
 Coordinate439 = x3d.Coordinate()
 Coordinate439.point = (0.0000,1.1200,-0.0650,0.0000,1.1459,-0.0625)
 
-IndexedLineSet438.coord.append(Coordinate439)
+IndexedLineSet438.coord = Coordinate439
 
 Shape437.geometry = IndexedLineSet438
 Appearance440 = x3d.Appearance()
@@ -2096,7 +2096,7 @@ IndexedLineSet464.coordIndex = [0,1,-1]
 Coordinate465 = x3d.Coordinate()
 Coordinate465.point = (0.0000,1.1459,-0.0625,0.0000,1.1790,-0.0680)
 
-IndexedLineSet464.coord.append(Coordinate465)
+IndexedLineSet464.coord = Coordinate465
 
 Shape463.geometry = IndexedLineSet464
 Appearance466 = x3d.Appearance()
@@ -2130,7 +2130,7 @@ IndexedLineSet472.coordIndex = [0,1,-1]
 Coordinate473 = x3d.Coordinate()
 Coordinate473.point = (0.0000,1.1790,-0.0680,0.0000,1.2420,-0.0900)
 
-IndexedLineSet472.coord.append(Coordinate473)
+IndexedLineSet472.coord = Coordinate473
 
 Shape471.geometry = IndexedLineSet472
 Appearance474 = x3d.Appearance()
@@ -2164,7 +2164,7 @@ IndexedLineSet480.coordIndex = [0,1,-1]
 Coordinate481 = x3d.Coordinate()
 Coordinate481.point = (0.0000,1.2145,-0.0755,0.0000,1.2420,-0.0900)
 
-IndexedLineSet480.coord.append(Coordinate481)
+IndexedLineSet480.coord = Coordinate481
 
 Shape479.geometry = IndexedLineSet480
 Appearance482 = x3d.Appearance()
@@ -2200,7 +2200,7 @@ IndexedLineSet488.coordIndex = [0,1,-1]
 Coordinate489 = x3d.Coordinate()
 Coordinate489.point = (0.0000,1.2420,-0.0900,0.0000,1.2680,-0.1000)
 
-IndexedLineSet488.coord.append(Coordinate489)
+IndexedLineSet488.coord = Coordinate489
 
 Shape487.geometry = IndexedLineSet488
 Appearance490 = x3d.Appearance()
@@ -2246,7 +2246,7 @@ IndexedLineSet498.coordIndex = [0,1,-1]
 Coordinate499 = x3d.Coordinate()
 Coordinate499.point = (0.0000,1.2680,-0.1000,0.0000,1.2940,-0.1100)
 
-IndexedLineSet498.coord.append(Coordinate499)
+IndexedLineSet498.coord = Coordinate499
 
 Shape497.geometry = IndexedLineSet498
 Appearance500 = x3d.Appearance()
@@ -2300,7 +2300,7 @@ IndexedLineSet510.coordIndex = [0,1,-1]
 Coordinate511 = x3d.Coordinate()
 Coordinate511.point = (0.0000,1.2940,-0.1100,0.0000,1.3520,-0.1200)
 
-IndexedLineSet510.coord.append(Coordinate511)
+IndexedLineSet510.coord = Coordinate511
 
 Shape509.geometry = IndexedLineSet510
 Appearance512 = x3d.Appearance()
@@ -2334,7 +2334,7 @@ IndexedLineSet518.coordIndex = [0,1,-1]
 Coordinate519 = x3d.Coordinate()
 Coordinate519.point = (0.0000,1.3520,-0.1200,0.0000,1.3810,-0.1235)
 
-IndexedLineSet518.coord.append(Coordinate519)
+IndexedLineSet518.coord = Coordinate519
 
 Shape517.geometry = IndexedLineSet518
 Appearance520 = x3d.Appearance()
@@ -2368,7 +2368,7 @@ IndexedLineSet526.coordIndex = [0,1,-1]
 Coordinate527 = x3d.Coordinate()
 Coordinate527.point = (0.0000,1.3810,-0.1235,0.0000,1.4100,-0.1235)
 
-IndexedLineSet526.coord.append(Coordinate527)
+IndexedLineSet526.coord = Coordinate527
 
 Shape525.geometry = IndexedLineSet526
 Appearance528 = x3d.Appearance()
@@ -2402,7 +2402,7 @@ IndexedLineSet534.coordIndex = [0,1,-1]
 Coordinate535 = x3d.Coordinate()
 Coordinate535.point = (0.0000,1.4100,-0.1235,0.0000,1.4380,-0.1200)
 
-IndexedLineSet534.coord.append(Coordinate535)
+IndexedLineSet534.coord = Coordinate535
 
 Shape533.geometry = IndexedLineSet534
 Appearance536 = x3d.Appearance()
@@ -2438,7 +2438,7 @@ IndexedLineSet542.coordIndex = [0,1,-1]
 Coordinate543 = x3d.Coordinate()
 Coordinate543.point = (0.0000,1.4100,-0.1235,0.0000,1.4380,-0.1200)
 
-IndexedLineSet542.coord.append(Coordinate543)
+IndexedLineSet542.coord = Coordinate543
 
 Shape541.geometry = IndexedLineSet542
 Appearance544 = x3d.Appearance()
@@ -2480,7 +2480,7 @@ IndexedLineSet552.coordIndex = [0,1,-1]
 Coordinate553 = x3d.Coordinate()
 Coordinate553.point = (0.0000,1.4380,-0.1200,0.0000,1.4680,-0.1050)
 
-IndexedLineSet552.coord.append(Coordinate553)
+IndexedLineSet552.coord = Coordinate553
 
 Shape551.geometry = IndexedLineSet552
 Appearance554 = x3d.Appearance()
@@ -2514,7 +2514,7 @@ IndexedLineSet560.coordIndex = [0,1,-1]
 Coordinate561 = x3d.Coordinate()
 Coordinate561.point = (0.0000,1.4680,-0.1050,0.0000,1.4970,-0.0900)
 
-IndexedLineSet560.coord.append(Coordinate561)
+IndexedLineSet560.coord = Coordinate561
 
 Shape559.geometry = IndexedLineSet560
 Appearance562 = x3d.Appearance()
@@ -2550,7 +2550,7 @@ IndexedLineSet568.coordIndex = [0,1,-1]
 Coordinate569 = x3d.Coordinate()
 Coordinate569.point = (0.0000,1.4970,-0.0900,0.0000,1.5250,-0.0720)
 
-IndexedLineSet568.coord.append(Coordinate569)
+IndexedLineSet568.coord = Coordinate569
 
 Shape567.geometry = IndexedLineSet568
 Appearance570 = x3d.Appearance()
@@ -2606,7 +2606,7 @@ IndexedLineSet580.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate581 = x3d.Coordinate()
 Coordinate581.point = (0.0000,1.5250,-0.0720,0.0820,1.4488,-0.0353,-0.0300,1.4600,0.0200,0.0000,1.5400,-0.0500)
 
-IndexedLineSet580.coord.append(Coordinate581)
+IndexedLineSet580.coord = Coordinate581
 
 Shape579.geometry = IndexedLineSet580
 Appearance582 = x3d.Appearance()
@@ -2660,7 +2660,7 @@ IndexedLineSet592.coordIndex = [0,1,-1]
 Coordinate593 = x3d.Coordinate()
 Coordinate593.point = (0.0000,1.5400,-0.0500,0.0000,1.5675,-0.0256)
 
-IndexedLineSet592.coord.append(Coordinate593)
+IndexedLineSet592.coord = Coordinate593
 
 Shape591.geometry = IndexedLineSet592
 Appearance594 = x3d.Appearance()
@@ -2702,7 +2702,7 @@ IndexedLineSet602.coordIndex = [0,1,-1]
 Coordinate603 = x3d.Coordinate()
 Coordinate603.point = (0.0000,1.5675,-0.0256,0.0000,1.5822,-0.0185)
 
-IndexedLineSet602.coord.append(Coordinate603)
+IndexedLineSet602.coord = Coordinate603
 
 Shape601.geometry = IndexedLineSet602
 Appearance604 = x3d.Appearance()
@@ -2728,7 +2728,7 @@ IndexedLineSet608.coordIndex = [0,1,-1]
 Coordinate609 = x3d.Coordinate()
 Coordinate609.point = (0.0000,1.5822,-0.0185,0.0000,1.5950,-0.0175)
 
-IndexedLineSet608.coord.append(Coordinate609)
+IndexedLineSet608.coord = Coordinate609
 
 Shape607.geometry = IndexedLineSet608
 Appearance610 = x3d.Appearance()
@@ -2762,7 +2762,7 @@ IndexedLineSet616.coordIndex = [0,1,-1]
 Coordinate617 = x3d.Coordinate()
 Coordinate617.point = (0.0000,1.5950,-0.0175,0.0000,1.6100,-0.0150)
 
-IndexedLineSet616.coord.append(Coordinate617)
+IndexedLineSet616.coord = Coordinate617
 
 Shape615.geometry = IndexedLineSet616
 Appearance618 = x3d.Appearance()
@@ -2796,7 +2796,7 @@ IndexedLineSet624.coordIndex = [0,1,-1]
 Coordinate625 = x3d.Coordinate()
 Coordinate625.point = (0.0000,1.6100,-0.0150,0.0000,1.6144,-0.0034)
 
-IndexedLineSet624.coord.append(Coordinate625)
+IndexedLineSet624.coord = Coordinate625
 
 Shape623.geometry = IndexedLineSet624
 Appearance626 = x3d.Appearance()
@@ -2830,7 +2830,7 @@ IndexedLineSet632.coordIndex = [0,1,-1]
 Coordinate633 = x3d.Coordinate()
 Coordinate633.point = (0.0000,1.6144,-0.0034,0.0000,1.6300,-0.0100)
 
-IndexedLineSet632.coord.append(Coordinate633)
+IndexedLineSet632.coord = Coordinate633
 
 Shape631.geometry = IndexedLineSet632
 Appearance634 = x3d.Appearance()
@@ -2866,7 +2866,7 @@ IndexedLineSet640.coordIndex = [0,1,-1,0,2,-1]
 Coordinate641 = x3d.Coordinate()
 Coordinate641.point = (0.0000,1.6300,-0.0100,0.0340,1.6590,0.0600,-0.0340,1.6550,0.0650)
 
-IndexedLineSet640.coord.append(Coordinate641)
+IndexedLineSet640.coord = Coordinate641
 
 Shape639.geometry = IndexedLineSet640
 Appearance642 = x3d.Appearance()
@@ -3000,7 +3000,7 @@ IndexedLineSet668.coordIndex = [0,1,-1]
 Coordinate669 = x3d.Coordinate()
 Coordinate669.point = (0.0340,1.6550,0.0650,-0.0340,1.6550,0.0650)
 
-IndexedLineSet668.coord.append(Coordinate669)
+IndexedLineSet668.coord = Coordinate669
 
 Shape667.geometry = IndexedLineSet668
 Appearance670 = x3d.Appearance()
@@ -3037,7 +3037,7 @@ IndexedLineSet676.coordIndex = [0,1,-1]
 Coordinate677 = x3d.Coordinate()
 Coordinate677.point = (0.0340,1.6550,0.0650,-0.0340,1.6550,0.0650)
 
-IndexedLineSet676.coord.append(Coordinate677)
+IndexedLineSet676.coord = Coordinate677
 
 Shape675.geometry = IndexedLineSet676
 Appearance678 = x3d.Appearance()
@@ -3092,7 +3092,7 @@ IndexedLineSet684.coordIndex = [0,1,-1]
 Coordinate685 = x3d.Coordinate()
 Coordinate685.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
-IndexedLineSet684.coord.append(Coordinate685)
+IndexedLineSet684.coord = Coordinate685
 
 Shape683.geometry = IndexedLineSet684
 Appearance686 = x3d.Appearance()
@@ -3138,7 +3138,7 @@ IndexedLineSet694.coordIndex = [0,1,-1]
 Coordinate695 = x3d.Coordinate()
 Coordinate695.point = (0.0962,1.4269,-0.0424,0.2000,1.4400,-0.0400)
 
-IndexedLineSet694.coord.append(Coordinate695)
+IndexedLineSet694.coord = Coordinate695
 
 Shape693.geometry = IndexedLineSet694
 Appearance696 = x3d.Appearance()
@@ -3212,7 +3212,7 @@ IndexedLineSet710.coordIndex = [0,1,-1]
 Coordinate711 = x3d.Coordinate()
 Coordinate711.point = (0.2029,1.4400,-0.0387,0.2000,1.1388,-0.0400)
 
-IndexedLineSet710.coord.append(Coordinate711)
+IndexedLineSet710.coord = Coordinate711
 
 Shape709.geometry = IndexedLineSet710
 Appearance712 = x3d.Appearance()
@@ -3318,7 +3318,7 @@ IndexedLineSet734.coordIndex = [0,1,-1]
 Coordinate735 = x3d.Coordinate()
 Coordinate735.point = (0.2000,1.1388,-0.0400,0.2000,0.8700,-0.0400)
 
-IndexedLineSet734.coord.append(Coordinate735)
+IndexedLineSet734.coord = Coordinate735
 
 Shape733.geometry = IndexedLineSet734
 Appearance736 = x3d.Appearance()
@@ -3414,7 +3414,7 @@ IndexedLineSet756.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
 Coordinate757 = x3d.Coordinate()
 Coordinate757.point = (0.2000,0.8700,-0.0400,0.1924,0.8472,-0.0534,0.1983,0.8024,-0.0280,0.1987,0.8029,-0.0530,0.1956,0.8019,-0.0794,0.1925,0.8066,-0.1036)
 
-IndexedLineSet756.coord.append(Coordinate757)
+IndexedLineSet756.coord = Coordinate757
 
 Shape755.geometry = IndexedLineSet756
 Appearance758 = x3d.Appearance()
@@ -3480,7 +3480,7 @@ IndexedLineSet770.coordIndex = [0,1,-1]
 Coordinate771 = x3d.Coordinate()
 Coordinate771.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
-IndexedLineSet770.coord.append(Coordinate771)
+IndexedLineSet770.coord = Coordinate771
 
 Shape769.geometry = IndexedLineSet770
 Appearance772 = x3d.Appearance()
@@ -3516,7 +3516,7 @@ IndexedLineSet778.coordIndex = [0,1,-1]
 Coordinate779 = x3d.Coordinate()
 Coordinate779.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
-IndexedLineSet778.coord.append(Coordinate779)
+IndexedLineSet778.coord = Coordinate779
 
 Shape777.geometry = IndexedLineSet778
 Appearance780 = x3d.Appearance()
@@ -3552,7 +3552,7 @@ IndexedLineSet786.coordIndex = [0,1,-1]
 Coordinate787 = x3d.Coordinate()
 Coordinate787.point = (0.1955,0.8159,0.0464,0.1982,0.8061,0.0759)
 
-IndexedLineSet786.coord.append(Coordinate787)
+IndexedLineSet786.coord = Coordinate787
 
 Shape785.geometry = IndexedLineSet786
 Appearance788 = x3d.Appearance()
@@ -3604,7 +3604,7 @@ IndexedLineSet796.coordIndex = [0,1,-1]
 Coordinate797 = x3d.Coordinate()
 Coordinate797.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
-IndexedLineSet796.coord.append(Coordinate797)
+IndexedLineSet796.coord = Coordinate797
 
 Shape795.geometry = IndexedLineSet796
 Appearance798 = x3d.Appearance()
@@ -3640,7 +3640,7 @@ IndexedLineSet804.coordIndex = [0,1,-1]
 Coordinate805 = x3d.Coordinate()
 Coordinate805.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
-IndexedLineSet804.coord.append(Coordinate805)
+IndexedLineSet804.coord = Coordinate805
 
 Shape803.geometry = IndexedLineSet804
 Appearance806 = x3d.Appearance()
@@ -3676,7 +3676,7 @@ IndexedLineSet812.coordIndex = [0,1,-1]
 Coordinate813 = x3d.Coordinate()
 Coordinate813.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
-IndexedLineSet812.coord.append(Coordinate813)
+IndexedLineSet812.coord = Coordinate813
 
 Shape811.geometry = IndexedLineSet812
 Appearance814 = x3d.Appearance()
@@ -3712,7 +3712,7 @@ IndexedLineSet820.coordIndex = [0,1,-1]
 Coordinate821 = x3d.Coordinate()
 Coordinate821.point = (0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245)
 
-IndexedLineSet820.coord.append(Coordinate821)
+IndexedLineSet820.coord = Coordinate821
 
 Shape819.geometry = IndexedLineSet820
 Appearance822 = x3d.Appearance()
@@ -3776,7 +3776,7 @@ IndexedLineSet832.coordIndex = [0,1,-1]
 Coordinate833 = x3d.Coordinate()
 Coordinate833.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
-IndexedLineSet832.coord.append(Coordinate833)
+IndexedLineSet832.coord = Coordinate833
 
 Shape831.geometry = IndexedLineSet832
 Appearance834 = x3d.Appearance()
@@ -3812,7 +3812,7 @@ IndexedLineSet840.coordIndex = [0,1,-1]
 Coordinate841 = x3d.Coordinate()
 Coordinate841.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
-IndexedLineSet840.coord.append(Coordinate841)
+IndexedLineSet840.coord = Coordinate841
 
 Shape839.geometry = IndexedLineSet840
 Appearance842 = x3d.Appearance()
@@ -3848,7 +3848,7 @@ IndexedLineSet848.coordIndex = [0,1,-1]
 Coordinate849 = x3d.Coordinate()
 Coordinate849.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
-IndexedLineSet848.coord.append(Coordinate849)
+IndexedLineSet848.coord = Coordinate849
 
 Shape847.geometry = IndexedLineSet848
 Appearance850 = x3d.Appearance()
@@ -3884,7 +3884,7 @@ IndexedLineSet856.coordIndex = [0,1,-1]
 Coordinate857 = x3d.Coordinate()
 Coordinate857.point = (0.2026,0.7011,-0.0494,0.2080,0.6731,-0.0491)
 
-IndexedLineSet856.coord.append(Coordinate857)
+IndexedLineSet856.coord = Coordinate857
 
 Shape855.geometry = IndexedLineSet856
 Appearance858 = x3d.Appearance()
@@ -3938,7 +3938,7 @@ IndexedLineSet866.coordIndex = [0,1,-1]
 Coordinate867 = x3d.Coordinate()
 Coordinate867.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
-IndexedLineSet866.coord.append(Coordinate867)
+IndexedLineSet866.coord = Coordinate867
 
 Shape865.geometry = IndexedLineSet866
 Appearance868 = x3d.Appearance()
@@ -3974,7 +3974,7 @@ IndexedLineSet874.coordIndex = [0,1,-1]
 Coordinate875 = x3d.Coordinate()
 Coordinate875.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
-IndexedLineSet874.coord.append(Coordinate875)
+IndexedLineSet874.coord = Coordinate875
 
 Shape873.geometry = IndexedLineSet874
 Appearance876 = x3d.Appearance()
@@ -4010,7 +4010,7 @@ IndexedLineSet882.coordIndex = [0,1,-1]
 Coordinate883 = x3d.Coordinate()
 Coordinate883.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
-IndexedLineSet882.coord.append(Coordinate883)
+IndexedLineSet882.coord = Coordinate883
 
 Shape881.geometry = IndexedLineSet882
 Appearance884 = x3d.Appearance()
@@ -4046,7 +4046,7 @@ IndexedLineSet890.coordIndex = [0,1,-1]
 Coordinate891 = x3d.Coordinate()
 Coordinate891.point = (0.1983,0.7045,-0.0767,0.2035,0.6750,-0.0756)
 
-IndexedLineSet890.coord.append(Coordinate891)
+IndexedLineSet890.coord = Coordinate891
 
 Shape889.geometry = IndexedLineSet890
 Appearance892 = x3d.Appearance()
@@ -4100,7 +4100,7 @@ IndexedLineSet900.coordIndex = [0,1,-1]
 Coordinate901 = x3d.Coordinate()
 Coordinate901.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
-IndexedLineSet900.coord.append(Coordinate901)
+IndexedLineSet900.coord = Coordinate901
 
 Shape899.geometry = IndexedLineSet900
 Appearance902 = x3d.Appearance()
@@ -4136,7 +4136,7 @@ IndexedLineSet908.coordIndex = [0,1,-1]
 Coordinate909 = x3d.Coordinate()
 Coordinate909.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
-IndexedLineSet908.coord.append(Coordinate909)
+IndexedLineSet908.coord = Coordinate909
 
 Shape907.geometry = IndexedLineSet908
 Appearance910 = x3d.Appearance()
@@ -4180,7 +4180,7 @@ IndexedLineSet918.coordIndex = [0,1,-1]
 Coordinate919 = x3d.Coordinate()
 Coordinate919.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
-IndexedLineSet918.coord.append(Coordinate919)
+IndexedLineSet918.coord = Coordinate919
 
 Shape917.geometry = IndexedLineSet918
 Appearance920 = x3d.Appearance()
@@ -4208,7 +4208,7 @@ IndexedLineSet924.coordIndex = [0,1,-1]
 Coordinate925 = x3d.Coordinate()
 Coordinate925.point = (0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012)
 
-IndexedLineSet924.coord.append(Coordinate925)
+IndexedLineSet924.coord = Coordinate925
 
 Shape923.geometry = IndexedLineSet924
 Appearance926 = x3d.Appearance()
@@ -4272,7 +4272,7 @@ IndexedLineSet934.coordIndex = [0,1,-1]
 Coordinate935 = x3d.Coordinate()
 Coordinate935.point = (-0.0300,1.4600,0.0200,-0.0900,1.4100,-0.0900)
 
-IndexedLineSet934.coord.append(Coordinate935)
+IndexedLineSet934.coord = Coordinate935
 
 Shape933.geometry = IndexedLineSet934
 Appearance936 = x3d.Appearance()
@@ -4318,7 +4318,7 @@ IndexedLineSet944.coordIndex = [0,1,-1]
 Coordinate945 = x3d.Coordinate()
 Coordinate945.point = (-0.0900,1.4100,-0.0900,-0.2000,1.4400,-0.0400)
 
-IndexedLineSet944.coord.append(Coordinate945)
+IndexedLineSet944.coord = Coordinate945
 
 Shape943.geometry = IndexedLineSet944
 Appearance946 = x3d.Appearance()
@@ -4400,7 +4400,7 @@ IndexedLineSet962.coordIndex = [0,1,-1]
 Coordinate963 = x3d.Coordinate()
 Coordinate963.point = (-0.2000,1.4400,-0.0400,-0.2000,1.1388,-0.0400)
 
-IndexedLineSet962.coord.append(Coordinate963)
+IndexedLineSet962.coord = Coordinate963
 
 Shape961.geometry = IndexedLineSet962
 Appearance964 = x3d.Appearance()
@@ -4522,7 +4522,7 @@ IndexedLineSet990.coordIndex = [0,1,-1]
 Coordinate991 = x3d.Coordinate()
 Coordinate991.point = (-0.2000,1.1388,-0.0400,-0.2000,0.8900,-0.0400)
 
-IndexedLineSet990.coord.append(Coordinate991)
+IndexedLineSet990.coord = Coordinate991
 
 Shape989.geometry = IndexedLineSet990
 Appearance992 = x3d.Appearance()
@@ -4618,7 +4618,7 @@ IndexedLineSet1012.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
 Coordinate1013 = x3d.Coordinate()
 Coordinate1013.point = (-0.2000,0.8900,-0.0400,-0.2000,0.8500,0.0000,-0.2000,0.8400,-0.0150,-0.2000,0.8350,-0.0400,-0.2000,0.8350,-0.0650,-0.2000,0.8400,-0.0850)
 
-IndexedLineSet1012.coord.append(Coordinate1013)
+IndexedLineSet1012.coord = Coordinate1013
 
 Shape1011.geometry = IndexedLineSet1012
 Appearance1014 = x3d.Appearance()
@@ -4664,7 +4664,7 @@ IndexedLineSet1022.coordIndex = [0,1,-1]
 Coordinate1023 = x3d.Coordinate()
 Coordinate1023.point = (-0.2000,0.8500,0.0000,-0.2000,0.8200,0.0300)
 
-IndexedLineSet1022.coord.append(Coordinate1023)
+IndexedLineSet1022.coord = Coordinate1023
 
 Shape1021.geometry = IndexedLineSet1022
 Appearance1024 = x3d.Appearance()
@@ -4700,7 +4700,7 @@ IndexedLineSet1030.coordIndex = [0,1,-1]
 Coordinate1031 = x3d.Coordinate()
 Coordinate1031.point = (-0.2000,0.8200,0.0300,-0.2000,0.8000,0.0500)
 
-IndexedLineSet1030.coord.append(Coordinate1031)
+IndexedLineSet1030.coord = Coordinate1031
 
 Shape1029.geometry = IndexedLineSet1030
 Appearance1032 = x3d.Appearance()
@@ -4736,7 +4736,7 @@ IndexedLineSet1038.coordIndex = [0,1,-1]
 Coordinate1039 = x3d.Coordinate()
 Coordinate1039.point = (-0.2000,0.8000,0.0500,-0.2000,0.7800,0.0700)
 
-IndexedLineSet1038.coord.append(Coordinate1039)
+IndexedLineSet1038.coord = Coordinate1039
 
 Shape1037.geometry = IndexedLineSet1038
 Appearance1040 = x3d.Appearance()
@@ -4797,7 +4797,7 @@ IndexedLineSet1050.coordIndex = [0,1,-1]
 Coordinate1051 = x3d.Coordinate()
 Coordinate1051.point = (-0.2000,0.8400,-0.0150,-0.2000,0.7930,-0.0150)
 
-IndexedLineSet1050.coord.append(Coordinate1051)
+IndexedLineSet1050.coord = Coordinate1051
 
 Shape1049.geometry = IndexedLineSet1050
 Appearance1052 = x3d.Appearance()
@@ -4843,7 +4843,7 @@ IndexedLineSet1060.coordIndex = [0,1,-1]
 Coordinate1061 = x3d.Coordinate()
 Coordinate1061.point = (-0.2000,0.7930,-0.0150,-0.2000,0.7450,-0.0150)
 
-IndexedLineSet1060.coord.append(Coordinate1061)
+IndexedLineSet1060.coord = Coordinate1061
 
 Shape1059.geometry = IndexedLineSet1060
 Appearance1062 = x3d.Appearance()
@@ -4879,7 +4879,7 @@ IndexedLineSet1068.coordIndex = [0,1,-1]
 Coordinate1069 = x3d.Coordinate()
 Coordinate1069.point = (-0.2000,0.7450,-0.0150,-0.2000,0.7200,-0.0150)
 
-IndexedLineSet1068.coord.append(Coordinate1069)
+IndexedLineSet1068.coord = Coordinate1069
 
 Shape1067.geometry = IndexedLineSet1068
 Appearance1070 = x3d.Appearance()
@@ -4915,7 +4915,7 @@ IndexedLineSet1076.coordIndex = [0,1,-1]
 Coordinate1077 = x3d.Coordinate()
 Coordinate1077.point = (-0.2000,0.7200,-0.0150,-0.2000,0.6950,-0.0150)
 
-IndexedLineSet1076.coord.append(Coordinate1077)
+IndexedLineSet1076.coord = Coordinate1077
 
 Shape1075.geometry = IndexedLineSet1076
 Appearance1078 = x3d.Appearance()
@@ -4969,7 +4969,7 @@ IndexedLineSet1086.coordIndex = [0,1,-1]
 Coordinate1087 = x3d.Coordinate()
 Coordinate1087.point = (-0.2000,0.8350,-0.0400,-0.2000,0.7880,-0.0400)
 
-IndexedLineSet1086.coord.append(Coordinate1087)
+IndexedLineSet1086.coord = Coordinate1087
 
 Shape1085.geometry = IndexedLineSet1086
 Appearance1088 = x3d.Appearance()
@@ -5005,7 +5005,7 @@ IndexedLineSet1094.coordIndex = [0,1,-1]
 Coordinate1095 = x3d.Coordinate()
 Coordinate1095.point = (-0.2000,0.7880,-0.0400,-0.2000,0.7400,-0.0400)
 
-IndexedLineSet1094.coord.append(Coordinate1095)
+IndexedLineSet1094.coord = Coordinate1095
 
 Shape1093.geometry = IndexedLineSet1094
 Appearance1096 = x3d.Appearance()
@@ -5041,7 +5041,7 @@ IndexedLineSet1102.coordIndex = [0,1,-1]
 Coordinate1103 = x3d.Coordinate()
 Coordinate1103.point = (-0.2000,0.7400,-0.0400,-0.2000,0.7142,-0.0400)
 
-IndexedLineSet1102.coord.append(Coordinate1103)
+IndexedLineSet1102.coord = Coordinate1103
 
 Shape1101.geometry = IndexedLineSet1102
 Appearance1104 = x3d.Appearance()
@@ -5077,7 +5077,7 @@ IndexedLineSet1110.coordIndex = [0,1,-1]
 Coordinate1111 = x3d.Coordinate()
 Coordinate1111.point = (-0.2000,0.7142,-0.0400,-0.2000,0.6758,-0.0400)
 
-IndexedLineSet1110.coord.append(Coordinate1111)
+IndexedLineSet1110.coord = Coordinate1111
 
 Shape1109.geometry = IndexedLineSet1110
 Appearance1112 = x3d.Appearance()
@@ -5141,7 +5141,7 @@ IndexedLineSet1122.coordIndex = [0,1,-1]
 Coordinate1123 = x3d.Coordinate()
 Coordinate1123.point = (-0.2000,0.8350,-0.0650,-0.2000,0.7930,-0.0650)
 
-IndexedLineSet1122.coord.append(Coordinate1123)
+IndexedLineSet1122.coord = Coordinate1123
 
 Shape1121.geometry = IndexedLineSet1122
 Appearance1124 = x3d.Appearance()
@@ -5177,7 +5177,7 @@ IndexedLineSet1130.coordIndex = [0,1,-1]
 Coordinate1131 = x3d.Coordinate()
 Coordinate1131.point = (-0.2000,0.7930,-0.0650,-0.2000,0.7400,-0.0650)
 
-IndexedLineSet1130.coord.append(Coordinate1131)
+IndexedLineSet1130.coord = Coordinate1131
 
 Shape1129.geometry = IndexedLineSet1130
 Appearance1132 = x3d.Appearance()
@@ -5213,7 +5213,7 @@ IndexedLineSet1138.coordIndex = [0,1,-1]
 Coordinate1139 = x3d.Coordinate()
 Coordinate1139.point = (-0.2000,0.7400,-0.0650,-0.2000,0.7177,-0.0650)
 
-IndexedLineSet1138.coord.append(Coordinate1139)
+IndexedLineSet1138.coord = Coordinate1139
 
 Shape1137.geometry = IndexedLineSet1138
 Appearance1140 = x3d.Appearance()
@@ -5249,7 +5249,7 @@ IndexedLineSet1146.coordIndex = [0,1,-1]
 Coordinate1147 = x3d.Coordinate()
 Coordinate1147.point = (-0.2000,0.7177,-0.0650,-0.2000,0.6950,-0.0650)
 
-IndexedLineSet1146.coord.append(Coordinate1147)
+IndexedLineSet1146.coord = Coordinate1147
 
 Shape1145.geometry = IndexedLineSet1146
 Appearance1148 = x3d.Appearance()
@@ -5303,7 +5303,7 @@ IndexedLineSet1156.coordIndex = [0,1,-1]
 Coordinate1157 = x3d.Coordinate()
 Coordinate1157.point = (-0.2000,0.8400,-0.0850,-0.2000,0.7900,-0.0850)
 
-IndexedLineSet1156.coord.append(Coordinate1157)
+IndexedLineSet1156.coord = Coordinate1157
 
 Shape1155.geometry = IndexedLineSet1156
 Appearance1158 = x3d.Appearance()
@@ -5349,7 +5349,7 @@ IndexedLineSet1166.coordIndex = [0,1,-1]
 Coordinate1167 = x3d.Coordinate()
 Coordinate1167.point = (-0.2000,0.7900,-0.0850,-0.2000,0.7550,-0.0850)
 
-IndexedLineSet1166.coord.append(Coordinate1167)
+IndexedLineSet1166.coord = Coordinate1167
 
 Shape1165.geometry = IndexedLineSet1166
 Appearance1168 = x3d.Appearance()
@@ -5385,7 +5385,7 @@ IndexedLineSet1174.coordIndex = [0,1,-1]
 Coordinate1175 = x3d.Coordinate()
 Coordinate1175.point = (-0.2000,0.7550,-0.0850,-0.2000,0.7350,-0.0850)
 
-IndexedLineSet1174.coord.append(Coordinate1175)
+IndexedLineSet1174.coord = Coordinate1175
 
 Shape1173.geometry = IndexedLineSet1174
 Appearance1176 = x3d.Appearance()
@@ -5421,7 +5421,7 @@ IndexedLineSet1182.coordIndex = [0,1,-1]
 Coordinate1183 = x3d.Coordinate()
 Coordinate1183.point = (-0.2000,0.7350,-0.0850,-0.2000,0.7200,-0.0850)
 
-IndexedLineSet1182.coord.append(Coordinate1183)
+IndexedLineSet1182.coord = Coordinate1183
 
 Shape1181.geometry = IndexedLineSet1182
 Appearance1184 = x3d.Appearance()

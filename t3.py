@@ -17,7 +17,7 @@ component3.level = 2
 head1.children.append(component3)
 meta4 = x3d.meta()
 meta4.name = "title"
-meta4.content = "t4.x3d"
+meta4.content = "t3.x3d"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()

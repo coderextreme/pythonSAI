@@ -27,7 +27,7 @@ meta5.content = "5 May 2015"
 head1.children.append(meta5)
 meta6 = x3d.meta()
 meta6.name = "modified"
-meta6.content = "05 May 2017"
+meta6.content = "23 Dec 2022"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()

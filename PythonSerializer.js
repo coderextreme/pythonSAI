@@ -83,6 +83,23 @@ PythonSerializer.prototype = {
 		// } else if (attrType === "SFString") {
 			// let s =  '('+lead+values.join(',')+trail+')';
 			// return s;
+		} else if (attrType === "MFVec2f") {
+			let Dwhole = [];
+                        for (let i=0; i < len(values); i+=2) {
+				let Dpart = "("+values[i]+", "+values[i+1)+")";
+				Dwhole.append(Dpart);
+			}
+			console.log(Dwhole);
+			return '['+lead+Dwhole.join(j)+trail+']';
+		} else if (attrType.startsWith("MFColor")) {
+			let Dwhole = [];
+			let TupleCount = attrType.endsWith("RGBA") ? 4 : 3;
+                        for (let i=0; i < len(values); i+=TupleCount) {
+				let Dpart = "("+values[i]+", "+values[i+1)+")";
+				Dwhole.append(Dpart);
+			}
+			console.log(Dwhole);
+			return '['+lead+Dwhole.join(j)+trail+']';
 		} else {
 			return '['+lead+values.join(j)+trail+']';
 		}
@@ -343,6 +360,21 @@ PythonSerializer.prototype = {
 				if (method === ".Scene" ||
 					method === ".IS" ||
 					method === ".appearance" ||
+					method === ".metadata" ||
+					method === ".backTexture" ||
+					method === ".back" ||
+					method === ".shape" ||
+					method === ".color" ||
+					method === ".skinCoord" ||
+					method === ".leftTexture" ||
+					method === ".coord" ||
+					method === ".value" ||
+					method === ".normal" ||
+					method === ".source" ||
+					method === ".layerSet" ||
+					method === ".textureTransform" ||
+					method === ".acousticProperties" ||
+					method === ".bottomTexture" ||
 					method === ".texture" ||
 					method === ".fontStyle" ||
 					method === ".material" ||

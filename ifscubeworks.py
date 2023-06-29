@@ -58,15 +58,15 @@ IndexedFaceSet13.colorIndex = [0,0,0,-1,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-
 Coordinate14 = x3d.Coordinate()
 Coordinate14.point = (0.0000,0.0000,1.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,1.0000)
 
-IndexedFaceSet13.coord.append(Coordinate14)
+IndexedFaceSet13.coord = Coordinate14
 Normal15 = x3d.Normal()
 Normal15.vector = (1.0000,0.0000,0.0000,-1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,-1.0000,0.0000,-1.0000,0.0000,0.0000,0.0000,1.0000)
 
-IndexedFaceSet13.normal.append(Normal15)
+IndexedFaceSet13.normal = Normal15
 Color16 = x3d.Color()
 Color16.color = [0,1,0]
 
-IndexedFaceSet13.color.append(Color16)
+IndexedFaceSet13.color = Color16
 
 Shape12.geometry = IndexedFaceSet13
 

@@ -98,11 +98,11 @@ ComposedCubeMapTexture22.DEF = "texture"
 ImageTexture23 = x3d.ImageTexture()
 ImageTexture23.url = ["../resources/images/bBK.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png"]
 
-ComposedCubeMapTexture22.backTexture.append(ImageTexture23)
+ComposedCubeMapTexture22.backTexture = ImageTexture23
 ImageTexture24 = x3d.ImageTexture()
 ImageTexture24.url = ["../resources/images/bBT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png"]
 
-ComposedCubeMapTexture22.bottomTexture.append(ImageTexture24)
+ComposedCubeMapTexture22.bottomTexture = ImageTexture24
 ImageTexture25 = x3d.ImageTexture()
 ImageTexture25.url = ["../resources/images/bFR.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bFR.png"]
 
@@ -110,7 +110,7 @@ ComposedCubeMapTexture22.frontTexture.append(ImageTexture25)
 ImageTexture26 = x3d.ImageTexture()
 ImageTexture26.url = ["../resources/images/bLF.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bLF.png"]
 
-ComposedCubeMapTexture22.leftTexture.append(ImageTexture26)
+ComposedCubeMapTexture22.leftTexture = ImageTexture26
 ImageTexture27 = x3d.ImageTexture()
 ImageTexture27.url = ["../resources/images/bRT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bRT.png"]
 

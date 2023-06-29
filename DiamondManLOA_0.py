@@ -146,7 +146,7 @@ Scene26.children.append(Viewpoint29)
 HAnimHumanoid30 = x3d.HAnimHumanoid()
 HAnimHumanoid30.name = "humanoid"
 HAnimHumanoid30.DEF = "hanim_humanoid"
-HAnimHumanoid30.version = "1.0"
+HAnimHumanoid30.version = "2.0"
 #original HAnimHumanoid info='\"authorEmail=beitler@graphics.cis.upenn.edu beitler@acm.org\" \"authorName=Matthew T. Beitler\" \"copyright=Copyright 1999 Matthew T. Beitler\" \"creationDate=05/12/99\" \"humanoidVersion=JointCenters 1.1 LOA0\" \"usageRestrictions=PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided _as-is_ and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose.\"'
 MetadataSet31 = x3d.MetadataSet()
 MetadataSet31.name = "HAnimHumanoid.info"
@@ -155,34 +155,34 @@ MetadataString32 = x3d.MetadataString()
 MetadataString32.name = "authorEmail"
 MetadataString32.value = ["beitler@graphics.cis.upenn.edu beitler@acm.org"]
 
-MetadataSet31.value.append(MetadataString32)
+MetadataSet31.value = MetadataString32
 MetadataString33 = x3d.MetadataString()
 MetadataString33.name = "authorName"
 MetadataString33.value = ["Matthew T. Beitler"]
 
-MetadataSet31.value.append(MetadataString33)
+MetadataSet31.value = MetadataString33
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "copyright"
 MetadataString34.value = ["Copyright 1999 Matthew T. Beitler"]
 
-MetadataSet31.value.append(MetadataString34)
+MetadataSet31.value = MetadataString34
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "creationDate"
 MetadataString35.value = ["05/12/99"]
 
-MetadataSet31.value.append(MetadataString35)
+MetadataSet31.value = MetadataString35
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "humanoidVersion"
 MetadataString36.value = ["JointCenters 1.1 LOA0"]
 
-MetadataSet31.value.append(MetadataString36)
+MetadataSet31.value = MetadataString36
 MetadataString37 = x3d.MetadataString()
 MetadataString37.name = "usageRestrictions"
 MetadataString37.value = ["PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided _as-is_ and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose."]
 
-MetadataSet31.value.append(MetadataString37)
+MetadataSet31.value = MetadataString37
 
-HAnimHumanoid30.metadata.append(MetadataSet31)
+HAnimHumanoid30.metadata = MetadataSet31
 HAnimJoint38 = x3d.HAnimJoint()
 HAnimJoint38.name = "HumanoidRoot"
 HAnimJoint38.DEF = "hanim_HumanoidRoot"
@@ -208,7 +208,7 @@ IndexedFaceSet43.creaseAngle = 0.5
 Coordinate44 = x3d.Coordinate()
 Coordinate44.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
-IndexedFaceSet43.coord.append(Coordinate44)
+IndexedFaceSet43.coord = Coordinate44
 
 Shape42.geometry = IndexedFaceSet43
 Appearance45 = x3d.Appearance()

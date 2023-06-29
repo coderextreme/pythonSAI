@@ -134,7 +134,7 @@ IndexedFaceSet28.coordIndex = [0,1,3,2,-1,4,5,7,6,-1,6,7,1,0,-1,2,3,5,4,-1,6,0,2
 Coordinate29 = x3d.Coordinate()
 Coordinate29.point = (-2.0000,1.5000,1.0000,-2.0000,-1.5000,1.0000,2.0000,1.5000,1.0000,2.0000,-1.5000,1.0000,2.0000,1.5000,-1.0000,2.0000,-1.5000,-1.0000,-2.0000,1.5000,-1.0000,-2.0000,-1.5000,-1.0000)
 
-IndexedFaceSet28.coord.append(Coordinate29)
+IndexedFaceSet28.coord = Coordinate29
 
 Shape24.geometry = IndexedFaceSet28
 

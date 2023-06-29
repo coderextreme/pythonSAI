@@ -216,9 +216,9 @@ MetadataString37.name = "SymmetricalLeftRight"
 MetadataString37.reference = "correction options: ignore, warn, average, left, right, largest, smallest"
 MetadataString37.value = ["ignore"]
 
-MetadataSet36.value.append(MetadataString37)
+MetadataSet36.value = MetadataString37
 
-HAnimHumanoid35.metadata.append(MetadataSet36)
+HAnimHumanoid35.metadata = MetadataSet36
 HAnimJoint38 = x3d.HAnimJoint()
 HAnimJoint38.name = "humanoid_root"
 HAnimJoint38.DEF = "OldMan_humanoid_root"
@@ -249,11 +249,11 @@ IndexedLineSet44.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate45 = x3d.Coordinate()
 Coordinate45.point = (0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000)
 
-IndexedLineSet44.coord.append(Coordinate45)
+IndexedLineSet44.coord = Coordinate45
 Color46 = x3d.Color()
 Color46.color = [1,0,0,0,0.6,0,0,0,1]
 
-IndexedLineSet44.color.append(Color46)
+IndexedLineSet44.color = Color46
 
 Shape43.geometry = IndexedLineSet44
 
@@ -276,7 +276,7 @@ Appearance48.texture = ImageTexture50
 TextureTransform51 = x3d.TextureTransform()
 TextureTransform51.DEF = "KickTextureTransform"
 
-Appearance48.textureTransform.append(TextureTransform51)
+Appearance48.textureTransform = TextureTransform51
 
 Shape47.appearance = Appearance48
 IndexedFaceSet52 = x3d.IndexedFaceSet()

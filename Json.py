@@ -3,7 +3,7 @@ import x3d
 print('-->')
 X3D0 = x3d.X3D()
 X3D0.profile = "Immersive"
-X3D0.version = "3.3"
+X3D0.version = "4.0"
 #x3dVersionComparisonTest for this model: supportsX3dVersion(X3D.VERSION_3_0)=true
 head1 = x3d.head()
 #comment #1
@@ -65,7 +65,7 @@ unit11.conversionFactor = 4.4482
 head1.children.append(unit11)
 meta12 = x3d.meta()
 meta12.name = "title"
-meta12.content = "HelloWorldProgramOutput.x3d"
+meta12.content = "Json.x3d"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
@@ -219,11 +219,11 @@ MetadataString43.name = "test"
 MetadataString43.DEF = "scene.addChildMetadata"
 MetadataString43.value = ["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
 
-Scene35.metadata.append(MetadataString43)
+Scene35.metadata = MetadataString43
 LayerSet44 = x3d.LayerSet()
 LayerSet44.DEF = "scene.addChildLayerSetTest"
 
-Scene35.layerSet.append(LayerSet44)
+Scene35.layerSet = LayerSet44
 Transform45 = x3d.Transform()
 Transform45.DEF = "LogoGeometryTransform"
 Transform45.translation = [0,1.5,0]
@@ -272,7 +272,7 @@ IndexedLineSet55.coordIndex = [0,1,2,3,4,0]
 Coordinate56 = x3d.Coordinate()
 Coordinate56.point = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
-IndexedLineSet55.coord.append(Coordinate56)
+IndexedLineSet55.coord = Coordinate56
 
 Shape52.geometry = IndexedLineSet55
 
@@ -324,14 +324,14 @@ MetadataString67 = x3d.MetadataString()
 MetadataString67.name = "quotesTestC"
 MetadataString67.value = ["MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""]
 
-MetadataSet66.value.append(MetadataString67)
+MetadataSet66.value = MetadataString67
 MetadataString68 = x3d.MetadataString()
 MetadataString68.name = "extraChildTest"
 MetadataString68.value = ["checks MetadataSetObject addValue() method"]
 
-MetadataSet66.value.append(MetadataString68)
+MetadataSet66.value = MetadataString68
 
-Text65.metadata.append(MetadataSet66)
+Text65.metadata = MetadataSet66
 FontStyle69 = x3d.FontStyle()
 FontStyle69.justify = ["MIDDLE","MIDDLE"]
 
@@ -777,7 +777,7 @@ MetadataString144.name = "findThisNameValue"
 MetadataString144.DEF = "FindableMetadataStringTest"
 MetadataString144.value = ["test case"]
 
-Shape143.metadata.append(MetadataString144)
+Shape143.value = MetadataString144
 Appearance145 = x3d.Appearance()
 Appearance145.DEF = "DeclarativeAppearanceExample"
 #DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance
@@ -825,7 +825,7 @@ AudioClip150.description = "chimes"
 AudioClip150.url = ["chimes.wav","https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]
 #Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
 
-Sound149.source.append(AudioClip150)
+Sound149.source = AudioClip150
 
 Scene35.children.append(Sound149)
 Sound151 = x3d.Sound()
@@ -837,7 +837,7 @@ MovieTexture152.url = ["mpgsys.mpg","https://www.web3d.org/x3d/content/examples/
 #Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
 #Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"
 
-Sound151.source.append(MovieTexture152)
+Sound151.source = MovieTexture152
 
 Scene35.children.append(Sound151)
 #Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true

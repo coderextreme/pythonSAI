@@ -6,7 +6,14 @@ java.classpath.push("saxon-he-12.1.jar");
 java.classpath.push("../saxon-he-12.1.jar");
 java.classpath.push("../../saxon-he-12.1.jar");
 java.classpath.push("../../../saxon-he-12.1.jar");
-
+java.classpath.push("xmlresolver-5.1.1.jar");
+java.classpath.push("../xmlresolver-5.1.1.jar");
+java.classpath.push("../../xmlresolver-5.1.1.jar");
+java.classpath.push("../../../xmlresolver-5.1.1.jar");
+java.classpath.push("xmlresolver-5.1.1-data.jar");
+java.classpath.push("../xmlresolver-5.1.1-data.jar");
+java.classpath.push("../../xmlresolver-5.1.1-data.jar");
+java.classpath.push("../../../xmlresolver-5.1.1-data.jar");
 java.classpath.push("target/classes");
 java.classpath.push("../target/classes");
 java.classpath.push("../../target/classes");

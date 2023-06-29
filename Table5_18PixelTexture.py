@@ -80,7 +80,7 @@ Appearance18 = x3d.Appearance()
 TextureTransform19 = x3d.TextureTransform()
 TextureTransform19.scale = [500,500]
 
-Appearance18.textureTransform.append(TextureTransform19)
+Appearance18.textureTransform = TextureTransform19
 PixelTexture20 = x3d.PixelTexture()
 PixelTexture20.image = [2,2,3,15119869,16767927,16767927,15119869]
 

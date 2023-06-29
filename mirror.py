@@ -75,35 +75,35 @@ Viewpoint15.description = "Switch background and images texture"
 Scene14.children.append(Viewpoint15)
 TextureBackground16 = x3d.TextureBackground()
 ImageTexture17 = x3d.ImageTexture()
-ImageTexture17.DEF = "leftBack"
+ImageTexture17.DEF = "leftBackgroundTexture"
 ImageTexture17.url = ["../resources/images/all_probes/beach_cross/beach_left.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_left.png"]
 
-TextureBackground16.leftTexture.append(ImageTexture17)
+TextureBackground16.leftTexture = ImageTexture17
 ImageTexture18 = x3d.ImageTexture()
-ImageTexture18.DEF = "rightBack"
+ImageTexture18.DEF = "rightBackgroundTexture"
 ImageTexture18.url = ["../resources/images/all_probes/beach_cross/beach_right.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_right.png"]
 
 TextureBackground16.rightTexture.append(ImageTexture18)
 ImageTexture19 = x3d.ImageTexture()
-ImageTexture19.DEF = "frontBack"
+ImageTexture19.DEF = "frontBackgroundTexture"
 ImageTexture19.url = ["../resources/images/all_probes/beach_cross/beach_front.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_front.png"]
 
 TextureBackground16.frontTexture.append(ImageTexture19)
 ImageTexture20 = x3d.ImageTexture()
-ImageTexture20.DEF = "backBack"
+ImageTexture20.DEF = "backBackgroundTexture"
 ImageTexture20.url = ["../resources/images/all_probes/beach_cross/beach_back.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_back.png"]
 
-TextureBackground16.backTexture.append(ImageTexture20)
+TextureBackground16.backTexture = ImageTexture20
 ImageTexture21 = x3d.ImageTexture()
-ImageTexture21.DEF = "topBack"
+ImageTexture21.DEF = "topBackgroundTexture"
 ImageTexture21.url = ["../resources/images/all_probes/beach_cross/beach_top.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_top.png"]
 
 TextureBackground16.topTexture.append(ImageTexture21)
 ImageTexture22 = x3d.ImageTexture()
-ImageTexture22.DEF = "bottomBack"
+ImageTexture22.DEF = "bottomBackgroundTexture"
 ImageTexture22.url = ["../resources/images/all_probes/beach_cross/beach_bottom.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_bottom.png"]
 
-TextureBackground16.bottomTexture.append(ImageTexture22)
+TextureBackground16.bottomTexture = ImageTexture22
 
 Scene14.children.append(TextureBackground16)
 Transform23 = x3d.Transform()
@@ -119,12 +119,12 @@ ImageTexture28 = x3d.ImageTexture()
 ImageTexture28.DEF = "backShader"
 ImageTexture28.url = ["../resources/images/all_probes/beach_cross/beach_back.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_back.png"]
 
-ComposedCubeMapTexture27.backTexture.append(ImageTexture28)
+ComposedCubeMapTexture27.backTexture = ImageTexture28
 ImageTexture29 = x3d.ImageTexture()
 ImageTexture29.DEF = "bottomShader"
 ImageTexture29.url = ["../resources/images/all_probes/beach_cross/beach_bottom.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_bottom.png"]
 
-ComposedCubeMapTexture27.bottomTexture.append(ImageTexture29)
+ComposedCubeMapTexture27.bottomTexture = ImageTexture29
 ImageTexture30 = x3d.ImageTexture()
 ImageTexture30.DEF = "frontShader"
 ImageTexture30.url = ["../resources/images/all_probes/beach_cross/beach_front.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_front.png"]
@@ -134,7 +134,7 @@ ImageTexture31 = x3d.ImageTexture()
 ImageTexture31.DEF = "leftShader"
 ImageTexture31.url = ["../resources/images/all_probes/beach_cross/beach_left.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_left.png"]
 
-ComposedCubeMapTexture27.leftTexture.append(ImageTexture31)
+ComposedCubeMapTexture27.leftTexture = ImageTexture31
 ImageTexture32 = x3d.ImageTexture()
 ImageTexture32.DEF = "rightShader"
 ImageTexture32.url = ["../resources/images/all_probes/beach_cross/beach_right.png","https://coderextreme.net/src/main/resources/images/all_probes/beach_cross/beach_right.png"]
@@ -386,42 +386,42 @@ Transform23.children.append(ROUTE67)
 ROUTE68 = x3d.ROUTE()
 ROUTE68.fromNode = "UrlSelector"
 ROUTE68.fromField = "front_changed"
-ROUTE68.toNode = "frontBack"
+ROUTE68.toNode = "frontBackgroundTexture"
 ROUTE68.toField = "url"
 
 Transform23.children.append(ROUTE68)
 ROUTE69 = x3d.ROUTE()
 ROUTE69.fromNode = "UrlSelector"
 ROUTE69.fromField = "back_changed"
-ROUTE69.toNode = "backBack"
+ROUTE69.toNode = "backBackgroundTexture"
 ROUTE69.toField = "url"
 
 Transform23.children.append(ROUTE69)
 ROUTE70 = x3d.ROUTE()
 ROUTE70.fromNode = "UrlSelector"
 ROUTE70.fromField = "left_changed"
-ROUTE70.toNode = "leftBack"
+ROUTE70.toNode = "leftBackgroundTexture"
 ROUTE70.toField = "url"
 
 Transform23.children.append(ROUTE70)
 ROUTE71 = x3d.ROUTE()
 ROUTE71.fromNode = "UrlSelector"
 ROUTE71.fromField = "right_changed"
-ROUTE71.toNode = "rightBack"
+ROUTE71.toNode = "rightBackgroundTexture"
 ROUTE71.toField = "url"
 
 Transform23.children.append(ROUTE71)
 ROUTE72 = x3d.ROUTE()
 ROUTE72.fromNode = "UrlSelector"
 ROUTE72.fromField = "top_changed"
-ROUTE72.toNode = "topBack"
+ROUTE72.toNode = "topBackgroundTexture"
 ROUTE72.toField = "url"
 
 Transform23.children.append(ROUTE72)
 ROUTE73 = x3d.ROUTE()
 ROUTE73.fromNode = "UrlSelector"
 ROUTE73.fromField = "bottom_changed"
-ROUTE73.toNode = "bottomBack"
+ROUTE73.toNode = "bottomBackgroundTexture"
 ROUTE73.toField = "url"
 
 Transform23.children.append(ROUTE73)

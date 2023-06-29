@@ -9890,7 +9890,7 @@ fieldValue1812.name = "HumanoidArray"
 HAnimHumanoid1813 = x3d.HAnimHumanoid()
 HAnimHumanoid1813.name = "DiamondManLOA-1"
 HAnimHumanoid1813.DEF = "hanim_DiamondManLOA-1"
-HAnimHumanoid1813.version = "1.0"
+HAnimHumanoid1813.version = "2.0"
 
 fieldValue1812.children.append(HAnimHumanoid1813)
 
