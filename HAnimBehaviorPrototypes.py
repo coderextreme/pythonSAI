@@ -9917,6 +9917,6 @@ ProtoInstance1811.fieldValue.append(fieldValue1817)
 Scene18.children.append(ProtoInstance1811)
 
 X3D0.Scene = Scene18
-f = open("././HAnimBehaviorPrototypes_RoundTrip.x3d", "w")
+f = open("././HAnimBehaviorPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

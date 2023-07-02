@@ -42,7 +42,6 @@ DirectionalLight9.intensity = 0.5
 
 Scene7.children.append(DirectionalLight9)
 Background10 = x3d.Background()
-Background10.skyColor = [1,1,1]
 
 Scene7.children.append(Background10)
 Viewpoint11 = x3d.Viewpoint()
@@ -202,6 +201,6 @@ ROUTE25.toField = "set_fraction"
 Scene7.children.append(ROUTE25)
 
 X3D0.Scene = Scene7
-f = open("././flower3_RoundTrip.x3d", "w")
+f = open("././flower3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -170,6 +170,6 @@ Transform34.children.append(Transform36)
 Scene20.children.append(Transform34)
 
 X3D0.Scene = Scene20
-f = open("././HAnimModelsHandsFeet_RoundTrip.x3d", "w")
+f = open("././HAnimModelsHandsFeet_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

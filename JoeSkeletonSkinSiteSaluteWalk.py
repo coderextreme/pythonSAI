@@ -189,8 +189,6 @@ NavigationInfo38.DEF = "HeadlightOnRevealsSkinTextureAndColors"
 Scene35.children.append(NavigationInfo38)
 Background39 = x3d.Background()
 Background39.groundAngle = [1.57]
-Background39.groundColor = [0,0.1,0,0,0.1,0]
-Background39.skyColor = [0,0,0.1]
 
 Scene35.children.append(Background39)
 Transform40 = x3d.Transform()
@@ -283,11 +281,9 @@ IndexedFaceSet57.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,
 IndexedFaceSet57.creaseAngle = 0.10000000149011612
 Coordinate58 = x3d.Coordinate()
 Coordinate58.DEF = "boxCoords"
-Coordinate58.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0157,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet57.coord = Coordinate58
 Color59 = x3d.Color()
-Color59.color = [1,0,0,0,0,1,0,1,0,1,1,1,0,1,1,1,1,0]
 
 IndexedFaceSet57.color = Color59
 
@@ -341,7 +337,6 @@ Shape69 = x3d.Shape()
 IndexedLineSet70 = x3d.IndexedLineSet()
 IndexedLineSet70.coordIndex = [0,1,-1]
 Coordinate71 = x3d.Coordinate()
-Coordinate71.point = (0.0000,0.0000,0.0000,0.0000,0.0001,0.0000)
 
 IndexedLineSet70.coord = Coordinate71
 
@@ -404,11 +399,9 @@ IndexedFaceSet83.coordIndex = [0,9,5,-1,0,7,9,-1,0,5,1,-1,1,5,2,-1,1,3,7,-1,2,4,
 IndexedFaceSet83.creaseAngle = 3.1
 Coordinate84 = x3d.Coordinate()
 Coordinate84.DEF = "TheSkinCoord"
-Coordinate84.point = (0.0000,1.7700,0.0000,0.0000,1.6650,0.0900,-0.0330,1.6200,0.0870,0.0330,1.6200,0.0870,0.0000,1.5500,0.0970,-0.0770,1.6400,-0.0100,-0.0527,1.5800,0.0150,0.0770,1.6400,-0.0100,0.0527,1.5800,0.0150,0.0000,1.6250,-0.0925,-0.0300,1.4600,0.0350,0.0000,1.4400,0.0300,0.0300,1.4600,0.0350,-0.1135,1.3180,0.0950,0.1135,1.3180,0.0950,0.0000,1.2500,0.1130,-0.0870,1.1900,0.0900,-0.0935,1.0300,0.0750,0.0870,1.1900,0.0900,0.0935,1.0300,0.0750,-0.1425,1.0650,0.0033,-0.1500,0.9000,-0.0100,0.1425,1.0650,0.0033,0.1500,0.9000,-0.0100,0.0000,1.5300,-0.0840,0.0049,1.1908,-0.1113,-0.0773,1.0190,-0.1200,0.0773,1.0190,-0.1200,0.0050,1.0915,-0.1091,-0.1780,1.4825,-0.0625,-0.1700,1.3800,0.0070,-0.1884,0.8676,-0.0360,-0.1600,1.3800,-0.1270,-0.2000,1.1388,-0.0800,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2300,1.1330,-0.0550,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.7890,-0.1064,0.1750,1.4825,-0.0600,0.1700,1.3800,0.0070,0.1901,0.8645,-0.0415,0.1600,1.3800,-0.1250,0.2000,1.1388,-0.0800,0.1650,1.1388,-0.0400,0.2440,1.1388,-0.0400,0.2300,1.1330,-0.0550,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.7860,-0.1122,-0.1000,0.4913,-0.0300,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1650,0.0100,0.1200,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.0900,0.0560,0.0125,-0.1150,0.0200,0.1220,-0.1150,0.0400,-0.0550,-0.1100,0.0110,0.1900,0.0993,0.4881,-0.0309,0.1700,0.4660,0.0000,0.0500,0.4867,0.0000,0.1650,0.0100,0.1200,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.0900,0.0560,0.0125,0.1150,0.0200,0.1220,0.1150,0.0400,-0.0550,0.1100,0.0110,0.1900,0.0000,0.8750,0.0000,-0.0646,1.5149,-0.0380,0.0646,1.5149,-0.0380,0.0000,1.0722,0.0900,-0.1100,1.4270,-0.1375,-0.2350,1.4200,-0.0625,0.1100,1.4270,-0.1375,0.2350,1.4200,-0.0625,0.0000,1.4100,-0.1450,0.0000,0.9250,0.0800,-0.0870,1.1900,-0.0900,0.0870,1.1900,-0.0900,0.1720,1.3200,-0.0300,-0.1720,1.3200,-0.0300,0.1500,1.2300,-0.0150,-0.1500,1.2300,-0.0150,0.0790,0.9200,-0.1400,0.1000,0.9000,0.0770,-0.0790,0.9200,-0.1400,-0.1000,0.9000,0.0750,0.0000,0.8700,0.0000,0.1710,0.6500,0.0000,0.0200,0.6500,0.0000,0.1000,0.6500,-0.0800,0.1000,0.6500,0.0700,-0.1710,0.6500,0.0000,-0.0200,0.6500,0.0000,-0.1000,0.6500,-0.0800,-0.1000,0.6500,0.0700,0.2500,1.2700,-0.0400,0.1700,1.2700,-0.0400,0.2000,1.2700,-0.0900,0.2000,1.2700,0.0200,0.2440,1.1388,-0.0400,0.1650,1.1388,-0.0400,0.2000,1.1388,-0.0800,0.2000,1.1388,-0.0130,0.2250,1.0000,-0.0100,0.2250,1.0000,-0.0700,0.1850,1.0000,-0.0100,0.1850,1.0000,-0.0700,0.2000,1.1388,-0.0400,0.2250,0.9200,-0.0400,0.1750,0.9200,-0.0400,0.2000,0.9200,-0.0650,0.2000,0.9200,-0.0150,0.2250,0.8900,-0.0400,0.1750,0.8900,-0.0400,0.2000,0.8900,-0.0650,0.2000,0.8900,-0.0150,0.2180,0.8600,-0.0400,0.1840,0.8600,-0.0400,0.2000,0.8700,-0.0700,0.2000,0.8700,0.0000,0.2100,0.8500,0.0000,0.1854,0.8500,0.0000,0.2120,0.8400,-0.0150,0.1830,0.8400,-0.0150,0.2130,0.8350,-0.0400,0.1900,0.8350,-0.0400,0.2110,0.8350,-0.0650,0.1920,0.8350,-0.0650,0.2080,0.8400,-0.0850,0.1900,0.8400,-0.0850,0.2000,0.8400,-0.0950,0.2150,0.8200,0.0000,0.1930,0.8150,0.0050,0.1980,0.8000,0.0120,0.2100,0.8200,0.0300,0.1900,0.8200,0.0300,0.2000,0.8350,0.0390,0.2120,0.8000,0.0500,0.1880,0.8000,0.0500,0.2000,0.8070,0.0570,0.2000,0.7930,0.0350,0.2000,0.7740,0.0760,0.2120,0.7800,0.0700,0.1880,0.7800,0.0700,0.2000,0.7850,0.0750,0.2000,0.7700,0.0620,0.2150,0.7930,-0.0150,0.1870,0.7930,-0.0150,0.2000,0.7930,-0.0050,0.2150,0.7880,-0.0400,0.1870,0.7880,-0.0400,0.2150,0.7930,-0.0650,0.1870,0.7930,-0.0650,0.2100,0.7900,-0.0850,0.1900,0.7900,-0.0850,0.2000,0.7900,-0.0950,0.1900,0.7700,-0.0275,0.1900,0.7700,-0.0525,0.1900,0.7800,-0.0775,0.2120,0.7450,-0.0150,0.1880,0.7450,-0.0200,0.2000,0.7450,-0.0255,0.2000,0.7450,-0.0045,0.2110,0.7200,-0.0150,0.1890,0.7200,-0.0150,0.2000,0.7200,-0.0252,0.2000,0.7200,-0.0048,0.2100,0.6950,-0.0150,0.1900,0.6950,-0.0150,0.2000,0.6950,-0.0250,0.2000,0.6950,-0.0050,0.2000,0.6850,-0.0150,0.2150,0.7400,-0.0400,0.1850,0.7400,-0.0400,0.2000,0.7400,-0.0550,0.2000,0.7400,-0.0250,0.2100,0.7142,-0.0400,0.1900,0.7142,-0.0400,0.2000,0.7142,-0.0530,0.2000,0.7142,-0.0270,0.2100,0.6800,-0.0400,0.1900,0.6800,-0.0400,0.2000,0.6800,-0.0500,0.2000,0.6800,-0.0300,0.2000,0.6700,-0.0400,0.2120,0.7400,-0.0650,0.1880,0.7400,-0.0650,0.2000,0.7400,-0.0756,0.2000,0.7400,-0.0542,0.2100,0.7177,-0.0650,0.1900,0.7177,-0.0650,0.2000,0.7177,-0.0751,0.2000,0.7177,-0.0549,0.2100,0.6950,-0.0650,0.1900,0.6950,-0.0650,0.2000,0.6950,-0.0750,0.2000,0.6950,-0.0550,0.2000,0.6850,-0.0650,0.2110,0.7550,-0.0850,0.1890,0.7550,-0.0850,0.2000,0.7550,-0.0952,0.2000,0.7550,-0.0748,0.2100,0.7350,-0.0850,0.1900,0.7350,-0.0850,0.2000,0.7350,-0.0951,0.2000,0.7350,-0.0749,0.2100,0.7200,-0.0850,0.1900,0.7200,-0.0850,0.2000,0.7200,-0.0950,0.2000,0.7200,-0.0750,0.2000,0.7100,-0.0850,-0.2300,1.2300,-0.0400,-0.1600,1.2300,-0.0400,-0.2000,1.2350,-0.1050,-0.2000,1.2350,0.0200,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2000,1.1388,-0.0800,-0.2000,1.1388,0.0130,-0.2250,1.0000,-0.0100,-0.2250,1.0000,-0.0700,-0.1850,1.0000,-0.0100,-0.1850,1.0000,-0.0700,-0.2000,1.1388,-0.0400,-0.2250,0.9200,-0.0400,-0.1750,0.9200,-0.0400,-0.2000,0.9200,-0.0650,-0.2000,0.9200,-0.0150,-0.2250,0.8900,-0.0400,-0.1750,0.8900,-0.0400,-0.2000,0.8900,-0.0650,-0.2000,0.8900,-0.0150,-0.2180,0.8600,-0.0400,-0.1840,0.8600,-0.0400,-0.2000,0.8700,-0.0700,-0.2000,0.8700,0.0000,-0.2100,0.8500,0.0000,-0.1854,0.8500,0.0000,-0.2120,0.8400,-0.0150,-0.1830,0.8400,-0.0150,-0.2130,0.8350,-0.0400,-0.1900,0.8350,-0.0400,-0.2110,0.8350,-0.0650,-0.1920,0.8350,-0.0650,-0.2080,0.8400,-0.0850,-0.1900,0.8400,-0.0850,-0.2000,0.8400,-0.0950,-0.2150,0.8200,0.0000,-0.1930,0.8150,0.0050,-0.1980,0.8000,0.0120,-0.2100,0.8200,0.0300,-0.1900,0.8200,0.0300,-0.2000,0.8350,0.0390,-0.2120,0.8000,0.0500,-0.1880,0.8000,0.0500,-0.2000,0.8070,0.0570,-0.2000,0.7930,0.0350,-0.2000,0.7740,0.0760,-0.2120,0.7800,0.0700,-0.1880,0.7800,0.0700,-0.2000,0.7850,0.0750,-0.2000,0.7700,0.0620,-0.2150,0.7930,-0.0150,-0.1870,0.7930,-0.0150,-0.2000,0.7930,-0.0050,-0.2150,0.7880,-0.0400,-0.1870,0.7880,-0.0400,-0.2150,0.7930,-0.0650,-0.1870,0.7930,-0.0650,-0.2100,0.7900,-0.0850,-0.1900,0.7900,-0.0850,-0.2000,0.7900,-0.0950,-0.1900,0.7700,-0.0275,-0.1900,0.7700,-0.0525,-0.1900,0.7800,-0.0775,-0.2120,0.7450,-0.0150,-0.1880,0.7450,-0.0200,-0.2000,0.7450,-0.0255,-0.2000,0.7450,-0.0045,-0.2110,0.7200,-0.0150,-0.1890,0.7200,-0.0150,-0.2000,0.7200,-0.0252,-0.2000,0.7200,-0.0048,-0.2100,0.6950,-0.0150,-0.1900,0.6950,-0.0150,-0.2000,0.6950,-0.0250,-0.2000,0.6950,-0.0050,-0.2000,0.6850,-0.0150,-0.2150,0.7400,-0.0400,-0.1850,0.7400,-0.0400,-0.2000,0.7400,-0.0550,-0.2000,0.7400,-0.0250,-0.2100,0.7142,-0.0400,-0.1900,0.7142,-0.0400,-0.2000,0.7142,-0.0530,-0.2000,0.7142,-0.0270,-0.2100,0.6800,-0.0400,-0.1900,0.6800,-0.0400,-0.2000,0.6800,-0.0500,-0.2000,0.6800,-0.0300,-0.2000,0.6700,-0.0400,-0.2120,0.7400,-0.0650,-0.1880,0.7400,-0.0650,-0.2000,0.7400,-0.0756,-0.2000,0.7400,-0.0542,-0.2100,0.7177,-0.0650,-0.1900,0.7177,-0.0650,-0.2000,0.7177,-0.0751,-0.2000,0.7177,-0.0549,-0.2100,0.6950,-0.0650,-0.1900,0.6950,-0.0650,-0.2000,0.6950,-0.0750,-0.2000,0.6950,-0.0550,-0.2000,0.6850,-0.0650,-0.2110,0.7550,-0.0850,-0.1890,0.7550,-0.0850,-0.2000,0.7550,-0.0952,-0.2000,0.7550,-0.0748,-0.2100,0.7350,-0.0850,-0.1900,0.7350,-0.0850,-0.2000,0.7350,-0.0951,-0.2000,0.7350,-0.0749,-0.2100,0.7200,-0.0850,-0.1900,0.7200,-0.0850,-0.2000,0.7200,-0.0950,-0.2000,0.7200,-0.0750,-0.2000,0.7100,-0.0850,0.1150,0.4660,0.0600,0.1150,0.4660,-0.0550,0.1500,0.4660,0.0000,0.0500,0.4660,0.0000,0.1700,0.3000,0.0000,0.0600,0.3000,0.0000,0.1000,0.3000,-0.0500,0.1000,0.3000,0.0500,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.1150,0.0690,-0.0450,0.1170,0.0975,0.0615,0.1375,0.0060,-0.0300,0.0950,0.0060,-0.0300,0.1150,0.0150,-0.0450,0.1150,0.0600,0.1000,0.1150,0.0000,0.0700,0.1650,0.0000,0.0700,0.0950,0.0000,0.0700,0.1150,0.0400,0.1300,0.1250,0.0000,0.1200,0.1650,0.0000,0.1200,0.0870,0.0000,0.1220,0.0900,0.0120,0.1880,0.1100,0.0110,0.1900,0.1280,0.0110,0.1850,0.1420,0.0110,0.1780,0.1540,0.0100,0.1680,-0.1150,0.4660,0.0600,-0.1150,0.4660,-0.0550,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1700,0.3000,0.0000,-0.0600,0.3000,0.0000,-0.1000,0.3000,-0.0500,-0.1000,0.3000,0.0500,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.1150,0.0690,-0.0450,-0.1170,0.0975,0.0615,-0.1375,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.1150,0.0600,0.1000,-0.1150,0.0000,0.0700,-0.1650,0.0000,0.0700,-0.0950,0.0000,0.0700,-0.1150,0.0400,0.1300,-0.1250,0.0000,0.1200,-0.1650,0.0000,0.1200,-0.0870,0.0000,0.1220,-0.0900,0.0120,0.1880,-0.1100,0.0110,0.1900,-0.1280,0.0110,0.1850,-0.1420,0.0110,0.1780,-0.1540,0.0100,0.1680)
 
 IndexedFaceSet83.coord = Coordinate84
 Color85 = x3d.Color()
-Color85.color = [1,0,0,0,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,1,0,1,1,0,1,1,1,1,0,0,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,1,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1]
 
 IndexedFaceSet83.color = Color85
 
@@ -458,7 +451,6 @@ Shape94 = x3d.Shape()
 IndexedLineSet95 = x3d.IndexedLineSet()
 IndexedLineSet95.coordIndex = [0,1,-1]
 Coordinate96 = x3d.Coordinate()
-Coordinate96.point = (0.0000,0.8750,0.0000,0.0000,0.9200,0.0000)
 
 IndexedLineSet95.coord = Coordinate96
 
@@ -513,7 +505,6 @@ Shape107 = x3d.Shape()
 IndexedLineSet108 = x3d.IndexedLineSet()
 IndexedLineSet108.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate109 = x3d.Coordinate()
-Coordinate109.point = (0.0000,0.9200,0.0000,0.0961,0.9124,0.0000,-0.0950,0.9171,0.0029,0.0000,1.0450,-0.0950)
 
 IndexedLineSet108.coord = Coordinate109
 
@@ -652,7 +643,6 @@ Shape136 = x3d.Shape()
 IndexedLineSet137 = x3d.IndexedLineSet()
 IndexedLineSet137.coordIndex = [0,1,-1]
 Coordinate138 = x3d.Coordinate()
-Coordinate138.point = (0.1000,0.9200,0.0000,0.1150,0.4660,0.0000)
 
 IndexedLineSet137.coord = Coordinate138
 
@@ -766,7 +756,6 @@ Shape162 = x3d.Shape()
 IndexedLineSet163 = x3d.IndexedLineSet()
 IndexedLineSet163.coordIndex = [0,1,-1]
 Coordinate164 = x3d.Coordinate()
-Coordinate164.point = (0.1150,0.4660,0.0000,0.1000,0.0690,0.0000)
 
 IndexedLineSet163.coord = Coordinate164
 
@@ -886,7 +875,6 @@ Shape190 = x3d.Shape()
 IndexedLineSet191 = x3d.IndexedLineSet()
 IndexedLineSet191.coordIndex = [0,1,-1]
 Coordinate192 = x3d.Coordinate()
-Coordinate192.point = (0.1000,0.0690,0.0000,0.1150,0.0310,0.0300)
 
 IndexedLineSet191.coord = Coordinate192
 
@@ -974,7 +962,6 @@ Shape210 = x3d.Shape()
 IndexedLineSet211 = x3d.IndexedLineSet()
 IndexedLineSet211.coordIndex = [0,1,-1]
 Coordinate212 = x3d.Coordinate()
-Coordinate212.point = (0.1150,0.0310,0.0300,0.1150,0.0370,0.0900)
 
 IndexedLineSet211.coord = Coordinate212
 
@@ -1034,7 +1021,6 @@ Shape224 = x3d.Shape()
 IndexedLineSet225 = x3d.IndexedLineSet()
 IndexedLineSet225.coordIndex = [0,1,-1]
 Coordinate226 = x3d.Coordinate()
-Coordinate226.point = (0.1150,0.0370,0.0900,0.1150,0.0200,0.1220)
 
 IndexedLineSet225.coord = Coordinate226
 
@@ -1112,7 +1098,6 @@ Shape242 = x3d.Shape()
 IndexedLineSet243 = x3d.IndexedLineSet()
 IndexedLineSet243.coordIndex = [0,1,-1]
 Coordinate244 = x3d.Coordinate()
-Coordinate244.point = (0.1150,0.0200,0.1220,0.1320,0.0130,0.1900)
 
 IndexedLineSet243.coord = Coordinate244
 
@@ -1252,7 +1237,6 @@ Shape272 = x3d.Shape()
 IndexedLineSet273 = x3d.IndexedLineSet()
 IndexedLineSet273.coordIndex = [0,1,-1]
 Coordinate274 = x3d.Coordinate()
-Coordinate274.point = (-0.1000,0.9200,0.0000,-0.1000,0.4913,0.0000)
 
 IndexedLineSet273.coord = Coordinate274
 
@@ -1366,7 +1350,6 @@ Shape298 = x3d.Shape()
 IndexedLineSet299 = x3d.IndexedLineSet()
 IndexedLineSet299.coordIndex = [0,1,-1]
 Coordinate300 = x3d.Coordinate()
-Coordinate300.point = (-0.1000,0.4913,0.0000,-0.1000,0.0712,0.0000)
 
 IndexedLineSet299.coord = Coordinate300
 
@@ -1486,7 +1469,6 @@ Shape326 = x3d.Shape()
 IndexedLineSet327 = x3d.IndexedLineSet()
 IndexedLineSet327.coordIndex = [0,1,-1]
 Coordinate328 = x3d.Coordinate()
-Coordinate328.point = (-0.1000,0.0712,0.0000,-0.1000,0.0150,-0.0100)
 
 IndexedLineSet327.coord = Coordinate328
 
@@ -1574,7 +1556,6 @@ Shape346 = x3d.Shape()
 IndexedLineSet347 = x3d.IndexedLineSet()
 IndexedLineSet347.coordIndex = [0,1,-1]
 Coordinate348 = x3d.Coordinate()
-Coordinate348.point = (-0.1000,0.0150,-0.0100,-0.1000,0.0200,0.0700)
 
 IndexedLineSet347.coord = Coordinate348
 
@@ -1634,7 +1615,6 @@ Shape360 = x3d.Shape()
 IndexedLineSet361 = x3d.IndexedLineSet()
 IndexedLineSet361.coordIndex = [0,1,-1]
 Coordinate362 = x3d.Coordinate()
-Coordinate362.point = (-0.1000,0.0200,0.0700,-0.1000,0.0100,0.1400)
 
 IndexedLineSet361.coord = Coordinate362
 
@@ -1712,7 +1692,6 @@ Shape378 = x3d.Shape()
 IndexedLineSet379 = x3d.IndexedLineSet()
 IndexedLineSet379.coordIndex = [0,1,-1]
 Coordinate380 = x3d.Coordinate()
-Coordinate380.point = (-0.1000,0.0100,0.1400,-0.1043,0.0016,0.2000)
 
 IndexedLineSet379.coord = Coordinate380
 
@@ -1846,7 +1825,6 @@ Shape406 = x3d.Shape()
 IndexedLineSet407 = x3d.IndexedLineSet()
 IndexedLineSet407.coordIndex = [0,1,-1]
 Coordinate408 = x3d.Coordinate()
-Coordinate408.point = (0.0000,1.0450,-0.0950,0.0000,0.9149,0.0016)
 
 IndexedLineSet407.coord = Coordinate408
 
@@ -1866,7 +1844,6 @@ Shape411 = x3d.Shape()
 IndexedLineSet412 = x3d.IndexedLineSet()
 IndexedLineSet412.coordIndex = [0,1,-1]
 Coordinate413 = x3d.Coordinate()
-Coordinate413.point = (0.0000,1.0450,-0.0950,0.0000,1.0680,-0.0850)
 
 IndexedLineSet412.coord = Coordinate413
 
@@ -1912,7 +1889,6 @@ Shape421 = x3d.Shape()
 IndexedLineSet422 = x3d.IndexedLineSet()
 IndexedLineSet422.coordIndex = [0,1,-1]
 Coordinate423 = x3d.Coordinate()
-Coordinate423.point = (0.0000,1.0680,-0.0850,0.0000,1.0920,-0.0725)
 
 IndexedLineSet422.coord = Coordinate423
 
@@ -1946,7 +1922,6 @@ Shape429 = x3d.Shape()
 IndexedLineSet430 = x3d.IndexedLineSet()
 IndexedLineSet430.coordIndex = [0,1,-1]
 Coordinate431 = x3d.Coordinate()
-Coordinate431.point = (0.0000,1.0920,-0.0725,0.0000,1.1200,-0.0650)
 
 IndexedLineSet430.coord = Coordinate431
 
@@ -1982,7 +1957,6 @@ Shape437 = x3d.Shape()
 IndexedLineSet438 = x3d.IndexedLineSet()
 IndexedLineSet438.coordIndex = [0,1,-1]
 Coordinate439 = x3d.Coordinate()
-Coordinate439.point = (0.0000,1.1200,-0.0650,0.0000,1.1459,-0.0625)
 
 IndexedLineSet438.coord = Coordinate439
 
@@ -2094,7 +2068,6 @@ Shape463 = x3d.Shape()
 IndexedLineSet464 = x3d.IndexedLineSet()
 IndexedLineSet464.coordIndex = [0,1,-1]
 Coordinate465 = x3d.Coordinate()
-Coordinate465.point = (0.0000,1.1459,-0.0625,0.0000,1.1790,-0.0680)
 
 IndexedLineSet464.coord = Coordinate465
 
@@ -2128,7 +2101,6 @@ Shape471 = x3d.Shape()
 IndexedLineSet472 = x3d.IndexedLineSet()
 IndexedLineSet472.coordIndex = [0,1,-1]
 Coordinate473 = x3d.Coordinate()
-Coordinate473.point = (0.0000,1.1790,-0.0680,0.0000,1.2420,-0.0900)
 
 IndexedLineSet472.coord = Coordinate473
 
@@ -2162,7 +2134,6 @@ Shape479 = x3d.Shape()
 IndexedLineSet480 = x3d.IndexedLineSet()
 IndexedLineSet480.coordIndex = [0,1,-1]
 Coordinate481 = x3d.Coordinate()
-Coordinate481.point = (0.0000,1.2145,-0.0755,0.0000,1.2420,-0.0900)
 
 IndexedLineSet480.coord = Coordinate481
 
@@ -2198,7 +2169,6 @@ Shape487 = x3d.Shape()
 IndexedLineSet488 = x3d.IndexedLineSet()
 IndexedLineSet488.coordIndex = [0,1,-1]
 Coordinate489 = x3d.Coordinate()
-Coordinate489.point = (0.0000,1.2420,-0.0900,0.0000,1.2680,-0.1000)
 
 IndexedLineSet488.coord = Coordinate489
 
@@ -2244,7 +2214,6 @@ Shape497 = x3d.Shape()
 IndexedLineSet498 = x3d.IndexedLineSet()
 IndexedLineSet498.coordIndex = [0,1,-1]
 Coordinate499 = x3d.Coordinate()
-Coordinate499.point = (0.0000,1.2680,-0.1000,0.0000,1.2940,-0.1100)
 
 IndexedLineSet498.coord = Coordinate499
 
@@ -2298,7 +2267,6 @@ Shape509 = x3d.Shape()
 IndexedLineSet510 = x3d.IndexedLineSet()
 IndexedLineSet510.coordIndex = [0,1,-1]
 Coordinate511 = x3d.Coordinate()
-Coordinate511.point = (0.0000,1.2940,-0.1100,0.0000,1.3520,-0.1200)
 
 IndexedLineSet510.coord = Coordinate511
 
@@ -2332,7 +2300,6 @@ Shape517 = x3d.Shape()
 IndexedLineSet518 = x3d.IndexedLineSet()
 IndexedLineSet518.coordIndex = [0,1,-1]
 Coordinate519 = x3d.Coordinate()
-Coordinate519.point = (0.0000,1.3520,-0.1200,0.0000,1.3810,-0.1235)
 
 IndexedLineSet518.coord = Coordinate519
 
@@ -2366,7 +2333,6 @@ Shape525 = x3d.Shape()
 IndexedLineSet526 = x3d.IndexedLineSet()
 IndexedLineSet526.coordIndex = [0,1,-1]
 Coordinate527 = x3d.Coordinate()
-Coordinate527.point = (0.0000,1.3810,-0.1235,0.0000,1.4100,-0.1235)
 
 IndexedLineSet526.coord = Coordinate527
 
@@ -2400,7 +2366,6 @@ Shape533 = x3d.Shape()
 IndexedLineSet534 = x3d.IndexedLineSet()
 IndexedLineSet534.coordIndex = [0,1,-1]
 Coordinate535 = x3d.Coordinate()
-Coordinate535.point = (0.0000,1.4100,-0.1235,0.0000,1.4380,-0.1200)
 
 IndexedLineSet534.coord = Coordinate535
 
@@ -2436,7 +2401,6 @@ Shape541 = x3d.Shape()
 IndexedLineSet542 = x3d.IndexedLineSet()
 IndexedLineSet542.coordIndex = [0,1,-1]
 Coordinate543 = x3d.Coordinate()
-Coordinate543.point = (0.0000,1.4100,-0.1235,0.0000,1.4380,-0.1200)
 
 IndexedLineSet542.coord = Coordinate543
 
@@ -2478,7 +2442,6 @@ Shape551 = x3d.Shape()
 IndexedLineSet552 = x3d.IndexedLineSet()
 IndexedLineSet552.coordIndex = [0,1,-1]
 Coordinate553 = x3d.Coordinate()
-Coordinate553.point = (0.0000,1.4380,-0.1200,0.0000,1.4680,-0.1050)
 
 IndexedLineSet552.coord = Coordinate553
 
@@ -2512,7 +2475,6 @@ Shape559 = x3d.Shape()
 IndexedLineSet560 = x3d.IndexedLineSet()
 IndexedLineSet560.coordIndex = [0,1,-1]
 Coordinate561 = x3d.Coordinate()
-Coordinate561.point = (0.0000,1.4680,-0.1050,0.0000,1.4970,-0.0900)
 
 IndexedLineSet560.coord = Coordinate561
 
@@ -2548,7 +2510,6 @@ Shape567 = x3d.Shape()
 IndexedLineSet568 = x3d.IndexedLineSet()
 IndexedLineSet568.coordIndex = [0,1,-1]
 Coordinate569 = x3d.Coordinate()
-Coordinate569.point = (0.0000,1.4970,-0.0900,0.0000,1.5250,-0.0720)
 
 IndexedLineSet568.coord = Coordinate569
 
@@ -2604,7 +2565,6 @@ Shape579 = x3d.Shape()
 IndexedLineSet580 = x3d.IndexedLineSet()
 IndexedLineSet580.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate581 = x3d.Coordinate()
-Coordinate581.point = (0.0000,1.5250,-0.0720,0.0820,1.4488,-0.0353,-0.0300,1.4600,0.0200,0.0000,1.5400,-0.0500)
 
 IndexedLineSet580.coord = Coordinate581
 
@@ -2658,7 +2618,6 @@ Shape591 = x3d.Shape()
 IndexedLineSet592 = x3d.IndexedLineSet()
 IndexedLineSet592.coordIndex = [0,1,-1]
 Coordinate593 = x3d.Coordinate()
-Coordinate593.point = (0.0000,1.5400,-0.0500,0.0000,1.5675,-0.0256)
 
 IndexedLineSet592.coord = Coordinate593
 
@@ -2700,7 +2659,6 @@ Shape601 = x3d.Shape()
 IndexedLineSet602 = x3d.IndexedLineSet()
 IndexedLineSet602.coordIndex = [0,1,-1]
 Coordinate603 = x3d.Coordinate()
-Coordinate603.point = (0.0000,1.5675,-0.0256,0.0000,1.5822,-0.0185)
 
 IndexedLineSet602.coord = Coordinate603
 
@@ -2726,7 +2684,6 @@ Shape607 = x3d.Shape()
 IndexedLineSet608 = x3d.IndexedLineSet()
 IndexedLineSet608.coordIndex = [0,1,-1]
 Coordinate609 = x3d.Coordinate()
-Coordinate609.point = (0.0000,1.5822,-0.0185,0.0000,1.5950,-0.0175)
 
 IndexedLineSet608.coord = Coordinate609
 
@@ -2760,7 +2717,6 @@ Shape615 = x3d.Shape()
 IndexedLineSet616 = x3d.IndexedLineSet()
 IndexedLineSet616.coordIndex = [0,1,-1]
 Coordinate617 = x3d.Coordinate()
-Coordinate617.point = (0.0000,1.5950,-0.0175,0.0000,1.6100,-0.0150)
 
 IndexedLineSet616.coord = Coordinate617
 
@@ -2794,7 +2750,6 @@ Shape623 = x3d.Shape()
 IndexedLineSet624 = x3d.IndexedLineSet()
 IndexedLineSet624.coordIndex = [0,1,-1]
 Coordinate625 = x3d.Coordinate()
-Coordinate625.point = (0.0000,1.6100,-0.0150,0.0000,1.6144,-0.0034)
 
 IndexedLineSet624.coord = Coordinate625
 
@@ -2828,7 +2783,6 @@ Shape631 = x3d.Shape()
 IndexedLineSet632 = x3d.IndexedLineSet()
 IndexedLineSet632.coordIndex = [0,1,-1]
 Coordinate633 = x3d.Coordinate()
-Coordinate633.point = (0.0000,1.6144,-0.0034,0.0000,1.6300,-0.0100)
 
 IndexedLineSet632.coord = Coordinate633
 
@@ -2864,7 +2818,6 @@ Shape639 = x3d.Shape()
 IndexedLineSet640 = x3d.IndexedLineSet()
 IndexedLineSet640.coordIndex = [0,1,-1,0,2,-1]
 Coordinate641 = x3d.Coordinate()
-Coordinate641.point = (0.0000,1.6300,-0.0100,0.0340,1.6590,0.0600,-0.0340,1.6550,0.0650)
 
 IndexedLineSet640.coord = Coordinate641
 
@@ -2998,7 +2951,6 @@ Shape667 = x3d.Shape()
 IndexedLineSet668 = x3d.IndexedLineSet()
 IndexedLineSet668.coordIndex = [0,1,-1]
 Coordinate669 = x3d.Coordinate()
-Coordinate669.point = (0.0340,1.6550,0.0650,-0.0340,1.6550,0.0650)
 
 IndexedLineSet668.coord = Coordinate669
 
@@ -3035,7 +2987,6 @@ Shape675 = x3d.Shape()
 IndexedLineSet676 = x3d.IndexedLineSet()
 IndexedLineSet676.coordIndex = [0,1,-1]
 Coordinate677 = x3d.Coordinate()
-Coordinate677.point = (0.0340,1.6550,0.0650,-0.0340,1.6550,0.0650)
 
 IndexedLineSet676.coord = Coordinate677
 
@@ -3090,7 +3041,6 @@ Shape683 = x3d.Shape()
 IndexedLineSet684 = x3d.IndexedLineSet()
 IndexedLineSet684.coordIndex = [0,1,-1]
 Coordinate685 = x3d.Coordinate()
-Coordinate685.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
 IndexedLineSet684.coord = Coordinate685
 
@@ -3136,7 +3086,6 @@ Shape693 = x3d.Shape()
 IndexedLineSet694 = x3d.IndexedLineSet()
 IndexedLineSet694.coordIndex = [0,1,-1]
 Coordinate695 = x3d.Coordinate()
-Coordinate695.point = (0.0962,1.4269,-0.0424,0.2000,1.4400,-0.0400)
 
 IndexedLineSet694.coord = Coordinate695
 
@@ -3210,7 +3159,6 @@ Shape709 = x3d.Shape()
 IndexedLineSet710 = x3d.IndexedLineSet()
 IndexedLineSet710.coordIndex = [0,1,-1]
 Coordinate711 = x3d.Coordinate()
-Coordinate711.point = (0.2029,1.4400,-0.0387,0.2000,1.1388,-0.0400)
 
 IndexedLineSet710.coord = Coordinate711
 
@@ -3316,7 +3264,6 @@ Shape733 = x3d.Shape()
 IndexedLineSet734 = x3d.IndexedLineSet()
 IndexedLineSet734.coordIndex = [0,1,-1]
 Coordinate735 = x3d.Coordinate()
-Coordinate735.point = (0.2000,1.1388,-0.0400,0.2000,0.8700,-0.0400)
 
 IndexedLineSet734.coord = Coordinate735
 
@@ -3412,7 +3359,6 @@ Shape755 = x3d.Shape()
 IndexedLineSet756 = x3d.IndexedLineSet()
 IndexedLineSet756.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
 Coordinate757 = x3d.Coordinate()
-Coordinate757.point = (0.2000,0.8700,-0.0400,0.1924,0.8472,-0.0534,0.1983,0.8024,-0.0280,0.1987,0.8029,-0.0530,0.1956,0.8019,-0.0794,0.1925,0.8066,-0.1036)
 
 IndexedLineSet756.coord = Coordinate757
 
@@ -3478,7 +3424,6 @@ Shape769 = x3d.Shape()
 IndexedLineSet770 = x3d.IndexedLineSet()
 IndexedLineSet770.coordIndex = [0,1,-1]
 Coordinate771 = x3d.Coordinate()
-Coordinate771.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
 IndexedLineSet770.coord = Coordinate771
 
@@ -3514,7 +3459,6 @@ Shape777 = x3d.Shape()
 IndexedLineSet778 = x3d.IndexedLineSet()
 IndexedLineSet778.coordIndex = [0,1,-1]
 Coordinate779 = x3d.Coordinate()
-Coordinate779.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
 IndexedLineSet778.coord = Coordinate779
 
@@ -3550,7 +3494,6 @@ Shape785 = x3d.Shape()
 IndexedLineSet786 = x3d.IndexedLineSet()
 IndexedLineSet786.coordIndex = [0,1,-1]
 Coordinate787 = x3d.Coordinate()
-Coordinate787.point = (0.1955,0.8159,0.0464,0.1982,0.8061,0.0759)
 
 IndexedLineSet786.coord = Coordinate787
 
@@ -3602,7 +3545,6 @@ Shape795 = x3d.Shape()
 IndexedLineSet796 = x3d.IndexedLineSet()
 IndexedLineSet796.coordIndex = [0,1,-1]
 Coordinate797 = x3d.Coordinate()
-Coordinate797.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
 IndexedLineSet796.coord = Coordinate797
 
@@ -3638,7 +3580,6 @@ Shape803 = x3d.Shape()
 IndexedLineSet804 = x3d.IndexedLineSet()
 IndexedLineSet804.coordIndex = [0,1,-1]
 Coordinate805 = x3d.Coordinate()
-Coordinate805.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
 IndexedLineSet804.coord = Coordinate805
 
@@ -3674,7 +3615,6 @@ Shape811 = x3d.Shape()
 IndexedLineSet812 = x3d.IndexedLineSet()
 IndexedLineSet812.coordIndex = [0,1,-1]
 Coordinate813 = x3d.Coordinate()
-Coordinate813.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
 IndexedLineSet812.coord = Coordinate813
 
@@ -3710,7 +3650,6 @@ Shape819 = x3d.Shape()
 IndexedLineSet820 = x3d.IndexedLineSet()
 IndexedLineSet820.coordIndex = [0,1,-1]
 Coordinate821 = x3d.Coordinate()
-Coordinate821.point = (0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245)
 
 IndexedLineSet820.coord = Coordinate821
 
@@ -3774,7 +3713,6 @@ Shape831 = x3d.Shape()
 IndexedLineSet832 = x3d.IndexedLineSet()
 IndexedLineSet832.coordIndex = [0,1,-1]
 Coordinate833 = x3d.Coordinate()
-Coordinate833.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
 IndexedLineSet832.coord = Coordinate833
 
@@ -3810,7 +3748,6 @@ Shape839 = x3d.Shape()
 IndexedLineSet840 = x3d.IndexedLineSet()
 IndexedLineSet840.coordIndex = [0,1,-1]
 Coordinate841 = x3d.Coordinate()
-Coordinate841.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
 IndexedLineSet840.coord = Coordinate841
 
@@ -3846,7 +3783,6 @@ Shape847 = x3d.Shape()
 IndexedLineSet848 = x3d.IndexedLineSet()
 IndexedLineSet848.coordIndex = [0,1,-1]
 Coordinate849 = x3d.Coordinate()
-Coordinate849.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
 IndexedLineSet848.coord = Coordinate849
 
@@ -3882,7 +3818,6 @@ Shape855 = x3d.Shape()
 IndexedLineSet856 = x3d.IndexedLineSet()
 IndexedLineSet856.coordIndex = [0,1,-1]
 Coordinate857 = x3d.Coordinate()
-Coordinate857.point = (0.2026,0.7011,-0.0494,0.2080,0.6731,-0.0491)
 
 IndexedLineSet856.coord = Coordinate857
 
@@ -3936,7 +3871,6 @@ Shape865 = x3d.Shape()
 IndexedLineSet866 = x3d.IndexedLineSet()
 IndexedLineSet866.coordIndex = [0,1,-1]
 Coordinate867 = x3d.Coordinate()
-Coordinate867.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
 IndexedLineSet866.coord = Coordinate867
 
@@ -3972,7 +3906,6 @@ Shape873 = x3d.Shape()
 IndexedLineSet874 = x3d.IndexedLineSet()
 IndexedLineSet874.coordIndex = [0,1,-1]
 Coordinate875 = x3d.Coordinate()
-Coordinate875.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
 IndexedLineSet874.coord = Coordinate875
 
@@ -4008,7 +3941,6 @@ Shape881 = x3d.Shape()
 IndexedLineSet882 = x3d.IndexedLineSet()
 IndexedLineSet882.coordIndex = [0,1,-1]
 Coordinate883 = x3d.Coordinate()
-Coordinate883.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
 IndexedLineSet882.coord = Coordinate883
 
@@ -4044,7 +3976,6 @@ Shape889 = x3d.Shape()
 IndexedLineSet890 = x3d.IndexedLineSet()
 IndexedLineSet890.coordIndex = [0,1,-1]
 Coordinate891 = x3d.Coordinate()
-Coordinate891.point = (0.1983,0.7045,-0.0767,0.2035,0.6750,-0.0756)
 
 IndexedLineSet890.coord = Coordinate891
 
@@ -4098,7 +4029,6 @@ Shape899 = x3d.Shape()
 IndexedLineSet900 = x3d.IndexedLineSet()
 IndexedLineSet900.coordIndex = [0,1,-1]
 Coordinate901 = x3d.Coordinate()
-Coordinate901.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
 IndexedLineSet900.coord = Coordinate901
 
@@ -4134,7 +4064,6 @@ Shape907 = x3d.Shape()
 IndexedLineSet908 = x3d.IndexedLineSet()
 IndexedLineSet908.coordIndex = [0,1,-1]
 Coordinate909 = x3d.Coordinate()
-Coordinate909.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
 IndexedLineSet908.coord = Coordinate909
 
@@ -4178,7 +4107,6 @@ Shape917 = x3d.Shape()
 IndexedLineSet918 = x3d.IndexedLineSet()
 IndexedLineSet918.coordIndex = [0,1,-1]
 Coordinate919 = x3d.Coordinate()
-Coordinate919.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
 IndexedLineSet918.coord = Coordinate919
 
@@ -4206,7 +4134,6 @@ Shape923 = x3d.Shape()
 IndexedLineSet924 = x3d.IndexedLineSet()
 IndexedLineSet924.coordIndex = [0,1,-1]
 Coordinate925 = x3d.Coordinate()
-Coordinate925.point = (0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012)
 
 IndexedLineSet924.coord = Coordinate925
 
@@ -4270,7 +4197,6 @@ Shape933 = x3d.Shape()
 IndexedLineSet934 = x3d.IndexedLineSet()
 IndexedLineSet934.coordIndex = [0,1,-1]
 Coordinate935 = x3d.Coordinate()
-Coordinate935.point = (-0.0300,1.4600,0.0200,-0.0900,1.4100,-0.0900)
 
 IndexedLineSet934.coord = Coordinate935
 
@@ -4316,7 +4242,6 @@ Shape943 = x3d.Shape()
 IndexedLineSet944 = x3d.IndexedLineSet()
 IndexedLineSet944.coordIndex = [0,1,-1]
 Coordinate945 = x3d.Coordinate()
-Coordinate945.point = (-0.0900,1.4100,-0.0900,-0.2000,1.4400,-0.0400)
 
 IndexedLineSet944.coord = Coordinate945
 
@@ -4398,7 +4323,6 @@ Shape961 = x3d.Shape()
 IndexedLineSet962 = x3d.IndexedLineSet()
 IndexedLineSet962.coordIndex = [0,1,-1]
 Coordinate963 = x3d.Coordinate()
-Coordinate963.point = (-0.2000,1.4400,-0.0400,-0.2000,1.1388,-0.0400)
 
 IndexedLineSet962.coord = Coordinate963
 
@@ -4520,7 +4444,6 @@ Shape989 = x3d.Shape()
 IndexedLineSet990 = x3d.IndexedLineSet()
 IndexedLineSet990.coordIndex = [0,1,-1]
 Coordinate991 = x3d.Coordinate()
-Coordinate991.point = (-0.2000,1.1388,-0.0400,-0.2000,0.8900,-0.0400)
 
 IndexedLineSet990.coord = Coordinate991
 
@@ -4616,7 +4539,6 @@ Shape1011 = x3d.Shape()
 IndexedLineSet1012 = x3d.IndexedLineSet()
 IndexedLineSet1012.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
 Coordinate1013 = x3d.Coordinate()
-Coordinate1013.point = (-0.2000,0.8900,-0.0400,-0.2000,0.8500,0.0000,-0.2000,0.8400,-0.0150,-0.2000,0.8350,-0.0400,-0.2000,0.8350,-0.0650,-0.2000,0.8400,-0.0850)
 
 IndexedLineSet1012.coord = Coordinate1013
 
@@ -4662,7 +4584,6 @@ Shape1021 = x3d.Shape()
 IndexedLineSet1022 = x3d.IndexedLineSet()
 IndexedLineSet1022.coordIndex = [0,1,-1]
 Coordinate1023 = x3d.Coordinate()
-Coordinate1023.point = (-0.2000,0.8500,0.0000,-0.2000,0.8200,0.0300)
 
 IndexedLineSet1022.coord = Coordinate1023
 
@@ -4698,7 +4619,6 @@ Shape1029 = x3d.Shape()
 IndexedLineSet1030 = x3d.IndexedLineSet()
 IndexedLineSet1030.coordIndex = [0,1,-1]
 Coordinate1031 = x3d.Coordinate()
-Coordinate1031.point = (-0.2000,0.8200,0.0300,-0.2000,0.8000,0.0500)
 
 IndexedLineSet1030.coord = Coordinate1031
 
@@ -4734,7 +4654,6 @@ Shape1037 = x3d.Shape()
 IndexedLineSet1038 = x3d.IndexedLineSet()
 IndexedLineSet1038.coordIndex = [0,1,-1]
 Coordinate1039 = x3d.Coordinate()
-Coordinate1039.point = (-0.2000,0.8000,0.0500,-0.2000,0.7800,0.0700)
 
 IndexedLineSet1038.coord = Coordinate1039
 
@@ -4795,7 +4714,6 @@ Shape1049 = x3d.Shape()
 IndexedLineSet1050 = x3d.IndexedLineSet()
 IndexedLineSet1050.coordIndex = [0,1,-1]
 Coordinate1051 = x3d.Coordinate()
-Coordinate1051.point = (-0.2000,0.8400,-0.0150,-0.2000,0.7930,-0.0150)
 
 IndexedLineSet1050.coord = Coordinate1051
 
@@ -4841,7 +4759,6 @@ Shape1059 = x3d.Shape()
 IndexedLineSet1060 = x3d.IndexedLineSet()
 IndexedLineSet1060.coordIndex = [0,1,-1]
 Coordinate1061 = x3d.Coordinate()
-Coordinate1061.point = (-0.2000,0.7930,-0.0150,-0.2000,0.7450,-0.0150)
 
 IndexedLineSet1060.coord = Coordinate1061
 
@@ -4877,7 +4794,6 @@ Shape1067 = x3d.Shape()
 IndexedLineSet1068 = x3d.IndexedLineSet()
 IndexedLineSet1068.coordIndex = [0,1,-1]
 Coordinate1069 = x3d.Coordinate()
-Coordinate1069.point = (-0.2000,0.7450,-0.0150,-0.2000,0.7200,-0.0150)
 
 IndexedLineSet1068.coord = Coordinate1069
 
@@ -4913,7 +4829,6 @@ Shape1075 = x3d.Shape()
 IndexedLineSet1076 = x3d.IndexedLineSet()
 IndexedLineSet1076.coordIndex = [0,1,-1]
 Coordinate1077 = x3d.Coordinate()
-Coordinate1077.point = (-0.2000,0.7200,-0.0150,-0.2000,0.6950,-0.0150)
 
 IndexedLineSet1076.coord = Coordinate1077
 
@@ -4967,7 +4882,6 @@ Shape1085 = x3d.Shape()
 IndexedLineSet1086 = x3d.IndexedLineSet()
 IndexedLineSet1086.coordIndex = [0,1,-1]
 Coordinate1087 = x3d.Coordinate()
-Coordinate1087.point = (-0.2000,0.8350,-0.0400,-0.2000,0.7880,-0.0400)
 
 IndexedLineSet1086.coord = Coordinate1087
 
@@ -5003,7 +4917,6 @@ Shape1093 = x3d.Shape()
 IndexedLineSet1094 = x3d.IndexedLineSet()
 IndexedLineSet1094.coordIndex = [0,1,-1]
 Coordinate1095 = x3d.Coordinate()
-Coordinate1095.point = (-0.2000,0.7880,-0.0400,-0.2000,0.7400,-0.0400)
 
 IndexedLineSet1094.coord = Coordinate1095
 
@@ -5039,7 +4952,6 @@ Shape1101 = x3d.Shape()
 IndexedLineSet1102 = x3d.IndexedLineSet()
 IndexedLineSet1102.coordIndex = [0,1,-1]
 Coordinate1103 = x3d.Coordinate()
-Coordinate1103.point = (-0.2000,0.7400,-0.0400,-0.2000,0.7142,-0.0400)
 
 IndexedLineSet1102.coord = Coordinate1103
 
@@ -5075,7 +4987,6 @@ Shape1109 = x3d.Shape()
 IndexedLineSet1110 = x3d.IndexedLineSet()
 IndexedLineSet1110.coordIndex = [0,1,-1]
 Coordinate1111 = x3d.Coordinate()
-Coordinate1111.point = (-0.2000,0.7142,-0.0400,-0.2000,0.6758,-0.0400)
 
 IndexedLineSet1110.coord = Coordinate1111
 
@@ -5139,7 +5050,6 @@ Shape1121 = x3d.Shape()
 IndexedLineSet1122 = x3d.IndexedLineSet()
 IndexedLineSet1122.coordIndex = [0,1,-1]
 Coordinate1123 = x3d.Coordinate()
-Coordinate1123.point = (-0.2000,0.8350,-0.0650,-0.2000,0.7930,-0.0650)
 
 IndexedLineSet1122.coord = Coordinate1123
 
@@ -5175,7 +5085,6 @@ Shape1129 = x3d.Shape()
 IndexedLineSet1130 = x3d.IndexedLineSet()
 IndexedLineSet1130.coordIndex = [0,1,-1]
 Coordinate1131 = x3d.Coordinate()
-Coordinate1131.point = (-0.2000,0.7930,-0.0650,-0.2000,0.7400,-0.0650)
 
 IndexedLineSet1130.coord = Coordinate1131
 
@@ -5211,7 +5120,6 @@ Shape1137 = x3d.Shape()
 IndexedLineSet1138 = x3d.IndexedLineSet()
 IndexedLineSet1138.coordIndex = [0,1,-1]
 Coordinate1139 = x3d.Coordinate()
-Coordinate1139.point = (-0.2000,0.7400,-0.0650,-0.2000,0.7177,-0.0650)
 
 IndexedLineSet1138.coord = Coordinate1139
 
@@ -5247,7 +5155,6 @@ Shape1145 = x3d.Shape()
 IndexedLineSet1146 = x3d.IndexedLineSet()
 IndexedLineSet1146.coordIndex = [0,1,-1]
 Coordinate1147 = x3d.Coordinate()
-Coordinate1147.point = (-0.2000,0.7177,-0.0650,-0.2000,0.6950,-0.0650)
 
 IndexedLineSet1146.coord = Coordinate1147
 
@@ -5301,7 +5208,6 @@ Shape1155 = x3d.Shape()
 IndexedLineSet1156 = x3d.IndexedLineSet()
 IndexedLineSet1156.coordIndex = [0,1,-1]
 Coordinate1157 = x3d.Coordinate()
-Coordinate1157.point = (-0.2000,0.8400,-0.0850,-0.2000,0.7900,-0.0850)
 
 IndexedLineSet1156.coord = Coordinate1157
 
@@ -5347,7 +5253,6 @@ Shape1165 = x3d.Shape()
 IndexedLineSet1166 = x3d.IndexedLineSet()
 IndexedLineSet1166.coordIndex = [0,1,-1]
 Coordinate1167 = x3d.Coordinate()
-Coordinate1167.point = (-0.2000,0.7900,-0.0850,-0.2000,0.7550,-0.0850)
 
 IndexedLineSet1166.coord = Coordinate1167
 
@@ -5383,7 +5288,6 @@ Shape1173 = x3d.Shape()
 IndexedLineSet1174 = x3d.IndexedLineSet()
 IndexedLineSet1174.coordIndex = [0,1,-1]
 Coordinate1175 = x3d.Coordinate()
-Coordinate1175.point = (-0.2000,0.7550,-0.0850,-0.2000,0.7350,-0.0850)
 
 IndexedLineSet1174.coord = Coordinate1175
 
@@ -5419,7 +5323,6 @@ Shape1181 = x3d.Shape()
 IndexedLineSet1182 = x3d.IndexedLineSet()
 IndexedLineSet1182.coordIndex = [0,1,-1]
 Coordinate1183 = x3d.Coordinate()
-Coordinate1183.point = (-0.2000,0.7350,-0.0850,-0.2000,0.7200,-0.0850)
 
 IndexedLineSet1182.coord = Coordinate1183
 
@@ -5887,25 +5790,21 @@ Scene35.children.append(TimeSensor1280)
 OrientationInterpolator1281 = x3d.OrientationInterpolator()
 OrientationInterpolator1281.DEF = "Pitch"
 OrientationInterpolator1281.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1281.keyValue = (1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.2560,1.0000,0.0000,0.0000,2.5120,1.0000,0.0000,0.0000,3.7680,1.0000,0.0000,0.0000,5.0240,1.0000,0.0000,0.0000,6.2800)
 
 Scene35.children.append(OrientationInterpolator1281)
 OrientationInterpolator1282 = x3d.OrientationInterpolator()
 OrientationInterpolator1282.DEF = "Yaw"
 OrientationInterpolator1282.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1282.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.2560,0.0000,1.0000,0.0000,2.5120,0.0000,1.0000,0.0000,3.7680,0.0000,1.0000,0.0000,5.0240,0.0000,1.0000,0.0000,6.2800)
 
 Scene35.children.append(OrientationInterpolator1282)
 OrientationInterpolator1283 = x3d.OrientationInterpolator()
 OrientationInterpolator1283.DEF = "Roll"
 OrientationInterpolator1283.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1283.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,1.2560,0.0000,0.0000,1.0000,2.5120,0.0000,0.0000,1.0000,3.7680,0.0000,0.0000,1.0000,5.0240,0.0000,0.0000,1.0000,6.2800)
 
 Scene35.children.append(OrientationInterpolator1283)
 OrientationInterpolator1284 = x3d.OrientationInterpolator()
 OrientationInterpolator1284.DEF = "vc6Yaw"
 OrientationInterpolator1284.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
-OrientationInterpolator1284.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.7000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,-1.0000,0.0000,0.0000,0.5000,-0.4000,-1.0000,0.0000,0.7000,-0.4000,-1.0000,0.0000,0.4000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1284)
 ROUTE1285 = x3d.ROUTE()
@@ -5925,7 +5824,6 @@ Scene35.children.append(ROUTE1286)
 OrientationInterpolator1287 = x3d.OrientationInterpolator()
 OrientationInterpolator1287.DEF = "EyeballsRotation"
 OrientationInterpolator1287.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
-OrientationInterpolator1287.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.2000,0.2000,0.2000,0.2000,-0.2000,0.2000,0.2000,0.2000,-0.2000,-0.2000,0.2000,0.2000,0.2000,-0.2000,0.2000,0.2000,-0.2000,0.2000,-0.2000,0.2000,-0.2000,0.2000,-0.2000,0.2000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1287)
 ROUTE1288 = x3d.ROUTE()
@@ -5952,109 +5850,91 @@ Scene35.children.append(ROUTE1290)
 OrientationInterpolator1291 = x3d.OrientationInterpolator()
 OrientationInterpolator1291.DEF = "r_sternoclavicularRelax"
 OrientationInterpolator1291.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1291.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.2000,-1.0000,0.0000,0.1100,0.2000,-1.0000,0.0000,0.1100,0.1000,-1.0000,0.0000,0.1000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1291)
 OrientationInterpolator1292 = x3d.OrientationInterpolator()
 OrientationInterpolator1292.DEF = "r_acromioclavicularRelax"
 OrientationInterpolator1292.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1292.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1292)
 OrientationInterpolator1293 = x3d.OrientationInterpolator()
 OrientationInterpolator1293.DEF = "r_shoulderRelax"
 OrientationInterpolator1293.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1293.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.4000,-0.7000,-0.5500,0.3500,0.4000,-0.7000,-0.5500,0.3500,0.4000,-0.7000,-0.5500,0.3500,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1293)
 OrientationInterpolator1294 = x3d.OrientationInterpolator()
 OrientationInterpolator1294.DEF = "r_elbowRelax"
 OrientationInterpolator1294.key = [0,0.15000000596046448,0.4000000059604645,0.6000000238418579,0.8999999761581421,1]
-OrientationInterpolator1294.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,-0.2000,0.0000,0.0100,0.5000,-0.2000,0.0000,0.0100,0.5000,-0.2000,0.0000,0.0100,0.5000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1294)
 OrientationInterpolator1295 = x3d.OrientationInterpolator()
 OrientationInterpolator1295.DEF = "r_wristRelax"
 OrientationInterpolator1295.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.8999999761581421,1]
-OrientationInterpolator1295.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.1000,-0.0900,0.2500,0.0000,0.1000,-0.0900,0.2500,0.0000,0.1000,-0.0900,0.2500,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1295)
 OrientationInterpolator1296 = x3d.OrientationInterpolator()
 OrientationInterpolator1296.DEF = "r_index0Relax"
 OrientationInterpolator1296.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1296.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,-0.2500,0.2500,-1.0000,0.1250,-0.2500,0.2500,-1.0000,0.1250,-0.2500,0.2500,-1.0000,0.1250,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1296)
 OrientationInterpolator1297 = x3d.OrientationInterpolator()
 OrientationInterpolator1297.DEF = "r_index1Relax"
 OrientationInterpolator1297.key = [0,0.10000000149011612,0.20000000298023224,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1297.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,-0.1350,-0.1350,1.0000,0.3570,-0.1590,-0.1530,1.0000,0.3550,-0.1590,-0.1530,1.0000,0.3570,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1297)
 OrientationInterpolator1298 = x3d.OrientationInterpolator()
 OrientationInterpolator1298.DEF = "r_middle0Relax"
 OrientationInterpolator1298.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1298.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,-1.0000,0.1400,0.0000,0.0000,-1.0000,0.1400,0.0000,0.0000,-1.0000,0.1400,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1298)
 OrientationInterpolator1299 = x3d.OrientationInterpolator()
 OrientationInterpolator1299.DEF = "r_middle1Relax"
 OrientationInterpolator1299.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
-OrientationInterpolator1299.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,0.3000,0.2570,0.0000,0.0000,0.3000,0.3700,0.0000,0.0000,0.3000,0.3900,0.0000,0.0000,0.3000,0.3100,0.0000,0.0000,0.3000,0.3200,0.0000,0.0000,0.3000,0.3400,0.0000,0.0000,0.3000,0.2800,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1299)
 OrientationInterpolator1300 = x3d.OrientationInterpolator()
 OrientationInterpolator1300.DEF = "r_ring0Relax"
 OrientationInterpolator1300.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1300.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.2500,0.2500,-1.0000,0.1000,0.2500,0.2500,-1.0000,0.1000,0.2500,0.2500,-1.0000,0.1000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1300)
 OrientationInterpolator1301 = x3d.OrientationInterpolator()
 OrientationInterpolator1301.DEF = "r_ring1Relax"
 OrientationInterpolator1301.key = [0,0.10000000149011612,0.4000000059604645,0.5,0.800000011920929,1]
-OrientationInterpolator1301.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.1350,0.1350,1.0000,0.2700,0.1350,0.1350,1.0000,0.2700,0.1350,0.1500,1.0000,0.2700,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1301)
 OrientationInterpolator1302 = x3d.OrientationInterpolator()
 OrientationInterpolator1302.DEF = "r_pinky0Relax"
 OrientationInterpolator1302.key = [0,0.10000000149011612,0.30000001192092896,0.5,0.800000011920929,1]
-OrientationInterpolator1302.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.3500,0.3500,-0.7000,0.1200,0.3500,0.3500,-0.9000,0.1200,0.3500,0.3500,-0.7000,0.1200,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1302)
 OrientationInterpolator1303 = x3d.OrientationInterpolator()
 OrientationInterpolator1303.DEF = "r_pinky1Relax"
 OrientationInterpolator1303.key = [0,0.10000000149011612,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1303.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.2000,0.2500,1.0000,0.2700,0.2000,0.2200,1.0000,0.2700,0.2200,0.2000,1.0000,0.2700,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1303)
 OrientationInterpolator1304 = x3d.OrientationInterpolator()
 OrientationInterpolator1304.DEF = "r_thumb1Relax"
 OrientationInterpolator1304.key = [0,0.029999999329447746,0.07999999821186066,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.800000011920929,0.949999988079071,1]
-OrientationInterpolator1304.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,-1.0000,1.0000,1.0000,0.5000,-0.1600,0.1600,0.7850,0.5000,-0.1600,0.1600,0.7850,1.0000,1.0000,1.0000,0.7500,1.0000,1.0000,1.0000,0.7500,1.0000,1.0000,1.0000,0.7500,1.0000,1.0000,1.0000,0.7500,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1304)
 OrientationInterpolator1305 = x3d.OrientationInterpolator()
 OrientationInterpolator1305.DEF = "r_thumb2Relax"
 OrientationInterpolator1305.key = [0,0.20000000298023224,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
-OrientationInterpolator1305.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.4500,1.0000,0.0000,0.0000,0.4500,1.0000,0.0000,0.0000,0.4500,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1305)
 OrientationInterpolator1306 = x3d.OrientationInterpolator()
 OrientationInterpolator1306.DEF = "r_thumb3Relax"
 OrientationInterpolator1306.key = [0,0.20000000298023224,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
-OrientationInterpolator1306.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.4500,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1306)
 OrientationInterpolator1307 = x3d.OrientationInterpolator()
 OrientationInterpolator1307.DEF = "r_fingers2Relax"
 OrientationInterpolator1307.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
-OrientationInterpolator1307.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.4300,0.0000,0.0000,1.0000,0.4400,0.0000,0.0000,1.0000,0.4600,0.0000,0.0000,1.0000,0.4400,0.0000,0.0000,1.0000,0.2450,0.0000,0.0000,1.0000,0.2400,0.0000,0.0000,1.0000,0.2100,0.0000,0.0000,1.0000,0.2400,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1307)
 OrientationInterpolator1308 = x3d.OrientationInterpolator()
 OrientationInterpolator1308.DEF = "r_fingers3Relax"
 OrientationInterpolator1308.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
-OrientationInterpolator1308.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.3700,0.0000,0.0000,1.0000,0.3800,0.0000,0.0000,1.0000,0.3900,0.0000,0.0000,1.0000,0.3800,0.0000,0.0000,1.0000,0.2700,0.0000,0.0000,1.0000,0.2800,0.0000,0.0000,1.0000,0.2700,0.0000,0.0000,1.0000,0.2800,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1308)
 ROUTE1309 = x3d.ROUTE()
@@ -6228,55 +6108,46 @@ Scene35.children.append(ROUTE1332)
 OrientationInterpolator1333 = x3d.OrientationInterpolator()
 OrientationInterpolator1333.DEF = "r_sternoclavicularRoll"
 OrientationInterpolator1333.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.699999988079071,0.800000011920929,1]
-OrientationInterpolator1333.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,-1.0000,0.1000,0.0000,0.0000,-1.0000,0.2200,0.0000,0.5000,-1.0000,0.2700,0.0000,0.0000,-1.0000,0.1000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1333)
 OrientationInterpolator1334 = x3d.OrientationInterpolator()
 OrientationInterpolator1334.DEF = "r_acromioclavicularRoll"
 OrientationInterpolator1334.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1334.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,-0.0500,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1334)
 OrientationInterpolator1335 = x3d.OrientationInterpolator()
 OrientationInterpolator1335.DEF = "r_shoulderRoll"
 OrientationInterpolator1335.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.8500000238418579,1]
-OrientationInterpolator1335.keyValue = (1.0000,0.0000,0.0000,0.0000,0.0000,0.0000,-1.0000,1.6600,-0.2500,0.0000,-1.0000,1.7600,0.0000,0.0000,-1.0000,1.2560,0.0000,0.0000,-1.0000,0.0500,1.0000,0.0000,0.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1335)
 OrientationInterpolator1336 = x3d.OrientationInterpolator()
 OrientationInterpolator1336.DEF = "r_ForeArmPitch"
 OrientationInterpolator1336.key = [0,0.15000000596046448,0.30000001192092896,0.5,0.699999988079071,0.8999999761581421,1]
-OrientationInterpolator1336.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.5500,-1.0000,-0.2500,0.0000,2.5500,-1.0000,-0.2500,0.0000,2.5500,-1.0000,-0.2500,0.0000,2.5500,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1336)
 OrientationInterpolator1337 = x3d.OrientationInterpolator()
 OrientationInterpolator1337.DEF = "r_wristRoll"
 OrientationInterpolator1337.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.6499999761581421,0.75,0.8500000238418579,1]
-OrientationInterpolator1337.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,-0.5500,0.0000,0.0000,1.0000,0.0000,0.0000,1.0000,0.0000,1.5500,0.0000,0.0000,-1.0000,1.5500,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1337)
 OrientationInterpolator1338 = x3d.OrientationInterpolator()
 OrientationInterpolator1338.DEF = "r_handPitch"
 OrientationInterpolator1338.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1338.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,0.0100,0.2500,0.0000,0.0000,-0.0100,0.0300,0.0000,0.0000,0.0100,0.0500,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1338)
 OrientationInterpolator1339 = x3d.OrientationInterpolator()
 OrientationInterpolator1339.DEF = "r_thumb1Pitch"
 OrientationInterpolator1339.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1339.keyValue = (1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.5000,1.0000,0.0000,0.0000,1.0000,1.0000,0.0000,0.0000,0.4000,1.0000,0.0000,0.0000,0.2000,1.0000,0.0000,0.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1339)
 OrientationInterpolator1340 = x3d.OrientationInterpolator()
 OrientationInterpolator1340.DEF = "r_thumb2Pitch"
 OrientationInterpolator1340.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
-OrientationInterpolator1340.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,1.0000,0.0000,0.3000,1.0000,1.0000,0.0000,0.3000,1.0000,1.0000,0.0000,0.6000,1.0000,1.0000,0.0000,0.3000,0.0000,1.0000,1.0000,0.0000)
 
 Scene35.children.append(OrientationInterpolator1340)
 OrientationInterpolator1341 = x3d.OrientationInterpolator()
 OrientationInterpolator1341.DEF = "l_shoulderRoll"
 OrientationInterpolator1341.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.8500000238418579,1]
-OrientationInterpolator1341.keyValue = (0.2500,0.0000,1.0000,1.7600,0.0000,0.0000,1.0000,1.6600,0.2500,0.0000,1.0000,1.7600,0.0000,0.0000,1.0000,1.2560,0.0000,0.0000,1.0000,0.0500,0.2500,0.0000,1.0000,1.7600)
 
 Scene35.children.append(OrientationInterpolator1341)
 ROUTE1342 = x3d.ROUTE()
@@ -6514,133 +6385,111 @@ Group1375 = x3d.Group()
 PositionInterpolator1376 = x3d.PositionInterpolator()
 PositionInterpolator1376.DEF = "HUMANOIDROOT_POSITION_ANIMATOR"
 PositionInterpolator1376.key = [0,0.041669998317956924,0.125,0.16670000553131104,0.20829999446868896,0.25,0.29170000553131104,0.375,0.45829999446868896,0.5,0.541700005531311,0.583299994468689,0.625,0.708299994468689,0.75,0.791700005531311,0.875,0.916700005531311,1]
-PositionInterpolator1376.keyValue = (0.0000,-0.0093,0.0000,0.0000,-0.0039,0.0000,0.0000,-0.0088,0.0000,0.0000,-0.0149,0.0000,0.0000,-0.0264,0.0000,0.0000,-0.0393,0.0000,0.0000,-0.0502,0.0000,0.0000,-0.0747,0.0000,0.0000,-0.0273,0.0000,0.0000,-0.0161,0.0000,0.0000,-0.0113,0.0000,0.0000,-0.0058,0.0000,0.0000,-0.0020,0.0000,0.0000,-0.0026,0.0000,0.0000,-0.0143,0.0000,0.0000,-0.0380,0.0000,0.0000,-0.0565,0.0000,0.0000,-0.0450,0.0000,0.0000,-0.0093,0.0000)
 
 Group1375.children.append(PositionInterpolator1376)
 OrientationInterpolator1377 = x3d.OrientationInterpolator()
 OrientationInterpolator1377.DEF = "HUMANOIDROOT_ANIMATOR"
 OrientationInterpolator1377.key = [0,1]
-OrientationInterpolator1377.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000)
 
 Group1375.children.append(OrientationInterpolator1377)
 OrientationInterpolator1378 = x3d.OrientationInterpolator()
 OrientationInterpolator1378.DEF = "L_HIP_ANIMATOR"
 OrientationInterpolator1378.key = [0,0.25,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
-OrientationInterpolator1378.keyValue = (-0.8730,0.0609,0.4840,0.2865,0.9963,-0.0106,0.0848,0.2488,0.9965,0.0159,-0.0822,0.3836,-0.7018,-0.0322,-0.7117,0.1289,-1.0000,0.0000,0.0000,0.5518,-0.9964,0.0223,0.0817,0.5351,-0.9809,0.0491,0.1881,0.5204,-0.8730,0.0609,0.4840,0.2865)
 
 Group1375.children.append(OrientationInterpolator1378)
 OrientationInterpolator1379 = x3d.OrientationInterpolator()
 OrientationInterpolator1379.DEF = "L_KNEE_ANIMATOR"
 OrientationInterpolator1379.key = [0,0.20829999446868896,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
-OrientationInterpolator1379.keyValue = (1.0000,0.0000,0.0000,0.3226,1.0000,0.0000,0.0000,0.1556,1.0000,0.0000,0.0000,0.0868,1.0000,0.0000,0.0000,0.8751,1.0000,0.0000,0.0000,1.1310,1.0000,0.0000,0.0000,0.0996,1.0000,0.0000,0.0000,0.3942,1.0000,0.0000,0.0000,0.3226)
 
 Group1375.children.append(OrientationInterpolator1379)
 OrientationInterpolator1380 = x3d.OrientationInterpolator()
 OrientationInterpolator1380.DEF = "L_ANKLE_ANIMATOR"
 OrientationInterpolator1380.key = [0,0.125,0.20829999446868896,0.375,0.666700005531311,0.916700005531311,1]
-OrientationInterpolator1380.keyValue = (-1.0000,0.0000,0.0000,0.0671,-1.0000,0.0000,0.0000,0.2152,-1.0000,0.0000,0.0000,0.3184,-1.0000,0.0000,0.0000,0.4717,-1.0000,0.0000,0.0000,0.2912,1.0000,0.0000,0.0000,0.2222,-1.0000,0.0000,0.0000,0.0671)
 
 Group1375.children.append(OrientationInterpolator1380)
 OrientationInterpolator1381 = x3d.OrientationInterpolator()
 OrientationInterpolator1381.DEF = "R_ANKLE_ANIMATOR"
 OrientationInterpolator1381.key = [0,0.125,0.20829999446868896,0.375,0.45829999446868896,0.5,0.666700005531311,0.75,0.7799999713897705,0.916700005531311,1]
-OrientationInterpolator1381.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.3533,-1.0000,0.0000,0.0000,0.1072,1.0000,0.0000,0.0000,0.4000,1.0000,0.0000,0.0000,0.1270,-1.0000,0.0000,0.0000,0.0180,-1.0000,0.0000,0.0000,0.0580,-1.0000,0.0000,0.0000,0.2400,-1.0000,0.0000,0.0000,0.3500,-1.0000,0.0000,0.0000,0.3300,0.0000,0.0000,1.0000,0.0000)
 
 Group1375.children.append(OrientationInterpolator1381)
 OrientationInterpolator1382 = x3d.OrientationInterpolator()
 OrientationInterpolator1382.DEF = "L_subtalar_ANIMATOR"
 OrientationInterpolator1382.key = [0,0.30000001192092896,1]
-OrientationInterpolator1382.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 
 Group1375.children.append(OrientationInterpolator1382)
 OrientationInterpolator1383 = x3d.OrientationInterpolator()
 OrientationInterpolator1383.DEF = "L_MIDTARSAL_ANIMATOR"
 OrientationInterpolator1383.key = [0,0.5,1]
-OrientationInterpolator1383.keyValue = (1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,-0.2000,1.0000,0.0000,0.0000,0.0000)
 
 Group1375.children.append(OrientationInterpolator1383)
 OrientationInterpolator1384 = x3d.OrientationInterpolator()
 OrientationInterpolator1384.DEF = "L_metatarsal_ANIMATOR"
 OrientationInterpolator1384.key = [0,0.20000000298023224,0.4000000059604645,0.800000011920929,1]
-OrientationInterpolator1384.keyValue = (-1.0000,0.0000,0.0000,0.3000,-1.0000,0.0000,0.0000,0.1500,1.0000,0.0000,0.0000,0.3000,0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.3000)
 
 Group1375.children.append(OrientationInterpolator1384)
 OrientationInterpolator1385 = x3d.OrientationInterpolator()
 OrientationInterpolator1385.DEF = "R_HIP_ANIMATOR"
 OrientationInterpolator1385.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
-OrientationInterpolator1385.keyValue = (-0.5831,0.0351,0.8116,0.1481,-0.9950,0.0230,0.0967,0.4683,-1.0000,0.0019,0.0080,0.4732,-0.9980,-0.0158,-0.0610,0.5079,-0.9911,-0.0354,-0.1286,0.5419,-0.9131,-0.0624,-0.4030,0.3361,-0.4306,-0.0796,-0.8990,0.0704,1.0000,0.0000,0.0000,0.2571,0.9891,-0.0280,0.1444,0.3879,-0.5831,0.0351,0.8116,0.1481)
 
 Group1375.children.append(OrientationInterpolator1385)
 OrientationInterpolator1386 = x3d.OrientationInterpolator()
 OrientationInterpolator1386.DEF = "R_KNEE_ANIMATOR"
 OrientationInterpolator1386.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
-OrientationInterpolator1386.keyValue = (1.0000,0.0000,0.0000,0.8573,1.0000,0.0000,0.0000,0.8926,1.0000,0.0000,0.0000,0.5351,1.0000,0.0000,0.0000,0.1756,1.0000,0.0000,0.0000,0.1194,1.0000,0.0000,0.0000,0.3153,1.0000,0.0000,0.0000,0.0935,1.0000,0.0000,0.0000,0.0856,1.0000,0.0000,0.0000,0.2475,1.0000,0.0000,0.0000,0.8573)
 
 Group1375.children.append(OrientationInterpolator1386)
 OrientationInterpolator1387 = x3d.OrientationInterpolator()
 OrientationInterpolator1387.DEF = "R_subtalar_ANIMATOR"
 OrientationInterpolator1387.key = [0,0.225,0.25,0.35,0.45,0.85,0.91]
-OrientationInterpolator1387.keyValue = (-1.0000,0.0000,0.0000,0.1000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.1000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.1000,1.0000,0.0000,0.0000,0.2500)
 
 Group1375.children.append(OrientationInterpolator1387)
 OrientationInterpolator1388 = x3d.OrientationInterpolator()
 OrientationInterpolator1388.DEF = "R_MIDTARSAL_ANIMATOR"
 OrientationInterpolator1388.key = [0,0.2199999988079071,1]
-OrientationInterpolator1388.keyValue = (1.0000,0.0000,0.0000,-0.2000,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,-0.2000)
 
 Group1375.children.append(OrientationInterpolator1388)
 OrientationInterpolator1389 = x3d.OrientationInterpolator()
 OrientationInterpolator1389.DEF = "R_metatarsal_ANIMATOR"
 OrientationInterpolator1389.key = [0,0.20000000298023224,0.4000000059604645,0.800000011920929,1]
-OrientationInterpolator1389.keyValue = (-1.0000,0.0000,0.0000,0.1500,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.3000,-1.0000,0.0000,0.0000,0.3000,-1.0000,0.0000,0.0000,0.1500)
 
 Group1375.children.append(OrientationInterpolator1389)
 OrientationInterpolator1390 = x3d.OrientationInterpolator()
 OrientationInterpolator1390.DEF = "VL5_ANIMATOR"
 OrientationInterpolator1390.key = [0,0.20829999446868896,0.375,0.75,0.833299994468689,1]
-OrientationInterpolator1390.keyValue = (0.0000,1.0000,0.0000,0.0826,-0.0197,-0.5974,0.8017,0.0823,0.0093,-0.9648,0.2627,0.1734,-0.0124,0.9549,-0.2968,0.0873,-0.0081,0.9691,-0.2463,0.1580,0.0000,1.0000,0.0000,0.0826)
 
 Group1375.children.append(OrientationInterpolator1390)
 OrientationInterpolator1391 = x3d.OrientationInterpolator()
 OrientationInterpolator1391.DEF = "SKULLBASE_ANIMATOR"
 OrientationInterpolator1391.key = [0,0.375,0.41670000553131104,0.5,0.583299994468689,0.666700005531311,0.75,0.833299994468689,0.916700005531311,1]
-OrientationInterpolator1391.keyValue = (0.0000,-1.0000,0.0000,0.0864,0.0000,1.0000,0.0000,0.1825,0.0000,1.0000,0.0000,0.1505,0.0000,1.0000,0.0000,0.1053,0.0000,1.0000,0.0000,0.0439,0.0000,-1.0000,0.0000,0.0312,0.0000,-1.0000,0.0000,0.0794,0.0000,-1.0000,0.0000,0.1616,0.0000,-1.0000,0.0000,0.1550,0.0000,-1.0000,0.0000,0.0864)
 
 Group1375.children.append(OrientationInterpolator1391)
 OrientationInterpolator1392 = x3d.OrientationInterpolator()
 OrientationInterpolator1392.DEF = "L_SHOULDER_ANIMATOR"
 OrientationInterpolator1392.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1392.keyValue = (1.0000,0.0000,0.4000,0.1200,-1.0000,0.0000,0.4000,0.1860,1.0000,0.0000,0.1000,0.3360,1.0000,0.0000,0.4000,0.1200)
 
 Group1375.children.append(OrientationInterpolator1392)
 OrientationInterpolator1393 = x3d.OrientationInterpolator()
 OrientationInterpolator1393.DEF = "L_ELBOW_ANIMATOR"
 OrientationInterpolator1393.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1393.keyValue = (-1.0000,0.0000,0.0000,0.0660,-1.0000,0.0000,0.0000,0.4880,-1.0000,0.0000,0.0000,0.0177,-1.0000,0.0000,0.0000,0.0660)
 
 Group1375.children.append(OrientationInterpolator1393)
 OrientationInterpolator1394 = x3d.OrientationInterpolator()
 OrientationInterpolator1394.DEF = "L_WRIST_ANIMATOR"
 OrientationInterpolator1394.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1394.keyValue = (0.0000,-1.0000,0.0000,0.4610,-0.3302,-0.9275,0.1755,0.5388,0.0328,-0.9993,-0.0172,0.4920,0.0000,-1.0000,0.0000,0.4611)
 
 Group1375.children.append(OrientationInterpolator1394)
 OrientationInterpolator1395 = x3d.OrientationInterpolator()
 OrientationInterpolator1395.DEF = "R_SHOULDER_ANIMATOR"
 OrientationInterpolator1395.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1395.keyValue = (-1.0000,0.0000,-1.0000,0.0920,1.0000,0.0000,-0.2000,0.3197,-1.0000,0.0000,-0.5000,0.1564,-1.0000,0.0000,-1.0000,0.0920)
 
 Group1375.children.append(OrientationInterpolator1395)
 OrientationInterpolator1396 = x3d.OrientationInterpolator()
 OrientationInterpolator1396.DEF = "R_ELBOW_ANIMATOR"
 OrientationInterpolator1396.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1396.keyValue = (-1.0000,0.0000,0.0000,0.4115,-1.0000,0.0000,0.0000,0.0925,-1.0000,0.0000,0.0000,0.5726,-1.0000,0.0000,0.0000,0.4115)
 
 Group1375.children.append(OrientationInterpolator1396)
 OrientationInterpolator1397 = x3d.OrientationInterpolator()
 OrientationInterpolator1397.DEF = "R_WRIST_ANIMATOR"
 OrientationInterpolator1397.key = [0,0.375,0.916700005531311,1]
-OrientationInterpolator1397.keyValue = (-0.8129,0.4759,-0.3357,0.1346,0.1533,-0.9878,0.0258,0.3902,-0.5701,0.7604,-0.3110,0.3660,-0.8129,0.4759,-0.3357,0.1346)
 
 Group1375.children.append(OrientationInterpolator1397)
 
@@ -6934,6 +6783,6 @@ ROUTE1438.toNode = "Joe_r_wrist"
 Scene35.children.append(ROUTE1438)
 
 X3D0.Scene = Scene35
-f = open("././JoeSkeletonSkinSiteSaluteWalk_RoundTrip.x3d", "w")
+f = open("././JoeSkeletonSkinSiteSaluteWalk_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

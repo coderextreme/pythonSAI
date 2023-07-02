@@ -144,7 +144,6 @@ head1.children.append(meta28)
 X3D0.head = head1
 Scene29 = x3d.Scene()
 Background30 = x3d.Background()
-Background30.skyColor = [0.3,0.3,0.3]
 
 Scene29.children.append(Background30)
 NavigationInfo31 = x3d.NavigationInfo()
@@ -299,37 +298,51 @@ MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "authorName"
 MetadataString45.value = ["Matthew T. Beitler Joe D. Williams Don Brutzman"]
 
-MetadataSet44.value = MetadataString45
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString45)
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "authorEmail"
 MetadataString46.value = ["HAnim@web3D.org"]
 
-MetadataSet44.value = MetadataString46
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString46)
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "copyright"
 MetadataString47.value = ["none"]
 
-MetadataSet44.value = MetadataString47
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString47)
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "creationDate"
 MetadataString48.value = ["12 May 1999"]
 
-MetadataSet44.value = MetadataString48
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString48)
 MetadataFloat49 = x3d.MetadataFloat()
 MetadataFloat49.name = "height"
 MetadataFloat49.value = [1.7504]
 
-MetadataSet44.value = MetadataFloat49
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataFloat49)
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "humanoidVersion"
 MetadataString50.value = ["2.0"]
 
-MetadataSet44.value = MetadataString50
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString50)
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "usageRestrictions"
 MetadataString51.value = ["none"]
 
-MetadataSet44.value = MetadataString51
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString51)
 
 HAnimHumanoid43.metadata = MetadataSet44
 HAnimJoint52 = x3d.HAnimJoint()
@@ -372,12 +385,10 @@ Shape60 = x3d.Shape()
 LineSet61 = x3d.LineSet()
 LineSet61.vertexCount = [2]
 Coordinate62 = x3d.Coordinate()
-Coordinate62.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
 LineSet61.coord = Coordinate62
 ColorRGBA63 = x3d.ColorRGBA()
 ColorRGBA63.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA63.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet61.color = ColorRGBA63
 
@@ -389,7 +400,6 @@ Shape64 = x3d.Shape()
 LineSet65 = x3d.LineSet()
 LineSet65.vertexCount = [2]
 Coordinate66 = x3d.Coordinate()
-Coordinate66.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
 LineSet65.coord = Coordinate66
 ColorRGBA67 = x3d.ColorRGBA()
@@ -429,7 +439,6 @@ Shape73 = x3d.Shape()
 LineSet74 = x3d.LineSet()
 LineSet74.vertexCount = [2]
 Coordinate75 = x3d.Coordinate()
-Coordinate75.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
 LineSet74.coord = Coordinate75
 ColorRGBA76 = x3d.ColorRGBA()
@@ -445,7 +454,6 @@ Shape77 = x3d.Shape()
 LineSet78 = x3d.LineSet()
 LineSet78.vertexCount = [2]
 Coordinate79 = x3d.Coordinate()
-Coordinate79.point = (0.0000,0.9149,0.0016,-0.0961,0.9124,-0.0001)
 
 LineSet78.coord = Coordinate79
 ColorRGBA80 = x3d.ColorRGBA()
@@ -461,12 +469,10 @@ Shape81 = x3d.Shape()
 LineSet82 = x3d.LineSet()
 LineSet82.vertexCount = [2]
 Coordinate83 = x3d.Coordinate()
-Coordinate83.point = (0.0000,0.9149,0.0016,-0.1525,1.0628,0.0035)
 
 LineSet82.coord = Coordinate83
 ColorRGBA84 = x3d.ColorRGBA()
 ColorRGBA84.DEF = "HAnimSiteLineColorRGBA"
-ColorRGBA84.color = [1,0,0,1,1,0,0,0.1]
 
 LineSet82.color = ColorRGBA84
 
@@ -478,7 +484,6 @@ Shape85 = x3d.Shape()
 LineSet86 = x3d.LineSet()
 LineSet86.vertexCount = [2]
 Coordinate87 = x3d.Coordinate()
-Coordinate87.point = (0.0000,0.9149,0.0016,-0.1689,0.8419,0.0352)
 
 LineSet86.coord = Coordinate87
 ColorRGBA88 = x3d.ColorRGBA()
@@ -494,7 +499,6 @@ Shape89 = x3d.Shape()
 LineSet90 = x3d.LineSet()
 LineSet90.vertexCount = [2]
 Coordinate91 = x3d.Coordinate()
-Coordinate91.point = (0.0000,0.9149,0.0016,0.1612,1.0537,0.0008)
 
 LineSet90.coord = Coordinate91
 ColorRGBA92 = x3d.ColorRGBA()
@@ -510,7 +514,6 @@ Shape93 = x3d.Shape()
 LineSet94 = x3d.LineSet()
 LineSet94.vertexCount = [2]
 Coordinate95 = x3d.Coordinate()
-Coordinate95.point = (0.0000,0.9149,0.0016,0.1677,0.8336,0.0303)
 
 LineSet94.coord = Coordinate95
 ColorRGBA96 = x3d.ColorRGBA()
@@ -526,7 +529,6 @@ Shape97 = x3d.Shape()
 LineSet98 = x3d.LineSet()
 LineSet98.vertexCount = [2]
 Coordinate99 = x3d.Coordinate()
-Coordinate99.point = (0.0000,0.9149,0.0016,-0.0887,1.0021,0.1112)
 
 LineSet98.coord = Coordinate99
 ColorRGBA100 = x3d.ColorRGBA()
@@ -542,7 +544,6 @@ Shape101 = x3d.Shape()
 LineSet102 = x3d.LineSet()
 LineSet102.vertexCount = [2]
 Coordinate103 = x3d.Coordinate()
-Coordinate103.point = (0.0000,0.9149,0.0016,0.0925,0.9983,0.1052)
 
 LineSet102.coord = Coordinate103
 ColorRGBA104 = x3d.ColorRGBA()
@@ -558,7 +559,6 @@ Shape105 = x3d.Shape()
 LineSet106 = x3d.LineSet()
 LineSet106.vertexCount = [2]
 Coordinate107 = x3d.Coordinate()
-Coordinate107.point = (0.0000,0.9149,0.0016,-0.0716,1.0190,-0.1138)
 
 LineSet106.coord = Coordinate107
 ColorRGBA108 = x3d.ColorRGBA()
@@ -574,7 +574,6 @@ Shape109 = x3d.Shape()
 LineSet110 = x3d.LineSet()
 LineSet110.vertexCount = [2]
 Coordinate111 = x3d.Coordinate()
-Coordinate111.point = (0.0000,0.9149,0.0016,0.0774,1.0190,-0.1151)
 
 LineSet110.coord = Coordinate111
 ColorRGBA112 = x3d.ColorRGBA()
@@ -590,7 +589,6 @@ Shape113 = x3d.Shape()
 LineSet114 = x3d.LineSet()
 LineSet114.vertexCount = [2]
 Coordinate115 = x3d.Coordinate()
-Coordinate115.point = (0.0000,0.9149,0.0016,0.0034,0.8266,0.0257)
 
 LineSet114.coord = Coordinate115
 ColorRGBA116 = x3d.ColorRGBA()
@@ -618,7 +616,6 @@ IndexedFaceSet120.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3
 IndexedFaceSet120.creaseAngle = 0.5
 IndexedFaceSet120.solid = False
 Coordinate121 = x3d.Coordinate()
-Coordinate121.point = (0.0000,0.0080,0.0000,-0.0080,0.0000,0.0000,0.0000,0.0000,0.0080,0.0080,0.0000,0.0000,0.0000,0.0000,-0.0080,0.0000,-0.0080,0.0000)
 
 IndexedFaceSet120.coord = Coordinate121
 
@@ -783,7 +780,6 @@ Shape153 = x3d.Shape()
 LineSet154 = x3d.LineSet()
 LineSet154.vertexCount = [2]
 Coordinate155 = x3d.Coordinate()
-Coordinate155.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
 LineSet154.coord = Coordinate155
 ColorRGBA156 = x3d.ColorRGBA()
@@ -799,7 +795,6 @@ Shape157 = x3d.Shape()
 LineSet158 = x3d.LineSet()
 LineSet158.vertexCount = [2]
 Coordinate159 = x3d.Coordinate()
-Coordinate159.point = (0.0961,0.9124,-0.0001,0.0993,0.4881,-0.0309)
 
 LineSet158.coord = Coordinate159
 ColorRGBA160 = x3d.ColorRGBA()
@@ -815,7 +810,6 @@ Shape161 = x3d.Shape()
 LineSet162 = x3d.LineSet()
 LineSet162.vertexCount = [2]
 Coordinate163 = x3d.Coordinate()
-Coordinate163.point = (0.0961,0.9124,-0.0001,0.1598,0.4967,0.0297)
 
 LineSet162.coord = Coordinate163
 ColorRGBA164 = x3d.ColorRGBA()
@@ -831,7 +825,6 @@ Shape165 = x3d.Shape()
 LineSet166 = x3d.LineSet()
 LineSet166.vertexCount = [2]
 Coordinate167 = x3d.Coordinate()
-Coordinate167.point = (0.0961,0.9124,-0.0001,0.0398,0.4946,0.0303)
 
 LineSet166.coord = Coordinate167
 ColorRGBA168 = x3d.ColorRGBA()
@@ -916,7 +909,6 @@ Shape183 = x3d.Shape()
 LineSet184 = x3d.LineSet()
 LineSet184.vertexCount = [2]
 Coordinate185 = x3d.Coordinate()
-Coordinate185.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
 LineSet184.coord = Coordinate185
 ColorRGBA186 = x3d.ColorRGBA()
@@ -956,7 +948,6 @@ Shape192 = x3d.Shape()
 LineSet193 = x3d.LineSet()
 LineSet193.vertexCount = [2]
 Coordinate194 = x3d.Coordinate()
-Coordinate194.point = (0.1101,0.0656,-0.0736,0.1086,0.0001,-0.0368)
 
 LineSet193.coord = Coordinate194
 ColorRGBA195 = x3d.ColorRGBA()
@@ -972,7 +963,6 @@ Shape196 = x3d.Shape()
 LineSet197 = x3d.LineSet()
 LineSet197.vertexCount = [2]
 Coordinate198 = x3d.Coordinate()
-Coordinate198.point = (0.1101,0.0656,-0.0736,0.1308,0.0597,-0.1032)
 
 LineSet197.coord = Coordinate198
 ColorRGBA199 = x3d.ColorRGBA()
@@ -988,7 +978,6 @@ Shape200 = x3d.Shape()
 LineSet201 = x3d.LineSet()
 LineSet201.vertexCount = [2]
 Coordinate202 = x3d.Coordinate()
-Coordinate202.point = (0.1101,0.0656,-0.0736,0.0890,0.0716,-0.0881)
 
 LineSet201.coord = Coordinate202
 ColorRGBA203 = x3d.ColorRGBA()
@@ -1004,7 +993,6 @@ Shape204 = x3d.Shape()
 LineSet205 = x3d.LineSet()
 LineSet205.vertexCount = [2]
 Coordinate206 = x3d.Coordinate()
-Coordinate206.point = (0.1101,0.0656,-0.0736,0.0890,0.0575,-0.0943)
 
 LineSet205.coord = Coordinate206
 ColorRGBA207 = x3d.ColorRGBA()
@@ -1020,7 +1008,6 @@ Shape208 = x3d.Shape()
 LineSet209 = x3d.LineSet()
 LineSet209.vertexCount = [2]
 Coordinate210 = x3d.Coordinate()
-Coordinate210.point = (0.1101,0.0656,-0.0736,0.0974,0.0259,-0.1171)
 
 LineSet209.coord = Coordinate210
 ColorRGBA211 = x3d.ColorRGBA()
@@ -1120,7 +1107,6 @@ Shape229 = x3d.Shape()
 LineSet230 = x3d.LineSet()
 LineSet230.vertexCount = [2]
 Coordinate231 = x3d.Coordinate()
-Coordinate231.point = (0.1086,0.0001,-0.0368,0.1086,0.0001,0.0368)
 
 LineSet230.coord = Coordinate231
 ColorRGBA232 = x3d.ColorRGBA()
@@ -1160,7 +1146,6 @@ Shape238 = x3d.Shape()
 LineSet239 = x3d.LineSet()
 LineSet239.vertexCount = [2]
 Coordinate240 = x3d.Coordinate()
-Coordinate240.point = (0.1086,0.0001,0.0368,0.1086,0.0000,0.0762)
 
 LineSet239.coord = Coordinate240
 ColorRGBA241 = x3d.ColorRGBA()
@@ -1176,7 +1161,6 @@ Shape242 = x3d.Shape()
 LineSet243 = x3d.LineSet()
 LineSet243.vertexCount = [2]
 Coordinate244 = x3d.Coordinate()
-Coordinate244.point = (0.1086,0.0001,0.0368,0.0816,0.0232,0.0106)
 
 LineSet243.coord = Coordinate244
 ColorRGBA245 = x3d.ColorRGBA()
@@ -1231,7 +1215,6 @@ Shape254 = x3d.Shape()
 LineSet255 = x3d.LineSet()
 LineSet255.vertexCount = [2]
 Coordinate256 = x3d.Coordinate()
-Coordinate256.point = (0.1086,0.0000,0.0762,0.1354,0.0016,0.1476)
 
 LineSet255.coord = Coordinate256
 ColorRGBA257 = x3d.ColorRGBA()
@@ -1247,7 +1230,6 @@ Shape258 = x3d.Shape()
 LineSet259 = x3d.LineSet()
 LineSet259.vertexCount = [2]
 Coordinate260 = x3d.Coordinate()
-Coordinate260.point = (0.1086,0.0000,0.0762,0.1825,0.0070,0.0928)
 
 LineSet259.coord = Coordinate260
 ColorRGBA261 = x3d.ColorRGBA()
@@ -1263,7 +1245,6 @@ Shape262 = x3d.Shape()
 LineSet263 = x3d.LineSet()
 LineSet263.vertexCount = [2]
 Coordinate264 = x3d.Coordinate()
-Coordinate264.point = (0.1086,0.0000,0.0762,0.1195,0.0079,0.1433)
 
 LineSet263.coord = Coordinate264
 ColorRGBA265 = x3d.ColorRGBA()
@@ -1360,7 +1341,6 @@ Shape280 = x3d.Shape()
 LineSet281 = x3d.LineSet()
 LineSet281.vertexCount = [2]
 Coordinate282 = x3d.Coordinate()
-Coordinate282.point = (-0.0961,0.9124,-0.0001,-0.1040,0.4867,0.0308)
 
 LineSet281.coord = Coordinate282
 ColorRGBA283 = x3d.ColorRGBA()
@@ -1376,7 +1356,6 @@ Shape284 = x3d.Shape()
 LineSet285 = x3d.LineSet()
 LineSet285.vertexCount = [2]
 Coordinate286 = x3d.Coordinate()
-Coordinate286.point = (-0.0961,0.9124,-0.0001,-0.0825,0.4932,-0.0326)
 
 LineSet285.coord = Coordinate286
 ColorRGBA287 = x3d.ColorRGBA()
@@ -1392,7 +1371,6 @@ Shape288 = x3d.Shape()
 LineSet289 = x3d.LineSet()
 LineSet289.vertexCount = [2]
 Coordinate290 = x3d.Coordinate()
-Coordinate290.point = (-0.0961,0.9124,-0.0001,-0.1421,0.4992,0.0310)
 
 LineSet289.coord = Coordinate290
 ColorRGBA291 = x3d.ColorRGBA()
@@ -1408,7 +1386,6 @@ Shape292 = x3d.Shape()
 LineSet293 = x3d.LineSet()
 LineSet293.vertexCount = [2]
 Coordinate294 = x3d.Coordinate()
-Coordinate294.point = (-0.0961,0.9124,-0.0001,-0.0221,0.5014,0.0289)
 
 LineSet293.coord = Coordinate294
 ColorRGBA295 = x3d.ColorRGBA()
@@ -1493,7 +1470,6 @@ Shape310 = x3d.Shape()
 LineSet311 = x3d.LineSet()
 LineSet311.vertexCount = [2]
 Coordinate312 = x3d.Coordinate()
-Coordinate312.point = (-0.1040,0.4867,0.0308,-0.1101,0.0656,-0.0736)
 
 LineSet311.coord = Coordinate312
 ColorRGBA313 = x3d.ColorRGBA()
@@ -1533,7 +1509,6 @@ Shape319 = x3d.Shape()
 LineSet320 = x3d.LineSet()
 LineSet320.vertexCount = [2]
 Coordinate321 = x3d.Coordinate()
-Coordinate321.point = (-0.1101,0.0656,-0.0736,-0.1086,0.0001,-0.0368)
 
 LineSet320.coord = Coordinate321
 ColorRGBA322 = x3d.ColorRGBA()
@@ -1549,7 +1524,6 @@ Shape323 = x3d.Shape()
 LineSet324 = x3d.LineSet()
 LineSet324.vertexCount = [2]
 Coordinate325 = x3d.Coordinate()
-Coordinate325.point = (-0.1101,0.0656,-0.0736,-0.1006,0.0658,-0.1075)
 
 LineSet324.coord = Coordinate325
 ColorRGBA326 = x3d.ColorRGBA()
@@ -1565,7 +1539,6 @@ Shape327 = x3d.Shape()
 LineSet328 = x3d.LineSet()
 LineSet328.vertexCount = [2]
 Coordinate329 = x3d.Coordinate()
-Coordinate329.point = (-0.1101,0.0656,-0.0736,-0.0591,0.0760,-0.0928)
 
 LineSet328.coord = Coordinate329
 ColorRGBA330 = x3d.ColorRGBA()
@@ -1581,7 +1554,6 @@ Shape331 = x3d.Shape()
 LineSet332 = x3d.LineSet()
 LineSet332.vertexCount = [2]
 Coordinate333 = x3d.Coordinate()
-Coordinate333.point = (-0.1101,0.0656,-0.0736,-0.0603,0.0610,-0.1002)
 
 LineSet332.coord = Coordinate333
 ColorRGBA334 = x3d.ColorRGBA()
@@ -1597,7 +1569,6 @@ Shape335 = x3d.Shape()
 LineSet336 = x3d.LineSet()
 LineSet336.vertexCount = [2]
 Coordinate337 = x3d.Coordinate()
-Coordinate337.point = (-0.1101,0.0656,-0.0736,-0.0692,0.0297,-0.1221)
 
 LineSet336.coord = Coordinate337
 ColorRGBA338 = x3d.ColorRGBA()
@@ -1697,7 +1668,6 @@ Shape356 = x3d.Shape()
 LineSet357 = x3d.LineSet()
 LineSet357.vertexCount = [2]
 Coordinate358 = x3d.Coordinate()
-Coordinate358.point = (-0.1086,0.0001,-0.0368,-0.1086,0.0001,0.0368)
 
 LineSet357.coord = Coordinate358
 ColorRGBA359 = x3d.ColorRGBA()
@@ -1737,7 +1707,6 @@ Shape365 = x3d.Shape()
 LineSet366 = x3d.LineSet()
 LineSet366.vertexCount = [2]
 Coordinate367 = x3d.Coordinate()
-Coordinate367.point = (-0.1086,0.0001,0.0368,-0.1086,0.0000,0.0762)
 
 LineSet366.coord = Coordinate367
 ColorRGBA368 = x3d.ColorRGBA()
@@ -1753,7 +1722,6 @@ Shape369 = x3d.Shape()
 LineSet370 = x3d.LineSet()
 LineSet370.vertexCount = [2]
 Coordinate371 = x3d.Coordinate()
-Coordinate371.point = (-0.1086,0.0001,0.0368,-0.0521,0.0260,0.0127)
 
 LineSet370.coord = Coordinate371
 ColorRGBA372 = x3d.ColorRGBA()
@@ -1808,7 +1776,6 @@ Shape381 = x3d.Shape()
 LineSet382 = x3d.LineSet()
 LineSet382.vertexCount = [2]
 Coordinate383 = x3d.Coordinate()
-Coordinate383.point = (-0.1086,0.0000,0.0762,-0.1043,0.0227,0.1450)
 
 LineSet382.coord = Coordinate383
 ColorRGBA384 = x3d.ColorRGBA()
@@ -1824,7 +1791,6 @@ Shape385 = x3d.Shape()
 LineSet386 = x3d.LineSet()
 LineSet386.vertexCount = [2]
 Coordinate387 = x3d.Coordinate()
-Coordinate387.point = (-0.1086,0.0000,0.0762,-0.1523,0.0166,0.0895)
 
 LineSet386.coord = Coordinate387
 ColorRGBA388 = x3d.ColorRGBA()
@@ -1840,7 +1806,6 @@ Shape389 = x3d.Shape()
 LineSet390 = x3d.LineSet()
 LineSet390.vertexCount = [2]
 Coordinate391 = x3d.Coordinate()
-Coordinate391.point = (-0.1086,0.0000,0.0762,-0.0883,0.0134,0.1383)
 
 LineSet390.coord = Coordinate391
 ColorRGBA392 = x3d.ColorRGBA()
@@ -1939,7 +1904,6 @@ Shape407 = x3d.Shape()
 LineSet408 = x3d.LineSet()
 LineSet408.vertexCount = [2]
 Coordinate409 = x3d.Coordinate()
-Coordinate409.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
 LineSet408.coord = Coordinate409
 ColorRGBA410 = x3d.ColorRGBA()
@@ -1955,7 +1919,6 @@ Shape411 = x3d.Shape()
 LineSet412 = x3d.LineSet()
 LineSet412.vertexCount = [2]
 Coordinate413 = x3d.Coordinate()
-Coordinate413.point = (0.0028,1.0568,-0.0776,0.0000,1.0915,-0.1091)
 
 LineSet412.coord = Coordinate413
 ColorRGBA414 = x3d.ColorRGBA()
@@ -1971,7 +1934,6 @@ Shape415 = x3d.Shape()
 LineSet416 = x3d.LineSet()
 LineSet416.vertexCount = [2]
 Coordinate417 = x3d.Coordinate()
-Coordinate417.point = (0.0028,1.0568,-0.0776,0.0069,1.0966,0.1017)
 
 LineSet416.coord = Coordinate417
 ColorRGBA418 = x3d.ColorRGBA()
@@ -2041,7 +2003,6 @@ Shape430 = x3d.Shape()
 LineSet431 = x3d.LineSet()
 LineSet431.vertexCount = [2]
 Coordinate432 = x3d.Coordinate()
-Coordinate432.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
 LineSet431.coord = Coordinate432
 ColorRGBA433 = x3d.ColorRGBA()
@@ -2081,7 +2042,6 @@ Shape439 = x3d.Shape()
 LineSet440 = x3d.LineSet()
 LineSet440.vertexCount = [2]
 Coordinate441 = x3d.Coordinate()
-Coordinate441.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
 LineSet440.coord = Coordinate441
 ColorRGBA442 = x3d.ColorRGBA()
@@ -2121,7 +2081,6 @@ Shape448 = x3d.Shape()
 LineSet449 = x3d.LineSet()
 LineSet449.vertexCount = [2]
 Coordinate450 = x3d.Coordinate()
-Coordinate450.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
 LineSet449.coord = Coordinate450
 ColorRGBA451 = x3d.ColorRGBA()
@@ -2137,7 +2096,6 @@ Shape452 = x3d.Shape()
 LineSet453 = x3d.LineSet()
 LineSet453.vertexCount = [2]
 Coordinate454 = x3d.Coordinate()
-Coordinate454.point = (0.0045,1.1546,-0.0800,-0.0711,1.1941,0.1016)
 
 LineSet453.coord = Coordinate454
 ColorRGBA455 = x3d.ColorRGBA()
@@ -2153,7 +2111,6 @@ Shape456 = x3d.Shape()
 LineSet457 = x3d.LineSet()
 LineSet457.vertexCount = [2]
 Coordinate458 = x3d.Coordinate()
-Coordinate458.point = (0.0045,1.1546,-0.0800,0.0871,1.1925,0.0992)
 
 LineSet457.coord = Coordinate458
 ColorRGBA459 = x3d.ColorRGBA()
@@ -2169,7 +2126,6 @@ Shape460 = x3d.Shape()
 LineSet461 = x3d.LineSet()
 LineSet461.vertexCount = [2]
 Coordinate462 = x3d.Coordinate()
-Coordinate462.point = (0.0045,1.1546,-0.0800,0.0049,1.1908,-0.1113)
 
 LineSet461.coord = Coordinate462
 ColorRGBA463 = x3d.ColorRGBA()
@@ -2254,7 +2210,6 @@ Shape478 = x3d.Shape()
 LineSet479 = x3d.LineSet()
 LineSet479.vertexCount = [2]
 Coordinate480 = x3d.Coordinate()
-Coordinate480.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
 LineSet479.coord = Coordinate480
 ColorRGBA481 = x3d.ColorRGBA()
@@ -2294,7 +2249,6 @@ Shape487 = x3d.Shape()
 LineSet488 = x3d.LineSet()
 LineSet488.vertexCount = [2]
 Coordinate489 = x3d.Coordinate()
-Coordinate489.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
 LineSet488.coord = Coordinate489
 ColorRGBA490 = x3d.ColorRGBA()
@@ -2334,7 +2288,6 @@ Shape496 = x3d.Shape()
 LineSet497 = x3d.LineSet()
 LineSet497.vertexCount = [2]
 Coordinate498 = x3d.Coordinate()
-Coordinate498.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
 LineSet497.coord = Coordinate498
 ColorRGBA499 = x3d.ColorRGBA()
@@ -2374,7 +2327,6 @@ Shape505 = x3d.Shape()
 LineSet506 = x3d.LineSet()
 LineSet506.vertexCount = [2]
 Coordinate507 = x3d.Coordinate()
-Coordinate507.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
 LineSet506.coord = Coordinate507
 ColorRGBA508 = x3d.ColorRGBA()
@@ -2390,7 +2342,6 @@ Shape509 = x3d.Shape()
 LineSet510 = x3d.LineSet()
 LineSet510.vertexCount = [2]
 Coordinate511 = x3d.Coordinate()
-Coordinate511.point = (0.0056,1.2848,-0.0822,0.0085,1.2995,0.1147)
 
 LineSet510.coord = Coordinate511
 ColorRGBA512 = x3d.ColorRGBA()
@@ -2445,7 +2396,6 @@ Shape521 = x3d.Shape()
 LineSet522 = x3d.LineSet()
 LineSet522.vertexCount = [2]
 Coordinate523 = x3d.Coordinate()
-Coordinate523.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
 LineSet522.coord = Coordinate523
 ColorRGBA524 = x3d.ColorRGBA()
@@ -2461,7 +2411,6 @@ Shape525 = x3d.Shape()
 LineSet526 = x3d.LineSet()
 LineSet526.vertexCount = [2]
 Coordinate527 = x3d.Coordinate()
-Coordinate527.point = (0.0057,1.3126,-0.0838,-0.0736,1.3385,0.1217)
 
 LineSet526.coord = Coordinate527
 ColorRGBA528 = x3d.ColorRGBA()
@@ -2477,7 +2426,6 @@ Shape529 = x3d.Shape()
 LineSet530 = x3d.LineSet()
 LineSet530.vertexCount = [2]
 Coordinate531 = x3d.Coordinate()
-Coordinate531.point = (0.0057,1.3126,-0.0838,0.0918,1.3382,0.1192)
 
 LineSet530.coord = Coordinate531
 ColorRGBA532 = x3d.ColorRGBA()
@@ -2547,7 +2495,6 @@ Shape544 = x3d.Shape()
 LineSet545 = x3d.LineSet()
 LineSet545.vertexCount = [2]
 Coordinate546 = x3d.Coordinate()
-Coordinate546.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
 LineSet545.coord = Coordinate546
 ColorRGBA547 = x3d.ColorRGBA()
@@ -2587,7 +2534,6 @@ Shape553 = x3d.Shape()
 LineSet554 = x3d.LineSet()
 LineSet554.vertexCount = [2]
 Coordinate555 = x3d.Coordinate()
-Coordinate555.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
 LineSet554.coord = Coordinate555
 ColorRGBA556 = x3d.ColorRGBA()
@@ -2627,7 +2573,6 @@ Shape562 = x3d.Shape()
 LineSet563 = x3d.LineSet()
 LineSet563.vertexCount = [2]
 Coordinate564 = x3d.Coordinate()
-Coordinate564.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
 LineSet563.coord = Coordinate564
 ColorRGBA565 = x3d.ColorRGBA()
@@ -2667,7 +2612,6 @@ Shape571 = x3d.Shape()
 LineSet572 = x3d.LineSet()
 LineSet572.vertexCount = [2]
 Coordinate573 = x3d.Coordinate()
-Coordinate573.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
 LineSet572.coord = Coordinate573
 ColorRGBA574 = x3d.ColorRGBA()
@@ -2707,7 +2651,6 @@ Shape580 = x3d.Shape()
 LineSet581 = x3d.LineSet()
 LineSet581.vertexCount = [2]
 Coordinate582 = x3d.Coordinate()
-Coordinate582.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
 LineSet581.coord = Coordinate582
 ColorRGBA583 = x3d.ColorRGBA()
@@ -2747,7 +2690,6 @@ Shape589 = x3d.Shape()
 LineSet590 = x3d.LineSet()
 LineSet590.vertexCount = [2]
 Coordinate591 = x3d.Coordinate()
-Coordinate591.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
 LineSet590.coord = Coordinate591
 ColorRGBA592 = x3d.ColorRGBA()
@@ -2787,7 +2729,6 @@ Shape598 = x3d.Shape()
 LineSet599 = x3d.LineSet()
 LineSet599.vertexCount = [2]
 Coordinate600 = x3d.Coordinate()
-Coordinate600.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
 LineSet599.coord = Coordinate600
 ColorRGBA601 = x3d.ColorRGBA()
@@ -2827,7 +2768,6 @@ Shape607 = x3d.Shape()
 LineSet608 = x3d.LineSet()
 LineSet608.vertexCount = [2]
 Coordinate609 = x3d.Coordinate()
-Coordinate609.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
 LineSet608.coord = Coordinate609
 ColorRGBA610 = x3d.ColorRGBA()
@@ -2843,7 +2783,6 @@ Shape611 = x3d.Shape()
 LineSet612 = x3d.LineSet()
 LineSet612.vertexCount = [2]
 Coordinate613 = x3d.Coordinate()
-Coordinate613.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
 LineSet612.coord = Coordinate613
 ColorRGBA614 = x3d.ColorRGBA()
@@ -2859,7 +2798,6 @@ Shape615 = x3d.Shape()
 LineSet616 = x3d.LineSet()
 LineSet616.vertexCount = [2]
 Coordinate617 = x3d.Coordinate()
-Coordinate617.point = (0.0065,1.4951,-0.0387,-0.0820,1.4488,-0.0353)
 
 LineSet616.coord = Coordinate617
 ColorRGBA618 = x3d.ColorRGBA()
@@ -2875,7 +2813,6 @@ Shape619 = x3d.Shape()
 LineSet620 = x3d.LineSet()
 LineSet620.vertexCount = [2]
 Coordinate621 = x3d.Coordinate()
-Coordinate621.point = (0.0065,1.4951,-0.0387,0.0084,1.4714,0.0551)
 
 LineSet620.coord = Coordinate621
 ColorRGBA622 = x3d.ColorRGBA()
@@ -2891,7 +2828,6 @@ Shape623 = x3d.Shape()
 LineSet624 = x3d.LineSet()
 LineSet624.vertexCount = [2]
 Coordinate625 = x3d.Coordinate()
-Coordinate625.point = (0.0065,1.4951,-0.0387,0.0064,1.5200,-0.0815)
 
 LineSet624.coord = Coordinate625
 ColorRGBA626 = x3d.ColorRGBA()
@@ -2961,7 +2897,6 @@ Shape638 = x3d.Shape()
 LineSet639 = x3d.LineSet()
 LineSet639.vertexCount = [2]
 Coordinate640 = x3d.Coordinate()
-Coordinate640.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
 LineSet639.coord = Coordinate640
 ColorRGBA641 = x3d.ColorRGBA()
@@ -2977,7 +2912,6 @@ Shape642 = x3d.Shape()
 LineSet643 = x3d.LineSet()
 LineSet643.vertexCount = [2]
 Coordinate644 = x3d.Coordinate()
-Coordinate644.point = (0.0066,1.5132,-0.0301,-0.0419,1.5149,-0.0220)
 
 LineSet643.coord = Coordinate644
 ColorRGBA645 = x3d.ColorRGBA()
@@ -2993,7 +2927,6 @@ Shape646 = x3d.Shape()
 LineSet647 = x3d.LineSet()
 LineSet647.vertexCount = [2]
 Coordinate648 = x3d.Coordinate()
-Coordinate648.point = (0.0066,1.5132,-0.0301,0.0646,1.5141,-0.0380)
 
 LineSet647.coord = Coordinate648
 ColorRGBA649 = x3d.ColorRGBA()
@@ -3063,7 +2996,6 @@ Shape661 = x3d.Shape()
 LineSet662 = x3d.LineSet()
 LineSet662.vertexCount = [2]
 Coordinate663 = x3d.Coordinate()
-Coordinate663.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
 LineSet662.coord = Coordinate663
 ColorRGBA664 = x3d.ColorRGBA()
@@ -3103,7 +3035,6 @@ Shape670 = x3d.Shape()
 LineSet671 = x3d.LineSet()
 LineSet671.vertexCount = [2]
 Coordinate672 = x3d.Coordinate()
-Coordinate672.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
 LineSet671.coord = Coordinate672
 ColorRGBA673 = x3d.ColorRGBA()
@@ -3143,7 +3074,6 @@ Shape679 = x3d.Shape()
 LineSet680 = x3d.LineSet()
 LineSet680.vertexCount = [2]
 Coordinate681 = x3d.Coordinate()
-Coordinate681.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
 LineSet680.coord = Coordinate681
 ColorRGBA682 = x3d.ColorRGBA()
@@ -3183,7 +3113,6 @@ Shape688 = x3d.Shape()
 LineSet689 = x3d.LineSet()
 LineSet689.vertexCount = [2]
 Coordinate690 = x3d.Coordinate()
-Coordinate690.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
 LineSet689.coord = Coordinate690
 ColorRGBA691 = x3d.ColorRGBA()
@@ -3223,7 +3152,6 @@ Shape697 = x3d.Shape()
 LineSet698 = x3d.LineSet()
 LineSet698.vertexCount = [2]
 Coordinate699 = x3d.Coordinate()
-Coordinate699.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
 LineSet698.coord = Coordinate699
 ColorRGBA700 = x3d.ColorRGBA()
@@ -3263,7 +3191,6 @@ Shape706 = x3d.Shape()
 LineSet707 = x3d.LineSet()
 LineSet707.vertexCount = [2]
 Coordinate708 = x3d.Coordinate()
-Coordinate708.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
 LineSet707.coord = Coordinate708
 ColorRGBA709 = x3d.ColorRGBA()
@@ -3303,7 +3230,6 @@ Shape715 = x3d.Shape()
 LineSet716 = x3d.LineSet()
 LineSet716.vertexCount = [2]
 Coordinate717 = x3d.Coordinate()
-Coordinate717.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
 LineSet716.coord = Coordinate717
 ColorRGBA718 = x3d.ColorRGBA()
@@ -3319,7 +3245,6 @@ Shape719 = x3d.Shape()
 LineSet720 = x3d.LineSet()
 LineSet720.vertexCount = [2]
 Coordinate721 = x3d.Coordinate()
-Coordinate721.point = (0.0044,1.6209,0.0236,0.0336,1.6332,0.0502)
 
 LineSet720.coord = Coordinate721
 ColorRGBA722 = x3d.ColorRGBA()
@@ -3335,7 +3260,6 @@ Shape723 = x3d.Shape()
 LineSet724 = x3d.LineSet()
 LineSet724.vertexCount = [2]
 Coordinate725 = x3d.Coordinate()
-Coordinate725.point = (0.0044,1.6209,0.0236,0.0336,1.6350,0.0506)
 
 LineSet724.coord = Coordinate725
 ColorRGBA726 = x3d.ColorRGBA()
@@ -3351,7 +3275,6 @@ Shape727 = x3d.Shape()
 LineSet728 = x3d.LineSet()
 LineSet728.vertexCount = [2]
 Coordinate729 = x3d.Coordinate()
-Coordinate729.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
 LineSet728.coord = Coordinate729
 ColorRGBA730 = x3d.ColorRGBA()
@@ -3367,7 +3290,6 @@ Shape731 = x3d.Shape()
 LineSet732 = x3d.LineSet()
 LineSet732.vertexCount = [2]
 Coordinate733 = x3d.Coordinate()
-Coordinate733.point = (0.0044,1.6209,0.0236,-0.0336,1.6332,0.0502)
 
 LineSet732.coord = Coordinate733
 ColorRGBA734 = x3d.ColorRGBA()
@@ -3383,7 +3305,6 @@ Shape735 = x3d.Shape()
 LineSet736 = x3d.LineSet()
 LineSet736.vertexCount = [2]
 Coordinate737 = x3d.Coordinate()
-Coordinate737.point = (0.0044,1.6209,0.0236,-0.0336,1.6350,0.0506)
 
 LineSet736.coord = Coordinate737
 ColorRGBA738 = x3d.ColorRGBA()
@@ -3399,7 +3320,6 @@ Shape739 = x3d.Shape()
 LineSet740 = x3d.LineSet()
 LineSet740.vertexCount = [2]
 Coordinate741 = x3d.Coordinate()
-Coordinate741.point = (0.0044,1.6209,0.0236,0.0000,1.6300,0.0150)
 
 LineSet740.coord = Coordinate741
 ColorRGBA742 = x3d.ColorRGBA()
@@ -3415,7 +3335,6 @@ Shape743 = x3d.Shape()
 LineSet744 = x3d.LineSet()
 LineSet744.vertexCount = [2]
 Coordinate745 = x3d.Coordinate()
-Coordinate745.point = (0.0044,1.6209,0.0236,0.0050,1.7504,0.0055)
 
 LineSet744.coord = Coordinate745
 ColorRGBA746 = x3d.ColorRGBA()
@@ -3431,7 +3350,6 @@ Shape747 = x3d.Shape()
 LineSet748 = x3d.LineSet()
 LineSet748.vertexCount = [2]
 Coordinate749 = x3d.Coordinate()
-Coordinate749.point = (0.0044,1.6209,0.0236,0.0058,1.6316,0.0852)
 
 LineSet748.coord = Coordinate749
 ColorRGBA750 = x3d.ColorRGBA()
@@ -3447,7 +3365,6 @@ Shape751 = x3d.Shape()
 LineSet752 = x3d.LineSet()
 LineSet752.vertexCount = [2]
 Coordinate753 = x3d.Coordinate()
-Coordinate753.point = (0.0044,1.6209,0.0236,-0.0237,1.6171,0.0752)
 
 LineSet752.coord = Coordinate753
 ColorRGBA754 = x3d.ColorRGBA()
@@ -3463,7 +3380,6 @@ Shape755 = x3d.Shape()
 LineSet756 = x3d.LineSet()
 LineSet756.vertexCount = [2]
 Coordinate757 = x3d.Coordinate()
-Coordinate757.point = (0.0044,1.6209,0.0236,0.0341,1.6171,0.0752)
 
 LineSet756.coord = Coordinate757
 ColorRGBA758 = x3d.ColorRGBA()
@@ -3479,7 +3395,6 @@ Shape759 = x3d.Shape()
 LineSet760 = x3d.LineSet()
 LineSet760.vertexCount = [2]
 Coordinate761 = x3d.Coordinate()
-Coordinate761.point = (0.0044,1.6209,0.0236,0.0061,1.5410,0.0805)
 
 LineSet760.coord = Coordinate761
 ColorRGBA762 = x3d.ColorRGBA()
@@ -3495,7 +3410,6 @@ Shape763 = x3d.Shape()
 LineSet764 = x3d.LineSet()
 LineSet764.vertexCount = [2]
 Coordinate765 = x3d.Coordinate()
-Coordinate765.point = (0.0044,1.6209,0.0236,-0.0646,1.6347,0.0302)
 
 LineSet764.coord = Coordinate765
 ColorRGBA766 = x3d.ColorRGBA()
@@ -3511,7 +3425,6 @@ Shape767 = x3d.Shape()
 LineSet768 = x3d.LineSet()
 LineSet768.vertexCount = [2]
 Coordinate769 = x3d.Coordinate()
-Coordinate769.point = (0.0044,1.6209,0.0236,-0.0520,1.5529,0.0347)
 
 LineSet768.coord = Coordinate769
 ColorRGBA770 = x3d.ColorRGBA()
@@ -3527,7 +3440,6 @@ Shape771 = x3d.Shape()
 LineSet772 = x3d.LineSet()
 LineSet772.vertexCount = [2]
 Coordinate773 = x3d.Coordinate()
-Coordinate773.point = (0.0044,1.6209,0.0236,0.0739,1.6348,0.0282)
 
 LineSet772.coord = Coordinate773
 ColorRGBA774 = x3d.ColorRGBA()
@@ -3543,7 +3455,6 @@ Shape775 = x3d.Shape()
 LineSet776 = x3d.LineSet()
 LineSet776.vertexCount = [2]
 Coordinate777 = x3d.Coordinate()
-Coordinate777.point = (0.0044,1.6209,0.0236,0.0631,1.5530,0.0330)
 
 LineSet776.coord = Coordinate777
 ColorRGBA778 = x3d.ColorRGBA()
@@ -3559,7 +3470,6 @@ Shape779 = x3d.Shape()
 LineSet780 = x3d.LineSet()
 LineSet780.vertexCount = [2]
 Coordinate781 = x3d.Coordinate()
-Coordinate781.point = (0.0044,1.6209,0.0236,0.0039,1.5972,-0.0796)
 
 LineSet780.coord = Coordinate781
 ColorRGBA782 = x3d.ColorRGBA()
@@ -3750,12 +3660,10 @@ Shape818 = x3d.Shape()
 LineSet819 = x3d.LineSet()
 LineSet819.vertexCount = [2]
 Coordinate820 = x3d.Coordinate()
-Coordinate820.point = (0.0336,1.6332,0.0502,0.0340,1.6400,0.0500)
 
 LineSet819.coord = Coordinate820
 ColorRGBA821 = x3d.ColorRGBA()
 ColorRGBA821.DEF = "HAnimSiteViewpointLineColorRGBA"
-ColorRGBA821.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet819.color = ColorRGBA821
 
@@ -3800,7 +3708,6 @@ IndexedFaceSet830.DEF = "SiteViewpointDiamondIFS"
 IndexedFaceSet830.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 IndexedFaceSet830.creaseAngle = 0.5
 Coordinate831 = x3d.Coordinate()
-Coordinate831.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet830.coord = Coordinate831
 
@@ -3904,7 +3811,6 @@ Shape849 = x3d.Shape()
 LineSet850 = x3d.LineSet()
 LineSet850.vertexCount = [2]
 Coordinate851 = x3d.Coordinate()
-Coordinate851.point = (-0.0336,1.6332,0.0502,-0.0340,1.6400,0.0500)
 
 LineSet850.coord = Coordinate851
 ColorRGBA852 = x3d.ColorRGBA()
@@ -4040,7 +3946,6 @@ Shape876 = x3d.Shape()
 LineSet877 = x3d.LineSet()
 LineSet877.vertexCount = [2]
 Coordinate878 = x3d.Coordinate()
-Coordinate878.point = (0.0000,1.6300,0.0150,0.0450,1.6300,0.0000)
 
 LineSet877.coord = Coordinate878
 ColorRGBA879 = x3d.ColorRGBA()
@@ -4056,7 +3961,6 @@ Shape880 = x3d.Shape()
 LineSet881 = x3d.LineSet()
 LineSet881.vertexCount = [2]
 Coordinate882 = x3d.Coordinate()
-Coordinate882.point = (0.0000,1.6300,0.0150,-0.0450,1.6300,0.0000)
 
 LineSet881.coord = Coordinate882
 ColorRGBA883 = x3d.ColorRGBA()
@@ -4144,7 +4048,6 @@ Shape895 = x3d.Shape()
 LineSet896 = x3d.LineSet()
 LineSet896.vertexCount = [2]
 Coordinate897 = x3d.Coordinate()
-Coordinate897.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
 LineSet896.coord = Coordinate897
 ColorRGBA898 = x3d.ColorRGBA()
@@ -4160,7 +4063,6 @@ Shape899 = x3d.Shape()
 LineSet900 = x3d.LineSet()
 LineSet900.vertexCount = [2]
 Coordinate901 = x3d.Coordinate()
-Coordinate901.point = (0.0820,1.4488,-0.0353,0.0271,1.4943,0.0394)
 
 LineSet900.coord = Coordinate901
 ColorRGBA902 = x3d.ColorRGBA()
@@ -4176,7 +4078,6 @@ Shape903 = x3d.Shape()
 LineSet904 = x3d.LineSet()
 LineSet904.vertexCount = [2]
 Coordinate905 = x3d.Coordinate()
-Coordinate905.point = (0.0820,1.4488,-0.0353,0.2032,1.4760,-0.0490)
 
 LineSet904.coord = Coordinate905
 ColorRGBA906 = x3d.ColorRGBA()
@@ -4192,7 +4093,6 @@ Shape907 = x3d.Shape()
 LineSet908 = x3d.LineSet()
 LineSet908.vertexCount = [2]
 Coordinate909 = x3d.Coordinate()
-Coordinate909.point = (0.0820,1.4488,-0.0353,0.1777,1.4065,-0.0075)
 
 LineSet908.coord = Coordinate909
 ColorRGBA910 = x3d.ColorRGBA()
@@ -4208,7 +4108,6 @@ Shape911 = x3d.Shape()
 LineSet912 = x3d.LineSet()
 LineSet912.vertexCount = [2]
 Coordinate913 = x3d.Coordinate()
-Coordinate913.point = (0.0820,1.4488,-0.0353,0.1706,1.4072,-0.0875)
 
 LineSet912.coord = Coordinate913
 ColorRGBA914 = x3d.ColorRGBA()
@@ -4308,7 +4207,6 @@ Shape932 = x3d.Shape()
 LineSet933 = x3d.LineSet()
 LineSet933.vertexCount = [2]
 Coordinate934 = x3d.Coordinate()
-Coordinate934.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
 LineSet933.coord = Coordinate934
 ColorRGBA935 = x3d.ColorRGBA()
@@ -4348,7 +4246,6 @@ Shape941 = x3d.Shape()
 LineSet942 = x3d.LineSet()
 LineSet942.vertexCount = [2]
 Coordinate943 = x3d.Coordinate()
-Coordinate943.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
 LineSet942.coord = Coordinate943
 ColorRGBA944 = x3d.ColorRGBA()
@@ -4364,7 +4261,6 @@ Shape945 = x3d.Shape()
 LineSet946 = x3d.LineSet()
 LineSet946.vertexCount = [2]
 Coordinate947 = x3d.Coordinate()
-Coordinate947.point = (0.2029,1.4376,-0.0387,0.2280,1.1482,-0.1100)
 
 LineSet946.coord = Coordinate947
 ColorRGBA948 = x3d.ColorRGBA()
@@ -4419,7 +4315,6 @@ Shape957 = x3d.Shape()
 LineSet958 = x3d.LineSet()
 LineSet958.vertexCount = [2]
 Coordinate959 = x3d.Coordinate()
-Coordinate959.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
 LineSet958.coord = Coordinate959
 ColorRGBA960 = x3d.ColorRGBA()
@@ -4435,7 +4330,6 @@ Shape961 = x3d.Shape()
 LineSet962 = x3d.LineSet()
 LineSet962.vertexCount = [2]
 Coordinate963 = x3d.Coordinate()
-Coordinate963.point = (0.2014,1.1357,-0.0682,0.1901,0.8645,-0.0415)
 
 LineSet962.coord = Coordinate963
 ColorRGBA964 = x3d.ColorRGBA()
@@ -4451,7 +4345,6 @@ Shape965 = x3d.Shape()
 LineSet966 = x3d.LineSet()
 LineSet966.vertexCount = [2]
 Coordinate967 = x3d.Coordinate()
-Coordinate967.point = (0.2014,1.1357,-0.0682,0.1962,1.1375,-0.1123)
 
 LineSet966.coord = Coordinate967
 ColorRGBA968 = x3d.ColorRGBA()
@@ -4467,7 +4360,6 @@ Shape969 = x3d.Shape()
 LineSet970 = x3d.LineSet()
 LineSet970.vertexCount = [2]
 Coordinate971 = x3d.Coordinate()
-Coordinate971.point = (0.2014,1.1357,-0.0682,0.1735,1.1272,-0.1113)
 
 LineSet970.coord = Coordinate971
 ColorRGBA972 = x3d.ColorRGBA()
@@ -4483,7 +4375,6 @@ Shape973 = x3d.Shape()
 LineSet974 = x3d.LineSet()
 LineSet974.vertexCount = [2]
 Coordinate975 = x3d.Coordinate()
-Coordinate975.point = (0.2014,1.1357,-0.0682,0.2182,1.1212,-0.1167)
 
 LineSet974.coord = Coordinate975
 ColorRGBA976 = x3d.ColorRGBA()
@@ -4583,7 +4474,6 @@ Shape994 = x3d.Shape()
 LineSet995 = x3d.LineSet()
 LineSet995.vertexCount = [2]
 Coordinate996 = x3d.Coordinate()
-Coordinate996.point = (0.1984,0.8663,-0.0583,0.1924,0.8472,-0.0534)
 
 LineSet995.coord = Coordinate996
 ColorRGBA997 = x3d.ColorRGBA()
@@ -4599,7 +4489,6 @@ Shape998 = x3d.Shape()
 LineSet999 = x3d.LineSet()
 LineSet999.vertexCount = [2]
 Coordinate1000 = x3d.Coordinate()
-Coordinate1000.point = (0.1984,0.8663,-0.0583,0.1983,0.8024,-0.0280)
 
 LineSet999.coord = Coordinate1000
 ColorRGBA1001 = x3d.ColorRGBA()
@@ -4615,7 +4504,6 @@ Shape1002 = x3d.Shape()
 LineSet1003 = x3d.LineSet()
 LineSet1003.vertexCount = [2]
 Coordinate1004 = x3d.Coordinate()
-Coordinate1004.point = (0.1984,0.8663,-0.0583,0.1987,0.8029,-0.0530)
 
 LineSet1003.coord = Coordinate1004
 ColorRGBA1005 = x3d.ColorRGBA()
@@ -4631,7 +4519,6 @@ Shape1006 = x3d.Shape()
 LineSet1007 = x3d.LineSet()
 LineSet1007.vertexCount = [2]
 Coordinate1008 = x3d.Coordinate()
-Coordinate1008.point = (0.1984,0.8663,-0.0583,0.1956,0.8019,-0.0794)
 
 LineSet1007.coord = Coordinate1008
 ColorRGBA1009 = x3d.ColorRGBA()
@@ -4647,7 +4534,6 @@ Shape1010 = x3d.Shape()
 LineSet1011 = x3d.LineSet()
 LineSet1011.vertexCount = [2]
 Coordinate1012 = x3d.Coordinate()
-Coordinate1012.point = (0.1984,0.8663,-0.0583,0.1925,0.8066,-0.1036)
 
 LineSet1011.coord = Coordinate1012
 ColorRGBA1013 = x3d.ColorRGBA()
@@ -4663,7 +4549,6 @@ Shape1014 = x3d.Shape()
 LineSet1015 = x3d.LineSet()
 LineSet1015.vertexCount = [2]
 Coordinate1016 = x3d.Coordinate()
-Coordinate1016.point = (0.1984,0.8663,-0.0583,0.2009,0.8139,-0.0237)
 
 LineSet1015.coord = Coordinate1016
 ColorRGBA1017 = x3d.ColorRGBA()
@@ -4679,7 +4564,6 @@ Shape1018 = x3d.Shape()
 LineSet1019 = x3d.LineSet()
 LineSet1019.vertexCount = [2]
 Coordinate1020 = x3d.Coordinate()
-Coordinate1020.point = (0.1984,0.8663,-0.0583,0.2142,0.8529,-0.0648)
 
 LineSet1019.coord = Coordinate1020
 ColorRGBA1021 = x3d.ColorRGBA()
@@ -4695,7 +4579,6 @@ Shape1022 = x3d.Shape()
 LineSet1023 = x3d.LineSet()
 LineSet1023.vertexCount = [2]
 Coordinate1024 = x3d.Coordinate()
-Coordinate1024.point = (0.1984,0.8663,-0.0583,0.1929,0.7860,-0.1122)
 
 LineSet1023.coord = Coordinate1024
 ColorRGBA1025 = x3d.ColorRGBA()
@@ -4711,7 +4594,6 @@ Shape1026 = x3d.Shape()
 LineSet1027 = x3d.LineSet()
 LineSet1027.vertexCount = [2]
 Coordinate1028 = x3d.Coordinate()
-Coordinate1028.point = (0.1984,0.8663,-0.0583,0.3000,0.7500,0.4500)
 
 LineSet1027.coord = Coordinate1028
 ColorRGBA1029 = x3d.ColorRGBA()
@@ -4837,7 +4719,6 @@ Shape1052 = x3d.Shape()
 LineSet1053 = x3d.LineSet()
 LineSet1053.vertexCount = [2]
 Coordinate1054 = x3d.Coordinate()
-Coordinate1054.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
 LineSet1053.coord = Coordinate1054
 ColorRGBA1055 = x3d.ColorRGBA()
@@ -4877,7 +4758,6 @@ Shape1061 = x3d.Shape()
 LineSet1062 = x3d.LineSet()
 LineSet1062.vertexCount = [2]
 Coordinate1063 = x3d.Coordinate()
-Coordinate1063.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
 LineSet1062.coord = Coordinate1063
 ColorRGBA1064 = x3d.ColorRGBA()
@@ -4917,7 +4797,6 @@ Shape1070 = x3d.Shape()
 LineSet1071 = x3d.LineSet()
 LineSet1071.vertexCount = [2]
 Coordinate1072 = x3d.Coordinate()
-Coordinate1072.point = (0.1955,0.8159,0.0464,0.1982,0.8061,0.0759)
 
 LineSet1071.coord = Coordinate1072
 ColorRGBA1073 = x3d.ColorRGBA()
@@ -4978,7 +4857,6 @@ Shape1082 = x3d.Shape()
 LineSet1083 = x3d.LineSet()
 LineSet1083.vertexCount = [2]
 Coordinate1084 = x3d.Coordinate()
-Coordinate1084.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
 LineSet1083.coord = Coordinate1084
 ColorRGBA1085 = x3d.ColorRGBA()
@@ -5018,7 +4896,6 @@ Shape1091 = x3d.Shape()
 LineSet1092 = x3d.LineSet()
 LineSet1092.vertexCount = [2]
 Coordinate1093 = x3d.Coordinate()
-Coordinate1093.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
 LineSet1092.coord = Coordinate1093
 ColorRGBA1094 = x3d.ColorRGBA()
@@ -5058,7 +4935,6 @@ Shape1100 = x3d.Shape()
 LineSet1101 = x3d.LineSet()
 LineSet1101.vertexCount = [2]
 Coordinate1102 = x3d.Coordinate()
-Coordinate1102.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
 LineSet1101.coord = Coordinate1102
 ColorRGBA1103 = x3d.ColorRGBA()
@@ -5098,7 +4974,6 @@ Shape1109 = x3d.Shape()
 LineSet1110 = x3d.LineSet()
 LineSet1110.vertexCount = [2]
 Coordinate1111 = x3d.Coordinate()
-Coordinate1111.point = (0.2028,0.7139,-0.0236,0.2089,0.6858,-0.0245)
 
 LineSet1110.coord = Coordinate1111
 ColorRGBA1112 = x3d.ColorRGBA()
@@ -5114,7 +4989,6 @@ Shape1113 = x3d.Shape()
 LineSet1114 = x3d.LineSet()
 LineSet1114.vertexCount = [2]
 Coordinate1115 = x3d.Coordinate()
-Coordinate1115.point = (0.2028,0.7139,-0.0236,0.2056,0.6743,-0.0482)
 
 LineSet1114.coord = Coordinate1115
 ColorRGBA1116 = x3d.ColorRGBA()
@@ -5192,7 +5066,6 @@ Shape1128 = x3d.Shape()
 LineSet1129 = x3d.LineSet()
 LineSet1129.vertexCount = [2]
 Coordinate1130 = x3d.Coordinate()
-Coordinate1130.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
 LineSet1129.coord = Coordinate1130
 ColorRGBA1131 = x3d.ColorRGBA()
@@ -5232,7 +5105,6 @@ Shape1137 = x3d.Shape()
 LineSet1138 = x3d.LineSet()
 LineSet1138.vertexCount = [2]
 Coordinate1139 = x3d.Coordinate()
-Coordinate1139.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
 LineSet1138.coord = Coordinate1139
 ColorRGBA1140 = x3d.ColorRGBA()
@@ -5272,7 +5144,6 @@ Shape1146 = x3d.Shape()
 LineSet1147 = x3d.LineSet()
 LineSet1147.vertexCount = [2]
 Coordinate1148 = x3d.Coordinate()
-Coordinate1148.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
 LineSet1147.coord = Coordinate1148
 ColorRGBA1149 = x3d.ColorRGBA()
@@ -5312,7 +5183,6 @@ Shape1155 = x3d.Shape()
 LineSet1156 = x3d.LineSet()
 LineSet1156.vertexCount = [2]
 Coordinate1157 = x3d.Coordinate()
-Coordinate1157.point = (0.2026,0.7011,-0.0494,0.2080,0.6731,-0.0491)
 
 LineSet1156.coord = Coordinate1157
 ColorRGBA1158 = x3d.ColorRGBA()
@@ -5375,7 +5245,6 @@ Shape1167 = x3d.Shape()
 LineSet1168 = x3d.LineSet()
 LineSet1168.vertexCount = [2]
 Coordinate1169 = x3d.Coordinate()
-Coordinate1169.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
 LineSet1168.coord = Coordinate1169
 ColorRGBA1170 = x3d.ColorRGBA()
@@ -5415,7 +5284,6 @@ Shape1176 = x3d.Shape()
 LineSet1177 = x3d.LineSet()
 LineSet1177.vertexCount = [2]
 Coordinate1178 = x3d.Coordinate()
-Coordinate1178.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
 LineSet1177.coord = Coordinate1178
 ColorRGBA1179 = x3d.ColorRGBA()
@@ -5455,7 +5323,6 @@ Shape1185 = x3d.Shape()
 LineSet1186 = x3d.LineSet()
 LineSet1186.vertexCount = [2]
 Coordinate1187 = x3d.Coordinate()
-Coordinate1187.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
 LineSet1186.coord = Coordinate1187
 ColorRGBA1188 = x3d.ColorRGBA()
@@ -5495,7 +5362,6 @@ Shape1194 = x3d.Shape()
 LineSet1195 = x3d.LineSet()
 LineSet1195.vertexCount = [2]
 Coordinate1196 = x3d.Coordinate()
-Coordinate1196.point = (0.1983,0.7045,-0.0767,0.2035,0.6750,-0.0756)
 
 LineSet1195.coord = Coordinate1196
 ColorRGBA1197 = x3d.ColorRGBA()
@@ -5558,7 +5424,6 @@ Shape1206 = x3d.Shape()
 LineSet1207 = x3d.LineSet()
 LineSet1207.vertexCount = [2]
 Coordinate1208 = x3d.Coordinate()
-Coordinate1208.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
 LineSet1207.coord = Coordinate1208
 ColorRGBA1209 = x3d.ColorRGBA()
@@ -5598,7 +5463,6 @@ Shape1215 = x3d.Shape()
 LineSet1216 = x3d.LineSet()
 LineSet1216.vertexCount = [2]
 Coordinate1217 = x3d.Coordinate()
-Coordinate1217.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
 LineSet1216.coord = Coordinate1217
 ColorRGBA1218 = x3d.ColorRGBA()
@@ -5638,7 +5502,6 @@ Shape1224 = x3d.Shape()
 LineSet1225 = x3d.LineSet()
 LineSet1225.vertexCount = [2]
 Coordinate1226 = x3d.Coordinate()
-Coordinate1226.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
 LineSet1225.coord = Coordinate1226
 ColorRGBA1227 = x3d.ColorRGBA()
@@ -5678,7 +5541,6 @@ Shape1233 = x3d.Shape()
 LineSet1234 = x3d.LineSet()
 LineSet1234.vertexCount = [2]
 Coordinate1235 = x3d.Coordinate()
-Coordinate1235.point = (0.1948,0.7277,-0.1017,0.2014,0.7009,-0.1012)
 
 LineSet1234.coord = Coordinate1235
 ColorRGBA1236 = x3d.ColorRGBA()
@@ -5751,7 +5613,6 @@ Shape1245 = x3d.Shape()
 LineSet1246 = x3d.LineSet()
 LineSet1246.vertexCount = [2]
 Coordinate1247 = x3d.Coordinate()
-Coordinate1247.point = (-0.0820,1.4488,-0.0353,-0.0962,1.4269,-0.0424)
 
 LineSet1246.coord = Coordinate1247
 ColorRGBA1248 = x3d.ColorRGBA()
@@ -5767,7 +5628,6 @@ Shape1249 = x3d.Shape()
 LineSet1250 = x3d.LineSet()
 LineSet1250.vertexCount = [2]
 Coordinate1251 = x3d.Coordinate()
-Coordinate1251.point = (-0.0820,1.4488,-0.0353,-0.0115,1.4943,0.0400)
 
 LineSet1250.coord = Coordinate1251
 ColorRGBA1252 = x3d.ColorRGBA()
@@ -5783,7 +5643,6 @@ Shape1253 = x3d.Shape()
 LineSet1254 = x3d.LineSet()
 LineSet1254.vertexCount = [2]
 Coordinate1255 = x3d.Coordinate()
-Coordinate1255.point = (-0.0820,1.4488,-0.0353,-0.1905,1.4791,-0.0431)
 
 LineSet1254.coord = Coordinate1255
 ColorRGBA1256 = x3d.ColorRGBA()
@@ -5799,7 +5658,6 @@ Shape1257 = x3d.Shape()
 LineSet1258 = x3d.LineSet()
 LineSet1258.vertexCount = [2]
 Coordinate1259 = x3d.Coordinate()
-Coordinate1259.point = (-0.0820,1.4488,-0.0353,-0.1626,1.4072,-0.0031)
 
 LineSet1258.coord = Coordinate1259
 ColorRGBA1260 = x3d.ColorRGBA()
@@ -5815,7 +5673,6 @@ Shape1261 = x3d.Shape()
 LineSet1262 = x3d.LineSet()
 LineSet1262.vertexCount = [2]
 Coordinate1263 = x3d.Coordinate()
-Coordinate1263.point = (-0.0820,1.4488,-0.0353,-0.1603,1.4098,-0.0826)
 
 LineSet1262.coord = Coordinate1263
 ColorRGBA1264 = x3d.ColorRGBA()
@@ -5915,7 +5772,6 @@ Shape1282 = x3d.Shape()
 LineSet1283 = x3d.LineSet()
 LineSet1283.vertexCount = [2]
 Coordinate1284 = x3d.Coordinate()
-Coordinate1284.point = (-0.0962,1.4269,-0.0424,-0.2029,1.4376,-0.0387)
 
 LineSet1283.coord = Coordinate1284
 ColorRGBA1285 = x3d.ColorRGBA()
@@ -5955,7 +5811,6 @@ Shape1291 = x3d.Shape()
 LineSet1292 = x3d.LineSet()
 LineSet1292.vertexCount = [2]
 Coordinate1293 = x3d.Coordinate()
-Coordinate1293.point = (-0.2029,1.4376,-0.0387,-0.2014,1.1357,-0.0682)
 
 LineSet1292.coord = Coordinate1293
 ColorRGBA1294 = x3d.ColorRGBA()
@@ -5971,7 +5826,6 @@ Shape1295 = x3d.Shape()
 LineSet1296 = x3d.LineSet()
 LineSet1296.vertexCount = [2]
 Coordinate1297 = x3d.Coordinate()
-Coordinate1297.point = (-0.2029,1.4376,-0.0387,-0.2224,1.1517,-0.1033)
 
 LineSet1296.coord = Coordinate1297
 ColorRGBA1298 = x3d.ColorRGBA()
@@ -6026,7 +5880,6 @@ Shape1307 = x3d.Shape()
 LineSet1308 = x3d.LineSet()
 LineSet1308.vertexCount = [2]
 Coordinate1309 = x3d.Coordinate()
-Coordinate1309.point = (-0.2014,1.1357,-0.0682,-0.1984,0.8663,-0.0583)
 
 LineSet1308.coord = Coordinate1309
 ColorRGBA1310 = x3d.ColorRGBA()
@@ -6042,7 +5895,6 @@ Shape1311 = x3d.Shape()
 LineSet1312 = x3d.LineSet()
 LineSet1312.vertexCount = [2]
 Coordinate1313 = x3d.Coordinate()
-Coordinate1313.point = (-0.2014,1.1357,-0.0682,-0.1884,0.8676,-0.0360)
 
 LineSet1312.coord = Coordinate1313
 ColorRGBA1314 = x3d.ColorRGBA()
@@ -6058,7 +5910,6 @@ Shape1315 = x3d.Shape()
 LineSet1316 = x3d.LineSet()
 LineSet1316.vertexCount = [2]
 Coordinate1317 = x3d.Coordinate()
-Coordinate1317.point = (-0.2014,1.1357,-0.0682,-0.1907,1.1405,-0.1065)
 
 LineSet1316.coord = Coordinate1317
 ColorRGBA1318 = x3d.ColorRGBA()
@@ -6074,7 +5925,6 @@ Shape1319 = x3d.Shape()
 LineSet1320 = x3d.LineSet()
 LineSet1320.vertexCount = [2]
 Coordinate1321 = x3d.Coordinate()
-Coordinate1321.point = (-0.2014,1.1357,-0.0682,-0.1680,1.1298,-0.1062)
 
 LineSet1320.coord = Coordinate1321
 ColorRGBA1322 = x3d.ColorRGBA()
@@ -6090,7 +5940,6 @@ Shape1323 = x3d.Shape()
 LineSet1324 = x3d.LineSet()
 LineSet1324.vertexCount = [2]
 Coordinate1325 = x3d.Coordinate()
-Coordinate1325.point = (-0.2014,1.1357,-0.0682,-0.2130,1.1305,-0.1091)
 
 LineSet1324.coord = Coordinate1325
 ColorRGBA1326 = x3d.ColorRGBA()
@@ -6190,7 +6039,6 @@ Shape1344 = x3d.Shape()
 LineSet1345 = x3d.LineSet()
 LineSet1345.vertexCount = [2]
 Coordinate1346 = x3d.Coordinate()
-Coordinate1346.point = (-0.1984,0.8663,-0.0583,-0.1924,0.8472,-0.0534)
 
 LineSet1345.coord = Coordinate1346
 ColorRGBA1347 = x3d.ColorRGBA()
@@ -6206,7 +6054,6 @@ Shape1348 = x3d.Shape()
 LineSet1349 = x3d.LineSet()
 LineSet1349.vertexCount = [2]
 Coordinate1350 = x3d.Coordinate()
-Coordinate1350.point = (-0.1984,0.8663,-0.0583,-0.1983,0.8024,-0.0280)
 
 LineSet1349.coord = Coordinate1350
 ColorRGBA1351 = x3d.ColorRGBA()
@@ -6222,7 +6069,6 @@ Shape1352 = x3d.Shape()
 LineSet1353 = x3d.LineSet()
 LineSet1353.vertexCount = [2]
 Coordinate1354 = x3d.Coordinate()
-Coordinate1354.point = (-0.1984,0.8663,-0.0583,-0.1987,0.8029,-0.0530)
 
 LineSet1353.coord = Coordinate1354
 ColorRGBA1355 = x3d.ColorRGBA()
@@ -6238,7 +6084,6 @@ Shape1356 = x3d.Shape()
 LineSet1357 = x3d.LineSet()
 LineSet1357.vertexCount = [2]
 Coordinate1358 = x3d.Coordinate()
-Coordinate1358.point = (-0.1984,0.8663,-0.0583,-0.1956,0.8019,-0.0794)
 
 LineSet1357.coord = Coordinate1358
 ColorRGBA1359 = x3d.ColorRGBA()
@@ -6254,7 +6099,6 @@ Shape1360 = x3d.Shape()
 LineSet1361 = x3d.LineSet()
 LineSet1361.vertexCount = [2]
 Coordinate1362 = x3d.Coordinate()
-Coordinate1362.point = (-0.1984,0.8663,-0.0583,-0.1925,0.8066,-0.1036)
 
 LineSet1361.coord = Coordinate1362
 ColorRGBA1363 = x3d.ColorRGBA()
@@ -6270,7 +6114,6 @@ Shape1364 = x3d.Shape()
 LineSet1365 = x3d.LineSet()
 LineSet1365.vertexCount = [2]
 Coordinate1366 = x3d.Coordinate()
-Coordinate1366.point = (-0.1984,0.8663,-0.0583,-0.1977,0.8169,-0.0177)
 
 LineSet1365.coord = Coordinate1366
 ColorRGBA1367 = x3d.ColorRGBA()
@@ -6286,7 +6129,6 @@ Shape1368 = x3d.Shape()
 LineSet1369 = x3d.LineSet()
 LineSet1369.vertexCount = [2]
 Coordinate1370 = x3d.Coordinate()
-Coordinate1370.point = (-0.1984,0.8663,-0.0583,-0.2117,0.8562,-0.0584)
 
 LineSet1369.coord = Coordinate1370
 ColorRGBA1371 = x3d.ColorRGBA()
@@ -6302,7 +6144,6 @@ Shape1372 = x3d.Shape()
 LineSet1373 = x3d.LineSet()
 LineSet1373.vertexCount = [2]
 Coordinate1374 = x3d.Coordinate()
-Coordinate1374.point = (-0.1984,0.8663,-0.0583,-0.1929,0.7890,-0.1064)
 
 LineSet1373.coord = Coordinate1374
 ColorRGBA1375 = x3d.ColorRGBA()
@@ -6318,7 +6159,6 @@ Shape1376 = x3d.Shape()
 LineSet1377 = x3d.LineSet()
 LineSet1377.vertexCount = [2]
 Coordinate1378 = x3d.Coordinate()
-Coordinate1378.point = (-0.1984,0.8663,-0.0583,-0.3000,0.7500,0.4500)
 
 LineSet1377.coord = Coordinate1378
 ColorRGBA1379 = x3d.ColorRGBA()
@@ -6444,7 +6284,6 @@ Shape1402 = x3d.Shape()
 LineSet1403 = x3d.LineSet()
 LineSet1403.vertexCount = [2]
 Coordinate1404 = x3d.Coordinate()
-Coordinate1404.point = (-0.1924,0.8472,-0.0534,-0.1951,0.8226,0.0246)
 
 LineSet1403.coord = Coordinate1404
 ColorRGBA1405 = x3d.ColorRGBA()
@@ -6484,7 +6323,6 @@ Shape1411 = x3d.Shape()
 LineSet1412 = x3d.LineSet()
 LineSet1412.vertexCount = [2]
 Coordinate1413 = x3d.Coordinate()
-Coordinate1413.point = (-0.1951,0.8226,0.0246,-0.1955,0.8159,0.0464)
 
 LineSet1412.coord = Coordinate1413
 ColorRGBA1414 = x3d.ColorRGBA()
@@ -6524,7 +6362,6 @@ Shape1420 = x3d.Shape()
 LineSet1421 = x3d.LineSet()
 LineSet1421.vertexCount = [2]
 Coordinate1422 = x3d.Coordinate()
-Coordinate1422.point = (-0.1955,0.8159,0.0464,-0.1869,0.8090,0.0820)
 
 LineSet1421.coord = Coordinate1422
 ColorRGBA1423 = x3d.ColorRGBA()
@@ -6585,7 +6422,6 @@ Shape1432 = x3d.Shape()
 LineSet1433 = x3d.LineSet()
 LineSet1433.vertexCount = [2]
 Coordinate1434 = x3d.Coordinate()
-Coordinate1434.point = (-0.1983,0.8024,-0.0280,-0.1983,0.7815,-0.0280)
 
 LineSet1433.coord = Coordinate1434
 ColorRGBA1435 = x3d.ColorRGBA()
@@ -6625,7 +6461,6 @@ Shape1441 = x3d.Shape()
 LineSet1442 = x3d.LineSet()
 LineSet1442.vertexCount = [2]
 Coordinate1443 = x3d.Coordinate()
-Coordinate1443.point = (-0.1983,0.7815,-0.0280,-0.2017,0.7363,-0.0248)
 
 LineSet1442.coord = Coordinate1443
 ColorRGBA1444 = x3d.ColorRGBA()
@@ -6665,7 +6500,6 @@ Shape1450 = x3d.Shape()
 LineSet1451 = x3d.LineSet()
 LineSet1451.vertexCount = [2]
 Coordinate1452 = x3d.Coordinate()
-Coordinate1452.point = (-0.2017,0.7363,-0.0248,-0.2028,0.7139,-0.0236)
 
 LineSet1451.coord = Coordinate1452
 ColorRGBA1453 = x3d.ColorRGBA()
@@ -6705,7 +6539,6 @@ Shape1459 = x3d.Shape()
 LineSet1460 = x3d.LineSet()
 LineSet1460.vertexCount = [2]
 Coordinate1461 = x3d.Coordinate()
-Coordinate1461.point = (-0.2028,0.7139,-0.0236,-0.1980,0.6883,-0.0180)
 
 LineSet1460.coord = Coordinate1461
 ColorRGBA1462 = x3d.ColorRGBA()
@@ -6721,7 +6554,6 @@ Shape1463 = x3d.Shape()
 LineSet1464 = x3d.LineSet()
 LineSet1464.vertexCount = [2]
 Coordinate1465 = x3d.Coordinate()
-Coordinate1465.point = (-0.2028,0.7139,-0.0236,-0.1941,0.6772,-0.0423)
 
 LineSet1464.coord = Coordinate1465
 ColorRGBA1466 = x3d.ColorRGBA()
@@ -6799,7 +6631,6 @@ Shape1478 = x3d.Shape()
 LineSet1479 = x3d.LineSet()
 LineSet1479.vertexCount = [2]
 Coordinate1480 = x3d.Coordinate()
-Coordinate1480.point = (-0.1987,0.8029,-0.0530,-0.1987,0.7818,-0.0530)
 
 LineSet1479.coord = Coordinate1480
 ColorRGBA1481 = x3d.ColorRGBA()
@@ -6839,7 +6670,6 @@ Shape1487 = x3d.Shape()
 LineSet1488 = x3d.LineSet()
 LineSet1488.vertexCount = [2]
 Coordinate1489 = x3d.Coordinate()
-Coordinate1489.point = (-0.1987,0.7818,-0.0530,-0.2013,0.7273,-0.0503)
 
 LineSet1488.coord = Coordinate1489
 ColorRGBA1490 = x3d.ColorRGBA()
@@ -6879,7 +6709,6 @@ Shape1496 = x3d.Shape()
 LineSet1497 = x3d.LineSet()
 LineSet1497.vertexCount = [2]
 Coordinate1498 = x3d.Coordinate()
-Coordinate1498.point = (-0.2013,0.7273,-0.0503,-0.2026,0.7011,-0.0494)
 
 LineSet1497.coord = Coordinate1498
 ColorRGBA1499 = x3d.ColorRGBA()
@@ -6919,7 +6748,6 @@ Shape1505 = x3d.Shape()
 LineSet1506 = x3d.LineSet()
 LineSet1506.vertexCount = [2]
 Coordinate1507 = x3d.Coordinate()
-Coordinate1507.point = (-0.2026,0.7011,-0.0494,-0.1969,0.6758,-0.0427)
 
 LineSet1506.coord = Coordinate1507
 ColorRGBA1508 = x3d.ColorRGBA()
@@ -6982,7 +6810,6 @@ Shape1517 = x3d.Shape()
 LineSet1518 = x3d.LineSet()
 LineSet1518.vertexCount = [2]
 Coordinate1519 = x3d.Coordinate()
-Coordinate1519.point = (-0.1956,0.8019,-0.0794,-0.1956,0.7815,-0.0794)
 
 LineSet1518.coord = Coordinate1519
 ColorRGBA1520 = x3d.ColorRGBA()
@@ -7022,7 +6849,6 @@ Shape1526 = x3d.Shape()
 LineSet1527 = x3d.LineSet()
 LineSet1527.vertexCount = [2]
 Coordinate1528 = x3d.Coordinate()
-Coordinate1528.point = (-0.1956,0.7815,-0.0794,-0.1973,0.7287,-0.0777)
 
 LineSet1527.coord = Coordinate1528
 ColorRGBA1529 = x3d.ColorRGBA()
@@ -7062,7 +6888,6 @@ Shape1535 = x3d.Shape()
 LineSet1536 = x3d.LineSet()
 LineSet1536.vertexCount = [2]
 Coordinate1537 = x3d.Coordinate()
-Coordinate1537.point = (-0.1973,0.7287,-0.0777,-0.1983,0.7045,-0.0767)
 
 LineSet1536.coord = Coordinate1537
 ColorRGBA1538 = x3d.ColorRGBA()
@@ -7102,7 +6927,6 @@ Shape1544 = x3d.Shape()
 LineSet1545 = x3d.LineSet()
 LineSet1545.vertexCount = [2]
 Coordinate1546 = x3d.Coordinate()
-Coordinate1546.point = (-0.1983,0.7045,-0.0767,-0.1934,0.6778,-0.0693)
 
 LineSet1545.coord = Coordinate1546
 ColorRGBA1547 = x3d.ColorRGBA()
@@ -7165,7 +6989,6 @@ Shape1556 = x3d.Shape()
 LineSet1557 = x3d.LineSet()
 LineSet1557.vertexCount = [2]
 Coordinate1558 = x3d.Coordinate()
-Coordinate1558.point = (-0.1925,0.8066,-0.1036,-0.1925,0.7866,-0.1036)
 
 LineSet1557.coord = Coordinate1558
 ColorRGBA1559 = x3d.ColorRGBA()
@@ -7205,7 +7028,6 @@ Shape1565 = x3d.Shape()
 LineSet1566 = x3d.LineSet()
 LineSet1566.vertexCount = [2]
 Coordinate1567 = x3d.Coordinate()
-Coordinate1567.point = (-0.1925,0.7866,-0.1036,-0.1938,0.7452,-0.1024)
 
 LineSet1566.coord = Coordinate1567
 ColorRGBA1568 = x3d.ColorRGBA()
@@ -7245,7 +7067,6 @@ Shape1574 = x3d.Shape()
 LineSet1575 = x3d.LineSet()
 LineSet1575.vertexCount = [2]
 Coordinate1576 = x3d.Coordinate()
-Coordinate1576.point = (-0.1938,0.7452,-0.1024,-0.1948,0.7277,-0.1017)
 
 LineSet1575.coord = Coordinate1576
 ColorRGBA1577 = x3d.ColorRGBA()
@@ -7285,7 +7106,6 @@ Shape1583 = x3d.Shape()
 LineSet1584 = x3d.LineSet()
 LineSet1584.vertexCount = [2]
 Coordinate1585 = x3d.Coordinate()
-Coordinate1585.point = (-0.1948,0.7277,-0.1017,-0.1938,0.7035,-0.0949)
 
 LineSet1584.coord = Coordinate1585
 ColorRGBA1586 = x3d.ColorRGBA()
@@ -9081,6 +8901,6 @@ HAnimHumanoid43.sites.append(HAnimSite1984)
 Scene29.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene29
-f = open("././HAnim2SpecificationLOA3Illustrated_RoundTrip.x3d", "w")
+f = open("././HAnim2SpecificationLOA3Illustrated_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -56,6 +56,6 @@ Group9.children.append(Shape10)
 Scene8.children.append(Group9)
 
 X3D0.Scene = Scene8
-f = open("././sphere_RoundTrip.x3d", "w")
+f = open("././sphere_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

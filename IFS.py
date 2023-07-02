@@ -66,11 +66,9 @@ IndexedFaceSet15.solid = False
 IndexedFaceSet15.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 ColorRGBA16 = x3d.ColorRGBA()
 ColorRGBA16.DEF = "HAnimSiteColorRGBA"
-ColorRGBA16.color = [1,1,0,1,1,1,0,0.1]
 
 IndexedFaceSet15.color = ColorRGBA16
 Coordinate17 = x3d.Coordinate()
-Coordinate17.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet15.coord = Coordinate17
 
@@ -99,6 +97,6 @@ Viewpoint21.description = "default"
 Scene11.children.append(Viewpoint21)
 
 X3D0.Scene = Scene11
-f = open("././IFS_RoundTrip.x3d", "w")
+f = open("././IFS_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

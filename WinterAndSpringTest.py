@@ -216,7 +216,9 @@ MetadataString37.name = "SymmetricalLeftRight"
 MetadataString37.reference = "correction options: ignore, warn, average, left, right, largest, smallest"
 MetadataString37.value = ["ignore"]
 
-MetadataSet36.value = MetadataString37
+if MetadataSet36.value is None:
+    MetadataSet36.value = []
+MetadataSet36.value.append(MetadataString37)
 
 HAnimHumanoid35.metadata = MetadataSet36
 HAnimJoint38 = x3d.HAnimJoint()
@@ -247,11 +249,9 @@ IndexedLineSet44.colorIndex = [0,1,2]
 IndexedLineSet44.colorPerVertex = False
 IndexedLineSet44.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate45 = x3d.Coordinate()
-Coordinate45.point = (0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000)
 
 IndexedLineSet44.coord = Coordinate45
 Color46 = x3d.Color()
-Color46.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet44.color = Color46
 
@@ -538,7 +538,6 @@ HAnimDisplacer91 = x3d.HAnimDisplacer()
 HAnimDisplacer91.name = "skull_tip_raiser_action"
 HAnimDisplacer91.DEF = "Joe_skull_tip_raiser_action"
 HAnimDisplacer91.coordIndex = [0,1,2,3,4,5,6,7,8,9]
-HAnimDisplacer91.displacements = (0.0000,0.1500,0.0000,0.0000,0.0000,0.1500,-0.1000,0.0000,0.1500,0.1000,0.0000,0.0500,0.0000,-0.0200,0.0500,-0.1500,0.0000,0.0000,-0.0500,0.0000,0.0000,0.1500,0.0000,0.0000,0.0500,0.0000,0.0000,0.0000,0.0000,-0.1500)
 
 HAnimJoint90.displacers.append(HAnimDisplacer91)
 HAnimJoint92 = x3d.HAnimJoint()
@@ -985,6 +984,6 @@ Group34.children.append(HAnimHumanoid35)
 Scene13.children.append(Group34)
 
 X3D0.Scene = Scene13
-f = open("././WinterAndSpringTest_RoundTrip.x3d", "w")
+f = open("././WinterAndSpringTest_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

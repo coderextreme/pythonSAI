@@ -162,7 +162,6 @@ IndexedLineSet32.DEF = "FrustumLines"
 IndexedLineSet32.coordIndex = [0,1,2,3,0,-1,4,5,6,7,4,-1,0,4,-1,1,5,-1,2,6,-1,3,7,-1]
 Coordinate33 = x3d.Coordinate()
 Coordinate33.DEF = "FrustumCoordinate"
-Coordinate33.point = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 IndexedLineSet32.coord = Coordinate33
 
@@ -431,6 +430,6 @@ Anchor77.children.append(Shape78)
 Scene15.children.append(Anchor77)
 
 X3D0.Scene = Scene15
-f = open("././ViewFrustumPrototype_RoundTrip.x3d", "w")
+f = open("././ViewFrustumPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -156,32 +156,44 @@ MetadataString32 = x3d.MetadataString()
 MetadataString32.name = "authorEmail"
 MetadataString32.value = ["beitler@graphics.cis.upenn.edu beitler@acm.org"]
 
-MetadataSet31.value = MetadataString32
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString32)
 MetadataString33 = x3d.MetadataString()
 MetadataString33.name = "authorName"
 MetadataString33.value = ["Matthew T. Beitler"]
 
-MetadataSet31.value = MetadataString33
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString33)
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "copyright"
 MetadataString34.value = ["Copyright 1999 Matthew T. Beitler"]
 
-MetadataSet31.value = MetadataString34
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString34)
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "creationDate"
 MetadataString35.value = ["05/12/99"]
 
-MetadataSet31.value = MetadataString35
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString35)
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "humanoidVersion"
 MetadataString36.value = ["JointCenters 1.1 LOA0"]
 
-MetadataSet31.value = MetadataString36
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString36)
 MetadataString37 = x3d.MetadataString()
 MetadataString37.name = "usageRestrictions"
 MetadataString37.value = ["PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided _as-is_ and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose."]
 
-MetadataSet31.value = MetadataString37
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString37)
 
 HAnimHumanoid30.metadata = MetadataSet31
 HAnimJoint38 = x3d.HAnimJoint()
@@ -207,7 +219,6 @@ IndexedFaceSet43 = x3d.IndexedFaceSet()
 IndexedFaceSet43.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 IndexedFaceSet43.creaseAngle = 0.5
 Coordinate44 = x3d.Coordinate()
-Coordinate44.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet43.coord = Coordinate44
 
@@ -277,6 +288,6 @@ HAnimHumanoid30.segments.append(HAnimSegment54)
 Scene26.children.append(HAnimHumanoid30)
 
 X3D0.Scene = Scene26
-f = open("././DiamondManLOA0_RoundTrip.x3d", "w")
+f = open("././DiamondManLOA0_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -106,7 +106,7 @@ ComposedCubeMapTexture22.bottomTexture = ImageTexture24
 ImageTexture25 = x3d.ImageTexture()
 ImageTexture25.url = ["../resources/images/bFR.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bFR.png"]
 
-ComposedCubeMapTexture22.frontTexture.append(ImageTexture25)
+ComposedCubeMapTexture22.frontTexture = ImageTexture25
 ImageTexture26 = x3d.ImageTexture()
 ImageTexture26.url = ["../resources/images/bLF.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bLF.png"]
 
@@ -114,11 +114,11 @@ ComposedCubeMapTexture22.leftTexture = ImageTexture26
 ImageTexture27 = x3d.ImageTexture()
 ImageTexture27.url = ["../resources/images/bRT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bRT.png"]
 
-ComposedCubeMapTexture22.rightTexture.append(ImageTexture27)
+ComposedCubeMapTexture22.rightTexture = ImageTexture27
 ImageTexture28 = x3d.ImageTexture()
 ImageTexture28.url = ["../resources/images/bTP.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bTP.png"]
 
-ComposedCubeMapTexture22.topTexture.append(ImageTexture28)
+ComposedCubeMapTexture22.topTexture = ImageTexture28
 
 Appearance20.texture = ComposedCubeMapTexture22
 ComposedShader29 = x3d.ComposedShader()
@@ -234,6 +234,6 @@ Transform17.children.append(Shape18)
 Scene13.children.append(Transform17)
 
 X3D0.Scene = Scene13
-f = open("././geo_RoundTrip.x3d", "w")
+f = open("././geo_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

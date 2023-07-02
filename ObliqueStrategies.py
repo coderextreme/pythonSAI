@@ -172,7 +172,6 @@ NavigationInfo35.type = ["NONE"]
 
 Scene33.children.append(NavigationInfo35)
 Background36 = x3d.Background()
-Background36.skyColor = [0.419608,0.427451,1]
 
 Scene33.children.append(Background36)
 Transform37 = x3d.Transform()
@@ -212,7 +211,6 @@ IndexedFaceSet46 = x3d.IndexedFaceSet()
 IndexedFaceSet46.coordIndex = [0,1,2,3,-1]
 IndexedFaceSet46.solid = False
 Coordinate47 = x3d.Coordinate()
-Coordinate47.point = (1.0000,1.0000,0.0000,1.0000,-1.0000,0.0000,-1.0000,-1.0000,0.0000,-1.0000,1.0000,0.0000)
 
 IndexedFaceSet46.coord = Coordinate47
 
@@ -404,7 +402,6 @@ IndexedFaceSet80 = x3d.IndexedFaceSet()
 IndexedFaceSet80.coordIndex = [0,1,2,3,-1]
 IndexedFaceSet80.solid = False
 Coordinate81 = x3d.Coordinate()
-Coordinate81.point = (1.0000,1.0000,0.0000,1.0000,-1.0000,0.0000,-1.0000,-1.0000,0.0000,-1.0000,1.0000,0.0000)
 
 IndexedFaceSet80.coord = Coordinate81
 
@@ -545,6 +542,6 @@ Transform102.children.append(Anchor103)
 Scene33.children.append(Transform102)
 
 X3D0.Scene = Scene33
-f = open("././ObliqueStrategies_RoundTrip.x3d", "w")
+f = open("././ObliqueStrategies_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

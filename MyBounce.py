@@ -146,6 +146,6 @@ ROUTE22.toField = "set_translation"
 Scene7.children.append(ROUTE22)
 
 X3D0.Scene = Scene7
-f = open("././MyBounce_RoundTrip.x3d", "w")
+f = open("././MyBounce_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

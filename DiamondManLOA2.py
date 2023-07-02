@@ -390,32 +390,44 @@ MetadataString96 = x3d.MetadataString()
 MetadataString96.name = "humanoidVersion"
 MetadataString96.value = ["Nancy V1.2b"]
 
-MetadataSet95.value = MetadataString96
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString96)
 MetadataString97 = x3d.MetadataString()
 MetadataString97.name = "authorEmail"
 MetadataString97.value = ["cindy@ballreich.net"]
 
-MetadataSet95.value = MetadataString97
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString97)
 MetadataString98 = x3d.MetadataString()
 MetadataString98.name = "authorName"
 MetadataString98.value = ["Cindy Ballreich"]
 
-MetadataSet95.value = MetadataString98
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString98)
 MetadataString99 = x3d.MetadataString()
 MetadataString99.name = "copyright"
 MetadataString99.value = ["1997 3Name3D / Yglesias Wallock Divekar Inc. all rights reserved."]
 
-MetadataSet95.value = MetadataString99
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString99)
 MetadataString100 = x3d.MetadataString()
 MetadataString100.name = "creationDate"
 MetadataString100.value = ["Tue Dec 30 08:30:08 PST 1997"]
 
-MetadataSet95.value = MetadataString100
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString100)
 MetadataString101 = x3d.MetadataString()
 MetadataString101.name = "usageRestrictions"
 MetadataString101.value = ["Noncommercial usage is ok if 3Name3D name and logo www.ballreich.net/vrml/HAnim/small_logo.gif is present and proper credit is given."]
 
-MetadataSet95.value = MetadataString101
+if MetadataSet95.value is None:
+    MetadataSet95.value = []
+MetadataSet95.value.append(MetadataString101)
 
 HAnimHumanoid94.metadata = MetadataSet95
 HAnimJoint102 = x3d.HAnimJoint()
@@ -436,7 +448,6 @@ IndexedFaceSet106.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3
 IndexedFaceSet106.creaseAngle = 0.5
 Coordinate107 = x3d.Coordinate()
 Coordinate107.DEF = "points"
-Coordinate107.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet106.coord = Coordinate107
 
@@ -4590,6 +4601,6 @@ HAnimHumanoid94.sites.append(HAnimSite1068)
 Scene17.children.append(HAnimHumanoid94)
 
 X3D0.Scene = Scene17
-f = open("././DiamondManLOA2_RoundTrip.x3d", "w")
+f = open("././DiamondManLOA2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

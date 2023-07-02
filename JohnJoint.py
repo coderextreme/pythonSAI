@@ -58,11 +58,9 @@ IndexedLineSet13.colorIndex = [0,1,2]
 IndexedLineSet13.colorPerVertex = False
 IndexedLineSet13.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate14 = x3d.Coordinate()
-Coordinate14.point = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000)
 
 IndexedLineSet13.coord = Coordinate14
 Color15 = x3d.Color()
-Color15.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet13.color = Color15
 
@@ -104,11 +102,9 @@ LineSet25 = x3d.LineSet()
 LineSet25.vertexCount = [2]
 ColorRGBA26 = x3d.ColorRGBA()
 ColorRGBA26.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA26.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet25.color = ColorRGBA26
 Coordinate27 = x3d.Coordinate()
-Coordinate27.point = (-0.0500,0.0000,0.0000,0.0500,0.0000,0.0000)
 
 LineSet25.coord = Coordinate27
 
@@ -132,6 +128,6 @@ Viewpoint29.description = "default"
 Scene10.children.append(Viewpoint29)
 
 X3D0.Scene = Scene10
-f = open("././JohnJoint_RoundTrip.x3d", "w")
+f = open("././JohnJoint_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -124,7 +124,7 @@ ComposedCubeMapTexture26.bottomTexture = ImageTexture28
 ImageTexture29 = x3d.ImageTexture()
 ImageTexture29.url = ["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
 
-ComposedCubeMapTexture26.frontTexture.append(ImageTexture29)
+ComposedCubeMapTexture26.frontTexture = ImageTexture29
 ImageTexture30 = x3d.ImageTexture()
 ImageTexture30.url = ["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
 
@@ -132,11 +132,11 @@ ComposedCubeMapTexture26.leftTexture = ImageTexture30
 ImageTexture31 = x3d.ImageTexture()
 ImageTexture31.url = ["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
 
-ComposedCubeMapTexture26.rightTexture.append(ImageTexture31)
+ComposedCubeMapTexture26.rightTexture = ImageTexture31
 ImageTexture32 = x3d.ImageTexture()
 ImageTexture32.url = ["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]
 
-ComposedCubeMapTexture26.topTexture.append(ImageTexture32)
+ComposedCubeMapTexture26.topTexture = ImageTexture32
 
 Appearance24.texture = ComposedCubeMapTexture26
 #<ProgramShader DEF='ProgramShader' containerField='shaders' language='GLSL'> <ShaderProgram url='\"../shaders/freewrl.vs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/freewrl.vs\"' containerField='programs' type='VERTEX'> <field name='chromaticDispertion' accessType='initializeOnly' type='SFVec3f' value='0.98 1 1.033'/> <field name='bias' accessType='initializeOnly' type='SFFloat' value='0.5'/> <field name='scale' accessType='initializeOnly' type='SFFloat' value='0.5'/> <field name='power' accessType='initializeOnly' type='SFFloat' value='2'/> </ShaderProgram> <ShaderProgram url='\"../shaders/freewrl.fs\" \"https://coderextreme.net/X3DJSONLD/src/main/shaders/freewrl.fs\"' containerField='programs' type='FRAGMENT'/> </ProgramShader>
@@ -257,6 +257,6 @@ Transform21.children.append(Shape22)
 Scene16.children.append(Transform21)
 
 X3D0.Scene = Scene16
-f = open("././ball_RoundTrip.x3d", "w")
+f = open("././ball_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

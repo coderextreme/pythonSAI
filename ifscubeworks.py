@@ -56,15 +56,12 @@ IndexedFaceSet13.normalIndex = [0,0,1,2,3,4,5]
 IndexedFaceSet13.normalPerVertex = False
 IndexedFaceSet13.colorIndex = [0,0,0,-1,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1,0,0,0,0,-1]
 Coordinate14 = x3d.Coordinate()
-Coordinate14.point = (0.0000,0.0000,1.0000,0.0000,1.0000,1.0000,1.0000,1.0000,1.0000,1.0000,0.0000,1.0000)
 
 IndexedFaceSet13.coord = Coordinate14
 Normal15 = x3d.Normal()
-Normal15.vector = (1.0000,0.0000,0.0000,-1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,-1.0000,0.0000,-1.0000,0.0000,0.0000,0.0000,1.0000)
 
 IndexedFaceSet13.normal = Normal15
 Color16 = x3d.Color()
-Color16.color = [0,1,0]
 
 IndexedFaceSet13.color = Color16
 
@@ -75,6 +72,6 @@ Group11.children.append(Shape12)
 Scene9.children.append(Group11)
 
 X3D0.Scene = Scene9
-f = open("././ifscubeworks_RoundTrip.x3d", "w")
+f = open("././ifscubeworks_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

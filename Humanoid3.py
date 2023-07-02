@@ -63,11 +63,9 @@ IndexedLineSet14.colorIndex = [0,1,2]
 IndexedLineSet14.colorPerVertex = False
 IndexedLineSet14.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate15 = x3d.Coordinate()
-Coordinate15.point = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000)
 
 IndexedLineSet14.coord = Coordinate15
 Color16 = x3d.Color()
-Color16.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet14.color = Color16
 
@@ -129,11 +127,9 @@ LineSet31 = x3d.LineSet()
 LineSet31.vertexCount = [2]
 ColorRGBA32 = x3d.ColorRGBA()
 ColorRGBA32.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA32.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet31.color = ColorRGBA32
 Coordinate33 = x3d.Coordinate()
-Coordinate33.point = (-0.0500,0.0000,0.0000,0.0500,0.0000,0.0000)
 
 LineSet31.coord = Coordinate33
 
@@ -153,11 +149,9 @@ IndexedFaceSet36.solid = False
 IndexedFaceSet36.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 ColorRGBA37 = x3d.ColorRGBA()
 ColorRGBA37.DEF = "HAnimSiteColorRGBA"
-ColorRGBA37.color = [1,1,0,1,1,1,0,0.1,1,1,0,1,1,1,0,0.1,1,1,0,1,1,1,0,0.1]
 
 IndexedFaceSet36.color = ColorRGBA37
 Coordinate38 = x3d.Coordinate()
-Coordinate38.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet36.coord = Coordinate38
 
@@ -200,11 +194,9 @@ IndexedFaceSet45.coordIndex = [0,9,5,-1,0,7,9,-1,0,5,1,-1,1,5,2,-1,1,3,7,-1,2,4,
 IndexedFaceSet45.creaseAngle = 3.1
 Coordinate46 = x3d.Coordinate()
 Coordinate46.DEF = "TheSkinCoord"
-Coordinate46.point = (0.0000,1.7700,0.0000,0.0000,1.6650,0.0900,-0.0330,1.6200,0.0870,0.0330,1.6200,0.0870,0.0000,1.5500,0.0970,-0.0770,1.6400,-0.0100,-0.0527,1.5800,0.0150,0.0770,1.6400,-0.0100,0.0527,1.5800,0.0150,0.0000,1.6250,-0.0925,-0.0300,1.4600,0.0350,0.0000,1.4400,0.0300,0.0300,1.4600,0.0350,-0.1135,1.3180,0.0950,0.1135,1.3180,0.0950,0.0000,1.2500,0.1130,-0.0870,1.1900,0.0900,-0.0935,1.0300,0.0750,0.0870,1.1900,0.0900,0.0935,1.0300,0.0750,-0.1425,1.0650,0.0033,-0.1500,0.9000,-0.0100,0.1425,1.0650,0.0033,0.1500,0.9000,-0.0100,0.0000,1.5300,-0.0840,0.0049,1.1908,-0.1113,-0.0773,1.0190,-0.1200,0.0773,1.0190,-0.1200,0.0050,1.0915,-0.1091,-0.1780,1.4825,-0.0625,-0.1700,1.3800,0.0070,-0.1884,0.8676,-0.0360,-0.1600,1.3800,-0.1270,-0.2000,1.1388,-0.0800,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2300,1.1330,-0.0550,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.7890,-0.1064,0.1750,1.4825,-0.0600,0.1700,1.3800,0.0070,0.1901,0.8645,-0.0415,0.1600,1.3800,-0.1250,0.2000,1.1388,-0.0800,0.1650,1.1388,-0.0400,0.2440,1.1388,-0.0400,0.2300,1.1330,-0.0550,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.7860,-0.1122,-0.1000,0.4913,-0.0300,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1650,0.0100,0.1200,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.0900,0.0560,0.0125,-0.1150,0.0200,0.1220,-0.1150,0.0400,-0.0550,-0.1100,0.0110,0.1900,0.0993,0.4881,-0.0309,0.1700,0.4660,0.0000,0.0500,0.4867,0.0000,0.1650,0.0100,0.1200,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.0900,0.0560,0.0125,0.1150,0.0200,0.1220,0.1150,0.0400,-0.0550,0.1100,0.0110,0.1900,0.0000,0.8750,0.0000,-0.0646,1.5149,-0.0380,0.0646,1.5149,-0.0380,0.0000,1.0722,0.0900,-0.1100,1.4270,-0.1375,-0.2350,1.4200,-0.0625,0.1100,1.4270,-0.1375,0.2350,1.4200,-0.0625,0.0000,1.4100,-0.1450,0.0000,0.9250,0.0800,-0.0870,1.1900,-0.0900,0.0870,1.1900,-0.0900,0.1720,1.3200,-0.0300,-0.1720,1.3200,-0.0300,0.1500,1.2300,-0.0150,-0.1500,1.2300,-0.0150,0.0790,0.9200,-0.1400,0.1000,0.9000,0.0770,-0.0790,0.9200,-0.1400,-0.1000,0.9000,0.0750,0.0000,0.8700,0.0000,0.1710,0.6500,0.0000,0.0200,0.6500,0.0000,0.1000,0.6500,-0.0800,0.1000,0.6500,0.0700,-0.1710,0.6500,0.0000,-0.0200,0.6500,0.0000,-0.1000,0.6500,-0.0800,-0.1000,0.6500,0.0700,0.2500,1.2700,-0.0400,0.1700,1.2700,-0.0400,0.2000,1.2700,-0.0900,0.2000,1.2700,0.0200,0.2440,1.1388,-0.0400,0.1650,1.1388,-0.0400,0.2000,1.1388,-0.0800,0.2000,1.1388,-0.0130,0.2250,1.0000,-0.0100,0.2250,1.0000,-0.0700,0.1850,1.0000,-0.0100,0.1850,1.0000,-0.0700,0.2000,1.1388,-0.0400,0.2250,0.9200,-0.0400,0.1750,0.9200,-0.0400,0.2000,0.9200,-0.0650,0.2000,0.9200,-0.0150,0.2250,0.8900,-0.0400,0.1750,0.8900,-0.0400,0.2000,0.8900,-0.0650,0.2000,0.8900,-0.0150,0.2180,0.8600,-0.0400,0.1840,0.8600,-0.0400,0.2000,0.8700,-0.0700,0.2000,0.8700,0.0000,0.2100,0.8500,0.0000,0.1854,0.8500,0.0000,0.2120,0.8400,-0.0150,0.1830,0.8400,-0.0150,0.2130,0.8350,-0.0400,0.1900,0.8350,-0.0400,0.2110,0.8350,-0.0650,0.1920,0.8350,-0.0650,0.2080,0.8400,-0.0850,0.1900,0.8400,-0.0850,0.2000,0.8400,-0.0950,0.2150,0.8200,0.0000,0.1930,0.8150,0.0050,0.1980,0.8000,0.0120,0.2100,0.8200,0.0300,0.1900,0.8200,0.0300,0.2000,0.8350,0.0390,0.2120,0.8000,0.0500,0.1880,0.8000,0.0500,0.2000,0.8070,0.0570,0.2000,0.7930,0.0350,0.2000,0.7740,0.0760,0.2120,0.7800,0.0700,0.1880,0.7800,0.0700,0.2000,0.7850,0.0750,0.2000,0.7700,0.0620,0.2150,0.7930,-0.0150,0.1870,0.7930,-0.0150,0.2000,0.7930,-0.0050,0.2150,0.7880,-0.0400,0.1870,0.7880,-0.0400,0.2150,0.7930,-0.0650,0.1870,0.7930,-0.0650,0.2100,0.7900,-0.0850,0.1900,0.7900,-0.0850,0.2000,0.7900,-0.0950,0.1900,0.7700,-0.0275,0.1900,0.7700,-0.0525,0.1900,0.7800,-0.0775,0.2120,0.7450,-0.0150,0.1880,0.7450,-0.0200,0.2000,0.7450,-0.0255,0.2000,0.7450,-0.0045,0.2110,0.7200,-0.0150,0.1890,0.7200,-0.0150,0.2000,0.7200,-0.0252,0.2000,0.7200,-0.0048,0.2100,0.6950,-0.0150,0.1900,0.6950,-0.0150,0.2000,0.6950,-0.0250,0.2000,0.6950,-0.0050,0.2000,0.6850,-0.0150,0.2150,0.7400,-0.0400,0.1850,0.7400,-0.0400,0.2000,0.7400,-0.0550,0.2000,0.7400,-0.0250,0.2100,0.7142,-0.0400,0.1900,0.7142,-0.0400,0.2000,0.7142,-0.0530,0.2000,0.7142,-0.0270,0.2100,0.6800,-0.0400,0.1900,0.6800,-0.0400,0.2000,0.6800,-0.0500,0.2000,0.6800,-0.0300,0.2000,0.6700,-0.0400,0.2120,0.7400,-0.0650,0.1880,0.7400,-0.0650,0.2000,0.7400,-0.0756,0.2000,0.7400,-0.0542,0.2100,0.7177,-0.0650,0.1900,0.7177,-0.0650,0.2000,0.7177,-0.0751,0.2000,0.7177,-0.0549,0.2100,0.6950,-0.0650,0.1900,0.6950,-0.0650,0.2000,0.6950,-0.0750,0.2000,0.6950,-0.0550,0.2000,0.6850,-0.0650,0.2110,0.7550,-0.0850,0.1890,0.7550,-0.0850,0.2000,0.7550,-0.0952,0.2000,0.7550,-0.0748,0.2100,0.7350,-0.0850,0.1900,0.7350,-0.0850,0.2000,0.7350,-0.0951,0.2000,0.7350,-0.0749,0.2100,0.7200,-0.0850,0.1900,0.7200,-0.0850,0.2000,0.7200,-0.0950,0.2000,0.7200,-0.0750,0.2000,0.7100,-0.0850,-0.2300,1.2300,-0.0400,-0.1600,1.2300,-0.0400,-0.2000,1.2350,-0.1050,-0.2000,1.2350,0.0200,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2000,1.1388,-0.0800,-0.2000,1.1388,0.0130,-0.2250,1.0000,-0.0100,-0.2250,1.0000,-0.0700,-0.1850,1.0000,-0.0100,-0.1850,1.0000,-0.0700,-0.2000,1.1388,-0.0400,-0.2250,0.9200,-0.0400,-0.1750,0.9200,-0.0400,-0.2000,0.9200,-0.0650,-0.2000,0.9200,-0.0150,-0.2250,0.8900,-0.0400,-0.1750,0.8900,-0.0400,-0.2000,0.8900,-0.0650,-0.2000,0.8900,-0.0150,-0.2180,0.8600,-0.0400,-0.1840,0.8600,-0.0400,-0.2000,0.8700,-0.0700,-0.2000,0.8700,0.0000,-0.2100,0.8500,0.0000,-0.1854,0.8500,0.0000,-0.2120,0.8400,-0.0150,-0.1830,0.8400,-0.0150,-0.2130,0.8350,-0.0400,-0.1900,0.8350,-0.0400,-0.2110,0.8350,-0.0650,-0.1920,0.8350,-0.0650,-0.2080,0.8400,-0.0850,-0.1900,0.8400,-0.0850,-0.2000,0.8400,-0.0950,-0.2150,0.8200,0.0000,-0.1930,0.8150,0.0050,-0.1980,0.8000,0.0120,-0.2100,0.8200,0.0300,-0.1900,0.8200,0.0300,-0.2000,0.8350,0.0390,-0.2120,0.8000,0.0500,-0.1880,0.8000,0.0500,-0.2000,0.8070,0.0570,-0.2000,0.7930,0.0350,-0.2000,0.7740,0.0760,-0.2120,0.7800,0.0700,-0.1880,0.7800,0.0700,-0.2000,0.7850,0.0750,-0.2000,0.7700,0.0620,-0.2150,0.7930,-0.0150,-0.1870,0.7930,-0.0150,-0.2000,0.7930,-0.0050,-0.2150,0.7880,-0.0400,-0.1870,0.7880,-0.0400,-0.2150,0.7930,-0.0650,-0.1870,0.7930,-0.0650,-0.2100,0.7900,-0.0850,-0.1900,0.7900,-0.0850,-0.2000,0.7900,-0.0950,-0.1900,0.7700,-0.0275,-0.1900,0.7700,-0.0525,-0.1900,0.7800,-0.0775,-0.2120,0.7450,-0.0150,-0.1880,0.7450,-0.0200,-0.2000,0.7450,-0.0255,-0.2000,0.7450,-0.0045,-0.2110,0.7200,-0.0150,-0.1890,0.7200,-0.0150,-0.2000,0.7200,-0.0252,-0.2000,0.7200,-0.0048,-0.2100,0.6950,-0.0150,-0.1900,0.6950,-0.0150,-0.2000,0.6950,-0.0250,-0.2000,0.6950,-0.0050,-0.2000,0.6850,-0.0150,-0.2150,0.7400,-0.0400,-0.1850,0.7400,-0.0400,-0.2000,0.7400,-0.0550,-0.2000,0.7400,-0.0250,-0.2100,0.7142,-0.0400,-0.1900,0.7142,-0.0400,-0.2000,0.7142,-0.0530,-0.2000,0.7142,-0.0270,-0.2100,0.6800,-0.0400,-0.1900,0.6800,-0.0400,-0.2000,0.6800,-0.0500,-0.2000,0.6800,-0.0300,-0.2000,0.6700,-0.0400,-0.2120,0.7400,-0.0650,-0.1880,0.7400,-0.0650,-0.2000,0.7400,-0.0756,-0.2000,0.7400,-0.0542,-0.2100,0.7177,-0.0650,-0.1900,0.7177,-0.0650,-0.2000,0.7177,-0.0751,-0.2000,0.7177,-0.0549,-0.2100,0.6950,-0.0650,-0.1900,0.6950,-0.0650,-0.2000,0.6950,-0.0750,-0.2000,0.6950,-0.0550,-0.2000,0.6850,-0.0650,-0.2110,0.7550,-0.0850,-0.1890,0.7550,-0.0850,-0.2000,0.7550,-0.0952,-0.2000,0.7550,-0.0748,-0.2100,0.7350,-0.0850,-0.1900,0.7350,-0.0850,-0.2000,0.7350,-0.0951,-0.2000,0.7350,-0.0749,-0.2100,0.7200,-0.0850,-0.1900,0.7200,-0.0850,-0.2000,0.7200,-0.0950,-0.2000,0.7200,-0.0750,-0.2000,0.7100,-0.0850,0.1150,0.4660,0.0600,0.1150,0.4660,-0.0550,0.1500,0.4660,0.0000,0.0500,0.4660,0.0000,0.1700,0.3000,0.0000,0.0600,0.3000,0.0000,0.1000,0.3000,-0.0500,0.1000,0.3000,0.0500,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.1150,0.0690,-0.0450,0.1170,0.0975,0.0615,0.1375,0.0060,-0.0300,0.0950,0.0060,-0.0300,0.1150,0.0150,-0.0450,0.1150,0.0600,0.1000,0.1150,0.0000,0.0700,0.1650,0.0000,0.0700,0.0950,0.0000,0.0700,0.1150,0.0400,0.1300,0.1250,0.0000,0.1200,0.1650,0.0000,0.1200,0.0870,0.0000,0.1220,0.0900,0.0120,0.1880,0.1100,0.0110,0.1900,0.1280,0.0110,0.1850,0.1420,0.0110,0.1780,0.1540,0.0100,0.1680,-0.1150,0.4660,0.0600,-0.1150,0.4660,-0.0550,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1700,0.3000,0.0000,-0.0600,0.3000,0.0000,-0.1000,0.3000,-0.0500,-0.1000,0.3000,0.0500,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.1150,0.0690,-0.0450,-0.1170,0.0975,0.0615,-0.1375,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.1150,0.0600,0.1000,-0.1150,0.0000,0.0700,-0.1650,0.0000,0.0700,-0.0950,0.0000,0.0700,-0.1150,0.0400,0.1300,-0.1250,0.0000,0.1200,-0.1650,0.0000,0.1200,-0.0870,0.0000,0.1220,-0.0900,0.0120,0.1880,-0.1100,0.0110,0.1900,-0.1280,0.0110,0.1850,-0.1420,0.0110,0.1780,-0.1540,0.0100,0.1680)
 
 IndexedFaceSet45.coord = Coordinate46
 Color47 = x3d.Color()
-Color47.color = [1,0,0,0,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,1,0,1,1,0,1,1,1,1,0,0,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,1,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1]
 
 IndexedFaceSet45.color = Color47
 
@@ -258,7 +250,6 @@ Shape57 = x3d.Shape()
 LineSet58 = x3d.LineSet()
 LineSet58.vertexCount = [2]
 Coordinate59 = x3d.Coordinate()
-Coordinate59.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
 LineSet58.coord = Coordinate59
 #from humanoid_root to sacroiliac vertices 2
@@ -413,7 +404,6 @@ Shape91 = x3d.Shape()
 LineSet92 = x3d.LineSet()
 LineSet92.vertexCount = [2]
 Coordinate93 = x3d.Coordinate()
-Coordinate93.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
 LineSet92.coord = Coordinate93
 #from humanoid_root to vl5 vertices 2
@@ -493,7 +483,6 @@ Shape109 = x3d.Shape()
 LineSet110 = x3d.LineSet()
 LineSet110.vertexCount = [2]
 Coordinate111 = x3d.Coordinate()
-Coordinate111.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
 LineSet110.coord = Coordinate111
 #from sacroiliac to l_hip vertices 2
@@ -564,7 +553,6 @@ Shape125 = x3d.Shape()
 LineSet126 = x3d.LineSet()
 LineSet126.vertexCount = [2]
 Coordinate127 = x3d.Coordinate()
-Coordinate127.point = (0.0000,0.9149,0.0016,-0.0950,0.9171,0.0029)
 
 LineSet126.coord = Coordinate127
 #from sacroiliac to r_hip vertices 2
@@ -658,7 +646,6 @@ Shape146 = x3d.Shape()
 LineSet147 = x3d.LineSet()
 LineSet147.vertexCount = [2]
 Coordinate148 = x3d.Coordinate()
-Coordinate148.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
 LineSet147.coord = Coordinate148
 #from l_hip to l_knee vertices 2
@@ -738,7 +725,6 @@ Shape164 = x3d.Shape()
 LineSet165 = x3d.LineSet()
 LineSet165.vertexCount = [2]
 Coordinate166 = x3d.Coordinate()
-Coordinate166.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
 LineSet165.coord = Coordinate166
 #from l_knee to l_talocrural vertices 2
@@ -808,7 +794,6 @@ Shape179 = x3d.Shape()
 LineSet180 = x3d.LineSet()
 LineSet180.vertexCount = [2]
 Coordinate181 = x3d.Coordinate()
-Coordinate181.point = (0.1101,0.0656,-0.0736,0.1101,0.0656,-0.0736)
 
 LineSet180.coord = Coordinate181
 #from l_talocrural to l_tarsometatarsal_2 vertices 2
@@ -825,13 +810,14 @@ HAnimJoint174.children.append(HAnimSegment175)
 HAnimJoint183 = x3d.HAnimJoint()
 HAnimJoint183.name = "l_tarsometatarsal_2"
 HAnimJoint183.DEF = "hanim_l_tarsometatarsal_2"
+HAnimJoint183.center = [0.08,0.0175,-0.0608]
 HAnimJoint183.ulimit = [0,0,0]
 HAnimJoint183.llimit = [0,0,0]
 HAnimSegment184 = x3d.HAnimSegment()
 HAnimSegment184.name = "l_metatarsal_2"
 HAnimSegment184.DEF = "hanim_l_metatarsal_2"
 Transform185 = x3d.Transform()
-Transform185.translation = [0.1101,0.0656,-0.0736]
+Transform185.translation = [0.08,0.0175,-0.0608]
 Transform186 = x3d.Transform()
 #Empty Transform
 Shape187 = x3d.Shape()
@@ -846,10 +832,9 @@ Shape188 = x3d.Shape()
 LineSet189 = x3d.LineSet()
 LineSet189.vertexCount = [2]
 Coordinate190 = x3d.Coordinate()
-Coordinate190.point = (0.1101,0.0656,-0.0736)
 
 LineSet189.coord = Coordinate190
-#from l_tarsometatarsal_2 to l_metatarsophalangeal_2 vertices 1
+#from l_tarsometatarsal_2 to l_metatarsophalangeal_2 vertices 2
 ColorRGBA191 = x3d.ColorRGBA()
 ColorRGBA191.USE = "HAnimSegmentLineColorRGBA"
 
@@ -863,13 +848,14 @@ HAnimJoint183.children.append(HAnimSegment184)
 HAnimJoint192 = x3d.HAnimJoint()
 HAnimJoint192.name = "l_metatarsophalangeal_2"
 HAnimJoint192.DEF = "hanim_l_metatarsophalangeal_2"
+HAnimJoint192.center = [0.0824,0.0064,-0.004]
 HAnimJoint192.ulimit = [0,0,0]
 HAnimJoint192.llimit = [0,0,0]
 HAnimSegment193 = x3d.HAnimSegment()
 HAnimSegment193.name = "l_tarsal_proximal_phalanx_2"
 HAnimSegment193.DEF = "hanim_l_tarsal_proximal_phalanx_2"
 Transform194 = x3d.Transform()
-Transform194.translation = [0.1101,0.0656,-0.0736]
+Transform194.translation = [0.0824,0.0064,-0.004]
 Transform195 = x3d.Transform()
 #Empty Transform
 Shape196 = x3d.Shape()
@@ -884,10 +870,9 @@ Shape197 = x3d.Shape()
 LineSet198 = x3d.LineSet()
 LineSet198.vertexCount = [2]
 Coordinate199 = x3d.Coordinate()
-Coordinate199.point = (0.1101,0.0656,-0.0736)
 
 LineSet198.coord = Coordinate199
-#from l_metatarsophalangeal_2 to l_tarsal_distal_interphalangeal_2 vertices 1
+#from l_metatarsophalangeal_2 to l_tarsal_distal_interphalangeal_2 vertices 2
 ColorRGBA200 = x3d.ColorRGBA()
 ColorRGBA200.USE = "HAnimSegmentLineColorRGBA"
 
@@ -915,6 +900,7 @@ HAnimJoint192.children.append(HAnimSegment193)
 HAnimJoint204 = x3d.HAnimJoint()
 HAnimJoint204.name = "l_tarsal_distal_interphalangeal_2"
 HAnimJoint204.DEF = "hanim_l_tarsal_distal_interphalangeal_2"
+HAnimJoint204.center = [0.0841,0.0013,0.0216]
 HAnimJoint204.ulimit = [0,0,0]
 HAnimJoint204.llimit = [0,0,0]
 
@@ -954,7 +940,6 @@ Shape210 = x3d.Shape()
 LineSet211 = x3d.LineSet()
 LineSet211.vertexCount = [2]
 Coordinate212 = x3d.Coordinate()
-Coordinate212.point = (-0.0950,0.9171,0.0029,-0.0867,0.4913,0.0318)
 
 LineSet211.coord = Coordinate212
 #from r_hip to r_knee vertices 2
@@ -1034,7 +1019,6 @@ Shape228 = x3d.Shape()
 LineSet229 = x3d.LineSet()
 LineSet229.vertexCount = [2]
 Coordinate230 = x3d.Coordinate()
-Coordinate230.point = (-0.0867,0.4913,0.0318,-0.0801,0.0712,-0.0766)
 
 LineSet229.coord = Coordinate230
 #from r_knee to r_talocrural vertices 2
@@ -1104,7 +1088,6 @@ Shape243 = x3d.Shape()
 LineSet244 = x3d.LineSet()
 LineSet244.vertexCount = [2]
 Coordinate245 = x3d.Coordinate()
-Coordinate245.point = (-0.0801,0.0712,-0.0766,-0.0801,0.0712,-0.0766)
 
 LineSet244.coord = Coordinate245
 #from r_talocrural to r_tarsometatarsal_2 vertices 2
@@ -1121,13 +1104,14 @@ HAnimJoint238.children.append(HAnimSegment239)
 HAnimJoint247 = x3d.HAnimJoint()
 HAnimJoint247.name = "r_tarsometatarsal_2"
 HAnimJoint247.DEF = "hanim_r_tarsometatarsal_2"
+HAnimJoint247.center = [-0.08,0.0175,-0.0608]
 HAnimJoint247.ulimit = [0,0,0]
 HAnimJoint247.llimit = [0,0,0]
 HAnimSegment248 = x3d.HAnimSegment()
 HAnimSegment248.name = "r_metatarsal_2"
 HAnimSegment248.DEF = "hanim_r_metatarsal_2"
 Transform249 = x3d.Transform()
-Transform249.translation = [-0.0801,0.0712,-0.0766]
+Transform249.translation = [-0.08,0.0175,-0.0608]
 Transform250 = x3d.Transform()
 #Empty Transform
 Shape251 = x3d.Shape()
@@ -1142,10 +1126,9 @@ Shape252 = x3d.Shape()
 LineSet253 = x3d.LineSet()
 LineSet253.vertexCount = [2]
 Coordinate254 = x3d.Coordinate()
-Coordinate254.point = (-0.0801,0.0712,-0.0766)
 
 LineSet253.coord = Coordinate254
-#from r_tarsometatarsal_2 to r_metatarsophalangeal_2 vertices 1
+#from r_tarsometatarsal_2 to r_metatarsophalangeal_2 vertices 2
 ColorRGBA255 = x3d.ColorRGBA()
 ColorRGBA255.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1159,13 +1142,14 @@ HAnimJoint247.children.append(HAnimSegment248)
 HAnimJoint256 = x3d.HAnimJoint()
 HAnimJoint256.name = "r_metatarsophalangeal_2"
 HAnimJoint256.DEF = "hanim_r_metatarsophalangeal_2"
+HAnimJoint256.center = [-0.0823,0.0064,-0.004]
 HAnimJoint256.ulimit = [0,0,0]
 HAnimJoint256.llimit = [0,0,0]
 HAnimSegment257 = x3d.HAnimSegment()
 HAnimSegment257.name = "r_tarsal_proximal_phalanx_2"
 HAnimSegment257.DEF = "hanim_r_tarsal_proximal_phalanx_2"
 Transform258 = x3d.Transform()
-Transform258.translation = [-0.0801,0.0712,-0.0766]
+Transform258.translation = [-0.0823,0.0064,-0.004]
 Transform259 = x3d.Transform()
 #Empty Transform
 Shape260 = x3d.Shape()
@@ -1180,10 +1164,9 @@ Shape261 = x3d.Shape()
 LineSet262 = x3d.LineSet()
 LineSet262.vertexCount = [2]
 Coordinate263 = x3d.Coordinate()
-Coordinate263.point = (-0.0801,0.0712,-0.0766)
 
 LineSet262.coord = Coordinate263
-#from r_metatarsophalangeal_2 to r_tarsal_distal_interphalangeal_2 vertices 1
+#from r_metatarsophalangeal_2 to r_tarsal_distal_interphalangeal_2 vertices 2
 ColorRGBA264 = x3d.ColorRGBA()
 ColorRGBA264.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1211,6 +1194,7 @@ HAnimJoint256.children.append(HAnimSegment257)
 HAnimJoint268 = x3d.HAnimJoint()
 HAnimJoint268.name = "r_tarsal_distal_interphalangeal_2"
 HAnimJoint268.DEF = "hanim_r_tarsal_distal_interphalangeal_2"
+HAnimJoint268.center = [-0.0841,0.0013,0.0216]
 HAnimJoint268.ulimit = [0,0,0]
 HAnimJoint268.llimit = [0,0,0]
 
@@ -1252,7 +1236,6 @@ Shape274 = x3d.Shape()
 LineSet275 = x3d.LineSet()
 LineSet275.vertexCount = [2]
 Coordinate276 = x3d.Coordinate()
-Coordinate276.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
 LineSet275.coord = Coordinate276
 #from vl5 to vl4 vertices 2
@@ -1291,7 +1274,6 @@ Shape283 = x3d.Shape()
 LineSet284 = x3d.LineSet()
 LineSet284.vertexCount = [2]
 Coordinate285 = x3d.Coordinate()
-Coordinate285.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
 LineSet284.coord = Coordinate285
 #from vl4 to vl3 vertices 2
@@ -1330,7 +1312,6 @@ Shape292 = x3d.Shape()
 LineSet293 = x3d.LineSet()
 LineSet293.vertexCount = [2]
 Coordinate294 = x3d.Coordinate()
-Coordinate294.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
 LineSet293.coord = Coordinate294
 #from vl3 to vl2 vertices 2
@@ -1410,7 +1391,6 @@ Shape310 = x3d.Shape()
 LineSet311 = x3d.LineSet()
 LineSet311.vertexCount = [2]
 Coordinate312 = x3d.Coordinate()
-Coordinate312.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
 LineSet311.coord = Coordinate312
 #from vl2 to vl1 vertices 2
@@ -1449,7 +1429,6 @@ Shape319 = x3d.Shape()
 LineSet320 = x3d.LineSet()
 LineSet320.vertexCount = [2]
 Coordinate321 = x3d.Coordinate()
-Coordinate321.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
 LineSet320.coord = Coordinate321
 #from vl1 to vt12 vertices 2
@@ -1488,7 +1467,6 @@ Shape328 = x3d.Shape()
 LineSet329 = x3d.LineSet()
 LineSet329.vertexCount = [2]
 Coordinate330 = x3d.Coordinate()
-Coordinate330.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
 LineSet329.coord = Coordinate330
 #from vt12 to vt11 vertices 2
@@ -1527,7 +1505,6 @@ Shape337 = x3d.Shape()
 LineSet338 = x3d.LineSet()
 LineSet338.vertexCount = [2]
 Coordinate339 = x3d.Coordinate()
-Coordinate339.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
 LineSet338.coord = Coordinate339
 #from vt11 to vt10 vertices 2
@@ -1580,7 +1557,6 @@ Shape349 = x3d.Shape()
 LineSet350 = x3d.LineSet()
 LineSet350.vertexCount = [2]
 Coordinate351 = x3d.Coordinate()
-Coordinate351.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
 LineSet350.coord = Coordinate351
 #from vt10 to vt9 vertices 2
@@ -1647,7 +1623,6 @@ Shape364 = x3d.Shape()
 LineSet365 = x3d.LineSet()
 LineSet365.vertexCount = [2]
 Coordinate366 = x3d.Coordinate()
-Coordinate366.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
 LineSet365.coord = Coordinate366
 #from vt9 to vt8 vertices 2
@@ -1686,7 +1661,6 @@ Shape373 = x3d.Shape()
 LineSet374 = x3d.LineSet()
 LineSet374.vertexCount = [2]
 Coordinate375 = x3d.Coordinate()
-Coordinate375.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
 LineSet374.coord = Coordinate375
 #from vt8 to vt7 vertices 2
@@ -1725,7 +1699,6 @@ Shape382 = x3d.Shape()
 LineSet383 = x3d.LineSet()
 LineSet383.vertexCount = [2]
 Coordinate384 = x3d.Coordinate()
-Coordinate384.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
 LineSet383.coord = Coordinate384
 #from vt7 to vt6 vertices 2
@@ -1816,7 +1789,6 @@ Shape403 = x3d.Shape()
 LineSet404 = x3d.LineSet()
 LineSet404.vertexCount = [2]
 Coordinate405 = x3d.Coordinate()
-Coordinate405.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
 LineSet404.coord = Coordinate405
 #from vt6 to vt5 vertices 2
@@ -1868,7 +1840,6 @@ Shape415 = x3d.Shape()
 LineSet416 = x3d.LineSet()
 LineSet416.vertexCount = [2]
 Coordinate417 = x3d.Coordinate()
-Coordinate417.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
 LineSet416.coord = Coordinate417
 #from vt5 to vt4 vertices 2
@@ -1907,7 +1878,6 @@ Shape424 = x3d.Shape()
 LineSet425 = x3d.LineSet()
 LineSet425.vertexCount = [2]
 Coordinate426 = x3d.Coordinate()
-Coordinate426.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
 LineSet425.coord = Coordinate426
 #from vt4 to vt3 vertices 2
@@ -1946,7 +1916,6 @@ Shape433 = x3d.Shape()
 LineSet434 = x3d.LineSet()
 LineSet434.vertexCount = [2]
 Coordinate435 = x3d.Coordinate()
-Coordinate435.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
 LineSet434.coord = Coordinate435
 #from vt3 to vt2 vertices 2
@@ -1985,7 +1954,6 @@ Shape442 = x3d.Shape()
 LineSet443 = x3d.LineSet()
 LineSet443.vertexCount = [2]
 Coordinate444 = x3d.Coordinate()
-Coordinate444.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
 LineSet443.coord = Coordinate444
 #from vt2 to vt1 vertices 2
@@ -2052,7 +2020,6 @@ Shape457 = x3d.Shape()
 LineSet458 = x3d.LineSet()
 LineSet458.vertexCount = [2]
 Coordinate459 = x3d.Coordinate()
-Coordinate459.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
 LineSet458.coord = Coordinate459
 #from vt1 to vc7 vertices 2
@@ -2096,7 +2063,6 @@ Shape467 = x3d.Shape()
 LineSet468 = x3d.LineSet()
 LineSet468.vertexCount = [2]
 Coordinate469 = x3d.Coordinate()
-Coordinate469.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
 LineSet468.coord = Coordinate469
 #from vt1 to l_sternoclavicular vertices 2
@@ -2181,7 +2147,6 @@ Shape486 = x3d.Shape()
 LineSet487 = x3d.LineSet()
 LineSet487.vertexCount = [2]
 Coordinate488 = x3d.Coordinate()
-Coordinate488.point = (0.0065,1.4951,-0.0387,-0.0694,1.4600,-0.0330)
 
 LineSet487.coord = Coordinate488
 #from vt1 to r_sternoclavicular vertices 2
@@ -2289,7 +2254,6 @@ Shape510 = x3d.Shape()
 LineSet511 = x3d.LineSet()
 LineSet511.vertexCount = [2]
 Coordinate512 = x3d.Coordinate()
-Coordinate512.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
 LineSet511.coord = Coordinate512
 #from vc7 to vc6 vertices 2
@@ -2328,7 +2292,6 @@ Shape519 = x3d.Shape()
 LineSet520 = x3d.LineSet()
 LineSet520.vertexCount = [2]
 Coordinate521 = x3d.Coordinate()
-Coordinate521.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
 LineSet520.coord = Coordinate521
 #from vc6 to vc5 vertices 2
@@ -2367,7 +2330,6 @@ Shape528 = x3d.Shape()
 LineSet529 = x3d.LineSet()
 LineSet529.vertexCount = [2]
 Coordinate530 = x3d.Coordinate()
-Coordinate530.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
 LineSet529.coord = Coordinate530
 #from vc5 to vc4 vertices 2
@@ -2406,7 +2368,6 @@ Shape537 = x3d.Shape()
 LineSet538 = x3d.LineSet()
 LineSet538.vertexCount = [2]
 Coordinate539 = x3d.Coordinate()
-Coordinate539.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
 LineSet538.coord = Coordinate539
 #from vc4 to vc3 vertices 2
@@ -2445,7 +2406,6 @@ Shape546 = x3d.Shape()
 LineSet547 = x3d.LineSet()
 LineSet547.vertexCount = [2]
 Coordinate548 = x3d.Coordinate()
-Coordinate548.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
 LineSet547.coord = Coordinate548
 #from vc3 to vc2 vertices 2
@@ -2497,7 +2457,6 @@ Shape558 = x3d.Shape()
 LineSet559 = x3d.LineSet()
 LineSet559.vertexCount = [2]
 Coordinate560 = x3d.Coordinate()
-Coordinate560.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
 LineSet559.coord = Coordinate560
 #from vc2 to vc1 vertices 2
@@ -2536,7 +2495,6 @@ Shape567 = x3d.Shape()
 LineSet568 = x3d.LineSet()
 LineSet568.vertexCount = [2]
 Coordinate569 = x3d.Coordinate()
-Coordinate569.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
 LineSet568.coord = Coordinate569
 #from vc1 to skullbase vertices 2
@@ -2725,7 +2683,6 @@ Shape609 = x3d.Shape()
 LineSet610 = x3d.LineSet()
 LineSet610.vertexCount = [2]
 Coordinate611 = x3d.Coordinate()
-Coordinate611.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet610.coord = Coordinate611
 #from skullbase to l_eyelid_joint vertices 2
@@ -2741,7 +2698,6 @@ Shape613 = x3d.Shape()
 LineSet614 = x3d.LineSet()
 LineSet614.vertexCount = [2]
 Coordinate615 = x3d.Coordinate()
-Coordinate615.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet614.coord = Coordinate615
 #from skullbase to r_eyelid_joint vertices 2
@@ -2757,7 +2713,6 @@ Shape617 = x3d.Shape()
 LineSet618 = x3d.LineSet()
 LineSet618.vertexCount = [2]
 Coordinate619 = x3d.Coordinate()
-Coordinate619.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet618.coord = Coordinate619
 #from skullbase to l_eyeball_joint vertices 2
@@ -2773,7 +2728,6 @@ Shape621 = x3d.Shape()
 LineSet622 = x3d.LineSet()
 LineSet622.vertexCount = [2]
 Coordinate623 = x3d.Coordinate()
-Coordinate623.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet622.coord = Coordinate623
 #from skullbase to r_eyeball_joint vertices 2
@@ -2789,7 +2743,6 @@ Shape625 = x3d.Shape()
 LineSet626 = x3d.LineSet()
 LineSet626.vertexCount = [2]
 Coordinate627 = x3d.Coordinate()
-Coordinate627.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet626.coord = Coordinate627
 #from skullbase to l_eyebrow_joint vertices 2
@@ -2805,7 +2758,6 @@ Shape629 = x3d.Shape()
 LineSet630 = x3d.LineSet()
 LineSet630.vertexCount = [2]
 Coordinate631 = x3d.Coordinate()
-Coordinate631.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet630.coord = Coordinate631
 #from skullbase to r_eyebrow_joint vertices 2
@@ -2821,7 +2773,6 @@ Shape633 = x3d.Shape()
 LineSet634 = x3d.LineSet()
 LineSet634.vertexCount = [2]
 Coordinate635 = x3d.Coordinate()
-Coordinate635.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet634.coord = Coordinate635
 #from skullbase to temporomandibular vertices 2
@@ -2893,6 +2844,7 @@ HAnimJoint604.children.append(HAnimSegment605)
 HAnimJoint649 = x3d.HAnimJoint()
 HAnimJoint649.name = "l_eyelid_joint"
 HAnimJoint649.DEF = "hanim_l_eyelid_joint"
+HAnimJoint649.center = [0.0503,1.4157,-0.0689]
 HAnimJoint649.ulimit = [0,0,0]
 HAnimJoint649.llimit = [0,0,0]
 
@@ -2900,6 +2852,7 @@ HAnimJoint604.children.append(HAnimJoint649)
 HAnimJoint650 = x3d.HAnimJoint()
 HAnimJoint650.name = "r_eyelid_joint"
 HAnimJoint650.DEF = "hanim_r_eyelid_joint"
+HAnimJoint650.center = [-0.0507,1.4157,-0.0689]
 HAnimJoint650.ulimit = [0,0,0]
 HAnimJoint650.llimit = [0,0,0]
 
@@ -2907,6 +2860,7 @@ HAnimJoint604.children.append(HAnimJoint650)
 HAnimJoint651 = x3d.HAnimJoint()
 HAnimJoint651.name = "l_eyeball_joint"
 HAnimJoint651.DEF = "hanim_l_eyeball_joint"
+HAnimJoint651.center = [0.0479,1.3963,-0.0188]
 HAnimJoint651.ulimit = [0,0,0]
 HAnimJoint651.llimit = [0,0,0]
 
@@ -2914,6 +2868,7 @@ HAnimJoint604.children.append(HAnimJoint651)
 HAnimJoint652 = x3d.HAnimJoint()
 HAnimJoint652.name = "r_eyeball_joint"
 HAnimJoint652.DEF = "hanim_r_eyeball_joint"
+HAnimJoint652.center = [-0.0483,1.3963,-0.0188]
 HAnimJoint652.ulimit = [0,0,0]
 HAnimJoint652.llimit = [0,0,0]
 
@@ -2921,6 +2876,7 @@ HAnimJoint604.children.append(HAnimJoint652)
 HAnimJoint653 = x3d.HAnimJoint()
 HAnimJoint653.name = "l_eyebrow_joint"
 HAnimJoint653.DEF = "hanim_l_eyebrow_joint"
+HAnimJoint653.center = [0.0216,1.4053,0.0051]
 HAnimJoint653.ulimit = [0,0,0]
 HAnimJoint653.llimit = [0,0,0]
 
@@ -2928,6 +2884,7 @@ HAnimJoint604.children.append(HAnimJoint653)
 HAnimJoint654 = x3d.HAnimJoint()
 HAnimJoint654.name = "r_eyebrow_joint"
 HAnimJoint654.DEF = "hanim_r_eyebrow_joint"
+HAnimJoint654.center = [-0.0219,1.4053,0.0051]
 HAnimJoint654.ulimit = [0,0,0]
 HAnimJoint654.llimit = [0,0,0]
 
@@ -2935,6 +2892,7 @@ HAnimJoint604.children.append(HAnimJoint654)
 HAnimJoint655 = x3d.HAnimJoint()
 HAnimJoint655.name = "temporomandibular"
 HAnimJoint655.DEF = "hanim_temporomandibular"
+HAnimJoint655.center = [-0.0002,1.3043,-0.0865]
 HAnimJoint655.ulimit = [0,0,0]
 HAnimJoint655.llimit = [0,0,0]
 
@@ -2980,7 +2938,6 @@ Shape661 = x3d.Shape()
 LineSet662 = x3d.LineSet()
 LineSet662.vertexCount = [2]
 Coordinate663 = x3d.Coordinate()
-Coordinate663.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
 LineSet662.coord = Coordinate663
 #from l_sternoclavicular to l_acromioclavicular vertices 2
@@ -3019,7 +2976,6 @@ Shape670 = x3d.Shape()
 LineSet671 = x3d.LineSet()
 LineSet671.vertexCount = [2]
 Coordinate672 = x3d.Coordinate()
-Coordinate672.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
 LineSet671.coord = Coordinate672
 #from l_acromioclavicular to l_shoulder vertices 2
@@ -3085,7 +3041,6 @@ Shape685 = x3d.Shape()
 LineSet686 = x3d.LineSet()
 LineSet686.vertexCount = [2]
 Coordinate687 = x3d.Coordinate()
-Coordinate687.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
 LineSet686.coord = Coordinate687
 #from l_shoulder to l_elbow vertices 2
@@ -3180,7 +3135,6 @@ Shape706 = x3d.Shape()
 LineSet707 = x3d.LineSet()
 LineSet707.vertexCount = [2]
 Coordinate708 = x3d.Coordinate()
-Coordinate708.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
 LineSet707.coord = Coordinate708
 #from l_elbow to l_radiocarpal vertices 2
@@ -3237,7 +3191,6 @@ Shape718 = x3d.Shape()
 LineSet719 = x3d.LineSet()
 LineSet719.vertexCount = [2]
 Coordinate720 = x3d.Coordinate()
-Coordinate720.point = (0.1984,0.8663,-0.0583,0.1924,0.8472,-0.0534)
 
 LineSet719.coord = Coordinate720
 #from l_radiocarpal to l_carpometacarpal_1 vertices 2
@@ -3253,7 +3206,6 @@ Shape722 = x3d.Shape()
 LineSet723 = x3d.LineSet()
 LineSet723.vertexCount = [2]
 Coordinate724 = x3d.Coordinate()
-Coordinate724.point = (0.1984,0.8663,-0.0583,0.1983,0.8024,-0.0280)
 
 LineSet723.coord = Coordinate724
 #from l_radiocarpal to l_carpometacarpal_2 vertices 2
@@ -3283,7 +3235,6 @@ Shape729 = x3d.Shape()
 LineSet730 = x3d.LineSet()
 LineSet730.vertexCount = [2]
 Coordinate731 = x3d.Coordinate()
-Coordinate731.point = (0.1984,0.8663,-0.0583,0.1987,0.8029,-0.0530)
 
 LineSet730.coord = Coordinate731
 #from l_radiocarpal to l_carpometacarpal_3 vertices 2
@@ -3312,7 +3263,6 @@ Shape736 = x3d.Shape()
 LineSet737 = x3d.LineSet()
 LineSet737.vertexCount = [2]
 Coordinate738 = x3d.Coordinate()
-Coordinate738.point = (0.1984,0.8663,-0.0583,0.1956,0.8019,-0.0794)
 
 LineSet737.coord = Coordinate738
 #from l_radiocarpal to l_carpometacarpal_4 vertices 2
@@ -3328,7 +3278,6 @@ Shape740 = x3d.Shape()
 LineSet741 = x3d.LineSet()
 LineSet741.vertexCount = [2]
 Coordinate742 = x3d.Coordinate()
-Coordinate742.point = (0.1984,0.8663,-0.0583,0.1925,0.8066,-0.1036)
 
 LineSet741.coord = Coordinate742
 #from l_radiocarpal to l_carpometacarpal_5 vertices 2
@@ -3381,7 +3330,6 @@ Shape752 = x3d.Shape()
 LineSet753 = x3d.LineSet()
 LineSet753.vertexCount = [2]
 Coordinate754 = x3d.Coordinate()
-Coordinate754.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
 LineSet753.coord = Coordinate754
 #from l_carpometacarpal_1 to l_metacarpophalangeal_1 vertices 2
@@ -3420,7 +3368,6 @@ Shape761 = x3d.Shape()
 LineSet762 = x3d.LineSet()
 LineSet762.vertexCount = [2]
 Coordinate763 = x3d.Coordinate()
-Coordinate763.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
 LineSet762.coord = Coordinate763
 #from l_metacarpophalangeal_1 to l_carpal_interphalangeal_1 vertices 2
@@ -3484,7 +3431,6 @@ Shape774 = x3d.Shape()
 LineSet775 = x3d.LineSet()
 LineSet775.vertexCount = [2]
 Coordinate776 = x3d.Coordinate()
-Coordinate776.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
 LineSet775.coord = Coordinate776
 #from l_carpometacarpal_2 to l_metacarpophalangeal_2 vertices 2
@@ -3523,7 +3469,6 @@ Shape783 = x3d.Shape()
 LineSet784 = x3d.LineSet()
 LineSet784.vertexCount = [2]
 Coordinate785 = x3d.Coordinate()
-Coordinate785.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
 LineSet784.coord = Coordinate785
 #from l_metacarpophalangeal_2 to l_carpal_proximal_interphalangeal_2 vertices 2
@@ -3562,7 +3507,6 @@ Shape792 = x3d.Shape()
 LineSet793 = x3d.LineSet()
 LineSet793.vertexCount = [2]
 Coordinate794 = x3d.Coordinate()
-Coordinate794.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
 LineSet793.coord = Coordinate794
 #from l_carpal_proximal_interphalangeal_2 to l_carpal_distal_interphalangeal_2 vertices 2
@@ -3642,7 +3586,6 @@ Shape808 = x3d.Shape()
 LineSet809 = x3d.LineSet()
 LineSet809.vertexCount = [2]
 Coordinate810 = x3d.Coordinate()
-Coordinate810.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
 LineSet809.coord = Coordinate810
 #from l_carpometacarpal_3 to l_metacarpophalangeal_3 vertices 2
@@ -3681,7 +3624,6 @@ Shape817 = x3d.Shape()
 LineSet818 = x3d.LineSet()
 LineSet818.vertexCount = [2]
 Coordinate819 = x3d.Coordinate()
-Coordinate819.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
 LineSet818.coord = Coordinate819
 #from l_metacarpophalangeal_3 to l_carpal_proximal_interphalangeal_3 vertices 2
@@ -3720,7 +3662,6 @@ Shape826 = x3d.Shape()
 LineSet827 = x3d.LineSet()
 LineSet827.vertexCount = [2]
 Coordinate828 = x3d.Coordinate()
-Coordinate828.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
 LineSet827.coord = Coordinate828
 #from l_carpal_proximal_interphalangeal_3 to l_carpal_distal_interphalangeal_3 vertices 2
@@ -3786,7 +3727,6 @@ Shape839 = x3d.Shape()
 LineSet840 = x3d.LineSet()
 LineSet840.vertexCount = [2]
 Coordinate841 = x3d.Coordinate()
-Coordinate841.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
 LineSet840.coord = Coordinate841
 #from l_carpometacarpal_4 to l_metacarpophalangeal_4 vertices 2
@@ -3825,7 +3765,6 @@ Shape848 = x3d.Shape()
 LineSet849 = x3d.LineSet()
 LineSet849.vertexCount = [2]
 Coordinate850 = x3d.Coordinate()
-Coordinate850.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
 LineSet849.coord = Coordinate850
 #from l_metacarpophalangeal_4 to l_carpal_proximal_interphalangeal_4 vertices 2
@@ -3864,7 +3803,6 @@ Shape857 = x3d.Shape()
 LineSet858 = x3d.LineSet()
 LineSet858.vertexCount = [2]
 Coordinate859 = x3d.Coordinate()
-Coordinate859.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
 LineSet858.coord = Coordinate859
 #from l_carpal_proximal_interphalangeal_4 to l_carpal_distal_interphalangeal_4 vertices 2
@@ -3930,7 +3868,6 @@ Shape870 = x3d.Shape()
 LineSet871 = x3d.LineSet()
 LineSet871.vertexCount = [2]
 Coordinate872 = x3d.Coordinate()
-Coordinate872.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
 LineSet871.coord = Coordinate872
 #from l_carpometacarpal_5 to l_metacarpophalangeal_5 vertices 2
@@ -3969,7 +3906,6 @@ Shape879 = x3d.Shape()
 LineSet880 = x3d.LineSet()
 LineSet880.vertexCount = [2]
 Coordinate881 = x3d.Coordinate()
-Coordinate881.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
 LineSet880.coord = Coordinate881
 #from l_metacarpophalangeal_5 to l_carpal_proximal_interphalangeal_5 vertices 2
@@ -4008,7 +3944,6 @@ Shape888 = x3d.Shape()
 LineSet889 = x3d.LineSet()
 LineSet889.vertexCount = [2]
 Coordinate890 = x3d.Coordinate()
-Coordinate890.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
 LineSet889.coord = Coordinate890
 #from l_carpal_proximal_interphalangeal_5 to l_carpal_distal_interphalangeal_5 vertices 2
@@ -4084,7 +4019,6 @@ Shape901 = x3d.Shape()
 LineSet902 = x3d.LineSet()
 LineSet902.vertexCount = [2]
 Coordinate903 = x3d.Coordinate()
-Coordinate903.point = (-0.0694,1.4600,-0.0330,-0.0836,1.4281,-0.0401)
 
 LineSet902.coord = Coordinate903
 #from r_sternoclavicular to r_acromioclavicular vertices 2
@@ -4123,7 +4057,6 @@ Shape910 = x3d.Shape()
 LineSet911 = x3d.LineSet()
 LineSet911.vertexCount = [2]
 Coordinate912 = x3d.Coordinate()
-Coordinate912.point = (-0.0836,1.4281,-0.0401,-0.1907,1.4407,-0.0325)
 
 LineSet911.coord = Coordinate912
 #from r_acromioclavicular to r_shoulder vertices 2
@@ -4189,7 +4122,6 @@ Shape925 = x3d.Shape()
 LineSet926 = x3d.LineSet()
 LineSet926.vertexCount = [2]
 Coordinate927 = x3d.Coordinate()
-Coordinate927.point = (-0.1907,1.4407,-0.0325,-0.1949,1.1388,-0.0620)
 
 LineSet926.coord = Coordinate927
 #from r_shoulder to r_elbow vertices 2
@@ -4284,7 +4216,6 @@ Shape946 = x3d.Shape()
 LineSet947 = x3d.LineSet()
 LineSet947.vertexCount = [2]
 Coordinate948 = x3d.Coordinate()
-Coordinate948.point = (-0.1949,1.1388,-0.0620,-0.1959,0.8694,-0.0521)
 
 LineSet947.coord = Coordinate948
 #from r_elbow to r_radiocarpal vertices 2
@@ -4341,7 +4272,6 @@ Shape958 = x3d.Shape()
 LineSet959 = x3d.LineSet()
 LineSet959.vertexCount = [2]
 Coordinate960 = x3d.Coordinate()
-Coordinate960.point = (-0.1959,0.8694,-0.0521,-0.1899,0.8502,-0.0473)
 
 LineSet959.coord = Coordinate960
 #from r_radiocarpal to r_carpometacarpal_1 vertices 2
@@ -4357,7 +4287,6 @@ Shape962 = x3d.Shape()
 LineSet963 = x3d.LineSet()
 LineSet963.vertexCount = [2]
 Coordinate964 = x3d.Coordinate()
-Coordinate964.point = (-0.1959,0.8694,-0.0521,-0.1961,0.8055,-0.0218)
 
 LineSet963.coord = Coordinate964
 #from r_radiocarpal to r_carpometacarpal_2 vertices 2
@@ -4387,7 +4316,6 @@ Shape969 = x3d.Shape()
 LineSet970 = x3d.LineSet()
 LineSet970.vertexCount = [2]
 Coordinate971 = x3d.Coordinate()
-Coordinate971.point = (-0.1959,0.8694,-0.0521,-0.1972,0.8060,-0.0468)
 
 LineSet970.coord = Coordinate971
 #from r_radiocarpal to r_carpometacarpal_3 vertices 2
@@ -4416,7 +4344,6 @@ Shape976 = x3d.Shape()
 LineSet977 = x3d.LineSet()
 LineSet977.vertexCount = [2]
 Coordinate978 = x3d.Coordinate()
-Coordinate978.point = (-0.1959,0.8694,-0.0521,-0.1951,0.8049,-0.0732)
 
 LineSet977.coord = Coordinate978
 #from r_radiocarpal to r_carpometacarpal_4 vertices 2
@@ -4432,7 +4359,6 @@ Shape980 = x3d.Shape()
 LineSet981 = x3d.LineSet()
 LineSet981.vertexCount = [2]
 Coordinate982 = x3d.Coordinate()
-Coordinate982.point = (-0.1959,0.8694,-0.0521,-0.1926,0.8096,-0.0975)
 
 LineSet981.coord = Coordinate982
 #from r_radiocarpal to r_carpometacarpal_5 vertices 2
@@ -4485,7 +4411,6 @@ Shape992 = x3d.Shape()
 LineSet993 = x3d.LineSet()
 LineSet993.vertexCount = [2]
 Coordinate994 = x3d.Coordinate()
-Coordinate994.point = (-0.1899,0.8502,-0.0473,-0.1874,0.8256,0.0306)
 
 LineSet993.coord = Coordinate994
 #from r_carpometacarpal_1 to r_metacarpophalangeal_1 vertices 2
@@ -4524,7 +4449,6 @@ Shape1001 = x3d.Shape()
 LineSet1002 = x3d.LineSet()
 LineSet1002.vertexCount = [2]
 Coordinate1003 = x3d.Coordinate()
-Coordinate1003.point = (-0.1874,0.8256,0.0306,-0.1864,0.8190,0.0506)
 
 LineSet1002.coord = Coordinate1003
 #from r_metacarpophalangeal_1 to r_carpal_interphalangeal_1 vertices 2
@@ -4588,7 +4512,6 @@ Shape1014 = x3d.Shape()
 LineSet1015 = x3d.LineSet()
 LineSet1015.vertexCount = [2]
 Coordinate1016 = x3d.Coordinate()
-Coordinate1016.point = (-0.1961,0.8055,-0.0218,-0.1961,0.7846,-0.0218)
 
 LineSet1015.coord = Coordinate1016
 #from r_carpometacarpal_2 to r_metacarpophalangeal_2 vertices 2
@@ -4627,7 +4550,6 @@ Shape1023 = x3d.Shape()
 LineSet1024 = x3d.LineSet()
 LineSet1024.vertexCount = [2]
 Coordinate1025 = x3d.Coordinate()
-Coordinate1025.point = (-0.1961,0.7846,-0.0218,-0.1954,0.7393,-0.0185)
 
 LineSet1024.coord = Coordinate1025
 #from r_metacarpophalangeal_2 to r_carpal_proximal_interphalangeal_2 vertices 2
@@ -4666,7 +4588,6 @@ Shape1032 = x3d.Shape()
 LineSet1033 = x3d.LineSet()
 LineSet1033.vertexCount = [2]
 Coordinate1034 = x3d.Coordinate()
-Coordinate1034.point = (-0.1954,0.7393,-0.0185,-0.1945,0.7169,-0.0173)
 
 LineSet1033.coord = Coordinate1034
 #from r_carpal_proximal_interphalangeal_2 to r_carpal_distal_interphalangeal_2 vertices 2
@@ -4746,7 +4667,6 @@ Shape1048 = x3d.Shape()
 LineSet1049 = x3d.LineSet()
 LineSet1049.vertexCount = [2]
 Coordinate1050 = x3d.Coordinate()
-Coordinate1050.point = (-0.1972,0.8060,-0.0468,-0.1972,0.7849,-0.0468)
 
 LineSet1049.coord = Coordinate1050
 #from r_carpometacarpal_3 to r_metacarpophalangeal_3 vertices 2
@@ -4785,7 +4705,6 @@ Shape1057 = x3d.Shape()
 LineSet1058 = x3d.LineSet()
 LineSet1058.vertexCount = [2]
 Coordinate1059 = x3d.Coordinate()
-Coordinate1059.point = (-0.1972,0.7849,-0.0468,-0.1950,0.7304,-0.0441)
 
 LineSet1058.coord = Coordinate1059
 #from r_metacarpophalangeal_3 to r_carpal_proximal_interphalangeal_3 vertices 2
@@ -4824,7 +4743,6 @@ Shape1066 = x3d.Shape()
 LineSet1067 = x3d.LineSet()
 LineSet1067.vertexCount = [2]
 Coordinate1068 = x3d.Coordinate()
-Coordinate1068.point = (-0.1950,0.7304,-0.0441,-0.1939,0.7042,-0.0432)
 
 LineSet1067.coord = Coordinate1068
 #from r_carpal_proximal_interphalangeal_3 to r_carpal_distal_interphalangeal_3 vertices 2
@@ -4890,7 +4808,6 @@ Shape1079 = x3d.Shape()
 LineSet1080 = x3d.LineSet()
 LineSet1080.vertexCount = [2]
 Coordinate1081 = x3d.Coordinate()
-Coordinate1081.point = (-0.1951,0.8049,-0.0732,-0.1951,0.7845,-0.0732)
 
 LineSet1080.coord = Coordinate1081
 #from r_carpometacarpal_4 to r_metacarpophalangeal_4 vertices 2
@@ -4929,7 +4846,6 @@ Shape1088 = x3d.Shape()
 LineSet1089 = x3d.LineSet()
 LineSet1089.vertexCount = [2]
 Coordinate1090 = x3d.Coordinate()
-Coordinate1090.point = (-0.1951,0.7845,-0.0732,-0.1920,0.7318,-0.0716)
 
 LineSet1089.coord = Coordinate1090
 #from r_metacarpophalangeal_4 to r_carpal_proximal_interphalangeal_4 vertices 2
@@ -4968,7 +4884,6 @@ Shape1097 = x3d.Shape()
 LineSet1098 = x3d.LineSet()
 LineSet1098.vertexCount = [2]
 Coordinate1099 = x3d.Coordinate()
-Coordinate1099.point = (-0.1920,0.7318,-0.0716,-0.1908,0.7077,-0.0706)
 
 LineSet1098.coord = Coordinate1099
 #from r_carpal_proximal_interphalangeal_4 to r_carpal_distal_interphalangeal_4 vertices 2
@@ -5034,7 +4949,6 @@ Shape1110 = x3d.Shape()
 LineSet1111 = x3d.LineSet()
 LineSet1111.vertexCount = [2]
 Coordinate1112 = x3d.Coordinate()
-Coordinate1112.point = (-0.1926,0.8096,-0.0975,-0.1926,0.7896,-0.0975)
 
 LineSet1111.coord = Coordinate1112
 #from r_carpometacarpal_5 to r_metacarpophalangeal_5 vertices 2
@@ -5073,7 +4987,6 @@ Shape1119 = x3d.Shape()
 LineSet1120 = x3d.LineSet()
 LineSet1120.vertexCount = [2]
 Coordinate1121 = x3d.Coordinate()
-Coordinate1121.point = (-0.1926,0.7896,-0.0975,-0.1902,0.7483,-0.0963)
 
 LineSet1120.coord = Coordinate1121
 #from r_metacarpophalangeal_5 to r_carpal_proximal_interphalangeal_5 vertices 2
@@ -5112,7 +5025,6 @@ Shape1128 = x3d.Shape()
 LineSet1129 = x3d.LineSet()
 LineSet1129.vertexCount = [2]
 Coordinate1130 = x3d.Coordinate()
-Coordinate1130.point = (-0.1902,0.7483,-0.0963,-0.1908,0.7540,-0.0960)
 
 LineSet1129.coord = Coordinate1130
 #from r_carpal_proximal_interphalangeal_5 to r_carpal_distal_interphalangeal_5 vertices 2
@@ -6303,6 +6215,6 @@ HAnimHumanoid43.sites.append(HAnimSite1410)
 Scene11.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene11
-f = open("././Humanoid3_RoundTrip.x3d", "w")
+f = open("././Humanoid3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -336,6 +336,6 @@ ProtoInstance76.fieldValue.append(fieldValue77)
 Scene7.children.append(ProtoInstance76)
 
 X3D0.Scene = Scene7
-f = open("././rubik2x2x2_RoundTrip.x3d", "w")
+f = open("././rubik2x2x2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

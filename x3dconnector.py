@@ -39,7 +39,6 @@ Viewpoint8.description = "Only Viewpoint"
 
 Scene7.children.append(Viewpoint8)
 Background9 = x3d.Background()
-Background9.skyColor = [0.4,0.4,0.4]
 
 Scene7.children.append(Background9)
 Transform10 = x3d.Transform()
@@ -349,6 +348,6 @@ ROUTE65.toField = "set_endpoint"
 Scene7.children.append(ROUTE65)
 
 X3D0.Scene = Scene7
-f = open("././x3dconnector_RoundTrip.x3d", "w")
+f = open("././x3dconnector_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

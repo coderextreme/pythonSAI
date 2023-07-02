@@ -22,5 +22,5 @@ bash x3d2py.sh
 for i in *.py
 do
 	FILE=$i
-	${PYTHON} $FILE 1> /dev/null 2> /dev/null || echo ========================================ERROR $FILE && ${PYTHON} $FILE
+	ls x3d.py package_lock.py mapToMethodGenerator.py X3Dpackage.py packagemaker.py old.py fieldTypesGenerator.py | grep $FILE || ${PYTHON} $FILE 1> /dev/null 2> /dev/null || echo ========================================ERROR $FILE && ${PYTHON} $FILE
 done

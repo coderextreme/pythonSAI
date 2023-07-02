@@ -64,7 +64,6 @@ head1.children.append(meta12)
 X3D0.head = head1
 Scene13 = x3d.Scene()
 Background14 = x3d.Background()
-Background14.skyColor = [1,1,1]
 
 Scene13.children.append(Background14)
 Viewpoint15 = x3d.Viewpoint()
@@ -103,6 +102,6 @@ Shape16.appearance = Appearance19
 Scene13.children.append(Shape16)
 
 X3D0.Scene = Scene13
-f = open("././TextSpecialCharacters_RoundTrip.x3d", "w")
+f = open("././TextSpecialCharacters_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -101,7 +101,7 @@ ImageTexture23 = x3d.ImageTexture()
 ImageTexture23.DEF = "frontShader"
 ImageTexture23.url = ["../resources/images/all_probes/beach_cross/beach_front.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/beach_cross/beach_front.png"]
 
-ComposedCubeMapTexture20.frontTexture.append(ImageTexture23)
+ComposedCubeMapTexture20.frontTexture = ImageTexture23
 ImageTexture24 = x3d.ImageTexture()
 ImageTexture24.DEF = "leftShader"
 ImageTexture24.url = ["../resources/images/all_probes/beach_cross/beach_left.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/beach_cross/beach_left.png"]
@@ -111,12 +111,12 @@ ImageTexture25 = x3d.ImageTexture()
 ImageTexture25.DEF = "rightShader"
 ImageTexture25.url = ["../resources/images/all_probes/beach_cross/beach_right.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/beach_cross/beach_right.png"]
 
-ComposedCubeMapTexture20.rightTexture.append(ImageTexture25)
+ComposedCubeMapTexture20.rightTexture = ImageTexture25
 ImageTexture26 = x3d.ImageTexture()
 ImageTexture26.DEF = "topShader"
 ImageTexture26.url = ["../resources/images/all_probes/beach_cross/beach_top.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/all_probes/beach_cross/beach_top.png"]
 
-ComposedCubeMapTexture20.topTexture.append(ImageTexture26)
+ComposedCubeMapTexture20.topTexture = ImageTexture26
 
 Appearance18.texture = ComposedCubeMapTexture20
 ComposedShader27 = x3d.ComposedShader()
@@ -443,6 +443,6 @@ Transform16.children.append(ROUTE72)
 Scene13.children.append(Transform16)
 
 X3D0.Scene = Scene13
-f = open("././mirror2_RoundTrip.x3d", "w")
+f = open("././mirror2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

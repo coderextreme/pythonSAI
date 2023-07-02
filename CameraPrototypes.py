@@ -359,7 +359,6 @@ ProtoBody42.children.append(DirectionalLight57)
 PositionInterpolator62 = x3d.PositionInterpolator()
 PositionInterpolator62.DEF = "CameraPositionInterpolator"
 PositionInterpolator62.key = [0,1]
-PositionInterpolator62.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 IS63 = x3d.IS()
 connect64 = x3d.connect()
 connect64.nodeField = "set_fraction"
@@ -373,7 +372,6 @@ ProtoBody42.children.append(PositionInterpolator62)
 OrientationInterpolator65 = x3d.OrientationInterpolator()
 OrientationInterpolator65.DEF = "CameraOrientationInterpolator"
 OrientationInterpolator65.key = [0,1]
-OrientationInterpolator65.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000)
 IS66 = x3d.IS()
 connect67 = x3d.connect()
 connect67.nodeField = "set_fraction"
@@ -2153,7 +2151,6 @@ ProtoDeclare216.ProtoBody = ProtoBody229
 Scene16.children.append(ProtoDeclare216)
 #=============== Launch Prototype Example ==============
 Background254 = x3d.Background()
-Background254.skyColor = [0.282353,0.380392,0.470588]
 
 Scene16.children.append(Background254)
 Anchor255 = x3d.Anchor()
@@ -2184,6 +2181,6 @@ Anchor255.children.append(Transform256)
 Scene16.children.append(Anchor255)
 
 X3D0.Scene = Scene16
-f = open("././CameraPrototypes_RoundTrip.x3d", "w")
+f = open("././CameraPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -40,7 +40,7 @@ PythonSerializer.prototype = {
 		bodystr += this.subSerializeToString(element, mapToMethod, fieldTypes, 3, stack);
 
 		str += bodystr;
-		str += "f = open(\""+clazz+"_RoundTrip.x3d\", \"w\")\n";
+		str += "f = open(\""+clazz+"_RoundTrip.x3d\", mode=\"w\", encoding=\"utf-8\")\n";
 		str += "f.write("+element.nodeName+stack[0]+".XML())\n";
 		str += "f.close()\n";
 		stack.shift();
@@ -77,26 +77,70 @@ PythonSerializer.prototype = {
 			values.pop();
 		}
 		if (attrType === "MFRotation") {
-			return '('+lead+values.map(a => parseFloat(a).toFixed(4)).join(j)+trail+')';
-		} else if (attrType === "MFVec3f") {
-			return '('+lead+values.map(a => parseFloat(a).toFixed(4)).join(j)+trail+')';
+			let Dwhole = [];
+			let TupleCount = 4;
+                        for (let i=0; i < len(values); i+=TupleCount) {
+				let Dpart = "(";
+				Dpart += values[i];
+				Dpart += ", ";
+				Dpart += values[i+1];
+				Dpart += ", ";
+				Dpart += values[i+2];
+				Dpart += ", ";
+				Dpart += values[i+3];
+				Dpart += ")";
+				Dwhole[i/TupleCount] = Dpart;
+			}
+			console.log(Dwhole);
+			return '['+lead+Dwhole.join(j)+trail+']';
+			// return '('+lead+values.map(a => parseFloat(a).toFixed(4)).join(j)+trail+')';
 		// } else if (attrType === "SFString") {
 			// let s =  '('+lead+values.join(',')+trail+')';
 			// return s;
 		} else if (attrType === "MFVec2f") {
 			let Dwhole = [];
-                        for (let i=0; i < len(values); i+=2) {
-				let Dpart = "("+values[i]+", "+values[i+1)+")";
-				Dwhole.append(Dpart);
+			let TupleCount = 2;
+                        for (let i=0; i < len(values); i+=TupleCount) {
+				let Dpart = "("+values[i]+", "+values[i+1]+")";
+				Dwhole[i/TupleCount] = Dpart;
 			}
 			console.log(Dwhole);
 			return '['+lead+Dwhole.join(j)+trail+']';
+		} else if (attrType === "MFVec3d") {
+			let Dwhole = [];
+			let TupleCount = 3;
+                        for (let i=0; i < len(values); i+=TupleCount) {
+				let Dpart = "("+values[i]+", "+values[i+1]+")";
+				Dwhole[i/TupleCount] = Dpart;
+			}
+			console.log(Dwhole);
+			return '['+lead+Dwhole.join(j)+trail+']';
+		} else if (attrType === "MFVec3f") {
+			let Dwhole = [];
+			let TupleCount = 3;
+                        for (let i=0; i < len(values); i+=TupleCount) {
+				let Dpart = "("+values[i]+", "+values[i+1]+")";
+				Dwhole[i/TupleCount] = Dpart;
+			}
+			console.log(Dwhole);
+			return '['+lead+Dwhole.join(j)+trail+']';
+			// return '('+lead+values.map(a => parseFloat(a).toFixed(4)).join(j)+trail+')';
 		} else if (attrType.startsWith("MFColor")) {
 			let Dwhole = [];
 			let TupleCount = attrType.endsWith("RGBA") ? 4 : 3;
                         for (let i=0; i < len(values); i+=TupleCount) {
-				let Dpart = "("+values[i]+", "+values[i+1)+")";
-				Dwhole.append(Dpart);
+				let Dpart = "(";
+				Dpart += values[i];
+				Dpart += ", ";
+				Dpart += values[i+1];
+				Dpart += ", ";
+				Dpart += values[i+2];
+				if (TupleCount > 3) {
+					Dpart += ", ";
+					Dpart += values[i+3];
+				}
+				Dpart += ")";
+				Dwhole[i/TupleCount] = Dpart;
 			}
 			console.log(Dwhole);
 			return '['+lead+Dwhole.join(j)+trail+']';
@@ -341,7 +385,9 @@ PythonSerializer.prototype = {
 				ch += bodystr;
 				ch += "\n"
 				let method = this.printParentChild(element, node, cn, mapToMethod, n);
-				if (method === ".addMeta" || method === ".addComponent"|| method === ".addUnit") {
+				if (method === ".global") {
+					method = ".global_";
+				} else if (method === ".addMeta" || method === ".addComponent"|| method === ".addUnit") {
 					method = ".children";
 				} else if (method === ".setIS") {
 					method = ".IS";
@@ -353,6 +399,8 @@ PythonSerializer.prototype = {
 					method = method.substring(0,1) + method.substring(4);
 				} else if (method === ".#sourceCode") {
 					method = method.substring(0,1) + method.substring(2);
+				} else if (method === ".shape") {
+				} else if (method.toLowerCase() === ".hanimsite") {
 				} else {
 					method = method.substring(0,1) + method.substring(4,5).toLowerCase() + method.substr(5);
 
@@ -361,31 +409,41 @@ PythonSerializer.prototype = {
 					method === ".IS" ||
 					method === ".appearance" ||
 					method === ".metadata" ||
-					method === ".backTexture" ||
 					method === ".back" ||
 					method === ".shape" ||
 					method === ".color" ||
 					method === ".skinCoord" ||
-					method === ".leftTexture" ||
 					method === ".coord" ||
-					method === ".value" ||
+					method === ".texCoord" ||
 					method === ".normal" ||
 					method === ".source" ||
 					method === ".layerSet" ||
 					method === ".textureTransform" ||
 					method === ".acousticProperties" ||
+					method === ".topTexture" ||
 					method === ".bottomTexture" ||
+					method === ".rightTexture" ||
+					method === ".leftTexture" ||
+					method === ".frontTexture" ||
+					method === ".backTexture" ||
 					method === ".texture" ||
 					method === ".fontStyle" ||
 					method === ".material" ||
 					method === ".geometry" ||
 					method === ".head" ||
+					method === ".geoOrigin" ||
 					method === ".proxy" ||
 					method === ".ProtoInterface" ||
 					method === ".ProtoBody") {
 					ch += element.nodeName+stack[1]+method+" = "+node.nodeName+stack[0]+"\n";
 				} else if (method === ".sourceCode") {
 					ch += element.nodeName+stack[1]+method+" = "+node.nodeName.substring(1)+stack[0]+"\n";
+				} else if ((element.nodeName === "Group" || element.nodeName === "Shape" || element.nodeName === "HAnimHumanoid") && method === ".value") {
+					ch += element.nodeName+stack[1]+".metadata = "+node.nodeName+stack[0]+"\n";
+				} else if (method === ".value") {
+					ch += "if "+element.nodeName+stack[1]+method+" is None:\n";
+					ch += "    "+element.nodeName+stack[1]+method+" = []\n";
+					ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
 				} else {
 					ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
 				}

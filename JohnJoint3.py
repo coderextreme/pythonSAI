@@ -63,11 +63,9 @@ IndexedLineSet14.colorIndex = [0,1,2]
 IndexedLineSet14.colorPerVertex = False
 IndexedLineSet14.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate15 = x3d.Coordinate()
-Coordinate15.point = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000)
 
 IndexedLineSet14.coord = Coordinate15
 Color16 = x3d.Color()
-Color16.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet14.color = Color16
 
@@ -109,11 +107,9 @@ LineSet26 = x3d.LineSet()
 LineSet26.vertexCount = [2]
 ColorRGBA27 = x3d.ColorRGBA()
 ColorRGBA27.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA27.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet26.color = ColorRGBA27
 Coordinate28 = x3d.Coordinate()
-Coordinate28.point = (-0.0500,0.0000,0.0000,0.0500,0.0000,0.0000)
 
 LineSet26.coord = Coordinate28
 
@@ -150,7 +146,6 @@ Shape33 = x3d.Shape()
 LineSet34 = x3d.LineSet()
 LineSet34.vertexCount = [2]
 Coordinate35 = x3d.Coordinate()
-Coordinate35.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
 LineSet34.coord = Coordinate35
 #from humanoid_root to sacroiliac
@@ -175,7 +170,7 @@ Shape39.USE = "HAnimSiteShape"
 
 HAnimSite37.children.append(Shape39)
 
-HAnimJoint32.imSite.append(HAnimSite37)
+HAnimJoint32.HAnimSite.append(HAnimSite37)
 HAnimSite40 = x3d.HAnimSite()
 HAnimSite40.name = "crotch_pt"
 HAnimSite40.DEF = "hanim_crotch_pt"
@@ -189,7 +184,7 @@ Shape42.USE = "HAnimSiteShape"
 
 HAnimSite40.children.append(Shape42)
 
-HAnimJoint32.imSite.append(HAnimSite40)
+HAnimJoint32.HAnimSite.append(HAnimSite40)
 HAnimSite43 = x3d.HAnimSite()
 HAnimSite43.name = "l_asis_pt"
 HAnimSite43.DEF = "hanim_l_asis_pt"
@@ -203,7 +198,7 @@ Shape45.USE = "HAnimSiteShape"
 
 HAnimSite43.children.append(Shape45)
 
-HAnimJoint32.imSite.append(HAnimSite43)
+HAnimJoint32.HAnimSite.append(HAnimSite43)
 HAnimSite46 = x3d.HAnimSite()
 HAnimSite46.name = "l_iliocristale_pt"
 HAnimSite46.DEF = "hanim_l_iliocristale_pt"
@@ -217,7 +212,7 @@ Shape48.USE = "HAnimSiteShape"
 
 HAnimSite46.children.append(Shape48)
 
-HAnimJoint32.imSite.append(HAnimSite46)
+HAnimJoint32.HAnimSite.append(HAnimSite46)
 HAnimSite49 = x3d.HAnimSite()
 HAnimSite49.name = "l_psis_pt"
 HAnimSite49.DEF = "hanim_l_psis_pt"
@@ -231,7 +226,7 @@ Shape51.USE = "HAnimSiteShape"
 
 HAnimSite49.children.append(Shape51)
 
-HAnimJoint32.imSite.append(HAnimSite49)
+HAnimJoint32.HAnimSite.append(HAnimSite49)
 HAnimSite52 = x3d.HAnimSite()
 HAnimSite52.name = "l_trochanterion_pt"
 HAnimSite52.DEF = "hanim_l_trochanterion_pt"
@@ -245,7 +240,7 @@ Shape54.USE = "HAnimSiteShape"
 
 HAnimSite52.children.append(Shape54)
 
-HAnimJoint32.imSite.append(HAnimSite52)
+HAnimJoint32.HAnimSite.append(HAnimSite52)
 HAnimSite55 = x3d.HAnimSite()
 HAnimSite55.name = "r_asis_pt"
 HAnimSite55.DEF = "hanim_r_asis_pt"
@@ -259,7 +254,7 @@ Shape57.USE = "HAnimSiteShape"
 
 HAnimSite55.children.append(Shape57)
 
-HAnimJoint32.imSite.append(HAnimSite55)
+HAnimJoint32.HAnimSite.append(HAnimSite55)
 HAnimSite58 = x3d.HAnimSite()
 HAnimSite58.name = "r_iliocristale_pt"
 HAnimSite58.DEF = "hanim_r_iliocristale_pt"
@@ -273,7 +268,7 @@ Shape60.USE = "HAnimSiteShape"
 
 HAnimSite58.children.append(Shape60)
 
-HAnimJoint32.imSite.append(HAnimSite58)
+HAnimJoint32.HAnimSite.append(HAnimSite58)
 HAnimSite61 = x3d.HAnimSite()
 HAnimSite61.name = "r_psis_pt"
 HAnimSite61.DEF = "hanim_r_psis_pt"
@@ -287,7 +282,7 @@ Shape63.USE = "HAnimSiteShape"
 
 HAnimSite61.children.append(Shape63)
 
-HAnimJoint32.imSite.append(HAnimSite61)
+HAnimJoint32.HAnimSite.append(HAnimSite61)
 HAnimSite64 = x3d.HAnimSite()
 HAnimSite64.name = "r_trochanterion_pt"
 HAnimSite64.DEF = "hanim_r_trochanterion_pt"
@@ -301,12 +296,11 @@ Shape66.USE = "HAnimSiteShape"
 
 HAnimSite64.children.append(Shape66)
 
-HAnimJoint32.imSite.append(HAnimSite64)
+HAnimJoint32.HAnimSite.append(HAnimSite64)
 Shape67 = x3d.Shape()
 LineSet68 = x3d.LineSet()
 LineSet68.vertexCount = [2]
 Coordinate69 = x3d.Coordinate()
-Coordinate69.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
 LineSet68.coord = Coordinate69
 #from humanoid_root to vl5
@@ -331,7 +325,7 @@ Shape73.USE = "HAnimSiteShape"
 
 HAnimSite71.children.append(Shape73)
 
-HAnimJoint32.imSite.append(HAnimSite71)
+HAnimJoint32.HAnimSite.append(HAnimSite71)
 HAnimSite74 = x3d.HAnimSite()
 HAnimSite74.name = "waist_preferred_anterior_pt"
 HAnimSite74.DEF = "hanim_waist_preferred_anterior_pt"
@@ -345,7 +339,7 @@ Shape76.USE = "HAnimSiteShape"
 
 HAnimSite74.children.append(Shape76)
 
-HAnimJoint32.imSite.append(HAnimSite74)
+HAnimJoint32.HAnimSite.append(HAnimSite74)
 HAnimSite77 = x3d.HAnimSite()
 HAnimSite77.name = "waist_preferred_posterior_pt"
 HAnimSite77.DEF = "hanim_waist_preferred_posterior_pt"
@@ -359,7 +353,7 @@ Shape79.USE = "HAnimSiteShape"
 
 HAnimSite77.children.append(Shape79)
 
-HAnimJoint32.imSite.append(HAnimSite77)
+HAnimJoint32.HAnimSite.append(HAnimSite77)
 HAnimJoint80 = x3d.HAnimJoint()
 HAnimJoint80.name = "sacroiliac"
 HAnimJoint80.DEF = "hanim_sacroiliac"
@@ -370,7 +364,6 @@ Shape81 = x3d.Shape()
 LineSet82 = x3d.LineSet()
 LineSet82.vertexCount = [2]
 Coordinate83 = x3d.Coordinate()
-Coordinate83.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
 LineSet82.coord = Coordinate83
 #from sacroiliac to l_hip
@@ -395,7 +388,7 @@ Shape87.USE = "HAnimSiteShape"
 
 HAnimSite85.children.append(Shape87)
 
-HAnimJoint80.imSite.append(HAnimSite85)
+HAnimJoint80.HAnimSite.append(HAnimSite85)
 HAnimSite88 = x3d.HAnimSite()
 HAnimSite88.name = "l_femoral_medial_epicondyles_pt"
 HAnimSite88.DEF = "hanim_l_femoral_medial_epicondyles_pt"
@@ -409,7 +402,7 @@ Shape90.USE = "HAnimSiteShape"
 
 HAnimSite88.children.append(Shape90)
 
-HAnimJoint80.imSite.append(HAnimSite88)
+HAnimJoint80.HAnimSite.append(HAnimSite88)
 HAnimSite91 = x3d.HAnimSite()
 HAnimSite91.name = "l_knee_crease_pt"
 HAnimSite91.DEF = "hanim_l_knee_crease_pt"
@@ -423,7 +416,7 @@ Shape93.USE = "HAnimSiteShape"
 
 HAnimSite91.children.append(Shape93)
 
-HAnimJoint80.imSite.append(HAnimSite91)
+HAnimJoint80.HAnimSite.append(HAnimSite91)
 HAnimSite94 = x3d.HAnimSite()
 HAnimSite94.name = "l_suprapatella_pt"
 HAnimSite94.DEF = "hanim_l_suprapatella_pt"
@@ -437,12 +430,11 @@ Shape96.USE = "HAnimSiteShape"
 
 HAnimSite94.children.append(Shape96)
 
-HAnimJoint80.imSite.append(HAnimSite94)
+HAnimJoint80.HAnimSite.append(HAnimSite94)
 Shape97 = x3d.Shape()
 LineSet98 = x3d.LineSet()
 LineSet98.vertexCount = [2]
 Coordinate99 = x3d.Coordinate()
-Coordinate99.point = (0.0000,0.9149,0.0016,-0.0950,0.9171,0.0029)
 
 LineSet98.coord = Coordinate99
 #from sacroiliac to r_hip
@@ -467,7 +459,7 @@ Shape103.USE = "HAnimSiteShape"
 
 HAnimSite101.children.append(Shape103)
 
-HAnimJoint80.imSite.append(HAnimSite101)
+HAnimJoint80.HAnimSite.append(HAnimSite101)
 HAnimSite104 = x3d.HAnimSite()
 HAnimSite104.name = "r_femoral_medial_epicondyles_pt"
 HAnimSite104.DEF = "hanim_r_femoral_medial_epicondyles_pt"
@@ -481,7 +473,7 @@ Shape106.USE = "HAnimSiteShape"
 
 HAnimSite104.children.append(Shape106)
 
-HAnimJoint80.imSite.append(HAnimSite104)
+HAnimJoint80.HAnimSite.append(HAnimSite104)
 HAnimSite107 = x3d.HAnimSite()
 HAnimSite107.name = "r_knee_crease_pt"
 HAnimSite107.DEF = "hanim_r_knee_crease_pt"
@@ -495,7 +487,7 @@ Shape109.USE = "HAnimSiteShape"
 
 HAnimSite107.children.append(Shape109)
 
-HAnimJoint80.imSite.append(HAnimSite107)
+HAnimJoint80.HAnimSite.append(HAnimSite107)
 HAnimSite110 = x3d.HAnimSite()
 HAnimSite110.name = "r_suprapatella_pt"
 HAnimSite110.DEF = "hanim_r_suprapatella_pt"
@@ -509,7 +501,7 @@ Shape112.USE = "HAnimSiteShape"
 
 HAnimSite110.children.append(Shape112)
 
-HAnimJoint80.imSite.append(HAnimSite110)
+HAnimJoint80.HAnimSite.append(HAnimSite110)
 HAnimJoint113 = x3d.HAnimJoint()
 HAnimJoint113.name = "l_hip"
 HAnimJoint113.DEF = "hanim_l_hip"
@@ -520,7 +512,6 @@ Shape114 = x3d.Shape()
 LineSet115 = x3d.LineSet()
 LineSet115.vertexCount = [2]
 Coordinate116 = x3d.Coordinate()
-Coordinate116.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
 LineSet115.coord = Coordinate116
 #from l_hip to l_knee
@@ -545,7 +536,7 @@ Shape120.USE = "HAnimSiteShape"
 
 HAnimSite118.children.append(Shape120)
 
-HAnimJoint113.imSite.append(HAnimSite118)
+HAnimJoint113.HAnimSite.append(HAnimSite118)
 HAnimSite121 = x3d.HAnimSite()
 HAnimSite121.name = "l_medial_malleolus_pt"
 HAnimSite121.DEF = "hanim_l_medial_malleolus_pt"
@@ -559,7 +550,7 @@ Shape123.USE = "HAnimSiteShape"
 
 HAnimSite121.children.append(Shape123)
 
-HAnimJoint113.imSite.append(HAnimSite121)
+HAnimJoint113.HAnimSite.append(HAnimSite121)
 HAnimSite124 = x3d.HAnimSite()
 HAnimSite124.name = "l_tibiale_pt"
 HAnimSite124.DEF = "hanim_l_tibiale_pt"
@@ -573,7 +564,7 @@ Shape126.USE = "HAnimSiteShape"
 
 HAnimSite124.children.append(Shape126)
 
-HAnimJoint113.imSite.append(HAnimSite124)
+HAnimJoint113.HAnimSite.append(HAnimSite124)
 HAnimJoint127 = x3d.HAnimJoint()
 HAnimJoint127.name = "l_knee"
 HAnimJoint127.DEF = "hanim_l_knee"
@@ -584,7 +575,6 @@ Shape128 = x3d.Shape()
 LineSet129 = x3d.LineSet()
 LineSet129.vertexCount = [2]
 Coordinate130 = x3d.Coordinate()
-Coordinate130.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
 LineSet129.coord = Coordinate130
 #from l_knee to l_talocrural
@@ -609,7 +599,7 @@ Shape134.USE = "HAnimSiteShape"
 
 HAnimSite132.children.append(Shape134)
 
-HAnimJoint127.imSite.append(HAnimSite132)
+HAnimJoint127.HAnimSite.append(HAnimSite132)
 HAnimSite135 = x3d.HAnimSite()
 HAnimSite135.name = "l_sphyrion_pt"
 HAnimSite135.DEF = "hanim_l_sphyrion_pt"
@@ -623,7 +613,7 @@ Shape137.USE = "HAnimSiteShape"
 
 HAnimSite135.children.append(Shape137)
 
-HAnimJoint127.imSite.append(HAnimSite135)
+HAnimJoint127.HAnimSite.append(HAnimSite135)
 HAnimJoint138 = x3d.HAnimJoint()
 HAnimJoint138.name = "l_talocrural"
 HAnimJoint138.DEF = "hanim_l_talocrural"
@@ -634,7 +624,6 @@ Shape139 = x3d.Shape()
 LineSet140 = x3d.LineSet()
 LineSet140.vertexCount = [2]
 Coordinate141 = x3d.Coordinate()
-Coordinate141.point = (0.1101,0.0656,-0.0736,0.0000,1.0000,0.0000)
 
 LineSet140.coord = Coordinate141
 #from l_talocrural to l_talocalcaneonavicular
@@ -650,7 +639,6 @@ Shape143 = x3d.Shape()
 LineSet144 = x3d.LineSet()
 LineSet144.vertexCount = [2]
 Coordinate145 = x3d.Coordinate()
-Coordinate145.point = (0.1101,0.0656,-0.0736,0.0000,1.0000,0.0000)
 
 LineSet144.coord = Coordinate145
 #from l_talocrural to l_calcaneocuboid
@@ -672,7 +660,6 @@ Shape148 = x3d.Shape()
 LineSet149 = x3d.LineSet()
 LineSet149.vertexCount = [1]
 Coordinate150 = x3d.Coordinate()
-Coordinate150.point = (0.0000,1.0000,0.0000)
 
 LineSet149.coord = Coordinate150
 #from l_talocalcaneonavicular to l_cuneonavicular_1
@@ -688,7 +675,6 @@ Shape152 = x3d.Shape()
 LineSet153 = x3d.LineSet()
 LineSet153.vertexCount = [1]
 Coordinate154 = x3d.Coordinate()
-Coordinate154.point = (0.0000,1.0000,0.0000)
 
 LineSet153.coord = Coordinate154
 #from l_talocalcaneonavicular to l_cuneonavicular_2
@@ -704,7 +690,6 @@ Shape156 = x3d.Shape()
 LineSet157 = x3d.LineSet()
 LineSet157.vertexCount = [1]
 Coordinate158 = x3d.Coordinate()
-Coordinate158.point = (0.0000,1.0000,0.0000)
 
 LineSet157.coord = Coordinate158
 #from l_talocalcaneonavicular to l_cuneonavicular_3
@@ -726,7 +711,6 @@ Shape161 = x3d.Shape()
 LineSet162 = x3d.LineSet()
 LineSet162.vertexCount = [1]
 Coordinate163 = x3d.Coordinate()
-Coordinate163.point = (0.0000,1.0000,0.0000)
 
 LineSet162.coord = Coordinate163
 #from l_cuneonavicular_1 to l_tarsometatarsal_1
@@ -748,7 +732,6 @@ Shape166 = x3d.Shape()
 LineSet167 = x3d.LineSet()
 LineSet167.vertexCount = [1]
 Coordinate168 = x3d.Coordinate()
-Coordinate168.point = (0.0000,1.0000,0.0000)
 
 LineSet167.coord = Coordinate168
 #from l_tarsometatarsal_1 to l_metatarsophalangeal_1
@@ -773,7 +756,7 @@ Shape172.USE = "HAnimSiteShape"
 
 HAnimSite170.children.append(Shape172)
 
-HAnimJoint165.imSite.append(HAnimSite170)
+HAnimJoint165.HAnimSite.append(HAnimSite170)
 HAnimJoint173 = x3d.HAnimJoint()
 HAnimJoint173.name = "l_metatarsophalangeal_1"
 HAnimJoint173.DEF = "hanim_l_metatarsophalangeal_1"
@@ -784,7 +767,6 @@ Shape174 = x3d.Shape()
 LineSet175 = x3d.LineSet()
 LineSet175.vertexCount = [1]
 Coordinate176 = x3d.Coordinate()
-Coordinate176.point = (0.0000,1.0000,0.0000)
 
 LineSet175.coord = Coordinate176
 #from l_metatarsophalangeal_1 to l_tarsal_interphalangeal_1
@@ -809,7 +791,7 @@ Shape180.USE = "HAnimSiteShape"
 
 HAnimSite178.children.append(Shape180)
 
-HAnimJoint173.imSite.append(HAnimSite178)
+HAnimJoint173.HAnimSite.append(HAnimSite178)
 HAnimJoint181 = x3d.HAnimJoint()
 HAnimJoint181.name = "l_tarsal_interphalangeal_1"
 HAnimJoint181.DEF = "hanim_l_tarsal_interphalangeal_1"
@@ -834,7 +816,6 @@ Shape183 = x3d.Shape()
 LineSet184 = x3d.LineSet()
 LineSet184.vertexCount = [1]
 Coordinate185 = x3d.Coordinate()
-Coordinate185.point = (0.0000,1.0000,0.0000)
 
 LineSet184.coord = Coordinate185
 #from l_cuneonavicular_2 to l_tarsometatarsal_2
@@ -856,7 +837,6 @@ Shape188 = x3d.Shape()
 LineSet189 = x3d.LineSet()
 LineSet189.vertexCount = [1]
 Coordinate190 = x3d.Coordinate()
-Coordinate190.point = (0.0000,1.0000,0.0000)
 
 LineSet189.coord = Coordinate190
 #from l_tarsometatarsal_2 to l_metatarsophalangeal_2
@@ -878,7 +858,6 @@ Shape193 = x3d.Shape()
 LineSet194 = x3d.LineSet()
 LineSet194.vertexCount = [1]
 Coordinate195 = x3d.Coordinate()
-Coordinate195.point = (0.0000,1.0000,0.0000)
 
 LineSet194.coord = Coordinate195
 #from l_metatarsophalangeal_2 to l_tarsal_proximal_interphalangeal_2
@@ -900,7 +879,6 @@ Shape198 = x3d.Shape()
 LineSet199 = x3d.LineSet()
 LineSet199.vertexCount = [1]
 Coordinate200 = x3d.Coordinate()
-Coordinate200.point = (0.0000,1.0000,0.0000)
 
 LineSet199.coord = Coordinate200
 #from l_tarsal_proximal_interphalangeal_2 to l_tarsal_distal_interphalangeal_2
@@ -925,7 +903,7 @@ Shape204.USE = "HAnimSiteShape"
 
 HAnimSite202.children.append(Shape204)
 
-HAnimJoint197.imSite.append(HAnimSite202)
+HAnimJoint197.HAnimSite.append(HAnimSite202)
 HAnimJoint205 = x3d.HAnimJoint()
 HAnimJoint205.name = "l_tarsal_distal_interphalangeal_2"
 HAnimJoint205.DEF = "hanim_l_tarsal_distal_interphalangeal_2"
@@ -952,7 +930,6 @@ Shape207 = x3d.Shape()
 LineSet208 = x3d.LineSet()
 LineSet208.vertexCount = [1]
 Coordinate209 = x3d.Coordinate()
-Coordinate209.point = (0.0000,1.0000,0.0000)
 
 LineSet208.coord = Coordinate209
 #from l_cuneonavicular_3 to l_tarsometatarsal_3
@@ -974,7 +951,6 @@ Shape212 = x3d.Shape()
 LineSet213 = x3d.LineSet()
 LineSet213.vertexCount = [1]
 Coordinate214 = x3d.Coordinate()
-Coordinate214.point = (0.0000,1.0000,0.0000)
 
 LineSet213.coord = Coordinate214
 #from l_tarsometatarsal_3 to l_metatarsophalangeal_3
@@ -996,7 +972,6 @@ Shape217 = x3d.Shape()
 LineSet218 = x3d.LineSet()
 LineSet218.vertexCount = [1]
 Coordinate219 = x3d.Coordinate()
-Coordinate219.point = (0.0000,1.0000,0.0000)
 
 LineSet218.coord = Coordinate219
 #from l_metatarsophalangeal_3 to l_tarsal_proximal_interphalangeal_3
@@ -1018,7 +993,6 @@ Shape222 = x3d.Shape()
 LineSet223 = x3d.LineSet()
 LineSet223.vertexCount = [1]
 Coordinate224 = x3d.Coordinate()
-Coordinate224.point = (0.0000,1.0000,0.0000)
 
 LineSet223.coord = Coordinate224
 #from l_tarsal_proximal_interphalangeal_3 to l_tarsal_distal_interphalangeal_3
@@ -1043,7 +1017,7 @@ Shape228.USE = "HAnimSiteShape"
 
 HAnimSite226.children.append(Shape228)
 
-HAnimJoint221.imSite.append(HAnimSite226)
+HAnimJoint221.HAnimSite.append(HAnimSite226)
 HAnimJoint229 = x3d.HAnimJoint()
 HAnimJoint229.name = "l_tarsal_distal_interphalangeal_3"
 HAnimJoint229.DEF = "hanim_l_tarsal_distal_interphalangeal_3"
@@ -1072,7 +1046,6 @@ Shape231 = x3d.Shape()
 LineSet232 = x3d.LineSet()
 LineSet232.vertexCount = [1]
 Coordinate233 = x3d.Coordinate()
-Coordinate233.point = (0.0000,1.0000,0.0000)
 
 LineSet232.coord = Coordinate233
 #from l_calcaneocuboid to l_transversetarsal
@@ -1094,7 +1067,6 @@ Shape236 = x3d.Shape()
 LineSet237 = x3d.LineSet()
 LineSet237.vertexCount = [1]
 Coordinate238 = x3d.Coordinate()
-Coordinate238.point = (0.0000,1.0000,0.0000)
 
 LineSet237.coord = Coordinate238
 #from l_transversetarsal to l_tarsometatarsal_4
@@ -1110,7 +1082,6 @@ Shape240 = x3d.Shape()
 LineSet241 = x3d.LineSet()
 LineSet241.vertexCount = [1]
 Coordinate242 = x3d.Coordinate()
-Coordinate242.point = (0.0000,1.0000,0.0000)
 
 LineSet241.coord = Coordinate242
 #from l_transversetarsal to l_tarsometatarsal_5
@@ -1132,7 +1103,6 @@ Shape245 = x3d.Shape()
 LineSet246 = x3d.LineSet()
 LineSet246.vertexCount = [1]
 Coordinate247 = x3d.Coordinate()
-Coordinate247.point = (0.0000,1.0000,0.0000)
 
 LineSet246.coord = Coordinate247
 #from l_tarsometatarsal_4 to l_metatarsophalangeal_4
@@ -1154,7 +1124,6 @@ Shape250 = x3d.Shape()
 LineSet251 = x3d.LineSet()
 LineSet251.vertexCount = [1]
 Coordinate252 = x3d.Coordinate()
-Coordinate252.point = (0.0000,1.0000,0.0000)
 
 LineSet251.coord = Coordinate252
 #from l_metatarsophalangeal_4 to l_tarsal_proximal_interphalangeal_4
@@ -1176,7 +1145,6 @@ Shape255 = x3d.Shape()
 LineSet256 = x3d.LineSet()
 LineSet256.vertexCount = [1]
 Coordinate257 = x3d.Coordinate()
-Coordinate257.point = (0.0000,1.0000,0.0000)
 
 LineSet256.coord = Coordinate257
 #from l_tarsal_proximal_interphalangeal_4 to l_tarsal_distal_interphalangeal_4
@@ -1201,7 +1169,7 @@ Shape261.USE = "HAnimSiteShape"
 
 HAnimSite259.children.append(Shape261)
 
-HAnimJoint254.imSite.append(HAnimSite259)
+HAnimJoint254.HAnimSite.append(HAnimSite259)
 HAnimJoint262 = x3d.HAnimJoint()
 HAnimJoint262.name = "l_tarsal_distal_interphalangeal_4"
 HAnimJoint262.DEF = "hanim_l_tarsal_distal_interphalangeal_4"
@@ -1226,7 +1194,6 @@ Shape264 = x3d.Shape()
 LineSet265 = x3d.LineSet()
 LineSet265.vertexCount = [1]
 Coordinate266 = x3d.Coordinate()
-Coordinate266.point = (0.0000,1.0000,0.0000)
 
 LineSet265.coord = Coordinate266
 #from l_tarsometatarsal_5 to l_metatarsophalangeal_5
@@ -1251,7 +1218,7 @@ Shape270.USE = "HAnimSiteShape"
 
 HAnimSite268.children.append(Shape270)
 
-HAnimJoint263.imSite.append(HAnimSite268)
+HAnimJoint263.HAnimSite.append(HAnimSite268)
 HAnimJoint271 = x3d.HAnimJoint()
 HAnimJoint271.name = "l_metatarsophalangeal_5"
 HAnimJoint271.DEF = "hanim_l_metatarsophalangeal_5"
@@ -1262,7 +1229,6 @@ Shape272 = x3d.Shape()
 LineSet273 = x3d.LineSet()
 LineSet273.vertexCount = [1]
 Coordinate274 = x3d.Coordinate()
-Coordinate274.point = (0.0000,1.0000,0.0000)
 
 LineSet273.coord = Coordinate274
 #from l_metatarsophalangeal_5 to l_tarsal_proximal_interphalangeal_5
@@ -1284,7 +1250,6 @@ Shape277 = x3d.Shape()
 LineSet278 = x3d.LineSet()
 LineSet278.vertexCount = [1]
 Coordinate279 = x3d.Coordinate()
-Coordinate279.point = (0.0000,1.0000,0.0000)
 
 LineSet278.coord = Coordinate279
 #from l_tarsal_proximal_interphalangeal_5 to l_tarsal_distal_interphalangeal_5
@@ -1309,7 +1274,7 @@ Shape283.USE = "HAnimSiteShape"
 
 HAnimSite281.children.append(Shape283)
 
-HAnimJoint276.imSite.append(HAnimSite281)
+HAnimJoint276.HAnimSite.append(HAnimSite281)
 HAnimJoint284 = x3d.HAnimJoint()
 HAnimJoint284.name = "l_tarsal_distal_interphalangeal_5"
 HAnimJoint284.DEF = "hanim_l_tarsal_distal_interphalangeal_5"
@@ -1344,7 +1309,6 @@ Shape286 = x3d.Shape()
 LineSet287 = x3d.LineSet()
 LineSet287.vertexCount = [2]
 Coordinate288 = x3d.Coordinate()
-Coordinate288.point = (-0.0950,0.9171,0.0029,-0.0867,0.4913,0.0318)
 
 LineSet287.coord = Coordinate288
 #from r_hip to r_knee
@@ -1369,7 +1333,7 @@ Shape292.USE = "HAnimSiteShape"
 
 HAnimSite290.children.append(Shape292)
 
-HAnimJoint285.imSite.append(HAnimSite290)
+HAnimJoint285.HAnimSite.append(HAnimSite290)
 HAnimSite293 = x3d.HAnimSite()
 HAnimSite293.name = "r_medial_malleolus_pt"
 HAnimSite293.DEF = "hanim_r_medial_malleolus_pt"
@@ -1383,7 +1347,7 @@ Shape295.USE = "HAnimSiteShape"
 
 HAnimSite293.children.append(Shape295)
 
-HAnimJoint285.imSite.append(HAnimSite293)
+HAnimJoint285.HAnimSite.append(HAnimSite293)
 HAnimSite296 = x3d.HAnimSite()
 HAnimSite296.name = "r_tibiale_pt"
 HAnimSite296.DEF = "hanim_r_tibiale_pt"
@@ -1397,7 +1361,7 @@ Shape298.USE = "HAnimSiteShape"
 
 HAnimSite296.children.append(Shape298)
 
-HAnimJoint285.imSite.append(HAnimSite296)
+HAnimJoint285.HAnimSite.append(HAnimSite296)
 HAnimJoint299 = x3d.HAnimJoint()
 HAnimJoint299.name = "r_knee"
 HAnimJoint299.DEF = "hanim_r_knee"
@@ -1408,7 +1372,6 @@ Shape300 = x3d.Shape()
 LineSet301 = x3d.LineSet()
 LineSet301.vertexCount = [2]
 Coordinate302 = x3d.Coordinate()
-Coordinate302.point = (-0.0867,0.4913,0.0318,-0.0801,0.0712,-0.0766)
 
 LineSet301.coord = Coordinate302
 #from r_knee to r_talocrural
@@ -1433,7 +1396,7 @@ Shape306.USE = "HAnimSiteShape"
 
 HAnimSite304.children.append(Shape306)
 
-HAnimJoint299.imSite.append(HAnimSite304)
+HAnimJoint299.HAnimSite.append(HAnimSite304)
 HAnimSite307 = x3d.HAnimSite()
 HAnimSite307.name = "r_sphyrion_pt"
 HAnimSite307.DEF = "hanim_r_sphyrion_pt"
@@ -1447,7 +1410,7 @@ Shape309.USE = "HAnimSiteShape"
 
 HAnimSite307.children.append(Shape309)
 
-HAnimJoint299.imSite.append(HAnimSite307)
+HAnimJoint299.HAnimSite.append(HAnimSite307)
 HAnimJoint310 = x3d.HAnimJoint()
 HAnimJoint310.name = "r_talocrural"
 HAnimJoint310.DEF = "hanim_r_talocrural"
@@ -1458,7 +1421,6 @@ Shape311 = x3d.Shape()
 LineSet312 = x3d.LineSet()
 LineSet312.vertexCount = [2]
 Coordinate313 = x3d.Coordinate()
-Coordinate313.point = (-0.0801,0.0712,-0.0766,0.0000,1.0000,0.0000)
 
 LineSet312.coord = Coordinate313
 #from r_talocrural to r_talocalcaneonavicular
@@ -1474,7 +1436,6 @@ Shape315 = x3d.Shape()
 LineSet316 = x3d.LineSet()
 LineSet316.vertexCount = [2]
 Coordinate317 = x3d.Coordinate()
-Coordinate317.point = (-0.0801,0.0712,-0.0766,0.0000,1.0000,0.0000)
 
 LineSet316.coord = Coordinate317
 #from r_talocrural to r_calcaneocuboid
@@ -1496,7 +1457,6 @@ Shape320 = x3d.Shape()
 LineSet321 = x3d.LineSet()
 LineSet321.vertexCount = [1]
 Coordinate322 = x3d.Coordinate()
-Coordinate322.point = (0.0000,1.0000,0.0000)
 
 LineSet321.coord = Coordinate322
 #from r_talocalcaneonavicular to r_cuneonavicular_1
@@ -1512,7 +1472,6 @@ Shape324 = x3d.Shape()
 LineSet325 = x3d.LineSet()
 LineSet325.vertexCount = [1]
 Coordinate326 = x3d.Coordinate()
-Coordinate326.point = (0.0000,1.0000,0.0000)
 
 LineSet325.coord = Coordinate326
 #from r_talocalcaneonavicular to r_cuneonavicular_2
@@ -1528,7 +1487,6 @@ Shape328 = x3d.Shape()
 LineSet329 = x3d.LineSet()
 LineSet329.vertexCount = [1]
 Coordinate330 = x3d.Coordinate()
-Coordinate330.point = (0.0000,1.0000,0.0000)
 
 LineSet329.coord = Coordinate330
 #from r_talocalcaneonavicular to r_cuneonavicular_3
@@ -1550,7 +1508,6 @@ Shape333 = x3d.Shape()
 LineSet334 = x3d.LineSet()
 LineSet334.vertexCount = [1]
 Coordinate335 = x3d.Coordinate()
-Coordinate335.point = (0.0000,1.0000,0.0000)
 
 LineSet334.coord = Coordinate335
 #from r_cuneonavicular_1 to r_tarsometatarsal_1
@@ -1572,7 +1529,6 @@ Shape338 = x3d.Shape()
 LineSet339 = x3d.LineSet()
 LineSet339.vertexCount = [1]
 Coordinate340 = x3d.Coordinate()
-Coordinate340.point = (0.0000,1.0000,0.0000)
 
 LineSet339.coord = Coordinate340
 #from r_tarsometatarsal_1 to r_metatarsophalangeal_1
@@ -1597,7 +1553,7 @@ Shape344.USE = "HAnimSiteShape"
 
 HAnimSite342.children.append(Shape344)
 
-HAnimJoint337.imSite.append(HAnimSite342)
+HAnimJoint337.HAnimSite.append(HAnimSite342)
 HAnimJoint345 = x3d.HAnimJoint()
 HAnimJoint345.name = "r_metatarsophalangeal_1"
 HAnimJoint345.DEF = "hanim_r_metatarsophalangeal_1"
@@ -1608,7 +1564,6 @@ Shape346 = x3d.Shape()
 LineSet347 = x3d.LineSet()
 LineSet347.vertexCount = [1]
 Coordinate348 = x3d.Coordinate()
-Coordinate348.point = (0.0000,1.0000,0.0000)
 
 LineSet347.coord = Coordinate348
 #from r_metatarsophalangeal_1 to r_tarsal_interphalangeal_1
@@ -1633,7 +1588,7 @@ Shape352.USE = "HAnimSiteShape"
 
 HAnimSite350.children.append(Shape352)
 
-HAnimJoint345.imSite.append(HAnimSite350)
+HAnimJoint345.HAnimSite.append(HAnimSite350)
 HAnimJoint353 = x3d.HAnimJoint()
 HAnimJoint353.name = "r_tarsal_interphalangeal_1"
 HAnimJoint353.DEF = "hanim_r_tarsal_interphalangeal_1"
@@ -1658,7 +1613,6 @@ Shape355 = x3d.Shape()
 LineSet356 = x3d.LineSet()
 LineSet356.vertexCount = [1]
 Coordinate357 = x3d.Coordinate()
-Coordinate357.point = (0.0000,1.0000,0.0000)
 
 LineSet356.coord = Coordinate357
 #from r_cuneonavicular_2 to r_tarsometatarsal_2
@@ -1680,7 +1634,6 @@ Shape360 = x3d.Shape()
 LineSet361 = x3d.LineSet()
 LineSet361.vertexCount = [1]
 Coordinate362 = x3d.Coordinate()
-Coordinate362.point = (0.0000,1.0000,0.0000)
 
 LineSet361.coord = Coordinate362
 #from r_tarsometatarsal_2 to r_metatarsophalangeal_2
@@ -1702,7 +1655,6 @@ Shape365 = x3d.Shape()
 LineSet366 = x3d.LineSet()
 LineSet366.vertexCount = [1]
 Coordinate367 = x3d.Coordinate()
-Coordinate367.point = (0.0000,1.0000,0.0000)
 
 LineSet366.coord = Coordinate367
 #from r_metatarsophalangeal_2 to r_tarsal_proximal_interphalangeal_2
@@ -1724,7 +1676,6 @@ Shape370 = x3d.Shape()
 LineSet371 = x3d.LineSet()
 LineSet371.vertexCount = [1]
 Coordinate372 = x3d.Coordinate()
-Coordinate372.point = (0.0000,1.0000,0.0000)
 
 LineSet371.coord = Coordinate372
 #from r_tarsal_proximal_interphalangeal_2 to r_tarsal_distal_interphalangeal_2
@@ -1749,7 +1700,7 @@ Shape376.USE = "HAnimSiteShape"
 
 HAnimSite374.children.append(Shape376)
 
-HAnimJoint369.imSite.append(HAnimSite374)
+HAnimJoint369.HAnimSite.append(HAnimSite374)
 HAnimJoint377 = x3d.HAnimJoint()
 HAnimJoint377.name = "r_tarsal_distal_interphalangeal_2"
 HAnimJoint377.DEF = "hanim_r_tarsal_distal_interphalangeal_2"
@@ -1776,7 +1727,6 @@ Shape379 = x3d.Shape()
 LineSet380 = x3d.LineSet()
 LineSet380.vertexCount = [1]
 Coordinate381 = x3d.Coordinate()
-Coordinate381.point = (0.0000,1.0000,0.0000)
 
 LineSet380.coord = Coordinate381
 #from r_cuneonavicular_3 to r_tarsometatarsal_3
@@ -1798,7 +1748,6 @@ Shape384 = x3d.Shape()
 LineSet385 = x3d.LineSet()
 LineSet385.vertexCount = [1]
 Coordinate386 = x3d.Coordinate()
-Coordinate386.point = (0.0000,1.0000,0.0000)
 
 LineSet385.coord = Coordinate386
 #from r_tarsometatarsal_3 to r_metatarsophalangeal_3
@@ -1820,7 +1769,6 @@ Shape389 = x3d.Shape()
 LineSet390 = x3d.LineSet()
 LineSet390.vertexCount = [1]
 Coordinate391 = x3d.Coordinate()
-Coordinate391.point = (0.0000,1.0000,0.0000)
 
 LineSet390.coord = Coordinate391
 #from r_metatarsophalangeal_3 to r_tarsal_proximal_interphalangeal_3
@@ -1842,7 +1790,6 @@ Shape394 = x3d.Shape()
 LineSet395 = x3d.LineSet()
 LineSet395.vertexCount = [1]
 Coordinate396 = x3d.Coordinate()
-Coordinate396.point = (0.0000,1.0000,0.0000)
 
 LineSet395.coord = Coordinate396
 #from r_tarsal_proximal_interphalangeal_3 to r_tarsal_distal_interphalangeal_3
@@ -1867,7 +1814,7 @@ Shape400.USE = "HAnimSiteShape"
 
 HAnimSite398.children.append(Shape400)
 
-HAnimJoint393.imSite.append(HAnimSite398)
+HAnimJoint393.HAnimSite.append(HAnimSite398)
 HAnimJoint401 = x3d.HAnimJoint()
 HAnimJoint401.name = "r_tarsal_distal_interphalangeal_3"
 HAnimJoint401.DEF = "hanim_r_tarsal_distal_interphalangeal_3"
@@ -1896,7 +1843,6 @@ Shape403 = x3d.Shape()
 LineSet404 = x3d.LineSet()
 LineSet404.vertexCount = [1]
 Coordinate405 = x3d.Coordinate()
-Coordinate405.point = (0.0000,1.0000,0.0000)
 
 LineSet404.coord = Coordinate405
 #from r_calcaneocuboid to r_transversetarsal
@@ -1918,7 +1864,6 @@ Shape408 = x3d.Shape()
 LineSet409 = x3d.LineSet()
 LineSet409.vertexCount = [1]
 Coordinate410 = x3d.Coordinate()
-Coordinate410.point = (0.0000,1.0000,0.0000)
 
 LineSet409.coord = Coordinate410
 #from r_transversetarsal to r_tarsometatarsal_4
@@ -1934,7 +1879,6 @@ Shape412 = x3d.Shape()
 LineSet413 = x3d.LineSet()
 LineSet413.vertexCount = [1]
 Coordinate414 = x3d.Coordinate()
-Coordinate414.point = (0.0000,1.0000,0.0000)
 
 LineSet413.coord = Coordinate414
 #from r_transversetarsal to r_tarsometatarsal_5
@@ -1956,7 +1900,6 @@ Shape417 = x3d.Shape()
 LineSet418 = x3d.LineSet()
 LineSet418.vertexCount = [1]
 Coordinate419 = x3d.Coordinate()
-Coordinate419.point = (0.0000,1.0000,0.0000)
 
 LineSet418.coord = Coordinate419
 #from r_tarsometatarsal_4 to r_metatarsophalangeal_4
@@ -1978,7 +1921,6 @@ Shape422 = x3d.Shape()
 LineSet423 = x3d.LineSet()
 LineSet423.vertexCount = [1]
 Coordinate424 = x3d.Coordinate()
-Coordinate424.point = (0.0000,1.0000,0.0000)
 
 LineSet423.coord = Coordinate424
 #from r_metatarsophalangeal_4 to r_tarsal_proximal_interphalangeal_4
@@ -2000,7 +1942,6 @@ Shape427 = x3d.Shape()
 LineSet428 = x3d.LineSet()
 LineSet428.vertexCount = [1]
 Coordinate429 = x3d.Coordinate()
-Coordinate429.point = (0.0000,1.0000,0.0000)
 
 LineSet428.coord = Coordinate429
 #from r_tarsal_proximal_interphalangeal_4 to r_tarsal_distal_interphalangeal_4
@@ -2025,7 +1966,7 @@ Shape433.USE = "HAnimSiteShape"
 
 HAnimSite431.children.append(Shape433)
 
-HAnimJoint426.imSite.append(HAnimSite431)
+HAnimJoint426.HAnimSite.append(HAnimSite431)
 HAnimJoint434 = x3d.HAnimJoint()
 HAnimJoint434.name = "r_tarsal_distal_interphalangeal_4"
 HAnimJoint434.DEF = "hanim_r_tarsal_distal_interphalangeal_4"
@@ -2050,7 +1991,6 @@ Shape436 = x3d.Shape()
 LineSet437 = x3d.LineSet()
 LineSet437.vertexCount = [1]
 Coordinate438 = x3d.Coordinate()
-Coordinate438.point = (0.0000,1.0000,0.0000)
 
 LineSet437.coord = Coordinate438
 #from r_tarsometatarsal_5 to r_metatarsophalangeal_5
@@ -2075,7 +2015,7 @@ Shape442.USE = "HAnimSiteShape"
 
 HAnimSite440.children.append(Shape442)
 
-HAnimJoint435.imSite.append(HAnimSite440)
+HAnimJoint435.HAnimSite.append(HAnimSite440)
 HAnimJoint443 = x3d.HAnimJoint()
 HAnimJoint443.name = "r_metatarsophalangeal_5"
 HAnimJoint443.DEF = "hanim_r_metatarsophalangeal_5"
@@ -2086,7 +2026,6 @@ Shape444 = x3d.Shape()
 LineSet445 = x3d.LineSet()
 LineSet445.vertexCount = [1]
 Coordinate446 = x3d.Coordinate()
-Coordinate446.point = (0.0000,1.0000,0.0000)
 
 LineSet445.coord = Coordinate446
 #from r_metatarsophalangeal_5 to r_tarsal_proximal_interphalangeal_5
@@ -2108,7 +2047,6 @@ Shape449 = x3d.Shape()
 LineSet450 = x3d.LineSet()
 LineSet450.vertexCount = [1]
 Coordinate451 = x3d.Coordinate()
-Coordinate451.point = (0.0000,1.0000,0.0000)
 
 LineSet450.coord = Coordinate451
 #from r_tarsal_proximal_interphalangeal_5 to r_tarsal_distal_interphalangeal_5
@@ -2133,7 +2071,7 @@ Shape455.USE = "HAnimSiteShape"
 
 HAnimSite453.children.append(Shape455)
 
-HAnimJoint448.imSite.append(HAnimSite453)
+HAnimJoint448.HAnimSite.append(HAnimSite453)
 HAnimJoint456 = x3d.HAnimJoint()
 HAnimJoint456.name = "r_tarsal_distal_interphalangeal_5"
 HAnimJoint456.DEF = "hanim_r_tarsal_distal_interphalangeal_5"
@@ -2170,7 +2108,6 @@ Shape458 = x3d.Shape()
 LineSet459 = x3d.LineSet()
 LineSet459.vertexCount = [2]
 Coordinate460 = x3d.Coordinate()
-Coordinate460.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
 LineSet459.coord = Coordinate460
 #from vl5 to vl4
@@ -2192,7 +2129,6 @@ Shape463 = x3d.Shape()
 LineSet464 = x3d.LineSet()
 LineSet464.vertexCount = [2]
 Coordinate465 = x3d.Coordinate()
-Coordinate465.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
 LineSet464.coord = Coordinate465
 #from vl4 to vl3
@@ -2214,7 +2150,6 @@ Shape468 = x3d.Shape()
 LineSet469 = x3d.LineSet()
 LineSet469.vertexCount = [2]
 Coordinate470 = x3d.Coordinate()
-Coordinate470.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
 LineSet469.coord = Coordinate470
 #from vl3 to vl2
@@ -2239,7 +2174,7 @@ Shape474.USE = "HAnimSiteShape"
 
 HAnimSite472.children.append(Shape474)
 
-HAnimJoint467.imSite.append(HAnimSite472)
+HAnimJoint467.HAnimSite.append(HAnimSite472)
 HAnimSite475 = x3d.HAnimSite()
 HAnimSite475.name = "r_rib10_pt"
 HAnimSite475.DEF = "hanim_r_rib10_pt"
@@ -2253,7 +2188,7 @@ Shape477.USE = "HAnimSiteShape"
 
 HAnimSite475.children.append(Shape477)
 
-HAnimJoint467.imSite.append(HAnimSite475)
+HAnimJoint467.HAnimSite.append(HAnimSite475)
 HAnimSite478 = x3d.HAnimSite()
 HAnimSite478.name = "spine_2_middle_back_pt"
 HAnimSite478.DEF = "hanim_spine_2_middle_back_pt"
@@ -2267,7 +2202,7 @@ Shape480.USE = "HAnimSiteShape"
 
 HAnimSite478.children.append(Shape480)
 
-HAnimJoint467.imSite.append(HAnimSite478)
+HAnimJoint467.HAnimSite.append(HAnimSite478)
 HAnimJoint481 = x3d.HAnimJoint()
 HAnimJoint481.name = "vl2"
 HAnimJoint481.DEF = "hanim_vl2"
@@ -2278,7 +2213,6 @@ Shape482 = x3d.Shape()
 LineSet483 = x3d.LineSet()
 LineSet483.vertexCount = [2]
 Coordinate484 = x3d.Coordinate()
-Coordinate484.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
 LineSet483.coord = Coordinate484
 #from vl2 to vl1
@@ -2300,7 +2234,6 @@ Shape487 = x3d.Shape()
 LineSet488 = x3d.LineSet()
 LineSet488.vertexCount = [2]
 Coordinate489 = x3d.Coordinate()
-Coordinate489.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
 LineSet488.coord = Coordinate489
 #from vl1 to vt12
@@ -2322,7 +2255,6 @@ Shape492 = x3d.Shape()
 LineSet493 = x3d.LineSet()
 LineSet493.vertexCount = [2]
 Coordinate494 = x3d.Coordinate()
-Coordinate494.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
 LineSet493.coord = Coordinate494
 #from vt12 to vt11
@@ -2344,7 +2276,6 @@ Shape497 = x3d.Shape()
 LineSet498 = x3d.LineSet()
 LineSet498.vertexCount = [2]
 Coordinate499 = x3d.Coordinate()
-Coordinate499.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
 LineSet498.coord = Coordinate499
 #from vt11 to vt10
@@ -2369,7 +2300,7 @@ Shape503.USE = "HAnimSiteShape"
 
 HAnimSite501.children.append(Shape503)
 
-HAnimJoint496.imSite.append(HAnimSite501)
+HAnimJoint496.HAnimSite.append(HAnimSite501)
 HAnimJoint504 = x3d.HAnimJoint()
 HAnimJoint504.name = "vt10"
 HAnimJoint504.DEF = "hanim_vt10"
@@ -2380,7 +2311,6 @@ Shape505 = x3d.Shape()
 LineSet506 = x3d.LineSet()
 LineSet506.vertexCount = [2]
 Coordinate507 = x3d.Coordinate()
-Coordinate507.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
 LineSet506.coord = Coordinate507
 #from vt10 to vt9
@@ -2405,7 +2335,7 @@ Shape511.USE = "HAnimSiteShape"
 
 HAnimSite509.children.append(Shape511)
 
-HAnimJoint504.imSite.append(HAnimSite509)
+HAnimJoint504.HAnimSite.append(HAnimSite509)
 HAnimSite512 = x3d.HAnimSite()
 HAnimSite512.name = "r_thelion_pt"
 HAnimSite512.DEF = "hanim_r_thelion_pt"
@@ -2419,7 +2349,7 @@ Shape514.USE = "HAnimSiteShape"
 
 HAnimSite512.children.append(Shape514)
 
-HAnimJoint504.imSite.append(HAnimSite512)
+HAnimJoint504.HAnimSite.append(HAnimSite512)
 HAnimJoint515 = x3d.HAnimJoint()
 HAnimJoint515.name = "vt9"
 HAnimJoint515.DEF = "hanim_vt9"
@@ -2430,7 +2360,6 @@ Shape516 = x3d.Shape()
 LineSet517 = x3d.LineSet()
 LineSet517.vertexCount = [2]
 Coordinate518 = x3d.Coordinate()
-Coordinate518.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
 LineSet517.coord = Coordinate518
 #from vt9 to vt8
@@ -2452,7 +2381,6 @@ Shape521 = x3d.Shape()
 LineSet522 = x3d.LineSet()
 LineSet522.vertexCount = [2]
 Coordinate523 = x3d.Coordinate()
-Coordinate523.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
 LineSet522.coord = Coordinate523
 #from vt8 to vt7
@@ -2474,7 +2402,6 @@ Shape526 = x3d.Shape()
 LineSet527 = x3d.LineSet()
 LineSet527.vertexCount = [2]
 Coordinate528 = x3d.Coordinate()
-Coordinate528.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
 LineSet527.coord = Coordinate528
 #from vt7 to vt6
@@ -2499,7 +2426,7 @@ Shape532.USE = "HAnimSiteShape"
 
 HAnimSite530.children.append(Shape532)
 
-HAnimJoint525.imSite.append(HAnimSite530)
+HAnimJoint525.HAnimSite.append(HAnimSite530)
 HAnimSite533 = x3d.HAnimSite()
 HAnimSite533.name = "mesosternale_pt"
 HAnimSite533.DEF = "hanim_mesosternale_pt"
@@ -2513,7 +2440,7 @@ Shape535.USE = "HAnimSiteShape"
 
 HAnimSite533.children.append(Shape535)
 
-HAnimJoint525.imSite.append(HAnimSite533)
+HAnimJoint525.HAnimSite.append(HAnimSite533)
 HAnimSite536 = x3d.HAnimSite()
 HAnimSite536.name = "r_chest_midsagittal_plane_pt"
 HAnimSite536.DEF = "hanim_r_chest_midsagittal_plane_pt"
@@ -2527,7 +2454,7 @@ Shape538.USE = "HAnimSiteShape"
 
 HAnimSite536.children.append(Shape538)
 
-HAnimJoint525.imSite.append(HAnimSite536)
+HAnimJoint525.HAnimSite.append(HAnimSite536)
 HAnimSite539 = x3d.HAnimSite()
 HAnimSite539.name = "rear_center_midsagittal_plane_pt"
 HAnimSite539.DEF = "hanim_rear_center_midsagittal_plane_pt"
@@ -2541,7 +2468,7 @@ Shape541.USE = "HAnimSiteShape"
 
 HAnimSite539.children.append(Shape541)
 
-HAnimJoint525.imSite.append(HAnimSite539)
+HAnimJoint525.HAnimSite.append(HAnimSite539)
 HAnimJoint542 = x3d.HAnimJoint()
 HAnimJoint542.name = "vt6"
 HAnimJoint542.DEF = "hanim_vt6"
@@ -2552,7 +2479,6 @@ Shape543 = x3d.Shape()
 LineSet544 = x3d.LineSet()
 LineSet544.vertexCount = [2]
 Coordinate545 = x3d.Coordinate()
-Coordinate545.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
 LineSet544.coord = Coordinate545
 #from vt6 to vt5
@@ -2577,7 +2503,7 @@ Shape549.USE = "HAnimSiteShape"
 
 HAnimSite547.children.append(Shape549)
 
-HAnimJoint542.imSite.append(HAnimSite547)
+HAnimJoint542.HAnimSite.append(HAnimSite547)
 HAnimJoint550 = x3d.HAnimJoint()
 HAnimJoint550.name = "vt5"
 HAnimJoint550.DEF = "hanim_vt5"
@@ -2588,7 +2514,6 @@ Shape551 = x3d.Shape()
 LineSet552 = x3d.LineSet()
 LineSet552.vertexCount = [2]
 Coordinate553 = x3d.Coordinate()
-Coordinate553.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
 LineSet552.coord = Coordinate553
 #from vt5 to vt4
@@ -2610,7 +2535,6 @@ Shape556 = x3d.Shape()
 LineSet557 = x3d.LineSet()
 LineSet557.vertexCount = [2]
 Coordinate558 = x3d.Coordinate()
-Coordinate558.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
 LineSet557.coord = Coordinate558
 #from vt4 to vt3
@@ -2632,7 +2556,6 @@ Shape561 = x3d.Shape()
 LineSet562 = x3d.LineSet()
 LineSet562.vertexCount = [2]
 Coordinate563 = x3d.Coordinate()
-Coordinate563.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
 LineSet562.coord = Coordinate563
 #from vt3 to vt2
@@ -2654,7 +2577,6 @@ Shape566 = x3d.Shape()
 LineSet567 = x3d.LineSet()
 LineSet567.vertexCount = [2]
 Coordinate568 = x3d.Coordinate()
-Coordinate568.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
 LineSet567.coord = Coordinate568
 #from vt2 to vt1
@@ -2679,7 +2601,7 @@ Shape572.USE = "HAnimSiteShape"
 
 HAnimSite570.children.append(Shape572)
 
-HAnimJoint565.imSite.append(HAnimSite570)
+HAnimJoint565.HAnimSite.append(HAnimSite570)
 HAnimSite573 = x3d.HAnimSite()
 HAnimSite573.name = "suprasternale_pt"
 HAnimSite573.DEF = "hanim_suprasternale_pt"
@@ -2693,7 +2615,7 @@ Shape575.USE = "HAnimSiteShape"
 
 HAnimSite573.children.append(Shape575)
 
-HAnimJoint565.imSite.append(HAnimSite573)
+HAnimJoint565.HAnimSite.append(HAnimSite573)
 HAnimJoint576 = x3d.HAnimJoint()
 HAnimJoint576.name = "vt1"
 HAnimJoint576.DEF = "hanim_vt1"
@@ -2704,7 +2626,6 @@ Shape577 = x3d.Shape()
 LineSet578 = x3d.LineSet()
 LineSet578.vertexCount = [2]
 Coordinate579 = x3d.Coordinate()
-Coordinate579.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
 LineSet578.coord = Coordinate579
 #from vt1 to vc7
@@ -2729,7 +2650,7 @@ Shape583.USE = "HAnimSiteShape"
 
 HAnimSite581.children.append(Shape583)
 
-HAnimJoint576.imSite.append(HAnimSite581)
+HAnimJoint576.HAnimSite.append(HAnimSite581)
 HAnimSite584 = x3d.HAnimSite()
 HAnimSite584.name = "r_neck_base_pt"
 HAnimSite584.DEF = "hanim_r_neck_base_pt"
@@ -2743,12 +2664,11 @@ Shape586.USE = "HAnimSiteShape"
 
 HAnimSite584.children.append(Shape586)
 
-HAnimJoint576.imSite.append(HAnimSite584)
+HAnimJoint576.HAnimSite.append(HAnimSite584)
 Shape587 = x3d.Shape()
 LineSet588 = x3d.LineSet()
 LineSet588.vertexCount = [2]
 Coordinate589 = x3d.Coordinate()
-Coordinate589.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
 LineSet588.coord = Coordinate589
 #from vt1 to l_sternoclavicular
@@ -2773,7 +2693,7 @@ Shape593.USE = "HAnimSiteShape"
 
 HAnimSite591.children.append(Shape593)
 
-HAnimJoint576.imSite.append(HAnimSite591)
+HAnimJoint576.HAnimSite.append(HAnimSite591)
 HAnimSite594 = x3d.HAnimSite()
 HAnimSite594.name = "l_axilla_distal_pt"
 HAnimSite594.DEF = "hanim_l_axilla_distal_pt"
@@ -2787,7 +2707,7 @@ Shape596.USE = "HAnimSiteShape"
 
 HAnimSite594.children.append(Shape596)
 
-HAnimJoint576.imSite.append(HAnimSite594)
+HAnimJoint576.HAnimSite.append(HAnimSite594)
 HAnimSite597 = x3d.HAnimSite()
 HAnimSite597.name = "l_axilla_posterior_folds_pt"
 HAnimSite597.DEF = "hanim_l_axilla_posterior_folds_pt"
@@ -2801,7 +2721,7 @@ Shape599.USE = "HAnimSiteShape"
 
 HAnimSite597.children.append(Shape599)
 
-HAnimJoint576.imSite.append(HAnimSite597)
+HAnimJoint576.HAnimSite.append(HAnimSite597)
 HAnimSite600 = x3d.HAnimSite()
 HAnimSite600.name = "l_axilla_proximal_pt"
 HAnimSite600.DEF = "hanim_l_axilla_proximal_pt"
@@ -2815,7 +2735,7 @@ Shape602.USE = "HAnimSiteShape"
 
 HAnimSite600.children.append(Shape602)
 
-HAnimJoint576.imSite.append(HAnimSite600)
+HAnimJoint576.HAnimSite.append(HAnimSite600)
 HAnimSite603 = x3d.HAnimSite()
 HAnimSite603.name = "l_clavicale_pt"
 HAnimSite603.DEF = "hanim_l_clavicale_pt"
@@ -2829,12 +2749,11 @@ Shape605.USE = "HAnimSiteShape"
 
 HAnimSite603.children.append(Shape605)
 
-HAnimJoint576.imSite.append(HAnimSite603)
+HAnimJoint576.HAnimSite.append(HAnimSite603)
 Shape606 = x3d.Shape()
 LineSet607 = x3d.LineSet()
 LineSet607.vertexCount = [2]
 Coordinate608 = x3d.Coordinate()
-Coordinate608.point = (0.0065,1.4951,-0.0387,-0.0694,1.4600,-0.0330)
 
 LineSet607.coord = Coordinate608
 #from vt1 to r_sternoclavicular
@@ -2859,7 +2778,7 @@ Shape612.USE = "HAnimSiteShape"
 
 HAnimSite610.children.append(Shape612)
 
-HAnimJoint576.imSite.append(HAnimSite610)
+HAnimJoint576.HAnimSite.append(HAnimSite610)
 HAnimSite613 = x3d.HAnimSite()
 HAnimSite613.name = "r_axilla_distal_pt"
 HAnimSite613.DEF = "hanim_r_axilla_distal_pt"
@@ -2873,7 +2792,7 @@ Shape615.USE = "HAnimSiteShape"
 
 HAnimSite613.children.append(Shape615)
 
-HAnimJoint576.imSite.append(HAnimSite613)
+HAnimJoint576.HAnimSite.append(HAnimSite613)
 HAnimSite616 = x3d.HAnimSite()
 HAnimSite616.name = "r_axilla_posterior_folds_pt"
 HAnimSite616.DEF = "hanim_r_axilla_posterior_folds_pt"
@@ -2887,7 +2806,7 @@ Shape618.USE = "HAnimSiteShape"
 
 HAnimSite616.children.append(Shape618)
 
-HAnimJoint576.imSite.append(HAnimSite616)
+HAnimJoint576.HAnimSite.append(HAnimSite616)
 HAnimSite619 = x3d.HAnimSite()
 HAnimSite619.name = "r_axilla_proximal_pt"
 HAnimSite619.DEF = "hanim_r_axilla_proximal_pt"
@@ -2901,7 +2820,7 @@ Shape621.USE = "HAnimSiteShape"
 
 HAnimSite619.children.append(Shape621)
 
-HAnimJoint576.imSite.append(HAnimSite619)
+HAnimJoint576.HAnimSite.append(HAnimSite619)
 HAnimSite622 = x3d.HAnimSite()
 HAnimSite622.name = "r_clavicale_pt"
 HAnimSite622.DEF = "hanim_r_clavicale_pt"
@@ -2915,7 +2834,7 @@ Shape624.USE = "HAnimSiteShape"
 
 HAnimSite622.children.append(Shape624)
 
-HAnimJoint576.imSite.append(HAnimSite622)
+HAnimJoint576.HAnimSite.append(HAnimSite622)
 HAnimJoint625 = x3d.HAnimJoint()
 HAnimJoint625.name = "vc7"
 HAnimJoint625.DEF = "hanim_vc7"
@@ -2926,7 +2845,6 @@ Shape626 = x3d.Shape()
 LineSet627 = x3d.LineSet()
 LineSet627.vertexCount = [2]
 Coordinate628 = x3d.Coordinate()
-Coordinate628.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
 LineSet627.coord = Coordinate628
 #from vc7 to vc6
@@ -2948,7 +2866,6 @@ Shape631 = x3d.Shape()
 LineSet632 = x3d.LineSet()
 LineSet632.vertexCount = [2]
 Coordinate633 = x3d.Coordinate()
-Coordinate633.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
 LineSet632.coord = Coordinate633
 #from vc6 to vc5
@@ -2970,7 +2887,6 @@ Shape636 = x3d.Shape()
 LineSet637 = x3d.LineSet()
 LineSet637.vertexCount = [2]
 Coordinate638 = x3d.Coordinate()
-Coordinate638.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
 LineSet637.coord = Coordinate638
 #from vc5 to vc4
@@ -2992,7 +2908,6 @@ Shape641 = x3d.Shape()
 LineSet642 = x3d.LineSet()
 LineSet642.vertexCount = [2]
 Coordinate643 = x3d.Coordinate()
-Coordinate643.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
 LineSet642.coord = Coordinate643
 #from vc4 to vc3
@@ -3014,7 +2929,6 @@ Shape646 = x3d.Shape()
 LineSet647 = x3d.LineSet()
 LineSet647.vertexCount = [2]
 Coordinate648 = x3d.Coordinate()
-Coordinate648.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
 LineSet647.coord = Coordinate648
 #from vc3 to vc2
@@ -3039,7 +2953,7 @@ Shape652.USE = "HAnimSiteShape"
 
 HAnimSite650.children.append(Shape652)
 
-HAnimJoint645.imSite.append(HAnimSite650)
+HAnimJoint645.HAnimSite.append(HAnimSite650)
 HAnimJoint653 = x3d.HAnimJoint()
 HAnimJoint653.name = "vc2"
 HAnimJoint653.DEF = "hanim_vc2"
@@ -3050,7 +2964,6 @@ Shape654 = x3d.Shape()
 LineSet655 = x3d.LineSet()
 LineSet655.vertexCount = [2]
 Coordinate656 = x3d.Coordinate()
-Coordinate656.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
 LineSet655.coord = Coordinate656
 #from vc2 to vc1
@@ -3072,7 +2985,6 @@ Shape659 = x3d.Shape()
 LineSet660 = x3d.LineSet()
 LineSet660.vertexCount = [2]
 Coordinate661 = x3d.Coordinate()
-Coordinate661.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
 LineSet660.coord = Coordinate661
 #from vc1 to skullbase
@@ -3097,7 +3009,7 @@ Shape665.USE = "HAnimSiteShape"
 
 HAnimSite663.children.append(Shape665)
 
-HAnimJoint658.imSite.append(HAnimSite663)
+HAnimJoint658.HAnimSite.append(HAnimSite663)
 HAnimSite666 = x3d.HAnimSite()
 HAnimSite666.name = "l_ectocanthus_pt"
 HAnimSite666.DEF = "hanim_l_ectocanthus_pt"
@@ -3111,7 +3023,7 @@ Shape668.USE = "HAnimSiteShape"
 
 HAnimSite666.children.append(Shape668)
 
-HAnimJoint658.imSite.append(HAnimSite666)
+HAnimJoint658.HAnimSite.append(HAnimSite666)
 HAnimSite669 = x3d.HAnimSite()
 HAnimSite669.name = "l_infraorbitale_pt"
 HAnimSite669.DEF = "hanim_l_infraorbitale_pt"
@@ -3125,7 +3037,7 @@ Shape671.USE = "HAnimSiteShape"
 
 HAnimSite669.children.append(Shape671)
 
-HAnimJoint658.imSite.append(HAnimSite669)
+HAnimJoint658.HAnimSite.append(HAnimSite669)
 HAnimSite672 = x3d.HAnimSite()
 HAnimSite672.name = "l_tragion_pt"
 HAnimSite672.DEF = "hanim_l_tragion_pt"
@@ -3139,7 +3051,7 @@ Shape674.USE = "HAnimSiteShape"
 
 HAnimSite672.children.append(Shape674)
 
-HAnimJoint658.imSite.append(HAnimSite672)
+HAnimJoint658.HAnimSite.append(HAnimSite672)
 HAnimSite675 = x3d.HAnimSite()
 HAnimSite675.name = "nuchale_pt"
 HAnimSite675.DEF = "hanim_nuchale_pt"
@@ -3153,7 +3065,7 @@ Shape677.USE = "HAnimSiteShape"
 
 HAnimSite675.children.append(Shape677)
 
-HAnimJoint658.imSite.append(HAnimSite675)
+HAnimJoint658.HAnimSite.append(HAnimSite675)
 HAnimSite678 = x3d.HAnimSite()
 HAnimSite678.name = "opisthocranion_pt"
 HAnimSite678.DEF = "hanim_opisthocranion_pt"
@@ -3167,7 +3079,7 @@ Shape680.USE = "HAnimSiteShape"
 
 HAnimSite678.children.append(Shape680)
 
-HAnimJoint658.imSite.append(HAnimSite678)
+HAnimJoint658.HAnimSite.append(HAnimSite678)
 HAnimSite681 = x3d.HAnimSite()
 HAnimSite681.name = "r_ectocanthus_pt"
 HAnimSite681.DEF = "hanim_r_ectocanthus_pt"
@@ -3181,7 +3093,7 @@ Shape683.USE = "HAnimSiteShape"
 
 HAnimSite681.children.append(Shape683)
 
-HAnimJoint658.imSite.append(HAnimSite681)
+HAnimJoint658.HAnimSite.append(HAnimSite681)
 HAnimSite684 = x3d.HAnimSite()
 HAnimSite684.name = "r_infraorbitale_pt"
 HAnimSite684.DEF = "hanim_r_infraorbitale_pt"
@@ -3195,7 +3107,7 @@ Shape686.USE = "HAnimSiteShape"
 
 HAnimSite684.children.append(Shape686)
 
-HAnimJoint658.imSite.append(HAnimSite684)
+HAnimJoint658.HAnimSite.append(HAnimSite684)
 HAnimSite687 = x3d.HAnimSite()
 HAnimSite687.name = "r_tragion_pt"
 HAnimSite687.DEF = "hanim_r_tragion_pt"
@@ -3209,7 +3121,7 @@ Shape689.USE = "HAnimSiteShape"
 
 HAnimSite687.children.append(Shape689)
 
-HAnimJoint658.imSite.append(HAnimSite687)
+HAnimJoint658.HAnimSite.append(HAnimSite687)
 HAnimSite690 = x3d.HAnimSite()
 HAnimSite690.name = "sellion_pt"
 HAnimSite690.DEF = "hanim_sellion_pt"
@@ -3223,7 +3135,7 @@ Shape692.USE = "HAnimSiteShape"
 
 HAnimSite690.children.append(Shape692)
 
-HAnimJoint658.imSite.append(HAnimSite690)
+HAnimJoint658.HAnimSite.append(HAnimSite690)
 HAnimSite693 = x3d.HAnimSite()
 HAnimSite693.name = "skull_vertex_pt"
 HAnimSite693.DEF = "hanim_skull_vertex_pt"
@@ -3237,7 +3149,7 @@ Shape695.USE = "HAnimSiteShape"
 
 HAnimSite693.children.append(Shape695)
 
-HAnimJoint658.imSite.append(HAnimSite693)
+HAnimJoint658.HAnimSite.append(HAnimSite693)
 HAnimJoint696 = x3d.HAnimJoint()
 HAnimJoint696.name = "skullbase"
 HAnimJoint696.DEF = "hanim_skullbase"
@@ -3248,7 +3160,6 @@ Shape697 = x3d.Shape()
 LineSet698 = x3d.LineSet()
 LineSet698.vertexCount = [2]
 Coordinate699 = x3d.Coordinate()
-Coordinate699.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet698.coord = Coordinate699
 #from skullbase to l_eyelid_joint
@@ -3264,7 +3175,6 @@ Shape701 = x3d.Shape()
 LineSet702 = x3d.LineSet()
 LineSet702.vertexCount = [2]
 Coordinate703 = x3d.Coordinate()
-Coordinate703.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet702.coord = Coordinate703
 #from skullbase to r_eyelid_joint
@@ -3280,7 +3190,6 @@ Shape705 = x3d.Shape()
 LineSet706 = x3d.LineSet()
 LineSet706.vertexCount = [2]
 Coordinate707 = x3d.Coordinate()
-Coordinate707.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet706.coord = Coordinate707
 #from skullbase to l_eyeball_joint
@@ -3296,7 +3205,6 @@ Shape709 = x3d.Shape()
 LineSet710 = x3d.LineSet()
 LineSet710.vertexCount = [2]
 Coordinate711 = x3d.Coordinate()
-Coordinate711.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet710.coord = Coordinate711
 #from skullbase to r_eyeball_joint
@@ -3312,7 +3220,6 @@ Shape713 = x3d.Shape()
 LineSet714 = x3d.LineSet()
 LineSet714.vertexCount = [2]
 Coordinate715 = x3d.Coordinate()
-Coordinate715.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet714.coord = Coordinate715
 #from skullbase to l_eyebrow_joint
@@ -3328,7 +3235,6 @@ Shape717 = x3d.Shape()
 LineSet718 = x3d.LineSet()
 LineSet718.vertexCount = [2]
 Coordinate719 = x3d.Coordinate()
-Coordinate719.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet718.coord = Coordinate719
 #from skullbase to r_eyebrow_joint
@@ -3344,7 +3250,6 @@ Shape721 = x3d.Shape()
 LineSet722 = x3d.LineSet()
 LineSet722.vertexCount = [2]
 Coordinate723 = x3d.Coordinate()
-Coordinate723.point = (0.0044,1.6209,0.0236,0.0000,1.0000,0.0000)
 
 LineSet722.coord = Coordinate723
 #from skullbase to temporomandibular
@@ -3369,7 +3274,7 @@ Shape727.USE = "HAnimSiteShape"
 
 HAnimSite725.children.append(Shape727)
 
-HAnimJoint696.imSite.append(HAnimSite725)
+HAnimJoint696.HAnimSite.append(HAnimSite725)
 HAnimSite728 = x3d.HAnimSite()
 HAnimSite728.name = "menton_pt"
 HAnimSite728.DEF = "hanim_menton_pt"
@@ -3383,7 +3288,7 @@ Shape730.USE = "HAnimSiteShape"
 
 HAnimSite728.children.append(Shape730)
 
-HAnimJoint696.imSite.append(HAnimSite728)
+HAnimJoint696.HAnimSite.append(HAnimSite728)
 HAnimSite731 = x3d.HAnimSite()
 HAnimSite731.name = "r_gonion_pt"
 HAnimSite731.DEF = "hanim_r_gonion_pt"
@@ -3397,7 +3302,7 @@ Shape733.USE = "HAnimSiteShape"
 
 HAnimSite731.children.append(Shape733)
 
-HAnimJoint696.imSite.append(HAnimSite731)
+HAnimJoint696.HAnimSite.append(HAnimSite731)
 HAnimSite734 = x3d.HAnimSite()
 HAnimSite734.name = "supramenton_pt"
 HAnimSite734.DEF = "hanim_supramenton_pt"
@@ -3411,7 +3316,7 @@ Shape736.USE = "HAnimSiteShape"
 
 HAnimSite734.children.append(Shape736)
 
-HAnimJoint696.imSite.append(HAnimSite734)
+HAnimJoint696.HAnimSite.append(HAnimSite734)
 HAnimJoint737 = x3d.HAnimJoint()
 HAnimJoint737.name = "l_eyelid_joint"
 HAnimJoint737.DEF = "hanim_l_eyelid_joint"
@@ -3494,7 +3399,6 @@ Shape745 = x3d.Shape()
 LineSet746 = x3d.LineSet()
 LineSet746.vertexCount = [2]
 Coordinate747 = x3d.Coordinate()
-Coordinate747.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
 LineSet746.coord = Coordinate747
 #from l_sternoclavicular to l_acromioclavicular
@@ -3516,7 +3420,6 @@ Shape750 = x3d.Shape()
 LineSet751 = x3d.LineSet()
 LineSet751.vertexCount = [2]
 Coordinate752 = x3d.Coordinate()
-Coordinate752.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
 LineSet751.coord = Coordinate752
 #from l_acromioclavicular to l_shoulder
@@ -3541,7 +3444,7 @@ Shape756.USE = "HAnimSiteShape"
 
 HAnimSite754.children.append(Shape756)
 
-HAnimJoint749.imSite.append(HAnimSite754)
+HAnimJoint749.HAnimSite.append(HAnimSite754)
 HAnimSite757 = x3d.HAnimSite()
 HAnimSite757.name = "l_humeral_lateral_epicondyles_pt"
 HAnimSite757.DEF = "hanim_l_humeral_lateral_epicondyles_pt"
@@ -3555,7 +3458,7 @@ Shape759.USE = "HAnimSiteShape"
 
 HAnimSite757.children.append(Shape759)
 
-HAnimJoint749.imSite.append(HAnimSite757)
+HAnimJoint749.HAnimSite.append(HAnimSite757)
 HAnimJoint760 = x3d.HAnimJoint()
 HAnimJoint760.name = "l_shoulder"
 HAnimJoint760.DEF = "hanim_l_shoulder"
@@ -3566,7 +3469,6 @@ Shape761 = x3d.Shape()
 LineSet762 = x3d.LineSet()
 LineSet762.vertexCount = [2]
 Coordinate763 = x3d.Coordinate()
-Coordinate763.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
 LineSet762.coord = Coordinate763
 #from l_shoulder to l_elbow
@@ -3591,7 +3493,7 @@ Shape767.USE = "HAnimSiteShape"
 
 HAnimSite765.children.append(Shape767)
 
-HAnimJoint760.imSite.append(HAnimSite765)
+HAnimJoint760.HAnimSite.append(HAnimSite765)
 HAnimSite768 = x3d.HAnimSite()
 HAnimSite768.name = "l_olecranon_pt"
 HAnimSite768.DEF = "hanim_l_olecranon_pt"
@@ -3605,7 +3507,7 @@ Shape770.USE = "HAnimSiteShape"
 
 HAnimSite768.children.append(Shape770)
 
-HAnimJoint760.imSite.append(HAnimSite768)
+HAnimJoint760.HAnimSite.append(HAnimSite768)
 HAnimSite771 = x3d.HAnimSite()
 HAnimSite771.name = "l_radial_styloid_pt"
 HAnimSite771.DEF = "hanim_l_radial_styloid_pt"
@@ -3619,7 +3521,7 @@ Shape773.USE = "HAnimSiteShape"
 
 HAnimSite771.children.append(Shape773)
 
-HAnimJoint760.imSite.append(HAnimSite771)
+HAnimJoint760.HAnimSite.append(HAnimSite771)
 HAnimSite774 = x3d.HAnimSite()
 HAnimSite774.name = "l_radiale_pt"
 HAnimSite774.DEF = "hanim_l_radiale_pt"
@@ -3633,7 +3535,7 @@ Shape776.USE = "HAnimSiteShape"
 
 HAnimSite774.children.append(Shape776)
 
-HAnimJoint760.imSite.append(HAnimSite774)
+HAnimJoint760.HAnimSite.append(HAnimSite774)
 HAnimJoint777 = x3d.HAnimJoint()
 HAnimJoint777.name = "l_elbow"
 HAnimJoint777.DEF = "hanim_l_elbow"
@@ -3644,7 +3546,6 @@ Shape778 = x3d.Shape()
 LineSet779 = x3d.LineSet()
 LineSet779.vertexCount = [2]
 Coordinate780 = x3d.Coordinate()
-Coordinate780.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
 LineSet779.coord = Coordinate780
 #from l_elbow to l_radiocarpal
@@ -3669,7 +3570,7 @@ Shape784.USE = "HAnimSiteShape"
 
 HAnimSite782.children.append(Shape784)
 
-HAnimJoint777.imSite.append(HAnimSite782)
+HAnimJoint777.HAnimSite.append(HAnimSite782)
 HAnimJoint785 = x3d.HAnimJoint()
 HAnimJoint785.name = "l_radiocarpal"
 HAnimJoint785.DEF = "hanim_l_radiocarpal"
@@ -3680,7 +3581,6 @@ Shape786 = x3d.Shape()
 LineSet787 = x3d.LineSet()
 LineSet787.vertexCount = [2]
 Coordinate788 = x3d.Coordinate()
-Coordinate788.point = (0.1984,0.8663,-0.0583,0.0000,1.0000,0.0000)
 
 LineSet787.coord = Coordinate788
 #from l_radiocarpal to l_midcarpal_1
@@ -3696,7 +3596,6 @@ Shape790 = x3d.Shape()
 LineSet791 = x3d.LineSet()
 LineSet791.vertexCount = [2]
 Coordinate792 = x3d.Coordinate()
-Coordinate792.point = (0.1984,0.8663,-0.0583,0.0000,1.0000,0.0000)
 
 LineSet791.coord = Coordinate792
 #from l_radiocarpal to l_midcarpal_2
@@ -3712,7 +3611,6 @@ Shape794 = x3d.Shape()
 LineSet795 = x3d.LineSet()
 LineSet795.vertexCount = [2]
 Coordinate796 = x3d.Coordinate()
-Coordinate796.point = (0.1984,0.8663,-0.0583,0.0000,1.0000,0.0000)
 
 LineSet795.coord = Coordinate796
 #from l_radiocarpal to l_midcarpal_3
@@ -3728,7 +3626,6 @@ Shape798 = x3d.Shape()
 LineSet799 = x3d.LineSet()
 LineSet799.vertexCount = [2]
 Coordinate800 = x3d.Coordinate()
-Coordinate800.point = (0.1984,0.8663,-0.0583,0.0000,1.0000,0.0000)
 
 LineSet799.coord = Coordinate800
 #from l_radiocarpal to l_midcarpal_4_5
@@ -3750,7 +3647,6 @@ Shape803 = x3d.Shape()
 LineSet804 = x3d.LineSet()
 LineSet804.vertexCount = [1]
 Coordinate805 = x3d.Coordinate()
-Coordinate805.point = (0.1924,0.8472,-0.0534)
 
 LineSet804.coord = Coordinate805
 #from l_midcarpal_1 to l_carpometacarpal_1
@@ -3772,7 +3668,6 @@ Shape808 = x3d.Shape()
 LineSet809 = x3d.LineSet()
 LineSet809.vertexCount = [2]
 Coordinate810 = x3d.Coordinate()
-Coordinate810.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
 LineSet809.coord = Coordinate810
 #from l_carpometacarpal_1 to l_metacarpophalangeal_1
@@ -3794,7 +3689,6 @@ Shape813 = x3d.Shape()
 LineSet814 = x3d.LineSet()
 LineSet814.vertexCount = [2]
 Coordinate815 = x3d.Coordinate()
-Coordinate815.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
 LineSet814.coord = Coordinate815
 #from l_metacarpophalangeal_1 to l_carpal_interphalangeal_1
@@ -3819,7 +3713,7 @@ Shape819.USE = "HAnimSiteShape"
 
 HAnimSite817.children.append(Shape819)
 
-HAnimJoint812.imSite.append(HAnimSite817)
+HAnimJoint812.HAnimSite.append(HAnimSite817)
 HAnimJoint820 = x3d.HAnimJoint()
 HAnimJoint820.name = "l_carpal_interphalangeal_1"
 HAnimJoint820.DEF = "hanim_l_carpal_interphalangeal_1"
@@ -3844,7 +3738,6 @@ Shape822 = x3d.Shape()
 LineSet823 = x3d.LineSet()
 LineSet823.vertexCount = [1]
 Coordinate824 = x3d.Coordinate()
-Coordinate824.point = (0.1983,0.8024,-0.0280)
 
 LineSet823.coord = Coordinate824
 #from l_midcarpal_2 to l_carpometacarpal_2
@@ -3869,7 +3762,7 @@ Shape828.USE = "HAnimSiteShape"
 
 HAnimSite826.children.append(Shape828)
 
-HAnimJoint821.imSite.append(HAnimSite826)
+HAnimJoint821.HAnimSite.append(HAnimSite826)
 HAnimJoint829 = x3d.HAnimJoint()
 HAnimJoint829.name = "l_carpometacarpal_2"
 HAnimJoint829.DEF = "hanim_l_carpometacarpal_2"
@@ -3880,7 +3773,6 @@ Shape830 = x3d.Shape()
 LineSet831 = x3d.LineSet()
 LineSet831.vertexCount = [2]
 Coordinate832 = x3d.Coordinate()
-Coordinate832.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
 LineSet831.coord = Coordinate832
 #from l_carpometacarpal_2 to l_metacarpophalangeal_2
@@ -3902,7 +3794,6 @@ Shape835 = x3d.Shape()
 LineSet836 = x3d.LineSet()
 LineSet836.vertexCount = [2]
 Coordinate837 = x3d.Coordinate()
-Coordinate837.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
 LineSet836.coord = Coordinate837
 #from l_metacarpophalangeal_2 to l_carpal_proximal_interphalangeal_2
@@ -3924,7 +3815,6 @@ Shape840 = x3d.Shape()
 LineSet841 = x3d.LineSet()
 LineSet841.vertexCount = [2]
 Coordinate842 = x3d.Coordinate()
-Coordinate842.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
 LineSet841.coord = Coordinate842
 #from l_carpal_proximal_interphalangeal_2 to l_carpal_distal_interphalangeal_2
@@ -3949,7 +3839,7 @@ Shape846.USE = "HAnimSiteShape"
 
 HAnimSite844.children.append(Shape846)
 
-HAnimJoint839.imSite.append(HAnimSite844)
+HAnimJoint839.HAnimSite.append(HAnimSite844)
 HAnimSite847 = x3d.HAnimSite()
 HAnimSite847.name = "l_dactylion_pt"
 HAnimSite847.DEF = "hanim_l_dactylion_pt"
@@ -3963,7 +3853,7 @@ Shape849.USE = "HAnimSiteShape"
 
 HAnimSite847.children.append(Shape849)
 
-HAnimJoint839.imSite.append(HAnimSite847)
+HAnimJoint839.HAnimSite.append(HAnimSite847)
 HAnimJoint850 = x3d.HAnimJoint()
 HAnimJoint850.name = "l_carpal_distal_interphalangeal_2"
 HAnimJoint850.DEF = "hanim_l_carpal_distal_interphalangeal_2"
@@ -3990,7 +3880,6 @@ Shape852 = x3d.Shape()
 LineSet853 = x3d.LineSet()
 LineSet853.vertexCount = [1]
 Coordinate854 = x3d.Coordinate()
-Coordinate854.point = (0.1987,0.8029,-0.0530)
 
 LineSet853.coord = Coordinate854
 #from l_midcarpal_3 to l_carpometacarpal_3
@@ -4015,7 +3904,7 @@ Shape858.USE = "HAnimSiteShape"
 
 HAnimSite856.children.append(Shape858)
 
-HAnimJoint851.imSite.append(HAnimSite856)
+HAnimJoint851.HAnimSite.append(HAnimSite856)
 HAnimJoint859 = x3d.HAnimJoint()
 HAnimJoint859.name = "l_carpometacarpal_3"
 HAnimJoint859.DEF = "hanim_l_carpometacarpal_3"
@@ -4026,7 +3915,6 @@ Shape860 = x3d.Shape()
 LineSet861 = x3d.LineSet()
 LineSet861.vertexCount = [2]
 Coordinate862 = x3d.Coordinate()
-Coordinate862.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
 LineSet861.coord = Coordinate862
 #from l_carpometacarpal_3 to l_metacarpophalangeal_3
@@ -4048,7 +3936,6 @@ Shape865 = x3d.Shape()
 LineSet866 = x3d.LineSet()
 LineSet866.vertexCount = [2]
 Coordinate867 = x3d.Coordinate()
-Coordinate867.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
 LineSet866.coord = Coordinate867
 #from l_metacarpophalangeal_3 to l_carpal_proximal_interphalangeal_3
@@ -4070,7 +3957,6 @@ Shape870 = x3d.Shape()
 LineSet871 = x3d.LineSet()
 LineSet871.vertexCount = [2]
 Coordinate872 = x3d.Coordinate()
-Coordinate872.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
 LineSet871.coord = Coordinate872
 #from l_carpal_proximal_interphalangeal_3 to l_carpal_distal_interphalangeal_3
@@ -4095,7 +3981,7 @@ Shape876.USE = "HAnimSiteShape"
 
 HAnimSite874.children.append(Shape876)
 
-HAnimJoint869.imSite.append(HAnimSite874)
+HAnimJoint869.HAnimSite.append(HAnimSite874)
 HAnimJoint877 = x3d.HAnimJoint()
 HAnimJoint877.name = "l_carpal_distal_interphalangeal_3"
 HAnimJoint877.DEF = "hanim_l_carpal_distal_interphalangeal_3"
@@ -4122,7 +4008,6 @@ Shape879 = x3d.Shape()
 LineSet880 = x3d.LineSet()
 LineSet880.vertexCount = [1]
 Coordinate881 = x3d.Coordinate()
-Coordinate881.point = (0.1956,0.8019,-0.0794)
 
 LineSet880.coord = Coordinate881
 #from l_midcarpal_4_5 to l_carpometacarpal_4
@@ -4138,7 +4023,6 @@ Shape883 = x3d.Shape()
 LineSet884 = x3d.LineSet()
 LineSet884.vertexCount = [1]
 Coordinate885 = x3d.Coordinate()
-Coordinate885.point = (0.1925,0.8066,-0.1036)
 
 LineSet884.coord = Coordinate885
 #from l_midcarpal_4_5 to l_carpometacarpal_5
@@ -4163,7 +4047,7 @@ Shape889.USE = "HAnimSiteShape"
 
 HAnimSite887.children.append(Shape889)
 
-HAnimJoint878.imSite.append(HAnimSite887)
+HAnimJoint878.HAnimSite.append(HAnimSite887)
 HAnimJoint890 = x3d.HAnimJoint()
 HAnimJoint890.name = "l_carpometacarpal_4"
 HAnimJoint890.DEF = "hanim_l_carpometacarpal_4"
@@ -4174,7 +4058,6 @@ Shape891 = x3d.Shape()
 LineSet892 = x3d.LineSet()
 LineSet892.vertexCount = [2]
 Coordinate893 = x3d.Coordinate()
-Coordinate893.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
 LineSet892.coord = Coordinate893
 #from l_carpometacarpal_4 to l_metacarpophalangeal_4
@@ -4196,7 +4079,6 @@ Shape896 = x3d.Shape()
 LineSet897 = x3d.LineSet()
 LineSet897.vertexCount = [2]
 Coordinate898 = x3d.Coordinate()
-Coordinate898.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
 LineSet897.coord = Coordinate898
 #from l_metacarpophalangeal_4 to l_carpal_proximal_interphalangeal_4
@@ -4218,7 +4100,6 @@ Shape901 = x3d.Shape()
 LineSet902 = x3d.LineSet()
 LineSet902.vertexCount = [2]
 Coordinate903 = x3d.Coordinate()
-Coordinate903.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
 LineSet902.coord = Coordinate903
 #from l_carpal_proximal_interphalangeal_4 to l_carpal_distal_interphalangeal_4
@@ -4243,7 +4124,7 @@ Shape907.USE = "HAnimSiteShape"
 
 HAnimSite905.children.append(Shape907)
 
-HAnimJoint900.imSite.append(HAnimSite905)
+HAnimJoint900.HAnimSite.append(HAnimSite905)
 HAnimJoint908 = x3d.HAnimJoint()
 HAnimJoint908.name = "l_carpal_distal_interphalangeal_4"
 HAnimJoint908.DEF = "hanim_l_carpal_distal_interphalangeal_4"
@@ -4268,7 +4149,6 @@ Shape910 = x3d.Shape()
 LineSet911 = x3d.LineSet()
 LineSet911.vertexCount = [2]
 Coordinate912 = x3d.Coordinate()
-Coordinate912.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
 LineSet911.coord = Coordinate912
 #from l_carpometacarpal_5 to l_metacarpophalangeal_5
@@ -4290,7 +4170,6 @@ Shape915 = x3d.Shape()
 LineSet916 = x3d.LineSet()
 LineSet916.vertexCount = [2]
 Coordinate917 = x3d.Coordinate()
-Coordinate917.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
 LineSet916.coord = Coordinate917
 #from l_metacarpophalangeal_5 to l_carpal_proximal_interphalangeal_5
@@ -4312,7 +4191,6 @@ Shape920 = x3d.Shape()
 LineSet921 = x3d.LineSet()
 LineSet921.vertexCount = [2]
 Coordinate922 = x3d.Coordinate()
-Coordinate922.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
 LineSet921.coord = Coordinate922
 #from l_carpal_proximal_interphalangeal_5 to l_carpal_distal_interphalangeal_5
@@ -4337,7 +4215,7 @@ Shape926.USE = "HAnimSiteShape"
 
 HAnimSite924.children.append(Shape926)
 
-HAnimJoint919.imSite.append(HAnimSite924)
+HAnimJoint919.HAnimSite.append(HAnimSite924)
 HAnimJoint927 = x3d.HAnimJoint()
 HAnimJoint927.name = "l_carpal_distal_interphalangeal_5"
 HAnimJoint927.DEF = "hanim_l_carpal_distal_interphalangeal_5"
@@ -4374,7 +4252,6 @@ Shape929 = x3d.Shape()
 LineSet930 = x3d.LineSet()
 LineSet930.vertexCount = [2]
 Coordinate931 = x3d.Coordinate()
-Coordinate931.point = (-0.0694,1.4600,-0.0330,-0.0836,1.4281,-0.0401)
 
 LineSet930.coord = Coordinate931
 #from r_sternoclavicular to r_acromioclavicular
@@ -4396,7 +4273,6 @@ Shape934 = x3d.Shape()
 LineSet935 = x3d.LineSet()
 LineSet935.vertexCount = [2]
 Coordinate936 = x3d.Coordinate()
-Coordinate936.point = (-0.0836,1.4281,-0.0401,-0.1907,1.4407,-0.0325)
 
 LineSet935.coord = Coordinate936
 #from r_acromioclavicular to r_shoulder
@@ -4421,7 +4297,7 @@ Shape940.USE = "HAnimSiteShape"
 
 HAnimSite938.children.append(Shape940)
 
-HAnimJoint933.imSite.append(HAnimSite938)
+HAnimJoint933.HAnimSite.append(HAnimSite938)
 HAnimSite941 = x3d.HAnimSite()
 HAnimSite941.name = "r_humeral_lateral_epicondyles_pt"
 HAnimSite941.DEF = "hanim_r_humeral_lateral_epicondyles_pt"
@@ -4435,7 +4311,7 @@ Shape943.USE = "HAnimSiteShape"
 
 HAnimSite941.children.append(Shape943)
 
-HAnimJoint933.imSite.append(HAnimSite941)
+HAnimJoint933.HAnimSite.append(HAnimSite941)
 HAnimJoint944 = x3d.HAnimJoint()
 HAnimJoint944.name = "r_shoulder"
 HAnimJoint944.DEF = "hanim_r_shoulder"
@@ -4446,7 +4322,6 @@ Shape945 = x3d.Shape()
 LineSet946 = x3d.LineSet()
 LineSet946.vertexCount = [2]
 Coordinate947 = x3d.Coordinate()
-Coordinate947.point = (-0.1907,1.4407,-0.0325,-0.1949,1.1388,-0.0620)
 
 LineSet946.coord = Coordinate947
 #from r_shoulder to r_elbow
@@ -4471,7 +4346,7 @@ Shape951.USE = "HAnimSiteShape"
 
 HAnimSite949.children.append(Shape951)
 
-HAnimJoint944.imSite.append(HAnimSite949)
+HAnimJoint944.HAnimSite.append(HAnimSite949)
 HAnimSite952 = x3d.HAnimSite()
 HAnimSite952.name = "r_olecranon_pt"
 HAnimSite952.DEF = "hanim_r_olecranon_pt"
@@ -4485,7 +4360,7 @@ Shape954.USE = "HAnimSiteShape"
 
 HAnimSite952.children.append(Shape954)
 
-HAnimJoint944.imSite.append(HAnimSite952)
+HAnimJoint944.HAnimSite.append(HAnimSite952)
 HAnimSite955 = x3d.HAnimSite()
 HAnimSite955.name = "r_radial_styloid_pt"
 HAnimSite955.DEF = "hanim_r_radial_styloid_pt"
@@ -4499,7 +4374,7 @@ Shape957.USE = "HAnimSiteShape"
 
 HAnimSite955.children.append(Shape957)
 
-HAnimJoint944.imSite.append(HAnimSite955)
+HAnimJoint944.HAnimSite.append(HAnimSite955)
 HAnimSite958 = x3d.HAnimSite()
 HAnimSite958.name = "r_radiale_pt"
 HAnimSite958.DEF = "hanim_r_radiale_pt"
@@ -4513,7 +4388,7 @@ Shape960.USE = "HAnimSiteShape"
 
 HAnimSite958.children.append(Shape960)
 
-HAnimJoint944.imSite.append(HAnimSite958)
+HAnimJoint944.HAnimSite.append(HAnimSite958)
 HAnimJoint961 = x3d.HAnimJoint()
 HAnimJoint961.name = "r_elbow"
 HAnimJoint961.DEF = "hanim_r_elbow"
@@ -4524,7 +4399,6 @@ Shape962 = x3d.Shape()
 LineSet963 = x3d.LineSet()
 LineSet963.vertexCount = [2]
 Coordinate964 = x3d.Coordinate()
-Coordinate964.point = (-0.1949,1.1388,-0.0620,-0.1959,0.8694,-0.0521)
 
 LineSet963.coord = Coordinate964
 #from r_elbow to r_radiocarpal
@@ -4549,7 +4423,7 @@ Shape968.USE = "HAnimSiteShape"
 
 HAnimSite966.children.append(Shape968)
 
-HAnimJoint961.imSite.append(HAnimSite966)
+HAnimJoint961.HAnimSite.append(HAnimSite966)
 HAnimJoint969 = x3d.HAnimJoint()
 HAnimJoint969.name = "r_radiocarpal"
 HAnimJoint969.DEF = "hanim_r_radiocarpal"
@@ -4560,7 +4434,6 @@ Shape970 = x3d.Shape()
 LineSet971 = x3d.LineSet()
 LineSet971.vertexCount = [2]
 Coordinate972 = x3d.Coordinate()
-Coordinate972.point = (-0.1959,0.8694,-0.0521,0.0000,1.0000,0.0000)
 
 LineSet971.coord = Coordinate972
 #from r_radiocarpal to r_midcarpal_1
@@ -4576,7 +4449,6 @@ Shape974 = x3d.Shape()
 LineSet975 = x3d.LineSet()
 LineSet975.vertexCount = [2]
 Coordinate976 = x3d.Coordinate()
-Coordinate976.point = (-0.1959,0.8694,-0.0521,0.0000,1.0000,0.0000)
 
 LineSet975.coord = Coordinate976
 #from r_radiocarpal to r_midcarpal_2
@@ -4592,7 +4464,6 @@ Shape978 = x3d.Shape()
 LineSet979 = x3d.LineSet()
 LineSet979.vertexCount = [2]
 Coordinate980 = x3d.Coordinate()
-Coordinate980.point = (-0.1959,0.8694,-0.0521,0.0000,1.0000,0.0000)
 
 LineSet979.coord = Coordinate980
 #from r_radiocarpal to r_midcarpal_3
@@ -4608,7 +4479,6 @@ Shape982 = x3d.Shape()
 LineSet983 = x3d.LineSet()
 LineSet983.vertexCount = [2]
 Coordinate984 = x3d.Coordinate()
-Coordinate984.point = (-0.1959,0.8694,-0.0521,0.0000,1.0000,0.0000)
 
 LineSet983.coord = Coordinate984
 #from r_radiocarpal to r_midcarpal_4_5
@@ -4630,7 +4500,6 @@ Shape987 = x3d.Shape()
 LineSet988 = x3d.LineSet()
 LineSet988.vertexCount = [1]
 Coordinate989 = x3d.Coordinate()
-Coordinate989.point = (-0.1899,0.8502,-0.0473)
 
 LineSet988.coord = Coordinate989
 #from r_midcarpal_1 to r_carpometacarpal_1
@@ -4652,7 +4521,6 @@ Shape992 = x3d.Shape()
 LineSet993 = x3d.LineSet()
 LineSet993.vertexCount = [2]
 Coordinate994 = x3d.Coordinate()
-Coordinate994.point = (-0.1899,0.8502,-0.0473,-0.1874,0.8256,0.0306)
 
 LineSet993.coord = Coordinate994
 #from r_carpometacarpal_1 to r_metacarpophalangeal_1
@@ -4674,7 +4542,6 @@ Shape997 = x3d.Shape()
 LineSet998 = x3d.LineSet()
 LineSet998.vertexCount = [2]
 Coordinate999 = x3d.Coordinate()
-Coordinate999.point = (-0.1874,0.8256,0.0306,-0.1864,0.8190,0.0506)
 
 LineSet998.coord = Coordinate999
 #from r_metacarpophalangeal_1 to r_carpal_interphalangeal_1
@@ -4699,7 +4566,7 @@ Shape1003.USE = "HAnimSiteShape"
 
 HAnimSite1001.children.append(Shape1003)
 
-HAnimJoint996.imSite.append(HAnimSite1001)
+HAnimJoint996.HAnimSite.append(HAnimSite1001)
 HAnimJoint1004 = x3d.HAnimJoint()
 HAnimJoint1004.name = "r_carpal_interphalangeal_1"
 HAnimJoint1004.DEF = "hanim_r_carpal_interphalangeal_1"
@@ -4724,7 +4591,6 @@ Shape1006 = x3d.Shape()
 LineSet1007 = x3d.LineSet()
 LineSet1007.vertexCount = [1]
 Coordinate1008 = x3d.Coordinate()
-Coordinate1008.point = (-0.1961,0.8055,-0.0218)
 
 LineSet1007.coord = Coordinate1008
 #from r_midcarpal_2 to r_carpometacarpal_2
@@ -4749,7 +4615,7 @@ Shape1012.USE = "HAnimSiteShape"
 
 HAnimSite1010.children.append(Shape1012)
 
-HAnimJoint1005.imSite.append(HAnimSite1010)
+HAnimJoint1005.HAnimSite.append(HAnimSite1010)
 HAnimJoint1013 = x3d.HAnimJoint()
 HAnimJoint1013.name = "r_carpometacarpal_2"
 HAnimJoint1013.DEF = "hanim_r_carpometacarpal_2"
@@ -4760,7 +4626,6 @@ Shape1014 = x3d.Shape()
 LineSet1015 = x3d.LineSet()
 LineSet1015.vertexCount = [2]
 Coordinate1016 = x3d.Coordinate()
-Coordinate1016.point = (-0.1961,0.8055,-0.0218,-0.1961,0.7846,-0.0218)
 
 LineSet1015.coord = Coordinate1016
 #from r_carpometacarpal_2 to r_metacarpophalangeal_2
@@ -4782,7 +4647,6 @@ Shape1019 = x3d.Shape()
 LineSet1020 = x3d.LineSet()
 LineSet1020.vertexCount = [2]
 Coordinate1021 = x3d.Coordinate()
-Coordinate1021.point = (-0.1961,0.7846,-0.0218,-0.1954,0.7393,-0.0185)
 
 LineSet1020.coord = Coordinate1021
 #from r_metacarpophalangeal_2 to r_carpal_proximal_interphalangeal_2
@@ -4804,7 +4668,6 @@ Shape1024 = x3d.Shape()
 LineSet1025 = x3d.LineSet()
 LineSet1025.vertexCount = [2]
 Coordinate1026 = x3d.Coordinate()
-Coordinate1026.point = (-0.1954,0.7393,-0.0185,-0.1945,0.7169,-0.0173)
 
 LineSet1025.coord = Coordinate1026
 #from r_carpal_proximal_interphalangeal_2 to r_carpal_distal_interphalangeal_2
@@ -4829,7 +4692,7 @@ Shape1030.USE = "HAnimSiteShape"
 
 HAnimSite1028.children.append(Shape1030)
 
-HAnimJoint1023.imSite.append(HAnimSite1028)
+HAnimJoint1023.HAnimSite.append(HAnimSite1028)
 HAnimSite1031 = x3d.HAnimSite()
 HAnimSite1031.name = "r_dactylion_pt"
 HAnimSite1031.DEF = "hanim_r_dactylion_pt"
@@ -4843,7 +4706,7 @@ Shape1033.USE = "HAnimSiteShape"
 
 HAnimSite1031.children.append(Shape1033)
 
-HAnimJoint1023.imSite.append(HAnimSite1031)
+HAnimJoint1023.HAnimSite.append(HAnimSite1031)
 HAnimJoint1034 = x3d.HAnimJoint()
 HAnimJoint1034.name = "r_carpal_distal_interphalangeal_2"
 HAnimJoint1034.DEF = "hanim_r_carpal_distal_interphalangeal_2"
@@ -4870,7 +4733,6 @@ Shape1036 = x3d.Shape()
 LineSet1037 = x3d.LineSet()
 LineSet1037.vertexCount = [1]
 Coordinate1038 = x3d.Coordinate()
-Coordinate1038.point = (-0.1972,0.8060,-0.0468)
 
 LineSet1037.coord = Coordinate1038
 #from r_midcarpal_3 to r_carpometacarpal_3
@@ -4895,7 +4757,7 @@ Shape1042.USE = "HAnimSiteShape"
 
 HAnimSite1040.children.append(Shape1042)
 
-HAnimJoint1035.imSite.append(HAnimSite1040)
+HAnimJoint1035.HAnimSite.append(HAnimSite1040)
 HAnimJoint1043 = x3d.HAnimJoint()
 HAnimJoint1043.name = "r_carpometacarpal_3"
 HAnimJoint1043.DEF = "hanim_r_carpometacarpal_3"
@@ -4906,7 +4768,6 @@ Shape1044 = x3d.Shape()
 LineSet1045 = x3d.LineSet()
 LineSet1045.vertexCount = [2]
 Coordinate1046 = x3d.Coordinate()
-Coordinate1046.point = (-0.1972,0.8060,-0.0468,-0.1972,0.7849,-0.0468)
 
 LineSet1045.coord = Coordinate1046
 #from r_carpometacarpal_3 to r_metacarpophalangeal_3
@@ -4928,7 +4789,6 @@ Shape1049 = x3d.Shape()
 LineSet1050 = x3d.LineSet()
 LineSet1050.vertexCount = [2]
 Coordinate1051 = x3d.Coordinate()
-Coordinate1051.point = (-0.1972,0.7849,-0.0468,-0.1950,0.7304,-0.0441)
 
 LineSet1050.coord = Coordinate1051
 #from r_metacarpophalangeal_3 to r_carpal_proximal_interphalangeal_3
@@ -4950,7 +4810,6 @@ Shape1054 = x3d.Shape()
 LineSet1055 = x3d.LineSet()
 LineSet1055.vertexCount = [2]
 Coordinate1056 = x3d.Coordinate()
-Coordinate1056.point = (-0.1950,0.7304,-0.0441,-0.1939,0.7042,-0.0432)
 
 LineSet1055.coord = Coordinate1056
 #from r_carpal_proximal_interphalangeal_3 to r_carpal_distal_interphalangeal_3
@@ -4975,7 +4834,7 @@ Shape1060.USE = "HAnimSiteShape"
 
 HAnimSite1058.children.append(Shape1060)
 
-HAnimJoint1053.imSite.append(HAnimSite1058)
+HAnimJoint1053.HAnimSite.append(HAnimSite1058)
 HAnimJoint1061 = x3d.HAnimJoint()
 HAnimJoint1061.name = "r_carpal_distal_interphalangeal_3"
 HAnimJoint1061.DEF = "hanim_r_carpal_distal_interphalangeal_3"
@@ -5002,7 +4861,6 @@ Shape1063 = x3d.Shape()
 LineSet1064 = x3d.LineSet()
 LineSet1064.vertexCount = [1]
 Coordinate1065 = x3d.Coordinate()
-Coordinate1065.point = (-0.1951,0.8049,-0.0732)
 
 LineSet1064.coord = Coordinate1065
 #from r_midcarpal_4_5 to r_carpometacarpal_4
@@ -5018,7 +4876,6 @@ Shape1067 = x3d.Shape()
 LineSet1068 = x3d.LineSet()
 LineSet1068.vertexCount = [1]
 Coordinate1069 = x3d.Coordinate()
-Coordinate1069.point = (-0.1926,0.8096,-0.0975)
 
 LineSet1068.coord = Coordinate1069
 #from r_midcarpal_4_5 to r_carpometacarpal_5
@@ -5043,7 +4900,7 @@ Shape1073.USE = "HAnimSiteShape"
 
 HAnimSite1071.children.append(Shape1073)
 
-HAnimJoint1062.imSite.append(HAnimSite1071)
+HAnimJoint1062.HAnimSite.append(HAnimSite1071)
 HAnimJoint1074 = x3d.HAnimJoint()
 HAnimJoint1074.name = "r_carpometacarpal_4"
 HAnimJoint1074.DEF = "hanim_r_carpometacarpal_4"
@@ -5054,7 +4911,6 @@ Shape1075 = x3d.Shape()
 LineSet1076 = x3d.LineSet()
 LineSet1076.vertexCount = [2]
 Coordinate1077 = x3d.Coordinate()
-Coordinate1077.point = (-0.1951,0.8049,-0.0732,-0.1951,0.7845,-0.0732)
 
 LineSet1076.coord = Coordinate1077
 #from r_carpometacarpal_4 to r_metacarpophalangeal_4
@@ -5076,7 +4932,6 @@ Shape1080 = x3d.Shape()
 LineSet1081 = x3d.LineSet()
 LineSet1081.vertexCount = [2]
 Coordinate1082 = x3d.Coordinate()
-Coordinate1082.point = (-0.1951,0.7845,-0.0732,-0.1920,0.7318,-0.0716)
 
 LineSet1081.coord = Coordinate1082
 #from r_metacarpophalangeal_4 to r_carpal_proximal_interphalangeal_4
@@ -5098,7 +4953,6 @@ Shape1085 = x3d.Shape()
 LineSet1086 = x3d.LineSet()
 LineSet1086.vertexCount = [2]
 Coordinate1087 = x3d.Coordinate()
-Coordinate1087.point = (-0.1920,0.7318,-0.0716,-0.1908,0.7077,-0.0706)
 
 LineSet1086.coord = Coordinate1087
 #from r_carpal_proximal_interphalangeal_4 to r_carpal_distal_interphalangeal_4
@@ -5123,7 +4977,7 @@ Shape1091.USE = "HAnimSiteShape"
 
 HAnimSite1089.children.append(Shape1091)
 
-HAnimJoint1084.imSite.append(HAnimSite1089)
+HAnimJoint1084.HAnimSite.append(HAnimSite1089)
 HAnimJoint1092 = x3d.HAnimJoint()
 HAnimJoint1092.name = "r_carpal_distal_interphalangeal_4"
 HAnimJoint1092.DEF = "hanim_r_carpal_distal_interphalangeal_4"
@@ -5148,7 +5002,6 @@ Shape1094 = x3d.Shape()
 LineSet1095 = x3d.LineSet()
 LineSet1095.vertexCount = [2]
 Coordinate1096 = x3d.Coordinate()
-Coordinate1096.point = (-0.1926,0.8096,-0.0975,-0.1926,0.7896,-0.0975)
 
 LineSet1095.coord = Coordinate1096
 #from r_carpometacarpal_5 to r_metacarpophalangeal_5
@@ -5170,7 +5023,6 @@ Shape1099 = x3d.Shape()
 LineSet1100 = x3d.LineSet()
 LineSet1100.vertexCount = [2]
 Coordinate1101 = x3d.Coordinate()
-Coordinate1101.point = (-0.1926,0.7896,-0.0975,-0.1902,0.7483,-0.0963)
 
 LineSet1100.coord = Coordinate1101
 #from r_metacarpophalangeal_5 to r_carpal_proximal_interphalangeal_5
@@ -5192,7 +5044,6 @@ Shape1104 = x3d.Shape()
 LineSet1105 = x3d.LineSet()
 LineSet1105.vertexCount = [2]
 Coordinate1106 = x3d.Coordinate()
-Coordinate1106.point = (-0.1902,0.7483,-0.0963,-0.1908,0.7540,-0.0960)
 
 LineSet1105.coord = Coordinate1106
 #from r_carpal_proximal_interphalangeal_5 to r_carpal_distal_interphalangeal_5
@@ -5217,7 +5068,7 @@ Shape1110.USE = "HAnimSiteShape"
 
 HAnimSite1108.children.append(Shape1110)
 
-HAnimJoint1103.imSite.append(HAnimSite1108)
+HAnimJoint1103.HAnimSite.append(HAnimSite1108)
 HAnimJoint1111 = x3d.HAnimJoint()
 HAnimJoint1111.name = "r_carpal_distal_interphalangeal_5"
 HAnimJoint1111.DEF = "hanim_r_carpal_distal_interphalangeal_5"
@@ -6340,6 +6191,6 @@ HAnimHumanoid31.sites.append(HAnimSite1375)
 Scene11.children.append(HAnimHumanoid31)
 
 X3D0.Scene = Scene11
-f = open("././JohnJoint3_RoundTrip.x3d", "w")
+f = open("././JohnJoint3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

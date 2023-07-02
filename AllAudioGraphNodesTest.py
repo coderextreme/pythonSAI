@@ -182,6 +182,6 @@ SpatialSound22.children.append(Analyser23)
 Scene11.children.append(SpatialSound22)
 
 X3D0.Scene = Scene11
-f = open("././AllAudioGraphNodesTest_RoundTrip.x3d", "w")
+f = open("././AllAudioGraphNodesTest_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

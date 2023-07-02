@@ -656,6 +656,6 @@ Anchor120.children.append(Shape121)
 Scene13.children.append(Anchor120)
 
 X3D0.Scene = Scene13
-f = open("././ArtDecoPrototypes_RoundTrip.x3d", "w")
+f = open("././ArtDecoPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

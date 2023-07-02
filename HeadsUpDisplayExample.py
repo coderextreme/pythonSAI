@@ -111,9 +111,7 @@ Scene15.children.append(ExternProtoDeclare16)
 Background21 = x3d.Background()
 Background21.DEF = "SandyShallowBottom"
 Background21.groundAngle = [0.05,1.52,1.56,1.5707]
-Background21.groundColor = [0.2,0.2,0,0.3,0.3,0,0.5,0.5,0.3,0.1,0.3,0.4,0,0.2,0.4]
 Background21.skyAngle = [0.04,0.05,0.1,1.309,1.57]
-Background21.skyColor = [0.8,0.8,0.2,0.8,0.8,0.2,0.1,0.1,0.6,0.1,0.1,0.6,0.1,0.25,0.8,0.6,0.6,0.9]
 
 Scene15.children.append(Background21)
 Viewpoint22 = x3d.Viewpoint()
@@ -161,6 +159,6 @@ Inline31.url = ["../HelloWorld.x3d","http://X3dGraphics.com/examples/X3dForWebAu
 Scene15.children.append(Inline31)
 
 X3D0.Scene = Scene15
-f = open("././HeadsUpDisplayExample_RoundTrip.x3d", "w")
+f = open("././HeadsUpDisplayExample_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

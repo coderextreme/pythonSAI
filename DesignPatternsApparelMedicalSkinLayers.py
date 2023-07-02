@@ -88,7 +88,6 @@ WorldInfo18.title = "HAnimHumanoid skin design patterns for apparel, medical"
 
 Scene17.children.append(WorldInfo18)
 Background19 = x3d.Background()
-Background19.skyColor = [0,0.6,0.6]
 
 Scene17.children.append(Background19)
 Group20 = x3d.Group()
@@ -98,7 +97,7 @@ MetadataString21.name = "HAnimArchitecture"
 MetadataString21.reference = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/Guidelines.html#MultipleHumanoidsPerFile"
 MetadataString21.value = ["E.4 Multiple humanoids per file"]
 
-Group20.value = MetadataString21
+Group20.metadata = MetadataString21
 #==============================
 HAnimHumanoid22 = x3d.HAnimHumanoid()
 HAnimHumanoid22.name = "SimpleSkeleton"
@@ -361,6 +360,6 @@ Anchor64.children.append(Shape70)
 Scene17.children.append(Anchor64)
 
 X3D0.Scene = Scene17
-f = open("././DesignPatternsApparelMedicalSkinLayers_RoundTrip.x3d", "w")
+f = open("././DesignPatternsApparelMedicalSkinLayers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

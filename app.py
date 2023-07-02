@@ -47,6 +47,6 @@ Transform11.translation = [1,2,3]
 Scene5.children.append(Transform11)
 
 X3D0.Scene = Scene5
-f = open("././app_RoundTrip.x3d", "w")
+f = open("././app_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

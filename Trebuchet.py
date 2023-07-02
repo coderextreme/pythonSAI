@@ -92,11 +92,9 @@ Background19.backUrl = ["https://www.web3d.org/WorkingGroups/media/textures/pano
 Background19.bottomUrl = ["https://www.web3d.org/WorkingGroups/media/textures/panoramas/meadow_2_bottom.jpg"]
 Background19.frontUrl = ["https://www.web3d.org/WorkingGroups/media/textures/panoramas/meadow_2_front.jpg"]
 Background19.groundAngle = [1.309,1.570796]
-Background19.groundColor = [0.1,0.1,0,0.4,0.25,0.2,0.6,0.6,0.6]
 Background19.leftUrl = ["https://www.web3d.org/WorkingGroups/media/textures/panoramas/meadow_2_left.jpg"]
 Background19.rightUrl = ["https://www.web3d.org/WorkingGroups/media/textures/panoramas/meadow_2_right.jpg"]
 Background19.skyAngle = [1.309,1.57079]
-Background19.skyColor = [0,0.2,0.7,0,0.5,1,1,1,1]
 Background19.topUrl = ["https://www.web3d.org/WorkingGroups/media/textures/panoramas/meadow_2_top.jpg"]
 
 Scene17.children.append(Background19)
@@ -540,10 +538,8 @@ Transform125.rotation = [0,0,1,1.57]
 Shape126 = x3d.Shape()
 Extrusion127 = x3d.Extrusion()
 Extrusion127.beginCap = False
-Extrusion127.crossSection = [1,-0.38,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,-0.38,-1,-1.1,1,-1.1,1,-0.38]
 Extrusion127.endCap = False
 Extrusion127.solid = False
-Extrusion127.spine = (0.0000,6.0000,0.0000,0.0000,-11.0000,0.0000)
 
 Shape126.geometry = Extrusion127
 Appearance128 = x3d.Appearance()
@@ -608,9 +604,7 @@ Extrusion142 = x3d.Extrusion()
 Extrusion142.beginCap = False
 Extrusion142.convex = False
 Extrusion142.creaseAngle = 1.57
-Extrusion142.crossSection = [0.9,0,0.81,-0.34,0.63,-0.63,0.34,-0.83,0,-0.9,-0.34,-0.81,-0.63,-0.63,-0.81,-0.34,-0.9,0,-0.81,0.34,-0.63,0.63,-0.34,0.81,0,0.9,0.38,0.81,0.63,0.63,0.81,0.34,0.9,0]
 Extrusion142.endCap = False
-Extrusion142.spine = (2.0000,0.0000,0.0000,1.8500,0.0000,0.7700,1.4100,0.0000,1.4100,0.7700,0.0000,1.8500,0.0000,0.0000,2.0000,-0.7700,0.0000,1.8500,-1.4100,0.0000,1.4100,-1.8500,0.0000,0.7700,-2.0000,0.0000,0.0000,-1.8500,0.0000,-0.7700,-1.4100,0.0000,-1.4100,-0.7700,0.0000,-1.8500,0.0000,0.0000,-2.0000,0.7700,0.0000,-1.8500,1.4100,0.0000,-1.4100,1.8500,0.0000,-0.7700,2.0000,0.0000,0.0000)
 
 Shape139.geometry = Extrusion142
 
@@ -694,10 +688,8 @@ Shape161.appearance = Appearance162
 Extrusion163 = x3d.Extrusion()
 Extrusion163.beginCap = False
 Extrusion163.creaseAngle = 0.76
-Extrusion163.crossSection = [0.1,0,0.092,-0.038,0.071,-0.071,0.038,-0.092,0,-0.1,-0.038,-0.092,-0.071,-0.071,-0.092,-0.038,-0.1,0,-0.092,0.038,-0.071,0.071,-0.038,0.092,0,0.1,0.038,0.092,0.071,0.071,0.092,0.038,0.1,0]
 Extrusion163.endCap = False
 Extrusion163.solid = False
-Extrusion163.spine = (-15.2000,1.4000,2.2000,-12.0000,-0.8000,2.2000)
 
 Shape161.geometry = Extrusion163
 
@@ -752,10 +744,8 @@ Shape174.appearance = Appearance175
 Extrusion176 = x3d.Extrusion()
 Extrusion176.beginCap = False
 Extrusion176.creaseAngle = 0.76
-Extrusion176.crossSection = [0.1,0,0.092,-0.038,0.071,-0.071,0.038,-0.092,0,-0.1,-0.038,-0.092,-0.071,-0.071,-0.092,-0.038,-0.1,0,-0.092,0.038,-0.071,0.071,-0.038,0.092,0,0.1,0.038,0.092,0.071,0.071,0.092,0.038,0.1,0]
 Extrusion176.endCap = False
 Extrusion176.solid = False
-Extrusion176.spine = (-33.0000,0.9000,2.5000,-18.5000,1.9000,2.5500)
 
 Shape174.geometry = Extrusion176
 
@@ -768,10 +758,8 @@ Shape177.appearance = Appearance178
 Extrusion179 = x3d.Extrusion()
 Extrusion179.beginCap = False
 Extrusion179.creaseAngle = 0.76
-Extrusion179.crossSection = [0.1,0,0.092,-0.038,0.071,-0.071,0.038,-0.092,0,-0.1,-0.038,-0.092,-0.071,-0.071,-0.092,-0.038,-0.1,0,-0.092,0.038,-0.071,0.071,-0.038,0.092,0,0.1,0.038,0.092,0.071,0.071,0.092,0.038,0.1,0]
 Extrusion179.endCap = False
 Extrusion179.solid = False
-Extrusion179.spine = (-35.7000,-0.8000,2.5000,-18.8000,-0.8000,2.5500)
 
 Shape177.geometry = Extrusion179
 
@@ -804,8 +792,6 @@ Appearance186.material = Material187
 
 Shape185.appearance = Appearance186
 Extrusion188 = x3d.Extrusion()
-Extrusion188.crossSection = [0,0,0,5,0.5,7,1,8,2,9,3,11,3.5,11.2,4,11,5,9,6,8,6.5,7,6.7,5,6.7,0,0,0]
-Extrusion188.spine = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000)
 
 Shape185.geometry = Extrusion188
 
@@ -875,10 +861,8 @@ Shape204 = x3d.Shape()
 Extrusion205 = x3d.Extrusion()
 Extrusion205.beginCap = False
 Extrusion205.creaseAngle = 0.785
-Extrusion205.crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0]
 Extrusion205.endCap = False
 Extrusion205.solid = False
-Extrusion205.spine = (0.0000,-1.0000,0.0000,0.0000,1.0000,0.0000)
 
 Shape204.geometry = Extrusion205
 Appearance206 = x3d.Appearance()
@@ -1634,31 +1618,26 @@ Scene17.children.append(TimeSensor352)
 PositionInterpolator353 = x3d.PositionInterpolator()
 PositionInterpolator353.DEF = "verticalweightpath"
 PositionInterpolator353.key = [0,0.1,0.2,0.2,0.3,0.9]
-PositionInterpolator353.keyValue = (1.4000,1.6000,0.0000,1.0000,-8.0000,0.0000,-3.5000,-12.0000,0.0000,-3.5000,-12.0000,0.0000,1.2000,-8.0000,0.0000,1.4000,1.6000,0.0000)
 
 Scene17.children.append(PositionInterpolator353)
 OrientationInterpolator354 = x3d.OrientationInterpolator()
 OrientationInterpolator354.DEF = "flingerangles"
 OrientationInterpolator354.key = [0,0.1,0.2,0.2,0.3,0.9]
-OrientationInterpolator354.keyValue = (0.0000,0.0000,1.0000,0.8200,0.0000,0.0000,1.0000,-0.7700,0.0000,0.0000,1.0000,-1.5700,0.0000,0.0000,1.0000,-1.5700,0.0000,0.0000,1.0000,-0.7700,0.0000,0.0000,1.0000,0.8200)
 
 Scene17.children.append(OrientationInterpolator354)
 PositionInterpolator355 = x3d.PositionInterpolator()
 PositionInterpolator355.DEF = "pinpath"
 PositionInterpolator355.key = [0,0.01,0.95,1]
-PositionInterpolator355.keyValue = (0.0000,0.0000,-3.0000,0.0000,0.0000,-10.0000,0.0000,0.0000,-10.0000,0.0000,0.0000,-3.0000)
 
 Scene17.children.append(PositionInterpolator355)
 OrientationInterpolator356 = x3d.OrientationInterpolator()
 OrientationInterpolator356.DEF = "RnSAngels"
 OrientationInterpolator356.key = [0,0.7,1]
-OrientationInterpolator356.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,-3.1400,0.0000,0.0000,1.0000,0.0000)
 
 Scene17.children.append(OrientationInterpolator356)
 PositionInterpolator357 = x3d.PositionInterpolator()
 PositionInterpolator357.DEF = "invisiable"
 PositionInterpolator357.key = [0,0.2,0.98,0.99]
-PositionInterpolator357.keyValue = (1.0000,1.0000,1.0000,0.0100,0.0100,0.0100,0.0100,0.0100,0.0100,1.0000,1.0000,1.0000)
 
 Scene17.children.append(PositionInterpolator357)
 ROUTE358 = x3d.ROUTE()
@@ -1845,6 +1824,6 @@ ROUTE383.toNode = "Pin"
 Scene17.children.append(ROUTE383)
 
 X3D0.Scene = Scene17
-f = open("././Trebuchet_RoundTrip.x3d", "w")
+f = open("././Trebuchet_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

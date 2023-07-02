@@ -310,7 +310,6 @@ Scene17.children.append(TimeSensor69)
 OrientationInterpolator70 = x3d.OrientationInterpolator()
 OrientationInterpolator70.DEF = "Spinner"
 OrientationInterpolator70.key = [0,0.5,1]
-OrientationInterpolator70.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,3.1416,0.0000,1.0000,0.0000,6.2832)
 
 Scene17.children.append(OrientationInterpolator70)
 ROUTE71 = x3d.ROUTE()
@@ -341,7 +340,6 @@ Scene17.children.append(IMPORT74)
 PositionInterpolator75 = x3d.PositionInterpolator()
 PositionInterpolator75.DEF = "StayInPlace"
 PositionInterpolator75.key = [0,1]
-PositionInterpolator75.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Scene17.children.append(PositionInterpolator75)
 ROUTE76 = x3d.ROUTE()
@@ -360,6 +358,6 @@ ROUTE77.toNode = "someInlineRoot"
 Scene17.children.append(ROUTE77)
 
 X3D0.Scene = Scene17
-f = open("././X3dHeaderPrototypeSyntaxExamples_RoundTrip.x3d", "w")
+f = open("././X3dHeaderPrototypeSyntaxExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

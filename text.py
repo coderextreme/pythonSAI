@@ -104,6 +104,6 @@ Transform9.children.append(Script25)
 Scene8.children.append(Transform9)
 
 X3D0.Scene = Scene8
-f = open("././text_RoundTrip.x3d", "w")
+f = open("././text_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

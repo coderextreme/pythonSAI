@@ -349,7 +349,6 @@ Transform56.DEF = "Close_travel"
 PositionInterpolator57 = x3d.PositionInterpolator()
 PositionInterpolator57.DEF = "Close_Mover"
 PositionInterpolator57.key = [0,0.25,0.5,0.75,1]
-PositionInterpolator57.keyValue = (0.0000,2.5000,0.0000,0.0000,0.0000,0.0000,0.0000,-2.5000,0.0000,0.0000,0.0000,0.0000,0.0000,2.5000,0.0000)
 
 Transform56.children.append(PositionInterpolator57)
 TimeSensor58 = x3d.TimeSensor()
@@ -2407,6 +2406,6 @@ ROUTE556.toNode = "Close_travel"
 Scene13.children.append(ROUTE556)
 
 X3D0.Scene = Scene13
-f = open("././ArtDecoExamples_RoundTrip.x3d", "w")
+f = open("././ArtDecoExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

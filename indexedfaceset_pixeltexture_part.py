@@ -163,23 +163,20 @@ IndexedFaceSet34.coordIndex = [0,1,3,2,-1,4,5,7,6,-1,6,7,1,0,-1,2,3,5,4,-1,6,0,2
 IndexedFaceSet34.creaseAngle = 0.5
 IndexedFaceSet34.texCoordIndex = [0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1,0,1,3,2,-1]
 Color35 = x3d.Color()
-Color35.color = [0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0]
 
 IndexedFaceSet34.color = Color35
 Coordinate36 = x3d.Coordinate()
-Coordinate36.point = (-2.0000,1.0000,1.0000,-2.0000,-1.0000,1.0000,2.0000,1.0000,1.0000,2.0000,-1.0000,1.0000,2.0000,1.0000,-1.0000,2.0000,-1.0000,-1.0000,-2.0000,1.0000,-1.0000,-2.0000,-1.0000,-1.0000)
 
 IndexedFaceSet34.coord = Coordinate36
 TextureCoordinate37 = x3d.TextureCoordinate()
-TextureCoordinate37.point = [0.5,1,0.5,0.5,1,1,1,0.5]
 
-IndexedFaceSet34.texCoord.append(TextureCoordinate37)
+IndexedFaceSet34.texCoord = TextureCoordinate37
 
 Shape30.geometry = IndexedFaceSet34
 
 Scene22.children.append(Shape30)
 
 X3D0.Scene = Scene22
-f = open("././indexedfaceset_pixeltexture_part_RoundTrip.x3d", "w")
+f = open("././indexedfaceset_pixeltexture_part_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

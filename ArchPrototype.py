@@ -484,6 +484,6 @@ Inline81.url = ["../data/CoordinateAxes.x3d"]
 Scene13.children.append(Inline81)
 
 X3D0.Scene = Scene13
-f = open("././ArchPrototype_RoundTrip.x3d", "w")
+f = open("././ArchPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

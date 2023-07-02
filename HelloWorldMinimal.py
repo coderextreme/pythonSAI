@@ -98,6 +98,6 @@ Shape19.geometry = Text20
 Scene17.children.append(Shape19)
 
 X3D0.Scene = Scene17
-f = open("././HelloWorldMinimal_RoundTrip.x3d", "w")
+f = open("././HelloWorldMinimal_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -58,11 +58,9 @@ IndexedLineSet13.colorIndex = [0,1,2]
 IndexedLineSet13.colorPerVertex = False
 IndexedLineSet13.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate14 = x3d.Coordinate()
-Coordinate14.point = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000)
 
 IndexedLineSet13.coord = Coordinate14
 Color15 = x3d.Color()
-Color15.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet13.color = Color15
 
@@ -124,11 +122,9 @@ LineSet30 = x3d.LineSet()
 LineSet30.vertexCount = [2]
 ColorRGBA31 = x3d.ColorRGBA()
 ColorRGBA31.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA31.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet30.color = ColorRGBA31
 Coordinate32 = x3d.Coordinate()
-Coordinate32.point = (-0.0500,0.0000,0.0000,0.0500,0.0000,0.0000)
 
 LineSet30.coord = Coordinate32
 
@@ -148,11 +144,9 @@ IndexedFaceSet35.solid = False
 IndexedFaceSet35.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 ColorRGBA36 = x3d.ColorRGBA()
 ColorRGBA36.DEF = "HAnimSiteColorRGBA"
-ColorRGBA36.color = [1,1,0,1,1,1,0,0.1]
 
 IndexedFaceSet35.color = ColorRGBA36
 Coordinate37 = x3d.Coordinate()
-Coordinate37.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet35.coord = Coordinate37
 
@@ -183,6 +177,6 @@ Viewpoint41.description = "default"
 Scene10.children.append(Viewpoint41)
 
 X3D0.Scene = Scene10
-f = open("././skeleton5_RoundTrip.x3d", "w")
+f = open("././skeleton5_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

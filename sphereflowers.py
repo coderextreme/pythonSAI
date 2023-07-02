@@ -140,6 +140,6 @@ Group10.children.append(ROUTE29)
 Scene7.children.append(Group10)
 
 X3D0.Scene = Scene7
-f = open("././sphereflowers_RoundTrip.x3d", "w")
+f = open("././sphereflowers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

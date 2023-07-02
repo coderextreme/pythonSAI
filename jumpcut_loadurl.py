@@ -84,8 +84,6 @@ WorldInfo17.title = "jumpcut_loadurl.x3d"
 Scene16.children.append(WorldInfo17)
 Background18 = x3d.Background()
 Background18.groundAngle = [1.57]
-Background18.groundColor = [0,0.5,0,0,0.5,0]
-Background18.skyColor = [0,0,1]
 
 Scene16.children.append(Background18)
 NavigationInfo19 = x3d.NavigationInfo()
@@ -159,6 +157,6 @@ ROUTE32.toNode = "MYSCRIPT"
 Scene16.children.append(ROUTE32)
 
 X3D0.Scene = Scene16
-f = open("././jumpcut_loadurl_RoundTrip.x3d", "w")
+f = open("././jumpcut_loadurl_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -222,7 +222,6 @@ IndexedLineSet46 = x3d.IndexedLineSet()
 IndexedLineSet46.coordIndex = [0,1,2,3,4,0]
 #Coordinate 3-tuple point count: 6
 Coordinate47 = x3d.Coordinate()
-Coordinate47.point = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
 IndexedLineSet46.coord = Coordinate47
 
@@ -232,7 +231,6 @@ Scene29.children.append(Shape43)
 PositionInterpolator48 = x3d.PositionInterpolator()
 PositionInterpolator48.DEF = "BoxPathAnimator"
 PositionInterpolator48.key = [0,0.125,0.375,0.625,0.875,1]
-PositionInterpolator48.keyValue = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
 Scene29.children.append(PositionInterpolator48)
 TimeSensor49 = x3d.TimeSensor()
@@ -276,12 +274,16 @@ MetadataString58 = x3d.MetadataString()
 MetadataString58.name = "quotesTestC"
 MetadataString58.value = ["MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""]
 
-MetadataSet57.value = MetadataString58
+if MetadataSet57.value is None:
+    MetadataSet57.value = []
+MetadataSet57.value.append(MetadataString58)
 MetadataString59 = x3d.MetadataString()
 MetadataString59.name = "extraChildTest"
 MetadataString59.value = ["checks MetadataSetObject addValue() method"]
 
-MetadataSet57.value = MetadataString59
+if MetadataSet57.value is None:
+    MetadataSet57.value = []
+MetadataSet57.value.append(MetadataString59)
 
 Text56.metadata = MetadataSet57
 FontStyle60 = x3d.FontStyle()
@@ -317,7 +319,6 @@ Scene29.children.append(Transform52)
 OrientationInterpolator64 = x3d.OrientationInterpolator()
 OrientationInterpolator64.DEF = "SpinInterpolator"
 OrientationInterpolator64.key = [0,0.5,1]
-OrientationInterpolator64.keyValue = (0.0000,1.0000,0.0000,4.7124,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.5708)
 
 Scene29.children.append(OrientationInterpolator64)
 TimeSensor65 = x3d.TimeSensor()
@@ -373,7 +374,6 @@ Group68.children.append(Script70)
 ColorInterpolator73 = x3d.ColorInterpolator()
 ColorInterpolator73.DEF = "ColorAnimator"
 ColorInterpolator73.key = [0,0.5,1]
-ColorInterpolator73.keyValue = [0.9411765,1,1,0.29411766,0,0.50980395,0.9411765,1,1]
 #AZURE to INDIGO and back again
 
 Group68.children.append(ColorInterpolator73)
@@ -817,6 +817,6 @@ Shape144.geometry = Extrusion147
 Scene29.children.append(Shape144)
 
 X3D0.Scene = Scene29
-f = open("././Java_RoundTrip.x3d", "w")
+f = open("././Java_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

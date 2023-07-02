@@ -155,27 +155,37 @@ MetadataString32 = x3d.MetadataString()
 MetadataString32.name = "authorEmail"
 MetadataString32.value = ["beitler@graphics.cis.upenn.edu beitler@acm.org"]
 
-MetadataSet31.value = MetadataString32
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString32)
 MetadataString33 = x3d.MetadataString()
 MetadataString33.name = "authorName"
 MetadataString33.value = ["Matthew T. Beitler"]
 
-MetadataSet31.value = MetadataString33
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString33)
 MetadataString34 = x3d.MetadataString()
 MetadataString34.name = "copyright"
 MetadataString34.value = ["Copyright 1999 Matthew T. Beitler"]
 
-MetadataSet31.value = MetadataString34
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString34)
 MetadataString35 = x3d.MetadataString()
 MetadataString35.name = "humanoidVersion"
 MetadataString35.value = ["JointCenters 1.1 LOA1"]
 
-MetadataSet31.value = MetadataString35
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString35)
 MetadataString36 = x3d.MetadataString()
 MetadataString36.name = "usageRestrictions"
 MetadataString36.value = ["PERMISSION TO FULLY USE THIS SCENE GRAPH IS GRANTED PROVIDED THIS COPYRIGHT INFORMATION AND DOCUMENTATION OF THE ORIGINAL AUTHOR IS INCLUDED. This humanoid scene graph is provided _as-is_ and without warranty of any kind express implied or otherwise including without limitation any warranty of merchantability or fitness for a particular purpose."]
 
-MetadataSet31.value = MetadataString36
+if MetadataSet31.value is None:
+    MetadataSet31.value = []
+MetadataSet31.value.append(MetadataString36)
 
 HAnimHumanoid30.metadata = MetadataSet31
 HAnimJoint37 = x3d.HAnimJoint()
@@ -202,7 +212,6 @@ IndexedFaceSet42.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,
 IndexedFaceSet42.creaseAngle = 0.5
 Coordinate43 = x3d.Coordinate()
 Coordinate43.DEF = "points"
-Coordinate43.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet42.coord = Coordinate43
 
@@ -1306,6 +1315,6 @@ HAnimHumanoid30.sites.append(HAnimSite259)
 Scene26.children.append(HAnimHumanoid30)
 
 X3D0.Scene = Scene26
-f = open("././DiamondManLOA_1_RoundTrip.x3d", "w")
+f = open("././DiamondManLOA_1_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

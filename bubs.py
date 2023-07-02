@@ -210,6 +210,6 @@ ProtoInstance32.DEF = "bubbleD"
 Scene8.children.append(ProtoInstance32)
 
 X3D0.Scene = Scene8
-f = open("././bubs_RoundTrip.x3d", "w")
+f = open("././bubs_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

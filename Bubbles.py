@@ -65,61 +65,51 @@ Group13.children.append(TimeSensor14)
 PositionInterpolator15 = x3d.PositionInterpolator()
 PositionInterpolator15.DEF = "BubblePath1"
 PositionInterpolator15.key = [0,0.5,0.8,0.9,1]
-PositionInterpolator15.keyValue = (0.0000,0.0000,0.0000,0.7500,0.7500,0.7500,0.8600,0.8600,0.8600,0.9900,0.9980,0.9876,1.2720,1.9044,0.9509)
 
 Group13.children.append(PositionInterpolator15)
 PositionInterpolator16 = x3d.PositionInterpolator()
 PositionInterpolator16.DEF = "BubblePath2"
 PositionInterpolator16.key = [0,0.3,0.64,0.85,1]
-PositionInterpolator16.keyValue = (0.1000,0.1000,0.1000,0.2000,0.4000,0.2500,0.3000,0.5000,0.4600,0.7500,0.5000,0.5750,0.0385,1.9890,1.0984)
 
 Group13.children.append(PositionInterpolator16)
 PositionInterpolator17 = x3d.PositionInterpolator()
 PositionInterpolator17.DEF = "BubblePath3"
 PositionInterpolator17.key = [0,0.1,0.45,0.7,1]
-PositionInterpolator17.keyValue = (0.0100,0.0100,0.0100,0.2500,0.3500,0.0045,0.5500,0.6000,0.0055,0.6600,0.6650,0.0066,1.5550,1.0904,0.0057)
 
 Group13.children.append(PositionInterpolator17)
 PositionInterpolator18 = x3d.PositionInterpolator()
 PositionInterpolator18.DEF = "BubblePath4"
 PositionInterpolator18.key = [0,0.5,0.6,0.8,1]
-PositionInterpolator18.keyValue = (0.0000,0.0000,0.0000,0.5000,0.5000,0.0050,0.6000,0.6000,0.0060,0.7500,0.7500,0.0075,1.9486,1.3983,0.0090)
 
 Group13.children.append(PositionInterpolator18)
 PositionInterpolator19 = x3d.PositionInterpolator()
 PositionInterpolator19.DEF = "BubblePath5"
 PositionInterpolator19.key = [0,0.25,0.35,0.65,1]
-PositionInterpolator19.keyValue = (0.0000,0.0000,0.0000,0.5000,0.5000,0.0050,0.6000,0.6000,0.0060,0.7500,0.7500,0.0075,1.8444,1.2222,0.1000)
 
 Group13.children.append(PositionInterpolator19)
 PositionInterpolator20 = x3d.PositionInterpolator()
 PositionInterpolator20.DEF = "BubblePath6"
 PositionInterpolator20.key = [0,0.15,0.22235,0.55565,1]
-PositionInterpolator20.keyValue = (0.0000,0.0000,0.0000,0.2350,0.3455,0.0055,0.3560,0.6760,0.0046,0.5675,0.7500,0.0075,1.0980,1.0343,0.1400)
 
 Group13.children.append(PositionInterpolator20)
 PositionInterpolator21 = x3d.PositionInterpolator()
 PositionInterpolator21.DEF = "BubblePath7"
 PositionInterpolator21.key = [0,0.2425,0.4535,0.6775,1]
-PositionInterpolator21.keyValue = (0.0000,0.0000,0.0000,0.1235,0.2225,0.0034,0.7860,0.4560,0.0067,0.7456,0.7335,0.0023,0.0879,1.0220,0.1200)
 
 Group13.children.append(PositionInterpolator21)
 PositionInterpolator22 = x3d.PositionInterpolator()
 PositionInterpolator22.DEF = "BubblePath8"
 PositionInterpolator22.key = [0,0.1125,0.5535,0.97865,1]
-PositionInterpolator22.keyValue = (0.0000,0.0000,0.0000,0.1235,0.0500,0.0013,0.5666,0.4346,0.0056,0.8975,0.3458,0.0099,1.8787,1.6860,0.8600)
 
 Group13.children.append(PositionInterpolator22)
 PositionInterpolator23 = x3d.PositionInterpolator()
 PositionInterpolator23.DEF = "BubblePath9"
 PositionInterpolator23.key = [0,0.0025,0.035,0.65,1]
-PositionInterpolator23.keyValue = (0.0000,0.0000,0.0000,0.5220,0.5445,0.0057,0.6543,0.2260,0.0055,0.4557,0.4375,0.0067,1.8787,2.0000,0.1545)
 
 Group13.children.append(PositionInterpolator23)
 PositionInterpolator24 = x3d.PositionInterpolator()
 PositionInterpolator24.DEF = "BubblePath10"
 PositionInterpolator24.key = [0,0.00025,0.035,0.6895,1]
-PositionInterpolator24.keyValue = (0.0000,0.0000,0.0000,0.8765,0.4450,0.0034,0.3336,0.4446,0.0056,0.7650,0.7500,0.0075,1.0000,1.0000,0.1000)
 
 Group13.children.append(PositionInterpolator24)
 Transform25 = x3d.Transform()
@@ -460,11 +450,10 @@ Transform12.children.append(Group13)
 
 Scene10.children.append(Transform12)
 Background96 = x3d.Background()
-Background96.skyColor = [0,0,0.6]
 
 Scene10.children.append(Background96)
 
 X3D0.Scene = Scene10
-f = open("././Bubbles_RoundTrip.x3d", "w")
+f = open("././Bubbles_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

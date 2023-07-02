@@ -89,7 +89,6 @@ Viewpoint18.description = "Hello MFString syntax"
 
 Scene17.children.append(Viewpoint18)
 Background19 = x3d.Background()
-Background19.skyColor = [0.6,1,0.8]
 
 Scene17.children.append(Background19)
 Shape20 = x3d.Shape()
@@ -115,6 +114,6 @@ Shape20.appearance = Appearance23
 Scene17.children.append(Shape20)
 
 X3D0.Scene = Scene17
-f = open("././StringArrayEncodingExamples_RoundTrip.x3d", "w")
+f = open("././StringArrayEncodingExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -39,7 +39,6 @@ Viewpoint8.description = "Only Viewpoint"
 
 Scene7.children.append(Viewpoint8)
 Background9 = x3d.Background()
-Background9.skyColor = [0.4,0.4,0.4]
 
 Scene7.children.append(Background9)
 ProtoDeclare10 = x3d.ProtoDeclare()
@@ -82,7 +81,6 @@ Transform14.children.append(Shape17)
 PositionInterpolator21 = x3d.PositionInterpolator()
 PositionInterpolator21.DEF = "PI1"
 PositionInterpolator21.key = [0,1]
-PositionInterpolator21.keyValue = (0.0000,0.0000,0.0000,0.0000,5.0000,0.0000)
 
 Transform14.children.append(PositionInterpolator21)
 Script22 = x3d.Script()
@@ -111,7 +109,6 @@ field26 = x3d.field()
 field26.name = "keyValue"
 field26.accessType = "inputOutput"
 field26.type = "MFVec3f"
-field26.value = (0.0000,0.0000,0.0000,0.0000,5.0000,0.0000)
 
 Script22.field.append(field26)
 
@@ -431,6 +428,6 @@ ROUTE78.toField = "set_endpoint"
 Scene7.children.append(ROUTE78)
 
 X3D0.Scene = Scene7
-f = open("././arc1_RoundTrip.x3d", "w")
+f = open("././arc1_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

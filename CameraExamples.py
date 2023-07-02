@@ -1814,7 +1814,6 @@ Shape356.DEF = "SightLine"
 IndexedLineSet357 = x3d.IndexedLineSet()
 IndexedLineSet357.coordIndex = [0,1]
 Coordinate358 = x3d.Coordinate()
-Coordinate358.point = (0.0000,0.0000,0.0000,0.0000,0.0000,-100.0000)
 
 IndexedLineSet357.coord = Coordinate358
 
@@ -1960,7 +1959,6 @@ Transform348.children.append(ROUTE381)
 Scene21.children.append(Transform348)
 #=============== add checkerboard, axes and other things to look at while animating ==============
 Background382 = x3d.Background()
-Background382.skyColor = [0.282353,0.380392,0.470588]
 
 Scene21.children.append(Background382)
 Transform383 = x3d.Transform()
@@ -1983,11 +1981,9 @@ IndexedFaceSet387.coordIndex = [0,8,9,1,-1,1,9,10,2,-1,2,10,11,3,-1,3,11,12,4,-1
 IndexedFaceSet387.normalPerVertex = False
 IndexedFaceSet387.solid = False
 Coordinate388 = x3d.Coordinate()
-Coordinate388.point = (-5.2500,5.2500,0.0000,-3.7500,5.2500,0.0000,-2.2500,5.2500,0.0000,-0.7500,5.2500,0.0000,0.7500,5.2500,0.0000,2.2500,5.2500,0.0000,3.7500,5.2500,0.0000,5.2500,5.2500,0.0000,-5.2500,3.7500,0.0000,-3.7500,3.7500,0.0000,-2.2500,3.7500,0.0000,-0.7500,3.7500,0.0000,0.7500,3.7500,0.0000,2.2500,3.7500,0.0000,3.7500,3.7500,0.0000,5.2500,3.7500,0.0000,-5.2500,2.2500,0.0000,-3.7500,2.2500,0.0000,-2.2500,2.2500,0.0000,-0.7500,2.2500,0.0000,0.7500,2.2500,0.0000,2.2500,2.2500,0.0000,3.7500,2.2500,0.0000,5.2500,2.2500,0.0000,-5.2500,0.7500,0.0000,-3.7500,0.7500,0.0000,-2.2500,0.7500,0.0000,-0.7500,0.7500,0.0000,0.7500,0.7500,0.0000,2.2500,0.7500,0.0000,3.7500,0.7500,0.0000,5.2500,0.7500,0.0000,-5.2500,-0.7500,0.0000,-3.7500,-0.7500,0.0000,-2.2500,-0.7500,0.0000,-0.7500,-0.7500,0.0000,0.7500,-0.7500,0.0000,2.2500,-0.7500,0.0000,3.7500,-0.7500,0.0000,5.2500,-0.7500,0.0000,-5.2500,-2.2500,0.0000,-3.7500,-2.2500,0.0000,-2.2500,-2.2500,0.0000,-0.7500,-2.2500,0.0000,0.7500,-2.2500,0.0000,2.2500,-2.2500,0.0000,3.7500,-2.2500,0.0000,5.2500,-2.2500,0.0000,-5.2500,-3.7500,0.0000,-3.7500,-3.7500,0.0000,-2.2500,-3.7500,0.0000,-0.7500,-3.7500,0.0000,0.7500,-3.7500,0.0000,2.2500,-3.7500,0.0000,3.7500,-3.7500,0.0000,5.2500,-3.7500,0.0000,-5.2500,-5.2500,0.0000,-3.7500,-5.2500,0.0000,-2.2500,-5.2500,0.0000,-0.7500,-5.2500,0.0000,0.7500,-5.2500,0.0000,2.2500,-5.2500,0.0000,3.7500,-5.2500,0.0000,5.2500,-5.2500,0.0000)
 
 IndexedFaceSet387.coord = Coordinate388
 Color389 = x3d.Color()
-Color389.color = [0.435294,0.741176,0,0,0.560784,0.580392]
 
 IndexedFaceSet387.color = Color389
 
@@ -2011,7 +2007,6 @@ Transform392.DEF = "MovingBoxTransform"
 PositionInterpolator393 = x3d.PositionInterpolator()
 PositionInterpolator393.DEF = "BoxPath"
 PositionInterpolator393.key = [0,0.25,0.5,0.75,1]
-PositionInterpolator393.keyValue = (-5.0000,1.0000,5.0000,45.0000,1.0000,5.0000,45.0000,1.0000,-45.0000,-5.0000,1.0000,-45.0000,-5.0000,1.0000,5.0000)
 
 Transform392.children.append(PositionInterpolator393)
 TimeSensor394 = x3d.TimeSensor()
@@ -2188,6 +2183,6 @@ Anchor418.children.append(Transform419)
 Scene21.children.append(Anchor418)
 
 X3D0.Scene = Scene21
-f = open("././CameraExamples_RoundTrip.x3d", "w")
+f = open("././CameraExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

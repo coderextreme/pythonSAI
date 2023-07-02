@@ -289,6 +289,6 @@ Collision16.proxy = Transform51
 Scene14.children.append(Collision16)
 
 X3D0.Scene = Scene14
-f = open("././CoordinateAxes_RoundTrip.x3d", "w")
+f = open("././CoordinateAxes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -100,13 +100,11 @@ Scene14.children.append(TimeSensor19)
 PositionInterpolator20 = x3d.PositionInterpolator()
 PositionInterpolator20.DEF = "Camera001-POS-INTERP"
 PositionInterpolator20.key = [0,0.25,0.5,0.75,1]
-PositionInterpolator20.keyValue = (0.0000,2000.0000,3500.0000,0.0000,2000.0000,0.0000,0.0000,2000.0000,-3500.0000,0.0000,2000.0000,0.0000,0.0000,2000.0000,3500.0000)
 
 Scene14.children.append(PositionInterpolator20)
 OrientationInterpolator21 = x3d.OrientationInterpolator()
 OrientationInterpolator21.DEF = "Camera001-ROT-INTERP"
 OrientationInterpolator21.key = [0,0.25,0.5,0.75,1]
-OrientationInterpolator21.keyValue = (1.0000,0.0000,0.0000,-0.5236,1.0000,0.0036,0.0027,-1.3090,0.0000,-0.9659,-0.2588,-3.1416,0.0023,-0.7934,-0.6088,-3.1356,1.0000,-0.0000,0.0000,-0.5236)
 
 Scene14.children.append(OrientationInterpolator21)
 ROUTE22 = x3d.ROUTE()
@@ -304,6 +302,6 @@ StreamAudioDestination56.children.append(SpatialSound60)
 Scene14.children.append(StreamAudioDestination56)
 
 X3D0.Scene = Scene14
-f = open("././SpatialAudioCameraAnimation_RoundTrip.x3d", "w")
+f = open("././SpatialAudioCameraAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

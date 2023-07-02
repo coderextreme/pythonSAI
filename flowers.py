@@ -106,7 +106,7 @@ ComposedCubeMapTexture23.bottomTexture = ImageTexture25
 ImageTexture26 = x3d.ImageTexture()
 ImageTexture26.url = ["../resources/images/all_probes/stpeters_cross/stpeters_front.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_front.png"]
 
-ComposedCubeMapTexture23.frontTexture.append(ImageTexture26)
+ComposedCubeMapTexture23.frontTexture = ImageTexture26
 ImageTexture27 = x3d.ImageTexture()
 ImageTexture27.url = ["../resources/images/all_probes/stpeters_cross/stpeters_left.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_left.png"]
 
@@ -114,11 +114,11 @@ ComposedCubeMapTexture23.leftTexture = ImageTexture27
 ImageTexture28 = x3d.ImageTexture()
 ImageTexture28.url = ["../resources/images/all_probes/stpeters_cross/stpeters_right.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_right.png"]
 
-ComposedCubeMapTexture23.rightTexture.append(ImageTexture28)
+ComposedCubeMapTexture23.rightTexture = ImageTexture28
 ImageTexture29 = x3d.ImageTexture()
 ImageTexture29.url = ["../resources/images/all_probes/stpeters_cross/stpeters_top.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_top.png"]
 
-ComposedCubeMapTexture23.topTexture.append(ImageTexture29)
+ComposedCubeMapTexture23.topTexture = ImageTexture29
 
 Appearance21.texture = ComposedCubeMapTexture23
 ComposedShader30 = x3d.ComposedShader()
@@ -574,6 +574,6 @@ ProtoInstance87.name = "flower"
 Scene14.children.append(ProtoInstance87)
 
 X3D0.Scene = Scene14
-f = open("././flowers_RoundTrip.x3d", "w")
+f = open("././flowers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

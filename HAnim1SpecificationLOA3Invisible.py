@@ -144,7 +144,6 @@ head1.children.append(meta28)
 X3D0.head = head1
 Scene29 = x3d.Scene()
 Background30 = x3d.Background()
-Background30.skyColor = [0.3,0.3,0.3]
 
 Scene29.children.append(Background30)
 NavigationInfo31 = x3d.NavigationInfo()
@@ -3374,6 +3373,6 @@ HAnimHumanoid43.sites.append(HAnimSite641)
 Scene29.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene29
-f = open("././HAnim1SpecificationLOA3Invisible_RoundTrip.x3d", "w")
+f = open("././HAnim1SpecificationLOA3Invisible_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

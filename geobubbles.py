@@ -82,7 +82,6 @@ Scene8.children.append(TimeSensor16)
 GeoPositionInterpolator17 = x3d.GeoPositionInterpolator()
 GeoPositionInterpolator17.DEF = "TourPosition"
 GeoPositionInterpolator17.key = [0,1]
-GeoPositionInterpolator17.keyValue = [0.0015708,0,4,0,0.0015708,4]
 
 Scene8.children.append(GeoPositionInterpolator17)
 Script18 = x3d.Script()
@@ -104,14 +103,12 @@ field21 = x3d.field()
 field21.name = "positions"
 field21.accessType = "inputOutput"
 field21.type = "MFVec3d"
-field21.value = [0.0015708,0,4,0,0.0015708,4]
 
 Script18.field.append(field21)
 field22 = x3d.field()
 field22.name = "position"
 field22.accessType = "inputOutput"
 field22.type = "MFVec3d"
-field22.value = [0.0015708,0,4,0,0.0015708,4]
 
 Script18.field.append(field22)
 
@@ -164,6 +161,6 @@ ROUTE26.toField = "set_position"
 Scene8.children.append(ROUTE26)
 
 X3D0.Scene = Scene8
-f = open("././geobubbles_RoundTrip.x3d", "w")
+f = open("././geobubbles_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -76,7 +76,6 @@ NavigationInfo16 = x3d.NavigationInfo()
 
 Scene14.children.append(NavigationInfo16)
 Background17 = x3d.Background()
-Background17.skyColor = [0.2,0.2,0.2]
 
 Scene14.children.append(Background17)
 Viewpoint18 = x3d.Viewpoint()
@@ -312,6 +311,6 @@ StreamAudioDestination46.children.append(DynamicsCompressor47)
 Scene14.children.append(StreamAudioDestination46)
 
 X3D0.Scene = Scene14
-f = open("././Filters_RoundTrip.x3d", "w")
+f = open("././Filters_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

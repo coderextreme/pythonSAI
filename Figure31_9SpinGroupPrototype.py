@@ -146,7 +146,6 @@ ProtoBody21.children.append(TimeSensor25)
 OrientationInterpolator31 = x3d.OrientationInterpolator()
 OrientationInterpolator31.DEF = "Spinner"
 OrientationInterpolator31.key = [0,0.5,1]
-OrientationInterpolator31.keyValue = (0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,3.1400,0.0000,1.0000,0.0000,6.2800)
 
 ProtoBody21.children.append(OrientationInterpolator31)
 ROUTE32 = x3d.ROUTE()
@@ -272,6 +271,6 @@ ROUTE56.toNode = "SecondSpinGroup"
 Scene12.children.append(ROUTE56)
 
 X3D0.Scene = Scene12
-f = open("././Figure31_9SpinGroupPrototype_RoundTrip.x3d", "w")
+f = open("././Figure31_9SpinGroupPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -5283,6 +5283,6 @@ NavigationInfo1053.speed = 1.5
 Scene4.children.append(NavigationInfo1053)
 
 X3D0.Scene = Scene4
-f = open("././foo_RoundTrip.x3d", "w")
+f = open("././foo_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

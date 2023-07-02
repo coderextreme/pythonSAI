@@ -155,6 +155,6 @@ Scene14.children.append(Group16)
 #Group complete
 
 X3D0.Scene = Scene14
-f = open("././HelloWorldCommented_RoundTrip.x3d", "w")
+f = open("././HelloWorldCommented_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

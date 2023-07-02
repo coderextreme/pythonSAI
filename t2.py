@@ -165,6 +165,6 @@ Anchor34.children.append(ProtoInstance35)
 Scene5.children.append(Anchor34)
 
 X3D0.Scene = Scene5
-f = open("././t2_RoundTrip.x3d", "w")
+f = open("././t2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

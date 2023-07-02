@@ -132,7 +132,6 @@ Shape24.appearance = Appearance25
 IndexedFaceSet28 = x3d.IndexedFaceSet()
 IndexedFaceSet28.coordIndex = [0,1,3,2,-1,4,5,7,6,-1,6,7,1,0,-1,2,3,5,4,-1,6,0,2,4,-1,1,7,5,3,-1]
 Coordinate29 = x3d.Coordinate()
-Coordinate29.point = (-2.0000,1.5000,1.0000,-2.0000,-1.5000,1.0000,2.0000,1.5000,1.0000,2.0000,-1.5000,1.0000,2.0000,1.5000,-1.0000,2.0000,-1.5000,-1.0000,-2.0000,1.5000,-1.0000,-2.0000,-1.5000,-1.0000)
 
 IndexedFaceSet28.coord = Coordinate29
 
@@ -141,6 +140,6 @@ Shape24.geometry = IndexedFaceSet28
 Scene16.children.append(Shape24)
 
 X3D0.Scene = Scene16
-f = open("././indexedfaceset_pixeltexture_entire_RoundTrip.x3d", "w")
+f = open("././indexedfaceset_pixeltexture_entire_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

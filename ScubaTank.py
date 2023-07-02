@@ -234,11 +234,10 @@ Transform12.children.append(Transform51)
 
 Scene10.children.append(Transform12)
 Background56 = x3d.Background()
-Background56.skyColor = [0.6,0.6,0.6]
 
 Scene10.children.append(Background56)
 
 X3D0.Scene = Scene10
-f = open("././ScubaTank_RoundTrip.x3d", "w")
+f = open("././ScubaTank_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -63,11 +63,9 @@ IndexedLineSet14.colorIndex = [0,1,2]
 IndexedLineSet14.colorPerVertex = False
 IndexedLineSet14.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
 Coordinate15 = x3d.Coordinate()
-Coordinate15.point = (0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000,0.0000,0.0000,0.0000,0.1000)
 
 IndexedLineSet14.coord = Coordinate15
 Color16 = x3d.Color()
-Color16.color = [1,0,0,0,0.6,0,0,0,1]
 
 IndexedLineSet14.color = Color16
 
@@ -129,11 +127,9 @@ LineSet31 = x3d.LineSet()
 LineSet31.vertexCount = [2]
 ColorRGBA32 = x3d.ColorRGBA()
 ColorRGBA32.DEF = "HAnimSegmentLineColorRGBA"
-ColorRGBA32.color = [1,1,0,1,1,1,0,0.1]
 
 LineSet31.color = ColorRGBA32
 Coordinate33 = x3d.Coordinate()
-Coordinate33.point = (-0.0500,0.0000,0.0000,0.0500,0.0000,0.0000)
 
 LineSet31.coord = Coordinate33
 
@@ -153,11 +149,9 @@ IndexedFaceSet36.solid = False
 IndexedFaceSet36.coordIndex = [0,1,2,-1,0,2,3,-1,0,3,4,-1,0,4,1,-1,5,2,1,-1,5,3,2,-1,5,4,3,-1,5,1,4,-1]
 ColorRGBA37 = x3d.ColorRGBA()
 ColorRGBA37.DEF = "HAnimSiteColorRGBA"
-ColorRGBA37.color = [1,1,0,1,1,1,0,0.1,1,1,0,1,1,1,0,0.1,1,1,0,1,1,1,0,0.1]
 
 IndexedFaceSet36.color = ColorRGBA37
 Coordinate38 = x3d.Coordinate()
-Coordinate38.point = (0.0000,0.0100,0.0000,-0.0100,0.0000,0.0000,0.0000,0.0000,0.0100,0.0100,0.0000,0.0000,0.0000,0.0000,-0.0100,0.0000,-0.0100,0.0000)
 
 IndexedFaceSet36.coord = Coordinate38
 
@@ -200,11 +194,9 @@ IndexedFaceSet45.coordIndex = [0,9,5,-1,0,7,9,-1,0,5,1,-1,1,5,2,-1,1,3,7,-1,2,4,
 IndexedFaceSet45.creaseAngle = 3.1
 Coordinate46 = x3d.Coordinate()
 Coordinate46.DEF = "TheSkinCoord"
-Coordinate46.point = (0.0000,1.7700,0.0000,0.0000,1.6650,0.0900,-0.0330,1.6200,0.0870,0.0330,1.6200,0.0870,0.0000,1.5500,0.0970,-0.0770,1.6400,-0.0100,-0.0527,1.5800,0.0150,0.0770,1.6400,-0.0100,0.0527,1.5800,0.0150,0.0000,1.6250,-0.0925,-0.0300,1.4600,0.0350,0.0000,1.4400,0.0300,0.0300,1.4600,0.0350,-0.1135,1.3180,0.0950,0.1135,1.3180,0.0950,0.0000,1.2500,0.1130,-0.0870,1.1900,0.0900,-0.0935,1.0300,0.0750,0.0870,1.1900,0.0900,0.0935,1.0300,0.0750,-0.1425,1.0650,0.0033,-0.1500,0.9000,-0.0100,0.1425,1.0650,0.0033,0.1500,0.9000,-0.0100,0.0000,1.5300,-0.0840,0.0049,1.1908,-0.1113,-0.0773,1.0190,-0.1200,0.0773,1.0190,-0.1200,0.0050,1.0915,-0.1091,-0.1780,1.4825,-0.0625,-0.1700,1.3800,0.0070,-0.1884,0.8676,-0.0360,-0.1600,1.3800,-0.1270,-0.2000,1.1388,-0.0800,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2300,1.1330,-0.0550,-0.1977,0.8169,-0.0177,-0.1941,0.6772,-0.0423,-0.2117,0.8562,-0.0584,-0.1929,0.7890,-0.1064,0.1750,1.4825,-0.0600,0.1700,1.3800,0.0070,0.1901,0.8645,-0.0415,0.1600,1.3800,-0.1250,0.2000,1.1388,-0.0800,0.1650,1.1388,-0.0400,0.2440,1.1388,-0.0400,0.2300,1.1330,-0.0550,0.2009,0.8139,-0.0237,0.2056,0.6743,-0.0482,0.2142,0.8529,-0.0648,0.1929,0.7860,-0.1122,-0.1000,0.4913,-0.0300,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1650,0.0100,0.1200,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.0900,0.0560,0.0125,-0.1150,0.0200,0.1220,-0.1150,0.0400,-0.0550,-0.1100,0.0110,0.1900,0.0993,0.4881,-0.0309,0.1700,0.4660,0.0000,0.0500,0.4867,0.0000,0.1650,0.0100,0.1200,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.0900,0.0560,0.0125,0.1150,0.0200,0.1220,0.1150,0.0400,-0.0550,0.1100,0.0110,0.1900,0.0000,0.8750,0.0000,-0.0646,1.5149,-0.0380,0.0646,1.5149,-0.0380,0.0000,1.0722,0.0900,-0.1100,1.4270,-0.1375,-0.2350,1.4200,-0.0625,0.1100,1.4270,-0.1375,0.2350,1.4200,-0.0625,0.0000,1.4100,-0.1450,0.0000,0.9250,0.0800,-0.0870,1.1900,-0.0900,0.0870,1.1900,-0.0900,0.1720,1.3200,-0.0300,-0.1720,1.3200,-0.0300,0.1500,1.2300,-0.0150,-0.1500,1.2300,-0.0150,0.0790,0.9200,-0.1400,0.1000,0.9000,0.0770,-0.0790,0.9200,-0.1400,-0.1000,0.9000,0.0750,0.0000,0.8700,0.0000,0.1710,0.6500,0.0000,0.0200,0.6500,0.0000,0.1000,0.6500,-0.0800,0.1000,0.6500,0.0700,-0.1710,0.6500,0.0000,-0.0200,0.6500,0.0000,-0.1000,0.6500,-0.0800,-0.1000,0.6500,0.0700,0.2500,1.2700,-0.0400,0.1700,1.2700,-0.0400,0.2000,1.2700,-0.0900,0.2000,1.2700,0.0200,0.2440,1.1388,-0.0400,0.1650,1.1388,-0.0400,0.2000,1.1388,-0.0800,0.2000,1.1388,-0.0130,0.2250,1.0000,-0.0100,0.2250,1.0000,-0.0700,0.1850,1.0000,-0.0100,0.1850,1.0000,-0.0700,0.2000,1.1388,-0.0400,0.2250,0.9200,-0.0400,0.1750,0.9200,-0.0400,0.2000,0.9200,-0.0650,0.2000,0.9200,-0.0150,0.2250,0.8900,-0.0400,0.1750,0.8900,-0.0400,0.2000,0.8900,-0.0650,0.2000,0.8900,-0.0150,0.2180,0.8600,-0.0400,0.1840,0.8600,-0.0400,0.2000,0.8700,-0.0700,0.2000,0.8700,0.0000,0.2100,0.8500,0.0000,0.1854,0.8500,0.0000,0.2120,0.8400,-0.0150,0.1830,0.8400,-0.0150,0.2130,0.8350,-0.0400,0.1900,0.8350,-0.0400,0.2110,0.8350,-0.0650,0.1920,0.8350,-0.0650,0.2080,0.8400,-0.0850,0.1900,0.8400,-0.0850,0.2000,0.8400,-0.0950,0.2150,0.8200,0.0000,0.1930,0.8150,0.0050,0.1980,0.8000,0.0120,0.2100,0.8200,0.0300,0.1900,0.8200,0.0300,0.2000,0.8350,0.0390,0.2120,0.8000,0.0500,0.1880,0.8000,0.0500,0.2000,0.8070,0.0570,0.2000,0.7930,0.0350,0.2000,0.7740,0.0760,0.2120,0.7800,0.0700,0.1880,0.7800,0.0700,0.2000,0.7850,0.0750,0.2000,0.7700,0.0620,0.2150,0.7930,-0.0150,0.1870,0.7930,-0.0150,0.2000,0.7930,-0.0050,0.2150,0.7880,-0.0400,0.1870,0.7880,-0.0400,0.2150,0.7930,-0.0650,0.1870,0.7930,-0.0650,0.2100,0.7900,-0.0850,0.1900,0.7900,-0.0850,0.2000,0.7900,-0.0950,0.1900,0.7700,-0.0275,0.1900,0.7700,-0.0525,0.1900,0.7800,-0.0775,0.2120,0.7450,-0.0150,0.1880,0.7450,-0.0200,0.2000,0.7450,-0.0255,0.2000,0.7450,-0.0045,0.2110,0.7200,-0.0150,0.1890,0.7200,-0.0150,0.2000,0.7200,-0.0252,0.2000,0.7200,-0.0048,0.2100,0.6950,-0.0150,0.1900,0.6950,-0.0150,0.2000,0.6950,-0.0250,0.2000,0.6950,-0.0050,0.2000,0.6850,-0.0150,0.2150,0.7400,-0.0400,0.1850,0.7400,-0.0400,0.2000,0.7400,-0.0550,0.2000,0.7400,-0.0250,0.2100,0.7142,-0.0400,0.1900,0.7142,-0.0400,0.2000,0.7142,-0.0530,0.2000,0.7142,-0.0270,0.2100,0.6800,-0.0400,0.1900,0.6800,-0.0400,0.2000,0.6800,-0.0500,0.2000,0.6800,-0.0300,0.2000,0.6700,-0.0400,0.2120,0.7400,-0.0650,0.1880,0.7400,-0.0650,0.2000,0.7400,-0.0756,0.2000,0.7400,-0.0542,0.2100,0.7177,-0.0650,0.1900,0.7177,-0.0650,0.2000,0.7177,-0.0751,0.2000,0.7177,-0.0549,0.2100,0.6950,-0.0650,0.1900,0.6950,-0.0650,0.2000,0.6950,-0.0750,0.2000,0.6950,-0.0550,0.2000,0.6850,-0.0650,0.2110,0.7550,-0.0850,0.1890,0.7550,-0.0850,0.2000,0.7550,-0.0952,0.2000,0.7550,-0.0748,0.2100,0.7350,-0.0850,0.1900,0.7350,-0.0850,0.2000,0.7350,-0.0951,0.2000,0.7350,-0.0749,0.2100,0.7200,-0.0850,0.1900,0.7200,-0.0850,0.2000,0.7200,-0.0950,0.2000,0.7200,-0.0750,0.2000,0.7100,-0.0850,-0.2300,1.2300,-0.0400,-0.1600,1.2300,-0.0400,-0.2000,1.2350,-0.1050,-0.2000,1.2350,0.0200,-0.2440,1.1388,-0.0400,-0.1650,1.1388,-0.0400,-0.2000,1.1388,-0.0800,-0.2000,1.1388,0.0130,-0.2250,1.0000,-0.0100,-0.2250,1.0000,-0.0700,-0.1850,1.0000,-0.0100,-0.1850,1.0000,-0.0700,-0.2000,1.1388,-0.0400,-0.2250,0.9200,-0.0400,-0.1750,0.9200,-0.0400,-0.2000,0.9200,-0.0650,-0.2000,0.9200,-0.0150,-0.2250,0.8900,-0.0400,-0.1750,0.8900,-0.0400,-0.2000,0.8900,-0.0650,-0.2000,0.8900,-0.0150,-0.2180,0.8600,-0.0400,-0.1840,0.8600,-0.0400,-0.2000,0.8700,-0.0700,-0.2000,0.8700,0.0000,-0.2100,0.8500,0.0000,-0.1854,0.8500,0.0000,-0.2120,0.8400,-0.0150,-0.1830,0.8400,-0.0150,-0.2130,0.8350,-0.0400,-0.1900,0.8350,-0.0400,-0.2110,0.8350,-0.0650,-0.1920,0.8350,-0.0650,-0.2080,0.8400,-0.0850,-0.1900,0.8400,-0.0850,-0.2000,0.8400,-0.0950,-0.2150,0.8200,0.0000,-0.1930,0.8150,0.0050,-0.1980,0.8000,0.0120,-0.2100,0.8200,0.0300,-0.1900,0.8200,0.0300,-0.2000,0.8350,0.0390,-0.2120,0.8000,0.0500,-0.1880,0.8000,0.0500,-0.2000,0.8070,0.0570,-0.2000,0.7930,0.0350,-0.2000,0.7740,0.0760,-0.2120,0.7800,0.0700,-0.1880,0.7800,0.0700,-0.2000,0.7850,0.0750,-0.2000,0.7700,0.0620,-0.2150,0.7930,-0.0150,-0.1870,0.7930,-0.0150,-0.2000,0.7930,-0.0050,-0.2150,0.7880,-0.0400,-0.1870,0.7880,-0.0400,-0.2150,0.7930,-0.0650,-0.1870,0.7930,-0.0650,-0.2100,0.7900,-0.0850,-0.1900,0.7900,-0.0850,-0.2000,0.7900,-0.0950,-0.1900,0.7700,-0.0275,-0.1900,0.7700,-0.0525,-0.1900,0.7800,-0.0775,-0.2120,0.7450,-0.0150,-0.1880,0.7450,-0.0200,-0.2000,0.7450,-0.0255,-0.2000,0.7450,-0.0045,-0.2110,0.7200,-0.0150,-0.1890,0.7200,-0.0150,-0.2000,0.7200,-0.0252,-0.2000,0.7200,-0.0048,-0.2100,0.6950,-0.0150,-0.1900,0.6950,-0.0150,-0.2000,0.6950,-0.0250,-0.2000,0.6950,-0.0050,-0.2000,0.6850,-0.0150,-0.2150,0.7400,-0.0400,-0.1850,0.7400,-0.0400,-0.2000,0.7400,-0.0550,-0.2000,0.7400,-0.0250,-0.2100,0.7142,-0.0400,-0.1900,0.7142,-0.0400,-0.2000,0.7142,-0.0530,-0.2000,0.7142,-0.0270,-0.2100,0.6800,-0.0400,-0.1900,0.6800,-0.0400,-0.2000,0.6800,-0.0500,-0.2000,0.6800,-0.0300,-0.2000,0.6700,-0.0400,-0.2120,0.7400,-0.0650,-0.1880,0.7400,-0.0650,-0.2000,0.7400,-0.0756,-0.2000,0.7400,-0.0542,-0.2100,0.7177,-0.0650,-0.1900,0.7177,-0.0650,-0.2000,0.7177,-0.0751,-0.2000,0.7177,-0.0549,-0.2100,0.6950,-0.0650,-0.1900,0.6950,-0.0650,-0.2000,0.6950,-0.0750,-0.2000,0.6950,-0.0550,-0.2000,0.6850,-0.0650,-0.2110,0.7550,-0.0850,-0.1890,0.7550,-0.0850,-0.2000,0.7550,-0.0952,-0.2000,0.7550,-0.0748,-0.2100,0.7350,-0.0850,-0.1900,0.7350,-0.0850,-0.2000,0.7350,-0.0951,-0.2000,0.7350,-0.0749,-0.2100,0.7200,-0.0850,-0.1900,0.7200,-0.0850,-0.2000,0.7200,-0.0950,-0.2000,0.7200,-0.0750,-0.2000,0.7100,-0.0850,0.1150,0.4660,0.0600,0.1150,0.4660,-0.0550,0.1500,0.4660,0.0000,0.0500,0.4660,0.0000,0.1700,0.3000,0.0000,0.0600,0.3000,0.0000,0.1000,0.3000,-0.0500,0.1000,0.3000,0.0500,0.1500,0.0700,0.0000,0.0850,0.0860,0.0125,0.1150,0.0690,-0.0450,0.1170,0.0975,0.0615,0.1375,0.0060,-0.0300,0.0950,0.0060,-0.0300,0.1150,0.0150,-0.0450,0.1150,0.0600,0.1000,0.1150,0.0000,0.0700,0.1650,0.0000,0.0700,0.0950,0.0000,0.0700,0.1150,0.0400,0.1300,0.1250,0.0000,0.1200,0.1650,0.0000,0.1200,0.0870,0.0000,0.1220,0.0900,0.0120,0.1880,0.1100,0.0110,0.1900,0.1280,0.0110,0.1850,0.1420,0.0110,0.1780,0.1540,0.0100,0.1680,-0.1150,0.4660,0.0600,-0.1150,0.4660,-0.0550,-0.1700,0.4660,0.0000,-0.0500,0.4660,0.0000,-0.1700,0.3000,0.0000,-0.0600,0.3000,0.0000,-0.1000,0.3000,-0.0500,-0.1000,0.3000,0.0500,-0.1500,0.0700,0.0000,-0.0850,0.0860,0.0125,-0.1150,0.0690,-0.0450,-0.1170,0.0975,0.0615,-0.1375,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.0950,0.0060,-0.0300,-0.1150,0.0600,0.1000,-0.1150,0.0000,0.0700,-0.1650,0.0000,0.0700,-0.0950,0.0000,0.0700,-0.1150,0.0400,0.1300,-0.1250,0.0000,0.1200,-0.1650,0.0000,0.1200,-0.0870,0.0000,0.1220,-0.0900,0.0120,0.1880,-0.1100,0.0110,0.1900,-0.1280,0.0110,0.1850,-0.1420,0.0110,0.1780,-0.1540,0.0100,0.1680)
 
 IndexedFaceSet45.coord = Coordinate46
 Color47 = x3d.Color()
-Color47.color = [1,0,0,0,1,1,0,1,0,1,1,0,1,1,0,1,0,0,0,1,0,0,0,1,0,1,1,0,1,1,1,1,0,1,1,0,1,1,0,1,1,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,1,0,1,1,0,1,1,1,1,0,0,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,1,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,0,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,0,1,1,1,0,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,0,0,1,1,1,0,1,0,1,1,0,1,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,1,1,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,0,1,1,0,1,0,1,0,1,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,0,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,1,0,0,1,0,1,1,0,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1]
 
 IndexedFaceSet45.color = Color47
 
@@ -258,7 +250,6 @@ Shape57 = x3d.Shape()
 LineSet58 = x3d.LineSet()
 LineSet58.vertexCount = [2]
 Coordinate59 = x3d.Coordinate()
-Coordinate59.point = (0.0000,0.8240,0.0277,0.0000,0.9149,0.0016)
 
 LineSet58.coord = Coordinate59
 #from humanoid_root to sacroiliac vertices 2
@@ -413,7 +404,6 @@ Shape91 = x3d.Shape()
 LineSet92 = x3d.LineSet()
 LineSet92.vertexCount = [2]
 Coordinate93 = x3d.Coordinate()
-Coordinate93.point = (0.0000,0.8240,0.0277,0.0028,1.0568,-0.0776)
 
 LineSet92.coord = Coordinate93
 #from humanoid_root to vl5 vertices 2
@@ -493,7 +483,6 @@ Shape109 = x3d.Shape()
 LineSet110 = x3d.LineSet()
 LineSet110.vertexCount = [2]
 Coordinate111 = x3d.Coordinate()
-Coordinate111.point = (0.0000,0.9149,0.0016,0.0961,0.9124,-0.0001)
 
 LineSet110.coord = Coordinate111
 #from sacroiliac to l_hip vertices 2
@@ -564,7 +553,6 @@ Shape125 = x3d.Shape()
 LineSet126 = x3d.LineSet()
 LineSet126.vertexCount = [2]
 Coordinate127 = x3d.Coordinate()
-Coordinate127.point = (0.0000,0.9149,0.0016,-0.0950,0.9171,0.0029)
 
 LineSet126.coord = Coordinate127
 #from sacroiliac to r_hip vertices 2
@@ -658,7 +646,6 @@ Shape146 = x3d.Shape()
 LineSet147 = x3d.LineSet()
 LineSet147.vertexCount = [2]
 Coordinate148 = x3d.Coordinate()
-Coordinate148.point = (0.0961,0.9124,-0.0001,0.1040,0.4867,0.0308)
 
 LineSet147.coord = Coordinate148
 #from l_hip to l_knee vertices 2
@@ -738,7 +725,6 @@ Shape164 = x3d.Shape()
 LineSet165 = x3d.LineSet()
 LineSet165.vertexCount = [2]
 Coordinate166 = x3d.Coordinate()
-Coordinate166.point = (0.1040,0.4867,0.0308,0.1101,0.0656,-0.0736)
 
 LineSet165.coord = Coordinate166
 #from l_knee to l_talocrural vertices 2
@@ -808,7 +794,6 @@ Shape179 = x3d.Shape()
 LineSet180 = x3d.LineSet()
 LineSet180.vertexCount = [2]
 Coordinate181 = x3d.Coordinate()
-Coordinate181.point = (0.1101,0.0656,-0.0736,0.1101,0.0656,-0.0736)
 
 LineSet180.coord = Coordinate181
 #from l_talocrural to l_talocalcaneonavicular vertices 2
@@ -824,7 +809,6 @@ Shape183 = x3d.Shape()
 LineSet184 = x3d.LineSet()
 LineSet184.vertexCount = [2]
 Coordinate185 = x3d.Coordinate()
-Coordinate185.point = (0.1101,0.0656,-0.0736,0.1101,0.0656,-0.0736)
 
 LineSet184.coord = Coordinate185
 #from l_talocrural to l_calcaneocuboid vertices 2
@@ -841,13 +825,14 @@ HAnimJoint174.children.append(HAnimSegment175)
 HAnimJoint187 = x3d.HAnimJoint()
 HAnimJoint187.name = "l_talocalcaneonavicular"
 HAnimJoint187.DEF = "hanim_l_talocalcaneonavicular"
+HAnimJoint187.center = [0.0781,0.0283,-0.097]
 HAnimJoint187.ulimit = [0,0,0]
 HAnimJoint187.llimit = [0,0,0]
 HAnimSegment188 = x3d.HAnimSegment()
 HAnimSegment188.name = "l_navicular"
 HAnimSegment188.DEF = "hanim_l_navicular"
 Transform189 = x3d.Transform()
-Transform189.translation = [0.1101,0.0656,-0.0736]
+Transform189.translation = [0.0781,0.0283,-0.097]
 Transform190 = x3d.Transform()
 #Empty Transform
 Shape191 = x3d.Shape()
@@ -862,10 +847,9 @@ Shape192 = x3d.Shape()
 LineSet193 = x3d.LineSet()
 LineSet193.vertexCount = [2]
 Coordinate194 = x3d.Coordinate()
-Coordinate194.point = (0.1101,0.0656,-0.0736)
 
 LineSet193.coord = Coordinate194
-#from l_talocalcaneonavicular to l_cuneonavicular_1 vertices 1
+#from l_talocalcaneonavicular to l_cuneonavicular_1 vertices 2
 ColorRGBA195 = x3d.ColorRGBA()
 ColorRGBA195.USE = "HAnimSegmentLineColorRGBA"
 
@@ -878,10 +862,9 @@ Shape196 = x3d.Shape()
 LineSet197 = x3d.LineSet()
 LineSet197.vertexCount = [2]
 Coordinate198 = x3d.Coordinate()
-Coordinate198.point = (0.1101,0.0656,-0.0736)
 
 LineSet197.coord = Coordinate198
-#from l_talocalcaneonavicular to l_cuneonavicular_2 vertices 1
+#from l_talocalcaneonavicular to l_cuneonavicular_2 vertices 2
 ColorRGBA199 = x3d.ColorRGBA()
 ColorRGBA199.USE = "HAnimSegmentLineColorRGBA"
 
@@ -894,10 +877,9 @@ Shape200 = x3d.Shape()
 LineSet201 = x3d.LineSet()
 LineSet201.vertexCount = [2]
 Coordinate202 = x3d.Coordinate()
-Coordinate202.point = (0.1101,0.0656,-0.0736)
 
 LineSet201.coord = Coordinate202
-#from l_talocalcaneonavicular to l_cuneonavicular_3 vertices 1
+#from l_talocalcaneonavicular to l_cuneonavicular_3 vertices 2
 ColorRGBA203 = x3d.ColorRGBA()
 ColorRGBA203.USE = "HAnimSegmentLineColorRGBA"
 
@@ -911,13 +893,14 @@ HAnimJoint187.children.append(HAnimSegment188)
 HAnimJoint204 = x3d.HAnimJoint()
 HAnimJoint204.name = "l_cuneonavicular_1"
 HAnimJoint204.DEF = "hanim_l_cuneonavicular_1"
+HAnimJoint204.center = [0.0672,0.0235,-0.0835]
 HAnimJoint204.ulimit = [0,0,0]
 HAnimJoint204.llimit = [0,0,0]
 HAnimSegment205 = x3d.HAnimSegment()
 HAnimSegment205.name = "l_cuneiform_1"
 HAnimSegment205.DEF = "hanim_l_cuneiform_1"
 Transform206 = x3d.Transform()
-Transform206.translation = [0.1101,0.0656,-0.0736]
+Transform206.translation = [0.0672,0.0235,-0.0835]
 Transform207 = x3d.Transform()
 #Empty Transform
 Shape208 = x3d.Shape()
@@ -932,10 +915,9 @@ Shape209 = x3d.Shape()
 LineSet210 = x3d.LineSet()
 LineSet210.vertexCount = [2]
 Coordinate211 = x3d.Coordinate()
-Coordinate211.point = (0.1101,0.0656,-0.0736)
 
 LineSet210.coord = Coordinate211
-#from l_cuneonavicular_1 to l_tarsometatarsal_1 vertices 1
+#from l_cuneonavicular_1 to l_tarsometatarsal_1 vertices 2
 ColorRGBA212 = x3d.ColorRGBA()
 ColorRGBA212.USE = "HAnimSegmentLineColorRGBA"
 
@@ -949,13 +931,14 @@ HAnimJoint204.children.append(HAnimSegment205)
 HAnimJoint213 = x3d.HAnimJoint()
 HAnimJoint213.name = "l_tarsometatarsal_1"
 HAnimJoint213.DEF = "hanim_l_tarsometatarsal_1"
+HAnimJoint213.center = [0.0644,0.0147,-0.0577]
 HAnimJoint213.ulimit = [0,0,0]
 HAnimJoint213.llimit = [0,0,0]
 HAnimSegment214 = x3d.HAnimSegment()
 HAnimSegment214.name = "l_metatarsal_1"
 HAnimSegment214.DEF = "hanim_l_metatarsal_1"
 Transform215 = x3d.Transform()
-Transform215.translation = [0.1101,0.0656,-0.0736]
+Transform215.translation = [0.0644,0.0147,-0.0577]
 Transform216 = x3d.Transform()
 #Empty Transform
 Shape217 = x3d.Shape()
@@ -970,10 +953,9 @@ Shape218 = x3d.Shape()
 LineSet219 = x3d.LineSet()
 LineSet219.vertexCount = [2]
 Coordinate220 = x3d.Coordinate()
-Coordinate220.point = (0.1101,0.0656,-0.0736)
 
 LineSet219.coord = Coordinate220
-#from l_tarsometatarsal_1 to l_metatarsophalangeal_1 vertices 1
+#from l_tarsometatarsal_1 to l_metatarsophalangeal_1 vertices 2
 ColorRGBA221 = x3d.ColorRGBA()
 ColorRGBA221.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1000,13 +982,14 @@ HAnimJoint213.children.append(HAnimSegment214)
 HAnimJoint225 = x3d.HAnimJoint()
 HAnimJoint225.name = "l_metatarsophalangeal_1"
 HAnimJoint225.DEF = "hanim_l_metatarsophalangeal_1"
+HAnimJoint225.center = [0.0619,0.0059,-0.0083]
 HAnimJoint225.ulimit = [0,0,0]
 HAnimJoint225.llimit = [0,0,0]
 HAnimSegment226 = x3d.HAnimSegment()
 HAnimSegment226.name = "l_tarsal_proximal_phalanx_1"
 HAnimSegment226.DEF = "hanim_l_tarsal_proximal_phalanx_1"
 Transform227 = x3d.Transform()
-Transform227.translation = [0.1101,0.0656,-0.0736]
+Transform227.translation = [0.0619,0.0059,-0.0083]
 Transform228 = x3d.Transform()
 #Empty Transform
 Shape229 = x3d.Shape()
@@ -1021,10 +1004,9 @@ Shape230 = x3d.Shape()
 LineSet231 = x3d.LineSet()
 LineSet231.vertexCount = [2]
 Coordinate232 = x3d.Coordinate()
-Coordinate232.point = (0.1101,0.0656,-0.0736)
 
 LineSet231.coord = Coordinate232
-#from l_metatarsophalangeal_1 to l_tarsal_interphalangeal_1 vertices 1
+#from l_metatarsophalangeal_1 to l_tarsal_interphalangeal_1 vertices 2
 ColorRGBA233 = x3d.ColorRGBA()
 ColorRGBA233.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1064,13 +1046,14 @@ HAnimJoint187.children.append(HAnimJoint204)
 HAnimJoint238 = x3d.HAnimJoint()
 HAnimJoint238.name = "l_cuneonavicular_2"
 HAnimJoint238.DEF = "hanim_l_cuneonavicular_2"
+HAnimJoint238.center = [0.0812,0.025,-0.0805]
 HAnimJoint238.ulimit = [0,0,0]
 HAnimJoint238.llimit = [0,0,0]
 HAnimSegment239 = x3d.HAnimSegment()
 HAnimSegment239.name = "l_cuneiform_2"
 HAnimSegment239.DEF = "hanim_l_cuneiform_2"
 Transform240 = x3d.Transform()
-Transform240.translation = [0.1101,0.0656,-0.0736]
+Transform240.translation = [0.0812,0.025,-0.0805]
 Transform241 = x3d.Transform()
 #Empty Transform
 Shape242 = x3d.Shape()
@@ -1085,10 +1068,9 @@ Shape243 = x3d.Shape()
 LineSet244 = x3d.LineSet()
 LineSet244.vertexCount = [2]
 Coordinate245 = x3d.Coordinate()
-Coordinate245.point = (0.1101,0.0656,-0.0736)
 
 LineSet244.coord = Coordinate245
-#from l_cuneonavicular_2 to l_tarsometatarsal_2 vertices 1
+#from l_cuneonavicular_2 to l_tarsometatarsal_2 vertices 2
 ColorRGBA246 = x3d.ColorRGBA()
 ColorRGBA246.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1102,13 +1084,14 @@ HAnimJoint238.children.append(HAnimSegment239)
 HAnimJoint247 = x3d.HAnimJoint()
 HAnimJoint247.name = "l_tarsometatarsal_2"
 HAnimJoint247.DEF = "hanim_l_tarsometatarsal_2"
+HAnimJoint247.center = [0.08,0.0175,-0.0608]
 HAnimJoint247.ulimit = [0,0,0]
 HAnimJoint247.llimit = [0,0,0]
 HAnimSegment248 = x3d.HAnimSegment()
 HAnimSegment248.name = "l_metatarsal_2"
 HAnimSegment248.DEF = "hanim_l_metatarsal_2"
 Transform249 = x3d.Transform()
-Transform249.translation = [0.1101,0.0656,-0.0736]
+Transform249.translation = [0.08,0.0175,-0.0608]
 Transform250 = x3d.Transform()
 #Empty Transform
 Shape251 = x3d.Shape()
@@ -1123,10 +1106,9 @@ Shape252 = x3d.Shape()
 LineSet253 = x3d.LineSet()
 LineSet253.vertexCount = [2]
 Coordinate254 = x3d.Coordinate()
-Coordinate254.point = (0.1101,0.0656,-0.0736)
 
 LineSet253.coord = Coordinate254
-#from l_tarsometatarsal_2 to l_metatarsophalangeal_2 vertices 1
+#from l_tarsometatarsal_2 to l_metatarsophalangeal_2 vertices 2
 ColorRGBA255 = x3d.ColorRGBA()
 ColorRGBA255.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1140,13 +1122,14 @@ HAnimJoint247.children.append(HAnimSegment248)
 HAnimJoint256 = x3d.HAnimJoint()
 HAnimJoint256.name = "l_metatarsophalangeal_2"
 HAnimJoint256.DEF = "hanim_l_metatarsophalangeal_2"
+HAnimJoint256.center = [0.0824,0.0064,-0.004]
 HAnimJoint256.ulimit = [0,0,0]
 HAnimJoint256.llimit = [0,0,0]
 HAnimSegment257 = x3d.HAnimSegment()
 HAnimSegment257.name = "l_tarsal_proximal_phalanx_2"
 HAnimSegment257.DEF = "hanim_l_tarsal_proximal_phalanx_2"
 Transform258 = x3d.Transform()
-Transform258.translation = [0.1101,0.0656,-0.0736]
+Transform258.translation = [0.0824,0.0064,-0.004]
 Transform259 = x3d.Transform()
 #Empty Transform
 Shape260 = x3d.Shape()
@@ -1161,10 +1144,9 @@ Shape261 = x3d.Shape()
 LineSet262 = x3d.LineSet()
 LineSet262.vertexCount = [2]
 Coordinate263 = x3d.Coordinate()
-Coordinate263.point = (0.1101,0.0656,-0.0736)
 
 LineSet262.coord = Coordinate263
-#from l_metatarsophalangeal_2 to l_tarsal_proximal_interphalangeal_2 vertices 1
+#from l_metatarsophalangeal_2 to l_tarsal_proximal_interphalangeal_2 vertices 2
 ColorRGBA264 = x3d.ColorRGBA()
 ColorRGBA264.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1178,13 +1160,14 @@ HAnimJoint256.children.append(HAnimSegment257)
 HAnimJoint265 = x3d.HAnimJoint()
 HAnimJoint265.name = "l_tarsal_proximal_interphalangeal_2"
 HAnimJoint265.DEF = "hanim_l_tarsal_proximal_interphalangeal_2"
+HAnimJoint265.center = [0.0841,0.0041,0.0121]
 HAnimJoint265.ulimit = [0,0,0]
 HAnimJoint265.llimit = [0,0,0]
 HAnimSegment266 = x3d.HAnimSegment()
 HAnimSegment266.name = "l_tarsal_middle_phalanx_2"
 HAnimSegment266.DEF = "hanim_l_tarsal_middle_phalanx_2"
 Transform267 = x3d.Transform()
-Transform267.translation = [0.1101,0.0656,-0.0736]
+Transform267.translation = [0.0841,0.0041,0.0121]
 Transform268 = x3d.Transform()
 #Empty Transform
 Shape269 = x3d.Shape()
@@ -1199,10 +1182,9 @@ Shape270 = x3d.Shape()
 LineSet271 = x3d.LineSet()
 LineSet271.vertexCount = [2]
 Coordinate272 = x3d.Coordinate()
-Coordinate272.point = (0.1101,0.0656,-0.0736)
 
 LineSet271.coord = Coordinate272
-#from l_tarsal_proximal_interphalangeal_2 to l_tarsal_distal_interphalangeal_2 vertices 1
+#from l_tarsal_proximal_interphalangeal_2 to l_tarsal_distal_interphalangeal_2 vertices 2
 ColorRGBA273 = x3d.ColorRGBA()
 ColorRGBA273.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1230,6 +1212,7 @@ HAnimJoint265.children.append(HAnimSegment266)
 HAnimJoint277 = x3d.HAnimJoint()
 HAnimJoint277.name = "l_tarsal_distal_interphalangeal_2"
 HAnimJoint277.DEF = "hanim_l_tarsal_distal_interphalangeal_2"
+HAnimJoint277.center = [0.0841,0.0013,0.0216]
 HAnimJoint277.ulimit = [0,0,0]
 HAnimJoint277.llimit = [0,0,0]
 
@@ -1245,13 +1228,14 @@ HAnimJoint187.children.append(HAnimJoint238)
 HAnimJoint278 = x3d.HAnimJoint()
 HAnimJoint278.name = "l_cuneonavicular_3"
 HAnimJoint278.DEF = "hanim_l_cuneonavicular_3"
+HAnimJoint278.center = [0.0928,0.0248,-0.0821]
 HAnimJoint278.ulimit = [0,0,0]
 HAnimJoint278.llimit = [0,0,0]
 HAnimSegment279 = x3d.HAnimSegment()
 HAnimSegment279.name = "l_cuneiform_3"
 HAnimSegment279.DEF = "hanim_l_cuneiform_3"
 Transform280 = x3d.Transform()
-Transform280.translation = [0.1101,0.0656,-0.0736]
+Transform280.translation = [0.0928,0.0248,-0.0821]
 Transform281 = x3d.Transform()
 #Empty Transform
 Shape282 = x3d.Shape()
@@ -1266,10 +1250,9 @@ Shape283 = x3d.Shape()
 LineSet284 = x3d.LineSet()
 LineSet284.vertexCount = [2]
 Coordinate285 = x3d.Coordinate()
-Coordinate285.point = (0.1101,0.0656,-0.0736)
 
 LineSet284.coord = Coordinate285
-#from l_cuneonavicular_3 to l_tarsometatarsal_3 vertices 1
+#from l_cuneonavicular_3 to l_tarsometatarsal_3 vertices 2
 ColorRGBA286 = x3d.ColorRGBA()
 ColorRGBA286.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1289,7 +1272,7 @@ HAnimSegment288 = x3d.HAnimSegment()
 HAnimSegment288.name = "l_metatarsal_3"
 HAnimSegment288.DEF = "hanim_l_metatarsal_3"
 Transform289 = x3d.Transform()
-Transform289.translation = [0.1101,0.0656,-0.0736]
+Transform289.translation = [0.0928,0.0248,-0.0821]
 Transform290 = x3d.Transform()
 #Empty Transform
 Shape291 = x3d.Shape()
@@ -1304,7 +1287,6 @@ Shape292 = x3d.Shape()
 LineSet293 = x3d.LineSet()
 LineSet293.vertexCount = [2]
 Coordinate294 = x3d.Coordinate()
-Coordinate294.point = (0.1101,0.0656,-0.0736)
 
 LineSet293.coord = Coordinate294
 #from l_tarsometatarsal_3 to l_metatarsophalangeal_3 vertices 1
@@ -1321,13 +1303,14 @@ HAnimJoint287.children.append(HAnimSegment288)
 HAnimJoint296 = x3d.HAnimJoint()
 HAnimJoint296.name = "l_metatarsophalangeal_3"
 HAnimJoint296.DEF = "hanim_l_metatarsophalangeal_3"
+HAnimJoint296.center = [0.0963,0.0065,-0.0065]
 HAnimJoint296.ulimit = [0,0,0]
 HAnimJoint296.llimit = [0,0,0]
 HAnimSegment297 = x3d.HAnimSegment()
 HAnimSegment297.name = "l_tarsal_proximal_phalanx_3"
 HAnimSegment297.DEF = "hanim_l_tarsal_proximal_phalanx_3"
 Transform298 = x3d.Transform()
-Transform298.translation = [0.1101,0.0656,-0.0736]
+Transform298.translation = [0.0963,0.0065,-0.0065]
 Transform299 = x3d.Transform()
 #Empty Transform
 Shape300 = x3d.Shape()
@@ -1342,10 +1325,9 @@ Shape301 = x3d.Shape()
 LineSet302 = x3d.LineSet()
 LineSet302.vertexCount = [2]
 Coordinate303 = x3d.Coordinate()
-Coordinate303.point = (0.1101,0.0656,-0.0736)
 
 LineSet302.coord = Coordinate303
-#from l_metatarsophalangeal_3 to l_tarsal_proximal_interphalangeal_3 vertices 1
+#from l_metatarsophalangeal_3 to l_tarsal_proximal_interphalangeal_3 vertices 2
 ColorRGBA304 = x3d.ColorRGBA()
 ColorRGBA304.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1359,13 +1341,14 @@ HAnimJoint296.children.append(HAnimSegment297)
 HAnimJoint305 = x3d.HAnimJoint()
 HAnimJoint305.name = "l_tarsal_proximal_interphalangeal_3"
 HAnimJoint305.DEF = "hanim_l_tarsal_proximal_interphalangeal_3"
+HAnimJoint305.center = [0.0987,0.0034,0.0086]
 HAnimJoint305.ulimit = [0,0,0]
 HAnimJoint305.llimit = [0,0,0]
 HAnimSegment306 = x3d.HAnimSegment()
 HAnimSegment306.name = "l_tarsal_middle_phalanx_3"
 HAnimSegment306.DEF = "hanim_l_tarsal_middle_phalanx_3"
 Transform307 = x3d.Transform()
-Transform307.translation = [0.1101,0.0656,-0.0736]
+Transform307.translation = [0.0987,0.0034,0.0086]
 Transform308 = x3d.Transform()
 #Empty Transform
 Shape309 = x3d.Shape()
@@ -1380,10 +1363,9 @@ Shape310 = x3d.Shape()
 LineSet311 = x3d.LineSet()
 LineSet311.vertexCount = [2]
 Coordinate312 = x3d.Coordinate()
-Coordinate312.point = (0.1101,0.0656,-0.0736)
 
 LineSet311.coord = Coordinate312
-#from l_tarsal_proximal_interphalangeal_3 to l_tarsal_distal_interphalangeal_3 vertices 1
+#from l_tarsal_proximal_interphalangeal_3 to l_tarsal_distal_interphalangeal_3 vertices 2
 ColorRGBA313 = x3d.ColorRGBA()
 ColorRGBA313.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1410,6 +1392,7 @@ HAnimJoint305.children.append(HAnimSegment306)
 HAnimJoint317 = x3d.HAnimJoint()
 HAnimJoint317.name = "l_tarsal_distal_interphalangeal_3"
 HAnimJoint317.DEF = "hanim_l_tarsal_distal_interphalangeal_3"
+HAnimJoint317.center = [0.1002,0.0013,0.0178]
 HAnimJoint317.ulimit = [0,0,0]
 HAnimJoint317.llimit = [0,0,0]
 
@@ -1427,13 +1410,14 @@ HAnimJoint174.children.append(HAnimJoint187)
 HAnimJoint318 = x3d.HAnimJoint()
 HAnimJoint318.name = "l_calcaneocuboid"
 HAnimJoint318.DEF = "hanim_l_calcaneocuboid"
+HAnimJoint318.center = [0.0889,0.0494,-0.1278]
 HAnimJoint318.ulimit = [0,0,0]
 HAnimJoint318.llimit = [0,0,0]
 HAnimSegment319 = x3d.HAnimSegment()
 HAnimSegment319.name = "l_calcaneus"
 HAnimSegment319.DEF = "hanim_l_calcaneus"
 Transform320 = x3d.Transform()
-Transform320.translation = [0.1101,0.0656,-0.0736]
+Transform320.translation = [0.0889,0.0494,-0.1278]
 Transform321 = x3d.Transform()
 #Empty Transform
 Shape322 = x3d.Shape()
@@ -1448,10 +1432,9 @@ Shape323 = x3d.Shape()
 LineSet324 = x3d.LineSet()
 LineSet324.vertexCount = [2]
 Coordinate325 = x3d.Coordinate()
-Coordinate325.point = (0.1101,0.0656,-0.0736)
 
 LineSet324.coord = Coordinate325
-#from l_calcaneocuboid to l_transversetarsal vertices 1
+#from l_calcaneocuboid to l_transversetarsal vertices 2
 ColorRGBA326 = x3d.ColorRGBA()
 ColorRGBA326.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1465,13 +1448,14 @@ HAnimJoint318.children.append(HAnimSegment319)
 HAnimJoint327 = x3d.HAnimJoint()
 HAnimJoint327.name = "l_transversetarsal"
 HAnimJoint327.DEF = "hanim_l_transversetarsal"
+HAnimJoint327.center = [0.1105,0.0267,-0.0998]
 HAnimJoint327.ulimit = [0,0,0]
 HAnimJoint327.llimit = [0,0,0]
 HAnimSegment328 = x3d.HAnimSegment()
 HAnimSegment328.name = "l_cuboid"
 HAnimSegment328.DEF = "hanim_l_cuboid"
 Transform329 = x3d.Transform()
-Transform329.translation = [0.1101,0.0656,-0.0736]
+Transform329.translation = [0.1105,0.0267,-0.0998]
 Transform330 = x3d.Transform()
 #Empty Transform
 Shape331 = x3d.Shape()
@@ -1486,10 +1470,9 @@ Shape332 = x3d.Shape()
 LineSet333 = x3d.LineSet()
 LineSet333.vertexCount = [2]
 Coordinate334 = x3d.Coordinate()
-Coordinate334.point = (0.1101,0.0656,-0.0736)
 
 LineSet333.coord = Coordinate334
-#from l_transversetarsal to l_tarsometatarsal_4 vertices 1
+#from l_transversetarsal to l_tarsometatarsal_4 vertices 2
 ColorRGBA335 = x3d.ColorRGBA()
 ColorRGBA335.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1502,10 +1485,9 @@ Shape336 = x3d.Shape()
 LineSet337 = x3d.LineSet()
 LineSet337.vertexCount = [2]
 Coordinate338 = x3d.Coordinate()
-Coordinate338.point = (0.1101,0.0656,-0.0736)
 
 LineSet337.coord = Coordinate338
-#from l_transversetarsal to l_tarsometatarsal_5 vertices 1
+#from l_transversetarsal to l_tarsometatarsal_5 vertices 2
 ColorRGBA339 = x3d.ColorRGBA()
 ColorRGBA339.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1519,13 +1501,14 @@ HAnimJoint327.children.append(HAnimSegment328)
 HAnimJoint340 = x3d.HAnimJoint()
 HAnimJoint340.name = "l_tarsometatarsal_4"
 HAnimJoint340.DEF = "hanim_l_tarsometatarsal_4"
+HAnimJoint340.center = [0.1063,0.016,-0.0634]
 HAnimJoint340.ulimit = [0,0,0]
 HAnimJoint340.llimit = [0,0,0]
 HAnimSegment341 = x3d.HAnimSegment()
 HAnimSegment341.name = "l_metatarsal_4"
 HAnimSegment341.DEF = "hanim_l_metatarsal_4"
 Transform342 = x3d.Transform()
-Transform342.translation = [0.1101,0.0656,-0.0736]
+Transform342.translation = [0.1063,0.016,-0.0634]
 Transform343 = x3d.Transform()
 #Empty Transform
 Shape344 = x3d.Shape()
@@ -1540,10 +1523,9 @@ Shape345 = x3d.Shape()
 LineSet346 = x3d.LineSet()
 LineSet346.vertexCount = [2]
 Coordinate347 = x3d.Coordinate()
-Coordinate347.point = (0.1101,0.0656,-0.0736)
 
 LineSet346.coord = Coordinate347
-#from l_tarsometatarsal_4 to l_metatarsophalangeal_4 vertices 1
+#from l_tarsometatarsal_4 to l_metatarsophalangeal_4 vertices 2
 ColorRGBA348 = x3d.ColorRGBA()
 ColorRGBA348.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1557,13 +1539,14 @@ HAnimJoint340.children.append(HAnimSegment341)
 HAnimJoint349 = x3d.HAnimJoint()
 HAnimJoint349.name = "l_metatarsophalangeal_4"
 HAnimJoint349.DEF = "hanim_l_metatarsophalangeal_4"
+HAnimJoint349.center = [0.1097,0.0058,-0.0107]
 HAnimJoint349.ulimit = [0,0,0]
 HAnimJoint349.llimit = [0,0,0]
 HAnimSegment350 = x3d.HAnimSegment()
 HAnimSegment350.name = "l_tarsal_proximal_phalanx_4"
 HAnimSegment350.DEF = "hanim_l_tarsal_proximal_phalanx_4"
 Transform351 = x3d.Transform()
-Transform351.translation = [0.1101,0.0656,-0.0736]
+Transform351.translation = [0.1097,0.0058,-0.0107]
 Transform352 = x3d.Transform()
 #Empty Transform
 Shape353 = x3d.Shape()
@@ -1578,10 +1561,9 @@ Shape354 = x3d.Shape()
 LineSet355 = x3d.LineSet()
 LineSet355.vertexCount = [2]
 Coordinate356 = x3d.Coordinate()
-Coordinate356.point = (0.1101,0.0656,-0.0736)
 
 LineSet355.coord = Coordinate356
-#from l_metatarsophalangeal_4 to l_tarsal_proximal_interphalangeal_4 vertices 1
+#from l_metatarsophalangeal_4 to l_tarsal_proximal_interphalangeal_4 vertices 2
 ColorRGBA357 = x3d.ColorRGBA()
 ColorRGBA357.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1595,13 +1577,14 @@ HAnimJoint349.children.append(HAnimSegment350)
 HAnimJoint358 = x3d.HAnimJoint()
 HAnimJoint358.name = "l_tarsal_proximal_interphalangeal_4"
 HAnimJoint358.DEF = "hanim_l_tarsal_proximal_interphalangeal_4"
+HAnimJoint358.center = [0.114,0.0037,0.0044]
 HAnimJoint358.ulimit = [0,0,0]
 HAnimJoint358.llimit = [0,0,0]
 HAnimSegment359 = x3d.HAnimSegment()
 HAnimSegment359.name = "l_tarsal_middle_phalanx_4"
 HAnimSegment359.DEF = "hanim_l_tarsal_middle_phalanx_4"
 Transform360 = x3d.Transform()
-Transform360.translation = [0.1101,0.0656,-0.0736]
+Transform360.translation = [0.114,0.0037,0.0044]
 Transform361 = x3d.Transform()
 #Empty Transform
 Shape362 = x3d.Shape()
@@ -1616,10 +1599,9 @@ Shape363 = x3d.Shape()
 LineSet364 = x3d.LineSet()
 LineSet364.vertexCount = [2]
 Coordinate365 = x3d.Coordinate()
-Coordinate365.point = (0.1101,0.0656,-0.0736)
 
 LineSet364.coord = Coordinate365
-#from l_tarsal_proximal_interphalangeal_4 to l_tarsal_distal_interphalangeal_4 vertices 1
+#from l_tarsal_proximal_interphalangeal_4 to l_tarsal_distal_interphalangeal_4 vertices 2
 ColorRGBA366 = x3d.ColorRGBA()
 ColorRGBA366.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1646,6 +1628,7 @@ HAnimJoint358.children.append(HAnimSegment359)
 HAnimJoint370 = x3d.HAnimJoint()
 HAnimJoint370.name = "l_tarsal_distal_interphalangeal_4"
 HAnimJoint370.DEF = "hanim_l_tarsal_distal_interphalangeal_4"
+HAnimJoint370.center = [0.1155,0.0008,0.0118]
 HAnimJoint370.ulimit = [0,0,0]
 HAnimJoint370.llimit = [0,0,0]
 
@@ -1659,13 +1642,14 @@ HAnimJoint327.children.append(HAnimJoint340)
 HAnimJoint371 = x3d.HAnimJoint()
 HAnimJoint371.name = "l_tarsometatarsal_5"
 HAnimJoint371.DEF = "hanim_l_tarsometatarsal_5"
+HAnimJoint371.center = [0.1206,0.0124,-0.0671]
 HAnimJoint371.ulimit = [0,0,0]
 HAnimJoint371.llimit = [0,0,0]
 HAnimSegment372 = x3d.HAnimSegment()
 HAnimSegment372.name = "l_metatarsal_5"
 HAnimSegment372.DEF = "hanim_l_metatarsal_5"
 Transform373 = x3d.Transform()
-Transform373.translation = [0.1101,0.0656,-0.0736]
+Transform373.translation = [0.1206,0.0124,-0.0671]
 Transform374 = x3d.Transform()
 #Empty Transform
 Shape375 = x3d.Shape()
@@ -1680,10 +1664,9 @@ Shape376 = x3d.Shape()
 LineSet377 = x3d.LineSet()
 LineSet377.vertexCount = [2]
 Coordinate378 = x3d.Coordinate()
-Coordinate378.point = (0.1101,0.0656,-0.0736)
 
 LineSet377.coord = Coordinate378
-#from l_tarsometatarsal_5 to l_metatarsophalangeal_5 vertices 1
+#from l_tarsometatarsal_5 to l_metatarsophalangeal_5 vertices 2
 ColorRGBA379 = x3d.ColorRGBA()
 ColorRGBA379.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1710,13 +1693,14 @@ HAnimJoint371.children.append(HAnimSegment372)
 HAnimJoint383 = x3d.HAnimJoint()
 HAnimJoint383.name = "l_metatarsophalangeal_5"
 HAnimJoint383.DEF = "hanim_l_metatarsophalangeal_5"
+HAnimJoint383.center = [0.1239,0.0051,-0.0153]
 HAnimJoint383.ulimit = [0,0,0]
 HAnimJoint383.llimit = [0,0,0]
 HAnimSegment384 = x3d.HAnimSegment()
 HAnimSegment384.name = "l_tarsal_proximal_phalanx_5"
 HAnimSegment384.DEF = "hanim_l_tarsal_proximal_phalanx_5"
 Transform385 = x3d.Transform()
-Transform385.translation = [0.1101,0.0656,-0.0736]
+Transform385.translation = [0.1239,0.0051,-0.0153]
 Transform386 = x3d.Transform()
 #Empty Transform
 Shape387 = x3d.Shape()
@@ -1731,10 +1715,9 @@ Shape388 = x3d.Shape()
 LineSet389 = x3d.LineSet()
 LineSet389.vertexCount = [2]
 Coordinate390 = x3d.Coordinate()
-Coordinate390.point = (0.1101,0.0656,-0.0736)
 
 LineSet389.coord = Coordinate390
-#from l_metatarsophalangeal_5 to l_tarsal_proximal_interphalangeal_5 vertices 1
+#from l_metatarsophalangeal_5 to l_tarsal_proximal_interphalangeal_5 vertices 2
 ColorRGBA391 = x3d.ColorRGBA()
 ColorRGBA391.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1748,13 +1731,14 @@ HAnimJoint383.children.append(HAnimSegment384)
 HAnimJoint392 = x3d.HAnimJoint()
 HAnimJoint392.name = "l_tarsal_proximal_interphalangeal_5"
 HAnimJoint392.DEF = "hanim_l_tarsal_proximal_interphalangeal_5"
+HAnimJoint392.center = [0.1262,0.0023,-0.0077]
 HAnimJoint392.ulimit = [0,0,0]
 HAnimJoint392.llimit = [0,0,0]
 HAnimSegment393 = x3d.HAnimSegment()
 HAnimSegment393.name = "l_tarsal_middle_phalanx_5"
 HAnimSegment393.DEF = "hanim_l_tarsal_middle_phalanx_5"
 Transform394 = x3d.Transform()
-Transform394.translation = [0.1101,0.0656,-0.0736]
+Transform394.translation = [0.1262,0.0023,-0.0077]
 Transform395 = x3d.Transform()
 #Empty Transform
 Shape396 = x3d.Shape()
@@ -1769,10 +1753,9 @@ Shape397 = x3d.Shape()
 LineSet398 = x3d.LineSet()
 LineSet398.vertexCount = [2]
 Coordinate399 = x3d.Coordinate()
-Coordinate399.point = (0.1101,0.0656,-0.0736)
 
 LineSet398.coord = Coordinate399
-#from l_tarsal_proximal_interphalangeal_5 to l_tarsal_distal_interphalangeal_5 vertices 1
+#from l_tarsal_proximal_interphalangeal_5 to l_tarsal_distal_interphalangeal_5 vertices 2
 ColorRGBA400 = x3d.ColorRGBA()
 ColorRGBA400.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1799,6 +1782,7 @@ HAnimJoint392.children.append(HAnimSegment393)
 HAnimJoint404 = x3d.HAnimJoint()
 HAnimJoint404.name = "l_tarsal_distal_interphalangeal_5"
 HAnimJoint404.DEF = "hanim_l_tarsal_distal_interphalangeal_5"
+HAnimJoint404.center = [0.1271,0,0]
 HAnimJoint404.ulimit = [0,0,0]
 HAnimJoint404.llimit = [0,0,0]
 
@@ -1844,7 +1828,6 @@ Shape410 = x3d.Shape()
 LineSet411 = x3d.LineSet()
 LineSet411.vertexCount = [2]
 Coordinate412 = x3d.Coordinate()
-Coordinate412.point = (-0.0950,0.9171,0.0029,-0.0867,0.4913,0.0318)
 
 LineSet411.coord = Coordinate412
 #from r_hip to r_knee vertices 2
@@ -1924,7 +1907,6 @@ Shape428 = x3d.Shape()
 LineSet429 = x3d.LineSet()
 LineSet429.vertexCount = [2]
 Coordinate430 = x3d.Coordinate()
-Coordinate430.point = (-0.0867,0.4913,0.0318,-0.0801,0.0712,-0.0766)
 
 LineSet429.coord = Coordinate430
 #from r_knee to r_talocrural vertices 2
@@ -1994,7 +1976,6 @@ Shape443 = x3d.Shape()
 LineSet444 = x3d.LineSet()
 LineSet444.vertexCount = [2]
 Coordinate445 = x3d.Coordinate()
-Coordinate445.point = (-0.0801,0.0712,-0.0766,-0.0801,0.0712,-0.0766)
 
 LineSet444.coord = Coordinate445
 #from r_talocrural to r_talocalcaneonavicular vertices 2
@@ -2010,7 +1991,6 @@ Shape447 = x3d.Shape()
 LineSet448 = x3d.LineSet()
 LineSet448.vertexCount = [2]
 Coordinate449 = x3d.Coordinate()
-Coordinate449.point = (-0.0801,0.0712,-0.0766,-0.0801,0.0712,-0.0766)
 
 LineSet448.coord = Coordinate449
 #from r_talocrural to r_calcaneocuboid vertices 2
@@ -2027,13 +2007,14 @@ HAnimJoint438.children.append(HAnimSegment439)
 HAnimJoint451 = x3d.HAnimJoint()
 HAnimJoint451.name = "r_talocalcaneonavicular"
 HAnimJoint451.DEF = "hanim_r_talocalcaneonavicular"
+HAnimJoint451.center = [-0.0781,0.0283,-0.097]
 HAnimJoint451.ulimit = [0,0,0]
 HAnimJoint451.llimit = [0,0,0]
 HAnimSegment452 = x3d.HAnimSegment()
 HAnimSegment452.name = "r_navicular"
 HAnimSegment452.DEF = "hanim_r_navicular"
 Transform453 = x3d.Transform()
-Transform453.translation = [-0.0801,0.0712,-0.0766]
+Transform453.translation = [-0.0781,0.0283,-0.097]
 Transform454 = x3d.Transform()
 #Empty Transform
 Shape455 = x3d.Shape()
@@ -2048,10 +2029,9 @@ Shape456 = x3d.Shape()
 LineSet457 = x3d.LineSet()
 LineSet457.vertexCount = [2]
 Coordinate458 = x3d.Coordinate()
-Coordinate458.point = (-0.0801,0.0712,-0.0766)
 
 LineSet457.coord = Coordinate458
-#from r_talocalcaneonavicular to r_cuneonavicular_1 vertices 1
+#from r_talocalcaneonavicular to r_cuneonavicular_1 vertices 2
 ColorRGBA459 = x3d.ColorRGBA()
 ColorRGBA459.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2064,10 +2044,9 @@ Shape460 = x3d.Shape()
 LineSet461 = x3d.LineSet()
 LineSet461.vertexCount = [2]
 Coordinate462 = x3d.Coordinate()
-Coordinate462.point = (-0.0801,0.0712,-0.0766)
 
 LineSet461.coord = Coordinate462
-#from r_talocalcaneonavicular to r_cuneonavicular_2 vertices 1
+#from r_talocalcaneonavicular to r_cuneonavicular_2 vertices 2
 ColorRGBA463 = x3d.ColorRGBA()
 ColorRGBA463.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2080,10 +2059,9 @@ Shape464 = x3d.Shape()
 LineSet465 = x3d.LineSet()
 LineSet465.vertexCount = [2]
 Coordinate466 = x3d.Coordinate()
-Coordinate466.point = (-0.0801,0.0712,-0.0766)
 
 LineSet465.coord = Coordinate466
-#from r_talocalcaneonavicular to r_cuneonavicular_3 vertices 1
+#from r_talocalcaneonavicular to r_cuneonavicular_3 vertices 2
 ColorRGBA467 = x3d.ColorRGBA()
 ColorRGBA467.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2097,13 +2075,14 @@ HAnimJoint451.children.append(HAnimSegment452)
 HAnimJoint468 = x3d.HAnimJoint()
 HAnimJoint468.name = "r_cuneonavicular_1"
 HAnimJoint468.DEF = "hanim_r_cuneonavicular_1"
+HAnimJoint468.center = [-0.0672,0.0235,-0.0835]
 HAnimJoint468.ulimit = [0,0,0]
 HAnimJoint468.llimit = [0,0,0]
 HAnimSegment469 = x3d.HAnimSegment()
 HAnimSegment469.name = "r_cuneiform_1"
 HAnimSegment469.DEF = "hanim_r_cuneiform_1"
 Transform470 = x3d.Transform()
-Transform470.translation = [-0.0801,0.0712,-0.0766]
+Transform470.translation = [-0.0672,0.0235,-0.0835]
 Transform471 = x3d.Transform()
 #Empty Transform
 Shape472 = x3d.Shape()
@@ -2118,10 +2097,9 @@ Shape473 = x3d.Shape()
 LineSet474 = x3d.LineSet()
 LineSet474.vertexCount = [2]
 Coordinate475 = x3d.Coordinate()
-Coordinate475.point = (-0.0801,0.0712,-0.0766)
 
 LineSet474.coord = Coordinate475
-#from r_cuneonavicular_1 to r_tarsometatarsal_1 vertices 1
+#from r_cuneonavicular_1 to r_tarsometatarsal_1 vertices 2
 ColorRGBA476 = x3d.ColorRGBA()
 ColorRGBA476.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2135,13 +2113,14 @@ HAnimJoint468.children.append(HAnimSegment469)
 HAnimJoint477 = x3d.HAnimJoint()
 HAnimJoint477.name = "r_tarsometatarsal_1"
 HAnimJoint477.DEF = "hanim_r_tarsometatarsal_1"
+HAnimJoint477.center = [-0.0644,0.0147,-0.0577]
 HAnimJoint477.ulimit = [0,0,0]
 HAnimJoint477.llimit = [0,0,0]
 HAnimSegment478 = x3d.HAnimSegment()
 HAnimSegment478.name = "r_metatarsal_1"
 HAnimSegment478.DEF = "hanim_r_metatarsal_1"
 Transform479 = x3d.Transform()
-Transform479.translation = [-0.0801,0.0712,-0.0766]
+Transform479.translation = [-0.0644,0.0147,-0.0577]
 Transform480 = x3d.Transform()
 #Empty Transform
 Shape481 = x3d.Shape()
@@ -2156,10 +2135,9 @@ Shape482 = x3d.Shape()
 LineSet483 = x3d.LineSet()
 LineSet483.vertexCount = [2]
 Coordinate484 = x3d.Coordinate()
-Coordinate484.point = (-0.0801,0.0712,-0.0766)
 
 LineSet483.coord = Coordinate484
-#from r_tarsometatarsal_1 to r_metatarsophalangeal_1 vertices 1
+#from r_tarsometatarsal_1 to r_metatarsophalangeal_1 vertices 2
 ColorRGBA485 = x3d.ColorRGBA()
 ColorRGBA485.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2186,13 +2164,14 @@ HAnimJoint477.children.append(HAnimSegment478)
 HAnimJoint489 = x3d.HAnimJoint()
 HAnimJoint489.name = "r_metatarsophalangeal_1"
 HAnimJoint489.DEF = "hanim_r_metatarsophalangeal_1"
+HAnimJoint489.center = [-0.0619,0.0059,-0.0083]
 HAnimJoint489.ulimit = [0,0,0]
 HAnimJoint489.llimit = [0,0,0]
 HAnimSegment490 = x3d.HAnimSegment()
 HAnimSegment490.name = "r_tarsal_proximal_phalanx_1"
 HAnimSegment490.DEF = "hanim_r_tarsal_proximal_phalanx_1"
 Transform491 = x3d.Transform()
-Transform491.translation = [-0.0801,0.0712,-0.0766]
+Transform491.translation = [-0.0619,0.0059,-0.0083]
 Transform492 = x3d.Transform()
 #Empty Transform
 Shape493 = x3d.Shape()
@@ -2207,10 +2186,9 @@ Shape494 = x3d.Shape()
 LineSet495 = x3d.LineSet()
 LineSet495.vertexCount = [2]
 Coordinate496 = x3d.Coordinate()
-Coordinate496.point = (-0.0801,0.0712,-0.0766)
 
 LineSet495.coord = Coordinate496
-#from r_metatarsophalangeal_1 to r_tarsal_interphalangeal_1 vertices 1
+#from r_metatarsophalangeal_1 to r_tarsal_interphalangeal_1 vertices 2
 ColorRGBA497 = x3d.ColorRGBA()
 ColorRGBA497.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2250,13 +2228,14 @@ HAnimJoint451.children.append(HAnimJoint468)
 HAnimJoint502 = x3d.HAnimJoint()
 HAnimJoint502.name = "r_cuneonavicular_2"
 HAnimJoint502.DEF = "hanim_r_cuneonavicular_2"
+HAnimJoint502.center = [-0.0812,0.025,-0.0805]
 HAnimJoint502.ulimit = [0,0,0]
 HAnimJoint502.llimit = [0,0,0]
 HAnimSegment503 = x3d.HAnimSegment()
 HAnimSegment503.name = "r_cuneiform_2"
 HAnimSegment503.DEF = "hanim_r_cuneiform_2"
 Transform504 = x3d.Transform()
-Transform504.translation = [-0.0801,0.0712,-0.0766]
+Transform504.translation = [-0.0812,0.025,-0.0805]
 Transform505 = x3d.Transform()
 #Empty Transform
 Shape506 = x3d.Shape()
@@ -2271,10 +2250,9 @@ Shape507 = x3d.Shape()
 LineSet508 = x3d.LineSet()
 LineSet508.vertexCount = [2]
 Coordinate509 = x3d.Coordinate()
-Coordinate509.point = (-0.0801,0.0712,-0.0766)
 
 LineSet508.coord = Coordinate509
-#from r_cuneonavicular_2 to r_tarsometatarsal_2 vertices 1
+#from r_cuneonavicular_2 to r_tarsometatarsal_2 vertices 2
 ColorRGBA510 = x3d.ColorRGBA()
 ColorRGBA510.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2288,13 +2266,14 @@ HAnimJoint502.children.append(HAnimSegment503)
 HAnimJoint511 = x3d.HAnimJoint()
 HAnimJoint511.name = "r_tarsometatarsal_2"
 HAnimJoint511.DEF = "hanim_r_tarsometatarsal_2"
+HAnimJoint511.center = [-0.08,0.0175,-0.0608]
 HAnimJoint511.ulimit = [0,0,0]
 HAnimJoint511.llimit = [0,0,0]
 HAnimSegment512 = x3d.HAnimSegment()
 HAnimSegment512.name = "r_metatarsal_2"
 HAnimSegment512.DEF = "hanim_r_metatarsal_2"
 Transform513 = x3d.Transform()
-Transform513.translation = [-0.0801,0.0712,-0.0766]
+Transform513.translation = [-0.08,0.0175,-0.0608]
 Transform514 = x3d.Transform()
 #Empty Transform
 Shape515 = x3d.Shape()
@@ -2309,10 +2288,9 @@ Shape516 = x3d.Shape()
 LineSet517 = x3d.LineSet()
 LineSet517.vertexCount = [2]
 Coordinate518 = x3d.Coordinate()
-Coordinate518.point = (-0.0801,0.0712,-0.0766)
 
 LineSet517.coord = Coordinate518
-#from r_tarsometatarsal_2 to r_metatarsophalangeal_2 vertices 1
+#from r_tarsometatarsal_2 to r_metatarsophalangeal_2 vertices 2
 ColorRGBA519 = x3d.ColorRGBA()
 ColorRGBA519.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2326,13 +2304,14 @@ HAnimJoint511.children.append(HAnimSegment512)
 HAnimJoint520 = x3d.HAnimJoint()
 HAnimJoint520.name = "r_metatarsophalangeal_2"
 HAnimJoint520.DEF = "hanim_r_metatarsophalangeal_2"
+HAnimJoint520.center = [-0.0823,0.0064,-0.004]
 HAnimJoint520.ulimit = [0,0,0]
 HAnimJoint520.llimit = [0,0,0]
 HAnimSegment521 = x3d.HAnimSegment()
 HAnimSegment521.name = "r_tarsal_proximal_phalanx_2"
 HAnimSegment521.DEF = "hanim_r_tarsal_proximal_phalanx_2"
 Transform522 = x3d.Transform()
-Transform522.translation = [-0.0801,0.0712,-0.0766]
+Transform522.translation = [-0.0823,0.0064,-0.004]
 Transform523 = x3d.Transform()
 #Empty Transform
 Shape524 = x3d.Shape()
@@ -2347,10 +2326,9 @@ Shape525 = x3d.Shape()
 LineSet526 = x3d.LineSet()
 LineSet526.vertexCount = [2]
 Coordinate527 = x3d.Coordinate()
-Coordinate527.point = (-0.0801,0.0712,-0.0766)
 
 LineSet526.coord = Coordinate527
-#from r_metatarsophalangeal_2 to r_tarsal_proximal_interphalangeal_2 vertices 1
+#from r_metatarsophalangeal_2 to r_tarsal_proximal_interphalangeal_2 vertices 2
 ColorRGBA528 = x3d.ColorRGBA()
 ColorRGBA528.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2364,13 +2342,14 @@ HAnimJoint520.children.append(HAnimSegment521)
 HAnimJoint529 = x3d.HAnimJoint()
 HAnimJoint529.name = "r_tarsal_proximal_interphalangeal_2"
 HAnimJoint529.DEF = "hanim_r_tarsal_proximal_interphalangeal_2"
+HAnimJoint529.center = [-0.0841,0.0041,0.0121]
 HAnimJoint529.ulimit = [0,0,0]
 HAnimJoint529.llimit = [0,0,0]
 HAnimSegment530 = x3d.HAnimSegment()
 HAnimSegment530.name = "r_tarsal_middle_phalanx_2"
 HAnimSegment530.DEF = "hanim_r_tarsal_middle_phalanx_2"
 Transform531 = x3d.Transform()
-Transform531.translation = [-0.0801,0.0712,-0.0766]
+Transform531.translation = [-0.0841,0.0041,0.0121]
 Transform532 = x3d.Transform()
 #Empty Transform
 Shape533 = x3d.Shape()
@@ -2385,10 +2364,9 @@ Shape534 = x3d.Shape()
 LineSet535 = x3d.LineSet()
 LineSet535.vertexCount = [2]
 Coordinate536 = x3d.Coordinate()
-Coordinate536.point = (-0.0801,0.0712,-0.0766)
 
 LineSet535.coord = Coordinate536
-#from r_tarsal_proximal_interphalangeal_2 to r_tarsal_distal_interphalangeal_2 vertices 1
+#from r_tarsal_proximal_interphalangeal_2 to r_tarsal_distal_interphalangeal_2 vertices 2
 ColorRGBA537 = x3d.ColorRGBA()
 ColorRGBA537.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2416,6 +2394,7 @@ HAnimJoint529.children.append(HAnimSegment530)
 HAnimJoint541 = x3d.HAnimJoint()
 HAnimJoint541.name = "r_tarsal_distal_interphalangeal_2"
 HAnimJoint541.DEF = "hanim_r_tarsal_distal_interphalangeal_2"
+HAnimJoint541.center = [-0.0841,0.0013,0.0216]
 HAnimJoint541.ulimit = [0,0,0]
 HAnimJoint541.llimit = [0,0,0]
 
@@ -2431,13 +2410,14 @@ HAnimJoint451.children.append(HAnimJoint502)
 HAnimJoint542 = x3d.HAnimJoint()
 HAnimJoint542.name = "r_cuneonavicular_3"
 HAnimJoint542.DEF = "hanim_r_cuneonavicular_3"
+HAnimJoint542.center = [-0.0928,0.0248,-0.0821]
 HAnimJoint542.ulimit = [0,0,0]
 HAnimJoint542.llimit = [0,0,0]
 HAnimSegment543 = x3d.HAnimSegment()
 HAnimSegment543.name = "r_cuneiform_3"
 HAnimSegment543.DEF = "hanim_r_cuneiform_3"
 Transform544 = x3d.Transform()
-Transform544.translation = [-0.0801,0.0712,-0.0766]
+Transform544.translation = [-0.0928,0.0248,-0.0821]
 Transform545 = x3d.Transform()
 #Empty Transform
 Shape546 = x3d.Shape()
@@ -2452,10 +2432,9 @@ Shape547 = x3d.Shape()
 LineSet548 = x3d.LineSet()
 LineSet548.vertexCount = [2]
 Coordinate549 = x3d.Coordinate()
-Coordinate549.point = (-0.0801,0.0712,-0.0766)
 
 LineSet548.coord = Coordinate549
-#from r_cuneonavicular_3 to r_tarsometatarsal_3 vertices 1
+#from r_cuneonavicular_3 to r_tarsometatarsal_3 vertices 2
 ColorRGBA550 = x3d.ColorRGBA()
 ColorRGBA550.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2475,7 +2454,7 @@ HAnimSegment552 = x3d.HAnimSegment()
 HAnimSegment552.name = "r_metatarsal_3"
 HAnimSegment552.DEF = "hanim_r_metatarsal_3"
 Transform553 = x3d.Transform()
-Transform553.translation = [-0.0801,0.0712,-0.0766]
+Transform553.translation = [-0.0928,0.0248,-0.0821]
 Transform554 = x3d.Transform()
 #Empty Transform
 Shape555 = x3d.Shape()
@@ -2490,7 +2469,6 @@ Shape556 = x3d.Shape()
 LineSet557 = x3d.LineSet()
 LineSet557.vertexCount = [2]
 Coordinate558 = x3d.Coordinate()
-Coordinate558.point = (-0.0801,0.0712,-0.0766)
 
 LineSet557.coord = Coordinate558
 #from r_tarsometatarsal_3 to r_metatarsophalangeal_3 vertices 1
@@ -2507,13 +2485,14 @@ HAnimJoint551.children.append(HAnimSegment552)
 HAnimJoint560 = x3d.HAnimJoint()
 HAnimJoint560.name = "r_metatarsophalangeal_3"
 HAnimJoint560.DEF = "hanim_r_metatarsophalangeal_3"
+HAnimJoint560.center = [-0.0963,0.0065,-0.0065]
 HAnimJoint560.ulimit = [0,0,0]
 HAnimJoint560.llimit = [0,0,0]
 HAnimSegment561 = x3d.HAnimSegment()
 HAnimSegment561.name = "r_tarsal_proximal_phalanx_3"
 HAnimSegment561.DEF = "hanim_r_tarsal_proximal_phalanx_3"
 Transform562 = x3d.Transform()
-Transform562.translation = [-0.0801,0.0712,-0.0766]
+Transform562.translation = [-0.0963,0.0065,-0.0065]
 Transform563 = x3d.Transform()
 #Empty Transform
 Shape564 = x3d.Shape()
@@ -2528,10 +2507,9 @@ Shape565 = x3d.Shape()
 LineSet566 = x3d.LineSet()
 LineSet566.vertexCount = [2]
 Coordinate567 = x3d.Coordinate()
-Coordinate567.point = (-0.0801,0.0712,-0.0766)
 
 LineSet566.coord = Coordinate567
-#from r_metatarsophalangeal_3 to r_tarsal_proximal_interphalangeal_3 vertices 1
+#from r_metatarsophalangeal_3 to r_tarsal_proximal_interphalangeal_3 vertices 2
 ColorRGBA568 = x3d.ColorRGBA()
 ColorRGBA568.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2545,13 +2523,14 @@ HAnimJoint560.children.append(HAnimSegment561)
 HAnimJoint569 = x3d.HAnimJoint()
 HAnimJoint569.name = "r_tarsal_proximal_interphalangeal_3"
 HAnimJoint569.DEF = "hanim_r_tarsal_proximal_interphalangeal_3"
+HAnimJoint569.center = [-0.0987,0.0034,0.0086]
 HAnimJoint569.ulimit = [0,0,0]
 HAnimJoint569.llimit = [0,0,0]
 HAnimSegment570 = x3d.HAnimSegment()
 HAnimSegment570.name = "r_tarsal_middle_phalanx_3"
 HAnimSegment570.DEF = "hanim_r_tarsal_middle_phalanx_3"
 Transform571 = x3d.Transform()
-Transform571.translation = [-0.0801,0.0712,-0.0766]
+Transform571.translation = [-0.0987,0.0034,0.0086]
 Transform572 = x3d.Transform()
 #Empty Transform
 Shape573 = x3d.Shape()
@@ -2566,10 +2545,9 @@ Shape574 = x3d.Shape()
 LineSet575 = x3d.LineSet()
 LineSet575.vertexCount = [2]
 Coordinate576 = x3d.Coordinate()
-Coordinate576.point = (-0.0801,0.0712,-0.0766)
 
 LineSet575.coord = Coordinate576
-#from r_tarsal_proximal_interphalangeal_3 to r_tarsal_distal_interphalangeal_3 vertices 1
+#from r_tarsal_proximal_interphalangeal_3 to r_tarsal_distal_interphalangeal_3 vertices 2
 ColorRGBA577 = x3d.ColorRGBA()
 ColorRGBA577.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2596,6 +2574,7 @@ HAnimJoint569.children.append(HAnimSegment570)
 HAnimJoint581 = x3d.HAnimJoint()
 HAnimJoint581.name = "r_tarsal_distal_interphalangeal_3"
 HAnimJoint581.DEF = "hanim_r_tarsal_distal_interphalangeal_3"
+HAnimJoint581.center = [-0.1002,0.0013,0.0178]
 HAnimJoint581.ulimit = [0,0,0]
 HAnimJoint581.llimit = [0,0,0]
 
@@ -2613,13 +2592,14 @@ HAnimJoint438.children.append(HAnimJoint451)
 HAnimJoint582 = x3d.HAnimJoint()
 HAnimJoint582.name = "r_calcaneocuboid"
 HAnimJoint582.DEF = "hanim_r_calcaneocuboid"
+HAnimJoint582.center = [-0.0889,0.0494,-0.1278]
 HAnimJoint582.ulimit = [0,0,0]
 HAnimJoint582.llimit = [0,0,0]
 HAnimSegment583 = x3d.HAnimSegment()
 HAnimSegment583.name = "r_calcaneus"
 HAnimSegment583.DEF = "hanim_r_calcaneus"
 Transform584 = x3d.Transform()
-Transform584.translation = [-0.0801,0.0712,-0.0766]
+Transform584.translation = [-0.0889,0.0494,-0.1278]
 Transform585 = x3d.Transform()
 #Empty Transform
 Shape586 = x3d.Shape()
@@ -2634,10 +2614,9 @@ Shape587 = x3d.Shape()
 LineSet588 = x3d.LineSet()
 LineSet588.vertexCount = [2]
 Coordinate589 = x3d.Coordinate()
-Coordinate589.point = (-0.0801,0.0712,-0.0766)
 
 LineSet588.coord = Coordinate589
-#from r_calcaneocuboid to r_transversetarsal vertices 1
+#from r_calcaneocuboid to r_transversetarsal vertices 2
 ColorRGBA590 = x3d.ColorRGBA()
 ColorRGBA590.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2651,13 +2630,14 @@ HAnimJoint582.children.append(HAnimSegment583)
 HAnimJoint591 = x3d.HAnimJoint()
 HAnimJoint591.name = "r_transversetarsal"
 HAnimJoint591.DEF = "hanim_r_transversetarsal"
+HAnimJoint591.center = [-0.1105,0.0267,-0.0998]
 HAnimJoint591.ulimit = [0,0,0]
 HAnimJoint591.llimit = [0,0,0]
 HAnimSegment592 = x3d.HAnimSegment()
 HAnimSegment592.name = "r_cuboid"
 HAnimSegment592.DEF = "hanim_r_cuboid"
 Transform593 = x3d.Transform()
-Transform593.translation = [-0.0801,0.0712,-0.0766]
+Transform593.translation = [-0.1105,0.0267,-0.0998]
 Transform594 = x3d.Transform()
 #Empty Transform
 Shape595 = x3d.Shape()
@@ -2672,10 +2652,9 @@ Shape596 = x3d.Shape()
 LineSet597 = x3d.LineSet()
 LineSet597.vertexCount = [2]
 Coordinate598 = x3d.Coordinate()
-Coordinate598.point = (-0.0801,0.0712,-0.0766)
 
 LineSet597.coord = Coordinate598
-#from r_transversetarsal to r_tarsometatarsal_4 vertices 1
+#from r_transversetarsal to r_tarsometatarsal_4 vertices 2
 ColorRGBA599 = x3d.ColorRGBA()
 ColorRGBA599.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2688,10 +2667,9 @@ Shape600 = x3d.Shape()
 LineSet601 = x3d.LineSet()
 LineSet601.vertexCount = [2]
 Coordinate602 = x3d.Coordinate()
-Coordinate602.point = (-0.0801,0.0712,-0.0766)
 
 LineSet601.coord = Coordinate602
-#from r_transversetarsal to r_tarsometatarsal_5 vertices 1
+#from r_transversetarsal to r_tarsometatarsal_5 vertices 2
 ColorRGBA603 = x3d.ColorRGBA()
 ColorRGBA603.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2705,13 +2683,14 @@ HAnimJoint591.children.append(HAnimSegment592)
 HAnimJoint604 = x3d.HAnimJoint()
 HAnimJoint604.name = "r_tarsometatarsal_4"
 HAnimJoint604.DEF = "hanim_r_tarsometatarsal_4"
+HAnimJoint604.center = [-0.1063,0.016,-0.0634]
 HAnimJoint604.ulimit = [0,0,0]
 HAnimJoint604.llimit = [0,0,0]
 HAnimSegment605 = x3d.HAnimSegment()
 HAnimSegment605.name = "r_metatarsal_4"
 HAnimSegment605.DEF = "hanim_r_metatarsal_4"
 Transform606 = x3d.Transform()
-Transform606.translation = [-0.0801,0.0712,-0.0766]
+Transform606.translation = [-0.1063,0.016,-0.0634]
 Transform607 = x3d.Transform()
 #Empty Transform
 Shape608 = x3d.Shape()
@@ -2726,10 +2705,9 @@ Shape609 = x3d.Shape()
 LineSet610 = x3d.LineSet()
 LineSet610.vertexCount = [2]
 Coordinate611 = x3d.Coordinate()
-Coordinate611.point = (-0.0801,0.0712,-0.0766)
 
 LineSet610.coord = Coordinate611
-#from r_tarsometatarsal_4 to r_metatarsophalangeal_4 vertices 1
+#from r_tarsometatarsal_4 to r_metatarsophalangeal_4 vertices 2
 ColorRGBA612 = x3d.ColorRGBA()
 ColorRGBA612.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2743,13 +2721,14 @@ HAnimJoint604.children.append(HAnimSegment605)
 HAnimJoint613 = x3d.HAnimJoint()
 HAnimJoint613.name = "r_metatarsophalangeal_4"
 HAnimJoint613.DEF = "hanim_r_metatarsophalangeal_4"
+HAnimJoint613.center = [-0.1097,0.0058,-0.0107]
 HAnimJoint613.ulimit = [0,0,0]
 HAnimJoint613.llimit = [0,0,0]
 HAnimSegment614 = x3d.HAnimSegment()
 HAnimSegment614.name = "r_tarsal_proximal_phalanx_4"
 HAnimSegment614.DEF = "hanim_r_tarsal_proximal_phalanx_4"
 Transform615 = x3d.Transform()
-Transform615.translation = [-0.0801,0.0712,-0.0766]
+Transform615.translation = [-0.1097,0.0058,-0.0107]
 Transform616 = x3d.Transform()
 #Empty Transform
 Shape617 = x3d.Shape()
@@ -2764,10 +2743,9 @@ Shape618 = x3d.Shape()
 LineSet619 = x3d.LineSet()
 LineSet619.vertexCount = [2]
 Coordinate620 = x3d.Coordinate()
-Coordinate620.point = (-0.0801,0.0712,-0.0766)
 
 LineSet619.coord = Coordinate620
-#from r_metatarsophalangeal_4 to r_tarsal_proximal_interphalangeal_4 vertices 1
+#from r_metatarsophalangeal_4 to r_tarsal_proximal_interphalangeal_4 vertices 2
 ColorRGBA621 = x3d.ColorRGBA()
 ColorRGBA621.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2781,13 +2759,14 @@ HAnimJoint613.children.append(HAnimSegment614)
 HAnimJoint622 = x3d.HAnimJoint()
 HAnimJoint622.name = "r_tarsal_proximal_interphalangeal_4"
 HAnimJoint622.DEF = "hanim_r_tarsal_proximal_interphalangeal_4"
+HAnimJoint622.center = [-0.114,0.0037,0.0044]
 HAnimJoint622.ulimit = [0,0,0]
 HAnimJoint622.llimit = [0,0,0]
 HAnimSegment623 = x3d.HAnimSegment()
 HAnimSegment623.name = "r_tarsal_middle_phalanx_4"
 HAnimSegment623.DEF = "hanim_r_tarsal_middle_phalanx_4"
 Transform624 = x3d.Transform()
-Transform624.translation = [-0.0801,0.0712,-0.0766]
+Transform624.translation = [-0.114,0.0037,0.0044]
 Transform625 = x3d.Transform()
 #Empty Transform
 Shape626 = x3d.Shape()
@@ -2802,10 +2781,9 @@ Shape627 = x3d.Shape()
 LineSet628 = x3d.LineSet()
 LineSet628.vertexCount = [2]
 Coordinate629 = x3d.Coordinate()
-Coordinate629.point = (-0.0801,0.0712,-0.0766)
 
 LineSet628.coord = Coordinate629
-#from r_tarsal_proximal_interphalangeal_4 to r_tarsal_distal_interphalangeal_4 vertices 1
+#from r_tarsal_proximal_interphalangeal_4 to r_tarsal_distal_interphalangeal_4 vertices 2
 ColorRGBA630 = x3d.ColorRGBA()
 ColorRGBA630.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2832,6 +2810,7 @@ HAnimJoint622.children.append(HAnimSegment623)
 HAnimJoint634 = x3d.HAnimJoint()
 HAnimJoint634.name = "r_tarsal_distal_interphalangeal_4"
 HAnimJoint634.DEF = "hanim_r_tarsal_distal_interphalangeal_4"
+HAnimJoint634.center = [-0.1155,0.0008,0.0118]
 HAnimJoint634.ulimit = [0,0,0]
 HAnimJoint634.llimit = [0,0,0]
 
@@ -2845,13 +2824,14 @@ HAnimJoint591.children.append(HAnimJoint604)
 HAnimJoint635 = x3d.HAnimJoint()
 HAnimJoint635.name = "r_tarsometatarsal_5"
 HAnimJoint635.DEF = "hanim_r_tarsometatarsal_5"
+HAnimJoint635.center = [-0.1206,0.0124,-0.0671]
 HAnimJoint635.ulimit = [0,0,0]
 HAnimJoint635.llimit = [0,0,0]
 HAnimSegment636 = x3d.HAnimSegment()
 HAnimSegment636.name = "r_metatarsal_5"
 HAnimSegment636.DEF = "hanim_r_metatarsal_5"
 Transform637 = x3d.Transform()
-Transform637.translation = [-0.0801,0.0712,-0.0766]
+Transform637.translation = [-0.1206,0.0124,-0.0671]
 Transform638 = x3d.Transform()
 #Empty Transform
 Shape639 = x3d.Shape()
@@ -2866,10 +2846,9 @@ Shape640 = x3d.Shape()
 LineSet641 = x3d.LineSet()
 LineSet641.vertexCount = [2]
 Coordinate642 = x3d.Coordinate()
-Coordinate642.point = (-0.0801,0.0712,-0.0766)
 
 LineSet641.coord = Coordinate642
-#from r_tarsometatarsal_5 to r_metatarsophalangeal_5 vertices 1
+#from r_tarsometatarsal_5 to r_metatarsophalangeal_5 vertices 2
 ColorRGBA643 = x3d.ColorRGBA()
 ColorRGBA643.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2896,13 +2875,14 @@ HAnimJoint635.children.append(HAnimSegment636)
 HAnimJoint647 = x3d.HAnimJoint()
 HAnimJoint647.name = "r_metatarsophalangeal_5"
 HAnimJoint647.DEF = "hanim_r_metatarsophalangeal_5"
+HAnimJoint647.center = [-0.1239,0.0051,-0.0153]
 HAnimJoint647.ulimit = [0,0,0]
 HAnimJoint647.llimit = [0,0,0]
 HAnimSegment648 = x3d.HAnimSegment()
 HAnimSegment648.name = "r_tarsal_proximal_phalanx_5"
 HAnimSegment648.DEF = "hanim_r_tarsal_proximal_phalanx_5"
 Transform649 = x3d.Transform()
-Transform649.translation = [-0.0801,0.0712,-0.0766]
+Transform649.translation = [-0.1239,0.0051,-0.0153]
 Transform650 = x3d.Transform()
 #Empty Transform
 Shape651 = x3d.Shape()
@@ -2917,10 +2897,9 @@ Shape652 = x3d.Shape()
 LineSet653 = x3d.LineSet()
 LineSet653.vertexCount = [2]
 Coordinate654 = x3d.Coordinate()
-Coordinate654.point = (-0.0801,0.0712,-0.0766)
 
 LineSet653.coord = Coordinate654
-#from r_metatarsophalangeal_5 to r_tarsal_proximal_interphalangeal_5 vertices 1
+#from r_metatarsophalangeal_5 to r_tarsal_proximal_interphalangeal_5 vertices 2
 ColorRGBA655 = x3d.ColorRGBA()
 ColorRGBA655.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2934,13 +2913,14 @@ HAnimJoint647.children.append(HAnimSegment648)
 HAnimJoint656 = x3d.HAnimJoint()
 HAnimJoint656.name = "r_tarsal_proximal_interphalangeal_5"
 HAnimJoint656.DEF = "hanim_r_tarsal_proximal_interphalangeal_5"
+HAnimJoint656.center = [-0.1262,0.0023,-0.0077]
 HAnimJoint656.ulimit = [0,0,0]
 HAnimJoint656.llimit = [0,0,0]
 HAnimSegment657 = x3d.HAnimSegment()
 HAnimSegment657.name = "r_tarsal_middle_phalanx_5"
 HAnimSegment657.DEF = "hanim_r_tarsal_middle_phalanx_5"
 Transform658 = x3d.Transform()
-Transform658.translation = [-0.0801,0.0712,-0.0766]
+Transform658.translation = [-0.1262,0.0023,-0.0077]
 Transform659 = x3d.Transform()
 #Empty Transform
 Shape660 = x3d.Shape()
@@ -2955,10 +2935,9 @@ Shape661 = x3d.Shape()
 LineSet662 = x3d.LineSet()
 LineSet662.vertexCount = [2]
 Coordinate663 = x3d.Coordinate()
-Coordinate663.point = (-0.0801,0.0712,-0.0766)
 
 LineSet662.coord = Coordinate663
-#from r_tarsal_proximal_interphalangeal_5 to r_tarsal_distal_interphalangeal_5 vertices 1
+#from r_tarsal_proximal_interphalangeal_5 to r_tarsal_distal_interphalangeal_5 vertices 2
 ColorRGBA664 = x3d.ColorRGBA()
 ColorRGBA664.USE = "HAnimSegmentLineColorRGBA"
 
@@ -2985,6 +2964,7 @@ HAnimJoint656.children.append(HAnimSegment657)
 HAnimJoint668 = x3d.HAnimJoint()
 HAnimJoint668.name = "r_tarsal_distal_interphalangeal_5"
 HAnimJoint668.DEF = "hanim_r_tarsal_distal_interphalangeal_5"
+HAnimJoint668.center = [-0.1271,0,0]
 HAnimJoint668.ulimit = [0,0,0]
 HAnimJoint668.llimit = [0,0,0]
 
@@ -3032,7 +3012,6 @@ Shape674 = x3d.Shape()
 LineSet675 = x3d.LineSet()
 LineSet675.vertexCount = [2]
 Coordinate676 = x3d.Coordinate()
-Coordinate676.point = (0.0028,1.0568,-0.0776,0.0035,1.0925,-0.0787)
 
 LineSet675.coord = Coordinate676
 #from vl5 to vl4 vertices 2
@@ -3071,7 +3050,6 @@ Shape683 = x3d.Shape()
 LineSet684 = x3d.LineSet()
 LineSet684.vertexCount = [2]
 Coordinate685 = x3d.Coordinate()
-Coordinate685.point = (0.0035,1.0925,-0.0787,0.0041,1.1276,-0.0796)
 
 LineSet684.coord = Coordinate685
 #from vl4 to vl3 vertices 2
@@ -3110,7 +3088,6 @@ Shape692 = x3d.Shape()
 LineSet693 = x3d.LineSet()
 LineSet693.vertexCount = [2]
 Coordinate694 = x3d.Coordinate()
-Coordinate694.point = (0.0041,1.1276,-0.0796,0.0045,1.1546,-0.0800)
 
 LineSet693.coord = Coordinate694
 #from vl3 to vl2 vertices 2
@@ -3190,7 +3167,6 @@ Shape710 = x3d.Shape()
 LineSet711 = x3d.LineSet()
 LineSet711.vertexCount = [2]
 Coordinate712 = x3d.Coordinate()
-Coordinate712.point = (0.0045,1.1546,-0.0800,0.0048,1.1912,-0.0805)
 
 LineSet711.coord = Coordinate712
 #from vl2 to vl1 vertices 2
@@ -3229,7 +3205,6 @@ Shape719 = x3d.Shape()
 LineSet720 = x3d.LineSet()
 LineSet720.vertexCount = [2]
 Coordinate721 = x3d.Coordinate()
-Coordinate721.point = (0.0048,1.1912,-0.0805,0.0051,1.2278,-0.0808)
 
 LineSet720.coord = Coordinate721
 #from vl1 to vt12 vertices 2
@@ -3268,7 +3243,6 @@ Shape728 = x3d.Shape()
 LineSet729 = x3d.LineSet()
 LineSet729.vertexCount = [2]
 Coordinate730 = x3d.Coordinate()
-Coordinate730.point = (0.0051,1.2278,-0.0808,0.0053,1.2679,-0.0810)
 
 LineSet729.coord = Coordinate730
 #from vt12 to vt11 vertices 2
@@ -3307,7 +3281,6 @@ Shape737 = x3d.Shape()
 LineSet738 = x3d.LineSet()
 LineSet738.vertexCount = [2]
 Coordinate739 = x3d.Coordinate()
-Coordinate739.point = (0.0053,1.2679,-0.0810,0.0056,1.2848,-0.0822)
 
 LineSet738.coord = Coordinate739
 #from vt11 to vt10 vertices 2
@@ -3360,7 +3333,6 @@ Shape749 = x3d.Shape()
 LineSet750 = x3d.LineSet()
 LineSet750.vertexCount = [2]
 Coordinate751 = x3d.Coordinate()
-Coordinate751.point = (0.0056,1.2848,-0.0822,0.0057,1.3126,-0.0838)
 
 LineSet750.coord = Coordinate751
 #from vt10 to vt9 vertices 2
@@ -3427,7 +3399,6 @@ Shape764 = x3d.Shape()
 LineSet765 = x3d.LineSet()
 LineSet765.vertexCount = [2]
 Coordinate766 = x3d.Coordinate()
-Coordinate766.point = (0.0057,1.3126,-0.0838,0.0057,1.3382,-0.0845)
 
 LineSet765.coord = Coordinate766
 #from vt9 to vt8 vertices 2
@@ -3466,7 +3437,6 @@ Shape773 = x3d.Shape()
 LineSet774 = x3d.LineSet()
 LineSet774.vertexCount = [2]
 Coordinate775 = x3d.Coordinate()
-Coordinate775.point = (0.0057,1.3382,-0.0845,0.0058,1.3625,-0.0833)
 
 LineSet774.coord = Coordinate775
 #from vt8 to vt7 vertices 2
@@ -3505,7 +3475,6 @@ Shape782 = x3d.Shape()
 LineSet783 = x3d.LineSet()
 LineSet783.vertexCount = [2]
 Coordinate784 = x3d.Coordinate()
-Coordinate784.point = (0.0058,1.3625,-0.0833,0.0059,1.3866,-0.0800)
 
 LineSet783.coord = Coordinate784
 #from vt7 to vt6 vertices 2
@@ -3596,7 +3565,6 @@ Shape803 = x3d.Shape()
 LineSet804 = x3d.LineSet()
 LineSet804.vertexCount = [2]
 Coordinate805 = x3d.Coordinate()
-Coordinate805.point = (0.0059,1.3866,-0.0800,0.0060,1.4102,-0.0745)
 
 LineSet804.coord = Coordinate805
 #from vt6 to vt5 vertices 2
@@ -3648,7 +3616,6 @@ Shape815 = x3d.Shape()
 LineSet816 = x3d.LineSet()
 LineSet816.vertexCount = [2]
 Coordinate817 = x3d.Coordinate()
-Coordinate817.point = (0.0060,1.4102,-0.0745,0.0061,1.4320,-0.0675)
 
 LineSet816.coord = Coordinate817
 #from vt5 to vt4 vertices 2
@@ -3687,7 +3654,6 @@ Shape824 = x3d.Shape()
 LineSet825 = x3d.LineSet()
 LineSet825.vertexCount = [2]
 Coordinate826 = x3d.Coordinate()
-Coordinate826.point = (0.0061,1.4320,-0.0675,0.0062,1.4583,-0.0570)
 
 LineSet825.coord = Coordinate826
 #from vt4 to vt3 vertices 2
@@ -3726,7 +3692,6 @@ Shape833 = x3d.Shape()
 LineSet834 = x3d.LineSet()
 LineSet834.vertexCount = [2]
 Coordinate835 = x3d.Coordinate()
-Coordinate835.point = (0.0062,1.4583,-0.0570,0.0063,1.4761,-0.0484)
 
 LineSet834.coord = Coordinate835
 #from vt3 to vt2 vertices 2
@@ -3765,7 +3730,6 @@ Shape842 = x3d.Shape()
 LineSet843 = x3d.LineSet()
 LineSet843.vertexCount = [2]
 Coordinate844 = x3d.Coordinate()
-Coordinate844.point = (0.0063,1.4761,-0.0484,0.0065,1.4951,-0.0387)
 
 LineSet843.coord = Coordinate844
 #from vt2 to vt1 vertices 2
@@ -3832,7 +3796,6 @@ Shape857 = x3d.Shape()
 LineSet858 = x3d.LineSet()
 LineSet858.vertexCount = [2]
 Coordinate859 = x3d.Coordinate()
-Coordinate859.point = (0.0065,1.4951,-0.0387,0.0066,1.5132,-0.0301)
 
 LineSet858.coord = Coordinate859
 #from vt1 to vc7 vertices 2
@@ -3876,7 +3839,6 @@ Shape867 = x3d.Shape()
 LineSet868 = x3d.LineSet()
 LineSet868.vertexCount = [2]
 Coordinate869 = x3d.Coordinate()
-Coordinate869.point = (0.0065,1.4951,-0.0387,0.0820,1.4488,-0.0353)
 
 LineSet868.coord = Coordinate869
 #from vt1 to l_sternoclavicular vertices 2
@@ -3961,7 +3923,6 @@ Shape886 = x3d.Shape()
 LineSet887 = x3d.LineSet()
 LineSet887.vertexCount = [2]
 Coordinate888 = x3d.Coordinate()
-Coordinate888.point = (0.0065,1.4951,-0.0387,-0.0694,1.4600,-0.0330)
 
 LineSet887.coord = Coordinate888
 #from vt1 to r_sternoclavicular vertices 2
@@ -4069,7 +4030,6 @@ Shape910 = x3d.Shape()
 LineSet911 = x3d.LineSet()
 LineSet911.vertexCount = [2]
 Coordinate912 = x3d.Coordinate()
-Coordinate912.point = (0.0066,1.5132,-0.0301,0.0066,1.5357,-0.0143)
 
 LineSet911.coord = Coordinate912
 #from vc7 to vc6 vertices 2
@@ -4108,7 +4068,6 @@ Shape919 = x3d.Shape()
 LineSet920 = x3d.LineSet()
 LineSet920.vertexCount = [2]
 Coordinate921 = x3d.Coordinate()
-Coordinate921.point = (0.0066,1.5357,-0.0143,0.0066,1.5520,-0.0082)
 
 LineSet920.coord = Coordinate921
 #from vc6 to vc5 vertices 2
@@ -4147,7 +4106,6 @@ Shape928 = x3d.Shape()
 LineSet929 = x3d.LineSet()
 LineSet929.vertexCount = [2]
 Coordinate930 = x3d.Coordinate()
-Coordinate930.point = (0.0066,1.5520,-0.0082,0.0066,1.5662,-0.0084)
 
 LineSet929.coord = Coordinate930
 #from vc5 to vc4 vertices 2
@@ -4186,7 +4144,6 @@ Shape937 = x3d.Shape()
 LineSet938 = x3d.LineSet()
 LineSet938.vertexCount = [2]
 Coordinate939 = x3d.Coordinate()
-Coordinate939.point = (0.0066,1.5662,-0.0084,0.0066,1.5800,-0.0103)
 
 LineSet938.coord = Coordinate939
 #from vc4 to vc3 vertices 2
@@ -4225,7 +4182,6 @@ Shape946 = x3d.Shape()
 LineSet947 = x3d.LineSet()
 LineSet947.vertexCount = [2]
 Coordinate948 = x3d.Coordinate()
-Coordinate948.point = (0.0066,1.5800,-0.0103,0.0066,1.5928,-0.0103)
 
 LineSet947.coord = Coordinate948
 #from vc3 to vc2 vertices 2
@@ -4277,7 +4233,6 @@ Shape958 = x3d.Shape()
 LineSet959 = x3d.LineSet()
 LineSet959.vertexCount = [2]
 Coordinate960 = x3d.Coordinate()
-Coordinate960.point = (0.0066,1.5928,-0.0103,0.0066,1.6144,-0.0034)
 
 LineSet959.coord = Coordinate960
 #from vc2 to vc1 vertices 2
@@ -4316,7 +4271,6 @@ Shape967 = x3d.Shape()
 LineSet968 = x3d.LineSet()
 LineSet968.vertexCount = [2]
 Coordinate969 = x3d.Coordinate()
-Coordinate969.point = (0.0066,1.6144,-0.0034,0.0044,1.6209,0.0236)
 
 LineSet968.coord = Coordinate969
 #from vc1 to skullbase vertices 2
@@ -4505,7 +4459,6 @@ Shape1009 = x3d.Shape()
 LineSet1010 = x3d.LineSet()
 LineSet1010.vertexCount = [2]
 Coordinate1011 = x3d.Coordinate()
-Coordinate1011.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1010.coord = Coordinate1011
 #from skullbase to l_eyelid_joint vertices 2
@@ -4521,7 +4474,6 @@ Shape1013 = x3d.Shape()
 LineSet1014 = x3d.LineSet()
 LineSet1014.vertexCount = [2]
 Coordinate1015 = x3d.Coordinate()
-Coordinate1015.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1014.coord = Coordinate1015
 #from skullbase to r_eyelid_joint vertices 2
@@ -4537,7 +4489,6 @@ Shape1017 = x3d.Shape()
 LineSet1018 = x3d.LineSet()
 LineSet1018.vertexCount = [2]
 Coordinate1019 = x3d.Coordinate()
-Coordinate1019.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1018.coord = Coordinate1019
 #from skullbase to l_eyeball_joint vertices 2
@@ -4553,7 +4504,6 @@ Shape1021 = x3d.Shape()
 LineSet1022 = x3d.LineSet()
 LineSet1022.vertexCount = [2]
 Coordinate1023 = x3d.Coordinate()
-Coordinate1023.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1022.coord = Coordinate1023
 #from skullbase to r_eyeball_joint vertices 2
@@ -4569,7 +4519,6 @@ Shape1025 = x3d.Shape()
 LineSet1026 = x3d.LineSet()
 LineSet1026.vertexCount = [2]
 Coordinate1027 = x3d.Coordinate()
-Coordinate1027.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1026.coord = Coordinate1027
 #from skullbase to l_eyebrow_joint vertices 2
@@ -4585,7 +4534,6 @@ Shape1029 = x3d.Shape()
 LineSet1030 = x3d.LineSet()
 LineSet1030.vertexCount = [2]
 Coordinate1031 = x3d.Coordinate()
-Coordinate1031.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1030.coord = Coordinate1031
 #from skullbase to r_eyebrow_joint vertices 2
@@ -4601,7 +4549,6 @@ Shape1033 = x3d.Shape()
 LineSet1034 = x3d.LineSet()
 LineSet1034.vertexCount = [2]
 Coordinate1035 = x3d.Coordinate()
-Coordinate1035.point = (0.0044,1.6209,0.0236,0.0044,1.6209,0.0236)
 
 LineSet1034.coord = Coordinate1035
 #from skullbase to temporomandibular vertices 2
@@ -4673,6 +4620,7 @@ HAnimJoint1004.children.append(HAnimSegment1005)
 HAnimJoint1049 = x3d.HAnimJoint()
 HAnimJoint1049.name = "l_eyelid_joint"
 HAnimJoint1049.DEF = "hanim_l_eyelid_joint"
+HAnimJoint1049.center = [0.0503,1.4157,-0.0689]
 HAnimJoint1049.ulimit = [0,0,0]
 HAnimJoint1049.llimit = [0,0,0]
 
@@ -4680,6 +4628,7 @@ HAnimJoint1004.children.append(HAnimJoint1049)
 HAnimJoint1050 = x3d.HAnimJoint()
 HAnimJoint1050.name = "r_eyelid_joint"
 HAnimJoint1050.DEF = "hanim_r_eyelid_joint"
+HAnimJoint1050.center = [-0.0507,1.4157,-0.0689]
 HAnimJoint1050.ulimit = [0,0,0]
 HAnimJoint1050.llimit = [0,0,0]
 
@@ -4687,6 +4636,7 @@ HAnimJoint1004.children.append(HAnimJoint1050)
 HAnimJoint1051 = x3d.HAnimJoint()
 HAnimJoint1051.name = "l_eyeball_joint"
 HAnimJoint1051.DEF = "hanim_l_eyeball_joint"
+HAnimJoint1051.center = [0.0479,1.3963,-0.0188]
 HAnimJoint1051.ulimit = [0,0,0]
 HAnimJoint1051.llimit = [0,0,0]
 
@@ -4694,6 +4644,7 @@ HAnimJoint1004.children.append(HAnimJoint1051)
 HAnimJoint1052 = x3d.HAnimJoint()
 HAnimJoint1052.name = "r_eyeball_joint"
 HAnimJoint1052.DEF = "hanim_r_eyeball_joint"
+HAnimJoint1052.center = [-0.0483,1.3963,-0.0188]
 HAnimJoint1052.ulimit = [0,0,0]
 HAnimJoint1052.llimit = [0,0,0]
 
@@ -4701,6 +4652,7 @@ HAnimJoint1004.children.append(HAnimJoint1052)
 HAnimJoint1053 = x3d.HAnimJoint()
 HAnimJoint1053.name = "l_eyebrow_joint"
 HAnimJoint1053.DEF = "hanim_l_eyebrow_joint"
+HAnimJoint1053.center = [0.0216,1.4053,0.0051]
 HAnimJoint1053.ulimit = [0,0,0]
 HAnimJoint1053.llimit = [0,0,0]
 
@@ -4708,6 +4660,7 @@ HAnimJoint1004.children.append(HAnimJoint1053)
 HAnimJoint1054 = x3d.HAnimJoint()
 HAnimJoint1054.name = "r_eyebrow_joint"
 HAnimJoint1054.DEF = "hanim_r_eyebrow_joint"
+HAnimJoint1054.center = [-0.0219,1.4053,0.0051]
 HAnimJoint1054.ulimit = [0,0,0]
 HAnimJoint1054.llimit = [0,0,0]
 
@@ -4715,6 +4668,7 @@ HAnimJoint1004.children.append(HAnimJoint1054)
 HAnimJoint1055 = x3d.HAnimJoint()
 HAnimJoint1055.name = "temporomandibular"
 HAnimJoint1055.DEF = "hanim_temporomandibular"
+HAnimJoint1055.center = [-0.0002,1.3043,-0.0865]
 HAnimJoint1055.ulimit = [0,0,0]
 HAnimJoint1055.llimit = [0,0,0]
 
@@ -4760,7 +4714,6 @@ Shape1061 = x3d.Shape()
 LineSet1062 = x3d.LineSet()
 LineSet1062.vertexCount = [2]
 Coordinate1063 = x3d.Coordinate()
-Coordinate1063.point = (0.0820,1.4488,-0.0353,0.0962,1.4269,-0.0424)
 
 LineSet1062.coord = Coordinate1063
 #from l_sternoclavicular to l_acromioclavicular vertices 2
@@ -4799,7 +4752,6 @@ Shape1070 = x3d.Shape()
 LineSet1071 = x3d.LineSet()
 LineSet1071.vertexCount = [2]
 Coordinate1072 = x3d.Coordinate()
-Coordinate1072.point = (0.0962,1.4269,-0.0424,0.2029,1.4376,-0.0387)
 
 LineSet1071.coord = Coordinate1072
 #from l_acromioclavicular to l_shoulder vertices 2
@@ -4865,7 +4817,6 @@ Shape1085 = x3d.Shape()
 LineSet1086 = x3d.LineSet()
 LineSet1086.vertexCount = [2]
 Coordinate1087 = x3d.Coordinate()
-Coordinate1087.point = (0.2029,1.4376,-0.0387,0.2014,1.1357,-0.0682)
 
 LineSet1086.coord = Coordinate1087
 #from l_shoulder to l_elbow vertices 2
@@ -4960,7 +4911,6 @@ Shape1106 = x3d.Shape()
 LineSet1107 = x3d.LineSet()
 LineSet1107.vertexCount = [2]
 Coordinate1108 = x3d.Coordinate()
-Coordinate1108.point = (0.2014,1.1357,-0.0682,0.1984,0.8663,-0.0583)
 
 LineSet1107.coord = Coordinate1108
 #from l_elbow to l_radiocarpal vertices 2
@@ -5017,7 +4967,6 @@ Shape1118 = x3d.Shape()
 LineSet1119 = x3d.LineSet()
 LineSet1119.vertexCount = [2]
 Coordinate1120 = x3d.Coordinate()
-Coordinate1120.point = (0.1984,0.8663,-0.0583,0.1984,0.8663,-0.0583)
 
 LineSet1119.coord = Coordinate1120
 #from l_radiocarpal to l_midcarpal_1 vertices 2
@@ -5033,7 +4982,6 @@ Shape1122 = x3d.Shape()
 LineSet1123 = x3d.LineSet()
 LineSet1123.vertexCount = [2]
 Coordinate1124 = x3d.Coordinate()
-Coordinate1124.point = (0.1984,0.8663,-0.0583,0.1984,0.8663,-0.0583)
 
 LineSet1123.coord = Coordinate1124
 #from l_radiocarpal to l_midcarpal_2 vertices 2
@@ -5049,7 +4997,6 @@ Shape1126 = x3d.Shape()
 LineSet1127 = x3d.LineSet()
 LineSet1127.vertexCount = [2]
 Coordinate1128 = x3d.Coordinate()
-Coordinate1128.point = (0.1984,0.8663,-0.0583,0.1984,0.8663,-0.0583)
 
 LineSet1127.coord = Coordinate1128
 #from l_radiocarpal to l_midcarpal_3 vertices 2
@@ -5065,7 +5012,6 @@ Shape1130 = x3d.Shape()
 LineSet1131 = x3d.LineSet()
 LineSet1131.vertexCount = [2]
 Coordinate1132 = x3d.Coordinate()
-Coordinate1132.point = (0.1984,0.8663,-0.0583,0.1984,0.8663,-0.0583)
 
 LineSet1131.coord = Coordinate1132
 #from l_radiocarpal to l_midcarpal_4_5 vertices 2
@@ -5082,13 +5028,14 @@ HAnimJoint1113.children.append(HAnimSegment1114)
 HAnimJoint1134 = x3d.HAnimJoint()
 HAnimJoint1134.name = "l_midcarpal_1"
 HAnimJoint1134.DEF = "hanim_l_midcarpal_1"
+HAnimJoint1134.center = [0.1811,0.6975,-0.0826]
 HAnimJoint1134.ulimit = [0,0,0]
 HAnimJoint1134.llimit = [0,0,0]
 HAnimSegment1135 = x3d.HAnimSegment()
 HAnimSegment1135.name = "l_trapezium"
 HAnimSegment1135.DEF = "hanim_l_trapezium"
 Transform1136 = x3d.Transform()
-Transform1136.translation = [0.1984,0.8663,-0.0583]
+Transform1136.translation = [0.1811,0.6975,-0.0826]
 Transform1137 = x3d.Transform()
 #Empty Transform
 Shape1138 = x3d.Shape()
@@ -5103,10 +5050,9 @@ Shape1139 = x3d.Shape()
 LineSet1140 = x3d.LineSet()
 LineSet1140.vertexCount = [2]
 Coordinate1141 = x3d.Coordinate()
-Coordinate1141.point = (0.1924,0.8472,-0.0534)
 
 LineSet1140.coord = Coordinate1141
-#from l_midcarpal_1 to l_carpometacarpal_1 vertices 1
+#from l_midcarpal_1 to l_carpometacarpal_1 vertices 2
 ColorRGBA1142 = x3d.ColorRGBA()
 ColorRGBA1142.USE = "HAnimSegmentLineColorRGBA"
 
@@ -5142,7 +5088,6 @@ Shape1148 = x3d.Shape()
 LineSet1149 = x3d.LineSet()
 LineSet1149.vertexCount = [2]
 Coordinate1150 = x3d.Coordinate()
-Coordinate1150.point = (0.1924,0.8472,-0.0534,0.1951,0.8226,0.0246)
 
 LineSet1149.coord = Coordinate1150
 #from l_carpometacarpal_1 to l_metacarpophalangeal_1 vertices 2
@@ -5181,7 +5126,6 @@ Shape1157 = x3d.Shape()
 LineSet1158 = x3d.LineSet()
 LineSet1158.vertexCount = [2]
 Coordinate1159 = x3d.Coordinate()
-Coordinate1159.point = (0.1951,0.8226,0.0246,0.1955,0.8159,0.0464)
 
 LineSet1158.coord = Coordinate1159
 #from l_metacarpophalangeal_1 to l_carpal_interphalangeal_1 vertices 2
@@ -5225,13 +5169,14 @@ HAnimJoint1113.children.append(HAnimJoint1134)
 HAnimJoint1165 = x3d.HAnimJoint()
 HAnimJoint1165.name = "l_midcarpal_2"
 HAnimJoint1165.DEF = "hanim_l_midcarpal_2"
+HAnimJoint1165.center = [0.1811,0.6984,-0.0935]
 HAnimJoint1165.ulimit = [0,0,0]
 HAnimJoint1165.llimit = [0,0,0]
 HAnimSegment1166 = x3d.HAnimSegment()
 HAnimSegment1166.name = "l_trapezoid"
 HAnimSegment1166.DEF = "hanim_l_trapezoid"
 Transform1167 = x3d.Transform()
-Transform1167.translation = [0.1955,0.8159,0.0464]
+Transform1167.translation = [0.1811,0.6984,-0.0935]
 Transform1168 = x3d.Transform()
 #Empty Transform
 Shape1169 = x3d.Shape()
@@ -5246,10 +5191,9 @@ Shape1170 = x3d.Shape()
 LineSet1171 = x3d.LineSet()
 LineSet1171.vertexCount = [2]
 Coordinate1172 = x3d.Coordinate()
-Coordinate1172.point = (0.1983,0.8024,-0.0280)
 
 LineSet1171.coord = Coordinate1172
-#from l_midcarpal_2 to l_carpometacarpal_2 vertices 1
+#from l_midcarpal_2 to l_carpometacarpal_2 vertices 2
 ColorRGBA1173 = x3d.ColorRGBA()
 ColorRGBA1173.USE = "HAnimSegmentLineColorRGBA"
 
@@ -5299,7 +5243,6 @@ Shape1182 = x3d.Shape()
 LineSet1183 = x3d.LineSet()
 LineSet1183.vertexCount = [2]
 Coordinate1184 = x3d.Coordinate()
-Coordinate1184.point = (0.1983,0.8024,-0.0280,0.1983,0.7815,-0.0280)
 
 LineSet1183.coord = Coordinate1184
 #from l_carpometacarpal_2 to l_metacarpophalangeal_2 vertices 2
@@ -5338,7 +5281,6 @@ Shape1191 = x3d.Shape()
 LineSet1192 = x3d.LineSet()
 LineSet1192.vertexCount = [2]
 Coordinate1193 = x3d.Coordinate()
-Coordinate1193.point = (0.1983,0.7815,-0.0280,0.2017,0.7363,-0.0248)
 
 LineSet1192.coord = Coordinate1193
 #from l_metacarpophalangeal_2 to l_carpal_proximal_interphalangeal_2 vertices 2
@@ -5377,7 +5319,6 @@ Shape1200 = x3d.Shape()
 LineSet1201 = x3d.LineSet()
 LineSet1201.vertexCount = [2]
 Coordinate1202 = x3d.Coordinate()
-Coordinate1202.point = (0.2017,0.7363,-0.0248,0.2028,0.7139,-0.0236)
 
 LineSet1201.coord = Coordinate1202
 #from l_carpal_proximal_interphalangeal_2 to l_carpal_distal_interphalangeal_2 vertices 2
@@ -5437,13 +5378,14 @@ HAnimJoint1113.children.append(HAnimJoint1165)
 HAnimJoint1211 = x3d.HAnimJoint()
 HAnimJoint1211.name = "l_midcarpal_3"
 HAnimJoint1211.DEF = "hanim_l_midcarpal_3"
+HAnimJoint1211.center = [0.1809,0.7,-0.1067]
 HAnimJoint1211.ulimit = [0,0,0]
 HAnimJoint1211.llimit = [0,0,0]
 HAnimSegment1212 = x3d.HAnimSegment()
 HAnimSegment1212.name = "l_capitate"
 HAnimSegment1212.DEF = "hanim_l_capitate"
 Transform1213 = x3d.Transform()
-Transform1213.translation = [0.2028,0.7139,-0.0236]
+Transform1213.translation = [0.1809,0.7,-0.1067]
 Transform1214 = x3d.Transform()
 #Empty Transform
 Shape1215 = x3d.Shape()
@@ -5458,10 +5400,9 @@ Shape1216 = x3d.Shape()
 LineSet1217 = x3d.LineSet()
 LineSet1217.vertexCount = [2]
 Coordinate1218 = x3d.Coordinate()
-Coordinate1218.point = (0.1987,0.8029,-0.0530)
 
 LineSet1217.coord = Coordinate1218
-#from l_midcarpal_3 to l_carpometacarpal_3 vertices 1
+#from l_midcarpal_3 to l_carpometacarpal_3 vertices 2
 ColorRGBA1219 = x3d.ColorRGBA()
 ColorRGBA1219.USE = "HAnimSegmentLineColorRGBA"
 
@@ -5510,7 +5451,6 @@ Shape1228 = x3d.Shape()
 LineSet1229 = x3d.LineSet()
 LineSet1229.vertexCount = [2]
 Coordinate1230 = x3d.Coordinate()
-Coordinate1230.point = (0.1987,0.8029,-0.0530,0.1987,0.7818,-0.0530)
 
 LineSet1229.coord = Coordinate1230
 #from l_carpometacarpal_3 to l_metacarpophalangeal_3 vertices 2
@@ -5549,7 +5489,6 @@ Shape1237 = x3d.Shape()
 LineSet1238 = x3d.LineSet()
 LineSet1238.vertexCount = [2]
 Coordinate1239 = x3d.Coordinate()
-Coordinate1239.point = (0.1987,0.7818,-0.0530,0.2013,0.7273,-0.0503)
 
 LineSet1238.coord = Coordinate1239
 #from l_metacarpophalangeal_3 to l_carpal_proximal_interphalangeal_3 vertices 2
@@ -5588,7 +5527,6 @@ Shape1246 = x3d.Shape()
 LineSet1247 = x3d.LineSet()
 LineSet1247.vertexCount = [2]
 Coordinate1248 = x3d.Coordinate()
-Coordinate1248.point = (0.2013,0.7273,-0.0503,0.2026,0.7011,-0.0494)
 
 LineSet1247.coord = Coordinate1248
 #from l_carpal_proximal_interphalangeal_3 to l_carpal_distal_interphalangeal_3 vertices 2
@@ -5634,13 +5572,14 @@ HAnimJoint1113.children.append(HAnimJoint1211)
 HAnimJoint1254 = x3d.HAnimJoint()
 HAnimJoint1254.name = "l_midcarpal_4_5"
 HAnimJoint1254.DEF = "hanim_l_midcarpal_4_5"
+HAnimJoint1254.center = [0.1809,0.6973,-0.1276]
 HAnimJoint1254.ulimit = [0,0,0]
 HAnimJoint1254.llimit = [0,0,0]
 HAnimSegment1255 = x3d.HAnimSegment()
 HAnimSegment1255.name = "l_hamate"
 HAnimSegment1255.DEF = "hanim_l_hamate"
 Transform1256 = x3d.Transform()
-Transform1256.translation = [0.2026,0.7011,-0.0494]
+Transform1256.translation = [0.1809,0.6973,-0.1276]
 Transform1257 = x3d.Transform()
 #Empty Transform
 Shape1258 = x3d.Shape()
@@ -5655,10 +5594,9 @@ Shape1259 = x3d.Shape()
 LineSet1260 = x3d.LineSet()
 LineSet1260.vertexCount = [2]
 Coordinate1261 = x3d.Coordinate()
-Coordinate1261.point = (0.1956,0.8019,-0.0794)
 
 LineSet1260.coord = Coordinate1261
-#from l_midcarpal_4_5 to l_carpometacarpal_4 vertices 1
+#from l_midcarpal_4_5 to l_carpometacarpal_4 vertices 2
 ColorRGBA1262 = x3d.ColorRGBA()
 ColorRGBA1262.USE = "HAnimSegmentLineColorRGBA"
 
@@ -5671,10 +5609,9 @@ Shape1263 = x3d.Shape()
 LineSet1264 = x3d.LineSet()
 LineSet1264.vertexCount = [2]
 Coordinate1265 = x3d.Coordinate()
-Coordinate1265.point = (0.1925,0.8066,-0.1036)
 
 LineSet1264.coord = Coordinate1265
-#from l_midcarpal_4_5 to l_carpometacarpal_5 vertices 1
+#from l_midcarpal_4_5 to l_carpometacarpal_5 vertices 2
 ColorRGBA1266 = x3d.ColorRGBA()
 ColorRGBA1266.USE = "HAnimSegmentLineColorRGBA"
 
@@ -5724,7 +5661,6 @@ Shape1275 = x3d.Shape()
 LineSet1276 = x3d.LineSet()
 LineSet1276.vertexCount = [2]
 Coordinate1277 = x3d.Coordinate()
-Coordinate1277.point = (0.1956,0.8019,-0.0794,0.1956,0.7815,-0.0794)
 
 LineSet1276.coord = Coordinate1277
 #from l_carpometacarpal_4 to l_metacarpophalangeal_4 vertices 2
@@ -5763,7 +5699,6 @@ Shape1284 = x3d.Shape()
 LineSet1285 = x3d.LineSet()
 LineSet1285.vertexCount = [2]
 Coordinate1286 = x3d.Coordinate()
-Coordinate1286.point = (0.1956,0.7815,-0.0794,0.1973,0.7287,-0.0777)
 
 LineSet1285.coord = Coordinate1286
 #from l_metacarpophalangeal_4 to l_carpal_proximal_interphalangeal_4 vertices 2
@@ -5802,7 +5737,6 @@ Shape1293 = x3d.Shape()
 LineSet1294 = x3d.LineSet()
 LineSet1294.vertexCount = [2]
 Coordinate1295 = x3d.Coordinate()
-Coordinate1295.point = (0.1973,0.7287,-0.0777,0.1983,0.7045,-0.0767)
 
 LineSet1294.coord = Coordinate1295
 #from l_carpal_proximal_interphalangeal_4 to l_carpal_distal_interphalangeal_4 vertices 2
@@ -5868,7 +5802,6 @@ Shape1306 = x3d.Shape()
 LineSet1307 = x3d.LineSet()
 LineSet1307.vertexCount = [2]
 Coordinate1308 = x3d.Coordinate()
-Coordinate1308.point = (0.1925,0.8066,-0.1036,0.1925,0.7866,-0.1036)
 
 LineSet1307.coord = Coordinate1308
 #from l_carpometacarpal_5 to l_metacarpophalangeal_5 vertices 2
@@ -5907,7 +5840,6 @@ Shape1315 = x3d.Shape()
 LineSet1316 = x3d.LineSet()
 LineSet1316.vertexCount = [2]
 Coordinate1317 = x3d.Coordinate()
-Coordinate1317.point = (0.1925,0.7866,-0.1036,0.1938,0.7452,-0.1024)
 
 LineSet1316.coord = Coordinate1317
 #from l_metacarpophalangeal_5 to l_carpal_proximal_interphalangeal_5 vertices 2
@@ -5946,7 +5878,6 @@ Shape1324 = x3d.Shape()
 LineSet1325 = x3d.LineSet()
 LineSet1325.vertexCount = [2]
 Coordinate1326 = x3d.Coordinate()
-Coordinate1326.point = (0.1938,0.7452,-0.1024,0.1948,0.7277,-0.1017)
 
 LineSet1325.coord = Coordinate1326
 #from l_carpal_proximal_interphalangeal_5 to l_carpal_distal_interphalangeal_5 vertices 2
@@ -6024,7 +5955,6 @@ Shape1337 = x3d.Shape()
 LineSet1338 = x3d.LineSet()
 LineSet1338.vertexCount = [2]
 Coordinate1339 = x3d.Coordinate()
-Coordinate1339.point = (-0.0694,1.4600,-0.0330,-0.0836,1.4281,-0.0401)
 
 LineSet1338.coord = Coordinate1339
 #from r_sternoclavicular to r_acromioclavicular vertices 2
@@ -6063,7 +5993,6 @@ Shape1346 = x3d.Shape()
 LineSet1347 = x3d.LineSet()
 LineSet1347.vertexCount = [2]
 Coordinate1348 = x3d.Coordinate()
-Coordinate1348.point = (-0.0836,1.4281,-0.0401,-0.1907,1.4407,-0.0325)
 
 LineSet1347.coord = Coordinate1348
 #from r_acromioclavicular to r_shoulder vertices 2
@@ -6129,7 +6058,6 @@ Shape1361 = x3d.Shape()
 LineSet1362 = x3d.LineSet()
 LineSet1362.vertexCount = [2]
 Coordinate1363 = x3d.Coordinate()
-Coordinate1363.point = (-0.1907,1.4407,-0.0325,-0.1949,1.1388,-0.0620)
 
 LineSet1362.coord = Coordinate1363
 #from r_shoulder to r_elbow vertices 2
@@ -6224,7 +6152,6 @@ Shape1382 = x3d.Shape()
 LineSet1383 = x3d.LineSet()
 LineSet1383.vertexCount = [2]
 Coordinate1384 = x3d.Coordinate()
-Coordinate1384.point = (-0.1949,1.1388,-0.0620,-0.1959,0.8694,-0.0521)
 
 LineSet1383.coord = Coordinate1384
 #from r_elbow to r_radiocarpal vertices 2
@@ -6281,7 +6208,6 @@ Shape1394 = x3d.Shape()
 LineSet1395 = x3d.LineSet()
 LineSet1395.vertexCount = [2]
 Coordinate1396 = x3d.Coordinate()
-Coordinate1396.point = (-0.1959,0.8694,-0.0521,-0.1959,0.8694,-0.0521)
 
 LineSet1395.coord = Coordinate1396
 #from r_radiocarpal to r_midcarpal_1 vertices 2
@@ -6297,7 +6223,6 @@ Shape1398 = x3d.Shape()
 LineSet1399 = x3d.LineSet()
 LineSet1399.vertexCount = [2]
 Coordinate1400 = x3d.Coordinate()
-Coordinate1400.point = (-0.1959,0.8694,-0.0521,-0.1959,0.8694,-0.0521)
 
 LineSet1399.coord = Coordinate1400
 #from r_radiocarpal to r_midcarpal_2 vertices 2
@@ -6313,7 +6238,6 @@ Shape1402 = x3d.Shape()
 LineSet1403 = x3d.LineSet()
 LineSet1403.vertexCount = [2]
 Coordinate1404 = x3d.Coordinate()
-Coordinate1404.point = (-0.1959,0.8694,-0.0521,-0.1959,0.8694,-0.0521)
 
 LineSet1403.coord = Coordinate1404
 #from r_radiocarpal to r_midcarpal_3 vertices 2
@@ -6329,7 +6253,6 @@ Shape1406 = x3d.Shape()
 LineSet1407 = x3d.LineSet()
 LineSet1407.vertexCount = [2]
 Coordinate1408 = x3d.Coordinate()
-Coordinate1408.point = (-0.1959,0.8694,-0.0521,-0.1959,0.8694,-0.0521)
 
 LineSet1407.coord = Coordinate1408
 #from r_radiocarpal to r_midcarpal_4_5 vertices 2
@@ -6346,13 +6269,14 @@ HAnimJoint1389.children.append(HAnimSegment1390)
 HAnimJoint1410 = x3d.HAnimJoint()
 HAnimJoint1410.name = "r_midcarpal_1"
 HAnimJoint1410.DEF = "hanim_r_midcarpal_1"
+HAnimJoint1410.center = [-0.1811,0.6975,-0.0826]
 HAnimJoint1410.ulimit = [0,0,0]
 HAnimJoint1410.llimit = [0,0,0]
 HAnimSegment1411 = x3d.HAnimSegment()
 HAnimSegment1411.name = "r_trapezium"
 HAnimSegment1411.DEF = "hanim_r_trapezium"
 Transform1412 = x3d.Transform()
-Transform1412.translation = [-0.1959,0.8694,-0.0521]
+Transform1412.translation = [-0.1811,0.6975,-0.0826]
 Transform1413 = x3d.Transform()
 #Empty Transform
 Shape1414 = x3d.Shape()
@@ -6367,10 +6291,9 @@ Shape1415 = x3d.Shape()
 LineSet1416 = x3d.LineSet()
 LineSet1416.vertexCount = [2]
 Coordinate1417 = x3d.Coordinate()
-Coordinate1417.point = (-0.1899,0.8502,-0.0473)
 
 LineSet1416.coord = Coordinate1417
-#from r_midcarpal_1 to r_carpometacarpal_1 vertices 1
+#from r_midcarpal_1 to r_carpometacarpal_1 vertices 2
 ColorRGBA1418 = x3d.ColorRGBA()
 ColorRGBA1418.USE = "HAnimSegmentLineColorRGBA"
 
@@ -6406,7 +6329,6 @@ Shape1424 = x3d.Shape()
 LineSet1425 = x3d.LineSet()
 LineSet1425.vertexCount = [2]
 Coordinate1426 = x3d.Coordinate()
-Coordinate1426.point = (-0.1899,0.8502,-0.0473,-0.1874,0.8256,0.0306)
 
 LineSet1425.coord = Coordinate1426
 #from r_carpometacarpal_1 to r_metacarpophalangeal_1 vertices 2
@@ -6445,7 +6367,6 @@ Shape1433 = x3d.Shape()
 LineSet1434 = x3d.LineSet()
 LineSet1434.vertexCount = [2]
 Coordinate1435 = x3d.Coordinate()
-Coordinate1435.point = (-0.1874,0.8256,0.0306,-0.1864,0.8190,0.0506)
 
 LineSet1434.coord = Coordinate1435
 #from r_metacarpophalangeal_1 to r_carpal_interphalangeal_1 vertices 2
@@ -6489,13 +6410,14 @@ HAnimJoint1389.children.append(HAnimJoint1410)
 HAnimJoint1441 = x3d.HAnimJoint()
 HAnimJoint1441.name = "r_midcarpal_2"
 HAnimJoint1441.DEF = "hanim_r_midcarpal_2"
+HAnimJoint1441.center = [-0.1811,0.6984,-0.0935]
 HAnimJoint1441.ulimit = [0,0,0]
 HAnimJoint1441.llimit = [0,0,0]
 HAnimSegment1442 = x3d.HAnimSegment()
 HAnimSegment1442.name = "r_trapezoid"
 HAnimSegment1442.DEF = "hanim_r_trapezoid"
 Transform1443 = x3d.Transform()
-Transform1443.translation = [-0.1864,0.819,0.0506]
+Transform1443.translation = [-0.1811,0.6984,-0.0935]
 Transform1444 = x3d.Transform()
 #Empty Transform
 Shape1445 = x3d.Shape()
@@ -6510,10 +6432,9 @@ Shape1446 = x3d.Shape()
 LineSet1447 = x3d.LineSet()
 LineSet1447.vertexCount = [2]
 Coordinate1448 = x3d.Coordinate()
-Coordinate1448.point = (-0.1961,0.8055,-0.0218)
 
 LineSet1447.coord = Coordinate1448
-#from r_midcarpal_2 to r_carpometacarpal_2 vertices 1
+#from r_midcarpal_2 to r_carpometacarpal_2 vertices 2
 ColorRGBA1449 = x3d.ColorRGBA()
 ColorRGBA1449.USE = "HAnimSegmentLineColorRGBA"
 
@@ -6563,7 +6484,6 @@ Shape1458 = x3d.Shape()
 LineSet1459 = x3d.LineSet()
 LineSet1459.vertexCount = [2]
 Coordinate1460 = x3d.Coordinate()
-Coordinate1460.point = (-0.1961,0.8055,-0.0218,-0.1961,0.7846,-0.0218)
 
 LineSet1459.coord = Coordinate1460
 #from r_carpometacarpal_2 to r_metacarpophalangeal_2 vertices 2
@@ -6602,7 +6522,6 @@ Shape1467 = x3d.Shape()
 LineSet1468 = x3d.LineSet()
 LineSet1468.vertexCount = [2]
 Coordinate1469 = x3d.Coordinate()
-Coordinate1469.point = (-0.1961,0.7846,-0.0218,-0.1954,0.7393,-0.0185)
 
 LineSet1468.coord = Coordinate1469
 #from r_metacarpophalangeal_2 to r_carpal_proximal_interphalangeal_2 vertices 2
@@ -6641,7 +6560,6 @@ Shape1476 = x3d.Shape()
 LineSet1477 = x3d.LineSet()
 LineSet1477.vertexCount = [2]
 Coordinate1478 = x3d.Coordinate()
-Coordinate1478.point = (-0.1954,0.7393,-0.0185,-0.1945,0.7169,-0.0173)
 
 LineSet1477.coord = Coordinate1478
 #from r_carpal_proximal_interphalangeal_2 to r_carpal_distal_interphalangeal_2 vertices 2
@@ -6701,13 +6619,14 @@ HAnimJoint1389.children.append(HAnimJoint1441)
 HAnimJoint1487 = x3d.HAnimJoint()
 HAnimJoint1487.name = "r_midcarpal_3"
 HAnimJoint1487.DEF = "hanim_r_midcarpal_3"
+HAnimJoint1487.center = [-0.1809,0.7,-0.1067]
 HAnimJoint1487.ulimit = [0,0,0]
 HAnimJoint1487.llimit = [0,0,0]
 HAnimSegment1488 = x3d.HAnimSegment()
 HAnimSegment1488.name = "r_capitate"
 HAnimSegment1488.DEF = "hanim_r_capitate"
 Transform1489 = x3d.Transform()
-Transform1489.translation = [-0.1945,0.7169,-0.0173]
+Transform1489.translation = [-0.1809,0.7,-0.1067]
 Transform1490 = x3d.Transform()
 #Empty Transform
 Shape1491 = x3d.Shape()
@@ -6722,10 +6641,9 @@ Shape1492 = x3d.Shape()
 LineSet1493 = x3d.LineSet()
 LineSet1493.vertexCount = [2]
 Coordinate1494 = x3d.Coordinate()
-Coordinate1494.point = (-0.1972,0.8060,-0.0468)
 
 LineSet1493.coord = Coordinate1494
-#from r_midcarpal_3 to r_carpometacarpal_3 vertices 1
+#from r_midcarpal_3 to r_carpometacarpal_3 vertices 2
 ColorRGBA1495 = x3d.ColorRGBA()
 ColorRGBA1495.USE = "HAnimSegmentLineColorRGBA"
 
@@ -6774,7 +6692,6 @@ Shape1504 = x3d.Shape()
 LineSet1505 = x3d.LineSet()
 LineSet1505.vertexCount = [2]
 Coordinate1506 = x3d.Coordinate()
-Coordinate1506.point = (-0.1972,0.8060,-0.0468,-0.1972,0.7849,-0.0468)
 
 LineSet1505.coord = Coordinate1506
 #from r_carpometacarpal_3 to r_metacarpophalangeal_3 vertices 2
@@ -6813,7 +6730,6 @@ Shape1513 = x3d.Shape()
 LineSet1514 = x3d.LineSet()
 LineSet1514.vertexCount = [2]
 Coordinate1515 = x3d.Coordinate()
-Coordinate1515.point = (-0.1972,0.7849,-0.0468,-0.1950,0.7304,-0.0441)
 
 LineSet1514.coord = Coordinate1515
 #from r_metacarpophalangeal_3 to r_carpal_proximal_interphalangeal_3 vertices 2
@@ -6852,7 +6768,6 @@ Shape1522 = x3d.Shape()
 LineSet1523 = x3d.LineSet()
 LineSet1523.vertexCount = [2]
 Coordinate1524 = x3d.Coordinate()
-Coordinate1524.point = (-0.1950,0.7304,-0.0441,-0.1939,0.7042,-0.0432)
 
 LineSet1523.coord = Coordinate1524
 #from r_carpal_proximal_interphalangeal_3 to r_carpal_distal_interphalangeal_3 vertices 2
@@ -6898,13 +6813,14 @@ HAnimJoint1389.children.append(HAnimJoint1487)
 HAnimJoint1530 = x3d.HAnimJoint()
 HAnimJoint1530.name = "r_midcarpal_4_5"
 HAnimJoint1530.DEF = "hanim_r_midcarpal_4_5"
+HAnimJoint1530.center = [-0.1809,0.6973,-0.1276]
 HAnimJoint1530.ulimit = [0,0,0]
 HAnimJoint1530.llimit = [0,0,0]
 HAnimSegment1531 = x3d.HAnimSegment()
 HAnimSegment1531.name = "r_hamate"
 HAnimSegment1531.DEF = "hanim_r_hamate"
 Transform1532 = x3d.Transform()
-Transform1532.translation = [-0.1939,0.7042,-0.0432]
+Transform1532.translation = [-0.1809,0.6973,-0.1276]
 Transform1533 = x3d.Transform()
 #Empty Transform
 Shape1534 = x3d.Shape()
@@ -6919,10 +6835,9 @@ Shape1535 = x3d.Shape()
 LineSet1536 = x3d.LineSet()
 LineSet1536.vertexCount = [2]
 Coordinate1537 = x3d.Coordinate()
-Coordinate1537.point = (-0.1951,0.8049,-0.0732)
 
 LineSet1536.coord = Coordinate1537
-#from r_midcarpal_4_5 to r_carpometacarpal_4 vertices 1
+#from r_midcarpal_4_5 to r_carpometacarpal_4 vertices 2
 ColorRGBA1538 = x3d.ColorRGBA()
 ColorRGBA1538.USE = "HAnimSegmentLineColorRGBA"
 
@@ -6935,10 +6850,9 @@ Shape1539 = x3d.Shape()
 LineSet1540 = x3d.LineSet()
 LineSet1540.vertexCount = [2]
 Coordinate1541 = x3d.Coordinate()
-Coordinate1541.point = (-0.1926,0.8096,-0.0975)
 
 LineSet1540.coord = Coordinate1541
-#from r_midcarpal_4_5 to r_carpometacarpal_5 vertices 1
+#from r_midcarpal_4_5 to r_carpometacarpal_5 vertices 2
 ColorRGBA1542 = x3d.ColorRGBA()
 ColorRGBA1542.USE = "HAnimSegmentLineColorRGBA"
 
@@ -6988,7 +6902,6 @@ Shape1551 = x3d.Shape()
 LineSet1552 = x3d.LineSet()
 LineSet1552.vertexCount = [2]
 Coordinate1553 = x3d.Coordinate()
-Coordinate1553.point = (-0.1951,0.8049,-0.0732,-0.1951,0.7845,-0.0732)
 
 LineSet1552.coord = Coordinate1553
 #from r_carpometacarpal_4 to r_metacarpophalangeal_4 vertices 2
@@ -7027,7 +6940,6 @@ Shape1560 = x3d.Shape()
 LineSet1561 = x3d.LineSet()
 LineSet1561.vertexCount = [2]
 Coordinate1562 = x3d.Coordinate()
-Coordinate1562.point = (-0.1951,0.7845,-0.0732,-0.1920,0.7318,-0.0716)
 
 LineSet1561.coord = Coordinate1562
 #from r_metacarpophalangeal_4 to r_carpal_proximal_interphalangeal_4 vertices 2
@@ -7066,7 +6978,6 @@ Shape1569 = x3d.Shape()
 LineSet1570 = x3d.LineSet()
 LineSet1570.vertexCount = [2]
 Coordinate1571 = x3d.Coordinate()
-Coordinate1571.point = (-0.1920,0.7318,-0.0716,-0.1908,0.7077,-0.0706)
 
 LineSet1570.coord = Coordinate1571
 #from r_carpal_proximal_interphalangeal_4 to r_carpal_distal_interphalangeal_4 vertices 2
@@ -7132,7 +7043,6 @@ Shape1582 = x3d.Shape()
 LineSet1583 = x3d.LineSet()
 LineSet1583.vertexCount = [2]
 Coordinate1584 = x3d.Coordinate()
-Coordinate1584.point = (-0.1926,0.8096,-0.0975,-0.1926,0.7896,-0.0975)
 
 LineSet1583.coord = Coordinate1584
 #from r_carpometacarpal_5 to r_metacarpophalangeal_5 vertices 2
@@ -7171,7 +7081,6 @@ Shape1591 = x3d.Shape()
 LineSet1592 = x3d.LineSet()
 LineSet1592.vertexCount = [2]
 Coordinate1593 = x3d.Coordinate()
-Coordinate1593.point = (-0.1926,0.7896,-0.0975,-0.1902,0.7483,-0.0963)
 
 LineSet1592.coord = Coordinate1593
 #from r_metacarpophalangeal_5 to r_carpal_proximal_interphalangeal_5 vertices 2
@@ -7210,7 +7119,6 @@ Shape1600 = x3d.Shape()
 LineSet1601 = x3d.LineSet()
 LineSet1601.vertexCount = [2]
 Coordinate1602 = x3d.Coordinate()
-Coordinate1602.point = (-0.1902,0.7483,-0.0963,-0.1908,0.7540,-0.0960)
 
 LineSet1601.coord = Coordinate1602
 #from r_carpal_proximal_interphalangeal_5 to r_carpal_distal_interphalangeal_5 vertices 2
@@ -8835,6 +8743,6 @@ HAnimHumanoid43.sites.append(HAnimSite1990)
 Scene11.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene11
-f = open("././Humanoid4_RoundTrip.x3d", "w")
+f = open("././Humanoid4_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

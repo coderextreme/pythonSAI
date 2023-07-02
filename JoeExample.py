@@ -110,6 +110,6 @@ ROUTE18.toField = "startTime"
 Scene3.children.append(ROUTE18)
 
 X3D0.Scene = Scene3
-f = open("././JoeExample_RoundTrip.x3d", "w")
+f = open("././JoeExample_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

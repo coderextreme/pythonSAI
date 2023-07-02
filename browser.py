@@ -59,6 +59,6 @@ Script9.sourceCode = '''ecmascript:\n"+
 Scene7.children.append(Script9)
 
 X3D0.Scene = Scene7
-f = open("././browser_RoundTrip.x3d", "w")
+f = open("././browser_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

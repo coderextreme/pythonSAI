@@ -840,6 +840,6 @@ Shape150.appearance = Appearance153
 Scene23.children.append(Shape150)
 
 X3D0.Scene = Scene23
-f = open("././HAnimPrototypes_RoundTrip.x3d", "w")
+f = open("././HAnimPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

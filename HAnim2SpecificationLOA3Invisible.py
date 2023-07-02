@@ -144,7 +144,6 @@ head1.children.append(meta28)
 X3D0.head = head1
 Scene29 = x3d.Scene()
 Background30 = x3d.Background()
-Background30.skyColor = [0.3,0.3,0.3]
 
 Scene29.children.append(Background30)
 NavigationInfo31 = x3d.NavigationInfo()
@@ -238,37 +237,51 @@ MetadataString45 = x3d.MetadataString()
 MetadataString45.name = "authorName"
 MetadataString45.value = ["Matthew T. Beitler Joe D. Williams Don Brutzman"]
 
-MetadataSet44.value = MetadataString45
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString45)
 MetadataString46 = x3d.MetadataString()
 MetadataString46.name = "authorEmail"
 MetadataString46.value = ["HAnim@web3D.org"]
 
-MetadataSet44.value = MetadataString46
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString46)
 MetadataString47 = x3d.MetadataString()
 MetadataString47.name = "copyright"
 MetadataString47.value = ["none"]
 
-MetadataSet44.value = MetadataString47
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString47)
 MetadataString48 = x3d.MetadataString()
 MetadataString48.name = "creationDate"
 MetadataString48.value = ["12 May 1999"]
 
-MetadataSet44.value = MetadataString48
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString48)
 MetadataFloat49 = x3d.MetadataFloat()
 MetadataFloat49.name = "height"
 MetadataFloat49.value = [1.7504]
 
-MetadataSet44.value = MetadataFloat49
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataFloat49)
 MetadataString50 = x3d.MetadataString()
 MetadataString50.name = "humanoidVersion"
 MetadataString50.value = ["2.0"]
 
-MetadataSet44.value = MetadataString50
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString50)
 MetadataString51 = x3d.MetadataString()
 MetadataString51.name = "usageRestrictions"
 MetadataString51.value = ["none"]
 
-MetadataSet44.value = MetadataString51
+if MetadataSet44.value is None:
+    MetadataSet44.value = []
+MetadataSet44.value.append(MetadataString51)
 
 HAnimHumanoid43.metadata = MetadataSet44
 HAnimJoint52 = x3d.HAnimJoint()
@@ -3415,6 +3428,6 @@ HAnimHumanoid43.sites.append(HAnimSite649)
 Scene29.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene29
-f = open("././HAnim2SpecificationLOA3Invisible_RoundTrip.x3d", "w")
+f = open("././HAnim2SpecificationLOA3Invisible_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

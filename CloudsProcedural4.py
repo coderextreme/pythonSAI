@@ -76,8 +76,6 @@ Viewpoint14.position = [48000,1000,20000]
 
 Scene11.children.append(Viewpoint14)
 Background15 = x3d.Background()
-Background15.groundColor = [0,0,1]
-Background15.skyColor = [0,0,1]
 
 Scene11.children.append(Background15)
 DirectionalLight16 = x3d.DirectionalLight()
@@ -569,6 +567,6 @@ Group28.children.append(DirectionalLight38)
 Scene11.children.append(Group28)
 
 X3D0.Scene = Scene11
-f = open("././CloudsProcedural4_RoundTrip.x3d", "w")
+f = open("././CloudsProcedural4_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

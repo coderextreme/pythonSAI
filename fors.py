@@ -102,7 +102,6 @@ ProtoBody12.children.append(Transform13)
 PositionInterpolator26 = x3d.PositionInterpolator()
 PositionInterpolator26.DEF = "NodePosition"
 PositionInterpolator26.key = [0,1]
-PositionInterpolator26.keyValue = (0.0000,0.0000,0.0000,0.0000,5.0000,0.0000)
 
 ProtoBody12.children.append(PositionInterpolator26)
 Script27 = x3d.Script()
@@ -203,8 +202,6 @@ Shape42 = x3d.Shape()
 Extrusion43 = x3d.Extrusion()
 Extrusion43.DEF = "extrusion"
 Extrusion43.creaseAngle = 0.785
-Extrusion43.crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]
-Extrusion43.spine = (0.0000,-50.0000,0.0000,0.0000,50.0000,0.0000)
 
 Shape42.geometry = Extrusion43
 Appearance44 = x3d.Appearance()
@@ -222,7 +219,6 @@ field47 = x3d.field()
 field47.name = "spine"
 field47.accessType = "inputOutput"
 field47.type = "MFVec3f"
-field47.value = (0.0000,-50.0000,0.0000,0.0000,50.0000,0.0000)
 
 Script46.field.append(field47)
 field48 = x3d.field()
@@ -348,6 +344,6 @@ ROUTE64.toField = "set_positionB"
 Scene8.children.append(ROUTE64)
 
 X3D0.Scene = Scene8
-f = open("././fors_RoundTrip.x3d", "w")
+f = open("././fors_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

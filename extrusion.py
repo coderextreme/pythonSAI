@@ -42,9 +42,7 @@ Group9 = x3d.Group()
 Shape10 = x3d.Shape()
 Extrusion11 = x3d.Extrusion()
 Extrusion11.DEF = "extrusion"
-Extrusion11.spine = (-50.0000,-50.0000,0.0000,50.0000,50.0000,0.0000)
 Extrusion11.creaseAngle = 0.785
-Extrusion11.crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]
 
 Shape10.geometry = Extrusion11
 Appearance12 = x3d.Appearance()
@@ -73,7 +71,6 @@ field17 = x3d.field()
 field17.name = "spine"
 field17.accessType = "inputOutput"
 field17.type = "MFVec3f"
-field17.value = (-50.0000,-50.0000,0.0000,50.0000,50.0000,0.0000)
 
 Script15.field.append(field17)
 
@@ -105,6 +102,6 @@ Group9.children.append(ROUTE19)
 Scene8.children.append(Group9)
 
 X3D0.Scene = Scene8
-f = open("././extrusion_RoundTrip.x3d", "w")
+f = open("././extrusion_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

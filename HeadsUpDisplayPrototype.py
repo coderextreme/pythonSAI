@@ -336,8 +336,6 @@ ProtoDeclare12.ProtoBody = ProtoBody18
 Scene11.children.append(ProtoDeclare12)
 #====================
 Background59 = x3d.Background()
-Background59.groundColor = [0.1,0.1,0.3]
-Background59.skyColor = [0.5,0.5,0.1]
 
 Scene11.children.append(Background59)
 Anchor60 = x3d.Anchor()
@@ -368,6 +366,6 @@ Anchor60.children.append(Shape61)
 Scene11.children.append(Anchor60)
 
 X3D0.Scene = Scene11
-f = open("././HeadsUpDisplayPrototype_RoundTrip.x3d", "w")
+f = open("././HeadsUpDisplayPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

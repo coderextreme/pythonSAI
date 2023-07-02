@@ -301,7 +301,6 @@ Group48.children.append(TimeSensor49)
 PositionInterpolator58 = x3d.PositionInterpolator()
 PositionInterpolator58.DEF = "HUMANOIDROOT_POSITION_ANIMATOR"
 PositionInterpolator58.key = [0,0.04,0.08,0.12,0.16,0.2,0.24,0.28,0.32,0.36,0.4,0.44,0.48,0.64,0.76,0.8,0.84,0.88,0.92,0.96,1]
-PositionInterpolator58.keyValue = (0.0000,0.0000,0.0000,0.0000,-0.0126,-0.0129,0.0000,-0.0471,-0.0374,-0.0003,-0.1049,-0.0535,-0.0006,-0.1892,-0.0656,-0.0008,-0.2860,-0.0628,-0.0010,-0.3795,-0.0515,-0.0011,-0.4484,-0.0366,-0.0011,-0.4484,-0.0366,-0.0011,-0.3269,-0.1499,-0.0009,-0.1300,-0.0636,-0.0005,-0.0312,-0.0549,0.0005,0.0530,0.0273,0.0002,0.4148,0.0069,0.0000,0.0305,0.0215,0.0000,-0.0130,-0.0106,0.0000,-0.0693,-0.0106,0.0001,-0.1037,-0.0051,0.0001,-0.0720,-0.0076,0.0001,-0.0163,-0.0049,0.0000,0.0000,0.0000)
 IS59 = x3d.IS()
 connect60 = x3d.connect()
 connect60.nodeField = "value_changed"
@@ -315,7 +314,6 @@ Group48.children.append(PositionInterpolator58)
 OrientationInterpolator61 = x3d.OrientationInterpolator()
 OrientationInterpolator61.DEF = "HUMANOIDROOT_ANIMATOR"
 OrientationInterpolator61.key = [0,0.28,0.32,0.48,0.64,0.76,1]
-OrientationInterpolator61.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.3273,1.0000,0.0000,0.0000,0.3273,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 IS62 = x3d.IS()
 connect63 = x3d.connect()
 connect63.nodeField = "value_changed"
@@ -329,7 +327,6 @@ Group48.children.append(OrientationInterpolator61)
 OrientationInterpolator64 = x3d.OrientationInterpolator()
 OrientationInterpolator64.DEF = "SACROILIAC_ANIMATOR"
 OrientationInterpolator64.key = [0,0.28,0.32,0.48,0.76,1]
-OrientationInterpolator64.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.1892,1.0000,0.0000,0.0000,0.1892,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000)
 IS65 = x3d.IS()
 connect66 = x3d.connect()
 connect66.nodeField = "value_changed"
@@ -343,7 +340,6 @@ Group48.children.append(OrientationInterpolator64)
 OrientationInterpolator67 = x3d.OrientationInterpolator()
 OrientationInterpolator67.DEF = "L_HIP_ANIMATOR"
 OrientationInterpolator67.key = [0,0.28,0.32,0.36,0.4,0.44,0.48,0.64,0.76,0.88,1]
-OrientationInterpolator67.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,4.3490,1.0000,0.0000,0.0000,4.3490,1.0000,0.0000,0.0000,4.6150,-1.0000,0.0000,0.0000,0.9136,-1.0000,0.0000,0.0000,0.3614,0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.7869,-1.0000,0.0000,0.0000,0.3918,-1.0000,0.0000,0.0000,0.5433,0.0000,0.0000,1.0000,0.0000)
 IS68 = x3d.IS()
 connect69 = x3d.connect()
 connect69.nodeField = "value_changed"
@@ -357,7 +353,6 @@ Group48.children.append(OrientationInterpolator67)
 OrientationInterpolator70 = x3d.OrientationInterpolator()
 OrientationInterpolator70.DEF = "L_KNEE_ANIMATOR"
 OrientationInterpolator70.key = [0,0.28,0.32,0.48,0.64,0.76,0.88,1]
-OrientationInterpolator70.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,2.0470,1.0000,0.0000,0.0000,2.0470,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,1.5660,1.0000,0.0000,0.0000,0.5913,1.0000,0.0000,0.0000,0.9235,0.0000,0.0000,1.0000,0.0000)
 IS71 = x3d.IS()
 connect72 = x3d.connect()
 connect72.nodeField = "value_changed"
@@ -371,7 +366,6 @@ Group48.children.append(OrientationInterpolator70)
 OrientationInterpolator73 = x3d.OrientationInterpolator()
 OrientationInterpolator73.DEF = "L_ANKLE_ANIMATOR"
 OrientationInterpolator73.key = [0,0.28,0.32,0.36,0.4,0.44,0.48,0.64,0.76,0.84,0.88,0.92,0.96,1]
-OrientationInterpolator73.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.6250,-1.0000,0.0000,0.0000,0.6250,-1.0000,0.0000,0.0000,0.3364,-1.0000,0.0000,0.0000,0.2742,-1.0000,0.0000,0.0000,0.0508,1.0000,0.0000,0.0000,0.2833,1.0000,0.0000,0.0000,0.6667,1.0000,0.0000,0.0000,0.2833,-1.0000,0.0000,0.0000,0.2108,-1.0000,0.0000,0.0000,0.3750,-1.0000,0.0000,0.0000,0.3146,-1.0000,0.0000,0.0000,0.1174,0.0000,0.0000,1.0000,0.0000)
 IS74 = x3d.IS()
 connect75 = x3d.connect()
 connect75.nodeField = "value_changed"
@@ -385,7 +379,6 @@ Group48.children.append(OrientationInterpolator73)
 OrientationInterpolator76 = x3d.OrientationInterpolator()
 OrientationInterpolator76.DEF = "L_MIDTARSAL_ANIMATOR"
 OrientationInterpolator76.key = [0,0.5,1]
-OrientationInterpolator76.keyValue = (1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,-0.2000,1.0000,0.0000,0.0000,0.0000)
 IS77 = x3d.IS()
 connect78 = x3d.connect()
 connect78.nodeField = "value_changed"
@@ -399,7 +392,6 @@ Group48.children.append(OrientationInterpolator76)
 OrientationInterpolator79 = x3d.OrientationInterpolator()
 OrientationInterpolator79.DEF = "R_HIP_ANIMATOR"
 OrientationInterpolator79.key = [0,0.28,0.32,0.36,0.4,0.44,0.48,0.64,0.76,0.88,1]
-OrientationInterpolator79.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,4.4330,1.0000,0.0000,0.0000,4.4330,1.0000,0.0000,0.0000,4.6470,-1.0000,0.0000,0.0000,0.8943,-1.0000,0.0000,0.0000,0.3698,0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.4963,-1.0000,0.0000,0.0000,0.3829,-1.0000,0.0000,0.0000,0.5169,0.0000,0.0000,1.0000,0.0000)
 IS80 = x3d.IS()
 connect81 = x3d.connect()
 connect81.nodeField = "value_changed"
@@ -413,7 +405,6 @@ Group48.children.append(OrientationInterpolator79)
 OrientationInterpolator82 = x3d.OrientationInterpolator()
 OrientationInterpolator82.DEF = "R_KNEE_ANIMATOR"
 OrientationInterpolator82.key = [0,0.28,0.32,0.48,0.64,0.76,0.88,1]
-OrientationInterpolator82.keyValue = (0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,2.0050,1.0000,0.0000,0.0000,2.0050,0.0000,0.0000,1.0000,0.0000,1.0000,0.0000,0.0000,0.9507,1.0000,0.0000,0.0000,0.5845,1.0000,0.0000,0.0000,0.9054,0.0000,0.0000,1.0000,0.0000)
 IS83 = x3d.IS()
 connect84 = x3d.connect()
 connect84.nodeField = "value_changed"
@@ -427,7 +418,6 @@ Group48.children.append(OrientationInterpolator82)
 OrientationInterpolator85 = x3d.OrientationInterpolator()
 OrientationInterpolator85.DEF = "R_ANKLE_ANIMATOR"
 OrientationInterpolator85.key = [0,0.28,0.32,0.36,0.4,0.44,0.48,0.64,0.76,0.84,0.88,0.92,0.96,1]
-OrientationInterpolator85.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.6735,-1.0000,0.0000,0.0000,0.6735,-1.0000,0.0000,0.0000,0.3527,-1.0000,0.0000,0.0000,0.3038,-1.0000,0.0000,0.0000,0.0796,1.0000,0.0000,0.0000,0.3001,1.0000,0.0000,0.0000,0.6509,1.0000,0.0000,0.0000,0.3001,-1.0000,0.0000,0.0000,0.2087,-1.0000,0.0000,0.0000,0.3756,-1.0000,0.0000,0.0000,0.3279,-1.0000,0.0000,0.0000,0.1193,0.0000,0.0000,1.0000,0.0000)
 IS86 = x3d.IS()
 connect87 = x3d.connect()
 connect87.nodeField = "value_changed"
@@ -441,7 +431,6 @@ Group48.children.append(OrientationInterpolator85)
 OrientationInterpolator88 = x3d.OrientationInterpolator()
 OrientationInterpolator88.DEF = "R_MIDTARSAL_ANIMATOR"
 OrientationInterpolator88.key = [0,0.5,1]
-OrientationInterpolator88.keyValue = (1.0000,0.0000,0.0000,-0.2000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,0.0000,-0.2000)
 IS89 = x3d.IS()
 connect90 = x3d.connect()
 connect90.nodeField = "value_changed"
@@ -455,7 +444,6 @@ Group48.children.append(OrientationInterpolator88)
 OrientationInterpolator91 = x3d.OrientationInterpolator()
 OrientationInterpolator91.DEF = "VL5_ANIMATOR"
 OrientationInterpolator91.key = [0,0.2083,0.375,0.75,0.8333,1]
-OrientationInterpolator91.keyValue = (0.0000,1.0000,0.0000,0.0826,-0.0197,-0.5974,0.8017,0.0823,0.0093,-0.9648,0.2627,0.1734,-0.0124,0.9549,-0.2968,0.0873,-0.0081,0.9691,-0.2463,0.1580,0.0000,1.0000,0.0000,0.0826)
 IS92 = x3d.IS()
 connect93 = x3d.connect()
 connect93.nodeField = "value_changed"
@@ -469,7 +457,6 @@ Group48.children.append(OrientationInterpolator91)
 OrientationInterpolator94 = x3d.OrientationInterpolator()
 OrientationInterpolator94.DEF = "SKULLBASE_ANIMATOR"
 OrientationInterpolator94.key = [0,0.28,0.32,0.48,0.76,1]
-OrientationInterpolator94.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.5989,-1.0000,0.0000,0.0000,0.5989,-1.0000,0.0000,0.0000,0.3216,1.0000,0.0000,0.0000,0.0650,0.0000,0.0000,1.0000,0.0000)
 IS95 = x3d.IS()
 connect96 = x3d.connect()
 connect96.nodeField = "value_changed"
@@ -483,7 +470,6 @@ Group48.children.append(OrientationInterpolator94)
 OrientationInterpolator97 = x3d.OrientationInterpolator()
 OrientationInterpolator97.DEF = "L_SHOULDER_ANIMATOR"
 OrientationInterpolator97.key = [0,0.28,0.32,0.64,0.76,0.88,1]
-OrientationInterpolator97.keyValue = (0.0000,0.0000,1.0000,0.0000,-0.9987,0.0255,0.0450,1.5700,-0.9987,0.0255,0.0450,1.5700,1.0000,0.0004,0.0031,4.1140,-0.8413,0.3238,0.4329,1.4530,-0.8770,0.4198,0.2337,0.6009,0.0000,0.0000,1.0000,0.0000)
 IS98 = x3d.IS()
 connect99 = x3d.connect()
 connect99.nodeField = "value_changed"
@@ -497,7 +483,6 @@ Group48.children.append(OrientationInterpolator97)
 OrientationInterpolator100 = x3d.OrientationInterpolator()
 OrientationInterpolator100.DEF = "L_ELBOW_ANIMATOR"
 OrientationInterpolator100.key = [0,0.28,0.32,0.64,0.76,1]
-OrientationInterpolator100.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.1229,-1.0000,0.0000,0.0000,0.1229,-1.0000,0.0000,0.0000,0.5976,-1.0000,0.0000,0.0000,0.3917,0.0000,0.0000,1.0000,0.0000)
 IS101 = x3d.IS()
 connect102 = x3d.connect()
 connect102.nodeField = "value_changed"
@@ -511,7 +496,6 @@ Group48.children.append(OrientationInterpolator100)
 OrientationInterpolator103 = x3d.OrientationInterpolator()
 OrientationInterpolator103.DEF = "L_WRIST_ANIMATOR"
 OrientationInterpolator103.key = [0,0.28,0.32,0.64,0.76,0.88,1]
-OrientationInterpolator103.keyValue = (0.0000,0.0000,1.0000,0.0000,0.0673,0.9895,-0.1281,4.1557,0.0673,0.9895,-0.1281,4.1557,0.0036,0.9999,0.0136,4.5822,0.0000,-1.0000,0.0000,0.6559,-0.0005,-1.0000,0.0013,1.2840,0.0000,0.0000,1.0000,0.0000)
 IS104 = x3d.IS()
 connect105 = x3d.connect()
 connect105.nodeField = "value_changed"
@@ -525,7 +509,6 @@ Group48.children.append(OrientationInterpolator103)
 OrientationInterpolator106 = x3d.OrientationInterpolator()
 OrientationInterpolator106.DEF = "R_SHOULDER_ANIMATOR"
 OrientationInterpolator106.key = [0,0.28,0.32,0.64,0.76,0.88,1]
-OrientationInterpolator106.keyValue = (0.0000,0.0000,1.0000,0.0000,0.9992,0.0204,0.0356,4.6880,0.9992,0.0204,0.0356,4.6880,0.9989,-0.0462,0.0052,4.0790,-0.8687,-0.2525,-0.4261,1.5010,-0.9410,-0.2893,-0.1754,0.4788,0.0000,0.0000,1.0000,0.0000)
 IS107 = x3d.IS()
 connect108 = x3d.connect()
 connect108.nodeField = "value_changed"
@@ -539,7 +522,6 @@ Group48.children.append(OrientationInterpolator106)
 OrientationInterpolator109 = x3d.OrientationInterpolator()
 OrientationInterpolator109.DEF = "R_ELBOW_ANIMATOR"
 OrientationInterpolator109.key = [0,0.28,0.32,0.64,0.76,1]
-OrientationInterpolator109.keyValue = (0.0000,0.0000,1.0000,0.0000,-1.0000,0.0000,0.0000,0.0415,-1.0000,0.0000,0.0000,0.0415,-1.0000,0.0000,0.0000,0.5855,-1.0000,0.0000,0.0000,0.5852,0.0000,0.0000,1.0000,0.0000)
 IS110 = x3d.IS()
 connect111 = x3d.connect()
 connect111.nodeField = "value_changed"
@@ -553,7 +535,6 @@ Group48.children.append(OrientationInterpolator109)
 OrientationInterpolator112 = x3d.OrientationInterpolator()
 OrientationInterpolator112.DEF = "R_WRIST_ANIMATOR"
 OrientationInterpolator112.key = [0,0.28,0.32,0.64,0.76,1]
-OrientationInterpolator112.keyValue = (0.0000,0.0000,1.0000,0.0000,-0.0585,0.9839,-0.1688,1.8596,-0.0585,0.9839,-0.1688,1.8596,-0.0022,0.9980,-0.0630,1.4607,0.0000,1.0000,0.0000,0.4973,0.0000,0.0000,1.0000,0.0000)
 IS113 = x3d.IS()
 connect114 = x3d.connect()
 connect114.nodeField = "value_changed"
@@ -730,6 +711,6 @@ Anchor134.children.append(Shape135)
 Scene17.children.append(Anchor134)
 
 X3D0.Scene = Scene17
-f = open("././LOA1_JumpAnimation_RoundTrip.x3d", "w")
+f = open("././LOA1_JumpAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

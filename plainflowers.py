@@ -115,6 +115,6 @@ Group10.children.append(ProtoInstance25)
 Scene7.children.append(Group10)
 
 X3D0.Scene = Scene7
-f = open("././plainflowers_RoundTrip.x3d", "w")
+f = open("././plainflowers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

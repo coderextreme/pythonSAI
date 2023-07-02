@@ -260,7 +260,6 @@ IndexedLineSet52 = x3d.IndexedLineSet()
 IndexedLineSet52.coordIndex = [0,1,2,3,4,0]
 #Coordinate 3-tuple point count: 6
 Coordinate53 = x3d.Coordinate()
-Coordinate53.point = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
 IndexedLineSet52.coord = Coordinate53
 
@@ -270,7 +269,6 @@ Scene32.children.append(Shape49)
 PositionInterpolator54 = x3d.PositionInterpolator()
 PositionInterpolator54.DEF = "BoxPathAnimator"
 PositionInterpolator54.key = [0,0.125,0.375,0.625,0.875,1]
-PositionInterpolator54.keyValue = (0.0000,1.5000,0.0000,2.0000,1.5000,0.0000,2.0000,1.5000,-2.0000,-2.0000,1.5000,-2.0000,-2.0000,1.5000,0.0000,0.0000,1.5000,0.0000)
 
 Scene32.children.append(PositionInterpolator54)
 TimeSensor55 = x3d.TimeSensor()
@@ -314,12 +312,16 @@ MetadataString64 = x3d.MetadataString()
 MetadataString64.name = "quotesTestC"
 MetadataString64.value = ["MFString example C, backslash-escaped quotes: He said, \"Immel did it!\""]
 
-MetadataSet63.value = MetadataString64
+if MetadataSet63.value is None:
+    MetadataSet63.value = []
+MetadataSet63.value.append(MetadataString64)
 MetadataString65 = x3d.MetadataString()
 MetadataString65.name = "extraChildTest"
 MetadataString65.value = ["checks MetadataSet addValue() method"]
 
-MetadataSet63.value = MetadataString65
+if MetadataSet63.value is None:
+    MetadataSet63.value = []
+MetadataSet63.value.append(MetadataString65)
 
 Text62.metadata = MetadataSet63
 FontStyle66 = x3d.FontStyle()
@@ -355,7 +357,6 @@ Scene32.children.append(Transform58)
 OrientationInterpolator70 = x3d.OrientationInterpolator()
 OrientationInterpolator70.DEF = "SpinInterpolator"
 OrientationInterpolator70.key = [0,0.5,1]
-OrientationInterpolator70.keyValue = (0.0000,1.0000,0.0000,4.7124,0.0000,1.0000,0.0000,0.0000,0.0000,1.0000,0.0000,1.5708)
 
 Scene32.children.append(OrientationInterpolator70)
 TimeSensor71 = x3d.TimeSensor()
@@ -411,7 +412,6 @@ Group74.children.append(Script76)
 ColorInterpolator79 = x3d.ColorInterpolator()
 ColorInterpolator79.DEF = "ColorAnimator"
 ColorInterpolator79.key = [0,0.5,1]
-ColorInterpolator79.keyValue = [0.9411765,1,1,0.29411766,0,0.50980395,0.9411765,1,1]
 #AZURE to INDIGO and back again
 
 Group74.children.append(ColorInterpolator79)
@@ -767,7 +767,7 @@ MetadataString141.name = "findThisNameValue"
 MetadataString141.DEF = "FindableMetadataStringTest"
 MetadataString141.value = ["test case"]
 
-Shape140.value = MetadataString141
+Shape140.metadata = MetadataString141
 Appearance142 = x3d.Appearance()
 Appearance142.DEF = "DeclarativeAppearanceExample"
 #DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance
@@ -1049,6 +1049,6 @@ LoadSensor193.children.append(ShaderProgram206)
 Scene32.children.append(LoadSensor193)
 
 X3D0.Scene = Scene32
-f = open("././HelloWorldProgramOutput_RoundTrip.x3d", "w")
+f = open("././HelloWorldProgramOutput_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

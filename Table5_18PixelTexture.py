@@ -69,7 +69,6 @@ head1.children.append(meta13)
 X3D0.head = head1
 Scene14 = x3d.Scene()
 Background15 = x3d.Background()
-Background15.skyColor = [0,0,1]
 
 Scene14.children.append(Background15)
 Transform16 = x3d.Transform()
@@ -226,6 +225,6 @@ Transform48.children.append(Shape49)
 Scene14.children.append(Transform48)
 
 X3D0.Scene = Scene14
-f = open("././Table5_18PixelTexture_RoundTrip.x3d", "w")
+f = open("././Table5_18PixelTexture_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -77,7 +77,6 @@ NavigationInfo16.type = ["ON"]
 
 Scene14.children.append(NavigationInfo16)
 Background17 = x3d.Background()
-Background17.skyColor = [0.2,0.2,0.21]
 
 Scene14.children.append(Background17)
 Viewpoint18 = x3d.Viewpoint()
@@ -310,7 +309,7 @@ StreamAudioDestination61.children.append(Gain62)
 Scene14.children.append(StreamAudioDestination61)
 ChannelSplitter68 = x3d.ChannelSplitter()
 ChannelSplitter68.DEF = "ChannelSplitter"
-ChannelSplitter68.channelCountMode = "explicit"
+ChannelSplitter68.channelCountMode = "EXPLICIT"
 ChannelSplitter68.channelInterpretation = "SPEAKERS"
 AudioClip69 = x3d.AudioClip()
 AudioClip69.description = "Violin"
@@ -348,6 +347,6 @@ Transform70.children.append(Shape71)
 Scene14.children.append(Transform70)
 
 X3D0.Scene = Scene14
-f = open("././SplitChannels_RoundTrip.x3d", "w")
+f = open("././SplitChannels_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -124,115 +124,96 @@ Group24.children.append(TimeSensor25)
 PositionInterpolator26 = x3d.PositionInterpolator()
 PositionInterpolator26.DEF = "Keyframe_HumanoidRoot"
 PositionInterpolator26.key = [0,1]
-PositionInterpolator26.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(PositionInterpolator26)
 OrientationInterpolator27 = x3d.OrientationInterpolator()
 OrientationInterpolator27.DEF = "Keyframe_HumanoidRoot"
 OrientationInterpolator27.key = [0,1]
-OrientationInterpolator27.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator27)
 OrientationInterpolator28 = x3d.OrientationInterpolator()
 OrientationInterpolator28.DEF = "Keyframe_sacroiliac"
 OrientationInterpolator28.key = [0,1]
-OrientationInterpolator28.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator28)
 OrientationInterpolator29 = x3d.OrientationInterpolator()
 OrientationInterpolator29.DEF = "Keyframe_l_shoulder"
 OrientationInterpolator29.key = [0,0.5,1]
-OrientationInterpolator29.keyValue = (0.0000,0.0000,0.0000,0.0000,-1.0000,0.0000,0.0000,3.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator29)
 OrientationInterpolator30 = x3d.OrientationInterpolator()
 OrientationInterpolator30.DEF = "Keyframe_l_elbow"
 OrientationInterpolator30.key = [0,1]
-OrientationInterpolator30.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator30)
 OrientationInterpolator31 = x3d.OrientationInterpolator()
 OrientationInterpolator31.DEF = "Keyframe_l_radiocarpal"
 OrientationInterpolator31.key = [0,1]
-OrientationInterpolator31.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator31)
 OrientationInterpolator32 = x3d.OrientationInterpolator()
 OrientationInterpolator32.DEF = "Keyframe_r_shoulder"
 OrientationInterpolator32.key = [0,0.5,1]
-OrientationInterpolator32.keyValue = (0.0000,0.0000,0.0000,0.0000,-1.0000,0.0000,0.0000,3.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator32)
 OrientationInterpolator33 = x3d.OrientationInterpolator()
 OrientationInterpolator33.DEF = "Keyframe_r_elbow"
 OrientationInterpolator33.key = [0,1]
-OrientationInterpolator33.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator33)
 OrientationInterpolator34 = x3d.OrientationInterpolator()
 OrientationInterpolator34.DEF = "Keyframe_r_radiocarpal"
 OrientationInterpolator34.key = [0,1]
-OrientationInterpolator34.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator34)
 OrientationInterpolator35 = x3d.OrientationInterpolator()
 OrientationInterpolator35.DEF = "Keyframe_vl5"
 OrientationInterpolator35.key = [0,1]
-OrientationInterpolator35.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator35)
 OrientationInterpolator36 = x3d.OrientationInterpolator()
 OrientationInterpolator36.DEF = "Keyframe_skullbase"
 OrientationInterpolator36.key = [0,1]
-OrientationInterpolator36.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator36)
 OrientationInterpolator37 = x3d.OrientationInterpolator()
 OrientationInterpolator37.DEF = "Keyframe_l_hip"
 OrientationInterpolator37.key = [0,1]
-OrientationInterpolator37.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator37)
 OrientationInterpolator38 = x3d.OrientationInterpolator()
 OrientationInterpolator38.DEF = "Keyframe_l_knee"
 OrientationInterpolator38.key = [0,1]
-OrientationInterpolator38.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator38)
 OrientationInterpolator39 = x3d.OrientationInterpolator()
 OrientationInterpolator39.DEF = "Keyframe_l_talocrural"
 OrientationInterpolator39.key = [0,1]
-OrientationInterpolator39.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator39)
 OrientationInterpolator40 = x3d.OrientationInterpolator()
 OrientationInterpolator40.DEF = "Keyframe_l_metatarsophalangeal"
 OrientationInterpolator40.key = [0,1]
-OrientationInterpolator40.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator40)
 OrientationInterpolator41 = x3d.OrientationInterpolator()
 OrientationInterpolator41.DEF = "Keyframe_r_hip"
 OrientationInterpolator41.key = [0,1]
-OrientationInterpolator41.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator41)
 OrientationInterpolator42 = x3d.OrientationInterpolator()
 OrientationInterpolator42.DEF = "Keyframe_r_knee"
 OrientationInterpolator42.key = [0,1]
-OrientationInterpolator42.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator42)
 OrientationInterpolator43 = x3d.OrientationInterpolator()
 OrientationInterpolator43.DEF = "Keyframe_r_talocrural"
 OrientationInterpolator43.key = [0,1]
-OrientationInterpolator43.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator43)
 OrientationInterpolator44 = x3d.OrientationInterpolator()
 OrientationInterpolator44.DEF = "Keyframe_r_metatarsophalangeal"
 OrientationInterpolator44.key = [0,1]
-OrientationInterpolator44.keyValue = (0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000)
 
 Group24.children.append(OrientationInterpolator44)
 ROUTE45 = x3d.ROUTE()
@@ -505,6 +486,6 @@ Group24.children.append(ROUTE82)
 Scene21.children.append(Group24)
 
 X3D0.Scene = Scene21
-f = open("././KoreanCharacterMotionAnnexB01Jin_RoundTrip.x3d", "w")
+f = open("././KoreanCharacterMotionAnnexB01Jin_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

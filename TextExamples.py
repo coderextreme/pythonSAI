@@ -123,6 +123,6 @@ Transform24.children.append(Shape25)
 Scene12.children.append(Transform24)
 
 X3D0.Scene = Scene12
-f = open("././TextExamples_RoundTrip.x3d", "w")
+f = open("././TextExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

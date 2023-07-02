@@ -39,7 +39,6 @@ Viewpoint8.description = "a moving graph"
 
 Scene7.children.append(Viewpoint8)
 Background9 = x3d.Background()
-Background9.skyColor = [0.4,0.4,0.4]
 
 Scene7.children.append(Background9)
 Transform10 = x3d.Transform()
@@ -148,7 +147,6 @@ Transform32.children.append(Shape35)
 PositionInterpolator39 = x3d.PositionInterpolator()
 PositionInterpolator39.DEF = "PI1"
 PositionInterpolator39.key = [0,1]
-PositionInterpolator39.keyValue = (0.0000,0.0000,0.0000,0.0000,5.0000,0.0000)
 
 Transform32.children.append(PositionInterpolator39)
 Script40 = x3d.Script()
@@ -568,6 +566,6 @@ ROUTE109.toField = "set_endpoint"
 Scene7.children.append(ROUTE109)
 
 X3D0.Scene = Scene7
-f = open("././arcold_RoundTrip.x3d", "w")
+f = open("././arcold_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

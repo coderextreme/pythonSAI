@@ -517,6 +517,6 @@ Transform47.children.append(ROUTE84)
 Scene17.children.append(Transform47)
 
 X3D0.Scene = Scene17
-f = open("././BindingOperations_RoundTrip.x3d", "w")
+f = open("././BindingOperations_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

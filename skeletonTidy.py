@@ -64,6 +64,6 @@ Viewpoint13.position = [0,1,3]
 Scene10.children.append(Viewpoint13)
 
 X3D0.Scene = Scene10
-f = open("././skeletonTidy_RoundTrip.x3d", "w")
+f = open("././skeletonTidy_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -188,6 +188,6 @@ Group27.children.append(Transform35)
 Scene25.children.append(Group27)
 
 X3D0.Scene = Scene25
-f = open("././HelloWorld_RoundTrip.x3d", "w")
+f = open("././HelloWorld_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

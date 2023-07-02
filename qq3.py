@@ -65,9 +65,7 @@ Appearance16.material = Material17
 
 Shape15.appearance = Appearance16
 Extrusion18 = x3d.Extrusion()
-Extrusion18.spine = (-2.5000,0.0000,0.0000,-1.5000,0.0000,0.0000)
 Extrusion18.creaseAngle = 0.785
-Extrusion18.crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]
 
 Shape15.geometry = Extrusion18
 
@@ -87,9 +85,7 @@ Appearance21.material = Material22
 
 Shape20.appearance = Appearance21
 Extrusion23 = x3d.Extrusion()
-Extrusion23.spine = (1.5000,0.0000,0.0000,2.5000,0.0000,0.0000)
 Extrusion23.creaseAngle = 0.785
-Extrusion23.crossSection = [1,0,0.92,-0.38,0.71,-0.71,0.38,-0.92,0,-1,-0.38,-0.92,-0.71,-0.71,-0.92,-0.38,-1,0,-0.92,0.38,-0.71,0.71,-0.38,0.92,0,1,0.38,0.92,0.71,0.71,0.92,0.38,1,0]
 
 Shape20.geometry = Extrusion23
 
@@ -151,6 +147,6 @@ Transform33.children.append(ProtoInstance34)
 Scene10.children.append(Transform33)
 
 X3D0.Scene = Scene10
-f = open("././qq3_RoundTrip.x3d", "w")
+f = open("././qq3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

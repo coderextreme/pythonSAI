@@ -259,6 +259,6 @@ ProtoInstance60.fieldValue.append(fieldValue61)
 Scene7.children.append(ProtoInstance60)
 
 X3D0.Scene = Scene7
-f = open("././ThreeDTexture_RoundTrip.x3d", "w")
+f = open("././ThreeDTexture_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()
