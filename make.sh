@@ -9,6 +9,7 @@ ${PYTHON} -m pip install --upgrade Cython
 ${PYTHON} -m pip install --upgrade pyjnius
 ${PYTHON} -m pip install --upgrade beautifulsoup4
 ${PYTHON} -m pip install --upgrade lxml
+${PYTHON} -m pip install --upgrade six
 ${PYTHON} classes.py
 ${PYTHON} fieldTypesGenerator.py
 ${PYTHON} mapToMethodGenerator.py

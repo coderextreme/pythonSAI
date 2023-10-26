@@ -3,6 +3,8 @@ if (typeof require === 'function') {
 	var Ajv = require('ajv');
 	var ajv = new Ajv();
 	var localize = require('ajv-i18n');
+	var addFormats = require("ajv-formats");
+	addFormats(ajv, {mode: "full", formats: ["uri-reference", "uri"], keywords: true});  // fast mode is "fast"
 	var X3DJSONLD = require('./X3DJSONLD.js');
 }
 
