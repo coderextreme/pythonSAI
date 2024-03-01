@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "underscore": ">=1.13.6",
+    "underscore": "*",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "ajv-i18n": "^4.2.0",
