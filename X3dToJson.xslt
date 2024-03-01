@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2001-2023 held by the author(s).  All rights reserved.
+Copyright (c) 2001-2024 held by the author(s).  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
@@ -65,7 +65,7 @@ POSSIBILITY OF SUCH DAMAGE.
 <xsl:stylesheet version="2.0" exclude-result-prefixes="ds saxon"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
-				xmlns:saxon="http://saxon.sf.net/">
+		xmlns:saxon="http://saxon.sf.net/">
     <!--
                 xmlns="http://www.w3.org/TR/xhtml1/strict"
                 xmlns:fn="http://www.w3.org/2005/xpath-functions" -->
@@ -2537,8 +2537,8 @@ POSSIBILITY OF SUCH DAMAGE.
                       not( local-name()='bboxSize'	and	(string(.)='-1 -1 -1' or string(.)='-1.0 -1.0 -1.0')) and
                       not( local-name()='bboxDisplay' and string(.)='false') and
                       not( local-name()='castShadow' and string(.)='true') and
-                      not( local-name()='channelCountMode' and string(.)='max') and
-                      not( local-name()='channelInterpretation' and string(.)='speakers') and
+                      not( local-name()='channelCountMode' and string(.)='MAX') and
+                      not( local-name()='channelInterpretation' and string(.)='SPEAKERS') and
                       not( local-name()='detune' and (string(.)='0' or string(.)='0.0')) and
                       not( local-name()='enabled' and string(.)='true') and
                       not( local-name()='gain' and (string(.)='1' or string(.)='1.0')) and
@@ -2606,14 +2606,17 @@ POSSIBILITY OF SUCH DAMAGE.
                       (local-name()='colorPerVertex' and string(.)='true') or
                       (local-name()='normalPerVertex' and string(.)='true') or
                       (local-name()='solid' and string(.)='true') or
-                      (local-name()='xDimension' and (string(.)='2')) or
+                      (local-name()='xDimension' and (string(.)='0')) or
                       (local-name()='xSpacing' and (string(.)='1' or string(.)='1.0')) or
-                      (local-name()='zDimension' and (string(.)='2')) or
+                      (local-name()='zDimension' and (string(.)='0')) or
                       (local-name()='zSpacing' and (string(.)='1' or string(.)='1.0')) or
                       (local-name()='yScale' and (string(.)='1' or string(.)='1.0')) or
-                      (local-name()='height' and (string(.)='0 0 0 0' or string(.)='0.0 0.0 0.0 0.0')) or
                       (local-name()='geoGridOrigin' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or
                       (local-name()='creaseAngle' and (string(.)='0' or string(.)='0.0')))) and
+                      not((local-name(..)='ElevationGrid') and
+                      (local-name()='height' and (string(.)='' or string(.)=''))) and
+                      not((local-name(..)='GeoElevationGrid') and
+                      (local-name()='height' and (string(.)='0 0' or string(.)='0.0 0.0'))) and
                       not( local-name(..)='Extrusion'	and
                       ((local-name()='beginCap' and string(.)='true') or
                       (local-name()='ccw' and string(.)='true') or
@@ -2658,7 +2661,7 @@ POSSIBILITY OF SUCH DAMAGE.
                       ((local-name()='enabled' and string(.)='true') or
                       (local-name()='timeOut' and (string(.)='0' or string(.)='0.0')))) and
                       not( local-name(..)='LOD'	and	((local-name()='center' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or (local-name()='forceTransitions' and string(.)='false'))) and
-                      not( ((local-name(..)='Material') or (local-name(..)='TwoSidedMaterial')) and
+                      not( ((local-name(..)='Material') or (local-name(..)='TwoSidedMaterial') or (local-name(..)='PhysicalMaterial')) and
                       ((local-name()='ambientIntensity' and string(.)='0.2') or
                       (local-name()='diffuseColor' and string(.)='0.8 0.8 0.8') or
                       (local-name()='emissiveColor' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or
@@ -2942,7 +2945,7 @@ POSSIBILITY OF SUCH DAMAGE.
                       not( local-name(..)='BufferAudioSource' and
                       ((local-name()='containerField' and string(.)='children') or
                       (local-name()='bufferDuration' and (string(.)='0' or string(.)='0.0')) or
-                      (local-name()='type' and (string(.)='lowpass')) or
+                      (local-name()='type' and (string(.)='LOWPASS')) or
                       (local-name()='loopStart' and (string(.)='0' or string(.)='0.0')) or
                       (local-name()='loopEnd' and (string(.)='0' or string(.)='0.0')) or
                       (local-name()='numberOfChannels' and string(.)='0') or
@@ -2991,17 +2994,17 @@ POSSIBILITY OF SUCH DAMAGE.
                       ((local-name()='containerField' and string(.)='children'))) and
                       not( local-name(..)='OscillatorSource' and
                       ((local-name()='containerField' and string(.)='children') or
-                      (local-name()='frequency' and (string(.)='0' or string(.)='0.0')))) and
+                      (local-name()='frequency' and (string(.)='440' or string(.)='440.0')))) and
                       not( local-name(..)='PeriodicWave' and
                       ((local-name()='containerField' and string(.)='children') or
-                      (local-name()='type' and (string(.)='square')))) and
+                      (local-name()='type' and (string(.)='SQUARE')))) and
                       not( local-name(..)='SpatialSound' and
                       ((local-name()='containerField' and string(.)='children') or
                       (local-name()='coneInnerAngle' and (string(.)='6.2832')) or
                       (local-name()='coneOuterAngle' and (string(.)='6.2832')) or
                       (local-name()='coneOuterGain' and (string(.)='0' or string(.)='0.0')) or
                       (local-name()='direction' and (string(.)='0 0 1' or string(.)='0.0 0.0 1.0')) or
-                      (local-name()='distanceModel' and (string(.)='inverse')) or
+                      (local-name()='distanceModel' and (string(.)='INVERSE')) or
                       (local-name()='dopplerEnabled' and (string(.)='false')) or
                       (local-name()='enableHRTF' and (string(.)='false')) or
                       (local-name()='intensity' and (string(.)='1' or string(.)='1.0')) or
@@ -3017,10 +3020,13 @@ POSSIBILITY OF SUCH DAMAGE.
                       ((local-name()='containerField' and string(.)='children'))) and
                       not( local-name(..)='WaveShaper' and
                       ((local-name()='containerField' and string(.)='children') or
-                      (local-name()='oversample' and (string(.)='none'))))" />
+                      (local-name()='oversample' and (string(.)='NONE'))))" />
         <xsl:variable name="notDefaultContainerField1"
                       select="not((local-name()='containerField' and string(.)='children')	and
                       (contains(local-name(..),'Interpolator') or
+                      ends-with(local-name(..),'Filter') or
+                      ends-with(local-name(..),'Sequencer') or
+                      ends-with(local-name(..),'Trigger') or
                       contains(local-name(..),'Light') or
                       contains(local-name(..),'Sensor') or
                       local-name(..)='Anchor' or
@@ -3058,11 +3064,11 @@ POSSIBILITY OF SUCH DAMAGE.
         <xsl:variable name="notDefaultContainerField2"
                       select="not((local-name()='containerField' and string(.)='source')   and (local-name(..)='AudioClip')) and
                       not((local-name()='containerField' and string(.)='appearance')	   and (local-name(..)='Appearance')) and
-                      not((local-name()='containerField' and string(.)='material')         and ((local-name(..)='Material') or (local-name(..)='TwoSidedMaterial'))) and
+                      not((local-name()='containerField' and string(.)='material')         and ((local-name(..)='Material') or (local-name(..)='TwoSidedMaterial') or (local-name(..)='PhysicalMaterial'))) and
                       not((local-name()='containerField' and string(.)='color')            and (local-name(..)='Color' or local-name(..)='ColorRGBA')) and
                       not((local-name()='containerField' and string(.)='coord')            and ((local-name(..)='Coordinate') or (local-name(..)='CoordinateDouble') or (local-name(..)='GeoCoordinate'))) and
                       not((local-name()='containerField' and string(.)='normal')           and (local-name(..)='Normal')) and
-                      not((local-name()='containerField' and string(.)='texture')          and (local-name(..)='ImageTexture' or local-name(..)='PixelTexture' or local-name(..)='MovieTexture' or local-name(..)='MultiTexture' or local-name(..)='ComposedTexture3D' or local-name(..)='ImageTexture3D' or local-name(..)='PixelTexture3D')) and
+                      not((local-name()='containerField' and string(.)='texture')          and (local-name(..)='ImageTexture' or local-name(..)='PixelTexture' or local-name(..)='MovieTexture' or local-name(..)='MultiTexture' or local-name(..)='ComposedTexture3D' or local-name(..)='ImageTexture3D' or local-name(..)='PixelTexture3D' or local-name(..)='GeneratedCubeMapTexture')) and
                       not((local-name()='containerField' and string(.)='fontStyle')        and (local-name(..)='FontStyle')) and
                       not((local-name()='containerField' and string(.)='texCoord')         and (local-name(..)='TextureCoordinate' or local-name(..)='TextureCoordinateGenerator')) and
                       not((local-name()='containerField' and string(.)='textureTransform') and (local-name(..)='TextureTransform'))" />
@@ -3184,9 +3190,6 @@ POSSIBILITY OF SUCH DAMAGE.
                        (local-name()='bboxCenter' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or
                        (local-name()='bboxSize' and (string(.)='-1 -1 -1' or string(.)='-1.0 -1.0 -1.0')) or
                        (local-name()='center' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or
-                       (local-name()='jointBindingPositions' and (string(.)='0 0 0' or string(.)='0.0 0.0 0.0')) or
-                       (local-name()='jointBindingRotations' and (string(.)='0 0 1 0' or string(.)='0 1 0 0' or string(.)='0.0 0.0 1.0 0.0' or string(.)='0.0 1.0 0.0 0.0')) or
-                       (local-name()='jointBindingScales' and (string(.)='1 1 1' or string(.)='1.0 1.0 1.0')) or
                        (local-name()='loa' and (string(.)='-1')) or
                        (local-name()='version' and (($isHAnim1 = true() and (string(.)='1.0' or (string-length(string(.)) = 0))) or ($isHAnim2 = true() and string(.)='2.0'))) or
                        (local-name()='skeletalConfiguration' and (string(.)='BASIC')) or
@@ -3229,7 +3232,7 @@ POSSIBILITY OF SUCH DAMAGE.
                       (local-name()='vDimension' and (string(.)='0')) or
                       (local-name()='uOrder' and (string(.)='3')) or
                       (local-name()='vOrder' and (string(.)='3')))) and
-                      not((local-name(..)='NurbsCurve' or local-name(..)='NurbsSwungSurface') and
+                      not((local-name(..)='NurbsSweptSurface' or local-name(..)='NurbsSwungSurface') and
                       ((local-name()='ccw' or local-name()='solid') and (string(.)='true'))) and
                       not((contains(local-name(..),'SplinePositionInterpolator') or local-name(..)='SplineScalarInterpolator' or local-name(..)='SquadOrientationInterpolator') and
                       ((local-name()='closed' or local-name()='normalizeVelocity') and (string(.)='false')))" />
@@ -3615,10 +3618,12 @@ POSSIBILITY OF SUCH DAMAGE.
 					($attributeName='next')     or
 					($attributeName='previous') or
 					($attributeName='normalizeVelocity') or
+					($attributeName='pickable')          or
 					($attributeName='rtpHeaderExpected') or
 					($attributeName='shadows') or
 					($attributeName='solid') or
 					($attributeName='uClosed') or ($attributeName='vClosed') or
+					($attributeName='useFiniteRotation') or ($attributeName='useGlobalGravity') or
 					($attributeName='viewAll') or
 					($attributeName='visible') or
 					($parentElementName='AudioClip' and $attributeName='loop') or
@@ -3647,7 +3652,6 @@ POSSIBILITY OF SUCH DAMAGE.
 					($parentElementName='NurbsPatchSurface' and $attributeName='closedSurface') or
 					($parentElementName='ParticleSystem' and $attributeName='createParticles') or
 					($parentElementName='VolumeEmitter' and $attributeName='internal') or
-					($parentElementName='PickableGroup' and $attributeName='pickable') or
 					($parentElementName='PixelTexture' and ($attributeName='repeatS' or $attributeName='repeatT')) or
 					($parentElementName='NavigationInfo' and $attributeName='headlight') or
 					($parentElementName='PlaneSensor' and $attributeName='autoOffset') or
@@ -3668,7 +3672,7 @@ POSSIBILITY OF SUCH DAMAGE.
 		  <!-- MFBool -->
 		  <xsl:when test="
 					($localFieldType='MFBool')  or 
-                    (contains($parentElementName,'BooleanSequencer') and $attributeName='keyValue') or
+                                        (contains($parentElementName,'BooleanSequencer') and $attributeName='keyValue') or
 					($parentElementName='CADLayer'                   and ($attributeName='visible') and starts-with(//X3D/@version,'3')) or
 					($parentElementName='HAnimHumanoid'              and $attributeName='motionsEnabled') or
 					($parentElementName='HAnimMotion'                and $attributeName='channelsEnabled') or
@@ -3739,17 +3743,35 @@ POSSIBILITY OF SUCH DAMAGE.
                                         ($attributeName='absorption')       or
                                         ($attributeName='ambientIntensity') or
 					($attributeName='attack')           or
+                                        ($attributeName='axis1Angle')       or ($attributeName='axis2Angle')  or ($attributeName='axis3Angle')  or	
+					($attributeName='axis1Torque')      or ($attributeName='axis2Torque') or ($attributeName='axis3Torque') or	
+					($attributeName='bounce')           or ($attributeName='minBounceSpeed')  or
                                         ($attributeName='coneInnerAngle')   or ($attributeName='coneOuterAngle')  or ($attributeName='coneOuterGain')    or
+					($attributeName='constantForceMix') or ($attributeName='contactSurfaceThickness')      or 
 					($attributeName='creaseAngle')      or
-					($attributeName='detune')           or
+                                        ($attributeName='desiredAngularVelocity1') or ($attributeName='desiredAngularVelocity2')  or
+                                        ($attributeName='disabledAngularSpeed') or ($attributeName='disabledLinearSpeed') or ($attributeName='disabledTime')  or	
+                                        ($attributeName='detune')           or
                                         ($attributeName='diffuse')          or
+					($attributeName='errorCorrection')  or
 					($attributeName='farDistance')      or ($attributeName='nearDistance')    or
 					($attributeName='frequency')        or
 					($attributeName='gain')             or
+					($attributeName='hinge1Angle')      or ($attributeName='hinge2Angle')       or
+					($attributeName='hinge1AngleRate')  or ($attributeName='hinge2AngleRate')   or
 					($attributeName='intensity')        or
 					($attributeName='interauralDistance') or
 					($attributeName='knee')             or
-					($attributeName='maxDistance')      or
+					($attributeName='linearDampingFactor') or ($attributeName='linearVelocity') or
+					($attributeName='loopEnd')          or ($attributeName='loopStart')       or
+					($attributeName='mass')             or
+					($attributeName='maxAngle1')        or ($attributeName='maxAngle2')       or
+					($attributeName='maxTorque1')       or ($attributeName='maxTorque2')      or
+					($attributeName='maxAngle')         or ($attributeName='minAngle1')       or
+					($attributeName='maxCorrectionSpeed') or
+					($attributeName='motor1Angle')      or ($attributeName='motor2Angle')     or
+                                        ($attributeName='motor1AngleRate')  or ($attributeName='motor2AngleRate') or
+                                        ($attributeName='maxDistance')      or
 					($attributeName='minDecibels')      or ($attributeName='maxDecibels')     or
                                         starts-with($attributeName,'pointSize') or
 					($attributeName='priority')         or
@@ -3759,10 +3781,16 @@ POSSIBILITY OF SUCH DAMAGE.
 					($attributeName='referenceDistance') or
                                         ($attributeName='refraction')       or
                                         ($attributeName='rolloffFactor')    or
+					($attributeName='separation')       or ($attributeName='separationRate')     or
 					($attributeName='shadowIntensity')  or
 					($attributeName='smoothingTimeConstant')  or
                                         ($attributeName='specular')         or
                                         ($attributeName='startAngle')       or ($attributeName='endAngle') or
+					($attributeName='stopBounce')       or ($attributeName='stopErrorCorrection') or
+                                        ($attributeName='stop1Bounce')      or ($attributeName='stop1ConstantForceMix ') or ($attributeName='stop1ErrorCorrection') or 
+                                        ($attributeName='stop2Bounce')      or ($attributeName='stop2ConstantForceMix ') or ($attributeName='stop2ErrorCorrection') or 
+                                        ($attributeName='stop3Bounce')      or ($attributeName='stop3ConstantForceMix ') or ($attributeName='stop3ErrorCorrection') or 
+                                        ($attributeName='suspensionErrorCorrection') or ($attributeName='suspensionForce') or 
 					($attributeName='threshold')        or
                                         ($attributeName='tolerance')        or
 					($attributeName='transparency')     or
@@ -3818,7 +3846,7 @@ POSSIBILITY OF SUCH DAMAGE.
 					($parentElementName='SpotLight' and ($attributeName='radius' or $attributeName='cutOffAngle' or $attributeName='beamWidth')) or
 					($parentElementName='Text' and $attributeName='maxExtent') or
 					($parentElementName='TextureProperties' and ($attributeName='anisotropicDegree' or $attributeName='texturePriority')) or
-					(starts-with($parentElementName,'TextureProjector') and ($attributeName='farDistance' or $attributeName='nearDistance')) or
+					(starts-with($parentElementName,'TextureProjector') and ($attributeName='farDistance' or $attributeName='nearDistance' or $attributeName='upVector')) or
                                         ($parentElementName='TextureTransform' and $attributeName='rotation') or
 					($parentElementName='TransmitterPdu' and ($attributeName='power' or $attributeName='transmitFrequencyBandwidth')) or
 					($parentElementName='UniversalJoint' and starts-with($attributeName,'stop')) or
@@ -3873,14 +3901,15 @@ POSSIBILITY OF SUCH DAMAGE.
                     ($attributeName='timestamp')      or
                     ($attributeName='readInterval')   or
                     ($attributeName='writeInterval')  or
-                    ($parentElementName='LoadSensor'     and $attributeName='timeOut')  or
-                    ($parentElementName='AudioClip'      and ends-with($attributeName,'Time'))  or
-                    ($parentElementName='EspduTransform' and ends-with($attributeName,'Time'))  or
-                    ($parentElementName='HAnimMotion'    and $attributeName='frameDuration') or
-                    ($parentElementName='MovieTexture'   and ends-with($attributeName,'Time')) or
+                    ($parentElementName='LoadSensor'         and $attributeName='timeOut')  or
+                    ($parentElementName='AudioClip'          and ends-with($attributeName,'Time'))  or
+                    ($parentElementName='DynamicsCompressor' and $attributeName='release')  or
+                    ($parentElementName='EspduTransform'     and ends-with($attributeName,'Time'))  or
+                    ($parentElementName='HAnimMotion'        and $attributeName='frameDuration') or
+                    ($parentElementName='MovieTexture'       and ends-with($attributeName,'Time')) or
                     ($parentElementName='TimeSensor')"> 
-                    <!-- TimeSensor loop & enabled are caught by SFBool tests, all other TimeSensor fields are SFTime -->
-			  <xsl:text>SFTime</xsl:text>
+                        <!-- TimeSensor loop & enabled are caught by SFBool tests, all other TimeSensor fields are SFTime -->
+                        <xsl:text>SFTime</xsl:text>
 		  </xsl:when>
 		  <!-- no MFTime -->
 		  <!-- SFVec2f -->
@@ -3942,6 +3971,8 @@ POSSIBILITY OF SUCH DAMAGE.
 					($attributeName='center')      or
 					($attributeName='scale')       or
 					($attributeName='translation') or
+					($attributeName='body1AnchorPoint') or ($attributeName='body2AnchorPoint') or
+					($attributeName='body1Axis')   or ($attributeName='body2Axis') or
 					($parentElementName='Billboard' and $attributeName='axisOfRotation') or
 					($parentElementName='Box' and $attributeName='size') or
 					(ends-with($parentElementName,'Emitter') and ($attributeName='direction' or $attributeName='position')) or
@@ -3966,7 +3997,7 @@ POSSIBILITY OF SUCH DAMAGE.
 					($parentElementName='SliderJoint' and ($attributeName='axis')) or
 					($parentElementName='Sound' and ($attributeName='direction' or $attributeName='location')) or
 					($parentElementName='SpotLight' and ($attributeName='attenuation' or $attributeName='direction' or $attributeName='location')) or
-					(starts-with($parentElementName,'TextureProjector') and ($attributeName='direction' or $attributeName='location')) or
+					(starts-with($parentElementName,'TextureProjector') and ($attributeName='direction' or $attributeName='location' or $attributeName='upVector')) or
 					($parentElementName='Transform' and ($attributeName='center' or $attributeName='scale' or $attributeName='translation')) or
 					($parentElementName='TransformSensor' and ($attributeName='size')) or
 					($parentElementName='TransmitterPdu' and (ends-with($attributeName,'Location'))) or
@@ -3989,6 +4020,7 @@ POSSIBILITY OF SUCH DAMAGE.
 					($parentElementName='NormalInterpolator'         and $attributeName='keyValue') or
 					($parentElementName='PositionInterpolator'       and $attributeName='keyValue') or
 					($parentElementName='SplinePositionInterpolator' and ($attributeName='keyValue' or $attributeName='keyVelocity')) or
+					($parentElementName='RigidBody'                  and ($attributeName='forces'   or $attributeName='torques')) or
 					(contains($parentElementName,'Coordinate') and $attributeName='point') or
 					($parentElementName='Extrusion' and $attributeName='spine') or
 					($parentElementName='Normal' and $attributeName='vector') or
@@ -4053,6 +4085,36 @@ POSSIBILITY OF SUCH DAMAGE.
                     ($parentElementName='Matrix4VertexAttribute' and $attributeName='value')">
 			  <xsl:text>MFMatrix4f</xsl:text>
 		  </xsl:when>
+		  <!-- SFNode and MFNode are needed for type lookup when checking ROUTE connections -->
+		  <!-- SFNode -->
+		  <xsl:when test="
+                    ($localFieldType='SFNode')    or 
+                    ($attributeName='attrib') or ($attributeName='color') or ($attributeName='coord') or ($attributeName='normal') or ($attributeName='texCoord') or 
+                    ($attributeName='body1')  or ($attributeName='body2') or ($attributeName='geometry1')  or ($attributeName='geometry2') or 
+                    (($parentElementName='MetadataSet')         and  $attributeName='metadata') or
+                    (($parentElementName='CollidableOffset')    and  $attributeName='collidable') or
+                    (($parentElementName='CollidableShape')     and  $attributeName='shape') or
+                    ((($parentElementName='CollisionSensor') or ($parentElementName='RigidBodyCollection'))  and  $attributeName='collider') or
+                    (($parentElementName='RigidBody')           and  $attributeName='massDensityModel') or
+                    (($parentElementName='RigidBodyCollection') and  $attributeName='joints') or
+                    ($parentElementName='Shape'                 and (($attributeName='appearance')     or ($attributeName='geometry'))) or
+                    ($parentElementName='Appearance'            and (($attributeName='material')       or ($attributeName='texture')          or ($attributeName='textureTransform') or ($attributeName='acousticProperties') or
+                    ($attributeName='fillProperties') or ($attributeName='lineProperties')  or ($attributeName='pointProperties'))) or
+                    ($parentElementName='PhysicalMaterial'      and (($attributeName='baseTexture')    or ($attributeName='emissiveTexture') or ($attributeName='metallicRoughnessTexture') or ($attributeName='normalTexture') or ($attributeName='occlusionTexture'))) or
+                    ($parentElementName='UnlitMaterial'         and (($attributeName='baseTexture')    or ($attributeName='emissiveTexture')                                                or ($attributeName='normalTexture')))">
+			  <xsl:text>SFNode</xsl:text>
+		  </xsl:when>
+		  <!-- MFNode -->
+		  <xsl:when test="
+                    ($localFieldType='MFNode')  or 
+                    ($attributeName='children') or ($attributeName='addChildren') or ($attributeName='removeChildren') or 
+                    (ends-with($parentElementName,'LOD') and  ($attributeName='level')) or
+                    ($attributeName='bodies') or ($attributeName='collidables') or ($attributeName='contacts') or
+                    (($parentElementName='RigidBodyCollection') and  $attributeName='joints') or
+                    ($parentElementName='MetadataSet' and $attributeName='metadata') or
+                    ($parentElementName='Appearance'  and $attributeName='shaders')">
+			  <xsl:text>MFNode</xsl:text>
+		  </xsl:when>
 		  <!-- MFInt32 --> <!-- must precede MFInt32 -->
 		  <xsl:when test="
 					($localFieldType='MFInt32')    or 
@@ -4081,12 +4143,18 @@ POSSIBILITY OF SUCH DAMAGE.
 		  </xsl:when>
 		  <!-- SFInt32 --> <!-- Note that other DIS attibutes must get tested before this, including MFInt32 -->
 		  <xsl:when test="
-                    ($localFieldType='SFInt32')    or 
-                     ends-with($attributeName,'ID')             or
-                    ($attributeName='farClippingPlane')         or
-                    ($attributeName='nearClippingPlane')        or
-                    ($attributeName='order')                    or
+                                        ($parentElementName='IntegerSequencer' and $attributeName='value') or
+                                        ($localFieldType='SFInt32')    or 
+                                         ends-with($attributeName,'ID')             or
+                                        ($attributeName='farClippingPlane')         or
+                                        ($attributeName='nearClippingPlane')        or
+                                        ($attributeName='bufferLength')             or
 					($attributeName='channelSelection')         or
+					($attributeName='enabledAxes')              or
+					($attributeName='fftSize')                  or
+					($attributeName='frequencyBinCount')        or
+					($attributeName='maxChannelCount')          or
+                                        ($attributeName='order')                    or
 					($attributeName='uOrder')                   or
 					($attributeName='vOrder')                   or
 					($attributeName='uDimension')               or
@@ -4104,8 +4172,8 @@ POSSIBILITY OF SUCH DAMAGE.
 					($parentElementName='FloatVertexAttribute' and $attributeName='numComponents') or
 					($parentElementName='GeneratedCubeMapTexture' and $attributeName='size') or
 					(starts-with($parentElementName,'HAnim') and $attributeName='loa') or
-                    ($parentElementName='HAnimMotion' and (($attributeName='frameIncrement') or ($attributeName='frameIndex') or ($attributeName='startFrame') or ($attributeName='endFrame'))) or
-                    ($parentElementName='IntegerTrigger' and $attributeName='integerKey') or
+                                        ($parentElementName='HAnimMotion' and (($attributeName='frameIncrement') or ($attributeName='frameIndex') or ($attributeName='startFrame') or ($attributeName='endFrame'))) or
+                                        ($parentElementName='IntegerTrigger' and $attributeName='integerKey') or
 					($parentElementName='LayerSet' and ($attributeName='activeLayer')) or
 					($parentElementName='LineProperties' and ($attributeName='linetype')) or
 					($parentElementName='MotorJoint' and $attributeName='enabledAxe') or

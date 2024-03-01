@@ -60,7 +60,7 @@
           },
           {
             "@name":"translated",
-            "@content":"26 October 2023"
+            "@content":"01 March 2024"
           },
           {
             "@name":"generator",
@@ -240,8 +240,6 @@
           },
           { "AudioDestination":
             {
-              "@channelCountMode":"MAX",
-              "@channelInterpretation":"SPEAKERS",
               "-children":[
                 {
                   "#comment":"not allowed here <Transform USE='Audio1'/>"
@@ -250,8 +248,7 @@
                   {
                     "@coneInnerAngle":6.283,
                     "@coneOuterAngle":6.283,
-                    "@enableHRTF":true,
-                    "@distanceModel":"INVERSE"
+                    "@enableHRTF":true
                   }
                 },
                 { "BufferAudioSource":
@@ -260,9 +257,7 @@
                     "@pauseTime":-1,
                     "@resumeTime":-1,
                     "@stopTime":-1,
-                    "@url":["sound/saxophone.mp3","sound/saxophone.ogg"],
-                    "@channelCountMode":"MAX",
-                    "@channelInterpretation":"SPEAKERS"
+                    "@url":["sound/saxophone.mp3","sound/saxophone.ogg"]
                   }
                 }
               ]

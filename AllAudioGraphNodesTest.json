@@ -44,7 +44,7 @@
           },
           {
             "@name":"translated",
-            "@content":"26 October 2023"
+            "@content":"01 March 2024"
           },
           {
             "@name":"generator",
@@ -178,6 +178,7 @@
                                                                                 "-children":[
                                                                                   { "WaveShaper":
                                                                                     {
+                                                                                      "@oversample":"NONE",
                                                                                       "@channelCountMode":"MAX",
                                                                                       "@channelInterpretation":"SPEAKERS",
                                                                                       "-children":[
