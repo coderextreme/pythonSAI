@@ -387,6 +387,7 @@ PythonSerializer.prototype = {
 				let method = this.printParentChild(element, node, cn, mapToMethod, n);
 				if (method === ".global") {
 					method = ".global_";
+					print(f"Substituting {method}");
 				} else if (method === ".addMeta" || method === ".addComponent"|| method === ".addUnit") {
 					method = ".children";
 				} else if (method === ".setIS") {
