@@ -6,78 +6,78 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "StringArrayEncodingExamples.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Demonstrate simple X3D MFString (string array) encoding."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "created"
 meta4.content = "27 May 2017"
+meta4.name = "created"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "modified"
 meta5.content = "27 May 2017"
+meta5.name = "modified"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "creator"
 meta6.content = "Don Brutzman"
+meta6.name = "creator"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "reference"
 meta7.content = "X3dHeaderPrototypeSyntaxExamples.x3d"
+meta7.name = "reference"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "specificationSection"
 meta8.content = "X3D encodings, ISO/IEC 19775-1, Part 1: Architecture and base components, 5 Field type reference, 5.3.14 SFString and MFString"
+meta8.name = "specificationSection"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "specificationUrl"
 meta9.content = "https://www.web3d.org/documents/specifications/19775-1/V3.3/Part01/fieldsDef.html#SFStringAndMFString"
+meta9.name = "specificationUrl"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "specificationSection"
 meta10.content = "X3D encodings, ISO/IEC 19776-1.3, Part 1: XML encoding, 5.3.14 SFString and MFString"
+meta10.name = "specificationSection"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "specificationUrl"
 meta11.content = "https://www.web3d.org/documents/specifications/19776-1/V3.3/Part01/EncodingOfFields.html#SFString"
+meta11.name = "specificationUrl"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "specificationSection"
 meta12.content = "X3D encodings, ISO/IEC 19776-2 v3.3, Part 2: Classic VRML encoding, 5.15 SFString and MFString"
+meta12.name = "specificationSection"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "specificationUrl"
 meta13.content = "https://www.web3d.org/documents/specifications/19776-2/V3.3/Part02/EncodingOfFields.html#SFString"
+meta13.name = "specificationUrl"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "identifier"
 meta14.content = "https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamples.x3d"
+meta14.name = "identifier"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "license"
 meta16.content = "../license.html"
+meta16.name = "license"
 
 head1.children.append(meta16)
 
@@ -94,8 +94,8 @@ Scene17.children.append(Background19)
 Shape20 = x3d.Shape()
 Text21 = x3d.Text()
 Text21.string = ["One, Two, Three","","He said, \"Immel did it!\""]
-#alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'
-#alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})
+""" alternative XML encoding: Text string='\"One, Two, Three\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"' """
+""" alternative Java source: .setString(new String [] {\"One, Two, Three\", \"\", \"He said, \\\"Immel did it!\\\"\"}) """
 FontStyle22 = x3d.FontStyle()
 FontStyle22.justify = ["MIDDLE","MIDDLE"]
 FontStyle22.style = "BOLD"
@@ -114,6 +114,6 @@ Shape20.appearance = Appearance23
 Scene17.children.append(Shape20)
 
 X3D0.Scene = Scene17
-f = open("././StringArrayEncodingExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("StringArrayEncodingExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

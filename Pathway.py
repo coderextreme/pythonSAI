@@ -6,68 +6,68 @@ X3D0.profile = "Interchange"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Pathway.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Pathway for HAnim scene Winter and Spring."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Carol McDonald"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Joe Williams and Don Brutzman"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "27 May 2023"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "27 May 2023"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "Image"
 meta8.content = "images/PathwayX3domOriginal.png"
+meta8.name = "Image"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "add viewpoints"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "TODO"
 meta10.content = "DEF/USE for all duplicated nodes to ensure consistency"
+meta10.name = "TODO"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "originals/pathway.x3dv"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "identifier"
 meta12.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Pathway.x3d"
+meta12.name = "identifier"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "generator"
 meta13.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta13.name = "generator"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "license"
 meta14.content = "../license.html"
+meta14.name = "license"
 
 head1.children.append(meta14)
 
@@ -80,9 +80,9 @@ Scene15.children.append(WorldInfo16)
 Shape17 = x3d.Shape()
 Appearance18 = x3d.Appearance()
 Material19 = x3d.Material()
-Material19.ambientIntensity = 0
-Material19.diffuseColor = [0.784313738,0,0]
-Material19.shininess = 1
+Material19.ambientIntensity = 0.0
+Material19.diffuseColor = [.784313738,0,0]
+Material19.shininess = 1.0
 
 Appearance18.material = Material19
 
@@ -101,9 +101,9 @@ Scene15.children.append(Shape17)
 Shape22 = x3d.Shape()
 Appearance23 = x3d.Appearance()
 Material24 = x3d.Material()
-Material24.ambientIntensity = 0
-Material24.diffuseColor = [0.784313738,0,0]
-Material24.shininess = 1
+Material24.ambientIntensity = 0.0
+Material24.diffuseColor = [.784313738,0,0]
+Material24.shininess = 1.0
 
 Appearance23.material = Material24
 
@@ -122,9 +122,9 @@ Scene15.children.append(Shape22)
 Shape27 = x3d.Shape()
 Appearance28 = x3d.Appearance()
 Material29 = x3d.Material()
-Material29.ambientIntensity = 0
-Material29.diffuseColor = [0.784313738,0,0]
-Material29.shininess = 1
+Material29.ambientIntensity = 0.0
+Material29.diffuseColor = [.784313738,0,0]
+Material29.shininess = 1.0
 
 Appearance28.material = Material29
 
@@ -143,9 +143,9 @@ Scene15.children.append(Shape27)
 Shape32 = x3d.Shape()
 Appearance33 = x3d.Appearance()
 Material34 = x3d.Material()
-Material34.ambientIntensity = 0
-Material34.diffuseColor = [0.784313738,0,0]
-Material34.shininess = 1
+Material34.ambientIntensity = 0.0
+Material34.diffuseColor = [.784313738,0,0]
+Material34.shininess = 1.0
 
 Appearance33.material = Material34
 
@@ -164,9 +164,9 @@ Scene15.children.append(Shape32)
 Shape37 = x3d.Shape()
 Appearance38 = x3d.Appearance()
 Material39 = x3d.Material()
-Material39.ambientIntensity = 0
-Material39.diffuseColor = [0.784313738,0,0]
-Material39.shininess = 1
+Material39.ambientIntensity = 0.0
+Material39.diffuseColor = [.784313738,0,0]
+Material39.shininess = 1.0
 
 Appearance38.material = Material39
 
@@ -185,9 +185,9 @@ Scene15.children.append(Shape37)
 Shape42 = x3d.Shape()
 Appearance43 = x3d.Appearance()
 Material44 = x3d.Material()
-Material44.ambientIntensity = 0
-Material44.diffuseColor = [0.784313738,0,0]
-Material44.shininess = 1
+Material44.ambientIntensity = 0.0
+Material44.diffuseColor = [.784313738,0,0]
+Material44.shininess = 1.0
 
 Appearance43.material = Material44
 
@@ -206,9 +206,9 @@ Scene15.children.append(Shape42)
 Shape47 = x3d.Shape()
 Appearance48 = x3d.Appearance()
 Material49 = x3d.Material()
-Material49.ambientIntensity = 0
-Material49.diffuseColor = [0.784313738,0,0]
-Material49.shininess = 1
+Material49.ambientIntensity = 0.0
+Material49.diffuseColor = [.784313738,0,0]
+Material49.shininess = 1.0
 
 Appearance48.material = Material49
 
@@ -227,9 +227,9 @@ Scene15.children.append(Shape47)
 Shape52 = x3d.Shape()
 Appearance53 = x3d.Appearance()
 Material54 = x3d.Material()
-Material54.ambientIntensity = 0
-Material54.diffuseColor = [0.784313738,0,0]
-Material54.shininess = 1
+Material54.ambientIntensity = 0.0
+Material54.diffuseColor = [.784313738,0,0]
+Material54.shininess = 1.0
 
 Appearance53.material = Material54
 
@@ -248,9 +248,9 @@ Scene15.children.append(Shape52)
 Shape57 = x3d.Shape()
 Appearance58 = x3d.Appearance()
 Material59 = x3d.Material()
-Material59.ambientIntensity = 0
-Material59.diffuseColor = [0.784313738,0,0]
-Material59.shininess = 1
+Material59.ambientIntensity = 0.0
+Material59.diffuseColor = [.784313738,0,0]
+Material59.shininess = 1.0
 
 Appearance58.material = Material59
 
@@ -269,9 +269,9 @@ Scene15.children.append(Shape57)
 Shape62 = x3d.Shape()
 Appearance63 = x3d.Appearance()
 Material64 = x3d.Material()
-Material64.ambientIntensity = 0
-Material64.diffuseColor = [0.784313738,0,0]
-Material64.shininess = 1
+Material64.ambientIntensity = 0.0
+Material64.diffuseColor = [.784313738,0,0]
+Material64.shininess = 1.0
 
 Appearance63.material = Material64
 
@@ -290,9 +290,9 @@ Scene15.children.append(Shape62)
 Shape67 = x3d.Shape()
 Appearance68 = x3d.Appearance()
 Material69 = x3d.Material()
-Material69.ambientIntensity = 0
-Material69.diffuseColor = [0.784313738,0,0]
-Material69.shininess = 1
+Material69.ambientIntensity = 0.0
+Material69.diffuseColor = [.784313738,0,0]
+Material69.shininess = 1.0
 
 Appearance68.material = Material69
 
@@ -311,9 +311,9 @@ Scene15.children.append(Shape67)
 Shape72 = x3d.Shape()
 Appearance73 = x3d.Appearance()
 Material74 = x3d.Material()
-Material74.ambientIntensity = 0
-Material74.diffuseColor = [0.784313738,0,0]
-Material74.shininess = 1
+Material74.ambientIntensity = 0.0
+Material74.diffuseColor = [.784313738,0,0]
+Material74.shininess = 1.0
 
 Appearance73.material = Material74
 
@@ -332,9 +332,9 @@ Scene15.children.append(Shape72)
 Shape77 = x3d.Shape()
 Appearance78 = x3d.Appearance()
 Material79 = x3d.Material()
-Material79.ambientIntensity = 0
-Material79.diffuseColor = [0.784313738,0,0]
-Material79.shininess = 1
+Material79.ambientIntensity = 0.0
+Material79.diffuseColor = [.784313738,0,0]
+Material79.shininess = 1.0
 
 Appearance78.material = Material79
 
@@ -353,9 +353,9 @@ Scene15.children.append(Shape77)
 Shape82 = x3d.Shape()
 Appearance83 = x3d.Appearance()
 Material84 = x3d.Material()
-Material84.ambientIntensity = 0
-Material84.diffuseColor = [0.784313738,0,0]
-Material84.shininess = 1
+Material84.ambientIntensity = 0.0
+Material84.diffuseColor = [.784313738,0,0]
+Material84.shininess = 1.0
 
 Appearance83.material = Material84
 
@@ -374,9 +374,9 @@ Scene15.children.append(Shape82)
 Shape87 = x3d.Shape()
 Appearance88 = x3d.Appearance()
 Material89 = x3d.Material()
-Material89.ambientIntensity = 0
-Material89.diffuseColor = [0.784313738,0,0]
-Material89.shininess = 1
+Material89.ambientIntensity = 0.0
+Material89.diffuseColor = [.784313738,0,0]
+Material89.shininess = 1.0
 
 Appearance88.material = Material89
 
@@ -395,9 +395,9 @@ Scene15.children.append(Shape87)
 Shape92 = x3d.Shape()
 Appearance93 = x3d.Appearance()
 Material94 = x3d.Material()
-Material94.ambientIntensity = 0
-Material94.diffuseColor = [0.784313738,0,0]
-Material94.shininess = 1
+Material94.ambientIntensity = 0.0
+Material94.diffuseColor = [.784313738,0,0]
+Material94.shininess = 1.0
 
 Appearance93.material = Material94
 
@@ -416,9 +416,9 @@ Scene15.children.append(Shape92)
 Shape97 = x3d.Shape()
 Appearance98 = x3d.Appearance()
 Material99 = x3d.Material()
-Material99.ambientIntensity = 0
-Material99.diffuseColor = [0.784313738,0,0]
-Material99.shininess = 1
+Material99.ambientIntensity = 0.0
+Material99.diffuseColor = [.784313738,0,0]
+Material99.shininess = 1.0
 
 Appearance98.material = Material99
 
@@ -437,9 +437,9 @@ Scene15.children.append(Shape97)
 Shape102 = x3d.Shape()
 Appearance103 = x3d.Appearance()
 Material104 = x3d.Material()
-Material104.ambientIntensity = 0
-Material104.diffuseColor = [0.784313738,0,0]
-Material104.shininess = 1
+Material104.ambientIntensity = 0.0
+Material104.diffuseColor = [.784313738,0,0]
+Material104.shininess = 1.0
 
 Appearance103.material = Material104
 
@@ -458,9 +458,9 @@ Scene15.children.append(Shape102)
 Shape107 = x3d.Shape()
 Appearance108 = x3d.Appearance()
 Material109 = x3d.Material()
-Material109.ambientIntensity = 0
-Material109.diffuseColor = [0.784313738,0,0]
-Material109.shininess = 1
+Material109.ambientIntensity = 0.0
+Material109.diffuseColor = [.784313738,0,0]
+Material109.shininess = 1.0
 
 Appearance108.material = Material109
 
@@ -479,9 +479,9 @@ Scene15.children.append(Shape107)
 Shape112 = x3d.Shape()
 Appearance113 = x3d.Appearance()
 Material114 = x3d.Material()
-Material114.ambientIntensity = 0
-Material114.diffuseColor = [0.784313738,0,0]
-Material114.shininess = 1
+Material114.ambientIntensity = 0.0
+Material114.diffuseColor = [.784313738,0,0]
+Material114.shininess = 1.0
 
 Appearance113.material = Material114
 
@@ -500,9 +500,9 @@ Scene15.children.append(Shape112)
 Shape117 = x3d.Shape()
 Appearance118 = x3d.Appearance()
 Material119 = x3d.Material()
-Material119.ambientIntensity = 0
-Material119.diffuseColor = [0.784313738,0,0]
-Material119.shininess = 1
+Material119.ambientIntensity = 0.0
+Material119.diffuseColor = [.784313738,0,0]
+Material119.shininess = 1.0
 
 Appearance118.material = Material119
 
@@ -521,9 +521,9 @@ Scene15.children.append(Shape117)
 Shape122 = x3d.Shape()
 Appearance123 = x3d.Appearance()
 Material124 = x3d.Material()
-Material124.ambientIntensity = 0
-Material124.diffuseColor = [0.784313738,0,0]
-Material124.shininess = 1
+Material124.ambientIntensity = 0.0
+Material124.diffuseColor = [.784313738,0,0]
+Material124.shininess = 1.0
 
 Appearance123.material = Material124
 
@@ -542,9 +542,9 @@ Scene15.children.append(Shape122)
 Shape127 = x3d.Shape()
 Appearance128 = x3d.Appearance()
 Material129 = x3d.Material()
-Material129.ambientIntensity = 0
-Material129.diffuseColor = [0.784313738,0,0]
-Material129.shininess = 1
+Material129.ambientIntensity = 0.0
+Material129.diffuseColor = [.784313738,0,0]
+Material129.shininess = 1.0
 
 Appearance128.material = Material129
 
@@ -563,9 +563,9 @@ Scene15.children.append(Shape127)
 Shape132 = x3d.Shape()
 Appearance133 = x3d.Appearance()
 Material134 = x3d.Material()
-Material134.ambientIntensity = 0
-Material134.diffuseColor = [0.784313738,0,0]
-Material134.shininess = 1
+Material134.ambientIntensity = 0.0
+Material134.diffuseColor = [.784313738,0,0]
+Material134.shininess = 1.0
 
 Appearance133.material = Material134
 
@@ -584,9 +584,9 @@ Scene15.children.append(Shape132)
 Shape137 = x3d.Shape()
 Appearance138 = x3d.Appearance()
 Material139 = x3d.Material()
-Material139.ambientIntensity = 0
-Material139.diffuseColor = [0.784313738,0,0]
-Material139.shininess = 1
+Material139.ambientIntensity = 0.0
+Material139.diffuseColor = [.784313738,0,0]
+Material139.shininess = 1.0
 
 Appearance138.material = Material139
 
@@ -605,9 +605,9 @@ Scene15.children.append(Shape137)
 Shape142 = x3d.Shape()
 Appearance143 = x3d.Appearance()
 Material144 = x3d.Material()
-Material144.ambientIntensity = 0
-Material144.diffuseColor = [0.784313738,0,0]
-Material144.shininess = 1
+Material144.ambientIntensity = 0.0
+Material144.diffuseColor = [.784313738,0,0]
+Material144.shininess = 1.0
 
 Appearance143.material = Material144
 
@@ -626,9 +626,9 @@ Scene15.children.append(Shape142)
 Shape147 = x3d.Shape()
 Appearance148 = x3d.Appearance()
 Material149 = x3d.Material()
-Material149.ambientIntensity = 0
-Material149.diffuseColor = [0.784313738,0,0]
-Material149.shininess = 1
+Material149.ambientIntensity = 0.0
+Material149.diffuseColor = [.784313738,0,0]
+Material149.shininess = 1.0
 
 Appearance148.material = Material149
 
@@ -647,9 +647,9 @@ Scene15.children.append(Shape147)
 Shape152 = x3d.Shape()
 Appearance153 = x3d.Appearance()
 Material154 = x3d.Material()
-Material154.ambientIntensity = 0
-Material154.diffuseColor = [0.784313738,0,0]
-Material154.shininess = 1
+Material154.ambientIntensity = 0.0
+Material154.diffuseColor = [.784313738,0,0]
+Material154.shininess = 1.0
 
 Appearance153.material = Material154
 
@@ -668,9 +668,9 @@ Scene15.children.append(Shape152)
 Shape157 = x3d.Shape()
 Appearance158 = x3d.Appearance()
 Material159 = x3d.Material()
-Material159.ambientIntensity = 0
-Material159.diffuseColor = [0.784313738,0,0]
-Material159.shininess = 1
+Material159.ambientIntensity = 0.0
+Material159.diffuseColor = [.784313738,0,0]
+Material159.shininess = 1.0
 
 Appearance158.material = Material159
 
@@ -689,9 +689,9 @@ Scene15.children.append(Shape157)
 Shape162 = x3d.Shape()
 Appearance163 = x3d.Appearance()
 Material164 = x3d.Material()
-Material164.ambientIntensity = 0
-Material164.diffuseColor = [0.784313738,0,0]
-Material164.shininess = 1
+Material164.ambientIntensity = 0.0
+Material164.diffuseColor = [.784313738,0,0]
+Material164.shininess = 1.0
 
 Appearance163.material = Material164
 
@@ -710,9 +710,9 @@ Scene15.children.append(Shape162)
 Shape167 = x3d.Shape()
 Appearance168 = x3d.Appearance()
 Material169 = x3d.Material()
-Material169.ambientIntensity = 0
-Material169.diffuseColor = [0.784313738,0,0]
-Material169.shininess = 1
+Material169.ambientIntensity = 0.0
+Material169.diffuseColor = [.784313738,0,0]
+Material169.shininess = 1.0
 
 Appearance168.material = Material169
 
@@ -731,9 +731,9 @@ Scene15.children.append(Shape167)
 Shape172 = x3d.Shape()
 Appearance173 = x3d.Appearance()
 Material174 = x3d.Material()
-Material174.ambientIntensity = 0
-Material174.diffuseColor = [0.784313738,0,0]
-Material174.shininess = 1
+Material174.ambientIntensity = 0.0
+Material174.diffuseColor = [.784313738,0,0]
+Material174.shininess = 1.0
 
 Appearance173.material = Material174
 
@@ -752,9 +752,9 @@ Scene15.children.append(Shape172)
 Shape177 = x3d.Shape()
 Appearance178 = x3d.Appearance()
 Material179 = x3d.Material()
-Material179.ambientIntensity = 0
-Material179.diffuseColor = [0.784313738,0,0]
-Material179.shininess = 1
+Material179.ambientIntensity = 0.0
+Material179.diffuseColor = [.784313738,0,0]
+Material179.shininess = 1.0
 
 Appearance178.material = Material179
 
@@ -773,9 +773,9 @@ Scene15.children.append(Shape177)
 Shape182 = x3d.Shape()
 Appearance183 = x3d.Appearance()
 Material184 = x3d.Material()
-Material184.ambientIntensity = 0
-Material184.diffuseColor = [0.784313738,0,0]
-Material184.shininess = 1
+Material184.ambientIntensity = 0.0
+Material184.diffuseColor = [.784313738,0,0]
+Material184.shininess = 1.0
 
 Appearance183.material = Material184
 
@@ -794,9 +794,9 @@ Scene15.children.append(Shape182)
 Shape187 = x3d.Shape()
 Appearance188 = x3d.Appearance()
 Material189 = x3d.Material()
-Material189.ambientIntensity = 0
-Material189.diffuseColor = [0.784313738,0,0]
-Material189.shininess = 1
+Material189.ambientIntensity = 0.0
+Material189.diffuseColor = [.784313738,0,0]
+Material189.shininess = 1.0
 
 Appearance188.material = Material189
 
@@ -815,9 +815,9 @@ Scene15.children.append(Shape187)
 Shape192 = x3d.Shape()
 Appearance193 = x3d.Appearance()
 Material194 = x3d.Material()
-Material194.ambientIntensity = 0
-Material194.diffuseColor = [0.784313738,0,0]
-Material194.shininess = 1
+Material194.ambientIntensity = 0.0
+Material194.diffuseColor = [.784313738,0,0]
+Material194.shininess = 1.0
 
 Appearance193.material = Material194
 
@@ -836,9 +836,9 @@ Scene15.children.append(Shape192)
 Shape197 = x3d.Shape()
 Appearance198 = x3d.Appearance()
 Material199 = x3d.Material()
-Material199.ambientIntensity = 0
-Material199.diffuseColor = [0.784313738,0,0]
-Material199.shininess = 1
+Material199.ambientIntensity = 0.0
+Material199.diffuseColor = [.784313738,0,0]
+Material199.shininess = 1.0
 
 Appearance198.material = Material199
 
@@ -857,9 +857,9 @@ Scene15.children.append(Shape197)
 Shape202 = x3d.Shape()
 Appearance203 = x3d.Appearance()
 Material204 = x3d.Material()
-Material204.ambientIntensity = 0
-Material204.diffuseColor = [0.784313738,0,0]
-Material204.shininess = 1
+Material204.ambientIntensity = 0.0
+Material204.diffuseColor = [.784313738,0,0]
+Material204.shininess = 1.0
 
 Appearance203.material = Material204
 
@@ -878,9 +878,9 @@ Scene15.children.append(Shape202)
 Shape207 = x3d.Shape()
 Appearance208 = x3d.Appearance()
 Material209 = x3d.Material()
-Material209.ambientIntensity = 0
-Material209.diffuseColor = [0.784313738,0,0]
-Material209.shininess = 1
+Material209.ambientIntensity = 0.0
+Material209.diffuseColor = [.784313738,0,0]
+Material209.shininess = 1.0
 
 Appearance208.material = Material209
 
@@ -899,9 +899,9 @@ Scene15.children.append(Shape207)
 Shape212 = x3d.Shape()
 Appearance213 = x3d.Appearance()
 Material214 = x3d.Material()
-Material214.ambientIntensity = 0
-Material214.diffuseColor = [0.784313738,0,0]
-Material214.shininess = 1
+Material214.ambientIntensity = 0.0
+Material214.diffuseColor = [.784313738,0,0]
+Material214.shininess = 1.0
 
 Appearance213.material = Material214
 
@@ -920,9 +920,9 @@ Scene15.children.append(Shape212)
 Shape217 = x3d.Shape()
 Appearance218 = x3d.Appearance()
 Material219 = x3d.Material()
-Material219.ambientIntensity = 0
-Material219.diffuseColor = [0.784313738,0,0]
-Material219.shininess = 1
+Material219.ambientIntensity = 0.0
+Material219.diffuseColor = [.784313738,0,0]
+Material219.shininess = 1.0
 
 Appearance218.material = Material219
 
@@ -941,9 +941,9 @@ Scene15.children.append(Shape217)
 Shape222 = x3d.Shape()
 Appearance223 = x3d.Appearance()
 Material224 = x3d.Material()
-Material224.ambientIntensity = 0
-Material224.diffuseColor = [0.784313738,0,0]
-Material224.shininess = 1
+Material224.ambientIntensity = 0.0
+Material224.diffuseColor = [.784313738,0,0]
+Material224.shininess = 1.0
 
 Appearance223.material = Material224
 
@@ -962,9 +962,9 @@ Scene15.children.append(Shape222)
 Shape227 = x3d.Shape()
 Appearance228 = x3d.Appearance()
 Material229 = x3d.Material()
-Material229.ambientIntensity = 0
-Material229.diffuseColor = [0.784313738,0,0]
-Material229.shininess = 1
+Material229.ambientIntensity = 0.0
+Material229.diffuseColor = [.784313738,0,0]
+Material229.shininess = 1.0
 
 Appearance228.material = Material229
 
@@ -983,9 +983,9 @@ Scene15.children.append(Shape227)
 Shape232 = x3d.Shape()
 Appearance233 = x3d.Appearance()
 Material234 = x3d.Material()
-Material234.ambientIntensity = 0
-Material234.diffuseColor = [0.784313738,0,0]
-Material234.shininess = 1
+Material234.ambientIntensity = 0.0
+Material234.diffuseColor = [.784313738,0,0]
+Material234.shininess = 1.0
 
 Appearance233.material = Material234
 
@@ -1004,9 +1004,9 @@ Scene15.children.append(Shape232)
 Shape237 = x3d.Shape()
 Appearance238 = x3d.Appearance()
 Material239 = x3d.Material()
-Material239.ambientIntensity = 0
-Material239.diffuseColor = [0.784313738,0,0]
-Material239.shininess = 1
+Material239.ambientIntensity = 0.0
+Material239.diffuseColor = [.784313738,0,0]
+Material239.shininess = 1.0
 
 Appearance238.material = Material239
 
@@ -1025,9 +1025,9 @@ Scene15.children.append(Shape237)
 Shape242 = x3d.Shape()
 Appearance243 = x3d.Appearance()
 Material244 = x3d.Material()
-Material244.ambientIntensity = 0
-Material244.diffuseColor = [0.784313738,0,0]
-Material244.shininess = 1
+Material244.ambientIntensity = 0.0
+Material244.diffuseColor = [.784313738,0,0]
+Material244.shininess = 1.0
 
 Appearance243.material = Material244
 
@@ -1046,9 +1046,9 @@ Scene15.children.append(Shape242)
 Shape247 = x3d.Shape()
 Appearance248 = x3d.Appearance()
 Material249 = x3d.Material()
-Material249.ambientIntensity = 0
-Material249.diffuseColor = [0.784313738,0,0]
-Material249.shininess = 1
+Material249.ambientIntensity = 0.0
+Material249.diffuseColor = [.784313738,0,0]
+Material249.shininess = 1.0
 
 Appearance248.material = Material249
 
@@ -1067,9 +1067,9 @@ Scene15.children.append(Shape247)
 Shape252 = x3d.Shape()
 Appearance253 = x3d.Appearance()
 Material254 = x3d.Material()
-Material254.ambientIntensity = 0
-Material254.diffuseColor = [0.784313738,0,0]
-Material254.shininess = 1
+Material254.ambientIntensity = 0.0
+Material254.diffuseColor = [.784313738,0,0]
+Material254.shininess = 1.0
 
 Appearance253.material = Material254
 
@@ -1088,9 +1088,9 @@ Scene15.children.append(Shape252)
 Shape257 = x3d.Shape()
 Appearance258 = x3d.Appearance()
 Material259 = x3d.Material()
-Material259.ambientIntensity = 0
-Material259.diffuseColor = [0.784313738,0,0]
-Material259.shininess = 1
+Material259.ambientIntensity = 0.0
+Material259.diffuseColor = [.784313738,0,0]
+Material259.shininess = 1.0
 
 Appearance258.material = Material259
 
@@ -1109,9 +1109,9 @@ Scene15.children.append(Shape257)
 Shape262 = x3d.Shape()
 Appearance263 = x3d.Appearance()
 Material264 = x3d.Material()
-Material264.ambientIntensity = 0
-Material264.diffuseColor = [0.784313738,0,0]
-Material264.shininess = 1
+Material264.ambientIntensity = 0.0
+Material264.diffuseColor = [.784313738,0,0]
+Material264.shininess = 1.0
 
 Appearance263.material = Material264
 
@@ -1130,9 +1130,9 @@ Scene15.children.append(Shape262)
 Shape267 = x3d.Shape()
 Appearance268 = x3d.Appearance()
 Material269 = x3d.Material()
-Material269.ambientIntensity = 0
-Material269.diffuseColor = [0.784313738,0,0]
-Material269.shininess = 1
+Material269.ambientIntensity = 0.0
+Material269.diffuseColor = [.784313738,0,0]
+Material269.shininess = 1.0
 
 Appearance268.material = Material269
 
@@ -1151,9 +1151,9 @@ Scene15.children.append(Shape267)
 Shape272 = x3d.Shape()
 Appearance273 = x3d.Appearance()
 Material274 = x3d.Material()
-Material274.ambientIntensity = 0
-Material274.diffuseColor = [0.784313738,0,0]
-Material274.shininess = 1
+Material274.ambientIntensity = 0.0
+Material274.diffuseColor = [.784313738,0,0]
+Material274.shininess = 1.0
 
 Appearance273.material = Material274
 
@@ -1172,9 +1172,9 @@ Scene15.children.append(Shape272)
 Shape277 = x3d.Shape()
 Appearance278 = x3d.Appearance()
 Material279 = x3d.Material()
-Material279.ambientIntensity = 0
-Material279.diffuseColor = [0.784313738,0,0]
-Material279.shininess = 1
+Material279.ambientIntensity = 0.0
+Material279.diffuseColor = [.784313738,0,0]
+Material279.shininess = 1.0
 
 Appearance278.material = Material279
 
@@ -1193,9 +1193,9 @@ Scene15.children.append(Shape277)
 Shape282 = x3d.Shape()
 Appearance283 = x3d.Appearance()
 Material284 = x3d.Material()
-Material284.ambientIntensity = 0
-Material284.diffuseColor = [0.784313738,0,0]
-Material284.shininess = 1
+Material284.ambientIntensity = 0.0
+Material284.diffuseColor = [.784313738,0,0]
+Material284.shininess = 1.0
 
 Appearance283.material = Material284
 
@@ -1214,9 +1214,9 @@ Scene15.children.append(Shape282)
 Shape287 = x3d.Shape()
 Appearance288 = x3d.Appearance()
 Material289 = x3d.Material()
-Material289.ambientIntensity = 0
-Material289.diffuseColor = [0.784313738,0,0]
-Material289.shininess = 1
+Material289.ambientIntensity = 0.0
+Material289.diffuseColor = [.784313738,0,0]
+Material289.shininess = 1.0
 
 Appearance288.material = Material289
 
@@ -1235,9 +1235,9 @@ Scene15.children.append(Shape287)
 Shape292 = x3d.Shape()
 Appearance293 = x3d.Appearance()
 Material294 = x3d.Material()
-Material294.ambientIntensity = 0
-Material294.diffuseColor = [0.784313738,0,0]
-Material294.shininess = 1
+Material294.ambientIntensity = 0.0
+Material294.diffuseColor = [.784313738,0,0]
+Material294.shininess = 1.0
 
 Appearance293.material = Material294
 
@@ -1256,9 +1256,9 @@ Scene15.children.append(Shape292)
 Shape297 = x3d.Shape()
 Appearance298 = x3d.Appearance()
 Material299 = x3d.Material()
-Material299.ambientIntensity = 0
-Material299.diffuseColor = [0.784313738,0,0]
-Material299.shininess = 1
+Material299.ambientIntensity = 0.0
+Material299.diffuseColor = [.784313738,0,0]
+Material299.shininess = 1.0
 
 Appearance298.material = Material299
 
@@ -1277,9 +1277,9 @@ Scene15.children.append(Shape297)
 Shape302 = x3d.Shape()
 Appearance303 = x3d.Appearance()
 Material304 = x3d.Material()
-Material304.ambientIntensity = 0
-Material304.diffuseColor = [0.784313738,0,0]
-Material304.shininess = 1
+Material304.ambientIntensity = 0.0
+Material304.diffuseColor = [.784313738,0,0]
+Material304.shininess = 1.0
 
 Appearance303.material = Material304
 
@@ -1298,9 +1298,9 @@ Scene15.children.append(Shape302)
 Shape307 = x3d.Shape()
 Appearance308 = x3d.Appearance()
 Material309 = x3d.Material()
-Material309.ambientIntensity = 0
-Material309.diffuseColor = [0.784313738,0,0]
-Material309.shininess = 1
+Material309.ambientIntensity = 0.0
+Material309.diffuseColor = [.784313738,0,0]
+Material309.shininess = 1.0
 
 Appearance308.material = Material309
 
@@ -1319,9 +1319,9 @@ Scene15.children.append(Shape307)
 Shape312 = x3d.Shape()
 Appearance313 = x3d.Appearance()
 Material314 = x3d.Material()
-Material314.ambientIntensity = 0
-Material314.diffuseColor = [0.784313738,0,0]
-Material314.shininess = 1
+Material314.ambientIntensity = 0.0
+Material314.diffuseColor = [.784313738,0,0]
+Material314.shininess = 1.0
 
 Appearance313.material = Material314
 
@@ -1340,9 +1340,9 @@ Scene15.children.append(Shape312)
 Shape317 = x3d.Shape()
 Appearance318 = x3d.Appearance()
 Material319 = x3d.Material()
-Material319.ambientIntensity = 0
-Material319.diffuseColor = [0.784313738,0,0]
-Material319.shininess = 1
+Material319.ambientIntensity = 0.0
+Material319.diffuseColor = [.784313738,0,0]
+Material319.shininess = 1.0
 
 Appearance318.material = Material319
 
@@ -1361,9 +1361,9 @@ Scene15.children.append(Shape317)
 Shape322 = x3d.Shape()
 Appearance323 = x3d.Appearance()
 Material324 = x3d.Material()
-Material324.ambientIntensity = 0
-Material324.diffuseColor = [0.784313738,0,0]
-Material324.shininess = 1
+Material324.ambientIntensity = 0.0
+Material324.diffuseColor = [.784313738,0,0]
+Material324.shininess = 1.0
 
 Appearance323.material = Material324
 
@@ -1382,9 +1382,9 @@ Scene15.children.append(Shape322)
 Shape327 = x3d.Shape()
 Appearance328 = x3d.Appearance()
 Material329 = x3d.Material()
-Material329.ambientIntensity = 0
-Material329.diffuseColor = [0.784313738,0,0]
-Material329.shininess = 1
+Material329.ambientIntensity = 0.0
+Material329.diffuseColor = [.784313738,0,0]
+Material329.shininess = 1.0
 
 Appearance328.material = Material329
 
@@ -1403,9 +1403,9 @@ Scene15.children.append(Shape327)
 Shape332 = x3d.Shape()
 Appearance333 = x3d.Appearance()
 Material334 = x3d.Material()
-Material334.ambientIntensity = 0
-Material334.diffuseColor = [0.784313738,0,0]
-Material334.shininess = 1
+Material334.ambientIntensity = 0.0
+Material334.diffuseColor = [.784313738,0,0]
+Material334.shininess = 1.0
 
 Appearance333.material = Material334
 
@@ -1424,9 +1424,9 @@ Scene15.children.append(Shape332)
 Shape337 = x3d.Shape()
 Appearance338 = x3d.Appearance()
 Material339 = x3d.Material()
-Material339.ambientIntensity = 0
-Material339.diffuseColor = [0.784313738,0,0]
-Material339.shininess = 1
+Material339.ambientIntensity = 0.0
+Material339.diffuseColor = [.784313738,0,0]
+Material339.shininess = 1.0
 
 Appearance338.material = Material339
 
@@ -1445,9 +1445,9 @@ Scene15.children.append(Shape337)
 Shape342 = x3d.Shape()
 Appearance343 = x3d.Appearance()
 Material344 = x3d.Material()
-Material344.ambientIntensity = 0
-Material344.diffuseColor = [0.784313738,0,0]
-Material344.shininess = 1
+Material344.ambientIntensity = 0.0
+Material344.diffuseColor = [.784313738,0,0]
+Material344.shininess = 1.0
 
 Appearance343.material = Material344
 
@@ -1466,9 +1466,9 @@ Scene15.children.append(Shape342)
 Shape347 = x3d.Shape()
 Appearance348 = x3d.Appearance()
 Material349 = x3d.Material()
-Material349.ambientIntensity = 0
-Material349.diffuseColor = [0.784313738,0,0]
-Material349.shininess = 1
+Material349.ambientIntensity = 0.0
+Material349.diffuseColor = [.784313738,0,0]
+Material349.shininess = 1.0
 
 Appearance348.material = Material349
 
@@ -1487,9 +1487,9 @@ Scene15.children.append(Shape347)
 Shape352 = x3d.Shape()
 Appearance353 = x3d.Appearance()
 Material354 = x3d.Material()
-Material354.ambientIntensity = 0
-Material354.diffuseColor = [0.784313738,0,0]
-Material354.shininess = 1
+Material354.ambientIntensity = 0.0
+Material354.diffuseColor = [.784313738,0,0]
+Material354.shininess = 1.0
 
 Appearance353.material = Material354
 
@@ -1508,9 +1508,9 @@ Scene15.children.append(Shape352)
 Shape357 = x3d.Shape()
 Appearance358 = x3d.Appearance()
 Material359 = x3d.Material()
-Material359.ambientIntensity = 0
-Material359.diffuseColor = [0.784313738,0,0]
-Material359.shininess = 1
+Material359.ambientIntensity = 0.0
+Material359.diffuseColor = [.784313738,0,0]
+Material359.shininess = 1.0
 
 Appearance358.material = Material359
 
@@ -1529,9 +1529,9 @@ Scene15.children.append(Shape357)
 Shape362 = x3d.Shape()
 Appearance363 = x3d.Appearance()
 Material364 = x3d.Material()
-Material364.ambientIntensity = 0
-Material364.diffuseColor = [0.784313738,0,0]
-Material364.shininess = 1
+Material364.ambientIntensity = 0.0
+Material364.diffuseColor = [.784313738,0,0]
+Material364.shininess = 1.0
 
 Appearance363.material = Material364
 
@@ -1550,9 +1550,9 @@ Scene15.children.append(Shape362)
 Shape367 = x3d.Shape()
 Appearance368 = x3d.Appearance()
 Material369 = x3d.Material()
-Material369.ambientIntensity = 0
-Material369.diffuseColor = [0.784313738,0,0]
-Material369.shininess = 1
+Material369.ambientIntensity = 0.0
+Material369.diffuseColor = [.784313738,0,0]
+Material369.shininess = 1.0
 
 Appearance368.material = Material369
 
@@ -1571,9 +1571,9 @@ Scene15.children.append(Shape367)
 Shape372 = x3d.Shape()
 Appearance373 = x3d.Appearance()
 Material374 = x3d.Material()
-Material374.ambientIntensity = 0
-Material374.diffuseColor = [0.784313738,0,0]
-Material374.shininess = 1
+Material374.ambientIntensity = 0.0
+Material374.diffuseColor = [.784313738,0,0]
+Material374.shininess = 1.0
 
 Appearance373.material = Material374
 
@@ -1592,9 +1592,9 @@ Scene15.children.append(Shape372)
 Shape377 = x3d.Shape()
 Appearance378 = x3d.Appearance()
 Material379 = x3d.Material()
-Material379.ambientIntensity = 0
-Material379.diffuseColor = [0.784313738,0,0]
-Material379.shininess = 1
+Material379.ambientIntensity = 0.0
+Material379.diffuseColor = [.784313738,0,0]
+Material379.shininess = 1.0
 
 Appearance378.material = Material379
 
@@ -1613,9 +1613,9 @@ Scene15.children.append(Shape377)
 Shape382 = x3d.Shape()
 Appearance383 = x3d.Appearance()
 Material384 = x3d.Material()
-Material384.ambientIntensity = 0
-Material384.diffuseColor = [0.784313738,0,0]
-Material384.shininess = 1
+Material384.ambientIntensity = 0.0
+Material384.diffuseColor = [.784313738,0,0]
+Material384.shininess = 1.0
 
 Appearance383.material = Material384
 
@@ -1634,9 +1634,9 @@ Scene15.children.append(Shape382)
 Shape387 = x3d.Shape()
 Appearance388 = x3d.Appearance()
 Material389 = x3d.Material()
-Material389.ambientIntensity = 0
-Material389.diffuseColor = [0.784313738,0,0]
-Material389.shininess = 1
+Material389.ambientIntensity = 0.0
+Material389.diffuseColor = [.784313738,0,0]
+Material389.shininess = 1.0
 
 Appearance388.material = Material389
 
@@ -1655,9 +1655,9 @@ Scene15.children.append(Shape387)
 Shape392 = x3d.Shape()
 Appearance393 = x3d.Appearance()
 Material394 = x3d.Material()
-Material394.ambientIntensity = 0
-Material394.diffuseColor = [0.784313738,0,0]
-Material394.shininess = 1
+Material394.ambientIntensity = 0.0
+Material394.diffuseColor = [.784313738,0,0]
+Material394.shininess = 1.0
 
 Appearance393.material = Material394
 
@@ -1676,9 +1676,9 @@ Scene15.children.append(Shape392)
 Shape397 = x3d.Shape()
 Appearance398 = x3d.Appearance()
 Material399 = x3d.Material()
-Material399.ambientIntensity = 0
-Material399.diffuseColor = [0.784313738,0,0]
-Material399.shininess = 1
+Material399.ambientIntensity = 0.0
+Material399.diffuseColor = [.784313738,0,0]
+Material399.shininess = 1.0
 
 Appearance398.material = Material399
 
@@ -1697,9 +1697,9 @@ Scene15.children.append(Shape397)
 Shape402 = x3d.Shape()
 Appearance403 = x3d.Appearance()
 Material404 = x3d.Material()
-Material404.ambientIntensity = 0
-Material404.diffuseColor = [0.784313738,0,0]
-Material404.shininess = 1
+Material404.ambientIntensity = 0.0
+Material404.diffuseColor = [.784313738,0,0]
+Material404.shininess = 1.0
 
 Appearance403.material = Material404
 
@@ -1718,9 +1718,9 @@ Scene15.children.append(Shape402)
 Shape407 = x3d.Shape()
 Appearance408 = x3d.Appearance()
 Material409 = x3d.Material()
-Material409.ambientIntensity = 0
-Material409.diffuseColor = [0.784313738,0,0]
-Material409.shininess = 1
+Material409.ambientIntensity = 0.0
+Material409.diffuseColor = [.784313738,0,0]
+Material409.shininess = 1.0
 
 Appearance408.material = Material409
 
@@ -1739,9 +1739,9 @@ Scene15.children.append(Shape407)
 Shape412 = x3d.Shape()
 Appearance413 = x3d.Appearance()
 Material414 = x3d.Material()
-Material414.ambientIntensity = 0
-Material414.diffuseColor = [0.784313738,0,0]
-Material414.shininess = 1
+Material414.ambientIntensity = 0.0
+Material414.diffuseColor = [.784313738,0,0]
+Material414.shininess = 1.0
 
 Appearance413.material = Material414
 
@@ -1760,9 +1760,9 @@ Scene15.children.append(Shape412)
 Shape417 = x3d.Shape()
 Appearance418 = x3d.Appearance()
 Material419 = x3d.Material()
-Material419.ambientIntensity = 0
-Material419.diffuseColor = [0.784313738,0,0]
-Material419.shininess = 1
+Material419.ambientIntensity = 0.0
+Material419.diffuseColor = [.784313738,0,0]
+Material419.shininess = 1.0
 
 Appearance418.material = Material419
 
@@ -1781,9 +1781,9 @@ Scene15.children.append(Shape417)
 Shape422 = x3d.Shape()
 Appearance423 = x3d.Appearance()
 Material424 = x3d.Material()
-Material424.ambientIntensity = 0
-Material424.diffuseColor = [0.784313738,0,0]
-Material424.shininess = 1
+Material424.ambientIntensity = 0.0
+Material424.diffuseColor = [.784313738,0,0]
+Material424.shininess = 1.0
 
 Appearance423.material = Material424
 
@@ -1802,9 +1802,9 @@ Scene15.children.append(Shape422)
 Shape427 = x3d.Shape()
 Appearance428 = x3d.Appearance()
 Material429 = x3d.Material()
-Material429.ambientIntensity = 0
-Material429.diffuseColor = [0.784313738,0,0]
-Material429.shininess = 1
+Material429.ambientIntensity = 0.0
+Material429.diffuseColor = [.784313738,0,0]
+Material429.shininess = 1.0
 
 Appearance428.material = Material429
 
@@ -1823,9 +1823,9 @@ Scene15.children.append(Shape427)
 Shape432 = x3d.Shape()
 Appearance433 = x3d.Appearance()
 Material434 = x3d.Material()
-Material434.ambientIntensity = 0
-Material434.diffuseColor = [0.784313738,0,0]
-Material434.shininess = 1
+Material434.ambientIntensity = 0.0
+Material434.diffuseColor = [.784313738,0,0]
+Material434.shininess = 1.0
 
 Appearance433.material = Material434
 
@@ -1844,9 +1844,9 @@ Scene15.children.append(Shape432)
 Shape437 = x3d.Shape()
 Appearance438 = x3d.Appearance()
 Material439 = x3d.Material()
-Material439.ambientIntensity = 0
-Material439.diffuseColor = [0.784313738,0,0]
-Material439.shininess = 1
+Material439.ambientIntensity = 0.0
+Material439.diffuseColor = [.784313738,0,0]
+Material439.shininess = 1.0
 
 Appearance438.material = Material439
 
@@ -1865,9 +1865,9 @@ Scene15.children.append(Shape437)
 Shape442 = x3d.Shape()
 Appearance443 = x3d.Appearance()
 Material444 = x3d.Material()
-Material444.ambientIntensity = 0
-Material444.diffuseColor = [0.784313738,0,0]
-Material444.shininess = 1
+Material444.ambientIntensity = 0.0
+Material444.diffuseColor = [.784313738,0,0]
+Material444.shininess = 1.0
 
 Appearance443.material = Material444
 
@@ -1886,9 +1886,9 @@ Scene15.children.append(Shape442)
 Shape447 = x3d.Shape()
 Appearance448 = x3d.Appearance()
 Material449 = x3d.Material()
-Material449.ambientIntensity = 0
-Material449.diffuseColor = [0.784313738,0,0]
-Material449.shininess = 1
+Material449.ambientIntensity = 0.0
+Material449.diffuseColor = [.784313738,0,0]
+Material449.shininess = 1.0
 
 Appearance448.material = Material449
 
@@ -1907,9 +1907,9 @@ Scene15.children.append(Shape447)
 Shape452 = x3d.Shape()
 Appearance453 = x3d.Appearance()
 Material454 = x3d.Material()
-Material454.ambientIntensity = 0
-Material454.diffuseColor = [0.784313738,0,0]
-Material454.shininess = 1
+Material454.ambientIntensity = 0.0
+Material454.diffuseColor = [.784313738,0,0]
+Material454.shininess = 1.0
 
 Appearance453.material = Material454
 
@@ -1928,9 +1928,9 @@ Scene15.children.append(Shape452)
 Shape457 = x3d.Shape()
 Appearance458 = x3d.Appearance()
 Material459 = x3d.Material()
-Material459.ambientIntensity = 0
-Material459.diffuseColor = [0.784313738,0,0]
-Material459.shininess = 1
+Material459.ambientIntensity = 0.0
+Material459.diffuseColor = [.784313738,0,0]
+Material459.shininess = 1.0
 
 Appearance458.material = Material459
 
@@ -1949,9 +1949,9 @@ Scene15.children.append(Shape457)
 Shape462 = x3d.Shape()
 Appearance463 = x3d.Appearance()
 Material464 = x3d.Material()
-Material464.ambientIntensity = 0
-Material464.diffuseColor = [0.784313738,0,0]
-Material464.shininess = 1
+Material464.ambientIntensity = 0.0
+Material464.diffuseColor = [.784313738,0,0]
+Material464.shininess = 1.0
 
 Appearance463.material = Material464
 
@@ -1970,9 +1970,9 @@ Scene15.children.append(Shape462)
 Shape467 = x3d.Shape()
 Appearance468 = x3d.Appearance()
 Material469 = x3d.Material()
-Material469.ambientIntensity = 0
-Material469.diffuseColor = [0.784313738,0,0]
-Material469.shininess = 1
+Material469.ambientIntensity = 0.0
+Material469.diffuseColor = [.784313738,0,0]
+Material469.shininess = 1.0
 
 Appearance468.material = Material469
 
@@ -1991,9 +1991,9 @@ Scene15.children.append(Shape467)
 Shape472 = x3d.Shape()
 Appearance473 = x3d.Appearance()
 Material474 = x3d.Material()
-Material474.ambientIntensity = 0
-Material474.diffuseColor = [0.784313738,0,0]
-Material474.shininess = 1
+Material474.ambientIntensity = 0.0
+Material474.diffuseColor = [.784313738,0,0]
+Material474.shininess = 1.0
 
 Appearance473.material = Material474
 
@@ -2012,9 +2012,9 @@ Scene15.children.append(Shape472)
 Shape477 = x3d.Shape()
 Appearance478 = x3d.Appearance()
 Material479 = x3d.Material()
-Material479.ambientIntensity = 0
-Material479.diffuseColor = [0.784313738,0,0]
-Material479.shininess = 1
+Material479.ambientIntensity = 0.0
+Material479.diffuseColor = [.784313738,0,0]
+Material479.shininess = 1.0
 
 Appearance478.material = Material479
 
@@ -2033,9 +2033,9 @@ Scene15.children.append(Shape477)
 Shape482 = x3d.Shape()
 Appearance483 = x3d.Appearance()
 Material484 = x3d.Material()
-Material484.ambientIntensity = 0
-Material484.diffuseColor = [0.784313738,0,0]
-Material484.shininess = 1
+Material484.ambientIntensity = 0.0
+Material484.diffuseColor = [.784313738,0,0]
+Material484.shininess = 1.0
 
 Appearance483.material = Material484
 
@@ -2054,9 +2054,9 @@ Scene15.children.append(Shape482)
 Shape487 = x3d.Shape()
 Appearance488 = x3d.Appearance()
 Material489 = x3d.Material()
-Material489.ambientIntensity = 0
-Material489.diffuseColor = [0.784313738,0,0]
-Material489.shininess = 1
+Material489.ambientIntensity = 0.0
+Material489.diffuseColor = [.784313738,0,0]
+Material489.shininess = 1.0
 
 Appearance488.material = Material489
 
@@ -2075,9 +2075,9 @@ Scene15.children.append(Shape487)
 Shape492 = x3d.Shape()
 Appearance493 = x3d.Appearance()
 Material494 = x3d.Material()
-Material494.ambientIntensity = 0
-Material494.diffuseColor = [0.784313738,0,0]
-Material494.shininess = 1
+Material494.ambientIntensity = 0.0
+Material494.diffuseColor = [.784313738,0,0]
+Material494.shininess = 1.0
 
 Appearance493.material = Material494
 
@@ -2096,9 +2096,9 @@ Scene15.children.append(Shape492)
 Shape497 = x3d.Shape()
 Appearance498 = x3d.Appearance()
 Material499 = x3d.Material()
-Material499.ambientIntensity = 0
-Material499.diffuseColor = [0.784313738,0,0]
-Material499.shininess = 1
+Material499.ambientIntensity = 0.0
+Material499.diffuseColor = [.784313738,0,0]
+Material499.shininess = 1.0
 
 Appearance498.material = Material499
 
@@ -2117,9 +2117,9 @@ Scene15.children.append(Shape497)
 Shape502 = x3d.Shape()
 Appearance503 = x3d.Appearance()
 Material504 = x3d.Material()
-Material504.ambientIntensity = 0
-Material504.diffuseColor = [0.784313738,0,0]
-Material504.shininess = 1
+Material504.ambientIntensity = 0.0
+Material504.diffuseColor = [.784313738,0,0]
+Material504.shininess = 1.0
 
 Appearance503.material = Material504
 
@@ -2138,9 +2138,9 @@ Scene15.children.append(Shape502)
 Shape507 = x3d.Shape()
 Appearance508 = x3d.Appearance()
 Material509 = x3d.Material()
-Material509.ambientIntensity = 0
-Material509.diffuseColor = [0.784313738,0,0]
-Material509.shininess = 1
+Material509.ambientIntensity = 0.0
+Material509.diffuseColor = [.784313738,0,0]
+Material509.shininess = 1.0
 
 Appearance508.material = Material509
 
@@ -2159,9 +2159,9 @@ Scene15.children.append(Shape507)
 Shape512 = x3d.Shape()
 Appearance513 = x3d.Appearance()
 Material514 = x3d.Material()
-Material514.ambientIntensity = 0
-Material514.diffuseColor = [0.784313738,0,0]
-Material514.shininess = 1
+Material514.ambientIntensity = 0.0
+Material514.diffuseColor = [.784313738,0,0]
+Material514.shininess = 1.0
 
 Appearance513.material = Material514
 
@@ -2180,9 +2180,9 @@ Scene15.children.append(Shape512)
 Shape517 = x3d.Shape()
 Appearance518 = x3d.Appearance()
 Material519 = x3d.Material()
-Material519.ambientIntensity = 0
-Material519.diffuseColor = [0.784313738,0,0]
-Material519.shininess = 1
+Material519.ambientIntensity = 0.0
+Material519.diffuseColor = [.784313738,0,0]
+Material519.shininess = 1.0
 
 Appearance518.material = Material519
 
@@ -2201,9 +2201,9 @@ Scene15.children.append(Shape517)
 Shape522 = x3d.Shape()
 Appearance523 = x3d.Appearance()
 Material524 = x3d.Material()
-Material524.ambientIntensity = 0
-Material524.diffuseColor = [0.784313738,0,0]
-Material524.shininess = 1
+Material524.ambientIntensity = 0.0
+Material524.diffuseColor = [.784313738,0,0]
+Material524.shininess = 1.0
 
 Appearance523.material = Material524
 
@@ -2222,9 +2222,9 @@ Scene15.children.append(Shape522)
 Shape527 = x3d.Shape()
 Appearance528 = x3d.Appearance()
 Material529 = x3d.Material()
-Material529.ambientIntensity = 0
-Material529.diffuseColor = [0.784313738,0,0]
-Material529.shininess = 1
+Material529.ambientIntensity = 0.0
+Material529.diffuseColor = [.784313738,0,0]
+Material529.shininess = 1.0
 
 Appearance528.material = Material529
 
@@ -2243,9 +2243,9 @@ Scene15.children.append(Shape527)
 Shape532 = x3d.Shape()
 Appearance533 = x3d.Appearance()
 Material534 = x3d.Material()
-Material534.ambientIntensity = 0
-Material534.diffuseColor = [0.784313738,0,0]
-Material534.shininess = 1
+Material534.ambientIntensity = 0.0
+Material534.diffuseColor = [.784313738,0,0]
+Material534.shininess = 1.0
 
 Appearance533.material = Material534
 
@@ -2264,9 +2264,9 @@ Scene15.children.append(Shape532)
 Shape537 = x3d.Shape()
 Appearance538 = x3d.Appearance()
 Material539 = x3d.Material()
-Material539.ambientIntensity = 0
-Material539.diffuseColor = [0.784313738,0,0]
-Material539.shininess = 1
+Material539.ambientIntensity = 0.0
+Material539.diffuseColor = [.784313738,0,0]
+Material539.shininess = 1.0
 
 Appearance538.material = Material539
 
@@ -2285,9 +2285,9 @@ Scene15.children.append(Shape537)
 Shape542 = x3d.Shape()
 Appearance543 = x3d.Appearance()
 Material544 = x3d.Material()
-Material544.ambientIntensity = 0
-Material544.diffuseColor = [0.784313738,0,0]
-Material544.shininess = 1
+Material544.ambientIntensity = 0.0
+Material544.diffuseColor = [.784313738,0,0]
+Material544.shininess = 1.0
 
 Appearance543.material = Material544
 
@@ -2306,9 +2306,9 @@ Scene15.children.append(Shape542)
 Shape547 = x3d.Shape()
 Appearance548 = x3d.Appearance()
 Material549 = x3d.Material()
-Material549.ambientIntensity = 0
-Material549.diffuseColor = [0.784313738,0,0]
-Material549.shininess = 1
+Material549.ambientIntensity = 0.0
+Material549.diffuseColor = [.784313738,0,0]
+Material549.shininess = 1.0
 
 Appearance548.material = Material549
 
@@ -2327,9 +2327,9 @@ Scene15.children.append(Shape547)
 Shape552 = x3d.Shape()
 Appearance553 = x3d.Appearance()
 Material554 = x3d.Material()
-Material554.ambientIntensity = 0
-Material554.diffuseColor = [0.784313738,0,0]
-Material554.shininess = 1
+Material554.ambientIntensity = 0.0
+Material554.diffuseColor = [.784313738,0,0]
+Material554.shininess = 1.0
 
 Appearance553.material = Material554
 
@@ -2348,9 +2348,9 @@ Scene15.children.append(Shape552)
 Shape557 = x3d.Shape()
 Appearance558 = x3d.Appearance()
 Material559 = x3d.Material()
-Material559.ambientIntensity = 0
-Material559.diffuseColor = [0.784313738,0,0]
-Material559.shininess = 1
+Material559.ambientIntensity = 0.0
+Material559.diffuseColor = [.784313738,0,0]
+Material559.shininess = 1.0
 
 Appearance558.material = Material559
 
@@ -2369,9 +2369,9 @@ Scene15.children.append(Shape557)
 Shape562 = x3d.Shape()
 Appearance563 = x3d.Appearance()
 Material564 = x3d.Material()
-Material564.ambientIntensity = 0
-Material564.diffuseColor = [0.784313738,0,0]
-Material564.shininess = 1
+Material564.ambientIntensity = 0.0
+Material564.diffuseColor = [.784313738,0,0]
+Material564.shininess = 1.0
 
 Appearance563.material = Material564
 
@@ -2390,9 +2390,9 @@ Scene15.children.append(Shape562)
 Shape567 = x3d.Shape()
 Appearance568 = x3d.Appearance()
 Material569 = x3d.Material()
-Material569.ambientIntensity = 0
-Material569.diffuseColor = [0.784313738,0,0]
-Material569.shininess = 1
+Material569.ambientIntensity = 0.0
+Material569.diffuseColor = [.784313738,0,0]
+Material569.shininess = 1.0
 
 Appearance568.material = Material569
 
@@ -2411,9 +2411,9 @@ Scene15.children.append(Shape567)
 Shape572 = x3d.Shape()
 Appearance573 = x3d.Appearance()
 Material574 = x3d.Material()
-Material574.ambientIntensity = 0
-Material574.diffuseColor = [0.784313738,0,0]
-Material574.shininess = 1
+Material574.ambientIntensity = 0.0
+Material574.diffuseColor = [.784313738,0,0]
+Material574.shininess = 1.0
 
 Appearance573.material = Material574
 
@@ -2432,9 +2432,9 @@ Scene15.children.append(Shape572)
 Shape577 = x3d.Shape()
 Appearance578 = x3d.Appearance()
 Material579 = x3d.Material()
-Material579.ambientIntensity = 0
-Material579.diffuseColor = [0.784313738,0,0]
-Material579.shininess = 1
+Material579.ambientIntensity = 0.0
+Material579.diffuseColor = [.784313738,0,0]
+Material579.shininess = 1.0
 
 Appearance578.material = Material579
 
@@ -2453,9 +2453,9 @@ Scene15.children.append(Shape577)
 Shape582 = x3d.Shape()
 Appearance583 = x3d.Appearance()
 Material584 = x3d.Material()
-Material584.ambientIntensity = 0
-Material584.diffuseColor = [0.784313738,0,0]
-Material584.shininess = 1
+Material584.ambientIntensity = 0.0
+Material584.diffuseColor = [.784313738,0,0]
+Material584.shininess = 1.0
 
 Appearance583.material = Material584
 
@@ -2474,9 +2474,9 @@ Scene15.children.append(Shape582)
 Shape587 = x3d.Shape()
 Appearance588 = x3d.Appearance()
 Material589 = x3d.Material()
-Material589.ambientIntensity = 0
-Material589.diffuseColor = [0.784313738,0,0]
-Material589.shininess = 1
+Material589.ambientIntensity = 0.0
+Material589.diffuseColor = [.784313738,0,0]
+Material589.shininess = 1.0
 
 Appearance588.material = Material589
 
@@ -2495,9 +2495,9 @@ Scene15.children.append(Shape587)
 Shape592 = x3d.Shape()
 Appearance593 = x3d.Appearance()
 Material594 = x3d.Material()
-Material594.ambientIntensity = 0
-Material594.diffuseColor = [0.784313738,0,0]
-Material594.shininess = 1
+Material594.ambientIntensity = 0.0
+Material594.diffuseColor = [.784313738,0,0]
+Material594.shininess = 1.0
 
 Appearance593.material = Material594
 
@@ -2516,9 +2516,9 @@ Scene15.children.append(Shape592)
 Shape597 = x3d.Shape()
 Appearance598 = x3d.Appearance()
 Material599 = x3d.Material()
-Material599.ambientIntensity = 0
-Material599.diffuseColor = [0.784313738,0,0]
-Material599.shininess = 1
+Material599.ambientIntensity = 0.0
+Material599.diffuseColor = [.784313738,0,0]
+Material599.shininess = 1.0
 
 Appearance598.material = Material599
 
@@ -2537,9 +2537,9 @@ Scene15.children.append(Shape597)
 Shape602 = x3d.Shape()
 Appearance603 = x3d.Appearance()
 Material604 = x3d.Material()
-Material604.ambientIntensity = 0
-Material604.diffuseColor = [0.784313738,0,0]
-Material604.shininess = 1
+Material604.ambientIntensity = 0.0
+Material604.diffuseColor = [.784313738,0,0]
+Material604.shininess = 1.0
 
 Appearance603.material = Material604
 
@@ -2558,9 +2558,9 @@ Scene15.children.append(Shape602)
 Shape607 = x3d.Shape()
 Appearance608 = x3d.Appearance()
 Material609 = x3d.Material()
-Material609.ambientIntensity = 0
-Material609.diffuseColor = [0.784313738,0,0]
-Material609.shininess = 1
+Material609.ambientIntensity = 0.0
+Material609.diffuseColor = [.784313738,0,0]
+Material609.shininess = 1.0
 
 Appearance608.material = Material609
 
@@ -2579,9 +2579,9 @@ Scene15.children.append(Shape607)
 Shape612 = x3d.Shape()
 Appearance613 = x3d.Appearance()
 Material614 = x3d.Material()
-Material614.ambientIntensity = 0
-Material614.diffuseColor = [0.784313738,0,0]
-Material614.shininess = 1
+Material614.ambientIntensity = 0.0
+Material614.diffuseColor = [.784313738,0,0]
+Material614.shininess = 1.0
 
 Appearance613.material = Material614
 
@@ -2600,9 +2600,9 @@ Scene15.children.append(Shape612)
 Shape617 = x3d.Shape()
 Appearance618 = x3d.Appearance()
 Material619 = x3d.Material()
-Material619.ambientIntensity = 0
-Material619.diffuseColor = [0.784313738,0,0]
-Material619.shininess = 1
+Material619.ambientIntensity = 0.0
+Material619.diffuseColor = [.784313738,0,0]
+Material619.shininess = 1.0
 
 Appearance618.material = Material619
 
@@ -2621,9 +2621,9 @@ Scene15.children.append(Shape617)
 Shape622 = x3d.Shape()
 Appearance623 = x3d.Appearance()
 Material624 = x3d.Material()
-Material624.ambientIntensity = 0
-Material624.diffuseColor = [0.784313738,0,0]
-Material624.shininess = 1
+Material624.ambientIntensity = 0.0
+Material624.diffuseColor = [.784313738,0,0]
+Material624.shininess = 1.0
 
 Appearance623.material = Material624
 
@@ -2642,9 +2642,9 @@ Scene15.children.append(Shape622)
 Shape627 = x3d.Shape()
 Appearance628 = x3d.Appearance()
 Material629 = x3d.Material()
-Material629.ambientIntensity = 0
-Material629.diffuseColor = [0.784313738,0,0]
-Material629.shininess = 1
+Material629.ambientIntensity = 0.0
+Material629.diffuseColor = [.784313738,0,0]
+Material629.shininess = 1.0
 
 Appearance628.material = Material629
 
@@ -2663,9 +2663,9 @@ Scene15.children.append(Shape627)
 Shape632 = x3d.Shape()
 Appearance633 = x3d.Appearance()
 Material634 = x3d.Material()
-Material634.ambientIntensity = 0
-Material634.diffuseColor = [0.784313738,0,0]
-Material634.shininess = 1
+Material634.ambientIntensity = 0.0
+Material634.diffuseColor = [.784313738,0,0]
+Material634.shininess = 1.0
 
 Appearance633.material = Material634
 
@@ -2684,9 +2684,9 @@ Scene15.children.append(Shape632)
 Shape637 = x3d.Shape()
 Appearance638 = x3d.Appearance()
 Material639 = x3d.Material()
-Material639.ambientIntensity = 0
-Material639.diffuseColor = [0.784313738,0,0]
-Material639.shininess = 1
+Material639.ambientIntensity = 0.0
+Material639.diffuseColor = [.784313738,0,0]
+Material639.shininess = 1.0
 
 Appearance638.material = Material639
 
@@ -2705,9 +2705,9 @@ Scene15.children.append(Shape637)
 Shape642 = x3d.Shape()
 Appearance643 = x3d.Appearance()
 Material644 = x3d.Material()
-Material644.ambientIntensity = 0
-Material644.diffuseColor = [0.784313738,0,0]
-Material644.shininess = 1
+Material644.ambientIntensity = 0.0
+Material644.diffuseColor = [.784313738,0,0]
+Material644.shininess = 1.0
 
 Appearance643.material = Material644
 
@@ -2726,9 +2726,9 @@ Scene15.children.append(Shape642)
 Shape647 = x3d.Shape()
 Appearance648 = x3d.Appearance()
 Material649 = x3d.Material()
-Material649.ambientIntensity = 0
-Material649.diffuseColor = [0.784313738,0,0]
-Material649.shininess = 1
+Material649.ambientIntensity = 0.0
+Material649.diffuseColor = [.784313738,0,0]
+Material649.shininess = 1.0
 
 Appearance648.material = Material649
 
@@ -2747,9 +2747,9 @@ Scene15.children.append(Shape647)
 Shape652 = x3d.Shape()
 Appearance653 = x3d.Appearance()
 Material654 = x3d.Material()
-Material654.ambientIntensity = 0
-Material654.diffuseColor = [0.784313738,0,0]
-Material654.shininess = 1
+Material654.ambientIntensity = 0.0
+Material654.diffuseColor = [.784313738,0,0]
+Material654.shininess = 1.0
 
 Appearance653.material = Material654
 
@@ -2768,9 +2768,9 @@ Scene15.children.append(Shape652)
 Shape657 = x3d.Shape()
 Appearance658 = x3d.Appearance()
 Material659 = x3d.Material()
-Material659.ambientIntensity = 0
-Material659.diffuseColor = [0.784313738,0,0]
-Material659.shininess = 1
+Material659.ambientIntensity = 0.0
+Material659.diffuseColor = [.784313738,0,0]
+Material659.shininess = 1.0
 
 Appearance658.material = Material659
 
@@ -2789,9 +2789,9 @@ Scene15.children.append(Shape657)
 Shape662 = x3d.Shape()
 Appearance663 = x3d.Appearance()
 Material664 = x3d.Material()
-Material664.ambientIntensity = 0
-Material664.diffuseColor = [0.784313738,0,0]
-Material664.shininess = 1
+Material664.ambientIntensity = 0.0
+Material664.diffuseColor = [.784313738,0,0]
+Material664.shininess = 1.0
 
 Appearance663.material = Material664
 
@@ -2810,9 +2810,9 @@ Scene15.children.append(Shape662)
 Shape667 = x3d.Shape()
 Appearance668 = x3d.Appearance()
 Material669 = x3d.Material()
-Material669.ambientIntensity = 0
-Material669.diffuseColor = [0.784313738,0,0]
-Material669.shininess = 1
+Material669.ambientIntensity = 0.0
+Material669.diffuseColor = [.784313738,0,0]
+Material669.shininess = 1.0
 
 Appearance668.material = Material669
 
@@ -2831,9 +2831,9 @@ Scene15.children.append(Shape667)
 Shape672 = x3d.Shape()
 Appearance673 = x3d.Appearance()
 Material674 = x3d.Material()
-Material674.ambientIntensity = 0
-Material674.diffuseColor = [0.784313738,0,0]
-Material674.shininess = 1
+Material674.ambientIntensity = 0.0
+Material674.diffuseColor = [.784313738,0,0]
+Material674.shininess = 1.0
 
 Appearance673.material = Material674
 
@@ -2852,9 +2852,9 @@ Scene15.children.append(Shape672)
 Shape677 = x3d.Shape()
 Appearance678 = x3d.Appearance()
 Material679 = x3d.Material()
-Material679.ambientIntensity = 0
-Material679.diffuseColor = [0.784313738,0,0]
-Material679.shininess = 1
+Material679.ambientIntensity = 0.0
+Material679.diffuseColor = [.784313738,0,0]
+Material679.shininess = 1.0
 
 Appearance678.material = Material679
 
@@ -2873,9 +2873,9 @@ Scene15.children.append(Shape677)
 Shape682 = x3d.Shape()
 Appearance683 = x3d.Appearance()
 Material684 = x3d.Material()
-Material684.ambientIntensity = 0
-Material684.diffuseColor = [0.784313738,0,0]
-Material684.shininess = 1
+Material684.ambientIntensity = 0.0
+Material684.diffuseColor = [.784313738,0,0]
+Material684.shininess = 1.0
 
 Appearance683.material = Material684
 
@@ -2894,9 +2894,9 @@ Scene15.children.append(Shape682)
 Shape687 = x3d.Shape()
 Appearance688 = x3d.Appearance()
 Material689 = x3d.Material()
-Material689.ambientIntensity = 0
-Material689.diffuseColor = [0.784313738,0,0]
-Material689.shininess = 1
+Material689.ambientIntensity = 0.0
+Material689.diffuseColor = [.784313738,0,0]
+Material689.shininess = 1.0
 
 Appearance688.material = Material689
 
@@ -2915,9 +2915,9 @@ Scene15.children.append(Shape687)
 Shape692 = x3d.Shape()
 Appearance693 = x3d.Appearance()
 Material694 = x3d.Material()
-Material694.ambientIntensity = 0
-Material694.diffuseColor = [0.784313738,0,0]
-Material694.shininess = 1
+Material694.ambientIntensity = 0.0
+Material694.diffuseColor = [.784313738,0,0]
+Material694.shininess = 1.0
 
 Appearance693.material = Material694
 
@@ -2936,9 +2936,9 @@ Scene15.children.append(Shape692)
 Shape697 = x3d.Shape()
 Appearance698 = x3d.Appearance()
 Material699 = x3d.Material()
-Material699.ambientIntensity = 0
-Material699.diffuseColor = [0.784313738,0,0]
-Material699.shininess = 1
+Material699.ambientIntensity = 0.0
+Material699.diffuseColor = [.784313738,0,0]
+Material699.shininess = 1.0
 
 Appearance698.material = Material699
 
@@ -2957,9 +2957,9 @@ Scene15.children.append(Shape697)
 Shape702 = x3d.Shape()
 Appearance703 = x3d.Appearance()
 Material704 = x3d.Material()
-Material704.ambientIntensity = 0
-Material704.diffuseColor = [0.784313738,0,0]
-Material704.shininess = 1
+Material704.ambientIntensity = 0.0
+Material704.diffuseColor = [.784313738,0,0]
+Material704.shininess = 1.0
 
 Appearance703.material = Material704
 
@@ -2978,9 +2978,9 @@ Scene15.children.append(Shape702)
 Shape707 = x3d.Shape()
 Appearance708 = x3d.Appearance()
 Material709 = x3d.Material()
-Material709.ambientIntensity = 0
-Material709.diffuseColor = [0.784313738,0,0]
-Material709.shininess = 1
+Material709.ambientIntensity = 0.0
+Material709.diffuseColor = [.784313738,0,0]
+Material709.shininess = 1.0
 
 Appearance708.material = Material709
 
@@ -2999,9 +2999,9 @@ Scene15.children.append(Shape707)
 Shape712 = x3d.Shape()
 Appearance713 = x3d.Appearance()
 Material714 = x3d.Material()
-Material714.ambientIntensity = 0
-Material714.diffuseColor = [0.784313738,0,0]
-Material714.shininess = 1
+Material714.ambientIntensity = 0.0
+Material714.diffuseColor = [.784313738,0,0]
+Material714.shininess = 1.0
 
 Appearance713.material = Material714
 
@@ -3020,9 +3020,9 @@ Scene15.children.append(Shape712)
 Shape717 = x3d.Shape()
 Appearance718 = x3d.Appearance()
 Material719 = x3d.Material()
-Material719.ambientIntensity = 0
-Material719.diffuseColor = [0.784313738,0,0]
-Material719.shininess = 1
+Material719.ambientIntensity = 0.0
+Material719.diffuseColor = [.784313738,0,0]
+Material719.shininess = 1.0
 
 Appearance718.material = Material719
 
@@ -3041,9 +3041,9 @@ Scene15.children.append(Shape717)
 Shape722 = x3d.Shape()
 Appearance723 = x3d.Appearance()
 Material724 = x3d.Material()
-Material724.ambientIntensity = 0
-Material724.diffuseColor = [0.784313738,0,0]
-Material724.shininess = 1
+Material724.ambientIntensity = 0.0
+Material724.diffuseColor = [.784313738,0,0]
+Material724.shininess = 1.0
 
 Appearance723.material = Material724
 
@@ -3062,9 +3062,9 @@ Scene15.children.append(Shape722)
 Shape727 = x3d.Shape()
 Appearance728 = x3d.Appearance()
 Material729 = x3d.Material()
-Material729.ambientIntensity = 0
-Material729.diffuseColor = [0.784313738,0,0]
-Material729.shininess = 1
+Material729.ambientIntensity = 0.0
+Material729.diffuseColor = [.784313738,0,0]
+Material729.shininess = 1.0
 
 Appearance728.material = Material729
 
@@ -3083,9 +3083,9 @@ Scene15.children.append(Shape727)
 Shape732 = x3d.Shape()
 Appearance733 = x3d.Appearance()
 Material734 = x3d.Material()
-Material734.ambientIntensity = 0
-Material734.diffuseColor = [0.784313738,0,0]
-Material734.shininess = 1
+Material734.ambientIntensity = 0.0
+Material734.diffuseColor = [.784313738,0,0]
+Material734.shininess = 1.0
 
 Appearance733.material = Material734
 
@@ -3104,9 +3104,9 @@ Scene15.children.append(Shape732)
 Shape737 = x3d.Shape()
 Appearance738 = x3d.Appearance()
 Material739 = x3d.Material()
-Material739.ambientIntensity = 0
-Material739.diffuseColor = [0.784313738,0,0]
-Material739.shininess = 1
+Material739.ambientIntensity = 0.0
+Material739.diffuseColor = [.784313738,0,0]
+Material739.shininess = 1.0
 
 Appearance738.material = Material739
 
@@ -3125,9 +3125,9 @@ Scene15.children.append(Shape737)
 Shape742 = x3d.Shape()
 Appearance743 = x3d.Appearance()
 Material744 = x3d.Material()
-Material744.ambientIntensity = 0
-Material744.diffuseColor = [0.784313738,0,0]
-Material744.shininess = 1
+Material744.ambientIntensity = 0.0
+Material744.diffuseColor = [.784313738,0,0]
+Material744.shininess = 1.0
 
 Appearance743.material = Material744
 
@@ -3146,9 +3146,9 @@ Scene15.children.append(Shape742)
 Shape747 = x3d.Shape()
 Appearance748 = x3d.Appearance()
 Material749 = x3d.Material()
-Material749.ambientIntensity = 0
-Material749.diffuseColor = [0.784313738,0,0]
-Material749.shininess = 1
+Material749.ambientIntensity = 0.0
+Material749.diffuseColor = [.784313738,0,0]
+Material749.shininess = 1.0
 
 Appearance748.material = Material749
 
@@ -3167,9 +3167,9 @@ Scene15.children.append(Shape747)
 Shape752 = x3d.Shape()
 Appearance753 = x3d.Appearance()
 Material754 = x3d.Material()
-Material754.ambientIntensity = 0
-Material754.diffuseColor = [0.784313738,0,0]
-Material754.shininess = 1
+Material754.ambientIntensity = 0.0
+Material754.diffuseColor = [.784313738,0,0]
+Material754.shininess = 1.0
 
 Appearance753.material = Material754
 
@@ -3188,9 +3188,9 @@ Scene15.children.append(Shape752)
 Shape757 = x3d.Shape()
 Appearance758 = x3d.Appearance()
 Material759 = x3d.Material()
-Material759.ambientIntensity = 0
-Material759.diffuseColor = [0.784313738,0,0]
-Material759.shininess = 1
+Material759.ambientIntensity = 0.0
+Material759.diffuseColor = [.784313738,0,0]
+Material759.shininess = 1.0
 
 Appearance758.material = Material759
 
@@ -3209,9 +3209,9 @@ Scene15.children.append(Shape757)
 Shape762 = x3d.Shape()
 Appearance763 = x3d.Appearance()
 Material764 = x3d.Material()
-Material764.ambientIntensity = 0
-Material764.diffuseColor = [0.784313738,0,0]
-Material764.shininess = 1
+Material764.ambientIntensity = 0.0
+Material764.diffuseColor = [.784313738,0,0]
+Material764.shininess = 1.0
 
 Appearance763.material = Material764
 
@@ -3230,9 +3230,9 @@ Scene15.children.append(Shape762)
 Shape767 = x3d.Shape()
 Appearance768 = x3d.Appearance()
 Material769 = x3d.Material()
-Material769.ambientIntensity = 0
-Material769.diffuseColor = [0.784313738,0,0]
-Material769.shininess = 1
+Material769.ambientIntensity = 0.0
+Material769.diffuseColor = [.784313738,0,0]
+Material769.shininess = 1.0
 
 Appearance768.material = Material769
 
@@ -3251,9 +3251,9 @@ Scene15.children.append(Shape767)
 Shape772 = x3d.Shape()
 Appearance773 = x3d.Appearance()
 Material774 = x3d.Material()
-Material774.ambientIntensity = 0
-Material774.diffuseColor = [0.784313738,0,0]
-Material774.shininess = 1
+Material774.ambientIntensity = 0.0
+Material774.diffuseColor = [.784313738,0,0]
+Material774.shininess = 1.0
 
 Appearance773.material = Material774
 
@@ -3272,9 +3272,9 @@ Scene15.children.append(Shape772)
 Shape777 = x3d.Shape()
 Appearance778 = x3d.Appearance()
 Material779 = x3d.Material()
-Material779.ambientIntensity = 0
-Material779.diffuseColor = [0.784313738,0,0]
-Material779.shininess = 1
+Material779.ambientIntensity = 0.0
+Material779.diffuseColor = [.784313738,0,0]
+Material779.shininess = 1.0
 
 Appearance778.material = Material779
 
@@ -3293,9 +3293,9 @@ Scene15.children.append(Shape777)
 Shape782 = x3d.Shape()
 Appearance783 = x3d.Appearance()
 Material784 = x3d.Material()
-Material784.ambientIntensity = 0
-Material784.diffuseColor = [0.784313738,0,0]
-Material784.shininess = 1
+Material784.ambientIntensity = 0.0
+Material784.diffuseColor = [.784313738,0,0]
+Material784.shininess = 1.0
 
 Appearance783.material = Material784
 
@@ -3314,9 +3314,9 @@ Scene15.children.append(Shape782)
 Shape787 = x3d.Shape()
 Appearance788 = x3d.Appearance()
 Material789 = x3d.Material()
-Material789.ambientIntensity = 0
-Material789.diffuseColor = [0.784313738,0,0]
-Material789.shininess = 1
+Material789.ambientIntensity = 0.0
+Material789.diffuseColor = [.784313738,0,0]
+Material789.shininess = 1.0
 
 Appearance788.material = Material789
 
@@ -3335,9 +3335,9 @@ Scene15.children.append(Shape787)
 Shape792 = x3d.Shape()
 Appearance793 = x3d.Appearance()
 Material794 = x3d.Material()
-Material794.ambientIntensity = 0
-Material794.diffuseColor = [0.784313738,0,0]
-Material794.shininess = 1
+Material794.ambientIntensity = 0.0
+Material794.diffuseColor = [.784313738,0,0]
+Material794.shininess = 1.0
 
 Appearance793.material = Material794
 
@@ -3356,9 +3356,9 @@ Scene15.children.append(Shape792)
 Shape797 = x3d.Shape()
 Appearance798 = x3d.Appearance()
 Material799 = x3d.Material()
-Material799.ambientIntensity = 0
-Material799.diffuseColor = [0.784313738,0,0]
-Material799.shininess = 1
+Material799.ambientIntensity = 0.0
+Material799.diffuseColor = [.784313738,0,0]
+Material799.shininess = 1.0
 
 Appearance798.material = Material799
 
@@ -3377,9 +3377,9 @@ Scene15.children.append(Shape797)
 Shape802 = x3d.Shape()
 Appearance803 = x3d.Appearance()
 Material804 = x3d.Material()
-Material804.ambientIntensity = 0
-Material804.diffuseColor = [0.784313738,0,0]
-Material804.shininess = 1
+Material804.ambientIntensity = 0.0
+Material804.diffuseColor = [.784313738,0,0]
+Material804.shininess = 1.0
 
 Appearance803.material = Material804
 
@@ -3398,9 +3398,9 @@ Scene15.children.append(Shape802)
 Shape807 = x3d.Shape()
 Appearance808 = x3d.Appearance()
 Material809 = x3d.Material()
-Material809.ambientIntensity = 0
-Material809.diffuseColor = [0.784313738,0,0]
-Material809.shininess = 1
+Material809.ambientIntensity = 0.0
+Material809.diffuseColor = [.784313738,0,0]
+Material809.shininess = 1.0
 
 Appearance808.material = Material809
 
@@ -3419,9 +3419,9 @@ Scene15.children.append(Shape807)
 Shape812 = x3d.Shape()
 Appearance813 = x3d.Appearance()
 Material814 = x3d.Material()
-Material814.ambientIntensity = 0
-Material814.diffuseColor = [0.784313738,0,0]
-Material814.shininess = 1
+Material814.ambientIntensity = 0.0
+Material814.diffuseColor = [.784313738,0,0]
+Material814.shininess = 1.0
 
 Appearance813.material = Material814
 
@@ -3440,9 +3440,9 @@ Scene15.children.append(Shape812)
 Shape817 = x3d.Shape()
 Appearance818 = x3d.Appearance()
 Material819 = x3d.Material()
-Material819.ambientIntensity = 0
-Material819.diffuseColor = [0.784313738,0,0]
-Material819.shininess = 1
+Material819.ambientIntensity = 0.0
+Material819.diffuseColor = [.784313738,0,0]
+Material819.shininess = 1.0
 
 Appearance818.material = Material819
 
@@ -3461,9 +3461,9 @@ Scene15.children.append(Shape817)
 Shape822 = x3d.Shape()
 Appearance823 = x3d.Appearance()
 Material824 = x3d.Material()
-Material824.ambientIntensity = 0
-Material824.diffuseColor = [0.784313738,0,0]
-Material824.shininess = 1
+Material824.ambientIntensity = 0.0
+Material824.diffuseColor = [.784313738,0,0]
+Material824.shininess = 1.0
 
 Appearance823.material = Material824
 
@@ -3482,9 +3482,9 @@ Scene15.children.append(Shape822)
 Shape827 = x3d.Shape()
 Appearance828 = x3d.Appearance()
 Material829 = x3d.Material()
-Material829.ambientIntensity = 0
-Material829.diffuseColor = [0.784313738,0,0]
-Material829.shininess = 1
+Material829.ambientIntensity = 0.0
+Material829.diffuseColor = [.784313738,0,0]
+Material829.shininess = 1.0
 
 Appearance828.material = Material829
 
@@ -3503,9 +3503,9 @@ Scene15.children.append(Shape827)
 Shape832 = x3d.Shape()
 Appearance833 = x3d.Appearance()
 Material834 = x3d.Material()
-Material834.ambientIntensity = 0
-Material834.diffuseColor = [0.784313738,0,0]
-Material834.shininess = 1
+Material834.ambientIntensity = 0.0
+Material834.diffuseColor = [.784313738,0,0]
+Material834.shininess = 1.0
 
 Appearance833.material = Material834
 
@@ -3524,9 +3524,9 @@ Scene15.children.append(Shape832)
 Shape837 = x3d.Shape()
 Appearance838 = x3d.Appearance()
 Material839 = x3d.Material()
-Material839.ambientIntensity = 0
-Material839.diffuseColor = [0.784313738,0,0]
-Material839.shininess = 1
+Material839.ambientIntensity = 0.0
+Material839.diffuseColor = [.784313738,0,0]
+Material839.shininess = 1.0
 
 Appearance838.material = Material839
 
@@ -3545,9 +3545,9 @@ Scene15.children.append(Shape837)
 Shape842 = x3d.Shape()
 Appearance843 = x3d.Appearance()
 Material844 = x3d.Material()
-Material844.ambientIntensity = 0
-Material844.diffuseColor = [0.784313738,0,0]
-Material844.shininess = 1
+Material844.ambientIntensity = 0.0
+Material844.diffuseColor = [.784313738,0,0]
+Material844.shininess = 1.0
 
 Appearance843.material = Material844
 
@@ -3566,9 +3566,9 @@ Scene15.children.append(Shape842)
 Shape847 = x3d.Shape()
 Appearance848 = x3d.Appearance()
 Material849 = x3d.Material()
-Material849.ambientIntensity = 0
-Material849.diffuseColor = [0.784313738,0,0]
-Material849.shininess = 1
+Material849.ambientIntensity = 0.0
+Material849.diffuseColor = [.784313738,0,0]
+Material849.shininess = 1.0
 
 Appearance848.material = Material849
 
@@ -3587,9 +3587,9 @@ Scene15.children.append(Shape847)
 Shape852 = x3d.Shape()
 Appearance853 = x3d.Appearance()
 Material854 = x3d.Material()
-Material854.ambientIntensity = 0
-Material854.diffuseColor = [0.784313738,0,0]
-Material854.shininess = 1
+Material854.ambientIntensity = 0.0
+Material854.diffuseColor = [.784313738,0,0]
+Material854.shininess = 1.0
 
 Appearance853.material = Material854
 
@@ -3608,9 +3608,9 @@ Scene15.children.append(Shape852)
 Shape857 = x3d.Shape()
 Appearance858 = x3d.Appearance()
 Material859 = x3d.Material()
-Material859.ambientIntensity = 0
-Material859.diffuseColor = [0.784313738,0,0]
-Material859.shininess = 1
+Material859.ambientIntensity = 0.0
+Material859.diffuseColor = [.784313738,0,0]
+Material859.shininess = 1.0
 
 Appearance858.material = Material859
 
@@ -3629,9 +3629,9 @@ Scene15.children.append(Shape857)
 Shape862 = x3d.Shape()
 Appearance863 = x3d.Appearance()
 Material864 = x3d.Material()
-Material864.ambientIntensity = 0
-Material864.diffuseColor = [0.784313738,0,0]
-Material864.shininess = 1
+Material864.ambientIntensity = 0.0
+Material864.diffuseColor = [.784313738,0,0]
+Material864.shininess = 1.0
 
 Appearance863.material = Material864
 
@@ -3650,9 +3650,9 @@ Scene15.children.append(Shape862)
 Shape867 = x3d.Shape()
 Appearance868 = x3d.Appearance()
 Material869 = x3d.Material()
-Material869.ambientIntensity = 0
-Material869.diffuseColor = [0.784313738,0,0]
-Material869.shininess = 1
+Material869.ambientIntensity = 0.0
+Material869.diffuseColor = [.784313738,0,0]
+Material869.shininess = 1.0
 
 Appearance868.material = Material869
 
@@ -3671,9 +3671,9 @@ Scene15.children.append(Shape867)
 Shape872 = x3d.Shape()
 Appearance873 = x3d.Appearance()
 Material874 = x3d.Material()
-Material874.ambientIntensity = 0
-Material874.diffuseColor = [0.784313738,0,0]
-Material874.shininess = 1
+Material874.ambientIntensity = 0.0
+Material874.diffuseColor = [.784313738,0,0]
+Material874.shininess = 1.0
 
 Appearance873.material = Material874
 
@@ -3692,9 +3692,9 @@ Scene15.children.append(Shape872)
 Shape877 = x3d.Shape()
 Appearance878 = x3d.Appearance()
 Material879 = x3d.Material()
-Material879.ambientIntensity = 0
-Material879.diffuseColor = [0.784313738,0,0]
-Material879.shininess = 1
+Material879.ambientIntensity = 0.0
+Material879.diffuseColor = [.784313738,0,0]
+Material879.shininess = 1.0
 
 Appearance878.material = Material879
 
@@ -3713,9 +3713,9 @@ Scene15.children.append(Shape877)
 Shape882 = x3d.Shape()
 Appearance883 = x3d.Appearance()
 Material884 = x3d.Material()
-Material884.ambientIntensity = 0
-Material884.diffuseColor = [0.784313738,0,0]
-Material884.shininess = 1
+Material884.ambientIntensity = 0.0
+Material884.diffuseColor = [.784313738,0,0]
+Material884.shininess = 1.0
 
 Appearance883.material = Material884
 
@@ -3734,9 +3734,9 @@ Scene15.children.append(Shape882)
 Shape887 = x3d.Shape()
 Appearance888 = x3d.Appearance()
 Material889 = x3d.Material()
-Material889.ambientIntensity = 0
-Material889.diffuseColor = [0.784313738,0,0]
-Material889.shininess = 1
+Material889.ambientIntensity = 0.0
+Material889.diffuseColor = [.784313738,0,0]
+Material889.shininess = 1.0
 
 Appearance888.material = Material889
 
@@ -3755,9 +3755,9 @@ Scene15.children.append(Shape887)
 Shape892 = x3d.Shape()
 Appearance893 = x3d.Appearance()
 Material894 = x3d.Material()
-Material894.ambientIntensity = 0
-Material894.diffuseColor = [0.784313738,0,0]
-Material894.shininess = 1
+Material894.ambientIntensity = 0.0
+Material894.diffuseColor = [.784313738,0,0]
+Material894.shininess = 1.0
 
 Appearance893.material = Material894
 
@@ -3776,9 +3776,9 @@ Scene15.children.append(Shape892)
 Shape897 = x3d.Shape()
 Appearance898 = x3d.Appearance()
 Material899 = x3d.Material()
-Material899.ambientIntensity = 0
-Material899.diffuseColor = [0.784313738,0,0]
-Material899.shininess = 1
+Material899.ambientIntensity = 0.0
+Material899.diffuseColor = [.784313738,0,0]
+Material899.shininess = 1.0
 
 Appearance898.material = Material899
 
@@ -3797,9 +3797,9 @@ Scene15.children.append(Shape897)
 Shape902 = x3d.Shape()
 Appearance903 = x3d.Appearance()
 Material904 = x3d.Material()
-Material904.ambientIntensity = 0
-Material904.diffuseColor = [0.784313738,0,0]
-Material904.shininess = 1
+Material904.ambientIntensity = 0.0
+Material904.diffuseColor = [.784313738,0,0]
+Material904.shininess = 1.0
 
 Appearance903.material = Material904
 
@@ -3818,9 +3818,9 @@ Scene15.children.append(Shape902)
 Shape907 = x3d.Shape()
 Appearance908 = x3d.Appearance()
 Material909 = x3d.Material()
-Material909.ambientIntensity = 0
-Material909.diffuseColor = [0.784313738,0,0]
-Material909.shininess = 1
+Material909.ambientIntensity = 0.0
+Material909.diffuseColor = [.784313738,0,0]
+Material909.shininess = 1.0
 
 Appearance908.material = Material909
 
@@ -3839,9 +3839,9 @@ Scene15.children.append(Shape907)
 Shape912 = x3d.Shape()
 Appearance913 = x3d.Appearance()
 Material914 = x3d.Material()
-Material914.ambientIntensity = 0
-Material914.diffuseColor = [0.784313738,0,0]
-Material914.shininess = 1
+Material914.ambientIntensity = 0.0
+Material914.diffuseColor = [.784313738,0,0]
+Material914.shininess = 1.0
 
 Appearance913.material = Material914
 
@@ -3860,9 +3860,9 @@ Scene15.children.append(Shape912)
 Shape917 = x3d.Shape()
 Appearance918 = x3d.Appearance()
 Material919 = x3d.Material()
-Material919.ambientIntensity = 0
-Material919.diffuseColor = [0.784313738,0,0]
-Material919.shininess = 1
+Material919.ambientIntensity = 0.0
+Material919.diffuseColor = [.784313738,0,0]
+Material919.shininess = 1.0
 
 Appearance918.material = Material919
 
@@ -3881,9 +3881,9 @@ Scene15.children.append(Shape917)
 Shape922 = x3d.Shape()
 Appearance923 = x3d.Appearance()
 Material924 = x3d.Material()
-Material924.ambientIntensity = 0
-Material924.diffuseColor = [0.784313738,0,0]
-Material924.shininess = 1
+Material924.ambientIntensity = 0.0
+Material924.diffuseColor = [.784313738,0,0]
+Material924.shininess = 1.0
 
 Appearance923.material = Material924
 
@@ -3902,9 +3902,9 @@ Scene15.children.append(Shape922)
 Shape927 = x3d.Shape()
 Appearance928 = x3d.Appearance()
 Material929 = x3d.Material()
-Material929.ambientIntensity = 0
-Material929.diffuseColor = [0.784313738,0,0]
-Material929.shininess = 1
+Material929.ambientIntensity = 0.0
+Material929.diffuseColor = [.784313738,0,0]
+Material929.shininess = 1.0
 
 Appearance928.material = Material929
 
@@ -3923,9 +3923,9 @@ Scene15.children.append(Shape927)
 Shape932 = x3d.Shape()
 Appearance933 = x3d.Appearance()
 Material934 = x3d.Material()
-Material934.ambientIntensity = 0
-Material934.diffuseColor = [0.784313738,0,0]
-Material934.shininess = 1
+Material934.ambientIntensity = 0.0
+Material934.diffuseColor = [.784313738,0,0]
+Material934.shininess = 1.0
 
 Appearance933.material = Material934
 
@@ -3944,9 +3944,9 @@ Scene15.children.append(Shape932)
 Shape937 = x3d.Shape()
 Appearance938 = x3d.Appearance()
 Material939 = x3d.Material()
-Material939.ambientIntensity = 0
-Material939.diffuseColor = [0.784313738,0,0]
-Material939.shininess = 1
+Material939.ambientIntensity = 0.0
+Material939.diffuseColor = [.784313738,0,0]
+Material939.shininess = 1.0
 
 Appearance938.material = Material939
 
@@ -3965,9 +3965,9 @@ Scene15.children.append(Shape937)
 Shape942 = x3d.Shape()
 Appearance943 = x3d.Appearance()
 Material944 = x3d.Material()
-Material944.ambientIntensity = 0
-Material944.diffuseColor = [0.784313738,0,0]
-Material944.shininess = 1
+Material944.ambientIntensity = 0.0
+Material944.diffuseColor = [.784313738,0,0]
+Material944.shininess = 1.0
 
 Appearance943.material = Material944
 
@@ -3986,9 +3986,9 @@ Scene15.children.append(Shape942)
 Shape947 = x3d.Shape()
 Appearance948 = x3d.Appearance()
 Material949 = x3d.Material()
-Material949.ambientIntensity = 0
-Material949.diffuseColor = [0.784313738,0,0]
-Material949.shininess = 1
+Material949.ambientIntensity = 0.0
+Material949.diffuseColor = [.784313738,0,0]
+Material949.shininess = 1.0
 
 Appearance948.material = Material949
 
@@ -4007,9 +4007,9 @@ Scene15.children.append(Shape947)
 Shape952 = x3d.Shape()
 Appearance953 = x3d.Appearance()
 Material954 = x3d.Material()
-Material954.ambientIntensity = 0
-Material954.diffuseColor = [0.784313738,0,0]
-Material954.shininess = 1
+Material954.ambientIntensity = 0.0
+Material954.diffuseColor = [.784313738,0,0]
+Material954.shininess = 1.0
 
 Appearance953.material = Material954
 
@@ -4028,9 +4028,9 @@ Scene15.children.append(Shape952)
 Shape957 = x3d.Shape()
 Appearance958 = x3d.Appearance()
 Material959 = x3d.Material()
-Material959.ambientIntensity = 0
-Material959.diffuseColor = [0.784313738,0,0]
-Material959.shininess = 1
+Material959.ambientIntensity = 0.0
+Material959.diffuseColor = [.784313738,0,0]
+Material959.shininess = 1.0
 
 Appearance958.material = Material959
 
@@ -4049,9 +4049,9 @@ Scene15.children.append(Shape957)
 Shape962 = x3d.Shape()
 Appearance963 = x3d.Appearance()
 Material964 = x3d.Material()
-Material964.ambientIntensity = 0
-Material964.diffuseColor = [0.784313738,0,0]
-Material964.shininess = 1
+Material964.ambientIntensity = 0.0
+Material964.diffuseColor = [.784313738,0,0]
+Material964.shininess = 1.0
 
 Appearance963.material = Material964
 
@@ -4070,9 +4070,9 @@ Scene15.children.append(Shape962)
 Shape967 = x3d.Shape()
 Appearance968 = x3d.Appearance()
 Material969 = x3d.Material()
-Material969.ambientIntensity = 0
-Material969.diffuseColor = [0.784313738,0,0]
-Material969.shininess = 1
+Material969.ambientIntensity = 0.0
+Material969.diffuseColor = [.784313738,0,0]
+Material969.shininess = 1.0
 
 Appearance968.material = Material969
 
@@ -4091,9 +4091,9 @@ Scene15.children.append(Shape967)
 Shape972 = x3d.Shape()
 Appearance973 = x3d.Appearance()
 Material974 = x3d.Material()
-Material974.ambientIntensity = 0
-Material974.diffuseColor = [0.784313738,0,0]
-Material974.shininess = 1
+Material974.ambientIntensity = 0.0
+Material974.diffuseColor = [.784313738,0,0]
+Material974.shininess = 1.0
 
 Appearance973.material = Material974
 
@@ -4112,9 +4112,9 @@ Scene15.children.append(Shape972)
 Shape977 = x3d.Shape()
 Appearance978 = x3d.Appearance()
 Material979 = x3d.Material()
-Material979.ambientIntensity = 0
-Material979.diffuseColor = [0.784313738,0,0]
-Material979.shininess = 1
+Material979.ambientIntensity = 0.0
+Material979.diffuseColor = [.784313738,0,0]
+Material979.shininess = 1.0
 
 Appearance978.material = Material979
 
@@ -4133,9 +4133,9 @@ Scene15.children.append(Shape977)
 Shape982 = x3d.Shape()
 Appearance983 = x3d.Appearance()
 Material984 = x3d.Material()
-Material984.ambientIntensity = 0
-Material984.diffuseColor = [0.784313738,0,0]
-Material984.shininess = 1
+Material984.ambientIntensity = 0.0
+Material984.diffuseColor = [.784313738,0,0]
+Material984.shininess = 1.0
 
 Appearance983.material = Material984
 
@@ -4154,9 +4154,9 @@ Scene15.children.append(Shape982)
 Shape987 = x3d.Shape()
 Appearance988 = x3d.Appearance()
 Material989 = x3d.Material()
-Material989.ambientIntensity = 0
-Material989.diffuseColor = [0.784313738,0,0]
-Material989.shininess = 1
+Material989.ambientIntensity = 0.0
+Material989.diffuseColor = [.784313738,0,0]
+Material989.shininess = 1.0
 
 Appearance988.material = Material989
 
@@ -4175,9 +4175,9 @@ Scene15.children.append(Shape987)
 Shape992 = x3d.Shape()
 Appearance993 = x3d.Appearance()
 Material994 = x3d.Material()
-Material994.ambientIntensity = 0
-Material994.diffuseColor = [0.784313738,0,0]
-Material994.shininess = 1
+Material994.ambientIntensity = 0.0
+Material994.diffuseColor = [.784313738,0,0]
+Material994.shininess = 1.0
 
 Appearance993.material = Material994
 
@@ -4196,9 +4196,9 @@ Scene15.children.append(Shape992)
 Shape997 = x3d.Shape()
 Appearance998 = x3d.Appearance()
 Material999 = x3d.Material()
-Material999.ambientIntensity = 0
-Material999.diffuseColor = [0.784313738,0,0]
-Material999.shininess = 1
+Material999.ambientIntensity = 0.0
+Material999.diffuseColor = [.784313738,0,0]
+Material999.shininess = 1.0
 
 Appearance998.material = Material999
 
@@ -4217,9 +4217,9 @@ Scene15.children.append(Shape997)
 Shape1002 = x3d.Shape()
 Appearance1003 = x3d.Appearance()
 Material1004 = x3d.Material()
-Material1004.ambientIntensity = 0
-Material1004.diffuseColor = [0.784313738,0,0]
-Material1004.shininess = 1
+Material1004.ambientIntensity = 0.0
+Material1004.diffuseColor = [.784313738,0,0]
+Material1004.shininess = 1.0
 
 Appearance1003.material = Material1004
 
@@ -4238,9 +4238,9 @@ Scene15.children.append(Shape1002)
 Shape1007 = x3d.Shape()
 Appearance1008 = x3d.Appearance()
 Material1009 = x3d.Material()
-Material1009.ambientIntensity = 0
-Material1009.diffuseColor = [0.784313738,0,0]
-Material1009.shininess = 1
+Material1009.ambientIntensity = 0.0
+Material1009.diffuseColor = [.784313738,0,0]
+Material1009.shininess = 1.0
 
 Appearance1008.material = Material1009
 
@@ -4259,9 +4259,9 @@ Scene15.children.append(Shape1007)
 Shape1012 = x3d.Shape()
 Appearance1013 = x3d.Appearance()
 Material1014 = x3d.Material()
-Material1014.ambientIntensity = 0
-Material1014.diffuseColor = [0.784313738,0,0]
-Material1014.shininess = 1
+Material1014.ambientIntensity = 0.0
+Material1014.diffuseColor = [.784313738,0,0]
+Material1014.shininess = 1.0
 
 Appearance1013.material = Material1014
 
@@ -4280,9 +4280,9 @@ Scene15.children.append(Shape1012)
 Shape1017 = x3d.Shape()
 Appearance1018 = x3d.Appearance()
 Material1019 = x3d.Material()
-Material1019.ambientIntensity = 0
-Material1019.diffuseColor = [0.784313738,0,0]
-Material1019.shininess = 1
+Material1019.ambientIntensity = 0.0
+Material1019.diffuseColor = [.784313738,0,0]
+Material1019.shininess = 1.0
 
 Appearance1018.material = Material1019
 
@@ -4301,9 +4301,9 @@ Scene15.children.append(Shape1017)
 Shape1022 = x3d.Shape()
 Appearance1023 = x3d.Appearance()
 Material1024 = x3d.Material()
-Material1024.ambientIntensity = 0
-Material1024.diffuseColor = [0.784313738,0,0]
-Material1024.shininess = 1
+Material1024.ambientIntensity = 0.0
+Material1024.diffuseColor = [.784313738,0,0]
+Material1024.shininess = 1.0
 
 Appearance1023.material = Material1024
 
@@ -4322,9 +4322,9 @@ Scene15.children.append(Shape1022)
 Shape1027 = x3d.Shape()
 Appearance1028 = x3d.Appearance()
 Material1029 = x3d.Material()
-Material1029.ambientIntensity = 0
-Material1029.diffuseColor = [0.784313738,0,0]
-Material1029.shininess = 1
+Material1029.ambientIntensity = 0.0
+Material1029.diffuseColor = [.784313738,0,0]
+Material1029.shininess = 1.0
 
 Appearance1028.material = Material1029
 
@@ -4343,9 +4343,9 @@ Scene15.children.append(Shape1027)
 Shape1032 = x3d.Shape()
 Appearance1033 = x3d.Appearance()
 Material1034 = x3d.Material()
-Material1034.ambientIntensity = 0
-Material1034.diffuseColor = [0.784313738,0,0]
-Material1034.shininess = 1
+Material1034.ambientIntensity = 0.0
+Material1034.diffuseColor = [.784313738,0,0]
+Material1034.shininess = 1.0
 
 Appearance1033.material = Material1034
 
@@ -4364,9 +4364,9 @@ Scene15.children.append(Shape1032)
 Shape1037 = x3d.Shape()
 Appearance1038 = x3d.Appearance()
 Material1039 = x3d.Material()
-Material1039.ambientIntensity = 0
-Material1039.diffuseColor = [0.784313738,0,0]
-Material1039.shininess = 1
+Material1039.ambientIntensity = 0.0
+Material1039.diffuseColor = [.784313738,0,0]
+Material1039.shininess = 1.0
 
 Appearance1038.material = Material1039
 
@@ -4385,9 +4385,9 @@ Scene15.children.append(Shape1037)
 Shape1042 = x3d.Shape()
 Appearance1043 = x3d.Appearance()
 Material1044 = x3d.Material()
-Material1044.ambientIntensity = 0
-Material1044.diffuseColor = [0.784313738,0,0]
-Material1044.shininess = 1
+Material1044.ambientIntensity = 0.0
+Material1044.diffuseColor = [.784313738,0,0]
+Material1044.shininess = 1.0
 
 Appearance1043.material = Material1044
 
@@ -4406,9 +4406,9 @@ Scene15.children.append(Shape1042)
 Shape1047 = x3d.Shape()
 Appearance1048 = x3d.Appearance()
 Material1049 = x3d.Material()
-Material1049.ambientIntensity = 0
-Material1049.diffuseColor = [0.784313738,0,0]
-Material1049.shininess = 1
+Material1049.ambientIntensity = 0.0
+Material1049.diffuseColor = [.784313738,0,0]
+Material1049.shininess = 1.0
 
 Appearance1048.material = Material1049
 
@@ -4427,9 +4427,9 @@ Scene15.children.append(Shape1047)
 Shape1052 = x3d.Shape()
 Appearance1053 = x3d.Appearance()
 Material1054 = x3d.Material()
-Material1054.ambientIntensity = 0
-Material1054.diffuseColor = [0.784313738,0,0]
-Material1054.shininess = 1
+Material1054.ambientIntensity = 0.0
+Material1054.diffuseColor = [.784313738,0,0]
+Material1054.shininess = 1.0
 
 Appearance1053.material = Material1054
 
@@ -4448,9 +4448,9 @@ Scene15.children.append(Shape1052)
 Shape1057 = x3d.Shape()
 Appearance1058 = x3d.Appearance()
 Material1059 = x3d.Material()
-Material1059.ambientIntensity = 0
-Material1059.diffuseColor = [0.784313738,0,0]
-Material1059.shininess = 1
+Material1059.ambientIntensity = 0.0
+Material1059.diffuseColor = [.784313738,0,0]
+Material1059.shininess = 1.0
 
 Appearance1058.material = Material1059
 
@@ -4469,9 +4469,9 @@ Scene15.children.append(Shape1057)
 Shape1062 = x3d.Shape()
 Appearance1063 = x3d.Appearance()
 Material1064 = x3d.Material()
-Material1064.ambientIntensity = 0
-Material1064.diffuseColor = [0.784313738,0,0]
-Material1064.shininess = 1
+Material1064.ambientIntensity = 0.0
+Material1064.diffuseColor = [.784313738,0,0]
+Material1064.shininess = 1.0
 
 Appearance1063.material = Material1064
 
@@ -4490,9 +4490,9 @@ Scene15.children.append(Shape1062)
 Shape1067 = x3d.Shape()
 Appearance1068 = x3d.Appearance()
 Material1069 = x3d.Material()
-Material1069.ambientIntensity = 0
-Material1069.diffuseColor = [0.784313738,0,0]
-Material1069.shininess = 1
+Material1069.ambientIntensity = 0.0
+Material1069.diffuseColor = [.784313738,0,0]
+Material1069.shininess = 1.0
 
 Appearance1068.material = Material1069
 
@@ -4511,9 +4511,9 @@ Scene15.children.append(Shape1067)
 Shape1072 = x3d.Shape()
 Appearance1073 = x3d.Appearance()
 Material1074 = x3d.Material()
-Material1074.ambientIntensity = 0
-Material1074.diffuseColor = [0.784313738,0,0]
-Material1074.shininess = 1
+Material1074.ambientIntensity = 0.0
+Material1074.diffuseColor = [.784313738,0,0]
+Material1074.shininess = 1.0
 
 Appearance1073.material = Material1074
 
@@ -4532,9 +4532,9 @@ Scene15.children.append(Shape1072)
 Shape1077 = x3d.Shape()
 Appearance1078 = x3d.Appearance()
 Material1079 = x3d.Material()
-Material1079.ambientIntensity = 0
-Material1079.diffuseColor = [0.784313738,0,0]
-Material1079.shininess = 1
+Material1079.ambientIntensity = 0.0
+Material1079.diffuseColor = [.784313738,0,0]
+Material1079.shininess = 1.0
 
 Appearance1078.material = Material1079
 
@@ -4553,9 +4553,9 @@ Scene15.children.append(Shape1077)
 Shape1082 = x3d.Shape()
 Appearance1083 = x3d.Appearance()
 Material1084 = x3d.Material()
-Material1084.ambientIntensity = 0
-Material1084.diffuseColor = [0.784313738,0,0]
-Material1084.shininess = 1
+Material1084.ambientIntensity = 0.0
+Material1084.diffuseColor = [.784313738,0,0]
+Material1084.shininess = 1.0
 
 Appearance1083.material = Material1084
 
@@ -4574,9 +4574,9 @@ Scene15.children.append(Shape1082)
 Shape1087 = x3d.Shape()
 Appearance1088 = x3d.Appearance()
 Material1089 = x3d.Material()
-Material1089.ambientIntensity = 0
-Material1089.diffuseColor = [0.784313738,0,0]
-Material1089.shininess = 1
+Material1089.ambientIntensity = 0.0
+Material1089.diffuseColor = [.784313738,0,0]
+Material1089.shininess = 1.0
 
 Appearance1088.material = Material1089
 
@@ -4595,9 +4595,9 @@ Scene15.children.append(Shape1087)
 Shape1092 = x3d.Shape()
 Appearance1093 = x3d.Appearance()
 Material1094 = x3d.Material()
-Material1094.ambientIntensity = 0
-Material1094.diffuseColor = [0.784313738,0,0]
-Material1094.shininess = 1
+Material1094.ambientIntensity = 0.0
+Material1094.diffuseColor = [.784313738,0,0]
+Material1094.shininess = 1.0
 
 Appearance1093.material = Material1094
 
@@ -4616,9 +4616,9 @@ Scene15.children.append(Shape1092)
 Shape1097 = x3d.Shape()
 Appearance1098 = x3d.Appearance()
 Material1099 = x3d.Material()
-Material1099.ambientIntensity = 0
-Material1099.diffuseColor = [0.784313738,0,0]
-Material1099.shininess = 1
+Material1099.ambientIntensity = 0.0
+Material1099.diffuseColor = [.784313738,0,0]
+Material1099.shininess = 1.0
 
 Appearance1098.material = Material1099
 
@@ -4637,9 +4637,9 @@ Scene15.children.append(Shape1097)
 Shape1102 = x3d.Shape()
 Appearance1103 = x3d.Appearance()
 Material1104 = x3d.Material()
-Material1104.ambientIntensity = 0
-Material1104.diffuseColor = [0.784313738,0,0]
-Material1104.shininess = 1
+Material1104.ambientIntensity = 0.0
+Material1104.diffuseColor = [.784313738,0,0]
+Material1104.shininess = 1.0
 
 Appearance1103.material = Material1104
 
@@ -4658,9 +4658,9 @@ Scene15.children.append(Shape1102)
 Shape1107 = x3d.Shape()
 Appearance1108 = x3d.Appearance()
 Material1109 = x3d.Material()
-Material1109.ambientIntensity = 0
-Material1109.diffuseColor = [0.784313738,0,0]
-Material1109.shininess = 1
+Material1109.ambientIntensity = 0.0
+Material1109.diffuseColor = [.784313738,0,0]
+Material1109.shininess = 1.0
 
 Appearance1108.material = Material1109
 
@@ -4679,9 +4679,9 @@ Scene15.children.append(Shape1107)
 Shape1112 = x3d.Shape()
 Appearance1113 = x3d.Appearance()
 Material1114 = x3d.Material()
-Material1114.ambientIntensity = 0
-Material1114.diffuseColor = [0.784313738,0,0]
-Material1114.shininess = 1
+Material1114.ambientIntensity = 0.0
+Material1114.diffuseColor = [.784313738,0,0]
+Material1114.shininess = 1.0
 
 Appearance1113.material = Material1114
 
@@ -4700,9 +4700,9 @@ Scene15.children.append(Shape1112)
 Shape1117 = x3d.Shape()
 Appearance1118 = x3d.Appearance()
 Material1119 = x3d.Material()
-Material1119.ambientIntensity = 0
-Material1119.diffuseColor = [0.784313738,0,0]
-Material1119.shininess = 1
+Material1119.ambientIntensity = 0.0
+Material1119.diffuseColor = [.784313738,0,0]
+Material1119.shininess = 1.0
 
 Appearance1118.material = Material1119
 
@@ -4721,9 +4721,9 @@ Scene15.children.append(Shape1117)
 Shape1122 = x3d.Shape()
 Appearance1123 = x3d.Appearance()
 Material1124 = x3d.Material()
-Material1124.ambientIntensity = 0
-Material1124.diffuseColor = [0.784313738,0,0]
-Material1124.shininess = 1
+Material1124.ambientIntensity = 0.0
+Material1124.diffuseColor = [.784313738,0,0]
+Material1124.shininess = 1.0
 
 Appearance1123.material = Material1124
 
@@ -4742,9 +4742,9 @@ Scene15.children.append(Shape1122)
 Shape1127 = x3d.Shape()
 Appearance1128 = x3d.Appearance()
 Material1129 = x3d.Material()
-Material1129.ambientIntensity = 0
-Material1129.diffuseColor = [0.784313738,0,0]
-Material1129.shininess = 1
+Material1129.ambientIntensity = 0.0
+Material1129.diffuseColor = [.784313738,0,0]
+Material1129.shininess = 1.0
 
 Appearance1128.material = Material1129
 
@@ -4763,9 +4763,9 @@ Scene15.children.append(Shape1127)
 Shape1132 = x3d.Shape()
 Appearance1133 = x3d.Appearance()
 Material1134 = x3d.Material()
-Material1134.ambientIntensity = 0
-Material1134.diffuseColor = [0.784313738,0,0]
-Material1134.shininess = 1
+Material1134.ambientIntensity = 0.0
+Material1134.diffuseColor = [.784313738,0,0]
+Material1134.shininess = 1.0
 
 Appearance1133.material = Material1134
 
@@ -4784,9 +4784,9 @@ Scene15.children.append(Shape1132)
 Shape1137 = x3d.Shape()
 Appearance1138 = x3d.Appearance()
 Material1139 = x3d.Material()
-Material1139.ambientIntensity = 0
-Material1139.diffuseColor = [0.784313738,0,0]
-Material1139.shininess = 1
+Material1139.ambientIntensity = 0.0
+Material1139.diffuseColor = [.784313738,0,0]
+Material1139.shininess = 1.0
 
 Appearance1138.material = Material1139
 
@@ -4805,9 +4805,9 @@ Scene15.children.append(Shape1137)
 Shape1142 = x3d.Shape()
 Appearance1143 = x3d.Appearance()
 Material1144 = x3d.Material()
-Material1144.ambientIntensity = 0
-Material1144.diffuseColor = [0.784313738,0,0]
-Material1144.shininess = 1
+Material1144.ambientIntensity = 0.0
+Material1144.diffuseColor = [.784313738,0,0]
+Material1144.shininess = 1.0
 
 Appearance1143.material = Material1144
 
@@ -4826,9 +4826,9 @@ Scene15.children.append(Shape1142)
 Shape1147 = x3d.Shape()
 Appearance1148 = x3d.Appearance()
 Material1149 = x3d.Material()
-Material1149.ambientIntensity = 0
-Material1149.diffuseColor = [0.784313738,0,0]
-Material1149.shininess = 1
+Material1149.ambientIntensity = 0.0
+Material1149.diffuseColor = [.784313738,0,0]
+Material1149.shininess = 1.0
 
 Appearance1148.material = Material1149
 
@@ -4847,9 +4847,9 @@ Scene15.children.append(Shape1147)
 Shape1152 = x3d.Shape()
 Appearance1153 = x3d.Appearance()
 Material1154 = x3d.Material()
-Material1154.ambientIntensity = 0
-Material1154.diffuseColor = [0.784313738,0,0]
-Material1154.shininess = 1
+Material1154.ambientIntensity = 0.0
+Material1154.diffuseColor = [.784313738,0,0]
+Material1154.shininess = 1.0
 
 Appearance1153.material = Material1154
 
@@ -4868,9 +4868,9 @@ Scene15.children.append(Shape1152)
 Shape1157 = x3d.Shape()
 Appearance1158 = x3d.Appearance()
 Material1159 = x3d.Material()
-Material1159.ambientIntensity = 0
-Material1159.diffuseColor = [0.784313738,0,0]
-Material1159.shininess = 1
+Material1159.ambientIntensity = 0.0
+Material1159.diffuseColor = [.784313738,0,0]
+Material1159.shininess = 1.0
 
 Appearance1158.material = Material1159
 
@@ -4889,9 +4889,9 @@ Scene15.children.append(Shape1157)
 Shape1162 = x3d.Shape()
 Appearance1163 = x3d.Appearance()
 Material1164 = x3d.Material()
-Material1164.ambientIntensity = 0
-Material1164.diffuseColor = [0.784313738,0,0]
-Material1164.shininess = 1
+Material1164.ambientIntensity = 0.0
+Material1164.diffuseColor = [.784313738,0,0]
+Material1164.shininess = 1.0
 
 Appearance1163.material = Material1164
 
@@ -4910,9 +4910,9 @@ Scene15.children.append(Shape1162)
 Shape1167 = x3d.Shape()
 Appearance1168 = x3d.Appearance()
 Material1169 = x3d.Material()
-Material1169.ambientIntensity = 0
-Material1169.diffuseColor = [0.784313738,0,0]
-Material1169.shininess = 1
+Material1169.ambientIntensity = 0.0
+Material1169.diffuseColor = [.784313738,0,0]
+Material1169.shininess = 1.0
 
 Appearance1168.material = Material1169
 
@@ -4931,9 +4931,9 @@ Scene15.children.append(Shape1167)
 Shape1172 = x3d.Shape()
 Appearance1173 = x3d.Appearance()
 Material1174 = x3d.Material()
-Material1174.ambientIntensity = 0
-Material1174.diffuseColor = [0.784313738,0,0]
-Material1174.shininess = 1
+Material1174.ambientIntensity = 0.0
+Material1174.diffuseColor = [.784313738,0,0]
+Material1174.shininess = 1.0
 
 Appearance1173.material = Material1174
 
@@ -4952,9 +4952,9 @@ Scene15.children.append(Shape1172)
 Shape1177 = x3d.Shape()
 Appearance1178 = x3d.Appearance()
 Material1179 = x3d.Material()
-Material1179.ambientIntensity = 0
-Material1179.diffuseColor = [0.784313738,0,0]
-Material1179.shininess = 1
+Material1179.ambientIntensity = 0.0
+Material1179.diffuseColor = [.784313738,0,0]
+Material1179.shininess = 1.0
 
 Appearance1178.material = Material1179
 
@@ -4973,9 +4973,9 @@ Scene15.children.append(Shape1177)
 Shape1182 = x3d.Shape()
 Appearance1183 = x3d.Appearance()
 Material1184 = x3d.Material()
-Material1184.ambientIntensity = 0
-Material1184.diffuseColor = [0.784313738,0,0]
-Material1184.shininess = 1
+Material1184.ambientIntensity = 0.0
+Material1184.diffuseColor = [.784313738,0,0]
+Material1184.shininess = 1.0
 
 Appearance1183.material = Material1184
 
@@ -4994,9 +4994,9 @@ Scene15.children.append(Shape1182)
 Shape1187 = x3d.Shape()
 Appearance1188 = x3d.Appearance()
 Material1189 = x3d.Material()
-Material1189.ambientIntensity = 0
-Material1189.diffuseColor = [0.784313738,0,0]
-Material1189.shininess = 1
+Material1189.ambientIntensity = 0.0
+Material1189.diffuseColor = [.784313738,0,0]
+Material1189.shininess = 1.0
 
 Appearance1188.material = Material1189
 
@@ -5015,9 +5015,9 @@ Scene15.children.append(Shape1187)
 Shape1192 = x3d.Shape()
 Appearance1193 = x3d.Appearance()
 Material1194 = x3d.Material()
-Material1194.ambientIntensity = 0
-Material1194.diffuseColor = [0.784313738,0,0]
-Material1194.shininess = 1
+Material1194.ambientIntensity = 0.0
+Material1194.diffuseColor = [.784313738,0,0]
+Material1194.shininess = 1.0
 
 Appearance1193.material = Material1194
 
@@ -5036,9 +5036,9 @@ Scene15.children.append(Shape1192)
 Shape1197 = x3d.Shape()
 Appearance1198 = x3d.Appearance()
 Material1199 = x3d.Material()
-Material1199.ambientIntensity = 0
-Material1199.diffuseColor = [0.784313738,0,0]
-Material1199.shininess = 1
+Material1199.ambientIntensity = 0.0
+Material1199.diffuseColor = [.784313738,0,0]
+Material1199.shininess = 1.0
 
 Appearance1198.material = Material1199
 
@@ -5057,9 +5057,9 @@ Scene15.children.append(Shape1197)
 Shape1202 = x3d.Shape()
 Appearance1203 = x3d.Appearance()
 Material1204 = x3d.Material()
-Material1204.ambientIntensity = 0
-Material1204.diffuseColor = [0.784313738,0,0]
-Material1204.shininess = 1
+Material1204.ambientIntensity = 0.0
+Material1204.diffuseColor = [.784313738,0,0]
+Material1204.shininess = 1.0
 
 Appearance1203.material = Material1204
 
@@ -5078,9 +5078,9 @@ Scene15.children.append(Shape1202)
 Shape1207 = x3d.Shape()
 Appearance1208 = x3d.Appearance()
 Material1209 = x3d.Material()
-Material1209.ambientIntensity = 0
-Material1209.diffuseColor = [0.784313738,0,0]
-Material1209.shininess = 1
+Material1209.ambientIntensity = 0.0
+Material1209.diffuseColor = [.784313738,0,0]
+Material1209.shininess = 1.0
 
 Appearance1208.material = Material1209
 
@@ -5099,9 +5099,9 @@ Scene15.children.append(Shape1207)
 Shape1212 = x3d.Shape()
 Appearance1213 = x3d.Appearance()
 Material1214 = x3d.Material()
-Material1214.ambientIntensity = 0
-Material1214.diffuseColor = [0.784313738,0,0]
-Material1214.shininess = 1
+Material1214.ambientIntensity = 0.0
+Material1214.diffuseColor = [.784313738,0,0]
+Material1214.shininess = 1.0
 
 Appearance1213.material = Material1214
 
@@ -5120,9 +5120,9 @@ Scene15.children.append(Shape1212)
 Shape1217 = x3d.Shape()
 Appearance1218 = x3d.Appearance()
 Material1219 = x3d.Material()
-Material1219.ambientIntensity = 0
-Material1219.diffuseColor = [0.784313738,0,0]
-Material1219.shininess = 1
+Material1219.ambientIntensity = 0.0
+Material1219.diffuseColor = [.784313738,0,0]
+Material1219.shininess = 1.0
 
 Appearance1218.material = Material1219
 
@@ -5141,9 +5141,9 @@ Scene15.children.append(Shape1217)
 Shape1222 = x3d.Shape()
 Appearance1223 = x3d.Appearance()
 Material1224 = x3d.Material()
-Material1224.ambientIntensity = 0
-Material1224.diffuseColor = [0.784313738,0,0]
-Material1224.shininess = 1
+Material1224.ambientIntensity = 0.0
+Material1224.diffuseColor = [.784313738,0,0]
+Material1224.shininess = 1.0
 
 Appearance1223.material = Material1224
 
@@ -5162,9 +5162,9 @@ Scene15.children.append(Shape1222)
 Shape1227 = x3d.Shape()
 Appearance1228 = x3d.Appearance()
 Material1229 = x3d.Material()
-Material1229.ambientIntensity = 0
-Material1229.diffuseColor = [0.784313738,0,0]
-Material1229.shininess = 1
+Material1229.ambientIntensity = 0.0
+Material1229.diffuseColor = [.784313738,0,0]
+Material1229.shininess = 1.0
 
 Appearance1228.material = Material1229
 
@@ -5183,9 +5183,9 @@ Scene15.children.append(Shape1227)
 Shape1232 = x3d.Shape()
 Appearance1233 = x3d.Appearance()
 Material1234 = x3d.Material()
-Material1234.ambientIntensity = 0
-Material1234.diffuseColor = [0.784313738,0,0]
-Material1234.shininess = 1
+Material1234.ambientIntensity = 0.0
+Material1234.diffuseColor = [.784313738,0,0]
+Material1234.shininess = 1.0
 
 Appearance1233.material = Material1234
 
@@ -5204,9 +5204,9 @@ Scene15.children.append(Shape1232)
 Shape1237 = x3d.Shape()
 Appearance1238 = x3d.Appearance()
 Material1239 = x3d.Material()
-Material1239.ambientIntensity = 0
-Material1239.diffuseColor = [0.784313738,0,0]
-Material1239.shininess = 1
+Material1239.ambientIntensity = 0.0
+Material1239.diffuseColor = [.784313738,0,0]
+Material1239.shininess = 1.0
 
 Appearance1238.material = Material1239
 
@@ -5225,9 +5225,9 @@ Scene15.children.append(Shape1237)
 Shape1242 = x3d.Shape()
 Appearance1243 = x3d.Appearance()
 Material1244 = x3d.Material()
-Material1244.ambientIntensity = 0
-Material1244.diffuseColor = [0.784313738,0,0]
-Material1244.shininess = 1
+Material1244.ambientIntensity = 0.0
+Material1244.diffuseColor = [.784313738,0,0]
+Material1244.shininess = 1.0
 
 Appearance1243.material = Material1244
 
@@ -5246,9 +5246,9 @@ Scene15.children.append(Shape1242)
 Shape1247 = x3d.Shape()
 Appearance1248 = x3d.Appearance()
 Material1249 = x3d.Material()
-Material1249.ambientIntensity = 0
-Material1249.diffuseColor = [0.784313738,0,0]
-Material1249.shininess = 1
+Material1249.ambientIntensity = 0.0
+Material1249.diffuseColor = [.784313738,0,0]
+Material1249.shininess = 1.0
 
 Appearance1248.material = Material1249
 
@@ -5267,9 +5267,9 @@ Scene15.children.append(Shape1247)
 Shape1252 = x3d.Shape()
 Appearance1253 = x3d.Appearance()
 Material1254 = x3d.Material()
-Material1254.ambientIntensity = 0
-Material1254.diffuseColor = [0.784313738,0,0]
-Material1254.shininess = 1
+Material1254.ambientIntensity = 0.0
+Material1254.diffuseColor = [.784313738,0,0]
+Material1254.shininess = 1.0
 
 Appearance1253.material = Material1254
 
@@ -5288,9 +5288,9 @@ Scene15.children.append(Shape1252)
 Shape1257 = x3d.Shape()
 Appearance1258 = x3d.Appearance()
 Material1259 = x3d.Material()
-Material1259.ambientIntensity = 0
-Material1259.diffuseColor = [0.784313738,0,0]
-Material1259.shininess = 1
+Material1259.ambientIntensity = 0.0
+Material1259.diffuseColor = [.784313738,0,0]
+Material1259.shininess = 1.0
 
 Appearance1258.material = Material1259
 
@@ -5309,9 +5309,9 @@ Scene15.children.append(Shape1257)
 Shape1262 = x3d.Shape()
 Appearance1263 = x3d.Appearance()
 Material1264 = x3d.Material()
-Material1264.ambientIntensity = 0
-Material1264.diffuseColor = [0.784313738,0,0]
-Material1264.shininess = 1
+Material1264.ambientIntensity = 0.0
+Material1264.diffuseColor = [.784313738,0,0]
+Material1264.shininess = 1.0
 
 Appearance1263.material = Material1264
 
@@ -5330,9 +5330,9 @@ Scene15.children.append(Shape1262)
 Shape1267 = x3d.Shape()
 Appearance1268 = x3d.Appearance()
 Material1269 = x3d.Material()
-Material1269.ambientIntensity = 0
-Material1269.diffuseColor = [0.784313738,0,0]
-Material1269.shininess = 1
+Material1269.ambientIntensity = 0.0
+Material1269.diffuseColor = [.784313738,0,0]
+Material1269.shininess = 1.0
 
 Appearance1268.material = Material1269
 
@@ -5351,9 +5351,9 @@ Scene15.children.append(Shape1267)
 Shape1272 = x3d.Shape()
 Appearance1273 = x3d.Appearance()
 Material1274 = x3d.Material()
-Material1274.ambientIntensity = 0
-Material1274.diffuseColor = [0.784313738,0,0]
-Material1274.shininess = 1
+Material1274.ambientIntensity = 0.0
+Material1274.diffuseColor = [.784313738,0,0]
+Material1274.shininess = 1.0
 
 Appearance1273.material = Material1274
 
@@ -5372,9 +5372,9 @@ Scene15.children.append(Shape1272)
 Shape1277 = x3d.Shape()
 Appearance1278 = x3d.Appearance()
 Material1279 = x3d.Material()
-Material1279.ambientIntensity = 0
-Material1279.diffuseColor = [0.784313738,0,0]
-Material1279.shininess = 1
+Material1279.ambientIntensity = 0.0
+Material1279.diffuseColor = [.784313738,0,0]
+Material1279.shininess = 1.0
 
 Appearance1278.material = Material1279
 
@@ -5393,9 +5393,9 @@ Scene15.children.append(Shape1277)
 Shape1282 = x3d.Shape()
 Appearance1283 = x3d.Appearance()
 Material1284 = x3d.Material()
-Material1284.ambientIntensity = 0
-Material1284.diffuseColor = [0.784313738,0,0]
-Material1284.shininess = 1
+Material1284.ambientIntensity = 0.0
+Material1284.diffuseColor = [.784313738,0,0]
+Material1284.shininess = 1.0
 
 Appearance1283.material = Material1284
 
@@ -5414,9 +5414,9 @@ Scene15.children.append(Shape1282)
 Shape1287 = x3d.Shape()
 Appearance1288 = x3d.Appearance()
 Material1289 = x3d.Material()
-Material1289.ambientIntensity = 0
-Material1289.diffuseColor = [0.784313738,0,0]
-Material1289.shininess = 1
+Material1289.ambientIntensity = 0.0
+Material1289.diffuseColor = [.784313738,0,0]
+Material1289.shininess = 1.0
 
 Appearance1288.material = Material1289
 
@@ -5435,9 +5435,9 @@ Scene15.children.append(Shape1287)
 Shape1292 = x3d.Shape()
 Appearance1293 = x3d.Appearance()
 Material1294 = x3d.Material()
-Material1294.ambientIntensity = 0
-Material1294.diffuseColor = [0.784313738,0,0]
-Material1294.shininess = 1
+Material1294.ambientIntensity = 0.0
+Material1294.diffuseColor = [.784313738,0,0]
+Material1294.shininess = 1.0
 
 Appearance1293.material = Material1294
 
@@ -5456,9 +5456,9 @@ Scene15.children.append(Shape1292)
 Shape1297 = x3d.Shape()
 Appearance1298 = x3d.Appearance()
 Material1299 = x3d.Material()
-Material1299.ambientIntensity = 0
-Material1299.diffuseColor = [0.784313738,0,0]
-Material1299.shininess = 1
+Material1299.ambientIntensity = 0.0
+Material1299.diffuseColor = [.784313738,0,0]
+Material1299.shininess = 1.0
 
 Appearance1298.material = Material1299
 
@@ -5477,9 +5477,9 @@ Scene15.children.append(Shape1297)
 Shape1302 = x3d.Shape()
 Appearance1303 = x3d.Appearance()
 Material1304 = x3d.Material()
-Material1304.ambientIntensity = 0
-Material1304.diffuseColor = [0.784313738,0,0]
-Material1304.shininess = 1
+Material1304.ambientIntensity = 0.0
+Material1304.diffuseColor = [.784313738,0,0]
+Material1304.shininess = 1.0
 
 Appearance1303.material = Material1304
 
@@ -5498,9 +5498,9 @@ Scene15.children.append(Shape1302)
 Shape1307 = x3d.Shape()
 Appearance1308 = x3d.Appearance()
 Material1309 = x3d.Material()
-Material1309.ambientIntensity = 0
-Material1309.diffuseColor = [0.784313738,0,0]
-Material1309.shininess = 1
+Material1309.ambientIntensity = 0.0
+Material1309.diffuseColor = [.784313738,0,0]
+Material1309.shininess = 1.0
 
 Appearance1308.material = Material1309
 
@@ -5519,9 +5519,9 @@ Scene15.children.append(Shape1307)
 Shape1312 = x3d.Shape()
 Appearance1313 = x3d.Appearance()
 Material1314 = x3d.Material()
-Material1314.ambientIntensity = 0
-Material1314.diffuseColor = [0.784313738,0,0]
-Material1314.shininess = 1
+Material1314.ambientIntensity = 0.0
+Material1314.diffuseColor = [.784313738,0,0]
+Material1314.shininess = 1.0
 
 Appearance1313.material = Material1314
 
@@ -5540,9 +5540,9 @@ Scene15.children.append(Shape1312)
 Shape1317 = x3d.Shape()
 Appearance1318 = x3d.Appearance()
 Material1319 = x3d.Material()
-Material1319.ambientIntensity = 0
-Material1319.diffuseColor = [0.784313738,0,0]
-Material1319.shininess = 1
+Material1319.ambientIntensity = 0.0
+Material1319.diffuseColor = [.784313738,0,0]
+Material1319.shininess = 1.0
 
 Appearance1318.material = Material1319
 
@@ -5561,9 +5561,9 @@ Scene15.children.append(Shape1317)
 Shape1322 = x3d.Shape()
 Appearance1323 = x3d.Appearance()
 Material1324 = x3d.Material()
-Material1324.ambientIntensity = 0
-Material1324.diffuseColor = [0.784313738,0,0]
-Material1324.shininess = 1
+Material1324.ambientIntensity = 0.0
+Material1324.diffuseColor = [.784313738,0,0]
+Material1324.shininess = 1.0
 
 Appearance1323.material = Material1324
 
@@ -5582,9 +5582,9 @@ Scene15.children.append(Shape1322)
 Shape1327 = x3d.Shape()
 Appearance1328 = x3d.Appearance()
 Material1329 = x3d.Material()
-Material1329.ambientIntensity = 0
-Material1329.diffuseColor = [0.784313738,0,0]
-Material1329.shininess = 1
+Material1329.ambientIntensity = 0.0
+Material1329.diffuseColor = [.784313738,0,0]
+Material1329.shininess = 1.0
 
 Appearance1328.material = Material1329
 
@@ -5603,9 +5603,9 @@ Scene15.children.append(Shape1327)
 Shape1332 = x3d.Shape()
 Appearance1333 = x3d.Appearance()
 Material1334 = x3d.Material()
-Material1334.ambientIntensity = 0
-Material1334.diffuseColor = [0.784313738,0,0]
-Material1334.shininess = 1
+Material1334.ambientIntensity = 0.0
+Material1334.diffuseColor = [.784313738,0,0]
+Material1334.shininess = 1.0
 
 Appearance1333.material = Material1334
 
@@ -5624,9 +5624,9 @@ Scene15.children.append(Shape1332)
 Shape1337 = x3d.Shape()
 Appearance1338 = x3d.Appearance()
 Material1339 = x3d.Material()
-Material1339.ambientIntensity = 0
-Material1339.diffuseColor = [0.784313738,0,0]
-Material1339.shininess = 1
+Material1339.ambientIntensity = 0.0
+Material1339.diffuseColor = [.784313738,0,0]
+Material1339.shininess = 1.0
 
 Appearance1338.material = Material1339
 
@@ -5645,9 +5645,9 @@ Scene15.children.append(Shape1337)
 Shape1342 = x3d.Shape()
 Appearance1343 = x3d.Appearance()
 Material1344 = x3d.Material()
-Material1344.ambientIntensity = 0
-Material1344.diffuseColor = [0.784313738,0,0]
-Material1344.shininess = 1
+Material1344.ambientIntensity = 0.0
+Material1344.diffuseColor = [.784313738,0,0]
+Material1344.shininess = 1.0
 
 Appearance1343.material = Material1344
 
@@ -5666,9 +5666,9 @@ Scene15.children.append(Shape1342)
 Shape1347 = x3d.Shape()
 Appearance1348 = x3d.Appearance()
 Material1349 = x3d.Material()
-Material1349.ambientIntensity = 0
-Material1349.diffuseColor = [0.784313738,0,0]
-Material1349.shininess = 1
+Material1349.ambientIntensity = 0.0
+Material1349.diffuseColor = [.784313738,0,0]
+Material1349.shininess = 1.0
 
 Appearance1348.material = Material1349
 
@@ -5687,9 +5687,9 @@ Scene15.children.append(Shape1347)
 Shape1352 = x3d.Shape()
 Appearance1353 = x3d.Appearance()
 Material1354 = x3d.Material()
-Material1354.ambientIntensity = 0
-Material1354.diffuseColor = [0.784313738,0,0]
-Material1354.shininess = 1
+Material1354.ambientIntensity = 0.0
+Material1354.diffuseColor = [.784313738,0,0]
+Material1354.shininess = 1.0
 
 Appearance1353.material = Material1354
 
@@ -5708,9 +5708,9 @@ Scene15.children.append(Shape1352)
 Shape1357 = x3d.Shape()
 Appearance1358 = x3d.Appearance()
 Material1359 = x3d.Material()
-Material1359.ambientIntensity = 0
-Material1359.diffuseColor = [0.784313738,0,0]
-Material1359.shininess = 1
+Material1359.ambientIntensity = 0.0
+Material1359.diffuseColor = [.784313738,0,0]
+Material1359.shininess = 1.0
 
 Appearance1358.material = Material1359
 
@@ -5729,9 +5729,9 @@ Scene15.children.append(Shape1357)
 Shape1362 = x3d.Shape()
 Appearance1363 = x3d.Appearance()
 Material1364 = x3d.Material()
-Material1364.ambientIntensity = 0
-Material1364.diffuseColor = [0.784313738,0,0]
-Material1364.shininess = 1
+Material1364.ambientIntensity = 0.0
+Material1364.diffuseColor = [.784313738,0,0]
+Material1364.shininess = 1.0
 
 Appearance1363.material = Material1364
 
@@ -5750,9 +5750,9 @@ Scene15.children.append(Shape1362)
 Shape1367 = x3d.Shape()
 Appearance1368 = x3d.Appearance()
 Material1369 = x3d.Material()
-Material1369.ambientIntensity = 0
-Material1369.diffuseColor = [0.784313738,0,0]
-Material1369.shininess = 1
+Material1369.ambientIntensity = 0.0
+Material1369.diffuseColor = [.784313738,0,0]
+Material1369.shininess = 1.0
 
 Appearance1368.material = Material1369
 
@@ -5771,9 +5771,9 @@ Scene15.children.append(Shape1367)
 Shape1372 = x3d.Shape()
 Appearance1373 = x3d.Appearance()
 Material1374 = x3d.Material()
-Material1374.ambientIntensity = 0
-Material1374.diffuseColor = [0.784313738,0,0]
-Material1374.shininess = 1
+Material1374.ambientIntensity = 0.0
+Material1374.diffuseColor = [.784313738,0,0]
+Material1374.shininess = 1.0
 
 Appearance1373.material = Material1374
 
@@ -5792,9 +5792,9 @@ Scene15.children.append(Shape1372)
 Shape1377 = x3d.Shape()
 Appearance1378 = x3d.Appearance()
 Material1379 = x3d.Material()
-Material1379.ambientIntensity = 0
-Material1379.diffuseColor = [0.784313738,0,0]
-Material1379.shininess = 1
+Material1379.ambientIntensity = 0.0
+Material1379.diffuseColor = [.784313738,0,0]
+Material1379.shininess = 1.0
 
 Appearance1378.material = Material1379
 
@@ -5813,9 +5813,9 @@ Scene15.children.append(Shape1377)
 Shape1382 = x3d.Shape()
 Appearance1383 = x3d.Appearance()
 Material1384 = x3d.Material()
-Material1384.ambientIntensity = 0
-Material1384.diffuseColor = [0.784313738,0,0]
-Material1384.shininess = 1
+Material1384.ambientIntensity = 0.0
+Material1384.diffuseColor = [.784313738,0,0]
+Material1384.shininess = 1.0
 
 Appearance1383.material = Material1384
 
@@ -5834,9 +5834,9 @@ Scene15.children.append(Shape1382)
 Shape1387 = x3d.Shape()
 Appearance1388 = x3d.Appearance()
 Material1389 = x3d.Material()
-Material1389.ambientIntensity = 0
-Material1389.diffuseColor = [0.784313738,0,0]
-Material1389.shininess = 1
+Material1389.ambientIntensity = 0.0
+Material1389.diffuseColor = [.784313738,0,0]
+Material1389.shininess = 1.0
 
 Appearance1388.material = Material1389
 
@@ -5855,9 +5855,9 @@ Scene15.children.append(Shape1387)
 Shape1392 = x3d.Shape()
 Appearance1393 = x3d.Appearance()
 Material1394 = x3d.Material()
-Material1394.ambientIntensity = 0
-Material1394.diffuseColor = [0.784313738,0,0]
-Material1394.shininess = 1
+Material1394.ambientIntensity = 0.0
+Material1394.diffuseColor = [.784313738,0,0]
+Material1394.shininess = 1.0
 
 Appearance1393.material = Material1394
 
@@ -5876,9 +5876,9 @@ Scene15.children.append(Shape1392)
 Shape1397 = x3d.Shape()
 Appearance1398 = x3d.Appearance()
 Material1399 = x3d.Material()
-Material1399.ambientIntensity = 0
-Material1399.diffuseColor = [0.784313738,0,0]
-Material1399.shininess = 1
+Material1399.ambientIntensity = 0.0
+Material1399.diffuseColor = [.784313738,0,0]
+Material1399.shininess = 1.0
 
 Appearance1398.material = Material1399
 
@@ -5897,9 +5897,9 @@ Scene15.children.append(Shape1397)
 Shape1402 = x3d.Shape()
 Appearance1403 = x3d.Appearance()
 Material1404 = x3d.Material()
-Material1404.ambientIntensity = 0
-Material1404.diffuseColor = [0.784313738,0,0]
-Material1404.shininess = 1
+Material1404.ambientIntensity = 0.0
+Material1404.diffuseColor = [.784313738,0,0]
+Material1404.shininess = 1.0
 
 Appearance1403.material = Material1404
 
@@ -5918,9 +5918,9 @@ Scene15.children.append(Shape1402)
 Shape1407 = x3d.Shape()
 Appearance1408 = x3d.Appearance()
 Material1409 = x3d.Material()
-Material1409.ambientIntensity = 0
-Material1409.diffuseColor = [0.784313738,0,0]
-Material1409.shininess = 1
+Material1409.ambientIntensity = 0.0
+Material1409.diffuseColor = [.784313738,0,0]
+Material1409.shininess = 1.0
 
 Appearance1408.material = Material1409
 
@@ -5939,9 +5939,9 @@ Scene15.children.append(Shape1407)
 Shape1412 = x3d.Shape()
 Appearance1413 = x3d.Appearance()
 Material1414 = x3d.Material()
-Material1414.ambientIntensity = 0
-Material1414.diffuseColor = [0.784313738,0,0]
-Material1414.shininess = 1
+Material1414.ambientIntensity = 0.0
+Material1414.diffuseColor = [.784313738,0,0]
+Material1414.shininess = 1.0
 
 Appearance1413.material = Material1414
 
@@ -5960,9 +5960,9 @@ Scene15.children.append(Shape1412)
 Shape1417 = x3d.Shape()
 Appearance1418 = x3d.Appearance()
 Material1419 = x3d.Material()
-Material1419.ambientIntensity = 0
-Material1419.diffuseColor = [0.784313738,0,0]
-Material1419.shininess = 1
+Material1419.ambientIntensity = 0.0
+Material1419.diffuseColor = [.784313738,0,0]
+Material1419.shininess = 1.0
 
 Appearance1418.material = Material1419
 
@@ -5981,9 +5981,9 @@ Scene15.children.append(Shape1417)
 Shape1422 = x3d.Shape()
 Appearance1423 = x3d.Appearance()
 Material1424 = x3d.Material()
-Material1424.ambientIntensity = 0
-Material1424.diffuseColor = [0.784313738,0,0]
-Material1424.shininess = 1
+Material1424.ambientIntensity = 0.0
+Material1424.diffuseColor = [.784313738,0,0]
+Material1424.shininess = 1.0
 
 Appearance1423.material = Material1424
 
@@ -6002,9 +6002,9 @@ Scene15.children.append(Shape1422)
 Shape1427 = x3d.Shape()
 Appearance1428 = x3d.Appearance()
 Material1429 = x3d.Material()
-Material1429.ambientIntensity = 0
-Material1429.diffuseColor = [0.784313738,0,0]
-Material1429.shininess = 1
+Material1429.ambientIntensity = 0.0
+Material1429.diffuseColor = [.784313738,0,0]
+Material1429.shininess = 1.0
 
 Appearance1428.material = Material1429
 
@@ -6023,9 +6023,9 @@ Scene15.children.append(Shape1427)
 Shape1432 = x3d.Shape()
 Appearance1433 = x3d.Appearance()
 Material1434 = x3d.Material()
-Material1434.ambientIntensity = 0
-Material1434.diffuseColor = [0.784313738,0,0]
-Material1434.shininess = 1
+Material1434.ambientIntensity = 0.0
+Material1434.diffuseColor = [.784313738,0,0]
+Material1434.shininess = 1.0
 
 Appearance1433.material = Material1434
 
@@ -6044,9 +6044,9 @@ Scene15.children.append(Shape1432)
 Shape1437 = x3d.Shape()
 Appearance1438 = x3d.Appearance()
 Material1439 = x3d.Material()
-Material1439.ambientIntensity = 0
-Material1439.diffuseColor = [0.784313738,0,0]
-Material1439.shininess = 1
+Material1439.ambientIntensity = 0.0
+Material1439.diffuseColor = [.784313738,0,0]
+Material1439.shininess = 1.0
 
 Appearance1438.material = Material1439
 
@@ -6065,9 +6065,9 @@ Scene15.children.append(Shape1437)
 Shape1442 = x3d.Shape()
 Appearance1443 = x3d.Appearance()
 Material1444 = x3d.Material()
-Material1444.ambientIntensity = 0
-Material1444.diffuseColor = [0.784313738,0,0]
-Material1444.shininess = 1
+Material1444.ambientIntensity = 0.0
+Material1444.diffuseColor = [.784313738,0,0]
+Material1444.shininess = 1.0
 
 Appearance1443.material = Material1444
 
@@ -6086,9 +6086,9 @@ Scene15.children.append(Shape1442)
 Shape1447 = x3d.Shape()
 Appearance1448 = x3d.Appearance()
 Material1449 = x3d.Material()
-Material1449.ambientIntensity = 0
-Material1449.diffuseColor = [0.784313738,0,0]
-Material1449.shininess = 1
+Material1449.ambientIntensity = 0.0
+Material1449.diffuseColor = [.784313738,0,0]
+Material1449.shininess = 1.0
 
 Appearance1448.material = Material1449
 
@@ -6107,9 +6107,9 @@ Scene15.children.append(Shape1447)
 Shape1452 = x3d.Shape()
 Appearance1453 = x3d.Appearance()
 Material1454 = x3d.Material()
-Material1454.ambientIntensity = 0
-Material1454.diffuseColor = [0.784313738,0,0]
-Material1454.shininess = 1
+Material1454.ambientIntensity = 0.0
+Material1454.diffuseColor = [.784313738,0,0]
+Material1454.shininess = 1.0
 
 Appearance1453.material = Material1454
 
@@ -6128,9 +6128,9 @@ Scene15.children.append(Shape1452)
 Shape1457 = x3d.Shape()
 Appearance1458 = x3d.Appearance()
 Material1459 = x3d.Material()
-Material1459.ambientIntensity = 0
-Material1459.diffuseColor = [0.784313738,0,0]
-Material1459.shininess = 1
+Material1459.ambientIntensity = 0.0
+Material1459.diffuseColor = [.784313738,0,0]
+Material1459.shininess = 1.0
 
 Appearance1458.material = Material1459
 
@@ -6149,9 +6149,9 @@ Scene15.children.append(Shape1457)
 Shape1462 = x3d.Shape()
 Appearance1463 = x3d.Appearance()
 Material1464 = x3d.Material()
-Material1464.ambientIntensity = 0
-Material1464.diffuseColor = [0.784313738,0,0]
-Material1464.shininess = 1
+Material1464.ambientIntensity = 0.0
+Material1464.diffuseColor = [.784313738,0,0]
+Material1464.shininess = 1.0
 
 Appearance1463.material = Material1464
 
@@ -6170,9 +6170,9 @@ Scene15.children.append(Shape1462)
 Shape1467 = x3d.Shape()
 Appearance1468 = x3d.Appearance()
 Material1469 = x3d.Material()
-Material1469.ambientIntensity = 0
-Material1469.diffuseColor = [0.784313738,0,0]
-Material1469.shininess = 1
+Material1469.ambientIntensity = 0.0
+Material1469.diffuseColor = [.784313738,0,0]
+Material1469.shininess = 1.0
 
 Appearance1468.material = Material1469
 
@@ -6191,9 +6191,9 @@ Scene15.children.append(Shape1467)
 Shape1472 = x3d.Shape()
 Appearance1473 = x3d.Appearance()
 Material1474 = x3d.Material()
-Material1474.ambientIntensity = 0
-Material1474.diffuseColor = [0.784313738,0,0]
-Material1474.shininess = 1
+Material1474.ambientIntensity = 0.0
+Material1474.diffuseColor = [.784313738,0,0]
+Material1474.shininess = 1.0
 
 Appearance1473.material = Material1474
 
@@ -6212,9 +6212,9 @@ Scene15.children.append(Shape1472)
 Shape1477 = x3d.Shape()
 Appearance1478 = x3d.Appearance()
 Material1479 = x3d.Material()
-Material1479.ambientIntensity = 0
-Material1479.diffuseColor = [0.784313738,0,0]
-Material1479.shininess = 1
+Material1479.ambientIntensity = 0.0
+Material1479.diffuseColor = [.784313738,0,0]
+Material1479.shininess = 1.0
 
 Appearance1478.material = Material1479
 
@@ -6233,9 +6233,9 @@ Scene15.children.append(Shape1477)
 Shape1482 = x3d.Shape()
 Appearance1483 = x3d.Appearance()
 Material1484 = x3d.Material()
-Material1484.ambientIntensity = 0
-Material1484.diffuseColor = [0.784313738,0,0]
-Material1484.shininess = 1
+Material1484.ambientIntensity = 0.0
+Material1484.diffuseColor = [.784313738,0,0]
+Material1484.shininess = 1.0
 
 Appearance1483.material = Material1484
 
@@ -6254,9 +6254,9 @@ Scene15.children.append(Shape1482)
 Shape1487 = x3d.Shape()
 Appearance1488 = x3d.Appearance()
 Material1489 = x3d.Material()
-Material1489.ambientIntensity = 0
-Material1489.diffuseColor = [0.784313738,0,0]
-Material1489.shininess = 1
+Material1489.ambientIntensity = 0.0
+Material1489.diffuseColor = [.784313738,0,0]
+Material1489.shininess = 1.0
 
 Appearance1488.material = Material1489
 
@@ -6275,9 +6275,9 @@ Scene15.children.append(Shape1487)
 Shape1492 = x3d.Shape()
 Appearance1493 = x3d.Appearance()
 Material1494 = x3d.Material()
-Material1494.ambientIntensity = 0
-Material1494.diffuseColor = [0.784313738,0,0]
-Material1494.shininess = 1
+Material1494.ambientIntensity = 0.0
+Material1494.diffuseColor = [.784313738,0,0]
+Material1494.shininess = 1.0
 
 Appearance1493.material = Material1494
 
@@ -6296,9 +6296,9 @@ Scene15.children.append(Shape1492)
 Shape1497 = x3d.Shape()
 Appearance1498 = x3d.Appearance()
 Material1499 = x3d.Material()
-Material1499.ambientIntensity = 0
-Material1499.diffuseColor = [0.784313738,0,0]
-Material1499.shininess = 1
+Material1499.ambientIntensity = 0.0
+Material1499.diffuseColor = [.784313738,0,0]
+Material1499.shininess = 1.0
 
 Appearance1498.material = Material1499
 
@@ -6317,9 +6317,9 @@ Scene15.children.append(Shape1497)
 Shape1502 = x3d.Shape()
 Appearance1503 = x3d.Appearance()
 Material1504 = x3d.Material()
-Material1504.ambientIntensity = 0
-Material1504.diffuseColor = [0.784313738,0,0]
-Material1504.shininess = 1
+Material1504.ambientIntensity = 0.0
+Material1504.diffuseColor = [.784313738,0,0]
+Material1504.shininess = 1.0
 
 Appearance1503.material = Material1504
 
@@ -6338,9 +6338,9 @@ Scene15.children.append(Shape1502)
 Shape1507 = x3d.Shape()
 Appearance1508 = x3d.Appearance()
 Material1509 = x3d.Material()
-Material1509.ambientIntensity = 0
-Material1509.diffuseColor = [0.784313738,0,0]
-Material1509.shininess = 1
+Material1509.ambientIntensity = 0.0
+Material1509.diffuseColor = [.784313738,0,0]
+Material1509.shininess = 1.0
 
 Appearance1508.material = Material1509
 
@@ -6359,9 +6359,9 @@ Scene15.children.append(Shape1507)
 Shape1512 = x3d.Shape()
 Appearance1513 = x3d.Appearance()
 Material1514 = x3d.Material()
-Material1514.ambientIntensity = 0
-Material1514.diffuseColor = [0.784313738,0,0]
-Material1514.shininess = 1
+Material1514.ambientIntensity = 0.0
+Material1514.diffuseColor = [.784313738,0,0]
+Material1514.shininess = 1.0
 
 Appearance1513.material = Material1514
 
@@ -6380,9 +6380,9 @@ Scene15.children.append(Shape1512)
 Shape1517 = x3d.Shape()
 Appearance1518 = x3d.Appearance()
 Material1519 = x3d.Material()
-Material1519.ambientIntensity = 0
-Material1519.diffuseColor = [0.784313738,0,0]
-Material1519.shininess = 1
+Material1519.ambientIntensity = 0.0
+Material1519.diffuseColor = [.784313738,0,0]
+Material1519.shininess = 1.0
 
 Appearance1518.material = Material1519
 
@@ -6401,9 +6401,9 @@ Scene15.children.append(Shape1517)
 Shape1522 = x3d.Shape()
 Appearance1523 = x3d.Appearance()
 Material1524 = x3d.Material()
-Material1524.ambientIntensity = 0
-Material1524.diffuseColor = [0.784313738,0,0]
-Material1524.shininess = 1
+Material1524.ambientIntensity = 0.0
+Material1524.diffuseColor = [.784313738,0,0]
+Material1524.shininess = 1.0
 
 Appearance1523.material = Material1524
 
@@ -6422,9 +6422,9 @@ Scene15.children.append(Shape1522)
 Shape1527 = x3d.Shape()
 Appearance1528 = x3d.Appearance()
 Material1529 = x3d.Material()
-Material1529.ambientIntensity = 0
-Material1529.diffuseColor = [0.784313738,0,0]
-Material1529.shininess = 1
+Material1529.ambientIntensity = 0.0
+Material1529.diffuseColor = [.784313738,0,0]
+Material1529.shininess = 1.0
 
 Appearance1528.material = Material1529
 
@@ -6443,9 +6443,9 @@ Scene15.children.append(Shape1527)
 Shape1532 = x3d.Shape()
 Appearance1533 = x3d.Appearance()
 Material1534 = x3d.Material()
-Material1534.ambientIntensity = 0
-Material1534.diffuseColor = [0.784313738,0,0]
-Material1534.shininess = 1
+Material1534.ambientIntensity = 0.0
+Material1534.diffuseColor = [.784313738,0,0]
+Material1534.shininess = 1.0
 
 Appearance1533.material = Material1534
 
@@ -6464,9 +6464,9 @@ Scene15.children.append(Shape1532)
 Shape1537 = x3d.Shape()
 Appearance1538 = x3d.Appearance()
 Material1539 = x3d.Material()
-Material1539.ambientIntensity = 0
-Material1539.diffuseColor = [0.784313738,0,0]
-Material1539.shininess = 1
+Material1539.ambientIntensity = 0.0
+Material1539.diffuseColor = [.784313738,0,0]
+Material1539.shininess = 1.0
 
 Appearance1538.material = Material1539
 
@@ -6485,9 +6485,9 @@ Scene15.children.append(Shape1537)
 Shape1542 = x3d.Shape()
 Appearance1543 = x3d.Appearance()
 Material1544 = x3d.Material()
-Material1544.ambientIntensity = 0
-Material1544.diffuseColor = [0.784313738,0,0]
-Material1544.shininess = 1
+Material1544.ambientIntensity = 0.0
+Material1544.diffuseColor = [.784313738,0,0]
+Material1544.shininess = 1.0
 
 Appearance1543.material = Material1544
 
@@ -6506,9 +6506,9 @@ Scene15.children.append(Shape1542)
 Shape1547 = x3d.Shape()
 Appearance1548 = x3d.Appearance()
 Material1549 = x3d.Material()
-Material1549.ambientIntensity = 0
-Material1549.diffuseColor = [0.784313738,0,0]
-Material1549.shininess = 1
+Material1549.ambientIntensity = 0.0
+Material1549.diffuseColor = [.784313738,0,0]
+Material1549.shininess = 1.0
 
 Appearance1548.material = Material1549
 
@@ -6527,9 +6527,9 @@ Scene15.children.append(Shape1547)
 Shape1552 = x3d.Shape()
 Appearance1553 = x3d.Appearance()
 Material1554 = x3d.Material()
-Material1554.ambientIntensity = 0
-Material1554.diffuseColor = [0.784313738,0,0]
-Material1554.shininess = 1
+Material1554.ambientIntensity = 0.0
+Material1554.diffuseColor = [.784313738,0,0]
+Material1554.shininess = 1.0
 
 Appearance1553.material = Material1554
 
@@ -6548,9 +6548,9 @@ Scene15.children.append(Shape1552)
 Shape1557 = x3d.Shape()
 Appearance1558 = x3d.Appearance()
 Material1559 = x3d.Material()
-Material1559.ambientIntensity = 0
-Material1559.diffuseColor = [0.784313738,0,0]
-Material1559.shininess = 1
+Material1559.ambientIntensity = 0.0
+Material1559.diffuseColor = [.784313738,0,0]
+Material1559.shininess = 1.0
 
 Appearance1558.material = Material1559
 
@@ -6569,9 +6569,9 @@ Scene15.children.append(Shape1557)
 Shape1562 = x3d.Shape()
 Appearance1563 = x3d.Appearance()
 Material1564 = x3d.Material()
-Material1564.ambientIntensity = 0
-Material1564.diffuseColor = [0.784313738,0,0]
-Material1564.shininess = 1
+Material1564.ambientIntensity = 0.0
+Material1564.diffuseColor = [.784313738,0,0]
+Material1564.shininess = 1.0
 
 Appearance1563.material = Material1564
 
@@ -6590,9 +6590,9 @@ Scene15.children.append(Shape1562)
 Shape1567 = x3d.Shape()
 Appearance1568 = x3d.Appearance()
 Material1569 = x3d.Material()
-Material1569.ambientIntensity = 0
-Material1569.diffuseColor = [0.784313738,0,0]
-Material1569.shininess = 1
+Material1569.ambientIntensity = 0.0
+Material1569.diffuseColor = [.784313738,0,0]
+Material1569.shininess = 1.0
 
 Appearance1568.material = Material1569
 
@@ -6611,9 +6611,9 @@ Scene15.children.append(Shape1567)
 Shape1572 = x3d.Shape()
 Appearance1573 = x3d.Appearance()
 Material1574 = x3d.Material()
-Material1574.ambientIntensity = 0
-Material1574.diffuseColor = [0.784313738,0,0]
-Material1574.shininess = 1
+Material1574.ambientIntensity = 0.0
+Material1574.diffuseColor = [.784313738,0,0]
+Material1574.shininess = 1.0
 
 Appearance1573.material = Material1574
 
@@ -6632,9 +6632,9 @@ Scene15.children.append(Shape1572)
 Shape1577 = x3d.Shape()
 Appearance1578 = x3d.Appearance()
 Material1579 = x3d.Material()
-Material1579.ambientIntensity = 0
-Material1579.diffuseColor = [0.784313738,0,0]
-Material1579.shininess = 1
+Material1579.ambientIntensity = 0.0
+Material1579.diffuseColor = [.784313738,0,0]
+Material1579.shininess = 1.0
 
 Appearance1578.material = Material1579
 
@@ -6653,9 +6653,9 @@ Scene15.children.append(Shape1577)
 Shape1582 = x3d.Shape()
 Appearance1583 = x3d.Appearance()
 Material1584 = x3d.Material()
-Material1584.ambientIntensity = 0
-Material1584.diffuseColor = [0.784313738,0,0]
-Material1584.shininess = 1
+Material1584.ambientIntensity = 0.0
+Material1584.diffuseColor = [.784313738,0,0]
+Material1584.shininess = 1.0
 
 Appearance1583.material = Material1584
 
@@ -6674,9 +6674,9 @@ Scene15.children.append(Shape1582)
 Shape1587 = x3d.Shape()
 Appearance1588 = x3d.Appearance()
 Material1589 = x3d.Material()
-Material1589.ambientIntensity = 0
-Material1589.diffuseColor = [0.784313738,0,0]
-Material1589.shininess = 1
+Material1589.ambientIntensity = 0.0
+Material1589.diffuseColor = [.784313738,0,0]
+Material1589.shininess = 1.0
 
 Appearance1588.material = Material1589
 
@@ -6695,9 +6695,9 @@ Scene15.children.append(Shape1587)
 Shape1592 = x3d.Shape()
 Appearance1593 = x3d.Appearance()
 Material1594 = x3d.Material()
-Material1594.ambientIntensity = 0
-Material1594.diffuseColor = [0.784313738,0,0]
-Material1594.shininess = 1
+Material1594.ambientIntensity = 0.0
+Material1594.diffuseColor = [.784313738,0,0]
+Material1594.shininess = 1.0
 
 Appearance1593.material = Material1594
 
@@ -6716,9 +6716,9 @@ Scene15.children.append(Shape1592)
 Shape1597 = x3d.Shape()
 Appearance1598 = x3d.Appearance()
 Material1599 = x3d.Material()
-Material1599.ambientIntensity = 0
-Material1599.diffuseColor = [0.784313738,0,0]
-Material1599.shininess = 1
+Material1599.ambientIntensity = 0.0
+Material1599.diffuseColor = [.784313738,0,0]
+Material1599.shininess = 1.0
 
 Appearance1598.material = Material1599
 
@@ -6737,9 +6737,9 @@ Scene15.children.append(Shape1597)
 Shape1602 = x3d.Shape()
 Appearance1603 = x3d.Appearance()
 Material1604 = x3d.Material()
-Material1604.ambientIntensity = 0
-Material1604.diffuseColor = [0.784313738,0,0]
-Material1604.shininess = 1
+Material1604.ambientIntensity = 0.0
+Material1604.diffuseColor = [.784313738,0,0]
+Material1604.shininess = 1.0
 
 Appearance1603.material = Material1604
 
@@ -6758,9 +6758,9 @@ Scene15.children.append(Shape1602)
 Shape1607 = x3d.Shape()
 Appearance1608 = x3d.Appearance()
 Material1609 = x3d.Material()
-Material1609.ambientIntensity = 0
-Material1609.diffuseColor = [0.784313738,0,0]
-Material1609.shininess = 1
+Material1609.ambientIntensity = 0.0
+Material1609.diffuseColor = [.784313738,0,0]
+Material1609.shininess = 1.0
 
 Appearance1608.material = Material1609
 
@@ -6779,9 +6779,9 @@ Scene15.children.append(Shape1607)
 Shape1612 = x3d.Shape()
 Appearance1613 = x3d.Appearance()
 Material1614 = x3d.Material()
-Material1614.ambientIntensity = 0
-Material1614.diffuseColor = [0.784313738,0,0]
-Material1614.shininess = 1
+Material1614.ambientIntensity = 0.0
+Material1614.diffuseColor = [.784313738,0,0]
+Material1614.shininess = 1.0
 
 Appearance1613.material = Material1614
 
@@ -6800,9 +6800,9 @@ Scene15.children.append(Shape1612)
 Shape1617 = x3d.Shape()
 Appearance1618 = x3d.Appearance()
 Material1619 = x3d.Material()
-Material1619.ambientIntensity = 0
-Material1619.diffuseColor = [0.784313738,0,0]
-Material1619.shininess = 1
+Material1619.ambientIntensity = 0.0
+Material1619.diffuseColor = [.784313738,0,0]
+Material1619.shininess = 1.0
 
 Appearance1618.material = Material1619
 
@@ -6821,9 +6821,9 @@ Scene15.children.append(Shape1617)
 Shape1622 = x3d.Shape()
 Appearance1623 = x3d.Appearance()
 Material1624 = x3d.Material()
-Material1624.ambientIntensity = 0
-Material1624.diffuseColor = [0.784313738,0,0]
-Material1624.shininess = 1
+Material1624.ambientIntensity = 0.0
+Material1624.diffuseColor = [.784313738,0,0]
+Material1624.shininess = 1.0
 
 Appearance1623.material = Material1624
 
@@ -6842,9 +6842,9 @@ Scene15.children.append(Shape1622)
 Shape1627 = x3d.Shape()
 Appearance1628 = x3d.Appearance()
 Material1629 = x3d.Material()
-Material1629.ambientIntensity = 0
-Material1629.diffuseColor = [0.784313738,0,0]
-Material1629.shininess = 1
+Material1629.ambientIntensity = 0.0
+Material1629.diffuseColor = [.784313738,0,0]
+Material1629.shininess = 1.0
 
 Appearance1628.material = Material1629
 
@@ -6863,9 +6863,9 @@ Scene15.children.append(Shape1627)
 Shape1632 = x3d.Shape()
 Appearance1633 = x3d.Appearance()
 Material1634 = x3d.Material()
-Material1634.ambientIntensity = 0
-Material1634.diffuseColor = [0.784313738,0,0]
-Material1634.shininess = 1
+Material1634.ambientIntensity = 0.0
+Material1634.diffuseColor = [.784313738,0,0]
+Material1634.shininess = 1.0
 
 Appearance1633.material = Material1634
 
@@ -6884,9 +6884,9 @@ Scene15.children.append(Shape1632)
 Shape1637 = x3d.Shape()
 Appearance1638 = x3d.Appearance()
 Material1639 = x3d.Material()
-Material1639.ambientIntensity = 0
-Material1639.diffuseColor = [0.784313738,0,0]
-Material1639.shininess = 1
+Material1639.ambientIntensity = 0.0
+Material1639.diffuseColor = [.784313738,0,0]
+Material1639.shininess = 1.0
 
 Appearance1638.material = Material1639
 
@@ -6905,9 +6905,9 @@ Scene15.children.append(Shape1637)
 Shape1642 = x3d.Shape()
 Appearance1643 = x3d.Appearance()
 Material1644 = x3d.Material()
-Material1644.ambientIntensity = 0
-Material1644.diffuseColor = [0.784313738,0,0]
-Material1644.shininess = 1
+Material1644.ambientIntensity = 0.0
+Material1644.diffuseColor = [.784313738,0,0]
+Material1644.shininess = 1.0
 
 Appearance1643.material = Material1644
 
@@ -6926,9 +6926,9 @@ Scene15.children.append(Shape1642)
 Shape1647 = x3d.Shape()
 Appearance1648 = x3d.Appearance()
 Material1649 = x3d.Material()
-Material1649.ambientIntensity = 0
-Material1649.diffuseColor = [0.784313738,0,0]
-Material1649.shininess = 1
+Material1649.ambientIntensity = 0.0
+Material1649.diffuseColor = [.784313738,0,0]
+Material1649.shininess = 1.0
 
 Appearance1648.material = Material1649
 
@@ -6947,9 +6947,9 @@ Scene15.children.append(Shape1647)
 Shape1652 = x3d.Shape()
 Appearance1653 = x3d.Appearance()
 Material1654 = x3d.Material()
-Material1654.ambientIntensity = 0
-Material1654.diffuseColor = [0.784313738,0,0]
-Material1654.shininess = 1
+Material1654.ambientIntensity = 0.0
+Material1654.diffuseColor = [.784313738,0,0]
+Material1654.shininess = 1.0
 
 Appearance1653.material = Material1654
 
@@ -6968,9 +6968,9 @@ Scene15.children.append(Shape1652)
 Shape1657 = x3d.Shape()
 Appearance1658 = x3d.Appearance()
 Material1659 = x3d.Material()
-Material1659.ambientIntensity = 0
-Material1659.diffuseColor = [0.784313738,0,0]
-Material1659.shininess = 1
+Material1659.ambientIntensity = 0.0
+Material1659.diffuseColor = [.784313738,0,0]
+Material1659.shininess = 1.0
 
 Appearance1658.material = Material1659
 
@@ -6989,9 +6989,9 @@ Scene15.children.append(Shape1657)
 Shape1662 = x3d.Shape()
 Appearance1663 = x3d.Appearance()
 Material1664 = x3d.Material()
-Material1664.ambientIntensity = 0
-Material1664.diffuseColor = [0.784313738,0,0]
-Material1664.shininess = 1
+Material1664.ambientIntensity = 0.0
+Material1664.diffuseColor = [.784313738,0,0]
+Material1664.shininess = 1.0
 
 Appearance1663.material = Material1664
 
@@ -7010,9 +7010,9 @@ Scene15.children.append(Shape1662)
 Shape1667 = x3d.Shape()
 Appearance1668 = x3d.Appearance()
 Material1669 = x3d.Material()
-Material1669.ambientIntensity = 0
-Material1669.diffuseColor = [0.784313738,0,0]
-Material1669.shininess = 1
+Material1669.ambientIntensity = 0.0
+Material1669.diffuseColor = [.784313738,0,0]
+Material1669.shininess = 1.0
 
 Appearance1668.material = Material1669
 
@@ -7031,9 +7031,9 @@ Scene15.children.append(Shape1667)
 Shape1672 = x3d.Shape()
 Appearance1673 = x3d.Appearance()
 Material1674 = x3d.Material()
-Material1674.ambientIntensity = 0
-Material1674.diffuseColor = [0.784313738,0,0]
-Material1674.shininess = 1
+Material1674.ambientIntensity = 0.0
+Material1674.diffuseColor = [.784313738,0,0]
+Material1674.shininess = 1.0
 
 Appearance1673.material = Material1674
 
@@ -7052,9 +7052,9 @@ Scene15.children.append(Shape1672)
 Shape1677 = x3d.Shape()
 Appearance1678 = x3d.Appearance()
 Material1679 = x3d.Material()
-Material1679.ambientIntensity = 0
-Material1679.diffuseColor = [0.784313738,0,0]
-Material1679.shininess = 1
+Material1679.ambientIntensity = 0.0
+Material1679.diffuseColor = [.784313738,0,0]
+Material1679.shininess = 1.0
 
 Appearance1678.material = Material1679
 
@@ -7073,9 +7073,9 @@ Scene15.children.append(Shape1677)
 Shape1682 = x3d.Shape()
 Appearance1683 = x3d.Appearance()
 Material1684 = x3d.Material()
-Material1684.ambientIntensity = 0
-Material1684.diffuseColor = [0.784313738,0,0]
-Material1684.shininess = 1
+Material1684.ambientIntensity = 0.0
+Material1684.diffuseColor = [.784313738,0,0]
+Material1684.shininess = 1.0
 
 Appearance1683.material = Material1684
 
@@ -7094,9 +7094,9 @@ Scene15.children.append(Shape1682)
 Shape1687 = x3d.Shape()
 Appearance1688 = x3d.Appearance()
 Material1689 = x3d.Material()
-Material1689.ambientIntensity = 0
-Material1689.diffuseColor = [0.784313738,0,0]
-Material1689.shininess = 1
+Material1689.ambientIntensity = 0.0
+Material1689.diffuseColor = [.784313738,0,0]
+Material1689.shininess = 1.0
 
 Appearance1688.material = Material1689
 
@@ -7115,9 +7115,9 @@ Scene15.children.append(Shape1687)
 Shape1692 = x3d.Shape()
 Appearance1693 = x3d.Appearance()
 Material1694 = x3d.Material()
-Material1694.ambientIntensity = 0
-Material1694.diffuseColor = [0.784313738,0,0]
-Material1694.shininess = 1
+Material1694.ambientIntensity = 0.0
+Material1694.diffuseColor = [.784313738,0,0]
+Material1694.shininess = 1.0
 
 Appearance1693.material = Material1694
 
@@ -7136,9 +7136,9 @@ Scene15.children.append(Shape1692)
 Shape1697 = x3d.Shape()
 Appearance1698 = x3d.Appearance()
 Material1699 = x3d.Material()
-Material1699.ambientIntensity = 0
-Material1699.diffuseColor = [0.784313738,0,0]
-Material1699.shininess = 1
+Material1699.ambientIntensity = 0.0
+Material1699.diffuseColor = [.784313738,0,0]
+Material1699.shininess = 1.0
 
 Appearance1698.material = Material1699
 
@@ -7157,9 +7157,9 @@ Scene15.children.append(Shape1697)
 Shape1702 = x3d.Shape()
 Appearance1703 = x3d.Appearance()
 Material1704 = x3d.Material()
-Material1704.ambientIntensity = 0
-Material1704.diffuseColor = [0.784313738,0,0]
-Material1704.shininess = 1
+Material1704.ambientIntensity = 0.0
+Material1704.diffuseColor = [.784313738,0,0]
+Material1704.shininess = 1.0
 
 Appearance1703.material = Material1704
 
@@ -7178,9 +7178,9 @@ Scene15.children.append(Shape1702)
 Shape1707 = x3d.Shape()
 Appearance1708 = x3d.Appearance()
 Material1709 = x3d.Material()
-Material1709.ambientIntensity = 0
-Material1709.diffuseColor = [0.784313738,0,0]
-Material1709.shininess = 1
+Material1709.ambientIntensity = 0.0
+Material1709.diffuseColor = [.784313738,0,0]
+Material1709.shininess = 1.0
 
 Appearance1708.material = Material1709
 
@@ -7199,9 +7199,9 @@ Scene15.children.append(Shape1707)
 Shape1712 = x3d.Shape()
 Appearance1713 = x3d.Appearance()
 Material1714 = x3d.Material()
-Material1714.ambientIntensity = 0
-Material1714.diffuseColor = [0.784313738,0,0]
-Material1714.shininess = 1
+Material1714.ambientIntensity = 0.0
+Material1714.diffuseColor = [.784313738,0,0]
+Material1714.shininess = 1.0
 
 Appearance1713.material = Material1714
 
@@ -7220,9 +7220,9 @@ Scene15.children.append(Shape1712)
 Shape1717 = x3d.Shape()
 Appearance1718 = x3d.Appearance()
 Material1719 = x3d.Material()
-Material1719.ambientIntensity = 0
-Material1719.diffuseColor = [0.784313738,0,0]
-Material1719.shininess = 1
+Material1719.ambientIntensity = 0.0
+Material1719.diffuseColor = [.784313738,0,0]
+Material1719.shininess = 1.0
 
 Appearance1718.material = Material1719
 
@@ -7241,9 +7241,9 @@ Scene15.children.append(Shape1717)
 Shape1722 = x3d.Shape()
 Appearance1723 = x3d.Appearance()
 Material1724 = x3d.Material()
-Material1724.ambientIntensity = 0
-Material1724.diffuseColor = [0.784313738,0,0]
-Material1724.shininess = 1
+Material1724.ambientIntensity = 0.0
+Material1724.diffuseColor = [.784313738,0,0]
+Material1724.shininess = 1.0
 
 Appearance1723.material = Material1724
 
@@ -7262,9 +7262,9 @@ Scene15.children.append(Shape1722)
 Shape1727 = x3d.Shape()
 Appearance1728 = x3d.Appearance()
 Material1729 = x3d.Material()
-Material1729.ambientIntensity = 0
-Material1729.diffuseColor = [0.784313738,0,0]
-Material1729.shininess = 1
+Material1729.ambientIntensity = 0.0
+Material1729.diffuseColor = [.784313738,0,0]
+Material1729.shininess = 1.0
 
 Appearance1728.material = Material1729
 
@@ -7283,9 +7283,9 @@ Scene15.children.append(Shape1727)
 Shape1732 = x3d.Shape()
 Appearance1733 = x3d.Appearance()
 Material1734 = x3d.Material()
-Material1734.ambientIntensity = 0
-Material1734.diffuseColor = [0.784313738,0,0]
-Material1734.shininess = 1
+Material1734.ambientIntensity = 0.0
+Material1734.diffuseColor = [.784313738,0,0]
+Material1734.shininess = 1.0
 
 Appearance1733.material = Material1734
 
@@ -7304,9 +7304,9 @@ Scene15.children.append(Shape1732)
 Shape1737 = x3d.Shape()
 Appearance1738 = x3d.Appearance()
 Material1739 = x3d.Material()
-Material1739.ambientIntensity = 0
-Material1739.diffuseColor = [0.784313738,0,0]
-Material1739.shininess = 1
+Material1739.ambientIntensity = 0.0
+Material1739.diffuseColor = [.784313738,0,0]
+Material1739.shininess = 1.0
 
 Appearance1738.material = Material1739
 
@@ -7325,9 +7325,9 @@ Scene15.children.append(Shape1737)
 Shape1742 = x3d.Shape()
 Appearance1743 = x3d.Appearance()
 Material1744 = x3d.Material()
-Material1744.ambientIntensity = 0
-Material1744.diffuseColor = [0.784313738,0,0]
-Material1744.shininess = 1
+Material1744.ambientIntensity = 0.0
+Material1744.diffuseColor = [.784313738,0,0]
+Material1744.shininess = 1.0
 
 Appearance1743.material = Material1744
 
@@ -7346,9 +7346,9 @@ Scene15.children.append(Shape1742)
 Shape1747 = x3d.Shape()
 Appearance1748 = x3d.Appearance()
 Material1749 = x3d.Material()
-Material1749.ambientIntensity = 0
-Material1749.diffuseColor = [0.784313738,0,0]
-Material1749.shininess = 1
+Material1749.ambientIntensity = 0.0
+Material1749.diffuseColor = [.784313738,0,0]
+Material1749.shininess = 1.0
 
 Appearance1748.material = Material1749
 
@@ -7367,9 +7367,9 @@ Scene15.children.append(Shape1747)
 Shape1752 = x3d.Shape()
 Appearance1753 = x3d.Appearance()
 Material1754 = x3d.Material()
-Material1754.ambientIntensity = 0
-Material1754.diffuseColor = [0.784313738,0,0]
-Material1754.shininess = 1
+Material1754.ambientIntensity = 0.0
+Material1754.diffuseColor = [.784313738,0,0]
+Material1754.shininess = 1.0
 
 Appearance1753.material = Material1754
 
@@ -7388,9 +7388,9 @@ Scene15.children.append(Shape1752)
 Shape1757 = x3d.Shape()
 Appearance1758 = x3d.Appearance()
 Material1759 = x3d.Material()
-Material1759.ambientIntensity = 0
-Material1759.diffuseColor = [0.784313738,0,0]
-Material1759.shininess = 1
+Material1759.ambientIntensity = 0.0
+Material1759.diffuseColor = [.784313738,0,0]
+Material1759.shininess = 1.0
 
 Appearance1758.material = Material1759
 
@@ -7409,9 +7409,9 @@ Scene15.children.append(Shape1757)
 Shape1762 = x3d.Shape()
 Appearance1763 = x3d.Appearance()
 Material1764 = x3d.Material()
-Material1764.ambientIntensity = 0
-Material1764.diffuseColor = [0.784313738,0,0]
-Material1764.shininess = 1
+Material1764.ambientIntensity = 0.0
+Material1764.diffuseColor = [.784313738,0,0]
+Material1764.shininess = 1.0
 
 Appearance1763.material = Material1764
 
@@ -7430,9 +7430,9 @@ Scene15.children.append(Shape1762)
 Shape1767 = x3d.Shape()
 Appearance1768 = x3d.Appearance()
 Material1769 = x3d.Material()
-Material1769.ambientIntensity = 0
-Material1769.diffuseColor = [0.784313738,0,0]
-Material1769.shininess = 1
+Material1769.ambientIntensity = 0.0
+Material1769.diffuseColor = [.784313738,0,0]
+Material1769.shininess = 1.0
 
 Appearance1768.material = Material1769
 
@@ -7451,9 +7451,9 @@ Scene15.children.append(Shape1767)
 Shape1772 = x3d.Shape()
 Appearance1773 = x3d.Appearance()
 Material1774 = x3d.Material()
-Material1774.ambientIntensity = 0
-Material1774.diffuseColor = [0.784313738,0,0]
-Material1774.shininess = 1
+Material1774.ambientIntensity = 0.0
+Material1774.diffuseColor = [.784313738,0,0]
+Material1774.shininess = 1.0
 
 Appearance1773.material = Material1774
 
@@ -7472,9 +7472,9 @@ Scene15.children.append(Shape1772)
 Shape1777 = x3d.Shape()
 Appearance1778 = x3d.Appearance()
 Material1779 = x3d.Material()
-Material1779.ambientIntensity = 0
-Material1779.diffuseColor = [0.784313738,0,0]
-Material1779.shininess = 1
+Material1779.ambientIntensity = 0.0
+Material1779.diffuseColor = [.784313738,0,0]
+Material1779.shininess = 1.0
 
 Appearance1778.material = Material1779
 
@@ -7493,9 +7493,9 @@ Scene15.children.append(Shape1777)
 Shape1782 = x3d.Shape()
 Appearance1783 = x3d.Appearance()
 Material1784 = x3d.Material()
-Material1784.ambientIntensity = 0
-Material1784.diffuseColor = [0.784313738,0,0]
-Material1784.shininess = 1
+Material1784.ambientIntensity = 0.0
+Material1784.diffuseColor = [.784313738,0,0]
+Material1784.shininess = 1.0
 
 Appearance1783.material = Material1784
 
@@ -7514,9 +7514,9 @@ Scene15.children.append(Shape1782)
 Shape1787 = x3d.Shape()
 Appearance1788 = x3d.Appearance()
 Material1789 = x3d.Material()
-Material1789.ambientIntensity = 0
-Material1789.diffuseColor = [0.784313738,0,0]
-Material1789.shininess = 1
+Material1789.ambientIntensity = 0.0
+Material1789.diffuseColor = [.784313738,0,0]
+Material1789.shininess = 1.0
 
 Appearance1788.material = Material1789
 
@@ -7535,9 +7535,9 @@ Scene15.children.append(Shape1787)
 Shape1792 = x3d.Shape()
 Appearance1793 = x3d.Appearance()
 Material1794 = x3d.Material()
-Material1794.ambientIntensity = 0
-Material1794.diffuseColor = [0.784313738,0,0]
-Material1794.shininess = 1
+Material1794.ambientIntensity = 0.0
+Material1794.diffuseColor = [.784313738,0,0]
+Material1794.shininess = 1.0
 
 Appearance1793.material = Material1794
 
@@ -7556,9 +7556,9 @@ Scene15.children.append(Shape1792)
 Shape1797 = x3d.Shape()
 Appearance1798 = x3d.Appearance()
 Material1799 = x3d.Material()
-Material1799.ambientIntensity = 0
-Material1799.diffuseColor = [0.784313738,0,0]
-Material1799.shininess = 1
+Material1799.ambientIntensity = 0.0
+Material1799.diffuseColor = [.784313738,0,0]
+Material1799.shininess = 1.0
 
 Appearance1798.material = Material1799
 
@@ -7577,9 +7577,9 @@ Scene15.children.append(Shape1797)
 Shape1802 = x3d.Shape()
 Appearance1803 = x3d.Appearance()
 Material1804 = x3d.Material()
-Material1804.ambientIntensity = 0
-Material1804.diffuseColor = [0.784313738,0,0]
-Material1804.shininess = 1
+Material1804.ambientIntensity = 0.0
+Material1804.diffuseColor = [.784313738,0,0]
+Material1804.shininess = 1.0
 
 Appearance1803.material = Material1804
 
@@ -7598,9 +7598,9 @@ Scene15.children.append(Shape1802)
 Shape1807 = x3d.Shape()
 Appearance1808 = x3d.Appearance()
 Material1809 = x3d.Material()
-Material1809.ambientIntensity = 0
-Material1809.diffuseColor = [0.784313738,0,0]
-Material1809.shininess = 1
+Material1809.ambientIntensity = 0.0
+Material1809.diffuseColor = [.784313738,0,0]
+Material1809.shininess = 1.0
 
 Appearance1808.material = Material1809
 
@@ -7619,9 +7619,9 @@ Scene15.children.append(Shape1807)
 Shape1812 = x3d.Shape()
 Appearance1813 = x3d.Appearance()
 Material1814 = x3d.Material()
-Material1814.ambientIntensity = 0
-Material1814.diffuseColor = [0.784313738,0,0]
-Material1814.shininess = 1
+Material1814.ambientIntensity = 0.0
+Material1814.diffuseColor = [.784313738,0,0]
+Material1814.shininess = 1.0
 
 Appearance1813.material = Material1814
 
@@ -7640,9 +7640,9 @@ Scene15.children.append(Shape1812)
 Shape1817 = x3d.Shape()
 Appearance1818 = x3d.Appearance()
 Material1819 = x3d.Material()
-Material1819.ambientIntensity = 0
-Material1819.diffuseColor = [0.784313738,0,0]
-Material1819.shininess = 1
+Material1819.ambientIntensity = 0.0
+Material1819.diffuseColor = [.784313738,0,0]
+Material1819.shininess = 1.0
 
 Appearance1818.material = Material1819
 
@@ -7661,9 +7661,9 @@ Scene15.children.append(Shape1817)
 Shape1822 = x3d.Shape()
 Appearance1823 = x3d.Appearance()
 Material1824 = x3d.Material()
-Material1824.ambientIntensity = 0
-Material1824.diffuseColor = [0.784313738,0,0]
-Material1824.shininess = 1
+Material1824.ambientIntensity = 0.0
+Material1824.diffuseColor = [.784313738,0,0]
+Material1824.shininess = 1.0
 
 Appearance1823.material = Material1824
 
@@ -7682,9 +7682,9 @@ Scene15.children.append(Shape1822)
 Shape1827 = x3d.Shape()
 Appearance1828 = x3d.Appearance()
 Material1829 = x3d.Material()
-Material1829.ambientIntensity = 0
-Material1829.diffuseColor = [0.784313738,0,0]
-Material1829.shininess = 1
+Material1829.ambientIntensity = 0.0
+Material1829.diffuseColor = [.784313738,0,0]
+Material1829.shininess = 1.0
 
 Appearance1828.material = Material1829
 
@@ -7703,9 +7703,9 @@ Scene15.children.append(Shape1827)
 Shape1832 = x3d.Shape()
 Appearance1833 = x3d.Appearance()
 Material1834 = x3d.Material()
-Material1834.ambientIntensity = 0
-Material1834.diffuseColor = [0.784313738,0,0]
-Material1834.shininess = 1
+Material1834.ambientIntensity = 0.0
+Material1834.diffuseColor = [.784313738,0,0]
+Material1834.shininess = 1.0
 
 Appearance1833.material = Material1834
 
@@ -7724,9 +7724,9 @@ Scene15.children.append(Shape1832)
 Shape1837 = x3d.Shape()
 Appearance1838 = x3d.Appearance()
 Material1839 = x3d.Material()
-Material1839.ambientIntensity = 0
-Material1839.diffuseColor = [0.784313738,0,0]
-Material1839.shininess = 1
+Material1839.ambientIntensity = 0.0
+Material1839.diffuseColor = [.784313738,0,0]
+Material1839.shininess = 1.0
 
 Appearance1838.material = Material1839
 
@@ -7745,9 +7745,9 @@ Scene15.children.append(Shape1837)
 Shape1842 = x3d.Shape()
 Appearance1843 = x3d.Appearance()
 Material1844 = x3d.Material()
-Material1844.ambientIntensity = 0
-Material1844.diffuseColor = [0.784313738,0,0]
-Material1844.shininess = 1
+Material1844.ambientIntensity = 0.0
+Material1844.diffuseColor = [.784313738,0,0]
+Material1844.shininess = 1.0
 
 Appearance1843.material = Material1844
 
@@ -7766,9 +7766,9 @@ Scene15.children.append(Shape1842)
 Shape1847 = x3d.Shape()
 Appearance1848 = x3d.Appearance()
 Material1849 = x3d.Material()
-Material1849.ambientIntensity = 0
-Material1849.diffuseColor = [0.784313738,0,0]
-Material1849.shininess = 1
+Material1849.ambientIntensity = 0.0
+Material1849.diffuseColor = [.784313738,0,0]
+Material1849.shininess = 1.0
 
 Appearance1848.material = Material1849
 
@@ -7787,9 +7787,9 @@ Scene15.children.append(Shape1847)
 Shape1852 = x3d.Shape()
 Appearance1853 = x3d.Appearance()
 Material1854 = x3d.Material()
-Material1854.ambientIntensity = 0
-Material1854.diffuseColor = [0.784313738,0,0]
-Material1854.shininess = 1
+Material1854.ambientIntensity = 0.0
+Material1854.diffuseColor = [.784313738,0,0]
+Material1854.shininess = 1.0
 
 Appearance1853.material = Material1854
 
@@ -7808,9 +7808,9 @@ Scene15.children.append(Shape1852)
 Shape1857 = x3d.Shape()
 Appearance1858 = x3d.Appearance()
 Material1859 = x3d.Material()
-Material1859.ambientIntensity = 0
-Material1859.diffuseColor = [0.784313738,0,0]
-Material1859.shininess = 1
+Material1859.ambientIntensity = 0.0
+Material1859.diffuseColor = [.784313738,0,0]
+Material1859.shininess = 1.0
 
 Appearance1858.material = Material1859
 
@@ -7829,9 +7829,9 @@ Scene15.children.append(Shape1857)
 Shape1862 = x3d.Shape()
 Appearance1863 = x3d.Appearance()
 Material1864 = x3d.Material()
-Material1864.ambientIntensity = 0
-Material1864.diffuseColor = [0.784313738,0,0]
-Material1864.shininess = 1
+Material1864.ambientIntensity = 0.0
+Material1864.diffuseColor = [.784313738,0,0]
+Material1864.shininess = 1.0
 
 Appearance1863.material = Material1864
 
@@ -7850,9 +7850,9 @@ Scene15.children.append(Shape1862)
 Shape1867 = x3d.Shape()
 Appearance1868 = x3d.Appearance()
 Material1869 = x3d.Material()
-Material1869.ambientIntensity = 0
-Material1869.diffuseColor = [0.784313738,0,0]
-Material1869.shininess = 1
+Material1869.ambientIntensity = 0.0
+Material1869.diffuseColor = [.784313738,0,0]
+Material1869.shininess = 1.0
 
 Appearance1868.material = Material1869
 
@@ -7871,9 +7871,9 @@ Scene15.children.append(Shape1867)
 Shape1872 = x3d.Shape()
 Appearance1873 = x3d.Appearance()
 Material1874 = x3d.Material()
-Material1874.ambientIntensity = 0
-Material1874.diffuseColor = [0.784313738,0,0]
-Material1874.shininess = 1
+Material1874.ambientIntensity = 0.0
+Material1874.diffuseColor = [.784313738,0,0]
+Material1874.shininess = 1.0
 
 Appearance1873.material = Material1874
 
@@ -7892,9 +7892,9 @@ Scene15.children.append(Shape1872)
 Shape1877 = x3d.Shape()
 Appearance1878 = x3d.Appearance()
 Material1879 = x3d.Material()
-Material1879.ambientIntensity = 0
-Material1879.diffuseColor = [0.784313738,0,0]
-Material1879.shininess = 1
+Material1879.ambientIntensity = 0.0
+Material1879.diffuseColor = [.784313738,0,0]
+Material1879.shininess = 1.0
 
 Appearance1878.material = Material1879
 
@@ -7913,9 +7913,9 @@ Scene15.children.append(Shape1877)
 Shape1882 = x3d.Shape()
 Appearance1883 = x3d.Appearance()
 Material1884 = x3d.Material()
-Material1884.ambientIntensity = 0
-Material1884.diffuseColor = [0.784313738,0,0]
-Material1884.shininess = 1
+Material1884.ambientIntensity = 0.0
+Material1884.diffuseColor = [.784313738,0,0]
+Material1884.shininess = 1.0
 
 Appearance1883.material = Material1884
 
@@ -7934,9 +7934,9 @@ Scene15.children.append(Shape1882)
 Shape1887 = x3d.Shape()
 Appearance1888 = x3d.Appearance()
 Material1889 = x3d.Material()
-Material1889.ambientIntensity = 0
-Material1889.diffuseColor = [0.784313738,0,0]
-Material1889.shininess = 1
+Material1889.ambientIntensity = 0.0
+Material1889.diffuseColor = [.784313738,0,0]
+Material1889.shininess = 1.0
 
 Appearance1888.material = Material1889
 
@@ -7955,9 +7955,9 @@ Scene15.children.append(Shape1887)
 Shape1892 = x3d.Shape()
 Appearance1893 = x3d.Appearance()
 Material1894 = x3d.Material()
-Material1894.ambientIntensity = 0
-Material1894.diffuseColor = [0.784313738,0,0]
-Material1894.shininess = 1
+Material1894.ambientIntensity = 0.0
+Material1894.diffuseColor = [.784313738,0,0]
+Material1894.shininess = 1.0
 
 Appearance1893.material = Material1894
 
@@ -7976,9 +7976,9 @@ Scene15.children.append(Shape1892)
 Shape1897 = x3d.Shape()
 Appearance1898 = x3d.Appearance()
 Material1899 = x3d.Material()
-Material1899.ambientIntensity = 0
-Material1899.diffuseColor = [0.784313738,0,0]
-Material1899.shininess = 1
+Material1899.ambientIntensity = 0.0
+Material1899.diffuseColor = [.784313738,0,0]
+Material1899.shininess = 1.0
 
 Appearance1898.material = Material1899
 
@@ -7997,9 +7997,9 @@ Scene15.children.append(Shape1897)
 Shape1902 = x3d.Shape()
 Appearance1903 = x3d.Appearance()
 Material1904 = x3d.Material()
-Material1904.ambientIntensity = 0
-Material1904.diffuseColor = [0.784313738,0,0]
-Material1904.shininess = 1
+Material1904.ambientIntensity = 0.0
+Material1904.diffuseColor = [.784313738,0,0]
+Material1904.shininess = 1.0
 
 Appearance1903.material = Material1904
 
@@ -8018,9 +8018,9 @@ Scene15.children.append(Shape1902)
 Shape1907 = x3d.Shape()
 Appearance1908 = x3d.Appearance()
 Material1909 = x3d.Material()
-Material1909.ambientIntensity = 0
-Material1909.diffuseColor = [0.784313738,0,0]
-Material1909.shininess = 1
+Material1909.ambientIntensity = 0.0
+Material1909.diffuseColor = [.784313738,0,0]
+Material1909.shininess = 1.0
 
 Appearance1908.material = Material1909
 
@@ -8039,9 +8039,9 @@ Scene15.children.append(Shape1907)
 Shape1912 = x3d.Shape()
 Appearance1913 = x3d.Appearance()
 Material1914 = x3d.Material()
-Material1914.ambientIntensity = 0
-Material1914.diffuseColor = [0.784313738,0,0]
-Material1914.shininess = 1
+Material1914.ambientIntensity = 0.0
+Material1914.diffuseColor = [.784313738,0,0]
+Material1914.shininess = 1.0
 
 Appearance1913.material = Material1914
 
@@ -8060,9 +8060,9 @@ Scene15.children.append(Shape1912)
 Shape1917 = x3d.Shape()
 Appearance1918 = x3d.Appearance()
 Material1919 = x3d.Material()
-Material1919.ambientIntensity = 0
-Material1919.diffuseColor = [0.784313738,0,0]
-Material1919.shininess = 1
+Material1919.ambientIntensity = 0.0
+Material1919.diffuseColor = [.784313738,0,0]
+Material1919.shininess = 1.0
 
 Appearance1918.material = Material1919
 
@@ -8081,9 +8081,9 @@ Scene15.children.append(Shape1917)
 Shape1922 = x3d.Shape()
 Appearance1923 = x3d.Appearance()
 Material1924 = x3d.Material()
-Material1924.ambientIntensity = 0
-Material1924.diffuseColor = [0.784313738,0,0]
-Material1924.shininess = 1
+Material1924.ambientIntensity = 0.0
+Material1924.diffuseColor = [.784313738,0,0]
+Material1924.shininess = 1.0
 
 Appearance1923.material = Material1924
 
@@ -8102,9 +8102,9 @@ Scene15.children.append(Shape1922)
 Shape1927 = x3d.Shape()
 Appearance1928 = x3d.Appearance()
 Material1929 = x3d.Material()
-Material1929.ambientIntensity = 0
-Material1929.diffuseColor = [0.784313738,0,0]
-Material1929.shininess = 1
+Material1929.ambientIntensity = 0.0
+Material1929.diffuseColor = [.784313738,0,0]
+Material1929.shininess = 1.0
 
 Appearance1928.material = Material1929
 
@@ -8123,9 +8123,9 @@ Scene15.children.append(Shape1927)
 Shape1932 = x3d.Shape()
 Appearance1933 = x3d.Appearance()
 Material1934 = x3d.Material()
-Material1934.ambientIntensity = 0
-Material1934.diffuseColor = [0.784313738,0,0]
-Material1934.shininess = 1
+Material1934.ambientIntensity = 0.0
+Material1934.diffuseColor = [.784313738,0,0]
+Material1934.shininess = 1.0
 
 Appearance1933.material = Material1934
 
@@ -8144,9 +8144,9 @@ Scene15.children.append(Shape1932)
 Shape1937 = x3d.Shape()
 Appearance1938 = x3d.Appearance()
 Material1939 = x3d.Material()
-Material1939.ambientIntensity = 0
-Material1939.diffuseColor = [0.784313738,0,0]
-Material1939.shininess = 1
+Material1939.ambientIntensity = 0.0
+Material1939.diffuseColor = [.784313738,0,0]
+Material1939.shininess = 1.0
 
 Appearance1938.material = Material1939
 
@@ -8165,9 +8165,9 @@ Scene15.children.append(Shape1937)
 Shape1942 = x3d.Shape()
 Appearance1943 = x3d.Appearance()
 Material1944 = x3d.Material()
-Material1944.ambientIntensity = 0
-Material1944.diffuseColor = [0.784313738,0,0]
-Material1944.shininess = 1
+Material1944.ambientIntensity = 0.0
+Material1944.diffuseColor = [.784313738,0,0]
+Material1944.shininess = 1.0
 
 Appearance1943.material = Material1944
 
@@ -8186,9 +8186,9 @@ Scene15.children.append(Shape1942)
 Shape1947 = x3d.Shape()
 Appearance1948 = x3d.Appearance()
 Material1949 = x3d.Material()
-Material1949.ambientIntensity = 0
-Material1949.diffuseColor = [0.784313738,0,0]
-Material1949.shininess = 1
+Material1949.ambientIntensity = 0.0
+Material1949.diffuseColor = [.784313738,0,0]
+Material1949.shininess = 1.0
 
 Appearance1948.material = Material1949
 
@@ -8207,9 +8207,9 @@ Scene15.children.append(Shape1947)
 Shape1952 = x3d.Shape()
 Appearance1953 = x3d.Appearance()
 Material1954 = x3d.Material()
-Material1954.ambientIntensity = 0
-Material1954.diffuseColor = [0.784313738,0,0]
-Material1954.shininess = 1
+Material1954.ambientIntensity = 0.0
+Material1954.diffuseColor = [.784313738,0,0]
+Material1954.shininess = 1.0
 
 Appearance1953.material = Material1954
 
@@ -8228,9 +8228,9 @@ Scene15.children.append(Shape1952)
 Shape1957 = x3d.Shape()
 Appearance1958 = x3d.Appearance()
 Material1959 = x3d.Material()
-Material1959.ambientIntensity = 0
-Material1959.diffuseColor = [0.784313738,0,0]
-Material1959.shininess = 1
+Material1959.ambientIntensity = 0.0
+Material1959.diffuseColor = [.784313738,0,0]
+Material1959.shininess = 1.0
 
 Appearance1958.material = Material1959
 
@@ -8249,9 +8249,9 @@ Scene15.children.append(Shape1957)
 Shape1962 = x3d.Shape()
 Appearance1963 = x3d.Appearance()
 Material1964 = x3d.Material()
-Material1964.ambientIntensity = 0
-Material1964.diffuseColor = [0.784313738,0,0]
-Material1964.shininess = 1
+Material1964.ambientIntensity = 0.0
+Material1964.diffuseColor = [.784313738,0,0]
+Material1964.shininess = 1.0
 
 Appearance1963.material = Material1964
 
@@ -8270,9 +8270,9 @@ Scene15.children.append(Shape1962)
 Shape1967 = x3d.Shape()
 Appearance1968 = x3d.Appearance()
 Material1969 = x3d.Material()
-Material1969.ambientIntensity = 0
-Material1969.diffuseColor = [0.784313738,0,0]
-Material1969.shininess = 1
+Material1969.ambientIntensity = 0.0
+Material1969.diffuseColor = [.784313738,0,0]
+Material1969.shininess = 1.0
 
 Appearance1968.material = Material1969
 
@@ -8291,9 +8291,9 @@ Scene15.children.append(Shape1967)
 Shape1972 = x3d.Shape()
 Appearance1973 = x3d.Appearance()
 Material1974 = x3d.Material()
-Material1974.ambientIntensity = 0
-Material1974.diffuseColor = [0.784313738,0,0]
-Material1974.shininess = 1
+Material1974.ambientIntensity = 0.0
+Material1974.diffuseColor = [.784313738,0,0]
+Material1974.shininess = 1.0
 
 Appearance1973.material = Material1974
 
@@ -8312,9 +8312,9 @@ Scene15.children.append(Shape1972)
 Shape1977 = x3d.Shape()
 Appearance1978 = x3d.Appearance()
 Material1979 = x3d.Material()
-Material1979.ambientIntensity = 0
-Material1979.diffuseColor = [0.784313738,0,0]
-Material1979.shininess = 1
+Material1979.ambientIntensity = 0.0
+Material1979.diffuseColor = [.784313738,0,0]
+Material1979.shininess = 1.0
 
 Appearance1978.material = Material1979
 
@@ -8333,9 +8333,9 @@ Scene15.children.append(Shape1977)
 Shape1982 = x3d.Shape()
 Appearance1983 = x3d.Appearance()
 Material1984 = x3d.Material()
-Material1984.ambientIntensity = 0
-Material1984.diffuseColor = [0.784313738,0,0]
-Material1984.shininess = 1
+Material1984.ambientIntensity = 0.0
+Material1984.diffuseColor = [.784313738,0,0]
+Material1984.shininess = 1.0
 
 Appearance1983.material = Material1984
 
@@ -8354,9 +8354,9 @@ Scene15.children.append(Shape1982)
 Shape1987 = x3d.Shape()
 Appearance1988 = x3d.Appearance()
 Material1989 = x3d.Material()
-Material1989.ambientIntensity = 0
-Material1989.diffuseColor = [0.784313738,0,0]
-Material1989.shininess = 1
+Material1989.ambientIntensity = 0.0
+Material1989.diffuseColor = [.784313738,0,0]
+Material1989.shininess = 1.0
 
 Appearance1988.material = Material1989
 
@@ -8375,9 +8375,9 @@ Scene15.children.append(Shape1987)
 Shape1992 = x3d.Shape()
 Appearance1993 = x3d.Appearance()
 Material1994 = x3d.Material()
-Material1994.ambientIntensity = 0
-Material1994.diffuseColor = [0.784313738,0,0]
-Material1994.shininess = 1
+Material1994.ambientIntensity = 0.0
+Material1994.diffuseColor = [.784313738,0,0]
+Material1994.shininess = 1.0
 
 Appearance1993.material = Material1994
 
@@ -8396,9 +8396,9 @@ Scene15.children.append(Shape1992)
 Shape1997 = x3d.Shape()
 Appearance1998 = x3d.Appearance()
 Material1999 = x3d.Material()
-Material1999.ambientIntensity = 0
-Material1999.diffuseColor = [0.784313738,0,0]
-Material1999.shininess = 1
+Material1999.ambientIntensity = 0.0
+Material1999.diffuseColor = [.784313738,0,0]
+Material1999.shininess = 1.0
 
 Appearance1998.material = Material1999
 
@@ -8417,9 +8417,9 @@ Scene15.children.append(Shape1997)
 Shape2002 = x3d.Shape()
 Appearance2003 = x3d.Appearance()
 Material2004 = x3d.Material()
-Material2004.ambientIntensity = 0
-Material2004.diffuseColor = [0.784313738,0,0]
-Material2004.shininess = 1
+Material2004.ambientIntensity = 0.0
+Material2004.diffuseColor = [.784313738,0,0]
+Material2004.shininess = 1.0
 
 Appearance2003.material = Material2004
 
@@ -8438,9 +8438,9 @@ Scene15.children.append(Shape2002)
 Shape2007 = x3d.Shape()
 Appearance2008 = x3d.Appearance()
 Material2009 = x3d.Material()
-Material2009.ambientIntensity = 0
-Material2009.diffuseColor = [0.784313738,0,0]
-Material2009.shininess = 1
+Material2009.ambientIntensity = 0.0
+Material2009.diffuseColor = [.784313738,0,0]
+Material2009.shininess = 1.0
 
 Appearance2008.material = Material2009
 
@@ -8459,9 +8459,9 @@ Scene15.children.append(Shape2007)
 Shape2012 = x3d.Shape()
 Appearance2013 = x3d.Appearance()
 Material2014 = x3d.Material()
-Material2014.ambientIntensity = 0
-Material2014.diffuseColor = [0.784313738,0,0]
-Material2014.shininess = 1
+Material2014.ambientIntensity = 0.0
+Material2014.diffuseColor = [.784313738,0,0]
+Material2014.shininess = 1.0
 
 Appearance2013.material = Material2014
 
@@ -8480,9 +8480,9 @@ Scene15.children.append(Shape2012)
 Shape2017 = x3d.Shape()
 Appearance2018 = x3d.Appearance()
 Material2019 = x3d.Material()
-Material2019.ambientIntensity = 0
-Material2019.diffuseColor = [0.784313738,0,0]
-Material2019.shininess = 1
+Material2019.ambientIntensity = 0.0
+Material2019.diffuseColor = [.784313738,0,0]
+Material2019.shininess = 1.0
 
 Appearance2018.material = Material2019
 
@@ -8501,9 +8501,9 @@ Scene15.children.append(Shape2017)
 Shape2022 = x3d.Shape()
 Appearance2023 = x3d.Appearance()
 Material2024 = x3d.Material()
-Material2024.ambientIntensity = 0
-Material2024.diffuseColor = [0.784313738,0,0]
-Material2024.shininess = 1
+Material2024.ambientIntensity = 0.0
+Material2024.diffuseColor = [.784313738,0,0]
+Material2024.shininess = 1.0
 
 Appearance2023.material = Material2024
 
@@ -8522,9 +8522,9 @@ Scene15.children.append(Shape2022)
 Shape2027 = x3d.Shape()
 Appearance2028 = x3d.Appearance()
 Material2029 = x3d.Material()
-Material2029.ambientIntensity = 0
-Material2029.diffuseColor = [0.784313738,0,0]
-Material2029.shininess = 1
+Material2029.ambientIntensity = 0.0
+Material2029.diffuseColor = [.784313738,0,0]
+Material2029.shininess = 1.0
 
 Appearance2028.material = Material2029
 
@@ -8543,9 +8543,9 @@ Scene15.children.append(Shape2027)
 Shape2032 = x3d.Shape()
 Appearance2033 = x3d.Appearance()
 Material2034 = x3d.Material()
-Material2034.ambientIntensity = 0
-Material2034.diffuseColor = [0.784313738,0,0]
-Material2034.shininess = 1
+Material2034.ambientIntensity = 0.0
+Material2034.diffuseColor = [.784313738,0,0]
+Material2034.shininess = 1.0
 
 Appearance2033.material = Material2034
 
@@ -8564,9 +8564,9 @@ Scene15.children.append(Shape2032)
 Shape2037 = x3d.Shape()
 Appearance2038 = x3d.Appearance()
 Material2039 = x3d.Material()
-Material2039.ambientIntensity = 0
-Material2039.diffuseColor = [0.784313738,0,0]
-Material2039.shininess = 1
+Material2039.ambientIntensity = 0.0
+Material2039.diffuseColor = [.784313738,0,0]
+Material2039.shininess = 1.0
 
 Appearance2038.material = Material2039
 
@@ -8585,9 +8585,9 @@ Scene15.children.append(Shape2037)
 Shape2042 = x3d.Shape()
 Appearance2043 = x3d.Appearance()
 Material2044 = x3d.Material()
-Material2044.ambientIntensity = 0
-Material2044.diffuseColor = [0.784313738,0,0]
-Material2044.shininess = 1
+Material2044.ambientIntensity = 0.0
+Material2044.diffuseColor = [.784313738,0,0]
+Material2044.shininess = 1.0
 
 Appearance2043.material = Material2044
 
@@ -8606,9 +8606,9 @@ Scene15.children.append(Shape2042)
 Shape2047 = x3d.Shape()
 Appearance2048 = x3d.Appearance()
 Material2049 = x3d.Material()
-Material2049.ambientIntensity = 0
-Material2049.diffuseColor = [0.784313738,0,0]
-Material2049.shininess = 1
+Material2049.ambientIntensity = 0.0
+Material2049.diffuseColor = [.784313738,0,0]
+Material2049.shininess = 1.0
 
 Appearance2048.material = Material2049
 
@@ -8627,9 +8627,9 @@ Scene15.children.append(Shape2047)
 Shape2052 = x3d.Shape()
 Appearance2053 = x3d.Appearance()
 Material2054 = x3d.Material()
-Material2054.ambientIntensity = 0
-Material2054.diffuseColor = [0.784313738,0,0]
-Material2054.shininess = 1
+Material2054.ambientIntensity = 0.0
+Material2054.diffuseColor = [.784313738,0,0]
+Material2054.shininess = 1.0
 
 Appearance2053.material = Material2054
 
@@ -8648,9 +8648,9 @@ Scene15.children.append(Shape2052)
 Shape2057 = x3d.Shape()
 Appearance2058 = x3d.Appearance()
 Material2059 = x3d.Material()
-Material2059.ambientIntensity = 0
-Material2059.diffuseColor = [0.784313738,0,0]
-Material2059.shininess = 1
+Material2059.ambientIntensity = 0.0
+Material2059.diffuseColor = [.784313738,0,0]
+Material2059.shininess = 1.0
 
 Appearance2058.material = Material2059
 
@@ -8669,9 +8669,9 @@ Scene15.children.append(Shape2057)
 Shape2062 = x3d.Shape()
 Appearance2063 = x3d.Appearance()
 Material2064 = x3d.Material()
-Material2064.ambientIntensity = 0
-Material2064.diffuseColor = [0.784313738,0,0]
-Material2064.shininess = 1
+Material2064.ambientIntensity = 0.0
+Material2064.diffuseColor = [.784313738,0,0]
+Material2064.shininess = 1.0
 
 Appearance2063.material = Material2064
 
@@ -8690,9 +8690,9 @@ Scene15.children.append(Shape2062)
 Shape2067 = x3d.Shape()
 Appearance2068 = x3d.Appearance()
 Material2069 = x3d.Material()
-Material2069.ambientIntensity = 0
-Material2069.diffuseColor = [0.784313738,0,0]
-Material2069.shininess = 1
+Material2069.ambientIntensity = 0.0
+Material2069.diffuseColor = [.784313738,0,0]
+Material2069.shininess = 1.0
 
 Appearance2068.material = Material2069
 
@@ -8711,9 +8711,9 @@ Scene15.children.append(Shape2067)
 Shape2072 = x3d.Shape()
 Appearance2073 = x3d.Appearance()
 Material2074 = x3d.Material()
-Material2074.ambientIntensity = 0
-Material2074.diffuseColor = [0.784313738,0,0]
-Material2074.shininess = 1
+Material2074.ambientIntensity = 0.0
+Material2074.diffuseColor = [.784313738,0,0]
+Material2074.shininess = 1.0
 
 Appearance2073.material = Material2074
 
@@ -8732,9 +8732,9 @@ Scene15.children.append(Shape2072)
 Shape2077 = x3d.Shape()
 Appearance2078 = x3d.Appearance()
 Material2079 = x3d.Material()
-Material2079.ambientIntensity = 0
-Material2079.diffuseColor = [0.784313738,0,0]
-Material2079.shininess = 1
+Material2079.ambientIntensity = 0.0
+Material2079.diffuseColor = [.784313738,0,0]
+Material2079.shininess = 1.0
 
 Appearance2078.material = Material2079
 
@@ -8753,9 +8753,9 @@ Scene15.children.append(Shape2077)
 Shape2082 = x3d.Shape()
 Appearance2083 = x3d.Appearance()
 Material2084 = x3d.Material()
-Material2084.ambientIntensity = 0
-Material2084.diffuseColor = [0.784313738,0,0]
-Material2084.shininess = 1
+Material2084.ambientIntensity = 0.0
+Material2084.diffuseColor = [.784313738,0,0]
+Material2084.shininess = 1.0
 
 Appearance2083.material = Material2084
 
@@ -8774,9 +8774,9 @@ Scene15.children.append(Shape2082)
 Shape2087 = x3d.Shape()
 Appearance2088 = x3d.Appearance()
 Material2089 = x3d.Material()
-Material2089.ambientIntensity = 0
-Material2089.diffuseColor = [0.784313738,0,0]
-Material2089.shininess = 1
+Material2089.ambientIntensity = 0.0
+Material2089.diffuseColor = [.784313738,0,0]
+Material2089.shininess = 1.0
 
 Appearance2088.material = Material2089
 
@@ -8795,9 +8795,9 @@ Scene15.children.append(Shape2087)
 Shape2092 = x3d.Shape()
 Appearance2093 = x3d.Appearance()
 Material2094 = x3d.Material()
-Material2094.ambientIntensity = 0
-Material2094.diffuseColor = [0.784313738,0,0]
-Material2094.shininess = 1
+Material2094.ambientIntensity = 0.0
+Material2094.diffuseColor = [.784313738,0,0]
+Material2094.shininess = 1.0
 
 Appearance2093.material = Material2094
 
@@ -8816,9 +8816,9 @@ Scene15.children.append(Shape2092)
 Shape2097 = x3d.Shape()
 Appearance2098 = x3d.Appearance()
 Material2099 = x3d.Material()
-Material2099.ambientIntensity = 0
-Material2099.diffuseColor = [0.784313738,0,0]
-Material2099.shininess = 1
+Material2099.ambientIntensity = 0.0
+Material2099.diffuseColor = [.784313738,0,0]
+Material2099.shininess = 1.0
 
 Appearance2098.material = Material2099
 
@@ -8837,9 +8837,9 @@ Scene15.children.append(Shape2097)
 Shape2102 = x3d.Shape()
 Appearance2103 = x3d.Appearance()
 Material2104 = x3d.Material()
-Material2104.ambientIntensity = 0
-Material2104.diffuseColor = [0.784313738,0,0]
-Material2104.shininess = 1
+Material2104.ambientIntensity = 0.0
+Material2104.diffuseColor = [.784313738,0,0]
+Material2104.shininess = 1.0
 
 Appearance2103.material = Material2104
 
@@ -8858,9 +8858,9 @@ Scene15.children.append(Shape2102)
 Shape2107 = x3d.Shape()
 Appearance2108 = x3d.Appearance()
 Material2109 = x3d.Material()
-Material2109.ambientIntensity = 0
-Material2109.diffuseColor = [0.784313738,0,0]
-Material2109.shininess = 1
+Material2109.ambientIntensity = 0.0
+Material2109.diffuseColor = [.784313738,0,0]
+Material2109.shininess = 1.0
 
 Appearance2108.material = Material2109
 
@@ -8879,9 +8879,9 @@ Scene15.children.append(Shape2107)
 Shape2112 = x3d.Shape()
 Appearance2113 = x3d.Appearance()
 Material2114 = x3d.Material()
-Material2114.ambientIntensity = 0
-Material2114.diffuseColor = [0.784313738,0,0]
-Material2114.shininess = 1
+Material2114.ambientIntensity = 0.0
+Material2114.diffuseColor = [.784313738,0,0]
+Material2114.shininess = 1.0
 
 Appearance2113.material = Material2114
 
@@ -8900,9 +8900,9 @@ Scene15.children.append(Shape2112)
 Shape2117 = x3d.Shape()
 Appearance2118 = x3d.Appearance()
 Material2119 = x3d.Material()
-Material2119.ambientIntensity = 0
-Material2119.diffuseColor = [0.784313738,0,0]
-Material2119.shininess = 1
+Material2119.ambientIntensity = 0.0
+Material2119.diffuseColor = [.784313738,0,0]
+Material2119.shininess = 1.0
 
 Appearance2118.material = Material2119
 
@@ -8921,9 +8921,9 @@ Scene15.children.append(Shape2117)
 Shape2122 = x3d.Shape()
 Appearance2123 = x3d.Appearance()
 Material2124 = x3d.Material()
-Material2124.ambientIntensity = 0
-Material2124.diffuseColor = [0.784313738,0,0]
-Material2124.shininess = 1
+Material2124.ambientIntensity = 0.0
+Material2124.diffuseColor = [.784313738,0,0]
+Material2124.shininess = 1.0
 
 Appearance2123.material = Material2124
 
@@ -8942,9 +8942,9 @@ Scene15.children.append(Shape2122)
 Shape2127 = x3d.Shape()
 Appearance2128 = x3d.Appearance()
 Material2129 = x3d.Material()
-Material2129.ambientIntensity = 0
-Material2129.diffuseColor = [0.784313738,0,0]
-Material2129.shininess = 1
+Material2129.ambientIntensity = 0.0
+Material2129.diffuseColor = [.784313738,0,0]
+Material2129.shininess = 1.0
 
 Appearance2128.material = Material2129
 
@@ -8963,9 +8963,9 @@ Scene15.children.append(Shape2127)
 Shape2132 = x3d.Shape()
 Appearance2133 = x3d.Appearance()
 Material2134 = x3d.Material()
-Material2134.ambientIntensity = 0
-Material2134.diffuseColor = [0.784313738,0,0]
-Material2134.shininess = 1
+Material2134.ambientIntensity = 0.0
+Material2134.diffuseColor = [.784313738,0,0]
+Material2134.shininess = 1.0
 
 Appearance2133.material = Material2134
 
@@ -8984,9 +8984,9 @@ Scene15.children.append(Shape2132)
 Shape2137 = x3d.Shape()
 Appearance2138 = x3d.Appearance()
 Material2139 = x3d.Material()
-Material2139.ambientIntensity = 0
-Material2139.diffuseColor = [0.784313738,0,0]
-Material2139.shininess = 1
+Material2139.ambientIntensity = 0.0
+Material2139.diffuseColor = [.784313738,0,0]
+Material2139.shininess = 1.0
 
 Appearance2138.material = Material2139
 
@@ -9005,9 +9005,9 @@ Scene15.children.append(Shape2137)
 Shape2142 = x3d.Shape()
 Appearance2143 = x3d.Appearance()
 Material2144 = x3d.Material()
-Material2144.ambientIntensity = 0
-Material2144.diffuseColor = [0.784313738,0,0]
-Material2144.shininess = 1
+Material2144.ambientIntensity = 0.0
+Material2144.diffuseColor = [.784313738,0,0]
+Material2144.shininess = 1.0
 
 Appearance2143.material = Material2144
 
@@ -9026,9 +9026,9 @@ Scene15.children.append(Shape2142)
 Shape2147 = x3d.Shape()
 Appearance2148 = x3d.Appearance()
 Material2149 = x3d.Material()
-Material2149.ambientIntensity = 0
-Material2149.diffuseColor = [0.784313738,0,0]
-Material2149.shininess = 1
+Material2149.ambientIntensity = 0.0
+Material2149.diffuseColor = [.784313738,0,0]
+Material2149.shininess = 1.0
 
 Appearance2148.material = Material2149
 
@@ -9047,9 +9047,9 @@ Scene15.children.append(Shape2147)
 Shape2152 = x3d.Shape()
 Appearance2153 = x3d.Appearance()
 Material2154 = x3d.Material()
-Material2154.ambientIntensity = 0
-Material2154.diffuseColor = [0.784313738,0,0]
-Material2154.shininess = 1
+Material2154.ambientIntensity = 0.0
+Material2154.diffuseColor = [.784313738,0,0]
+Material2154.shininess = 1.0
 
 Appearance2153.material = Material2154
 
@@ -9068,9 +9068,9 @@ Scene15.children.append(Shape2152)
 Shape2157 = x3d.Shape()
 Appearance2158 = x3d.Appearance()
 Material2159 = x3d.Material()
-Material2159.ambientIntensity = 0
-Material2159.diffuseColor = [0.784313738,0,0]
-Material2159.shininess = 1
+Material2159.ambientIntensity = 0.0
+Material2159.diffuseColor = [.784313738,0,0]
+Material2159.shininess = 1.0
 
 Appearance2158.material = Material2159
 
@@ -9089,9 +9089,9 @@ Scene15.children.append(Shape2157)
 Shape2162 = x3d.Shape()
 Appearance2163 = x3d.Appearance()
 Material2164 = x3d.Material()
-Material2164.ambientIntensity = 0
-Material2164.diffuseColor = [0.784313738,0,0]
-Material2164.shininess = 1
+Material2164.ambientIntensity = 0.0
+Material2164.diffuseColor = [.784313738,0,0]
+Material2164.shininess = 1.0
 
 Appearance2163.material = Material2164
 
@@ -9110,9 +9110,9 @@ Scene15.children.append(Shape2162)
 Shape2167 = x3d.Shape()
 Appearance2168 = x3d.Appearance()
 Material2169 = x3d.Material()
-Material2169.ambientIntensity = 0
-Material2169.diffuseColor = [0.784313738,0,0]
-Material2169.shininess = 1
+Material2169.ambientIntensity = 0.0
+Material2169.diffuseColor = [.784313738,0,0]
+Material2169.shininess = 1.0
 
 Appearance2168.material = Material2169
 
@@ -9131,9 +9131,9 @@ Scene15.children.append(Shape2167)
 Shape2172 = x3d.Shape()
 Appearance2173 = x3d.Appearance()
 Material2174 = x3d.Material()
-Material2174.ambientIntensity = 0
-Material2174.diffuseColor = [0.784313738,0,0]
-Material2174.shininess = 1
+Material2174.ambientIntensity = 0.0
+Material2174.diffuseColor = [.784313738,0,0]
+Material2174.shininess = 1.0
 
 Appearance2173.material = Material2174
 
@@ -9152,9 +9152,9 @@ Scene15.children.append(Shape2172)
 Shape2177 = x3d.Shape()
 Appearance2178 = x3d.Appearance()
 Material2179 = x3d.Material()
-Material2179.ambientIntensity = 0
-Material2179.diffuseColor = [0.784313738,0,0]
-Material2179.shininess = 1
+Material2179.ambientIntensity = 0.0
+Material2179.diffuseColor = [.784313738,0,0]
+Material2179.shininess = 1.0
 
 Appearance2178.material = Material2179
 
@@ -9173,9 +9173,9 @@ Scene15.children.append(Shape2177)
 Shape2182 = x3d.Shape()
 Appearance2183 = x3d.Appearance()
 Material2184 = x3d.Material()
-Material2184.ambientIntensity = 0
-Material2184.diffuseColor = [0.784313738,0,0]
-Material2184.shininess = 1
+Material2184.ambientIntensity = 0.0
+Material2184.diffuseColor = [.784313738,0,0]
+Material2184.shininess = 1.0
 
 Appearance2183.material = Material2184
 
@@ -9194,9 +9194,9 @@ Scene15.children.append(Shape2182)
 Shape2187 = x3d.Shape()
 Appearance2188 = x3d.Appearance()
 Material2189 = x3d.Material()
-Material2189.ambientIntensity = 0
-Material2189.diffuseColor = [0.784313738,0,0]
-Material2189.shininess = 1
+Material2189.ambientIntensity = 0.0
+Material2189.diffuseColor = [.784313738,0,0]
+Material2189.shininess = 1.0
 
 Appearance2188.material = Material2189
 
@@ -9215,9 +9215,9 @@ Scene15.children.append(Shape2187)
 Shape2192 = x3d.Shape()
 Appearance2193 = x3d.Appearance()
 Material2194 = x3d.Material()
-Material2194.ambientIntensity = 0
-Material2194.diffuseColor = [0.784313738,0,0]
-Material2194.shininess = 1
+Material2194.ambientIntensity = 0.0
+Material2194.diffuseColor = [.784313738,0,0]
+Material2194.shininess = 1.0
 
 Appearance2193.material = Material2194
 
@@ -9236,9 +9236,9 @@ Scene15.children.append(Shape2192)
 Shape2197 = x3d.Shape()
 Appearance2198 = x3d.Appearance()
 Material2199 = x3d.Material()
-Material2199.ambientIntensity = 0
-Material2199.diffuseColor = [0.784313738,0,0]
-Material2199.shininess = 1
+Material2199.ambientIntensity = 0.0
+Material2199.diffuseColor = [.784313738,0,0]
+Material2199.shininess = 1.0
 
 Appearance2198.material = Material2199
 
@@ -9257,9 +9257,9 @@ Scene15.children.append(Shape2197)
 Shape2202 = x3d.Shape()
 Appearance2203 = x3d.Appearance()
 Material2204 = x3d.Material()
-Material2204.ambientIntensity = 0
-Material2204.diffuseColor = [0.784313738,0,0]
-Material2204.shininess = 1
+Material2204.ambientIntensity = 0.0
+Material2204.diffuseColor = [.784313738,0,0]
+Material2204.shininess = 1.0
 
 Appearance2203.material = Material2204
 
@@ -9278,9 +9278,9 @@ Scene15.children.append(Shape2202)
 Shape2207 = x3d.Shape()
 Appearance2208 = x3d.Appearance()
 Material2209 = x3d.Material()
-Material2209.ambientIntensity = 0
-Material2209.diffuseColor = [0.784313738,0,0]
-Material2209.shininess = 1
+Material2209.ambientIntensity = 0.0
+Material2209.diffuseColor = [.784313738,0,0]
+Material2209.shininess = 1.0
 
 Appearance2208.material = Material2209
 
@@ -9299,9 +9299,9 @@ Scene15.children.append(Shape2207)
 Shape2212 = x3d.Shape()
 Appearance2213 = x3d.Appearance()
 Material2214 = x3d.Material()
-Material2214.ambientIntensity = 0
-Material2214.diffuseColor = [0.784313738,0,0]
-Material2214.shininess = 1
+Material2214.ambientIntensity = 0.0
+Material2214.diffuseColor = [.784313738,0,0]
+Material2214.shininess = 1.0
 
 Appearance2213.material = Material2214
 
@@ -9320,9 +9320,9 @@ Scene15.children.append(Shape2212)
 Shape2217 = x3d.Shape()
 Appearance2218 = x3d.Appearance()
 Material2219 = x3d.Material()
-Material2219.ambientIntensity = 0
-Material2219.diffuseColor = [0.784313738,0,0]
-Material2219.shininess = 1
+Material2219.ambientIntensity = 0.0
+Material2219.diffuseColor = [.784313738,0,0]
+Material2219.shininess = 1.0
 
 Appearance2218.material = Material2219
 
@@ -9341,9 +9341,9 @@ Scene15.children.append(Shape2217)
 Shape2222 = x3d.Shape()
 Appearance2223 = x3d.Appearance()
 Material2224 = x3d.Material()
-Material2224.ambientIntensity = 0
-Material2224.diffuseColor = [0.784313738,0,0]
-Material2224.shininess = 1
+Material2224.ambientIntensity = 0.0
+Material2224.diffuseColor = [.784313738,0,0]
+Material2224.shininess = 1.0
 
 Appearance2223.material = Material2224
 
@@ -9361,6 +9361,6 @@ Shape2222.geometry = IndexedFaceSet2225
 Scene15.children.append(Shape2222)
 
 X3D0.Scene = Scene15
-f = open("././Pathway_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Pathway_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

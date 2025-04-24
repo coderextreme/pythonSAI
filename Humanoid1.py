@@ -6,13 +6,13 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "HAnim"
 component2.level = 1
+component2.name = "HAnim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "JohnBoy.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
@@ -36,28 +36,29 @@ meta7.content = "14 Jan 2023"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "creator"
 meta8.content = "John Carlson"
+meta8.name = "creator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "created"
 meta9.content = "9 November 2020"
+meta9.name = "created"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "../license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 
 X3D0.head = head1
 Scene11 = x3d.Scene()
 Transform12 = x3d.Transform()
-#DEF for markerfor XYZ axes
+Transform12.scale = [1,1,1]
+""" DEF for markerfor XYZ axes """
 Shape13 = x3d.Shape()
 Shape13.DEF = "AxisLinesShape"
-#RGB lines showing XYZ axes
+""" RGB lines showing XYZ axes """
 IndexedLineSet14 = x3d.IndexedLineSet()
 IndexedLineSet14.colorIndex = [0,1,2]
 IndexedLineSet14.colorPerVertex = False
@@ -75,10 +76,13 @@ Transform12.children.append(Shape13)
 
 Scene11.children.append(Transform12)
 Group17 = x3d.Group()
-#DEFS for markers of skeleton joints, segments, and sites
+""" DEFS for markers of skeleton joints, segments, and sites """
 Transform18 = x3d.Transform()
+Transform18.translation = [0,0,0]
+Transform18.scale = [1,1,1]
 Transform19 = x3d.Transform()
 Transform19.translation = [0,2,0]
+Transform19.scale = [1,1,1]
 Shape20 = x3d.Shape()
 Shape20.DEF = "HAnimRootShape"
 Sphere21 = x3d.Sphere()
@@ -100,6 +104,7 @@ Transform19.children.append(Shape20)
 Transform18.children.append(Transform19)
 Transform24 = x3d.Transform()
 Transform24.translation = [0,2.1,0]
+Transform24.scale = [1,1,1]
 Shape25 = x3d.Shape()
 Shape25.DEF = "HAnimJointShape"
 Sphere26 = x3d.Sphere()
@@ -121,6 +126,7 @@ Transform24.children.append(Shape25)
 Transform18.children.append(Transform24)
 Transform29 = x3d.Transform()
 Transform29.translation = [0,2.05,0]
+Transform29.scale = [1,1,1]
 Shape30 = x3d.Shape()
 Shape30.DEF = "HAnimSegmentLine"
 LineSet31 = x3d.LineSet()
@@ -140,6 +146,7 @@ Transform29.children.append(Shape30)
 Transform18.children.append(Transform29)
 Transform34 = x3d.Transform()
 Transform34.translation = [0,2.1,0]
+Transform34.scale = [1,1,1]
 Shape35 = x3d.Shape()
 Shape35.DEF = "HAnimSiteShape"
 IndexedFaceSet36 = x3d.IndexedFaceSet()
@@ -174,19 +181,22 @@ Group17.children.append(Transform18)
 Scene11.children.append(Group17)
 NavigationInfo41 = x3d.NavigationInfo()
 NavigationInfo41.speed = 1.5
+NavigationInfo41.type = ["EXAMINE","ANY"]
 
 Scene11.children.append(NavigationInfo41)
 Viewpoint42 = x3d.Viewpoint()
+Viewpoint42.centerOfRotation = [0,0,0]
 Viewpoint42.description = "default"
 
 Scene11.children.append(Viewpoint42)
 HAnimHumanoid43 = x3d.HAnimHumanoid()
-HAnimHumanoid43.name = "HAnim"
 HAnimHumanoid43.DEF = "hanim_HAnim"
 HAnimHumanoid43.info = ["humanoidVersion=2.0"]
+HAnimHumanoid43.name = "HAnim"
+HAnimHumanoid43.scale = [1,1,1]
+HAnimHumanoid43.translation = [0,0,0]
 HAnimHumanoid43.version = "2.0"
-#<LOD containerField='skin'> (Switch whichChoice='0' and LOD parents each already work in view3dscene)
-#</LOD>
+""" <LOD containerField='skin'> (Switch whichChoice='0' and LOD parents each already work in view3dscene) """
 Shape44 = x3d.Shape()
 Shape44.DEF = "SkinShape"
 IndexedFaceSet45 = x3d.IndexedFaceSet()
@@ -221,23 +231,22 @@ Appearance48.material = Material50
 Shape44.appearance = Appearance48
 
 HAnimHumanoid43.skin.append(Shape44)
+""" </LOD> """
 Coordinate51 = x3d.Coordinate()
 Coordinate51.USE = "TheSkinCoord"
 
 HAnimHumanoid43.skinCoord = Coordinate51
 HAnimJoint52 = x3d.HAnimJoint()
-HAnimJoint52.name = "humanoid_root"
 HAnimJoint52.DEF = "hanim_humanoid_root"
-HAnimJoint52.center = [0,0.824,0.0277]
-HAnimJoint52.ulimit = [0,0,0]
-HAnimJoint52.llimit = [0,0,0]
+HAnimJoint52.name = "humanoid_root"
+HAnimJoint52.center = [0.0000,0.8240,0.0277]
 HAnimSegment53 = x3d.HAnimSegment()
-HAnimSegment53.name = "sacrum"
 HAnimSegment53.DEF = "hanim_sacrum"
+HAnimSegment53.name = "sacrum"
 Transform54 = x3d.Transform()
-Transform54.translation = [0,0.824,0.0277]
+Transform54.translation = [0.0000,0.8240,0.0277]
 Transform55 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape56 = x3d.Shape()
 Shape56.USE = "HAnimJointShape"
 
@@ -252,7 +261,7 @@ LineSet58.vertexCount = [2]
 Coordinate59 = x3d.Coordinate()
 
 LineSet58.coord = Coordinate59
-#from humanoid_root to sacroiliac vertices 2
+""" from humanoid_root to sacroiliac vertices 2"""
 ColorRGBA60 = x3d.ColorRGBA()
 ColorRGBA60.USE = "HAnimSegmentLineColorRGBA"
 
@@ -262,8 +271,8 @@ Shape57.geometry = LineSet58
 
 HAnimSegment53.children.append(Shape57)
 HAnimSite61 = x3d.HAnimSite()
-HAnimSite61.name = "buttocks_standing_wall_contact_point_pt"
 HAnimSite61.DEF = "hanim_buttocks_standing_wall_contact_point_pt"
+HAnimSite61.name = "buttocks_standing_wall_contact_point_pt"
 TouchSensor62 = x3d.TouchSensor()
 TouchSensor62.description = "HAnimSite buttocks_standing_wall_contact_point_pt"
 
@@ -275,8 +284,8 @@ HAnimSite61.children.append(Shape63)
 
 HAnimSegment53.children.append(HAnimSite61)
 HAnimSite64 = x3d.HAnimSite()
-HAnimSite64.name = "crotch_pt"
 HAnimSite64.DEF = "hanim_crotch_pt"
+HAnimSite64.name = "crotch_pt"
 HAnimSite64.translation = [0.0034,0.8266,0.0257]
 TouchSensor65 = x3d.TouchSensor()
 TouchSensor65.description = "HAnimSite crotch_pt"
@@ -289,8 +298,8 @@ HAnimSite64.children.append(Shape66)
 
 HAnimSegment53.children.append(HAnimSite64)
 HAnimSite67 = x3d.HAnimSite()
-HAnimSite67.name = "l_asis_pt"
 HAnimSite67.DEF = "hanim_l_asis_pt"
+HAnimSite67.name = "l_asis_pt"
 HAnimSite67.translation = [0.0925,0.9983,0.1052]
 TouchSensor68 = x3d.TouchSensor()
 TouchSensor68.description = "HAnimSite l_asis_pt"
@@ -303,8 +312,8 @@ HAnimSite67.children.append(Shape69)
 
 HAnimSegment53.children.append(HAnimSite67)
 HAnimSite70 = x3d.HAnimSite()
-HAnimSite70.name = "l_iliocristale_pt"
 HAnimSite70.DEF = "hanim_l_iliocristale_pt"
+HAnimSite70.name = "l_iliocristale_pt"
 HAnimSite70.translation = [0.1612,1.0537,0.0008]
 TouchSensor71 = x3d.TouchSensor()
 TouchSensor71.description = "HAnimSite l_iliocristale_pt"
@@ -317,9 +326,9 @@ HAnimSite70.children.append(Shape72)
 
 HAnimSegment53.children.append(HAnimSite70)
 HAnimSite73 = x3d.HAnimSite()
-HAnimSite73.name = "l_psis_pt"
 HAnimSite73.DEF = "hanim_l_psis_pt"
-HAnimSite73.translation = [0.0774,1.019,-0.1151]
+HAnimSite73.name = "l_psis_pt"
+HAnimSite73.translation = [0.0774,1.0190,-0.1151]
 TouchSensor74 = x3d.TouchSensor()
 TouchSensor74.description = "HAnimSite l_psis_pt"
 
@@ -331,8 +340,8 @@ HAnimSite73.children.append(Shape75)
 
 HAnimSegment53.children.append(HAnimSite73)
 HAnimSite76 = x3d.HAnimSite()
-HAnimSite76.name = "l_trochanterion_pt"
 HAnimSite76.DEF = "hanim_l_trochanterion_pt"
+HAnimSite76.name = "l_trochanterion_pt"
 HAnimSite76.translation = [0.1677,0.8336,0.0303]
 TouchSensor77 = x3d.TouchSensor()
 TouchSensor77.description = "HAnimSite l_trochanterion_pt"
@@ -345,8 +354,8 @@ HAnimSite76.children.append(Shape78)
 
 HAnimSegment53.children.append(HAnimSite76)
 HAnimSite79 = x3d.HAnimSite()
-HAnimSite79.name = "r_asis_pt"
 HAnimSite79.DEF = "hanim_r_asis_pt"
+HAnimSite79.name = "r_asis_pt"
 HAnimSite79.translation = [-0.0887,1.0021,0.1112]
 TouchSensor80 = x3d.TouchSensor()
 TouchSensor80.description = "HAnimSite r_asis_pt"
@@ -359,8 +368,8 @@ HAnimSite79.children.append(Shape81)
 
 HAnimSegment53.children.append(HAnimSite79)
 HAnimSite82 = x3d.HAnimSite()
-HAnimSite82.name = "r_iliocristale_pt"
 HAnimSite82.DEF = "hanim_r_iliocristale_pt"
+HAnimSite82.name = "r_iliocristale_pt"
 HAnimSite82.translation = [-0.1525,1.0628,0.0035]
 TouchSensor83 = x3d.TouchSensor()
 TouchSensor83.description = "HAnimSite r_iliocristale_pt"
@@ -373,9 +382,9 @@ HAnimSite82.children.append(Shape84)
 
 HAnimSegment53.children.append(HAnimSite82)
 HAnimSite85 = x3d.HAnimSite()
-HAnimSite85.name = "r_psis_pt"
 HAnimSite85.DEF = "hanim_r_psis_pt"
-HAnimSite85.translation = [-0.0716,1.019,-0.1138]
+HAnimSite85.name = "r_psis_pt"
+HAnimSite85.translation = [-0.0716,1.0190,-0.1138]
 TouchSensor86 = x3d.TouchSensor()
 TouchSensor86.description = "HAnimSite r_psis_pt"
 
@@ -387,8 +396,8 @@ HAnimSite85.children.append(Shape87)
 
 HAnimSegment53.children.append(HAnimSite85)
 HAnimSite88 = x3d.HAnimSite()
-HAnimSite88.name = "r_trochanterion_pt"
 HAnimSite88.DEF = "hanim_r_trochanterion_pt"
+HAnimSite88.name = "r_trochanterion_pt"
 HAnimSite88.translation = [-0.1689,0.8419,0.0352]
 TouchSensor89 = x3d.TouchSensor()
 TouchSensor89.description = "HAnimSite r_trochanterion_pt"
@@ -406,7 +415,7 @@ LineSet92.vertexCount = [2]
 Coordinate93 = x3d.Coordinate()
 
 LineSet92.coord = Coordinate93
-#from humanoid_root to vl5 vertices 2
+""" from humanoid_root to vl5 vertices 2"""
 ColorRGBA94 = x3d.ColorRGBA()
 ColorRGBA94.USE = "HAnimSegmentLineColorRGBA"
 
@@ -416,8 +425,8 @@ Shape91.geometry = LineSet92
 
 HAnimSegment53.children.append(Shape91)
 HAnimSite95 = x3d.HAnimSite()
-HAnimSite95.name = "navel_pt"
 HAnimSite95.DEF = "hanim_navel_pt"
+HAnimSite95.name = "navel_pt"
 HAnimSite95.translation = [0.0069,1.0966,0.1017]
 TouchSensor96 = x3d.TouchSensor()
 TouchSensor96.description = "HAnimSite navel_pt"
@@ -430,8 +439,8 @@ HAnimSite95.children.append(Shape97)
 
 HAnimSegment53.children.append(HAnimSite95)
 HAnimSite98 = x3d.HAnimSite()
-HAnimSite98.name = "waist_preferred_anterior_pt"
 HAnimSite98.DEF = "hanim_waist_preferred_anterior_pt"
+HAnimSite98.name = "waist_preferred_anterior_pt"
 TouchSensor99 = x3d.TouchSensor()
 TouchSensor99.description = "HAnimSite waist_preferred_anterior_pt"
 
@@ -443,9 +452,9 @@ HAnimSite98.children.append(Shape100)
 
 HAnimSegment53.children.append(HAnimSite98)
 HAnimSite101 = x3d.HAnimSite()
-HAnimSite101.name = "waist_preferred_posterior_pt"
 HAnimSite101.DEF = "hanim_waist_preferred_posterior_pt"
-HAnimSite101.translation = [0.29,1.0915,-0.1091]
+HAnimSite101.name = "waist_preferred_posterior_pt"
+HAnimSite101.translation = [0.2900,1.0915,-0.1091]
 TouchSensor102 = x3d.TouchSensor()
 TouchSensor102.description = "HAnimSite waist_preferred_posterior_pt"
 
@@ -459,18 +468,16 @@ HAnimSegment53.children.append(HAnimSite101)
 
 HAnimJoint52.children.append(HAnimSegment53)
 HAnimJoint104 = x3d.HAnimJoint()
-HAnimJoint104.name = "sacroiliac"
 HAnimJoint104.DEF = "hanim_sacroiliac"
-HAnimJoint104.center = [0,0.9149,0.0016]
-HAnimJoint104.ulimit = [0,0,0]
-HAnimJoint104.llimit = [0,0,0]
+HAnimJoint104.name = "sacroiliac"
+HAnimJoint104.center = [0.0000,0.9149,0.0016]
 HAnimSegment105 = x3d.HAnimSegment()
-HAnimSegment105.name = "pelvis"
 HAnimSegment105.DEF = "hanim_pelvis"
+HAnimSegment105.name = "pelvis"
 Transform106 = x3d.Transform()
-Transform106.translation = [0,0.9149,0.0016]
+Transform106.translation = [0.0000,0.9149,0.0016]
 Transform107 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape108 = x3d.Shape()
 Shape108.USE = "HAnimJointShape"
 
@@ -485,7 +492,7 @@ LineSet110.vertexCount = [2]
 Coordinate111 = x3d.Coordinate()
 
 LineSet110.coord = Coordinate111
-#from sacroiliac to l_hip vertices 2
+""" from sacroiliac to l_hip vertices 2"""
 ColorRGBA112 = x3d.ColorRGBA()
 ColorRGBA112.USE = "HAnimSegmentLineColorRGBA"
 
@@ -495,8 +502,8 @@ Shape109.geometry = LineSet110
 
 HAnimSegment105.children.append(Shape109)
 HAnimSite113 = x3d.HAnimSite()
-HAnimSite113.name = "l_femoral_lateral_epicondyles_pt"
 HAnimSite113.DEF = "hanim_l_femoral_lateral_epicondyles_pt"
+HAnimSite113.name = "l_femoral_lateral_epicondyles_pt"
 HAnimSite113.translation = [0.1598,0.4967,0.0297]
 TouchSensor114 = x3d.TouchSensor()
 TouchSensor114.description = "HAnimSite l_femoral_lateral_epicondyles_pt"
@@ -509,8 +516,8 @@ HAnimSite113.children.append(Shape115)
 
 HAnimSegment105.children.append(HAnimSite113)
 HAnimSite116 = x3d.HAnimSite()
-HAnimSite116.name = "l_femoral_medial_epicondyles_pt"
 HAnimSite116.DEF = "hanim_l_femoral_medial_epicondyles_pt"
+HAnimSite116.name = "l_femoral_medial_epicondyles_pt"
 HAnimSite116.translation = [0.0398,0.4946,0.0303]
 TouchSensor117 = x3d.TouchSensor()
 TouchSensor117.description = "HAnimSite l_femoral_medial_epicondyles_pt"
@@ -523,8 +530,8 @@ HAnimSite116.children.append(Shape118)
 
 HAnimSegment105.children.append(HAnimSite116)
 HAnimSite119 = x3d.HAnimSite()
-HAnimSite119.name = "l_knee_crease_pt"
 HAnimSite119.DEF = "hanim_l_knee_crease_pt"
+HAnimSite119.name = "l_knee_crease_pt"
 HAnimSite119.translation = [0.0993,0.4881,-0.0309]
 TouchSensor120 = x3d.TouchSensor()
 TouchSensor120.description = "HAnimSite l_knee_crease_pt"
@@ -537,8 +544,8 @@ HAnimSite119.children.append(Shape121)
 
 HAnimSegment105.children.append(HAnimSite119)
 HAnimSite122 = x3d.HAnimSite()
-HAnimSite122.name = "l_suprapatella_pt"
 HAnimSite122.DEF = "hanim_l_suprapatella_pt"
+HAnimSite122.name = "l_suprapatella_pt"
 TouchSensor123 = x3d.TouchSensor()
 TouchSensor123.description = "HAnimSite l_suprapatella_pt"
 
@@ -555,7 +562,7 @@ LineSet126.vertexCount = [2]
 Coordinate127 = x3d.Coordinate()
 
 LineSet126.coord = Coordinate127
-#from sacroiliac to r_hip vertices 2
+""" from sacroiliac to r_hip vertices 2"""
 ColorRGBA128 = x3d.ColorRGBA()
 ColorRGBA128.USE = "HAnimSegmentLineColorRGBA"
 
@@ -565,9 +572,9 @@ Shape125.geometry = LineSet126
 
 HAnimSegment105.children.append(Shape125)
 HAnimSite129 = x3d.HAnimSite()
-HAnimSite129.name = "r_femoral_lateral_epicondyles_pt"
 HAnimSite129.DEF = "hanim_r_femoral_lateral_epicondyles_pt"
-HAnimSite129.translation = [-0.1421,0.4992,0.031]
+HAnimSite129.name = "r_femoral_lateral_epicondyles_pt"
+HAnimSite129.translation = [-0.1421,0.4992,0.0310]
 TouchSensor130 = x3d.TouchSensor()
 TouchSensor130.description = "HAnimSite r_femoral_lateral_epicondyles_pt"
 
@@ -579,8 +586,8 @@ HAnimSite129.children.append(Shape131)
 
 HAnimSegment105.children.append(HAnimSite129)
 HAnimSite132 = x3d.HAnimSite()
-HAnimSite132.name = "r_femoral_medial_epicondyles_pt"
 HAnimSite132.DEF = "hanim_r_femoral_medial_epicondyles_pt"
+HAnimSite132.name = "r_femoral_medial_epicondyles_pt"
 HAnimSite132.translation = [-0.0221,0.5014,0.0289]
 TouchSensor133 = x3d.TouchSensor()
 TouchSensor133.description = "HAnimSite r_femoral_medial_epicondyles_pt"
@@ -593,8 +600,8 @@ HAnimSite132.children.append(Shape134)
 
 HAnimSegment105.children.append(HAnimSite132)
 HAnimSite135 = x3d.HAnimSite()
-HAnimSite135.name = "r_knee_crease_pt"
 HAnimSite135.DEF = "hanim_r_knee_crease_pt"
+HAnimSite135.name = "r_knee_crease_pt"
 HAnimSite135.translation = [-0.0825,0.4932,-0.0326]
 TouchSensor136 = x3d.TouchSensor()
 TouchSensor136.description = "HAnimSite r_knee_crease_pt"
@@ -607,8 +614,8 @@ HAnimSite135.children.append(Shape137)
 
 HAnimSegment105.children.append(HAnimSite135)
 HAnimSite138 = x3d.HAnimSite()
-HAnimSite138.name = "r_suprapatella_pt"
 HAnimSite138.DEF = "hanim_r_suprapatella_pt"
+HAnimSite138.name = "r_suprapatella_pt"
 TouchSensor139 = x3d.TouchSensor()
 TouchSensor139.description = "HAnimSite r_suprapatella_pt"
 
@@ -622,18 +629,16 @@ HAnimSegment105.children.append(HAnimSite138)
 
 HAnimJoint104.children.append(HAnimSegment105)
 HAnimJoint141 = x3d.HAnimJoint()
-HAnimJoint141.name = "l_hip"
 HAnimJoint141.DEF = "hanim_l_hip"
+HAnimJoint141.name = "l_hip"
 HAnimJoint141.center = [0.0961,0.9124,-0.0001]
-HAnimJoint141.ulimit = [0,0,0]
-HAnimJoint141.llimit = [0,0,0]
 HAnimSegment142 = x3d.HAnimSegment()
-HAnimSegment142.name = "l_thigh"
 HAnimSegment142.DEF = "hanim_l_thigh"
+HAnimSegment142.name = "l_thigh"
 Transform143 = x3d.Transform()
 Transform143.translation = [0.0961,0.9124,-0.0001]
 Transform144 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape145 = x3d.Shape()
 Shape145.USE = "HAnimJointShape"
 
@@ -648,7 +653,7 @@ LineSet147.vertexCount = [2]
 Coordinate148 = x3d.Coordinate()
 
 LineSet147.coord = Coordinate148
-#from l_hip to l_knee vertices 2
+""" from l_hip to l_knee vertices 2"""
 ColorRGBA149 = x3d.ColorRGBA()
 ColorRGBA149.USE = "HAnimSegmentLineColorRGBA"
 
@@ -658,8 +663,8 @@ Shape146.geometry = LineSet147
 
 HAnimSegment142.children.append(Shape146)
 HAnimSite150 = x3d.HAnimSite()
-HAnimSite150.name = "l_lateral_malleolus_pt"
 HAnimSite150.DEF = "hanim_l_lateral_malleolus_pt"
+HAnimSite150.name = "l_lateral_malleolus_pt"
 HAnimSite150.translation = [0.1308,0.0597,-0.1032]
 TouchSensor151 = x3d.TouchSensor()
 TouchSensor151.description = "HAnimSite l_lateral_malleolus_pt"
@@ -672,9 +677,9 @@ HAnimSite150.children.append(Shape152)
 
 HAnimSegment142.children.append(HAnimSite150)
 HAnimSite153 = x3d.HAnimSite()
-HAnimSite153.name = "l_medial_malleolus_pt"
 HAnimSite153.DEF = "hanim_l_medial_malleolus_pt"
-HAnimSite153.translation = [0.089,0.0716,-0.0881]
+HAnimSite153.name = "l_medial_malleolus_pt"
+HAnimSite153.translation = [0.0890,0.0716,-0.0881]
 TouchSensor154 = x3d.TouchSensor()
 TouchSensor154.description = "HAnimSite l_medial_malleolus_pt"
 
@@ -686,8 +691,8 @@ HAnimSite153.children.append(Shape155)
 
 HAnimSegment142.children.append(HAnimSite153)
 HAnimSite156 = x3d.HAnimSite()
-HAnimSite156.name = "l_tibiale_pt"
 HAnimSite156.DEF = "hanim_l_tibiale_pt"
+HAnimSite156.name = "l_tibiale_pt"
 TouchSensor157 = x3d.TouchSensor()
 TouchSensor157.description = "HAnimSite l_tibiale_pt"
 
@@ -701,18 +706,16 @@ HAnimSegment142.children.append(HAnimSite156)
 
 HAnimJoint141.children.append(HAnimSegment142)
 HAnimJoint159 = x3d.HAnimJoint()
-HAnimJoint159.name = "l_knee"
 HAnimJoint159.DEF = "hanim_l_knee"
-HAnimJoint159.center = [0.104,0.4867,0.0308]
-HAnimJoint159.ulimit = [0,0,0]
-HAnimJoint159.llimit = [0,0,0]
+HAnimJoint159.name = "l_knee"
+HAnimJoint159.center = [0.1040,0.4867,0.0308]
 HAnimSegment160 = x3d.HAnimSegment()
-HAnimSegment160.name = "l_calf"
 HAnimSegment160.DEF = "hanim_l_calf"
+HAnimSegment160.name = "l_calf"
 Transform161 = x3d.Transform()
-Transform161.translation = [0.104,0.4867,0.0308]
+Transform161.translation = [0.1040,0.4867,0.0308]
 Transform162 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape163 = x3d.Shape()
 Shape163.USE = "HAnimJointShape"
 
@@ -727,7 +730,7 @@ LineSet165.vertexCount = [2]
 Coordinate166 = x3d.Coordinate()
 
 LineSet165.coord = Coordinate166
-#from l_knee to l_talocrural vertices 2
+""" from l_knee to l_talocrural vertices 2"""
 ColorRGBA167 = x3d.ColorRGBA()
 ColorRGBA167.USE = "HAnimSegmentLineColorRGBA"
 
@@ -737,8 +740,8 @@ Shape164.geometry = LineSet165
 
 HAnimSegment160.children.append(Shape164)
 HAnimSite168 = x3d.HAnimSite()
-HAnimSite168.name = "l_calcaneus_posterior_pt"
 HAnimSite168.DEF = "hanim_l_calcaneus_posterior_pt"
+HAnimSite168.name = "l_calcaneus_posterior_pt"
 HAnimSite168.translation = [0.0974,0.0259,-0.1171]
 TouchSensor169 = x3d.TouchSensor()
 TouchSensor169.description = "HAnimSite l_calcaneus_posterior_pt"
@@ -751,9 +754,9 @@ HAnimSite168.children.append(Shape170)
 
 HAnimSegment160.children.append(HAnimSite168)
 HAnimSite171 = x3d.HAnimSite()
-HAnimSite171.name = "l_sphyrion_pt"
 HAnimSite171.DEF = "hanim_l_sphyrion_pt"
-HAnimSite171.translation = [0.089,0.0575,-0.0943]
+HAnimSite171.name = "l_sphyrion_pt"
+HAnimSite171.translation = [0.0890,0.0575,-0.0943]
 TouchSensor172 = x3d.TouchSensor()
 TouchSensor172.description = "HAnimSite l_sphyrion_pt"
 
@@ -767,21 +770,19 @@ HAnimSegment160.children.append(HAnimSite171)
 
 HAnimJoint159.children.append(HAnimSegment160)
 HAnimJoint174 = x3d.HAnimJoint()
-HAnimJoint174.name = "l_talocrural"
 HAnimJoint174.DEF = "hanim_l_talocrural"
+HAnimJoint174.name = "l_talocrural"
 HAnimJoint174.center = [0.1101,0.0656,-0.0736]
-HAnimJoint174.ulimit = [0,0,0]
-HAnimJoint174.llimit = [0,0,0]
 HAnimSegment175 = x3d.HAnimSegment()
-HAnimSegment175.name = "l_talus"
 HAnimSegment175.DEF = "hanim_l_talus"
+HAnimSegment175.name = "l_talus"
 Transform176 = x3d.Transform()
 Transform176.scale = [0.15,0.15,0.15]
 Transform176.translation = [0.08,0.06,-0.025]
 Transform176.rotation = [1,0,0,-1.57]
-#Transform left foot
+""" Transform left foot """
 Transform177 = x3d.Transform()
-#Empty Transform left foot
+""" Empty Transform left foot """
 Shape178 = x3d.Shape()
 Shape178.USE = "HAnimJointShape"
 
@@ -796,7 +797,7 @@ LineSet180.vertexCount = [2]
 Coordinate181 = x3d.Coordinate()
 
 LineSet180.coord = Coordinate181
-#from l_talocrural to l_metatarsophalangeal_2 vertices 2
+""" from l_talocrural to l_metatarsophalangeal_2 vertices 2"""
 ColorRGBA182 = x3d.ColorRGBA()
 ColorRGBA182.USE = "HAnimSegmentLineColorRGBA"
 
@@ -808,11 +809,9 @@ HAnimSegment175.children.append(Shape179)
 
 HAnimJoint174.children.append(HAnimSegment175)
 HAnimJoint183 = x3d.HAnimJoint()
-HAnimJoint183.name = "l_metatarsophalangeal_2"
 HAnimJoint183.DEF = "hanim_l_metatarsophalangeal_2"
-HAnimJoint183.center = [0.0824,0.0064,-0.004]
-HAnimJoint183.ulimit = [0,0,0]
-HAnimJoint183.llimit = [0,0,0]
+HAnimJoint183.name = "l_metatarsophalangeal_2"
+HAnimJoint183.center = [0.0824,0.0064,-0.0040]
 
 HAnimJoint174.children.append(HAnimJoint183)
 
@@ -822,18 +821,16 @@ HAnimJoint141.children.append(HAnimJoint159)
 
 HAnimJoint104.children.append(HAnimJoint141)
 HAnimJoint184 = x3d.HAnimJoint()
-HAnimJoint184.name = "r_hip"
 HAnimJoint184.DEF = "hanim_r_hip"
-HAnimJoint184.center = [-0.095,0.9171,0.0029]
-HAnimJoint184.ulimit = [0,0,0]
-HAnimJoint184.llimit = [0,0,0]
+HAnimJoint184.name = "r_hip"
+HAnimJoint184.center = [-0.0950,0.9171,0.0029]
 HAnimSegment185 = x3d.HAnimSegment()
-HAnimSegment185.name = "r_thigh"
 HAnimSegment185.DEF = "hanim_r_thigh"
+HAnimSegment185.name = "r_thigh"
 Transform186 = x3d.Transform()
-Transform186.translation = [-0.095,0.9171,0.0029]
+Transform186.translation = [-0.0950,0.9171,0.0029]
 Transform187 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape188 = x3d.Shape()
 Shape188.USE = "HAnimJointShape"
 
@@ -848,7 +845,7 @@ LineSet190.vertexCount = [2]
 Coordinate191 = x3d.Coordinate()
 
 LineSet190.coord = Coordinate191
-#from r_hip to r_knee vertices 2
+""" from r_hip to r_knee vertices 2"""
 ColorRGBA192 = x3d.ColorRGBA()
 ColorRGBA192.USE = "HAnimSegmentLineColorRGBA"
 
@@ -858,8 +855,8 @@ Shape189.geometry = LineSet190
 
 HAnimSegment185.children.append(Shape189)
 HAnimSite193 = x3d.HAnimSite()
-HAnimSite193.name = "r_lateral_malleolus_pt"
 HAnimSite193.DEF = "hanim_r_lateral_malleolus_pt"
+HAnimSite193.name = "r_lateral_malleolus_pt"
 HAnimSite193.translation = [-0.1006,0.0658,-0.1075]
 TouchSensor194 = x3d.TouchSensor()
 TouchSensor194.description = "HAnimSite r_lateral_malleolus_pt"
@@ -872,9 +869,9 @@ HAnimSite193.children.append(Shape195)
 
 HAnimSegment185.children.append(HAnimSite193)
 HAnimSite196 = x3d.HAnimSite()
-HAnimSite196.name = "r_medial_malleolus_pt"
 HAnimSite196.DEF = "hanim_r_medial_malleolus_pt"
-HAnimSite196.translation = [-0.0591,0.076,-0.0928]
+HAnimSite196.name = "r_medial_malleolus_pt"
+HAnimSite196.translation = [-0.0591,0.0760,-0.0928]
 TouchSensor197 = x3d.TouchSensor()
 TouchSensor197.description = "HAnimSite r_medial_malleolus_pt"
 
@@ -886,8 +883,8 @@ HAnimSite196.children.append(Shape198)
 
 HAnimSegment185.children.append(HAnimSite196)
 HAnimSite199 = x3d.HAnimSite()
-HAnimSite199.name = "r_tibiale_pt"
 HAnimSite199.DEF = "hanim_r_tibiale_pt"
+HAnimSite199.name = "r_tibiale_pt"
 TouchSensor200 = x3d.TouchSensor()
 TouchSensor200.description = "HAnimSite r_tibiale_pt"
 
@@ -901,18 +898,16 @@ HAnimSegment185.children.append(HAnimSite199)
 
 HAnimJoint184.children.append(HAnimSegment185)
 HAnimJoint202 = x3d.HAnimJoint()
-HAnimJoint202.name = "r_knee"
 HAnimJoint202.DEF = "hanim_r_knee"
+HAnimJoint202.name = "r_knee"
 HAnimJoint202.center = [-0.0867,0.4913,0.0318]
-HAnimJoint202.ulimit = [0,0,0]
-HAnimJoint202.llimit = [0,0,0]
 HAnimSegment203 = x3d.HAnimSegment()
-HAnimSegment203.name = "r_calf"
 HAnimSegment203.DEF = "hanim_r_calf"
+HAnimSegment203.name = "r_calf"
 Transform204 = x3d.Transform()
 Transform204.translation = [-0.0867,0.4913,0.0318]
 Transform205 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape206 = x3d.Shape()
 Shape206.USE = "HAnimJointShape"
 
@@ -927,7 +922,7 @@ LineSet208.vertexCount = [2]
 Coordinate209 = x3d.Coordinate()
 
 LineSet208.coord = Coordinate209
-#from r_knee to r_talocrural vertices 2
+""" from r_knee to r_talocrural vertices 2"""
 ColorRGBA210 = x3d.ColorRGBA()
 ColorRGBA210.USE = "HAnimSegmentLineColorRGBA"
 
@@ -937,8 +932,8 @@ Shape207.geometry = LineSet208
 
 HAnimSegment203.children.append(Shape207)
 HAnimSite211 = x3d.HAnimSite()
-HAnimSite211.name = "r_calcaneus_posterior_pt"
 HAnimSite211.DEF = "hanim_r_calcaneus_posterior_pt"
+HAnimSite211.name = "r_calcaneus_posterior_pt"
 HAnimSite211.translation = [-0.0692,0.0297,-0.1221]
 TouchSensor212 = x3d.TouchSensor()
 TouchSensor212.description = "HAnimSite r_calcaneus_posterior_pt"
@@ -951,9 +946,9 @@ HAnimSite211.children.append(Shape213)
 
 HAnimSegment203.children.append(HAnimSite211)
 HAnimSite214 = x3d.HAnimSite()
-HAnimSite214.name = "r_sphyrion_pt"
 HAnimSite214.DEF = "hanim_r_sphyrion_pt"
-HAnimSite214.translation = [-0.0603,0.061,-0.1002]
+HAnimSite214.name = "r_sphyrion_pt"
+HAnimSite214.translation = [-0.0603,0.0610,-0.1002]
 TouchSensor215 = x3d.TouchSensor()
 TouchSensor215.description = "HAnimSite r_sphyrion_pt"
 
@@ -967,21 +962,19 @@ HAnimSegment203.children.append(HAnimSite214)
 
 HAnimJoint202.children.append(HAnimSegment203)
 HAnimJoint217 = x3d.HAnimJoint()
-HAnimJoint217.name = "r_talocrural"
 HAnimJoint217.DEF = "hanim_r_talocrural"
+HAnimJoint217.name = "r_talocrural"
 HAnimJoint217.center = [-0.0801,0.0712,-0.0766]
-HAnimJoint217.ulimit = [0,0,0]
-HAnimJoint217.llimit = [0,0,0]
 HAnimSegment218 = x3d.HAnimSegment()
-HAnimSegment218.name = "r_talus"
 HAnimSegment218.DEF = "hanim_r_talus"
+HAnimSegment218.name = "r_talus"
 Transform219 = x3d.Transform()
 Transform219.scale = [0.15,0.15,0.15]
 Transform219.translation = [-0.05,0.06,-0.025]
 Transform219.rotation = [1,0,0,-1.57]
-#Transform right foot
+""" Transform right foot """
 Transform220 = x3d.Transform()
-#Empty Transform right foot
+""" Empty Transform right foot """
 Shape221 = x3d.Shape()
 Shape221.USE = "HAnimJointShape"
 
@@ -996,7 +989,7 @@ LineSet223.vertexCount = [2]
 Coordinate224 = x3d.Coordinate()
 
 LineSet223.coord = Coordinate224
-#from r_talocrural to r_metatarsophalangeal_2 vertices 2
+""" from r_talocrural to r_metatarsophalangeal_2 vertices 2"""
 ColorRGBA225 = x3d.ColorRGBA()
 ColorRGBA225.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1008,11 +1001,9 @@ HAnimSegment218.children.append(Shape222)
 
 HAnimJoint217.children.append(HAnimSegment218)
 HAnimJoint226 = x3d.HAnimJoint()
-HAnimJoint226.name = "r_metatarsophalangeal_2"
 HAnimJoint226.DEF = "hanim_r_metatarsophalangeal_2"
-HAnimJoint226.center = [-0.0823,0.0064,-0.004]
-HAnimJoint226.ulimit = [0,0,0]
-HAnimJoint226.llimit = [0,0,0]
+HAnimJoint226.name = "r_metatarsophalangeal_2"
+HAnimJoint226.center = [-0.0823,0.0064,-0.0040]
 
 HAnimJoint217.children.append(HAnimJoint226)
 
@@ -1024,18 +1015,16 @@ HAnimJoint104.children.append(HAnimJoint184)
 
 HAnimJoint52.children.append(HAnimJoint104)
 HAnimJoint227 = x3d.HAnimJoint()
-HAnimJoint227.name = "vl5"
 HAnimJoint227.DEF = "hanim_vl5"
+HAnimJoint227.name = "vl5"
 HAnimJoint227.center = [0.0028,1.0568,-0.0776]
-HAnimJoint227.ulimit = [0,0,0]
-HAnimJoint227.llimit = [0,0,0]
 HAnimSegment228 = x3d.HAnimSegment()
-HAnimSegment228.name = "l5"
 HAnimSegment228.DEF = "hanim_l5"
+HAnimSegment228.name = "l5"
 Transform229 = x3d.Transform()
 Transform229.translation = [0.0028,1.0568,-0.0776]
 Transform230 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape231 = x3d.Shape()
 Shape231.USE = "HAnimJointShape"
 
@@ -1050,7 +1039,7 @@ LineSet233.vertexCount = [2]
 Coordinate234 = x3d.Coordinate()
 
 LineSet233.coord = Coordinate234
-#from vl5 to skullbase vertices 2
+""" from vl5 to skullbase vertices 2"""
 ColorRGBA235 = x3d.ColorRGBA()
 ColorRGBA235.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1060,8 +1049,8 @@ Shape232.geometry = LineSet233
 
 HAnimSegment228.children.append(Shape232)
 HAnimSite236 = x3d.HAnimSite()
-HAnimSite236.name = "glabella_pt"
 HAnimSite236.DEF = "hanim_glabella_pt"
+HAnimSite236.name = "glabella_pt"
 TouchSensor237 = x3d.TouchSensor()
 TouchSensor237.description = "HAnimSite glabella_pt"
 
@@ -1073,8 +1062,8 @@ HAnimSite236.children.append(Shape238)
 
 HAnimSegment228.children.append(HAnimSite236)
 HAnimSite239 = x3d.HAnimSite()
-HAnimSite239.name = "l_ectocanthus_pt"
 HAnimSite239.DEF = "hanim_l_ectocanthus_pt"
+HAnimSite239.name = "l_ectocanthus_pt"
 TouchSensor240 = x3d.TouchSensor()
 TouchSensor240.description = "HAnimSite l_ectocanthus_pt"
 
@@ -1086,8 +1075,8 @@ HAnimSite239.children.append(Shape241)
 
 HAnimSegment228.children.append(HAnimSite239)
 HAnimSite242 = x3d.HAnimSite()
-HAnimSite242.name = "l_infraorbitale_pt"
 HAnimSite242.DEF = "hanim_l_infraorbitale_pt"
+HAnimSite242.name = "l_infraorbitale_pt"
 HAnimSite242.translation = [0.0341,1.6171,0.0752]
 TouchSensor243 = x3d.TouchSensor()
 TouchSensor243.description = "HAnimSite l_infraorbitale_pt"
@@ -1100,8 +1089,8 @@ HAnimSite242.children.append(Shape244)
 
 HAnimSegment228.children.append(HAnimSite242)
 HAnimSite245 = x3d.HAnimSite()
-HAnimSite245.name = "l_tragion_pt"
 HAnimSite245.DEF = "hanim_l_tragion_pt"
+HAnimSite245.name = "l_tragion_pt"
 HAnimSite245.translation = [0.0739,1.6348,0.0282]
 TouchSensor246 = x3d.TouchSensor()
 TouchSensor246.description = "HAnimSite l_tragion_pt"
@@ -1114,8 +1103,8 @@ HAnimSite245.children.append(Shape247)
 
 HAnimSegment228.children.append(HAnimSite245)
 HAnimSite248 = x3d.HAnimSite()
-HAnimSite248.name = "nuchale_pt"
 HAnimSite248.DEF = "hanim_nuchale_pt"
+HAnimSite248.name = "nuchale_pt"
 HAnimSite248.translation = [0.0039,1.5972,-0.0796]
 TouchSensor249 = x3d.TouchSensor()
 TouchSensor249.description = "HAnimSite nuchale_pt"
@@ -1128,8 +1117,8 @@ HAnimSite248.children.append(Shape250)
 
 HAnimSegment228.children.append(HAnimSite248)
 HAnimSite251 = x3d.HAnimSite()
-HAnimSite251.name = "opisthocranion_pt"
 HAnimSite251.DEF = "hanim_opisthocranion_pt"
+HAnimSite251.name = "opisthocranion_pt"
 TouchSensor252 = x3d.TouchSensor()
 TouchSensor252.description = "HAnimSite opisthocranion_pt"
 
@@ -1141,8 +1130,8 @@ HAnimSite251.children.append(Shape253)
 
 HAnimSegment228.children.append(HAnimSite251)
 HAnimSite254 = x3d.HAnimSite()
-HAnimSite254.name = "r_ectocanthus_pt"
 HAnimSite254.DEF = "hanim_r_ectocanthus_pt"
+HAnimSite254.name = "r_ectocanthus_pt"
 TouchSensor255 = x3d.TouchSensor()
 TouchSensor255.description = "HAnimSite r_ectocanthus_pt"
 
@@ -1154,8 +1143,8 @@ HAnimSite254.children.append(Shape256)
 
 HAnimSegment228.children.append(HAnimSite254)
 HAnimSite257 = x3d.HAnimSite()
-HAnimSite257.name = "r_infraorbitale_pt"
 HAnimSite257.DEF = "hanim_r_infraorbitale_pt"
+HAnimSite257.name = "r_infraorbitale_pt"
 HAnimSite257.translation = [-0.0237,1.6171,0.0752]
 TouchSensor258 = x3d.TouchSensor()
 TouchSensor258.description = "HAnimSite r_infraorbitale_pt"
@@ -1168,8 +1157,8 @@ HAnimSite257.children.append(Shape259)
 
 HAnimSegment228.children.append(HAnimSite257)
 HAnimSite260 = x3d.HAnimSite()
-HAnimSite260.name = "r_tragion_pt"
 HAnimSite260.DEF = "hanim_r_tragion_pt"
+HAnimSite260.name = "r_tragion_pt"
 HAnimSite260.translation = [-0.0646,1.6347,0.0302]
 TouchSensor261 = x3d.TouchSensor()
 TouchSensor261.description = "HAnimSite r_tragion_pt"
@@ -1182,8 +1171,8 @@ HAnimSite260.children.append(Shape262)
 
 HAnimSegment228.children.append(HAnimSite260)
 HAnimSite263 = x3d.HAnimSite()
-HAnimSite263.name = "sellion_pt"
 HAnimSite263.DEF = "hanim_sellion_pt"
+HAnimSite263.name = "sellion_pt"
 HAnimSite263.translation = [0.0058,1.6316,0.0852]
 TouchSensor264 = x3d.TouchSensor()
 TouchSensor264.description = "HAnimSite sellion_pt"
@@ -1196,9 +1185,9 @@ HAnimSite263.children.append(Shape265)
 
 HAnimSegment228.children.append(HAnimSite263)
 HAnimSite266 = x3d.HAnimSite()
-HAnimSite266.name = "skull_vertex_pt"
 HAnimSite266.DEF = "hanim_skull_vertex_pt"
-HAnimSite266.translation = [0.005,1.7504,0.0055]
+HAnimSite266.name = "skull_vertex_pt"
+HAnimSite266.translation = [0.0050,1.7504,0.0055]
 TouchSensor267 = x3d.TouchSensor()
 TouchSensor267.description = "HAnimSite skull_vertex_pt"
 
@@ -1215,7 +1204,7 @@ LineSet270.vertexCount = [2]
 Coordinate271 = x3d.Coordinate()
 
 LineSet270.coord = Coordinate271
-#from vl5 to l_shoulder vertices 2
+""" from vl5 to l_shoulder vertices 2"""
 ColorRGBA272 = x3d.ColorRGBA()
 ColorRGBA272.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1225,8 +1214,8 @@ Shape269.geometry = LineSet270
 
 HAnimSegment228.children.append(Shape269)
 HAnimSite273 = x3d.HAnimSite()
-HAnimSite273.name = "l_bideltoid_pt"
 HAnimSite273.DEF = "hanim_l_bideltoid_pt"
+HAnimSite273.name = "l_bideltoid_pt"
 TouchSensor274 = x3d.TouchSensor()
 TouchSensor274.description = "HAnimSite l_bideltoid_pt"
 
@@ -1238,9 +1227,9 @@ HAnimSite273.children.append(Shape275)
 
 HAnimSegment228.children.append(HAnimSite273)
 HAnimSite276 = x3d.HAnimSite()
-HAnimSite276.name = "l_humeral_lateral_epicondyles_pt"
 HAnimSite276.DEF = "hanim_l_humeral_lateral_epicondyles_pt"
-HAnimSite276.translation = [0.228,1.1482,-0.11]
+HAnimSite276.name = "l_humeral_lateral_epicondyles_pt"
+HAnimSite276.translation = [0.2280,1.1482,-0.1100]
 TouchSensor277 = x3d.TouchSensor()
 TouchSensor277.description = "HAnimSite l_humeral_lateral_epicondyles_pt"
 
@@ -1257,7 +1246,7 @@ LineSet280.vertexCount = [2]
 Coordinate281 = x3d.Coordinate()
 
 LineSet280.coord = Coordinate281
-#from vl5 to r_shoulder vertices 2
+""" from vl5 to r_shoulder vertices 2"""
 ColorRGBA282 = x3d.ColorRGBA()
 ColorRGBA282.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1267,8 +1256,8 @@ Shape279.geometry = LineSet280
 
 HAnimSegment228.children.append(Shape279)
 HAnimSite283 = x3d.HAnimSite()
-HAnimSite283.name = "r_bideltoid_pt"
 HAnimSite283.DEF = "hanim_r_bideltoid_pt"
+HAnimSite283.name = "r_bideltoid_pt"
 TouchSensor284 = x3d.TouchSensor()
 TouchSensor284.description = "HAnimSite r_bideltoid_pt"
 
@@ -1280,8 +1269,8 @@ HAnimSite283.children.append(Shape285)
 
 HAnimSegment228.children.append(HAnimSite283)
 HAnimSite286 = x3d.HAnimSite()
-HAnimSite286.name = "r_humeral_lateral_epicondyles_pt"
 HAnimSite286.DEF = "hanim_r_humeral_lateral_epicondyles_pt"
+HAnimSite286.name = "r_humeral_lateral_epicondyles_pt"
 HAnimSite286.translation = [-0.2224,1.1517,-0.1033]
 TouchSensor287 = x3d.TouchSensor()
 TouchSensor287.description = "HAnimSite r_humeral_lateral_epicondyles_pt"
@@ -1296,26 +1285,22 @@ HAnimSegment228.children.append(HAnimSite286)
 
 HAnimJoint227.children.append(HAnimSegment228)
 HAnimJoint289 = x3d.HAnimJoint()
-HAnimJoint289.name = "skullbase"
 HAnimJoint289.DEF = "hanim_skullbase"
+HAnimJoint289.name = "skullbase"
 HAnimJoint289.center = [0.0044,1.6209,0.0236]
-HAnimJoint289.ulimit = [0,0,0]
-HAnimJoint289.llimit = [0,0,0]
 
 HAnimJoint227.children.append(HAnimJoint289)
 HAnimJoint290 = x3d.HAnimJoint()
-HAnimJoint290.name = "l_shoulder"
 HAnimJoint290.DEF = "hanim_l_shoulder"
+HAnimJoint290.name = "l_shoulder"
 HAnimJoint290.center = [0.2029,1.4376,-0.0387]
-HAnimJoint290.ulimit = [0,0,0]
-HAnimJoint290.llimit = [0,0,0]
 HAnimSegment291 = x3d.HAnimSegment()
-HAnimSegment291.name = "l_upperarm"
 HAnimSegment291.DEF = "hanim_l_upperarm"
+HAnimSegment291.name = "l_upperarm"
 Transform292 = x3d.Transform()
 Transform292.translation = [0.2029,1.4376,-0.0387]
 Transform293 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape294 = x3d.Shape()
 Shape294.USE = "HAnimJointShape"
 
@@ -1330,7 +1315,7 @@ LineSet296.vertexCount = [2]
 Coordinate297 = x3d.Coordinate()
 
 LineSet296.coord = Coordinate297
-#from l_shoulder to l_elbow vertices 2
+""" from l_shoulder to l_elbow vertices 2"""
 ColorRGBA298 = x3d.ColorRGBA()
 ColorRGBA298.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1340,8 +1325,8 @@ Shape295.geometry = LineSet296
 
 HAnimSegment291.children.append(Shape295)
 HAnimSite299 = x3d.HAnimSite()
-HAnimSite299.name = "l_humeral_medial_epicondyles_pt"
 HAnimSite299.DEF = "hanim_l_humeral_medial_epicondyles_pt"
+HAnimSite299.name = "l_humeral_medial_epicondyles_pt"
 HAnimSite299.translation = [0.1735,1.1272,-0.1113]
 TouchSensor300 = x3d.TouchSensor()
 TouchSensor300.description = "HAnimSite l_humeral_medial_epicondyles_pt"
@@ -1354,8 +1339,8 @@ HAnimSite299.children.append(Shape301)
 
 HAnimSegment291.children.append(HAnimSite299)
 HAnimSite302 = x3d.HAnimSite()
-HAnimSite302.name = "l_olecranon_pt"
 HAnimSite302.DEF = "hanim_l_olecranon_pt"
+HAnimSite302.name = "l_olecranon_pt"
 HAnimSite302.translation = [-0.1962,1.1375,-0.1123]
 TouchSensor303 = x3d.TouchSensor()
 TouchSensor303.description = "HAnimSite l_olecranon_pt"
@@ -1368,8 +1353,8 @@ HAnimSite302.children.append(Shape304)
 
 HAnimSegment291.children.append(HAnimSite302)
 HAnimSite305 = x3d.HAnimSite()
-HAnimSite305.name = "l_radial_styloid_pt"
 HAnimSite305.DEF = "hanim_l_radial_styloid_pt"
+HAnimSite305.name = "l_radial_styloid_pt"
 HAnimSite305.translation = [0.1901,0.8645,-0.0415]
 TouchSensor306 = x3d.TouchSensor()
 TouchSensor306.description = "HAnimSite l_radial_styloid_pt"
@@ -1382,8 +1367,8 @@ HAnimSite305.children.append(Shape307)
 
 HAnimSegment291.children.append(HAnimSite305)
 HAnimSite308 = x3d.HAnimSite()
-HAnimSite308.name = "l_radiale_pt"
 HAnimSite308.DEF = "hanim_l_radiale_pt"
+HAnimSite308.name = "l_radiale_pt"
 HAnimSite308.translation = [0.2182,1.1212,-0.1167]
 TouchSensor309 = x3d.TouchSensor()
 TouchSensor309.description = "HAnimSite l_radiale_pt"
@@ -1398,18 +1383,16 @@ HAnimSegment291.children.append(HAnimSite308)
 
 HAnimJoint290.children.append(HAnimSegment291)
 HAnimJoint311 = x3d.HAnimJoint()
-HAnimJoint311.name = "l_elbow"
 HAnimJoint311.DEF = "hanim_l_elbow"
+HAnimJoint311.name = "l_elbow"
 HAnimJoint311.center = [0.2014,1.1357,-0.0682]
-HAnimJoint311.ulimit = [0,0,0]
-HAnimJoint311.llimit = [0,0,0]
 HAnimSegment312 = x3d.HAnimSegment()
-HAnimSegment312.name = "l_forearm"
 HAnimSegment312.DEF = "hanim_l_forearm"
+HAnimSegment312.name = "l_forearm"
 Transform313 = x3d.Transform()
 Transform313.translation = [0.2014,1.1357,-0.0682]
 Transform314 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape315 = x3d.Shape()
 Shape315.USE = "HAnimJointShape"
 
@@ -1424,7 +1407,7 @@ LineSet317.vertexCount = [2]
 Coordinate318 = x3d.Coordinate()
 
 LineSet317.coord = Coordinate318
-#from l_elbow to l_radiocarpal vertices 2
+""" from l_elbow to l_radiocarpal vertices 2"""
 ColorRGBA319 = x3d.ColorRGBA()
 ColorRGBA319.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1434,8 +1417,8 @@ Shape316.geometry = LineSet317
 
 HAnimSegment312.children.append(Shape316)
 HAnimSite320 = x3d.HAnimSite()
-HAnimSite320.name = "l_ulnar_styloid_pt"
 HAnimSite320.DEF = "hanim_l_ulnar_styloid_pt"
+HAnimSite320.name = "l_ulnar_styloid_pt"
 HAnimSite320.translation = [-0.2142,0.8529,-0.0648]
 TouchSensor321 = x3d.TouchSensor()
 TouchSensor321.description = "HAnimSite l_ulnar_styloid_pt"
@@ -1450,11 +1433,9 @@ HAnimSegment312.children.append(HAnimSite320)
 
 HAnimJoint311.children.append(HAnimSegment312)
 HAnimJoint323 = x3d.HAnimJoint()
-HAnimJoint323.name = "l_radiocarpal"
 HAnimJoint323.DEF = "hanim_l_radiocarpal"
+HAnimJoint323.name = "l_radiocarpal"
 HAnimJoint323.center = [0.1984,0.8663,-0.0583]
-HAnimJoint323.ulimit = [0,0,0]
-HAnimJoint323.llimit = [0,0,0]
 
 HAnimJoint311.children.append(HAnimJoint323)
 
@@ -1462,18 +1443,16 @@ HAnimJoint290.children.append(HAnimJoint311)
 
 HAnimJoint227.children.append(HAnimJoint290)
 HAnimJoint324 = x3d.HAnimJoint()
-HAnimJoint324.name = "r_shoulder"
 HAnimJoint324.DEF = "hanim_r_shoulder"
+HAnimJoint324.name = "r_shoulder"
 HAnimJoint324.center = [-0.1907,1.4407,-0.0325]
-HAnimJoint324.ulimit = [0,0,0]
-HAnimJoint324.llimit = [0,0,0]
 HAnimSegment325 = x3d.HAnimSegment()
-HAnimSegment325.name = "r_upperarm"
 HAnimSegment325.DEF = "hanim_r_upperarm"
+HAnimSegment325.name = "r_upperarm"
 Transform326 = x3d.Transform()
 Transform326.translation = [-0.1907,1.4407,-0.0325]
 Transform327 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape328 = x3d.Shape()
 Shape328.USE = "HAnimJointShape"
 
@@ -1488,7 +1467,7 @@ LineSet330.vertexCount = [2]
 Coordinate331 = x3d.Coordinate()
 
 LineSet330.coord = Coordinate331
-#from r_shoulder to r_elbow vertices 2
+""" from r_shoulder to r_elbow vertices 2"""
 ColorRGBA332 = x3d.ColorRGBA()
 ColorRGBA332.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1498,9 +1477,9 @@ Shape329.geometry = LineSet330
 
 HAnimSegment325.children.append(Shape329)
 HAnimSite333 = x3d.HAnimSite()
-HAnimSite333.name = "r_humeral_medial_epicondyles_pt"
 HAnimSite333.DEF = "hanim_r_humeral_medial_epicondyles_pt"
-HAnimSite333.translation = [-0.168,1.1298,-0.1062]
+HAnimSite333.name = "r_humeral_medial_epicondyles_pt"
+HAnimSite333.translation = [-0.1680,1.1298,-0.1062]
 TouchSensor334 = x3d.TouchSensor()
 TouchSensor334.description = "HAnimSite r_humeral_medial_epicondyles_pt"
 
@@ -1512,8 +1491,8 @@ HAnimSite333.children.append(Shape335)
 
 HAnimSegment325.children.append(HAnimSite333)
 HAnimSite336 = x3d.HAnimSite()
-HAnimSite336.name = "r_olecranon_pt"
 HAnimSite336.DEF = "hanim_r_olecranon_pt"
+HAnimSite336.name = "r_olecranon_pt"
 HAnimSite336.translation = [-0.1907,1.1405,-0.1065]
 TouchSensor337 = x3d.TouchSensor()
 TouchSensor337.description = "HAnimSite r_olecranon_pt"
@@ -1526,9 +1505,9 @@ HAnimSite336.children.append(Shape338)
 
 HAnimSegment325.children.append(HAnimSite336)
 HAnimSite339 = x3d.HAnimSite()
-HAnimSite339.name = "r_radial_styloid_pt"
 HAnimSite339.DEF = "hanim_r_radial_styloid_pt"
-HAnimSite339.translation = [-0.1884,0.8676,-0.036]
+HAnimSite339.name = "r_radial_styloid_pt"
+HAnimSite339.translation = [-0.1884,0.8676,-0.0360]
 TouchSensor340 = x3d.TouchSensor()
 TouchSensor340.description = "HAnimSite r_radial_styloid_pt"
 
@@ -1540,9 +1519,9 @@ HAnimSite339.children.append(Shape341)
 
 HAnimSegment325.children.append(HAnimSite339)
 HAnimSite342 = x3d.HAnimSite()
-HAnimSite342.name = "r_radiale_pt"
 HAnimSite342.DEF = "hanim_r_radiale_pt"
-HAnimSite342.translation = [-0.213,1.1305,-0.1091]
+HAnimSite342.name = "r_radiale_pt"
+HAnimSite342.translation = [-0.2130,1.1305,-0.1091]
 TouchSensor343 = x3d.TouchSensor()
 TouchSensor343.description = "HAnimSite r_radiale_pt"
 
@@ -1556,18 +1535,16 @@ HAnimSegment325.children.append(HAnimSite342)
 
 HAnimJoint324.children.append(HAnimSegment325)
 HAnimJoint345 = x3d.HAnimJoint()
-HAnimJoint345.name = "r_elbow"
 HAnimJoint345.DEF = "hanim_r_elbow"
-HAnimJoint345.center = [-0.1949,1.1388,-0.062]
-HAnimJoint345.ulimit = [0,0,0]
-HAnimJoint345.llimit = [0,0,0]
+HAnimJoint345.name = "r_elbow"
+HAnimJoint345.center = [-0.1949,1.1388,-0.0620]
 HAnimSegment346 = x3d.HAnimSegment()
-HAnimSegment346.name = "r_forearm"
 HAnimSegment346.DEF = "hanim_r_forearm"
+HAnimSegment346.name = "r_forearm"
 Transform347 = x3d.Transform()
-Transform347.translation = [-0.1949,1.1388,-0.062]
+Transform347.translation = [-0.1949,1.1388,-0.0620]
 Transform348 = x3d.Transform()
-#Empty Transform
+""" Empty Transform """
 Shape349 = x3d.Shape()
 Shape349.USE = "HAnimJointShape"
 
@@ -1582,7 +1559,7 @@ LineSet351.vertexCount = [2]
 Coordinate352 = x3d.Coordinate()
 
 LineSet351.coord = Coordinate352
-#from r_elbow to r_radiocarpal vertices 2
+""" from r_elbow to r_radiocarpal vertices 2"""
 ColorRGBA353 = x3d.ColorRGBA()
 ColorRGBA353.USE = "HAnimSegmentLineColorRGBA"
 
@@ -1592,8 +1569,8 @@ Shape350.geometry = LineSet351
 
 HAnimSegment346.children.append(Shape350)
 HAnimSite354 = x3d.HAnimSite()
-HAnimSite354.name = "r_ulnar_styloid_pt"
 HAnimSite354.DEF = "hanim_r_ulnar_styloid_pt"
+HAnimSite354.name = "r_ulnar_styloid_pt"
 HAnimSite354.translation = [-0.2117,0.8562,-0.0584]
 TouchSensor355 = x3d.TouchSensor()
 TouchSensor355.description = "HAnimSite r_ulnar_styloid_pt"
@@ -1608,11 +1585,9 @@ HAnimSegment346.children.append(HAnimSite354)
 
 HAnimJoint345.children.append(HAnimSegment346)
 HAnimJoint357 = x3d.HAnimJoint()
-HAnimJoint357.name = "r_radiocarpal"
 HAnimJoint357.DEF = "hanim_r_radiocarpal"
+HAnimJoint357.name = "r_radiocarpal"
 HAnimJoint357.center = [-0.1959,0.8694,-0.0521]
-HAnimJoint357.ulimit = [0,0,0]
-HAnimJoint357.llimit = [0,0,0]
 
 HAnimJoint345.children.append(HAnimJoint357)
 
@@ -1975,6 +1950,6 @@ HAnimHumanoid43.sites.append(HAnimSite444)
 Scene11.children.append(HAnimHumanoid43)
 
 X3D0.Scene = Scene11
-f = open("././Humanoid1_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Humanoid1_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

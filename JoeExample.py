@@ -41,7 +41,9 @@ field8.accessType = "initializeOnly"
 
 Script4.field.append(field8)
 
-Script4.sourceCode = '''ecmascript:\n"+
+Script4.sourceCode = '''\n"+
+"\n"+
+"      ecmascript:\n"+
 "\n"+
 "      function combinationEntered (value) {\n"+
 "\n"+
@@ -53,7 +55,9 @@ Script4.sourceCode = '''ecmascript:\n"+
 "\n"+
 "      if (unlocked) vaultUnlocked = value;\n"+
 "\n"+
-"      }'''
+"      }\n"+
+"\n"+
+"      '''
 
 Scene3.children.append(Script4)
 Shape9 = x3d.Shape()
@@ -110,6 +114,6 @@ ROUTE18.toField = "startTime"
 Scene3.children.append(ROUTE18)
 
 X3D0.Scene = Scene3
-f = open("././JoeExample_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("JoeExample_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

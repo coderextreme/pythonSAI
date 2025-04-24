@@ -6,83 +6,83 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "H-Anim"
 component2.level = 1
+component2.name = "H-Anim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "HAnimBehaviorPrototypes.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "description"
 meta4.content = "Prototypes for HAnimBehavior node, which collects OrientationInterpolators for aggregate animation of an HAnim humanoid model, and HAnimBodyBehaviorChooser, which selects one body and enables/disables multiple aggregated behaviors."
+meta4.name = "description"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Don Brutzman, Jeff Weekley, MV4205 Advanced X3D Authoring class, and Keith Victor"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "2 May 2006"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "4 July 2020"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "Web3D2007BlendedBehaviorsChangeableBodies.pdf"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "https://www.web3d.org/files/specifications/19774/V1.0"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://www.web3d.org/x3d/specifications/ISO-IEC-19775-X3DAbstractSpecification_Revision1_to_Part1/Part01/components/hanim.html"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "InterchangableActorsViaDynamicRoutingPrototypes.x3d"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "ApaydinThesis.pdf"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "subject"
 meta13.content = "X3D HAnim humanoid animation behaviors"
+meta13.name = "subject"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "warning"
 meta14.content = "under development. should joint translations be exposed? upgrade to HAnim v2.2"
+meta14.name = "warning"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "identifier"
 meta15.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimBehaviorPrototypes.x3d"
+meta15.name = "identifier"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "generator"
 meta16.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta16.name = "generator"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "license"
 meta17.content = "../license.html"
+meta17.name = "license"
 
 head1.children.append(meta17)
 
@@ -93,3906 +93,3906 @@ WorldInfo19.title = "HAnimBehaviorPrototypes.x3d"
 
 Scene18.children.append(WorldInfo19)
 ProtoDeclare20 = x3d.ProtoDeclare()
-ProtoDeclare20.name = "HAnimBehavior"
 ProtoDeclare20.appinfo = "The HAnimBehavior node models a single humanoid behavior either for an entire body or simply parts of a body. It collects a TimeSensor clock with a single PositionInterpolator and multiple OrientationInterpolator nodes to provide a single humanoid behavior."
 ProtoDeclare20.documentation = "https://www.web3d.org/files/specifications/19774/V1.0/"
+ProtoDeclare20.name = "HAnimBehavior"
 ProtoInterface21 = x3d.ProtoInterface()
-#supported Level of Articulation (LOA)
-#shared common input for single TimeSensor animating all interpolators, since different Behaviors may have different cycleInterval durations
-#TODO: add other X3D 3.0 TimeSensor fields (pause etc.)
-#Not supported: animated translation of individual joints
-#pass in key/keyValue array pairs for single PositionInterpolator
-#pass in key/keyValue array pairs and expose named output for each OrientationInterpolator, joint by joint
+""" supported Level of Articulation (LOA) """
 field22 = x3d.field()
-field22.name = "supportedLOA"
 field22.accessType = "inputOutput"
 field22.appinfo = "Supported Level of Articulation (LOA) support needed by authored HAnimBehavior set of OrientationInterpolator values. Legal values 0 1 2 3."
+field22.name = "supportedLOA"
 field22.type = "SFInt32"
 field22.value = -1
 
 ProtoInterface21.field.append(field22)
+""" shared common input for single TimeSensor animating all interpolators, since different Behaviors may have different cycleInterval durations """
+""" TODO: add other X3D 3.0 TimeSensor fields (pause etc.) """
+""" Not supported: animated translation of individual joints """
 field23 = x3d.field()
-field23.name = "enabled"
 field23.accessType = "inputOutput"
 field23.appinfo = "is this behavior enabled?"
+field23.name = "enabled"
 field23.type = "SFBool"
 field23.value = True
 
 ProtoInterface21.field.append(field23)
 field24 = x3d.field()
-field24.name = "cycleInterval"
 field24.accessType = "inputOutput"
 field24.appinfo = "how long do these interpolators take to execute?"
+field24.name = "cycleInterval"
 field24.type = "SFTime"
-field24.value = 1
+field24.value = 1.0
 
 ProtoInterface21.field.append(field24)
 field25 = x3d.field()
-field25.name = "loop"
 field25.accessType = "inputOutput"
 field25.appinfo = "whether or not this behavior loops (e.g. walking) or is single shot (e.g. shake hands)."
+field25.name = "loop"
 field25.type = "SFBool"
 field25.value = False
 
 ProtoInterface21.field.append(field25)
 field26 = x3d.field()
-field26.name = "startTime"
 field26.accessType = "inputOutput"
 field26.appinfo = "when time now >= startTime isActive becomes true and TimeSensor becomes active"
+field26.name = "startTime"
 field26.type = "SFTime"
 field26.value = 0
 
 ProtoInterface21.field.append(field26)
 field27 = x3d.field()
-field27.name = "stopTime"
 field27.accessType = "inputOutput"
 field27.appinfo = "when stopTime becomes <= time now isActive becomes false and TimeSensor becomes inactive"
+field27.name = "stopTime"
 field27.type = "SFTime"
 field27.value = 0
 
 ProtoInterface21.field.append(field27)
 field28 = x3d.field()
-field28.name = "pauseTime"
 field28.accessType = "inputOutput"
 field28.appinfo = "when time now >= pauseTime isPaused becomes true and TimeSensor becomes paused"
+field28.name = "pauseTime"
 field28.type = "SFTime"
 field28.value = 0
 
 ProtoInterface21.field.append(field28)
 field29 = x3d.field()
-field29.name = "resumeTime"
 field29.accessType = "inputOutput"
 field29.appinfo = "when resumeTime becomes <= time now isPaused becomes false and TimeSensor becomes inactive"
+field29.name = "resumeTime"
 field29.type = "SFTime"
 field29.value = 0
 
 ProtoInterface21.field.append(field29)
 field30 = x3d.field()
-field30.name = "cycleTime"
 field30.accessType = "outputOnly"
 field30.appinfo = "cycleTime sends a time outputOnly at startTime and also at the beginning of each new cycle"
+field30.name = "cycleTime"
 field30.type = "SFTime"
 
 ProtoInterface21.field.append(field30)
 field31 = x3d.field()
-field31.name = "isActive"
 field31.accessType = "outputOnly"
 field31.appinfo = "isActive true/false events are sent when TimeSensor starts/stops running"
+field31.name = "isActive"
 field31.type = "SFBool"
 
 ProtoInterface21.field.append(field31)
 field32 = x3d.field()
-field32.name = "isPaused"
 field32.accessType = "outputOnly"
 field32.appinfo = "isPaused true/false events are sent when TimeSensor is paused/resumed"
+field32.name = "isPaused"
 field32.type = "SFBool"
 
 ProtoInterface21.field.append(field32)
 field33 = x3d.field()
-field33.name = "elapsedTime"
 field33.accessType = "outputOnly"
 field33.appinfo = "current elapsed time since TimeSensor activated/running cumulative in seconds and not counting any paused time"
+field33.name = "elapsedTime"
 field33.type = "SFBool"
 
 ProtoInterface21.field.append(field33)
 field34 = x3d.field()
-field34.name = "time"
 field34.accessType = "outputOnly"
 field34.appinfo = "continuously sends the absolute time (since January 1 1970)"
+field34.name = "time"
 field34.type = "SFBool"
 
 ProtoInterface21.field.append(field34)
 field35 = x3d.field()
-field35.name = "fraction_changed"
 field35.accessType = "outputOnly"
 field35.appinfo = "fraction_changed continuously sends value in range [0 1] showing time progress in the current cycle."
+field35.name = "fraction_changed"
 field35.type = "SFFloat"
 
 ProtoInterface21.field.append(field35)
+""" pass in key/keyValue array pairs for single PositionInterpolator """
 field36 = x3d.field()
-field36.name = "HumanoidRoot_translation_key"
 field36.accessType = "inputOutput"
+field36.name = "HumanoidRoot_translation_key"
 field36.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field36)
 field37 = x3d.field()
-field37.name = "HumanoidRoot_translation_keyValue"
 field37.accessType = "inputOutput"
+field37.name = "HumanoidRoot_translation_keyValue"
 field37.type = "MFVec3f"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field37)
 field38 = x3d.field()
-field38.name = "HumanoidRoot_translation_changed"
 field38.accessType = "outputOnly"
+field38.name = "HumanoidRoot_translation_changed"
 field38.type = "SFVec3f"
 
 ProtoInterface21.field.append(field38)
+""" pass in key/keyValue array pairs and expose named output for each OrientationInterpolator, joint by joint """
 field39 = x3d.field()
-field39.name = "HumanoidRoot_rotation_key"
 field39.accessType = "inputOutput"
+field39.name = "HumanoidRoot_rotation_key"
 field39.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field39)
 field40 = x3d.field()
-field40.name = "HumanoidRoot_rotation_keyValue"
 field40.accessType = "inputOutput"
+field40.name = "HumanoidRoot_rotation_keyValue"
 field40.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field40)
 field41 = x3d.field()
-field41.name = "HumanoidRoot_rotation_changed"
 field41.accessType = "outputOnly"
+field41.name = "HumanoidRoot_rotation_changed"
 field41.type = "SFRotation"
 
 ProtoInterface21.field.append(field41)
 field42 = x3d.field()
-field42.name = "c1_key"
 field42.accessType = "inputOutput"
+field42.name = "c1_key"
 field42.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field42)
 field43 = x3d.field()
-field43.name = "c1_keyValue"
 field43.accessType = "inputOutput"
+field43.name = "c1_keyValue"
 field43.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field43)
 field44 = x3d.field()
-field44.name = "c1_changed"
 field44.accessType = "outputOnly"
+field44.name = "c1_changed"
 field44.type = "SFRotation"
 
 ProtoInterface21.field.append(field44)
 field45 = x3d.field()
-field45.name = "c2_key"
 field45.accessType = "inputOutput"
+field45.name = "c2_key"
 field45.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field45)
 field46 = x3d.field()
-field46.name = "c2_keyValue"
 field46.accessType = "inputOutput"
+field46.name = "c2_keyValue"
 field46.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field46)
 field47 = x3d.field()
-field47.name = "c2_changed"
 field47.accessType = "outputOnly"
+field47.name = "c2_changed"
 field47.type = "SFRotation"
 
 ProtoInterface21.field.append(field47)
 field48 = x3d.field()
-field48.name = "c3_key"
 field48.accessType = "inputOutput"
+field48.name = "c3_key"
 field48.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field48)
 field49 = x3d.field()
-field49.name = "c3_keyValue"
 field49.accessType = "inputOutput"
+field49.name = "c3_keyValue"
 field49.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field49)
 field50 = x3d.field()
-field50.name = "c3_changed"
 field50.accessType = "outputOnly"
+field50.name = "c3_changed"
 field50.type = "SFRotation"
 
 ProtoInterface21.field.append(field50)
 field51 = x3d.field()
-field51.name = "c4_key"
 field51.accessType = "inputOutput"
+field51.name = "c4_key"
 field51.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field51)
 field52 = x3d.field()
-field52.name = "c4_keyValue"
 field52.accessType = "inputOutput"
+field52.name = "c4_keyValue"
 field52.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field52)
 field53 = x3d.field()
-field53.name = "c4_changed"
 field53.accessType = "outputOnly"
+field53.name = "c4_changed"
 field53.type = "SFRotation"
 
 ProtoInterface21.field.append(field53)
 field54 = x3d.field()
-field54.name = "c5_key"
 field54.accessType = "inputOutput"
+field54.name = "c5_key"
 field54.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field54)
 field55 = x3d.field()
-field55.name = "c5_keyValue"
 field55.accessType = "inputOutput"
+field55.name = "c5_keyValue"
 field55.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field55)
 field56 = x3d.field()
-field56.name = "c5_changed"
 field56.accessType = "outputOnly"
+field56.name = "c5_changed"
 field56.type = "SFRotation"
 
 ProtoInterface21.field.append(field56)
 field57 = x3d.field()
-field57.name = "c6_key"
 field57.accessType = "inputOutput"
+field57.name = "c6_key"
 field57.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field57)
 field58 = x3d.field()
-field58.name = "c6_keyValue"
 field58.accessType = "inputOutput"
+field58.name = "c6_keyValue"
 field58.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field58)
 field59 = x3d.field()
-field59.name = "c6_changed"
 field59.accessType = "outputOnly"
+field59.name = "c6_changed"
 field59.type = "SFRotation"
 
 ProtoInterface21.field.append(field59)
 field60 = x3d.field()
-field60.name = "c7_key"
 field60.accessType = "inputOutput"
+field60.name = "c7_key"
 field60.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field60)
 field61 = x3d.field()
-field61.name = "c7_keyValue"
 field61.accessType = "inputOutput"
+field61.name = "c7_keyValue"
 field61.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field61)
 field62 = x3d.field()
-field62.name = "c7_changed"
 field62.accessType = "outputOnly"
+field62.name = "c7_changed"
 field62.type = "SFRotation"
 
 ProtoInterface21.field.append(field62)
 field63 = x3d.field()
-field63.name = "jaw_key"
 field63.accessType = "inputOutput"
+field63.name = "jaw_key"
 field63.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field63)
 field64 = x3d.field()
-field64.name = "jaw_keyValue"
 field64.accessType = "inputOutput"
+field64.name = "jaw_keyValue"
 field64.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field64)
 field65 = x3d.field()
-field65.name = "jaw_changed"
 field65.accessType = "outputOnly"
+field65.name = "jaw_changed"
 field65.type = "SFRotation"
 
 ProtoInterface21.field.append(field65)
 field66 = x3d.field()
-field66.name = "l1_key"
 field66.accessType = "inputOutput"
+field66.name = "l1_key"
 field66.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field66)
 field67 = x3d.field()
-field67.name = "l1_keyValue"
 field67.accessType = "inputOutput"
+field67.name = "l1_keyValue"
 field67.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field67)
 field68 = x3d.field()
-field68.name = "l1_changed"
 field68.accessType = "outputOnly"
+field68.name = "l1_changed"
 field68.type = "SFRotation"
 
 ProtoInterface21.field.append(field68)
 field69 = x3d.field()
-field69.name = "l2_key"
 field69.accessType = "inputOutput"
+field69.name = "l2_key"
 field69.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field69)
 field70 = x3d.field()
-field70.name = "l2_keyValue"
 field70.accessType = "inputOutput"
+field70.name = "l2_keyValue"
 field70.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field70)
 field71 = x3d.field()
-field71.name = "l2_changed"
 field71.accessType = "outputOnly"
+field71.name = "l2_changed"
 field71.type = "SFRotation"
 
 ProtoInterface21.field.append(field71)
 field72 = x3d.field()
-field72.name = "l3_key"
 field72.accessType = "inputOutput"
+field72.name = "l3_key"
 field72.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field72)
 field73 = x3d.field()
-field73.name = "l3_keyValue"
 field73.accessType = "inputOutput"
+field73.name = "l3_keyValue"
 field73.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field73)
 field74 = x3d.field()
-field74.name = "l3_changed"
 field74.accessType = "outputOnly"
+field74.name = "l3_changed"
 field74.type = "SFRotation"
 
 ProtoInterface21.field.append(field74)
 field75 = x3d.field()
-field75.name = "l4_key"
 field75.accessType = "inputOutput"
+field75.name = "l4_key"
 field75.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field75)
 field76 = x3d.field()
-field76.name = "l4_keyValue"
 field76.accessType = "inputOutput"
+field76.name = "l4_keyValue"
 field76.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field76)
 field77 = x3d.field()
-field77.name = "l4_changed"
 field77.accessType = "outputOnly"
+field77.name = "l4_changed"
 field77.type = "SFRotation"
 
 ProtoInterface21.field.append(field77)
 field78 = x3d.field()
-field78.name = "l5_key"
 field78.accessType = "inputOutput"
+field78.name = "l5_key"
 field78.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field78)
 field79 = x3d.field()
-field79.name = "l5_keyValue"
 field79.accessType = "inputOutput"
+field79.name = "l5_keyValue"
 field79.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field79)
 field80 = x3d.field()
-field80.name = "l5_changed"
 field80.accessType = "outputOnly"
+field80.name = "l5_changed"
 field80.type = "SFRotation"
 
 ProtoInterface21.field.append(field80)
 field81 = x3d.field()
-field81.name = "l_acromioclavicular_key"
 field81.accessType = "inputOutput"
+field81.name = "l_acromioclavicular_key"
 field81.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field81)
 field82 = x3d.field()
-field82.name = "l_acromioclavicular_keyValue"
 field82.accessType = "inputOutput"
+field82.name = "l_acromioclavicular_keyValue"
 field82.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field82)
 field83 = x3d.field()
-field83.name = "l_acromioclavicular_changed"
 field83.accessType = "outputOnly"
+field83.name = "l_acromioclavicular_changed"
 field83.type = "SFRotation"
 
 ProtoInterface21.field.append(field83)
 field84 = x3d.field()
-field84.name = "l_ankle_key"
 field84.accessType = "inputOutput"
+field84.name = "l_ankle_key"
 field84.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field84)
 field85 = x3d.field()
-field85.name = "l_ankle_keyValue"
 field85.accessType = "inputOutput"
+field85.name = "l_ankle_keyValue"
 field85.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field85)
 field86 = x3d.field()
-field86.name = "l_ankle_changed"
 field86.accessType = "outputOnly"
+field86.name = "l_ankle_changed"
 field86.type = "SFRotation"
 
 ProtoInterface21.field.append(field86)
 field87 = x3d.field()
-field87.name = "l_calf_key"
 field87.accessType = "inputOutput"
+field87.name = "l_calf_key"
 field87.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field87)
 field88 = x3d.field()
-field88.name = "l_calf_keyValue"
 field88.accessType = "inputOutput"
+field88.name = "l_calf_keyValue"
 field88.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field88)
 field89 = x3d.field()
-field89.name = "l_calf_changed"
 field89.accessType = "outputOnly"
+field89.name = "l_calf_changed"
 field89.type = "SFRotation"
 
 ProtoInterface21.field.append(field89)
 field90 = x3d.field()
-field90.name = "l_clavicle_key"
 field90.accessType = "inputOutput"
+field90.name = "l_clavicle_key"
 field90.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field90)
 field91 = x3d.field()
-field91.name = "l_clavicle_keyValue"
 field91.accessType = "inputOutput"
+field91.name = "l_clavicle_keyValue"
 field91.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field91)
 field92 = x3d.field()
-field92.name = "l_clavicle_changed"
 field92.accessType = "outputOnly"
+field92.name = "l_clavicle_changed"
 field92.type = "SFRotation"
 
 ProtoInterface21.field.append(field92)
 field93 = x3d.field()
-field93.name = "l_elbow_key"
 field93.accessType = "inputOutput"
+field93.name = "l_elbow_key"
 field93.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field93)
 field94 = x3d.field()
-field94.name = "l_elbow_keyValue"
 field94.accessType = "inputOutput"
+field94.name = "l_elbow_keyValue"
 field94.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field94)
 field95 = x3d.field()
-field95.name = "l_elbow_changed"
 field95.accessType = "outputOnly"
+field95.name = "l_elbow_changed"
 field95.type = "SFRotation"
 
 ProtoInterface21.field.append(field95)
 field96 = x3d.field()
-field96.name = "l_eyeball_key"
 field96.accessType = "inputOutput"
+field96.name = "l_eyeball_key"
 field96.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field96)
 field97 = x3d.field()
-field97.name = "l_eyeball_keyValue"
 field97.accessType = "inputOutput"
+field97.name = "l_eyeball_keyValue"
 field97.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field97)
 field98 = x3d.field()
-field98.name = "l_eyeball_changed"
 field98.accessType = "outputOnly"
+field98.name = "l_eyeball_changed"
 field98.type = "SFRotation"
 
 ProtoInterface21.field.append(field98)
 field99 = x3d.field()
-field99.name = "l_eyeball_joint_key"
 field99.accessType = "inputOutput"
+field99.name = "l_eyeball_joint_key"
 field99.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field99)
 field100 = x3d.field()
-field100.name = "l_eyeball_joint_keyValue"
 field100.accessType = "inputOutput"
+field100.name = "l_eyeball_joint_keyValue"
 field100.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field100)
 field101 = x3d.field()
-field101.name = "l_eyeball_joint_changed"
 field101.accessType = "outputOnly"
+field101.name = "l_eyeball_joint_changed"
 field101.type = "SFRotation"
 
 ProtoInterface21.field.append(field101)
 field102 = x3d.field()
-field102.name = "l_eyebrow_key"
 field102.accessType = "inputOutput"
+field102.name = "l_eyebrow_key"
 field102.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field102)
 field103 = x3d.field()
-field103.name = "l_eyebrow_keyValue"
 field103.accessType = "inputOutput"
+field103.name = "l_eyebrow_keyValue"
 field103.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field103)
 field104 = x3d.field()
-field104.name = "l_eyebrow_changed"
 field104.accessType = "outputOnly"
+field104.name = "l_eyebrow_changed"
 field104.type = "SFRotation"
 
 ProtoInterface21.field.append(field104)
 field105 = x3d.field()
-field105.name = "l_eyebrow_joint_key"
 field105.accessType = "inputOutput"
+field105.name = "l_eyebrow_joint_key"
 field105.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field105)
 field106 = x3d.field()
-field106.name = "l_eyebrow_joint_keyValue"
 field106.accessType = "inputOutput"
+field106.name = "l_eyebrow_joint_keyValue"
 field106.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field106)
 field107 = x3d.field()
-field107.name = "l_eyebrow_joint_changed"
 field107.accessType = "outputOnly"
+field107.name = "l_eyebrow_joint_changed"
 field107.type = "SFRotation"
 
 ProtoInterface21.field.append(field107)
 field108 = x3d.field()
-field108.name = "l_eyelid_key"
 field108.accessType = "inputOutput"
+field108.name = "l_eyelid_key"
 field108.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field108)
 field109 = x3d.field()
-field109.name = "l_eyelid_keyValue"
 field109.accessType = "inputOutput"
+field109.name = "l_eyelid_keyValue"
 field109.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field109)
 field110 = x3d.field()
-field110.name = "l_eyelid_changed"
 field110.accessType = "outputOnly"
+field110.name = "l_eyelid_changed"
 field110.type = "SFRotation"
 
 ProtoInterface21.field.append(field110)
 field111 = x3d.field()
-field111.name = "l_eyelid_joint_key"
 field111.accessType = "inputOutput"
+field111.name = "l_eyelid_joint_key"
 field111.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field111)
 field112 = x3d.field()
-field112.name = "l_eyelid_joint_keyValue"
 field112.accessType = "inputOutput"
+field112.name = "l_eyelid_joint_keyValue"
 field112.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field112)
 field113 = x3d.field()
-field113.name = "l_eyelid_joint_changed"
 field113.accessType = "outputOnly"
+field113.name = "l_eyelid_joint_changed"
 field113.type = "SFRotation"
 
 ProtoInterface21.field.append(field113)
 field114 = x3d.field()
-field114.name = "l_forearm_key"
 field114.accessType = "inputOutput"
+field114.name = "l_forearm_key"
 field114.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field114)
 field115 = x3d.field()
-field115.name = "l_forearm_keyValue"
 field115.accessType = "inputOutput"
+field115.name = "l_forearm_keyValue"
 field115.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field115)
 field116 = x3d.field()
-field116.name = "l_forearm_changed"
 field116.accessType = "outputOnly"
+field116.name = "l_forearm_changed"
 field116.type = "SFRotation"
 
 ProtoInterface21.field.append(field116)
 field117 = x3d.field()
-field117.name = "l_forefoot_key"
 field117.accessType = "inputOutput"
+field117.name = "l_forefoot_key"
 field117.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field117)
 field118 = x3d.field()
-field118.name = "l_forefoot_keyValue"
 field118.accessType = "inputOutput"
+field118.name = "l_forefoot_keyValue"
 field118.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field118)
 field119 = x3d.field()
-field119.name = "l_forefoot_changed"
 field119.accessType = "outputOnly"
+field119.name = "l_forefoot_changed"
 field119.type = "SFRotation"
 
 ProtoInterface21.field.append(field119)
 field120 = x3d.field()
-field120.name = "l_hand_key"
 field120.accessType = "inputOutput"
+field120.name = "l_hand_key"
 field120.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field120)
 field121 = x3d.field()
-field121.name = "l_hand_keyValue"
 field121.accessType = "inputOutput"
+field121.name = "l_hand_keyValue"
 field121.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field121)
 field122 = x3d.field()
-field122.name = "l_hand_changed"
 field122.accessType = "outputOnly"
+field122.name = "l_hand_changed"
 field122.type = "SFRotation"
 
 ProtoInterface21.field.append(field122)
 field123 = x3d.field()
-field123.name = "l_hindfoot_key"
 field123.accessType = "inputOutput"
+field123.name = "l_hindfoot_key"
 field123.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field123)
 field124 = x3d.field()
-field124.name = "l_hindfoot_keyValue"
 field124.accessType = "inputOutput"
+field124.name = "l_hindfoot_keyValue"
 field124.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field124)
 field125 = x3d.field()
-field125.name = "l_hindfoot_changed"
 field125.accessType = "outputOnly"
+field125.name = "l_hindfoot_changed"
 field125.type = "SFRotation"
 
 ProtoInterface21.field.append(field125)
 field126 = x3d.field()
-field126.name = "l_hip_key"
 field126.accessType = "inputOutput"
+field126.name = "l_hip_key"
 field126.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field126)
 field127 = x3d.field()
-field127.name = "l_hip_keyValue"
 field127.accessType = "inputOutput"
+field127.name = "l_hip_keyValue"
 field127.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field127)
 field128 = x3d.field()
-field128.name = "l_hip_changed"
 field128.accessType = "outputOnly"
+field128.name = "l_hip_changed"
 field128.type = "SFRotation"
 
 ProtoInterface21.field.append(field128)
 field129 = x3d.field()
-field129.name = "l_index0_key"
 field129.accessType = "inputOutput"
+field129.name = "l_index0_key"
 field129.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field129)
 field130 = x3d.field()
-field130.name = "l_index0_keyValue"
 field130.accessType = "inputOutput"
+field130.name = "l_index0_keyValue"
 field130.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field130)
 field131 = x3d.field()
-field131.name = "l_index0_changed"
 field131.accessType = "outputOnly"
+field131.name = "l_index0_changed"
 field131.type = "SFRotation"
 
 ProtoInterface21.field.append(field131)
 field132 = x3d.field()
-field132.name = "l_index1_key"
 field132.accessType = "inputOutput"
+field132.name = "l_index1_key"
 field132.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field132)
 field133 = x3d.field()
-field133.name = "l_index1_keyValue"
 field133.accessType = "inputOutput"
+field133.name = "l_index1_keyValue"
 field133.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field133)
 field134 = x3d.field()
-field134.name = "l_index1_changed"
 field134.accessType = "outputOnly"
+field134.name = "l_index1_changed"
 field134.type = "SFRotation"
 
 ProtoInterface21.field.append(field134)
 field135 = x3d.field()
-field135.name = "l_index2_key"
 field135.accessType = "inputOutput"
+field135.name = "l_index2_key"
 field135.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field135)
 field136 = x3d.field()
-field136.name = "l_index2_keyValue"
 field136.accessType = "inputOutput"
+field136.name = "l_index2_keyValue"
 field136.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field136)
 field137 = x3d.field()
-field137.name = "l_index2_changed"
 field137.accessType = "outputOnly"
+field137.name = "l_index2_changed"
 field137.type = "SFRotation"
 
 ProtoInterface21.field.append(field137)
 field138 = x3d.field()
-field138.name = "l_index3_key"
 field138.accessType = "inputOutput"
+field138.name = "l_index3_key"
 field138.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field138)
 field139 = x3d.field()
-field139.name = "l_index3_keyValue"
 field139.accessType = "inputOutput"
+field139.name = "l_index3_keyValue"
 field139.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field139)
 field140 = x3d.field()
-field140.name = "l_index3_changed"
 field140.accessType = "outputOnly"
+field140.name = "l_index3_changed"
 field140.type = "SFRotation"
 
 ProtoInterface21.field.append(field140)
 field141 = x3d.field()
-field141.name = "l_index_distal_key"
 field141.accessType = "inputOutput"
+field141.name = "l_index_distal_key"
 field141.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field141)
 field142 = x3d.field()
-field142.name = "l_index_distal_keyValue"
 field142.accessType = "inputOutput"
+field142.name = "l_index_distal_keyValue"
 field142.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field142)
 field143 = x3d.field()
-field143.name = "l_index_distal_changed"
 field143.accessType = "outputOnly"
+field143.name = "l_index_distal_changed"
 field143.type = "SFRotation"
 
 ProtoInterface21.field.append(field143)
 field144 = x3d.field()
-field144.name = "l_index_metacarpal_key"
 field144.accessType = "inputOutput"
+field144.name = "l_index_metacarpal_key"
 field144.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field144)
 field145 = x3d.field()
-field145.name = "l_index_metacarpal_keyValue"
 field145.accessType = "inputOutput"
+field145.name = "l_index_metacarpal_keyValue"
 field145.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field145)
 field146 = x3d.field()
-field146.name = "l_index_metacarpal_changed"
 field146.accessType = "outputOnly"
+field146.name = "l_index_metacarpal_changed"
 field146.type = "SFRotation"
 
 ProtoInterface21.field.append(field146)
 field147 = x3d.field()
-field147.name = "l_index_middle_key"
 field147.accessType = "inputOutput"
+field147.name = "l_index_middle_key"
 field147.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field147)
 field148 = x3d.field()
-field148.name = "l_index_middle_keyValue"
 field148.accessType = "inputOutput"
+field148.name = "l_index_middle_keyValue"
 field148.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field148)
 field149 = x3d.field()
-field149.name = "l_index_middle_changed"
 field149.accessType = "outputOnly"
+field149.name = "l_index_middle_changed"
 field149.type = "SFRotation"
 
 ProtoInterface21.field.append(field149)
 field150 = x3d.field()
-field150.name = "l_index_proximal_key"
 field150.accessType = "inputOutput"
+field150.name = "l_index_proximal_key"
 field150.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field150)
 field151 = x3d.field()
-field151.name = "l_index_proximal_keyValue"
 field151.accessType = "inputOutput"
+field151.name = "l_index_proximal_keyValue"
 field151.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field151)
 field152 = x3d.field()
-field152.name = "l_index_proximal_changed"
 field152.accessType = "outputOnly"
+field152.name = "l_index_proximal_changed"
 field152.type = "SFRotation"
 
 ProtoInterface21.field.append(field152)
 field153 = x3d.field()
-field153.name = "l_knee_key"
 field153.accessType = "inputOutput"
+field153.name = "l_knee_key"
 field153.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field153)
 field154 = x3d.field()
-field154.name = "l_knee_keyValue"
 field154.accessType = "inputOutput"
+field154.name = "l_knee_keyValue"
 field154.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field154)
 field155 = x3d.field()
-field155.name = "l_knee_changed"
 field155.accessType = "outputOnly"
+field155.name = "l_knee_changed"
 field155.type = "SFRotation"
 
 ProtoInterface21.field.append(field155)
 field156 = x3d.field()
-field156.name = "l_metatarsal_key"
 field156.accessType = "inputOutput"
+field156.name = "l_metatarsal_key"
 field156.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field156)
 field157 = x3d.field()
-field157.name = "l_metatarsal_keyValue"
 field157.accessType = "inputOutput"
+field157.name = "l_metatarsal_keyValue"
 field157.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field157)
 field158 = x3d.field()
-field158.name = "l_metatarsal_changed"
 field158.accessType = "outputOnly"
+field158.name = "l_metatarsal_changed"
 field158.type = "SFRotation"
 
 ProtoInterface21.field.append(field158)
 field159 = x3d.field()
-field159.name = "l_middistal_key"
 field159.accessType = "inputOutput"
+field159.name = "l_middistal_key"
 field159.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field159)
 field160 = x3d.field()
-field160.name = "l_middistal_keyValue"
 field160.accessType = "inputOutput"
+field160.name = "l_middistal_keyValue"
 field160.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field160)
 field161 = x3d.field()
-field161.name = "l_middistal_changed"
 field161.accessType = "outputOnly"
+field161.name = "l_middistal_changed"
 field161.type = "SFRotation"
 
 ProtoInterface21.field.append(field161)
 field162 = x3d.field()
-field162.name = "l_middle0_key"
 field162.accessType = "inputOutput"
+field162.name = "l_middle0_key"
 field162.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field162)
 field163 = x3d.field()
-field163.name = "l_middle0_keyValue"
 field163.accessType = "inputOutput"
+field163.name = "l_middle0_keyValue"
 field163.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field163)
 field164 = x3d.field()
-field164.name = "l_middle0_changed"
 field164.accessType = "outputOnly"
+field164.name = "l_middle0_changed"
 field164.type = "SFRotation"
 
 ProtoInterface21.field.append(field164)
 field165 = x3d.field()
-field165.name = "l_middle1_key"
 field165.accessType = "inputOutput"
+field165.name = "l_middle1_key"
 field165.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field165)
 field166 = x3d.field()
-field166.name = "l_middle1_keyValue"
 field166.accessType = "inputOutput"
+field166.name = "l_middle1_keyValue"
 field166.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field166)
 field167 = x3d.field()
-field167.name = "l_middle1_changed"
 field167.accessType = "outputOnly"
+field167.name = "l_middle1_changed"
 field167.type = "SFRotation"
 
 ProtoInterface21.field.append(field167)
 field168 = x3d.field()
-field168.name = "l_middle2_key"
 field168.accessType = "inputOutput"
+field168.name = "l_middle2_key"
 field168.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field168)
 field169 = x3d.field()
-field169.name = "l_middle2_keyValue"
 field169.accessType = "inputOutput"
+field169.name = "l_middle2_keyValue"
 field169.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field169)
 field170 = x3d.field()
-field170.name = "l_middle2_changed"
 field170.accessType = "outputOnly"
+field170.name = "l_middle2_changed"
 field170.type = "SFRotation"
 
 ProtoInterface21.field.append(field170)
 field171 = x3d.field()
-field171.name = "l_middle3_key"
 field171.accessType = "inputOutput"
+field171.name = "l_middle3_key"
 field171.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field171)
 field172 = x3d.field()
-field172.name = "l_middle3_keyValue"
 field172.accessType = "inputOutput"
+field172.name = "l_middle3_keyValue"
 field172.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field172)
 field173 = x3d.field()
-field173.name = "l_middle3_changed"
 field173.accessType = "outputOnly"
+field173.name = "l_middle3_changed"
 field173.type = "SFRotation"
 
 ProtoInterface21.field.append(field173)
 field174 = x3d.field()
-field174.name = "l_middle_distal_key"
 field174.accessType = "inputOutput"
+field174.name = "l_middle_distal_key"
 field174.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field174)
 field175 = x3d.field()
-field175.name = "l_middle_distal_keyValue"
 field175.accessType = "inputOutput"
+field175.name = "l_middle_distal_keyValue"
 field175.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field175)
 field176 = x3d.field()
-field176.name = "l_middle_distal_changed"
 field176.accessType = "outputOnly"
+field176.name = "l_middle_distal_changed"
 field176.type = "SFRotation"
 
 ProtoInterface21.field.append(field176)
 field177 = x3d.field()
-field177.name = "l_middle_metacarpal_key"
 field177.accessType = "inputOutput"
+field177.name = "l_middle_metacarpal_key"
 field177.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field177)
 field178 = x3d.field()
-field178.name = "l_middle_metacarpal_keyValue"
 field178.accessType = "inputOutput"
+field178.name = "l_middle_metacarpal_keyValue"
 field178.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field178)
 field179 = x3d.field()
-field179.name = "l_middle_metacarpal_changed"
 field179.accessType = "outputOnly"
+field179.name = "l_middle_metacarpal_changed"
 field179.type = "SFRotation"
 
 ProtoInterface21.field.append(field179)
 field180 = x3d.field()
-field180.name = "l_middle_middle_key"
 field180.accessType = "inputOutput"
+field180.name = "l_middle_middle_key"
 field180.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field180)
 field181 = x3d.field()
-field181.name = "l_middle_middle_keyValue"
 field181.accessType = "inputOutput"
+field181.name = "l_middle_middle_keyValue"
 field181.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field181)
 field182 = x3d.field()
-field182.name = "l_middle_middle_changed"
 field182.accessType = "outputOnly"
+field182.name = "l_middle_middle_changed"
 field182.type = "SFRotation"
 
 ProtoInterface21.field.append(field182)
 field183 = x3d.field()
-field183.name = "l_middle_proximal_key"
 field183.accessType = "inputOutput"
+field183.name = "l_middle_proximal_key"
 field183.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field183)
 field184 = x3d.field()
-field184.name = "l_middle_proximal_keyValue"
 field184.accessType = "inputOutput"
+field184.name = "l_middle_proximal_keyValue"
 field184.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field184)
 field185 = x3d.field()
-field185.name = "l_middle_proximal_changed"
 field185.accessType = "outputOnly"
+field185.name = "l_middle_proximal_changed"
 field185.type = "SFRotation"
 
 ProtoInterface21.field.append(field185)
 field186 = x3d.field()
-field186.name = "l_midproximal_key"
 field186.accessType = "inputOutput"
+field186.name = "l_midproximal_key"
 field186.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field186)
 field187 = x3d.field()
-field187.name = "l_midproximal_keyValue"
 field187.accessType = "inputOutput"
+field187.name = "l_midproximal_keyValue"
 field187.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field187)
 field188 = x3d.field()
-field188.name = "l_midproximal_changed"
 field188.accessType = "outputOnly"
+field188.name = "l_midproximal_changed"
 field188.type = "SFRotation"
 
 ProtoInterface21.field.append(field188)
 field189 = x3d.field()
-field189.name = "l_midtarsal_key"
 field189.accessType = "inputOutput"
+field189.name = "l_midtarsal_key"
 field189.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field189)
 field190 = x3d.field()
-field190.name = "l_midtarsal_keyValue"
 field190.accessType = "inputOutput"
+field190.name = "l_midtarsal_keyValue"
 field190.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field190)
 field191 = x3d.field()
-field191.name = "l_midtarsal_changed"
 field191.accessType = "outputOnly"
+field191.name = "l_midtarsal_changed"
 field191.type = "SFRotation"
 
 ProtoInterface21.field.append(field191)
 field192 = x3d.field()
-field192.name = "l_pinky0_key"
 field192.accessType = "inputOutput"
+field192.name = "l_pinky0_key"
 field192.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field192)
 field193 = x3d.field()
-field193.name = "l_pinky0_keyValue"
 field193.accessType = "inputOutput"
+field193.name = "l_pinky0_keyValue"
 field193.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field193)
 field194 = x3d.field()
-field194.name = "l_pinky0_changed"
 field194.accessType = "outputOnly"
+field194.name = "l_pinky0_changed"
 field194.type = "SFRotation"
 
 ProtoInterface21.field.append(field194)
 field195 = x3d.field()
-field195.name = "l_pinky1_key"
 field195.accessType = "inputOutput"
+field195.name = "l_pinky1_key"
 field195.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field195)
 field196 = x3d.field()
-field196.name = "l_pinky1_keyValue"
 field196.accessType = "inputOutput"
+field196.name = "l_pinky1_keyValue"
 field196.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field196)
 field197 = x3d.field()
-field197.name = "l_pinky1_changed"
 field197.accessType = "outputOnly"
+field197.name = "l_pinky1_changed"
 field197.type = "SFRotation"
 
 ProtoInterface21.field.append(field197)
 field198 = x3d.field()
-field198.name = "l_pinky2_key"
 field198.accessType = "inputOutput"
+field198.name = "l_pinky2_key"
 field198.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field198)
 field199 = x3d.field()
-field199.name = "l_pinky2_keyValue"
 field199.accessType = "inputOutput"
+field199.name = "l_pinky2_keyValue"
 field199.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field199)
 field200 = x3d.field()
-field200.name = "l_pinky2_changed"
 field200.accessType = "outputOnly"
+field200.name = "l_pinky2_changed"
 field200.type = "SFRotation"
 
 ProtoInterface21.field.append(field200)
 field201 = x3d.field()
-field201.name = "l_pinky3_key"
 field201.accessType = "inputOutput"
+field201.name = "l_pinky3_key"
 field201.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field201)
 field202 = x3d.field()
-field202.name = "l_pinky3_keyValue"
 field202.accessType = "inputOutput"
+field202.name = "l_pinky3_keyValue"
 field202.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field202)
 field203 = x3d.field()
-field203.name = "l_pinky3_changed"
 field203.accessType = "outputOnly"
+field203.name = "l_pinky3_changed"
 field203.type = "SFRotation"
 
 ProtoInterface21.field.append(field203)
 field204 = x3d.field()
-field204.name = "l_pinky_distal_key"
 field204.accessType = "inputOutput"
+field204.name = "l_pinky_distal_key"
 field204.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field204)
 field205 = x3d.field()
-field205.name = "l_pinky_distal_keyValue"
 field205.accessType = "inputOutput"
+field205.name = "l_pinky_distal_keyValue"
 field205.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field205)
 field206 = x3d.field()
-field206.name = "l_pinky_distal_changed"
 field206.accessType = "outputOnly"
+field206.name = "l_pinky_distal_changed"
 field206.type = "SFRotation"
 
 ProtoInterface21.field.append(field206)
 field207 = x3d.field()
-field207.name = "l_pinky_metacarpal_key"
 field207.accessType = "inputOutput"
+field207.name = "l_pinky_metacarpal_key"
 field207.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field207)
 field208 = x3d.field()
-field208.name = "l_pinky_metacarpal_keyValue"
 field208.accessType = "inputOutput"
+field208.name = "l_pinky_metacarpal_keyValue"
 field208.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field208)
 field209 = x3d.field()
-field209.name = "l_pinky_metacarpal_changed"
 field209.accessType = "outputOnly"
+field209.name = "l_pinky_metacarpal_changed"
 field209.type = "SFRotation"
 
 ProtoInterface21.field.append(field209)
 field210 = x3d.field()
-field210.name = "l_pinky_middle_key"
 field210.accessType = "inputOutput"
+field210.name = "l_pinky_middle_key"
 field210.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field210)
 field211 = x3d.field()
-field211.name = "l_pinky_middle_keyValue"
 field211.accessType = "inputOutput"
+field211.name = "l_pinky_middle_keyValue"
 field211.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field211)
 field212 = x3d.field()
-field212.name = "l_pinky_middle_changed"
 field212.accessType = "outputOnly"
+field212.name = "l_pinky_middle_changed"
 field212.type = "SFRotation"
 
 ProtoInterface21.field.append(field212)
 field213 = x3d.field()
-field213.name = "l_pinky_proximal_key"
 field213.accessType = "inputOutput"
+field213.name = "l_pinky_proximal_key"
 field213.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field213)
 field214 = x3d.field()
-field214.name = "l_pinky_proximal_keyValue"
 field214.accessType = "inputOutput"
+field214.name = "l_pinky_proximal_keyValue"
 field214.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field214)
 field215 = x3d.field()
-field215.name = "l_pinky_proximal_changed"
 field215.accessType = "outputOnly"
+field215.name = "l_pinky_proximal_changed"
 field215.type = "SFRotation"
 
 ProtoInterface21.field.append(field215)
 field216 = x3d.field()
-field216.name = "l_ring0_key"
 field216.accessType = "inputOutput"
+field216.name = "l_ring0_key"
 field216.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field216)
 field217 = x3d.field()
-field217.name = "l_ring0_keyValue"
 field217.accessType = "inputOutput"
+field217.name = "l_ring0_keyValue"
 field217.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field217)
 field218 = x3d.field()
-field218.name = "l_ring0_changed"
 field218.accessType = "outputOnly"
+field218.name = "l_ring0_changed"
 field218.type = "SFRotation"
 
 ProtoInterface21.field.append(field218)
 field219 = x3d.field()
-field219.name = "l_ring1_key"
 field219.accessType = "inputOutput"
+field219.name = "l_ring1_key"
 field219.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field219)
 field220 = x3d.field()
-field220.name = "l_ring1_keyValue"
 field220.accessType = "inputOutput"
+field220.name = "l_ring1_keyValue"
 field220.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field220)
 field221 = x3d.field()
-field221.name = "l_ring1_changed"
 field221.accessType = "outputOnly"
+field221.name = "l_ring1_changed"
 field221.type = "SFRotation"
 
 ProtoInterface21.field.append(field221)
 field222 = x3d.field()
-field222.name = "l_ring2_key"
 field222.accessType = "inputOutput"
+field222.name = "l_ring2_key"
 field222.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field222)
 field223 = x3d.field()
-field223.name = "l_ring2_keyValue"
 field223.accessType = "inputOutput"
+field223.name = "l_ring2_keyValue"
 field223.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field223)
 field224 = x3d.field()
-field224.name = "l_ring2_changed"
 field224.accessType = "outputOnly"
+field224.name = "l_ring2_changed"
 field224.type = "SFRotation"
 
 ProtoInterface21.field.append(field224)
 field225 = x3d.field()
-field225.name = "l_ring3_key"
 field225.accessType = "inputOutput"
+field225.name = "l_ring3_key"
 field225.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field225)
 field226 = x3d.field()
-field226.name = "l_ring3_keyValue"
 field226.accessType = "inputOutput"
+field226.name = "l_ring3_keyValue"
 field226.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field226)
 field227 = x3d.field()
-field227.name = "l_ring3_changed"
 field227.accessType = "outputOnly"
+field227.name = "l_ring3_changed"
 field227.type = "SFRotation"
 
 ProtoInterface21.field.append(field227)
 field228 = x3d.field()
-field228.name = "l_ring_distal_key"
 field228.accessType = "inputOutput"
+field228.name = "l_ring_distal_key"
 field228.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field228)
 field229 = x3d.field()
-field229.name = "l_ring_distal_keyValue"
 field229.accessType = "inputOutput"
+field229.name = "l_ring_distal_keyValue"
 field229.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field229)
 field230 = x3d.field()
-field230.name = "l_ring_distal_changed"
 field230.accessType = "outputOnly"
+field230.name = "l_ring_distal_changed"
 field230.type = "SFRotation"
 
 ProtoInterface21.field.append(field230)
 field231 = x3d.field()
-field231.name = "l_ring_metacarpal_key"
 field231.accessType = "inputOutput"
+field231.name = "l_ring_metacarpal_key"
 field231.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field231)
 field232 = x3d.field()
-field232.name = "l_ring_metacarpal_keyValue"
 field232.accessType = "inputOutput"
+field232.name = "l_ring_metacarpal_keyValue"
 field232.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field232)
 field233 = x3d.field()
-field233.name = "l_ring_metacarpal_changed"
 field233.accessType = "outputOnly"
+field233.name = "l_ring_metacarpal_changed"
 field233.type = "SFRotation"
 
 ProtoInterface21.field.append(field233)
 field234 = x3d.field()
-field234.name = "l_ring_middle_key"
 field234.accessType = "inputOutput"
+field234.name = "l_ring_middle_key"
 field234.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field234)
 field235 = x3d.field()
-field235.name = "l_ring_middle_keyValue"
 field235.accessType = "inputOutput"
+field235.name = "l_ring_middle_keyValue"
 field235.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field235)
 field236 = x3d.field()
-field236.name = "l_ring_middle_changed"
 field236.accessType = "outputOnly"
+field236.name = "l_ring_middle_changed"
 field236.type = "SFRotation"
 
 ProtoInterface21.field.append(field236)
 field237 = x3d.field()
-field237.name = "l_ring_proximal_key"
 field237.accessType = "inputOutput"
+field237.name = "l_ring_proximal_key"
 field237.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field237)
 field238 = x3d.field()
-field238.name = "l_ring_proximal_keyValue"
 field238.accessType = "inputOutput"
+field238.name = "l_ring_proximal_keyValue"
 field238.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field238)
 field239 = x3d.field()
-field239.name = "l_ring_proximal_changed"
 field239.accessType = "outputOnly"
+field239.name = "l_ring_proximal_changed"
 field239.type = "SFRotation"
 
 ProtoInterface21.field.append(field239)
 field240 = x3d.field()
-field240.name = "l_scapula_key"
 field240.accessType = "inputOutput"
+field240.name = "l_scapula_key"
 field240.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field240)
 field241 = x3d.field()
-field241.name = "l_scapula_keyValue"
 field241.accessType = "inputOutput"
+field241.name = "l_scapula_keyValue"
 field241.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field241)
 field242 = x3d.field()
-field242.name = "l_scapula_changed"
 field242.accessType = "outputOnly"
+field242.name = "l_scapula_changed"
 field242.type = "SFRotation"
 
 ProtoInterface21.field.append(field242)
 field243 = x3d.field()
-field243.name = "l_shoulder_key"
 field243.accessType = "inputOutput"
+field243.name = "l_shoulder_key"
 field243.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field243)
 field244 = x3d.field()
-field244.name = "l_shoulder_keyValue"
 field244.accessType = "inputOutput"
+field244.name = "l_shoulder_keyValue"
 field244.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field244)
 field245 = x3d.field()
-field245.name = "l_shoulder_changed"
 field245.accessType = "outputOnly"
+field245.name = "l_shoulder_changed"
 field245.type = "SFRotation"
 
 ProtoInterface21.field.append(field245)
 field246 = x3d.field()
-field246.name = "l_sternoclavicular_key"
 field246.accessType = "inputOutput"
+field246.name = "l_sternoclavicular_key"
 field246.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field246)
 field247 = x3d.field()
-field247.name = "l_sternoclavicular_keyValue"
 field247.accessType = "inputOutput"
+field247.name = "l_sternoclavicular_keyValue"
 field247.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field247)
 field248 = x3d.field()
-field248.name = "l_sternoclavicular_changed"
 field248.accessType = "outputOnly"
+field248.name = "l_sternoclavicular_changed"
 field248.type = "SFRotation"
 
 ProtoInterface21.field.append(field248)
 field249 = x3d.field()
-field249.name = "l_subtalar_key"
 field249.accessType = "inputOutput"
+field249.name = "l_subtalar_key"
 field249.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field249)
 field250 = x3d.field()
-field250.name = "l_subtalar_keyValue"
 field250.accessType = "inputOutput"
+field250.name = "l_subtalar_keyValue"
 field250.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field250)
 field251 = x3d.field()
-field251.name = "l_subtalar_changed"
 field251.accessType = "outputOnly"
+field251.name = "l_subtalar_changed"
 field251.type = "SFRotation"
 
 ProtoInterface21.field.append(field251)
 field252 = x3d.field()
-field252.name = "l_thigh_key"
 field252.accessType = "inputOutput"
+field252.name = "l_thigh_key"
 field252.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field252)
 field253 = x3d.field()
-field253.name = "l_thigh_keyValue"
 field253.accessType = "inputOutput"
+field253.name = "l_thigh_keyValue"
 field253.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field253)
 field254 = x3d.field()
-field254.name = "l_thigh_changed"
 field254.accessType = "outputOnly"
+field254.name = "l_thigh_changed"
 field254.type = "SFRotation"
 
 ProtoInterface21.field.append(field254)
 field255 = x3d.field()
-field255.name = "l_thumb1_key"
 field255.accessType = "inputOutput"
+field255.name = "l_thumb1_key"
 field255.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field255)
 field256 = x3d.field()
-field256.name = "l_thumb1_keyValue"
 field256.accessType = "inputOutput"
+field256.name = "l_thumb1_keyValue"
 field256.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field256)
 field257 = x3d.field()
-field257.name = "l_thumb1_changed"
 field257.accessType = "outputOnly"
+field257.name = "l_thumb1_changed"
 field257.type = "SFRotation"
 
 ProtoInterface21.field.append(field257)
 field258 = x3d.field()
-field258.name = "l_thumb2_key"
 field258.accessType = "inputOutput"
+field258.name = "l_thumb2_key"
 field258.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field258)
 field259 = x3d.field()
-field259.name = "l_thumb2_keyValue"
 field259.accessType = "inputOutput"
+field259.name = "l_thumb2_keyValue"
 field259.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field259)
 field260 = x3d.field()
-field260.name = "l_thumb2_changed"
 field260.accessType = "outputOnly"
+field260.name = "l_thumb2_changed"
 field260.type = "SFRotation"
 
 ProtoInterface21.field.append(field260)
 field261 = x3d.field()
-field261.name = "l_thumb3_key"
 field261.accessType = "inputOutput"
+field261.name = "l_thumb3_key"
 field261.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field261)
 field262 = x3d.field()
-field262.name = "l_thumb3_keyValue"
 field262.accessType = "inputOutput"
+field262.name = "l_thumb3_keyValue"
 field262.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field262)
 field263 = x3d.field()
-field263.name = "l_thumb3_changed"
 field263.accessType = "outputOnly"
+field263.name = "l_thumb3_changed"
 field263.type = "SFRotation"
 
 ProtoInterface21.field.append(field263)
 field264 = x3d.field()
-field264.name = "l_thumb_distal_key"
 field264.accessType = "inputOutput"
+field264.name = "l_thumb_distal_key"
 field264.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field264)
 field265 = x3d.field()
-field265.name = "l_thumb_distal_keyValue"
 field265.accessType = "inputOutput"
+field265.name = "l_thumb_distal_keyValue"
 field265.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field265)
 field266 = x3d.field()
-field266.name = "l_thumb_distal_changed"
 field266.accessType = "outputOnly"
+field266.name = "l_thumb_distal_changed"
 field266.type = "SFRotation"
 
 ProtoInterface21.field.append(field266)
 field267 = x3d.field()
-field267.name = "l_thumb_metacarpal_key"
 field267.accessType = "inputOutput"
+field267.name = "l_thumb_metacarpal_key"
 field267.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field267)
 field268 = x3d.field()
-field268.name = "l_thumb_metacarpal_keyValue"
 field268.accessType = "inputOutput"
+field268.name = "l_thumb_metacarpal_keyValue"
 field268.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field268)
 field269 = x3d.field()
-field269.name = "l_thumb_metacarpal_changed"
 field269.accessType = "outputOnly"
+field269.name = "l_thumb_metacarpal_changed"
 field269.type = "SFRotation"
 
 ProtoInterface21.field.append(field269)
 field270 = x3d.field()
-field270.name = "l_thumb_proximal_key"
 field270.accessType = "inputOutput"
+field270.name = "l_thumb_proximal_key"
 field270.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field270)
 field271 = x3d.field()
-field271.name = "l_thumb_proximal_keyValue"
 field271.accessType = "inputOutput"
+field271.name = "l_thumb_proximal_keyValue"
 field271.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field271)
 field272 = x3d.field()
-field272.name = "l_thumb_proximal_changed"
 field272.accessType = "outputOnly"
+field272.name = "l_thumb_proximal_changed"
 field272.type = "SFRotation"
 
 ProtoInterface21.field.append(field272)
 field273 = x3d.field()
-field273.name = "l_upperarm_key"
 field273.accessType = "inputOutput"
+field273.name = "l_upperarm_key"
 field273.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field273)
 field274 = x3d.field()
-field274.name = "l_upperarm_keyValue"
 field274.accessType = "inputOutput"
+field274.name = "l_upperarm_keyValue"
 field274.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field274)
 field275 = x3d.field()
-field275.name = "l_upperarm_changed"
 field275.accessType = "outputOnly"
+field275.name = "l_upperarm_changed"
 field275.type = "SFRotation"
 
 ProtoInterface21.field.append(field275)
 field276 = x3d.field()
-field276.name = "l_wrist_key"
 field276.accessType = "inputOutput"
+field276.name = "l_wrist_key"
 field276.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field276)
 field277 = x3d.field()
-field277.name = "l_wrist_keyValue"
 field277.accessType = "inputOutput"
+field277.name = "l_wrist_keyValue"
 field277.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field277)
 field278 = x3d.field()
-field278.name = "l_wrist_changed"
 field278.accessType = "outputOnly"
+field278.name = "l_wrist_changed"
 field278.type = "SFRotation"
 
 ProtoInterface21.field.append(field278)
 field279 = x3d.field()
-field279.name = "pelvis_key"
 field279.accessType = "inputOutput"
+field279.name = "pelvis_key"
 field279.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field279)
 field280 = x3d.field()
-field280.name = "pelvis_keyValue"
 field280.accessType = "inputOutput"
+field280.name = "pelvis_keyValue"
 field280.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field280)
 field281 = x3d.field()
-field281.name = "pelvis_changed"
 field281.accessType = "outputOnly"
+field281.name = "pelvis_changed"
 field281.type = "SFRotation"
 
 ProtoInterface21.field.append(field281)
 field282 = x3d.field()
-field282.name = "r_acromioclavicular_key"
 field282.accessType = "inputOutput"
+field282.name = "r_acromioclavicular_key"
 field282.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field282)
 field283 = x3d.field()
-field283.name = "r_acromioclavicular_keyValue"
 field283.accessType = "inputOutput"
+field283.name = "r_acromioclavicular_keyValue"
 field283.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field283)
 field284 = x3d.field()
-field284.name = "r_acromioclavicular_changed"
 field284.accessType = "outputOnly"
+field284.name = "r_acromioclavicular_changed"
 field284.type = "SFRotation"
 
 ProtoInterface21.field.append(field284)
 field285 = x3d.field()
-field285.name = "r_ankle_key"
 field285.accessType = "inputOutput"
+field285.name = "r_ankle_key"
 field285.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field285)
 field286 = x3d.field()
-field286.name = "r_ankle_keyValue"
 field286.accessType = "inputOutput"
+field286.name = "r_ankle_keyValue"
 field286.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field286)
 field287 = x3d.field()
-field287.name = "r_ankle_changed"
 field287.accessType = "outputOnly"
+field287.name = "r_ankle_changed"
 field287.type = "SFRotation"
 
 ProtoInterface21.field.append(field287)
 field288 = x3d.field()
-field288.name = "r_calf_key"
 field288.accessType = "inputOutput"
+field288.name = "r_calf_key"
 field288.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field288)
 field289 = x3d.field()
-field289.name = "r_calf_keyValue"
 field289.accessType = "inputOutput"
+field289.name = "r_calf_keyValue"
 field289.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field289)
 field290 = x3d.field()
-field290.name = "r_calf_changed"
 field290.accessType = "outputOnly"
+field290.name = "r_calf_changed"
 field290.type = "SFRotation"
 
 ProtoInterface21.field.append(field290)
 field291 = x3d.field()
-field291.name = "r_clavicle_key"
 field291.accessType = "inputOutput"
+field291.name = "r_clavicle_key"
 field291.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field291)
 field292 = x3d.field()
-field292.name = "r_clavicle_keyValue"
 field292.accessType = "inputOutput"
+field292.name = "r_clavicle_keyValue"
 field292.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field292)
 field293 = x3d.field()
-field293.name = "r_clavicle_changed"
 field293.accessType = "outputOnly"
+field293.name = "r_clavicle_changed"
 field293.type = "SFRotation"
 
 ProtoInterface21.field.append(field293)
 field294 = x3d.field()
-field294.name = "r_elbow_key"
 field294.accessType = "inputOutput"
+field294.name = "r_elbow_key"
 field294.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field294)
 field295 = x3d.field()
-field295.name = "r_elbow_keyValue"
 field295.accessType = "inputOutput"
+field295.name = "r_elbow_keyValue"
 field295.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field295)
 field296 = x3d.field()
-field296.name = "r_elbow_changed"
 field296.accessType = "outputOnly"
+field296.name = "r_elbow_changed"
 field296.type = "SFRotation"
 
 ProtoInterface21.field.append(field296)
 field297 = x3d.field()
-field297.name = "r_eyeball_key"
 field297.accessType = "inputOutput"
+field297.name = "r_eyeball_key"
 field297.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field297)
 field298 = x3d.field()
-field298.name = "r_eyeball_keyValue"
 field298.accessType = "inputOutput"
+field298.name = "r_eyeball_keyValue"
 field298.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field298)
 field299 = x3d.field()
-field299.name = "r_eyeball_changed"
 field299.accessType = "outputOnly"
+field299.name = "r_eyeball_changed"
 field299.type = "SFRotation"
 
 ProtoInterface21.field.append(field299)
 field300 = x3d.field()
-field300.name = "r_eyeball_joint_key"
 field300.accessType = "inputOutput"
+field300.name = "r_eyeball_joint_key"
 field300.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field300)
 field301 = x3d.field()
-field301.name = "r_eyeball_joint_keyValue"
 field301.accessType = "inputOutput"
+field301.name = "r_eyeball_joint_keyValue"
 field301.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field301)
 field302 = x3d.field()
-field302.name = "r_eyeball_joint_changed"
 field302.accessType = "outputOnly"
+field302.name = "r_eyeball_joint_changed"
 field302.type = "SFRotation"
 
 ProtoInterface21.field.append(field302)
 field303 = x3d.field()
-field303.name = "r_eyebrow_key"
 field303.accessType = "inputOutput"
+field303.name = "r_eyebrow_key"
 field303.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field303)
 field304 = x3d.field()
-field304.name = "r_eyebrow_keyValue"
 field304.accessType = "inputOutput"
+field304.name = "r_eyebrow_keyValue"
 field304.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field304)
 field305 = x3d.field()
-field305.name = "r_eyebrow_changed"
 field305.accessType = "outputOnly"
+field305.name = "r_eyebrow_changed"
 field305.type = "SFRotation"
 
 ProtoInterface21.field.append(field305)
 field306 = x3d.field()
-field306.name = "r_eyebrow_joint_key"
 field306.accessType = "inputOutput"
+field306.name = "r_eyebrow_joint_key"
 field306.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field306)
 field307 = x3d.field()
-field307.name = "r_eyebrow_joint_keyValue"
 field307.accessType = "inputOutput"
+field307.name = "r_eyebrow_joint_keyValue"
 field307.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field307)
 field308 = x3d.field()
-field308.name = "r_eyebrow_joint_changed"
 field308.accessType = "outputOnly"
+field308.name = "r_eyebrow_joint_changed"
 field308.type = "SFRotation"
 
 ProtoInterface21.field.append(field308)
 field309 = x3d.field()
-field309.name = "r_eyelid_key"
 field309.accessType = "inputOutput"
+field309.name = "r_eyelid_key"
 field309.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field309)
 field310 = x3d.field()
-field310.name = "r_eyelid_keyValue"
 field310.accessType = "inputOutput"
+field310.name = "r_eyelid_keyValue"
 field310.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field310)
 field311 = x3d.field()
-field311.name = "r_eyelid_changed"
 field311.accessType = "outputOnly"
+field311.name = "r_eyelid_changed"
 field311.type = "SFRotation"
 
 ProtoInterface21.field.append(field311)
 field312 = x3d.field()
-field312.name = "r_eyelid_joint_key"
 field312.accessType = "inputOutput"
+field312.name = "r_eyelid_joint_key"
 field312.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field312)
 field313 = x3d.field()
-field313.name = "r_eyelid_joint_keyValue"
 field313.accessType = "inputOutput"
+field313.name = "r_eyelid_joint_keyValue"
 field313.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field313)
 field314 = x3d.field()
-field314.name = "r_eyelid_joint_changed"
 field314.accessType = "outputOnly"
+field314.name = "r_eyelid_joint_changed"
 field314.type = "SFRotation"
 
 ProtoInterface21.field.append(field314)
 field315 = x3d.field()
-field315.name = "r_forearm_key"
 field315.accessType = "inputOutput"
+field315.name = "r_forearm_key"
 field315.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field315)
 field316 = x3d.field()
-field316.name = "r_forearm_keyValue"
 field316.accessType = "inputOutput"
+field316.name = "r_forearm_keyValue"
 field316.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field316)
 field317 = x3d.field()
-field317.name = "r_forearm_changed"
 field317.accessType = "outputOnly"
+field317.name = "r_forearm_changed"
 field317.type = "SFRotation"
 
 ProtoInterface21.field.append(field317)
 field318 = x3d.field()
-field318.name = "r_forefoot_key"
 field318.accessType = "inputOutput"
+field318.name = "r_forefoot_key"
 field318.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field318)
 field319 = x3d.field()
-field319.name = "r_forefoot_keyValue"
 field319.accessType = "inputOutput"
+field319.name = "r_forefoot_keyValue"
 field319.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field319)
 field320 = x3d.field()
-field320.name = "r_forefoot_changed"
 field320.accessType = "outputOnly"
+field320.name = "r_forefoot_changed"
 field320.type = "SFRotation"
 
 ProtoInterface21.field.append(field320)
 field321 = x3d.field()
-field321.name = "r_hand_key"
 field321.accessType = "inputOutput"
+field321.name = "r_hand_key"
 field321.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field321)
 field322 = x3d.field()
-field322.name = "r_hand_keyValue"
 field322.accessType = "inputOutput"
+field322.name = "r_hand_keyValue"
 field322.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field322)
 field323 = x3d.field()
-field323.name = "r_hand_changed"
 field323.accessType = "outputOnly"
+field323.name = "r_hand_changed"
 field323.type = "SFRotation"
 
 ProtoInterface21.field.append(field323)
 field324 = x3d.field()
-field324.name = "r_hindfoot_key"
 field324.accessType = "inputOutput"
+field324.name = "r_hindfoot_key"
 field324.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field324)
 field325 = x3d.field()
-field325.name = "r_hindfoot_keyValue"
 field325.accessType = "inputOutput"
+field325.name = "r_hindfoot_keyValue"
 field325.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field325)
 field326 = x3d.field()
-field326.name = "r_hindfoot_changed"
 field326.accessType = "outputOnly"
+field326.name = "r_hindfoot_changed"
 field326.type = "SFRotation"
 
 ProtoInterface21.field.append(field326)
 field327 = x3d.field()
-field327.name = "r_hip_key"
 field327.accessType = "inputOutput"
+field327.name = "r_hip_key"
 field327.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field327)
 field328 = x3d.field()
-field328.name = "r_hip_keyValue"
 field328.accessType = "inputOutput"
+field328.name = "r_hip_keyValue"
 field328.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field328)
 field329 = x3d.field()
-field329.name = "r_hip_changed"
 field329.accessType = "outputOnly"
+field329.name = "r_hip_changed"
 field329.type = "SFRotation"
 
 ProtoInterface21.field.append(field329)
 field330 = x3d.field()
-field330.name = "r_index0_key"
 field330.accessType = "inputOutput"
+field330.name = "r_index0_key"
 field330.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field330)
 field331 = x3d.field()
-field331.name = "r_index0_keyValue"
 field331.accessType = "inputOutput"
+field331.name = "r_index0_keyValue"
 field331.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field331)
 field332 = x3d.field()
-field332.name = "r_index0_changed"
 field332.accessType = "outputOnly"
+field332.name = "r_index0_changed"
 field332.type = "SFRotation"
 
 ProtoInterface21.field.append(field332)
 field333 = x3d.field()
-field333.name = "r_index1_key"
 field333.accessType = "inputOutput"
+field333.name = "r_index1_key"
 field333.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field333)
 field334 = x3d.field()
-field334.name = "r_index1_keyValue"
 field334.accessType = "inputOutput"
+field334.name = "r_index1_keyValue"
 field334.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field334)
 field335 = x3d.field()
-field335.name = "r_index1_changed"
 field335.accessType = "outputOnly"
+field335.name = "r_index1_changed"
 field335.type = "SFRotation"
 
 ProtoInterface21.field.append(field335)
 field336 = x3d.field()
-field336.name = "r_index2_key"
 field336.accessType = "inputOutput"
+field336.name = "r_index2_key"
 field336.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field336)
 field337 = x3d.field()
-field337.name = "r_index2_keyValue"
 field337.accessType = "inputOutput"
+field337.name = "r_index2_keyValue"
 field337.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field337)
 field338 = x3d.field()
-field338.name = "r_index2_changed"
 field338.accessType = "outputOnly"
+field338.name = "r_index2_changed"
 field338.type = "SFRotation"
 
 ProtoInterface21.field.append(field338)
 field339 = x3d.field()
-field339.name = "r_index3_key"
 field339.accessType = "inputOutput"
+field339.name = "r_index3_key"
 field339.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field339)
 field340 = x3d.field()
-field340.name = "r_index3_keyValue"
 field340.accessType = "inputOutput"
+field340.name = "r_index3_keyValue"
 field340.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field340)
 field341 = x3d.field()
-field341.name = "r_index3_changed"
 field341.accessType = "outputOnly"
+field341.name = "r_index3_changed"
 field341.type = "SFRotation"
 
 ProtoInterface21.field.append(field341)
 field342 = x3d.field()
-field342.name = "r_index_distal_key"
 field342.accessType = "inputOutput"
+field342.name = "r_index_distal_key"
 field342.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field342)
 field343 = x3d.field()
-field343.name = "r_index_distal_keyValue"
 field343.accessType = "inputOutput"
+field343.name = "r_index_distal_keyValue"
 field343.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field343)
 field344 = x3d.field()
-field344.name = "r_index_distal_changed"
 field344.accessType = "outputOnly"
+field344.name = "r_index_distal_changed"
 field344.type = "SFRotation"
 
 ProtoInterface21.field.append(field344)
 field345 = x3d.field()
-field345.name = "r_index_metacarpal_key"
 field345.accessType = "inputOutput"
+field345.name = "r_index_metacarpal_key"
 field345.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field345)
 field346 = x3d.field()
-field346.name = "r_index_metacarpal_keyValue"
 field346.accessType = "inputOutput"
+field346.name = "r_index_metacarpal_keyValue"
 field346.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field346)
 field347 = x3d.field()
-field347.name = "r_index_metacarpal_changed"
 field347.accessType = "outputOnly"
+field347.name = "r_index_metacarpal_changed"
 field347.type = "SFRotation"
 
 ProtoInterface21.field.append(field347)
 field348 = x3d.field()
-field348.name = "r_index_middle_key"
 field348.accessType = "inputOutput"
+field348.name = "r_index_middle_key"
 field348.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field348)
 field349 = x3d.field()
-field349.name = "r_index_middle_keyValue"
 field349.accessType = "inputOutput"
+field349.name = "r_index_middle_keyValue"
 field349.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field349)
 field350 = x3d.field()
-field350.name = "r_index_middle_changed"
 field350.accessType = "outputOnly"
+field350.name = "r_index_middle_changed"
 field350.type = "SFRotation"
 
 ProtoInterface21.field.append(field350)
 field351 = x3d.field()
-field351.name = "r_index_proximal_key"
 field351.accessType = "inputOutput"
+field351.name = "r_index_proximal_key"
 field351.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field351)
 field352 = x3d.field()
-field352.name = "r_index_proximal_keyValue"
 field352.accessType = "inputOutput"
+field352.name = "r_index_proximal_keyValue"
 field352.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field352)
 field353 = x3d.field()
-field353.name = "r_index_proximal_changed"
 field353.accessType = "outputOnly"
+field353.name = "r_index_proximal_changed"
 field353.type = "SFRotation"
 
 ProtoInterface21.field.append(field353)
 field354 = x3d.field()
-field354.name = "r_knee_key"
 field354.accessType = "inputOutput"
+field354.name = "r_knee_key"
 field354.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field354)
 field355 = x3d.field()
-field355.name = "r_knee_keyValue"
 field355.accessType = "inputOutput"
+field355.name = "r_knee_keyValue"
 field355.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field355)
 field356 = x3d.field()
-field356.name = "r_knee_changed"
 field356.accessType = "outputOnly"
+field356.name = "r_knee_changed"
 field356.type = "SFRotation"
 
 ProtoInterface21.field.append(field356)
 field357 = x3d.field()
-field357.name = "r_metatarsal_key"
 field357.accessType = "inputOutput"
+field357.name = "r_metatarsal_key"
 field357.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field357)
 field358 = x3d.field()
-field358.name = "r_metatarsal_keyValue"
 field358.accessType = "inputOutput"
+field358.name = "r_metatarsal_keyValue"
 field358.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field358)
 field359 = x3d.field()
-field359.name = "r_metatarsal_changed"
 field359.accessType = "outputOnly"
+field359.name = "r_metatarsal_changed"
 field359.type = "SFRotation"
 
 ProtoInterface21.field.append(field359)
 field360 = x3d.field()
-field360.name = "r_middistal_key"
 field360.accessType = "inputOutput"
+field360.name = "r_middistal_key"
 field360.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field360)
 field361 = x3d.field()
-field361.name = "r_middistal_keyValue"
 field361.accessType = "inputOutput"
+field361.name = "r_middistal_keyValue"
 field361.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field361)
 field362 = x3d.field()
-field362.name = "r_middistal_changed"
 field362.accessType = "outputOnly"
+field362.name = "r_middistal_changed"
 field362.type = "SFRotation"
 
 ProtoInterface21.field.append(field362)
 field363 = x3d.field()
-field363.name = "r_middle0_key"
 field363.accessType = "inputOutput"
+field363.name = "r_middle0_key"
 field363.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field363)
 field364 = x3d.field()
-field364.name = "r_middle0_keyValue"
 field364.accessType = "inputOutput"
+field364.name = "r_middle0_keyValue"
 field364.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field364)
 field365 = x3d.field()
-field365.name = "r_middle0_changed"
 field365.accessType = "outputOnly"
+field365.name = "r_middle0_changed"
 field365.type = "SFRotation"
 
 ProtoInterface21.field.append(field365)
 field366 = x3d.field()
-field366.name = "r_middle1_key"
 field366.accessType = "inputOutput"
+field366.name = "r_middle1_key"
 field366.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field366)
 field367 = x3d.field()
-field367.name = "r_middle1_keyValue"
 field367.accessType = "inputOutput"
+field367.name = "r_middle1_keyValue"
 field367.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field367)
 field368 = x3d.field()
-field368.name = "r_middle1_changed"
 field368.accessType = "outputOnly"
+field368.name = "r_middle1_changed"
 field368.type = "SFRotation"
 
 ProtoInterface21.field.append(field368)
 field369 = x3d.field()
-field369.name = "r_middle2_key"
 field369.accessType = "inputOutput"
+field369.name = "r_middle2_key"
 field369.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field369)
 field370 = x3d.field()
-field370.name = "r_middle2_keyValue"
 field370.accessType = "inputOutput"
+field370.name = "r_middle2_keyValue"
 field370.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field370)
 field371 = x3d.field()
-field371.name = "r_middle2_changed"
 field371.accessType = "outputOnly"
+field371.name = "r_middle2_changed"
 field371.type = "SFRotation"
 
 ProtoInterface21.field.append(field371)
 field372 = x3d.field()
-field372.name = "r_middle3_key"
 field372.accessType = "inputOutput"
+field372.name = "r_middle3_key"
 field372.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field372)
 field373 = x3d.field()
-field373.name = "r_middle3_keyValue"
 field373.accessType = "inputOutput"
+field373.name = "r_middle3_keyValue"
 field373.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field373)
 field374 = x3d.field()
-field374.name = "r_middle3_changed"
 field374.accessType = "outputOnly"
+field374.name = "r_middle3_changed"
 field374.type = "SFRotation"
 
 ProtoInterface21.field.append(field374)
 field375 = x3d.field()
-field375.name = "r_middle_distal_key"
 field375.accessType = "inputOutput"
+field375.name = "r_middle_distal_key"
 field375.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field375)
 field376 = x3d.field()
-field376.name = "r_middle_distal_keyValue"
 field376.accessType = "inputOutput"
+field376.name = "r_middle_distal_keyValue"
 field376.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field376)
 field377 = x3d.field()
-field377.name = "r_middle_distal_changed"
 field377.accessType = "outputOnly"
+field377.name = "r_middle_distal_changed"
 field377.type = "SFRotation"
 
 ProtoInterface21.field.append(field377)
 field378 = x3d.field()
-field378.name = "r_middle_metacarpal_key"
 field378.accessType = "inputOutput"
+field378.name = "r_middle_metacarpal_key"
 field378.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field378)
 field379 = x3d.field()
-field379.name = "r_middle_metacarpal_keyValue"
 field379.accessType = "inputOutput"
+field379.name = "r_middle_metacarpal_keyValue"
 field379.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field379)
 field380 = x3d.field()
-field380.name = "r_middle_metacarpal_changed"
 field380.accessType = "outputOnly"
+field380.name = "r_middle_metacarpal_changed"
 field380.type = "SFRotation"
 
 ProtoInterface21.field.append(field380)
 field381 = x3d.field()
-field381.name = "r_middle_middle_key"
 field381.accessType = "inputOutput"
+field381.name = "r_middle_middle_key"
 field381.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field381)
 field382 = x3d.field()
-field382.name = "r_middle_middle_keyValue"
 field382.accessType = "inputOutput"
+field382.name = "r_middle_middle_keyValue"
 field382.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field382)
 field383 = x3d.field()
-field383.name = "r_middle_middle_changed"
 field383.accessType = "outputOnly"
+field383.name = "r_middle_middle_changed"
 field383.type = "SFRotation"
 
 ProtoInterface21.field.append(field383)
 field384 = x3d.field()
-field384.name = "r_middle_proximal_key"
 field384.accessType = "inputOutput"
+field384.name = "r_middle_proximal_key"
 field384.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field384)
 field385 = x3d.field()
-field385.name = "r_middle_proximal_keyValue"
 field385.accessType = "inputOutput"
+field385.name = "r_middle_proximal_keyValue"
 field385.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field385)
 field386 = x3d.field()
-field386.name = "r_middle_proximal_changed"
 field386.accessType = "outputOnly"
+field386.name = "r_middle_proximal_changed"
 field386.type = "SFRotation"
 
 ProtoInterface21.field.append(field386)
 field387 = x3d.field()
-field387.name = "r_midproximal_key"
 field387.accessType = "inputOutput"
+field387.name = "r_midproximal_key"
 field387.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field387)
 field388 = x3d.field()
-field388.name = "r_midproximal_keyValue"
 field388.accessType = "inputOutput"
+field388.name = "r_midproximal_keyValue"
 field388.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field388)
 field389 = x3d.field()
-field389.name = "r_midproximal_changed"
 field389.accessType = "outputOnly"
+field389.name = "r_midproximal_changed"
 field389.type = "SFRotation"
 
 ProtoInterface21.field.append(field389)
 field390 = x3d.field()
-field390.name = "r_midtarsal_key"
 field390.accessType = "inputOutput"
+field390.name = "r_midtarsal_key"
 field390.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field390)
 field391 = x3d.field()
-field391.name = "r_midtarsal_keyValue"
 field391.accessType = "inputOutput"
+field391.name = "r_midtarsal_keyValue"
 field391.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field391)
 field392 = x3d.field()
-field392.name = "r_midtarsal_changed"
 field392.accessType = "outputOnly"
+field392.name = "r_midtarsal_changed"
 field392.type = "SFRotation"
 
 ProtoInterface21.field.append(field392)
 field393 = x3d.field()
-field393.name = "r_pinky0_key"
 field393.accessType = "inputOutput"
+field393.name = "r_pinky0_key"
 field393.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field393)
 field394 = x3d.field()
-field394.name = "r_pinky0_keyValue"
 field394.accessType = "inputOutput"
+field394.name = "r_pinky0_keyValue"
 field394.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field394)
 field395 = x3d.field()
-field395.name = "r_pinky0_changed"
 field395.accessType = "outputOnly"
+field395.name = "r_pinky0_changed"
 field395.type = "SFRotation"
 
 ProtoInterface21.field.append(field395)
 field396 = x3d.field()
-field396.name = "r_pinky1_key"
 field396.accessType = "inputOutput"
+field396.name = "r_pinky1_key"
 field396.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field396)
 field397 = x3d.field()
-field397.name = "r_pinky1_keyValue"
 field397.accessType = "inputOutput"
+field397.name = "r_pinky1_keyValue"
 field397.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field397)
 field398 = x3d.field()
-field398.name = "r_pinky1_changed"
 field398.accessType = "outputOnly"
+field398.name = "r_pinky1_changed"
 field398.type = "SFRotation"
 
 ProtoInterface21.field.append(field398)
 field399 = x3d.field()
-field399.name = "r_pinky2_key"
 field399.accessType = "inputOutput"
+field399.name = "r_pinky2_key"
 field399.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field399)
 field400 = x3d.field()
-field400.name = "r_pinky2_keyValue"
 field400.accessType = "inputOutput"
+field400.name = "r_pinky2_keyValue"
 field400.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field400)
 field401 = x3d.field()
-field401.name = "r_pinky2_changed"
 field401.accessType = "outputOnly"
+field401.name = "r_pinky2_changed"
 field401.type = "SFRotation"
 
 ProtoInterface21.field.append(field401)
 field402 = x3d.field()
-field402.name = "r_pinky3_key"
 field402.accessType = "inputOutput"
+field402.name = "r_pinky3_key"
 field402.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field402)
 field403 = x3d.field()
-field403.name = "r_pinky3_keyValue"
 field403.accessType = "inputOutput"
+field403.name = "r_pinky3_keyValue"
 field403.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field403)
 field404 = x3d.field()
-field404.name = "r_pinky3_changed"
 field404.accessType = "outputOnly"
+field404.name = "r_pinky3_changed"
 field404.type = "SFRotation"
 
 ProtoInterface21.field.append(field404)
 field405 = x3d.field()
-field405.name = "r_pinky_distal_key"
 field405.accessType = "inputOutput"
+field405.name = "r_pinky_distal_key"
 field405.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field405)
 field406 = x3d.field()
-field406.name = "r_pinky_distal_keyValue"
 field406.accessType = "inputOutput"
+field406.name = "r_pinky_distal_keyValue"
 field406.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field406)
 field407 = x3d.field()
-field407.name = "r_pinky_distal_changed"
 field407.accessType = "outputOnly"
+field407.name = "r_pinky_distal_changed"
 field407.type = "SFRotation"
 
 ProtoInterface21.field.append(field407)
 field408 = x3d.field()
-field408.name = "r_pinky_metacarpal_key"
 field408.accessType = "inputOutput"
+field408.name = "r_pinky_metacarpal_key"
 field408.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field408)
 field409 = x3d.field()
-field409.name = "r_pinky_metacarpal_keyValue"
 field409.accessType = "inputOutput"
+field409.name = "r_pinky_metacarpal_keyValue"
 field409.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field409)
 field410 = x3d.field()
-field410.name = "r_pinky_metacarpal_changed"
 field410.accessType = "outputOnly"
+field410.name = "r_pinky_metacarpal_changed"
 field410.type = "SFRotation"
 
 ProtoInterface21.field.append(field410)
 field411 = x3d.field()
-field411.name = "r_pinky_middle_key"
 field411.accessType = "inputOutput"
+field411.name = "r_pinky_middle_key"
 field411.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field411)
 field412 = x3d.field()
-field412.name = "r_pinky_middle_keyValue"
 field412.accessType = "inputOutput"
+field412.name = "r_pinky_middle_keyValue"
 field412.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field412)
 field413 = x3d.field()
-field413.name = "r_pinky_middle_changed"
 field413.accessType = "outputOnly"
+field413.name = "r_pinky_middle_changed"
 field413.type = "SFRotation"
 
 ProtoInterface21.field.append(field413)
 field414 = x3d.field()
-field414.name = "r_pinky_proximal_key"
 field414.accessType = "inputOutput"
+field414.name = "r_pinky_proximal_key"
 field414.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field414)
 field415 = x3d.field()
-field415.name = "r_pinky_proximal_keyValue"
 field415.accessType = "inputOutput"
+field415.name = "r_pinky_proximal_keyValue"
 field415.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field415)
 field416 = x3d.field()
-field416.name = "r_pinky_proximal_changed"
 field416.accessType = "outputOnly"
+field416.name = "r_pinky_proximal_changed"
 field416.type = "SFRotation"
 
 ProtoInterface21.field.append(field416)
 field417 = x3d.field()
-field417.name = "r_ring0_key"
 field417.accessType = "inputOutput"
+field417.name = "r_ring0_key"
 field417.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field417)
 field418 = x3d.field()
-field418.name = "r_ring0_keyValue"
 field418.accessType = "inputOutput"
+field418.name = "r_ring0_keyValue"
 field418.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field418)
 field419 = x3d.field()
-field419.name = "r_ring0_changed"
 field419.accessType = "outputOnly"
+field419.name = "r_ring0_changed"
 field419.type = "SFRotation"
 
 ProtoInterface21.field.append(field419)
 field420 = x3d.field()
-field420.name = "r_ring1_key"
 field420.accessType = "inputOutput"
+field420.name = "r_ring1_key"
 field420.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field420)
 field421 = x3d.field()
-field421.name = "r_ring1_keyValue"
 field421.accessType = "inputOutput"
+field421.name = "r_ring1_keyValue"
 field421.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field421)
 field422 = x3d.field()
-field422.name = "r_ring1_changed"
 field422.accessType = "outputOnly"
+field422.name = "r_ring1_changed"
 field422.type = "SFRotation"
 
 ProtoInterface21.field.append(field422)
 field423 = x3d.field()
-field423.name = "r_ring2_key"
 field423.accessType = "inputOutput"
+field423.name = "r_ring2_key"
 field423.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field423)
 field424 = x3d.field()
-field424.name = "r_ring2_keyValue"
 field424.accessType = "inputOutput"
+field424.name = "r_ring2_keyValue"
 field424.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field424)
 field425 = x3d.field()
-field425.name = "r_ring2_changed"
 field425.accessType = "outputOnly"
+field425.name = "r_ring2_changed"
 field425.type = "SFRotation"
 
 ProtoInterface21.field.append(field425)
 field426 = x3d.field()
-field426.name = "r_ring3_key"
 field426.accessType = "inputOutput"
+field426.name = "r_ring3_key"
 field426.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field426)
 field427 = x3d.field()
-field427.name = "r_ring3_keyValue"
 field427.accessType = "inputOutput"
+field427.name = "r_ring3_keyValue"
 field427.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field427)
 field428 = x3d.field()
-field428.name = "r_ring3_changed"
 field428.accessType = "outputOnly"
+field428.name = "r_ring3_changed"
 field428.type = "SFRotation"
 
 ProtoInterface21.field.append(field428)
 field429 = x3d.field()
-field429.name = "r_ring_distal_key"
 field429.accessType = "inputOutput"
+field429.name = "r_ring_distal_key"
 field429.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field429)
 field430 = x3d.field()
-field430.name = "r_ring_distal_keyValue"
 field430.accessType = "inputOutput"
+field430.name = "r_ring_distal_keyValue"
 field430.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field430)
 field431 = x3d.field()
-field431.name = "r_ring_distal_changed"
 field431.accessType = "outputOnly"
+field431.name = "r_ring_distal_changed"
 field431.type = "SFRotation"
 
 ProtoInterface21.field.append(field431)
 field432 = x3d.field()
-field432.name = "r_ring_metacarpal_key"
 field432.accessType = "inputOutput"
+field432.name = "r_ring_metacarpal_key"
 field432.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field432)
 field433 = x3d.field()
-field433.name = "r_ring_metacarpal_keyValue"
 field433.accessType = "inputOutput"
+field433.name = "r_ring_metacarpal_keyValue"
 field433.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field433)
 field434 = x3d.field()
-field434.name = "r_ring_metacarpal_changed"
 field434.accessType = "outputOnly"
+field434.name = "r_ring_metacarpal_changed"
 field434.type = "SFRotation"
 
 ProtoInterface21.field.append(field434)
 field435 = x3d.field()
-field435.name = "r_ring_middle_key"
 field435.accessType = "inputOutput"
+field435.name = "r_ring_middle_key"
 field435.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field435)
 field436 = x3d.field()
-field436.name = "r_ring_middle_keyValue"
 field436.accessType = "inputOutput"
+field436.name = "r_ring_middle_keyValue"
 field436.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field436)
 field437 = x3d.field()
-field437.name = "r_ring_middle_changed"
 field437.accessType = "outputOnly"
+field437.name = "r_ring_middle_changed"
 field437.type = "SFRotation"
 
 ProtoInterface21.field.append(field437)
 field438 = x3d.field()
-field438.name = "r_ring_proximal_key"
 field438.accessType = "inputOutput"
+field438.name = "r_ring_proximal_key"
 field438.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field438)
 field439 = x3d.field()
-field439.name = "r_ring_proximal_keyValue"
 field439.accessType = "inputOutput"
+field439.name = "r_ring_proximal_keyValue"
 field439.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field439)
 field440 = x3d.field()
-field440.name = "r_ring_proximal_changed"
 field440.accessType = "outputOnly"
+field440.name = "r_ring_proximal_changed"
 field440.type = "SFRotation"
 
 ProtoInterface21.field.append(field440)
 field441 = x3d.field()
-field441.name = "r_scapula_key"
 field441.accessType = "inputOutput"
+field441.name = "r_scapula_key"
 field441.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field441)
 field442 = x3d.field()
-field442.name = "r_scapula_keyValue"
 field442.accessType = "inputOutput"
+field442.name = "r_scapula_keyValue"
 field442.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field442)
 field443 = x3d.field()
-field443.name = "r_scapula_changed"
 field443.accessType = "outputOnly"
+field443.name = "r_scapula_changed"
 field443.type = "SFRotation"
 
 ProtoInterface21.field.append(field443)
 field444 = x3d.field()
-field444.name = "r_shoulder_key"
 field444.accessType = "inputOutput"
+field444.name = "r_shoulder_key"
 field444.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field444)
 field445 = x3d.field()
-field445.name = "r_shoulder_keyValue"
 field445.accessType = "inputOutput"
+field445.name = "r_shoulder_keyValue"
 field445.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field445)
 field446 = x3d.field()
-field446.name = "r_shoulder_changed"
 field446.accessType = "outputOnly"
+field446.name = "r_shoulder_changed"
 field446.type = "SFRotation"
 
 ProtoInterface21.field.append(field446)
 field447 = x3d.field()
-field447.name = "r_sternoclavicular_key"
 field447.accessType = "inputOutput"
+field447.name = "r_sternoclavicular_key"
 field447.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field447)
 field448 = x3d.field()
-field448.name = "r_sternoclavicular_keyValue"
 field448.accessType = "inputOutput"
+field448.name = "r_sternoclavicular_keyValue"
 field448.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field448)
 field449 = x3d.field()
-field449.name = "r_sternoclavicular_changed"
 field449.accessType = "outputOnly"
+field449.name = "r_sternoclavicular_changed"
 field449.type = "SFRotation"
 
 ProtoInterface21.field.append(field449)
 field450 = x3d.field()
-field450.name = "r_subtalar_key"
 field450.accessType = "inputOutput"
+field450.name = "r_subtalar_key"
 field450.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field450)
 field451 = x3d.field()
-field451.name = "r_subtalar_keyValue"
 field451.accessType = "inputOutput"
+field451.name = "r_subtalar_keyValue"
 field451.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field451)
 field452 = x3d.field()
-field452.name = "r_subtalar_changed"
 field452.accessType = "outputOnly"
+field452.name = "r_subtalar_changed"
 field452.type = "SFRotation"
 
 ProtoInterface21.field.append(field452)
 field453 = x3d.field()
-field453.name = "r_thigh_key"
 field453.accessType = "inputOutput"
+field453.name = "r_thigh_key"
 field453.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field453)
 field454 = x3d.field()
-field454.name = "r_thigh_keyValue"
 field454.accessType = "inputOutput"
+field454.name = "r_thigh_keyValue"
 field454.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field454)
 field455 = x3d.field()
-field455.name = "r_thigh_changed"
 field455.accessType = "outputOnly"
+field455.name = "r_thigh_changed"
 field455.type = "SFRotation"
 
 ProtoInterface21.field.append(field455)
 field456 = x3d.field()
-field456.name = "r_thumb1_key"
 field456.accessType = "inputOutput"
+field456.name = "r_thumb1_key"
 field456.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field456)
 field457 = x3d.field()
-field457.name = "r_thumb1_keyValue"
 field457.accessType = "inputOutput"
+field457.name = "r_thumb1_keyValue"
 field457.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field457)
 field458 = x3d.field()
-field458.name = "r_thumb1_changed"
 field458.accessType = "outputOnly"
+field458.name = "r_thumb1_changed"
 field458.type = "SFRotation"
 
 ProtoInterface21.field.append(field458)
 field459 = x3d.field()
-field459.name = "r_thumb2_key"
 field459.accessType = "inputOutput"
+field459.name = "r_thumb2_key"
 field459.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field459)
 field460 = x3d.field()
-field460.name = "r_thumb2_keyValue"
 field460.accessType = "inputOutput"
+field460.name = "r_thumb2_keyValue"
 field460.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field460)
 field461 = x3d.field()
-field461.name = "r_thumb2_changed"
 field461.accessType = "outputOnly"
+field461.name = "r_thumb2_changed"
 field461.type = "SFRotation"
 
 ProtoInterface21.field.append(field461)
 field462 = x3d.field()
-field462.name = "r_thumb3_key"
 field462.accessType = "inputOutput"
+field462.name = "r_thumb3_key"
 field462.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field462)
 field463 = x3d.field()
-field463.name = "r_thumb3_keyValue"
 field463.accessType = "inputOutput"
+field463.name = "r_thumb3_keyValue"
 field463.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field463)
 field464 = x3d.field()
-field464.name = "r_thumb3_changed"
 field464.accessType = "outputOnly"
+field464.name = "r_thumb3_changed"
 field464.type = "SFRotation"
 
 ProtoInterface21.field.append(field464)
 field465 = x3d.field()
-field465.name = "r_thumb_distal_key"
 field465.accessType = "inputOutput"
+field465.name = "r_thumb_distal_key"
 field465.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field465)
 field466 = x3d.field()
-field466.name = "r_thumb_distal_keyValue"
 field466.accessType = "inputOutput"
+field466.name = "r_thumb_distal_keyValue"
 field466.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field466)
 field467 = x3d.field()
-field467.name = "r_thumb_distal_changed"
 field467.accessType = "outputOnly"
+field467.name = "r_thumb_distal_changed"
 field467.type = "SFRotation"
 
 ProtoInterface21.field.append(field467)
 field468 = x3d.field()
-field468.name = "r_thumb_metacarpal_key"
 field468.accessType = "inputOutput"
+field468.name = "r_thumb_metacarpal_key"
 field468.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field468)
 field469 = x3d.field()
-field469.name = "r_thumb_metacarpal_keyValue"
 field469.accessType = "inputOutput"
+field469.name = "r_thumb_metacarpal_keyValue"
 field469.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field469)
 field470 = x3d.field()
-field470.name = "r_thumb_metacarpal_changed"
 field470.accessType = "outputOnly"
+field470.name = "r_thumb_metacarpal_changed"
 field470.type = "SFRotation"
 
 ProtoInterface21.field.append(field470)
 field471 = x3d.field()
-field471.name = "r_thumb_proximal_key"
 field471.accessType = "inputOutput"
+field471.name = "r_thumb_proximal_key"
 field471.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field471)
 field472 = x3d.field()
-field472.name = "r_thumb_proximal_keyValue"
 field472.accessType = "inputOutput"
+field472.name = "r_thumb_proximal_keyValue"
 field472.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field472)
 field473 = x3d.field()
-field473.name = "r_thumb_proximal_changed"
 field473.accessType = "outputOnly"
+field473.name = "r_thumb_proximal_changed"
 field473.type = "SFRotation"
 
 ProtoInterface21.field.append(field473)
 field474 = x3d.field()
-field474.name = "r_upperarm_key"
 field474.accessType = "inputOutput"
+field474.name = "r_upperarm_key"
 field474.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field474)
 field475 = x3d.field()
-field475.name = "r_upperarm_keyValue"
 field475.accessType = "inputOutput"
+field475.name = "r_upperarm_keyValue"
 field475.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field475)
 field476 = x3d.field()
-field476.name = "r_upperarm_changed"
 field476.accessType = "outputOnly"
+field476.name = "r_upperarm_changed"
 field476.type = "SFRotation"
 
 ProtoInterface21.field.append(field476)
 field477 = x3d.field()
-field477.name = "r_wrist_key"
 field477.accessType = "inputOutput"
+field477.name = "r_wrist_key"
 field477.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field477)
 field478 = x3d.field()
-field478.name = "r_wrist_keyValue"
 field478.accessType = "inputOutput"
+field478.name = "r_wrist_keyValue"
 field478.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field478)
 field479 = x3d.field()
-field479.name = "r_wrist_changed"
 field479.accessType = "outputOnly"
+field479.name = "r_wrist_changed"
 field479.type = "SFRotation"
 
 ProtoInterface21.field.append(field479)
 field480 = x3d.field()
-field480.name = "sacroiliac_key"
 field480.accessType = "inputOutput"
+field480.name = "sacroiliac_key"
 field480.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field480)
 field481 = x3d.field()
-field481.name = "sacroiliac_keyValue"
 field481.accessType = "inputOutput"
+field481.name = "sacroiliac_keyValue"
 field481.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field481)
 field482 = x3d.field()
-field482.name = "sacroiliac_changed"
 field482.accessType = "outputOnly"
+field482.name = "sacroiliac_changed"
 field482.type = "SFRotation"
 
 ProtoInterface21.field.append(field482)
 field483 = x3d.field()
-field483.name = "sacrum_key"
 field483.accessType = "inputOutput"
+field483.name = "sacrum_key"
 field483.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field483)
 field484 = x3d.field()
-field484.name = "sacrum_keyValue"
 field484.accessType = "inputOutput"
+field484.name = "sacrum_keyValue"
 field484.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field484)
 field485 = x3d.field()
-field485.name = "sacrum_changed"
 field485.accessType = "outputOnly"
+field485.name = "sacrum_changed"
 field485.type = "SFRotation"
 
 ProtoInterface21.field.append(field485)
 field486 = x3d.field()
-field486.name = "skull_key"
 field486.accessType = "inputOutput"
+field486.name = "skull_key"
 field486.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field486)
 field487 = x3d.field()
-field487.name = "skull_keyValue"
 field487.accessType = "inputOutput"
+field487.name = "skull_keyValue"
 field487.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field487)
 field488 = x3d.field()
-field488.name = "skull_changed"
 field488.accessType = "outputOnly"
+field488.name = "skull_changed"
 field488.type = "SFRotation"
 
 ProtoInterface21.field.append(field488)
 field489 = x3d.field()
-field489.name = "skullbase_key"
 field489.accessType = "inputOutput"
+field489.name = "skullbase_key"
 field489.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field489)
 field490 = x3d.field()
-field490.name = "skullbase_keyValue"
 field490.accessType = "inputOutput"
+field490.name = "skullbase_keyValue"
 field490.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field490)
 field491 = x3d.field()
-field491.name = "skullbase_changed"
 field491.accessType = "outputOnly"
+field491.name = "skullbase_changed"
 field491.type = "SFRotation"
 
 ProtoInterface21.field.append(field491)
 field492 = x3d.field()
-field492.name = "t10_key"
 field492.accessType = "inputOutput"
+field492.name = "t10_key"
 field492.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field492)
 field493 = x3d.field()
-field493.name = "t10_keyValue"
 field493.accessType = "inputOutput"
+field493.name = "t10_keyValue"
 field493.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field493)
 field494 = x3d.field()
-field494.name = "t10_changed"
 field494.accessType = "outputOnly"
+field494.name = "t10_changed"
 field494.type = "SFRotation"
 
 ProtoInterface21.field.append(field494)
 field495 = x3d.field()
-field495.name = "t11_key"
 field495.accessType = "inputOutput"
+field495.name = "t11_key"
 field495.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field495)
 field496 = x3d.field()
-field496.name = "t11_keyValue"
 field496.accessType = "inputOutput"
+field496.name = "t11_keyValue"
 field496.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field496)
 field497 = x3d.field()
-field497.name = "t11_changed"
 field497.accessType = "outputOnly"
+field497.name = "t11_changed"
 field497.type = "SFRotation"
 
 ProtoInterface21.field.append(field497)
 field498 = x3d.field()
-field498.name = "t12_key"
 field498.accessType = "inputOutput"
+field498.name = "t12_key"
 field498.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field498)
 field499 = x3d.field()
-field499.name = "t12_keyValue"
 field499.accessType = "inputOutput"
+field499.name = "t12_keyValue"
 field499.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field499)
 field500 = x3d.field()
-field500.name = "t12_changed"
 field500.accessType = "outputOnly"
+field500.name = "t12_changed"
 field500.type = "SFRotation"
 
 ProtoInterface21.field.append(field500)
 field501 = x3d.field()
-field501.name = "t1_key"
 field501.accessType = "inputOutput"
+field501.name = "t1_key"
 field501.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field501)
 field502 = x3d.field()
-field502.name = "t1_keyValue"
 field502.accessType = "inputOutput"
+field502.name = "t1_keyValue"
 field502.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field502)
 field503 = x3d.field()
-field503.name = "t1_changed"
 field503.accessType = "outputOnly"
+field503.name = "t1_changed"
 field503.type = "SFRotation"
 
 ProtoInterface21.field.append(field503)
 field504 = x3d.field()
-field504.name = "t2_key"
 field504.accessType = "inputOutput"
+field504.name = "t2_key"
 field504.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field504)
 field505 = x3d.field()
-field505.name = "t2_keyValue"
 field505.accessType = "inputOutput"
+field505.name = "t2_keyValue"
 field505.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field505)
 field506 = x3d.field()
-field506.name = "t2_changed"
 field506.accessType = "outputOnly"
+field506.name = "t2_changed"
 field506.type = "SFRotation"
 
 ProtoInterface21.field.append(field506)
 field507 = x3d.field()
-field507.name = "t3_key"
 field507.accessType = "inputOutput"
+field507.name = "t3_key"
 field507.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field507)
 field508 = x3d.field()
-field508.name = "t3_keyValue"
 field508.accessType = "inputOutput"
+field508.name = "t3_keyValue"
 field508.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field508)
 field509 = x3d.field()
-field509.name = "t3_changed"
 field509.accessType = "outputOnly"
+field509.name = "t3_changed"
 field509.type = "SFRotation"
 
 ProtoInterface21.field.append(field509)
 field510 = x3d.field()
-field510.name = "t4_key"
 field510.accessType = "inputOutput"
+field510.name = "t4_key"
 field510.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field510)
 field511 = x3d.field()
-field511.name = "t4_keyValue"
 field511.accessType = "inputOutput"
+field511.name = "t4_keyValue"
 field511.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field511)
 field512 = x3d.field()
-field512.name = "t4_changed"
 field512.accessType = "outputOnly"
+field512.name = "t4_changed"
 field512.type = "SFRotation"
 
 ProtoInterface21.field.append(field512)
 field513 = x3d.field()
-field513.name = "t5_key"
 field513.accessType = "inputOutput"
+field513.name = "t5_key"
 field513.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field513)
 field514 = x3d.field()
-field514.name = "t5_keyValue"
 field514.accessType = "inputOutput"
+field514.name = "t5_keyValue"
 field514.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field514)
 field515 = x3d.field()
-field515.name = "t5_changed"
 field515.accessType = "outputOnly"
+field515.name = "t5_changed"
 field515.type = "SFRotation"
 
 ProtoInterface21.field.append(field515)
 field516 = x3d.field()
-field516.name = "t6_key"
 field516.accessType = "inputOutput"
+field516.name = "t6_key"
 field516.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field516)
 field517 = x3d.field()
-field517.name = "t6_keyValue"
 field517.accessType = "inputOutput"
+field517.name = "t6_keyValue"
 field517.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field517)
 field518 = x3d.field()
-field518.name = "t6_changed"
 field518.accessType = "outputOnly"
+field518.name = "t6_changed"
 field518.type = "SFRotation"
 
 ProtoInterface21.field.append(field518)
 field519 = x3d.field()
-field519.name = "t7_key"
 field519.accessType = "inputOutput"
+field519.name = "t7_key"
 field519.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field519)
 field520 = x3d.field()
-field520.name = "t7_keyValue"
 field520.accessType = "inputOutput"
+field520.name = "t7_keyValue"
 field520.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field520)
 field521 = x3d.field()
-field521.name = "t7_changed"
 field521.accessType = "outputOnly"
+field521.name = "t7_changed"
 field521.type = "SFRotation"
 
 ProtoInterface21.field.append(field521)
 field522 = x3d.field()
-field522.name = "t8_key"
 field522.accessType = "inputOutput"
+field522.name = "t8_key"
 field522.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field522)
 field523 = x3d.field()
-field523.name = "t8_keyValue"
 field523.accessType = "inputOutput"
+field523.name = "t8_keyValue"
 field523.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field523)
 field524 = x3d.field()
-field524.name = "t8_changed"
 field524.accessType = "outputOnly"
+field524.name = "t8_changed"
 field524.type = "SFRotation"
 
 ProtoInterface21.field.append(field524)
 field525 = x3d.field()
-field525.name = "t9_key"
 field525.accessType = "inputOutput"
+field525.name = "t9_key"
 field525.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field525)
 field526 = x3d.field()
-field526.name = "t9_keyValue"
 field526.accessType = "inputOutput"
+field526.name = "t9_keyValue"
 field526.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field526)
 field527 = x3d.field()
-field527.name = "t9_changed"
 field527.accessType = "outputOnly"
+field527.name = "t9_changed"
 field527.type = "SFRotation"
 
 ProtoInterface21.field.append(field527)
 field528 = x3d.field()
-field528.name = "temporomandibular_key"
 field528.accessType = "inputOutput"
+field528.name = "temporomandibular_key"
 field528.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field528)
 field529 = x3d.field()
-field529.name = "temporomandibular_keyValue"
 field529.accessType = "inputOutput"
+field529.name = "temporomandibular_keyValue"
 field529.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field529)
 field530 = x3d.field()
-field530.name = "temporomandibular_changed"
 field530.accessType = "outputOnly"
+field530.name = "temporomandibular_changed"
 field530.type = "SFRotation"
 
 ProtoInterface21.field.append(field530)
 field531 = x3d.field()
-field531.name = "vc1_key"
 field531.accessType = "inputOutput"
+field531.name = "vc1_key"
 field531.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field531)
 field532 = x3d.field()
-field532.name = "vc1_keyValue"
 field532.accessType = "inputOutput"
+field532.name = "vc1_keyValue"
 field532.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field532)
 field533 = x3d.field()
-field533.name = "vc1_changed"
 field533.accessType = "outputOnly"
+field533.name = "vc1_changed"
 field533.type = "SFRotation"
 
 ProtoInterface21.field.append(field533)
 field534 = x3d.field()
-field534.name = "vc2_key"
 field534.accessType = "inputOutput"
+field534.name = "vc2_key"
 field534.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field534)
 field535 = x3d.field()
-field535.name = "vc2_keyValue"
 field535.accessType = "inputOutput"
+field535.name = "vc2_keyValue"
 field535.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field535)
 field536 = x3d.field()
-field536.name = "vc2_changed"
 field536.accessType = "outputOnly"
+field536.name = "vc2_changed"
 field536.type = "SFRotation"
 
 ProtoInterface21.field.append(field536)
 field537 = x3d.field()
-field537.name = "vc3_key"
 field537.accessType = "inputOutput"
+field537.name = "vc3_key"
 field537.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field537)
 field538 = x3d.field()
-field538.name = "vc3_keyValue"
 field538.accessType = "inputOutput"
+field538.name = "vc3_keyValue"
 field538.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field538)
 field539 = x3d.field()
-field539.name = "vc3_changed"
 field539.accessType = "outputOnly"
+field539.name = "vc3_changed"
 field539.type = "SFRotation"
 
 ProtoInterface21.field.append(field539)
 field540 = x3d.field()
-field540.name = "vc4_key"
 field540.accessType = "inputOutput"
+field540.name = "vc4_key"
 field540.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field540)
 field541 = x3d.field()
-field541.name = "vc4_keyValue"
 field541.accessType = "inputOutput"
+field541.name = "vc4_keyValue"
 field541.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field541)
 field542 = x3d.field()
-field542.name = "vc4_changed"
 field542.accessType = "outputOnly"
+field542.name = "vc4_changed"
 field542.type = "SFRotation"
 
 ProtoInterface21.field.append(field542)
 field543 = x3d.field()
-field543.name = "vc5_key"
 field543.accessType = "inputOutput"
+field543.name = "vc5_key"
 field543.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field543)
 field544 = x3d.field()
-field544.name = "vc5_keyValue"
 field544.accessType = "inputOutput"
+field544.name = "vc5_keyValue"
 field544.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field544)
 field545 = x3d.field()
-field545.name = "vc5_changed"
 field545.accessType = "outputOnly"
+field545.name = "vc5_changed"
 field545.type = "SFRotation"
 
 ProtoInterface21.field.append(field545)
 field546 = x3d.field()
-field546.name = "vc6_key"
 field546.accessType = "inputOutput"
+field546.name = "vc6_key"
 field546.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field546)
 field547 = x3d.field()
-field547.name = "vc6_keyValue"
 field547.accessType = "inputOutput"
+field547.name = "vc6_keyValue"
 field547.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field547)
 field548 = x3d.field()
-field548.name = "vc6_changed"
 field548.accessType = "outputOnly"
+field548.name = "vc6_changed"
 field548.type = "SFRotation"
 
 ProtoInterface21.field.append(field548)
 field549 = x3d.field()
-field549.name = "vc7_key"
 field549.accessType = "inputOutput"
+field549.name = "vc7_key"
 field549.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field549)
 field550 = x3d.field()
-field550.name = "vc7_keyValue"
 field550.accessType = "inputOutput"
+field550.name = "vc7_keyValue"
 field550.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field550)
 field551 = x3d.field()
-field551.name = "vc7_changed"
 field551.accessType = "outputOnly"
+field551.name = "vc7_changed"
 field551.type = "SFRotation"
 
 ProtoInterface21.field.append(field551)
 field552 = x3d.field()
-field552.name = "vl1_key"
 field552.accessType = "inputOutput"
+field552.name = "vl1_key"
 field552.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field552)
 field553 = x3d.field()
-field553.name = "vl1_keyValue"
 field553.accessType = "inputOutput"
+field553.name = "vl1_keyValue"
 field553.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field553)
 field554 = x3d.field()
-field554.name = "vl1_changed"
 field554.accessType = "outputOnly"
+field554.name = "vl1_changed"
 field554.type = "SFRotation"
 
 ProtoInterface21.field.append(field554)
 field555 = x3d.field()
-field555.name = "vl2_key"
 field555.accessType = "inputOutput"
+field555.name = "vl2_key"
 field555.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field555)
 field556 = x3d.field()
-field556.name = "vl2_keyValue"
 field556.accessType = "inputOutput"
+field556.name = "vl2_keyValue"
 field556.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field556)
 field557 = x3d.field()
-field557.name = "vl2_changed"
 field557.accessType = "outputOnly"
+field557.name = "vl2_changed"
 field557.type = "SFRotation"
 
 ProtoInterface21.field.append(field557)
 field558 = x3d.field()
-field558.name = "vl3_key"
 field558.accessType = "inputOutput"
+field558.name = "vl3_key"
 field558.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field558)
 field559 = x3d.field()
-field559.name = "vl3_keyValue"
 field559.accessType = "inputOutput"
+field559.name = "vl3_keyValue"
 field559.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field559)
 field560 = x3d.field()
-field560.name = "vl3_changed"
 field560.accessType = "outputOnly"
+field560.name = "vl3_changed"
 field560.type = "SFRotation"
 
 ProtoInterface21.field.append(field560)
 field561 = x3d.field()
-field561.name = "vl4_key"
 field561.accessType = "inputOutput"
+field561.name = "vl4_key"
 field561.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field561)
 field562 = x3d.field()
-field562.name = "vl4_keyValue"
 field562.accessType = "inputOutput"
+field562.name = "vl4_keyValue"
 field562.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field562)
 field563 = x3d.field()
-field563.name = "vl4_changed"
 field563.accessType = "outputOnly"
+field563.name = "vl4_changed"
 field563.type = "SFRotation"
 
 ProtoInterface21.field.append(field563)
 field564 = x3d.field()
-field564.name = "vl5_key"
 field564.accessType = "inputOutput"
+field564.name = "vl5_key"
 field564.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field564)
 field565 = x3d.field()
-field565.name = "vl5_keyValue"
 field565.accessType = "inputOutput"
+field565.name = "vl5_keyValue"
 field565.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field565)
 field566 = x3d.field()
-field566.name = "vl5_changed"
 field566.accessType = "outputOnly"
+field566.name = "vl5_changed"
 field566.type = "SFRotation"
 
 ProtoInterface21.field.append(field566)
 field567 = x3d.field()
-field567.name = "vt10_key"
 field567.accessType = "inputOutput"
+field567.name = "vt10_key"
 field567.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field567)
 field568 = x3d.field()
-field568.name = "vt10_keyValue"
 field568.accessType = "inputOutput"
+field568.name = "vt10_keyValue"
 field568.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field568)
 field569 = x3d.field()
-field569.name = "vt10_changed"
 field569.accessType = "outputOnly"
+field569.name = "vt10_changed"
 field569.type = "SFRotation"
 
 ProtoInterface21.field.append(field569)
 field570 = x3d.field()
-field570.name = "vt11_key"
 field570.accessType = "inputOutput"
+field570.name = "vt11_key"
 field570.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field570)
 field571 = x3d.field()
-field571.name = "vt11_keyValue"
 field571.accessType = "inputOutput"
+field571.name = "vt11_keyValue"
 field571.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field571)
 field572 = x3d.field()
-field572.name = "vt11_changed"
 field572.accessType = "outputOnly"
+field572.name = "vt11_changed"
 field572.type = "SFRotation"
 
 ProtoInterface21.field.append(field572)
 field573 = x3d.field()
-field573.name = "vt12_key"
 field573.accessType = "inputOutput"
+field573.name = "vt12_key"
 field573.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field573)
 field574 = x3d.field()
-field574.name = "vt12_keyValue"
 field574.accessType = "inputOutput"
+field574.name = "vt12_keyValue"
 field574.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field574)
 field575 = x3d.field()
-field575.name = "vt12_changed"
 field575.accessType = "outputOnly"
+field575.name = "vt12_changed"
 field575.type = "SFRotation"
 
 ProtoInterface21.field.append(field575)
 field576 = x3d.field()
-field576.name = "vt1_key"
 field576.accessType = "inputOutput"
+field576.name = "vt1_key"
 field576.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field576)
 field577 = x3d.field()
-field577.name = "vt1_keyValue"
 field577.accessType = "inputOutput"
+field577.name = "vt1_keyValue"
 field577.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field577)
 field578 = x3d.field()
-field578.name = "vt1_changed"
 field578.accessType = "outputOnly"
+field578.name = "vt1_changed"
 field578.type = "SFRotation"
 
 ProtoInterface21.field.append(field578)
 field579 = x3d.field()
-field579.name = "vt2_key"
 field579.accessType = "inputOutput"
+field579.name = "vt2_key"
 field579.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field579)
 field580 = x3d.field()
-field580.name = "vt2_keyValue"
 field580.accessType = "inputOutput"
+field580.name = "vt2_keyValue"
 field580.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field580)
 field581 = x3d.field()
-field581.name = "vt2_changed"
 field581.accessType = "outputOnly"
+field581.name = "vt2_changed"
 field581.type = "SFRotation"
 
 ProtoInterface21.field.append(field581)
 field582 = x3d.field()
-field582.name = "vt3_key"
 field582.accessType = "inputOutput"
+field582.name = "vt3_key"
 field582.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field582)
 field583 = x3d.field()
-field583.name = "vt3_keyValue"
 field583.accessType = "inputOutput"
+field583.name = "vt3_keyValue"
 field583.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field583)
 field584 = x3d.field()
-field584.name = "vt3_changed"
 field584.accessType = "outputOnly"
+field584.name = "vt3_changed"
 field584.type = "SFRotation"
 
 ProtoInterface21.field.append(field584)
 field585 = x3d.field()
-field585.name = "vt4_key"
 field585.accessType = "inputOutput"
+field585.name = "vt4_key"
 field585.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field585)
 field586 = x3d.field()
-field586.name = "vt4_keyValue"
 field586.accessType = "inputOutput"
+field586.name = "vt4_keyValue"
 field586.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field586)
 field587 = x3d.field()
-field587.name = "vt4_changed"
 field587.accessType = "outputOnly"
+field587.name = "vt4_changed"
 field587.type = "SFRotation"
 
 ProtoInterface21.field.append(field587)
 field588 = x3d.field()
-field588.name = "vt5_key"
 field588.accessType = "inputOutput"
+field588.name = "vt5_key"
 field588.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field588)
 field589 = x3d.field()
-field589.name = "vt5_keyValue"
 field589.accessType = "inputOutput"
+field589.name = "vt5_keyValue"
 field589.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field589)
 field590 = x3d.field()
-field590.name = "vt5_changed"
 field590.accessType = "outputOnly"
+field590.name = "vt5_changed"
 field590.type = "SFRotation"
 
 ProtoInterface21.field.append(field590)
 field591 = x3d.field()
-field591.name = "vt6_key"
 field591.accessType = "inputOutput"
+field591.name = "vt6_key"
 field591.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field591)
 field592 = x3d.field()
-field592.name = "vt6_keyValue"
 field592.accessType = "inputOutput"
+field592.name = "vt6_keyValue"
 field592.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field592)
 field593 = x3d.field()
-field593.name = "vt6_changed"
 field593.accessType = "outputOnly"
+field593.name = "vt6_changed"
 field593.type = "SFRotation"
 
 ProtoInterface21.field.append(field593)
 field594 = x3d.field()
-field594.name = "vt7_key"
 field594.accessType = "inputOutput"
+field594.name = "vt7_key"
 field594.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field594)
 field595 = x3d.field()
-field595.name = "vt7_keyValue"
 field595.accessType = "inputOutput"
+field595.name = "vt7_keyValue"
 field595.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field595)
 field596 = x3d.field()
-field596.name = "vt7_changed"
 field596.accessType = "outputOnly"
+field596.name = "vt7_changed"
 field596.type = "SFRotation"
 
 ProtoInterface21.field.append(field596)
 field597 = x3d.field()
-field597.name = "vt8_key"
 field597.accessType = "inputOutput"
+field597.name = "vt8_key"
 field597.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field597)
 field598 = x3d.field()
-field598.name = "vt8_keyValue"
 field598.accessType = "inputOutput"
+field598.name = "vt8_keyValue"
 field598.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field598)
 field599 = x3d.field()
-field599.name = "vt8_changed"
 field599.accessType = "outputOnly"
+field599.name = "vt8_changed"
 field599.type = "SFRotation"
 
 ProtoInterface21.field.append(field599)
 field600 = x3d.field()
-field600.name = "vt9_key"
 field600.accessType = "inputOutput"
+field600.name = "vt9_key"
 field600.type = "MFFloat"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field600)
 field601 = x3d.field()
-field601.name = "vt9_keyValue"
 field601.accessType = "inputOutput"
+field601.name = "vt9_keyValue"
 field601.type = "MFRotation"
-#no default value
+""" no default value """
 
 ProtoInterface21.field.append(field601)
 field602 = x3d.field()
-field602.name = "vt9_changed"
 field602.accessType = "outputOnly"
+field602.name = "vt9_changed"
 field602.type = "SFRotation"
 
 ProtoInterface21.field.append(field602)
 
 ProtoDeclare20.ProtoInterface = ProtoInterface21
 ProtoBody603 = x3d.ProtoBody()
-#design alternative: move TimeSensor out of the prototype, instead expose set_fraction globally to all interpolators
+""" design alternative: move TimeSensor out of the prototype, instead expose set_fraction globally to all interpolators """
 TimeSensor604 = x3d.TimeSensor()
 TimeSensor604.DEF = "BehaviorClock"
 IS605 = x3d.IS()
@@ -4065,7 +4065,7 @@ IS605.connect.append(connect618)
 TimeSensor604.IS = IS605
 
 ProtoBody603.children.append(TimeSensor604)
-#note that other nodes following the first node in the ProtoBody are not rendered but remain active nevertheless
+""" note that other nodes following the first node in the ProtoBody are not rendered but remain active nevertheless """
 Switch619 = x3d.Switch()
 Switch619.DEF = "SupportedLoaHolder1"
 Switch619.whichChoice = -1
@@ -9565,97 +9565,97 @@ ProtoDeclare20.ProtoBody = ProtoBody603
 
 Scene18.children.append(ProtoDeclare20)
 ProtoDeclare1756 = x3d.ProtoDeclare()
-ProtoDeclare1756.name = "HAnimBodyBehaviorChooser"
 ProtoDeclare1756.appinfo = "The HAnimBodyBehaviorChooser node allows an author to select one of several HAnimHumanoid bodies and simultaneously apply multiple HAnimBehavior animations to the active body. Individual behaviors may be enabled or disabled at any time."
+ProtoDeclare1756.name = "HAnimBodyBehaviorChooser"
 ProtoInterface1757 = x3d.ProtoInterface()
-#TODO: supported Level of Articulation (LOA) might be adapted to more efficiently setup/teardown pertinent ROUTEs
-#accessType=\"inputOutput\" avoided to maintain backwards compatilibility with VRML97 scripting constraints
-#shared common TimeSensor inputs for all BehaviorAnimation nodes, connected via ROUTEs
-#TODO: consider named accessors, e.g. enableBehaviorByName and disableBehaviorByName
-#TODO: consider addBody, removeBody, addBehavior, removeBehavior
-#TODO: consider startBehaviorByIndex, stopBehaviorByIndex, startBehaviorByName, stopBehaviorByName
+""" TODO: supported Level of Articulation (LOA) might be adapted to more efficiently setup/teardown pertinent ROUTEs """
 field1758 = x3d.field()
-field1758.name = "supportedLOA"
 field1758.accessType = "inputOutput"
 field1758.appinfo = "Level of Articulation (LOA) support needed by authored HAnimBehavior set of OrientationInterpolator values. Legal values 0 1 2 3."
+field1758.name = "supportedLOA"
 field1758.type = "SFInt32"
 field1758.value = -1
 
 ProtoInterface1757.field.append(field1758)
 field1759 = x3d.field()
-field1759.name = "HumanoidArray"
 field1759.accessType = "initializeOnly"
 field1759.appinfo = "[HAnimHumanoid] nodes only"
+field1759.name = "HumanoidArray"
 field1759.type = "MFNode"
-#default NULL
+""" default NULL """
 
 ProtoInterface1757.field.append(field1759)
+""" accessType=\"inputOutput\" avoided to maintain backwards compatilibility with VRML97 scripting constraints """
 field1760 = x3d.field()
-field1760.name = "whichBody"
 field1760.accessType = "initializeOnly"
 field1760.appinfo = "whichBody is selected default is initial member of HumanoidArray"
+field1760.name = "whichBody"
 field1760.type = "SFInt32"
 field1760.value = -1
 
 ProtoInterface1757.field.append(field1760)
 field1761 = x3d.field()
-field1761.name = "set_whichBody"
 field1761.accessType = "inputOnly"
 field1761.appinfo = "whichBody is selected default is none"
+field1761.name = "set_whichBody"
 field1761.type = "SFInt32"
 
 ProtoInterface1757.field.append(field1761)
 field1762 = x3d.field()
-field1762.name = "whichBody_changed"
 field1762.accessType = "outputOnly"
 field1762.appinfo = "whichBody is selected default is none"
+field1762.name = "whichBody_changed"
 field1762.type = "SFInt32"
 
 ProtoInterface1757.field.append(field1762)
 field1763 = x3d.field()
-field1763.name = "hAnimBehaviorNodes"
 field1763.accessType = "initializeOnly"
 field1763.appinfo = "[HAnimBehavior] nodes only some or all of which may be enabled. Warning: do not animate a single joint with more than one interpolator at a given time."
+field1763.name = "hAnimBehaviorNodes"
 field1763.type = "MFNode"
-#default NULL
+""" default NULL """
 
 ProtoInterface1757.field.append(field1763)
 field1764 = x3d.field()
-field1764.name = "enabledBehaviorsArray"
 field1764.accessType = "initializeOnly"
 field1764.appinfo = "indicate which HAnimBehavior nodes are activated, empty indicates all enabled true"
+field1764.name = "enabledBehaviorsArray"
 field1764.type = "MFBool"
-#no default values
+""" no default values """
 
 ProtoInterface1757.field.append(field1764)
 field1765 = x3d.field()
-field1765.name = "enableBehavior"
 field1765.accessType = "inputOnly"
 field1765.appinfo = "enable corresponding behavior identified by index number"
+field1765.name = "enableBehavior"
 field1765.type = "SFInt32"
 
 ProtoInterface1757.field.append(field1765)
 field1766 = x3d.field()
-field1766.name = "disableBehavior"
 field1766.accessType = "inputOnly"
 field1766.appinfo = "disable corresponding behavior identified by index number"
+field1766.name = "disableBehavior"
 field1766.type = "SFInt32"
 
 ProtoInterface1757.field.append(field1766)
+""" shared common TimeSensor inputs for all BehaviorAnimation nodes, connected via ROUTEs """
 field1767 = x3d.field()
-field1767.name = "startTime"
 field1767.accessType = "inputOutput"
+field1767.name = "startTime"
 field1767.type = "SFTime"
 field1767.value = 0
 
 ProtoInterface1757.field.append(field1767)
 field1768 = x3d.field()
-field1768.name = "stopTime"
 field1768.accessType = "inputOutput"
+field1768.name = "stopTime"
 field1768.type = "SFTime"
 field1768.value = 0
 
 ProtoInterface1757.field.append(field1768)
+""" TODO: consider named accessors, e.g. enableBehaviorByName and disableBehaviorByName """
+""" TODO: consider addBody, removeBody, addBehavior, removeBehavior """
+""" TODO: consider startBehaviorByIndex, stopBehaviorByIndex, startBehaviorByName, stopBehaviorByName """
 
 ProtoDeclare1756.ProtoInterface = ProtoInterface1757
 ProtoBody1769 = x3d.ProtoBody()
@@ -9677,7 +9677,7 @@ IS1771.connect.append(connect1773)
 Switch1770.IS = IS1771
 
 ProtoBody1769.children.append(Switch1770)
-#note that other nodes following the first node in the ProtoBody are not rendered but remain active nevertheless
+""" note that other nodes following the first node in the ProtoBody are not rendered but remain active nevertheless """
 Group1774 = x3d.Group()
 Group1774.DEF = "BehaviorArrayHolder"
 IS1775 = x3d.IS()
@@ -9725,64 +9725,64 @@ Script1784.DEF = "BehaviorSelectionScript"
 Script1784.directOutput = True
 Script1784.url = ["HAnimBehaviorPrototypesScript.js","https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/HAnimBehaviorPrototypesScript.js"]
 field1785 = x3d.field()
-field1785.name = "HumanoidArray"
 field1785.accessType = "initializeOnly"
 field1785.appinfo = "[HAnimHumanoid] nodes only"
+field1785.name = "HumanoidArray"
 field1785.type = "MFNode"
 
 Script1784.field.append(field1785)
 field1786 = x3d.field()
-field1786.name = "whichBody"
 field1786.accessType = "initializeOnly"
 field1786.appinfo = "whichBody is selected default is none"
+field1786.name = "whichBody"
 field1786.type = "SFInt32"
 
 Script1784.field.append(field1786)
 field1787 = x3d.field()
-field1787.name = "set_whichBody"
 field1787.accessType = "inputOnly"
 field1787.appinfo = "whichBody is selected default is none"
+field1787.name = "set_whichBody"
 field1787.type = "SFInt32"
 
 Script1784.field.append(field1787)
 field1788 = x3d.field()
-field1788.name = "whichBody_changed"
 field1788.accessType = "outputOnly"
 field1788.appinfo = "whichBody is selected default is none"
+field1788.name = "whichBody_changed"
 field1788.type = "SFInt32"
 
 Script1784.field.append(field1788)
 field1789 = x3d.field()
-field1789.name = "hAnimBehaviorNodes"
 field1789.accessType = "initializeOnly"
 field1789.appinfo = "[HAnimBehavior] nodes only"
+field1789.name = "hAnimBehaviorNodes"
 field1789.type = "MFNode"
-#TODO: might consider accessType=\"inputOutput\" if VRML97 compatibility not needed
+""" TODO: might consider accessType=\"inputOutput\" if VRML97 compatibility not needed """
 
 Script1784.field.append(field1789)
 field1790 = x3d.field()
-field1790.name = "enabledBehaviorsArray"
 field1790.accessType = "initializeOnly"
+field1790.name = "enabledBehaviorsArray"
 field1790.type = "MFBool"
 
 Script1784.field.append(field1790)
 field1791 = x3d.field()
-field1791.name = "enableBehavior"
 field1791.accessType = "inputOnly"
 field1791.appinfo = "enable corresponding behavior"
+field1791.name = "enableBehavior"
 field1791.type = "SFInt32"
 
 Script1784.field.append(field1791)
 field1792 = x3d.field()
-field1792.name = "disableBehavior"
 field1792.accessType = "inputOnly"
 field1792.appinfo = "enable corresponding behavior"
+field1792.name = "disableBehavior"
 field1792.type = "SFInt32"
 
 Script1784.field.append(field1792)
 field1793 = x3d.field()
-field1793.name = "timeSensorNode"
 field1793.accessType = "initializeOnly"
+field1793.name = "timeSensorNode"
 field1793.type = "SFNode"
 TimeSensor1794 = x3d.TimeSensor()
 TimeSensor1794.USE = "TimeSensorHolderStartStopTimes"
@@ -9791,16 +9791,16 @@ field1793.children.append(TimeSensor1794)
 
 Script1784.field.append(field1793)
 field1795 = x3d.field()
-field1795.name = "previousBodyIndex"
 field1795.accessType = "initializeOnly"
 field1795.appinfo = "remember prior body index to avoid unnecessary ROUTE teardown and creation"
+field1795.name = "previousBodyIndex"
 field1795.type = "SFInt32"
 field1795.value = -1
 
 Script1784.field.append(field1795)
 field1796 = x3d.field()
-field1796.name = "traceEnabled"
 field1796.accessType = "initializeOnly"
+field1796.name = "traceEnabled"
 field1796.type = "SFBool"
 field1796.value = True
 
@@ -9854,15 +9854,14 @@ ProtoBody1769.children.append(Script1784)
 ProtoDeclare1756.ProtoBody = ProtoBody1769
 
 Scene18.children.append(ProtoDeclare1756)
-#TODO: Goal is to have 3 different ways to present a body: local creation, Inline with IMPORT/EXPORT, or external prototype.
+""" TODO: Goal is to have 3 different ways to present a body: local creation, Inline with IMPORT/EXPORT, or external prototype. """
 ProtoInstance1806 = x3d.ProtoInstance()
-ProtoInstance1806.name = "HAnimBehavior"
 ProtoInstance1806.DEF = "BehaviorTest1"
-#only one PositionInterpolator key/keyValue definition for entire humanoid - optional
-#must have paired overrides of each key/keyValue array being defined
+ProtoInstance1806.name = "HAnimBehavior"
+""" only one PositionInterpolator key/keyValue definition for entire humanoid - optional """
 fieldValue1807 = x3d.fieldValue()
 fieldValue1807.name = "HumanoidRoot_translation_key"
-fieldValue1807.value = "0 0.25 0.5 0.75 1"
+fieldValue1807.value = "0 0.25 0.5 0.75 1.0"
 
 ProtoInstance1806.fieldValue.append(fieldValue1807)
 fieldValue1808 = x3d.fieldValue()
@@ -9870,6 +9869,7 @@ fieldValue1808.name = "HumanoidRoot_translation_keyValue"
 fieldValue1808.value = "0 0 0 0 0 10 0 0 20 0 0 30 0 0 40 0 0 50"
 
 ProtoInstance1806.fieldValue.append(fieldValue1808)
+""" must have paired overrides of each key/keyValue array being defined """
 fieldValue1809 = x3d.fieldValue()
 fieldValue1809.name = "r_ankle_key"
 fieldValue1809.value = "0 0.5 1"
@@ -9883,13 +9883,13 @@ ProtoInstance1806.fieldValue.append(fieldValue1810)
 
 Scene18.children.append(ProtoInstance1806)
 ProtoInstance1811 = x3d.ProtoInstance()
-ProtoInstance1811.name = "HAnimBodyBehaviorChooser"
 ProtoInstance1811.DEF = "ChooserTest"
+ProtoInstance1811.name = "HAnimBodyBehaviorChooser"
 fieldValue1812 = x3d.fieldValue()
 fieldValue1812.name = "HumanoidArray"
 HAnimHumanoid1813 = x3d.HAnimHumanoid()
-HAnimHumanoid1813.name = "DiamondManLOA-1"
 HAnimHumanoid1813.DEF = "hanim_DiamondManLOA-1"
+HAnimHumanoid1813.name = "DiamondManLOA-1"
 HAnimHumanoid1813.version = "2.0"
 
 fieldValue1812.children.append(HAnimHumanoid1813)
@@ -9917,6 +9917,6 @@ ProtoInstance1811.fieldValue.append(fieldValue1817)
 Scene18.children.append(ProtoInstance1811)
 
 X3D0.Scene = Scene18
-f = open("././HAnimBehaviorPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("HAnimBehaviorPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

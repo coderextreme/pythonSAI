@@ -31,31 +31,31 @@ Scene4.children.append(WorldInfo6)
 Viewpoint7 = x3d.Viewpoint()
 Viewpoint7.description = "looking North"
 Viewpoint7.position = [0,60,110]
-Viewpoint7.orientation = [1,0,0,-0.699999988079071]
-Viewpoint7.fieldOfView = 0.7853981256484985
+Viewpoint7.orientation = [1,0,0,-0.69999998807907104]
+Viewpoint7.fieldOfView = 0.78539812564849854
 
 Scene4.children.append(Viewpoint7)
 Viewpoint8 = x3d.Viewpoint()
 Viewpoint8.description = "looking East"
 Viewpoint8.position = [-140,30,0]
-Viewpoint8.orientation = [0,0.4000000059604645,0,-1.399999976158142]
-Viewpoint8.fieldOfView = 0.7853981256484985
+Viewpoint8.orientation = [0,0.40000000596046448,0,-1.3999999761581421]
+Viewpoint8.fieldOfView = 0.78539812564849854
 
 Scene4.children.append(Viewpoint8)
 Viewpoint9 = x3d.Viewpoint()
 Viewpoint9.description = "Overhead"
 Viewpoint9.position = [0,150,0]
 Viewpoint9.orientation = [1,0,0,-1.5700000524520874]
-Viewpoint9.fieldOfView = 0.7853981256484985
+Viewpoint9.fieldOfView = 0.78539812564849854
 
 Scene4.children.append(Viewpoint9)
 ProtoDeclare10 = x3d.ProtoDeclare()
 ProtoDeclare10.name = "school"
 ProtoInterface11 = x3d.ProtoInterface()
 field12 = x3d.field()
-field12.name = "pos"
 field12.accessType = "initializeOnly"
 field12.type = "SFVec3f"
+field12.name = "pos"
 field12.value = [0,0,0]
 
 ProtoInterface11.field.append(field12)
@@ -99,9 +99,9 @@ ProtoDeclare22 = x3d.ProtoDeclare()
 ProtoDeclare22.name = "institute"
 ProtoInterface23 = x3d.ProtoInterface()
 field24 = x3d.field()
-field24.name = "pos"
 field24.accessType = "initializeOnly"
 field24.type = "SFVec3f"
+field24.name = "pos"
 field24.value = [0,0,0]
 
 ProtoInterface23.field.append(field24)
@@ -119,7 +119,7 @@ Appearance28.material = Material29
 
 Shape27.appearance = Appearance28
 Box30 = x3d.Box()
-Box30.size = [0.699999988079071,0.699999988079071,0.699999988079071]
+Box30.size = [0.69999998807907104,0.69999998807907104,0.69999998807907104]
 
 Shape27.geometry = Box30
 
@@ -142,9 +142,9 @@ ProtoDeclare33 = x3d.ProtoDeclare()
 ProtoDeclare33.name = "disart_org"
 ProtoInterface34 = x3d.ProtoInterface()
 field35 = x3d.field()
-field35.name = "pos"
 field35.accessType = "initializeOnly"
 field35.type = "SFVec3f"
+field35.name = "pos"
 field35.value = [0,0,0]
 
 ProtoInterface34.field.append(field35)
@@ -161,7 +161,7 @@ Appearance39.material = Material40
 
 Shape38.appearance = Appearance39
 Sphere41 = x3d.Sphere()
-Sphere41.radius = 0.699999988079071
+Sphere41.radius = 0.69999998807907104
 
 Shape38.geometry = Sphere41
 
@@ -184,16 +184,16 @@ ProtoDeclare44 = x3d.ProtoDeclare()
 ProtoDeclare44.name = "org"
 ProtoInterface45 = x3d.ProtoInterface()
 field46 = x3d.field()
-field46.name = "posi"
 field46.accessType = "initializeOnly"
 field46.type = "SFVec3f"
+field46.name = "posi"
 field46.value = [0,0,0]
 
 ProtoInterface45.field.append(field46)
 field47 = x3d.field()
-field47.name = "col"
 field47.accessType = "initializeOnly"
 field47.type = "SFColor"
+field47.name = "col"
 field47.value = [0,0,0]
 
 ProtoInterface45.field.append(field47)
@@ -204,7 +204,7 @@ Transform49 = x3d.Transform()
 Shape50 = x3d.Shape()
 Appearance51 = x3d.Appearance()
 Material52 = x3d.Material()
-Material52.transparency = 0.4000000059604645
+Material52.transparency = 0.40000000596046448
 IS53 = x3d.IS()
 connect54 = x3d.connect()
 connect54.nodeField = "emissiveColor"
@@ -218,7 +218,7 @@ Appearance51.material = Material52
 
 Shape50.appearance = Appearance51
 Sphere55 = x3d.Sphere()
-Sphere55.radius = 1.100000023841858
+Sphere55.radius = 1.1000000238418579
 
 Shape50.geometry = Sphere55
 
@@ -241,9 +241,9 @@ ProtoDeclare58 = x3d.ProtoDeclare()
 ProtoDeclare58.name = "l"
 ProtoInterface59 = x3d.ProtoInterface()
 field60 = x3d.field()
-field60.name = "pos"
 field60.accessType = "initializeOnly"
 field60.type = "SFVec3f"
+field60.name = "pos"
 field60.value = [0,0,0]
 
 ProtoInterface59.field.append(field60)
@@ -254,7 +254,7 @@ ProtoInstance62 = x3d.ProtoInstance()
 ProtoInstance62.name = "org"
 fieldValue63 = x3d.fieldValue()
 fieldValue63.name = "col"
-fieldValue63.value = "0 0.6000000238418579 0"
+fieldValue63.value = "0 0.60000002384185791 0"
 
 ProtoInstance62.fieldValue.append(fieldValue63)
 IS64 = x3d.IS()
@@ -275,9 +275,9 @@ ProtoDeclare66 = x3d.ProtoDeclare()
 ProtoDeclare66.name = "r"
 ProtoInterface67 = x3d.ProtoInterface()
 field68 = x3d.field()
-field68.name = "pos"
 field68.accessType = "initializeOnly"
 field68.type = "SFVec3f"
+field68.name = "pos"
 field68.value = [0,0,0]
 
 ProtoInterface67.field.append(field68)
@@ -309,9 +309,9 @@ ProtoDeclare74 = x3d.ProtoDeclare()
 ProtoDeclare74.name = "n"
 ProtoInterface75 = x3d.ProtoInterface()
 field76 = x3d.field()
-field76.name = "pos"
 field76.accessType = "initializeOnly"
 field76.type = "SFVec3f"
+field76.name = "pos"
 field76.value = [0,0,0]
 
 ProtoInterface75.field.append(field76)
@@ -343,9 +343,9 @@ ProtoDeclare82 = x3d.ProtoDeclare()
 ProtoDeclare82.name = "i"
 ProtoInterface83 = x3d.ProtoInterface()
 field84 = x3d.field()
-field84.name = "pos"
 field84.accessType = "initializeOnly"
 field84.type = "SFVec3f"
+field84.name = "pos"
 field84.value = [0,0,0]
 
 ProtoInterface83.field.append(field84)
@@ -356,7 +356,7 @@ ProtoInstance86 = x3d.ProtoInstance()
 ProtoInstance86.name = "org"
 fieldValue87 = x3d.fieldValue()
 fieldValue87.name = "col"
-fieldValue87.value = "0.6000000238418579 0 0.6000000238418579"
+fieldValue87.value = "0.60000002384185791 0 0.60000002384185791"
 
 ProtoInstance86.fieldValue.append(fieldValue87)
 IS88 = x3d.IS()
@@ -386,7 +386,7 @@ ProtoInstance93 = x3d.ProtoInstance()
 ProtoInstance93.name = "institute"
 fieldValue94 = x3d.fieldValue()
 fieldValue94.name = "pos"
-fieldValue94.value = "435.29998779296875 0.10000000149011612 -335.6000061035156"
+fieldValue94.value = "435.29998779296875 0.10000000149011612 -335.60000610351563"
 
 ProtoInstance93.fieldValue.append(fieldValue94)
 
@@ -414,7 +414,7 @@ ProtoInstance99 = x3d.ProtoInstance()
 ProtoInstance99.name = "school"
 fieldValue100 = x3d.fieldValue()
 fieldValue100.name = "pos"
-fieldValue100.value = "400.6000061035156 0.10000000149011612 -392.8999938964844"
+fieldValue100.value = "400.60000610351563 0.10000000149011612 -392.89999389648438"
 
 ProtoInstance99.fieldValue.append(fieldValue100)
 
@@ -428,7 +428,7 @@ ProtoInstance102 = x3d.ProtoInstance()
 ProtoInstance102.name = "school"
 fieldValue103 = x3d.fieldValue()
 fieldValue103.name = "pos"
-fieldValue103.value = "416.70001220703125 0.10000000149011612 -383.3999938964844"
+fieldValue103.value = "416.70001220703125 0.10000000149011612 -383.39999389648438"
 
 ProtoInstance102.fieldValue.append(fieldValue103)
 
@@ -442,7 +442,7 @@ ProtoInstance105 = x3d.ProtoInstance()
 ProtoInstance105.name = "i"
 fieldValue106 = x3d.fieldValue()
 fieldValue106.name = "pos"
-fieldValue106.value = "429.8999938964844 0.10000000149011612 -319.6000061035156"
+fieldValue106.value = "429.89999389648438 0.10000000149011612 -319.60000610351563"
 
 ProtoInstance105.fieldValue.append(fieldValue106)
 
@@ -484,7 +484,7 @@ ProtoInstance114 = x3d.ProtoInstance()
 ProtoInstance114.name = "school"
 fieldValue115 = x3d.fieldValue()
 fieldValue115.name = "pos"
-fieldValue115.value = "438.29998779296875 0.10000000149011612 -338.6000061035156"
+fieldValue115.value = "438.29998779296875 0.10000000149011612 -338.60000610351563"
 
 ProtoInstance114.fieldValue.append(fieldValue115)
 
@@ -498,7 +498,7 @@ ProtoInstance117 = x3d.ProtoInstance()
 ProtoInstance117.name = "n"
 fieldValue118 = x3d.fieldValue()
 fieldValue118.name = "pos"
-fieldValue118.value = "429.8999938964844 0.10000000149011612 -360.29998779296875"
+fieldValue118.value = "429.89999389648438 0.10000000149011612 -360.29998779296875"
 
 ProtoInstance117.fieldValue.append(fieldValue118)
 
@@ -512,7 +512,7 @@ ProtoInstance120 = x3d.ProtoInstance()
 ProtoInstance120.name = "institute"
 fieldValue121 = x3d.fieldValue()
 fieldValue121.name = "pos"
-fieldValue121.value = "434.6000061035156 0.10000000149011612 -338.6000061035156"
+fieldValue121.value = "434.60000610351563 0.10000000149011612 -338.60000610351563"
 
 ProtoInstance120.fieldValue.append(fieldValue121)
 
@@ -540,7 +540,7 @@ ProtoInstance126 = x3d.ProtoInstance()
 ProtoInstance126.name = "institute"
 fieldValue127 = x3d.fieldValue()
 fieldValue127.name = "pos"
-fieldValue127.value = "432.70001220703125 0.10000000149011612 -336.6000061035156"
+fieldValue127.value = "432.70001220703125 0.10000000149011612 -336.60000610351563"
 
 ProtoInstance126.fieldValue.append(fieldValue127)
 
@@ -554,7 +554,7 @@ ProtoInstance129 = x3d.ProtoInstance()
 ProtoInstance129.name = "school"
 fieldValue130 = x3d.fieldValue()
 fieldValue130.name = "pos"
-fieldValue130.value = "437.6000061035156 0.10000000149011612 -332.6000061035156"
+fieldValue130.value = "437.60000610351563 0.10000000149011612 -332.60000610351563"
 
 ProtoInstance129.fieldValue.append(fieldValue130)
 
@@ -568,7 +568,7 @@ ProtoInstance132 = x3d.ProtoInstance()
 ProtoInstance132.name = "institute"
 fieldValue133 = x3d.fieldValue()
 fieldValue133.name = "pos"
-fieldValue133.value = "434.70001220703125 0.10000000149011612 -336.8999938964844"
+fieldValue133.value = "434.70001220703125 0.10000000149011612 -336.89999389648438"
 
 ProtoInstance132.fieldValue.append(fieldValue133)
 
@@ -582,7 +582,7 @@ ProtoInstance135 = x3d.ProtoInstance()
 ProtoInstance135.name = "school"
 fieldValue136 = x3d.fieldValue()
 fieldValue136.name = "pos"
-fieldValue136.value = "436.29998779296875 0.10000000149011612 -333.3999938964844"
+fieldValue136.value = "436.29998779296875 0.10000000149011612 -333.39999389648438"
 
 ProtoInstance135.fieldValue.append(fieldValue136)
 
@@ -638,7 +638,7 @@ ProtoInstance147 = x3d.ProtoInstance()
 ProtoInstance147.name = "school"
 fieldValue148 = x3d.fieldValue()
 fieldValue148.name = "pos"
-fieldValue148.value = "436.1000061035156 0.10000000149011612 -334.8999938964844"
+fieldValue148.value = "436.10000610351563 0.10000000149011612 -334.89999389648438"
 
 ProtoInstance147.fieldValue.append(fieldValue148)
 
@@ -652,7 +652,7 @@ ProtoInstance150 = x3d.ProtoInstance()
 ProtoInstance150.name = "institute"
 fieldValue151 = x3d.fieldValue()
 fieldValue151.name = "pos"
-fieldValue151.value = "485.6000061035156 0.10000000149011612 -309"
+fieldValue151.value = "485.60000610351563 0.10000000149011612 -309"
 
 ProtoInstance150.fieldValue.append(fieldValue151)
 
@@ -722,7 +722,7 @@ ProtoInstance165 = x3d.ProtoInstance()
 ProtoInstance165.name = "i"
 fieldValue166 = x3d.fieldValue()
 fieldValue166.name = "pos"
-fieldValue166.value = "455.8999938964844 0.10000000149011612 -341.29998779296875"
+fieldValue166.value = "455.89999389648438 0.10000000149011612 -341.29998779296875"
 
 ProtoInstance165.fieldValue.append(fieldValue166)
 
@@ -736,7 +736,7 @@ ProtoInstance168 = x3d.ProtoInstance()
 ProtoInstance168.name = "r"
 fieldValue169 = x3d.fieldValue()
 fieldValue169.name = "pos"
-fieldValue169.value = "456.1000061035156 0.10000000149011612 -341.5"
+fieldValue169.value = "456.10000610351563 0.10000000149011612 -341.5"
 
 ProtoInstance168.fieldValue.append(fieldValue169)
 
@@ -764,7 +764,7 @@ ProtoInstance174 = x3d.ProtoInstance()
 ProtoInstance174.name = "institute"
 fieldValue175 = x3d.fieldValue()
 fieldValue175.name = "pos"
-fieldValue175.value = "457.3999938964844 0.10000000149011612 -359.6000061035156"
+fieldValue175.value = "457.39999389648438 0.10000000149011612 -359.60000610351563"
 
 ProtoInstance174.fieldValue.append(fieldValue175)
 
@@ -778,7 +778,7 @@ ProtoInstance177 = x3d.ProtoInstance()
 ProtoInstance177.name = "school"
 fieldValue178 = x3d.fieldValue()
 fieldValue178.name = "pos"
-fieldValue178.value = "454.20001220703125 0.10000000149011612 -358.6000061035156"
+fieldValue178.value = "454.20001220703125 0.10000000149011612 -358.60000610351563"
 
 ProtoInstance177.fieldValue.append(fieldValue178)
 
@@ -792,7 +792,7 @@ ProtoInstance180 = x3d.ProtoInstance()
 ProtoInstance180.name = "institute"
 fieldValue181 = x3d.fieldValue()
 fieldValue181.name = "pos"
-fieldValue181.value = "450.6000061035156 0.10000000149011612 -358.6000061035156"
+fieldValue181.value = "450.60000610351563 0.10000000149011612 -358.60000610351563"
 
 ProtoInstance180.fieldValue.append(fieldValue181)
 
@@ -820,7 +820,7 @@ ProtoInstance186 = x3d.ProtoInstance()
 ProtoInstance186.name = "n"
 fieldValue187 = x3d.fieldValue()
 fieldValue187.name = "pos"
-fieldValue187.value = "458.8999938964844 0.10000000149011612 -304.29998779296875"
+fieldValue187.value = "458.89999389648438 0.10000000149011612 -304.29998779296875"
 
 ProtoInstance186.fieldValue.append(fieldValue187)
 
@@ -862,7 +862,7 @@ ProtoInstance195 = x3d.ProtoInstance()
 ProtoInstance195.name = "r"
 fieldValue196 = x3d.fieldValue()
 fieldValue196.name = "pos"
-fieldValue196.value = "457.1000061035156 0.10000000149011612 -300.79998779296875"
+fieldValue196.value = "457.10000610351563 0.10000000149011612 -300.79998779296875"
 
 ProtoInstance195.fieldValue.append(fieldValue196)
 
@@ -876,7 +876,7 @@ ProtoInstance198 = x3d.ProtoInstance()
 ProtoInstance198.name = "school"
 fieldValue199 = x3d.fieldValue()
 fieldValue199.name = "pos"
-fieldValue199.value = "456.79998779296875 0.10000000149011612 -302.6000061035156"
+fieldValue199.value = "456.79998779296875 0.10000000149011612 -302.60000610351563"
 
 ProtoInstance198.fieldValue.append(fieldValue199)
 
@@ -890,7 +890,7 @@ ProtoInstance201 = x3d.ProtoInstance()
 ProtoInstance201.name = "school"
 fieldValue202 = x3d.fieldValue()
 fieldValue202.name = "pos"
-fieldValue202.value = "453.29998779296875 0.10000000149011612 -318.6000061035156"
+fieldValue202.value = "453.29998779296875 0.10000000149011612 -318.60000610351563"
 
 ProtoInstance201.fieldValue.append(fieldValue202)
 
@@ -904,7 +904,7 @@ ProtoInstance204 = x3d.ProtoInstance()
 ProtoInstance204.name = "r"
 fieldValue205 = x3d.fieldValue()
 fieldValue205.name = "pos"
-fieldValue205.value = "442.3999938964844 0.10000000149011612 -314.5"
+fieldValue205.value = "442.39999389648438 0.10000000149011612 -314.5"
 
 ProtoInstance204.fieldValue.append(fieldValue205)
 
@@ -918,7 +918,7 @@ ProtoInstance207 = x3d.ProtoInstance()
 ProtoInstance207.name = "school"
 fieldValue208 = x3d.fieldValue()
 fieldValue208.name = "pos"
-fieldValue208.value = "444.6000061035156 0.10000000149011612 -313.70001220703125"
+fieldValue208.value = "444.60000610351563 0.10000000149011612 -313.70001220703125"
 
 ProtoInstance207.fieldValue.append(fieldValue208)
 
@@ -932,7 +932,7 @@ ProtoInstance210 = x3d.ProtoInstance()
 ProtoInstance210.name = "school"
 fieldValue211 = x3d.fieldValue()
 fieldValue211.name = "pos"
-fieldValue211.value = "440.6000061035156 0.10000000149011612 -310.3999938964844"
+fieldValue211.value = "440.60000610351563 0.10000000149011612 -310.39999389648438"
 
 ProtoInstance210.fieldValue.append(fieldValue211)
 
@@ -946,7 +946,7 @@ ProtoInstance213 = x3d.ProtoInstance()
 ProtoInstance213.name = "r"
 fieldValue214 = x3d.fieldValue()
 fieldValue214.name = "pos"
-fieldValue214.value = "491.6000061035156 0.10000000149011612 -335.70001220703125"
+fieldValue214.value = "491.60000610351563 0.10000000149011612 -335.70001220703125"
 
 ProtoInstance213.fieldValue.append(fieldValue214)
 
@@ -960,7 +960,7 @@ ProtoInstance216 = x3d.ProtoInstance()
 ProtoInstance216.name = "institute"
 fieldValue217 = x3d.fieldValue()
 fieldValue217.name = "pos"
-fieldValue217.value = "491.3999938964844 0.10000000149011612 -336.79998779296875"
+fieldValue217.value = "491.39999389648438 0.10000000149011612 -336.79998779296875"
 
 ProtoInstance216.fieldValue.append(fieldValue217)
 
@@ -974,7 +974,7 @@ ProtoInstance219 = x3d.ProtoInstance()
 ProtoInstance219.name = "institute"
 fieldValue220 = x3d.fieldValue()
 fieldValue220.name = "pos"
-fieldValue220.value = "496.8999938964844 0.10000000149011612 -368.8999938964844"
+fieldValue220.value = "496.89999389648438 0.10000000149011612 -368.89999389648438"
 
 ProtoInstance219.fieldValue.append(fieldValue220)
 
@@ -1002,7 +1002,7 @@ ProtoInstance225 = x3d.ProtoInstance()
 ProtoInstance225.name = "institute"
 fieldValue226 = x3d.fieldValue()
 fieldValue226.name = "pos"
-fieldValue226.value = "477.1000061035156 0.10000000149011612 -260"
+fieldValue226.value = "477.10000610351563 0.10000000149011612 -260"
 
 ProtoInstance225.fieldValue.append(fieldValue226)
 
@@ -1016,7 +1016,7 @@ ProtoInstance228 = x3d.ProtoInstance()
 ProtoInstance228.name = "school"
 fieldValue229 = x3d.fieldValue()
 fieldValue229.name = "pos"
-fieldValue229.value = "474.70001220703125 0.10000000149011612 -259.1000061035156"
+fieldValue229.value = "474.70001220703125 0.10000000149011612 -259.10000610351563"
 
 ProtoInstance228.fieldValue.append(fieldValue229)
 
@@ -1044,7 +1044,7 @@ ProtoInstance234 = x3d.ProtoInstance()
 ProtoInstance234.name = "n"
 fieldValue235 = x3d.fieldValue()
 fieldValue235.name = "pos"
-fieldValue235.value = "457.3999938964844 0.10000000149011612 -262.70001220703125"
+fieldValue235.value = "457.39999389648438 0.10000000149011612 -262.70001220703125"
 
 ProtoInstance234.fieldValue.append(fieldValue235)
 
@@ -1072,7 +1072,7 @@ ProtoInstance240 = x3d.ProtoInstance()
 ProtoInstance240.name = "school"
 fieldValue241 = x3d.fieldValue()
 fieldValue241.name = "pos"
-fieldValue241.value = "466.8999938964844 0.10000000149011612 -243.8000030517578"
+fieldValue241.value = "466.89999389648438 0.10000000149011612 -243.80000305175781"
 
 ProtoInstance240.fieldValue.append(fieldValue241)
 
@@ -1086,7 +1086,7 @@ ProtoInstance243 = x3d.ProtoInstance()
 ProtoInstance243.name = "institute"
 fieldValue244 = x3d.fieldValue()
 fieldValue244.name = "pos"
-fieldValue244.value = "469.5 0.10000000149011612 -249.8000030517578"
+fieldValue244.value = "469.5 0.10000000149011612 -249.80000305175781"
 
 ProtoInstance243.fieldValue.append(fieldValue244)
 
@@ -1165,6 +1165,6 @@ Transform90.children.append(Shape258)
 Scene4.children.append(Transform90)
 
 X3D0.Scene = Scene4
-f = open("././t1_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("t1_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

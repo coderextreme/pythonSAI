@@ -52,7 +52,7 @@ field13 = x3d.field()
 field13.name = "xtranslation"
 field13.accessType = "inputOutput"
 field13.type = "SFVec3f"
-field13.value = [0,0,0]
+field13.value = [0.0,0.0,0.0]
 
 ProtoInterface12.field.append(field13)
 field14 = x3d.field()
@@ -66,6 +66,7 @@ ProtoInterface12.field.append(field14)
 ProtoDeclare11.ProtoInterface = ProtoInterface12
 ProtoBody15 = x3d.ProtoBody()
 Transform16 = x3d.Transform()
+Transform16.translation = [0,0,0]
 IS17 = x3d.IS()
 connect18 = x3d.connect()
 connect18.nodeField = "translation"
@@ -108,7 +109,7 @@ field27 = x3d.field()
 field27.name = "ytranslation"
 field27.accessType = "inputOutput"
 field27.type = "SFVec3f"
-field27.value = [0,0,0]
+field27.value = [0.0,0.0,0.0]
 
 ProtoInterface26.field.append(field27)
 field28 = x3d.field()
@@ -122,6 +123,7 @@ ProtoInterface26.field.append(field28)
 ProtoDeclare25.ProtoInterface = ProtoInterface26
 ProtoBody29 = x3d.ProtoBody()
 Transform30 = x3d.Transform()
+Transform30.translation = [0,0,0]
 IS31 = x3d.IS()
 connect32 = x3d.connect()
 connect32.nodeField = "translation"
@@ -187,7 +189,7 @@ field45 = x3d.field()
 field45.name = "ztranslation"
 field45.accessType = "inputOutput"
 field45.type = "SFVec3f"
-field45.value = [0,0,0]
+field45.value = [0.0,0.0,0.0]
 
 ProtoInterface44.field.append(field45)
 field46 = x3d.field()
@@ -208,6 +210,7 @@ ProtoInterface44.field.append(field47)
 ProtoDeclare43.ProtoInterface = ProtoInterface44
 ProtoBody48 = x3d.ProtoBody()
 Transform49 = x3d.Transform()
+Transform49.translation = [0,0,0]
 IS50 = x3d.IS()
 connect51 = x3d.connect()
 connect51.nodeField = "translation"
@@ -273,13 +276,14 @@ field64 = x3d.field()
 field64.name = "ttranslation"
 field64.accessType = "inputOutput"
 field64.type = "SFVec3f"
-field64.value = [0,0,0]
+field64.value = [0.0,0.0,0.0]
 
 ProtoInterface63.field.append(field64)
 
 ProtoDeclare62.ProtoInterface = ProtoInterface63
 ProtoBody65 = x3d.ProtoBody()
 Transform66 = x3d.Transform()
+Transform66.translation = [0,0,0]
 IS67 = x3d.IS()
 connect68 = x3d.connect()
 connect68.nodeField = "translation"
@@ -341,9 +345,94 @@ fieldValue78.value = "0 0 0"
 ProtoInstance77.fieldValue.append(fieldValue78)
 
 Scene7.children.append(ProtoInstance77)
-#Axes below <Group> <Group DEF='ArrowGreen'> <Shape> <Cylinder DEF='ArrowCylinder' radius='.025' top='false'/> <Appearance DEF='Green'> <Material diffuseColor='0 0 0'/> </Appearance> </Shape> <Transform translation='0 1 0'> <Shape> <Cone DEF='ArrowCone' bottomRadius='.05' height='.1'/> <Appearance USE='Green'/> </Shape> </Transform> </Group> <Transform translation='0 1.08 0'> <Billboard> <Shape> <Appearance DEF='LABEL_APPEARANCE'> <Material diffuseColor='0 0 0'/> </Appearance> <Text string='\"Y\"'> <FontStyle DEF='LABEL_FONT' family='\"SANS\"' justify='\"MIDDLE\" \"MIDDLE\"' size='.2'/> </Text> </Shape> </Billboard> </Transform> </Group> <Transform rotation='0 0 1 -1.57079'> <Group> <Group DEF='ArrowRed'> <Shape> <Cylinder USE='ArrowCylinder'/> <Appearance DEF='Red'> <Material diffuseColor='0 0 0'/> </Appearance> </Shape> <Transform translation='0 1 0'> <Shape> <Cone USE='ArrowCone'/> <Appearance USE='Red'/> </Shape> </Transform> </Group> <Transform rotation='0 0 1 1.57079' translation='.072 1.1 0'> <Billboard> <Shape> <Appearance USE='LABEL_APPEARANCE'/> <Text string='\"X\"'> <FontStyle USE='LABEL_FONT'/> </Text> </Shape> </Billboard> </Transform> </Group> </Transform> <Transform rotation='1 0 0 1.57079'> <Group> <Group DEF='ArrowBlue'> <Shape> <Cylinder USE='ArrowCylinder'/> <Appearance DEF='Blue'> <Material diffuseColor='0 0 0'/> </Appearance> </Shape> <Transform translation='0 1 0'> <Shape> <Cone USE='ArrowCone'/> <Appearance USE='Blue'/> </Shape> </Transform> </Group> <Transform rotation='1 0 0 -1.57079' translation='0 1.1 .072'> <Billboard> <Shape> <Appearance USE='LABEL_APPEARANCE'/> <Text string='\"Z\"'> <FontStyle USE='LABEL_FONT'/> </Text> </Shape> </Billboard> </Transform> </Group> </Transform>
+""" Axes below
+      <Group>
+        <Group DEF='ArrowGreen'>
+          <Shape>
+            <Cylinder DEF='ArrowCylinder' radius='.025' top='false'/>
+            <Appearance DEF='Green'>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+          </Shape>
+          <Transform translation='0 1 0'>
+            <Shape>
+              <Cone DEF='ArrowCone' bottomRadius='.05' height='.1'/>
+              <Appearance USE='Green'/>
+            </Shape>
+          </Transform>
+        </Group>
+        <Transform translation='0 1.08 0'>
+          <Billboard>
+            <Shape>
+              <Appearance DEF='LABEL_APPEARANCE'>
+                <Material diffuseColor='0 0 0'/>
+              </Appearance>
+              <Text string='\"Y\"'>
+                <FontStyle DEF='LABEL_FONT' family='\"SANS\"' justify='\"MIDDLE\" \"MIDDLE\"' size='.2'/>
+              </Text>
+            </Shape>
+          </Billboard>
+        </Transform>
+      </Group>
+      <Transform rotation='0 0 1 -1.57079'>
+        <Group>
+          <Group DEF='ArrowRed'>
+            <Shape>
+              <Cylinder USE='ArrowCylinder'/>
+              <Appearance DEF='Red'>
+                <Material diffuseColor='0 0 0'/>
+              </Appearance>
+            </Shape>
+            <Transform translation='0 1 0'>
+              <Shape>
+                <Cone USE='ArrowCone'/>
+                <Appearance USE='Red'/>
+              </Shape>
+            </Transform>
+          </Group>
+          <Transform rotation='0 0 1 1.57079' translation='.072 1.1 0'>
+            <Billboard>
+              <Shape>
+                <Appearance USE='LABEL_APPEARANCE'/>
+                <Text string='\"X\"'>
+                  <FontStyle USE='LABEL_FONT'/>
+                </Text>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+      </Transform>
+      <Transform rotation='1 0 0 1.57079'>
+        <Group>
+          <Group DEF='ArrowBlue'>
+            <Shape>
+              <Cylinder USE='ArrowCylinder'/>
+              <Appearance DEF='Blue'>
+                <Material diffuseColor='0 0 0'/>
+              </Appearance>
+            </Shape>
+            <Transform translation='0 1 0'>
+              <Shape>
+                <Cone USE='ArrowCone'/>
+                <Appearance USE='Blue'/>
+              </Shape>
+            </Transform>
+          </Group>
+          <Transform rotation='1 0 0 -1.57079' translation='0 1.1 .072'>
+            <Billboard>
+              <Shape>
+                <Appearance USE='LABEL_APPEARANCE'/>
+                <Text string='\"Z\"'>
+                  <FontStyle USE='LABEL_FONT'/>
+                </Text>
+              </Shape>
+            </Billboard>
+          </Transform>
+        </Group>
+      </Transform>
+"""
 
 X3D0.Scene = Scene7
-f = open("././rubikcoord_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("rubikcoord_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -64,6 +64,7 @@ head1.children.append(meta12)
 X3D0.head = head1
 Scene13 = x3d.Scene()
 NavigationInfo14 = x3d.NavigationInfo()
+NavigationInfo14.type = ["EXAMINE","ANY"]
 
 Scene13.children.append(NavigationInfo14)
 Background15 = x3d.Background()
@@ -80,8 +81,8 @@ Transform16.DEF = "transform"
 Shape17 = x3d.Shape()
 Appearance18 = x3d.Appearance()
 Material19 = x3d.Material()
-Material19.diffuseColor = [0.7,0.7,0.7]
-Material19.specularColor = [0.5,0.5,0.5]
+Material19.diffuseColor = [.7,.7,.7]
+Material19.specularColor = [.5,.5,.5]
 
 Appearance18.material = Material19
 ComposedCubeMapTexture20 = x3d.ComposedCubeMapTexture()
@@ -125,7 +126,7 @@ field29 = x3d.field()
 field29.name = "chromaticDispertion"
 field29.accessType = "inputOutput"
 field29.type = "SFVec3f"
-field29.value = [0.98,1,1.033]
+field29.value = [0.98,1.0,1.033]
 
 ComposedShader27.field.append(field29)
 field30 = x3d.field()
@@ -163,10 +164,13 @@ ComposedShader27.parts.append(ShaderPart34)
 Appearance18.shaders.append(ComposedShader27)
 
 Shape17.appearance = Appearance18
-#<Sphere>
+"""
+                <Sphere>
+		"""
 IndexedFaceSet35 = x3d.IndexedFaceSet()
 IndexedFaceSet35.convex = False
 IndexedFaceSet35.DEF = "Orbit"
+IndexedFaceSet35.creaseAngle = 0
 Coordinate36 = x3d.Coordinate()
 Coordinate36.DEF = "OrbitCoordinates"
 
@@ -180,25 +184,27 @@ Scene13.children.append(Transform16)
 Script37 = x3d.Script()
 Script37.DEF = "OrbitScript"
 field38 = x3d.field()
-field38.name = "set_fraction"
 field38.accessType = "inputOnly"
+field38.name = "set_fraction"
 field38.type = "SFFloat"
 
 Script37.field.append(field38)
 field39 = x3d.field()
-field39.name = "coordinates"
 field39.accessType = "inputOutput"
+field39.name = "coordinates"
 field39.type = "MFVec3f"
 
 Script37.field.append(field39)
 field40 = x3d.field()
-field40.name = "coordIndexes"
 field40.accessType = "outputOnly"
+field40.name = "coordIndexes"
 field40.type = "MFInt32"
 
 Script37.field.append(field40)
 
-Script37.sourceCode = '''ecmascript:\n"+
+Script37.sourceCode = '''\n"+
+"\n"+
+"ecmascript:\n"+
 "\n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
@@ -268,7 +274,8 @@ Script37.sourceCode = '''ecmascript:\n"+
 "	}\n"+
 "	var resolution = 100;\n"+
 "	updateCoordinates(resolution);\n"+
-"}'''
+"}\n"+
+"      '''
 
 Scene13.children.append(Script37)
 TimeSensor41 = x3d.TimeSensor()
@@ -300,6 +307,6 @@ ROUTE44.toNode = "OrbitScript"
 Scene13.children.append(ROUTE44)
 
 X3D0.Scene = Scene13
-f = open("././flowers4_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flowers4_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

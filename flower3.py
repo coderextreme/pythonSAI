@@ -34,6 +34,7 @@ head1.children.append(meta6)
 X3D0.head = head1
 Scene7 = x3d.Scene()
 NavigationInfo8 = x3d.NavigationInfo()
+NavigationInfo8.type = ["EXAMINE","ANY"]
 
 Scene7.children.append(NavigationInfo8)
 DirectionalLight9 = x3d.DirectionalLight()
@@ -64,6 +65,7 @@ Shape13.appearance = Appearance14
 IndexedFaceSet16 = x3d.IndexedFaceSet()
 IndexedFaceSet16.convex = False
 IndexedFaceSet16.DEF = "Orbit"
+IndexedFaceSet16.creaseAngle = 0
 Coordinate17 = x3d.Coordinate()
 Coordinate17.DEF = "OrbitCoordinates"
 
@@ -77,27 +79,35 @@ Scene7.children.append(Transform12)
 Script18 = x3d.Script()
 Script18.DEF = "OrbitScript"
 field19 = x3d.field()
-field19.name = "set_fraction"
 field19.accessType = "inputOnly"
+field19.name = "set_fraction"
 field19.type = "SFFloat"
 
 Script18.field.append(field19)
 field20 = x3d.field()
-field20.name = "coordinates"
 field20.accessType = "outputOnly"
+field20.name = "coordinates"
 field20.type = "MFVec3f"
 
 Script18.field.append(field20)
 field21 = x3d.field()
-field21.name = "coordIndexes"
 field21.accessType = "outputOnly"
+field21.name = "coordIndexes"
 field21.type = "MFInt32"
 
 Script18.field.append(field21)
-#<field accessType=\"inputOutput\" name=\"e\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"f\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"g\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"h\" type=\"SFFloat\" value=\"5\"/> <field accessType=\"inputOutput\" name=\"t\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"inputOutput\" name=\"p\" type=\"SFFloat\" value=\"0\"/> <field accessType=\"initializeOnly\" name=\"resolution\" type=\"SFInt32\" value=\"100\"/>
+"""
+        <field accessType=\"inputOutput\" name=\"e\" type=\"SFFloat\" value=\"5\"/>
+        <field accessType=\"inputOutput\" name=\"f\" type=\"SFFloat\" value=\"5\"/>
+        <field accessType=\"inputOutput\" name=\"g\" type=\"SFFloat\" value=\"5\"/>
+        <field accessType=\"inputOutput\" name=\"h\" type=\"SFFloat\" value=\"5\"/>
+        <field accessType=\"inputOutput\" name=\"t\" type=\"SFFloat\" value=\"0\"/>
+        <field accessType=\"inputOutput\" name=\"p\" type=\"SFFloat\" value=\"0\"/>
+        <field accessType=\"initializeOnly\" name=\"resolution\" type=\"SFInt32\" value=\"100\"/>
+	"""
 
 Script18.sourceCode = '''ecmascript:\n"+
-"\n"+
+"    \n"+
 "var e = 5;\n"+
 "var f = 5;\n"+
 "var g = 5;\n"+
@@ -169,7 +179,8 @@ Script18.sourceCode = '''ecmascript:\n"+
 "		h = 4;\n"+
 "	}\n"+
 "	generateCoordinates(resolution);\n"+
-"}'''
+"}\n"+
+"'''
 
 Scene7.children.append(Script18)
 TimeSensor22 = x3d.TimeSensor()
@@ -201,6 +212,6 @@ ROUTE25.toField = "set_fraction"
 Scene7.children.append(ROUTE25)
 
 X3D0.Scene = Scene7
-f = open("././flower3_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flower3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

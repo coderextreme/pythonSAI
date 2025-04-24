@@ -6,53 +6,53 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "TextExamples.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Show different escape-character text examples for embedded quotation marks."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Don Brutzman"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "7 April 2001"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "26 April 2016"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "warning"
 meta7.content = "Note that X3D Canonicalization (C14N) will scrub alternate XML character representations, be careful to check original encoding into version control."
+meta7.name = "warning"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "warning"
 meta8.content = "Usually this source document needs to be inspected and edited using a plain-text editor in order to see the differences in these XML-equivalent text representations."
+meta8.name = "warning"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "identifier"
 meta9.content = "https://www.web3d.org/x3d/content/examples/Basic/development/TextExamples.x3d"
+meta9.name = "identifier"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "generator"
 meta10.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta10.name = "generator"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "license"
 meta11.content = "../license.html"
+meta11.name = "license"
 
 head1.children.append(meta11)
 
@@ -123,6 +123,6 @@ Transform24.children.append(Shape25)
 Scene12.children.append(Transform24)
 
 X3D0.Scene = Scene12
-f = open("././TextExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("TextExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

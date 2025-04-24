@@ -6,8 +6,8 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Scripting"
 component2.level = 1
+component2.name = "Scripting"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
@@ -152,7 +152,8 @@ Script19.sourceCode = '''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform14.children.append(Script19)
 TimeSensor25 = x3d.TimeSensor()
@@ -210,6 +211,6 @@ ProtoInstance32.DEF = "bubbleD"
 Scene8.children.append(ProtoInstance32)
 
 X3D0.Scene = Scene8
-f = open("././bubs_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("bubs_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

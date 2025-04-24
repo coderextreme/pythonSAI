@@ -67,15 +67,15 @@ ProtoDeclare14 = x3d.ProtoDeclare()
 ProtoDeclare14.name = "FlowerProto"
 ProtoInterface15 = x3d.ProtoInterface()
 field16 = x3d.field()
-field16.name = "vertex"
 field16.accessType = "inputOutput"
+field16.name = "vertex"
 field16.type = "MFString"
 field16.value = ["../shaders/gl_flowers_chromatic.vs"]
 
 ProtoInterface15.field.append(field16)
 field17 = x3d.field()
-field17.name = "fragment"
 field17.accessType = "inputOutput"
+field17.name = "fragment"
 field17.type = "MFString"
 field17.value = ["../shaders/pc_flowers.fs"]
 
@@ -85,11 +85,12 @@ ProtoDeclare14.ProtoInterface = ProtoInterface15
 ProtoBody18 = x3d.ProtoBody()
 Transform19 = x3d.Transform()
 Transform19.DEF = "transform"
+Transform19.translation = [0,0,0]
 Shape20 = x3d.Shape()
 Appearance21 = x3d.Appearance()
 Material22 = x3d.Material()
-Material22.diffuseColor = [0.7,0.7,0.7]
-Material22.specularColor = [0.5,0.5,0.5]
+Material22.diffuseColor = [.7,.7,.7]
+Material22.specularColor = [.5,.5,.5]
 
 Appearance21.material = Material22
 ComposedCubeMapTexture23 = x3d.ComposedCubeMapTexture()
@@ -130,11 +131,16 @@ field31.accessType = "inputOutput"
 field31.value = 0
 
 ComposedShader30.field.append(field31)
+""" 
+		       <field name='cube' type='SFNode' accessType=\"inputOutput\">
+			  <ComposedCubeMapTexture USE=\"texture\"/>
+		  </field>
+		  """
 field32 = x3d.field()
 field32.name = "chromaticDispertion"
 field32.accessType = "initializeOnly"
 field32.type = "SFVec3f"
-field32.value = [0.98,1,1.033]
+field32.value = [0.98,1.0,1.033]
 
 ComposedShader30.field.append(field32)
 field33 = x3d.field()
@@ -200,7 +206,6 @@ field41.accessType = "inputOutput"
 field41.value = 0
 
 ComposedShader30.field.append(field41)
-#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart42 = x3d.ShaderPart()
 ShaderPart42.type = "VERTEX"
 IS43 = x3d.IS()
@@ -299,7 +304,9 @@ field58.value = 0.5
 
 Script49.field.append(field58)
 
-Script49.sourceCode = '''ecmascript:\n"+
+Script49.sourceCode = '''\n"+
+"  \n"+
+"ecmascript:\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
 "			    velocity = new SFVec3f(\n"+
@@ -364,7 +371,9 @@ Script49.sourceCode = '''ecmascript:\n"+
 "				if (d > 10) {\n"+
 "					d = 4;\n"+
 "				}\n"+
-"			}'''
+"			}\n"+
+"\n"+
+"'''
 
 Transform19.children.append(Script49)
 TimeSensor59 = x3d.TimeSensor()
@@ -437,6 +446,6 @@ ProtoDeclare14.ProtoBody = ProtoBody18
 Scene13.children.append(ProtoDeclare14)
 
 X3D0.Scene = Scene13
-f = open("././flowerproto_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flowerproto_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

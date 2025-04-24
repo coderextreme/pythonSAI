@@ -1,24 +1,47 @@
 "use strict";
 
-if (typeof document === 'undefined') {
-       var document = {};
+if (typeof window === 'undefined') {
+	var window = {};
+	if (typeof window.document === 'undefined') {
+	       window.document = {};
+
+	}
+}
+if (typeof require !== 'function') {
+	window.require = function() {
+		console.log("Redefinining require on browser");
+		return undefined;
+	};
 }
 
-if (typeof require === 'function' && typeof load !== 'function') {
-	var fs = require("fs");
-	var http = require("http");
-	var https = require("https");
+var xmldom = require('@xmldom/xmldom');
+if (typeof DOMSerializer === 'undefined') {
+	var DOMSerializer = require('./DOMSerializer.js');
+}
+if (typeof DOMSerializer === 'undefined') {
+	DOMSerializer = window.DOMSerializer;
+}
+var http = require("http");
+var https = require("https");
+// TODO this causes node-java 0.12.2 to hang
+// var runAndSend = require("./runAndSend");
+var fs = require('fs');
+
+
+if (typeof load !== 'function') {
+	fs = require("fs");
+	http = require("http");
+	https = require("https");
 	// TODO this causes node-java 0.12.2 to hang
-	/*
-	var runAndSend = require("./runAndSend");
-	*/
+	// var runAndSend = require("./runAndSend");
 	var xmldom = require('@xmldom/xmldom');
-	var domserializer = new xmldom.XMLSerializer();
-	var DOMParser = xmldom.DOMParser;
-	var domParser = new DOMParser();
-} else {
-	var domserializer = new XMLSerializer();
-        var domParser = new DOMParser();
+	if (typeof xmldom !== 'undefined') {
+		var domserializer = new xmldom.XMLSerializer();
+		var DOMParser = xmldom.DOMParser;
+	} else {
+		var domserializer = new XMLSerializer();
+		var domParser = new DOMParser();
+	}
 }
 	
 
@@ -28,7 +51,7 @@ if (typeof console !== 'undefined') {
 	}
 }
 
-const JSONParser = {
+var X3DJSONLD = {
 x3djsonNS : "",
 Browser : {
 	print : function(string) { if (typeof console !== 'undefined' && typeof string !== 'undefined') console.error(string); },
@@ -42,7 +65,7 @@ Browser : {
 	},
 	appendTo : function(element, jsobj) {
 		 if (element != null) {
-			 return this.ConvertToX3DOM(document, jsobj, "", element, 'foo.json');
+			 return X3DJSONLD.ConvertToX3DOM(document, jsobj, "", element, 'foo.x3dj');
 		 }
 	},
 	getDocument : function() {
@@ -89,7 +112,7 @@ processURLs: function(localArray, path) {
 			}
 			*/
 			while (localArray[url].startsWith("../")) {
-				localArray[url] = localArray[url].substr(3);
+				localArray[url] = localArray[url].substring(3);
 				var pe = pc.lastIndexOf('/');
 				if (pe >= 0) {
 					pc = pc.substring(0, pe);
@@ -97,7 +120,7 @@ processURLs: function(localArray, path) {
 					pc = "";
 				}
 			}
-			if (p == 0) {
+			if (p === 0) {
 				localArray[url] = path+localArray[url];
 			} else {
 				localArray[url] = pc+"/"+localArray[url];
@@ -113,17 +136,19 @@ processURLs: function(localArray, path) {
 		/*
 		var x3d = localArray[url].lastIndexOf(".x3d") ;
 		if (x3d === localArray[url].length - 4) {
-			localArray[url] = localArray[url].substring(0, x3d)+".json" + hash;
+			localArray[url] = localArray[url].substring(0, x3d)+".x3dj" + hash;
 		}
 		*/
+		/*
 		var wrl = localArray[url].lastIndexOf(".wrl") ;
 		if (wrl === localArray[url].length - 4) {
-			localArray[url] = localArray[url].substring(0, wrl)+".json" + hash;
+			localArray[url] = localArray[url].substring(0, wrl)+".x3dj" + hash;
 		}
 		var wrz = localArray[url].lastIndexOf(".wrz") ;
 		if (wrz === localArray[url].length - 4) {
-			localArray[url] = localArray[url].substring(0, wrz)+".json" + hash;
+			localArray[url] = localArray[url].substring(0, wrz)+".x3dj" + hash;
 		}
+		*/
 			
         }
 	// console.error("Processed URLs", localArray.join(" "));
@@ -138,7 +163,7 @@ processURLs: function(localArray, path) {
 loadURLs : function(loadpath, urls, loadedCallback, protoexp, done, externProtoDeclare, obj) {
 	if (typeof urls !== 'undefined') {
 		// console.error("Preprocessed", urls)
-		urls = this.processURLs(urls, loadpath);
+		urls = X3DJSONLD.processURLs(urls, loadpath);
 		// console.error("Postprocessed", urls)
 		for (var u in urls) {
 			try {
@@ -203,17 +228,15 @@ loadURLs : function(loadpath, urls, loadedCallback, protoexp, done, externProtoD
 							loadedCallback(data.toString(), url, protoexp, done, externProtoDeclare, obj);
 						} catch (e) {
 							var filename = url;
-							if (filename.endsWith(".json")) {
+							if (filename.endsWith(".json") || filename.endsWith(".x3dj")) {
 								filename = filename.substring(0, filename.lastIndexOf("."))+".x3d";
-								console.error("Not converting possible X3D to JSON", filename);
-								/*
+								// console.error("converting possible X3D to JSON", filename);
 								if (typeof runAndSend === 'function') {
 									runAndSend(['---silent', filename], function(jsobj) {
 										data = JSON.stringify(jsobj);
 										loadedCallback(data, filename, protoexp, done, externProtoDeclare, obj);
 									});
 								}
-								*/
 							}
 						}
 					} else if (typeof $ !== 'undefined' && typeof $.get === 'function') {
@@ -263,9 +286,9 @@ ConvertChildren : function(xmlDoc, parentkey, object, element, path) {
 	for (key in object) {
 		if (typeof object[key] === 'object') {
 			if (isNaN(parseInt(key))) {
-				this.ConvertObject(xmlDoc, key, object, element, path, parentkey.substr(1));
+				X3DJSONLD.ConvertObject(xmlDoc, key, object, element, path, parentkey.substring(1));
 			} else {
-				this.ConvertToX3DOM(xmlDoc, object[key], key, element, path, parentkey.substr(1));
+				X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, element, path, parentkey.substring(1));
 			}
 		}
 	}
@@ -281,13 +304,15 @@ CreateElement : function(xmlDoc, key, x3djsonNS, containerField) {
 		child = xmlDoc.createElement(key);
 	} else {
 		child = xmlDoc.createElementNS(x3djsonNS, key);
-		if (child == null || typeof child === 'undefined') {
+		if (child === null || typeof child === 'undefined') {
 			// console.error('Trouble creating element for', key);
 			child = xmlDoc.createElement(key);
 		}
 	}
-	if (typeof containerField !== 'undefined' && key.toLowerCase() != containerField.toLowerCase()) {
-		this.elementSetAttribute(child, 'containerField', containerField);
+	if (typeof containerField !== 'undefined') { // && key.toLowerCase() !== containerField.toLowerCase()) {
+		if (containerField !== 'geometry' && containerField !== 'coord') {
+			X3DJSONLD.elementSetAttribute(child, 'containerField', containerField);
+		}
 	}
 	return child;
 },
@@ -315,7 +340,7 @@ CDATACreateFunction : function(xmlDoc, element, str) {
  * set the CDATA create function.
  */
 setCDATACreateFunction : function(fnc) {
-	this.CDATACreateFunction = fnc;
+	X3DJSONLD.CDATACreateFunction = fnc;
 },
 
 /**
@@ -323,39 +348,39 @@ setCDATACreateFunction : function(fnc) {
  */
 ConvertObject : function(xmlDoc, key, object, element, path, containerField) {
 	if (object !== null && typeof object[key] === 'object') {
-		if (key.substr(0,1) === '@') {
-			this.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
-		} else if (key.substr(0,1) === '-') {
-			this.ConvertChildren(xmlDoc, key, object[key], element, path);
+		if (key.startsWith('@')) {
+			X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
+		} else if (key.startsWith('-')) {
+			X3DJSONLD.ConvertChildren(xmlDoc, key, object[key], element, path);
 		} else if (key === '#comment') {
 			for (var c in object[key]) {
-				var child = xmlDoc.createComment(this.CommentStringToXML(object[key][c]));
+				var child = xmlDoc.createComment(X3DJSONLD.CommentStringToXML(object[key][c]));
 				element.appendChild(child);
 			}
 			/*
 		} else if (key === 'Inline') {
 			var localArray = object[key]["@url"];
 			// console.error("Loading", localArray, "at", path, "into", key);
-			this.loadURLs(path, localArray, function(jsobj, path) {
+			X3DJSONLD.loadURLs(path, localArray, function(jsobj, path) {
 				// console.error("Read", jsobj);
 				try {
 					// console.error("Loading", jsobj, "into inline");
 					var child = xmlDoc.createDocumentFragment();
-					this.ConvertToX3DOM(xmlDoc, jsobj, "-children", child, path);
+					X3DJSONLD.ConvertToX3DOM(xmlDoc, jsobj, "-children", child, path);
 					element.appendChild(child);
 					element.appendChild(xmlDoc.createTextNode("\n"));
 				} catch(e) {
 					// if JSON parse failed, it might be XML or WRL
-					var child = this.CreateElement(xmlDoc, key, this.x3djsonNS, containerField);
+					var child = X3DJSONLD.CreateElement(xmlDoc, key, X3DJSONLD.x3djsonNS, containerField);
 					// console.error("Reloading", object[key]["@url"].join('","').replace(/\.json/g, '.x3d').split(/","/));
-					this.ConvertToX3DOM(xmlDoc, object[key], key, child, path);
+					X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, child, path);
 					element.appendChild(child);
 					element.appendChild(xmlDoc.createTextNode("\n"));
 				}
 			});
 			*/
 		} else if (key === '#sourceCode') {
-			this.CDATACreateFunction(xmlDoc, element, object[key].join("\r\n")+"\r\n");
+			X3DJSONLD.CDATACreateFunction(xmlDoc, element, object[key].join("\r\n")+"\r\n");
 		} else {
 			if (key === 'connect' || key === 'fieldValue' || key === 'field' || key === 'meta' || key === 'component' || key === 'unit') {
 				/*
@@ -392,16 +417,16 @@ ConvertObject : function(xmlDoc, key, object, element, path, containerField) {
 				for (var childkey in object[key]) {  // for each field
 					if (key !== 'meta' || childkey < object[key].length - 3) {
 						if (typeof object[key][childkey] === 'object') {
-							var child = this.CreateElement(xmlDoc, key, this.x3djsonNS, containerField);
-							this.ConvertToX3DOM(xmlDoc, object[key][childkey], childkey, child, path);
+							var child = X3DJSONLD.CreateElement(xmlDoc, key, X3DJSONLD.x3djsonNS, containerField);
+							X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key][childkey], childkey, child, path);
 							element.appendChild(child);
 							element.appendChild(xmlDoc.createTextNode("\n"));
 						}
 					}
 				}
 			} else {
-				var child = this.CreateElement(xmlDoc, key, this.x3djsonNS, containerField);
-				this.ConvertToX3DOM(xmlDoc, object[key], key, child, path);
+				var child = X3DJSONLD.CreateElement(xmlDoc, key, X3DJSONLD.x3djsonNS, containerField);
+				X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, child, path);
 				element.appendChild(child);
 				element.appendChild(xmlDoc.createTextNode("\n"));
 			}
@@ -481,7 +506,7 @@ ConvertToX3DOM : function(xmlDoc, object, parentkey, element, path, containerFie
 					localArray.push(object[key].join(" "));
 				}
 				*/
-				this.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
+				X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
 			} else if (typeof object[key] === 'undefined') {
 			} else {
 				console.error("Unknown type found in array "+typeof object[key]);
@@ -489,34 +514,47 @@ ConvertToX3DOM : function(xmlDoc, object, parentkey, element, path, containerFie
 		} else if (typeof object[key] === 'object') {
 			// This is where the whole thing starts
 			if (key === 'X3D') {
-				this.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
+				X3DJSONLD.ConvertToX3DOM(xmlDoc, object[key], key, element, path);
 			} else {
-				if (key === "-skin" || key === "-skeleton" || key === "-value") {
+				if (key === "-skin" || key === "-skeleton" || key === "-viewpoints" || key === "-value" || key === "-segments") {
 					let firstNode = object[key][0];
-					for (var skv in firstNode) {
-						firstNode[skv]['@containerField'] = key.substr(1);
-						// console.log(firstNode[skv]);
-						this.ConvertObject(xmlDoc, key, object, element, path, firstNode[skv]['@containerField']);
+					if (key === "-value") {
+						firstNode = object[key];
+						// console.log(firstNode);
+						for (var skv in firstNode) {
+							for (var prop in firstNode[skv]) {
+								firstNode[skv][prop]['@containerField'] = key.substring(1);
+								// console.log(firstNode[skv]);
+							}
+						}
+						X3DJSONLD.ConvertObject(xmlDoc, key, object, element, path, key.substring(1));
+					} else {
+						for (var skv in firstNode) {
+							firstNode[skv]['@containerField'] = key.substring(1);
+							X3DJSONLD.ConvertObject(xmlDoc, key, object, element, path, firstNode[skv]['@containerField']);
+						}
 					}
 				} else if (key.indexOf("HAnim") === 0 && key !== "HAnimHumanoid" && typeof object[key]['@USE'] != 'undefined') {
-					object[key]['@containerField'] = key.substr(5).toLowerCase()+"s";
-					this.ConvertObject(xmlDoc, key, object, element, path, object[key]['@containerField']);
+					object[key]['@containerField'] = key.substring(5).toLowerCase()+"s";
+					X3DJSONLD.ConvertObject(xmlDoc, key, object, element, path, object[key]['@containerField']);
 				} else {
-					this.ConvertObject(xmlDoc, key, object, element, path);
+					X3DJSONLD.ConvertObject(xmlDoc, key, object, element, path);
 				}
 			}
 		} else if (typeof object[key] === 'number') {
-			this.elementSetAttribute(element, key.substr(1),object[key]);
+			X3DJSONLD.elementSetAttribute(element, key.substring(1),object[key]);
 		} else if (typeof object[key] === 'string') {
-			if (key !== '#comment') {
+			if (key.substring(1) === 'type' && parentkey === '@NavigationInfo') {
+				X3DJSONLD.elementSetAttribute(element, key.substring(1), X3DJSONLD.NavigationInfoTypeToXML(object[key]));
+			} else if (key !== '#comment') {
 				// ordinary string attributes
-				this.elementSetAttribute(element, key.substr(1), this.JSONStringToXML(object[key]));
+				X3DJSONLD.elementSetAttribute(element, key.substring(1), X3DJSONLD.JSONStringToXML(object[key]));
 			} else {
-				var child = xmlDoc.createComment(this.CommentStringToXML(object[key]));
+				var child = xmlDoc.createComment(X3DJSONLD.CommentStringToXML(object[key]));
 				element.appendChild(child);
 			}
 		} else if (typeof object[key] === 'boolean') {
-			this.elementSetAttribute(element, key.substr(1),object[key]);
+			X3DJSONLD.elementSetAttribute(element, key.substring(1),object[key]);
 		} else if (typeof object[key] === 'undefined') {
 		} else {
 			console.error("Unknown type found in object "+typeof object[key]);
@@ -524,22 +562,22 @@ ConvertToX3DOM : function(xmlDoc, object, parentkey, element, path, containerFie
 		}
 	}
 	if (isArray) {
-		if (parentkey.substr(0,1) === '@') {
+		if (parentkey.startsWith('@')) {
 			if (arrayOfStrings) {
 				arrayOfStrings = false;
 				for (var str in localArray) {
-					localArray[str] = this.SFStringToXML(localArray[str]);
+					localArray[str] = X3DJSONLD.SFStringToXML(localArray[str]);
 				}
                                 if (parentkey === '@url' || parentkey.indexOf("Url") === parentkey.length - 3) {
 					// console.error("Load array  is",localArray);
 					// console.error("Path is",path);
-					this.processURLs(localArray, path);
+					X3DJSONLD.processURLs(localArray, path);
 					// console.error("Processed Load array  is",localArray);
 				}
-				this.elementSetAttribute(element, parentkey.substr(1),'"'+localArray.join('" "')+'"');
+				X3DJSONLD.elementSetAttribute(element, parentkey.substring(1),'"'+localArray.join('" "')+'"');
 			} else {
 				// if non string array
-				this.elementSetAttribute(element, parentkey.substr(1),localArray.join(" "));
+				X3DJSONLD.elementSetAttribute(element, parentkey.substring(1),localArray.join(" "));
 			}
 		}
 		isArray = false;
@@ -556,8 +594,12 @@ ConvertToX3DOM : function(xmlDoc, object, parentkey, element, path, containerFie
  * returns child element, xml document, xml string.
  */
 loadJsonIntoXml: function(DOMImplementation, jsobj, path) {
-	var child  = this.loadJsonIntoDom(DOMImplementation, jsobj, path);
-	var xml = this.serializeDOM(jsobj, child, true);
+	var child;
+	var xml;
+	[ child, xml ]  = X3DJSONLD.loadJsonIntoDom(DOMImplementation, jsobj, path);
+	if (!xml) {
+		xml = X3DJSONLD.serializeDOM(jsobj, child, true);
+	}
 	return [ child, xml ];
 },
 
@@ -570,25 +612,32 @@ loadJsonIntoXml: function(DOMImplementation, jsobj, path) {
  * returns child element, xml document.
  */
 loadJsonIntoDom: function(DOMImplementation, jsobj, path) {
-	var xmlDoc = this.prepareDocument(DOMImplementation, jsobj);
-	var child = this.CreateElement(xmlDoc, 'X3D', this.x3djsonNS);
+	var xmlDoc = X3DJSONLD.prepareDocument(DOMImplementation, jsobj);
+	var child = X3DJSONLD.CreateElement(xmlDoc, 'X3D', X3DJSONLD.x3djsonNS);
 	child.setAttribute("xmlns:xsd", 'http://www.w3.org/2001/XMLSchema-instance');
-	this.ConvertToX3DOM(xmlDoc, jsobj, "", child, path);
-	return child;
+	X3DJSONLD.ConvertToX3DOM(xmlDoc, jsobj, "", child, path);
+	return [ child, null ]; // TODO null until we can refactor
 },
 
 prepareDocument: function(DOMImplementation, jsobj) {
-	var version = "4.0";
-	var encoding = "UTF-8";
-	if (typeof jsobj.X3D !== 'undefined') {
-		version = jsobj.X3D["@version"];
-		encoding = jsobj.X3D["@encoding"];
-	}
+	var version = jsobj.X3D["@version"];
        	var docType = DOMImplementation.createDocumentType("X3D", 'ISO//Web3D//DTD X3D '+version+'//EN" "https://www.web3d.org/specifications/x3d-'+version+'.dtd', null);
 	var xmlDoc = DOMImplementation.createDocument(null, "X3D", docType);
 
-	xmlDoc.insertBefore(xmlDoc.createProcessingInstruction('xml', 'version="1.0" encoding="'+encoding+'"'), docType);
+	xmlDoc.insertBefore(xmlDoc.createProcessingInstruction('xml', 'version="1.0" encoding="'+jsobj.X3D["encoding"]+'"'), docType);
 	return xmlDoc;
+},
+
+NavigationInfoTypeToXML : function(str) {
+	let y = str;
+	console.log("X3DJSONLD jsonstring replacing "+ y);
+	// str = y.replace(/\\/g, "");
+	if (y !== str) {
+		console.log("with                           "+ str);
+	} else {
+		console.log("ok");
+	}
+	return str;
 },
 
 /**
@@ -597,7 +646,7 @@ prepareDocument: function(DOMImplementation, jsobj) {
  */
 fixXML : function(xmlstr) {
 	// get rid of self-closing tags
-	xmlstr = xmlstr.replace(/(<[ \t]*)([A-Za-z0-9]+)([^>]*)\/>/g, "$1$2$3></$2>");
+	xmlstr = xmlstr.replace(/(<[ \t]*)([A-Za-z0-9]+)([^>]*)\/>/g, "$1$2$3></$2>\n");
 	// strip out namespace
 	xmlstr = xmlstr.replace(/xmlns="[^"]*"/g, "");
 
@@ -606,8 +655,8 @@ fixXML : function(xmlstr) {
 
 
 	// Fix CDATA sections
-	xmlstr = xmlstr.replace(/&lt;!\[CDATA\[/g, "<![CDATA[");
-	xmlstr = xmlstr.replace(/\]\]&gt;/g, "]]>");
+	xmlstr = xmlstr.replace(/&lt;!\[CDATA\[/g, "\n<![CDATA[");
+	xmlstr = xmlstr.replace(/\]\]&gt;/g, "]]>\n");
 	xmlstr = xmlstr.replace(/[\u0080-\uFFFF]/g, 
 		function (v) {return '&#'+v.charCodeAt()+';';}
 	);
@@ -633,22 +682,28 @@ fixXML : function(xmlstr) {
 serializeDOM : function(json, element, appendDocType) {
 	var version = "4.0";
 	var encoding = "UTF-8";
-	if (typeof json !== 'undefined' && typeof json.X3D !== 'undefined') {
+	if (typeof json !== 'undefined') {
 		version = json.X3D["@version"];
 		encoding = json.X3D["encoding"];
 	}
 	var xml = '';
+	/*
 	if (appendDocType) {
 		xml += '<?xml version="1.0" encoding="'+encoding+'"?>\n';
 		xml += '<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D '+version+'//EN" "https://www.web3d.org/specifications/x3d-'+version+'.dtd">\n';
 	}
+	*/
 	if (typeof element === 'string') {
 		xml += element;
 	} else if (typeof element !== 'undefined') {
-		xml += domserializer.serializeToString(element);
+		if (typeof DOMSerializer === 'undefined') {
+			DOMSerializer = window.DOMSerializer;
+		}
+		var domserial = new DOMSerializer();
+		xml += domserial.serializeToString(json, element);
 	}
 
-	xml = this.fixXML(xml);
+	xml = X3DJSONLD.fixXML(xml);
 	return xml;
 },
 
@@ -660,10 +715,11 @@ serializeDOM : function(json, element, appendDocType) {
  *
  */
 selectObjectFromJSObj : function(node, selectorField) {
+	selectorField = selectorField.substring(1);
 	var skipDescendants = 0; // number of descendents to skip
 	var selectedValue = node;
 	var higherValue = selectedValue;
-	var selector  = selectorField.split(/ > /);
+	var selector  = selectorField.split(/\//);
 	var depth = (selector.length - skipDescendants);
 	for (var index = 0; index < depth - 0; index++) {
 		higherValue = selectedValue;
@@ -678,15 +734,14 @@ selectObjectFromJSObj : function(node, selectorField) {
 },
 
 setProcessURLs : function(func) {
-	this.processURLs = func;
+	X3DJSONLD.processURLs = func;
 },
 setDocument : function(doc) {
 	document = doc;
 }
 }
 
-var X3DJSONLD = Object.create(JSONParser);
+var Browser = X3DJSONLD.Browser;
+window.X3DJSONLD = X3DJSONLD;
 
-if (typeof module === 'object')  {
-	module.exports = X3DJSONLD;
-}
+module.exports = X3DJSONLD;

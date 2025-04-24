@@ -215,6 +215,6 @@ Transform14.children.append(Group15)
 Scene12.children.append(Transform14)
 
 X3D0.Scene = Scene12
-f = open("././GridXZ_20x20Fixed_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("GridXZ_20x20Fixed_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

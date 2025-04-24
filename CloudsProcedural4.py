@@ -6,54 +6,54 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.2"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "CloudsProcedural4.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "X3D utilizing ecmascript to develop quasi volumetric 3D clouds from png image textured billboard nodes."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Capt Darren W. Murphy"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "1 November 2007"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "14 January 2014"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "identifier"
 meta7.content = "https://savage.nps.edu/Savage/Environment/Atmosphere/CloudsProcedural4.x3d"
+meta7.name = "identifier"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "generator"
 meta8.content = "X3D-Edit, https://www.web3d.org/x3d/content/README.X3D-Edit.html"
+meta8.name = "generator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "license"
 meta9.content = "../../license.html"
+meta9.name = "license"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "TODO"
 meta10.content = "fix links"
+meta10.name = "TODO"
 
 head1.children.append(meta10)
 
 X3D0.head = head1
 Scene11 = x3d.Scene()
-#A png image file for the cloud texture must be designated in the ecmascript node.
+""" A png image file for the cloud texture must be designated in the ecmascript node. """
 Viewpoint12 = x3d.Viewpoint()
 Viewpoint12.description = "Main"
 Viewpoint12.jump = False
@@ -147,8 +147,8 @@ Script32 = x3d.Script()
 Script32.DEF = "PixelScript"
 Script32.directOutput = True
 field33 = x3d.field()
-field33.name = "Cumulus"
 field33.accessType = "initializeOnly"
+field33.name = "Cumulus"
 field33.type = "SFNode"
 Transform34 = x3d.Transform()
 Transform34.USE = "Cumulus"
@@ -157,8 +157,8 @@ field33.children.append(Transform34)
 
 Script32.field.append(field33)
 field35 = x3d.field()
-field35.name = "Cirrus"
 field35.accessType = "initializeOnly"
+field35.name = "Cirrus"
 field35.type = "SFNode"
 Transform36 = x3d.Transform()
 Transform36.USE = "Cirrus"
@@ -167,13 +167,14 @@ field35.children.append(Transform36)
 
 Script32.field.append(field35)
 field37 = x3d.field()
-field37.name = "Fog"
 field37.accessType = "initializeOnly"
+field37.name = "Fog"
 field37.type = "SFNode"
 
 Script32.field.append(field37)
 
-Script32.sourceCode = '''ecmascript:\n"+
+Script32.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -345,12 +346,12 @@ Script32.sourceCode = '''ecmascript:\n"+
 "\n"+
 "		if (Y <= 30) //cloud shading and lighting control\n"+
 "  	{	\n"+
-"	image = ' \"CloudTexture1_5.png\" \"https://savage.nps.edu/Savage/Environment/Spheretexture.png\" \\n';\n"+
+"	image = ' \\\"CloudTexture1_5.png\\\" \\\"https://savage.nps.edu/Savage/Environment/Spheretexture.png\\\" \\n';\n"+
 "  	}\n"+
 "\n"+
 "  		else\n"+
 "  	{	\n"+
-"	image = ' \"CloudTexture1_4.png\" \"https://savage.nps.edu/Savage/Environment/Spheretexture.png\" \\n';\n"+
+"	image = ' \\\"CloudTexture1_4.png\\\" \\\"https://savage.nps.edu/Savage/Environment/Spheretexture.png\\\" \\n';\n"+
 "  	}\n"+
 "\n"+
 "	\n"+
@@ -494,7 +495,7 @@ Script32.sourceCode = '''ecmascript:\n"+
 "		'			    material Material {			\\n' +\n"+
 "		'			    }					\\n' +\n"+
 " 		'	                      texture ImageTexture {	        \\n' +\n"+
-"		'	                        url [\"cloudtexture3.png\" \"https://savage.nps.edu/Savage/Environment/cloudtexture1_4.png\" ] \\n' +\n"+
+"		'	                        url [\\\"cloudtexture3.png\\\" \\\"https://savage.nps.edu/Savage/Environment/cloudtexture1_4.png\\\" ] \\n' +\n"+
 "		'	                      }	                                \\n' +\n"+
 "		'	                    }	                                \\n' +\n"+
 "		'	                    geometry IndexedFaceSet {	        \\n' +     // define type of geometry to texture\n"+
@@ -553,7 +554,8 @@ Script32.sourceCode = '''ecmascript:\n"+
 "cumulus();\n"+
 "\n"+
 "cirrus();\n"+
-"}'''
+"}\n"+
+"'''
 
 Group28.children.append(Script32)
 DirectionalLight38 = x3d.DirectionalLight()
@@ -567,6 +569,6 @@ Group28.children.append(DirectionalLight38)
 Scene11.children.append(Group28)
 
 X3D0.Scene = Scene11
-f = open("././CloudsProcedural4_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("CloudsProcedural4_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

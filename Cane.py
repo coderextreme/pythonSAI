@@ -6,53 +6,53 @@ X3D0.profile = "Interchange"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Cane.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Cane for elderly man."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Carol McDonald"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Joe Williams and Don Brutzman"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "27 May 2023"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "27 May 2023"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "originals/cane.x3dv"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "identifier"
 meta9.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Cane.x3d"
+meta9.name = "identifier"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "generator"
 meta10.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta10.name = "generator"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "license"
 meta11.content = "../license.html"
+meta11.name = "license"
 
 head1.children.append(meta11)
 
@@ -68,9 +68,9 @@ Scene12.children.append(Background14)
 Shape15 = x3d.Shape()
 Appearance16 = x3d.Appearance()
 Material17 = x3d.Material()
-Material17.ambientIntensity = 0
-Material17.diffuseColor = [0.490196079,0.149019614,0.80392158]
-Material17.shininess = 1
+Material17.ambientIntensity = 0.0
+Material17.diffuseColor = [.490196079,.149019614,.80392158]
+Material17.shininess = 1.0
 
 Appearance16.material = Material17
 
@@ -88,6 +88,6 @@ Shape15.geometry = IndexedFaceSet18
 Scene12.children.append(Shape15)
 
 X3D0.Scene = Scene12
-f = open("././Cane_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Cane_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

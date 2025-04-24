@@ -64,9 +64,10 @@ head1.children.append(meta12)
 X3D0.head = head1
 Scene13 = x3d.Scene()
 NavigationInfo14 = x3d.NavigationInfo()
+NavigationInfo14.type = ["EXAMINE","ANY"]
 
 Scene13.children.append(NavigationInfo14)
-#Images courtesy of Paul Debevec's Light Probe Image Gallery
+""" Images courtesy of Paul Debevec's Light Probe Image Gallery """
 Background15 = x3d.Background()
 Background15.DEF = "background"
 Background15.backUrl = ["../resources/images/all_probes/beach_cross/beach_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/beach_cross/beach_back.png"]
@@ -86,8 +87,8 @@ Transform17 = x3d.Transform()
 Shape18 = x3d.Shape()
 Appearance19 = x3d.Appearance()
 Material20 = x3d.Material()
-Material20.diffuseColor = [0.7,0.7,0.7]
-Material20.specularColor = [0.5,0.5,0.5]
+Material20.diffuseColor = [.7,.7,.7]
+Material20.specularColor = [.5,.5,.5]
 
 Appearance19.material = Material20
 ComposedCubeMapTexture21 = x3d.ComposedCubeMapTexture()
@@ -134,11 +135,16 @@ field29.accessType = "inputOutput"
 field29.value = 0
 
 ComposedShader28.field.append(field29)
+""" 
+		       <field name='cube' type='SFNode' accessType=\"inputOutput\">
+			  <ComposedCubeMapTexture USE=\"texture\"/>
+		  </field>
+		  """
 field30 = x3d.field()
 field30.name = "chromaticDispertion"
 field30.accessType = "initializeOnly"
 field30.type = "SFVec3f"
-field30.value = [0.98,1,1.033]
+field30.value = [0.98,1.0,1.033]
 
 ComposedShader28.field.append(field30)
 field31 = x3d.field()
@@ -204,7 +210,6 @@ field39.accessType = "inputOutput"
 field39.value = 0
 
 ComposedShader28.field.append(field39)
-#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart40 = x3d.ShaderPart()
 ShaderPart40.url = ["../shaders/x3dom_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom_flowers_chromatic.vs"]
 ShaderPart40.type = "VERTEX"
@@ -234,7 +239,7 @@ field45 = x3d.field()
 field45.name = "chromaticDispertion"
 field45.accessType = "initializeOnly"
 field45.type = "SFVec3f"
-field45.value = [0.98,1,1.033]
+field45.value = [0.98,1.0,1.033]
 
 ComposedShader42.field.append(field45)
 field46 = x3d.field()
@@ -416,7 +421,8 @@ field72.value = -1
 
 Script58.field.append(field72)
 
-Script58.sourceCode = '''ecmascript:\n"+
+Script58.sourceCode = '''\n"+
+"ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "            var side = Math.floor(f*frontUrls.length);\n"+
 "            if (side > frontUrls.length-1) {\n"+
@@ -431,10 +437,26 @@ Script58.sourceCode = '''ecmascript:\n"+
 "                    top[0] = topUrls[side];\n"+
 "                    bottom[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }'''
+"        }\n"+
+"'''
 
 Scene13.children.append(Script58)
-#<TimeSensor DEF=\"Clock\" cycleInterval=\"45\" loop='true'/> <ROUTE fromNode='Clock' fromField='fraction_changed' toNode='UrlSelector' toField='set_fraction'/> <ROUTE fromNode='UrlSelector' fromField='front' toNode='background' toField='frontUrl'/> <ROUTE fromNode='UrlSelector' fromField='back' toNode='background' toField='backUrl'/> <ROUTE fromNode='UrlSelector' fromField='left' toNode='background' toField='leftUrl'/> <ROUTE fromNode='UrlSelector' fromField='right' toNode='background' toField='rightUrl'/> <ROUTE fromNode='UrlSelector' fromField='top' toNode='background' toField='topUrl'/> <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='background' toField='bottomUrl'/> <ROUTE fromNode='UrlSelector' fromField='front' toNode='frontShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='back' toNode='backShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='left' toNode='leftShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='right' toNode='rightShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='top' toNode='topShader' toField='url'/> <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='bottomShader' toField='url'/>
+"""
+            <TimeSensor DEF=\"Clock\" cycleInterval=\"45\" loop='true'/>
+            <ROUTE fromNode='Clock' fromField='fraction_changed' toNode='UrlSelector' toField='set_fraction'/>
+            <ROUTE fromNode='UrlSelector' fromField='front' toNode='background' toField='frontUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='back' toNode='background' toField='backUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='left' toNode='background' toField='leftUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='right' toNode='background' toField='rightUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='top' toNode='background' toField='topUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='background' toField='bottomUrl'/>
+            <ROUTE fromNode='UrlSelector' fromField='front' toNode='frontShader' toField='url'/>
+            <ROUTE fromNode='UrlSelector' fromField='back' toNode='backShader' toField='url'/>
+            <ROUTE fromNode='UrlSelector' fromField='left' toNode='leftShader' toField='url'/>
+            <ROUTE fromNode='UrlSelector' fromField='right' toNode='rightShader' toField='url'/>
+            <ROUTE fromNode='UrlSelector' fromField='top' toNode='topShader' toField='url'/>
+            <ROUTE fromNode='UrlSelector' fromField='bottom' toNode='bottomShader' toField='url'/>
+	    """
 Script73 = x3d.Script()
 Script73.DEF = "Animate"
 Script73.directOutput = True
@@ -487,7 +509,8 @@ field80.value = 0
 
 Script73.field.append(field80)
 
-Script73.sourceCode = '''ecmascript:\n"+
+Script73.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function set_fraction() {\n"+
 "	var choice = Math.floor(Math.random() * 4);\n"+
@@ -525,7 +548,8 @@ Script73.sourceCode = '''ecmascript:\n"+
 "	if (d > 20) {\n"+
 "		d = 4;\n"+
 "	}\n"+
-"}'''
+"}\n"+
+"'''
 
 Scene13.children.append(Script73)
 TimeSensor81 = x3d.TimeSensor()
@@ -627,6 +651,6 @@ ROUTE94.toField = "tdelta"
 Scene13.children.append(ROUTE94)
 
 X3D0.Scene = Scene13
-f = open("././flowers7_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flowers7_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

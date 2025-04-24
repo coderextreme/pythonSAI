@@ -6,93 +6,93 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "rgb_alpha.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "Image"
 meta3.content = "rgb_alpha-front.jpg"
+meta3.name = "Image"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "Image"
 meta4.content = "rgb_alpha-rear.jpg"
+meta4.name = "Image"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "Image"
 meta5.content = "rgb_alpha-top.jpg"
+meta5.name = "Image"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "Image"
 meta6.content = "rgb_alpha-bottom.jpg"
+meta6.name = "Image"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "reference"
 meta7.content = "http://www.nist.gov/vrml.html"
+meta7.name = "reference"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "http://www.itl.nist.gov/div897/ctg/vrml/vrml.html"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "creator"
 meta9.content = "http://www.itl.nist.gov/div897/ctg/vrml/members.html"
+meta9.name = "creator"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "disclaimer"
 meta10.content = "This file was provided by the National Institute of Standards and Technology, and is part of the X3D Conformance Test Suite, available at http://www.nist.gov/vrml.html The information contained within this file is provided for use in establishing conformance to the ISO VRML97 Specification. Conformance to this test does not imply recommendation or endorsement by the National Institute of Standards and Technology. This software can be redistributed and/or modified freely provided that any derivative works bear some notice that they are derived from it, and any modified versions bear some notice that they have been modified."
+meta10.name = "disclaimer"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "info"
 meta11.content = "Correct definition and compliance of this conformance scene is maintained by the X3D Working Group, https://www.web3d.org/working-groups/x3d"
+meta11.name = "info"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "translator"
 meta12.content = "Michael Kass NIST, Don Brutzman NPS"
+meta12.name = "translator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "translated"
 meta13.content = "21 January 2001"
+meta13.name = "translated"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "modified"
 meta14.content = "16 January 2011"
+meta14.name = "modified"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "description"
 meta15.content = "Test browser ability to map a RGB plus alpha opacity to geometry. A checkerboard of four colored squares: lower left (red), lower right (transparent), uppser left (transparent) and upper right (red) map onto the faces of all geometry. For the sphere, the texture should cover the entire surface, and wrap counterclockwise from the back of the sphere. For the cone, the texture should wrap counterclockwise (from above) starting at the back of the cone. A circle cutout of the texture is applied right side up to the base of the cone when the cone is tilted toward the -z axis. For the cylinder, the texture should wrap counterclockwise (from above) starting at the back of the cylinder. A circle cutout of the texture is applied right side up to the top and bottom caps of the cylinder. For the box, the texture should be applied right side up in its entirety to each face of the box."
+meta15.name = "description"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "identifier"
 meta16.content = "https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/PixelTexture/rgb_alpha.x3d"
+meta16.name = "identifier"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "generator"
 meta17.content = "Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"
+meta17.name = "generator"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "generator"
 meta18.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta18.name = "generator"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "license"
 meta19.content = "../../license.html"
+meta19.name = "license"
 
 head1.children.append(meta19)
 
@@ -188,6 +188,6 @@ Group22.children.append(Transform41)
 Scene20.children.append(Group22)
 
 X3D0.Scene = Scene20
-f = open("././rgb_alpha_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("rgb_alpha_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

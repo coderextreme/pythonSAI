@@ -45,8 +45,8 @@ ProtoDeclare10 = x3d.ProtoDeclare()
 ProtoDeclare10.name = "point"
 ProtoInterface11 = x3d.ProtoInterface()
 field12 = x3d.field()
-field12.name = "translation"
 field12.accessType = "inputOutput"
+field12.name = "translation"
 field12.type = "SFVec3f"
 field12.value = [0,0,0]
 
@@ -112,12 +112,14 @@ field26.type = "MFVec3f"
 
 Script22.field.append(field26)
 
-Script22.sourceCode = '''ecmascript:\n"+
+Script22.sourceCode = '''\n"+
+"ecmascript:\n"+
 "               function set_location(value) {\n"+
 "                    old = translation;\n"+
 "                    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
-"               }'''
+"               }\n"+
+"'''
 
 Transform14.children.append(Script22)
 TimeSensor27 = x3d.TimeSensor()
@@ -191,13 +193,13 @@ Shape39 = x3d.Shape()
 Appearance40 = x3d.Appearance()
 Material41 = x3d.Material()
 Material41.diffuseColor = [0.2,0.7,0.7]
-Material41.transparency = 0.5
+Material41.transparency = .5
 
 Appearance40.material = Material41
 
 Shape39.appearance = Appearance40
 Cylinder42 = x3d.Cylinder()
-Cylinder42.radius = 0.05
+Cylinder42.radius = .05
 
 Shape39.geometry = Cylinder42
 
@@ -210,38 +212,38 @@ ProtoDeclare43 = x3d.ProtoDeclare()
 ProtoDeclare43.name = "x3dconnector"
 ProtoInterface44 = x3d.ProtoInterface()
 field45 = x3d.field()
-field45.name = "startnode"
 field45.accessType = "initializeOnly"
+field45.name = "startnode"
 field45.type = "SFNode"
 
 ProtoInterface44.field.append(field45)
 field46 = x3d.field()
-field46.name = "endnode"
 field46.accessType = "initializeOnly"
+field46.name = "endnode"
 field46.type = "SFNode"
 
 ProtoInterface44.field.append(field46)
 field47 = x3d.field()
-field47.name = "transnode"
 field47.accessType = "inputOutput"
+field47.name = "transnode"
 field47.type = "SFNode"
 
 ProtoInterface44.field.append(field47)
 field48 = x3d.field()
-field48.name = "rotscalenode"
 field48.accessType = "inputOutput"
+field48.name = "rotscalenode"
 field48.type = "SFNode"
 
 ProtoInterface44.field.append(field48)
 field49 = x3d.field()
-field49.name = "set_startpoint"
 field49.accessType = "inputOnly"
+field49.name = "set_startpoint"
 field49.type = "SFVec3f"
 
 ProtoInterface44.field.append(field49)
 field50 = x3d.field()
-field50.name = "set_endpoint"
 field50.accessType = "inputOnly"
+field50.name = "set_endpoint"
 field50.type = "SFVec3f"
 
 ProtoInterface44.field.append(field50)
@@ -251,38 +253,38 @@ ProtoBody51 = x3d.ProtoBody()
 Script52 = x3d.Script()
 Script52.DEF = "S1"
 field53 = x3d.field()
-field53.name = "startnode"
 field53.accessType = "initializeOnly"
+field53.name = "startnode"
 field53.type = "SFNode"
 
 Script52.field.append(field53)
 field54 = x3d.field()
-field54.name = "endnode"
 field54.accessType = "initializeOnly"
+field54.name = "endnode"
 field54.type = "SFNode"
 
 Script52.field.append(field54)
 field55 = x3d.field()
-field55.name = "transnode"
 field55.accessType = "initializeOnly"
+field55.name = "transnode"
 field55.type = "SFNode"
 
 Script52.field.append(field55)
 field56 = x3d.field()
-field56.name = "rotscalenode"
 field56.accessType = "initializeOnly"
+field56.name = "rotscalenode"
 field56.type = "SFNode"
 
 Script52.field.append(field56)
 field57 = x3d.field()
-field57.name = "set_startpoint"
 field57.accessType = "inputOnly"
+field57.name = "set_startpoint"
 field57.type = "SFVec3f"
 
 Script52.field.append(field57)
 field58 = x3d.field()
-field58.name = "set_endpoint"
 field58.accessType = "inputOnly"
+field58.name = "set_endpoint"
 field58.type = "SFVec3f"
 
 Script52.field.append(field58)
@@ -360,7 +362,8 @@ Script52.sourceCode = '''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }'''
+"        }\n"+
+"            '''
 
 ProtoBody51.children.append(Script52)
 
@@ -428,6 +431,6 @@ ROUTE78.toField = "set_endpoint"
 Scene7.children.append(ROUTE78)
 
 X3D0.Scene = Scene7
-f = open("././arc1_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("arc1_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -45,6 +45,7 @@ Transform10 = x3d.Transform()
 Transform10.DEF = "G1"
 Transform11 = x3d.Transform()
 Transform11.DEF = "DECLpoint_INSTANCE_node"
+Transform11.translation = [0,0,0]
 Shape12 = x3d.Shape()
 Sphere13 = x3d.Sphere()
 Sphere13.radius = 0.1
@@ -93,12 +94,17 @@ field21.type = "MFVec3f"
 
 Script17.field.append(field21)
 
-Script17.sourceCode = '''ecmascript:\n"+
+Script17.sourceCode = '''\n"+
+"\n"+
+"ecmascript:\n"+
 "               function set_location(value) {\n"+
 "                    old = translation;\n"+
 "                    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f(old, translation);\n"+
-"               }'''
+"               }\n"+
+"\n"+
+"\n"+
+"'''
 
 Transform11.children.append(Script17)
 TimeSensor22 = x3d.TimeSensor()
@@ -150,6 +156,7 @@ Transform28 = x3d.Transform()
 Transform28.DEF = "G2"
 Transform29 = x3d.Transform()
 Transform29.DEF = "DECLpoint_INSTANCE1000_node"
+Transform29.translation = [0,0,0]
 Shape30 = x3d.Shape()
 Sphere31 = x3d.Sphere()
 Sphere31.radius = 0.1
@@ -198,12 +205,17 @@ field39.type = "MFVec3f"
 
 Script35.field.append(field39)
 
-Script35.sourceCode = '''ecmascript:\n"+
+Script35.sourceCode = '''\n"+
+"\n"+
+"ecmascript:\n"+
 "               function set_location(value) {\n"+
 "                    old = translation;\n"+
 "                    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f(old, translation);\n"+
-"               }'''
+"               }\n"+
+"\n"+
+"\n"+
+"'''
 
 Transform29.children.append(Script35)
 TimeSensor40 = x3d.TimeSensor()
@@ -329,7 +341,8 @@ field62.type = "SFVec3f"
 
 Script52.field.append(field62)
 
-Script52.sourceCode = '''ecmascript:\n"+
+Script52.sourceCode = '''\n"+
+"            ecmascript:\n"+
 "        function recompute(startpoint,endpoint){\n"+
 "	    if (typeof endpoint === 'undefined') {\n"+
 "		return;\n"+
@@ -367,7 +380,10 @@ Script52.sourceCode = '''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }'''
+"        }\n"+
+"\n"+
+"\n"+
+"'''
 
 Scene7.children.append(Script52)
 ROUTE63 = x3d.ROUTE()
@@ -386,6 +402,6 @@ ROUTE64.toField = "set_endpoint"
 Scene7.children.append(ROUTE64)
 
 X3D0.Scene = Scene7
-f = open("././arc2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("arc2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -25,7 +25,7 @@ class ClassPrinter:
             self.node = node
 
     def findParents(self):
-        if self.node:
+        if self.node is not None and not isinstance(self.node, bool):
             addinhers = self.node.iter("AdditionalInheritance")
             for addinher in addinhers:
                 self.parents.update({ addinher.get('baseType') : 1} )
@@ -40,7 +40,7 @@ class ClassPrinter:
             return self.parents;
 
     def findChildren(self):
-        if self.node:
+        if self.node is not None and not isinstance(self.node, bool):
             addinhers = self.node.iter("AdditionalInheritance")
             for addinher in addinhers:
                 classes[addinher.get('baseType')].children.append(self.name)
@@ -86,7 +86,7 @@ class ClassPrinter:
             except:
                 pass
         str += '"'+self.name+'" : {\n'
-        if self.node:
+        if self.node is not None and not isinstance(self.node, bool):
             fields = self.node.iter("field")
             for field in fields:
                 if field.get("type") == "MFNode" or field.get("type") == "SFNode":

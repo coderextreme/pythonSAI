@@ -6,158 +6,158 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "ObliqueStrategies.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Text scripting and animation example using Oblique Strategies card set by Brian Eno."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Don Brutzman, John Kelly, Ben Cheng"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "3 November 2013"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "10 November 2019"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "reference"
 meta7.content = "oblique.html"
+meta7.name = "reference"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "ObliqueStrategies.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "ObliqueStrategiesScript.js"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "http://music.hyperreal.org/artists/brian_eno/oblique/oblique.html"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "http://www.eno-web.co.uk/obliques.html"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "http://gothpunk.com/haiku-intro.html"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "http://www.rtqe.net/ObliqueStrategies/OSintro.html"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "reference"
 meta14.content = "https://en.wikipedia.org/wiki/Oblique_Strategies"
+meta14.name = "reference"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "subject"
 meta15.content = "Brian Eno, Oblique Strategies"
+meta15.name = "subject"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "Image"
 meta16.content = "images/ObliqueStrategiesEntryScreen.png"
+meta16.name = "Image"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "Sound"
 meta17.content = "http://translate.google.com/translate_tts?tl=en&q=hello%20X3D"
+meta17.name = "Sound"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "Sound"
 meta18.content = "translate_tts_HelloX3D.mp3"
+meta18.name = "Sound"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "Sound"
 meta19.content = "translate_tts_HelloX3D.wav"
+meta19.name = "Sound"
 
 head1.children.append(meta19)
 meta20 = x3d.meta()
-meta20.name = "TODO"
 meta20.content = "multiliingual translation parameter"
+meta20.name = "TODO"
 
 head1.children.append(meta20)
 meta21 = x3d.meta()
-meta21.name = "reference"
 meta21.content = "http://stackoverflow.com/questions/9163988/download-mp3-from-google-translate-text-to-speech"
+meta21.name = "reference"
 
 head1.children.append(meta21)
 meta22 = x3d.meta()
-meta22.name = "reference"
 meta22.content = "http://www.greenbot.com/article/2105862/how-to-get-started-with-google-text-to-speech.html"
+meta22.name = "reference"
 
 head1.children.append(meta22)
 meta23 = x3d.meta()
-meta23.name = "warning"
 meta23.content = "under development, scene Sound/AudioClip triggering (or retrieved file format) not working"
+meta23.name = "warning"
 
 head1.children.append(meta23)
 meta24 = x3d.meta()
-meta24.name = "warning"
 meta24.content = "TODO resolve potential error in Script node TextScript: parse problem line 15 \" var strategy = [];"
+meta24.name = "warning"
 
 head1.children.append(meta24)
 meta25 = x3d.meta()
-meta25.name = "reference"
 meta25.content = "https://gist.github.com/alotaiba/1728771"
+meta25.name = "reference"
 
 head1.children.append(meta25)
 meta26 = x3d.meta()
-meta26.name = "reference"
 meta26.content = "https://stackoverflow.com/questions/35002003/how-to-use-google-translate-tts-with-the-new-v2-api"
+meta26.name = "reference"
 
 head1.children.append(meta26)
 meta27 = x3d.meta()
-meta27.name = "Sound"
 meta27.content = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=Hello+X3D4"
+meta27.name = "Sound"
 
 head1.children.append(meta27)
 meta28 = x3d.meta()
-meta28.name = "Sound"
 meta28.content = "translate_tts_HelloX3D4.mp3"
+meta28.name = "Sound"
 
 head1.children.append(meta28)
 meta29 = x3d.meta()
-meta29.name = "reference"
 meta29.content = "https://cloud.google.com/translate/docs/basic/translating-text"
+meta29.name = "reference"
 
 head1.children.append(meta29)
 meta30 = x3d.meta()
-meta30.name = "identifier"
 meta30.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategies.x3d"
+meta30.name = "identifier"
 
 head1.children.append(meta30)
 meta31 = x3d.meta()
-meta31.name = "generator"
 meta31.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta31.name = "generator"
 
 head1.children.append(meta31)
 meta32 = x3d.meta()
-meta32.name = "license"
 meta32.content = "../license.html"
+meta32.name = "license"
 
 head1.children.append(meta32)
 
@@ -235,59 +235,59 @@ Scene33.children.append(Transform37)
 Script50 = x3d.Script()
 Script50.DEF = "TextScript"
 Script50.url = ["ObliqueStrategiesScript.js","https://x3dgraphics.com/examples/X3dForAdvancedModeling/Inspiration/ObliqueStrategiesScript.js"]
-#initialize() method includes unit test to printAllStrategies() to console
-#TODO insert field definitions here (index string_changed previous next random) and then animate!
+""" initialize() method includes unit test to printAllStrategies() to console """
+""" TODO insert field definitions here (index string_changed previous next random) and then animate! """
 field51 = x3d.field()
-field51.name = "index"
 field51.accessType = "initializeOnly"
 field51.appinfo = "index for active strategy card, -1 means no selection"
+field51.name = "index"
 field51.type = "SFInt32"
 field51.value = 0
 
 Script50.field.append(field51)
 field52 = x3d.field()
-field52.name = "string_changed"
 field52.accessType = "outputOnly"
 field52.appinfo = "latest strategy card value"
+field52.name = "string_changed"
 field52.type = "MFString"
 
 Script50.field.append(field52)
 field53 = x3d.field()
-field53.name = "textToSpeechUrl"
 field53.accessType = "outputOnly"
 field53.appinfo = "\"url to invoke Google Translate\""
+field53.name = "textToSpeechUrl"
 field53.type = "MFString"
 
 Script50.field.append(field53)
 field54 = x3d.field()
-field54.name = "newCardTime"
 field54.accessType = "outputOnly"
 field54.appinfo = "activate Sound node"
+field54.name = "newCardTime"
 field54.type = "SFTime"
 
 Script50.field.append(field54)
 field55 = x3d.field()
-field55.name = "selectPreviousCard"
 field55.accessType = "inputOnly"
+field55.name = "selectPreviousCard"
 field55.type = "SFBool"
 
 Script50.field.append(field55)
 field56 = x3d.field()
-field56.name = "selectNextCard"
 field56.accessType = "inputOnly"
+field56.name = "selectNextCard"
 field56.type = "SFBool"
 
 Script50.field.append(field56)
 field57 = x3d.field()
-field57.name = "selectRandomCard"
 field57.accessType = "inputOnly"
+field57.name = "selectRandomCard"
 field57.type = "SFBool"
 
 Script50.field.append(field57)
 field58 = x3d.field()
-field58.name = "traceEnabled"
 field58.accessType = "initializeOnly"
 field58.appinfo = "controls console tracing"
+field58.name = "traceEnabled"
 field58.type = "SFBool"
 field58.value = True
 
@@ -331,10 +331,10 @@ Sound66.maxBack = 100
 Sound66.maxFront = 100
 Sound66.minBack = 20
 Sound66.minFront = 20
-#Make sure the sound source AudioClip is audible at the user location
-#Not all X3D players seem to use the .mp3
-#&#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players
-#%20 is space character used in uri/url encoding
+""" Make sure the sound source AudioClip is audible at the user location """
+""" Not all X3D players seem to use the .mp3 """
+""" &#38; is ampersand character, avoids escaping problems and inconsistencies in browsers and X3D players """
+""" %20 is space character used in uri/url encoding """
 AudioClip67 = x3d.AudioClip()
 AudioClip67.DEF = "TextToSpeechAudioClip"
 AudioClip67.description = "sends strategy text google translate"
@@ -397,7 +397,7 @@ Transform78 = x3d.Transform()
 Transform78.scale = [2,0.6,1]
 Shape79 = x3d.Shape()
 Shape79.DEF = "TransparentClickSurface"
-#support Selectable Text with a scalable IFS
+""" support Selectable Text with a scalable IFS """
 IndexedFaceSet80 = x3d.IndexedFaceSet()
 IndexedFaceSet80.coordIndex = [0,1,2,3,-1]
 IndexedFaceSet80.solid = False
@@ -542,6 +542,6 @@ Transform102.children.append(Anchor103)
 Scene33.children.append(Transform102)
 
 X3D0.Scene = Scene33
-f = open("././ObliqueStrategies_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ObliqueStrategies_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

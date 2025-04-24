@@ -6,545 +6,545 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "CameraExamples.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Camera, CameraShot and CameraMove examples that demonstrate storyboard capabilities and precise camera operation. This is a developmental effort for potential X3D Specification improvement."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "documentation"
 meta4.content = "Two demos are found in the scene, click the \"red text\" on left or right to start. (a) SimpleShotsTest shows Zoom in/out, Pan left/right, Boom up/down, Tilt left/right, with each is defined by a CameraShot collecting a series of CameraMovements. (b) AimPointTest gradually slews the camera view to look at the sliding cube, then follows it around before returning to original viewpoint."
+meta4.name = "documentation"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Don Brutzman and Jeff Weekley"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "18 June 2009"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "20 January 2020"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "TODO"
 meta8.content = "Schematron rules, backed up by initialize() checks"
+meta8.name = "TODO"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "BeyondViewpointCameraNodesWeb3D2009.pdf"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "MovingImage"
 meta10.content = "CameraExamplesDemo.mp4"
+meta10.name = "MovingImage"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "https://www.web3d.org/x3d/specifications/ISO-IEC-FDIS-19775-1.2-X3D-AbstractSpecification/Part01/components/navigation.html"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "subject"
 meta12.content = "Camera nodes for Viewpoint navigation control"
+meta12.name = "subject"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "CameraPrototypes.x3d"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "reference"
 meta14.content = "CameraExamplesConsoleLog.txt"
+meta14.name = "reference"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "reference"
 meta15.content = "http://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.avi"
+meta15.name = "reference"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "reference"
 meta16.content = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d"
+meta16.name = "reference"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "identifier"
 meta17.content = "https://www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d"
+meta17.name = "identifier"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "reference"
 meta18.content = "http://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/content/examples/Basic/development/CameraExamples.x3d"
+meta18.name = "reference"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "generator"
 meta19.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta19.name = "generator"
 
 head1.children.append(meta19)
 meta20 = x3d.meta()
-meta20.name = "license"
 meta20.content = "../license.html"
+meta20.name = "license"
 
 head1.children.append(meta20)
 
 X3D0.head = head1
 Scene21 = x3d.Scene()
-#=============== Camera ==============
+""" =============== Camera ============== """
 WorldInfo22 = x3d.WorldInfo()
 WorldInfo22.title = "CameraExamples.x3d"
 
 Scene21.children.append(WorldInfo22)
 ExternProtoDeclare23 = x3d.ExternProtoDeclare()
-ExternProtoDeclare23.name = "Camera"
 ExternProtoDeclare23.appinfo = "Camera node provides direct control of scene view to enable cinematic camera animation shot by shot and move by move along with still digital-photography settings for offline rendering of camera images"
+ExternProtoDeclare23.name = "Camera"
 ExternProtoDeclare23.url = ["CameraPrototypes.x3d#Camera","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#Camera","CameraPrototypes.wrl#Camera","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#Camera"]
 field24 = x3d.field()
-field24.name = "description"
 field24.accessType = "inputOutput"
 field24.appinfo = "Text description to be displayed for this Camera"
+field24.name = "description"
 field24.type = "SFString"
 
 ExternProtoDeclare23.field.append(field24)
 field25 = x3d.field()
-field25.name = "position"
 field25.accessType = "inputOutput"
 field25.appinfo = "Camera position in local transformation frame, which is default prior to first CameraShot initialPosition getting activated"
+field25.name = "position"
 field25.type = "SFVec3f"
 
 ExternProtoDeclare23.field.append(field25)
 field26 = x3d.field()
-field26.name = "orientation"
 field26.accessType = "inputOutput"
 field26.appinfo = "Camera rotation in local transformation frame, which is default prior to first CameraShot initialPosition getting activated"
+field26.name = "orientation"
 field26.type = "SFRotation"
 
 ExternProtoDeclare23.field.append(field26)
 field27 = x3d.field()
-field27.name = "fieldOfView"
 field27.accessType = "inputOutput"
 field27.appinfo = "pi/4"
+field27.name = "fieldOfView"
 field27.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field27)
 field28 = x3d.field()
-field28.name = "set_fraction"
 field28.accessType = "inputOnly"
 field28.appinfo = "input fraction drives interpolators"
+field28.name = "set_fraction"
 field28.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field28)
 field29 = x3d.field()
-field29.name = "set_bind"
 field29.accessType = "inputOnly"
 field29.appinfo = "input event binds or unbinds this Camera"
+field29.name = "set_bind"
 field29.type = "SFBool"
 
 ExternProtoDeclare23.field.append(field29)
 field30 = x3d.field()
-field30.name = "bindTime"
 field30.accessType = "outputOnly"
 field30.appinfo = "output event indicates when this Camera is bound"
+field30.name = "bindTime"
 field30.type = "SFTime"
 
 ExternProtoDeclare23.field.append(field30)
 field31 = x3d.field()
-field31.name = "isBound"
 field31.accessType = "outputOnly"
 field31.appinfo = "output event indicates whether this Camera is bound or unbound"
+field31.name = "isBound"
 field31.type = "SFBool"
 
 ExternProtoDeclare23.field.append(field31)
 field32 = x3d.field()
-field32.name = "nearClipPlane"
 field32.accessType = "inputOutput"
 field32.appinfo = "Vector distance to near clipping plane corresponds to NavigationInfo.avatarSize[0]"
+field32.name = "nearClipPlane"
 field32.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field32)
 field33 = x3d.field()
-field33.name = "farClipPlane"
 field33.accessType = "inputOutput"
 field33.appinfo = "Vector distance to far clipping plane corresponds to NavigationInfo.visibilityLimit"
+field33.name = "farClipPlane"
 field33.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field33)
 field34 = x3d.field()
-field34.name = "shots"
 field34.accessType = "inputOutput"
 field34.appinfo = "Array of CameraShot nodes which in turn contain CameraMovement nodes"
+field34.name = "shots"
 field34.type = "MFNode"
 
 ExternProtoDeclare23.field.append(field34)
 field35 = x3d.field()
-field35.name = "headlight"
 field35.accessType = "inputOutput"
 field35.appinfo = "Whether camera headlight is on or off"
+field35.name = "headlight"
 field35.type = "SFBool"
 
 ExternProtoDeclare23.field.append(field35)
 field36 = x3d.field()
-field36.name = "headlightColor"
 field36.accessType = "inputOutput"
 field36.appinfo = "Camera headlight color"
+field36.name = "headlightColor"
 field36.type = "SFColor"
 
 ExternProtoDeclare23.field.append(field36)
 field37 = x3d.field()
-field37.name = "headlightIntensity"
 field37.accessType = "inputOutput"
 field37.appinfo = "Camera headlight intensity"
+field37.name = "headlightIntensity"
 field37.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field37)
 field38 = x3d.field()
-field38.name = "filterColor"
 field38.accessType = "inputOutput"
 field38.appinfo = "Camera filter color that modifies virtual lens capture"
+field38.name = "filterColor"
 field38.type = "SFColor"
 
 ExternProtoDeclare23.field.append(field38)
 field39 = x3d.field()
-field39.name = "filterTransparency"
 field39.accessType = "inputOutput"
 field39.appinfo = "Camera filter transparency that modifies virtual lens capture"
+field39.name = "filterTransparency"
 field39.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field39)
 field40 = x3d.field()
-field40.name = "upVector"
 field40.accessType = "inputOutput"
 field40.appinfo = "upVector changes modify camera orientation (and possibly vice versa)"
+field40.name = "upVector"
 field40.type = "SFVec3f"
 
 ExternProtoDeclare23.field.append(field40)
 field41 = x3d.field()
-field41.name = "fStop"
 field41.accessType = "inputOutput"
 field41.appinfo = "Focal length divided effective aperture diameter indicating width of focal plane"
+field41.name = "fStop"
 field41.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field41)
 field42 = x3d.field()
-field42.name = "focusDistance"
 field42.accessType = "inputOutput"
 field42.appinfo = "Distance to focal plane of sharpest focus"
+field42.name = "focusDistance"
 field42.type = "SFFloat"
 
 ExternProtoDeclare23.field.append(field42)
 field43 = x3d.field()
-field43.name = "isActive"
 field43.accessType = "outputOnly"
 field43.appinfo = "Mark start/stop with true/false output respectively useful to trigger external animations"
+field43.name = "isActive"
 field43.type = "SFBool"
 
 ExternProtoDeclare23.field.append(field43)
 field44 = x3d.field()
-field44.name = "totalDuration"
 field44.accessType = "outputOnly"
 field44.appinfo = "Total duration of contained enabled CameraShot (and thus CameraMovement) move durations"
+field44.name = "totalDuration"
 field44.type = "SFTime"
 
 ExternProtoDeclare23.field.append(field44)
 field45 = x3d.field()
-field45.name = "offlineRender"
 field45.accessType = "inputOutput"
 field45.appinfo = "OfflineRender node"
+field45.name = "offlineRender"
 field45.type = "SFNode"
 
 ExternProtoDeclare23.field.append(field45)
 field46 = x3d.field()
-field46.name = "traceEnabled"
 field46.accessType = "initializeOnly"
 field46.appinfo = "enable console output to trace script computations and prototype progress"
+field46.name = "traceEnabled"
 field46.type = "SFBool"
 
 ExternProtoDeclare23.field.append(field46)
-#Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields
+""" Viewpoint-related fields, NavigationInfo-related fields and Camera-unique fields """
 
 Scene21.children.append(ExternProtoDeclare23)
-#=============== CameraShot ==============
+""" =============== CameraShot ============== """
 ExternProtoDeclare47 = x3d.ExternProtoDeclare()
-ExternProtoDeclare47.name = "CameraShot"
 ExternProtoDeclare47.appinfo = "CameraShot collects a specific set of CameraMovement animations that make up an individual shot"
+ExternProtoDeclare47.name = "CameraShot"
 ExternProtoDeclare47.url = ["CameraPrototypes.x3d#CameraShot","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#CameraShot","CameraPrototypes.wrl#CameraShot","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#CameraShot"]
 field48 = x3d.field()
-field48.name = "description"
 field48.accessType = "inputOutput"
 field48.appinfo = "Text description to be displayed for this CameraShot"
+field48.name = "description"
 field48.type = "SFString"
 
 ExternProtoDeclare47.field.append(field48)
 field49 = x3d.field()
-field49.name = "enabled"
 field49.accessType = "inputOutput"
 field49.appinfo = "Whether this CameraShot can be activated"
+field49.name = "enabled"
 field49.type = "SFBool"
 
 ExternProtoDeclare47.field.append(field49)
 field50 = x3d.field()
-field50.name = "moves"
 field50.accessType = "inputOutput"
 field50.appinfo = "Set of CameraMovement nodes"
+field50.name = "moves"
 field50.type = "MFNode"
-#initializing CameraMovement nodes are inserted here by scene author using ProtoInstance
+""" initializing CameraMovement nodes are inserted here by scene author using ProtoInstance """
 
 ExternProtoDeclare47.field.append(field50)
 field51 = x3d.field()
-field51.name = "initialPosition"
 field51.accessType = "inputOutput"
 field51.appinfo = "Setup to reinitialize camera position for this shot"
+field51.name = "initialPosition"
 field51.type = "SFVec3f"
 
 ExternProtoDeclare47.field.append(field51)
 field52 = x3d.field()
-field52.name = "initialOrientation"
 field52.accessType = "inputOutput"
 field52.appinfo = "Setup to reinitialize camera rotation for this shot"
+field52.name = "initialOrientation"
 field52.type = "SFRotation"
 
 ExternProtoDeclare47.field.append(field52)
 field53 = x3d.field()
-field53.name = "initialAimPoint"
 field53.accessType = "inputOutput"
 field53.appinfo = "Setup to reinitialize aimpoint (relative location for camera direction) for this shot"
+field53.name = "initialAimPoint"
 field53.type = "SFVec3f"
 
 ExternProtoDeclare47.field.append(field53)
 field54 = x3d.field()
-field54.name = "initialFieldOfView"
 field54.accessType = "inputOutput"
 field54.appinfo = "pi/4"
+field54.name = "initialFieldOfView"
 field54.type = "SFFloat"
 
 ExternProtoDeclare47.field.append(field54)
 field55 = x3d.field()
-field55.name = "initialFStop"
 field55.accessType = "inputOutput"
 field55.appinfo = "Focal length divided effective aperture diameter indicating width of focal plane"
+field55.name = "initialFStop"
 field55.type = "SFFloat"
 
 ExternProtoDeclare47.field.append(field55)
 field56 = x3d.field()
-field56.name = "initialFocusDistance"
 field56.accessType = "inputOutput"
 field56.appinfo = "Distance to focal plane of sharpest focus"
+field56.name = "initialFocusDistance"
 field56.type = "SFFloat"
 
 ExternProtoDeclare47.field.append(field56)
 field57 = x3d.field()
-field57.name = "shotDuration"
 field57.accessType = "outputOnly"
 field57.appinfo = "Subtotal duration of contained CameraMovement move durations"
+field57.name = "shotDuration"
 field57.type = "SFTime"
 
 ExternProtoDeclare47.field.append(field57)
 field58 = x3d.field()
-field58.name = "isActive"
 field58.accessType = "outputOnly"
 field58.appinfo = "Mark start/stop with true/false output respectively useful to trigger external animations"
+field58.name = "isActive"
 field58.type = "SFBool"
 
 ExternProtoDeclare47.field.append(field58)
 field59 = x3d.field()
-field59.name = "traceEnabled"
 field59.accessType = "initializeOnly"
 field59.appinfo = "enable console output to trace script computations and prototype progress"
+field59.name = "traceEnabled"
 field59.type = "SFBool"
 
 ExternProtoDeclare47.field.append(field59)
 
 Scene21.children.append(ExternProtoDeclare47)
-#=============== CameraMovement ==============
+""" =============== CameraMovement ============== """
 ExternProtoDeclare60 = x3d.ExternProtoDeclare()
-ExternProtoDeclare60.name = "CameraMovement"
 ExternProtoDeclare60.appinfo = "CameraMovement defines a single camera movement animation"
+ExternProtoDeclare60.name = "CameraMovement"
 ExternProtoDeclare60.url = ["CameraPrototypes.x3d#CameraMovement","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#CameraMovement","CameraPrototypes.wrl#CameraMovement","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#CameraMovement"]
 field61 = x3d.field()
-field61.name = "description"
 field61.accessType = "inputOutput"
 field61.appinfo = "Text description to be displayed for this CameraMovement"
+field61.name = "description"
 field61.type = "SFString"
 
 ExternProtoDeclare60.field.append(field61)
 field62 = x3d.field()
-field62.name = "enabled"
 field62.accessType = "inputOutput"
 field62.appinfo = "Whether this CameraMovement can be activated"
+field62.name = "enabled"
 field62.type = "SFBool"
 
 ExternProtoDeclare60.field.append(field62)
 field63 = x3d.field()
-field63.name = "duration"
 field63.accessType = "inputOutput"
 field63.appinfo = "Duration in seconds for this move"
+field63.name = "duration"
 field63.type = "SFFloat"
 
 ExternProtoDeclare60.field.append(field63)
 field64 = x3d.field()
-field64.name = "goalPosition"
 field64.accessType = "inputOutput"
 field64.appinfo = "Goal camera position for this move"
+field64.name = "goalPosition"
 field64.type = "SFVec3f"
 
 ExternProtoDeclare60.field.append(field64)
 field65 = x3d.field()
-field65.name = "goalOrientation"
 field65.accessType = "inputOutput"
 field65.appinfo = "Goal camera rotation for this move"
+field65.name = "goalOrientation"
 field65.type = "SFRotation"
 
 ExternProtoDeclare60.field.append(field65)
 field66 = x3d.field()
-field66.name = "tracking"
 field66.accessType = "inputOutput"
 field66.appinfo = "Whether or not camera direction is tracking towards the aimPoint"
+field66.name = "tracking"
 field66.type = "SFBool"
 
 ExternProtoDeclare60.field.append(field66)
 field67 = x3d.field()
-field67.name = "goalAimPoint"
 field67.accessType = "inputOutput"
 field67.appinfo = "Goal aimPoint for this move, ignored if tracking=false"
+field67.name = "goalAimPoint"
 field67.type = "SFVec3f"
 
 ExternProtoDeclare60.field.append(field67)
 field68 = x3d.field()
-field68.name = "goalFieldOfView"
 field68.accessType = "inputOutput"
 field68.appinfo = "Goal fieldOfView for this move"
+field68.name = "goalFieldOfView"
 field68.type = "SFFloat"
 
 ExternProtoDeclare60.field.append(field68)
 field69 = x3d.field()
-field69.name = "goalFStop"
 field69.accessType = "inputOutput"
 field69.appinfo = "Focal length divided effective aperture diameter indicating width of focal plane"
+field69.name = "goalFStop"
 field69.type = "SFFloat"
 
 ExternProtoDeclare60.field.append(field69)
 field70 = x3d.field()
-field70.name = "goalFocusDistance"
 field70.accessType = "inputOutput"
 field70.appinfo = "Distance to focal plane of sharpest focus"
+field70.name = "goalFocusDistance"
 field70.type = "SFFloat"
 
 ExternProtoDeclare60.field.append(field70)
 field71 = x3d.field()
-field71.name = "isActive"
 field71.accessType = "outputOnly"
 field71.appinfo = "Mark start/stop with true/false output respectively useful to trigger external animations"
+field71.name = "isActive"
 field71.type = "SFBool"
 
 ExternProtoDeclare60.field.append(field71)
 field72 = x3d.field()
-field72.name = "traceEnabled"
 field72.accessType = "initializeOnly"
 field72.appinfo = "enable console output to trace script computations and prototype progress"
+field72.name = "traceEnabled"
 field72.type = "SFBool"
 
 ExternProtoDeclare60.field.append(field72)
 
 Scene21.children.append(ExternProtoDeclare60)
-#=============== OfflineRender ==============
+""" =============== OfflineRender ============== """
 ExternProtoDeclare73 = x3d.ExternProtoDeclare()
-ExternProtoDeclare73.name = "OfflineRender"
 ExternProtoDeclare73.appinfo = "OfflineRender defines a parameters for offline rendering of Camera animation output to a movie file (or possibly a still shot)"
+ExternProtoDeclare73.name = "OfflineRender"
 ExternProtoDeclare73.url = ["CameraPrototypes.x3d#OfflineRender","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.x3d#OfflineRender","CameraPrototypes.wrl#OfflineRender","https://www.web3d.org/x3d/content/examples/Basic/development/CameraPrototypes.wrl#OfflineRender"]
 field74 = x3d.field()
-field74.name = "description"
 field74.accessType = "inputOutput"
 field74.appinfo = "Text description to be displayed for this OfflineRender"
+field74.name = "description"
 field74.type = "SFString"
 
 ExternProtoDeclare73.field.append(field74)
 field75 = x3d.field()
-field75.name = "enabled"
 field75.accessType = "inputOutput"
 field75.appinfo = "Whether this OfflineRender can be activated"
+field75.name = "enabled"
 field75.type = "SFBool"
 
 ExternProtoDeclare73.field.append(field75)
 field76 = x3d.field()
-field76.name = "frameRate"
 field76.accessType = "inputOutput"
 field76.appinfo = "Frames per second recorded for this rendering"
+field76.name = "frameRate"
 field76.type = "SFFloat"
 
 ExternProtoDeclare73.field.append(field76)
 field77 = x3d.field()
-field77.name = "frameSize"
 field77.accessType = "inputOutput"
 field77.appinfo = "Size of frame in number of pixels width and height"
+field77.name = "frameSize"
 field77.type = "SFVec2f"
 
 ExternProtoDeclare73.field.append(field77)
 field78 = x3d.field()
-field78.name = "pixelAspectRatio"
 field78.accessType = "inputOutput"
 field78.appinfo = "Relative dimensions of pixel height/width typically 1.33 or 1"
+field78.name = "pixelAspectRatio"
 field78.type = "SFFloat"
 
 ExternProtoDeclare73.field.append(field78)
 field79 = x3d.field()
-field79.name = "set_startTime"
 field79.accessType = "inputOnly"
 field79.appinfo = "Begin render operation"
+field79.name = "set_startTime"
 field79.type = "SFTime"
 
 ExternProtoDeclare73.field.append(field79)
 field80 = x3d.field()
-field80.name = "progress"
 field80.accessType = "outputOnly"
 field80.appinfo = "Progress performing render operation (0..1)"
+field80.name = "progress"
 field80.type = "SFFloat"
 
 ExternProtoDeclare73.field.append(field80)
 field81 = x3d.field()
-field81.name = "renderCompleteTime"
 field81.accessType = "outputOnly"
 field81.appinfo = "Render operation complete"
+field81.name = "renderCompleteTime"
 field81.type = "SFTime"
 
 ExternProtoDeclare73.field.append(field81)
 field82 = x3d.field()
-field82.name = "movieFormat"
 field82.accessType = "initializeOnly"
 field82.appinfo = "Format of rendered output movie (mpeg mp4 etc.), use first supported format"
+field82.name = "movieFormat"
 field82.type = "MFString"
 
 ExternProtoDeclare73.field.append(field82)
 field83 = x3d.field()
-field83.name = "imageFormat"
 field83.accessType = "initializeOnly"
 field83.appinfo = "Format of rendered output images (png jpeg gif tiff etc.) use first supported format"
+field83.name = "imageFormat"
 field83.type = "MFString"
 
 ExternProtoDeclare73.field.append(field83)
 field84 = x3d.field()
-field84.name = "traceEnabled"
 field84.accessType = "initializeOnly"
 field84.appinfo = "enable console output to trace script computations and prototype progress"
+field84.name = "traceEnabled"
 field84.type = "SFBool"
 
 ExternProtoDeclare73.field.append(field84)
-#TODO non-photorealistic rendering (NPR) parameters
+""" TODO non-photorealistic rendering (NPR) parameters """
 
 Scene21.children.append(ExternProtoDeclare73)
-#=============== Lights, camera, action! ==============
+""" =============== Lights, camera, action! ============== """
 DirectionalLight85 = x3d.DirectionalLight()
 DirectionalLight85.direction = [0,-1,0]
 DirectionalLight85.global = True
@@ -566,12 +566,12 @@ Viewpoint88.orientation = [1,0,0,-1.57079]
 Viewpoint88.position = [0,150,0]
 
 Scene21.children.append(Viewpoint88)
-#Keep prototype instances in same file while developing, then move later
-#We will create examples matching those in the paper
-#=============== Camera.SimpleShotsTest ==============
+""" Keep prototype instances in same file while developing, then move later """
+""" We will create examples matching those in the paper """
+""" =============== Camera.SimpleShotsTest ============== """
 ProtoInstance89 = x3d.ProtoInstance()
-ProtoInstance89.name = "Camera"
 ProtoInstance89.DEF = "Camera.SimpleShotsTest"
+ProtoInstance89.name = "Camera"
 fieldValue90 = x3d.fieldValue()
 fieldValue90.name = "description"
 fieldValue90.value = "SimpleShotsTest for camera Zoom Dolly Pan Boom and Tilt"
@@ -590,8 +590,8 @@ ProtoInstance89.fieldValue.append(fieldValue92)
 fieldValue93 = x3d.fieldValue()
 fieldValue93.name = "shots"
 ProtoInstance94 = x3d.ProtoInstance()
-ProtoInstance94.name = "CameraShot"
 ProtoInstance94.DEF = "Zoom"
+ProtoInstance94.name = "CameraShot"
 fieldValue95 = x3d.fieldValue()
 fieldValue95.name = "description"
 fieldValue95.value = "Simple shot of Camera Zoom"
@@ -686,8 +686,8 @@ ProtoInstance94.fieldValue.append(fieldValue98)
 
 fieldValue93.children.append(ProtoInstance94)
 ProtoInstance114 = x3d.ProtoInstance()
-ProtoInstance114.name = "CameraShot"
 ProtoInstance114.DEF = "Dolly"
+ProtoInstance114.name = "CameraShot"
 fieldValue115 = x3d.fieldValue()
 fieldValue115.name = "description"
 fieldValue115.value = "Simple shot of Camera Dolly"
@@ -706,8 +706,8 @@ ProtoInstance114.fieldValue.append(fieldValue117)
 fieldValue118 = x3d.fieldValue()
 fieldValue118.name = "moves"
 ProtoInstance119 = x3d.ProtoInstance()
-ProtoInstance119.name = "CameraMovement"
 ProtoInstance119.DEF = "DollyMove1"
+ProtoInstance119.name = "CameraMovement"
 fieldValue120 = x3d.fieldValue()
 fieldValue120.name = "description"
 fieldValue120.value = "Camera Dolly from Right to Left"
@@ -783,8 +783,8 @@ ProtoInstance114.fieldValue.append(fieldValue118)
 
 fieldValue93.children.append(ProtoInstance114)
 ProtoInstance134 = x3d.ProtoInstance()
-ProtoInstance134.name = "CameraShot"
 ProtoInstance134.DEF = "Pan"
+ProtoInstance134.name = "CameraShot"
 fieldValue135 = x3d.fieldValue()
 fieldValue135.name = "description"
 fieldValue135.value = "Simple shot of Camera Pan left right and back to center"
@@ -803,8 +803,8 @@ ProtoInstance134.fieldValue.append(fieldValue137)
 fieldValue138 = x3d.fieldValue()
 fieldValue138.name = "moves"
 ProtoInstance139 = x3d.ProtoInstance()
-ProtoInstance139.name = "CameraMovement"
 ProtoInstance139.DEF = "PanLeft"
+ProtoInstance139.name = "CameraMovement"
 fieldValue140 = x3d.fieldValue()
 fieldValue140.name = "description"
 fieldValue140.value = "Pan Left"
@@ -828,8 +828,8 @@ ProtoInstance139.fieldValue.append(fieldValue143)
 
 fieldValue138.children.append(ProtoInstance139)
 ProtoInstance144 = x3d.ProtoInstance()
-ProtoInstance144.name = "CameraMovement"
 ProtoInstance144.DEF = "PanRight"
+ProtoInstance144.name = "CameraMovement"
 fieldValue145 = x3d.fieldValue()
 fieldValue145.name = "description"
 fieldValue145.value = "Pan Right"
@@ -905,8 +905,8 @@ ProtoInstance134.fieldValue.append(fieldValue138)
 
 fieldValue93.children.append(ProtoInstance134)
 ProtoInstance159 = x3d.ProtoInstance()
-ProtoInstance159.name = "CameraShot"
 ProtoInstance159.DEF = "CameraBoom"
+ProtoInstance159.name = "CameraShot"
 fieldValue160 = x3d.fieldValue()
 fieldValue160.name = "description"
 fieldValue160.value = "Camera Boom"
@@ -925,8 +925,8 @@ ProtoInstance159.fieldValue.append(fieldValue162)
 fieldValue163 = x3d.fieldValue()
 fieldValue163.name = "moves"
 ProtoInstance164 = x3d.ProtoInstance()
-ProtoInstance164.name = "CameraMovement"
 ProtoInstance164.DEF = "CameraBoomUp"
+ProtoInstance164.name = "CameraMovement"
 fieldValue165 = x3d.fieldValue()
 fieldValue165.name = "description"
 fieldValue165.value = "Camera Boom Up"
@@ -950,8 +950,8 @@ ProtoInstance164.fieldValue.append(fieldValue168)
 
 fieldValue163.children.append(ProtoInstance164)
 ProtoInstance169 = x3d.ProtoInstance()
-ProtoInstance169.name = "CameraMovement"
 ProtoInstance169.DEF = "BoomDown"
+ProtoInstance169.name = "CameraMovement"
 fieldValue170 = x3d.fieldValue()
 fieldValue170.name = "description"
 fieldValue170.value = "Camera Boom Down"
@@ -975,8 +975,8 @@ ProtoInstance169.fieldValue.append(fieldValue173)
 
 fieldValue163.children.append(ProtoInstance169)
 ProtoInstance174 = x3d.ProtoInstance()
-ProtoInstance174.name = "CameraMovement"
 ProtoInstance174.DEF = "BoomPause"
+ProtoInstance174.name = "CameraMovement"
 fieldValue175 = x3d.fieldValue()
 fieldValue175.name = "description"
 fieldValue175.value = "Camera Pause"
@@ -1004,8 +1004,8 @@ ProtoInstance159.fieldValue.append(fieldValue163)
 
 fieldValue93.children.append(ProtoInstance159)
 ProtoInstance179 = x3d.ProtoInstance()
-ProtoInstance179.name = "CameraShot"
 ProtoInstance179.DEF = "CameraTilt"
+ProtoInstance179.name = "CameraShot"
 fieldValue180 = x3d.fieldValue()
 fieldValue180.name = "description"
 fieldValue180.value = "Camera Tilt"
@@ -1053,8 +1053,8 @@ ProtoInstance185.fieldValue.append(fieldValue189)
 
 fieldValue184.children.append(ProtoInstance185)
 ProtoInstance190 = x3d.ProtoInstance()
-ProtoInstance190.name = "CameraMovement"
 ProtoInstance190.DEF = "TiltDown"
+ProtoInstance190.name = "CameraMovement"
 fieldValue191 = x3d.fieldValue()
 fieldValue191.name = "description"
 fieldValue191.value = "Camera Tilt Left"
@@ -1078,8 +1078,8 @@ ProtoInstance190.fieldValue.append(fieldValue194)
 
 fieldValue184.children.append(ProtoInstance190)
 ProtoInstance195 = x3d.ProtoInstance()
-ProtoInstance195.name = "CameraMovement"
 ProtoInstance195.DEF = "TiltPause"
+ProtoInstance195.name = "CameraMovement"
 fieldValue196 = x3d.fieldValue()
 fieldValue196.name = "description"
 fieldValue196.value = "Camera Tilt Pause"
@@ -1151,8 +1151,8 @@ ProtoInstance205.fieldValue.append(fieldValue209)
 
 fieldValue184.children.append(ProtoInstance205)
 ProtoInstance210 = x3d.ProtoInstance()
-ProtoInstance210.name = "CameraMovement"
 ProtoInstance210.DEF = "TiltReset"
+ProtoInstance210.name = "CameraMovement"
 fieldValue211 = x3d.fieldValue()
 fieldValue211.name = "description"
 fieldValue211.value = "Camera Tilt Reset"
@@ -1176,8 +1176,8 @@ ProtoInstance210.fieldValue.append(fieldValue214)
 
 fieldValue184.children.append(ProtoInstance210)
 ProtoInstance215 = x3d.ProtoInstance()
-ProtoInstance215.name = "CameraMovement"
 ProtoInstance215.DEF = "TiltUp"
+ProtoInstance215.name = "CameraMovement"
 fieldValue216 = x3d.fieldValue()
 fieldValue216.name = "description"
 fieldValue216.value = "Return to home"
@@ -1214,7 +1214,7 @@ TimeSensor221 = x3d.TimeSensor()
 TimeSensor221.DEF = "CameraTimer.SimpleShots"
 
 Group220.children.append(TimeSensor221)
-#initialize clock to match totalDuration of combined Shot Moves
+""" initialize clock to match totalDuration of combined Shot Moves """
 ROUTE222 = x3d.ROUTE()
 ROUTE222.fromField = "totalDuration"
 ROUTE222.fromNode = "Camera.SimpleShotsTest"
@@ -1222,7 +1222,7 @@ ROUTE222.toField = "cycleInterval"
 ROUTE222.toNode = "CameraTimer.SimpleShots"
 
 Group220.children.append(ROUTE222)
-#TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator
+""" TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator """
 ROUTE223 = x3d.ROUTE()
 ROUTE223.fromField = "fraction_changed"
 ROUTE223.fromNode = "CameraTimer.SimpleShots"
@@ -1279,14 +1279,14 @@ Material234.ambientIntensity = 0.24
 Material234.diffuseColor = [0.945455,0.318988,0.321717]
 Material234.shininess = 0.01
 Material234.specularColor = [0.072727,0.021705,0.010732]
-#Universal Media Library: ArtDeco 5
+""" Universal Media Library: ArtDeco 5 """
 
 Appearance233.material = Material234
 
 Shape230.appearance = Appearance233
 
 Transform224.children.append(Shape230)
-#Simplify intersection test for user selecting text
+""" Simplify intersection test for user selecting text """
 Shape235 = x3d.Shape()
 Shape235.DEF = "TransparentBox"
 Appearance236 = x3d.Appearance()
@@ -1520,10 +1520,10 @@ Transform288.children.append(Transform294)
 Group239.children.append(Transform288)
 
 Scene21.children.append(Group239)
-#=============== Camera.AimPointTest ==============
+""" =============== Camera.AimPointTest ============== """
 ProtoInstance300 = x3d.ProtoInstance()
-ProtoInstance300.name = "Camera"
 ProtoInstance300.DEF = "Camera.AimPointTest"
+ProtoInstance300.name = "Camera"
 fieldValue301 = x3d.fieldValue()
 fieldValue301.name = "description"
 fieldValue301.value = "AimPointTest for moving camera tracking moving target"
@@ -1537,8 +1537,8 @@ ProtoInstance300.fieldValue.append(fieldValue302)
 fieldValue303 = x3d.fieldValue()
 fieldValue303.name = "shots"
 ProtoInstance304 = x3d.ProtoInstance()
-ProtoInstance304.name = "CameraShot"
 ProtoInstance304.DEF = "Shot5"
+ProtoInstance304.name = "CameraShot"
 fieldValue305 = x3d.fieldValue()
 fieldValue305.name = "description"
 fieldValue305.value = "#3 Tracking shot"
@@ -1557,8 +1557,8 @@ ProtoInstance304.fieldValue.append(fieldValue307)
 fieldValue308 = x3d.fieldValue()
 fieldValue308.name = "moves"
 ProtoInstance309 = x3d.ProtoInstance()
-ProtoInstance309.name = "CameraMovement"
 ProtoInstance309.DEF = "MoveAimPoint3.1"
+ProtoInstance309.name = "CameraMovement"
 fieldValue310 = x3d.fieldValue()
 fieldValue310.name = "description"
 fieldValue310.value = "AimPoint 3.1 moving BoxPath"
@@ -1579,12 +1579,12 @@ fieldValue313.name = "goalPosition"
 fieldValue313.value = "6 6 10"
 
 ProtoInstance309.fieldValue.append(fieldValue313)
-#goalAimPoint modified by ROUTE to match moving Box
+""" goalAimPoint modified by ROUTE to match moving Box """
 
 fieldValue308.children.append(ProtoInstance309)
 ProtoInstance314 = x3d.ProtoInstance()
-ProtoInstance314.name = "CameraMovement"
 ProtoInstance314.DEF = "MoveAimPoint3.2"
+ProtoInstance314.name = "CameraMovement"
 fieldValue315 = x3d.fieldValue()
 fieldValue315.name = "description"
 fieldValue315.value = "AimPoint 3.2 pan right while tracking"
@@ -1605,12 +1605,12 @@ fieldValue318.name = "goalPosition"
 fieldValue318.value = "40 6 12"
 
 ProtoInstance314.fieldValue.append(fieldValue318)
-#goalAimPoint modified by ROUTE to match moving Box
+""" goalAimPoint modified by ROUTE to match moving Box """
 
 fieldValue308.children.append(ProtoInstance314)
 ProtoInstance319 = x3d.ProtoInstance()
-ProtoInstance319.name = "CameraMovement"
 ProtoInstance319.DEF = "MoveAimPoint3.3"
+ProtoInstance319.name = "CameraMovement"
 fieldValue320 = x3d.fieldValue()
 fieldValue320.name = "description"
 fieldValue320.value = "AimPoint 3.3 boom up while tracking"
@@ -1631,12 +1631,12 @@ fieldValue323.name = "goalPosition"
 fieldValue323.value = "40 20 13"
 
 ProtoInstance319.fieldValue.append(fieldValue323)
-#goalAimPoint modified by ROUTE to match moving Box
+""" goalAimPoint modified by ROUTE to match moving Box """
 
 fieldValue308.children.append(ProtoInstance319)
 ProtoInstance324 = x3d.ProtoInstance()
-ProtoInstance324.name = "CameraMovement"
 ProtoInstance324.DEF = "MoveAimPoint3.4"
+ProtoInstance324.name = "CameraMovement"
 fieldValue325 = x3d.fieldValue()
 fieldValue325.name = "description"
 fieldValue325.value = "AimPoint 3.4 restore camera back to home"
@@ -1667,7 +1667,7 @@ fieldValue330.name = "goalOrientation"
 fieldValue330.value = "0 1 0 0"
 
 ProtoInstance324.fieldValue.append(fieldValue330)
-#can test tracking or not using these values
+""" can test tracking or not using these values """
 
 fieldValue308.children.append(ProtoInstance324)
 
@@ -1684,7 +1684,7 @@ TimeSensor332 = x3d.TimeSensor()
 TimeSensor332.DEF = "CameraTimer.AimPointTest"
 
 Group331.children.append(TimeSensor332)
-#initialize clock to match totalDuration of combined Shot Moves
+""" initialize clock to match totalDuration of combined Shot Moves """
 ROUTE333 = x3d.ROUTE()
 ROUTE333.fromField = "totalDuration"
 ROUTE333.fromNode = "Camera.AimPointTest"
@@ -1692,7 +1692,7 @@ ROUTE333.toField = "cycleInterval"
 ROUTE333.toNode = "CameraTimer.AimPointTest"
 
 Group331.children.append(ROUTE333)
-#TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator
+""" TimeSensor animates the CameraClock since that maintains the computed PositionInterpolator and OrientationInterpolator """
 ROUTE334 = x3d.ROUTE()
 ROUTE334.fromField = "fraction_changed"
 ROUTE334.fromNode = "CameraTimer.AimPointTest"
@@ -1759,16 +1759,16 @@ Transform335.children.append(Shape346)
 Group331.children.append(Transform335)
 
 Scene21.children.append(Group331)
-#TODO build a test once implemented
+""" TODO build a test once implemented """
 ProtoInstance347 = x3d.ProtoInstance()
 ProtoInstance347.name = "OfflineRender"
 
 Scene21.children.append(ProtoInstance347)
-#=============== animate a camera shape to visualize view changes ==============
+""" =============== animate a camera shape to visualize view changes ============== """
 Transform348 = x3d.Transform()
 Transform348.DEF = "CameraShapeTransform"
 Transform348.translation = [0,0.5,0]
-#move CameraShape using active Camera
+""" move CameraShape using active Camera """
 ROUTE349 = x3d.ROUTE()
 ROUTE349.fromField = "position_changed"
 ROUTE349.fromNode = "Camera.SimpleShotsTest"
@@ -1829,72 +1829,72 @@ Shape356.appearance = Appearance359
 Transform353.children.append(Shape356)
 
 Transform348.children.append(Transform353)
-#Display frustum to show camera view within the scene, toggled by user selecting CameraShape
+""" Display frustum to show camera view within the scene, toggled by user selecting CameraShape """
 ExternProtoDeclare361 = x3d.ExternProtoDeclare()
-ExternProtoDeclare361.name = "ViewFrustum"
 ExternProtoDeclare361.appinfo = "Display view frustum associated with a given pair of Viewpoint NavigationInfo nodes"
+ExternProtoDeclare361.name = "ViewFrustum"
 ExternProtoDeclare361.url = ["../../X3dForWebAuthors/Chapter14Prototypes/ViewFrustumPrototype.x3d#ViewFrustum","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ViewFrustumPrototype.x3d#ViewFrustum","../../X3dForWebAuthors/Chapter14Prototypes/ViewFrustumPrototype.wrl#ViewFrustum","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ViewFrustumPrototype.wrl#ViewFrustum"]
 field362 = x3d.field()
-field362.name = "ViewpointNode"
 field362.accessType = "initializeOnly"
 field362.appinfo = "required: insert Viewpoint DEF or USE node for view of interest"
+field362.name = "ViewpointNode"
 field362.type = "SFNode"
 
 ExternProtoDeclare361.field.append(field362)
 field363 = x3d.field()
-field363.name = "NavigationInfoNode"
 field363.accessType = "initializeOnly"
 field363.appinfo = "required: insert NavigationInfo DEF or USE node of interest"
+field363.name = "NavigationInfoNode"
 field363.type = "SFNode"
 
 ExternProtoDeclare361.field.append(field363)
 field364 = x3d.field()
-field364.name = "visible"
 field364.accessType = "inputOutput"
 field364.appinfo = "whether or not frustum geometry is rendered"
+field364.name = "visible"
 field364.type = "SFBool"
 
 ExternProtoDeclare361.field.append(field364)
 field365 = x3d.field()
-field365.name = "lineColor"
 field365.accessType = "inputOutput"
 field365.appinfo = "RGB color of ViewFrustum outline, default value 0.9 0.9 0.9"
+field365.name = "lineColor"
 field365.type = "SFColor"
 
 ExternProtoDeclare361.field.append(field365)
 field366 = x3d.field()
-field366.name = "frustumColor"
 field366.accessType = "inputOutput"
 field366.appinfo = "RGB color of ViewFrustum hull geometry, default value 0.8 0.8 0.8"
+field366.name = "frustumColor"
 field366.type = "SFColor"
 
 ExternProtoDeclare361.field.append(field366)
 field367 = x3d.field()
-field367.name = "transparency"
 field367.accessType = "inputOutput"
 field367.appinfo = "transparency of ViewFrustum hull geometry, default value 0.5"
+field367.name = "transparency"
 field367.type = "SFFloat"
 
 ExternProtoDeclare361.field.append(field367)
 field368 = x3d.field()
-field368.name = "aspectRatio"
 field368.accessType = "inputOutput"
 field368.appinfo = "assumed ratio height/width, default value 0.75"
+field368.name = "aspectRatio"
 field368.type = "SFFloat"
 
 ExternProtoDeclare361.field.append(field368)
 field369 = x3d.field()
-field369.name = "trace"
 field369.accessType = "initializeOnly"
 field369.appinfo = "debug support, default false"
+field369.name = "trace"
 field369.type = "SFBool"
 
 ExternProtoDeclare361.field.append(field369)
 
 Transform348.children.append(ExternProtoDeclare361)
 ProtoInstance370 = x3d.ProtoInstance()
-ProtoInstance370.name = "ViewFrustum"
 ProtoInstance370.DEF = "ViewFrustumNode"
+ProtoInstance370.name = "ViewFrustum"
 fieldValue371 = x3d.fieldValue()
 fieldValue371.name = "ViewpointNode"
 Viewpoint372 = x3d.Viewpoint()
@@ -1957,7 +1957,7 @@ ROUTE381.toNode = "ViewFrustumNode"
 Transform348.children.append(ROUTE381)
 
 Scene21.children.append(Transform348)
-#=============== add checkerboard, axes and other things to look at while animating ==============
+""" =============== add checkerboard, axes and other things to look at while animating ============== """
 Background382 = x3d.Background()
 
 Scene21.children.append(Background382)
@@ -1968,7 +1968,7 @@ Shape384 = x3d.Shape()
 Appearance385 = x3d.Appearance()
 Material386 = x3d.Material()
 Material386.ambientIntensity = 0.01
-Material386.diffuseColor = [1,1,1]
+Material386.diffuseColor = [1.0,1.0,1.0]
 Material386.shininess = 0.05
 
 Appearance385.material = Material386
@@ -2068,51 +2068,51 @@ Shape400.appearance = Appearance402
 Transform392.children.append(Shape400)
 
 Scene21.children.append(Transform392)
-#================ CrossHair visualization for center of screen ================
+""" ================ CrossHair visualization for center of screen ================ """
 ExternProtoDeclare405 = x3d.ExternProtoDeclare()
-ExternProtoDeclare405.name = "CrossHair"
 ExternProtoDeclare405.appinfo = "CrossHair prototype provides a heads-up display (HUD) crosshair at the view center, which is useful for assessing NavigationInfo lookAt point"
+ExternProtoDeclare405.name = "CrossHair"
 ExternProtoDeclare405.url = ["../../Savage/Tools/HeadsUpDisplays/CrossHairPrototype.x3d#CrossHair","https://savage.nps.edu/Savage/Tools/HeadsUpDisplays/CrossHairPrototype.x3d#CrossHair","../../Savage/Tools/HeadsUpDisplays/CrossHairPrototype.wrl#CrossHair","https://savage.nps.edu/Savage/Tools/HeadsUpDisplays/CrossHairPrototype.wrl#CrossHair"]
 field406 = x3d.field()
-field406.name = "enabled"
 field406.accessType = "initializeOnly"
 field406.appinfo = "whether CrissHair orititype is enabled or not"
+field406.name = "enabled"
 field406.type = "SFBool"
 
 ExternProtoDeclare405.field.append(field406)
 field407 = x3d.field()
-field407.name = "set_enabled"
 field407.accessType = "inputOnly"
 field407.appinfo = "control whether enabled/disabled"
+field407.name = "set_enabled"
 field407.type = "SFBool"
 
 ExternProtoDeclare405.field.append(field407)
 field408 = x3d.field()
-field408.name = "markerColor"
 field408.accessType = "inputOutput"
 field408.appinfo = "color of CrossHair marker"
+field408.name = "markerColor"
 field408.type = "SFColor"
 
 ExternProtoDeclare405.field.append(field408)
 field409 = x3d.field()
-field409.name = "scale"
 field409.accessType = "inputOutput"
 field409.appinfo = "size of CrossHair in meters"
+field409.name = "scale"
 field409.type = "SFVec3f"
 
 ExternProtoDeclare405.field.append(field409)
 field410 = x3d.field()
-field410.name = "positionOffsetFromCamera"
 field410.accessType = "inputOutput"
 field410.appinfo = "distance in front of HUD viewpoint"
+field410.name = "positionOffsetFromCamera"
 field410.type = "SFVec3f"
 
 ExternProtoDeclare405.field.append(field410)
 
 Scene21.children.append(ExternProtoDeclare405)
 ProtoInstance411 = x3d.ProtoInstance()
-ProtoInstance411.name = "CrossHair"
 ProtoInstance411.DEF = "CrossHairInstance"
+ProtoInstance411.name = "CrossHair"
 fieldValue412 = x3d.fieldValue()
 fieldValue412.name = "enabled"
 fieldValue412.value = "true"
@@ -2135,7 +2135,7 @@ fieldValue415.value = "0 0 -6"
 ProtoInstance411.fieldValue.append(fieldValue415)
 
 Scene21.children.append(ProtoInstance411)
-#turn on CrossHairInstance when animated camera viewpoints are bound
+""" turn on CrossHairInstance when animated camera viewpoints are bound """
 ROUTE416 = x3d.ROUTE()
 ROUTE416.fromField = "isBound"
 ROUTE416.fromNode = "Camera.SimpleShotsTest"
@@ -2150,8 +2150,8 @@ ROUTE417.toField = "set_enabled"
 ROUTE417.toNode = "CrossHairInstance"
 
 Scene21.children.append(ROUTE417)
-#turn off CrossHairInstance when animated camera viewpoints are unbound <BooleanFilter DEF='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.SimpleShotsTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.AimPointTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='inputNegate' fromNode='NegateCrossHair' toField='set_enabled' toNode='CrossHairInstance'/>
-#=============== TODO Launch Prototype Example ==============
+""" turn off CrossHairInstance when animated camera viewpoints are unbound <BooleanFilter DEF='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.SimpleShotsTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='isBound' fromNode='Camera.AimPointTest' toField='set_boolean' toNode='NegateCrossHair'/> <ROUTE fromField='inputNegate' fromNode='NegateCrossHair' toField='set_enabled' toNode='CrossHairInstance'/> """
+""" =============== TODO Launch Prototype Example ============== """
 Anchor418 = x3d.Anchor()
 Anchor418.description = "launch CameraExample scene"
 Anchor418.parameter = ["target=_blank"]
@@ -2183,6 +2183,6 @@ Anchor418.children.append(Transform419)
 Scene21.children.append(Anchor418)
 
 X3D0.Scene = Scene21
-f = open("././CameraExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("CameraExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

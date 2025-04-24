@@ -6,58 +6,58 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "gridBack.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Checkerboard grid background for X3D/VRML materials selection."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "David Roussel"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "James Harney, Don Brutzman NPS"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "8 April 2002"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "12 January 2014"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "http://vrmlstuff.free.fr/materials"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "subject"
 meta9.content = "Universal Media Material Library"
+meta9.name = "subject"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.json"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -67,7 +67,7 @@ Shape14 = x3d.Shape()
 Appearance15 = x3d.Appearance()
 Material16 = x3d.Material()
 Material16.ambientIntensity = 0.01
-Material16.diffuseColor = [1,1,1]
+Material16.diffuseColor = [1.0,1.0,1.0]
 Material16.shininess = 0.05
 
 Appearance15.material = Material16
@@ -90,6 +90,6 @@ Shape14.geometry = IndexedFaceSet17
 Scene13.children.append(Shape14)
 
 X3D0.Scene = Scene13
-f = open("././gridBack_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("gridBack_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

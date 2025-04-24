@@ -6,63 +6,63 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "SpatialAudioCameraAnimation.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "In the last demo, there are two sound sources in different positions. Through the immersion in the X3D scene the user could attend a rational navigation. Whenever the camera moves in the direction of an existing sound source, the strength of this source increases, while the sound strength of the other (the second one) decreases and vice versa. Through this process, great realism of the scene is achieved, since it emulates the spatial sound in real world."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "info"
 meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
+meta4.name = "info"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "28 October 2020"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "5 December 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CHANGELOG.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "credit for audio files"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://www.medialab.hmu.gr/minipages/x3domAudio"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "identifier"
 meta11.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SpatialAudioCameraAnimation.x3d"
+meta11.name = "identifier"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "license"
 meta13.content = "../license.html"
+meta13.name = "license"
 
 head1.children.append(meta13)
 
@@ -137,7 +137,7 @@ ROUTE25.toNode = "Camera001"
 Scene14.children.append(ROUTE25)
 Transform26 = x3d.Transform()
 Transform26.DEF = "Floor"
-Transform26.translation = [1.241,0,0.358]
+Transform26.translation = [1.241,0.000,0.358]
 Shape27 = x3d.Shape()
 Appearance28 = x3d.Appearance()
 Appearance28.DEF = "WireColor"
@@ -264,14 +264,9 @@ ListenerPointSource55.trackCurrentView = True
 
 Scene14.children.append(ListenerPointSource55)
 StreamAudioDestination56 = x3d.StreamAudioDestination()
-StreamAudioDestination56.channelCountMode = "MAX"
-StreamAudioDestination56.channelInterpretation = "SPEAKERS"
 SpatialSound57 = x3d.SpatialSound()
 SpatialSound57.DEF = "Audio1"
-SpatialSound57.distanceModel = "INVERSE"
 Gain58 = x3d.Gain()
-Gain58.channelCountMode = "MAX"
-Gain58.channelInterpretation = "SPEAKERS"
 AudioClip59 = x3d.AudioClip()
 AudioClip59.description = "Violin"
 AudioClip59.loop = True
@@ -284,10 +279,7 @@ SpatialSound57.children.append(Gain58)
 StreamAudioDestination56.children.append(SpatialSound57)
 SpatialSound60 = x3d.SpatialSound()
 SpatialSound60.DEF = "Audio2"
-SpatialSound60.distanceModel = "INVERSE"
 Gain61 = x3d.Gain()
-Gain61.channelCountMode = "MAX"
-Gain61.channelInterpretation = "SPEAKERS"
 AudioClip62 = x3d.AudioClip()
 AudioClip62.description = "Saxophone"
 AudioClip62.loop = True
@@ -302,6 +294,6 @@ StreamAudioDestination56.children.append(SpatialSound60)
 Scene14.children.append(StreamAudioDestination56)
 
 X3D0.Scene = Scene14
-f = open("././SpatialAudioCameraAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("SpatialAudioCameraAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

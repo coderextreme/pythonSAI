@@ -10,41 +10,41 @@ meta2.name = "title"
 meta2.content = "bubs2.x3d"
 
 head1.children.append(meta2)
-meta3 = x3d.meta()
-meta3.name = "creator"
-meta3.content = "John Carlson"
+component3 = x3d.component()
+component3.name = "Scripting"
+component3.level = 1
 
-head1.children.append(meta3)
+head1.children.append(component3)
 meta4 = x3d.meta()
-meta4.name = "description"
-meta4.content = "Tour around a prismatic sphere"
+meta4.name = "creator"
+meta4.content = "John Carlson"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "generator"
-meta5.content = "X3D-Edit, https://savage.nps.edu/X3D-Edit"
+meta5.name = "description"
+meta5.content = "Tour around a prismatic sphere"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "identifier"
-meta6.content = "https://coderextreme.net/X3DJSONLD/geo.x3d"
+meta6.name = "generator"
+meta6.content = "X3D-Edit, https://savage.nps.edu/X3D-Edit"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "translated"
-meta7.content = "13 March 2016"
+meta7.name = "identifier"
+meta7.content = "https://coderextreme.net/X3DJSONLD/geo.x3d"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "generator"
-meta8.content = "X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
+meta8.name = "translated"
+meta8.content = "13 March 2016"
 
 head1.children.append(meta8)
-component9 = x3d.component()
-component9.name = "Scripting"
-component9.level = 1
+meta9 = x3d.meta()
+meta9.name = "generator"
+meta9.content = "X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
 
-head1.children.append(component9)
+head1.children.append(meta9)
 
 X3D0.head = head1
 Scene10 = x3d.Scene()
@@ -232,6 +232,6 @@ ProtoInstance34.DEF = "bubbleD"
 Scene10.children.append(ProtoInstance34)
 
 X3D0.Scene = Scene10
-f = open("././bubs2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("bubs2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

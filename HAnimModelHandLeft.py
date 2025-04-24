@@ -6,113 +6,113 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "HAnim"
 component2.level = 1
+component2.name = "HAnim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "HAnimModelHandLeft.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "description"
 meta4.content = "Left hand, using high-fidelity definitions for HAnim version 2.0"
+meta4.name = "description"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Kwan-Hee YOO, Don Brutzman and Joe Williams"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "26 January 2015"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "23 December 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "TODO"
 meta8.content = "fix visible geometry for thumb and index finger, midcarpal_1 and midcarpal_2"
+meta8.name = "TODO"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "Image"
 meta9.content = "HAnimModelHandRightSegmentVisualizationError.png"
+meta9.name = "Image"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "error"
 meta10.content = "not yet to scale, also relatively flat"
+meta10.name = "error"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "warning"
 meta11.content = "TODO will X3D HAnim component add a new level to support LOA-4 functionality?"
+meta11.name = "warning"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "info"
 meta12.content = "TODO describe how to compute and apply offsets for center values whenever attaching this appendage to a body"
+meta12.name = "info"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "https://www.web3d.org/working-groups/humanoid-animation-HAnim"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "reference"
 meta14.content = "https://www.web3d.org/documents/specifications/19774/V2.0"
+meta14.name = "reference"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "reference"
 meta15.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#TheHands"
+meta15.name = "reference"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "reference"
 meta16.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#f-HandJoints"
+meta16.name = "reference"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "reference"
 meta17.content = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/concepts.html#Hierarchy4"
+meta17.name = "reference"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "reference"
 meta18.content = "https://www.web3d.org/specifications/X3Dv4Draft/ISO-IEC19775-1v4-WD2/Part01/components/hanim.html"
+meta18.name = "reference"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "subject"
 meta19.content = "X3D HAnim humanoid animation"
+meta19.name = "subject"
 
 head1.children.append(meta19)
 meta20 = x3d.meta()
-meta20.name = "TODO"
 meta20.content = "Integrate and confirm Segment/Joint names, Viewpoints."
+meta20.name = "TODO"
 
 head1.children.append(meta20)
 meta21 = x3d.meta()
-meta21.name = "identifier"
 meta21.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/HAnimModelHandLeft.x3d"
+meta21.name = "identifier"
 
 head1.children.append(meta21)
 meta22 = x3d.meta()
-meta22.name = "generator"
 meta22.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta22.name = "generator"
 
 head1.children.append(meta22)
 meta23 = x3d.meta()
-meta23.name = "license"
 meta23.content = "../license.html"
+meta23.name = "license"
 
 head1.children.append(meta23)
 
@@ -123,17 +123,17 @@ WorldInfo25.title = "HAnimModelHandLeft.x3d"
 
 Scene24.children.append(WorldInfo25)
 HAnimHumanoid26 = x3d.HAnimHumanoid()
-HAnimHumanoid26.name = "Hand_Left"
 HAnimHumanoid26.DEF = "hanim_Hand_Left"
 HAnimHumanoid26.loa = 4
+HAnimHumanoid26.name = "Hand_Left"
 HAnimHumanoid26.version = "2.0"
-#original HAnimHumanoid info='\"authorName=Kwan-Hee YOO, Don Brutzman and Joe Williams\"'
+""" original HAnimHumanoid info='\"authorName=Kwan-Hee YOO, Don Brutzman and Joe Williams\"' """
 MetadataSet27 = x3d.MetadataSet()
 MetadataSet27.name = "HAnimHumanoid.info"
 MetadataSet27.reference = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/ObjectInterfaces.html#Humanoid"
 MetadataString28 = x3d.MetadataString()
 MetadataString28.name = "authorName"
-MetadataString28.value = ["Kwan-Hee YOO, Don Brutzman and Joe Williams"]
+MetadataString28.value = ["wan-Hee YOO, Don Brutzman and Joe William"]
 
 if MetadataSet27.value is None:
     MetadataSet27.value = []
@@ -141,20 +141,16 @@ MetadataSet27.value.append(MetadataString28)
 
 HAnimHumanoid26.metadata = MetadataSet27
 HAnimJoint29 = x3d.HAnimJoint()
-HAnimJoint29.name = "humanoid_root"
 HAnimJoint29.DEF = "hanim_humanoid_root"
-HAnimJoint29.ulimit = [0,0,0]
-HAnimJoint29.llimit = [0,0,0]
-#Might consider putting a HAnimSegment here, but that doesn't help with re-use of this hand model
+HAnimJoint29.name = "humanoid_root"
+""" Might consider putting a HAnimSegment here, but that doesn't help with re-use of this hand model """
 HAnimJoint30 = x3d.HAnimJoint()
-HAnimJoint30.name = "l_radiocarpal"
 HAnimJoint30.DEF = "hanim_l_radiocarpal"
 HAnimJoint30.description = "connection joint of hand to leg above"
-HAnimJoint30.ulimit = [0,0,0]
-HAnimJoint30.llimit = [0,0,0]
+HAnimJoint30.name = "l_radiocarpal"
 HAnimSegment31 = x3d.HAnimSegment()
-HAnimSegment31.name = "l_carpal"
 HAnimSegment31.DEF = "hanim_l_carpal"
+HAnimSegment31.name = "l_carpal"
 Transform32 = x3d.Transform()
 Shape33 = x3d.Shape()
 Shape33.DEF = "HAnimJointShape"
@@ -230,16 +226,14 @@ Shape47.geometry = IndexedLineSet50
 HAnimSegment31.children.append(Shape47)
 
 HAnimJoint30.children.append(HAnimSegment31)
-#MC1
+""" MC1 """
 HAnimJoint52 = x3d.HAnimJoint()
-HAnimJoint52.name = "l_midcarpal_1"
 HAnimJoint52.DEF = "hanim_l_midcarpal_1"
 HAnimJoint52.center = [0.14,0.09,0]
-HAnimJoint52.ulimit = [0,0,0]
-HAnimJoint52.llimit = [0,0,0]
+HAnimJoint52.name = "l_midcarpal_1"
 HAnimSegment53 = x3d.HAnimSegment()
-HAnimSegment53.name = "l_trapezium"
 HAnimSegment53.DEF = "hanim_l_trapezium"
+HAnimSegment53.name = "l_trapezium"
 Transform54 = x3d.Transform()
 Transform54.translation = [0.14,0.09,0]
 Shape55 = x3d.Shape()
@@ -298,16 +292,14 @@ Shape64.geometry = IndexedLineSet67
 HAnimSegment53.children.append(Shape64)
 
 HAnimJoint52.children.append(HAnimSegment53)
-#thumb finger
+""" thumb finger """
 HAnimJoint69 = x3d.HAnimJoint()
-HAnimJoint69.name = "l_carpometacarpal_1"
 HAnimJoint69.DEF = "hanim_l_carpometacarpal_1"
 HAnimJoint69.center = [0.2,0.15,0]
-HAnimJoint69.ulimit = [0,0,0]
-HAnimJoint69.llimit = [0,0,0]
+HAnimJoint69.name = "l_carpometacarpal_1"
 HAnimSegment70 = x3d.HAnimSegment()
-HAnimSegment70.name = "l_metacarpal_1"
 HAnimSegment70.DEF = "hanim_l_metacarpal_1"
+HAnimSegment70.name = "l_metacarpal_1"
 Transform71 = x3d.Transform()
 Transform71.translation = [0.2,0.15,0]
 Shape72 = x3d.Shape()
@@ -337,14 +329,12 @@ HAnimSegment70.children.append(Shape73)
 
 HAnimJoint69.children.append(HAnimSegment70)
 HAnimJoint78 = x3d.HAnimJoint()
-HAnimJoint78.name = "l_metacarpophalangeal_1"
 HAnimJoint78.DEF = "hanim_l_metacarpophalangeal_1"
 HAnimJoint78.center = [0.3,0.3,0]
-HAnimJoint78.ulimit = [0,0,0]
-HAnimJoint78.llimit = [0,0,0]
+HAnimJoint78.name = "l_metacarpophalangeal_1"
 HAnimSegment79 = x3d.HAnimSegment()
-HAnimSegment79.name = "l_carpal_proximal_phalanx_1"
 HAnimSegment79.DEF = "hanim_l_carpal_proximal_phalanx_1"
+HAnimSegment79.name = "l_carpal_proximal_phalanx_1"
 Transform80 = x3d.Transform()
 Transform80.translation = [0.3,0.3,0]
 Shape81 = x3d.Shape()
@@ -374,14 +364,12 @@ HAnimSegment79.children.append(Shape82)
 
 HAnimJoint78.children.append(HAnimSegment79)
 HAnimJoint87 = x3d.HAnimJoint()
-HAnimJoint87.name = "l_carpal_interphalangeal_1"
 HAnimJoint87.DEF = "hanim_l_carpal_interphalangeal_1"
 HAnimJoint87.center = [0.35,0.4,0]
-HAnimJoint87.ulimit = [0,0,0]
-HAnimJoint87.llimit = [0,0,0]
+HAnimJoint87.name = "l_carpal_interphalangeal_1"
 HAnimSegment88 = x3d.HAnimSegment()
-HAnimSegment88.name = "l_carpal_distal_phalanx_1"
 HAnimSegment88.DEF = "hanim_l_carpal_distal_phalanx_1"
+HAnimSegment88.name = "l_carpal_distal_phalanx_1"
 Transform89 = x3d.Transform()
 Transform89.translation = [0.35,0.4,0]
 Shape90 = x3d.Shape()
@@ -418,16 +406,14 @@ HAnimJoint69.children.append(HAnimJoint78)
 HAnimJoint52.children.append(HAnimJoint69)
 
 HAnimJoint30.children.append(HAnimJoint52)
-#MC2
+""" MC2 """
 HAnimJoint96 = x3d.HAnimJoint()
-HAnimJoint96.name = "l_midcarpal_2"
 HAnimJoint96.DEF = "hanim_l_midcarpal_2"
 HAnimJoint96.center = [0.07,0.07,0]
-HAnimJoint96.ulimit = [0,0,0]
-HAnimJoint96.llimit = [0,0,0]
+HAnimJoint96.name = "l_midcarpal_2"
 HAnimSegment97 = x3d.HAnimSegment()
-HAnimSegment97.name = "l_trapezoid"
 HAnimSegment97.DEF = "hanim_l_trapezoid"
+HAnimSegment97.name = "l_trapezoid"
 Transform98 = x3d.Transform()
 Transform98.translation = [0.07,0.07,0]
 Shape99 = x3d.Shape()
@@ -456,16 +442,14 @@ Shape100.geometry = IndexedLineSet103
 HAnimSegment97.children.append(Shape100)
 
 HAnimJoint96.children.append(HAnimSegment97)
-#index finger
+""" index finger """
 HAnimJoint105 = x3d.HAnimJoint()
-HAnimJoint105.name = "l_carpometacarpal_2"
 HAnimJoint105.DEF = "hanim_l_carpometacarpal_2"
 HAnimJoint105.center = [0.1,0.2,0]
-HAnimJoint105.ulimit = [0,0,0]
-HAnimJoint105.llimit = [0,0,0]
+HAnimJoint105.name = "l_carpometacarpal_2"
 HAnimSegment106 = x3d.HAnimSegment()
-HAnimSegment106.name = "l_metacarpal_2"
 HAnimSegment106.DEF = "hanim_l_metacarpal_2"
+HAnimSegment106.name = "l_metacarpal_2"
 Transform107 = x3d.Transform()
 Transform107.translation = [0.1,0.2,0]
 Shape108 = x3d.Shape()
@@ -495,14 +479,12 @@ HAnimSegment106.children.append(Shape109)
 
 HAnimJoint105.children.append(HAnimSegment106)
 HAnimJoint114 = x3d.HAnimJoint()
-HAnimJoint114.name = "l_metacarpophalangeal_2"
 HAnimJoint114.DEF = "hanim_l_metacarpophalangeal_2"
 HAnimJoint114.center = [0.15,0.5,0]
-HAnimJoint114.ulimit = [0,0,0]
-HAnimJoint114.llimit = [0,0,0]
+HAnimJoint114.name = "l_metacarpophalangeal_2"
 HAnimSegment115 = x3d.HAnimSegment()
-HAnimSegment115.name = "l_carpal_proximal_phalanx_2"
 HAnimSegment115.DEF = "hanim_l_carpal_proximal_phalanx_2"
+HAnimSegment115.name = "l_carpal_proximal_phalanx_2"
 Transform116 = x3d.Transform()
 Transform116.translation = [0.15,0.5,0]
 Shape117 = x3d.Shape()
@@ -532,14 +514,12 @@ HAnimSegment115.children.append(Shape118)
 
 HAnimJoint114.children.append(HAnimSegment115)
 HAnimJoint123 = x3d.HAnimJoint()
-HAnimJoint123.name = "l_carpal_proximal_interphalangeal_2"
 HAnimJoint123.DEF = "hanim_l_carpal_proximal_interphalangeal_2"
 HAnimJoint123.center = [0.2,0.7,0]
-HAnimJoint123.ulimit = [0,0,0]
-HAnimJoint123.llimit = [0,0,0]
+HAnimJoint123.name = "l_carpal_proximal_interphalangeal_2"
 HAnimSegment124 = x3d.HAnimSegment()
-HAnimSegment124.name = "l_carpal_middle_phalanx_2"
 HAnimSegment124.DEF = "hanim_l_carpal_middle_phalanx_2"
+HAnimSegment124.name = "l_carpal_middle_phalanx_2"
 Transform125 = x3d.Transform()
 Transform125.translation = [0.2,0.7,0]
 Shape126 = x3d.Shape()
@@ -569,14 +549,12 @@ HAnimSegment124.children.append(Shape127)
 
 HAnimJoint123.children.append(HAnimSegment124)
 HAnimJoint132 = x3d.HAnimJoint()
-HAnimJoint132.name = "l_carpal_distal_interphalangeal_2"
 HAnimJoint132.DEF = "hanim_l_carpal_distal_interphalangeal_2"
 HAnimJoint132.center = [0.24,0.87,0]
-HAnimJoint132.ulimit = [0,0,0]
-HAnimJoint132.llimit = [0,0,0]
+HAnimJoint132.name = "l_carpal_distal_interphalangeal_2"
 HAnimSegment133 = x3d.HAnimSegment()
-HAnimSegment133.name = "l_carpal_distal_phalanx_2"
 HAnimSegment133.DEF = "hanim_l_carpal_distal_phalanx_2"
+HAnimSegment133.name = "l_carpal_distal_phalanx_2"
 Transform134 = x3d.Transform()
 Transform134.translation = [0.24,0.87,0]
 Shape135 = x3d.Shape()
@@ -615,18 +593,16 @@ HAnimJoint105.children.append(HAnimJoint114)
 HAnimJoint96.children.append(HAnimJoint105)
 
 HAnimJoint30.children.append(HAnimJoint96)
-#MC3
+""" MC3 """
 HAnimJoint141 = x3d.HAnimJoint()
-HAnimJoint141.name = "l_midcarpal_3"
 HAnimJoint141.DEF = "hanim_l_midcarpal_3"
-HAnimJoint141.center = [0,0.07,0]
-HAnimJoint141.ulimit = [0,0,0]
-HAnimJoint141.llimit = [0,0,0]
+HAnimJoint141.center = [0.0,0.07,0]
+HAnimJoint141.name = "l_midcarpal_3"
 HAnimSegment142 = x3d.HAnimSegment()
-HAnimSegment142.name = "l_capitate"
 HAnimSegment142.DEF = "hanim_l_capitate"
+HAnimSegment142.name = "l_capitate"
 Transform143 = x3d.Transform()
-Transform143.translation = [0,0.07,0]
+Transform143.translation = [0.0,0.07,0]
 Shape144 = x3d.Shape()
 Shape144.USE = "HAnimNewJointShape"
 
@@ -653,18 +629,16 @@ Shape145.geometry = IndexedLineSet148
 HAnimSegment142.children.append(Shape145)
 
 HAnimJoint141.children.append(HAnimSegment142)
-#Middle fingle
+""" Middle fingle """
 HAnimJoint150 = x3d.HAnimJoint()
-HAnimJoint150.name = "l_carpometacarpal_3"
 HAnimJoint150.DEF = "hanim_l_carpometacarpal_3"
-HAnimJoint150.center = [0,0.2,0]
-HAnimJoint150.ulimit = [0,0,0]
-HAnimJoint150.llimit = [0,0,0]
+HAnimJoint150.center = [0.0,0.2,0]
+HAnimJoint150.name = "l_carpometacarpal_3"
 HAnimSegment151 = x3d.HAnimSegment()
-HAnimSegment151.name = "l_metacarpal_3"
 HAnimSegment151.DEF = "hanim_l_metacarpal_3"
+HAnimSegment151.name = "l_metacarpal_3"
 Transform152 = x3d.Transform()
-Transform152.translation = [0,0.2,0]
+Transform152.translation = [0.0,0.2,0]
 Shape153 = x3d.Shape()
 Shape153.USE = "HAnimJointShape"
 
@@ -692,14 +666,12 @@ HAnimSegment151.children.append(Shape154)
 
 HAnimJoint150.children.append(HAnimSegment151)
 HAnimJoint159 = x3d.HAnimJoint()
-HAnimJoint159.name = "l_metacarpophalangeal_3"
 HAnimJoint159.DEF = "hanim_l_metacarpophalangeal_3"
 HAnimJoint159.center = [0.03,0.5,0]
-HAnimJoint159.ulimit = [0,0,0]
-HAnimJoint159.llimit = [0,0,0]
+HAnimJoint159.name = "l_metacarpophalangeal_3"
 HAnimSegment160 = x3d.HAnimSegment()
-HAnimSegment160.name = "l_carpal_proximal_phalanx_3"
 HAnimSegment160.DEF = "hanim_l_carpal_proximal_phalanx_3"
+HAnimSegment160.name = "l_carpal_proximal_phalanx_3"
 Transform161 = x3d.Transform()
 Transform161.translation = [0.03,0.5,0]
 Shape162 = x3d.Shape()
@@ -729,14 +701,12 @@ HAnimSegment160.children.append(Shape163)
 
 HAnimJoint159.children.append(HAnimSegment160)
 HAnimJoint168 = x3d.HAnimJoint()
-HAnimJoint168.name = "l_carpal_proximal_interphalangeal_3"
 HAnimJoint168.DEF = "hanim_l_carpal_proximal_interphalangeal_3"
 HAnimJoint168.center = [0.05,0.75,0]
-HAnimJoint168.ulimit = [0,0,0]
-HAnimJoint168.llimit = [0,0,0]
+HAnimJoint168.name = "l_carpal_proximal_interphalangeal_3"
 HAnimSegment169 = x3d.HAnimSegment()
-HAnimSegment169.name = "l_carpal_middle_phalanx_3"
 HAnimSegment169.DEF = "hanim_l_carpal_middle_phalanx_3"
+HAnimSegment169.name = "l_carpal_middle_phalanx_3"
 Transform170 = x3d.Transform()
 Transform170.translation = [0.05,0.75,0]
 Shape171 = x3d.Shape()
@@ -766,14 +736,12 @@ HAnimSegment169.children.append(Shape172)
 
 HAnimJoint168.children.append(HAnimSegment169)
 HAnimJoint177 = x3d.HAnimJoint()
-HAnimJoint177.name = "l_carpal_distal_interphalangeal_3"
 HAnimJoint177.DEF = "hanim_l_carpal_distal_interphalangeal_3"
 HAnimJoint177.center = [0.08,0.96,0]
-HAnimJoint177.ulimit = [0,0,0]
-HAnimJoint177.llimit = [0,0,0]
+HAnimJoint177.name = "l_carpal_distal_interphalangeal_3"
 HAnimSegment178 = x3d.HAnimSegment()
-HAnimSegment178.name = "l_carpal_distal_phalanx_3"
 HAnimSegment178.DEF = "hanim_l_carpal_distal_phalanx_3"
+HAnimSegment178.name = "l_carpal_distal_phalanx_3"
 Transform179 = x3d.Transform()
 Transform179.translation = [0.08,0.96,0]
 Shape180 = x3d.Shape()
@@ -812,16 +780,14 @@ HAnimJoint150.children.append(HAnimJoint159)
 HAnimJoint141.children.append(HAnimJoint150)
 
 HAnimJoint30.children.append(HAnimJoint141)
-#MC45
+""" MC45 """
 HAnimJoint186 = x3d.HAnimJoint()
-HAnimJoint186.name = "l_midcarpal_4_5"
 HAnimJoint186.DEF = "hanim_l_midcarpal_4_5"
 HAnimJoint186.center = [-0.1,0.1,0]
-HAnimJoint186.ulimit = [0,0,0]
-HAnimJoint186.llimit = [0,0,0]
+HAnimJoint186.name = "l_midcarpal_4_5"
 HAnimSegment187 = x3d.HAnimSegment()
-HAnimSegment187.name = "l_hamate"
 HAnimSegment187.DEF = "hanim_l_hamate"
+HAnimSegment187.name = "l_hamate"
 Transform188 = x3d.Transform()
 Transform188.translation = [-0.1,0.1,0]
 Shape189 = x3d.Shape()
@@ -868,16 +834,14 @@ Shape195.geometry = IndexedLineSet198
 HAnimSegment187.children.append(Shape195)
 
 HAnimJoint186.children.append(HAnimSegment187)
-#ring finger
+""" ring finger """
 HAnimJoint200 = x3d.HAnimJoint()
-HAnimJoint200.name = "l_carpometacarpal_4"
 HAnimJoint200.DEF = "hanim_l_carpometacarpal_4"
 HAnimJoint200.center = [-0.1,0.2,0]
-HAnimJoint200.ulimit = [0,0,0]
-HAnimJoint200.llimit = [0,0,0]
+HAnimJoint200.name = "l_carpometacarpal_4"
 HAnimSegment201 = x3d.HAnimSegment()
-HAnimSegment201.name = "l_metacarpal_4"
 HAnimSegment201.DEF = "hanim_l_metacarpal_4"
+HAnimSegment201.name = "l_metacarpal_4"
 Transform202 = x3d.Transform()
 Transform202.translation = [-0.1,0.2,0]
 Shape203 = x3d.Shape()
@@ -907,14 +871,12 @@ HAnimSegment201.children.append(Shape204)
 
 HAnimJoint200.children.append(HAnimSegment201)
 HAnimJoint209 = x3d.HAnimJoint()
-HAnimJoint209.name = "l_metacarpophalangeal_4"
 HAnimJoint209.DEF = "hanim_l_metacarpophalangeal_4"
 HAnimJoint209.center = [-0.1,0.47,0]
-HAnimJoint209.ulimit = [0,0,0]
-HAnimJoint209.llimit = [0,0,0]
+HAnimJoint209.name = "l_metacarpophalangeal_4"
 HAnimSegment210 = x3d.HAnimSegment()
-HAnimSegment210.name = "l_carpal_proximal_phalanx_4"
 HAnimSegment210.DEF = "hanim_l_carpal_proximal_phalanx_4"
+HAnimSegment210.name = "l_carpal_proximal_phalanx_4"
 Transform211 = x3d.Transform()
 Transform211.translation = [-0.1,0.47,0]
 Shape212 = x3d.Shape()
@@ -944,14 +906,12 @@ HAnimSegment210.children.append(Shape213)
 
 HAnimJoint209.children.append(HAnimSegment210)
 HAnimJoint218 = x3d.HAnimJoint()
-HAnimJoint218.name = "l_carpal_proximal_interphalangeal_4"
 HAnimJoint218.DEF = "hanim_l_carpal_proximal_interphalangeal_4"
 HAnimJoint218.center = [-0.1,0.7,0]
-HAnimJoint218.ulimit = [0,0,0]
-HAnimJoint218.llimit = [0,0,0]
+HAnimJoint218.name = "l_carpal_proximal_interphalangeal_4"
 HAnimSegment219 = x3d.HAnimSegment()
-HAnimSegment219.name = "l_carpal_middle_phalanx_4"
 HAnimSegment219.DEF = "hanim_l_carpal_middle_phalanx_4"
+HAnimSegment219.name = "l_carpal_middle_phalanx_4"
 Transform220 = x3d.Transform()
 Transform220.translation = [-0.1,0.7,0]
 Shape221 = x3d.Shape()
@@ -981,14 +941,12 @@ HAnimSegment219.children.append(Shape222)
 
 HAnimJoint218.children.append(HAnimSegment219)
 HAnimJoint227 = x3d.HAnimJoint()
-HAnimJoint227.name = "l_carpal_distal_interphalangeal_4"
 HAnimJoint227.DEF = "hanim_l_carpal_distal_interphalangeal_4"
 HAnimJoint227.center = [-0.1,0.93,0]
-HAnimJoint227.ulimit = [0,0,0]
-HAnimJoint227.llimit = [0,0,0]
+HAnimJoint227.name = "l_carpal_distal_interphalangeal_4"
 HAnimSegment228 = x3d.HAnimSegment()
-HAnimSegment228.name = "l_carpal_distal_phalanx_4"
 HAnimSegment228.DEF = "hanim_l_carpal_distal_phalanx_4"
+HAnimSegment228.name = "l_carpal_distal_phalanx_4"
 Transform229 = x3d.Transform()
 Transform229.translation = [-0.1,0.93,0]
 Shape230 = x3d.Shape()
@@ -1025,16 +983,14 @@ HAnimJoint209.children.append(HAnimJoint218)
 HAnimJoint200.children.append(HAnimJoint209)
 
 HAnimJoint186.children.append(HAnimJoint200)
-#pinky finger
+""" pinky finger """
 HAnimJoint236 = x3d.HAnimJoint()
-HAnimJoint236.name = "l_carpometacarpal_5"
 HAnimJoint236.DEF = "hanim_l_carpometacarpal_5"
 HAnimJoint236.center = [-0.15,0.17,0]
-HAnimJoint236.ulimit = [0,0,0]
-HAnimJoint236.llimit = [0,0,0]
+HAnimJoint236.name = "l_carpometacarpal_5"
 HAnimSegment237 = x3d.HAnimSegment()
-HAnimSegment237.name = "l_metacarpal_5"
 HAnimSegment237.DEF = "hanim_l_metacarpal_5"
+HAnimSegment237.name = "l_metacarpal_5"
 Transform238 = x3d.Transform()
 Transform238.translation = [-0.15,0.17,0]
 Shape239 = x3d.Shape()
@@ -1064,14 +1020,12 @@ HAnimSegment237.children.append(Shape240)
 
 HAnimJoint236.children.append(HAnimSegment237)
 HAnimJoint245 = x3d.HAnimJoint()
-HAnimJoint245.name = "l_metacarpophalangeal_5"
 HAnimJoint245.DEF = "hanim_l_metacarpophalangeal_5"
 HAnimJoint245.center = [-0.2,0.4,0]
-HAnimJoint245.ulimit = [0,0,0]
-HAnimJoint245.llimit = [0,0,0]
+HAnimJoint245.name = "l_metacarpophalangeal_5"
 HAnimSegment246 = x3d.HAnimSegment()
-HAnimSegment246.name = "l_carpal_proximal_phalanx_5"
 HAnimSegment246.DEF = "hanim_l_carpal_proximal_phalanx_5"
+HAnimSegment246.name = "l_carpal_proximal_phalanx_5"
 Transform247 = x3d.Transform()
 Transform247.translation = [-0.2,0.4,0]
 Shape248 = x3d.Shape()
@@ -1101,14 +1055,12 @@ HAnimSegment246.children.append(Shape249)
 
 HAnimJoint245.children.append(HAnimSegment246)
 HAnimJoint254 = x3d.HAnimJoint()
-HAnimJoint254.name = "l_carpal_proximal_interphalangeal_5"
 HAnimJoint254.DEF = "hanim_l_carpal_proximal_interphalangeal_5"
 HAnimJoint254.center = [-0.23,0.63,0]
-HAnimJoint254.ulimit = [0,0,0]
-HAnimJoint254.llimit = [0,0,0]
+HAnimJoint254.name = "l_carpal_proximal_interphalangeal_5"
 HAnimSegment255 = x3d.HAnimSegment()
-HAnimSegment255.name = "l_carpal_middle_phalanx_5"
 HAnimSegment255.DEF = "hanim_l_carpal_middle_phalanx_5"
+HAnimSegment255.name = "l_carpal_middle_phalanx_5"
 Transform256 = x3d.Transform()
 Transform256.translation = [-0.23,0.63,0]
 Shape257 = x3d.Shape()
@@ -1138,14 +1090,12 @@ HAnimSegment255.children.append(Shape258)
 
 HAnimJoint254.children.append(HAnimSegment255)
 HAnimJoint263 = x3d.HAnimJoint()
-HAnimJoint263.name = "l_carpal_distal_interphalangeal_5"
 HAnimJoint263.DEF = "hanim_l_carpal_distal_interphalangeal_5"
 HAnimJoint263.center = [-0.25,0.79,0]
-HAnimJoint263.ulimit = [0,0,0]
-HAnimJoint263.llimit = [0,0,0]
+HAnimJoint263.name = "l_carpal_distal_interphalangeal_5"
 HAnimSegment264 = x3d.HAnimSegment()
-HAnimSegment264.name = "l_carpal_distal_phalanx_5"
 HAnimSegment264.DEF = "hanim_l_carpal_distal_phalanx_5"
+HAnimSegment264.name = "l_carpal_distal_phalanx_5"
 Transform265 = x3d.Transform()
 Transform265.translation = [-0.25,0.79,0]
 Shape266 = x3d.Shape()
@@ -1388,6 +1338,6 @@ HAnimHumanoid26.segments.append(HAnimSegment320)
 Scene24.children.append(HAnimHumanoid26)
 
 X3D0.Scene = Scene24
-f = open("././HAnimModelHandLeft_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("HAnimModelHandLeft_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

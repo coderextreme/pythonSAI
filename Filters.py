@@ -6,63 +6,63 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Filters.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "This X3D scene involves three sound sources. Each of them is visualized by a 3D object (in our case is a sphere) that depicts the sound effects. Specifically, we have added filters through of them we are able to manage the different sound effects in an impressive way. Filters can be composed of a number of attributes, frequency, detune, gain and the quality factor which also known as Q. Furthermore, the filters are classified in some specific types, depending on the sound effects that produce. In detail, there is the Low-pass filter which can create more muffled sound. Another one is the High-pass filter, which is used to generate tinny sound. Equally important is the Band-pass filter, which cuts off low and high frequencies and passes through only these within a certain range. On the contrary, the Notch filter has exactly the opposite operation of the Band-pass filter. Then is the Low-shelf filter, its role is to change the amount of bass in a sound, as a result the frequencies that are lower than the current frequency get a boost, while them that are over it remain unchanged. Next, the High-shelf filter is responsible for the quantity of treble in a sound. Moreover, Peaking filter is used in order to handle the amount of midrange in a sound. Lastly, there is the All-pass filter, whose role is to introduce phaser effects."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "info"
 meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
+meta4.name = "info"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "28 October 2020"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "5 December 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CHANGELOG.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "credit for audio files"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://www.medialab.hmu.gr/minipages/x3domAudio"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "identifier"
 meta11.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/Filters.x3d"
+meta11.name = "identifier"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "license"
 meta13.content = "../license.html"
+meta13.name = "license"
 
 head1.children.append(meta13)
 
@@ -81,7 +81,7 @@ Scene14.children.append(Background17)
 Viewpoint18 = x3d.Viewpoint()
 Viewpoint18.description = "View entire audio model"
 Viewpoint18.orientation = [1,0,0,-0.5]
-Viewpoint18.position = [0,500,600]
+Viewpoint18.position = [0.0,500.0,600.0]
 Viewpoint18.retainUserOffsets = True
 
 Scene14.children.append(Viewpoint18)
@@ -206,30 +206,17 @@ ListenerPointSource45.trackCurrentView = True
 
 Scene14.children.append(ListenerPointSource45)
 StreamAudioDestination46 = x3d.StreamAudioDestination()
-StreamAudioDestination46.channelCountMode = "MAX"
-StreamAudioDestination46.channelInterpretation = "SPEAKERS"
 DynamicsCompressor47 = x3d.DynamicsCompressor()
-DynamicsCompressor47.channelCountMode = "MAX"
-DynamicsCompressor47.channelInterpretation = "SPEAKERS"
 Gain48 = x3d.Gain()
-Gain48.channelCountMode = "MAX"
-Gain48.channelInterpretation = "SPEAKERS"
 SpatialSound49 = x3d.SpatialSound()
 SpatialSound49.DEF = "Audio1"
-SpatialSound49.distanceModel = "INVERSE"
 Gain50 = x3d.Gain()
-Gain50.channelCountMode = "MAX"
-Gain50.channelInterpretation = "SPEAKERS"
 Analyser51 = x3d.Analyser()
-Analyser51.channelCountMode = "MAX"
-Analyser51.channelInterpretation = "SPEAKERS"
 BiquadFilter52 = x3d.BiquadFilter()
-BiquadFilter52.detune = 50
+BiquadFilter52.detune = 50.0
 BiquadFilter52.frequency = 600
-BiquadFilter52.qualityFactor = 30
+BiquadFilter52.qualityFactor = 30.0
 BiquadFilter52.type = "ALLPASS"
-BiquadFilter52.channelCountMode = "MAX"
-BiquadFilter52.channelInterpretation = "SPEAKERS"
 AudioClip53 = x3d.AudioClip()
 AudioClip53.description = "Techno beat"
 AudioClip53.loop = True
@@ -246,20 +233,13 @@ SpatialSound49.children.append(Gain50)
 Gain48.children.append(SpatialSound49)
 SpatialSound54 = x3d.SpatialSound()
 SpatialSound54.DEF = "Audio2"
-SpatialSound54.distanceModel = "INVERSE"
 Gain55 = x3d.Gain()
-Gain55.channelCountMode = "MAX"
-Gain55.channelInterpretation = "SPEAKERS"
 Analyser56 = x3d.Analyser()
-Analyser56.channelCountMode = "MAX"
-Analyser56.channelInterpretation = "SPEAKERS"
 BiquadFilter57 = x3d.BiquadFilter()
-BiquadFilter57.detune = 15
+BiquadFilter57.detune = 15.0
 BiquadFilter57.frequency = 600
-BiquadFilter57.qualityFactor = 15
+BiquadFilter57.qualityFactor = 15.0
 BiquadFilter57.type = "ALLPASS"
-BiquadFilter57.channelCountMode = "MAX"
-BiquadFilter57.channelInterpretation = "SPEAKERS"
 AudioClip58 = x3d.AudioClip()
 AudioClip58.description = "Simple beat"
 AudioClip58.loop = True
@@ -276,19 +256,12 @@ SpatialSound54.children.append(Gain55)
 Gain48.children.append(SpatialSound54)
 SpatialSound59 = x3d.SpatialSound()
 SpatialSound59.DEF = "Audio3"
-SpatialSound59.distanceModel = "INVERSE"
 Gain60 = x3d.Gain()
-Gain60.channelCountMode = "MAX"
-Gain60.channelInterpretation = "SPEAKERS"
 Analyser61 = x3d.Analyser()
-Analyser61.channelCountMode = "MAX"
-Analyser61.channelInterpretation = "SPEAKERS"
 BiquadFilter62 = x3d.BiquadFilter()
 BiquadFilter62.frequency = 1000
 BiquadFilter62.qualityFactor = 0
 BiquadFilter62.type = "ALLPASS"
-BiquadFilter62.channelCountMode = "MAX"
-BiquadFilter62.channelInterpretation = "SPEAKERS"
 AudioClip63 = x3d.AudioClip()
 AudioClip63.description = "Wobble loop"
 AudioClip63.loop = True
@@ -311,6 +284,6 @@ StreamAudioDestination46.children.append(DynamicsCompressor47)
 Scene14.children.append(StreamAudioDestination46)
 
 X3D0.Scene = Scene14
-f = open("././Filters_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Filters_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

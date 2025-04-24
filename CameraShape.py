@@ -6,58 +6,58 @@ X3D0.profile = "Interactive"
 X3D0.version = "3.1"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "CameraShape.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Simple video camera shape"
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Jeff Weekley and Don Brutzman"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "2 June 2009"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "translated"
 meta6.content = "2 June 2009"
+meta6.name = "translated"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "13 January 2014"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CameraExamples.x3d"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "identifier"
 meta9.content = "https://www.web3d.org/x3d/content/examples/Basic/development/SimpleCamera.x3d"
+meta9.name = "identifier"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "generator"
 meta10.content = "Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"
+meta10.name = "generator"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -111,7 +111,7 @@ Material24.ambientIntensity = 0.25
 Material24.diffuseColor = [0.372322,0.371574,0.373173]
 Material24.shininess = 0.02
 Material24.specularColor = [0.890909,0.887832,0.890909]
-#Universal Media Library: Metals 30
+""" Universal Media Library: Metals 30 """
 
 Appearance23.material = Material24
 
@@ -195,7 +195,7 @@ Transform20.children.append(Switch21)
 Group41 = x3d.Group()
 Transform42 = x3d.Transform()
 Transform42.DEF = "pCylinder1"
-Transform42.rotation = [-1,0,0,0.373518]
+Transform42.rotation = [-1.0,0.0,0.0,0.373518]
 Transform42.translation = [-0.038462,3.596312,3.297562]
 Shape43 = x3d.Shape()
 Appearance44 = x3d.Appearance()
@@ -212,7 +212,7 @@ Transform42.children.append(Shape43)
 Group41.children.append(Transform42)
 Transform46 = x3d.Transform()
 Transform46.DEF = "pCube1"
-Transform46.scale = [1,0.727134,0.801457]
+Transform46.scale = [1.0,0.727134,0.801457]
 Transform46.translation = [-0.030769,1.738461,1.4436]
 Shape47 = x3d.Shape()
 Appearance48 = x3d.Appearance()
@@ -229,7 +229,7 @@ Transform46.children.append(Shape47)
 Group41.children.append(Transform46)
 Transform50 = x3d.Transform()
 Transform50.DEF = "pPipe1"
-Transform50.scale = [1,1,0.569444]
+Transform50.scale = [1.0,1.0,0.569444]
 Transform50.translation = [0.015385,1.630769,-1.973274]
 Shape51 = x3d.Shape()
 Appearance52 = x3d.Appearance()
@@ -267,6 +267,6 @@ Transform20.children.append(Group41)
 Scene13.children.append(Transform20)
 
 X3D0.Scene = Scene13
-f = open("././CameraShape_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("CameraShape_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

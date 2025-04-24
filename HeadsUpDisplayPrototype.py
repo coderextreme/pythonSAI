@@ -6,85 +6,85 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "HeadsUpDisplayPrototype.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Generic Heads Up Display (HUD) prototype to keep children on screen."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Don Brutzman"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "9 November 2003"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "14 January 2014"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "subject"
 meta7.content = "HUD Heads Up Display"
+meta7.name = "subject"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "identifier"
 meta8.content = "https://savage.nps.edu/Savage/Tools/HeadsUpDisplays/HeadsUpDisplayPrototype.x3d"
+meta8.name = "identifier"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "generator"
 meta9.content = "X3D-Edit 3.2, https://savage.nps.edu/X3D-Edit"
+meta9.name = "generator"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "../../license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 
 X3D0.head = head1
 Scene11 = x3d.Scene()
 ProtoDeclare12 = x3d.ProtoDeclare()
-ProtoDeclare12.name = "HeadsUpDisplay"
 ProtoDeclare12.appinfo = "HeadsUpDisplay positions child geometry in screen space, movable by the user"
+ProtoDeclare12.name = "HeadsUpDisplay"
 ProtoInterface13 = x3d.ProtoInterface()
 field14 = x3d.field()
-field14.name = "children"
 field14.accessType = "inputOutput"
 field14.appinfo = "Displayed subscene positioned as a HUD."
+field14.name = "children"
 field14.type = "MFNode"
-#default is null array of nodes
+""" default is null array of nodes """
 
 ProtoInterface13.field.append(field14)
 field15 = x3d.field()
-field15.name = "dragChildren"
 field15.accessType = "inputOutput"
 field15.appinfo = "Additional HUD geometry which can be touched and dragged for repositioning. If this geometry goes offscreen (perhaps due to screen resizing) then it snaps back to original position."
+field15.name = "dragChildren"
 field15.type = "MFNode"
-#default is null array of nodes
+""" default is null array of nodes """
 
 ProtoInterface13.field.append(field15)
 field16 = x3d.field()
-field16.name = "locationOffset"
 field16.accessType = "initializeOnly"
 field16.appinfo = "Modified screen location and distance (for size)."
+field16.name = "locationOffset"
 field16.type = "SFVec3f"
 field16.value = [-2,-2,0]
 
 ProtoInterface13.field.append(field16)
 field17 = x3d.field()
-field17.name = "traceEnabled"
 field17.accessType = "initializeOnly"
 field17.appinfo = "Enable/disable console output for troubleshooting."
+field17.name = "traceEnabled"
 field17.type = "SFBool"
 field17.value = False
 
@@ -167,52 +167,52 @@ Group32.children.append(VisibilitySensor39)
 Script40 = x3d.Script()
 Script40.DEF = "VisibilityControlScript"
 field41 = x3d.field()
-field41.name = "traceEnabled"
 field41.accessType = "initializeOnly"
+field41.name = "traceEnabled"
 field41.type = "SFBool"
 
 Script40.field.append(field41)
 field42 = x3d.field()
-field42.name = "isVisible"
 field42.accessType = "initializeOnly"
+field42.name = "isVisible"
 field42.type = "SFBool"
 field42.value = True
 
 Script40.field.append(field42)
 field43 = x3d.field()
-field43.name = "planeSensorTranslation"
 field43.accessType = "initializeOnly"
+field43.name = "planeSensorTranslation"
 field43.type = "SFVec3f"
 field43.value = [0,0,0]
 
 Script40.field.append(field43)
 field44 = x3d.field()
-field44.name = "setIsVisible"
 field44.accessType = "inputOnly"
+field44.name = "setIsVisible"
 field44.type = "SFBool"
 
 Script40.field.append(field44)
 field45 = x3d.field()
-field45.name = "setPlaneSensorIsActive"
 field45.accessType = "inputOnly"
+field45.name = "setPlaneSensorIsActive"
 field45.type = "SFBool"
 
 Script40.field.append(field45)
 field46 = x3d.field()
-field46.name = "setPlaneSensorTranslation"
 field46.accessType = "inputOnly"
+field46.name = "setPlaneSensorTranslation"
 field46.type = "SFVec3f"
 
 Script40.field.append(field46)
 field47 = x3d.field()
-field47.name = "translationChanged"
 field47.accessType = "outputOnly"
+field47.name = "translationChanged"
 field47.type = "SFVec3f"
 
 Script40.field.append(field47)
 field48 = x3d.field()
-field48.name = "translationOffsetChanged"
 field48.accessType = "outputOnly"
+field48.name = "translationOffsetChanged"
 field48.type = "SFVec3f"
 
 Script40.field.append(field48)
@@ -225,7 +225,8 @@ IS49.connect.append(connect50)
 
 Script40.IS = IS49
 
-Script40.sourceCode = '''ecmascript:\n"+
+Script40.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function tracePrint (text)\n"+
 "{\n"+
@@ -259,7 +260,8 @@ Script40.sourceCode = '''ecmascript:\n"+
 "{\n"+
 "	planeSensorTranslation = value;\n"+
 "	tracePrint('planeSensorTranslation=' + value);\n"+
-"}'''
+"}\n"+
+"'''
 
 Group32.children.append(Script40)
 ROUTE51 = x3d.ROUTE()
@@ -334,7 +336,7 @@ ProtoBody18.children.append(Group19)
 ProtoDeclare12.ProtoBody = ProtoBody18
 
 Scene11.children.append(ProtoDeclare12)
-#====================
+""" ==================== """
 Background59 = x3d.Background()
 
 Scene11.children.append(Background59)
@@ -366,6 +368,6 @@ Anchor60.children.append(Shape61)
 Scene11.children.append(Anchor60)
 
 X3D0.Scene = Scene11
-f = open("././HeadsUpDisplayPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("HeadsUpDisplayPrototype_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

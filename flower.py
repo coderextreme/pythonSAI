@@ -6,53 +6,53 @@ X3D0.profile = "Interchange"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Flower.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Flower for HAnim scene Winter and Spring."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Carol McDonald"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Joe Williams and Don Brutzman"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "27 May 2023"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "27 May 2023"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "originals/flower.x3dv"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "identifier"
 meta9.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Flower.x3d"
+meta9.name = "identifier"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "generator"
 meta10.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta10.name = "generator"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "license"
 meta11.content = "../license.html"
+meta11.name = "license"
 
 head1.children.append(meta11)
 
@@ -65,9 +65,9 @@ Scene12.children.append(WorldInfo13)
 Shape14 = x3d.Shape()
 Appearance15 = x3d.Appearance()
 Material16 = x3d.Material()
-Material16.ambientIntensity = 0
-Material16.diffuseColor = [1,0.498039216,0]
-Material16.shininess = 1
+Material16.ambientIntensity = 0.0
+Material16.diffuseColor = [1,.498039216,0]
+Material16.shininess = 1.0
 
 Appearance15.material = Material16
 
@@ -86,9 +86,9 @@ Scene12.children.append(Shape14)
 Shape19 = x3d.Shape()
 Appearance20 = x3d.Appearance()
 Material21 = x3d.Material()
-Material21.ambientIntensity = 0
-Material21.diffuseColor = [1,0.498039216,0]
-Material21.shininess = 1
+Material21.ambientIntensity = 0.0
+Material21.diffuseColor = [1,.498039216,0]
+Material21.shininess = 1.0
 
 Appearance20.material = Material21
 
@@ -107,9 +107,9 @@ Scene12.children.append(Shape19)
 Shape24 = x3d.Shape()
 Appearance25 = x3d.Appearance()
 Material26 = x3d.Material()
-Material26.ambientIntensity = 0
-Material26.diffuseColor = [1,0.498039216,0]
-Material26.shininess = 1
+Material26.ambientIntensity = 0.0
+Material26.diffuseColor = [1,.498039216,0]
+Material26.shininess = 1.0
 
 Appearance25.material = Material26
 
@@ -128,9 +128,9 @@ Scene12.children.append(Shape24)
 Shape29 = x3d.Shape()
 Appearance30 = x3d.Appearance()
 Material31 = x3d.Material()
-Material31.ambientIntensity = 0
-Material31.diffuseColor = [1,0.498039216,0]
-Material31.shininess = 1
+Material31.ambientIntensity = 0.0
+Material31.diffuseColor = [1,.498039216,0]
+Material31.shininess = 1.0
 
 Appearance30.material = Material31
 
@@ -149,9 +149,9 @@ Scene12.children.append(Shape29)
 Shape34 = x3d.Shape()
 Appearance35 = x3d.Appearance()
 Material36 = x3d.Material()
-Material36.ambientIntensity = 0
-Material36.diffuseColor = [1,0.498039216,0]
-Material36.shininess = 1
+Material36.ambientIntensity = 0.0
+Material36.diffuseColor = [1,.498039216,0]
+Material36.shininess = 1.0
 
 Appearance35.material = Material36
 
@@ -170,9 +170,9 @@ Scene12.children.append(Shape34)
 Shape39 = x3d.Shape()
 Appearance40 = x3d.Appearance()
 Material41 = x3d.Material()
-Material41.ambientIntensity = 0
-Material41.diffuseColor = [1,0.498039216,0]
-Material41.shininess = 1
+Material41.ambientIntensity = 0.0
+Material41.diffuseColor = [1,.498039216,0]
+Material41.shininess = 1.0
 
 Appearance40.material = Material41
 
@@ -191,9 +191,9 @@ Scene12.children.append(Shape39)
 Shape44 = x3d.Shape()
 Appearance45 = x3d.Appearance()
 Material46 = x3d.Material()
-Material46.ambientIntensity = 0
-Material46.diffuseColor = [1,0.498039216,0]
-Material46.shininess = 1
+Material46.ambientIntensity = 0.0
+Material46.diffuseColor = [1,.498039216,0]
+Material46.shininess = 1.0
 
 Appearance45.material = Material46
 
@@ -212,9 +212,9 @@ Scene12.children.append(Shape44)
 Shape49 = x3d.Shape()
 Appearance50 = x3d.Appearance()
 Material51 = x3d.Material()
-Material51.ambientIntensity = 0
-Material51.diffuseColor = [1,0.498039216,0]
-Material51.shininess = 1
+Material51.ambientIntensity = 0.0
+Material51.diffuseColor = [1,.498039216,0]
+Material51.shininess = 1.0
 
 Appearance50.material = Material51
 
@@ -233,9 +233,9 @@ Scene12.children.append(Shape49)
 Shape54 = x3d.Shape()
 Appearance55 = x3d.Appearance()
 Material56 = x3d.Material()
-Material56.ambientIntensity = 0
-Material56.diffuseColor = [1,0.498039216,0]
-Material56.shininess = 1
+Material56.ambientIntensity = 0.0
+Material56.diffuseColor = [1,.498039216,0]
+Material56.shininess = 1.0
 
 Appearance55.material = Material56
 
@@ -254,9 +254,9 @@ Scene12.children.append(Shape54)
 Shape59 = x3d.Shape()
 Appearance60 = x3d.Appearance()
 Material61 = x3d.Material()
-Material61.ambientIntensity = 0
-Material61.diffuseColor = [1,0.498039216,0]
-Material61.shininess = 1
+Material61.ambientIntensity = 0.0
+Material61.diffuseColor = [1,.498039216,0]
+Material61.shininess = 1.0
 
 Appearance60.material = Material61
 
@@ -275,9 +275,9 @@ Scene12.children.append(Shape59)
 Shape64 = x3d.Shape()
 Appearance65 = x3d.Appearance()
 Material66 = x3d.Material()
-Material66.ambientIntensity = 0
-Material66.diffuseColor = [1,0.498039216,0]
-Material66.shininess = 1
+Material66.ambientIntensity = 0.0
+Material66.diffuseColor = [1,.498039216,0]
+Material66.shininess = 1.0
 
 Appearance65.material = Material66
 
@@ -296,9 +296,9 @@ Scene12.children.append(Shape64)
 Shape69 = x3d.Shape()
 Appearance70 = x3d.Appearance()
 Material71 = x3d.Material()
-Material71.ambientIntensity = 0
-Material71.diffuseColor = [1,0.498039216,0]
-Material71.shininess = 1
+Material71.ambientIntensity = 0.0
+Material71.diffuseColor = [1,.498039216,0]
+Material71.shininess = 1.0
 
 Appearance70.material = Material71
 
@@ -317,9 +317,9 @@ Scene12.children.append(Shape69)
 Shape74 = x3d.Shape()
 Appearance75 = x3d.Appearance()
 Material76 = x3d.Material()
-Material76.ambientIntensity = 0
-Material76.diffuseColor = [1,0.498039216,0]
-Material76.shininess = 1
+Material76.ambientIntensity = 0.0
+Material76.diffuseColor = [1,.498039216,0]
+Material76.shininess = 1.0
 
 Appearance75.material = Material76
 
@@ -337,6 +337,6 @@ Shape74.geometry = IndexedFaceSet77
 Scene12.children.append(Shape74)
 
 X3D0.Scene = Scene12
-f = open("././flower_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flower_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

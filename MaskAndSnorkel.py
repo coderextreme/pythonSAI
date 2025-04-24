@@ -6,43 +6,43 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "MaskAndSnorkel.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Diving mask and snorkel tube."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Etsuko Lippi"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "January 24, 2001"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "23 May 2020"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "identifier"
 meta7.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/MaskAndSnorkel.x3d"
+meta7.name = "identifier"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "generator"
 meta8.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta8.name = "generator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "license"
 meta9.content = "../license.html"
+meta9.name = "license"
 
 head1.children.append(meta9)
 
@@ -292,6 +292,6 @@ Transform13.children.append(Transform66)
 Scene10.children.append(Transform13)
 
 X3D0.Scene = Scene10
-f = open("././MaskAndSnorkel_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("MaskAndSnorkel_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

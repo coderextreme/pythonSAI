@@ -6,53 +6,53 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Marine.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Marine model"
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Pat Sullivan"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "25 November 2006"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "9 May 2020"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "warning"
 meta7.content = "Not HAnim compliant"
+meta7.name = "warning"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "identifier"
 meta8.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Polygonal/Marine.x3d"
+meta8.name = "identifier"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "generator"
 meta9.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta9.name = "generator"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "../license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "Vizthumbnail"
 meta11.content = "Thumb_marine_x3d21897981139112986.jpg"
+meta11.name = "Vizthumbnail"
 
 head1.children.append(meta11)
 
@@ -73,7 +73,7 @@ Group17 = x3d.Group()
 Group17.DEF = "Import_Base"
 NavigationInfo18 = x3d.NavigationInfo()
 NavigationInfo18.DEF = "NavInfo1"
-NavigationInfo18.avatarSize = [0.25,1.6,0.75]
+NavigationInfo18.avatarSize = [.25,1.6,.75]
 
 Group17.children.append(NavigationInfo18)
 Transform19 = x3d.Transform()
@@ -83,10 +83,10 @@ Group20 = x3d.Group()
 Group20.DEF = "Transform5"
 Transform21 = x3d.Transform()
 Transform21.DEF = "dad_Cover_FACES01_FACES"
-Transform21.rotation = [0,-0.716,0.698,3.141]
-Transform21.scale = [0.1097,0.09537,0.09537]
-Transform21.scaleOrientation = [0.577,-0.577,0.577,2.094]
-Transform21.translation = [-0.189,1.74359,-0.02274]
+Transform21.rotation = [0,-.716,.698,3.141]
+Transform21.scale = [.1097,.09537,.09537]
+Transform21.scaleOrientation = [.577,-.577,.577,2.094]
+Transform21.translation = [-.189,1.74359,-.02274]
 Shape22 = x3d.Shape()
 Shape22.DEF = "Cover_FACES01_FACES"
 Appearance23 = x3d.Appearance()
@@ -97,8 +97,8 @@ ImageTexture24.url = ["marine_camo.jpg","https://www.web3d.org/x3d/content/examp
 Appearance23.texture = ImageTexture24
 Material25 = x3d.Material()
 Material25.DEF = "material0_mat"
-Material25.ambientIntensity = 1
-Material25.diffuseColor = [0.1255,0.1843,0.09804]
+Material25.ambientIntensity = 1.000
+Material25.diffuseColor = [.1255,.1843,.09804]
 Material25.shininess = 0.056
 
 Appearance23.material = Material25
@@ -124,8 +124,8 @@ Group20.children.append(Transform21)
 Transform29 = x3d.Transform()
 Transform29.DEF = "dad_HEAD_FACES01_FACES"
 Transform29.rotation = [1,0,0,1.571]
-Transform29.scale = [0.4132,0.4132,0.4132]
-Transform29.translation = [-0.02468,1.03432,-0.09053]
+Transform29.scale = [.4132,.4132,.4132]
+Transform29.translation = [-.02468,1.03432,-.09053]
 Shape30 = x3d.Shape()
 Shape30.DEF = "HEAD_FACES01_FACES"
 Appearance31 = x3d.Appearance()
@@ -135,8 +135,8 @@ ImageTexture32.USE = "marine_camo"
 Appearance31.texture = ImageTexture32
 Material33 = x3d.Material()
 Material33.DEF = "material2_mat"
-Material33.ambientIntensity = 1
-Material33.diffuseColor = [0.1255,0.1843,0.09804]
+Material33.ambientIntensity = 1.000
+Material33.diffuseColor = [.1255,.1843,.09804]
 Material33.shininess = 0.056
 
 Appearance31.material = Material33
@@ -162,8 +162,8 @@ Group20.children.append(Transform29)
 Transform37 = x3d.Transform()
 Transform37.DEF = "dad_BODY_FACES01_FACES"
 Transform37.rotation = [1,0,0,1.571]
-Transform37.scale = [0.4132,0.4132,0.4132]
-Transform37.translation = [-0.02585,1.03714,-0.09053]
+Transform37.scale = [.4132,.4132,.4132]
+Transform37.translation = [-.02585,1.03714,-.09053]
 Shape38 = x3d.Shape()
 Shape38.DEF = "BODY_FACES01_FACES"
 Appearance39 = x3d.Appearance()
@@ -173,8 +173,8 @@ ImageTexture40.USE = "marine_camo"
 Appearance39.texture = ImageTexture40
 Material41 = x3d.Material()
 Material41.DEF = "material1_mat"
-Material41.ambientIntensity = 1
-Material41.diffuseColor = [0.1255,0.1843,0.09804]
+Material41.ambientIntensity = 1.000
+Material41.diffuseColor = [.1255,.1843,.09804]
 Material41.shininess = 0.056
 
 Appearance39.material = Material41
@@ -215,7 +215,7 @@ Group15.children.append(Viewpoint45)
 Viewpoint46 = x3d.Viewpoint()
 Viewpoint46.DEF = "Viewpoint2"
 Viewpoint46.description = "Sailor Back"
-Viewpoint46.orientation = [-0.185,-0.965,-0.185,1.605]
+Viewpoint46.orientation = [-.185,-.965,-.185,1.605]
 Viewpoint46.position = [-1.208,2,0]
 
 Group15.children.append(Viewpoint46)
@@ -225,6 +225,6 @@ Transform14.children.append(Group15)
 Scene12.children.append(Transform14)
 
 X3D0.Scene = Scene12
-f = open("././Marine_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Marine_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

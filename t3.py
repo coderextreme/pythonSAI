@@ -46,8 +46,8 @@ meta9.content = "Test Case for Proto Expander"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "https://www.web3d.org/x3d/content/examples/license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
@@ -436,6 +436,6 @@ Transform18.children.append(Anchor103)
 Scene14.children.append(Transform18)
 
 X3D0.Scene = Scene14
-f = open("././t3_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("t3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

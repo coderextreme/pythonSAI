@@ -6,63 +6,63 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "CoordinateAxes.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "creator"
 meta3.content = "Don Brutzman, Byounghyun Yoo"
+meta3.name = "creator"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "created"
 meta4.content = "14 July 2000"
+meta4.name = "created"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "modified"
 meta5.content = "20 October 2019"
+meta5.name = "modified"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "description"
 meta6.content = "X Y Z axis arrows and labels in X3D coordinate system. See CoordinateAxesExample for use as an Inline coordinate-system reference frame."
+meta6.name = "description"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "reference"
 meta7.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
+meta7.name = "reference"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxesNSEW.x3d"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxes.x3d"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://savage.nps.edu/Savage/Tools/Authoring/CoordinateAxesNSEW.x3d"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "identifier"
 meta11.content = "https://X3dGraphics.com/examples/X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d"
+meta11.name = "identifier"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "license"
 meta13.content = "../license.html"
+meta13.name = "license"
 
 head1.children.append(meta13)
 
@@ -74,26 +74,26 @@ WorldInfo15.title = "CoordinateAxes.x3d"
 Scene14.children.append(WorldInfo15)
 Collision16 = x3d.Collision()
 Collision16.DEF = "DoNotCollideWithVisualizationWidget"
-#Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph.
-#This NavigationInfo allows examine mode and will be overridden by any parent scene.
-#Each arrow goes from +1m to -1m to allow linear scaling to fit a scene
-#Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user
+""" Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph. """
+""" This NavigationInfo allows examine mode and will be overridden by any parent scene. """
+""" Each arrow goes from +1m to -1m to allow linear scaling to fit a scene """
+""" Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user """
 Group17 = x3d.Group()
-#Vertical Y arrow and label
+""" Vertical Y arrow and label """
 Group18 = x3d.Group()
 Group18.DEF = "ArrowGreen"
 Shape19 = x3d.Shape()
 Cylinder20 = x3d.Cylinder()
 Cylinder20.DEF = "ArrowCylinder"
-Cylinder20.radius = 0.025
+Cylinder20.radius = .025
 Cylinder20.top = False
 
 Shape19.geometry = Cylinder20
 Appearance21 = x3d.Appearance()
 Appearance21.DEF = "Green"
 Material22 = x3d.Material()
-Material22.diffuseColor = [0.1,0.6,0.1]
-Material22.emissiveColor = [0.05,0.2,0.05]
+Material22.diffuseColor = [.1,.6,.1]
+Material22.emissiveColor = [.05,.2,.05]
 
 Appearance21.material = Material22
 
@@ -105,8 +105,8 @@ Transform23.translation = [0,1,0]
 Shape24 = x3d.Shape()
 Cone25 = x3d.Cone()
 Cone25.DEF = "ArrowCone"
-Cone25.bottomRadius = 0.05
-Cone25.height = 0.1
+Cone25.bottomRadius = .05
+Cone25.height = .1
 
 Shape24.geometry = Cone25
 Appearance26 = x3d.Appearance()
@@ -126,8 +126,8 @@ Shape29 = x3d.Shape()
 Appearance30 = x3d.Appearance()
 Appearance30.DEF = "LABEL_APPEARANCE"
 Material31 = x3d.Material()
-Material31.diffuseColor = [1,1,0.3]
-Material31.emissiveColor = [0.33,0.33,0.1]
+Material31.diffuseColor = [1,1,.3]
+Material31.emissiveColor = [.33,.33,.1]
 
 Appearance30.material = Material31
 
@@ -138,7 +138,7 @@ FontStyle33 = x3d.FontStyle()
 FontStyle33.DEF = "LABEL_FONT"
 FontStyle33.family = ["SANS"]
 FontStyle33.justify = ["MIDDLE","MIDDLE"]
-FontStyle33.size = 0.2
+FontStyle33.size = .2
 
 Text32.fontStyle = FontStyle33
 
@@ -153,7 +153,7 @@ Group17.children.append(Transform27)
 Collision16.proxy = Group17
 Transform34 = x3d.Transform()
 Transform34.rotation = [0,0,1,-1.57079]
-#Horizontal X arrow and label
+""" Horizontal X arrow and label """
 Group35 = x3d.Group()
 Group36 = x3d.Group()
 Group36.DEF = "ArrowRed"
@@ -165,8 +165,8 @@ Shape37.geometry = Cylinder38
 Appearance39 = x3d.Appearance()
 Appearance39.DEF = "Red"
 Material40 = x3d.Material()
-Material40.diffuseColor = [0.7,0.1,0.1]
-Material40.emissiveColor = [0.33,0,0]
+Material40.diffuseColor = [.7,.1,.1]
+Material40.emissiveColor = [.33,0,0]
 
 Appearance39.material = Material40
 
@@ -192,8 +192,8 @@ Group36.children.append(Transform41)
 Group35.children.append(Group36)
 Transform45 = x3d.Transform()
 Transform45.rotation = [0,0,1,1.57079]
-Transform45.translation = [0.072,1.1,0]
-#note label rotated back to original coordinate frame
+Transform45.translation = [.072,1.1,0]
+""" note label rotated back to original coordinate frame """
 Billboard46 = x3d.Billboard()
 Shape47 = x3d.Shape()
 Appearance48 = x3d.Appearance()
@@ -220,7 +220,7 @@ Transform34.children.append(Group35)
 Collision16.proxy = Transform34
 Transform51 = x3d.Transform()
 Transform51.rotation = [1,0,0,1.57079]
-#Perpendicular Z arrow and label, note right-hand rule
+""" Perpendicular Z arrow and label, note right-hand rule """
 Group52 = x3d.Group()
 Group53 = x3d.Group()
 Group53.DEF = "ArrowBlue"
@@ -232,8 +232,8 @@ Shape54.geometry = Cylinder55
 Appearance56 = x3d.Appearance()
 Appearance56.DEF = "Blue"
 Material57 = x3d.Material()
-Material57.diffuseColor = [0.3,0.3,1]
-Material57.emissiveColor = [0.1,0.1,0.33]
+Material57.diffuseColor = [.3,.3,1]
+Material57.emissiveColor = [.1,.1,.33]
 
 Appearance56.material = Material57
 
@@ -259,8 +259,8 @@ Group53.children.append(Transform58)
 Group52.children.append(Group53)
 Transform62 = x3d.Transform()
 Transform62.rotation = [1,0,0,-1.57079]
-Transform62.translation = [0,1.1,0.072]
-#note label rotated back to original coordinate frame
+Transform62.translation = [0,1.1,.072]
+""" note label rotated back to original coordinate frame """
 Billboard63 = x3d.Billboard()
 Shape64 = x3d.Shape()
 Appearance65 = x3d.Appearance()
@@ -289,6 +289,6 @@ Collision16.proxy = Transform51
 Scene14.children.append(Collision16)
 
 X3D0.Scene = Scene14
-f = open("././CoordinateAxes_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("CoordinateAxes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

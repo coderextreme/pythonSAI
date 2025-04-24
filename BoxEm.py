@@ -231,6 +231,6 @@ Transform54.children.append(Shape55)
 Scene7.children.append(Transform54)
 
 X3D0.Scene = Scene7
-f = open("././BoxEm_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("BoxEm_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

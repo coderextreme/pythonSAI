@@ -106,7 +106,8 @@ field21.type = "SFFloat"
 
 Script16.field.append(field21)
 
-Script16.sourceCode = '''ecmascript:\n"+
+Script16.sourceCode = ''' \n"+
+"ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -144,7 +145,10 @@ Script16.sourceCode = '''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}'''
+"}\n"+
+"\n"+
+"			\n"+
+" '''
 
 Transform11.children.append(Script16)
 TimeSensor22 = x3d.TimeSensor()
@@ -230,7 +234,8 @@ field36.type = "SFFloat"
 
 Script31.field.append(field36)
 
-Script31.sourceCode = '''ecmascript:\n"+
+Script31.sourceCode = ''' \n"+
+"ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -268,7 +273,10 @@ Script31.sourceCode = '''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}'''
+"}\n"+
+"\n"+
+"			\n"+
+" '''
 
 Transform26.children.append(Script31)
 TimeSensor37 = x3d.TimeSensor()
@@ -354,7 +362,8 @@ field51.type = "SFFloat"
 
 Script46.field.append(field51)
 
-Script46.sourceCode = '''ecmascript:\n"+
+Script46.sourceCode = ''' \n"+
+"ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -392,7 +401,10 @@ Script46.sourceCode = '''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}'''
+"}\n"+
+"\n"+
+"			\n"+
+" '''
 
 Transform41.children.append(Script46)
 TimeSensor52 = x3d.TimeSensor()
@@ -478,7 +490,8 @@ field66.type = "SFFloat"
 
 Script61.field.append(field66)
 
-Script61.sourceCode = '''ecmascript:\n"+
+Script61.sourceCode = ''' \n"+
+"ecmascript:\n"+
 "function initialize() {\n"+
 "    velocity = new SFVec3f(Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125, Math.random() * 0.25 - 0.125);\n"+
 "\n"+
@@ -516,7 +529,10 @@ Script61.sourceCode = '''ecmascript:\n"+
 "	translation.z = 0;\n"+
 "	initialize();\n"+
 "    }\n"+
-"}'''
+"}\n"+
+"\n"+
+"			\n"+
+" '''
 
 Transform56.children.append(Script61)
 TimeSensor67 = x3d.TimeSensor()
@@ -550,6 +566,6 @@ Transform56.children.append(ROUTE70)
 Scene7.children.append(Transform56)
 
 X3D0.Scene = Scene7
-f = open("././bubs3_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("bubs3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

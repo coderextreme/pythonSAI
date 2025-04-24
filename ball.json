@@ -71,7 +71,7 @@
           },
           {
             "@name":"translated",
-            "@content":"01 March 2024"
+            "@content":"24 April 2025"
           },
           {
             "@name":"generator",
@@ -92,7 +92,7 @@
           },
           { "NavigationInfo":
             {
-              "@type":"\"ANY\" \"EXAMINE\" \"FLY\" \"LOOKAT\""
+              "@type":["ANY","EXAMINE","FLY","LOOKAT"]
             }
           },
           { "Viewpoint":

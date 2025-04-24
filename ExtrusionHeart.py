@@ -6,43 +6,43 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "ExtrusionHeart.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Simple extrusion of a Valentine heart."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Class participants in course Introduction to VRML/X3D."
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "14 February 2001"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "27 November 2015"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "identifier"
 meta7.content = "https://www.web3d.org/x3d/content/examples/Basic/course/ExtrusionHeart.x3d"
+meta7.name = "identifier"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "generator"
 meta8.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta8.name = "generator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "license"
 meta9.content = "../license.html"
+meta9.name = "license"
 
 head1.children.append(meta9)
 
@@ -75,6 +75,6 @@ Transform12.children.append(Shape13)
 Scene10.children.append(Transform12)
 
 X3D0.Scene = Scene10
-f = open("././ExtrusionHeart_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ExtrusionHeart_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

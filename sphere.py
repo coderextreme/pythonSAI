@@ -48,6 +48,7 @@ Appearance11.material = Material12
 
 Shape10.appearance = Appearance11
 Sphere13 = x3d.Sphere()
+Sphere13.radius = 1
 
 Shape10.geometry = Sphere13
 
@@ -56,6 +57,6 @@ Group9.children.append(Shape10)
 Scene8.children.append(Group9)
 
 X3D0.Scene = Scene8
-f = open("././sphere_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("sphere_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

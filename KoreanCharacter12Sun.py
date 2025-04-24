@@ -6,88 +6,88 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "HAnim"
 component2.level = 1
+component2.name = "HAnim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "KoreanCharacter12Sun.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Jin Hoon Lee and Min Joo Lee"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Chul Hee Jung and Myeong Won Lee"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "31 March 2011"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "translated"
 meta7.content = "1 November 2014"
+meta7.name = "translated"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "modified"
 meta8.content = "23 December 2021"
+meta8.name = "modified"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "description"
 meta9.content = "Articulated 3D game character designed with a general graphics tool, then converted into an X3D HAnim model."
+meta9.name = "description"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "KoreanCharacter00ReadMe.txt"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "KoreanCharacterHumanMotion_Infotech2014_140706.pdf"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "KoreanCharactersIllustrated.pdf"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "identifier"
 meta13.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Characters/KoreanCharacter12Sun.x3d"
+meta13.name = "identifier"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "generator"
 meta14.content = "3DS MAX, http://www.autodesk.com/products/autodesk-3ds-max/overview"
+meta14.name = "generator"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "Suwon University HAnim Editor"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "generator"
 meta16.content = "Gnu Image Manipulation Program, http://www.gimp.org"
+meta16.name = "generator"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "generator"
 meta17.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta17.name = "generator"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "license"
 meta18.content = "../license.html"
+meta18.name = "license"
 
 head1.children.append(meta18)
 
@@ -108,38 +108,38 @@ Viewpoint22.position = [0,1,3]
 
 Scene19.children.append(Viewpoint22)
 HAnimHumanoid23 = x3d.HAnimHumanoid()
-HAnimHumanoid23.name = "Sun"
 HAnimHumanoid23.DEF = "hanim_Sun"
+HAnimHumanoid23.name = "Sun"
 HAnimHumanoid23.scale = [0.0225,0.0225,0.0225]
 HAnimHumanoid23.version = "2.0"
-#original HAnimHumanoid info='\"authorName=Chul Hee Jung and Myeong Won Lee\" \"authorEmail=myeongwonlee@gmail.com\" \"creationDate=31 March 2011\" \"humanoidVersion=2.0\" \"gender=female\" \"height=1.5\"'
+""" original HAnimHumanoid info='\"authorName=Chul Hee Jung and Myeong Won Lee\" \"authorEmail=myeongwonlee@gmail.com\" \"creationDate=31 March 2011\" \"humanoidVersion=2.0\" \"gender=female\" \"height=1.5\"' """
 MetadataSet24 = x3d.MetadataSet()
 MetadataSet24.name = "HAnimHumanoid.info"
 MetadataSet24.reference = "https://www.web3d.org/documents/specifications/19774/V2.0/Architecture/ObjectInterfaces.html#Humanoid"
 MetadataString25 = x3d.MetadataString()
 MetadataString25.name = "authorName"
-MetadataString25.value = ["Chul Hee Jung and Myeong Won Lee"]
+MetadataString25.value = ["hul Hee Jung and Myeong Won Le"]
 
 if MetadataSet24.value is None:
     MetadataSet24.value = []
 MetadataSet24.value.append(MetadataString25)
 MetadataString26 = x3d.MetadataString()
 MetadataString26.name = "authorEmail"
-MetadataString26.value = ["myeongwonlee@gmail.com"]
+MetadataString26.value = ["yeongwonlee@gmail.co"]
 
 if MetadataSet24.value is None:
     MetadataSet24.value = []
 MetadataSet24.value.append(MetadataString26)
 MetadataString27 = x3d.MetadataString()
 MetadataString27.name = "creationDate"
-MetadataString27.value = ["31 March 2011"]
+MetadataString27.value = ["1 March 201"]
 
 if MetadataSet24.value is None:
     MetadataSet24.value = []
 MetadataSet24.value.append(MetadataString27)
 MetadataString28 = x3d.MetadataString()
 MetadataString28.name = "gender"
-MetadataString28.value = ["female"]
+MetadataString28.value = ["emal"]
 
 if MetadataSet24.value is None:
     MetadataSet24.value = []
@@ -161,20 +161,18 @@ MetadataSet24.value.append(MetadataString30)
 
 HAnimHumanoid23.metadata = MetadataSet24
 HAnimJoint31 = x3d.HAnimJoint()
-HAnimJoint31.name = "humanoid_root"
 HAnimJoint31.DEF = "hanim_humanoid_root"
-HAnimJoint31.center = [0,29.860001,-0.4567]
-HAnimJoint31.ulimit = [0,0,0]
-HAnimJoint31.llimit = [0,0,0]
+HAnimJoint31.center = [0,29.860001,-0.456700]
+HAnimJoint31.name = "humanoid_root"
 HAnimSegment32 = x3d.HAnimSegment()
-HAnimSegment32.name = "sacrum"
 HAnimSegment32.DEF = "hanim_sacrum"
+HAnimSegment32.name = "sacrum"
 Transform33 = x3d.Transform()
-Transform33.translation = [0,29.860001,-0.4567]
+Transform33.translation = [0,29.860001,-0.456700]
 Shape34 = x3d.Shape()
 Appearance35 = x3d.Appearance()
 Material36 = x3d.Material()
-Material36.diffuseColor = [0.588,0.588,0.588]
+Material36.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance35.material = Material36
 ImageTexture37 = x3d.ImageTexture()
@@ -203,20 +201,18 @@ HAnimSegment32.children.append(Transform33)
 
 HAnimJoint31.children.append(HAnimSegment32)
 HAnimJoint41 = x3d.HAnimJoint()
-HAnimJoint41.name = "l_hip"
 HAnimJoint41.DEF = "hanim_l_hip"
-HAnimJoint41.center = [2.955,28.940001,-0.5218]
-HAnimJoint41.ulimit = [0,0,0]
-HAnimJoint41.llimit = [0,0,0]
+HAnimJoint41.center = [2.955000,28.940001,-0.521800]
+HAnimJoint41.name = "l_hip"
 HAnimSegment42 = x3d.HAnimSegment()
-HAnimSegment42.name = "l_thigh"
 HAnimSegment42.DEF = "hanim_l_thigh"
+HAnimSegment42.name = "l_thigh"
 Transform43 = x3d.Transform()
-Transform43.translation = [2.955,28.940001,-0.5218]
+Transform43.translation = [2.955000,28.940001,-0.521800]
 Shape44 = x3d.Shape()
 Appearance45 = x3d.Appearance()
 Material46 = x3d.Material()
-Material46.diffuseColor = [0.588,0.588,0.588]
+Material46.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance45.material = Material46
 ImageTexture47 = x3d.ImageTexture()
@@ -244,20 +240,18 @@ HAnimSegment42.children.append(Transform43)
 
 HAnimJoint41.children.append(HAnimSegment42)
 HAnimJoint51 = x3d.HAnimJoint()
-HAnimJoint51.name = "l_knee"
 HAnimJoint51.DEF = "hanim_l_knee"
-HAnimJoint51.center = [2.948,16.459999,-0.5275]
-HAnimJoint51.ulimit = [0,0,0]
-HAnimJoint51.llimit = [0,0,0]
+HAnimJoint51.center = [2.948000,16.459999,-0.527500]
+HAnimJoint51.name = "l_knee"
 HAnimSegment52 = x3d.HAnimSegment()
-HAnimSegment52.name = "l_calf"
 HAnimSegment52.DEF = "hanim_l_calf"
+HAnimSegment52.name = "l_calf"
 Transform53 = x3d.Transform()
-Transform53.translation = [2.948,16.459999,-0.5275]
+Transform53.translation = [2.948000,16.459999,-0.527500]
 Shape54 = x3d.Shape()
 Appearance55 = x3d.Appearance()
 Material56 = x3d.Material()
-Material56.diffuseColor = [0.588,0.588,0.588]
+Material56.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance55.material = Material56
 ImageTexture57 = x3d.ImageTexture()
@@ -285,20 +279,18 @@ HAnimSegment52.children.append(Transform53)
 
 HAnimJoint51.children.append(HAnimSegment52)
 HAnimJoint61 = x3d.HAnimJoint()
-HAnimJoint61.name = "l_talocrural"
 HAnimJoint61.DEF = "hanim_l_talocrural"
-HAnimJoint61.center = [2.839,3.899,-0.4116]
-HAnimJoint61.ulimit = [0,0,0]
-HAnimJoint61.llimit = [0,0,0]
+HAnimJoint61.center = [2.839000,3.899000,-0.411600]
+HAnimJoint61.name = "l_talocrural"
 HAnimSegment62 = x3d.HAnimSegment()
-HAnimSegment62.name = "l_talus"
 HAnimSegment62.DEF = "hanim_l_talus"
+HAnimSegment62.name = "l_talus"
 Transform63 = x3d.Transform()
-Transform63.translation = [2.839,3.899,-0.4116]
+Transform63.translation = [2.839000,3.899000,-0.411600]
 Shape64 = x3d.Shape()
 Appearance65 = x3d.Appearance()
 Material66 = x3d.Material()
-Material66.diffuseColor = [0.588,0.588,0.588]
+Material66.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance65.material = Material66
 ImageTexture67 = x3d.ImageTexture()
@@ -326,20 +318,18 @@ HAnimSegment62.children.append(Transform63)
 
 HAnimJoint61.children.append(HAnimSegment62)
 HAnimJoint71 = x3d.HAnimJoint()
-HAnimJoint71.name = "l_metatarsophalangeal_2"
 HAnimJoint71.DEF = "hanim_l_metatarsophalangeal_2"
-HAnimJoint71.center = [2.839,3.312,1.078]
-HAnimJoint71.ulimit = [0,0,0]
-HAnimJoint71.llimit = [0,0,0]
+HAnimJoint71.center = [2.839000,3.312000,1.078000]
+HAnimJoint71.name = "l_metatarsophalangeal_2"
 HAnimSegment72 = x3d.HAnimSegment()
-HAnimSegment72.name = "l_tarsal_proximal_phalanx_2"
 HAnimSegment72.DEF = "hanim_l_tarsal_proximal_phalanx_2"
+HAnimSegment72.name = "l_tarsal_proximal_phalanx_2"
 Transform73 = x3d.Transform()
-Transform73.translation = [2.839,3.312,1.078]
+Transform73.translation = [2.839000,3.312000,1.078000]
 Shape74 = x3d.Shape()
 Appearance75 = x3d.Appearance()
 Material76 = x3d.Material()
-Material76.diffuseColor = [0.588,0.588,0.588]
+Material76.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance75.material = Material76
 ImageTexture77 = x3d.ImageTexture()
@@ -375,20 +365,18 @@ HAnimJoint41.children.append(HAnimJoint51)
 
 HAnimJoint31.children.append(HAnimJoint41)
 HAnimJoint81 = x3d.HAnimJoint()
-HAnimJoint81.name = "r_hip"
 HAnimJoint81.DEF = "hanim_r_hip"
-HAnimJoint81.center = [-2.955,28.940001,-0.5218]
-HAnimJoint81.ulimit = [0,0,0]
-HAnimJoint81.llimit = [0,0,0]
+HAnimJoint81.center = [-2.955000,28.940001,-0.521800]
+HAnimJoint81.name = "r_hip"
 HAnimSegment82 = x3d.HAnimSegment()
-HAnimSegment82.name = "r_thigh"
 HAnimSegment82.DEF = "hanim_r_thigh"
+HAnimSegment82.name = "r_thigh"
 Transform83 = x3d.Transform()
-Transform83.translation = [-2.955,28.940001,-0.5218]
+Transform83.translation = [-2.955000,28.940001,-0.521800]
 Shape84 = x3d.Shape()
 Appearance85 = x3d.Appearance()
 Material86 = x3d.Material()
-Material86.diffuseColor = [0.588,0.588,0.588]
+Material86.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance85.material = Material86
 ImageTexture87 = x3d.ImageTexture()
@@ -416,20 +404,18 @@ HAnimSegment82.children.append(Transform83)
 
 HAnimJoint81.children.append(HAnimSegment82)
 HAnimJoint91 = x3d.HAnimJoint()
-HAnimJoint91.name = "r_knee"
 HAnimJoint91.DEF = "hanim_r_knee"
-HAnimJoint91.center = [-2.948,16.459999,-0.5275]
-HAnimJoint91.ulimit = [0,0,0]
-HAnimJoint91.llimit = [0,0,0]
+HAnimJoint91.center = [-2.948000,16.459999,-0.527500]
+HAnimJoint91.name = "r_knee"
 HAnimSegment92 = x3d.HAnimSegment()
-HAnimSegment92.name = "r_calf"
 HAnimSegment92.DEF = "hanim_r_calf"
+HAnimSegment92.name = "r_calf"
 Transform93 = x3d.Transform()
-Transform93.translation = [-2.948,16.459999,-0.5275]
+Transform93.translation = [-2.948000,16.459999,-0.527500]
 Shape94 = x3d.Shape()
 Appearance95 = x3d.Appearance()
 Material96 = x3d.Material()
-Material96.diffuseColor = [0.588,0.588,0.588]
+Material96.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance95.material = Material96
 ImageTexture97 = x3d.ImageTexture()
@@ -457,20 +443,18 @@ HAnimSegment92.children.append(Transform93)
 
 HAnimJoint91.children.append(HAnimSegment92)
 HAnimJoint101 = x3d.HAnimJoint()
-HAnimJoint101.name = "r_talocrural"
 HAnimJoint101.DEF = "hanim_r_talocrural"
-HAnimJoint101.center = [-2.839,3.899,-0.4116]
-HAnimJoint101.ulimit = [0,0,0]
-HAnimJoint101.llimit = [0,0,0]
+HAnimJoint101.center = [-2.839000,3.899000,-0.411600]
+HAnimJoint101.name = "r_talocrural"
 HAnimSegment102 = x3d.HAnimSegment()
-HAnimSegment102.name = "r_talus"
 HAnimSegment102.DEF = "hanim_r_talus"
+HAnimSegment102.name = "r_talus"
 Transform103 = x3d.Transform()
-Transform103.translation = [-2.839,3.899,-0.4116]
+Transform103.translation = [-2.839000,3.899000,-0.411600]
 Shape104 = x3d.Shape()
 Appearance105 = x3d.Appearance()
 Material106 = x3d.Material()
-Material106.diffuseColor = [0.588,0.588,0.588]
+Material106.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance105.material = Material106
 ImageTexture107 = x3d.ImageTexture()
@@ -498,20 +482,18 @@ HAnimSegment102.children.append(Transform103)
 
 HAnimJoint101.children.append(HAnimSegment102)
 HAnimJoint111 = x3d.HAnimJoint()
-HAnimJoint111.name = "r_metatarsophalangeal_2"
 HAnimJoint111.DEF = "hanim_r_metatarsophalangeal_2"
-HAnimJoint111.center = [-2.839,3.312,1.078]
-HAnimJoint111.ulimit = [0,0,0]
-HAnimJoint111.llimit = [0,0,0]
+HAnimJoint111.center = [-2.839000,3.312000,1.078000]
+HAnimJoint111.name = "r_metatarsophalangeal_2"
 HAnimSegment112 = x3d.HAnimSegment()
-HAnimSegment112.name = "r_tarsal_proximal_phalanx_2"
 HAnimSegment112.DEF = "hanim_r_tarsal_proximal_phalanx_2"
+HAnimSegment112.name = "r_tarsal_proximal_phalanx_2"
 Transform113 = x3d.Transform()
-Transform113.translation = [-2.839,3.312,1.078]
+Transform113.translation = [-2.839000,3.312000,1.078000]
 Shape114 = x3d.Shape()
 Appearance115 = x3d.Appearance()
 Material116 = x3d.Material()
-Material116.diffuseColor = [0.588,0.588,0.588]
+Material116.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance115.material = Material116
 ImageTexture117 = x3d.ImageTexture()
@@ -547,20 +529,18 @@ HAnimJoint81.children.append(HAnimJoint91)
 
 HAnimJoint31.children.append(HAnimJoint81)
 HAnimJoint121 = x3d.HAnimJoint()
-HAnimJoint121.name = "sacroiliac"
 HAnimJoint121.DEF = "hanim_sacroiliac"
-HAnimJoint121.center = [0,29.860001,-0.4567]
-HAnimJoint121.ulimit = [0,0,0]
-HAnimJoint121.llimit = [0,0,0]
+HAnimJoint121.center = [0,29.860001,-0.456700]
+HAnimJoint121.name = "sacroiliac"
 HAnimSegment122 = x3d.HAnimSegment()
-HAnimSegment122.name = "pelvis"
 HAnimSegment122.DEF = "hanim_pelvis"
+HAnimSegment122.name = "pelvis"
 Transform123 = x3d.Transform()
-Transform123.translation = [0,29.860001,-0.4567]
+Transform123.translation = [0,29.860001,-0.456700]
 Shape124 = x3d.Shape()
 Appearance125 = x3d.Appearance()
 Material126 = x3d.Material()
-Material126.diffuseColor = [0.588,0.588,0.588]
+Material126.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance125.material = Material126
 ImageTexture127 = x3d.ImageTexture()
@@ -588,20 +568,18 @@ HAnimSegment122.children.append(Transform123)
 
 HAnimJoint121.children.append(HAnimSegment122)
 HAnimJoint131 = x3d.HAnimJoint()
-HAnimJoint131.name = "l_shoulder"
 HAnimJoint131.DEF = "hanim_l_shoulder"
-HAnimJoint131.center = [6.077,45.880001,-1.319]
-HAnimJoint131.ulimit = [0,0,0]
-HAnimJoint131.llimit = [0,0,0]
+HAnimJoint131.center = [6.077000,45.880001,-1.319000]
+HAnimJoint131.name = "l_shoulder"
 HAnimSegment132 = x3d.HAnimSegment()
-HAnimSegment132.name = "l_upperarm"
 HAnimSegment132.DEF = "hanim_l_upperarm"
+HAnimSegment132.name = "l_upperarm"
 Transform133 = x3d.Transform()
-Transform133.translation = [6.077,45.880001,-1.319]
+Transform133.translation = [6.077000,45.880001,-1.319000]
 Shape134 = x3d.Shape()
 Appearance135 = x3d.Appearance()
 Material136 = x3d.Material()
-Material136.diffuseColor = [0.588,0.588,0.588]
+Material136.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance135.material = Material136
 ImageTexture137 = x3d.ImageTexture()
@@ -629,20 +607,18 @@ HAnimSegment132.children.append(Transform133)
 
 HAnimJoint131.children.append(HAnimSegment132)
 HAnimJoint141 = x3d.HAnimJoint()
-HAnimJoint141.name = "l_elbow"
 HAnimJoint141.DEF = "hanim_l_elbow"
-HAnimJoint141.center = [7.076,38.529999,-1.385]
-HAnimJoint141.ulimit = [0,0,0]
-HAnimJoint141.llimit = [0,0,0]
+HAnimJoint141.center = [7.076000,38.529999,-1.385000]
+HAnimJoint141.name = "l_elbow"
 HAnimSegment142 = x3d.HAnimSegment()
-HAnimSegment142.name = "l_forearm"
 HAnimSegment142.DEF = "hanim_l_forearm"
+HAnimSegment142.name = "l_forearm"
 Transform143 = x3d.Transform()
-Transform143.translation = [7.076,38.529999,-1.385]
+Transform143.translation = [7.076000,38.529999,-1.385000]
 Shape144 = x3d.Shape()
 Appearance145 = x3d.Appearance()
 Material146 = x3d.Material()
-Material146.diffuseColor = [0.588,0.588,0.588]
+Material146.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance145.material = Material146
 ImageTexture147 = x3d.ImageTexture()
@@ -670,20 +646,18 @@ HAnimSegment142.children.append(Transform143)
 
 HAnimJoint141.children.append(HAnimSegment142)
 HAnimJoint151 = x3d.HAnimJoint()
-HAnimJoint151.name = "l_radiocarpal"
 HAnimJoint151.DEF = "hanim_l_radiocarpal"
-HAnimJoint151.center = [6.946,30.889999,-1.308]
-HAnimJoint151.ulimit = [0,0,0]
-HAnimJoint151.llimit = [0,0,0]
+HAnimJoint151.center = [6.946000,30.889999,-1.308000]
+HAnimJoint151.name = "l_radiocarpal"
 HAnimSegment152 = x3d.HAnimSegment()
-HAnimSegment152.name = "l_carpal"
 HAnimSegment152.DEF = "hanim_l_carpal"
+HAnimSegment152.name = "l_carpal"
 Transform153 = x3d.Transform()
-Transform153.translation = [6.946,30.889999,-1.308]
+Transform153.translation = [6.946000,30.889999,-1.308000]
 Shape154 = x3d.Shape()
 Appearance155 = x3d.Appearance()
 Material156 = x3d.Material()
-Material156.diffuseColor = [0.588,0.588,0.588]
+Material156.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance155.material = Material156
 ImageTexture157 = x3d.ImageTexture()
@@ -717,20 +691,18 @@ HAnimJoint131.children.append(HAnimJoint141)
 
 HAnimJoint121.children.append(HAnimJoint131)
 HAnimJoint161 = x3d.HAnimJoint()
-HAnimJoint161.name = "r_shoulder"
 HAnimJoint161.DEF = "hanim_r_shoulder"
-HAnimJoint161.center = [-6.077,45.880001,-1.319]
-HAnimJoint161.ulimit = [0,0,0]
-HAnimJoint161.llimit = [0,0,0]
+HAnimJoint161.center = [-6.077000,45.880001,-1.319000]
+HAnimJoint161.name = "r_shoulder"
 HAnimSegment162 = x3d.HAnimSegment()
-HAnimSegment162.name = "r_upperarm"
 HAnimSegment162.DEF = "hanim_r_upperarm"
+HAnimSegment162.name = "r_upperarm"
 Transform163 = x3d.Transform()
-Transform163.translation = [-6.077,45.880001,-1.319]
+Transform163.translation = [-6.077000,45.880001,-1.319000]
 Shape164 = x3d.Shape()
 Appearance165 = x3d.Appearance()
 Material166 = x3d.Material()
-Material166.diffuseColor = [0.588,0.588,0.588]
+Material166.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance165.material = Material166
 ImageTexture167 = x3d.ImageTexture()
@@ -758,20 +730,18 @@ HAnimSegment162.children.append(Transform163)
 
 HAnimJoint161.children.append(HAnimSegment162)
 HAnimJoint171 = x3d.HAnimJoint()
-HAnimJoint171.name = "r_elbow"
 HAnimJoint171.DEF = "hanim_r_elbow"
-HAnimJoint171.center = [-7.076,38.529999,-1.385]
-HAnimJoint171.ulimit = [0,0,0]
-HAnimJoint171.llimit = [0,0,0]
+HAnimJoint171.center = [-7.076000,38.529999,-1.385000]
+HAnimJoint171.name = "r_elbow"
 HAnimSegment172 = x3d.HAnimSegment()
-HAnimSegment172.name = "r_forearm"
 HAnimSegment172.DEF = "hanim_r_forearm"
+HAnimSegment172.name = "r_forearm"
 Transform173 = x3d.Transform()
-Transform173.translation = [-7.076,38.529999,-1.385]
+Transform173.translation = [-7.076000,38.529999,-1.385000]
 Shape174 = x3d.Shape()
 Appearance175 = x3d.Appearance()
 Material176 = x3d.Material()
-Material176.diffuseColor = [0.588,0.588,0.588]
+Material176.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance175.material = Material176
 ImageTexture177 = x3d.ImageTexture()
@@ -799,20 +769,18 @@ HAnimSegment172.children.append(Transform173)
 
 HAnimJoint171.children.append(HAnimSegment172)
 HAnimJoint181 = x3d.HAnimJoint()
-HAnimJoint181.name = "r_radiocarpal"
 HAnimJoint181.DEF = "hanim_r_radiocarpal"
-HAnimJoint181.center = [-6.946,30.889999,-1.308]
-HAnimJoint181.ulimit = [0,0,0]
-HAnimJoint181.llimit = [0,0,0]
+HAnimJoint181.center = [-6.946000,30.889999,-1.308000]
+HAnimJoint181.name = "r_radiocarpal"
 HAnimSegment182 = x3d.HAnimSegment()
-HAnimSegment182.name = "r_carpal"
 HAnimSegment182.DEF = "hanim_r_carpal"
+HAnimSegment182.name = "r_carpal"
 Transform183 = x3d.Transform()
-Transform183.translation = [-6.946,30.889999,-1.308]
+Transform183.translation = [-6.946000,30.889999,-1.308000]
 Shape184 = x3d.Shape()
 Appearance185 = x3d.Appearance()
 Material186 = x3d.Material()
-Material186.diffuseColor = [0.588,0.588,0.588]
+Material186.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance185.material = Material186
 ImageTexture187 = x3d.ImageTexture()
@@ -846,20 +814,18 @@ HAnimJoint161.children.append(HAnimJoint171)
 
 HAnimJoint121.children.append(HAnimJoint161)
 HAnimJoint191 = x3d.HAnimJoint()
-HAnimJoint191.name = "vl5"
 HAnimJoint191.DEF = "hanim_vl5"
-HAnimJoint191.center = [0.05249,34.130001,-0.468]
-HAnimJoint191.ulimit = [0,0,0]
-HAnimJoint191.llimit = [0,0,0]
+HAnimJoint191.center = [0.052490,34.130001,-0.468000]
+HAnimJoint191.name = "vl5"
 HAnimSegment192 = x3d.HAnimSegment()
-HAnimSegment192.name = "l5"
 HAnimSegment192.DEF = "hanim_l5"
+HAnimSegment192.name = "l5"
 Transform193 = x3d.Transform()
-Transform193.translation = [0.05249,34.130001,-0.468]
+Transform193.translation = [0.052490,34.130001,-0.468000]
 Shape194 = x3d.Shape()
 Appearance195 = x3d.Appearance()
 Material196 = x3d.Material()
-Material196.diffuseColor = [0.588,0.588,0.588]
+Material196.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance195.material = Material196
 ImageTexture197 = x3d.ImageTexture()
@@ -887,20 +853,18 @@ HAnimSegment192.children.append(Transform193)
 
 HAnimJoint191.children.append(HAnimSegment192)
 HAnimJoint201 = x3d.HAnimJoint()
-HAnimJoint201.name = "skullbase"
 HAnimJoint201.DEF = "hanim_skullbase"
-HAnimJoint201.center = [0,51.25,-1.124]
-HAnimJoint201.ulimit = [0,0,0]
-HAnimJoint201.llimit = [0,0,0]
+HAnimJoint201.center = [0,51.250000,-1.124000]
+HAnimJoint201.name = "skullbase"
 HAnimSegment202 = x3d.HAnimSegment()
-HAnimSegment202.name = "skull"
 HAnimSegment202.DEF = "hanim_skull"
+HAnimSegment202.name = "skull"
 Transform203 = x3d.Transform()
-Transform203.translation = [0,51.25,-1.124]
+Transform203.translation = [0,51.250000,-1.124000]
 Shape204 = x3d.Shape()
 Appearance205 = x3d.Appearance()
 Material206 = x3d.Material()
-Material206.diffuseColor = [0.588,0.588,0.588]
+Material206.diffuseColor = [0.588000,0.588000,0.588000]
 
 Appearance205.material = Material206
 ImageTexture207 = x3d.ImageTexture()
@@ -1083,6 +1047,6 @@ HAnimHumanoid23.segments.append(HAnimSegment246)
 Scene19.children.append(HAnimHumanoid23)
 
 X3D0.Scene = Scene19
-f = open("././KoreanCharacter12Sun_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("KoreanCharacter12Sun_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

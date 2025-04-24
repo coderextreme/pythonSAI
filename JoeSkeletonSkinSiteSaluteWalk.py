@@ -6,168 +6,168 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "H-Anim"
 component2.level = 2
+component2.name = "H-Anim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "JoeSkeletonSkinSaluteSiteWalk.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "description"
 meta4.content = "Comprehensive example showing skeleton, skin, sites and interpolator animation together."
+meta4.name = "description"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Joe D. Williams"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "9 January 2004"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "translated"
 meta7.content = "4 December 2022"
+meta7.name = "translated"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "modified"
 meta8.content = "27 January 2023"
+meta8.name = "modified"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "warning"
 meta9.content = "Under development, numerous errors and warnings"
+meta9.name = "warning"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "TODO"
 meta10.content = "This is an HAnimV1 loa model, might need to convert to X3D4 to note loa value"
+meta10.name = "TODO"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "TODO"
 meta11.content = "Provide feedback to tovrmlx3d converter"
+meta11.name = "TODO"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "TODO"
 meta12.content = "HAnimJoint cannot contain X3DChildNode elements, only HAnimJoint HAnimSegmet HAnimSite - improve diagnostics."
+meta12.name = "TODO"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "TODO"
 meta13.content = "ensure name prefix \"Joe_\" applied to all contained DEF values (not name field), perhaps correction automatically applied by X3DTidy"
+meta13.name = "TODO"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "reference"
 meta14.content = "JoeSkeletonSkinSaluteSiteWalk.original.x3dv"
+meta14.name = "reference"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "reference"
 meta15.content = "JoeSkeletonSkinSaluteSiteWalk.modified1.x3dv"
+meta15.name = "reference"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "reference"
 meta16.content = "JoeSkeletonSkinSaluteSiteWalk.modified2.x3dv"
+meta16.name = "reference"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "Image"
 meta17.content = "JoeSkeletonSkinSiteSaluteWalk_X3D-Edit.png"
+meta17.name = "Image"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "reference"
 meta18.content = "JoeSkeletonSkinSiteSaluteWalk_composite.vsdx"
+meta18.name = "reference"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "Image"
 meta19.content = "JoeSkeletonSkinSiteSaluteWalk_composite.2023JAN2.png"
+meta19.name = "Image"
 
 head1.children.append(meta19)
 meta20 = x3d.meta()
-meta20.name = "Image"
 meta20.content = "JoeSkeletonSkinSiteSaluteWalk_view3dscene.png"
+meta20.name = "Image"
 
 head1.children.append(meta20)
 meta21 = x3d.meta()
-meta21.name = "Image"
 meta21.content = "JoeSkeletonSkinSiteSaluteWalk_X_ITE.png"
+meta21.name = "Image"
 
 head1.children.append(meta21)
 meta22 = x3d.meta()
-meta22.name = "Image"
 meta22.content = "JoeSkeletonSkinSiteSaluteWalk_X3DOM.png"
+meta22.name = "Image"
 
 head1.children.append(meta22)
 meta23 = x3d.meta()
-meta23.name = "Image"
 meta23.content = "JoeSkeletonSkinSiteSaluteWalk_H3DViewer.png"
+meta23.name = "Image"
 
 head1.children.append(meta23)
 meta24 = x3d.meta()
-meta24.name = "Image"
 meta24.content = "JoeSkeletonSkinSiteSaluteWalk_freeWrl.png"
+meta24.name = "Image"
 
 head1.children.append(meta24)
 meta25 = x3d.meta()
-meta25.name = "Image"
 meta25.content = "JoeSkeletonSkinSiteSaluteWalk_Octaga.png"
+meta25.name = "Image"
 
 head1.children.append(meta25)
 meta26 = x3d.meta()
-meta26.name = "Image"
 meta26.content = "JoeSkeletonSkinSiteSaluteWalk_vivaty.png"
+meta26.name = "Image"
 
 head1.children.append(meta26)
 meta27 = x3d.meta()
-meta27.name = "generator"
 meta27.content = "tovrmlx3d, https://castle-engine.io/convert.php"
+meta27.name = "generator"
 
 head1.children.append(meta27)
 meta28 = x3d.meta()
-meta28.name = "reference"
 meta28.content = "https://castle-engine.io/view3dscene.php#section_converting"
+meta28.name = "reference"
 
 head1.children.append(meta28)
 meta29 = x3d.meta()
-meta29.name = "translator"
 meta29.content = "Michalis Kamburelis"
+meta29.name = "translator"
 
 head1.children.append(meta29)
 meta30 = x3d.meta()
-meta30.name = "translator"
 meta30.content = "Don Brutzman"
+meta30.name = "translator"
 
 head1.children.append(meta30)
 meta31 = x3d.meta()
-meta31.name = "translator"
 meta31.content = "Joe D. Williams"
+meta31.name = "translator"
 
 head1.children.append(meta31)
 meta32 = x3d.meta()
-meta32.name = "generator"
 meta32.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta32.name = "generator"
 
 head1.children.append(meta32)
 meta33 = x3d.meta()
-meta33.name = "identifier"
 meta33.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Skin/JoeSkeletonSkinSaluteSiteWalk.x3d"
+meta33.name = "identifier"
 
 head1.children.append(meta33)
 meta34 = x3d.meta()
-meta34.name = "license"
 meta34.content = "../license.html"
+meta34.name = "license"
 
 head1.children.append(meta34)
 
@@ -201,7 +201,7 @@ Inline41.url = ["../../X3dForWebAuthors/Chapter03Grouping/CoordinateAxes.x3d",".
 Transform40.children.append(Inline41)
 
 Scene35.children.append(Transform40)
-#Authoring hint: these axes are aligned within local coordinate system
+""" Authoring hint: these axes are aligned within local coordinate system """
 Group42 = x3d.Group()
 Group42.DEF = "ViewpointGroup"
 Viewpoint43 = x3d.Viewpoint()
@@ -218,11 +218,13 @@ Viewpoint44.position = [-2.5,1.5,0]
 Group42.children.append(Viewpoint44)
 Viewpoint45 = x3d.Viewpoint()
 Viewpoint45.description = "Front Mid View"
+Viewpoint45.orientation = [0,1,0,0]
 Viewpoint45.position = [0,0.5,1.25]
 
 Group42.children.append(Viewpoint45)
 Viewpoint46 = x3d.Viewpoint()
 Viewpoint46.description = "Front Feet View"
+Viewpoint46.orientation = [0,1,0,0]
 Viewpoint46.position = [0,0,0.75]
 
 Group42.children.append(Viewpoint46)
@@ -240,6 +242,7 @@ Viewpoint48.position = [0,1.65,0.75]
 Group42.children.append(Viewpoint48)
 Viewpoint49 = x3d.Viewpoint()
 Viewpoint49.description = "Front Mid View"
+Viewpoint49.orientation = [0,1,0,0]
 Viewpoint49.position = [0,1,1.75]
 
 Group42.children.append(Viewpoint49)
@@ -386,12 +389,12 @@ Group79.DEF = "SpecHumanoid"
 Group80 = x3d.Group()
 Group80.DEF = "JoeISOHumanoid"
 HAnimHumanoid81 = x3d.HAnimHumanoid()
-HAnimHumanoid81.name = "Human"
 HAnimHumanoid81.DEF = "Joe_Human"
 HAnimHumanoid81.info = ["humanoidVersion=2.0"]
+HAnimHumanoid81.loa = -1
+HAnimHumanoid81.name = "Human"
 HAnimHumanoid81.version = "2.0"
-#<LOD containerField='skin'> (Switch whichChoice='0' and LOD parents each already work in view3dscene)
-#</LOD>
+""" <LOD containerField='skin'> (Switch whichChoice='0' and LOD parents each already work in view3dscene) """
 Shape82 = x3d.Shape()
 Shape82.DEF = "SkinShape"
 IndexedFaceSet83 = x3d.IndexedFaceSet()
@@ -426,19 +429,20 @@ Appearance86.material = Material88
 Shape82.appearance = Appearance86
 
 HAnimHumanoid81.skin.append(Shape82)
+""" </LOD> """
 Coordinate89 = x3d.Coordinate()
 Coordinate89.USE = "TheSkinCoord"
 
 HAnimHumanoid81.skinCoord = Coordinate89
 HAnimJoint90 = x3d.HAnimJoint()
-HAnimJoint90.name = "HumanoidRoot"
 HAnimJoint90.DEF = "Joe_HumanoidRoot"
 HAnimJoint90.center = [0,0.875,0]
-HAnimJoint90.ulimit = [0,0,0]
-HAnimJoint90.llimit = [0,0,0]
+HAnimJoint90.name = "HumanoidRoot"
+HAnimJoint90.stiffness = [0,0,0]
 HAnimSegment91 = x3d.HAnimSegment()
-HAnimSegment91.name = "sacrum"
 HAnimSegment91.DEF = "Joe_sacrum"
+HAnimSegment91.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment91.name = "sacrum"
 Transform92 = x3d.Transform()
 Transform92.translation = [0,0.875,0]
 Shape93 = x3d.Shape()
@@ -480,16 +484,15 @@ HAnimSegment91.children.append(Transform100)
 
 HAnimJoint90.children.append(HAnimSegment91)
 HAnimJoint102 = x3d.HAnimJoint()
-HAnimJoint102.name = "sacroiliac"
 HAnimJoint102.DEF = "Joe_sacroiliac"
 HAnimJoint102.center = [0,0.92,0]
+HAnimJoint102.name = "sacroiliac"
 HAnimJoint102.skinCoordIndex = [17,19,20,21,22,23,26,27,73,82,89,91,93]
 HAnimJoint102.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,0.35,0.35,1]
-HAnimJoint102.ulimit = [0,0,0]
-HAnimJoint102.llimit = [0,0,0]
 HAnimSegment103 = x3d.HAnimSegment()
-HAnimSegment103.name = "pelvis"
 HAnimSegment103.DEF = "Joe_pelvis"
+HAnimSegment103.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment103.name = "pelvis"
 Transform104 = x3d.Transform()
 Transform104.translation = [0,0.9149,0.0016]
 Transform105 = x3d.Transform()
@@ -516,8 +519,8 @@ Shape107.appearance = Appearance110
 
 HAnimSegment103.children.append(Shape107)
 HAnimSite111 = x3d.HAnimSite()
-HAnimSite111.name = "l_iliocristale"
 HAnimSite111.DEF = "Joe_l_iliocristale"
+HAnimSite111.name = "l_iliocristale"
 HAnimSite111.translation = [0.1425,1.065,0.0033]
 Shape112 = x3d.Shape()
 Shape112.USE = "sitebox"
@@ -526,8 +529,8 @@ HAnimSite111.children.append(Shape112)
 
 HAnimSegment103.children.append(HAnimSite111)
 HAnimSite113 = x3d.HAnimSite()
-HAnimSite113.name = "l_trochanterion"
 HAnimSite113.DEF = "Joe_l_trochanterion"
+HAnimSite113.name = "l_trochanterion"
 HAnimSite113.translation = [0.15,0.9,-0.01]
 Shape114 = x3d.Shape()
 Shape114.USE = "sitebox"
@@ -536,8 +539,8 @@ HAnimSite113.children.append(Shape114)
 
 HAnimSegment103.children.append(HAnimSite113)
 HAnimSite115 = x3d.HAnimSite()
-HAnimSite115.name = "r_iliocristale"
 HAnimSite115.DEF = "Joe_r_iliocristale"
+HAnimSite115.name = "r_iliocristale"
 HAnimSite115.translation = [-0.1425,1.065,0.0033]
 Shape116 = x3d.Shape()
 Shape116.USE = "sitebox"
@@ -546,8 +549,8 @@ HAnimSite115.children.append(Shape116)
 
 HAnimSegment103.children.append(HAnimSite115)
 HAnimSite117 = x3d.HAnimSite()
-HAnimSite117.name = "r_trochanterion"
 HAnimSite117.DEF = "Joe_r_trochanterion"
+HAnimSite117.name = "r_trochanterion"
 HAnimSite117.translation = [-0.15,0.9,-0.01]
 Shape118 = x3d.Shape()
 Shape118.USE = "sitebox"
@@ -556,8 +559,8 @@ HAnimSite117.children.append(Shape118)
 
 HAnimSegment103.children.append(HAnimSite117)
 HAnimSite119 = x3d.HAnimSite()
-HAnimSite119.name = "l_asis"
 HAnimSite119.DEF = "Joe_l_asis"
+HAnimSite119.name = "l_asis"
 HAnimSite119.translation = [0.0935,1.03,0.075]
 Shape120 = x3d.Shape()
 Shape120.USE = "sitebox"
@@ -566,8 +569,8 @@ HAnimSite119.children.append(Shape120)
 
 HAnimSegment103.children.append(HAnimSite119)
 HAnimSite121 = x3d.HAnimSite()
-HAnimSite121.name = "r_asis"
 HAnimSite121.DEF = "Joe_r_asis"
+HAnimSite121.name = "r_asis"
 HAnimSite121.translation = [-0.0935,1.03,0.075]
 Shape122 = x3d.Shape()
 Shape122.USE = "sitebox"
@@ -576,8 +579,8 @@ HAnimSite121.children.append(Shape122)
 
 HAnimSegment103.children.append(HAnimSite121)
 HAnimSite123 = x3d.HAnimSite()
-HAnimSite123.name = "l_psis"
 HAnimSite123.DEF = "Joe_l_psis"
+HAnimSite123.name = "l_psis"
 HAnimSite123.translation = [0.0773,1.019,-0.12]
 Shape124 = x3d.Shape()
 Shape124.USE = "sitebox"
@@ -586,8 +589,8 @@ HAnimSite123.children.append(Shape124)
 
 HAnimSegment103.children.append(HAnimSite123)
 HAnimSite125 = x3d.HAnimSite()
-HAnimSite125.name = "r_psis"
 HAnimSite125.DEF = "Joe_r_psis"
+HAnimSite125.name = "r_psis"
 HAnimSite125.translation = [-0.0773,1.019,-0.12]
 Shape126 = x3d.Shape()
 Shape126.USE = "sitebox"
@@ -596,8 +599,8 @@ HAnimSite125.children.append(Shape126)
 
 HAnimSegment103.children.append(HAnimSite125)
 HAnimSite127 = x3d.HAnimSite()
-HAnimSite127.name = "floormarker"
 HAnimSite127.DEF = "Joe_floormarker"
+HAnimSite127.name = "floormarker"
 Transform128 = x3d.Transform()
 Transform128.scale = [3,3,3]
 Shape129 = x3d.Shape()
@@ -609,8 +612,8 @@ HAnimSite127.children.append(Transform128)
 
 HAnimSegment103.children.append(HAnimSite127)
 HAnimSite130 = x3d.HAnimSite()
-HAnimSite130.name = "crotch"
 HAnimSite130.DEF = "Joe_crotch"
+HAnimSite130.name = "crotch"
 HAnimSite130.translation = [0,0.87,-0.022]
 Shape131 = x3d.Shape()
 Shape131.USE = "sitebox"
@@ -621,16 +624,15 @@ HAnimSegment103.children.append(HAnimSite130)
 
 HAnimJoint102.children.append(HAnimSegment103)
 HAnimJoint132 = x3d.HAnimJoint()
-HAnimJoint132.name = "l_hip"
 HAnimJoint132.DEF = "Joe_l_hip"
 HAnimJoint132.center = [0.1,0.92,0]
+HAnimJoint132.name = "l_hip"
 HAnimJoint132.skinCoordIndex = [89,90,94,95,96,97]
 HAnimJoint132.skinCoordWeight = [0.65,1,1,1,1,1]
-HAnimJoint132.ulimit = [0,0,0]
-HAnimJoint132.llimit = [0,0,0]
 HAnimSegment133 = x3d.HAnimSegment()
-HAnimSegment133.name = "l_thigh"
 HAnimSegment133.DEF = "Joe_l_thigh"
+HAnimSegment133.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment133.name = "l_thigh"
 Transform134 = x3d.Transform()
 Transform134.translation = [0.1,0.92,0]
 Shape135 = x3d.Shape()
@@ -702,8 +704,8 @@ Transform150.children.append(Shape151)
 
 HAnimSegment133.children.append(Transform150)
 HAnimSite152 = x3d.HAnimSite()
-HAnimSite152.name = "l_knee_crease"
 HAnimSite152.DEF = "Joe_l_knee_crease"
+HAnimSite152.name = "l_knee_crease"
 HAnimSite152.translation = [0.115,0.466,-0.055]
 Shape153 = x3d.Shape()
 Shape153.USE = "sitebox"
@@ -712,8 +714,8 @@ HAnimSite152.children.append(Shape153)
 
 HAnimSegment133.children.append(HAnimSite152)
 HAnimSite154 = x3d.HAnimSite()
-HAnimSite154.name = "l_femoral_lateral_epicn"
 HAnimSite154.DEF = "Joe_l_femoral_lateral_epicn"
+HAnimSite154.name = "l_femoral_lateral_epicn"
 HAnimSite154.translation = [0.17,0.466,0]
 Shape155 = x3d.Shape()
 Shape155.USE = "sitebox"
@@ -722,8 +724,8 @@ HAnimSite154.children.append(Shape155)
 
 HAnimSegment133.children.append(HAnimSite154)
 HAnimSite156 = x3d.HAnimSite()
-HAnimSite156.name = "l_femoral_medial_epicn"
 HAnimSite156.DEF = "Joe_l_femoral_medial_epicn"
+HAnimSite156.name = "l_femoral_medial_epicn"
 HAnimSite156.translation = [0.05,0.466,0]
 Shape157 = x3d.Shape()
 Shape157.USE = "sitebox"
@@ -734,18 +736,18 @@ HAnimSegment133.children.append(HAnimSite156)
 
 HAnimJoint132.children.append(HAnimSegment133)
 HAnimJoint158 = x3d.HAnimJoint()
-HAnimJoint158.name = "l_knee"
 HAnimJoint158.DEF = "Joe_l_knee"
-HAnimJoint158.center = [0.11500000208616257,0.4659999907016754,0]
+HAnimJoint158.center = [0.11500000208616257,0.46599999070167542,0]
+HAnimJoint158.name = "l_knee"
 HAnimJoint158.skinCoordIndex = [334,335,336,337,338,339,340,341]
 HAnimJoint158.skinCoordWeight = [1,1,1,1,1,1,1,1]
-HAnimJoint158.ulimit = [0,0,0]
-HAnimJoint158.llimit = [0,0,0]
+HAnimJoint158.stiffness = [0,0,0]
 HAnimSegment159 = x3d.HAnimSegment()
-HAnimSegment159.name = "l_calf"
 HAnimSegment159.DEF = "Joe_l_calf"
+HAnimSegment159.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment159.name = "l_calf"
 Transform160 = x3d.Transform()
-Transform160.translation = [0.11500000208616257,0.4659999907016754,0]
+Transform160.translation = [0.11500000208616257,0.46599999070167542,0]
 Shape161 = x3d.Shape()
 Shape161.USE = "jointbox"
 
@@ -831,8 +833,8 @@ Transform180.children.append(Shape181)
 
 HAnimSegment159.children.append(Transform180)
 HAnimSite182 = x3d.HAnimSite()
-HAnimSite182.name = "l_lateral_malleolus"
 HAnimSite182.DEF = "Joe_l_lateral_malleolus"
+HAnimSite182.name = "l_lateral_malleolus"
 HAnimSite182.translation = [0.15,0.07,0]
 Shape183 = x3d.Shape()
 Shape183.USE = "sitebox"
@@ -841,8 +843,8 @@ HAnimSite182.children.append(Shape183)
 
 HAnimSegment159.children.append(HAnimSite182)
 HAnimSite184 = x3d.HAnimSite()
-HAnimSite184.name = "l_medial_malleolus"
 HAnimSite184.DEF = "Joe_l_medial_malleolus"
+HAnimSite184.name = "l_medial_malleolus"
 HAnimSite184.translation = [0.085,0.086,0.0125]
 Shape185 = x3d.Shape()
 Shape185.USE = "sitebox"
@@ -853,16 +855,15 @@ HAnimSegment159.children.append(HAnimSite184)
 
 HAnimJoint158.children.append(HAnimSegment159)
 HAnimJoint186 = x3d.HAnimJoint()
-HAnimJoint186.name = "l_ankle"
 HAnimJoint186.DEF = "Joe_l_ankle"
 HAnimJoint186.center = [0.115,0.069,0]
+HAnimJoint186.name = "l_ankle"
 HAnimJoint186.skinCoordIndex = [342,343,344,345]
 HAnimJoint186.skinCoordWeight = [1,1,1,1]
-HAnimJoint186.ulimit = [0,0,0]
-HAnimJoint186.llimit = [0,0,0]
 HAnimSegment187 = x3d.HAnimSegment()
-HAnimSegment187.name = "l_hindfoot"
 HAnimSegment187.DEF = "Joe_l_hindfoot"
+HAnimSegment187.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment187.name = "l_hindfoot"
 Transform188 = x3d.Transform()
 Transform188.translation = [0.115,0.069,0]
 Shape189 = x3d.Shape()
@@ -918,8 +919,8 @@ Transform200.children.append(Shape201)
 
 HAnimSegment187.children.append(Transform200)
 HAnimSite202 = x3d.HAnimSite()
-HAnimSite202.name = "l_sphyrion"
 HAnimSite202.DEF = "Joe_l_sphyrion"
+HAnimSite202.name = "l_sphyrion"
 HAnimSite202.translation = [0.09,0.056,0.0125]
 Shape203 = x3d.Shape()
 Shape203.USE = "sitebox"
@@ -928,8 +929,8 @@ HAnimSite202.children.append(Shape203)
 
 HAnimSegment187.children.append(HAnimSite202)
 HAnimSite204 = x3d.HAnimSite()
-HAnimSite204.name = "l_calcaneous_post"
 HAnimSite204.DEF = "Joe_l_calcaneous_post"
+HAnimSite204.name = "l_calcaneous_post"
 HAnimSite204.translation = [0.115,0.04,-0.055]
 Shape205 = x3d.Shape()
 Shape205.USE = "sitebox"
@@ -940,16 +941,15 @@ HAnimSegment187.children.append(HAnimSite204)
 
 HAnimJoint186.children.append(HAnimSegment187)
 HAnimJoint206 = x3d.HAnimJoint()
-HAnimJoint206.name = "l_subtalar"
 HAnimJoint206.DEF = "Joe_l_subtalar"
 HAnimJoint206.center = [0.115,0.031,0.03]
+HAnimJoint206.name = "l_subtalar"
 HAnimJoint206.skinCoordIndex = [346,347,348,71]
 HAnimJoint206.skinCoordWeight = [1,1,1,1]
-HAnimJoint206.ulimit = [0,0,0]
-HAnimJoint206.llimit = [0,0,0]
 HAnimSegment207 = x3d.HAnimSegment()
-HAnimSegment207.name = "l_midproximal"
 HAnimSegment207.DEF = "Joe_l_midproximal"
+HAnimSegment207.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment207.name = "l_midproximal"
 Transform208 = x3d.Transform()
 Transform208.translation = [0.115,0.031,0.03]
 Shape209 = x3d.Shape()
@@ -999,16 +999,15 @@ HAnimSegment207.children.append(Transform218)
 
 HAnimJoint206.children.append(HAnimSegment207)
 HAnimJoint220 = x3d.HAnimJoint()
-HAnimJoint220.name = "l_midtarsal"
 HAnimJoint220.DEF = "Joe_l_midtarsal"
 HAnimJoint220.center = [0.115,0.037,0.09]
+HAnimJoint220.name = "l_midtarsal"
 HAnimJoint220.skinCoordIndex = [349,350,351,352]
 HAnimJoint220.skinCoordWeight = [1,1,1,1]
-HAnimJoint220.ulimit = [0,0,0]
-HAnimJoint220.llimit = [0,0,0]
 HAnimSegment221 = x3d.HAnimSegment()
-HAnimSegment221.name = "l_middistal"
 HAnimSegment221.DEF = "Joe_l_middistal"
+HAnimSegment221.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment221.name = "l_middistal"
 Transform222 = x3d.Transform()
 Transform222.translation = [0.115,0.037,0.09]
 Shape223 = x3d.Shape()
@@ -1032,7 +1031,7 @@ Shape224.appearance = Appearance227
 
 HAnimSegment221.children.append(Shape224)
 Transform228 = x3d.Transform()
-Transform228.translation = [0.11500000208616257,0.05999999865889549,0.10000000149011612]
+Transform228.translation = [0.11500000208616257,0.059999998658895493,0.10000000149011612]
 Shape229 = x3d.Shape()
 Shape229.USE = "skinsphere"
 
@@ -1040,7 +1039,7 @@ Transform228.children.append(Shape229)
 
 HAnimSegment221.children.append(Transform228)
 Transform230 = x3d.Transform()
-Transform230.translation = [0.11500000208616257,0,0.07000000029802322]
+Transform230.translation = [0.11500000208616257,0,0.070000000298023224]
 Shape231 = x3d.Shape()
 Shape231.USE = "skinsphere"
 
@@ -1048,7 +1047,7 @@ Transform230.children.append(Shape231)
 
 HAnimSegment221.children.append(Transform230)
 Transform232 = x3d.Transform()
-Transform232.translation = [0.16500000655651093,0,0.07000000029802322]
+Transform232.translation = [0.16500000655651093,0,0.070000000298023224]
 Shape233 = x3d.Shape()
 Shape233.USE = "skinsphere"
 
@@ -1056,7 +1055,7 @@ Transform232.children.append(Shape233)
 
 HAnimSegment221.children.append(Transform232)
 Transform234 = x3d.Transform()
-Transform234.translation = [0.0949999988079071,0,0.07000000029802322]
+Transform234.translation = [0.094999998807907104,0,0.070000000298023224]
 Shape235 = x3d.Shape()
 Shape235.USE = "skinsphere"
 
@@ -1064,9 +1063,9 @@ Transform234.children.append(Shape235)
 
 HAnimSegment221.children.append(Transform234)
 HAnimSite236 = x3d.HAnimSite()
-HAnimSite236.name = "l_metatarsal_pha1"
 HAnimSite236.DEF = "Joe_l_metatarsal_pha1"
-HAnimSite236.translation = [0.08699999749660492,0.009999999776482582,0.12200000137090683]
+HAnimSite236.name = "l_metatarsal_pha1"
+HAnimSite236.translation = [0.086999997496604919,0.0099999997764825821,0.12200000137090683]
 Shape237 = x3d.Shape()
 Shape237.USE = "sitebox"
 
@@ -1076,16 +1075,16 @@ HAnimSegment221.children.append(HAnimSite236)
 
 HAnimJoint220.children.append(HAnimSegment221)
 HAnimJoint238 = x3d.HAnimJoint()
-HAnimJoint238.name = "l_metatarsal"
 HAnimJoint238.DEF = "Joe_l_metatarsal"
 HAnimJoint238.center = [0.11500000208616257,0.019999999552965164,0.12200000137090683]
+HAnimJoint238.name = "l_metatarsal"
 HAnimJoint238.skinCoordIndex = [353,354,355,356,357,358,359,360,361]
 HAnimJoint238.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint238.ulimit = [0,0,0]
-HAnimJoint238.llimit = [0,0,0]
+HAnimJoint238.stiffness = [0,0,0]
 HAnimSegment239 = x3d.HAnimSegment()
-HAnimSegment239.name = "l_forefoot"
 HAnimSegment239.DEF = "Joe_l_forefoot"
+HAnimSegment239.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment239.name = "l_forefoot"
 Transform240 = x3d.Transform()
 Transform240.translation = [0.11500000208616257,0.019999999552965164,0.12999999523162842]
 Shape241 = x3d.Shape()
@@ -1109,7 +1108,7 @@ Shape242.appearance = Appearance245
 
 HAnimSegment239.children.append(Shape242)
 Transform246 = x3d.Transform()
-Transform246.translation = [0.11500000208616257,0.03999999910593033,0.12999999523162842]
+Transform246.translation = [0.11500000208616257,0.039999999105930328,0.12999999523162842]
 Shape247 = x3d.Shape()
 Shape247.USE = "skinsphere"
 
@@ -1133,7 +1132,7 @@ Transform250.children.append(Shape251)
 
 HAnimSegment239.children.append(Transform250)
 Transform252 = x3d.Transform()
-Transform252.translation = [0.08699999749660492,0,0.12200000137090683]
+Transform252.translation = [0.086999997496604919,0,0.12200000137090683]
 Shape253 = x3d.Shape()
 Shape253.USE = "skinsphere"
 
@@ -1141,7 +1140,7 @@ Transform252.children.append(Shape253)
 
 HAnimSegment239.children.append(Transform252)
 Transform254 = x3d.Transform()
-Transform254.translation = [0.09000000357627869,0.012000000104308128,0.18799999356269836]
+Transform254.translation = [0.090000003576278687,0.012000000104308128,0.18799999356269836]
 Shape255 = x3d.Shape()
 Shape255.USE = "skinsphere"
 
@@ -1149,7 +1148,7 @@ Transform254.children.append(Shape255)
 
 HAnimSegment239.children.append(Transform254)
 Transform256 = x3d.Transform()
-Transform256.translation = [0.10999999940395355,0.010999999940395355,0.1899999976158142]
+Transform256.translation = [0.10999999940395355,0.010999999940395355,0.18999999761581421]
 Shape257 = x3d.Shape()
 Shape257.USE = "skinsphere"
 
@@ -1157,7 +1156,7 @@ Transform256.children.append(Shape257)
 
 HAnimSegment239.children.append(Transform256)
 Transform258 = x3d.Transform()
-Transform258.translation = [0.12800000607967377,0.010999999940395355,0.1850000023841858]
+Transform258.translation = [0.12800000607967377,0.010999999940395355,0.18500000238418579]
 Shape259 = x3d.Shape()
 Shape259.USE = "skinsphere"
 
@@ -1165,7 +1164,7 @@ Transform258.children.append(Shape259)
 
 HAnimSegment239.children.append(Transform258)
 Transform260 = x3d.Transform()
-Transform260.translation = [0.1420000046491623,0.010999999940395355,0.17800000309944153]
+Transform260.translation = [0.14200000464916229,0.010999999940395355,0.17800000309944153]
 Shape261 = x3d.Shape()
 Shape261.USE = "skinsphere"
 
@@ -1173,7 +1172,7 @@ Transform260.children.append(Shape261)
 
 HAnimSegment239.children.append(Transform260)
 Transform262 = x3d.Transform()
-Transform262.translation = [0.15399999916553497,0.009999999776482582,0.1679999977350235]
+Transform262.translation = [0.15399999916553497,0.0099999997764825821,0.1679999977350235]
 Shape263 = x3d.Shape()
 Shape263.USE = "skinsphere"
 
@@ -1181,9 +1180,9 @@ Transform262.children.append(Shape263)
 
 HAnimSegment239.children.append(Transform262)
 HAnimSite264 = x3d.HAnimSite()
-HAnimSite264.name = "l_metatarsal_pha5"
 HAnimSite264.DEF = "Joe_l_metatarsal_pha5"
-HAnimSite264.translation = [0.16500000655651093,0.009999999776482582,0.11999999731779099]
+HAnimSite264.name = "l_metatarsal_pha5"
+HAnimSite264.translation = [0.16500000655651093,0.0099999997764825821,0.11999999731779099]
 Shape265 = x3d.Shape()
 Shape265.USE = "sitebox"
 
@@ -1191,9 +1190,9 @@ HAnimSite264.children.append(Shape265)
 
 HAnimSegment239.children.append(HAnimSite264)
 HAnimSite266 = x3d.HAnimSite()
-HAnimSite266.name = "l_digit2"
 HAnimSite266.DEF = "Joe_l_digit2"
-HAnimSite266.translation = [0.10999999940395355,0.010999999940395355,0.1899999976158142]
+HAnimSite266.name = "l_digit2"
+HAnimSite266.translation = [0.10999999940395355,0.010999999940395355,0.18999999761581421]
 Shape267 = x3d.Shape()
 Shape267.USE = "sitebox"
 
@@ -1215,18 +1214,18 @@ HAnimJoint132.children.append(HAnimJoint158)
 
 HAnimJoint102.children.append(HAnimJoint132)
 HAnimJoint268 = x3d.HAnimJoint()
-HAnimJoint268.name = "r_hip"
 HAnimJoint268.DEF = "Joe_r_hip"
-HAnimJoint268.center = [-0.10000000149011612,0.9200000166893005,0]
+HAnimJoint268.center = [-0.10000000149011612,0.92000001668930054,0]
+HAnimJoint268.name = "r_hip"
 HAnimJoint268.skinCoordIndex = [91,92,98,99,100,101]
-HAnimJoint268.skinCoordWeight = [0.6499999761581421,1,1,1,1,1]
-HAnimJoint268.ulimit = [0,0,0]
-HAnimJoint268.llimit = [0,0,0]
+HAnimJoint268.skinCoordWeight = [0.64999997615814209,1,1,1,1,1]
+HAnimJoint268.stiffness = [0,0,0]
 HAnimSegment269 = x3d.HAnimSegment()
-HAnimSegment269.name = "r_thigh"
 HAnimSegment269.DEF = "Joe_r_thigh"
+HAnimSegment269.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment269.name = "r_thigh"
 Transform270 = x3d.Transform()
-Transform270.translation = [-0.10000000149011612,0.9200000166893005,0]
+Transform270.translation = [-0.10000000149011612,0.92000001668930054,0]
 Shape271 = x3d.Shape()
 Shape271.USE = "jointbox"
 
@@ -1248,7 +1247,7 @@ Shape272.appearance = Appearance275
 
 HAnimSegment269.children.append(Shape272)
 Transform276 = x3d.Transform()
-Transform276.translation = [-0.07900000363588333,0.9200000166893005,-0.14000000059604645]
+Transform276.translation = [-0.079000003635883331,0.92000001668930054,-0.14000000059604645]
 Shape277 = x3d.Shape()
 Shape277.USE = "skinsphere"
 
@@ -1256,7 +1255,7 @@ Transform276.children.append(Shape277)
 
 HAnimSegment269.children.append(Transform276)
 Transform278 = x3d.Transform()
-Transform278.translation = [-0.10000000149011612,0.8999999761581421,0.07500000298023224]
+Transform278.translation = [-0.10000000149011612,0.89999997615814209,0.075000002980232239]
 Shape279 = x3d.Shape()
 Shape279.USE = "skinsphere"
 
@@ -1264,7 +1263,7 @@ Transform278.children.append(Shape279)
 
 HAnimSegment269.children.append(Transform278)
 Transform280 = x3d.Transform()
-Transform280.translation = [-0.17100000381469727,0.6499999761581421,0]
+Transform280.translation = [-0.17100000381469727,0.64999997615814209,0]
 Shape281 = x3d.Shape()
 Shape281.USE = "skinsphere"
 
@@ -1272,7 +1271,7 @@ Transform280.children.append(Shape281)
 
 HAnimSegment269.children.append(Transform280)
 Transform282 = x3d.Transform()
-Transform282.translation = [-0.019999999552965164,0.6499999761581421,0]
+Transform282.translation = [-0.019999999552965164,0.64999997615814209,0]
 Shape283 = x3d.Shape()
 Shape283.USE = "skinsphere"
 
@@ -1280,7 +1279,7 @@ Transform282.children.append(Shape283)
 
 HAnimSegment269.children.append(Transform282)
 Transform284 = x3d.Transform()
-Transform284.translation = [-0.10000000149011612,0.6499999761581421,-0.07999999821186066]
+Transform284.translation = [-0.10000000149011612,0.64999997615814209,-0.079999998211860657]
 Shape285 = x3d.Shape()
 Shape285.USE = "skinsphere"
 
@@ -1288,7 +1287,7 @@ Transform284.children.append(Shape285)
 
 HAnimSegment269.children.append(Transform284)
 Transform286 = x3d.Transform()
-Transform286.translation = [-0.10000000149011612,0.6499999761581421,0.07000000029802322]
+Transform286.translation = [-0.10000000149011612,0.64999997615814209,0.070000000298023224]
 Shape287 = x3d.Shape()
 Shape287.USE = "skinsphere"
 
@@ -1296,9 +1295,9 @@ Transform286.children.append(Shape287)
 
 HAnimSegment269.children.append(Transform286)
 HAnimSite288 = x3d.HAnimSite()
-HAnimSite288.name = "r_knee_crease"
 HAnimSite288.DEF = "Joe_r_knee_crease"
-HAnimSite288.translation = [-0.11500000208616257,0.4659999907016754,-0.054999999701976776]
+HAnimSite288.name = "r_knee_crease"
+HAnimSite288.translation = [-0.11500000208616257,0.46599999070167542,-0.054999999701976776]
 Shape289 = x3d.Shape()
 Shape289.USE = "sitebox"
 
@@ -1306,9 +1305,9 @@ HAnimSite288.children.append(Shape289)
 
 HAnimSegment269.children.append(HAnimSite288)
 HAnimSite290 = x3d.HAnimSite()
-HAnimSite290.name = "r_femoral_lateral_epicn"
 HAnimSite290.DEF = "Joe_r_femoral_lateral_epicn"
-HAnimSite290.translation = [-0.17000000178813934,0.4659999907016754,0]
+HAnimSite290.name = "r_femoral_lateral_epicn"
+HAnimSite290.translation = [-0.17000000178813934,0.46599999070167542,0]
 Shape291 = x3d.Shape()
 Shape291.USE = "sitebox"
 
@@ -1316,9 +1315,9 @@ HAnimSite290.children.append(Shape291)
 
 HAnimSegment269.children.append(HAnimSite290)
 HAnimSite292 = x3d.HAnimSite()
-HAnimSite292.name = "r_femoral_medial_epicn"
 HAnimSite292.DEF = "Joe_r_femoral_medial_epicn"
-HAnimSite292.translation = [-0.05000000074505806,0.4659999907016754,0]
+HAnimSite292.name = "r_femoral_medial_epicn"
+HAnimSite292.translation = [-0.05000000074505806,0.46599999070167542,0]
 Shape293 = x3d.Shape()
 Shape293.USE = "sitebox"
 
@@ -1328,16 +1327,16 @@ HAnimSegment269.children.append(HAnimSite292)
 
 HAnimJoint268.children.append(HAnimSegment269)
 HAnimJoint294 = x3d.HAnimJoint()
-HAnimJoint294.name = "r_knee"
 HAnimJoint294.DEF = "Joe_r_knee"
-HAnimJoint294.center = [-0.05000000074505806,0.4659999907016754,0]
+HAnimJoint294.center = [-0.05000000074505806,0.46599999070167542,0]
+HAnimJoint294.name = "r_knee"
 HAnimJoint294.skinCoordIndex = [362,363,364,365,366,367,368,369]
 HAnimJoint294.skinCoordWeight = [1,1,1,1,1,1,1,1]
-HAnimJoint294.ulimit = [0,0,0]
-HAnimJoint294.llimit = [0,0,0]
+HAnimJoint294.stiffness = [0,0,0]
 HAnimSegment295 = x3d.HAnimSegment()
-HAnimSegment295.name = "r_calf"
 HAnimSegment295.DEF = "Joe_r_calf"
+HAnimSegment295.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment295.name = "r_calf"
 Transform296 = x3d.Transform()
 Transform296.translation = [-0.10000000149011612,0.49129998683929443,0]
 Shape297 = x3d.Shape()
@@ -1361,7 +1360,7 @@ Shape298.appearance = Appearance301
 
 HAnimSegment295.children.append(Shape298)
 Transform302 = x3d.Transform()
-Transform302.translation = [-0.11500000208616257,0.4659999907016754,0.05999999865889549]
+Transform302.translation = [-0.11500000208616257,0.46599999070167542,0.059999998658895493]
 Shape303 = x3d.Shape()
 Shape303.USE = "skinsphere"
 
@@ -1369,7 +1368,7 @@ Transform302.children.append(Shape303)
 
 HAnimSegment295.children.append(Transform302)
 Transform304 = x3d.Transform()
-Transform304.translation = [-0.11500000208616257,0.4659999907016754,-0.054999999701976776]
+Transform304.translation = [-0.11500000208616257,0.46599999070167542,-0.054999999701976776]
 Shape305 = x3d.Shape()
 Shape305.USE = "skinsphere"
 
@@ -1377,7 +1376,7 @@ Transform304.children.append(Shape305)
 
 HAnimSegment295.children.append(Transform304)
 Transform306 = x3d.Transform()
-Transform306.translation = [-0.17000000178813934,0.4659999907016754,0]
+Transform306.translation = [-0.17000000178813934,0.46599999070167542,0]
 Shape307 = x3d.Shape()
 Shape307.USE = "skinsphere"
 
@@ -1385,7 +1384,7 @@ Transform306.children.append(Shape307)
 
 HAnimSegment295.children.append(Transform306)
 Transform308 = x3d.Transform()
-Transform308.translation = [-0.05000000074505806,0.4659999907016754,0]
+Transform308.translation = [-0.05000000074505806,0.46599999070167542,0]
 Shape309 = x3d.Shape()
 Shape309.USE = "skinsphere"
 
@@ -1401,7 +1400,7 @@ Transform310.children.append(Shape311)
 
 HAnimSegment295.children.append(Transform310)
 Transform312 = x3d.Transform()
-Transform312.translation = [-0.05999999865889549,0.30000001192092896,0]
+Transform312.translation = [-0.059999998658895493,0.30000001192092896,0]
 Shape313 = x3d.Shape()
 Shape313.USE = "skinsphere"
 
@@ -1425,9 +1424,9 @@ Transform316.children.append(Shape317)
 
 HAnimSegment295.children.append(Transform316)
 HAnimSite318 = x3d.HAnimSite()
-HAnimSite318.name = "r_lateral_malleolus"
 HAnimSite318.DEF = "Joe_r_lateral_malleolus"
-HAnimSite318.translation = [-0.15000000596046448,0.07000000029802322,0]
+HAnimSite318.name = "r_lateral_malleolus"
+HAnimSite318.translation = [-0.15000000596046448,0.070000000298023224,0]
 Shape319 = x3d.Shape()
 Shape319.USE = "sitebox"
 
@@ -1435,9 +1434,9 @@ HAnimSite318.children.append(Shape319)
 
 HAnimSegment295.children.append(HAnimSite318)
 HAnimSite320 = x3d.HAnimSite()
-HAnimSite320.name = "r_medial_malleolus"
 HAnimSite320.DEF = "Joe_r_medial_malleolus"
-HAnimSite320.translation = [-0.08500000089406967,0.0860000029206276,0.012500000186264515]
+HAnimSite320.name = "r_medial_malleolus"
+HAnimSite320.translation = [-0.085000000894069672,0.086000002920627594,0.012500000186264515]
 Shape321 = x3d.Shape()
 Shape321.USE = "sitebox"
 
@@ -1447,18 +1446,18 @@ HAnimSegment295.children.append(HAnimSite320)
 
 HAnimJoint294.children.append(HAnimSegment295)
 HAnimJoint322 = x3d.HAnimJoint()
-HAnimJoint322.name = "r_ankle"
 HAnimJoint322.DEF = "Joe_r_ankle"
-HAnimJoint322.center = [-0.11500000208616257,0.0689999982714653,0]
+HAnimJoint322.center = [-0.11500000208616257,0.068999998271465302,0]
+HAnimJoint322.name = "r_ankle"
 HAnimJoint322.skinCoordIndex = [370,371,372,373]
 HAnimJoint322.skinCoordWeight = [1,1,1,1]
-HAnimJoint322.ulimit = [0,0,0]
-HAnimJoint322.llimit = [0,0,0]
+HAnimJoint322.stiffness = [0,0,0]
 HAnimSegment323 = x3d.HAnimSegment()
-HAnimSegment323.name = "r_hindfoot"
 HAnimSegment323.DEF = "Joe_r_hindfoot"
+HAnimSegment323.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment323.name = "r_hindfoot"
 Transform324 = x3d.Transform()
-Transform324.translation = [-0.10000000149011612,0.07119999825954437,0]
+Transform324.translation = [-0.10000000149011612,0.071199998259544373,0]
 Shape325 = x3d.Shape()
 Shape325.USE = "jointbox"
 
@@ -1480,7 +1479,7 @@ Shape326.appearance = Appearance329
 
 HAnimSegment323.children.append(Shape326)
 Transform330 = x3d.Transform()
-Transform330.translation = [-0.15000000596046448,0.07000000029802322,0]
+Transform330.translation = [-0.15000000596046448,0.070000000298023224,0]
 Shape331 = x3d.Shape()
 Shape331.USE = "skinsphere"
 
@@ -1488,7 +1487,7 @@ Transform330.children.append(Shape331)
 
 HAnimSegment323.children.append(Transform330)
 Transform332 = x3d.Transform()
-Transform332.translation = [-0.08500000089406967,0.0860000029206276,0.012500000186264515]
+Transform332.translation = [-0.085000000894069672,0.086000002920627594,0.012500000186264515]
 Shape333 = x3d.Shape()
 Shape333.USE = "skinsphere"
 
@@ -1496,7 +1495,7 @@ Transform332.children.append(Shape333)
 
 HAnimSegment323.children.append(Transform332)
 Transform334 = x3d.Transform()
-Transform334.translation = [-0.11500000208616257,0.0689999982714653,-0.04500000178813934]
+Transform334.translation = [-0.11500000208616257,0.068999998271465302,-0.045000001788139343]
 Shape335 = x3d.Shape()
 Shape335.USE = "skinsphere"
 
@@ -1504,7 +1503,7 @@ Transform334.children.append(Shape335)
 
 HAnimSegment323.children.append(Transform334)
 Transform336 = x3d.Transform()
-Transform336.translation = [-0.11699999868869781,0.09749999642372131,0.061500001698732376]
+Transform336.translation = [-0.11699999868869781,0.097499996423721313,0.061500001698732376]
 Shape337 = x3d.Shape()
 Shape337.USE = "skinsphere"
 
@@ -1512,9 +1511,9 @@ Transform336.children.append(Shape337)
 
 HAnimSegment323.children.append(Transform336)
 HAnimSite338 = x3d.HAnimSite()
-HAnimSite338.name = "r_sphyrion"
 HAnimSite338.DEF = "Joe_r_sphyrion"
-HAnimSite338.translation = [-0.09000000357627869,0.0560000017285347,0.012500000186264515]
+HAnimSite338.name = "r_sphyrion"
+HAnimSite338.translation = [-0.090000003576278687,0.056000001728534698,0.012500000186264515]
 Shape339 = x3d.Shape()
 Shape339.USE = "sitebox"
 
@@ -1522,9 +1521,9 @@ HAnimSite338.children.append(Shape339)
 
 HAnimSegment323.children.append(HAnimSite338)
 HAnimSite340 = x3d.HAnimSite()
-HAnimSite340.name = "r_calcaneous_post"
 HAnimSite340.DEF = "Joe_r_calcaneous_post"
-HAnimSite340.translation = [-0.11500000208616257,0.03999999910593033,-0.054999999701976776]
+HAnimSite340.name = "r_calcaneous_post"
+HAnimSite340.translation = [-0.11500000208616257,0.039999999105930328,-0.054999999701976776]
 Shape341 = x3d.Shape()
 Shape341.USE = "sitebox"
 
@@ -1534,18 +1533,17 @@ HAnimSegment323.children.append(HAnimSite340)
 
 HAnimJoint322.children.append(HAnimSegment323)
 HAnimJoint342 = x3d.HAnimJoint()
-HAnimJoint342.name = "r_subtalar"
 HAnimJoint342.DEF = "Joe_r_subtalar"
-HAnimJoint342.center = [-0.10000000149011612,0.014999999664723873,-0.009999999776482582]
+HAnimJoint342.center = [-0.10000000149011612,0.014999999664723873,-0.0099999997764825821]
+HAnimJoint342.name = "r_subtalar"
 HAnimJoint342.skinCoordIndex = [374,375,376]
 HAnimJoint342.skinCoordWeight = [1,1,1]
-HAnimJoint342.ulimit = [0,0,0]
-HAnimJoint342.llimit = [0,0,0]
+HAnimJoint342.stiffness = [0,0,0]
 HAnimSegment343 = x3d.HAnimSegment()
-HAnimSegment343.name = "r_midproximal"
 HAnimSegment343.DEF = "Joe_r_midproximal"
+HAnimSegment343.name = "r_midproximal"
 Transform344 = x3d.Transform()
-Transform344.translation = [-0.10000000149011612,0.014999999664723873,-0.009999999776482582]
+Transform344.translation = [-0.10000000149011612,0.014999999664723873,-0.0099999997764825821]
 Shape345 = x3d.Shape()
 Shape345.USE = "jointbox"
 
@@ -1567,7 +1565,7 @@ Shape346.appearance = Appearance349
 
 HAnimSegment343.children.append(Shape346)
 Transform350 = x3d.Transform()
-Transform350.translation = [-0.13750000298023224,0.006000000052154064,-0.029999999329447746]
+Transform350.translation = [-0.13750000298023224,0.0060000000521540642,-0.029999999329447746]
 Shape351 = x3d.Shape()
 Shape351.USE = "skinsphere"
 
@@ -1575,7 +1573,7 @@ Transform350.children.append(Shape351)
 
 HAnimSegment343.children.append(Transform350)
 Transform352 = x3d.Transform()
-Transform352.translation = [-0.0949999988079071,0.006000000052154064,-0.029999999329447746]
+Transform352.translation = [-0.094999998807907104,0.0060000000521540642,-0.029999999329447746]
 Shape353 = x3d.Shape()
 Shape353.USE = "skinsphere"
 
@@ -1583,7 +1581,7 @@ Transform352.children.append(Shape353)
 
 HAnimSegment343.children.append(Transform352)
 Transform354 = x3d.Transform()
-Transform354.translation = [-0.0949999988079071,0.006000000052154064,-0.029999999329447746]
+Transform354.translation = [-0.094999998807907104,0.0060000000521540642,-0.029999999329447746]
 Shape355 = x3d.Shape()
 Shape355.USE = "skinsphere"
 
@@ -1593,18 +1591,18 @@ HAnimSegment343.children.append(Transform354)
 
 HAnimJoint342.children.append(HAnimSegment343)
 HAnimJoint356 = x3d.HAnimJoint()
-HAnimJoint356.name = "r_midtarsal"
 HAnimJoint356.DEF = "Joe_r_midtarsal"
-HAnimJoint356.center = [-0.11500000208616257,0.03700000047683716,0.09000000357627869]
+HAnimJoint356.center = [-0.11500000208616257,0.037000000476837158,0.090000003576278687]
+HAnimJoint356.name = "r_midtarsal"
 HAnimJoint356.skinCoordIndex = [377,378,379,380]
 HAnimJoint356.skinCoordWeight = [1,1,1,1]
-HAnimJoint356.ulimit = [0,0,0]
-HAnimJoint356.llimit = [0,0,0]
+HAnimJoint356.stiffness = [0,0,0]
 HAnimSegment357 = x3d.HAnimSegment()
-HAnimSegment357.name = "r_middistal"
 HAnimSegment357.DEF = "Joe_r_middistal"
+HAnimSegment357.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment357.name = "r_middistal"
 Transform358 = x3d.Transform()
-Transform358.translation = [-0.10000000149011612,0.019999999552965164,0.07000000029802322]
+Transform358.translation = [-0.10000000149011612,0.019999999552965164,0.070000000298023224]
 Shape359 = x3d.Shape()
 Shape359.USE = "jointbox"
 
@@ -1626,7 +1624,7 @@ Shape360.appearance = Appearance363
 
 HAnimSegment357.children.append(Shape360)
 Transform364 = x3d.Transform()
-Transform364.translation = [-0.11500000208616257,0.05999999865889549,0.10000000149011612]
+Transform364.translation = [-0.11500000208616257,0.059999998658895493,0.10000000149011612]
 Shape365 = x3d.Shape()
 Shape365.USE = "skinsphere"
 
@@ -1634,7 +1632,7 @@ Transform364.children.append(Shape365)
 
 HAnimSegment357.children.append(Transform364)
 Transform366 = x3d.Transform()
-Transform366.translation = [-0.11500000208616257,0,0.07000000029802322]
+Transform366.translation = [-0.11500000208616257,0,0.070000000298023224]
 Shape367 = x3d.Shape()
 Shape367.USE = "skinsphere"
 
@@ -1642,7 +1640,7 @@ Transform366.children.append(Shape367)
 
 HAnimSegment357.children.append(Transform366)
 Transform368 = x3d.Transform()
-Transform368.translation = [-0.16500000655651093,0,0.07000000029802322]
+Transform368.translation = [-0.16500000655651093,0,0.070000000298023224]
 Shape369 = x3d.Shape()
 Shape369.USE = "skinsphere"
 
@@ -1650,7 +1648,7 @@ Transform368.children.append(Shape369)
 
 HAnimSegment357.children.append(Transform368)
 Transform370 = x3d.Transform()
-Transform370.translation = [-0.16500000655651093,0,0.07000000029802322]
+Transform370.translation = [-0.16500000655651093,0,0.070000000298023224]
 Shape371 = x3d.Shape()
 Shape371.USE = "skinsphere"
 
@@ -1658,8 +1656,8 @@ Transform370.children.append(Shape371)
 
 HAnimSegment357.children.append(Transform370)
 HAnimSite372 = x3d.HAnimSite()
-HAnimSite372.name = "r_metatarsal_pha1"
 HAnimSite372.DEF = "Joe_r_metatarsal_pha1"
+HAnimSite372.name = "r_metatarsal_pha1"
 HAnimSite372.translation = [-0.11500000208616257,0.019999999552965164,0.12200000137090683]
 Shape373 = x3d.Shape()
 Shape373.USE = "sitebox"
@@ -1670,18 +1668,18 @@ HAnimSegment357.children.append(HAnimSite372)
 
 HAnimJoint356.children.append(HAnimSegment357)
 HAnimJoint374 = x3d.HAnimJoint()
-HAnimJoint374.name = "r_metatarsal"
 HAnimJoint374.DEF = "Joe_r_metatarsal"
-HAnimJoint374.center = [-0.10000000149011612,0.009999999776482582,0.14000000059604645]
+HAnimJoint374.center = [-0.10000000149011612,0.0099999997764825821,0.14000000059604645]
+HAnimJoint374.name = "r_metatarsal"
 HAnimJoint374.skinCoordIndex = [381,382,383,384,385,386,387,388,389]
 HAnimJoint374.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint374.ulimit = [0,0,0]
-HAnimJoint374.llimit = [0,0,0]
+HAnimJoint374.stiffness = [0,0,0]
 HAnimSegment375 = x3d.HAnimSegment()
-HAnimSegment375.name = "r_forefoot"
 HAnimSegment375.DEF = "Joe_r_forefoot"
+HAnimSegment375.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment375.name = "r_forefoot"
 Transform376 = x3d.Transform()
-Transform376.translation = [-0.10859999805688858,0.009999999776482582,0.14000000059604645]
+Transform376.translation = [-0.10859999805688858,0.0099999997764825821,0.14000000059604645]
 Shape377 = x3d.Shape()
 Shape377.USE = "jointbox"
 
@@ -1703,7 +1701,7 @@ Shape378.appearance = Appearance381
 
 HAnimSegment375.children.append(Shape378)
 Transform382 = x3d.Transform()
-Transform382.translation = [-0.11500000208616257,0.03999999910593033,0.12999999523162842]
+Transform382.translation = [-0.11500000208616257,0.039999999105930328,0.12999999523162842]
 Shape383 = x3d.Shape()
 Shape383.USE = "skinsphere"
 
@@ -1727,7 +1725,7 @@ Transform386.children.append(Shape387)
 
 HAnimSegment375.children.append(Transform386)
 Transform388 = x3d.Transform()
-Transform388.translation = [-0.08699999749660492,0,0.12200000137090683]
+Transform388.translation = [-0.086999997496604919,0,0.12200000137090683]
 Shape389 = x3d.Shape()
 Shape389.USE = "skinsphere"
 
@@ -1735,7 +1733,7 @@ Transform388.children.append(Shape389)
 
 HAnimSegment375.children.append(Transform388)
 Transform390 = x3d.Transform()
-Transform390.translation = [-0.09000000357627869,0.012000000104308128,0.18799999356269836]
+Transform390.translation = [-0.090000003576278687,0.012000000104308128,0.18799999356269836]
 Shape391 = x3d.Shape()
 Shape391.USE = "skinsphere"
 
@@ -1743,7 +1741,7 @@ Transform390.children.append(Shape391)
 
 HAnimSegment375.children.append(Transform390)
 Transform392 = x3d.Transform()
-Transform392.translation = [-0.10999999940395355,0.010999999940395355,0.1899999976158142]
+Transform392.translation = [-0.10999999940395355,0.010999999940395355,0.18999999761581421]
 Shape393 = x3d.Shape()
 Shape393.USE = "skinsphere"
 
@@ -1751,7 +1749,7 @@ Transform392.children.append(Shape393)
 
 HAnimSegment375.children.append(Transform392)
 Transform394 = x3d.Transform()
-Transform394.translation = [-0.12800000607967377,0.010999999940395355,0.1850000023841858]
+Transform394.translation = [-0.12800000607967377,0.010999999940395355,0.18500000238418579]
 Shape395 = x3d.Shape()
 Shape395.USE = "skinsphere"
 
@@ -1759,7 +1757,7 @@ Transform394.children.append(Shape395)
 
 HAnimSegment375.children.append(Transform394)
 Transform396 = x3d.Transform()
-Transform396.translation = [-0.1420000046491623,0.010999999940395355,0.17800000309944153]
+Transform396.translation = [-0.14200000464916229,0.010999999940395355,0.17800000309944153]
 Shape397 = x3d.Shape()
 Shape397.USE = "skinsphere"
 
@@ -1767,7 +1765,7 @@ Transform396.children.append(Shape397)
 
 HAnimSegment375.children.append(Transform396)
 Transform398 = x3d.Transform()
-Transform398.translation = [-0.15399999916553497,0.009999999776482582,0.1679999977350235]
+Transform398.translation = [-0.15399999916553497,0.0099999997764825821,0.1679999977350235]
 Shape399 = x3d.Shape()
 Shape399.USE = "skinsphere"
 
@@ -1775,9 +1773,9 @@ Transform398.children.append(Shape399)
 
 HAnimSegment375.children.append(Transform398)
 HAnimSite400 = x3d.HAnimSite()
-HAnimSite400.name = "r_metatarsal_pha5"
 HAnimSite400.DEF = "Joe_r_metatarsal_pha5"
-HAnimSite400.translation = [-0.16500000655651093,0.009999999776482582,0.11999999731779099]
+HAnimSite400.name = "r_metatarsal_pha5"
+HAnimSite400.translation = [-0.16500000655651093,0.0099999997764825821,0.11999999731779099]
 Shape401 = x3d.Shape()
 Shape401.USE = "sitebox"
 
@@ -1785,9 +1783,9 @@ HAnimSite400.children.append(Shape401)
 
 HAnimSegment375.children.append(HAnimSite400)
 HAnimSite402 = x3d.HAnimSite()
-HAnimSite402.name = "r_digit2"
 HAnimSite402.DEF = "Joe_r_digit2"
-HAnimSite402.translation = [-0.10999999940395355,0.010999999940395355,0.1899999976158142]
+HAnimSite402.name = "r_digit2"
+HAnimSite402.translation = [-0.10999999940395355,0.010999999940395355,0.18999999761581421]
 Shape403 = x3d.Shape()
 Shape403.USE = "sitebox"
 
@@ -1811,16 +1809,16 @@ HAnimJoint102.children.append(HAnimJoint268)
 
 HAnimJoint90.children.append(HAnimJoint102)
 HAnimJoint404 = x3d.HAnimJoint()
-HAnimJoint404.name = "vl5"
 HAnimJoint404.DEF = "Joe_vl5"
-HAnimJoint404.center = [0,1.0449999570846558,-0.0949999988079071]
+HAnimJoint404.center = [0,1.0449999570846558,-0.094999998807907104]
+HAnimJoint404.name = "vl5"
 HAnimJoint404.skinCoordIndex = [28,76]
 HAnimJoint404.skinCoordWeight = [1,1]
-HAnimJoint404.ulimit = [0,0,0]
-HAnimJoint404.llimit = [0,0,0]
+HAnimJoint404.stiffness = [0,0,0]
 HAnimSegment405 = x3d.HAnimSegment()
-HAnimSegment405.name = "toPelvis"
 HAnimSegment405.DEF = "Joe_toPelvisMarker"
+HAnimSegment405.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment405.name = "toPelvis"
 Shape406 = x3d.Shape()
 IndexedLineSet407 = x3d.IndexedLineSet()
 IndexedLineSet407.coordIndex = [0,1,-1]
@@ -1838,8 +1836,9 @@ HAnimSegment405.children.append(Shape406)
 
 HAnimJoint404.children.append(HAnimSegment405)
 HAnimSegment410 = x3d.HAnimSegment()
-HAnimSegment410.name = "l5"
 HAnimSegment410.DEF = "Joe_l5"
+HAnimSegment410.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment410.name = "l5"
 Shape411 = x3d.Shape()
 IndexedLineSet412 = x3d.IndexedLineSet()
 IndexedLineSet412.coordIndex = [0,1,-1]
@@ -1855,8 +1854,8 @@ Shape411.appearance = Appearance414
 
 HAnimSegment410.children.append(Shape411)
 HAnimSite415 = x3d.HAnimSite()
-HAnimSite415.name = "waist_preferred_post"
 HAnimSite415.DEF = "Joe_waist_preferred_post"
+HAnimSite415.name = "waist_preferred_post"
 HAnimSite415.translation = [0,1.0915000438690186,-0.10909999907016754]
 Shape416 = x3d.Shape()
 Shape416.USE = "sitebox"
@@ -1865,9 +1864,9 @@ HAnimSite415.children.append(Shape416)
 
 HAnimSegment410.children.append(HAnimSite415)
 HAnimSite417 = x3d.HAnimSite()
-HAnimSite417.name = "navel"
 HAnimSite417.DEF = "Joe_navel"
-HAnimSite417.translation = [0,1.0722500085830688,0.09000000357627869]
+HAnimSite417.name = "navel"
+HAnimSite417.translation = [0,1.0722500085830688,0.090000003576278687]
 Shape418 = x3d.Shape()
 Shape418.USE = "sitebox"
 
@@ -1877,14 +1876,13 @@ HAnimSegment410.children.append(HAnimSite417)
 
 HAnimJoint404.children.append(HAnimSegment410)
 HAnimJoint419 = x3d.HAnimJoint()
-HAnimJoint419.name = "vl4"
 HAnimJoint419.DEF = "Joe_vl4"
 HAnimJoint419.center = [0,1.068,-0.085]
-HAnimJoint419.ulimit = [0,0,0]
-HAnimJoint419.llimit = [0,0,0]
+HAnimJoint419.name = "vl4"
 HAnimSegment420 = x3d.HAnimSegment()
-HAnimSegment420.name = "l4"
 HAnimSegment420.DEF = "Joe_l4"
+HAnimSegment420.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment420.name = "l4"
 Shape421 = x3d.Shape()
 IndexedLineSet422 = x3d.IndexedLineSet()
 IndexedLineSet422.coordIndex = [0,1,-1]
@@ -1910,14 +1908,13 @@ HAnimSegment420.children.append(Transform425)
 
 HAnimJoint419.children.append(HAnimSegment420)
 HAnimJoint427 = x3d.HAnimJoint()
-HAnimJoint427.name = "vl3"
 HAnimJoint427.DEF = "Joe_vl3"
 HAnimJoint427.center = [0,1.092,-0.0725]
-HAnimJoint427.ulimit = [0,0,0]
-HAnimJoint427.llimit = [0,0,0]
+HAnimJoint427.name = "vl3"
 HAnimSegment428 = x3d.HAnimSegment()
-HAnimSegment428.name = "l3"
 HAnimSegment428.DEF = "Joe_l3"
+HAnimSegment428.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment428.name = "l3"
 Shape429 = x3d.Shape()
 IndexedLineSet430 = x3d.IndexedLineSet()
 IndexedLineSet430.coordIndex = [0,1,-1]
@@ -1943,16 +1940,15 @@ HAnimSegment428.children.append(Transform433)
 
 HAnimJoint427.children.append(HAnimSegment428)
 HAnimJoint435 = x3d.HAnimJoint()
-HAnimJoint435.name = "vl2"
 HAnimJoint435.DEF = "Joe_vl2"
 HAnimJoint435.center = [0,1.12,-0.065]
+HAnimJoint435.name = "vl2"
 HAnimJoint435.skinCoordIndex = [16,18,25,83,84,85,86,87,88]
 HAnimJoint435.skinCoordWeight = [1,1,1,1,1,1,0.7,1,0.8]
-HAnimJoint435.ulimit = [0,0,0]
-HAnimJoint435.llimit = [0,0,0]
 HAnimSegment436 = x3d.HAnimSegment()
-HAnimSegment436.name = "l2"
 HAnimSegment436.DEF = "Joe_l2"
+HAnimSegment436.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment436.name = "l2"
 Shape437 = x3d.Shape()
 IndexedLineSet438 = x3d.IndexedLineSet()
 IndexedLineSet438.coordIndex = [0,1,-1]
@@ -1968,7 +1964,7 @@ Shape437.appearance = Appearance440
 
 HAnimSegment436.children.append(Shape437)
 Transform441 = x3d.Transform()
-Transform441.translation = [0,1.1200000047683716,-0.06499999761581421]
+Transform441.translation = [0,1.1200000047683716,-0.064999997615814209]
 Shape442 = x3d.Shape()
 Shape442.USE = "jointbox"
 
@@ -1976,7 +1972,7 @@ Transform441.children.append(Shape442)
 
 HAnimSegment436.children.append(Transform441)
 Transform443 = x3d.Transform()
-Transform443.translation = [-0.08699999749660492,1.190000057220459,-0.09000000357627869]
+Transform443.translation = [-0.086999997496604919,1.190000057220459,-0.090000003576278687]
 Shape444 = x3d.Shape()
 Shape444.USE = "skinsphere"
 
@@ -1984,7 +1980,7 @@ Transform443.children.append(Shape444)
 
 HAnimSegment436.children.append(Transform443)
 Transform445 = x3d.Transform()
-Transform445.translation = [0.08699999749660492,1.190000057220459,-0.09000000357627869]
+Transform445.translation = [0.086999997496604919,1.190000057220459,-0.090000003576278687]
 Shape446 = x3d.Shape()
 Shape446.USE = "skinsphere"
 
@@ -1992,7 +1988,7 @@ Transform445.children.append(Shape446)
 
 HAnimSegment436.children.append(Transform445)
 Transform447 = x3d.Transform()
-Transform447.translation = [0.1720000058412552,1.3200000524520874,-0.029999999329447746]
+Transform447.translation = [0.17200000584125519,1.3200000524520874,-0.029999999329447746]
 Shape448 = x3d.Shape()
 Shape448.USE = "skinsphere"
 
@@ -2000,7 +1996,7 @@ Transform447.children.append(Shape448)
 
 HAnimSegment436.children.append(Transform447)
 Transform449 = x3d.Transform()
-Transform449.translation = [-0.1720000058412552,1.3200000524520874,-0.029999999329447746]
+Transform449.translation = [-0.17200000584125519,1.3200000524520874,-0.029999999329447746]
 Shape450 = x3d.Shape()
 Shape450.USE = "skinsphere"
 
@@ -2024,9 +2020,9 @@ Transform453.children.append(Shape454)
 
 HAnimSegment436.children.append(Transform453)
 HAnimSite455 = x3d.HAnimSite()
-HAnimSite455.name = "r_rib10"
 HAnimSite455.DEF = "Joe_r_rib10"
-HAnimSite455.translation = [-0.08699999749660492,1.190000057220459,0.09000000357627869]
+HAnimSite455.name = "r_rib10"
+HAnimSite455.translation = [-0.086999997496604919,1.190000057220459,0.090000003576278687]
 Shape456 = x3d.Shape()
 Shape456.USE = "sitebox"
 
@@ -2034,9 +2030,9 @@ HAnimSite455.children.append(Shape456)
 
 HAnimSegment436.children.append(HAnimSite455)
 HAnimSite457 = x3d.HAnimSite()
-HAnimSite457.name = "l_rib10"
 HAnimSite457.DEF = "Joe_l_rib10"
-HAnimSite457.translation = [0.08699999749660492,1.190000057220459,0.09000000357627869]
+HAnimSite457.name = "l_rib10"
+HAnimSite457.translation = [0.086999997496604919,1.190000057220459,0.090000003576278687]
 Shape458 = x3d.Shape()
 Shape458.USE = "sitebox"
 
@@ -2044,8 +2040,8 @@ HAnimSite457.children.append(Shape458)
 
 HAnimSegment436.children.append(HAnimSite457)
 HAnimSite459 = x3d.HAnimSite()
-HAnimSite459.name = "rib10_midspine"
 HAnimSite459.DEF = "Joe_rib10_midspine"
+HAnimSite459.name = "rib10_midspine"
 HAnimSite459.translation = [0,1.1908,-0.1113]
 Shape460 = x3d.Shape()
 Shape460.USE = "sitebox"
@@ -2056,14 +2052,13 @@ HAnimSegment436.children.append(HAnimSite459)
 
 HAnimJoint435.children.append(HAnimSegment436)
 HAnimJoint461 = x3d.HAnimJoint()
-HAnimJoint461.name = "vl1"
 HAnimJoint461.DEF = "Joe_vl1"
 HAnimJoint461.center = [0,1.1459,-0.0625]
-HAnimJoint461.ulimit = [0,0,0]
-HAnimJoint461.llimit = [0,0,0]
+HAnimJoint461.name = "vl1"
 HAnimSegment462 = x3d.HAnimSegment()
-HAnimSegment462.name = "l1"
 HAnimSegment462.DEF = "Joe_l1"
+HAnimSegment462.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment462.name = "l1"
 Shape463 = x3d.Shape()
 IndexedLineSet464 = x3d.IndexedLineSet()
 IndexedLineSet464.coordIndex = [0,1,-1]
@@ -2089,14 +2084,14 @@ HAnimSegment462.children.append(Transform467)
 
 HAnimJoint461.children.append(HAnimSegment462)
 HAnimJoint469 = x3d.HAnimJoint()
-HAnimJoint469.name = "vt12"
 HAnimJoint469.DEF = "Joe_vt12"
-HAnimJoint469.center = [0,1.1790000200271606,-0.06800000369548798]
-HAnimJoint469.ulimit = [0,0,0]
-HAnimJoint469.llimit = [0,0,0]
+HAnimJoint469.center = [0,1.1790000200271606,-0.068000003695487976]
+HAnimJoint469.name = "vt12"
+HAnimJoint469.stiffness = [0,0,0]
 HAnimSegment470 = x3d.HAnimSegment()
-HAnimSegment470.name = "t12"
 HAnimSegment470.DEF = "Joe_t12"
+HAnimSegment470.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment470.name = "t12"
 Shape471 = x3d.Shape()
 IndexedLineSet472 = x3d.IndexedLineSet()
 IndexedLineSet472.coordIndex = [0,1,-1]
@@ -2112,7 +2107,7 @@ Shape471.appearance = Appearance474
 
 HAnimSegment470.children.append(Shape471)
 Transform475 = x3d.Transform()
-Transform475.translation = [0,1.1790000200271606,-0.06800000369548798]
+Transform475.translation = [0,1.1790000200271606,-0.068000003695487976]
 Shape476 = x3d.Shape()
 Shape476.USE = "jointbox"
 
@@ -2122,14 +2117,14 @@ HAnimSegment470.children.append(Transform475)
 
 HAnimJoint469.children.append(HAnimSegment470)
 HAnimJoint477 = x3d.HAnimJoint()
-HAnimJoint477.name = "vt11"
 HAnimJoint477.DEF = "Joe_vt11"
-HAnimJoint477.center = [0,1.267899990081787,-0.08100000023841858]
-HAnimJoint477.ulimit = [0,0,0]
-HAnimJoint477.llimit = [0,0,0]
+HAnimJoint477.center = [0,1.2678999900817871,-0.081000000238418579]
+HAnimJoint477.name = "vt11"
+HAnimJoint477.stiffness = [0,0,0]
 HAnimSegment478 = x3d.HAnimSegment()
-HAnimSegment478.name = "t11"
 HAnimSegment478.DEF = "Joe_t11"
+HAnimSegment478.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment478.name = "t11"
 Shape479 = x3d.Shape()
 IndexedLineSet480 = x3d.IndexedLineSet()
 IndexedLineSet480.coordIndex = [0,1,-1]
@@ -2145,7 +2140,7 @@ Shape479.appearance = Appearance482
 
 HAnimSegment478.children.append(Shape479)
 Transform483 = x3d.Transform()
-Transform483.translation = [0,1.2144999504089355,-0.0754999965429306]
+Transform483.translation = [0,1.2144999504089355,-0.075499996542930603]
 Shape484 = x3d.Shape()
 Shape484.USE = "jointbox"
 
@@ -2155,16 +2150,16 @@ HAnimSegment478.children.append(Transform483)
 
 HAnimJoint477.children.append(HAnimSegment478)
 HAnimJoint485 = x3d.HAnimJoint()
-HAnimJoint485.name = "vt10"
 HAnimJoint485.DEF = "Joe_vt10"
-HAnimJoint485.center = [0,1.2419999837875366,-0.09000000357627869]
+HAnimJoint485.center = [0,1.2419999837875366,-0.090000003576278687]
+HAnimJoint485.name = "vt10"
 HAnimJoint485.skinCoordIndex = [15]
 HAnimJoint485.skinCoordWeight = [1]
-HAnimJoint485.ulimit = [0,0,0]
-HAnimJoint485.llimit = [0,0,0]
+HAnimJoint485.stiffness = [0,0,0]
 HAnimSegment486 = x3d.HAnimSegment()
-HAnimSegment486.name = "t10"
 HAnimSegment486.DEF = "Joe_t10"
+HAnimSegment486.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment486.name = "t10"
 Shape487 = x3d.Shape()
 IndexedLineSet488 = x3d.IndexedLineSet()
 IndexedLineSet488.coordIndex = [0,1,-1]
@@ -2180,7 +2175,7 @@ Shape487.appearance = Appearance490
 
 HAnimSegment486.children.append(Shape487)
 Transform491 = x3d.Transform()
-Transform491.translation = [0,1.2419999837875366,-0.09000000357627869]
+Transform491.translation = [0,1.2419999837875366,-0.090000003576278687]
 Shape492 = x3d.Shape()
 Shape492.USE = "jointbox"
 
@@ -2188,8 +2183,8 @@ Transform491.children.append(Shape492)
 
 HAnimSegment486.children.append(Transform491)
 HAnimSite493 = x3d.HAnimSite()
-HAnimSite493.name = "substernale"
 HAnimSite493.DEF = "Joe_substernale"
+HAnimSite493.name = "substernale"
 HAnimSite493.translation = [0,1.25,0.11299999803304672]
 Shape494 = x3d.Shape()
 Shape494.USE = "sitebox"
@@ -2200,16 +2195,16 @@ HAnimSegment486.children.append(HAnimSite493)
 
 HAnimJoint485.children.append(HAnimSegment486)
 HAnimJoint495 = x3d.HAnimJoint()
-HAnimJoint495.name = "vt9"
 HAnimJoint495.DEF = "Joe_vt9"
 HAnimJoint495.center = [0,1.2680000066757202,-0.10000000149011612]
+HAnimJoint495.name = "vt9"
 HAnimJoint495.skinCoordIndex = [13,14]
 HAnimJoint495.skinCoordWeight = [1,1]
-HAnimJoint495.ulimit = [0,0,0]
-HAnimJoint495.llimit = [0,0,0]
+HAnimJoint495.stiffness = [0,0,0]
 HAnimSegment496 = x3d.HAnimSegment()
-HAnimSegment496.name = "t9"
 HAnimSegment496.DEF = "Joe_t9"
+HAnimSegment496.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment496.name = "t9"
 Shape497 = x3d.Shape()
 IndexedLineSet498 = x3d.IndexedLineSet()
 IndexedLineSet498.coordIndex = [0,1,-1]
@@ -2233,9 +2228,9 @@ Transform501.children.append(Shape502)
 
 HAnimSegment496.children.append(Transform501)
 HAnimSite503 = x3d.HAnimSite()
-HAnimSite503.name = "r_thelion"
 HAnimSite503.DEF = "Joe_r_thelion"
-HAnimSite503.translation = [-0.11349999904632568,1.3179999589920044,0.0949999988079071]
+HAnimSite503.name = "r_thelion"
+HAnimSite503.translation = [-0.11349999904632568,1.3179999589920044,0.094999998807907104]
 Shape504 = x3d.Shape()
 Shape504.USE = "sitebox"
 
@@ -2243,9 +2238,9 @@ HAnimSite503.children.append(Shape504)
 
 HAnimSegment496.children.append(HAnimSite503)
 HAnimSite505 = x3d.HAnimSite()
-HAnimSite505.name = "l_thelion"
 HAnimSite505.DEF = "Joe_l_thelion"
-HAnimSite505.translation = [0.11349999904632568,1.3179999589920044,0.0949999988079071]
+HAnimSite505.name = "l_thelion"
+HAnimSite505.translation = [0.11349999904632568,1.3179999589920044,0.094999998807907104]
 Shape506 = x3d.Shape()
 Shape506.USE = "sitebox"
 
@@ -2255,14 +2250,14 @@ HAnimSegment496.children.append(HAnimSite505)
 
 HAnimJoint495.children.append(HAnimSegment496)
 HAnimJoint507 = x3d.HAnimJoint()
-HAnimJoint507.name = "vt8"
 HAnimJoint507.DEF = "Joe_vt8"
 HAnimJoint507.center = [0,1.2940000295639038,-0.10999999940395355]
-HAnimJoint507.ulimit = [0,0,0]
-HAnimJoint507.llimit = [0,0,0]
+HAnimJoint507.name = "vt8"
+HAnimJoint507.stiffness = [0,0,0]
 HAnimSegment508 = x3d.HAnimSegment()
-HAnimSegment508.name = "t8"
 HAnimSegment508.DEF = "Joe_t8"
+HAnimSegment508.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment508.name = "t8"
 Shape509 = x3d.Shape()
 IndexedLineSet510 = x3d.IndexedLineSet()
 IndexedLineSet510.coordIndex = [0,1,-1]
@@ -2288,14 +2283,14 @@ HAnimSegment508.children.append(Transform513)
 
 HAnimJoint507.children.append(HAnimSegment508)
 HAnimJoint515 = x3d.HAnimJoint()
-HAnimJoint515.name = "vt7"
 HAnimJoint515.DEF = "Joe_vt7"
 HAnimJoint515.center = [0,1.3229999542236328,-0.11550000309944153]
-HAnimJoint515.ulimit = [0,0,0]
-HAnimJoint515.llimit = [0,0,0]
+HAnimJoint515.name = "vt7"
+HAnimJoint515.stiffness = [0,0,0]
 HAnimSegment516 = x3d.HAnimSegment()
-HAnimSegment516.name = "t7"
 HAnimSegment516.DEF = "Joe_t7"
+HAnimSegment516.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment516.name = "t7"
 Shape517 = x3d.Shape()
 IndexedLineSet518 = x3d.IndexedLineSet()
 IndexedLineSet518.coordIndex = [0,1,-1]
@@ -2321,14 +2316,14 @@ HAnimSegment516.children.append(Transform521)
 
 HAnimJoint515.children.append(HAnimSegment516)
 HAnimJoint523 = x3d.HAnimJoint()
-HAnimJoint523.name = "vt6"
 HAnimJoint523.DEF = "Joe_vt6"
 HAnimJoint523.center = [0,1.3519999980926514,-0.11999999731779099]
-HAnimJoint523.ulimit = [0,0,0]
-HAnimJoint523.llimit = [0,0,0]
+HAnimJoint523.name = "vt6"
+HAnimJoint523.stiffness = [0,0,0]
 HAnimSegment524 = x3d.HAnimSegment()
-HAnimSegment524.name = "t6"
 HAnimSegment524.DEF = "Joe_t6"
+HAnimSegment524.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment524.name = "t6"
 Shape525 = x3d.Shape()
 IndexedLineSet526 = x3d.IndexedLineSet()
 IndexedLineSet526.coordIndex = [0,1,-1]
@@ -2354,14 +2349,14 @@ HAnimSegment524.children.append(Transform529)
 
 HAnimJoint523.children.append(HAnimSegment524)
 HAnimJoint531 = x3d.HAnimJoint()
-HAnimJoint531.name = "vt5"
 HAnimJoint531.DEF = "Joe_vt5"
-HAnimJoint531.center = [0,1.38100004196167,-0.12349999696016312]
-HAnimJoint531.ulimit = [0,0,0]
-HAnimJoint531.llimit = [0,0,0]
+HAnimJoint531.center = [0,1.3810000419616699,-0.12349999696016312]
+HAnimJoint531.name = "vt5"
+HAnimJoint531.stiffness = [0,0,0]
 HAnimSegment532 = x3d.HAnimSegment()
-HAnimSegment532.name = "t5"
 HAnimSegment532.DEF = "Joe_t5"
+HAnimSegment532.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment532.name = "t5"
 Shape533 = x3d.Shape()
 IndexedLineSet534 = x3d.IndexedLineSet()
 IndexedLineSet534.coordIndex = [0,1,-1]
@@ -2377,7 +2372,7 @@ Shape533.appearance = Appearance536
 
 HAnimSegment532.children.append(Shape533)
 Transform537 = x3d.Transform()
-Transform537.translation = [0,1.38100004196167,-0.12349999696016312]
+Transform537.translation = [0,1.3810000419616699,-0.12349999696016312]
 Shape538 = x3d.Shape()
 Shape538.USE = "jointbox"
 
@@ -2387,16 +2382,16 @@ HAnimSegment532.children.append(Transform537)
 
 HAnimJoint531.children.append(HAnimSegment532)
 HAnimJoint539 = x3d.HAnimJoint()
-HAnimJoint539.name = "vt4"
 HAnimJoint539.DEF = "Joe_vt4"
-HAnimJoint539.center = [0,1.409999966621399,-0.12349999696016312]
+HAnimJoint539.center = [0,1.4099999666213989,-0.12349999696016312]
+HAnimJoint539.name = "vt4"
 HAnimJoint539.skinCoordIndex = [81]
 HAnimJoint539.skinCoordWeight = [1]
-HAnimJoint539.ulimit = [0,0,0]
-HAnimJoint539.llimit = [0,0,0]
+HAnimJoint539.stiffness = [0,0,0]
 HAnimSegment540 = x3d.HAnimSegment()
-HAnimSegment540.name = "t4"
 HAnimSegment540.DEF = "Joe_t4"
+HAnimSegment540.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment540.name = "t4"
 Shape541 = x3d.Shape()
 IndexedLineSet542 = x3d.IndexedLineSet()
 IndexedLineSet542.coordIndex = [0,1,-1]
@@ -2412,7 +2407,7 @@ Shape541.appearance = Appearance544
 
 HAnimSegment540.children.append(Shape541)
 Transform545 = x3d.Transform()
-Transform545.translation = [0,1.409999966621399,-0.12349999696016312]
+Transform545.translation = [0,1.4099999666213989,-0.12349999696016312]
 Shape546 = x3d.Shape()
 Shape546.USE = "jointbox"
 
@@ -2420,7 +2415,7 @@ Transform545.children.append(Shape546)
 
 HAnimSegment540.children.append(Transform545)
 Transform547 = x3d.Transform()
-Transform547.translation = [0,1.409999966621399,-0.14499999582767487]
+Transform547.translation = [0,1.4099999666213989,-0.14499999582767487]
 Shape548 = x3d.Shape()
 Shape548.USE = "skinsphere"
 
@@ -2430,14 +2425,14 @@ HAnimSegment540.children.append(Transform547)
 
 HAnimJoint539.children.append(HAnimSegment540)
 HAnimJoint549 = x3d.HAnimJoint()
-HAnimJoint549.name = "vt3"
 HAnimJoint549.DEF = "Joe_vt3"
 HAnimJoint549.center = [0,1.437999963760376,-0.11999999731779099]
-HAnimJoint549.ulimit = [0,0,0]
-HAnimJoint549.llimit = [0,0,0]
+HAnimJoint549.name = "vt3"
+HAnimJoint549.stiffness = [0,0,0]
 HAnimSegment550 = x3d.HAnimSegment()
-HAnimSegment550.name = "t3"
 HAnimSegment550.DEF = "Joe_t3"
+HAnimSegment550.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment550.name = "t3"
 Shape551 = x3d.Shape()
 IndexedLineSet552 = x3d.IndexedLineSet()
 IndexedLineSet552.coordIndex = [0,1,-1]
@@ -2463,14 +2458,14 @@ HAnimSegment550.children.append(Transform555)
 
 HAnimJoint549.children.append(HAnimSegment550)
 HAnimJoint557 = x3d.HAnimJoint()
-HAnimJoint557.name = "vt2"
 HAnimJoint557.DEF = "Joe_vt2"
 HAnimJoint557.center = [0,1.468000054359436,-0.10499999672174454]
-HAnimJoint557.ulimit = [0,0,0]
-HAnimJoint557.llimit = [0,0,0]
+HAnimJoint557.name = "vt2"
+HAnimJoint557.stiffness = [0,0,0]
 HAnimSegment558 = x3d.HAnimSegment()
-HAnimSegment558.name = "t2"
 HAnimSegment558.DEF = "Joe_t2"
+HAnimSegment558.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment558.name = "t2"
 Shape559 = x3d.Shape()
 IndexedLineSet560 = x3d.IndexedLineSet()
 IndexedLineSet560.coordIndex = [0,1,-1]
@@ -2496,16 +2491,15 @@ HAnimSegment558.children.append(Transform563)
 
 HAnimJoint557.children.append(HAnimSegment558)
 HAnimJoint565 = x3d.HAnimJoint()
-HAnimJoint565.name = "vt1"
 HAnimJoint565.DEF = "Joe_vt1"
 HAnimJoint565.center = [0,1.497,-0.09]
+HAnimJoint565.name = "vt1"
 HAnimJoint565.skinCoordIndex = [11,24]
 HAnimJoint565.skinCoordWeight = [1,1]
-HAnimJoint565.ulimit = [0,0,0]
-HAnimJoint565.llimit = [0,0,0]
 HAnimSegment566 = x3d.HAnimSegment()
-HAnimSegment566.name = "t1"
 HAnimSegment566.DEF = "Joe_t1"
+HAnimSegment566.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment566.name = "t1"
 Shape567 = x3d.Shape()
 IndexedLineSet568 = x3d.IndexedLineSet()
 IndexedLineSet568.coordIndex = [0,1,-1]
@@ -2529,8 +2523,8 @@ Transform571.children.append(Shape572)
 
 HAnimSegment566.children.append(Transform571)
 HAnimSite573 = x3d.HAnimSite()
-HAnimSite573.name = "suprasternale"
 HAnimSite573.DEF = "Joe_suprasternale"
+HAnimSite573.name = "suprasternale"
 HAnimSite573.translation = [0,1.440000057220459,0.029999999329447746]
 Shape574 = x3d.Shape()
 Shape574.USE = "sitebox"
@@ -2539,9 +2533,9 @@ HAnimSite573.children.append(Shape574)
 
 HAnimSegment566.children.append(HAnimSite573)
 HAnimSite575 = x3d.HAnimSite()
-HAnimSite575.name = "cervicale"
 HAnimSite575.DEF = "Joe_cervicale"
-HAnimSite575.translation = [0,1.5299999713897705,-0.08399999886751175]
+HAnimSite575.name = "cervicale"
+HAnimSite575.translation = [0,1.5299999713897705,-0.083999998867511749]
 Shape576 = x3d.Shape()
 Shape576.USE = "sitebox"
 
@@ -2551,16 +2545,16 @@ HAnimSegment566.children.append(HAnimSite575)
 
 HAnimJoint565.children.append(HAnimSegment566)
 HAnimJoint577 = x3d.HAnimJoint()
-HAnimJoint577.name = "vc7"
 HAnimJoint577.DEF = "Joe_vc7"
-HAnimJoint577.center = [0,1.524999976158142,-0.07199999690055847]
+HAnimJoint577.center = [0,1.5249999761581421,-0.071999996900558472]
+HAnimJoint577.name = "vc7"
 HAnimJoint577.skinCoordIndex = [74,75]
 HAnimJoint577.skinCoordWeight = [1,1]
-HAnimJoint577.ulimit = [0,0,0]
-HAnimJoint577.llimit = [0,0,0]
+HAnimJoint577.stiffness = [0,0,0]
 HAnimSegment578 = x3d.HAnimSegment()
-HAnimSegment578.name = "c7"
 HAnimSegment578.DEF = "Joe_c7"
+HAnimSegment578.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment578.name = "c7"
 Shape579 = x3d.Shape()
 IndexedLineSet580 = x3d.IndexedLineSet()
 IndexedLineSet580.coordIndex = [0,1,-1,0,2,-1,0,3,-1]
@@ -2576,7 +2570,7 @@ Shape579.appearance = Appearance582
 
 HAnimSegment578.children.append(Shape579)
 Transform583 = x3d.Transform()
-Transform583.translation = [0,1.524999976158142,-0.07199999690055847]
+Transform583.translation = [0,1.5249999761581421,-0.071999996900558472]
 Shape584 = x3d.Shape()
 Shape584.USE = "jointbox"
 
@@ -2584,9 +2578,9 @@ Transform583.children.append(Shape584)
 
 HAnimSegment578.children.append(Transform583)
 HAnimSite585 = x3d.HAnimSite()
-HAnimSite585.name = "r_neck_base"
 HAnimSite585.DEF = "Joe_r_neck_base"
-HAnimSite585.translation = [-0.06459999829530716,1.5148999691009521,-0.03849999979138374]
+HAnimSite585.name = "r_neck_base"
+HAnimSite585.translation = [-0.064599998295307159,1.5148999691009521,-0.038499999791383743]
 Shape586 = x3d.Shape()
 Shape586.USE = "sitebox"
 
@@ -2594,9 +2588,9 @@ HAnimSite585.children.append(Shape586)
 
 HAnimSegment578.children.append(HAnimSite585)
 HAnimSite587 = x3d.HAnimSite()
-HAnimSite587.name = "l_neck_base"
 HAnimSite587.DEF = "Joe_l_neck_base"
-HAnimSite587.translation = [0.06459999829530716,1.5148999691009521,-0.03849999979138374]
+HAnimSite587.name = "l_neck_base"
+HAnimSite587.translation = [0.064599998295307159,1.5148999691009521,-0.038499999791383743]
 Shape588 = x3d.Shape()
 Shape588.USE = "sitebox"
 
@@ -2606,14 +2600,14 @@ HAnimSegment578.children.append(HAnimSite587)
 
 HAnimJoint577.children.append(HAnimSegment578)
 HAnimJoint589 = x3d.HAnimJoint()
-HAnimJoint589.name = "vc6"
 HAnimJoint589.DEF = "Joe_vc6"
 HAnimJoint589.center = [0,1.5399999618530273,-0.05000000074505806]
-HAnimJoint589.ulimit = [0,0,0]
-HAnimJoint589.llimit = [0,0,0]
+HAnimJoint589.name = "vc6"
+HAnimJoint589.stiffness = [0,0,0]
 HAnimSegment590 = x3d.HAnimSegment()
-HAnimSegment590.name = "c6"
 HAnimSegment590.DEF = "Joe_c6"
+HAnimSegment590.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment590.name = "c6"
 Shape591 = x3d.Shape()
 IndexedLineSet592 = x3d.IndexedLineSet()
 IndexedLineSet592.coordIndex = [0,1,-1]
@@ -2639,16 +2633,16 @@ HAnimSegment590.children.append(Transform595)
 
 HAnimJoint589.children.append(HAnimSegment590)
 HAnimJoint597 = x3d.HAnimJoint()
-HAnimJoint597.name = "vc5"
 HAnimJoint597.DEF = "Joe_vc5"
-HAnimJoint597.center = [0,1.5520000457763672,-0.03500000014901161]
-HAnimJoint597.ulimit = [0,0,0]
-HAnimJoint597.llimit = [0,0,0]
+HAnimJoint597.center = [0,1.5520000457763672,-0.035000000149011612]
+HAnimJoint597.name = "vc5"
+HAnimJoint597.stiffness = [0,0,0]
 HAnimSegment598 = x3d.HAnimSegment()
-HAnimSegment598.name = "c5"
 HAnimSegment598.DEF = "Joe_c5"
+HAnimSegment598.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment598.name = "c5"
 Transform599 = x3d.Transform()
-Transform599.translation = [0,1.5520000457763672,-0.03500000014901161]
+Transform599.translation = [0,1.5520000457763672,-0.035000000149011612]
 Shape600 = x3d.Shape()
 Shape600.USE = "jointbox"
 
@@ -2672,14 +2666,14 @@ HAnimSegment598.children.append(Shape601)
 
 HAnimJoint597.children.append(HAnimSegment598)
 HAnimJoint605 = x3d.HAnimJoint()
-HAnimJoint605.name = "vc4"
 HAnimJoint605.DEF = "Joe_vc4"
 HAnimJoint605.center = [0,1.5674999952316284,-0.025599999353289604]
-HAnimJoint605.ulimit = [0,0,0]
-HAnimJoint605.llimit = [0,0,0]
+HAnimJoint605.name = "vc4"
+HAnimJoint605.stiffness = [0,0,0]
 HAnimSegment606 = x3d.HAnimSegment()
-HAnimSegment606.name = "c4"
 HAnimSegment606.DEF = "Joe_c4"
+HAnimSegment606.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment606.name = "c4"
 Shape607 = x3d.Shape()
 IndexedLineSet608 = x3d.IndexedLineSet()
 IndexedLineSet608.coordIndex = [0,1,-1]
@@ -2705,14 +2699,14 @@ HAnimSegment606.children.append(Transform611)
 
 HAnimJoint605.children.append(HAnimSegment606)
 HAnimJoint613 = x3d.HAnimJoint()
-HAnimJoint613.name = "vc3"
 HAnimJoint613.DEF = "Joe_vc3"
-HAnimJoint613.center = [0,1.5822499990463257,-0.01850000023841858]
-HAnimJoint613.ulimit = [0,0,0]
-HAnimJoint613.llimit = [0,0,0]
+HAnimJoint613.center = [0,1.5822499990463257,-0.018500000238418579]
+HAnimJoint613.name = "vc3"
+HAnimJoint613.stiffness = [0,0,0]
 HAnimSegment614 = x3d.HAnimSegment()
-HAnimSegment614.name = "c3"
 HAnimSegment614.DEF = "Joe_c3"
+HAnimSegment614.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment614.name = "c3"
 Shape615 = x3d.Shape()
 IndexedLineSet616 = x3d.IndexedLineSet()
 IndexedLineSet616.coordIndex = [0,1,-1]
@@ -2728,7 +2722,7 @@ Shape615.appearance = Appearance618
 
 HAnimSegment614.children.append(Shape615)
 Transform619 = x3d.Transform()
-Transform619.translation = [0,1.5822499990463257,-0.01850000023841858]
+Transform619.translation = [0,1.5822499990463257,-0.018500000238418579]
 Shape620 = x3d.Shape()
 Shape620.USE = "jointbox"
 
@@ -2738,14 +2732,14 @@ HAnimSegment614.children.append(Transform619)
 
 HAnimJoint613.children.append(HAnimSegment614)
 HAnimJoint621 = x3d.HAnimJoint()
-HAnimJoint621.name = "vc2"
 HAnimJoint621.DEF = "Joe_vc2"
 HAnimJoint621.center = [0,1.5950000286102295,-0.017500000074505806]
-HAnimJoint621.ulimit = [0,0,0]
-HAnimJoint621.llimit = [0,0,0]
+HAnimJoint621.name = "vc2"
+HAnimJoint621.stiffness = [0,0,0]
 HAnimSegment622 = x3d.HAnimSegment()
-HAnimSegment622.name = "c2"
 HAnimSegment622.DEF = "Joe_c2"
+HAnimSegment622.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment622.name = "c2"
 Shape623 = x3d.Shape()
 IndexedLineSet624 = x3d.IndexedLineSet()
 IndexedLineSet624.coordIndex = [0,1,-1]
@@ -2771,14 +2765,14 @@ HAnimSegment622.children.append(Transform627)
 
 HAnimJoint621.children.append(HAnimSegment622)
 HAnimJoint629 = x3d.HAnimJoint()
-HAnimJoint629.name = "vc1"
 HAnimJoint629.DEF = "Joe_vc1"
 HAnimJoint629.center = [0,1.6100000143051147,-0.014999999664723873]
-HAnimJoint629.ulimit = [0,0,0]
-HAnimJoint629.llimit = [0,0,0]
+HAnimJoint629.name = "vc1"
+HAnimJoint629.stiffness = [0,0,0]
 HAnimSegment630 = x3d.HAnimSegment()
-HAnimSegment630.name = "c1"
 HAnimSegment630.DEF = "Joe_c1"
+HAnimSegment630.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment630.name = "c1"
 Shape631 = x3d.Shape()
 IndexedLineSet632 = x3d.IndexedLineSet()
 IndexedLineSet632.coordIndex = [0,1,-1]
@@ -2804,16 +2798,16 @@ HAnimSegment630.children.append(Transform635)
 
 HAnimJoint629.children.append(HAnimSegment630)
 HAnimJoint637 = x3d.HAnimJoint()
-HAnimJoint637.name = "skullbase"
 HAnimJoint637.DEF = "Joe_skullbase"
-HAnimJoint637.center = [0,1.6299999952316284,-0.009999999776482582]
+HAnimJoint637.center = [0,1.6299999952316284,-0.0099999997764825821]
+HAnimJoint637.name = "skullbase"
 HAnimJoint637.skinCoordIndex = [0,1,2,3,4,5,6,7,8,9]
 HAnimJoint637.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1]
-HAnimJoint637.ulimit = [0,0,0]
-HAnimJoint637.llimit = [0,0,0]
+HAnimJoint637.stiffness = [0,0,0]
 HAnimSegment638 = x3d.HAnimSegment()
-HAnimSegment638.name = "skull"
 HAnimSegment638.DEF = "Joe_skull"
+HAnimSegment638.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment638.name = "skull"
 Shape639 = x3d.Shape()
 IndexedLineSet640 = x3d.IndexedLineSet()
 IndexedLineSet640.coordIndex = [0,1,-1,0,2,-1]
@@ -2829,7 +2823,7 @@ Shape639.appearance = Appearance642
 
 HAnimSegment638.children.append(Shape639)
 Transform643 = x3d.Transform()
-Transform643.translation = [0,1.6299999952316284,-0.009999999776482582]
+Transform643.translation = [0,1.6299999952316284,-0.0099999997764825821]
 Shape644 = x3d.Shape()
 Shape644.USE = "jointbox"
 
@@ -2837,8 +2831,8 @@ Transform643.children.append(Shape644)
 
 HAnimSegment638.children.append(Transform643)
 HAnimSite645 = x3d.HAnimSite()
-HAnimSite645.name = "skull_tip"
 HAnimSite645.DEF = "Joe_skull_tip"
+HAnimSite645.name = "skull_tip"
 HAnimSite645.translation = [0,1.7699999809265137,0]
 Shape646 = x3d.Shape()
 Shape646.USE = "sitebox"
@@ -2847,9 +2841,9 @@ HAnimSite645.children.append(Shape646)
 
 HAnimSegment638.children.append(HAnimSite645)
 HAnimSite647 = x3d.HAnimSite()
-HAnimSite647.name = "sellion"
 HAnimSite647.DEF = "Joe_sellion"
-HAnimSite647.translation = [0,1.6649999618530273,0.09000000357627869]
+HAnimSite647.name = "sellion"
+HAnimSite647.translation = [0,1.6649999618530273,0.090000003576278687]
 Shape648 = x3d.Shape()
 Shape648.USE = "sitebox"
 
@@ -2857,9 +2851,9 @@ HAnimSite647.children.append(Shape648)
 
 HAnimSegment638.children.append(HAnimSite647)
 HAnimSite649 = x3d.HAnimSite()
-HAnimSite649.name = "r_infraorbitale"
 HAnimSite649.DEF = "Joe_r_infraorbitale"
-HAnimSite649.translation = [-0.032999999821186066,1.6200000047683716,0.08699999749660492]
+HAnimSite649.name = "r_infraorbitale"
+HAnimSite649.translation = [-0.032999999821186066,1.6200000047683716,0.086999997496604919]
 Shape650 = x3d.Shape()
 Shape650.USE = "sitebox"
 
@@ -2867,9 +2861,9 @@ HAnimSite649.children.append(Shape650)
 
 HAnimSegment638.children.append(HAnimSite649)
 HAnimSite651 = x3d.HAnimSite()
-HAnimSite651.name = "l_infraorbitale"
 HAnimSite651.DEF = "Joe_l_infraorbitale"
-HAnimSite651.translation = [0.032999999821186066,1.6200000047683716,0.08699999749660492]
+HAnimSite651.name = "l_infraorbitale"
+HAnimSite651.translation = [0.032999999821186066,1.6200000047683716,0.086999997496604919]
 Shape652 = x3d.Shape()
 Shape652.USE = "sitebox"
 
@@ -2877,9 +2871,9 @@ HAnimSite651.children.append(Shape652)
 
 HAnimSegment638.children.append(HAnimSite651)
 HAnimSite653 = x3d.HAnimSite()
-HAnimSite653.name = "supramenton"
 HAnimSite653.DEF = "Joe_supramenton"
-HAnimSite653.translation = [0,1.5499999523162842,0.09700000286102295]
+HAnimSite653.name = "supramenton"
+HAnimSite653.translation = [0,1.5499999523162842,0.097000002861022949]
 Shape654 = x3d.Shape()
 Shape654.USE = "sitebox"
 
@@ -2887,9 +2881,9 @@ HAnimSite653.children.append(Shape654)
 
 HAnimSegment638.children.append(HAnimSite653)
 HAnimSite655 = x3d.HAnimSite()
-HAnimSite655.name = "r_tragion"
 HAnimSite655.DEF = "Joe_r_tragion"
-HAnimSite655.translation = [-0.07699999958276749,1.6399999856948853,-0.009999999776482582]
+HAnimSite655.name = "r_tragion"
+HAnimSite655.translation = [-0.076999999582767487,1.6399999856948853,-0.0099999997764825821]
 Shape656 = x3d.Shape()
 Shape656.USE = "sitebox"
 
@@ -2897,8 +2891,8 @@ HAnimSite655.children.append(Shape656)
 
 HAnimSegment638.children.append(HAnimSite655)
 HAnimSite657 = x3d.HAnimSite()
-HAnimSite657.name = "r_gonion"
 HAnimSite657.DEF = "Joe_r_gonion"
+HAnimSite657.name = "r_gonion"
 HAnimSite657.translation = [-0.052000001072883606,1.5800000429153442,0.014999999664723873]
 Shape658 = x3d.Shape()
 Shape658.USE = "sitebox"
@@ -2907,9 +2901,9 @@ HAnimSite657.children.append(Shape658)
 
 HAnimSegment638.children.append(HAnimSite657)
 HAnimSite659 = x3d.HAnimSite()
-HAnimSite659.name = "l_tragion"
 HAnimSite659.DEF = "Joe_l_tragion"
-HAnimSite659.translation = [0.07699999958276749,1.6399999856948853,-0.009999999776482582]
+HAnimSite659.name = "l_tragion"
+HAnimSite659.translation = [0.076999999582767487,1.6399999856948853,-0.0099999997764825821]
 Shape660 = x3d.Shape()
 Shape660.USE = "sitebox"
 
@@ -2917,9 +2911,9 @@ HAnimSite659.children.append(Shape660)
 
 HAnimSegment638.children.append(HAnimSite659)
 HAnimSite661 = x3d.HAnimSite()
-HAnimSite661.name = "l_gonion"
 HAnimSite661.DEF = "Joe_l_gonion"
-HAnimSite661.translation = [0.06310000270605087,1.5800000429153442,0.014999999664723873]
+HAnimSite661.name = "l_gonion"
+HAnimSite661.translation = [0.063100002706050873,1.5800000429153442,0.014999999664723873]
 Shape662 = x3d.Shape()
 Shape662.USE = "sitebox"
 
@@ -2927,9 +2921,9 @@ HAnimSite661.children.append(Shape662)
 
 HAnimSegment638.children.append(HAnimSite661)
 HAnimSite663 = x3d.HAnimSite()
-HAnimSite663.name = "nuchale"
 HAnimSite663.DEF = "Joe_nuchale"
-HAnimSite663.translation = [0,1.625,-0.0925000011920929]
+HAnimSite663.name = "nuchale"
+HAnimSite663.translation = [0,1.625,-0.092500001192092896]
 Shape664 = x3d.Shape()
 Shape664.USE = "sitebox"
 
@@ -2939,14 +2933,13 @@ HAnimSegment638.children.append(HAnimSite663)
 
 HAnimJoint637.children.append(HAnimSegment638)
 HAnimJoint665 = x3d.HAnimJoint()
-HAnimJoint665.name = "l_eyeball_joint"
 HAnimJoint665.DEF = "Joe_l_eyeball_joint"
 HAnimJoint665.center = [0.034,1.659,0.06]
-HAnimJoint665.ulimit = [0,0,0]
-HAnimJoint665.llimit = [0,0,0]
+HAnimJoint665.name = "l_eyeball_joint"
 HAnimSegment666 = x3d.HAnimSegment()
-HAnimSegment666.name = "l_eyeball"
 HAnimSegment666.DEF = "Joe_l_eyeball"
+HAnimSegment666.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment666.name = "l_eyeball"
 Shape667 = x3d.Shape()
 IndexedLineSet668 = x3d.IndexedLineSet()
 IndexedLineSet668.coordIndex = [0,1,-1]
@@ -2975,14 +2968,13 @@ HAnimJoint665.children.append(HAnimSegment666)
 
 HAnimJoint637.children.append(HAnimJoint665)
 HAnimJoint673 = x3d.HAnimJoint()
-HAnimJoint673.name = "r_eyeball_joint"
 HAnimJoint673.DEF = "Joe_r_eyeball_joint"
 HAnimJoint673.center = [-0.034,1.659,0.06]
-HAnimJoint673.ulimit = [0,0,0]
-HAnimJoint673.llimit = [0,0,0]
+HAnimJoint673.name = "r_eyeball_joint"
 HAnimSegment674 = x3d.HAnimSegment()
-HAnimSegment674.name = "r_eyeball"
 HAnimSegment674.DEF = "Joe_r_eyeball"
+HAnimSegment674.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment674.name = "r_eyeball"
 Shape675 = x3d.Shape()
 IndexedLineSet676 = x3d.IndexedLineSet()
 IndexedLineSet676.coordIndex = [0,1,-1]
@@ -3027,16 +3019,15 @@ HAnimJoint577.children.append(HAnimJoint589)
 
 HAnimJoint565.children.append(HAnimJoint577)
 HAnimJoint681 = x3d.HAnimJoint()
-HAnimJoint681.name = "l_sternoclavicular"
 HAnimJoint681.DEF = "Joe_l_sternoclavicular"
 HAnimJoint681.center = [0.082,1.4488,-0.0353]
+HAnimJoint681.name = "l_sternoclavicular"
 HAnimJoint681.skinCoordIndex = [12]
 HAnimJoint681.skinCoordWeight = [1]
-HAnimJoint681.ulimit = [0,0,0]
-HAnimJoint681.llimit = [0,0,0]
 HAnimSegment682 = x3d.HAnimSegment()
-HAnimSegment682.name = "l_clavicle"
 HAnimSegment682.DEF = "Joe_l_clavicle"
+HAnimSegment682.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment682.name = "l_clavicle"
 Shape683 = x3d.Shape()
 IndexedLineSet684 = x3d.IndexedLineSet()
 IndexedLineSet684.coordIndex = [0,1,-1]
@@ -3052,7 +3043,7 @@ Shape683.appearance = Appearance686
 
 HAnimSegment682.children.append(Shape683)
 Transform687 = x3d.Transform()
-Transform687.translation = [0.0820000022649765,1.448799967765808,-0.03530000150203705]
+Transform687.translation = [0.082000002264976501,1.4487999677658081,-0.035300001502037048]
 Shape688 = x3d.Shape()
 Shape688.USE = "jointbox"
 
@@ -3060,9 +3051,9 @@ Transform687.children.append(Shape688)
 
 HAnimSegment682.children.append(Transform687)
 HAnimSite689 = x3d.HAnimSite()
-HAnimSite689.name = "l_clavicale"
 HAnimSite689.DEF = "Joe_l_clavicale"
-HAnimSite689.translation = [0.029999999329447746,1.4600000381469727,0.03500000014901161]
+HAnimSite689.name = "l_clavicale"
+HAnimSite689.translation = [0.029999999329447746,1.4600000381469727,0.035000000149011612]
 Shape690 = x3d.Shape()
 Shape690.USE = "sitebox"
 
@@ -3072,16 +3063,16 @@ HAnimSegment682.children.append(HAnimSite689)
 
 HAnimJoint681.children.append(HAnimSegment682)
 HAnimJoint691 = x3d.HAnimJoint()
-HAnimJoint691.name = "l_acromioclavicular"
 HAnimJoint691.DEF = "Joe_l_acromioclavicular"
-HAnimJoint691.center = [0.09619999676942825,1.426900029182434,-0.042399998754262924]
+HAnimJoint691.center = [0.096199996769428253,1.4269000291824341,-0.042399998754262924]
+HAnimJoint691.name = "l_acromioclavicular"
 HAnimJoint691.skinCoordIndex = [79]
 HAnimJoint691.skinCoordWeight = [1]
-HAnimJoint691.ulimit = [0,0,0]
-HAnimJoint691.llimit = [0,0,0]
+HAnimJoint691.stiffness = [0,0,0]
 HAnimSegment692 = x3d.HAnimSegment()
-HAnimSegment692.name = "l_scapula"
 HAnimSegment692.DEF = "Joe_l_scapula"
+HAnimSegment692.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment692.name = "l_scapula"
 Shape693 = x3d.Shape()
 IndexedLineSet694 = x3d.IndexedLineSet()
 IndexedLineSet694.coordIndex = [0,1,-1]
@@ -3097,7 +3088,7 @@ Shape693.appearance = Appearance696
 
 HAnimSegment692.children.append(Shape693)
 Transform697 = x3d.Transform()
-Transform697.translation = [0.09619999676942825,1.426900029182434,-0.042399998754262924]
+Transform697.translation = [0.096199996769428253,1.4269000291824341,-0.042399998754262924]
 Shape698 = x3d.Shape()
 Shape698.USE = "jointbox"
 
@@ -3113,9 +3104,9 @@ Transform699.children.append(Shape700)
 
 HAnimSegment692.children.append(Transform699)
 HAnimSite701 = x3d.HAnimSite()
-HAnimSite701.name = "l_acromion"
 HAnimSite701.DEF = "Joe_l_acromion"
-HAnimSite701.translation = [0.17499999701976776,1.4824999570846558,-0.05999999865889549]
+HAnimSite701.name = "l_acromion"
+HAnimSite701.translation = [0.17499999701976776,1.4824999570846558,-0.059999998658895493]
 Shape702 = x3d.Shape()
 Shape702.USE = "sitebox"
 
@@ -3123,9 +3114,9 @@ HAnimSite701.children.append(Shape702)
 
 HAnimSegment692.children.append(HAnimSite701)
 HAnimSite703 = x3d.HAnimSite()
-HAnimSite703.name = "l_axilla_ant"
 HAnimSite703.DEF = "Joe_l_axilla_ant"
-HAnimSite703.translation = [0.17000000178813934,1.3799999952316284,0.007000000216066837]
+HAnimSite703.name = "l_axilla_ant"
+HAnimSite703.translation = [0.17000000178813934,1.3799999952316284,0.0070000002160668373]
 Shape704 = x3d.Shape()
 Shape704.USE = "sitebox"
 
@@ -3133,9 +3124,9 @@ HAnimSite703.children.append(Shape704)
 
 HAnimSegment692.children.append(HAnimSite703)
 HAnimSite705 = x3d.HAnimSite()
-HAnimSite705.name = "l_axilla_post"
 HAnimSite705.DEF = "Joe_l_axilla_post"
-HAnimSite705.translation = [0.1599999964237213,1.3799999952316284,-0.125]
+HAnimSite705.name = "l_axilla_post"
+HAnimSite705.translation = [0.15999999642372131,1.3799999952316284,-0.125]
 Shape706 = x3d.Shape()
 Shape706.USE = "sitebox"
 
@@ -3145,16 +3136,16 @@ HAnimSegment692.children.append(HAnimSite705)
 
 HAnimJoint691.children.append(HAnimSegment692)
 HAnimJoint707 = x3d.HAnimJoint()
-HAnimJoint707.name = "l_shoulder"
 HAnimJoint707.DEF = "Joe_l_shoulder"
-HAnimJoint707.center = [0.20000000298023224,1.440000057220459,-0.03999999910593033]
+HAnimJoint707.center = [0.20000000298023224,1.440000057220459,-0.039999999105930328]
+HAnimJoint707.name = "l_shoulder"
 HAnimJoint707.skinCoordIndex = [41,42,44,80,102,103,104,105]
 HAnimJoint707.skinCoordWeight = [1,1,1,1,1,1,1,1]
-HAnimJoint707.ulimit = [0,0,0]
-HAnimJoint707.llimit = [0,0,0]
+HAnimJoint707.stiffness = [0,0,0]
 HAnimSegment708 = x3d.HAnimSegment()
-HAnimSegment708.name = "l_upperarm"
 HAnimSegment708.DEF = "Joe_l_upperarm"
+HAnimSegment708.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment708.name = "l_upperarm"
 Shape709 = x3d.Shape()
 IndexedLineSet710 = x3d.IndexedLineSet()
 IndexedLineSet710.coordIndex = [0,1,-1]
@@ -3170,7 +3161,7 @@ Shape709.appearance = Appearance712
 
 HAnimSegment708.children.append(Shape709)
 Transform713 = x3d.Transform()
-Transform713.translation = [0.20000000298023224,1.440000057220459,-0.03999999910593033]
+Transform713.translation = [0.20000000298023224,1.440000057220459,-0.039999999105930328]
 Shape714 = x3d.Shape()
 Shape714.USE = "jointbox"
 
@@ -3186,7 +3177,7 @@ Transform715.children.append(Shape716)
 
 HAnimSegment708.children.append(Transform715)
 Transform717 = x3d.Transform()
-Transform717.translation = [0.25,1.2699999809265137,-0.03999999910593033]
+Transform717.translation = [0.25,1.2699999809265137,-0.039999999105930328]
 Shape718 = x3d.Shape()
 Shape718.USE = "skinsphere"
 
@@ -3194,7 +3185,7 @@ Transform717.children.append(Shape718)
 
 HAnimSegment708.children.append(Transform717)
 Transform719 = x3d.Transform()
-Transform719.translation = [0.17000000178813934,1.2699999809265137,-0.03999999910593033]
+Transform719.translation = [0.17000000178813934,1.2699999809265137,-0.039999999105930328]
 Shape720 = x3d.Shape()
 Shape720.USE = "skinsphere"
 
@@ -3202,7 +3193,7 @@ Transform719.children.append(Shape720)
 
 HAnimSegment708.children.append(Transform719)
 Transform721 = x3d.Transform()
-Transform721.translation = [0.20000000298023224,1.2699999809265137,-0.09000000357627869]
+Transform721.translation = [0.20000000298023224,1.2699999809265137,-0.090000003576278687]
 Shape722 = x3d.Shape()
 Shape722.USE = "skinsphere"
 
@@ -3218,9 +3209,9 @@ Transform723.children.append(Shape724)
 
 HAnimSegment708.children.append(Transform723)
 HAnimSite725 = x3d.HAnimSite()
-HAnimSite725.name = "l_humeral_medial_epicn"
 HAnimSite725.DEF = "Joe_l_humeral_medial_epicn"
-HAnimSite725.translation = [0.16500000655651093,1.138800024986267,-0.03999999910593033]
+HAnimSite725.name = "l_humeral_medial_epicn"
+HAnimSite725.translation = [0.16500000655651093,1.1388000249862671,-0.039999999105930328]
 Shape726 = x3d.Shape()
 Shape726.USE = "sitebox"
 
@@ -3228,8 +3219,8 @@ HAnimSite725.children.append(Shape726)
 
 HAnimSegment708.children.append(HAnimSite725)
 HAnimSite727 = x3d.HAnimSite()
-HAnimSite727.name = "l_radiale"
 HAnimSite727.DEF = "Joe_l_radiale"
+HAnimSite727.name = "l_radiale"
 HAnimSite727.translation = [0.23000000417232513,1.1330000162124634,-0.054999999701976776]
 Shape728 = x3d.Shape()
 Shape728.USE = "sitebox"
@@ -3238,9 +3229,9 @@ HAnimSite727.children.append(Shape728)
 
 HAnimSegment708.children.append(HAnimSite727)
 HAnimSite729 = x3d.HAnimSite()
-HAnimSite729.name = "l_humeral_lateral_epicn"
 HAnimSite729.DEF = "Joe_l_humeral_lateral_epicn"
-HAnimSite729.translation = [0.24400000274181366,1.138800024986267,-0.03999999910593033]
+HAnimSite729.name = "l_humeral_lateral_epicn"
+HAnimSite729.translation = [0.24400000274181366,1.1388000249862671,-0.039999999105930328]
 Shape730 = x3d.Shape()
 Shape730.USE = "sitebox"
 
@@ -3250,16 +3241,16 @@ HAnimSegment708.children.append(HAnimSite729)
 
 HAnimJoint707.children.append(HAnimSegment708)
 HAnimJoint731 = x3d.HAnimJoint()
-HAnimJoint731.name = "l_elbow"
 HAnimJoint731.DEF = "Joe_l_elbow"
-HAnimJoint731.center = [0.20000000298023224,1.138800024986267,-0.03999999910593033]
+HAnimJoint731.center = [0.20000000298023224,1.1388000249862671,-0.039999999105930328]
+HAnimJoint731.name = "l_elbow"
 HAnimJoint731.skinCoordIndex = [45,46,47,109,110,111,112,113,115,116,117,118]
 HAnimJoint731.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-HAnimJoint731.ulimit = [0,0,0]
-HAnimJoint731.llimit = [0,0,0]
+HAnimJoint731.stiffness = [0,0,0]
 HAnimSegment732 = x3d.HAnimSegment()
-HAnimSegment732.name = "l_forearm"
 HAnimSegment732.DEF = "Joe_l_forearm"
+HAnimSegment732.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment732.name = "l_forearm"
 Shape733 = x3d.Shape()
 IndexedLineSet734 = x3d.IndexedLineSet()
 IndexedLineSet734.coordIndex = [0,1,-1]
@@ -3275,7 +3266,7 @@ Shape733.appearance = Appearance736
 
 HAnimSegment732.children.append(Shape733)
 Transform737 = x3d.Transform()
-Transform737.translation = [0.20000000298023224,1.138800024986267,-0.03999999910593033]
+Transform737.translation = [0.20000000298023224,1.1388000249862671,-0.039999999105930328]
 Shape738 = x3d.Shape()
 Shape738.USE = "jointbox"
 
@@ -3283,7 +3274,7 @@ Transform737.children.append(Shape738)
 
 HAnimSegment732.children.append(Transform737)
 Transform739 = x3d.Transform()
-Transform739.translation = [0.20000000298023224,1.138800024986267,-0.013000000268220901]
+Transform739.translation = [0.20000000298023224,1.1388000249862671,-0.013000000268220901]
 Shape740 = x3d.Shape()
 Shape740.USE = "skinsphere"
 
@@ -3291,7 +3282,7 @@ Transform739.children.append(Shape740)
 
 HAnimSegment732.children.append(Transform739)
 Transform741 = x3d.Transform()
-Transform741.translation = [0.22499999403953552,1,-0.009999999776482582]
+Transform741.translation = [0.22499999403953552,1,-0.0099999997764825821]
 Shape742 = x3d.Shape()
 Shape742.USE = "skinsphere"
 
@@ -3299,7 +3290,7 @@ Transform741.children.append(Shape742)
 
 HAnimSegment732.children.append(Transform741)
 Transform743 = x3d.Transform()
-Transform743.translation = [0.22499999403953552,1,-0.07000000029802322]
+Transform743.translation = [0.22499999403953552,1,-0.070000000298023224]
 Shape744 = x3d.Shape()
 Shape744.USE = "skinsphere"
 
@@ -3307,7 +3298,7 @@ Transform743.children.append(Shape744)
 
 HAnimSegment732.children.append(Transform743)
 Transform745 = x3d.Transform()
-Transform745.translation = [0.1850000023841858,1,-0.009999999776482582]
+Transform745.translation = [0.18500000238418579,1,-0.0099999997764825821]
 Shape746 = x3d.Shape()
 Shape746.USE = "skinsphere"
 
@@ -3315,7 +3306,7 @@ Transform745.children.append(Shape746)
 
 HAnimSegment732.children.append(Transform745)
 Transform747 = x3d.Transform()
-Transform747.translation = [0.1850000023841858,1,-0.07000000029802322]
+Transform747.translation = [0.18500000238418579,1,-0.070000000298023224]
 Shape748 = x3d.Shape()
 Shape748.USE = "skinsphere"
 
@@ -3323,9 +3314,9 @@ Transform747.children.append(Shape748)
 
 HAnimSegment732.children.append(Transform747)
 HAnimSite749 = x3d.HAnimSite()
-HAnimSite749.name = "l_radial_styloid"
 HAnimSite749.DEF = "Joe_l_radial_styloid"
-HAnimSite749.translation = [0.19009999930858612,0.8644999861717224,-0.04149999842047691]
+HAnimSite749.name = "l_radial_styloid"
+HAnimSite749.translation = [0.19009999930858612,0.86449998617172241,-0.041499998420476913]
 Shape750 = x3d.Shape()
 Shape750.USE = "sitebox"
 
@@ -3333,9 +3324,9 @@ HAnimSite749.children.append(Shape750)
 
 HAnimSegment732.children.append(HAnimSite749)
 HAnimSite751 = x3d.HAnimSite()
-HAnimSite751.name = "l_olecranon"
 HAnimSite751.DEF = "Joe_l_olecranon"
-HAnimSite751.translation = [0.20000000298023224,1.138800024986267,-0.07999999821186066]
+HAnimSite751.name = "l_olecranon"
+HAnimSite751.translation = [0.20000000298023224,1.1388000249862671,-0.079999998211860657]
 Shape752 = x3d.Shape()
 Shape752.USE = "sitebox"
 
@@ -3345,16 +3336,16 @@ HAnimSegment732.children.append(HAnimSite751)
 
 HAnimJoint731.children.append(HAnimSegment732)
 HAnimJoint753 = x3d.HAnimJoint()
-HAnimJoint753.name = "l_wrist"
 HAnimJoint753.DEF = "Joe_l_wrist"
-HAnimJoint753.center = [0.20000000298023224,0.8700000047683716,-0.03999999910593033]
+HAnimJoint753.center = [0.20000000298023224,0.87000000476837158,-0.039999999105930328]
+HAnimJoint753.name = "l_wrist"
 HAnimJoint753.skinCoordIndex = [119,120,121,122,123,124,125,126]
 HAnimJoint753.skinCoordWeight = [1,1,1,1,1,1,1,1]
-HAnimJoint753.ulimit = [0,0,0]
-HAnimJoint753.llimit = [0,0,0]
+HAnimJoint753.stiffness = [0,0,0]
 HAnimSegment754 = x3d.HAnimSegment()
-HAnimSegment754.name = "l_hand"
 HAnimSegment754.DEF = "Joe_l_hand"
+HAnimSegment754.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment754.name = "l_hand"
 Shape755 = x3d.Shape()
 IndexedLineSet756 = x3d.IndexedLineSet()
 IndexedLineSet756.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
@@ -3370,7 +3361,7 @@ Shape755.appearance = Appearance758
 
 HAnimSegment754.children.append(Shape755)
 Transform759 = x3d.Transform()
-Transform759.translation = [0.20000000298023224,0.8700000047683716,-0.03999999910593033]
+Transform759.translation = [0.20000000298023224,0.87000000476837158,-0.039999999105930328]
 Shape760 = x3d.Shape()
 Shape760.USE = "jointbox"
 
@@ -3378,9 +3369,9 @@ Transform759.children.append(Shape760)
 
 HAnimSegment754.children.append(Transform759)
 HAnimSite761 = x3d.HAnimSite()
-HAnimSite761.name = "l_metacarpal_pha2"
 HAnimSite761.DEF = "Joe_l_metacarpal_pha2"
-HAnimSite761.translation = [0.20090000331401825,0.8138999938964844,-0.02370000071823597]
+HAnimSite761.name = "l_metacarpal_pha2"
+HAnimSite761.translation = [0.20090000331401825,0.81389999389648438,-0.02370000071823597]
 Shape762 = x3d.Shape()
 Shape762.USE = "sitebox"
 
@@ -3388,9 +3379,9 @@ HAnimSite761.children.append(Shape762)
 
 HAnimSegment754.children.append(HAnimSite761)
 HAnimSite763 = x3d.HAnimSite()
-HAnimSite763.name = "l_ulnar_styloid"
 HAnimSite763.DEF = "Joe_l_ulnar_styloid"
-HAnimSite763.translation = [0.2142000049352646,0.8529000282287598,-0.06480000168085098]
+HAnimSite763.name = "l_ulnar_styloid"
+HAnimSite763.translation = [0.21420000493526459,0.85290002822875977,-0.064800001680850983]
 Shape764 = x3d.Shape()
 Shape764.USE = "sitebox"
 
@@ -3398,9 +3389,9 @@ HAnimSite763.children.append(Shape764)
 
 HAnimSegment754.children.append(HAnimSite763)
 HAnimSite765 = x3d.HAnimSite()
-HAnimSite765.name = "l_metacarpal_pha5"
 HAnimSite765.DEF = "Joe_l_metacarpal_pha5"
-HAnimSite765.translation = [0.19290000200271606,0.7860000133514404,-0.11219999939203262]
+HAnimSite765.name = "l_metacarpal_pha5"
+HAnimSite765.translation = [0.19290000200271606,0.78600001335144043,-0.11219999939203262]
 Shape766 = x3d.Shape()
 Shape766.USE = "sitebox"
 
@@ -3410,16 +3401,16 @@ HAnimSegment754.children.append(HAnimSite765)
 
 HAnimJoint753.children.append(HAnimSegment754)
 HAnimJoint767 = x3d.HAnimJoint()
-HAnimJoint767.name = "l_thumb1"
 HAnimJoint767.DEF = "Joe_l_thumb1"
-HAnimJoint767.center = [0.1923999935388565,0.8471999764442444,-0.05339999869465828]
+HAnimJoint767.center = [0.19239999353885651,0.84719997644424438,-0.053399998694658279]
+HAnimJoint767.name = "l_thumb1"
 HAnimJoint767.skinCoordIndex = [127,128]
 HAnimJoint767.skinCoordWeight = [1,1]
-HAnimJoint767.ulimit = [0,0,0]
-HAnimJoint767.llimit = [0,0,0]
+HAnimJoint767.stiffness = [0,0,0]
 HAnimSegment768 = x3d.HAnimSegment()
-HAnimSegment768.name = "l_thumb_metacarpal"
 HAnimSegment768.DEF = "Joe_l_thumb_metacarpal"
+HAnimSegment768.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment768.name = "l_thumb_metacarpal"
 Shape769 = x3d.Shape()
 IndexedLineSet770 = x3d.IndexedLineSet()
 IndexedLineSet770.coordIndex = [0,1,-1]
@@ -3435,7 +3426,7 @@ Shape769.appearance = Appearance772
 
 HAnimSegment768.children.append(Shape769)
 Transform773 = x3d.Transform()
-Transform773.translation = [0.1923999935388565,0.8471999764442444,-0.05339999869465828]
+Transform773.translation = [0.19239999353885651,0.84719997644424438,-0.053399998694658279]
 Shape774 = x3d.Shape()
 Shape774.USE = "jointbox"
 
@@ -3445,16 +3436,16 @@ HAnimSegment768.children.append(Transform773)
 
 HAnimJoint767.children.append(HAnimSegment768)
 HAnimJoint775 = x3d.HAnimJoint()
-HAnimJoint775.name = "l_thumb2"
 HAnimJoint775.DEF = "Joe_l_thumb2"
-HAnimJoint775.center = [0.19509999454021454,0.8226000070571899,0.02459999918937683]
+HAnimJoint775.center = [0.19509999454021454,0.82260000705718994,0.024599999189376831]
+HAnimJoint775.name = "l_thumb2"
 HAnimJoint775.skinCoordIndex = [138,139,140,141,142,143]
 HAnimJoint775.skinCoordWeight = [0.5,0.5,0.5,1,1,1]
-HAnimJoint775.ulimit = [0,0,0]
-HAnimJoint775.llimit = [0,0,0]
+HAnimJoint775.stiffness = [0,0,0]
 HAnimSegment776 = x3d.HAnimSegment()
-HAnimSegment776.name = "l_thumb_distal"
 HAnimSegment776.DEF = "Joe_l_thumb_proximal"
+HAnimSegment776.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment776.name = "l_thumb_distal"
 Shape777 = x3d.Shape()
 IndexedLineSet778 = x3d.IndexedLineSet()
 IndexedLineSet778.coordIndex = [0,1,-1]
@@ -3470,7 +3461,7 @@ Shape777.appearance = Appearance780
 
 HAnimSegment776.children.append(Shape777)
 Transform781 = x3d.Transform()
-Transform781.translation = [0.19509999454021454,0.8226000070571899,0.02459999918937683]
+Transform781.translation = [0.19509999454021454,0.82260000705718994,0.024599999189376831]
 Shape782 = x3d.Shape()
 Shape782.USE = "jointbox"
 
@@ -3480,16 +3471,16 @@ HAnimSegment776.children.append(Transform781)
 
 HAnimJoint775.children.append(HAnimSegment776)
 HAnimJoint783 = x3d.HAnimJoint()
-HAnimJoint783.name = "l_thumb3"
 HAnimJoint783.DEF = "Joe_l_thumb3"
-HAnimJoint783.center = [0.19550000131130219,0.8159000277519226,0.04639999940991402]
+HAnimJoint783.center = [0.19550000131130219,0.81590002775192261,0.046399999409914017]
+HAnimJoint783.name = "l_thumb3"
 HAnimJoint783.skinCoordIndex = [144,145,146,147,148,149,150,151,152]
 HAnimJoint783.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint783.ulimit = [0,0,0]
-HAnimJoint783.llimit = [0,0,0]
+HAnimJoint783.stiffness = [0,0,0]
 HAnimSegment784 = x3d.HAnimSegment()
-HAnimSegment784.name = "l_thumb_distal"
 HAnimSegment784.DEF = "Joe_l_thumb_distal"
+HAnimSegment784.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment784.name = "l_thumb_distal"
 Shape785 = x3d.Shape()
 IndexedLineSet786 = x3d.IndexedLineSet()
 IndexedLineSet786.coordIndex = [0,1,-1]
@@ -3505,7 +3496,7 @@ Shape785.appearance = Appearance788
 
 HAnimSegment784.children.append(Shape785)
 Transform789 = x3d.Transform()
-Transform789.translation = [0.19550000131130219,0.8159000277519226,0.04639999940991402]
+Transform789.translation = [0.19550000131130219,0.81590002775192261,0.046399999409914017]
 Shape790 = x3d.Shape()
 Shape790.USE = "jointbox"
 
@@ -3513,9 +3504,9 @@ Transform789.children.append(Shape790)
 
 HAnimSegment784.children.append(Transform789)
 HAnimSite791 = x3d.HAnimSite()
-HAnimSite791.name = "l_thumb_distal_tip"
 HAnimSite791.DEF = "Joe_l_thumb_distal_tip"
-HAnimSite791.translation = [0.19820000231266022,0.8061000108718872,0.07590000331401825]
+HAnimSite791.name = "l_thumb_distal_tip"
+HAnimSite791.translation = [0.19820000231266022,0.80610001087188721,0.07590000331401825]
 Shape792 = x3d.Shape()
 Shape792.USE = "sitebox"
 
@@ -3531,16 +3522,16 @@ HAnimJoint767.children.append(HAnimJoint775)
 
 HAnimJoint753.children.append(HAnimJoint767)
 HAnimJoint793 = x3d.HAnimJoint()
-HAnimJoint793.name = "l_index0"
 HAnimJoint793.DEF = "Joe_l_index0"
-HAnimJoint793.center = [0.19830000400543213,0.8023999929428101,-0.02800000086426735]
+HAnimJoint793.center = [0.19830000400543213,0.80239999294281006,-0.028000000864267349]
+HAnimJoint793.name = "l_index0"
 HAnimJoint793.skinCoordIndex = [129,130]
 HAnimJoint793.skinCoordWeight = [1,1]
-HAnimJoint793.ulimit = [0,0,0]
-HAnimJoint793.llimit = [0,0,0]
+HAnimJoint793.stiffness = [0,0,0]
 HAnimSegment794 = x3d.HAnimSegment()
-HAnimSegment794.name = "l_index_metacarpal"
 HAnimSegment794.DEF = "Joe_l_index_metacarpal"
+HAnimSegment794.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment794.name = "l_index_metacarpal"
 Shape795 = x3d.Shape()
 IndexedLineSet796 = x3d.IndexedLineSet()
 IndexedLineSet796.coordIndex = [0,1,-1]
@@ -3566,16 +3557,15 @@ HAnimSegment794.children.append(Transform799)
 
 HAnimJoint793.children.append(HAnimSegment794)
 HAnimJoint801 = x3d.HAnimJoint()
-HAnimJoint801.name = "l_index1"
 HAnimJoint801.DEF = "Joe_l_index1"
 HAnimJoint801.center = [0.1983,0.7815,-0.028]
+HAnimJoint801.name = "l_index1"
 HAnimJoint801.skinCoordIndex = [138,139,140,153,154,155,163]
 HAnimJoint801.skinCoordWeight = [0.5,0.5,0.5,1,1,1,0.5]
-HAnimJoint801.ulimit = [0,0,0]
-HAnimJoint801.llimit = [0,0,0]
 HAnimSegment802 = x3d.HAnimSegment()
-HAnimSegment802.name = "l_index_proximal"
 HAnimSegment802.DEF = "Joe_l_index_proximal"
+HAnimSegment802.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment802.name = "l_index_proximal"
 Shape803 = x3d.Shape()
 IndexedLineSet804 = x3d.IndexedLineSet()
 IndexedLineSet804.coordIndex = [0,1,-1]
@@ -3601,16 +3591,15 @@ HAnimSegment802.children.append(Transform807)
 
 HAnimJoint801.children.append(HAnimSegment802)
 HAnimJoint809 = x3d.HAnimJoint()
-HAnimJoint809.name = "l_index2"
 HAnimJoint809.DEF = "Joe_l_index2"
 HAnimJoint809.center = [0.2017,0.7363,-0.0248]
+HAnimJoint809.name = "l_index2"
 HAnimJoint809.skinCoordIndex = [166,167,168,169]
 HAnimJoint809.skinCoordWeight = [1,1,1,1]
-HAnimJoint809.ulimit = [0,0,0]
-HAnimJoint809.llimit = [0,0,0]
 HAnimSegment810 = x3d.HAnimSegment()
-HAnimSegment810.name = "l_index_middle"
 HAnimSegment810.DEF = "Joe_l_index_middle"
+HAnimSegment810.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment810.name = "l_index_middle"
 Shape811 = x3d.Shape()
 IndexedLineSet812 = x3d.IndexedLineSet()
 IndexedLineSet812.coordIndex = [0,1,-1]
@@ -3636,16 +3625,16 @@ HAnimSegment810.children.append(Transform815)
 
 HAnimJoint809.children.append(HAnimSegment810)
 HAnimJoint817 = x3d.HAnimJoint()
-HAnimJoint817.name = "l_index3"
 HAnimJoint817.DEF = "Joe_l_index3"
-HAnimJoint817.center = [0.20280000567436218,0.7139000296592712,-0.023600000888109207]
+HAnimJoint817.center = [0.20280000567436218,0.71390002965927124,-0.023600000888109207]
+HAnimJoint817.name = "l_index3"
 HAnimJoint817.skinCoordIndex = [170,171,172,173,174,175,176,177,178]
 HAnimJoint817.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint817.ulimit = [0,0,0]
-HAnimJoint817.llimit = [0,0,0]
+HAnimJoint817.stiffness = [0,0,0]
 HAnimSegment818 = x3d.HAnimSegment()
-HAnimSegment818.name = "l_index_distal"
 HAnimSegment818.DEF = "Joe_l_index_distal"
+HAnimSegment818.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment818.name = "l_index_distal"
 Shape819 = x3d.Shape()
 IndexedLineSet820 = x3d.IndexedLineSet()
 IndexedLineSet820.coordIndex = [0,1,-1]
@@ -3661,7 +3650,7 @@ Shape819.appearance = Appearance822
 
 HAnimSegment818.children.append(Shape819)
 Transform823 = x3d.Transform()
-Transform823.translation = [0.20280000567436218,0.7139000296592712,-0.023600000888109207]
+Transform823.translation = [0.20280000567436218,0.71390002965927124,-0.023600000888109207]
 Shape824 = x3d.Shape()
 Shape824.USE = "jointbox"
 
@@ -3669,9 +3658,9 @@ Transform823.children.append(Shape824)
 
 HAnimSegment818.children.append(Transform823)
 HAnimSite825 = x3d.HAnimSite()
-HAnimSite825.name = "l_index_distal_tip"
 HAnimSite825.DEF = "Joe_l_index_distal_tip"
-HAnimSite825.translation = [0.20890000462532043,0.6858000159263611,-0.02449999935925007]
+HAnimSite825.name = "l_index_distal_tip"
+HAnimSite825.translation = [0.20890000462532043,0.68580001592636108,-0.024499999359250069]
 Shape826 = x3d.Shape()
 Shape826.USE = "sitebox"
 
@@ -3679,9 +3668,9 @@ HAnimSite825.children.append(Shape826)
 
 HAnimSegment818.children.append(HAnimSite825)
 HAnimSite827 = x3d.HAnimSite()
-HAnimSite827.name = "l_dactylion"
 HAnimSite827.DEF = "Joe_l_dactylion"
-HAnimSite827.translation = [0.20559999346733093,0.6743000149726868,-0.04820000007748604]
+HAnimSite827.name = "l_dactylion"
+HAnimSite827.translation = [0.20559999346733093,0.67430001497268677,-0.048200000077486038]
 Shape828 = x3d.Shape()
 Shape828.USE = "sitebox"
 
@@ -3699,16 +3688,16 @@ HAnimJoint793.children.append(HAnimJoint801)
 
 HAnimJoint753.children.append(HAnimJoint793)
 HAnimJoint829 = x3d.HAnimJoint()
-HAnimJoint829.name = "l_middle0"
 HAnimJoint829.DEF = "Joe_l_middle0"
-HAnimJoint829.center = [0.19869999587535858,0.8029000163078308,-0.05299999937415123]
+HAnimJoint829.center = [0.19869999587535858,0.80290001630783081,-0.05299999937415123]
+HAnimJoint829.name = "l_middle0"
 HAnimJoint829.skinCoordIndex = [131,132]
 HAnimJoint829.skinCoordWeight = [1,1]
-HAnimJoint829.ulimit = [0,0,0]
-HAnimJoint829.llimit = [0,0,0]
+HAnimJoint829.stiffness = [0,0,0]
 HAnimSegment830 = x3d.HAnimSegment()
-HAnimSegment830.name = "l_middle_metacarpal"
 HAnimSegment830.DEF = "Joe_l_middle_metacarpal"
+HAnimSegment830.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment830.name = "l_middle_metacarpal"
 Shape831 = x3d.Shape()
 IndexedLineSet832 = x3d.IndexedLineSet()
 IndexedLineSet832.coordIndex = [0,1,-1]
@@ -3724,7 +3713,7 @@ Shape831.appearance = Appearance834
 
 HAnimSegment830.children.append(Shape831)
 Transform835 = x3d.Transform()
-Transform835.translation = [0.19869999587535858,0.8029000163078308,-0.05299999937415123]
+Transform835.translation = [0.19869999587535858,0.80290001630783081,-0.05299999937415123]
 Shape836 = x3d.Shape()
 Shape836.USE = "jointbox"
 
@@ -3734,16 +3723,16 @@ HAnimSegment830.children.append(Transform835)
 
 HAnimJoint829.children.append(HAnimSegment830)
 HAnimJoint837 = x3d.HAnimJoint()
-HAnimJoint837.name = "l_middle1"
 HAnimJoint837.DEF = "Joe_l_middle1"
-HAnimJoint837.center = [0.19869999587535858,0.7817999720573425,-0.05299999937415123]
+HAnimJoint837.center = [0.19869999587535858,0.78179997205734253,-0.05299999937415123]
+HAnimJoint837.name = "l_middle1"
 HAnimJoint837.skinCoordIndex = [156,157,163,164]
 HAnimJoint837.skinCoordWeight = [1,1,0.5,0.5]
-HAnimJoint837.ulimit = [0,0,0]
-HAnimJoint837.llimit = [0,0,0]
+HAnimJoint837.stiffness = [0,0,0]
 HAnimSegment838 = x3d.HAnimSegment()
-HAnimSegment838.name = "l_middle_proximal"
 HAnimSegment838.DEF = "Joe_l_middle_proximal"
+HAnimSegment838.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment838.name = "l_middle_proximal"
 Shape839 = x3d.Shape()
 IndexedLineSet840 = x3d.IndexedLineSet()
 IndexedLineSet840.coordIndex = [0,1,-1]
@@ -3759,7 +3748,7 @@ Shape839.appearance = Appearance842
 
 HAnimSegment838.children.append(Shape839)
 Transform843 = x3d.Transform()
-Transform843.translation = [0.19869999587535858,0.7817999720573425,-0.05299999937415123]
+Transform843.translation = [0.19869999587535858,0.78179997205734253,-0.05299999937415123]
 Shape844 = x3d.Shape()
 Shape844.USE = "jointbox"
 
@@ -3769,16 +3758,16 @@ HAnimSegment838.children.append(Transform843)
 
 HAnimJoint837.children.append(HAnimSegment838)
 HAnimJoint845 = x3d.HAnimJoint()
-HAnimJoint845.name = "l_middle2"
 HAnimJoint845.DEF = "Joe_l_middle2"
-HAnimJoint845.center = [0.2012999951839447,0.7272999882698059,-0.0502999983727932]
+HAnimJoint845.center = [0.2012999951839447,0.72729998826980591,-0.050299998372793198]
+HAnimJoint845.name = "l_middle2"
 HAnimJoint845.skinCoordIndex = [179,180,181,182]
 HAnimJoint845.skinCoordWeight = [1,1,1,1]
-HAnimJoint845.ulimit = [0,0,0]
-HAnimJoint845.llimit = [0,0,0]
+HAnimJoint845.stiffness = [0,0,0]
 HAnimSegment846 = x3d.HAnimSegment()
-HAnimSegment846.name = "l_middle_middle"
 HAnimSegment846.DEF = "Joe_l_middle_middle"
+HAnimSegment846.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment846.name = "l_middle_middle"
 Shape847 = x3d.Shape()
 IndexedLineSet848 = x3d.IndexedLineSet()
 IndexedLineSet848.coordIndex = [0,1,-1]
@@ -3794,7 +3783,7 @@ Shape847.appearance = Appearance850
 
 HAnimSegment846.children.append(Shape847)
 Transform851 = x3d.Transform()
-Transform851.translation = [0.2012999951839447,0.7272999882698059,-0.0502999983727932]
+Transform851.translation = [0.2012999951839447,0.72729998826980591,-0.050299998372793198]
 Shape852 = x3d.Shape()
 Shape852.USE = "jointbox"
 
@@ -3804,16 +3793,16 @@ HAnimSegment846.children.append(Transform851)
 
 HAnimJoint845.children.append(HAnimSegment846)
 HAnimJoint853 = x3d.HAnimJoint()
-HAnimJoint853.name = "l_middle3"
 HAnimJoint853.DEF = "Joe_l_middle3"
-HAnimJoint853.center = [0.20260000228881836,0.7010999917984009,-0.049400001764297485]
+HAnimJoint853.center = [0.20260000228881836,0.70109999179840088,-0.049400001764297485]
+HAnimJoint853.name = "l_middle3"
 HAnimJoint853.skinCoordIndex = [183,184,185,186,187,188,189,190,191]
 HAnimJoint853.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint853.ulimit = [0,0,0]
-HAnimJoint853.llimit = [0,0,0]
+HAnimJoint853.stiffness = [0,0,0]
 HAnimSegment854 = x3d.HAnimSegment()
-HAnimSegment854.name = "l_middle_distal"
 HAnimSegment854.DEF = "Joe_l_middle_distal"
+HAnimSegment854.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment854.name = "l_middle_distal"
 Shape855 = x3d.Shape()
 IndexedLineSet856 = x3d.IndexedLineSet()
 IndexedLineSet856.coordIndex = [0,1,-1]
@@ -3829,9 +3818,9 @@ Shape855.appearance = Appearance858
 
 HAnimSegment854.children.append(Shape855)
 HAnimSite859 = x3d.HAnimSite()
-HAnimSite859.name = "l_middle_distal_tip"
 HAnimSite859.DEF = "Joe_l_middle_distal_tip"
-HAnimSite859.translation = [0.20800000429153442,0.6730999946594238,-0.04910000041127205]
+HAnimSite859.name = "l_middle_distal_tip"
+HAnimSite859.translation = [0.20800000429153442,0.67309999465942383,-0.049100000411272049]
 Shape860 = x3d.Shape()
 Shape860.USE = "sitebox"
 
@@ -3839,7 +3828,7 @@ HAnimSite859.children.append(Shape860)
 
 HAnimSegment854.children.append(HAnimSite859)
 Transform861 = x3d.Transform()
-Transform861.translation = [0.20260000228881836,0.7010999917984009,-0.049400001764297485]
+Transform861.translation = [0.20260000228881836,0.70109999179840088,-0.049400001764297485]
 Shape862 = x3d.Shape()
 Shape862.USE = "jointbox"
 
@@ -3857,16 +3846,16 @@ HAnimJoint829.children.append(HAnimJoint837)
 
 HAnimJoint753.children.append(HAnimJoint829)
 HAnimJoint863 = x3d.HAnimJoint()
-HAnimJoint863.name = "l_ring0"
 HAnimJoint863.DEF = "Joe_l_ring0"
-HAnimJoint863.center = [0.1956000030040741,0.8019000291824341,-0.07940000295639038]
+HAnimJoint863.center = [0.1956000030040741,0.80190002918243408,-0.079400002956390381]
+HAnimJoint863.name = "l_ring0"
 HAnimJoint863.skinCoordIndex = [133,134]
 HAnimJoint863.skinCoordWeight = [1,1]
-HAnimJoint863.ulimit = [0,0,0]
-HAnimJoint863.llimit = [0,0,0]
+HAnimJoint863.stiffness = [0,0,0]
 HAnimSegment864 = x3d.HAnimSegment()
-HAnimSegment864.name = "l_ring_metacarpal"
 HAnimSegment864.DEF = "Joe_l_ring_metacarpal"
+HAnimSegment864.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment864.name = "l_ring_metacarpal"
 Shape865 = x3d.Shape()
 IndexedLineSet866 = x3d.IndexedLineSet()
 IndexedLineSet866.coordIndex = [0,1,-1]
@@ -3882,7 +3871,7 @@ Shape865.appearance = Appearance868
 
 HAnimSegment864.children.append(Shape865)
 Transform869 = x3d.Transform()
-Transform869.translation = [0.1956000030040741,0.8019000291824341,-0.07940000295639038]
+Transform869.translation = [0.1956000030040741,0.80190002918243408,-0.079400002956390381]
 Shape870 = x3d.Shape()
 Shape870.USE = "jointbox"
 
@@ -3892,16 +3881,16 @@ HAnimSegment864.children.append(Transform869)
 
 HAnimJoint863.children.append(HAnimSegment864)
 HAnimJoint871 = x3d.HAnimJoint()
-HAnimJoint871.name = "l_ring1"
 HAnimJoint871.DEF = "Joe_l_ring1"
-HAnimJoint871.center = [0.1956000030040741,0.781499981880188,-0.07940000295639038]
+HAnimJoint871.center = [0.1956000030040741,0.78149998188018799,-0.079400002956390381]
+HAnimJoint871.name = "l_ring1"
 HAnimJoint871.skinCoordIndex = [158,159,164,165]
 HAnimJoint871.skinCoordWeight = [1,1,0.5,0.5]
-HAnimJoint871.ulimit = [0,0,0]
-HAnimJoint871.llimit = [0,0,0]
+HAnimJoint871.stiffness = [0,0,0]
 HAnimSegment872 = x3d.HAnimSegment()
-HAnimSegment872.name = "l_ring_proximal"
 HAnimSegment872.DEF = "Joe_l_ring_proximal"
+HAnimSegment872.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment872.name = "l_ring_proximal"
 Shape873 = x3d.Shape()
 IndexedLineSet874 = x3d.IndexedLineSet()
 IndexedLineSet874.coordIndex = [0,1,-1]
@@ -3917,7 +3906,7 @@ Shape873.appearance = Appearance876
 
 HAnimSegment872.children.append(Shape873)
 Transform877 = x3d.Transform()
-Transform877.translation = [0.1956000030040741,0.781499981880188,-0.07940000295639038]
+Transform877.translation = [0.1956000030040741,0.78149998188018799,-0.079400002956390381]
 Shape878 = x3d.Shape()
 Shape878.USE = "jointbox"
 
@@ -3927,16 +3916,16 @@ HAnimSegment872.children.append(Transform877)
 
 HAnimJoint871.children.append(HAnimSegment872)
 HAnimJoint879 = x3d.HAnimJoint()
-HAnimJoint879.name = "l_ring2"
 HAnimJoint879.DEF = "Joe_l_ring2"
-HAnimJoint879.center = [0.1973000019788742,0.7286999821662903,-0.07769999653100967]
+HAnimJoint879.center = [0.19730000197887421,0.72869998216629028,-0.077699996531009674]
+HAnimJoint879.name = "l_ring2"
 HAnimJoint879.skinCoordIndex = [192,193,194,195]
 HAnimJoint879.skinCoordWeight = [1,1,1,1]
-HAnimJoint879.ulimit = [0,0,0]
-HAnimJoint879.llimit = [0,0,0]
+HAnimJoint879.stiffness = [0,0,0]
 HAnimSegment880 = x3d.HAnimSegment()
-HAnimSegment880.name = "l_ring_middle"
 HAnimSegment880.DEF = "Joe_l_ring_middle"
+HAnimSegment880.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment880.name = "l_ring_middle"
 Shape881 = x3d.Shape()
 IndexedLineSet882 = x3d.IndexedLineSet()
 IndexedLineSet882.coordIndex = [0,1,-1]
@@ -3952,7 +3941,7 @@ Shape881.appearance = Appearance884
 
 HAnimSegment880.children.append(Shape881)
 Transform885 = x3d.Transform()
-Transform885.translation = [0.1973000019788742,0.7286999821662903,-0.07769999653100967]
+Transform885.translation = [0.19730000197887421,0.72869998216629028,-0.077699996531009674]
 Shape886 = x3d.Shape()
 Shape886.USE = "jointbox"
 
@@ -3962,16 +3951,16 @@ HAnimSegment880.children.append(Transform885)
 
 HAnimJoint879.children.append(HAnimSegment880)
 HAnimJoint887 = x3d.HAnimJoint()
-HAnimJoint887.name = "l_ring3"
 HAnimJoint887.DEF = "Joe_l_ring3"
-HAnimJoint887.center = [0.19830000400543213,0.7045000195503235,-0.07670000195503235]
+HAnimJoint887.center = [0.19830000400543213,0.70450001955032349,-0.076700001955032349]
+HAnimJoint887.name = "l_ring3"
 HAnimJoint887.skinCoordIndex = [196,197,198,199,200,201,202,203,204]
 HAnimJoint887.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint887.ulimit = [0,0,0]
-HAnimJoint887.llimit = [0,0,0]
+HAnimJoint887.stiffness = [0,0,0]
 HAnimSegment888 = x3d.HAnimSegment()
-HAnimSegment888.name = "l_ring_distal"
 HAnimSegment888.DEF = "Joe_l_ring_distal"
+HAnimSegment888.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment888.name = "l_ring_distal"
 Shape889 = x3d.Shape()
 IndexedLineSet890 = x3d.IndexedLineSet()
 IndexedLineSet890.coordIndex = [0,1,-1]
@@ -3987,7 +3976,7 @@ Shape889.appearance = Appearance892
 
 HAnimSegment888.children.append(Shape889)
 Transform893 = x3d.Transform()
-Transform893.translation = [0.19830000400543213,0.7045000195503235,-0.07670000195503235]
+Transform893.translation = [0.19830000400543213,0.70450001955032349,-0.076700001955032349]
 Shape894 = x3d.Shape()
 Shape894.USE = "jointbox"
 
@@ -3995,9 +3984,9 @@ Transform893.children.append(Shape894)
 
 HAnimSegment888.children.append(Transform893)
 HAnimSite895 = x3d.HAnimSite()
-HAnimSite895.name = "l_ring_distal_tip"
 HAnimSite895.DEF = "Joe_l_ring_distal_tip"
-HAnimSite895.translation = [0.20350000262260437,0.675000011920929,-0.07559999823570251]
+HAnimSite895.name = "l_ring_distal_tip"
+HAnimSite895.translation = [0.20350000262260437,0.67500001192092896,-0.075599998235702515]
 Shape896 = x3d.Shape()
 Shape896.USE = "sitebox"
 
@@ -4015,16 +4004,15 @@ HAnimJoint863.children.append(HAnimJoint871)
 
 HAnimJoint753.children.append(HAnimJoint863)
 HAnimJoint897 = x3d.HAnimJoint()
-HAnimJoint897.name = "l_pinky0"
 HAnimJoint897.DEF = "Joe_l_pinky0"
 HAnimJoint897.center = [0.1925,0.8066,-0.1036]
+HAnimJoint897.name = "l_pinky0"
 HAnimJoint897.skinCoordIndex = [135,136,137,165]
 HAnimJoint897.skinCoordWeight = [1,1,1,0.5]
-HAnimJoint897.ulimit = [0,0,0]
-HAnimJoint897.llimit = [0,0,0]
 HAnimSegment898 = x3d.HAnimSegment()
-HAnimSegment898.name = "l_pinky_metacarpal"
 HAnimSegment898.DEF = "Joe_l_pinky_metacarpal"
+HAnimSegment898.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment898.name = "l_pinky_metacarpal"
 Shape899 = x3d.Shape()
 IndexedLineSet900 = x3d.IndexedLineSet()
 IndexedLineSet900.coordIndex = [0,1,-1]
@@ -4040,7 +4028,7 @@ Shape899.appearance = Appearance902
 
 HAnimSegment898.children.append(Shape899)
 Transform903 = x3d.Transform()
-Transform903.translation = [0.19249999523162842,0.8065999746322632,-0.10360000282526016]
+Transform903.translation = [0.19249999523162842,0.80659997463226318,-0.10360000282526016]
 Shape904 = x3d.Shape()
 Shape904.USE = "jointbox"
 
@@ -4050,16 +4038,16 @@ HAnimSegment898.children.append(Transform903)
 
 HAnimJoint897.children.append(HAnimSegment898)
 HAnimJoint905 = x3d.HAnimJoint()
-HAnimJoint905.name = "l_pinky1"
 HAnimJoint905.DEF = "Joe_l_pinky1"
-HAnimJoint905.center = [0.19249999523162842,0.7865999937057495,-0.10360000282526016]
+HAnimJoint905.center = [0.19249999523162842,0.78659999370574951,-0.10360000282526016]
+HAnimJoint905.name = "l_pinky1"
 HAnimJoint905.skinCoordIndex = [160,161,162]
 HAnimJoint905.skinCoordWeight = [1,1,1]
-HAnimJoint905.ulimit = [0,0,0]
-HAnimJoint905.llimit = [0,0,0]
+HAnimJoint905.stiffness = [0,0,0]
 HAnimSegment906 = x3d.HAnimSegment()
-HAnimSegment906.name = "l_pinky_proximal"
 HAnimSegment906.DEF = "Joe_l_pinky_proximal"
+HAnimSegment906.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment906.name = "l_pinky_proximal"
 Shape907 = x3d.Shape()
 IndexedLineSet908 = x3d.IndexedLineSet()
 IndexedLineSet908.coordIndex = [0,1,-1]
@@ -4075,7 +4063,7 @@ Shape907.appearance = Appearance910
 
 HAnimSegment906.children.append(Shape907)
 Transform911 = x3d.Transform()
-Transform911.translation = [0.19249999523162842,0.7865999937057495,-0.10360000282526016]
+Transform911.translation = [0.19249999523162842,0.78659999370574951,-0.10360000282526016]
 Shape912 = x3d.Shape()
 Shape912.USE = "jointbox"
 
@@ -4085,16 +4073,16 @@ HAnimSegment906.children.append(Transform911)
 
 HAnimJoint905.children.append(HAnimSegment906)
 HAnimJoint913 = x3d.HAnimJoint()
-HAnimJoint913.name = "l_pinky2"
 HAnimJoint913.DEF = "Joe_l_pinky2"
-HAnimJoint913.center = [0.19380000233650208,0.745199978351593,-0.10239999741315842]
+HAnimJoint913.center = [0.19380000233650208,0.74519997835159302,-0.10239999741315842]
+HAnimJoint913.name = "l_pinky2"
 HAnimJoint913.skinCoordIndex = [205,206,207,208]
 HAnimJoint913.skinCoordWeight = [1,1,1,1]
-HAnimJoint913.ulimit = [0,0,0]
-HAnimJoint913.llimit = [0,0,0]
+HAnimJoint913.stiffness = [0,0,0]
 HAnimSegment914 = x3d.HAnimSegment()
-HAnimSegment914.name = "l_pinky_middle"
 HAnimSegment914.DEF = "Joe_l_pinky_middle"
+HAnimSegment914.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment914.name = "l_pinky_middle"
 Transform915 = x3d.Transform()
 Transform915.translation = [0.1938,0.7452,-0.1024]
 Shape916 = x3d.Shape()
@@ -4120,16 +4108,16 @@ HAnimSegment914.children.append(Shape917)
 
 HAnimJoint913.children.append(HAnimSegment914)
 HAnimJoint921 = x3d.HAnimJoint()
-HAnimJoint921.name = "l_pinky3"
 HAnimJoint921.DEF = "Joe_l_pinky3"
-HAnimJoint921.center = [0.19480000436306,0.7276999950408936,-0.10170000046491623]
+HAnimJoint921.center = [0.19480000436306,0.72769999504089355,-0.10170000046491623]
+HAnimJoint921.name = "l_pinky3"
 HAnimJoint921.skinCoordIndex = [209,210,211,212,213,214,215,216,217]
 HAnimJoint921.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint921.ulimit = [0,0,0]
-HAnimJoint921.llimit = [0,0,0]
+HAnimJoint921.stiffness = [0,0,0]
 HAnimSegment922 = x3d.HAnimSegment()
-HAnimSegment922.name = "l_pinky_distal"
 HAnimSegment922.DEF = "Joe_l_pinky_distal"
+HAnimSegment922.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment922.name = "l_pinky_distal"
 Shape923 = x3d.Shape()
 IndexedLineSet924 = x3d.IndexedLineSet()
 IndexedLineSet924.coordIndex = [0,1,-1]
@@ -4153,9 +4141,9 @@ Transform927.children.append(Shape928)
 
 HAnimSegment922.children.append(Transform927)
 HAnimSite929 = x3d.HAnimSite()
-HAnimSite929.name = "l_pinky_distal_tip"
 HAnimSite929.DEF = "Joe_l_pinky_distal_tip"
-HAnimSite929.translation = [0.2013999968767166,0.7009000182151794,-0.10119999945163727]
+HAnimSite929.name = "l_pinky_distal_tip"
+HAnimSite929.translation = [0.20139999687671661,0.70090001821517944,-0.10119999945163727]
 Shape930 = x3d.Shape()
 Shape930.USE = "sitebox"
 
@@ -4183,16 +4171,16 @@ HAnimJoint681.children.append(HAnimJoint691)
 
 HAnimJoint565.children.append(HAnimJoint681)
 HAnimJoint931 = x3d.HAnimJoint()
-HAnimJoint931.name = "r_sternoclavicular"
 HAnimJoint931.DEF = "Joe_r_sternoclavicular"
 HAnimJoint931.center = [-0.029999999329447746,1.4600000381469727,0]
+HAnimJoint931.name = "r_sternoclavicular"
 HAnimJoint931.skinCoordIndex = [10]
 HAnimJoint931.skinCoordWeight = [1]
-HAnimJoint931.ulimit = [0,0,0]
-HAnimJoint931.llimit = [0,0,0]
+HAnimJoint931.stiffness = [0,0,0]
 HAnimSegment932 = x3d.HAnimSegment()
-HAnimSegment932.name = "r_clavicle"
 HAnimSegment932.DEF = "Joe_r_clavicle"
+HAnimSegment932.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment932.name = "r_clavicle"
 Shape933 = x3d.Shape()
 IndexedLineSet934 = x3d.IndexedLineSet()
 IndexedLineSet934.coordIndex = [0,1,-1]
@@ -4216,9 +4204,9 @@ Transform937.children.append(Shape938)
 
 HAnimSegment932.children.append(Transform937)
 HAnimSite939 = x3d.HAnimSite()
-HAnimSite939.name = "r_clavicale"
 HAnimSite939.DEF = "Joe_r_clavicale"
-HAnimSite939.translation = [-0.029999999329447746,1.4600000381469727,0.03500000014901161]
+HAnimSite939.name = "r_clavicale"
+HAnimSite939.translation = [-0.029999999329447746,1.4600000381469727,0.035000000149011612]
 Shape940 = x3d.Shape()
 Shape940.USE = "sitebox"
 
@@ -4228,16 +4216,16 @@ HAnimSegment932.children.append(HAnimSite939)
 
 HAnimJoint931.children.append(HAnimSegment932)
 HAnimJoint941 = x3d.HAnimJoint()
-HAnimJoint941.name = "r_acromioclavicular"
 HAnimJoint941.DEF = "Joe_r_acromioclavicular"
-HAnimJoint941.center = [-0.09000000357627869,1.409999966621399,-0.10999999940395355]
+HAnimJoint941.center = [-0.090000003576278687,1.4099999666213989,-0.10999999940395355]
+HAnimJoint941.name = "r_acromioclavicular"
 HAnimJoint941.skinCoordIndex = [77,29]
-HAnimJoint941.skinCoordWeight = [1,0.8999999761581421]
-HAnimJoint941.ulimit = [0,0,0]
-HAnimJoint941.llimit = [0,0,0]
+HAnimJoint941.skinCoordWeight = [1,0.89999997615814209]
+HAnimJoint941.stiffness = [0,0,0]
 HAnimSegment942 = x3d.HAnimSegment()
-HAnimSegment942.name = "r_scapula"
 HAnimSegment942.DEF = "Joe_r_scapula"
+HAnimSegment942.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment942.name = "r_scapula"
 Shape943 = x3d.Shape()
 IndexedLineSet944 = x3d.IndexedLineSet()
 IndexedLineSet944.coordIndex = [0,1,-1]
@@ -4253,7 +4241,7 @@ Shape943.appearance = Appearance946
 
 HAnimSegment942.children.append(Shape943)
 Transform947 = x3d.Transform()
-Transform947.translation = [-0.09000000357627869,1.409999966621399,-0.09000000357627869]
+Transform947.translation = [-0.090000003576278687,1.4099999666213989,-0.090000003576278687]
 Shape948 = x3d.Shape()
 Shape948.USE = "jointbox"
 
@@ -4269,8 +4257,8 @@ Transform949.children.append(Shape950)
 
 HAnimSegment942.children.append(Transform949)
 HAnimSite951 = x3d.HAnimSite()
-HAnimSite951.name = "r_acromion"
 HAnimSite951.DEF = "Joe_r_acromion"
+HAnimSite951.name = "r_acromion"
 HAnimSite951.translation = [-0.17800000309944153,1.4824999570846558,-0.0625]
 Shape952 = x3d.Shape()
 Shape952.USE = "sitebox"
@@ -4279,9 +4267,9 @@ HAnimSite951.children.append(Shape952)
 
 HAnimSegment942.children.append(HAnimSite951)
 HAnimSite953 = x3d.HAnimSite()
-HAnimSite953.name = "r_axilla_ant"
 HAnimSite953.DEF = "Joe_r_axilla_ant"
-HAnimSite953.translation = [-0.17000000178813934,1.3799999952316284,0.007000000216066837]
+HAnimSite953.name = "r_axilla_ant"
+HAnimSite953.translation = [-0.17000000178813934,1.3799999952316284,0.0070000002160668373]
 Shape954 = x3d.Shape()
 Shape954.USE = "sitebox"
 
@@ -4289,9 +4277,9 @@ HAnimSite953.children.append(Shape954)
 
 HAnimSegment942.children.append(HAnimSite953)
 HAnimSite955 = x3d.HAnimSite()
-HAnimSite955.name = "r_axilla_post"
 HAnimSite955.DEF = "Joe_r_axilla_post"
-HAnimSite955.translation = [-0.1599999964237213,1.3799999952316284,-0.12700000405311584]
+HAnimSite955.name = "r_axilla_post"
+HAnimSite955.translation = [-0.15999999642372131,1.3799999952316284,-0.12700000405311584]
 Shape956 = x3d.Shape()
 Shape956.USE = "sitebox"
 
@@ -4301,18 +4289,18 @@ HAnimSegment942.children.append(HAnimSite955)
 
 HAnimJoint941.children.append(HAnimSegment942)
 HAnimJoint957 = x3d.HAnimJoint()
-HAnimJoint957.name = "r_shoulder"
 HAnimJoint957.DEF = "Joe_r_shoulder"
-HAnimJoint957.center = [-0.20000000298023224,1.440000057220459,-0.03999999910593033]
+HAnimJoint957.center = [-0.20000000298023224,1.440000057220459,-0.039999999105930328]
+HAnimJoint957.name = "r_shoulder"
 HAnimJoint957.skinCoordIndex = [29,30,32,78,218,219,220,221,86,88]
 HAnimJoint957.skinCoordWeight = [0.10000000149011612,1,1,1,1,1,1,1,0.30000001192092896,0.20000000298023224]
-HAnimJoint957.ulimit = [0,0,0]
-HAnimJoint957.llimit = [0,0,0]
+HAnimJoint957.stiffness = [0,0,0]
 HAnimSegment958 = x3d.HAnimSegment()
-HAnimSegment958.name = "r_upperarm"
 HAnimSegment958.DEF = "Joe_r_upperarm"
+HAnimSegment958.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment958.name = "r_upperarm"
 Transform959 = x3d.Transform()
-Transform959.translation = [-0.20000000298023224,1.440000057220459,-0.03999999910593033]
+Transform959.translation = [-0.20000000298023224,1.440000057220459,-0.039999999105930328]
 Shape960 = x3d.Shape()
 Shape960.USE = "jointbox"
 
@@ -4342,7 +4330,7 @@ Transform965.children.append(Shape966)
 
 HAnimSegment958.children.append(Transform965)
 Transform967 = x3d.Transform()
-Transform967.translation = [-0.17000000178813934,1.3799999952316284,0.007000000216066837]
+Transform967.translation = [-0.17000000178813934,1.3799999952316284,0.0070000002160668373]
 Shape968 = x3d.Shape()
 Shape968.USE = "skinsphere"
 
@@ -4350,7 +4338,7 @@ Transform967.children.append(Shape968)
 
 HAnimSegment958.children.append(Transform967)
 Transform969 = x3d.Transform()
-Transform969.translation = [-0.1599999964237213,1.3799999952316284,-0.12700000405311584]
+Transform969.translation = [-0.15999999642372131,1.3799999952316284,-0.12700000405311584]
 Shape970 = x3d.Shape()
 Shape970.USE = "skinsphere"
 
@@ -4366,7 +4354,7 @@ Transform971.children.append(Shape972)
 
 HAnimSegment958.children.append(Transform971)
 Transform973 = x3d.Transform()
-Transform973.translation = [-0.23000000417232513,1.2350000143051147,-0.03999999910593033]
+Transform973.translation = [-0.23000000417232513,1.2350000143051147,-0.039999999105930328]
 Shape974 = x3d.Shape()
 Shape974.USE = "skinsphere"
 
@@ -4374,7 +4362,7 @@ Transform973.children.append(Shape974)
 
 HAnimSegment958.children.append(Transform973)
 Transform975 = x3d.Transform()
-Transform975.translation = [-0.1599999964237213,1.2300000190734863,-0.03999999910593033]
+Transform975.translation = [-0.15999999642372131,1.2300000190734863,-0.039999999105930328]
 Shape976 = x3d.Shape()
 Shape976.USE = "skinsphere"
 
@@ -4398,9 +4386,9 @@ Transform979.children.append(Shape980)
 
 HAnimSegment958.children.append(Transform979)
 HAnimSite981 = x3d.HAnimSite()
-HAnimSite981.name = "r_humeral_medial_epicn"
 HAnimSite981.DEF = "Joe_r_humeral_medial_epicn"
-HAnimSite981.translation = [-0.16500000655651093,1.138800024986267,-0.03999999910593033]
+HAnimSite981.name = "r_humeral_medial_epicn"
+HAnimSite981.translation = [-0.16500000655651093,1.1388000249862671,-0.039999999105930328]
 Shape982 = x3d.Shape()
 Shape982.USE = "sitebox"
 
@@ -4408,8 +4396,8 @@ HAnimSite981.children.append(Shape982)
 
 HAnimSegment958.children.append(HAnimSite981)
 HAnimSite983 = x3d.HAnimSite()
-HAnimSite983.name = "r_radiale"
 HAnimSite983.DEF = "Joe_r_radiale"
+HAnimSite983.name = "r_radiale"
 HAnimSite983.translation = [-0.23000000417232513,1.1330000162124634,-0.054999999701976776]
 Shape984 = x3d.Shape()
 Shape984.USE = "sitebox"
@@ -4418,9 +4406,9 @@ HAnimSite983.children.append(Shape984)
 
 HAnimSegment958.children.append(HAnimSite983)
 HAnimSite985 = x3d.HAnimSite()
-HAnimSite985.name = "r_humeral_lateral_epicn"
 HAnimSite985.DEF = "Joe_r_humeral_lateral_epicn"
-HAnimSite985.translation = [-0.24400000274181366,1.138800024986267,-0.03999999910593033]
+HAnimSite985.name = "r_humeral_lateral_epicn"
+HAnimSite985.translation = [-0.24400000274181366,1.1388000249862671,-0.039999999105930328]
 Shape986 = x3d.Shape()
 Shape986.USE = "sitebox"
 
@@ -4430,16 +4418,16 @@ HAnimSegment958.children.append(HAnimSite985)
 
 HAnimJoint957.children.append(HAnimSegment958)
 HAnimJoint987 = x3d.HAnimJoint()
-HAnimJoint987.name = "r_elbow"
 HAnimJoint987.DEF = "Joe_r_elbow"
-HAnimJoint987.center = [-0.20000000298023224,1.138800024986267,-0.03999999910593033]
+HAnimJoint987.center = [-0.20000000298023224,1.1388000249862671,-0.039999999105930328]
+HAnimJoint987.name = "r_elbow"
 HAnimJoint987.skinCoordIndex = [33,34,35,225,226,227,228,229,231,232,233,234]
 HAnimJoint987.skinCoordWeight = [1,1,1,1,1,1,1,1,1,1,1,1]
-HAnimJoint987.ulimit = [0,0,0]
-HAnimJoint987.llimit = [0,0,0]
+HAnimJoint987.stiffness = [0,0,0]
 HAnimSegment988 = x3d.HAnimSegment()
-HAnimSegment988.name = "r_forearm"
 HAnimSegment988.DEF = "Joe_r_forearm"
+HAnimSegment988.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment988.name = "r_forearm"
 Shape989 = x3d.Shape()
 IndexedLineSet990 = x3d.IndexedLineSet()
 IndexedLineSet990.coordIndex = [0,1,-1]
@@ -4455,7 +4443,7 @@ Shape989.appearance = Appearance992
 
 HAnimSegment988.children.append(Shape989)
 Transform993 = x3d.Transform()
-Transform993.translation = [-0.20000000298023224,1.138800024986267,-0.03999999910593033]
+Transform993.translation = [-0.20000000298023224,1.1388000249862671,-0.039999999105930328]
 Shape994 = x3d.Shape()
 Shape994.USE = "jointbox"
 
@@ -4463,7 +4451,7 @@ Transform993.children.append(Shape994)
 
 HAnimSegment988.children.append(Transform993)
 Transform995 = x3d.Transform()
-Transform995.translation = [-0.20000000298023224,1.138800024986267,0.013000000268220901]
+Transform995.translation = [-0.20000000298023224,1.1388000249862671,0.013000000268220901]
 Shape996 = x3d.Shape()
 Shape996.USE = "skinsphere"
 
@@ -4471,7 +4459,7 @@ Transform995.children.append(Shape996)
 
 HAnimSegment988.children.append(Transform995)
 Transform997 = x3d.Transform()
-Transform997.translation = [-0.22499999403953552,1,-0.009999999776482582]
+Transform997.translation = [-0.22499999403953552,1,-0.0099999997764825821]
 Shape998 = x3d.Shape()
 Shape998.USE = "skinsphere"
 
@@ -4479,7 +4467,7 @@ Transform997.children.append(Shape998)
 
 HAnimSegment988.children.append(Transform997)
 Transform999 = x3d.Transform()
-Transform999.translation = [-0.22499999403953552,1,-0.07000000029802322]
+Transform999.translation = [-0.22499999403953552,1,-0.070000000298023224]
 Shape1000 = x3d.Shape()
 Shape1000.USE = "skinsphere"
 
@@ -4487,7 +4475,7 @@ Transform999.children.append(Shape1000)
 
 HAnimSegment988.children.append(Transform999)
 Transform1001 = x3d.Transform()
-Transform1001.translation = [-0.1850000023841858,1,-0.009999999776482582]
+Transform1001.translation = [-0.18500000238418579,1,-0.0099999997764825821]
 Shape1002 = x3d.Shape()
 Shape1002.USE = "skinsphere"
 
@@ -4495,7 +4483,7 @@ Transform1001.children.append(Shape1002)
 
 HAnimSegment988.children.append(Transform1001)
 Transform1003 = x3d.Transform()
-Transform1003.translation = [-0.1850000023841858,1,-0.07000000029802322]
+Transform1003.translation = [-0.18500000238418579,1,-0.070000000298023224]
 Shape1004 = x3d.Shape()
 Shape1004.USE = "skinsphere"
 
@@ -4503,9 +4491,9 @@ Transform1003.children.append(Shape1004)
 
 HAnimSegment988.children.append(Transform1003)
 HAnimSite1005 = x3d.HAnimSite()
-HAnimSite1005.name = "r_radial_styloid"
 HAnimSite1005.DEF = "Joe_r_radial_styloid"
-HAnimSite1005.translation = [-0.20000000298023224,0.8999999761581421,-0.014999999664723873]
+HAnimSite1005.name = "r_radial_styloid"
+HAnimSite1005.translation = [-0.20000000298023224,0.89999997615814209,-0.014999999664723873]
 Shape1006 = x3d.Shape()
 Shape1006.USE = "sitebox"
 
@@ -4513,9 +4501,9 @@ HAnimSite1005.children.append(Shape1006)
 
 HAnimSegment988.children.append(HAnimSite1005)
 HAnimSite1007 = x3d.HAnimSite()
-HAnimSite1007.name = "r_olecranon"
 HAnimSite1007.DEF = "Joe_r_olecranon"
-HAnimSite1007.translation = [-0.20000000298023224,1.138800024986267,-0.07999999821186066]
+HAnimSite1007.name = "r_olecranon"
+HAnimSite1007.translation = [-0.20000000298023224,1.1388000249862671,-0.079999998211860657]
 Shape1008 = x3d.Shape()
 Shape1008.USE = "sitebox"
 
@@ -4525,16 +4513,16 @@ HAnimSegment988.children.append(HAnimSite1007)
 
 HAnimJoint987.children.append(HAnimSegment988)
 HAnimJoint1009 = x3d.HAnimJoint()
-HAnimJoint1009.name = "r_wrist"
 HAnimJoint1009.DEF = "Joe_r_wrist"
-HAnimJoint1009.center = [-0.20000000298023224,0.8899999856948853,-0.03999999910593033]
+HAnimJoint1009.center = [-0.20000000298023224,0.88999998569488525,-0.039999999105930328]
+HAnimJoint1009.name = "r_wrist"
 HAnimJoint1009.skinCoordIndex = [235,236,237,238,239,240,241,242]
 HAnimJoint1009.skinCoordWeight = [1,1,1,1,1,1,1,1]
-HAnimJoint1009.ulimit = [0,0,0]
-HAnimJoint1009.llimit = [0,0,0]
+HAnimJoint1009.stiffness = [0,0,0]
 HAnimSegment1010 = x3d.HAnimSegment()
-HAnimSegment1010.name = "r_hand"
 HAnimSegment1010.DEF = "Joe_r_hand"
+HAnimSegment1010.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1010.name = "r_hand"
 Shape1011 = x3d.Shape()
 IndexedLineSet1012 = x3d.IndexedLineSet()
 IndexedLineSet1012.coordIndex = [0,1,-1,0,2,-1,0,3,-1,0,4,-1,0,5,-1]
@@ -4550,7 +4538,7 @@ Shape1011.appearance = Appearance1014
 
 HAnimSegment1010.children.append(Shape1011)
 Transform1015 = x3d.Transform()
-Transform1015.translation = [-0.20000000298023224,0.8899999856948853,-0.03999999910593033]
+Transform1015.translation = [-0.20000000298023224,0.88999998569488525,-0.039999999105930328]
 Shape1016 = x3d.Shape()
 Shape1016.USE = "jointbox"
 
@@ -4558,9 +4546,9 @@ Transform1015.children.append(Shape1016)
 
 HAnimSegment1010.children.append(Transform1015)
 HAnimSite1017 = x3d.HAnimSite()
-HAnimSite1017.name = "r_ulnar_styloid"
 HAnimSite1017.DEF = "Joe_r_ulnar_styloid"
-HAnimSite1017.translation = [-0.20000000298023224,0.8999999761581421,-0.08500000089406967]
+HAnimSite1017.name = "r_ulnar_styloid"
+HAnimSite1017.translation = [-0.20000000298023224,0.89999997615814209,-0.085000000894069672]
 Shape1018 = x3d.Shape()
 Shape1018.USE = "sitebox"
 
@@ -4570,16 +4558,16 @@ HAnimSegment1010.children.append(HAnimSite1017)
 
 HAnimJoint1009.children.append(HAnimSegment1010)
 HAnimJoint1019 = x3d.HAnimJoint()
-HAnimJoint1019.name = "r_thumb1"
 HAnimJoint1019.DEF = "Joe_r_thumb1"
-HAnimJoint1019.center = [-0.20000000298023224,0.8500000238418579,0]
+HAnimJoint1019.center = [-0.20000000298023224,0.85000002384185791,0]
+HAnimJoint1019.name = "r_thumb1"
 HAnimJoint1019.skinCoordIndex = [243,244]
 HAnimJoint1019.skinCoordWeight = [1,1]
-HAnimJoint1019.ulimit = [0,0,0]
-HAnimJoint1019.llimit = [0,0,0]
+HAnimJoint1019.stiffness = [0,0,0]
 HAnimSegment1020 = x3d.HAnimSegment()
-HAnimSegment1020.name = "r_thumb_metacarpal"
 HAnimSegment1020.DEF = "Joe_r_thumb_metacarpal"
+HAnimSegment1020.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1020.name = "r_thumb_metacarpal"
 Shape1021 = x3d.Shape()
 IndexedLineSet1022 = x3d.IndexedLineSet()
 IndexedLineSet1022.coordIndex = [0,1,-1]
@@ -4595,7 +4583,7 @@ Shape1021.appearance = Appearance1024
 
 HAnimSegment1020.children.append(Shape1021)
 Transform1025 = x3d.Transform()
-Transform1025.translation = [-0.20000000298023224,0.8500000238418579,0]
+Transform1025.translation = [-0.20000000298023224,0.85000002384185791,0]
 Shape1026 = x3d.Shape()
 Shape1026.USE = "jointbox"
 
@@ -4605,16 +4593,16 @@ HAnimSegment1020.children.append(Transform1025)
 
 HAnimJoint1019.children.append(HAnimSegment1020)
 HAnimJoint1027 = x3d.HAnimJoint()
-HAnimJoint1027.name = "r_thumb2"
 HAnimJoint1027.DEF = "Joe_r_thumb2"
-HAnimJoint1027.center = [-0.20000000298023224,0.8199999928474426,0.029999999329447746]
+HAnimJoint1027.center = [-0.20000000298023224,0.81999999284744263,0.029999999329447746]
+HAnimJoint1027.name = "r_thumb2"
 HAnimJoint1027.skinCoordIndex = [254,255,256,257,258,259]
 HAnimJoint1027.skinCoordWeight = [0.5,0.5,0.5,1,1,1]
-HAnimJoint1027.ulimit = [0,0,0]
-HAnimJoint1027.llimit = [0,0,0]
+HAnimJoint1027.stiffness = [0,0,0]
 HAnimSegment1028 = x3d.HAnimSegment()
-HAnimSegment1028.name = "r_thumb_proximal"
 HAnimSegment1028.DEF = "Joe_r_thumb_proximal"
+HAnimSegment1028.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1028.name = "r_thumb_proximal"
 Shape1029 = x3d.Shape()
 IndexedLineSet1030 = x3d.IndexedLineSet()
 IndexedLineSet1030.coordIndex = [0,1,-1]
@@ -4630,7 +4618,7 @@ Shape1029.appearance = Appearance1032
 
 HAnimSegment1028.children.append(Shape1029)
 Transform1033 = x3d.Transform()
-Transform1033.translation = [-0.20000000298023224,0.8199999928474426,0.029999999329447746]
+Transform1033.translation = [-0.20000000298023224,0.81999999284744263,0.029999999329447746]
 Shape1034 = x3d.Shape()
 Shape1034.USE = "jointbox"
 
@@ -4640,16 +4628,16 @@ HAnimSegment1028.children.append(Transform1033)
 
 HAnimJoint1027.children.append(HAnimSegment1028)
 HAnimJoint1035 = x3d.HAnimJoint()
-HAnimJoint1035.name = "r_thumb3"
 HAnimJoint1035.DEF = "Joe_r_thumb3"
-HAnimJoint1035.center = [-0.20000000298023224,0.800000011920929,0.05000000074505806]
+HAnimJoint1035.center = [-0.20000000298023224,0.80000001192092896,0.05000000074505806]
+HAnimJoint1035.name = "r_thumb3"
 HAnimJoint1035.skinCoordIndex = [260,261,262,263,264,265,266,267,268]
 HAnimJoint1035.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint1035.ulimit = [0,0,0]
-HAnimJoint1035.llimit = [0,0,0]
+HAnimJoint1035.stiffness = [0,0,0]
 HAnimSegment1036 = x3d.HAnimSegment()
-HAnimSegment1036.name = "r_thumb_distal"
 HAnimSegment1036.DEF = "Joe_r_thumb_distal"
+HAnimSegment1036.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1036.name = "r_thumb_distal"
 Shape1037 = x3d.Shape()
 IndexedLineSet1038 = x3d.IndexedLineSet()
 IndexedLineSet1038.coordIndex = [0,1,-1]
@@ -4666,7 +4654,7 @@ Shape1037.appearance = Appearance1040
 HAnimSegment1036.children.append(Shape1037)
 Transform1041 = x3d.Transform()
 Transform1041.DEF = "Thumbnail"
-Transform1041.translation = [-0.20000000298023224,0.7850000262260437,0.07500000298023224]
+Transform1041.translation = [-0.20000000298023224,0.7850000262260437,0.075000002980232239]
 Shape1042 = x3d.Shape()
 Shape1042.USE = "skinsphere"
 
@@ -4674,7 +4662,7 @@ Transform1041.children.append(Shape1042)
 
 HAnimSegment1036.children.append(Transform1041)
 Transform1043 = x3d.Transform()
-Transform1043.translation = [-0.20000000298023224,0.800000011920929,0.05000000074505806]
+Transform1043.translation = [-0.20000000298023224,0.80000001192092896,0.05000000074505806]
 Shape1044 = x3d.Shape()
 Shape1044.USE = "jointbox"
 
@@ -4682,9 +4670,9 @@ Transform1043.children.append(Shape1044)
 
 HAnimSegment1036.children.append(Transform1043)
 HAnimSite1045 = x3d.HAnimSite()
-HAnimSite1045.name = "r_thumb_distal_tip"
 HAnimSite1045.DEF = "Joe_r_thumb_distal_tip"
-HAnimSite1045.translation = [-0.20000000298023224,0.7799999713897705,0.07000000029802322]
+HAnimSite1045.name = "r_thumb_distal_tip"
+HAnimSite1045.translation = [-0.20000000298023224,0.77999997138977051,0.070000000298023224]
 Shape1046 = x3d.Shape()
 Shape1046.USE = "sitebox"
 
@@ -4700,16 +4688,16 @@ HAnimJoint1019.children.append(HAnimJoint1027)
 
 HAnimJoint1009.children.append(HAnimJoint1019)
 HAnimJoint1047 = x3d.HAnimJoint()
-HAnimJoint1047.name = "r_index0"
 HAnimJoint1047.DEF = "Joe_r_index0"
 HAnimJoint1047.center = [-0.20000000298023224,0.8399999737739563,-0.014999999664723873]
+HAnimJoint1047.name = "r_index0"
 HAnimJoint1047.skinCoordIndex = [245,246]
 HAnimJoint1047.skinCoordWeight = [1,1]
-HAnimJoint1047.ulimit = [0,0,0]
-HAnimJoint1047.llimit = [0,0,0]
+HAnimJoint1047.stiffness = [0,0,0]
 HAnimSegment1048 = x3d.HAnimSegment()
-HAnimSegment1048.name = "r_index_metacarpal"
 HAnimSegment1048.DEF = "Joe_r_index_metacarpal"
+HAnimSegment1048.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1048.name = "r_index_metacarpal"
 Shape1049 = x3d.Shape()
 IndexedLineSet1050 = x3d.IndexedLineSet()
 IndexedLineSet1050.coordIndex = [0,1,-1]
@@ -4733,8 +4721,8 @@ Transform1053.children.append(Shape1054)
 
 HAnimSegment1048.children.append(Transform1053)
 HAnimSite1055 = x3d.HAnimSite()
-HAnimSite1055.name = "r_metacarpal_pha2"
 HAnimSite1055.DEF = "Joe_r_metacarpal_pha2"
+HAnimSite1055.name = "r_metacarpal_pha2"
 HAnimSite1055.translation = [-0.20000000298023224,0.7929999828338623,-0.004999999888241291]
 Shape1056 = x3d.Shape()
 Shape1056.USE = "sitebox"
@@ -4745,16 +4733,16 @@ HAnimSegment1048.children.append(HAnimSite1055)
 
 HAnimJoint1047.children.append(HAnimSegment1048)
 HAnimJoint1057 = x3d.HAnimJoint()
-HAnimJoint1057.name = "r_index1"
 HAnimJoint1057.DEF = "Joe_r_index1"
 HAnimJoint1057.center = [-0.20000000298023224,0.7929999828338623,-0.014999999664723873]
+HAnimJoint1057.name = "r_index1"
 HAnimJoint1057.skinCoordIndex = [254,255,256,269,270,271,279]
 HAnimJoint1057.skinCoordWeight = [0.5,0.5,0.5,1,1,1,0.5]
-HAnimJoint1057.ulimit = [0,0,0]
-HAnimJoint1057.llimit = [0,0,0]
+HAnimJoint1057.stiffness = [0,0,0]
 HAnimSegment1058 = x3d.HAnimSegment()
-HAnimSegment1058.name = "r_index_proximal"
 HAnimSegment1058.DEF = "Joe_r_index_proximal"
+HAnimSegment1058.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1058.name = "r_index_proximal"
 Shape1059 = x3d.Shape()
 IndexedLineSet1060 = x3d.IndexedLineSet()
 IndexedLineSet1060.coordIndex = [0,1,-1]
@@ -4780,16 +4768,16 @@ HAnimSegment1058.children.append(Transform1063)
 
 HAnimJoint1057.children.append(HAnimSegment1058)
 HAnimJoint1065 = x3d.HAnimJoint()
-HAnimJoint1065.name = "r_index2"
 HAnimJoint1065.DEF = "Joe_r_index2"
-HAnimJoint1065.center = [-0.20000000298023224,0.7450000047683716,-0.014999999664723873]
+HAnimJoint1065.center = [-0.20000000298023224,0.74500000476837158,-0.014999999664723873]
+HAnimJoint1065.name = "r_index2"
 HAnimJoint1065.skinCoordIndex = [282,283,284,285]
 HAnimJoint1065.skinCoordWeight = [1,1,1,1]
-HAnimJoint1065.ulimit = [0,0,0]
-HAnimJoint1065.llimit = [0,0,0]
+HAnimJoint1065.stiffness = [0,0,0]
 HAnimSegment1066 = x3d.HAnimSegment()
-HAnimSegment1066.name = "r_index_middle"
 HAnimSegment1066.DEF = "Joe_r_index_middle"
+HAnimSegment1066.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1066.name = "r_index_middle"
 Shape1067 = x3d.Shape()
 IndexedLineSet1068 = x3d.IndexedLineSet()
 IndexedLineSet1068.coordIndex = [0,1,-1]
@@ -4805,7 +4793,7 @@ Shape1067.appearance = Appearance1070
 
 HAnimSegment1066.children.append(Shape1067)
 Transform1071 = x3d.Transform()
-Transform1071.translation = [-0.20000000298023224,0.7450000047683716,-0.014999999664723873]
+Transform1071.translation = [-0.20000000298023224,0.74500000476837158,-0.014999999664723873]
 Shape1072 = x3d.Shape()
 Shape1072.USE = "jointbox"
 
@@ -4815,16 +4803,16 @@ HAnimSegment1066.children.append(Transform1071)
 
 HAnimJoint1065.children.append(HAnimSegment1066)
 HAnimJoint1073 = x3d.HAnimJoint()
-HAnimJoint1073.name = "r_index3"
 HAnimJoint1073.DEF = "Joe_r_index3"
-HAnimJoint1073.center = [-0.20000000298023224,0.7200000286102295,-0.014999999664723873]
+HAnimJoint1073.center = [-0.20000000298023224,0.72000002861022949,-0.014999999664723873]
+HAnimJoint1073.name = "r_index3"
 HAnimJoint1073.skinCoordIndex = [286,287,288,289,290,291,292,293,294]
 HAnimJoint1073.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint1073.ulimit = [0,0,0]
-HAnimJoint1073.llimit = [0,0,0]
+HAnimJoint1073.stiffness = [0,0,0]
 HAnimSegment1074 = x3d.HAnimSegment()
-HAnimSegment1074.name = "r_index_distal"
 HAnimSegment1074.DEF = "Joe_r_index_distal"
+HAnimSegment1074.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1074.name = "r_index_distal"
 Shape1075 = x3d.Shape()
 IndexedLineSet1076 = x3d.IndexedLineSet()
 IndexedLineSet1076.coordIndex = [0,1,-1]
@@ -4840,7 +4828,7 @@ Shape1075.appearance = Appearance1078
 
 HAnimSegment1074.children.append(Shape1075)
 Transform1079 = x3d.Transform()
-Transform1079.translation = [-0.20000000298023224,0.7200000286102295,-0.014999999664723873]
+Transform1079.translation = [-0.20000000298023224,0.72000002861022949,-0.014999999664723873]
 Shape1080 = x3d.Shape()
 Shape1080.USE = "jointbox"
 
@@ -4848,9 +4836,9 @@ Transform1079.children.append(Shape1080)
 
 HAnimSegment1074.children.append(Transform1079)
 HAnimSite1081 = x3d.HAnimSite()
-HAnimSite1081.name = "r_index_distal_tip"
 HAnimSite1081.DEF = "Joe_r_index_distal_tip"
-HAnimSite1081.translation = [-0.20000000298023224,0.6949999928474426,-0.014999999664723873]
+HAnimSite1081.name = "r_index_distal_tip"
+HAnimSite1081.translation = [-0.20000000298023224,0.69499999284744263,-0.014999999664723873]
 Shape1082 = x3d.Shape()
 Shape1082.USE = "sitebox"
 
@@ -4868,16 +4856,16 @@ HAnimJoint1047.children.append(HAnimJoint1057)
 
 HAnimJoint1009.children.append(HAnimJoint1047)
 HAnimJoint1083 = x3d.HAnimJoint()
-HAnimJoint1083.name = "r_middle0"
 HAnimJoint1083.DEF = "Joe_r_middle0"
-HAnimJoint1083.center = [-0.20000000298023224,0.8349999785423279,-0.03999999910593033]
+HAnimJoint1083.center = [-0.20000000298023224,0.83499997854232788,-0.039999999105930328]
+HAnimJoint1083.name = "r_middle0"
 HAnimJoint1083.skinCoordIndex = [247,248]
 HAnimJoint1083.skinCoordWeight = [1,1]
-HAnimJoint1083.ulimit = [0,0,0]
-HAnimJoint1083.llimit = [0,0,0]
+HAnimJoint1083.stiffness = [0,0,0]
 HAnimSegment1084 = x3d.HAnimSegment()
-HAnimSegment1084.name = "r_middle_metacarpal"
 HAnimSegment1084.DEF = "Joe_r_middle_metacarpal"
+HAnimSegment1084.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1084.name = "r_middle_metacarpal"
 Shape1085 = x3d.Shape()
 IndexedLineSet1086 = x3d.IndexedLineSet()
 IndexedLineSet1086.coordIndex = [0,1,-1]
@@ -4893,7 +4881,7 @@ Shape1085.appearance = Appearance1088
 
 HAnimSegment1084.children.append(Shape1085)
 Transform1089 = x3d.Transform()
-Transform1089.translation = [-0.20000000298023224,0.8349999785423279,-0.03999999910593033]
+Transform1089.translation = [-0.20000000298023224,0.83499997854232788,-0.039999999105930328]
 Shape1090 = x3d.Shape()
 Shape1090.USE = "jointbox"
 
@@ -4903,16 +4891,16 @@ HAnimSegment1084.children.append(Transform1089)
 
 HAnimJoint1083.children.append(HAnimSegment1084)
 HAnimJoint1091 = x3d.HAnimJoint()
-HAnimJoint1091.name = "r_middle1"
 HAnimJoint1091.DEF = "Joe_r_middle1"
-HAnimJoint1091.center = [-0.20000000298023224,0.7879999876022339,-0.03999999910593033]
+HAnimJoint1091.center = [-0.20000000298023224,0.78799998760223389,-0.039999999105930328]
+HAnimJoint1091.name = "r_middle1"
 HAnimJoint1091.skinCoordIndex = [272,273,279,280]
 HAnimJoint1091.skinCoordWeight = [1,1,0.5,0.5]
-HAnimJoint1091.ulimit = [0,0,0]
-HAnimJoint1091.llimit = [0,0,0]
+HAnimJoint1091.stiffness = [0,0,0]
 HAnimSegment1092 = x3d.HAnimSegment()
-HAnimSegment1092.name = "r_middle_proximal"
 HAnimSegment1092.DEF = "Joe_r_middle_proximal"
+HAnimSegment1092.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1092.name = "r_middle_proximal"
 Shape1093 = x3d.Shape()
 IndexedLineSet1094 = x3d.IndexedLineSet()
 IndexedLineSet1094.coordIndex = [0,1,-1]
@@ -4928,7 +4916,7 @@ Shape1093.appearance = Appearance1096
 
 HAnimSegment1092.children.append(Shape1093)
 Transform1097 = x3d.Transform()
-Transform1097.translation = [-0.20000000298023224,0.7879999876022339,-0.03999999910593033]
+Transform1097.translation = [-0.20000000298023224,0.78799998760223389,-0.039999999105930328]
 Shape1098 = x3d.Shape()
 Shape1098.USE = "jointbox"
 
@@ -4938,16 +4926,16 @@ HAnimSegment1092.children.append(Transform1097)
 
 HAnimJoint1091.children.append(HAnimSegment1092)
 HAnimJoint1099 = x3d.HAnimJoint()
-HAnimJoint1099.name = "r_middle2"
 HAnimJoint1099.DEF = "Joe_r_middle2"
-HAnimJoint1099.center = [-0.20000000298023224,0.7400000095367432,-0.03999999910593033]
+HAnimJoint1099.center = [-0.20000000298023224,0.74000000953674316,-0.039999999105930328]
+HAnimJoint1099.name = "r_middle2"
 HAnimJoint1099.skinCoordIndex = [295,296,297,298]
 HAnimJoint1099.skinCoordWeight = [1,1,1,1]
-HAnimJoint1099.ulimit = [0,0,0]
-HAnimJoint1099.llimit = [0,0,0]
+HAnimJoint1099.stiffness = [0,0,0]
 HAnimSegment1100 = x3d.HAnimSegment()
-HAnimSegment1100.name = "r_middle_middle"
 HAnimSegment1100.DEF = "Joe_r_middle_middle"
+HAnimSegment1100.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1100.name = "r_middle_middle"
 Shape1101 = x3d.Shape()
 IndexedLineSet1102 = x3d.IndexedLineSet()
 IndexedLineSet1102.coordIndex = [0,1,-1]
@@ -4963,7 +4951,7 @@ Shape1101.appearance = Appearance1104
 
 HAnimSegment1100.children.append(Shape1101)
 Transform1105 = x3d.Transform()
-Transform1105.translation = [-0.20000000298023224,0.7400000095367432,-0.03999999910593033]
+Transform1105.translation = [-0.20000000298023224,0.74000000953674316,-0.039999999105930328]
 Shape1106 = x3d.Shape()
 Shape1106.USE = "jointbox"
 
@@ -4973,16 +4961,16 @@ HAnimSegment1100.children.append(Transform1105)
 
 HAnimJoint1099.children.append(HAnimSegment1100)
 HAnimJoint1107 = x3d.HAnimJoint()
-HAnimJoint1107.name = "r_middle3"
 HAnimJoint1107.DEF = "Joe_r_middle3"
-HAnimJoint1107.center = [-0.20000000298023224,0.7142000198364258,-0.03999999910593033]
+HAnimJoint1107.center = [-0.20000000298023224,0.71420001983642578,-0.039999999105930328]
+HAnimJoint1107.name = "r_middle3"
 HAnimJoint1107.skinCoordIndex = [299,300,301,302,303,304,305,306,307]
 HAnimJoint1107.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint1107.ulimit = [0,0,0]
-HAnimJoint1107.llimit = [0,0,0]
+HAnimJoint1107.stiffness = [0,0,0]
 HAnimSegment1108 = x3d.HAnimSegment()
-HAnimSegment1108.name = "r_middle_distal"
 HAnimSegment1108.DEF = "Joe_r_middle_distal"
+HAnimSegment1108.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1108.name = "r_middle_distal"
 Shape1109 = x3d.Shape()
 IndexedLineSet1110 = x3d.IndexedLineSet()
 IndexedLineSet1110.coordIndex = [0,1,-1]
@@ -4998,7 +4986,7 @@ Shape1109.appearance = Appearance1112
 
 HAnimSegment1108.children.append(Shape1109)
 Transform1113 = x3d.Transform()
-Transform1113.translation = [-0.20000000298023224,0.7142000198364258,-0.03999999910593033]
+Transform1113.translation = [-0.20000000298023224,0.71420001983642578,-0.039999999105930328]
 Shape1114 = x3d.Shape()
 Shape1114.USE = "jointbox"
 
@@ -5006,9 +4994,9 @@ Transform1113.children.append(Shape1114)
 
 HAnimSegment1108.children.append(Transform1113)
 HAnimSite1115 = x3d.HAnimSite()
-HAnimSite1115.name = "r_dactylion"
 HAnimSite1115.DEF = "Joe_r_dactylion"
-HAnimSite1115.translation = [-0.20000000298023224,0.6800000071525574,-0.03999999910593033]
+HAnimSite1115.name = "r_dactylion"
+HAnimSite1115.translation = [-0.20000000298023224,0.68000000715255737,-0.039999999105930328]
 Shape1116 = x3d.Shape()
 Shape1116.USE = "sitebox"
 
@@ -5016,9 +5004,9 @@ HAnimSite1115.children.append(Shape1116)
 
 HAnimSegment1108.children.append(HAnimSite1115)
 HAnimSite1117 = x3d.HAnimSite()
-HAnimSite1117.name = "r_middle_distal_tip"
 HAnimSite1117.DEF = "Joe_r_middle_distal_tip"
-HAnimSite1117.translation = [-0.20000000298023224,0.6800000071525574,-0.03999999910593033]
+HAnimSite1117.name = "r_middle_distal_tip"
+HAnimSite1117.translation = [-0.20000000298023224,0.68000000715255737,-0.039999999105930328]
 Shape1118 = x3d.Shape()
 Shape1118.USE = "sitebox"
 
@@ -5036,16 +5024,15 @@ HAnimJoint1083.children.append(HAnimJoint1091)
 
 HAnimJoint1009.children.append(HAnimJoint1083)
 HAnimJoint1119 = x3d.HAnimJoint()
-HAnimJoint1119.name = "r_ring0"
 HAnimJoint1119.DEF = "Joe_r_ring0"
 HAnimJoint1119.center = [-0.2,0.835,-0.065]
+HAnimJoint1119.name = "r_ring0"
 HAnimJoint1119.skinCoordIndex = [249,250]
 HAnimJoint1119.skinCoordWeight = [1,1]
-HAnimJoint1119.ulimit = [0,0,0]
-HAnimJoint1119.llimit = [0,0,0]
 HAnimSegment1120 = x3d.HAnimSegment()
-HAnimSegment1120.name = "r_ring_metacarpal"
 HAnimSegment1120.DEF = "Joe_r_ring_metacarpal"
+HAnimSegment1120.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1120.name = "r_ring_metacarpal"
 Shape1121 = x3d.Shape()
 IndexedLineSet1122 = x3d.IndexedLineSet()
 IndexedLineSet1122.coordIndex = [0,1,-1]
@@ -5061,7 +5048,7 @@ Shape1121.appearance = Appearance1124
 
 HAnimSegment1120.children.append(Shape1121)
 Transform1125 = x3d.Transform()
-Transform1125.translation = [-0.20000000298023224,0.8349999785423279,-0.06499999761581421]
+Transform1125.translation = [-0.20000000298023224,0.83499997854232788,-0.064999997615814209]
 Shape1126 = x3d.Shape()
 Shape1126.USE = "jointbox"
 
@@ -5071,16 +5058,16 @@ HAnimSegment1120.children.append(Transform1125)
 
 HAnimJoint1119.children.append(HAnimSegment1120)
 HAnimJoint1127 = x3d.HAnimJoint()
-HAnimJoint1127.name = "r_ring1"
 HAnimJoint1127.DEF = "Joe_r_ring1"
-HAnimJoint1127.center = [-0.20000000298023224,0.7929999828338623,-0.06499999761581421]
+HAnimJoint1127.center = [-0.20000000298023224,0.7929999828338623,-0.064999997615814209]
+HAnimJoint1127.name = "r_ring1"
 HAnimJoint1127.skinCoordIndex = [274,275,280,281]
 HAnimJoint1127.skinCoordWeight = [1,1,0.5,0.5]
-HAnimJoint1127.ulimit = [0,0,0]
-HAnimJoint1127.llimit = [0,0,0]
+HAnimJoint1127.stiffness = [0,0,0]
 HAnimSegment1128 = x3d.HAnimSegment()
-HAnimSegment1128.name = "r_ring_proximal"
 HAnimSegment1128.DEF = "Joe_r_ring_proximal"
+HAnimSegment1128.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1128.name = "r_ring_proximal"
 Shape1129 = x3d.Shape()
 IndexedLineSet1130 = x3d.IndexedLineSet()
 IndexedLineSet1130.coordIndex = [0,1,-1]
@@ -5096,7 +5083,7 @@ Shape1129.appearance = Appearance1132
 
 HAnimSegment1128.children.append(Shape1129)
 Transform1133 = x3d.Transform()
-Transform1133.translation = [-0.20000000298023224,0.7929999828338623,-0.06499999761581421]
+Transform1133.translation = [-0.20000000298023224,0.7929999828338623,-0.064999997615814209]
 Shape1134 = x3d.Shape()
 Shape1134.USE = "jointbox"
 
@@ -5106,16 +5093,16 @@ HAnimSegment1128.children.append(Transform1133)
 
 HAnimJoint1127.children.append(HAnimSegment1128)
 HAnimJoint1135 = x3d.HAnimJoint()
-HAnimJoint1135.name = "r_ring2"
 HAnimJoint1135.DEF = "Joe_r_ring2"
-HAnimJoint1135.center = [-0.20000000298023224,0.7400000095367432,-0.06499999761581421]
+HAnimJoint1135.center = [-0.20000000298023224,0.74000000953674316,-0.064999997615814209]
+HAnimJoint1135.name = "r_ring2"
 HAnimJoint1135.skinCoordIndex = [308,309,310,311]
 HAnimJoint1135.skinCoordWeight = [1,1,1,1]
-HAnimJoint1135.ulimit = [0,0,0]
-HAnimJoint1135.llimit = [0,0,0]
+HAnimJoint1135.stiffness = [0,0,0]
 HAnimSegment1136 = x3d.HAnimSegment()
-HAnimSegment1136.name = "r_ring_middle"
 HAnimSegment1136.DEF = "Joe_r_ring_middle"
+HAnimSegment1136.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1136.name = "r_ring_middle"
 Shape1137 = x3d.Shape()
 IndexedLineSet1138 = x3d.IndexedLineSet()
 IndexedLineSet1138.coordIndex = [0,1,-1]
@@ -5131,7 +5118,7 @@ Shape1137.appearance = Appearance1140
 
 HAnimSegment1136.children.append(Shape1137)
 Transform1141 = x3d.Transform()
-Transform1141.translation = [-0.20000000298023224,0.7400000095367432,-0.06499999761581421]
+Transform1141.translation = [-0.20000000298023224,0.74000000953674316,-0.064999997615814209]
 Shape1142 = x3d.Shape()
 Shape1142.USE = "jointbox"
 
@@ -5141,16 +5128,16 @@ HAnimSegment1136.children.append(Transform1141)
 
 HAnimJoint1135.children.append(HAnimSegment1136)
 HAnimJoint1143 = x3d.HAnimJoint()
-HAnimJoint1143.name = "r_ring3"
 HAnimJoint1143.DEF = "Joe_r_ring3"
-HAnimJoint1143.center = [-0.20000000298023224,0.7177000045776367,-0.06499999761581421]
+HAnimJoint1143.center = [-0.20000000298023224,0.71770000457763672,-0.064999997615814209]
+HAnimJoint1143.name = "r_ring3"
 HAnimJoint1143.skinCoordIndex = [312,313,314,315,316,317,318,319,320]
 HAnimJoint1143.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint1143.ulimit = [0,0,0]
-HAnimJoint1143.llimit = [0,0,0]
+HAnimJoint1143.stiffness = [0,0,0]
 HAnimSegment1144 = x3d.HAnimSegment()
-HAnimSegment1144.name = "r_ring_distal"
 HAnimSegment1144.DEF = "Joe_r_ring_distal"
+HAnimSegment1144.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1144.name = "r_ring_distal"
 Shape1145 = x3d.Shape()
 IndexedLineSet1146 = x3d.IndexedLineSet()
 IndexedLineSet1146.coordIndex = [0,1,-1]
@@ -5166,7 +5153,7 @@ Shape1145.appearance = Appearance1148
 
 HAnimSegment1144.children.append(Shape1145)
 Transform1149 = x3d.Transform()
-Transform1149.translation = [-0.20000000298023224,0.7177000045776367,-0.06499999761581421]
+Transform1149.translation = [-0.20000000298023224,0.71770000457763672,-0.064999997615814209]
 Shape1150 = x3d.Shape()
 Shape1150.USE = "jointbox"
 
@@ -5174,9 +5161,9 @@ Transform1149.children.append(Shape1150)
 
 HAnimSegment1144.children.append(Transform1149)
 HAnimSite1151 = x3d.HAnimSite()
-HAnimSite1151.name = "r_ring_distal_tip"
 HAnimSite1151.DEF = "Joe_r_ring_distal_tip"
-HAnimSite1151.translation = [-0.20000000298023224,0.6949999928474426,-0.06499999761581421]
+HAnimSite1151.name = "r_ring_distal_tip"
+HAnimSite1151.translation = [-0.20000000298023224,0.69499999284744263,-0.064999997615814209]
 Shape1152 = x3d.Shape()
 Shape1152.USE = "sitebox"
 
@@ -5194,16 +5181,16 @@ HAnimJoint1119.children.append(HAnimJoint1127)
 
 HAnimJoint1009.children.append(HAnimJoint1119)
 HAnimJoint1153 = x3d.HAnimJoint()
-HAnimJoint1153.name = "r_pinky0"
 HAnimJoint1153.DEF = "Joe_r_pinky0"
-HAnimJoint1153.center = [-0.20000000298023224,0.8399999737739563,-0.08500000089406967]
+HAnimJoint1153.center = [-0.20000000298023224,0.8399999737739563,-0.085000000894069672]
+HAnimJoint1153.name = "r_pinky0"
 HAnimJoint1153.skinCoordIndex = [251,252,253,281]
 HAnimJoint1153.skinCoordWeight = [1,1,1,0.5]
-HAnimJoint1153.ulimit = [0,0,0]
-HAnimJoint1153.llimit = [0,0,0]
+HAnimJoint1153.stiffness = [0,0,0]
 HAnimSegment1154 = x3d.HAnimSegment()
-HAnimSegment1154.name = "r_pinky_metacarpal"
 HAnimSegment1154.DEF = "Joe_r_pinky_metacarpal"
+HAnimSegment1154.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1154.name = "r_pinky_metacarpal"
 Shape1155 = x3d.Shape()
 IndexedLineSet1156 = x3d.IndexedLineSet()
 IndexedLineSet1156.coordIndex = [0,1,-1]
@@ -5219,7 +5206,7 @@ Shape1155.appearance = Appearance1158
 
 HAnimSegment1154.children.append(Shape1155)
 Transform1159 = x3d.Transform()
-Transform1159.translation = [-0.20000000298023224,0.8399999737739563,-0.08500000089406967]
+Transform1159.translation = [-0.20000000298023224,0.8399999737739563,-0.085000000894069672]
 Shape1160 = x3d.Shape()
 Shape1160.USE = "jointbox"
 
@@ -5227,9 +5214,9 @@ Transform1159.children.append(Shape1160)
 
 HAnimSegment1154.children.append(Transform1159)
 HAnimSite1161 = x3d.HAnimSite()
-HAnimSite1161.name = "r_metacarpal_pha5"
 HAnimSite1161.DEF = "Joe_r_metacarpal_pha5"
-HAnimSite1161.translation = [-0.20000000298023224,0.7900000214576721,-0.0949999988079071]
+HAnimSite1161.name = "r_metacarpal_pha5"
+HAnimSite1161.translation = [-0.20000000298023224,0.79000002145767212,-0.094999998807907104]
 Shape1162 = x3d.Shape()
 Shape1162.USE = "sitebox"
 
@@ -5239,16 +5226,16 @@ HAnimSegment1154.children.append(HAnimSite1161)
 
 HAnimJoint1153.children.append(HAnimSegment1154)
 HAnimJoint1163 = x3d.HAnimJoint()
-HAnimJoint1163.name = "r_pinky1"
 HAnimJoint1163.DEF = "Joe_r_pinky1"
-HAnimJoint1163.center = [-0.20000000298023224,0.7900000214576721,-0.08500000089406967]
+HAnimJoint1163.center = [-0.20000000298023224,0.79000002145767212,-0.085000000894069672]
+HAnimJoint1163.name = "r_pinky1"
 HAnimJoint1163.skinCoordIndex = [276,277,278]
 HAnimJoint1163.skinCoordWeight = [1,1,1]
-HAnimJoint1163.ulimit = [0,0,0]
-HAnimJoint1163.llimit = [0,0,0]
+HAnimJoint1163.stiffness = [0,0,0]
 HAnimSegment1164 = x3d.HAnimSegment()
-HAnimSegment1164.name = "r_pinky_proximal"
 HAnimSegment1164.DEF = "Joe_r_pinky_proximal"
+HAnimSegment1164.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1164.name = "r_pinky_proximal"
 Shape1165 = x3d.Shape()
 IndexedLineSet1166 = x3d.IndexedLineSet()
 IndexedLineSet1166.coordIndex = [0,1,-1]
@@ -5264,7 +5251,7 @@ Shape1165.appearance = Appearance1168
 
 HAnimSegment1164.children.append(Shape1165)
 Transform1169 = x3d.Transform()
-Transform1169.translation = [-0.20000000298023224,0.7900000214576721,-0.08500000089406967]
+Transform1169.translation = [-0.20000000298023224,0.79000002145767212,-0.085000000894069672]
 Shape1170 = x3d.Shape()
 Shape1170.USE = "jointbox"
 
@@ -5274,16 +5261,16 @@ HAnimSegment1164.children.append(Transform1169)
 
 HAnimJoint1163.children.append(HAnimSegment1164)
 HAnimJoint1171 = x3d.HAnimJoint()
-HAnimJoint1171.name = "r_pinky2"
 HAnimJoint1171.DEF = "Joe_r_pinky2"
-HAnimJoint1171.center = [-0.20000000298023224,0.7549999952316284,-0.08500000089406967]
+HAnimJoint1171.center = [-0.20000000298023224,0.75499999523162842,-0.085000000894069672]
+HAnimJoint1171.name = "r_pinky2"
 HAnimJoint1171.skinCoordIndex = [321,322,323,324]
 HAnimJoint1171.skinCoordWeight = [1,1,1,1]
-HAnimJoint1171.ulimit = [0,0,0]
-HAnimJoint1171.llimit = [0,0,0]
+HAnimJoint1171.stiffness = [0,0,0]
 HAnimSegment1172 = x3d.HAnimSegment()
-HAnimSegment1172.name = "r_pinky_middle"
 HAnimSegment1172.DEF = "Joe_r_pinky_middle"
+HAnimSegment1172.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1172.name = "r_pinky_middle"
 Shape1173 = x3d.Shape()
 IndexedLineSet1174 = x3d.IndexedLineSet()
 IndexedLineSet1174.coordIndex = [0,1,-1]
@@ -5299,7 +5286,7 @@ Shape1173.appearance = Appearance1176
 
 HAnimSegment1172.children.append(Shape1173)
 Transform1177 = x3d.Transform()
-Transform1177.translation = [-0.20000000298023224,0.7549999952316284,-0.08500000089406967]
+Transform1177.translation = [-0.20000000298023224,0.75499999523162842,-0.085000000894069672]
 Shape1178 = x3d.Shape()
 Shape1178.USE = "jointbox"
 
@@ -5309,16 +5296,16 @@ HAnimSegment1172.children.append(Transform1177)
 
 HAnimJoint1171.children.append(HAnimSegment1172)
 HAnimJoint1179 = x3d.HAnimJoint()
-HAnimJoint1179.name = "r_pinky3"
 HAnimJoint1179.DEF = "Joe_r_pinky3"
-HAnimJoint1179.center = [-0.20000000298023224,0.7350000143051147,-0.09000000357627869]
+HAnimJoint1179.center = [-0.20000000298023224,0.73500001430511475,-0.090000003576278687]
+HAnimJoint1179.name = "r_pinky3"
 HAnimJoint1179.skinCoordIndex = [325,326,327,328,329,330,331,332,333]
 HAnimJoint1179.skinCoordWeight = [1,1,1,1,1,1,1,1,1]
-HAnimJoint1179.ulimit = [0,0,0]
-HAnimJoint1179.llimit = [0,0,0]
+HAnimJoint1179.stiffness = [0,0,0]
 HAnimSegment1180 = x3d.HAnimSegment()
-HAnimSegment1180.name = "r_pinky_distal"
 HAnimSegment1180.DEF = "Joe_r_pinky_distal"
+HAnimSegment1180.momentsOfInertia = [0,0,0,0,0,0,0,0,0]
+HAnimSegment1180.name = "r_pinky_distal"
 Shape1181 = x3d.Shape()
 IndexedLineSet1182 = x3d.IndexedLineSet()
 IndexedLineSet1182.coordIndex = [0,1,-1]
@@ -5334,7 +5321,7 @@ Shape1181.appearance = Appearance1184
 
 HAnimSegment1180.children.append(Shape1181)
 Transform1185 = x3d.Transform()
-Transform1185.translation = [-0.20000000298023224,0.7350000143051147,-0.08500000089406967]
+Transform1185.translation = [-0.20000000298023224,0.73500001430511475,-0.085000000894069672]
 Shape1186 = x3d.Shape()
 Shape1186.USE = "jointbox"
 
@@ -5342,9 +5329,9 @@ Transform1185.children.append(Shape1186)
 
 HAnimSegment1180.children.append(Transform1185)
 HAnimSite1187 = x3d.HAnimSite()
-HAnimSite1187.name = "r_pinky_distal_tip"
 HAnimSite1187.DEF = "Joe_r_pinky_distal_tip"
-HAnimSite1187.translation = [-0.20000000298023224,0.7200000286102295,-0.08500000089406967]
+HAnimSite1187.name = "r_pinky_distal_tip"
+HAnimSite1187.translation = [-0.20000000298023224,0.72000002861022949,-0.085000000894069672]
 Shape1188 = x3d.Shape()
 Shape1188.USE = "sitebox"
 
@@ -5408,361 +5395,361 @@ HAnimJoint90.children.append(HAnimJoint404)
 
 HAnimHumanoid81.skeleton.append(HAnimJoint90)
 HAnimJoint1189 = x3d.HAnimJoint()
-HAnimJoint1189.USE = "Joe_HumanoidRoot"
+HAnimJoint1189.USE = "Joe_sacroiliac"
 
 HAnimHumanoid81.joints.append(HAnimJoint1189)
 HAnimJoint1190 = x3d.HAnimJoint()
-HAnimJoint1190.USE = "Joe_sacroiliac"
+HAnimJoint1190.USE = "Joe_l_hip"
 
 HAnimHumanoid81.joints.append(HAnimJoint1190)
 HAnimJoint1191 = x3d.HAnimJoint()
-HAnimJoint1191.USE = "Joe_l_hip"
+HAnimJoint1191.USE = "Joe_l_knee"
 
 HAnimHumanoid81.joints.append(HAnimJoint1191)
 HAnimJoint1192 = x3d.HAnimJoint()
-HAnimJoint1192.USE = "Joe_l_knee"
+HAnimJoint1192.USE = "Joe_l_ankle"
 
 HAnimHumanoid81.joints.append(HAnimJoint1192)
 HAnimJoint1193 = x3d.HAnimJoint()
-HAnimJoint1193.USE = "Joe_l_ankle"
+HAnimJoint1193.USE = "Joe_l_subtalar"
 
 HAnimHumanoid81.joints.append(HAnimJoint1193)
 HAnimJoint1194 = x3d.HAnimJoint()
-HAnimJoint1194.USE = "Joe_l_subtalar"
+HAnimJoint1194.USE = "Joe_l_midtarsal"
 
 HAnimHumanoid81.joints.append(HAnimJoint1194)
 HAnimJoint1195 = x3d.HAnimJoint()
-HAnimJoint1195.USE = "Joe_l_midtarsal"
+HAnimJoint1195.USE = "Joe_l_metatarsal"
 
 HAnimHumanoid81.joints.append(HAnimJoint1195)
 HAnimJoint1196 = x3d.HAnimJoint()
-HAnimJoint1196.USE = "Joe_l_metatarsal"
+HAnimJoint1196.USE = "Joe_r_hip"
 
 HAnimHumanoid81.joints.append(HAnimJoint1196)
 HAnimJoint1197 = x3d.HAnimJoint()
-HAnimJoint1197.USE = "Joe_r_hip"
+HAnimJoint1197.USE = "Joe_r_knee"
 
 HAnimHumanoid81.joints.append(HAnimJoint1197)
 HAnimJoint1198 = x3d.HAnimJoint()
-HAnimJoint1198.USE = "Joe_r_knee"
+HAnimJoint1198.USE = "Joe_r_ankle"
 
 HAnimHumanoid81.joints.append(HAnimJoint1198)
 HAnimJoint1199 = x3d.HAnimJoint()
-HAnimJoint1199.USE = "Joe_r_ankle"
+HAnimJoint1199.USE = "Joe_r_subtalar"
 
 HAnimHumanoid81.joints.append(HAnimJoint1199)
 HAnimJoint1200 = x3d.HAnimJoint()
-HAnimJoint1200.USE = "Joe_r_subtalar"
+HAnimJoint1200.USE = "Joe_r_midtarsal"
 
 HAnimHumanoid81.joints.append(HAnimJoint1200)
 HAnimJoint1201 = x3d.HAnimJoint()
-HAnimJoint1201.USE = "Joe_r_midtarsal"
+HAnimJoint1201.USE = "Joe_r_metatarsal"
 
 HAnimHumanoid81.joints.append(HAnimJoint1201)
 HAnimJoint1202 = x3d.HAnimJoint()
-HAnimJoint1202.USE = "Joe_r_metatarsal"
+HAnimJoint1202.USE = "Joe_vl5"
 
 HAnimHumanoid81.joints.append(HAnimJoint1202)
 HAnimJoint1203 = x3d.HAnimJoint()
-HAnimJoint1203.USE = "Joe_vl5"
+HAnimJoint1203.USE = "Joe_vl4"
 
 HAnimHumanoid81.joints.append(HAnimJoint1203)
 HAnimJoint1204 = x3d.HAnimJoint()
-HAnimJoint1204.USE = "Joe_vl4"
+HAnimJoint1204.USE = "Joe_vl3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1204)
 HAnimJoint1205 = x3d.HAnimJoint()
-HAnimJoint1205.USE = "Joe_vl3"
+HAnimJoint1205.USE = "Joe_vl2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1205)
 HAnimJoint1206 = x3d.HAnimJoint()
-HAnimJoint1206.USE = "Joe_vl2"
+HAnimJoint1206.USE = "Joe_vl1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1206)
 HAnimJoint1207 = x3d.HAnimJoint()
-HAnimJoint1207.USE = "Joe_vl1"
+HAnimJoint1207.USE = "Joe_vt12"
 
 HAnimHumanoid81.joints.append(HAnimJoint1207)
 HAnimJoint1208 = x3d.HAnimJoint()
-HAnimJoint1208.USE = "Joe_vt12"
+HAnimJoint1208.USE = "Joe_vt11"
 
 HAnimHumanoid81.joints.append(HAnimJoint1208)
 HAnimJoint1209 = x3d.HAnimJoint()
-HAnimJoint1209.USE = "Joe_vt11"
+HAnimJoint1209.USE = "Joe_vt10"
 
 HAnimHumanoid81.joints.append(HAnimJoint1209)
 HAnimJoint1210 = x3d.HAnimJoint()
-HAnimJoint1210.USE = "Joe_vt10"
+HAnimJoint1210.USE = "Joe_vt9"
 
 HAnimHumanoid81.joints.append(HAnimJoint1210)
 HAnimJoint1211 = x3d.HAnimJoint()
-HAnimJoint1211.USE = "Joe_vt9"
+HAnimJoint1211.USE = "Joe_vt8"
 
 HAnimHumanoid81.joints.append(HAnimJoint1211)
 HAnimJoint1212 = x3d.HAnimJoint()
-HAnimJoint1212.USE = "Joe_vt8"
+HAnimJoint1212.USE = "Joe_vt7"
 
 HAnimHumanoid81.joints.append(HAnimJoint1212)
 HAnimJoint1213 = x3d.HAnimJoint()
-HAnimJoint1213.USE = "Joe_vt7"
+HAnimJoint1213.USE = "Joe_vt6"
 
 HAnimHumanoid81.joints.append(HAnimJoint1213)
 HAnimJoint1214 = x3d.HAnimJoint()
-HAnimJoint1214.USE = "Joe_vt6"
+HAnimJoint1214.USE = "Joe_vt5"
 
 HAnimHumanoid81.joints.append(HAnimJoint1214)
 HAnimJoint1215 = x3d.HAnimJoint()
-HAnimJoint1215.USE = "Joe_vt5"
+HAnimJoint1215.USE = "Joe_vt4"
 
 HAnimHumanoid81.joints.append(HAnimJoint1215)
 HAnimJoint1216 = x3d.HAnimJoint()
-HAnimJoint1216.USE = "Joe_vt4"
+HAnimJoint1216.USE = "Joe_vt3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1216)
 HAnimJoint1217 = x3d.HAnimJoint()
-HAnimJoint1217.USE = "Joe_vt3"
+HAnimJoint1217.USE = "Joe_vt2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1217)
 HAnimJoint1218 = x3d.HAnimJoint()
-HAnimJoint1218.USE = "Joe_vt2"
+HAnimJoint1218.USE = "Joe_vt1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1218)
 HAnimJoint1219 = x3d.HAnimJoint()
-HAnimJoint1219.USE = "Joe_vt1"
+HAnimJoint1219.USE = "Joe_vc7"
 
 HAnimHumanoid81.joints.append(HAnimJoint1219)
 HAnimJoint1220 = x3d.HAnimJoint()
-HAnimJoint1220.USE = "Joe_vc7"
+HAnimJoint1220.USE = "Joe_vc6"
 
 HAnimHumanoid81.joints.append(HAnimJoint1220)
 HAnimJoint1221 = x3d.HAnimJoint()
-HAnimJoint1221.USE = "Joe_vc6"
+HAnimJoint1221.USE = "Joe_vc5"
 
 HAnimHumanoid81.joints.append(HAnimJoint1221)
 HAnimJoint1222 = x3d.HAnimJoint()
-HAnimJoint1222.USE = "Joe_vc5"
+HAnimJoint1222.USE = "Joe_vc4"
 
 HAnimHumanoid81.joints.append(HAnimJoint1222)
 HAnimJoint1223 = x3d.HAnimJoint()
-HAnimJoint1223.USE = "Joe_vc4"
+HAnimJoint1223.USE = "Joe_vc3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1223)
 HAnimJoint1224 = x3d.HAnimJoint()
-HAnimJoint1224.USE = "Joe_vc3"
+HAnimJoint1224.USE = "Joe_vc2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1224)
 HAnimJoint1225 = x3d.HAnimJoint()
-HAnimJoint1225.USE = "Joe_vc2"
+HAnimJoint1225.USE = "Joe_vc1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1225)
 HAnimJoint1226 = x3d.HAnimJoint()
-HAnimJoint1226.USE = "Joe_vc1"
+HAnimJoint1226.USE = "Joe_skullbase"
 
 HAnimHumanoid81.joints.append(HAnimJoint1226)
 HAnimJoint1227 = x3d.HAnimJoint()
-HAnimJoint1227.USE = "Joe_skullbase"
+HAnimJoint1227.USE = "Joe_l_eyeball_joint"
 
 HAnimHumanoid81.joints.append(HAnimJoint1227)
 HAnimJoint1228 = x3d.HAnimJoint()
-HAnimJoint1228.USE = "Joe_l_eyeball_joint"
+HAnimJoint1228.USE = "Joe_r_eyeball_joint"
 
 HAnimHumanoid81.joints.append(HAnimJoint1228)
 HAnimJoint1229 = x3d.HAnimJoint()
-HAnimJoint1229.USE = "Joe_r_eyeball_joint"
+HAnimJoint1229.USE = "Joe_l_sternoclavicular"
 
 HAnimHumanoid81.joints.append(HAnimJoint1229)
 HAnimJoint1230 = x3d.HAnimJoint()
-HAnimJoint1230.USE = "Joe_l_sternoclavicular"
+HAnimJoint1230.USE = "Joe_l_acromioclavicular"
 
 HAnimHumanoid81.joints.append(HAnimJoint1230)
 HAnimJoint1231 = x3d.HAnimJoint()
-HAnimJoint1231.USE = "Joe_l_acromioclavicular"
+HAnimJoint1231.USE = "Joe_l_shoulder"
 
 HAnimHumanoid81.joints.append(HAnimJoint1231)
 HAnimJoint1232 = x3d.HAnimJoint()
-HAnimJoint1232.USE = "Joe_l_shoulder"
+HAnimJoint1232.USE = "Joe_l_elbow"
 
 HAnimHumanoid81.joints.append(HAnimJoint1232)
 HAnimJoint1233 = x3d.HAnimJoint()
-HAnimJoint1233.USE = "Joe_l_elbow"
+HAnimJoint1233.USE = "Joe_l_wrist"
 
 HAnimHumanoid81.joints.append(HAnimJoint1233)
 HAnimJoint1234 = x3d.HAnimJoint()
-HAnimJoint1234.USE = "Joe_l_wrist"
+HAnimJoint1234.USE = "Joe_l_thumb1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1234)
 HAnimJoint1235 = x3d.HAnimJoint()
-HAnimJoint1235.USE = "Joe_l_thumb1"
+HAnimJoint1235.USE = "Joe_l_thumb2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1235)
 HAnimJoint1236 = x3d.HAnimJoint()
-HAnimJoint1236.USE = "Joe_l_thumb2"
+HAnimJoint1236.USE = "Joe_l_thumb3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1236)
 HAnimJoint1237 = x3d.HAnimJoint()
-HAnimJoint1237.USE = "Joe_l_thumb3"
+HAnimJoint1237.USE = "Joe_l_index0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1237)
 HAnimJoint1238 = x3d.HAnimJoint()
-HAnimJoint1238.USE = "Joe_l_index0"
+HAnimJoint1238.USE = "Joe_l_index1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1238)
 HAnimJoint1239 = x3d.HAnimJoint()
-HAnimJoint1239.USE = "Joe_l_index1"
+HAnimJoint1239.USE = "Joe_l_index2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1239)
 HAnimJoint1240 = x3d.HAnimJoint()
-HAnimJoint1240.USE = "Joe_l_index2"
+HAnimJoint1240.USE = "Joe_l_index3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1240)
 HAnimJoint1241 = x3d.HAnimJoint()
-HAnimJoint1241.USE = "Joe_l_index3"
+HAnimJoint1241.USE = "Joe_l_middle0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1241)
 HAnimJoint1242 = x3d.HAnimJoint()
-HAnimJoint1242.USE = "Joe_l_middle0"
+HAnimJoint1242.USE = "Joe_l_middle1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1242)
 HAnimJoint1243 = x3d.HAnimJoint()
-HAnimJoint1243.USE = "Joe_l_middle1"
+HAnimJoint1243.USE = "Joe_l_middle2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1243)
 HAnimJoint1244 = x3d.HAnimJoint()
-HAnimJoint1244.USE = "Joe_l_middle2"
+HAnimJoint1244.USE = "Joe_l_middle3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1244)
 HAnimJoint1245 = x3d.HAnimJoint()
-HAnimJoint1245.USE = "Joe_l_middle3"
+HAnimJoint1245.USE = "Joe_l_ring0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1245)
 HAnimJoint1246 = x3d.HAnimJoint()
-HAnimJoint1246.USE = "Joe_l_ring0"
+HAnimJoint1246.USE = "Joe_l_ring1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1246)
 HAnimJoint1247 = x3d.HAnimJoint()
-HAnimJoint1247.USE = "Joe_l_ring1"
+HAnimJoint1247.USE = "Joe_l_ring2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1247)
 HAnimJoint1248 = x3d.HAnimJoint()
-HAnimJoint1248.USE = "Joe_l_ring2"
+HAnimJoint1248.USE = "Joe_l_ring3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1248)
 HAnimJoint1249 = x3d.HAnimJoint()
-HAnimJoint1249.USE = "Joe_l_ring3"
+HAnimJoint1249.USE = "Joe_l_pinky0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1249)
 HAnimJoint1250 = x3d.HAnimJoint()
-HAnimJoint1250.USE = "Joe_l_pinky0"
+HAnimJoint1250.USE = "Joe_l_pinky1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1250)
 HAnimJoint1251 = x3d.HAnimJoint()
-HAnimJoint1251.USE = "Joe_l_pinky1"
+HAnimJoint1251.USE = "Joe_l_pinky2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1251)
 HAnimJoint1252 = x3d.HAnimJoint()
-HAnimJoint1252.USE = "Joe_l_pinky2"
+HAnimJoint1252.USE = "Joe_l_pinky3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1252)
 HAnimJoint1253 = x3d.HAnimJoint()
-HAnimJoint1253.USE = "Joe_l_pinky3"
+HAnimJoint1253.USE = "Joe_r_sternoclavicular"
 
 HAnimHumanoid81.joints.append(HAnimJoint1253)
 HAnimJoint1254 = x3d.HAnimJoint()
-HAnimJoint1254.USE = "Joe_r_sternoclavicular"
+HAnimJoint1254.USE = "Joe_r_acromioclavicular"
 
 HAnimHumanoid81.joints.append(HAnimJoint1254)
 HAnimJoint1255 = x3d.HAnimJoint()
-HAnimJoint1255.USE = "Joe_r_acromioclavicular"
+HAnimJoint1255.USE = "Joe_r_shoulder"
 
 HAnimHumanoid81.joints.append(HAnimJoint1255)
 HAnimJoint1256 = x3d.HAnimJoint()
-HAnimJoint1256.USE = "Joe_r_shoulder"
+HAnimJoint1256.USE = "Joe_r_elbow"
 
 HAnimHumanoid81.joints.append(HAnimJoint1256)
 HAnimJoint1257 = x3d.HAnimJoint()
-HAnimJoint1257.USE = "Joe_r_elbow"
+HAnimJoint1257.USE = "Joe_r_wrist"
 
 HAnimHumanoid81.joints.append(HAnimJoint1257)
 HAnimJoint1258 = x3d.HAnimJoint()
-HAnimJoint1258.USE = "Joe_r_wrist"
+HAnimJoint1258.USE = "Joe_r_thumb1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1258)
 HAnimJoint1259 = x3d.HAnimJoint()
-HAnimJoint1259.USE = "Joe_r_thumb1"
+HAnimJoint1259.USE = "Joe_r_thumb2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1259)
 HAnimJoint1260 = x3d.HAnimJoint()
-HAnimJoint1260.USE = "Joe_r_thumb2"
+HAnimJoint1260.USE = "Joe_r_thumb3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1260)
 HAnimJoint1261 = x3d.HAnimJoint()
-HAnimJoint1261.USE = "Joe_r_thumb3"
+HAnimJoint1261.USE = "Joe_r_index0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1261)
 HAnimJoint1262 = x3d.HAnimJoint()
-HAnimJoint1262.USE = "Joe_r_index0"
+HAnimJoint1262.USE = "Joe_r_index1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1262)
 HAnimJoint1263 = x3d.HAnimJoint()
-HAnimJoint1263.USE = "Joe_r_index1"
+HAnimJoint1263.USE = "Joe_r_index2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1263)
 HAnimJoint1264 = x3d.HAnimJoint()
-HAnimJoint1264.USE = "Joe_r_index2"
+HAnimJoint1264.USE = "Joe_r_index3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1264)
 HAnimJoint1265 = x3d.HAnimJoint()
-HAnimJoint1265.USE = "Joe_r_index3"
+HAnimJoint1265.USE = "Joe_r_middle0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1265)
 HAnimJoint1266 = x3d.HAnimJoint()
-HAnimJoint1266.USE = "Joe_r_middle0"
+HAnimJoint1266.USE = "Joe_r_middle1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1266)
 HAnimJoint1267 = x3d.HAnimJoint()
-HAnimJoint1267.USE = "Joe_r_middle1"
+HAnimJoint1267.USE = "Joe_r_middle2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1267)
 HAnimJoint1268 = x3d.HAnimJoint()
-HAnimJoint1268.USE = "Joe_r_middle2"
+HAnimJoint1268.USE = "Joe_r_middle3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1268)
 HAnimJoint1269 = x3d.HAnimJoint()
-HAnimJoint1269.USE = "Joe_r_middle3"
+HAnimJoint1269.USE = "Joe_r_ring0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1269)
 HAnimJoint1270 = x3d.HAnimJoint()
-HAnimJoint1270.USE = "Joe_r_ring0"
+HAnimJoint1270.USE = "Joe_r_ring1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1270)
 HAnimJoint1271 = x3d.HAnimJoint()
-HAnimJoint1271.USE = "Joe_r_ring1"
+HAnimJoint1271.USE = "Joe_r_ring2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1271)
 HAnimJoint1272 = x3d.HAnimJoint()
-HAnimJoint1272.USE = "Joe_r_ring2"
+HAnimJoint1272.USE = "Joe_r_ring3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1272)
 HAnimJoint1273 = x3d.HAnimJoint()
-HAnimJoint1273.USE = "Joe_r_ring3"
+HAnimJoint1273.USE = "Joe_r_pinky0"
 
 HAnimHumanoid81.joints.append(HAnimJoint1273)
 HAnimJoint1274 = x3d.HAnimJoint()
-HAnimJoint1274.USE = "Joe_r_pinky0"
+HAnimJoint1274.USE = "Joe_r_pinky1"
 
 HAnimHumanoid81.joints.append(HAnimJoint1274)
 HAnimJoint1275 = x3d.HAnimJoint()
-HAnimJoint1275.USE = "Joe_r_pinky1"
+HAnimJoint1275.USE = "Joe_r_pinky2"
 
 HAnimHumanoid81.joints.append(HAnimJoint1275)
 HAnimJoint1276 = x3d.HAnimJoint()
-HAnimJoint1276.USE = "Joe_r_pinky2"
+HAnimJoint1276.USE = "Joe_r_pinky3"
 
 HAnimHumanoid81.joints.append(HAnimJoint1276)
 HAnimJoint1277 = x3d.HAnimJoint()
-HAnimJoint1277.USE = "Joe_r_pinky3"
+HAnimJoint1277.USE = "Joe_HumanoidRoot"
 
-HAnimHumanoid81.joints.append(HAnimJoint1277)
+HAnimHumanoid81.skeleton.append(HAnimJoint1277)
 
 Group80.children.append(HAnimHumanoid81)
 
@@ -5771,40 +5758,40 @@ Group79.children.append(Group80)
 Scene35.children.append(Group79)
 TimeSensor1278 = x3d.TimeSensor()
 TimeSensor1278.DEF = "Time1"
-TimeSensor1278.cycleInterval = 2.86
+TimeSensor1278.cycleInterval = 2.8599999999999999
 TimeSensor1278.loop = True
 
 Scene35.children.append(TimeSensor1278)
 TimeSensor1279 = x3d.TimeSensor()
 TimeSensor1279.DEF = "Time2"
-TimeSensor1279.cycleInterval = 5.72
+TimeSensor1279.cycleInterval = 5.7199999999999998
 TimeSensor1279.loop = True
 
 Scene35.children.append(TimeSensor1279)
 TimeSensor1280 = x3d.TimeSensor()
 TimeSensor1280.DEF = "Time3"
-TimeSensor1280.cycleInterval = 5.8
+TimeSensor1280.cycleInterval = 5.7999999999999998
 TimeSensor1280.loop = True
 
 Scene35.children.append(TimeSensor1280)
 OrientationInterpolator1281 = x3d.OrientationInterpolator()
 OrientationInterpolator1281.DEF = "Pitch"
-OrientationInterpolator1281.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1281.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1281)
 OrientationInterpolator1282 = x3d.OrientationInterpolator()
 OrientationInterpolator1282.DEF = "Yaw"
-OrientationInterpolator1282.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1282.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1282)
 OrientationInterpolator1283 = x3d.OrientationInterpolator()
 OrientationInterpolator1283.DEF = "Roll"
-OrientationInterpolator1283.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1283.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1283)
 OrientationInterpolator1284 = x3d.OrientationInterpolator()
 OrientationInterpolator1284.DEF = "vc6Yaw"
-OrientationInterpolator1284.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
+OrientationInterpolator1284.key = [0,0.20000000298023224,0.40000000596046448,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1284)
 ROUTE1285 = x3d.ROUTE()
@@ -5823,7 +5810,7 @@ ROUTE1286.toNode = "Joe_vc6"
 Scene35.children.append(ROUTE1286)
 OrientationInterpolator1287 = x3d.OrientationInterpolator()
 OrientationInterpolator1287.DEF = "EyeballsRotation"
-OrientationInterpolator1287.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
+OrientationInterpolator1287.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.40000000596046448,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1287)
 ROUTE1288 = x3d.ROUTE()
@@ -5849,92 +5836,92 @@ ROUTE1290.toNode = "Joe_l_eyeball_joint"
 Scene35.children.append(ROUTE1290)
 OrientationInterpolator1291 = x3d.OrientationInterpolator()
 OrientationInterpolator1291.DEF = "r_sternoclavicularRelax"
-OrientationInterpolator1291.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1291.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1291)
 OrientationInterpolator1292 = x3d.OrientationInterpolator()
 OrientationInterpolator1292.DEF = "r_acromioclavicularRelax"
-OrientationInterpolator1292.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1292.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1292)
 OrientationInterpolator1293 = x3d.OrientationInterpolator()
 OrientationInterpolator1293.DEF = "r_shoulderRelax"
-OrientationInterpolator1293.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1293.key = [0,0.10000000149011612,0.30000001192092896,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1293)
 OrientationInterpolator1294 = x3d.OrientationInterpolator()
 OrientationInterpolator1294.DEF = "r_elbowRelax"
-OrientationInterpolator1294.key = [0,0.15000000596046448,0.4000000059604645,0.6000000238418579,0.8999999761581421,1]
+OrientationInterpolator1294.key = [0,0.15000000596046448,0.40000000596046448,0.60000002384185791,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1294)
 OrientationInterpolator1295 = x3d.OrientationInterpolator()
 OrientationInterpolator1295.DEF = "r_wristRelax"
-OrientationInterpolator1295.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.8999999761581421,1]
+OrientationInterpolator1295.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1295)
 OrientationInterpolator1296 = x3d.OrientationInterpolator()
 OrientationInterpolator1296.DEF = "r_index0Relax"
-OrientationInterpolator1296.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1296.key = [0,0.10000000149011612,0.30000001192092896,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1296)
 OrientationInterpolator1297 = x3d.OrientationInterpolator()
 OrientationInterpolator1297.DEF = "r_index1Relax"
-OrientationInterpolator1297.key = [0,0.10000000149011612,0.20000000298023224,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1297.key = [0,0.10000000149011612,0.20000000298023224,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1297)
 OrientationInterpolator1298 = x3d.OrientationInterpolator()
 OrientationInterpolator1298.DEF = "r_middle0Relax"
-OrientationInterpolator1298.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1298.key = [0,0.10000000149011612,0.30000001192092896,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1298)
 OrientationInterpolator1299 = x3d.OrientationInterpolator()
 OrientationInterpolator1299.DEF = "r_middle1Relax"
-OrientationInterpolator1299.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
+OrientationInterpolator1299.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.40000000596046448,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1299)
 OrientationInterpolator1300 = x3d.OrientationInterpolator()
 OrientationInterpolator1300.DEF = "r_ring0Relax"
-OrientationInterpolator1300.key = [0,0.10000000149011612,0.30000001192092896,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1300.key = [0,0.10000000149011612,0.30000001192092896,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1300)
 OrientationInterpolator1301 = x3d.OrientationInterpolator()
 OrientationInterpolator1301.DEF = "r_ring1Relax"
-OrientationInterpolator1301.key = [0,0.10000000149011612,0.4000000059604645,0.5,0.800000011920929,1]
+OrientationInterpolator1301.key = [0,0.10000000149011612,0.40000000596046448,0.5,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1301)
 OrientationInterpolator1302 = x3d.OrientationInterpolator()
 OrientationInterpolator1302.DEF = "r_pinky0Relax"
-OrientationInterpolator1302.key = [0,0.10000000149011612,0.30000001192092896,0.5,0.800000011920929,1]
+OrientationInterpolator1302.key = [0,0.10000000149011612,0.30000001192092896,0.5,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1302)
 OrientationInterpolator1303 = x3d.OrientationInterpolator()
 OrientationInterpolator1303.DEF = "r_pinky1Relax"
-OrientationInterpolator1303.key = [0,0.10000000149011612,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1303.key = [0,0.10000000149011612,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1303)
 OrientationInterpolator1304 = x3d.OrientationInterpolator()
 OrientationInterpolator1304.DEF = "r_thumb1Relax"
-OrientationInterpolator1304.key = [0,0.029999999329447746,0.07999999821186066,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.800000011920929,0.949999988079071,1]
+OrientationInterpolator1304.key = [0,0.029999999329447746,0.079999998211860657,0.20000000298023224,0.30000001192092896,0.40000000596046448,0.5,0.80000001192092896,0.94999998807907104,1]
 
 Scene35.children.append(OrientationInterpolator1304)
 OrientationInterpolator1305 = x3d.OrientationInterpolator()
 OrientationInterpolator1305.DEF = "r_thumb2Relax"
-OrientationInterpolator1305.key = [0,0.20000000298023224,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
+OrientationInterpolator1305.key = [0,0.20000000298023224,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1305)
 OrientationInterpolator1306 = x3d.OrientationInterpolator()
 OrientationInterpolator1306.DEF = "r_thumb3Relax"
-OrientationInterpolator1306.key = [0,0.20000000298023224,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,1]
+OrientationInterpolator1306.key = [0,0.20000000298023224,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1306)
 OrientationInterpolator1307 = x3d.OrientationInterpolator()
 OrientationInterpolator1307.DEF = "r_fingers2Relax"
-OrientationInterpolator1307.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
+OrientationInterpolator1307.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.40000000596046448,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1307)
 OrientationInterpolator1308 = x3d.OrientationInterpolator()
 OrientationInterpolator1308.DEF = "r_fingers3Relax"
-OrientationInterpolator1308.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.4000000059604645,0.5,0.6000000238418579,0.699999988079071,0.800000011920929,0.8999999761581421,1]
+OrientationInterpolator1308.key = [0,0.10000000149011612,0.20000000298023224,0.30000001192092896,0.40000000596046448,0.5,0.60000002384185791,0.69999998807907104,0.80000001192092896,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1308)
 ROUTE1309 = x3d.ROUTE()
@@ -6107,47 +6094,47 @@ ROUTE1332.toNode = "Joe_r_pinky3"
 Scene35.children.append(ROUTE1332)
 OrientationInterpolator1333 = x3d.OrientationInterpolator()
 OrientationInterpolator1333.DEF = "r_sternoclavicularRoll"
-OrientationInterpolator1333.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.699999988079071,0.800000011920929,1]
+OrientationInterpolator1333.key = [0,0.20000000298023224,0.40000000596046448,0.5,0.69999998807907104,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1333)
 OrientationInterpolator1334 = x3d.OrientationInterpolator()
 OrientationInterpolator1334.DEF = "r_acromioclavicularRoll"
-OrientationInterpolator1334.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1334.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1334)
 OrientationInterpolator1335 = x3d.OrientationInterpolator()
 OrientationInterpolator1335.DEF = "r_shoulderRoll"
-OrientationInterpolator1335.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.8500000238418579,1]
+OrientationInterpolator1335.key = [0,0.20000000298023224,0.40000000596046448,0.5,0.85000002384185791,1]
 
 Scene35.children.append(OrientationInterpolator1335)
 OrientationInterpolator1336 = x3d.OrientationInterpolator()
 OrientationInterpolator1336.DEF = "r_ForeArmPitch"
-OrientationInterpolator1336.key = [0,0.15000000596046448,0.30000001192092896,0.5,0.699999988079071,0.8999999761581421,1]
+OrientationInterpolator1336.key = [0,0.15000000596046448,0.30000001192092896,0.5,0.69999998807907104,0.89999997615814209,1]
 
 Scene35.children.append(OrientationInterpolator1336)
 OrientationInterpolator1337 = x3d.OrientationInterpolator()
 OrientationInterpolator1337.DEF = "r_wristRoll"
-OrientationInterpolator1337.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.6499999761581421,0.75,0.8500000238418579,1]
+OrientationInterpolator1337.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.64999997615814209,0.75,0.85000002384185791,1]
 
 Scene35.children.append(OrientationInterpolator1337)
 OrientationInterpolator1338 = x3d.OrientationInterpolator()
 OrientationInterpolator1338.DEF = "r_handPitch"
-OrientationInterpolator1338.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1338.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1338)
 OrientationInterpolator1339 = x3d.OrientationInterpolator()
 OrientationInterpolator1339.DEF = "r_thumb1Pitch"
-OrientationInterpolator1339.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1339.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1339)
 OrientationInterpolator1340 = x3d.OrientationInterpolator()
 OrientationInterpolator1340.DEF = "r_thumb2Pitch"
-OrientationInterpolator1340.key = [0,0.20000000298023224,0.4000000059604645,0.6000000238418579,0.800000011920929,1]
+OrientationInterpolator1340.key = [0,0.20000000298023224,0.40000000596046448,0.60000002384185791,0.80000001192092896,1]
 
 Scene35.children.append(OrientationInterpolator1340)
 OrientationInterpolator1341 = x3d.OrientationInterpolator()
 OrientationInterpolator1341.DEF = "l_shoulderRoll"
-OrientationInterpolator1341.key = [0,0.20000000298023224,0.4000000059604645,0.5,0.8500000238418579,1]
+OrientationInterpolator1341.key = [0,0.20000000298023224,0.40000000596046448,0.5,0.85000002384185791,1]
 
 Scene35.children.append(OrientationInterpolator1341)
 ROUTE1342 = x3d.ROUTE()
@@ -6384,7 +6371,7 @@ Scene35.children.append(ROUTE1374)
 Group1375 = x3d.Group()
 PositionInterpolator1376 = x3d.PositionInterpolator()
 PositionInterpolator1376.DEF = "HUMANOIDROOT_POSITION_ANIMATOR"
-PositionInterpolator1376.key = [0,0.041669998317956924,0.125,0.16670000553131104,0.20829999446868896,0.25,0.29170000553131104,0.375,0.45829999446868896,0.5,0.541700005531311,0.583299994468689,0.625,0.708299994468689,0.75,0.791700005531311,0.875,0.916700005531311,1]
+PositionInterpolator1376.key = [0,0.041669998317956924,0.125,0.16670000553131104,0.20829999446868896,0.25,0.29170000553131104,0.375,0.45829999446868896,0.5,0.54170000553131104,0.58329999446868896,0.625,0.70829999446868896,0.75,0.79170000553131104,0.875,0.91670000553131104,1]
 
 Group1375.children.append(PositionInterpolator1376)
 OrientationInterpolator1377 = x3d.OrientationInterpolator()
@@ -6394,22 +6381,22 @@ OrientationInterpolator1377.key = [0,1]
 Group1375.children.append(OrientationInterpolator1377)
 OrientationInterpolator1378 = x3d.OrientationInterpolator()
 OrientationInterpolator1378.DEF = "L_HIP_ANIMATOR"
-OrientationInterpolator1378.key = [0,0.25,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
+OrientationInterpolator1378.key = [0,0.25,0.375,0.5,0.66670000553131104,0.79170000553131104,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1378)
 OrientationInterpolator1379 = x3d.OrientationInterpolator()
 OrientationInterpolator1379.DEF = "L_KNEE_ANIMATOR"
-OrientationInterpolator1379.key = [0,0.20829999446868896,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
+OrientationInterpolator1379.key = [0,0.20829999446868896,0.375,0.5,0.66670000553131104,0.79170000553131104,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1379)
 OrientationInterpolator1380 = x3d.OrientationInterpolator()
 OrientationInterpolator1380.DEF = "L_ANKLE_ANIMATOR"
-OrientationInterpolator1380.key = [0,0.125,0.20829999446868896,0.375,0.666700005531311,0.916700005531311,1]
+OrientationInterpolator1380.key = [0,0.125,0.20829999446868896,0.375,0.66670000553131104,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1380)
 OrientationInterpolator1381 = x3d.OrientationInterpolator()
 OrientationInterpolator1381.DEF = "R_ANKLE_ANIMATOR"
-OrientationInterpolator1381.key = [0,0.125,0.20829999446868896,0.375,0.45829999446868896,0.5,0.666700005531311,0.75,0.7799999713897705,0.916700005531311,1]
+OrientationInterpolator1381.key = [0,0.125,0.20829999446868896,0.375,0.45829999446868896,0.5,0.66670000553131104,0.75,0.77999997138977051,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1381)
 OrientationInterpolator1382 = x3d.OrientationInterpolator()
@@ -6424,17 +6411,17 @@ OrientationInterpolator1383.key = [0,0.5,1]
 Group1375.children.append(OrientationInterpolator1383)
 OrientationInterpolator1384 = x3d.OrientationInterpolator()
 OrientationInterpolator1384.DEF = "L_metatarsal_ANIMATOR"
-OrientationInterpolator1384.key = [0,0.20000000298023224,0.4000000059604645,0.800000011920929,1]
+OrientationInterpolator1384.key = [0,0.20000000298023224,0.40000000596046448,0.80000001192092896,1]
 
 Group1375.children.append(OrientationInterpolator1384)
 OrientationInterpolator1385 = x3d.OrientationInterpolator()
 OrientationInterpolator1385.DEF = "R_HIP_ANIMATOR"
-OrientationInterpolator1385.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
+OrientationInterpolator1385.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.66670000553131104,0.79170000553131104,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1385)
 OrientationInterpolator1386 = x3d.OrientationInterpolator()
 OrientationInterpolator1386.DEF = "R_KNEE_ANIMATOR"
-OrientationInterpolator1386.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.666700005531311,0.791700005531311,0.916700005531311,1]
+OrientationInterpolator1386.key = [0,0.125,0.20829999446868896,0.29170000553131104,0.375,0.5,0.66670000553131104,0.79170000553131104,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1386)
 OrientationInterpolator1387 = x3d.OrientationInterpolator()
@@ -6449,47 +6436,47 @@ OrientationInterpolator1388.key = [0,0.2199999988079071,1]
 Group1375.children.append(OrientationInterpolator1388)
 OrientationInterpolator1389 = x3d.OrientationInterpolator()
 OrientationInterpolator1389.DEF = "R_metatarsal_ANIMATOR"
-OrientationInterpolator1389.key = [0,0.20000000298023224,0.4000000059604645,0.800000011920929,1]
+OrientationInterpolator1389.key = [0,0.20000000298023224,0.40000000596046448,0.80000001192092896,1]
 
 Group1375.children.append(OrientationInterpolator1389)
 OrientationInterpolator1390 = x3d.OrientationInterpolator()
 OrientationInterpolator1390.DEF = "VL5_ANIMATOR"
-OrientationInterpolator1390.key = [0,0.20829999446868896,0.375,0.75,0.833299994468689,1]
+OrientationInterpolator1390.key = [0,0.20829999446868896,0.375,0.75,0.83329999446868896,1]
 
 Group1375.children.append(OrientationInterpolator1390)
 OrientationInterpolator1391 = x3d.OrientationInterpolator()
 OrientationInterpolator1391.DEF = "SKULLBASE_ANIMATOR"
-OrientationInterpolator1391.key = [0,0.375,0.41670000553131104,0.5,0.583299994468689,0.666700005531311,0.75,0.833299994468689,0.916700005531311,1]
+OrientationInterpolator1391.key = [0,0.375,0.41670000553131104,0.5,0.58329999446868896,0.66670000553131104,0.75,0.83329999446868896,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1391)
 OrientationInterpolator1392 = x3d.OrientationInterpolator()
 OrientationInterpolator1392.DEF = "L_SHOULDER_ANIMATOR"
-OrientationInterpolator1392.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1392.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1392)
 OrientationInterpolator1393 = x3d.OrientationInterpolator()
 OrientationInterpolator1393.DEF = "L_ELBOW_ANIMATOR"
-OrientationInterpolator1393.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1393.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1393)
 OrientationInterpolator1394 = x3d.OrientationInterpolator()
 OrientationInterpolator1394.DEF = "L_WRIST_ANIMATOR"
-OrientationInterpolator1394.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1394.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1394)
 OrientationInterpolator1395 = x3d.OrientationInterpolator()
 OrientationInterpolator1395.DEF = "R_SHOULDER_ANIMATOR"
-OrientationInterpolator1395.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1395.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1395)
 OrientationInterpolator1396 = x3d.OrientationInterpolator()
 OrientationInterpolator1396.DEF = "R_ELBOW_ANIMATOR"
-OrientationInterpolator1396.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1396.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1396)
 OrientationInterpolator1397 = x3d.OrientationInterpolator()
 OrientationInterpolator1397.DEF = "R_WRIST_ANIMATOR"
-OrientationInterpolator1397.key = [0,0.375,0.916700005531311,1]
+OrientationInterpolator1397.key = [0,0.375,0.91670000553131104,1]
 
 Group1375.children.append(OrientationInterpolator1397)
 
@@ -6783,6 +6770,6 @@ ROUTE1438.toNode = "Joe_r_wrist"
 Scene35.children.append(ROUTE1438)
 
 X3D0.Scene = Scene35
-f = open("././JoeSkeletonSkinSiteSaluteWalk_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("JoeSkeletonSkinSiteSaluteWalk_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

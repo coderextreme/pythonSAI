@@ -68,6 +68,6 @@ Group10.children.append(Shape11)
 Scene9.children.append(Group10)
 
 X3D0.Scene = Scene9
-f = open("././cube_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("cube_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

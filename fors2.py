@@ -67,15 +67,15 @@ IS15.connect.append(connect16)
 
 Transform14.IS = IS15
 Shape17 = x3d.Shape()
-#comment before Sphere
-#comment after Sphere
-#comment after Appearance
+"""comment before Sphere"""
+"""comment after Sphere"""
+"""comment after Appearance"""
 Sphere18 = x3d.Sphere()
 
 Shape17.geometry = Sphere18
 Appearance19 = x3d.Appearance()
-#comment before Material
-#comment after Material
+"""comment before Material"""
+"""comment after Material"""
 Material20 = x3d.Material()
 Material20.diffuseColor = [1,0,0]
 
@@ -120,13 +120,14 @@ field26.type = "MFVec3f"
 
 Script22.field.append(field26)
 
-Script22.sourceCode = '''ecmascript:\n"+
+Script22.sourceCode = ''' ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}'''
+"					}\n"+
+" '''
 
 ProtoBody13.children.append(Script22)
 TimeSensor27 = x3d.TimeSensor()
@@ -234,7 +235,7 @@ IS45.connect.append(connect47)
 
 Script41.IS = IS45
 
-Script41.sourceCode = '''ecmascript:\n"+
+Script41.sourceCode = ''' ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
@@ -243,7 +244,7 @@ Script41.sourceCode = '''ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === \"undefined\") {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -251,11 +252,12 @@ Script41.sourceCode = '''ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "		    Browser.print('\\n'+'\"');\n"+
 "                    spine = value;\n"+
-"                }'''
+"                }\n"+
+" '''
 
 ProtoBody36.children.append(Script41)
 ROUTE48 = x3d.ROUTE()
@@ -324,6 +326,6 @@ ROUTE58.toField = "positionB"
 Scene9.children.append(ROUTE58)
 
 X3D0.Scene = Scene9
-f = open("././fors2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("fors2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

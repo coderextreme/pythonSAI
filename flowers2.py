@@ -6,8 +6,8 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Scripting"
 component2.level = 1
+component2.name = "Scripting"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
@@ -16,49 +16,50 @@ meta3.content = "flowers2.x3d"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "John Carlson"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "transcriber"
 meta5.content = "John Carlson"
+meta5.name = "transcriber"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "23 January 2005"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "21 March 2018"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "description"
 meta8.content = "2 random mathematical roses in spherical dimensions. rho = a + b * cos(c * theta) * cos(d * phi)"
+meta8.name = "description"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "identifier"
 meta9.content = "https://coderextreme.net/X3DJSONLD/src/main/data/flowers2.x3d"
+meta9.name = "identifier"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "generator"
 meta10.content = "manually written"
+meta10.name = "generator"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "license"
 meta11.content = "https://www.web3d.org/x3d/content/examples/license.html"
+meta11.name = "license"
 
 head1.children.append(meta11)
 
 X3D0.head = head1
 Scene12 = x3d.Scene()
 NavigationInfo13 = x3d.NavigationInfo()
+NavigationInfo13.type = ["EXAMINE","ANY"]
 
 Scene12.children.append(NavigationInfo13)
 Viewpoint14 = x3d.Viewpoint()
@@ -114,7 +115,7 @@ TimeSensor25.loop = True
 Group24.children.append(TimeSensor25)
 OrientationInterpolator26 = x3d.OrientationInterpolator()
 OrientationInterpolator26.DEF = "OrbitPath"
-OrientationInterpolator26.key = [0,0.5,1]
+OrientationInterpolator26.key = [0.0,0.50,1.0]
 
 Group24.children.append(OrientationInterpolator26)
 Transform27 = x3d.Transform()
@@ -152,12 +153,18 @@ Material32.IS = IS33
 Appearance31.material = Material32
 
 Shape30.appearance = Appearance31
-#<IndexedFaceSet DEF=\"Orbit\" creaseAngle=\"0\"> <Coordinate DEF=\"OrbitCoordinates\"/> </IndexedFaceSet>
+"""
+				  <IndexedFaceSet DEF=\"Orbit\" creaseAngle=\"0\">
+				    <Coordinate DEF=\"OrbitCoordinates\"/>
+				  </IndexedFaceSet>
+				  """
 IndexedFaceSet37 = x3d.IndexedFaceSet()
 IndexedFaceSet37.ccw = False
 IndexedFaceSet37.convex = False
 IndexedFaceSet37.coordIndex = [0,1,2,-1]
+IndexedFaceSet37.creaseAngle = 0
 IndexedFaceSet37.DEF = "Orbit"
+IndexedFaceSet37.solid = True
 Coordinate38 = x3d.Coordinate()
 Coordinate38.DEF = "OrbitCoordinates"
 
@@ -171,60 +178,61 @@ Group24.children.append(Transform27)
 Script39 = x3d.Script()
 Script39.DEF = "OrbitScript"
 field40 = x3d.field()
-field40.name = "set_fraction"
 field40.accessType = "inputOnly"
+field40.name = "set_fraction"
 field40.type = "SFFloat"
 
 Script39.field.append(field40)
 field41 = x3d.field()
-field41.name = "coordinates"
 field41.accessType = "outputOnly"
+field41.name = "coordinates"
 field41.type = "MFVec3f"
 
 Script39.field.append(field41)
 field42 = x3d.field()
-field42.name = "coordIndexes"
 field42.accessType = "outputOnly"
+field42.name = "coordIndexes"
 field42.type = "MFInt32"
 
 Script39.field.append(field42)
 field43 = x3d.field()
-field43.name = "e"
 field43.accessType = "inputOutput"
+field43.name = "e"
 field43.type = "SFFloat"
 field43.value = 5
 
 Script39.field.append(field43)
 field44 = x3d.field()
-field44.name = "f"
 field44.accessType = "inputOutput"
+field44.name = "f"
 field44.type = "SFFloat"
 field44.value = 5
 
 Script39.field.append(field44)
 field45 = x3d.field()
-field45.name = "g"
 field45.accessType = "inputOutput"
+field45.name = "g"
 field45.type = "SFFloat"
 field45.value = 5
 
 Script39.field.append(field45)
 field46 = x3d.field()
-field46.name = "h"
 field46.accessType = "inputOutput"
+field46.name = "h"
 field46.type = "SFFloat"
 field46.value = 5
 
 Script39.field.append(field46)
 field47 = x3d.field()
-field47.name = "resolution"
 field47.accessType = "inputOutput"
+field47.name = "resolution"
 field47.type = "SFInt32"
 field47.value = 50
 
 Script39.field.append(field47)
 
-Script39.sourceCode = '''ecmascript:\n"+
+Script39.sourceCode = '''\n"+
+"			ecmascript:\n"+
 "\n"+
 "			var e = 5;\n"+
 "			var f = 5;\n"+
@@ -297,7 +305,8 @@ Script39.sourceCode = '''ecmascript:\n"+
 "					h = 4;\n"+
 "				}\n"+
 "				generateCoordinates();\n"+
-"			}'''
+"			}\n"+
+"			      '''
 
 Group24.children.append(Script39)
 ROUTE48 = x3d.ROUTE()
@@ -393,6 +402,6 @@ Group15.children.append(ProtoInstance58)
 Scene12.children.append(Group15)
 
 X3D0.Scene = Scene12
-f = open("././flowers2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flowers2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

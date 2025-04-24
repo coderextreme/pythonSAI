@@ -46,8 +46,8 @@ meta9.content = "Test Case for Proto Expander"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "https://www.web3d.org/x3d/content/examples/license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 
@@ -74,16 +74,16 @@ ProtoDeclare15 = x3d.ProtoDeclare()
 ProtoDeclare15.name = "org"
 ProtoInterface16 = x3d.ProtoInterface()
 field17 = x3d.field()
-field17.name = "posi"
 field17.accessType = "initializeOnly"
 field17.type = "SFVec3f"
+field17.name = "posi"
 field17.value = [0,0,0]
 
 ProtoInterface16.field.append(field17)
 field18 = x3d.field()
-field18.name = "col"
 field18.accessType = "initializeOnly"
 field18.type = "SFColor"
+field18.name = "col"
 field18.value = [0,0,0]
 
 ProtoInterface16.field.append(field18)
@@ -131,9 +131,9 @@ ProtoDeclare29 = x3d.ProtoDeclare()
 ProtoDeclare29.name = "r"
 ProtoInterface30 = x3d.ProtoInterface()
 field31 = x3d.field()
-field31.name = "pos"
 field31.accessType = "initializeOnly"
 field31.type = "SFVec3f"
+field31.name = "pos"
 field31.value = [0,0,0]
 
 ProtoInterface30.field.append(field31)
@@ -165,9 +165,9 @@ ProtoDeclare37 = x3d.ProtoDeclare()
 ProtoDeclare37.name = "n"
 ProtoInterface38 = x3d.ProtoInterface()
 field39 = x3d.field()
-field39.name = "pos"
 field39.accessType = "initializeOnly"
 field39.type = "SFVec3f"
+field39.name = "pos"
 field39.value = [0,0,0]
 
 ProtoInterface38.field.append(field39)
@@ -199,9 +199,9 @@ ProtoDeclare45 = x3d.ProtoDeclare()
 ProtoDeclare45.name = "i"
 ProtoInterface46 = x3d.ProtoInterface()
 field47 = x3d.field()
-field47.name = "pos"
 field47.accessType = "initializeOnly"
 field47.type = "SFVec3f"
+field47.name = "pos"
 field47.value = [0,0,0]
 
 ProtoInterface46.field.append(field47)
@@ -232,7 +232,7 @@ Scene11.children.append(ProtoDeclare45)
 Transform53 = x3d.Transform()
 Transform53.translation = [-468,0,315]
 Anchor54 = x3d.Anchor()
-Anchor54.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor54.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/574.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor54.description = "High Peak Community Arts"
 ProtoInstance55 = x3d.ProtoInstance()
 ProtoInstance55.name = "r"
@@ -246,7 +246,7 @@ Anchor54.children.append(ProtoInstance55)
 
 Transform53.children.append(Anchor54)
 Anchor57 = x3d.Anchor()
-Anchor57.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor57.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/583.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor57.description = "People Express"
 ProtoInstance58 = x3d.ProtoInstance()
 ProtoInstance58.name = "i"
@@ -260,7 +260,7 @@ Anchor57.children.append(ProtoInstance58)
 
 Transform53.children.append(Anchor57)
 Anchor60 = x3d.Anchor()
-Anchor60.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor60.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/589.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor60.description = "QArts/Studios"
 ProtoInstance61 = x3d.ProtoInstance()
 ProtoInstance61.name = "i"
@@ -274,7 +274,7 @@ Anchor60.children.append(ProtoInstance61)
 
 Transform53.children.append(Anchor60)
 Anchor63 = x3d.Anchor()
-Anchor63.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor63.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/593.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor63.description = "First Movement"
 ProtoInstance64 = x3d.ProtoInstance()
 ProtoInstance64.name = "n"
@@ -288,7 +288,7 @@ Anchor63.children.append(ProtoInstance64)
 
 Transform53.children.append(Anchor63)
 Anchor66 = x3d.Anchor()
-Anchor66.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor66.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/612.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor66.description = "City Arts"
 ProtoInstance67 = x3d.ProtoInstance()
 ProtoInstance67.name = "i"
@@ -302,7 +302,7 @@ Anchor66.children.append(ProtoInstance67)
 
 Transform53.children.append(Anchor66)
 Anchor69 = x3d.Anchor()
-Anchor69.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor69.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/615.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor69.description = "Indigo Dance Group (Salamanda Tandem)"
 ProtoInstance70 = x3d.ProtoInstance()
 ProtoInstance70.name = "r"
@@ -316,7 +316,7 @@ Anchor69.children.append(ProtoInstance70)
 
 Transform53.children.append(Anchor69)
 Anchor72 = x3d.Anchor()
-Anchor72.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor72.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/623.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor72.description = "Watering Seeds"
 ProtoInstance73 = x3d.ProtoInstance()
 ProtoInstance73.name = "r"
@@ -330,7 +330,7 @@ Anchor72.children.append(ProtoInstance73)
 
 Transform53.children.append(Anchor72)
 Anchor75 = x3d.Anchor()
-Anchor75.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor75.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/630.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor75.description = "Fased In The Arts"
 ProtoInstance76 = x3d.ProtoInstance()
 ProtoInstance76.name = "r"
@@ -344,7 +344,7 @@ Anchor75.children.append(ProtoInstance76)
 
 Transform53.children.append(Anchor75)
 Anchor78 = x3d.Anchor()
-Anchor78.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor78.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/633.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor78.description = "27a Access Artspace"
 ProtoInstance79 = x3d.ProtoInstance()
 ProtoInstance79.name = "n"
@@ -358,7 +358,7 @@ Anchor78.children.append(ProtoInstance79)
 
 Transform53.children.append(Anchor78)
 Anchor81 = x3d.Anchor()
-Anchor81.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor81.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/638.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor81.description = "Bamboozle Theatre Company"
 ProtoInstance82 = x3d.ProtoInstance()
 ProtoInstance82.name = "r"
@@ -372,7 +372,7 @@ Anchor81.children.append(ProtoInstance82)
 
 Transform53.children.append(Anchor81)
 Anchor84 = x3d.Anchor()
-Anchor84.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor84.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/648.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor84.description = "Mantle Community Arts"
 ProtoInstance85 = x3d.ProtoInstance()
 ProtoInstance85.name = "r"
@@ -386,7 +386,7 @@ Anchor84.children.append(ProtoInstance85)
 
 Transform53.children.append(Anchor84)
 Anchor87 = x3d.Anchor()
-Anchor87.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor87.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/658.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor87.description = "Artlink East"
 ProtoInstance88 = x3d.ProtoInstance()
 ProtoInstance88.name = "r"
@@ -400,7 +400,7 @@ Anchor87.children.append(ProtoInstance88)
 
 Transform53.children.append(Anchor87)
 Anchor90 = x3d.Anchor()
-Anchor90.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor90.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/665.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor90.description = "Creations"
 ProtoInstance91 = x3d.ProtoInstance()
 ProtoInstance91.name = "r"
@@ -414,7 +414,7 @@ Anchor90.children.append(ProtoInstance91)
 
 Transform53.children.append(Anchor90)
 Anchor93 = x3d.Anchor()
-Anchor93.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor93.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/670.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor93.description = "New Perspectives"
 ProtoInstance94 = x3d.ProtoInstance()
 ProtoInstance94.name = "n"
@@ -428,7 +428,7 @@ Anchor93.children.append(ProtoInstance94)
 
 Transform53.children.append(Anchor93)
 Anchor96 = x3d.Anchor()
-Anchor96.url = [", ","javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');javascript:window.open('./data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
+Anchor96.url = ["javascript:window.open('https://coderextreme.net/X3DJSONLD/src/main/data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');","javascript:window.open('./data/671.html','details','height=550,width=400,top=50,left=50,menubar=no,status=no,toolbar=no,titlebar=no');"]
 Anchor96.description = "UKan2"
 ProtoInstance97 = x3d.ProtoInstance()
 ProtoInstance97.name = "r"
@@ -445,6 +445,6 @@ Transform53.children.append(Anchor96)
 Scene11.children.append(Transform53)
 
 X3D0.Scene = Scene11
-f = open("././t4_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("t4_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

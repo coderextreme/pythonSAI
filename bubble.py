@@ -144,7 +144,8 @@ Script17.sourceCode = '''ecmascript:\n"+
 "		translation.z = 0;\n"+
 "		initialize();\n"+
 "	}\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform12.children.append(Script17)
 TimeSensor23 = x3d.TimeSensor()
@@ -187,6 +188,6 @@ ProtoInstance27.DEF = "bubbleA"
 Scene7.children.append(ProtoInstance27)
 
 X3D0.Scene = Scene7
-f = open("././bubble_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("bubble_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

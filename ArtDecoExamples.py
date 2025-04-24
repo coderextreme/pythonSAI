@@ -6,58 +6,58 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "ArtDecoExamples.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Example ExternProtoDeclare/ProtoInstance usage of X3D/VRML materials, originally converted from SGI's Open Inventor material examples."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "David Roussel"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "James Harney, Don Brutzman NPS"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "7 April 2002"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "20 October 2019"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "http://vrmlstuff.free.fr/materials"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "subject"
 meta9.content = "Universal Media Material Library"
+meta9.name = "subject"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoExamples.x3d"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -68,247 +68,247 @@ WorldInfo14.title = "ArtDecoExamples.x3d"
 
 Scene13.children.append(WorldInfo14)
 ExternProtoDeclare15 = x3d.ExternProtoDeclare()
-ExternProtoDeclare15.name = "ArtDeco00"
 ExternProtoDeclare15.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare15.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare15.name = "ArtDeco00"
 ExternProtoDeclare15.url = ["ArtDecoPrototypes.x3d#ArtDeco00","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco00","ArtDecoPrototypes.wrl#ArtDeco00","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco00"]
 
 Scene13.children.append(ExternProtoDeclare15)
 ExternProtoDeclare16 = x3d.ExternProtoDeclare()
-ExternProtoDeclare16.name = "ArtDeco01"
 ExternProtoDeclare16.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare16.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare16.name = "ArtDeco01"
 ExternProtoDeclare16.url = ["ArtDecoPrototypes.x3d#ArtDeco01","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco01","ArtDecoPrototypes.wrl#ArtDeco01","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco01"]
 
 Scene13.children.append(ExternProtoDeclare16)
 ExternProtoDeclare17 = x3d.ExternProtoDeclare()
-ExternProtoDeclare17.name = "ArtDeco02"
 ExternProtoDeclare17.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare17.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare17.name = "ArtDeco02"
 ExternProtoDeclare17.url = ["ArtDecoPrototypes.x3d#ArtDeco02","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco02","ArtDecoPrototypes.wrl#ArtDeco02","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco02"]
 
 Scene13.children.append(ExternProtoDeclare17)
 ExternProtoDeclare18 = x3d.ExternProtoDeclare()
-ExternProtoDeclare18.name = "ArtDeco03"
 ExternProtoDeclare18.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare18.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare18.name = "ArtDeco03"
 ExternProtoDeclare18.url = ["ArtDecoPrototypes.x3d#ArtDeco03","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco03","ArtDecoPrototypes.wrl#ArtDeco03","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco03"]
 
 Scene13.children.append(ExternProtoDeclare18)
 ExternProtoDeclare19 = x3d.ExternProtoDeclare()
-ExternProtoDeclare19.name = "ArtDeco04"
 ExternProtoDeclare19.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare19.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare19.name = "ArtDeco04"
 ExternProtoDeclare19.url = ["ArtDecoPrototypes.x3d#ArtDeco04","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco04","ArtDecoPrototypes.wrl#ArtDeco04","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco04"]
 
 Scene13.children.append(ExternProtoDeclare19)
 ExternProtoDeclare20 = x3d.ExternProtoDeclare()
-ExternProtoDeclare20.name = "ArtDeco05"
 ExternProtoDeclare20.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare20.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare20.name = "ArtDeco05"
 ExternProtoDeclare20.url = ["ArtDecoPrototypes.x3d#ArtDeco05","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco05","ArtDecoPrototypes.wrl#ArtDeco05","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco05"]
 
 Scene13.children.append(ExternProtoDeclare20)
 ExternProtoDeclare21 = x3d.ExternProtoDeclare()
-ExternProtoDeclare21.name = "ArtDeco06"
 ExternProtoDeclare21.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare21.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare21.name = "ArtDeco06"
 ExternProtoDeclare21.url = ["ArtDecoPrototypes.x3d#ArtDeco06","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco06","ArtDecoPrototypes.wrl#ArtDeco06","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco06"]
 
 Scene13.children.append(ExternProtoDeclare21)
 ExternProtoDeclare22 = x3d.ExternProtoDeclare()
-ExternProtoDeclare22.name = "ArtDeco07"
 ExternProtoDeclare22.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare22.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare22.name = "ArtDeco07"
 ExternProtoDeclare22.url = ["ArtDecoPrototypes.x3d#ArtDeco07","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco07","ArtDecoPrototypes.wrl#ArtDeco07","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco07"]
 
 Scene13.children.append(ExternProtoDeclare22)
 ExternProtoDeclare23 = x3d.ExternProtoDeclare()
-ExternProtoDeclare23.name = "ArtDeco08"
 ExternProtoDeclare23.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare23.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare23.name = "ArtDeco08"
 ExternProtoDeclare23.url = ["ArtDecoPrototypes.x3d#ArtDeco08","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco08","ArtDecoPrototypes.wrl#ArtDeco08","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco08"]
 
 Scene13.children.append(ExternProtoDeclare23)
 ExternProtoDeclare24 = x3d.ExternProtoDeclare()
-ExternProtoDeclare24.name = "ArtDeco09"
 ExternProtoDeclare24.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare24.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare24.name = "ArtDeco09"
 ExternProtoDeclare24.url = ["ArtDecoPrototypes.x3d#ArtDeco09","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco09","ArtDecoPrototypes.wrl#ArtDeco09","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco09"]
 
 Scene13.children.append(ExternProtoDeclare24)
 ExternProtoDeclare25 = x3d.ExternProtoDeclare()
-ExternProtoDeclare25.name = "ArtDeco10"
 ExternProtoDeclare25.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare25.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare25.name = "ArtDeco10"
 ExternProtoDeclare25.url = ["ArtDecoPrototypes.x3d#ArtDeco10","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco10","ArtDecoPrototypes.wrl#ArtDeco10","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco10"]
 
 Scene13.children.append(ExternProtoDeclare25)
 ExternProtoDeclare26 = x3d.ExternProtoDeclare()
-ExternProtoDeclare26.name = "ArtDeco11"
 ExternProtoDeclare26.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare26.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare26.name = "ArtDeco11"
 ExternProtoDeclare26.url = ["ArtDecoPrototypes.x3d#ArtDeco11","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco11","ArtDecoPrototypes.wrl#ArtDeco11","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco11"]
 
 Scene13.children.append(ExternProtoDeclare26)
 ExternProtoDeclare27 = x3d.ExternProtoDeclare()
-ExternProtoDeclare27.name = "ArtDeco12"
 ExternProtoDeclare27.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare27.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare27.name = "ArtDeco12"
 ExternProtoDeclare27.url = ["ArtDecoPrototypes.x3d#ArtDeco12","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco12","ArtDecoPrototypes.wrl#ArtDeco12","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco12"]
 
 Scene13.children.append(ExternProtoDeclare27)
 ExternProtoDeclare28 = x3d.ExternProtoDeclare()
-ExternProtoDeclare28.name = "ArtDeco13"
 ExternProtoDeclare28.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare28.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare28.name = "ArtDeco13"
 ExternProtoDeclare28.url = ["ArtDecoPrototypes.x3d#ArtDeco13","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco13","ArtDecoPrototypes.wrl#ArtDeco13","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco13"]
 
 Scene13.children.append(ExternProtoDeclare28)
 ExternProtoDeclare29 = x3d.ExternProtoDeclare()
-ExternProtoDeclare29.name = "ArtDeco14"
 ExternProtoDeclare29.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare29.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare29.name = "ArtDeco14"
 ExternProtoDeclare29.url = ["ArtDecoPrototypes.x3d#ArtDeco14","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco14","ArtDecoPrototypes.wrl#ArtDeco14","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco14"]
 
 Scene13.children.append(ExternProtoDeclare29)
 ExternProtoDeclare30 = x3d.ExternProtoDeclare()
-ExternProtoDeclare30.name = "ArtDeco15"
 ExternProtoDeclare30.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare30.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare30.name = "ArtDeco15"
 ExternProtoDeclare30.url = ["ArtDecoPrototypes.x3d#ArtDeco15","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco15","ArtDecoPrototypes.wrl#ArtDeco15","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco15"]
 
 Scene13.children.append(ExternProtoDeclare30)
 ExternProtoDeclare31 = x3d.ExternProtoDeclare()
-ExternProtoDeclare31.name = "ArtDeco16"
 ExternProtoDeclare31.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare31.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare31.name = "ArtDeco16"
 ExternProtoDeclare31.url = ["ArtDecoPrototypes.x3d#ArtDeco16","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco16","ArtDecoPrototypes.wrl#ArtDeco16","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco16"]
 
 Scene13.children.append(ExternProtoDeclare31)
 ExternProtoDeclare32 = x3d.ExternProtoDeclare()
-ExternProtoDeclare32.name = "ArtDeco17"
 ExternProtoDeclare32.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare32.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare32.name = "ArtDeco17"
 ExternProtoDeclare32.url = ["ArtDecoPrototypes.x3d#ArtDeco17","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco17","ArtDecoPrototypes.wrl#ArtDeco17","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco17"]
 
 Scene13.children.append(ExternProtoDeclare32)
 ExternProtoDeclare33 = x3d.ExternProtoDeclare()
-ExternProtoDeclare33.name = "ArtDeco18"
 ExternProtoDeclare33.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare33.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare33.name = "ArtDeco18"
 ExternProtoDeclare33.url = ["ArtDecoPrototypes.x3d#ArtDeco18","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco18","ArtDecoPrototypes.wrl#ArtDeco18","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco18"]
 
 Scene13.children.append(ExternProtoDeclare33)
 ExternProtoDeclare34 = x3d.ExternProtoDeclare()
-ExternProtoDeclare34.name = "ArtDeco19"
 ExternProtoDeclare34.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare34.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare34.name = "ArtDeco19"
 ExternProtoDeclare34.url = ["ArtDecoPrototypes.x3d#ArtDeco19","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco19","ArtDecoPrototypes.wrl#ArtDeco19","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco19"]
 
 Scene13.children.append(ExternProtoDeclare34)
 ExternProtoDeclare35 = x3d.ExternProtoDeclare()
-ExternProtoDeclare35.name = "ArtDeco20"
 ExternProtoDeclare35.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare35.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare35.name = "ArtDeco20"
 ExternProtoDeclare35.url = ["ArtDecoPrototypes.x3d#ArtDeco20","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco20","ArtDecoPrototypes.wrl#ArtDeco20","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco20"]
 
 Scene13.children.append(ExternProtoDeclare35)
 ExternProtoDeclare36 = x3d.ExternProtoDeclare()
-ExternProtoDeclare36.name = "ArtDeco21"
 ExternProtoDeclare36.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare36.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare36.name = "ArtDeco21"
 ExternProtoDeclare36.url = ["ArtDecoPrototypes.x3d#ArtDeco21","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco21","ArtDecoPrototypes.wrl#ArtDeco21","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco21"]
 
 Scene13.children.append(ExternProtoDeclare36)
 ExternProtoDeclare37 = x3d.ExternProtoDeclare()
-ExternProtoDeclare37.name = "ArtDeco22"
 ExternProtoDeclare37.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare37.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare37.name = "ArtDeco22"
 ExternProtoDeclare37.url = ["ArtDecoPrototypes.x3d#ArtDeco22","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco22","ArtDecoPrototypes.wrl#ArtDeco22","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco22"]
 
 Scene13.children.append(ExternProtoDeclare37)
 ExternProtoDeclare38 = x3d.ExternProtoDeclare()
-ExternProtoDeclare38.name = "ArtDeco23"
 ExternProtoDeclare38.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare38.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare38.name = "ArtDeco23"
 ExternProtoDeclare38.url = ["ArtDecoPrototypes.x3d#ArtDeco23","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco23","ArtDecoPrototypes.wrl#ArtDeco23","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco23"]
 
 Scene13.children.append(ExternProtoDeclare38)
 ExternProtoDeclare39 = x3d.ExternProtoDeclare()
-ExternProtoDeclare39.name = "ArtDeco24"
 ExternProtoDeclare39.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare39.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare39.name = "ArtDeco24"
 ExternProtoDeclare39.url = ["ArtDecoPrototypes.x3d#ArtDeco24","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco24","ArtDecoPrototypes.wrl#ArtDeco24","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco24"]
 
 Scene13.children.append(ExternProtoDeclare39)
 ExternProtoDeclare40 = x3d.ExternProtoDeclare()
-ExternProtoDeclare40.name = "ArtDeco25"
 ExternProtoDeclare40.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare40.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare40.name = "ArtDeco25"
 ExternProtoDeclare40.url = ["ArtDecoPrototypes.x3d#ArtDeco25","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco25","ArtDecoPrototypes.wrl#ArtDeco25","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco25"]
 
 Scene13.children.append(ExternProtoDeclare40)
 ExternProtoDeclare41 = x3d.ExternProtoDeclare()
-ExternProtoDeclare41.name = "ArtDeco26"
 ExternProtoDeclare41.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare41.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare41.name = "ArtDeco26"
 ExternProtoDeclare41.url = ["ArtDecoPrototypes.x3d#ArtDeco26","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco26","ArtDecoPrototypes.wrl#ArtDeco26","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco26"]
 
 Scene13.children.append(ExternProtoDeclare41)
 ExternProtoDeclare42 = x3d.ExternProtoDeclare()
-ExternProtoDeclare42.name = "ArtDeco27"
 ExternProtoDeclare42.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare42.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare42.name = "ArtDeco27"
 ExternProtoDeclare42.url = ["ArtDecoPrototypes.x3d#ArtDeco27","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco27","ArtDecoPrototypes.wrl#ArtDeco27","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco27"]
 
 Scene13.children.append(ExternProtoDeclare42)
 ExternProtoDeclare43 = x3d.ExternProtoDeclare()
-ExternProtoDeclare43.name = "ArtDeco28"
 ExternProtoDeclare43.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare43.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare43.name = "ArtDeco28"
 ExternProtoDeclare43.url = ["ArtDecoPrototypes.x3d#ArtDeco28","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco28","ArtDecoPrototypes.wrl#ArtDeco28","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco28"]
 
 Scene13.children.append(ExternProtoDeclare43)
 ExternProtoDeclare44 = x3d.ExternProtoDeclare()
-ExternProtoDeclare44.name = "ArtDeco29"
 ExternProtoDeclare44.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare44.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare44.name = "ArtDeco29"
 ExternProtoDeclare44.url = ["ArtDecoPrototypes.x3d#ArtDeco29","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco29","ArtDecoPrototypes.wrl#ArtDeco29","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco29"]
 
 Scene13.children.append(ExternProtoDeclare44)
 ExternProtoDeclare45 = x3d.ExternProtoDeclare()
-ExternProtoDeclare45.name = "ArtDeco30"
 ExternProtoDeclare45.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare45.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare45.name = "ArtDeco30"
 ExternProtoDeclare45.url = ["ArtDecoPrototypes.x3d#ArtDeco30","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco30","ArtDecoPrototypes.wrl#ArtDeco30","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco30"]
 
 Scene13.children.append(ExternProtoDeclare45)
 ExternProtoDeclare46 = x3d.ExternProtoDeclare()
-ExternProtoDeclare46.name = "ArtDeco31"
 ExternProtoDeclare46.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare46.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare46.name = "ArtDeco31"
 ExternProtoDeclare46.url = ["ArtDecoPrototypes.x3d#ArtDeco31","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco31","ArtDecoPrototypes.wrl#ArtDeco31","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco31"]
 
 Scene13.children.append(ExternProtoDeclare46)
 ExternProtoDeclare47 = x3d.ExternProtoDeclare()
-ExternProtoDeclare47.name = "ArtDeco32"
 ExternProtoDeclare47.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare47.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare47.name = "ArtDeco32"
 ExternProtoDeclare47.url = ["ArtDecoPrototypes.x3d#ArtDeco32","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco32","ArtDecoPrototypes.wrl#ArtDeco32","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco32"]
 
 Scene13.children.append(ExternProtoDeclare47)
 ExternProtoDeclare48 = x3d.ExternProtoDeclare()
-ExternProtoDeclare48.name = "ArtDeco33"
 ExternProtoDeclare48.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare48.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare48.name = "ArtDeco33"
 ExternProtoDeclare48.url = ["ArtDecoPrototypes.x3d#ArtDeco33","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco33","ArtDecoPrototypes.wrl#ArtDeco33","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco33"]
 
 Scene13.children.append(ExternProtoDeclare48)
 ExternProtoDeclare49 = x3d.ExternProtoDeclare()
-ExternProtoDeclare49.name = "ArtDeco34"
 ExternProtoDeclare49.appinfo = "UniversalMediaMaterials prototype"
 ExternProtoDeclare49.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ExternProtoDeclare49.name = "ArtDeco34"
 ExternProtoDeclare49.url = ["ArtDecoPrototypes.x3d#ArtDeco34","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d#ArtDeco34","ArtDecoPrototypes.wrl#ArtDeco34","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.wrl#ArtDeco34"]
 
 Scene13.children.append(ExternProtoDeclare49)
@@ -320,7 +320,7 @@ Group50.children.append(NavigationInfo51)
 Viewpoint52 = x3d.Viewpoint()
 Viewpoint52.DEF = "Front"
 Viewpoint52.description = "Front view"
-Viewpoint52.position = [0,0,12]
+Viewpoint52.position = [0.0,0.0,12.0]
 
 Group50.children.append(Viewpoint52)
 Viewpoint53 = x3d.Viewpoint()
@@ -340,37 +340,37 @@ Group50.children.append(Viewpoint54)
 Viewpoint55 = x3d.Viewpoint()
 Viewpoint55.DEF = "Back"
 Viewpoint55.description = "Back view"
-Viewpoint55.orientation = [0,1,0,3.1416]
-Viewpoint55.position = [0,0,-12]
+Viewpoint55.orientation = [0.0,1.0,0.0,3.1416]
+Viewpoint55.position = [0.0,0.0,-12.0]
 
 Group50.children.append(Viewpoint55)
 Transform56 = x3d.Transform()
 Transform56.DEF = "Close_travel"
 PositionInterpolator57 = x3d.PositionInterpolator()
 PositionInterpolator57.DEF = "Close_Mover"
-PositionInterpolator57.key = [0,0.25,0.5,0.75,1]
+PositionInterpolator57.key = [0.0,0.25,0.5,0.75,1.0]
 
 Transform56.children.append(PositionInterpolator57)
 TimeSensor58 = x3d.TimeSensor()
 TimeSensor58.DEF = "Close_Time"
-TimeSensor58.cycleInterval = 12
+TimeSensor58.cycleInterval = 12.0
 TimeSensor58.loop = True
 
 Transform56.children.append(TimeSensor58)
 Viewpoint59 = x3d.Viewpoint()
 Viewpoint59.DEF = "Close"
 Viewpoint59.description = "Close Front"
-Viewpoint59.position = [0,0,6]
+Viewpoint59.position = [0.0,0.0,6.0]
 
 Transform56.children.append(Viewpoint59)
 
 Group50.children.append(Transform56)
 DirectionalLight60 = x3d.DirectionalLight()
-DirectionalLight60.direction = [1,-1,-1]
+DirectionalLight60.direction = [1.0,-1.0,-1.0]
 
 Group50.children.append(DirectionalLight60)
 DirectionalLight61 = x3d.DirectionalLight()
-DirectionalLight61.direction = [0,1,-0.5]
+DirectionalLight61.direction = [0.0,1.0,-0.5]
 DirectionalLight61.intensity = 0.5
 
 Group50.children.append(DirectionalLight61)
@@ -378,7 +378,7 @@ Anchor62 = x3d.Anchor()
 Anchor62.description = "Back to front view"
 Anchor62.url = ["#Front"]
 Transform63 = x3d.Transform()
-Transform63.translation = [0,0,-0.5]
+Transform63.translation = [0.0,0.0,-0.5]
 Inline64 = x3d.Inline()
 Inline64.url = ["../data/gridBack.json","../data/gridBack.x3d","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.x3d","gridBack.wrl","https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/gridBack.wrl"]
 
@@ -390,11 +390,11 @@ Group50.children.append(Anchor62)
 Viewpoint65 = x3d.Viewpoint()
 Viewpoint65.DEF = "View00"
 Viewpoint65.description = "ArtDeco00"
-Viewpoint65.position = [-3.75,3.75,3]
+Viewpoint65.position = [-3.75,3.75,3.0]
 
 Group50.children.append(Viewpoint65)
 Transform66 = x3d.Transform()
-Transform66.translation = [-3.75,3.75,0]
+Transform66.translation = [-3.75,3.75,0.0]
 Anchor67 = x3d.Anchor()
 Anchor67.description = "ArtDeco00 view"
 Anchor67.url = ["#View00"]
@@ -416,7 +416,7 @@ Anchor67.children.append(Shape68)
 
 Transform66.children.append(Anchor67)
 Transform72 = x3d.Transform()
-Transform72.translation = [0,0.3,0.5]
+Transform72.translation = [0.0,0.3,0.5]
 Anchor73 = x3d.Anchor()
 Anchor73.description = "ArtDeco00"
 Anchor73.parameter = ["target=_source"]
@@ -425,7 +425,7 @@ Shape74 = x3d.Shape()
 Appearance75 = x3d.Appearance()
 Material76 = x3d.Material()
 Material76.DEF = "TextMat"
-Material76.diffuseColor = [1,1,1]
+Material76.diffuseColor = [1.0,1.0,1.0]
 
 Appearance75.material = Material76
 
@@ -453,11 +453,11 @@ Group50.children.append(Transform66)
 Viewpoint79 = x3d.Viewpoint()
 Viewpoint79.DEF = "View01"
 Viewpoint79.description = "ArtDeco01"
-Viewpoint79.position = [-2.25,3.75,3]
+Viewpoint79.position = [-2.25,3.75,3.0]
 
 Group50.children.append(Viewpoint79)
 Transform80 = x3d.Transform()
-Transform80.translation = [-2.25,3.75,0]
+Transform80.translation = [-2.25,3.75,0.0]
 Anchor81 = x3d.Anchor()
 Anchor81.description = "ArtDeco01 view"
 Anchor81.url = ["#View01"]
@@ -478,7 +478,7 @@ Anchor81.children.append(Shape82)
 
 Transform80.children.append(Anchor81)
 Transform86 = x3d.Transform()
-Transform86.translation = [0,0.3,0.5]
+Transform86.translation = [0.0,0.3,0.5]
 Anchor87 = x3d.Anchor()
 Anchor87.description = "ArtDeco01"
 Anchor87.parameter = ["target=_source"]
@@ -510,11 +510,11 @@ Group50.children.append(Transform80)
 Viewpoint93 = x3d.Viewpoint()
 Viewpoint93.DEF = "View02"
 Viewpoint93.description = "ArtDeco02"
-Viewpoint93.position = [-0.75,3.75,3]
+Viewpoint93.position = [-0.75,3.75,3.0]
 
 Group50.children.append(Viewpoint93)
 Transform94 = x3d.Transform()
-Transform94.translation = [-0.75,3.75,0]
+Transform94.translation = [-0.75,3.75,0.0]
 Anchor95 = x3d.Anchor()
 Anchor95.description = "ArtDeco02 view"
 Anchor95.url = ["#View02"]
@@ -535,7 +535,7 @@ Anchor95.children.append(Shape96)
 
 Transform94.children.append(Anchor95)
 Transform100 = x3d.Transform()
-Transform100.translation = [0,0.3,0.5]
+Transform100.translation = [0.0,0.3,0.5]
 Anchor101 = x3d.Anchor()
 Anchor101.description = "ArtDeco02"
 Anchor101.parameter = ["target=_source"]
@@ -567,11 +567,11 @@ Group50.children.append(Transform94)
 Viewpoint107 = x3d.Viewpoint()
 Viewpoint107.DEF = "View03"
 Viewpoint107.description = "ArtDeco03"
-Viewpoint107.position = [0.75,3.75,3]
+Viewpoint107.position = [0.75,3.75,3.0]
 
 Group50.children.append(Viewpoint107)
 Transform108 = x3d.Transform()
-Transform108.translation = [0.75,3.75,0]
+Transform108.translation = [0.75,3.75,0.0]
 Anchor109 = x3d.Anchor()
 Anchor109.description = "ArtDeco03 view"
 Anchor109.url = ["#View03"]
@@ -592,7 +592,7 @@ Anchor109.children.append(Shape110)
 
 Transform108.children.append(Anchor109)
 Transform114 = x3d.Transform()
-Transform114.translation = [0,0.3,0.5]
+Transform114.translation = [0.0,0.3,0.5]
 Anchor115 = x3d.Anchor()
 Anchor115.description = "ArtDeco03"
 Anchor115.parameter = ["target=_source"]
@@ -624,11 +624,11 @@ Group50.children.append(Transform108)
 Viewpoint121 = x3d.Viewpoint()
 Viewpoint121.DEF = "View04"
 Viewpoint121.description = "ArtDeco04"
-Viewpoint121.position = [2.25,3.75,3]
+Viewpoint121.position = [2.25,3.75,3.0]
 
 Group50.children.append(Viewpoint121)
 Transform122 = x3d.Transform()
-Transform122.translation = [2.25,3.75,0]
+Transform122.translation = [2.25,3.75,0.0]
 Anchor123 = x3d.Anchor()
 Anchor123.description = "ArtDeco04 view"
 Anchor123.url = ["#View04"]
@@ -649,7 +649,7 @@ Anchor123.children.append(Shape124)
 
 Transform122.children.append(Anchor123)
 Transform128 = x3d.Transform()
-Transform128.translation = [0,0.3,0.5]
+Transform128.translation = [0.0,0.3,0.5]
 Anchor129 = x3d.Anchor()
 Anchor129.description = "ArtDeco04"
 Anchor129.parameter = ["target=_source"]
@@ -681,11 +681,11 @@ Group50.children.append(Transform122)
 Viewpoint135 = x3d.Viewpoint()
 Viewpoint135.DEF = "View05"
 Viewpoint135.description = "ArtDeco05"
-Viewpoint135.position = [3.75,3.75,3]
+Viewpoint135.position = [3.75,3.75,3.0]
 
 Group50.children.append(Viewpoint135)
 Transform136 = x3d.Transform()
-Transform136.translation = [3.75,3.75,0]
+Transform136.translation = [3.75,3.75,0.0]
 Anchor137 = x3d.Anchor()
 Anchor137.description = "ArtDeco05 view"
 Anchor137.url = ["#View05"]
@@ -706,7 +706,7 @@ Anchor137.children.append(Shape138)
 
 Transform136.children.append(Anchor137)
 Transform142 = x3d.Transform()
-Transform142.translation = [0,0.3,0.5]
+Transform142.translation = [0.0,0.3,0.5]
 Anchor143 = x3d.Anchor()
 Anchor143.description = "ArtDeco05"
 Anchor143.parameter = ["target=_source"]
@@ -738,11 +738,11 @@ Group50.children.append(Transform136)
 Viewpoint149 = x3d.Viewpoint()
 Viewpoint149.DEF = "View06"
 Viewpoint149.description = "ArtDeco06"
-Viewpoint149.position = [-3.75,2.25,3]
+Viewpoint149.position = [-3.75,2.25,3.0]
 
 Group50.children.append(Viewpoint149)
 Transform150 = x3d.Transform()
-Transform150.translation = [-3.75,2.25,0]
+Transform150.translation = [-3.75,2.25,0.0]
 Anchor151 = x3d.Anchor()
 Anchor151.description = "ArtDeco06 view"
 Anchor151.url = ["#View06"]
@@ -763,7 +763,7 @@ Anchor151.children.append(Shape152)
 
 Transform150.children.append(Anchor151)
 Transform156 = x3d.Transform()
-Transform156.translation = [0,0.3,0.5]
+Transform156.translation = [0.0,0.3,0.5]
 Anchor157 = x3d.Anchor()
 Anchor157.description = "ArtDeco06"
 Anchor157.parameter = ["target=_source"]
@@ -795,11 +795,11 @@ Group50.children.append(Transform150)
 Viewpoint163 = x3d.Viewpoint()
 Viewpoint163.DEF = "View07"
 Viewpoint163.description = "ArtDeco07"
-Viewpoint163.position = [-2.25,2.25,3]
+Viewpoint163.position = [-2.25,2.25,3.0]
 
 Group50.children.append(Viewpoint163)
 Transform164 = x3d.Transform()
-Transform164.translation = [-2.25,2.25,0]
+Transform164.translation = [-2.25,2.25,0.0]
 Anchor165 = x3d.Anchor()
 Anchor165.description = "ArtDeco07 view"
 Anchor165.url = ["#View07"]
@@ -820,7 +820,7 @@ Anchor165.children.append(Shape166)
 
 Transform164.children.append(Anchor165)
 Transform170 = x3d.Transform()
-Transform170.translation = [0,0.3,0.5]
+Transform170.translation = [0.0,0.3,0.5]
 Anchor171 = x3d.Anchor()
 Anchor171.description = "ArtDeco07"
 Anchor171.parameter = ["target=_source"]
@@ -852,11 +852,11 @@ Group50.children.append(Transform164)
 Viewpoint177 = x3d.Viewpoint()
 Viewpoint177.DEF = "View08"
 Viewpoint177.description = "ArtDeco08"
-Viewpoint177.position = [-0.75,2.25,3]
+Viewpoint177.position = [-0.75,2.25,3.0]
 
 Group50.children.append(Viewpoint177)
 Transform178 = x3d.Transform()
-Transform178.translation = [-0.75,2.25,0]
+Transform178.translation = [-0.75,2.25,0.0]
 Anchor179 = x3d.Anchor()
 Anchor179.description = "ArtDeco08 view"
 Anchor179.url = ["#View08"]
@@ -877,7 +877,7 @@ Anchor179.children.append(Shape180)
 
 Transform178.children.append(Anchor179)
 Transform184 = x3d.Transform()
-Transform184.translation = [0,0.3,0.5]
+Transform184.translation = [0.0,0.3,0.5]
 Anchor185 = x3d.Anchor()
 Anchor185.description = "ArtDeco08"
 Anchor185.parameter = ["target=_source"]
@@ -909,11 +909,11 @@ Group50.children.append(Transform178)
 Viewpoint191 = x3d.Viewpoint()
 Viewpoint191.DEF = "View09"
 Viewpoint191.description = "ArtDeco09"
-Viewpoint191.position = [0.75,2.25,3]
+Viewpoint191.position = [0.75,2.25,3.0]
 
 Group50.children.append(Viewpoint191)
 Transform192 = x3d.Transform()
-Transform192.translation = [0.75,2.25,0]
+Transform192.translation = [0.75,2.25,0.0]
 Anchor193 = x3d.Anchor()
 Anchor193.description = "ArtDeco09 view"
 Anchor193.url = ["#View09"]
@@ -934,7 +934,7 @@ Anchor193.children.append(Shape194)
 
 Transform192.children.append(Anchor193)
 Transform198 = x3d.Transform()
-Transform198.translation = [0,0.3,0.5]
+Transform198.translation = [0.0,0.3,0.5]
 Anchor199 = x3d.Anchor()
 Anchor199.description = "ArtDeco09"
 Anchor199.parameter = ["target=_source"]
@@ -966,11 +966,11 @@ Group50.children.append(Transform192)
 Viewpoint205 = x3d.Viewpoint()
 Viewpoint205.DEF = "View10"
 Viewpoint205.description = "ArtDeco10"
-Viewpoint205.position = [2.25,2.25,3]
+Viewpoint205.position = [2.25,2.25,3.0]
 
 Group50.children.append(Viewpoint205)
 Transform206 = x3d.Transform()
-Transform206.translation = [2.25,2.25,0]
+Transform206.translation = [2.25,2.25,0.0]
 Anchor207 = x3d.Anchor()
 Anchor207.description = "ArtDeco10 view"
 Anchor207.url = ["#View10"]
@@ -991,7 +991,7 @@ Anchor207.children.append(Shape208)
 
 Transform206.children.append(Anchor207)
 Transform212 = x3d.Transform()
-Transform212.translation = [0,0.3,0.5]
+Transform212.translation = [0.0,0.3,0.5]
 Anchor213 = x3d.Anchor()
 Anchor213.description = "ArtDeco10"
 Anchor213.parameter = ["target=_source"]
@@ -1023,11 +1023,11 @@ Group50.children.append(Transform206)
 Viewpoint219 = x3d.Viewpoint()
 Viewpoint219.DEF = "View11"
 Viewpoint219.description = "ArtDeco11"
-Viewpoint219.position = [3.75,2.25,3]
+Viewpoint219.position = [3.75,2.25,3.0]
 
 Group50.children.append(Viewpoint219)
 Transform220 = x3d.Transform()
-Transform220.translation = [3.75,2.25,0]
+Transform220.translation = [3.75,2.25,0.0]
 Anchor221 = x3d.Anchor()
 Anchor221.description = "ArtDeco11 view"
 Anchor221.url = ["#View11"]
@@ -1048,7 +1048,7 @@ Anchor221.children.append(Shape222)
 
 Transform220.children.append(Anchor221)
 Transform226 = x3d.Transform()
-Transform226.translation = [0,0.3,0.5]
+Transform226.translation = [0.0,0.3,0.5]
 Anchor227 = x3d.Anchor()
 Anchor227.description = "ArtDeco11"
 Anchor227.parameter = ["target=_source"]
@@ -1080,11 +1080,11 @@ Group50.children.append(Transform220)
 Viewpoint233 = x3d.Viewpoint()
 Viewpoint233.DEF = "View12"
 Viewpoint233.description = "ArtDeco12"
-Viewpoint233.position = [-3.75,0.75,3]
+Viewpoint233.position = [-3.75,0.75,3.0]
 
 Group50.children.append(Viewpoint233)
 Transform234 = x3d.Transform()
-Transform234.translation = [-3.75,0.75,0]
+Transform234.translation = [-3.75,0.75,0.0]
 Anchor235 = x3d.Anchor()
 Anchor235.description = "ArtDeco12 view"
 Anchor235.url = ["#View12"]
@@ -1105,7 +1105,7 @@ Anchor235.children.append(Shape236)
 
 Transform234.children.append(Anchor235)
 Transform240 = x3d.Transform()
-Transform240.translation = [0,0.3,0.5]
+Transform240.translation = [0.0,0.3,0.5]
 Anchor241 = x3d.Anchor()
 Anchor241.description = "ArtDeco12"
 Anchor241.parameter = ["target=_source"]
@@ -1137,11 +1137,11 @@ Group50.children.append(Transform234)
 Viewpoint247 = x3d.Viewpoint()
 Viewpoint247.DEF = "View13"
 Viewpoint247.description = "ArtDeco13"
-Viewpoint247.position = [-2.25,0.75,3]
+Viewpoint247.position = [-2.25,0.75,3.0]
 
 Group50.children.append(Viewpoint247)
 Transform248 = x3d.Transform()
-Transform248.translation = [-2.25,0.75,0]
+Transform248.translation = [-2.25,0.75,0.0]
 Anchor249 = x3d.Anchor()
 Anchor249.description = "ArtDeco13 view"
 Anchor249.url = ["#View13"]
@@ -1162,7 +1162,7 @@ Anchor249.children.append(Shape250)
 
 Transform248.children.append(Anchor249)
 Transform254 = x3d.Transform()
-Transform254.translation = [0,0.3,0.5]
+Transform254.translation = [0.0,0.3,0.5]
 Anchor255 = x3d.Anchor()
 Anchor255.description = "ArtDeco13"
 Anchor255.parameter = ["target=_source"]
@@ -1194,11 +1194,11 @@ Group50.children.append(Transform248)
 Viewpoint261 = x3d.Viewpoint()
 Viewpoint261.DEF = "View14"
 Viewpoint261.description = "ArtDeco14"
-Viewpoint261.position = [-0.75,0.75,3]
+Viewpoint261.position = [-0.75,0.75,3.0]
 
 Group50.children.append(Viewpoint261)
 Transform262 = x3d.Transform()
-Transform262.translation = [-0.75,0.75,0]
+Transform262.translation = [-0.75,0.75,0.0]
 Anchor263 = x3d.Anchor()
 Anchor263.description = "ArtDeco14 view"
 Anchor263.url = ["#View14"]
@@ -1219,7 +1219,7 @@ Anchor263.children.append(Shape264)
 
 Transform262.children.append(Anchor263)
 Transform268 = x3d.Transform()
-Transform268.translation = [0,0.3,0.5]
+Transform268.translation = [0.0,0.3,0.5]
 Anchor269 = x3d.Anchor()
 Anchor269.description = "ArtDeco14"
 Anchor269.parameter = ["target=_source"]
@@ -1251,11 +1251,11 @@ Group50.children.append(Transform262)
 Viewpoint275 = x3d.Viewpoint()
 Viewpoint275.DEF = "View15"
 Viewpoint275.description = "ArtDeco15"
-Viewpoint275.position = [0.75,0.75,3]
+Viewpoint275.position = [0.75,0.75,3.0]
 
 Group50.children.append(Viewpoint275)
 Transform276 = x3d.Transform()
-Transform276.translation = [0.75,0.75,0]
+Transform276.translation = [0.75,0.75,0.0]
 Anchor277 = x3d.Anchor()
 Anchor277.description = "ArtDeco15 view"
 Anchor277.url = ["#View15"]
@@ -1276,7 +1276,7 @@ Anchor277.children.append(Shape278)
 
 Transform276.children.append(Anchor277)
 Transform282 = x3d.Transform()
-Transform282.translation = [0,0.3,0.5]
+Transform282.translation = [0.0,0.3,0.5]
 Anchor283 = x3d.Anchor()
 Anchor283.description = "ArtDeco15"
 Anchor283.parameter = ["target=_source"]
@@ -1308,11 +1308,11 @@ Group50.children.append(Transform276)
 Viewpoint289 = x3d.Viewpoint()
 Viewpoint289.DEF = "View16"
 Viewpoint289.description = "ArtDeco16"
-Viewpoint289.position = [2.25,0.75,3]
+Viewpoint289.position = [2.25,0.75,3.0]
 
 Group50.children.append(Viewpoint289)
 Transform290 = x3d.Transform()
-Transform290.translation = [2.25,0.75,0]
+Transform290.translation = [2.25,0.75,0.0]
 Anchor291 = x3d.Anchor()
 Anchor291.description = "ArtDeco16 view"
 Anchor291.url = ["#View16"]
@@ -1333,7 +1333,7 @@ Anchor291.children.append(Shape292)
 
 Transform290.children.append(Anchor291)
 Transform296 = x3d.Transform()
-Transform296.translation = [0,0.3,0.5]
+Transform296.translation = [0.0,0.3,0.5]
 Anchor297 = x3d.Anchor()
 Anchor297.description = "ArtDeco16"
 Anchor297.parameter = ["target=_source"]
@@ -1365,11 +1365,11 @@ Group50.children.append(Transform290)
 Viewpoint303 = x3d.Viewpoint()
 Viewpoint303.DEF = "View17"
 Viewpoint303.description = "ArtDeco17"
-Viewpoint303.position = [3.75,0.75,3]
+Viewpoint303.position = [3.75,0.75,3.0]
 
 Group50.children.append(Viewpoint303)
 Transform304 = x3d.Transform()
-Transform304.translation = [3.75,0.75,0]
+Transform304.translation = [3.75,0.75,0.0]
 Anchor305 = x3d.Anchor()
 Anchor305.description = "ArtDeco17 view"
 Anchor305.url = ["#View17"]
@@ -1390,7 +1390,7 @@ Anchor305.children.append(Shape306)
 
 Transform304.children.append(Anchor305)
 Transform310 = x3d.Transform()
-Transform310.translation = [0,0.3,0.5]
+Transform310.translation = [0.0,0.3,0.5]
 Anchor311 = x3d.Anchor()
 Anchor311.description = "ArtDeco17"
 Anchor311.parameter = ["target=_source"]
@@ -1422,11 +1422,11 @@ Group50.children.append(Transform304)
 Viewpoint317 = x3d.Viewpoint()
 Viewpoint317.DEF = "View18"
 Viewpoint317.description = "ArtDeco18"
-Viewpoint317.position = [-3.75,-0.75,3]
+Viewpoint317.position = [-3.75,-0.75,3.0]
 
 Group50.children.append(Viewpoint317)
 Transform318 = x3d.Transform()
-Transform318.translation = [-3.75,-0.75,0]
+Transform318.translation = [-3.75,-0.75,0.0]
 Anchor319 = x3d.Anchor()
 Anchor319.description = "ArtDeco18 view"
 Anchor319.url = ["#View18"]
@@ -1447,7 +1447,7 @@ Anchor319.children.append(Shape320)
 
 Transform318.children.append(Anchor319)
 Transform324 = x3d.Transform()
-Transform324.translation = [0,0.3,0.5]
+Transform324.translation = [0.0,0.3,0.5]
 Anchor325 = x3d.Anchor()
 Anchor325.description = "ArtDeco18"
 Anchor325.parameter = ["target=_source"]
@@ -1479,11 +1479,11 @@ Group50.children.append(Transform318)
 Viewpoint331 = x3d.Viewpoint()
 Viewpoint331.DEF = "View19"
 Viewpoint331.description = "ArtDeco19"
-Viewpoint331.position = [-2.25,-0.75,3]
+Viewpoint331.position = [-2.25,-0.75,3.0]
 
 Group50.children.append(Viewpoint331)
 Transform332 = x3d.Transform()
-Transform332.translation = [-2.25,-0.75,0]
+Transform332.translation = [-2.25,-0.75,0.0]
 Anchor333 = x3d.Anchor()
 Anchor333.description = "ArtDeco19 view"
 Anchor333.url = ["#View19"]
@@ -1504,7 +1504,7 @@ Anchor333.children.append(Shape334)
 
 Transform332.children.append(Anchor333)
 Transform338 = x3d.Transform()
-Transform338.translation = [0,0.3,0.5]
+Transform338.translation = [0.0,0.3,0.5]
 Anchor339 = x3d.Anchor()
 Anchor339.description = "ArtDeco19"
 Anchor339.parameter = ["target=_source"]
@@ -1536,11 +1536,11 @@ Group50.children.append(Transform332)
 Viewpoint345 = x3d.Viewpoint()
 Viewpoint345.DEF = "View20"
 Viewpoint345.description = "ArtDeco20"
-Viewpoint345.position = [-0.75,-0.75,3]
+Viewpoint345.position = [-0.75,-0.75,3.0]
 
 Group50.children.append(Viewpoint345)
 Transform346 = x3d.Transform()
-Transform346.translation = [-0.75,-0.75,0]
+Transform346.translation = [-0.75,-0.75,0.0]
 Anchor347 = x3d.Anchor()
 Anchor347.description = "ArtDeco20 view"
 Anchor347.url = ["#View20"]
@@ -1561,7 +1561,7 @@ Anchor347.children.append(Shape348)
 
 Transform346.children.append(Anchor347)
 Transform352 = x3d.Transform()
-Transform352.translation = [0,0.3,0.5]
+Transform352.translation = [0.0,0.3,0.5]
 Anchor353 = x3d.Anchor()
 Anchor353.description = "ArtDeco20"
 Anchor353.parameter = ["target=_source"]
@@ -1593,11 +1593,11 @@ Group50.children.append(Transform346)
 Viewpoint359 = x3d.Viewpoint()
 Viewpoint359.DEF = "View21"
 Viewpoint359.description = "ArtDeco21"
-Viewpoint359.position = [0.75,-0.75,3]
+Viewpoint359.position = [0.75,-0.75,3.0]
 
 Group50.children.append(Viewpoint359)
 Transform360 = x3d.Transform()
-Transform360.translation = [0.75,-0.75,0]
+Transform360.translation = [0.75,-0.75,0.0]
 Anchor361 = x3d.Anchor()
 Anchor361.description = "ArtDeco21 view"
 Anchor361.url = ["#View21"]
@@ -1618,7 +1618,7 @@ Anchor361.children.append(Shape362)
 
 Transform360.children.append(Anchor361)
 Transform366 = x3d.Transform()
-Transform366.translation = [0,0.3,0.5]
+Transform366.translation = [0.0,0.3,0.5]
 Anchor367 = x3d.Anchor()
 Anchor367.description = "ArtDeco21"
 Anchor367.parameter = ["target=_source"]
@@ -1650,11 +1650,11 @@ Group50.children.append(Transform360)
 Viewpoint373 = x3d.Viewpoint()
 Viewpoint373.DEF = "View22"
 Viewpoint373.description = "ArtDeco22"
-Viewpoint373.position = [2.25,-0.75,3]
+Viewpoint373.position = [2.25,-0.75,3.0]
 
 Group50.children.append(Viewpoint373)
 Transform374 = x3d.Transform()
-Transform374.translation = [2.25,-0.75,0]
+Transform374.translation = [2.25,-0.75,0.0]
 Anchor375 = x3d.Anchor()
 Anchor375.description = "ArtDeco22 view"
 Anchor375.url = ["#View22"]
@@ -1675,7 +1675,7 @@ Anchor375.children.append(Shape376)
 
 Transform374.children.append(Anchor375)
 Transform380 = x3d.Transform()
-Transform380.translation = [0,0.3,0.5]
+Transform380.translation = [0.0,0.3,0.5]
 Anchor381 = x3d.Anchor()
 Anchor381.description = "ArtDeco22"
 Anchor381.parameter = ["target=_source"]
@@ -1707,11 +1707,11 @@ Group50.children.append(Transform374)
 Viewpoint387 = x3d.Viewpoint()
 Viewpoint387.DEF = "View23"
 Viewpoint387.description = "ArtDeco23"
-Viewpoint387.position = [3.75,-0.75,3]
+Viewpoint387.position = [3.75,-0.75,3.0]
 
 Group50.children.append(Viewpoint387)
 Transform388 = x3d.Transform()
-Transform388.translation = [3.75,-0.75,0]
+Transform388.translation = [3.75,-0.75,0.0]
 Anchor389 = x3d.Anchor()
 Anchor389.description = "ArtDeco23 view"
 Anchor389.url = ["#View23"]
@@ -1732,7 +1732,7 @@ Anchor389.children.append(Shape390)
 
 Transform388.children.append(Anchor389)
 Transform394 = x3d.Transform()
-Transform394.translation = [0,0.3,0.5]
+Transform394.translation = [0.0,0.3,0.5]
 Anchor395 = x3d.Anchor()
 Anchor395.description = "ArtDeco23"
 Anchor395.parameter = ["target=_source"]
@@ -1764,11 +1764,11 @@ Group50.children.append(Transform388)
 Viewpoint401 = x3d.Viewpoint()
 Viewpoint401.DEF = "View24"
 Viewpoint401.description = "ArtDeco24"
-Viewpoint401.position = [-3.75,-2.25,3]
+Viewpoint401.position = [-3.75,-2.25,3.0]
 
 Group50.children.append(Viewpoint401)
 Transform402 = x3d.Transform()
-Transform402.translation = [-3.75,-2.25,0]
+Transform402.translation = [-3.75,-2.25,0.0]
 Anchor403 = x3d.Anchor()
 Anchor403.description = "ArtDeco24 view"
 Anchor403.url = ["#View24"]
@@ -1789,7 +1789,7 @@ Anchor403.children.append(Shape404)
 
 Transform402.children.append(Anchor403)
 Transform408 = x3d.Transform()
-Transform408.translation = [0,0.3,0.5]
+Transform408.translation = [0.0,0.3,0.5]
 Anchor409 = x3d.Anchor()
 Anchor409.description = "ArtDeco24"
 Anchor409.parameter = ["target=_source"]
@@ -1821,11 +1821,11 @@ Group50.children.append(Transform402)
 Viewpoint415 = x3d.Viewpoint()
 Viewpoint415.DEF = "View25"
 Viewpoint415.description = "ArtDeco25"
-Viewpoint415.position = [-2.25,-2.25,3]
+Viewpoint415.position = [-2.25,-2.25,3.0]
 
 Group50.children.append(Viewpoint415)
 Transform416 = x3d.Transform()
-Transform416.translation = [-2.25,-2.25,0]
+Transform416.translation = [-2.25,-2.25,0.0]
 Anchor417 = x3d.Anchor()
 Anchor417.description = "ArtDeco25 view"
 Anchor417.url = ["#View25"]
@@ -1846,7 +1846,7 @@ Anchor417.children.append(Shape418)
 
 Transform416.children.append(Anchor417)
 Transform422 = x3d.Transform()
-Transform422.translation = [0,0.3,0.5]
+Transform422.translation = [0.0,0.3,0.5]
 Anchor423 = x3d.Anchor()
 Anchor423.description = "ArtDeco25"
 Anchor423.parameter = ["target=_source"]
@@ -1878,11 +1878,11 @@ Group50.children.append(Transform416)
 Viewpoint429 = x3d.Viewpoint()
 Viewpoint429.DEF = "View26"
 Viewpoint429.description = "ArtDeco26"
-Viewpoint429.position = [-0.75,-2.25,3]
+Viewpoint429.position = [-0.75,-2.25,3.0]
 
 Group50.children.append(Viewpoint429)
 Transform430 = x3d.Transform()
-Transform430.translation = [-0.75,-2.25,0]
+Transform430.translation = [-0.75,-2.25,0.0]
 Anchor431 = x3d.Anchor()
 Anchor431.description = "ArtDeco26 view"
 Anchor431.url = ["#View26"]
@@ -1903,7 +1903,7 @@ Anchor431.children.append(Shape432)
 
 Transform430.children.append(Anchor431)
 Transform436 = x3d.Transform()
-Transform436.translation = [0,0.3,0.5]
+Transform436.translation = [0.0,0.3,0.5]
 Anchor437 = x3d.Anchor()
 Anchor437.description = "ArtDeco26"
 Anchor437.parameter = ["target=_source"]
@@ -1935,11 +1935,11 @@ Group50.children.append(Transform430)
 Viewpoint443 = x3d.Viewpoint()
 Viewpoint443.DEF = "View27"
 Viewpoint443.description = "ArtDeco27"
-Viewpoint443.position = [0.75,-2.25,3]
+Viewpoint443.position = [0.75,-2.25,3.0]
 
 Group50.children.append(Viewpoint443)
 Transform444 = x3d.Transform()
-Transform444.translation = [0.75,-2.25,0]
+Transform444.translation = [0.75,-2.25,0.0]
 Anchor445 = x3d.Anchor()
 Anchor445.description = "ArtDeco27 view"
 Anchor445.url = ["#View27"]
@@ -1960,7 +1960,7 @@ Anchor445.children.append(Shape446)
 
 Transform444.children.append(Anchor445)
 Transform450 = x3d.Transform()
-Transform450.translation = [0,0.3,0.5]
+Transform450.translation = [0.0,0.3,0.5]
 Anchor451 = x3d.Anchor()
 Anchor451.description = "ArtDeco27"
 Anchor451.parameter = ["target=_source"]
@@ -1992,11 +1992,11 @@ Group50.children.append(Transform444)
 Viewpoint457 = x3d.Viewpoint()
 Viewpoint457.DEF = "View28"
 Viewpoint457.description = "ArtDeco28"
-Viewpoint457.position = [2.25,-2.25,3]
+Viewpoint457.position = [2.25,-2.25,3.0]
 
 Group50.children.append(Viewpoint457)
 Transform458 = x3d.Transform()
-Transform458.translation = [2.25,-2.25,0]
+Transform458.translation = [2.25,-2.25,0.0]
 Anchor459 = x3d.Anchor()
 Anchor459.description = "ArtDeco28 view"
 Anchor459.url = ["#View28"]
@@ -2017,7 +2017,7 @@ Anchor459.children.append(Shape460)
 
 Transform458.children.append(Anchor459)
 Transform464 = x3d.Transform()
-Transform464.translation = [0,0.3,0.5]
+Transform464.translation = [0.0,0.3,0.5]
 Anchor465 = x3d.Anchor()
 Anchor465.description = "ArtDeco28"
 Anchor465.parameter = ["target=_source"]
@@ -2049,11 +2049,11 @@ Group50.children.append(Transform458)
 Viewpoint471 = x3d.Viewpoint()
 Viewpoint471.DEF = "View29"
 Viewpoint471.description = "ArtDeco29"
-Viewpoint471.position = [3.75,-2.25,3]
+Viewpoint471.position = [3.75,-2.25,3.0]
 
 Group50.children.append(Viewpoint471)
 Transform472 = x3d.Transform()
-Transform472.translation = [3.75,-2.25,0]
+Transform472.translation = [3.75,-2.25,0.0]
 Anchor473 = x3d.Anchor()
 Anchor473.description = "ArtDeco29 view"
 Anchor473.url = ["#View29"]
@@ -2074,7 +2074,7 @@ Anchor473.children.append(Shape474)
 
 Transform472.children.append(Anchor473)
 Transform478 = x3d.Transform()
-Transform478.translation = [0,0.3,0.5]
+Transform478.translation = [0.0,0.3,0.5]
 Anchor479 = x3d.Anchor()
 Anchor479.description = "ArtDeco29"
 Anchor479.parameter = ["target=_source"]
@@ -2106,11 +2106,11 @@ Group50.children.append(Transform472)
 Viewpoint485 = x3d.Viewpoint()
 Viewpoint485.DEF = "View30"
 Viewpoint485.description = "ArtDeco30"
-Viewpoint485.position = [-3.75,-3.75,3]
+Viewpoint485.position = [-3.75,-3.75,3.0]
 
 Group50.children.append(Viewpoint485)
 Transform486 = x3d.Transform()
-Transform486.translation = [-3.75,-3.75,0]
+Transform486.translation = [-3.75,-3.75,0.0]
 Anchor487 = x3d.Anchor()
 Anchor487.description = "ArtDeco30 view"
 Anchor487.url = ["#View30"]
@@ -2131,7 +2131,7 @@ Anchor487.children.append(Shape488)
 
 Transform486.children.append(Anchor487)
 Transform492 = x3d.Transform()
-Transform492.translation = [0,0.3,0.5]
+Transform492.translation = [0.0,0.3,0.5]
 Anchor493 = x3d.Anchor()
 Anchor493.description = "ArtDeco30"
 Anchor493.parameter = ["target=_source"]
@@ -2163,11 +2163,11 @@ Group50.children.append(Transform486)
 Viewpoint499 = x3d.Viewpoint()
 Viewpoint499.DEF = "View31"
 Viewpoint499.description = "ArtDeco31"
-Viewpoint499.position = [-2.25,-3.75,3]
+Viewpoint499.position = [-2.25,-3.75,3.0]
 
 Group50.children.append(Viewpoint499)
 Transform500 = x3d.Transform()
-Transform500.translation = [-2.25,-3.75,0]
+Transform500.translation = [-2.25,-3.75,0.0]
 Anchor501 = x3d.Anchor()
 Anchor501.description = "ArtDeco31 view"
 Anchor501.url = ["#View31"]
@@ -2188,7 +2188,7 @@ Anchor501.children.append(Shape502)
 
 Transform500.children.append(Anchor501)
 Transform506 = x3d.Transform()
-Transform506.translation = [0,0.3,0.5]
+Transform506.translation = [0.0,0.3,0.5]
 Anchor507 = x3d.Anchor()
 Anchor507.description = "ArtDeco31"
 Anchor507.parameter = ["target=_source"]
@@ -2220,11 +2220,11 @@ Group50.children.append(Transform500)
 Viewpoint513 = x3d.Viewpoint()
 Viewpoint513.DEF = "View32"
 Viewpoint513.description = "ArtDeco32"
-Viewpoint513.position = [-0.75,-3.75,3]
+Viewpoint513.position = [-0.75,-3.75,3.0]
 
 Group50.children.append(Viewpoint513)
 Transform514 = x3d.Transform()
-Transform514.translation = [-0.75,-3.75,0]
+Transform514.translation = [-0.75,-3.75,0.0]
 Anchor515 = x3d.Anchor()
 Anchor515.description = "ArtDeco32 view"
 Anchor515.url = ["#View32"]
@@ -2245,7 +2245,7 @@ Anchor515.children.append(Shape516)
 
 Transform514.children.append(Anchor515)
 Transform520 = x3d.Transform()
-Transform520.translation = [0,0.3,0.5]
+Transform520.translation = [0.0,0.3,0.5]
 Anchor521 = x3d.Anchor()
 Anchor521.description = "ArtDeco32"
 Anchor521.parameter = ["target=_source"]
@@ -2277,11 +2277,11 @@ Group50.children.append(Transform514)
 Viewpoint527 = x3d.Viewpoint()
 Viewpoint527.DEF = "View33"
 Viewpoint527.description = "ArtDeco33"
-Viewpoint527.position = [0.75,-3.75,3]
+Viewpoint527.position = [0.75,-3.75,3.0]
 
 Group50.children.append(Viewpoint527)
 Transform528 = x3d.Transform()
-Transform528.translation = [0.75,-3.75,0]
+Transform528.translation = [0.75,-3.75,0.0]
 Anchor529 = x3d.Anchor()
 Anchor529.description = "ArtDeco33 view"
 Anchor529.url = ["#View33"]
@@ -2302,7 +2302,7 @@ Anchor529.children.append(Shape530)
 
 Transform528.children.append(Anchor529)
 Transform534 = x3d.Transform()
-Transform534.translation = [0,0.3,0.5]
+Transform534.translation = [0.0,0.3,0.5]
 Anchor535 = x3d.Anchor()
 Anchor535.description = "ArtDeco33"
 Anchor535.parameter = ["target=_source"]
@@ -2334,11 +2334,11 @@ Group50.children.append(Transform528)
 Viewpoint541 = x3d.Viewpoint()
 Viewpoint541.DEF = "View34"
 Viewpoint541.description = "ArtDeco34"
-Viewpoint541.position = [2.25,-3.75,3]
+Viewpoint541.position = [2.25,-3.75,3.0]
 
 Group50.children.append(Viewpoint541)
 Transform542 = x3d.Transform()
-Transform542.translation = [2.25,-3.75,0]
+Transform542.translation = [2.25,-3.75,0.0]
 Anchor543 = x3d.Anchor()
 Anchor543.description = "ArtDeco34 view"
 Anchor543.url = ["#View34"]
@@ -2359,7 +2359,7 @@ Anchor543.children.append(Shape544)
 
 Transform542.children.append(Anchor543)
 Transform548 = x3d.Transform()
-Transform548.translation = [0,0.3,0.5]
+Transform548.translation = [0.0,0.3,0.5]
 Anchor549 = x3d.Anchor()
 Anchor549.description = "ArtDeco34"
 Anchor549.parameter = ["target=_source"]
@@ -2406,6 +2406,6 @@ ROUTE556.toNode = "Close_travel"
 Scene13.children.append(ROUTE556)
 
 X3D0.Scene = Scene13
-f = open("././ArtDecoExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ArtDecoExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

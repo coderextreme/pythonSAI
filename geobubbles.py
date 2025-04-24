@@ -6,8 +6,8 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Geospatial"
 component2.level = 1
+component2.name = "Geospatial"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
@@ -38,13 +38,14 @@ head1.children.append(meta7)
 
 X3D0.head = head1
 Scene8 = x3d.Scene()
-#Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/
-#PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/
+"""Viewpoint DEF='Tour' position='0 0 4' orientation='1 0 0 0' description='Tour Views'/"""
+"""PositionInterpolator DEF='TourPosition' key='0 1' keyValue='-0.5 -0.5 4 -0.5 0.5 4'/"""
 GeoViewpoint9 = x3d.GeoViewpoint()
 GeoViewpoint9.DEF = "Tour"
 GeoViewpoint9.position = [0,0,4]
 GeoViewpoint9.orientation = [1,0,0,0]
 GeoViewpoint9.description = "Tour Views"
+GeoViewpoint9.retainUserOffsets = False
 
 Scene8.children.append(GeoViewpoint9)
 Background10 = x3d.Background()
@@ -161,6 +162,6 @@ ROUTE26.toField = "set_position"
 Scene8.children.append(ROUTE26)
 
 X3D0.Scene = Scene8
-f = open("././geobubbles_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("geobubbles_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

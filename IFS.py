@@ -6,13 +6,13 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "HAnim"
 component2.level = 1
+component2.name = "HAnim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "JohnIFS.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
@@ -36,27 +36,28 @@ meta7.content = "18 Jan 2023"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "creator"
 meta8.content = "John Carlson"
+meta8.name = "creator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "created"
 meta9.content = "9 November 2020"
+meta9.name = "created"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "../license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 
 X3D0.head = head1
 Scene11 = x3d.Scene()
 Group12 = x3d.Group()
-#DEFS for markers of skeleton joints, segments, and sites
+""" DEFS for markers of skeleton joints, segments, and sites """
 Transform13 = x3d.Transform()
 Transform13.translation = [0,2.1,0]
+Transform13.scale = [1,1,1]
 Shape14 = x3d.Shape()
 Shape14.DEF = "HAnimSiteShape"
 IndexedFaceSet15 = x3d.IndexedFaceSet()
@@ -89,14 +90,16 @@ Group12.children.append(Transform13)
 Scene11.children.append(Group12)
 NavigationInfo20 = x3d.NavigationInfo()
 NavigationInfo20.speed = 1.5
+NavigationInfo20.type = ["EXAMINE","ANY"]
 
 Scene11.children.append(NavigationInfo20)
 Viewpoint21 = x3d.Viewpoint()
+Viewpoint21.centerOfRotation = [0,0,0]
 Viewpoint21.description = "default"
 
 Scene11.children.append(Viewpoint21)
 
 X3D0.Scene = Scene11
-f = open("././IFS_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("IFS_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

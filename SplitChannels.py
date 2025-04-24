@@ -6,63 +6,63 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "SplitChannels.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "This X3D scene includes a simple sound source which can be moved right and left. Depending on the position of the sound source, the user can hear the produced sound from the corresponding output speaker. Accordingly, there is a source that can be passed through a SpatialSound for the spatialization of the input audio. The approach is based on the relative position of the source and the listener, in comparison to the panner."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "info"
 meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
+meta4.name = "info"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "28 October 2020"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "5 December 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CHANGELOG.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "credit for audio files"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "http://www.medialab.hmu.gr/minipages/x3domAudio"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "identifier"
 meta11.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SplitChannels.x3d"
+meta11.name = "identifier"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "license"
 meta13.content = "../license.html"
+meta13.name = "license"
 
 head1.children.append(meta13)
 
@@ -81,7 +81,7 @@ Background17 = x3d.Background()
 Scene14.children.append(Background17)
 Viewpoint18 = x3d.Viewpoint()
 Viewpoint18.orientation = [1,0,0,-0.5]
-Viewpoint18.position = [0,500,600]
+Viewpoint18.position = [0.0,500.0,600.0]
 Viewpoint18.retainUserOffsets = True
 
 Scene14.children.append(Viewpoint18)
@@ -153,7 +153,7 @@ Appearance33.material = Material34
 
 Shape32.appearance = Appearance33
 Text35 = x3d.Text()
-Text35.string = ["Right Channel Volume"]
+Text35.string = ["ight Channel Volum"]
 FontStyle36 = x3d.FontStyle()
 FontStyle36.family = ["Times"]
 FontStyle36.style = "BOLD"
@@ -235,7 +235,7 @@ Appearance51.material = Material52
 
 Shape50.appearance = Appearance51
 Text53 = x3d.Text()
-Text53.string = ["Left Channel Volume"]
+Text53.string = ["eft Channel Volum"]
 FontStyle54 = x3d.FontStyle()
 FontStyle54.family = ["Times"]
 FontStyle54.style = "BOLD"
@@ -274,17 +274,9 @@ ListenerPointSource60.trackCurrentView = True
 
 Scene14.children.append(ListenerPointSource60)
 StreamAudioDestination61 = x3d.StreamAudioDestination()
-StreamAudioDestination61.channelCountMode = "MAX"
-StreamAudioDestination61.channelInterpretation = "SPEAKERS"
 Gain62 = x3d.Gain()
-Gain62.channelCountMode = "MAX"
-Gain62.channelInterpretation = "SPEAKERS"
 ChannelMerger63 = x3d.ChannelMerger()
-ChannelMerger63.channelCountMode = "MAX"
-ChannelMerger63.channelInterpretation = "SPEAKERS"
 ChannelSelector64 = x3d.ChannelSelector()
-ChannelSelector64.channelCountMode = "MAX"
-ChannelSelector64.channelInterpretation = "SPEAKERS"
 Gain65 = x3d.Gain()
 Gain65.USE = "ChannelSplitter"
 
@@ -293,8 +285,6 @@ ChannelSelector64.children.append(Gain65)
 ChannelMerger63.children.append(ChannelSelector64)
 ChannelSelector66 = x3d.ChannelSelector()
 ChannelSelector66.channelSelection = 1
-ChannelSelector66.channelCountMode = "MAX"
-ChannelSelector66.channelInterpretation = "SPEAKERS"
 Gain67 = x3d.Gain()
 Gain67.USE = "ChannelSplitter"
 
@@ -310,12 +300,11 @@ Scene14.children.append(StreamAudioDestination61)
 ChannelSplitter68 = x3d.ChannelSplitter()
 ChannelSplitter68.DEF = "ChannelSplitter"
 ChannelSplitter68.channelCountMode = "EXPLICIT"
-ChannelSplitter68.channelInterpretation = "SPEAKERS"
 AudioClip69 = x3d.AudioClip()
 AudioClip69.description = "Violin"
 AudioClip69.url = ["sound/violin.mp3","https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/sound/violin.mp3"]
 
-ChannelSplitter68.outputs.append(AudioClip69)
+ChannelSplitter68.children.append(AudioClip69)
 
 Scene14.children.append(ChannelSplitter68)
 Transform70 = x3d.Transform()
@@ -347,6 +336,6 @@ Transform70.children.append(Shape71)
 Scene14.children.append(Transform70)
 
 X3D0.Scene = Scene14
-f = open("././SplitChannels_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("SplitChannels_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -1,13 +1,9 @@
-if (typeof require === 'function') {
-	var fs = require('fs');
-	var Ajv = require('ajv');
-	var ajv = new Ajv();
-	var localize = require('ajv-i18n');
-	var addFormats = require("ajv-formats");
-	addFormats(ajv, {mode: "full", formats: ["uri-reference", "uri"], keywords: true});  // fast mode is "fast"
-	var X3DJSONLD = require('./X3DJSONLD.js');
-}
+const Ajv2020 = require("ajv/dist/2020");
+const addFormats = require("ajv-formats-draft2019");
+var ajv = new Ajv2020({allErrors:true, verbose:true});
+addFormats(ajv, {mode: "full", formats: ["uri-reference", "uri", "iri-reference", "iri"], keywords: true});  // fast mode is "fast"
 
+var X3DJSONLD = require('./X3DJSONLD.js');
 X3DJSONLD = Object.assign(X3DJSONLD, { processURLs : function(urls) { return urls; }});
 var selectObjectFromJSObj = X3DJSONLD.selectObjectFromJSObj;
 var validate = { };
@@ -94,7 +90,6 @@ function loadSchema(json, file, doValidate, X3DJSONLD, success, failure) {
 	}
 	var validated_version = validate[version];
         if (typeof validated_version === 'undefined') {
-		var ajv = new Ajv({allErrors:true, verbose:true});
 		      if (typeof $ === 'function' && typeof $.getJSON === 'function') {
 			      $.getJSON("./x3d-"+version+"-JSONSchema.json", function(schemajson) {
 				      validated_version = addSchema(ajv, schemajson, version);

@@ -31,8 +31,8 @@ meta6.content = "4 April 2017"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "license"
 meta7.content = "https://www.web3d.org/x3d/content/examples/license.html"
+meta7.name = "license"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
@@ -72,6 +72,6 @@ Group11.children.append(Shape12)
 Scene9.children.append(Group11)
 
 X3D0.Scene = Scene9
-f = open("././ifscubeworks_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ifscubeworks_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

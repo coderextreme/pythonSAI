@@ -6,83 +6,84 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Teapot.x3d"
+meta2.name = "title"
+meta2.lang = ""
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "A watertight (solid) Utah Teapot Model converted from obj format."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "created"
 meta4.content = "20 March 2016"
+meta4.name = "created"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "modified"
 meta5.content = "20 October 2019"
+meta5.name = "modified"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "creator"
 meta6.content = "Pyarelal Knowles"
+meta6.name = "creator"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "translator"
 meta7.content = "Don Brutzman"
+meta7.name = "translator"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "wt_teapot.obj"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "teapot.ply"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "http://goanna.cs.rmit.edu.au/~pknowles/models.html"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "https://en.wikipedia.org/wiki/Utah_teapot"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "https://en.wikipedia.org/wiki/List_of_common_3D_test_models"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "http://www.realtimerendering.com/udacity/?load=demo/unit1-teapot-demo.js"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "identifier"
 meta14.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/Teapot.x3d"
+meta14.name = "identifier"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "Meshlab X3D Exported, http://meshlab.sourceforge.net"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "generator"
 meta16.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta16.name = "generator"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "license"
 meta17.content = "../license.html"
+meta17.name = "license"
 
 head1.children.append(meta17)
 
@@ -126,7 +127,7 @@ Shape22.appearance = Appearance25
 Scene18.children.append(Shape22)
 Shape27 = x3d.Shape()
 Shape27.DEF = "AxisLinesShape"
-#RGB lines showing XYZ axes
+""" RGB lines showing XYZ axes """
 IndexedLineSet28 = x3d.IndexedLineSet()
 IndexedLineSet28.colorIndex = [0,1,2]
 IndexedLineSet28.colorPerVertex = False
@@ -143,6 +144,6 @@ Shape27.geometry = IndexedLineSet28
 Scene18.children.append(Shape27)
 
 X3D0.Scene = Scene18
-f = open("././Teapot_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Teapot_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -156,7 +156,7 @@
           },
           {
             "@name":"translated",
-            "@content":"01 March 2024"
+            "@content":"24 April 2025"
           },
           {
             "@name":"generator",
@@ -198,7 +198,7 @@
           },
           { "NavigationInfo":
             {
-              "@type":"\"EXAMINE\" \"FLY\" \"ANY\""
+              "@type":["EXAMINE","FLY","ANY"]
             }
           },
           { "WorldInfo":
@@ -1454,7 +1454,7 @@
           },
           { "NavigationInfo":
             {
-              "@type":"\"EXAMINE\" \"FLY\" \"ANY\""
+              "@type":["EXAMINE","FLY","ANY"]
             }
           },
           { "WorldInfo":

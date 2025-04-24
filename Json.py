@@ -4,12 +4,12 @@ print('-->')
 X3D0 = x3d.X3D()
 X3D0.profile = "Immersive"
 X3D0.version = "4.0"
-#x3dVersionComparisonTest for this model: supportsX3dVersion(X3D.VERSION_3_0)=true
+""" x3dVersionComparisonTest for this model: supportsX3dVersion(X3D.VERSION_3_0)=true """
 head1 = x3d.head()
-#comment #1
-#comment #2
-#comment #3
-#comment #4
+""" comment #1 """
+""" comment #2 """
+""" comment #3 """
+""" comment #4 """
 component2 = x3d.component()
 component2.name = "Navigation"
 component2.level = 3
@@ -48,13 +48,13 @@ head1.children.append(component8)
 unit9 = x3d.unit()
 unit9.name = "AngleUnitConversion"
 unit9.category = "angle"
-unit9.conversionFactor = 1
+unit9.conversionFactor = 1.0
 
 head1.children.append(unit9)
 unit10 = x3d.unit()
 unit10.name = "LengthUnitConversion"
 unit10.category = "length"
-unit10.conversionFactor = 1
+unit10.conversionFactor = 1.0
 
 head1.children.append(unit10)
 unit11 = x3d.unit()
@@ -64,118 +64,118 @@ unit11.conversionFactor = 4.4482
 
 head1.children.append(unit11)
 meta12 = x3d.meta()
-meta12.name = "title"
 meta12.content = "Json.x3d"
+meta12.name = "title"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "info"
 meta13.content = "continued development and testing in progress"
+meta13.name = "info"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "description"
 meta14.content = "Example HelloWorldProgram creates an X3D model using the X3D Java Scene Access Interface Library (X3DJSAIL)"
+meta14.name = "description"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "reference"
 meta15.content = "https://www.web3d.org/specifications/java/X3DJSAIL.html"
+meta15.name = "reference"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "generator"
 meta16.content = "HelloWorldProgramOutput.java"
+meta16.name = "generator"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "created"
 meta17.content = "6 September 2016"
+meta17.name = "created"
 
 head1.children.append(meta17)
 meta18 = x3d.meta()
-meta18.name = "modified"
 meta18.content = "25 May 2020"
+meta18.name = "modified"
 
 head1.children.append(meta18)
 meta19 = x3d.meta()
-meta19.name = "generator"
 meta19.content = "X3D Java Scene Access Interface Library (X3DJSAIL)"
+meta19.name = "generator"
 
 head1.children.append(meta19)
 meta20 = x3d.meta()
-meta20.name = "generator"
 meta20.content = "https://www.web3d.org/specifications/java/examples/HelloWorldProgram.java"
+meta20.name = "generator"
 
 head1.children.append(meta20)
 meta21 = x3d.meta()
-meta21.name = "generator"
 meta21.content = "Netbeans http://www.netbeans.org"
+meta21.name = "generator"
 
 head1.children.append(meta21)
 meta22 = x3d.meta()
-meta22.name = "creator"
 meta22.content = "Don Brutzman"
+meta22.name = "creator"
 
 head1.children.append(meta22)
 meta23 = x3d.meta()
-meta23.name = "reference"
 meta23.content = "https://sourceforge.net/p/x3d/code/HEAD/tree/www.web3d.org/x3d/stylesheets/java/examples/HelloWorldProgramOutput.x3d"
+meta23.name = "reference"
 
 head1.children.append(meta23)
 meta24 = x3d.meta()
-meta24.name = "reference"
 meta24.content = "Console output, ClassicVRML encoding, VRML97 encoding and pretty-print documentation:"
+meta24.name = "reference"
 
 head1.children.append(meta24)
 meta25 = x3d.meta()
-meta25.name = "reference"
 meta25.content = "HelloWorldProgramOutput.txt"
+meta25.name = "reference"
 
 head1.children.append(meta25)
 meta26 = x3d.meta()
-meta26.name = "reference"
 meta26.content = "HelloWorldProgramOutput.x3dv"
+meta26.name = "reference"
 
 head1.children.append(meta26)
 meta27 = x3d.meta()
-meta27.name = "reference"
 meta27.content = "HelloWorldProgramOutput.wrl"
+meta27.name = "reference"
 
 head1.children.append(meta27)
 meta28 = x3d.meta()
-meta28.name = "reference"
 meta28.content = "HelloWorldProgramOutput.html"
+meta28.name = "reference"
 
 head1.children.append(meta28)
 meta29 = x3d.meta()
-meta29.name = "reference"
 meta29.content = "https://savage.nps.edu/X3dValidator?url=https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
+meta29.name = "reference"
 
 head1.children.append(meta29)
 meta30 = x3d.meta()
-meta30.name = "identifier"
 meta30.content = "https://www.web3d.org/specifications/java/examples/HelloWorldProgramOutput.x3d"
+meta30.name = "identifier"
 
 head1.children.append(meta30)
 meta31 = x3d.meta()
-meta31.name = "license"
 meta31.content = "../license.html"
+meta31.name = "license"
 
 head1.children.append(meta31)
 meta32 = x3d.meta()
-meta32.name = "translated"
 meta32.content = "25 May 2020"
+meta32.name = "translated"
 
 head1.children.append(meta32)
 meta33 = x3d.meta()
-meta33.name = "generator"
 meta33.content = "X3dToJson.xslt, https://www.web3d.org/x3d/stylesheets/X3dToJson.html"
+meta33.name = "generator"
 
 head1.children.append(meta33)
 meta34 = x3d.meta()
-meta34.name = "reference"
 meta34.content = "X3D JSON encoding: https://www.web3d.org/wiki/index.php/X3D_JSON_Encoding"
+meta34.name = "reference"
 
 head1.children.append(meta34)
 
@@ -198,6 +198,8 @@ ViewpointGroup36.children.append(Viewpoint38)
 
 Scene35.children.append(ViewpointGroup36)
 NavigationInfo39 = x3d.NavigationInfo()
+NavigationInfo39.avatarSize = [0.25,1.6,0.75]
+NavigationInfo39.transitionType = ["LINEAR"]
 NavigationInfo39.type = ["EXAMINE","FLY","ANY"]
 
 Scene35.children.append(NavigationInfo39)
@@ -215,13 +217,14 @@ WorldInfo42.USE = "WorldInfoDEF"
 
 Scene35.children.append(WorldInfo42)
 MetadataString43 = x3d.MetadataString()
-MetadataString43.name = "test"
 MetadataString43.DEF = "scene.addChildMetadata"
+MetadataString43.name = "test"
 MetadataString43.value = ["Top-level root Metadata node beneath Scene needs to be one of '-children' in JSON encoding"]
 
 Scene35.metadata = MetadataString43
 LayerSet44 = x3d.LayerSet()
 LayerSet44.DEF = "scene.addChildLayerSetTest"
+LayerSet44.order = [0]
 
 Scene35.layerSet = LayerSet44
 Transform45 = x3d.Transform()
@@ -268,7 +271,7 @@ Appearance53.material = Material54
 Shape52.appearance = Appearance53
 IndexedLineSet55 = x3d.IndexedLineSet()
 IndexedLineSet55.coordIndex = [0,1,2,3,4,0]
-#Coordinate 3-tuple point count: 6
+""" Coordinate 3-tuple point count: 6 """
 Coordinate56 = x3d.Coordinate()
 
 IndexedLineSet55.coord = Coordinate56
@@ -283,7 +286,7 @@ PositionInterpolator57.key = [0,0.125,0.375,0.625,0.875,1]
 Scene35.children.append(PositionInterpolator57)
 TimeSensor58 = x3d.TimeSensor()
 TimeSensor58.DEF = "OrbitClock"
-TimeSensor58.cycleInterval = 8
+TimeSensor58.cycleInterval = 8.0
 TimeSensor58.loop = True
 
 Scene35.children.append(TimeSensor58)
@@ -314,8 +317,8 @@ Appearance63.material = Material64
 Shape62.appearance = Appearance63
 Text65 = x3d.Text()
 Text65.string = ["X3D Java","SAI Library","X3DJSAIL"]
-#Comment example A, plain quotation marks: He said, \"Immel did it!\"
-#Comment example B, XML character entities: He said, &quot;Immel did it!&quot;
+""" Comment example A, plain quotation marks: He said, \"Immel did it!\" """
+""" Comment example B, XML character entities: He said, &quot;Immel did it!&quot; """
 MetadataSet66 = x3d.MetadataSet()
 MetadataSet66.name = "EscapedQuotationMarksMetadataSet"
 MetadataString67 = x3d.MetadataString()
@@ -335,6 +338,7 @@ MetadataSet66.value.append(MetadataString68)
 
 Text65.metadata = MetadataSet66
 FontStyle69 = x3d.FontStyle()
+FontStyle69.family = ["SERIF"]
 FontStyle69.justify = ["MIDDLE","MIDDLE"]
 
 Text65.fontStyle = FontStyle69
@@ -343,13 +347,13 @@ Shape62.geometry = Text65
 
 Transform61.children.append(Shape62)
 Collision70 = x3d.Collision()
-#test containerField='proxy'
+""" test containerField='proxy' """
 Shape71 = x3d.Shape()
 Shape71.DEF = "ProxyShape"
-#alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"'
-#alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"'
-#alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"\"Immel did it!\\\"\"\"})
-#reference: https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html
+""" alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\"' """
+""" alternative XML encoding: Text string='\"One, Two, Comment\" \"\" \"He said, \\&quot;Immel did it!\\&quot;\" \"\"' """
+""" alternative Java source: .setString(new String [] {\"One, Two, Comment\", \"\", \"He said, \\\"Immel did it!\\\"\"}) """
+""" reference: https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/StringArrayEncodingExamplesIndex.html """
 Text72 = x3d.Text()
 Text72.string = ["One, Two, Text","","He said, \"Immel did it!\" \"\""]
 
@@ -358,12 +362,12 @@ Shape71.geometry = Text72
 Collision70.proxy = Shape71
 
 Transform61.children.append(Collision70)
-#It's a beautiful world
-#... for you!
-#https://en.wikipedia.org/wiki/Beautiful_World_(Devo_song)
+""" It's a beautiful world """
+""" ... for you! """
+""" https://en.wikipedia.org/wiki/Beautiful_World_(Devo_song) """
 
 Scene35.children.append(Transform61)
-#repeatedly spin 180 degrees as a readable special effect
+""" repeatedly spin 180 degrees as a readable special effect """
 OrientationInterpolator73 = x3d.OrientationInterpolator()
 OrientationInterpolator73.DEF = "SpinInterpolator"
 OrientationInterpolator73.key = [0,0.5,1]
@@ -371,7 +375,7 @@ OrientationInterpolator73.key = [0,0.5,1]
 Scene35.children.append(OrientationInterpolator73)
 TimeSensor74 = x3d.TimeSensor()
 TimeSensor74.DEF = "SpinClock"
-TimeSensor74.cycleInterval = 5
+TimeSensor74.cycleInterval = 5.0
 TimeSensor74.loop = True
 
 Scene35.children.append(TimeSensor74)
@@ -410,24 +414,26 @@ field81.type = "MFColor"
 
 Script79.field.append(field81)
 
-Script79.sourceCode = '''ecmascript:\n"+
+Script79.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function colorInput (eventValue) // Example source code\n"+
 "{\n"+
 "   colorsOutput = new MFColor(eventValue); // assigning value sends output event\n"+
 "// Browser.print('colorInput=' + eventValue + ', colorsOutput=' + colorsOutput + '\\n');\n"+
-"}'''
+"}\n"+
+"'''
 
 Group77.children.append(Script79)
 ColorInterpolator82 = x3d.ColorInterpolator()
 ColorInterpolator82.DEF = "ColorAnimator"
 ColorInterpolator82.key = [0,0.5,1]
-#AZURE to INDIGO and back again
+""" AZURE to INDIGO and back again """
 
 Group77.children.append(ColorInterpolator82)
 TimeSensor83 = x3d.TimeSensor()
 TimeSensor83.DEF = "ColorClock"
-TimeSensor83.cycleInterval = 60
+TimeSensor83.cycleInterval = 60.0
 TimeSensor83.loop = True
 
 Group77.children.append(TimeSensor83)
@@ -476,7 +482,7 @@ ProtoInterface88.field.append(field90)
 
 ProtoDeclare87.ProtoInterface = ProtoInterface88
 ProtoBody91 = x3d.ProtoBody()
-#Initial node of ProtoBody determines prototype node type
+""" Initial node of ProtoBody determines prototype node type """
 Material92 = x3d.Material()
 Material92.ambientIntensity = 0.25
 Material92.diffuseColor = [0.282435,0.085159,0.134462]
@@ -484,8 +490,8 @@ Material92.shininess = 0.127273
 Material92.specularColor = [0.276305,0.11431,0.139857]
 
 ProtoBody91.children.append(Material92)
-#[HelloWorldProgram diagnostic] should be connected to scene graph: artDeco01ProtoDeclare.getNodeType()=\"Material\"
-#presence of follow-on TouchSensor shows that additional nodes are allowed in ProtoBody after initial node, regardless of node types
+""" [HelloWorldProgram diagnostic] should be connected to scene graph: artDeco01ProtoDeclare.getNodeType()=\"Material\" """
+""" presence of follow-on TouchSensor shows that additional nodes are allowed in ProtoBody after initial node, regardless of node types """
 TouchSensor93 = x3d.TouchSensor()
 TouchSensor93.description = "within ProtoBody"
 IS94 = x3d.IS()
@@ -511,7 +517,7 @@ ExternProtoDeclare97 = x3d.ExternProtoDeclare()
 ExternProtoDeclare97.name = "ArtDeco02Material"
 ExternProtoDeclare97.appinfo = "this is a different Material node"
 ExternProtoDeclare97.url = ["http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3d#ArtDeco02Material","http://X3dGraphics.com/examples/X3dForWebAuthors/Chapter14Prototypes/ArtDecoPrototypesExcerpt.x3dv#ArtDeco02Material"]
-#[HelloWorldProgram diagnostic] artDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\"
+""" [HelloWorldProgram diagnostic] artDeco02ExternProtoDeclare.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\" """
 field98 = x3d.field()
 field98.name = "description"
 field98.accessType = "inputOutput"
@@ -521,15 +527,15 @@ field98.type = "SFString"
 ExternProtoDeclare97.field.append(field98)
 
 Scene35.children.append(ExternProtoDeclare97)
-#Tested ArtDeco01ProtoInstance, ArtDeco02ProtoInstance for improper node type when ProtoInstance is added in wrong place
+""" Tested ArtDeco01ProtoInstance, ArtDeco02ProtoInstance for improper node type when ProtoInstance is added in wrong place """
 Shape99 = x3d.Shape()
 Shape99.DEF = "TestShape1"
 Appearance100 = x3d.Appearance()
 Appearance100.DEF = "TestAppearance1"
-#ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java
+""" ArtDeco01Material prototype goes here... TODO ensure setContainerField is handled in exported Java """
 ProtoInstance101 = x3d.ProtoInstance()
 ProtoInstance101.name = "ArtDeco01Material"
-#[HelloWorldProgram diagnostic] ArtDeco01ProtoInstance.getNodeType()=\"Material\"
+""" [HelloWorldProgram diagnostic] ArtDeco01ProtoInstance.getNodeType()=\"Material\" """
 fieldValue102 = x3d.fieldValue()
 fieldValue102.name = "description"
 fieldValue102.value = "ArtDeco01Material can substitute for a Material node"
@@ -549,11 +555,11 @@ Shape104 = x3d.Shape()
 Shape104.DEF = "TestShape2"
 Appearance105 = x3d.Appearance()
 Appearance105.DEF = "TestAppearance2"
-#ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java
+""" ArtDeco02Material prototype goes here... TODO ensure setContainerField is handled in exported Java """
 ProtoInstance106 = x3d.ProtoInstance()
-ProtoInstance106.name = "ArtDeco02Material"
 ProtoInstance106.DEF = "ArtDeco02MaterialDEF"
-#[HelloWorldProgram diagnostic] ArtDeco02ProtoInstance.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\"
+ProtoInstance106.name = "ArtDeco02Material"
+""" [HelloWorldProgram diagnostic] ArtDeco02ProtoInstance.getNodeType()=\"ERROR_UNKNOWN_EXTERNPROTODECLARE_NODE_TYPE: ExternProtoDeclare name='ArtDeco02Material' type cannot be remotely accessed at run time. TODO X3DJSAIL needs to add further capability that retrieves the ExternProtoDeclare file.\" """
 fieldValue107 = x3d.fieldValue()
 fieldValue107.name = "description"
 fieldValue107.value = "ArtDeco02Material can substitute for another Material node"
@@ -574,7 +580,7 @@ Shape109 = x3d.Shape()
 Shape109.DEF = "TestShape3"
 Appearance110 = x3d.Appearance()
 Appearance110.DEF = "TestAppearance3"
-#ArtDeco02Material ProtoInstance USE goes here. Note that name field is NOT defined as part of ProtoInstance USE.
+""" ArtDeco02Material ProtoInstance USE goes here. Note that name field is NOT defined as part of ProtoInstance USE. """
 ProtoInstance111 = x3d.ProtoInstance()
 ProtoInstance111.USE = "ArtDeco02MaterialDEF"
 
@@ -641,21 +647,21 @@ field122 = x3d.field()
 field122.name = "transparency"
 field122.accessType = "inputOutput"
 field122.type = "SFFloat"
-field122.value = 0
+field122.value = 0.0
 
 ProtoInterface117.field.append(field122)
 field123 = x3d.field()
 field123.name = "shininess"
 field123.accessType = "inputOutput"
 field123.type = "SFFloat"
-field123.value = 0
+field123.value = 0.0
 
 ProtoInterface117.field.append(field123)
 field124 = x3d.field()
 field124.name = "ambientIntensity"
 field124.accessType = "inputOutput"
 field124.type = "SFFloat"
-field124.value = 0
+field124.value = 0.0
 
 ProtoInterface117.field.append(field124)
 
@@ -698,7 +704,7 @@ IS127.connect.append(connect133)
 Material126.IS = IS127
 
 ProtoBody125.children.append(Material126)
-#Only first node (the node type) is renderable, others are along for the ride
+""" Only first node (the node type) is renderable, others are along for the ride """
 Script134 = x3d.Script()
 Script134.DEF = "MaterialModulatorScript"
 field135 = x3d.field()
@@ -739,7 +745,8 @@ IS139.connect.append(connect141)
 
 Script134.IS = IS139
 
-Script134.sourceCode = '''ecmascript:\n"+
+Script134.sourceCode = '''\n"+
+"ecmascript:\n"+
 "function initialize ()\n"+
 "{\n"+
 "    newColor = diffuseColor; // start with correct color\n"+
@@ -761,29 +768,30 @@ Script134.sourceCode = '''ecmascript:\n"+
 "	{\n"+
 "		Browser.print ('diffuseColor=(' + red + ',' + green + ',' + blue + ') newColor=' + newColor.toString() + '\\n');\n"+
 "	}\n"+
-"}'''
+"}\n"+
+"'''
 
 ProtoBody125.children.append(Script134)
 
 ProtoDeclare116.ProtoBody = ProtoBody125
 
 Scene35.children.append(ProtoDeclare116)
-#Test success: declarative statement createDeclarativeShapeTests()
+""" Test success: declarative statement createDeclarativeShapeTests() """
 Group142 = x3d.Group()
 Group142.DEF = "DeclarativeGroupExample"
 Shape143 = x3d.Shape()
 MetadataString144 = x3d.MetadataString()
-MetadataString144.name = "findThisNameValue"
 MetadataString144.DEF = "FindableMetadataStringTest"
+MetadataString144.name = "findThisNameValue"
 MetadataString144.value = ["test case"]
 
 Shape143.metadata = MetadataString144
 Appearance145 = x3d.Appearance()
 Appearance145.DEF = "DeclarativeAppearanceExample"
-#DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance
+""" DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance """
 ProtoInstance146 = x3d.ProtoInstance()
-ProtoInstance146.name = "MaterialModulator"
 ProtoInstance146.DEF = "MyMaterialModulator"
+ProtoInstance146.name = "MaterialModulator"
 
 Appearance145.material = ProtoInstance146
 
@@ -796,64 +804,64 @@ Cone147.height = 0.1
 Shape143.geometry = Cone147
 
 Group142.children.append(Shape143)
-#Test success: declarativeGroup.addChild() singleton pipeline method
+""" Test success: declarativeGroup.addChild() singleton pipeline method """
 
 Scene35.children.append(Group142)
-#Test success: declarative statement addChild()
-#Test success: x3dModel.findNodeByDEF(DeclarativeAppearanceExample) = <Appearance DEF='DeclarativeAppearanceExample'/> i.e. <Appearance DEF='DeclarativeAppearanceExample'> <!- - DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance - -> <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator' containerField='material'/> </Appearance>
-#Test success: x3dModel.findElementByNameValue(findThisNameValue) = <MetadataString DEF='FindableMetadataStringTest' name='findThisNameValue' value='\"test case\"'/>
-#Test success: x3dModel.findElementByNameValue(\"ArtDeco01Material\", \"ProtoDeclare\") found
-#Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoDeclare\") found
-#Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoInstance\") found
+""" Test success: declarative statement addChild() """
+""" Test success: x3dModel.findNodeByDEF(DeclarativeAppearanceExample) = <Appearance DEF='DeclarativeAppearanceExample'/> i.e. <Appearance DEF='DeclarativeAppearanceExample'> <!- - DeclarativeMaterialExample gets overridden by subsequently added MaterialModulator ProtoInstance - -> <ProtoInstance DEF='MyMaterialModulator' name='MaterialModulator' containerField='material'/> </Appearance> """
+""" Test success: x3dModel.findElementByNameValue(findThisNameValue) = <MetadataString DEF='FindableMetadataStringTest' name='findThisNameValue' value='\"test case\"'/> """
+""" Test success: x3dModel.findElementByNameValue(\"ArtDeco01Material\", \"ProtoDeclare\") found """
+""" Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoDeclare\") found """
+""" Test success: x3dModel.findElementByNameValue(\"MaterialModulator\", \"ProtoInstance\") found """
 Group148 = x3d.Group()
 Group148.DEF = "TestFieldObjectsGroup"
-#testFieldObjects() results
-#SFBool default=true, true=true, false=false, negate()=true
-#MFBool default=, initial=true false true, negate()=false true false
-#SFFloat default=0.0, initial=1.0, setValue(2)=2.0, setValue(3.0f)=3.0, setValue(4.0)=4.0
-#MFFloat default=, initial=1 2 3, append(5)=1 2 3 5, inserts(3,4)(0,0)=0 1 2 3 4 5, append(6)=0 1 2 3 4 5 6, size()=7
-#... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear=
-#SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true
-#regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value
+""" testFieldObjects() results """
+""" SFBool default=true, true=true, false=false, negate()=true """
+""" MFBool default=, initial=true false true, negate()=false true false """
+""" SFFloat default=0.0, initial=1.0, setValue(2)=2.0, setValue(3.0f)=3.0, setValue(4.0)=4.0 """
+""" MFFloat default=, initial=1 2 3, append(5)=1 2 3 5, inserts(3,4)(0,0)=0 1 2 3 4 5, append(6)=0 1 2 3 4 5 6, size()=7 """
+""" ... get1Value[3]=3.0, remove[1]=0 2 3 4 5 6, set1Value(0,10)=10 2 3 4 5 6, multiply(2)=20 4 6 8 10 12, clear= """
+""" SFVec3f default=0 0 0, initial=1 2 3, setValue=4 5 6, multiply(2)=8 10 12, normalize()=0.45584232 0.5698029 0.68376344, regex matches()=true """
+""" regex test SFVec3f().matches(\"1 2 3\")=true, regex test SFVec3f().matches(\"1 2 3 4\")=false, regex test (SFRotationObject.matches(\"0 0 0 0\")=true, failure detecting illegal (zero axis) rotation value """
 
 Scene35.children.append(Group148)
 Sound149 = x3d.Sound()
 Sound149.location = [0,1.6,0]
-#set sound-ellipsoid location height at 1.6m to match typical avatar height
+""" set sound-ellipsoid location height at 1.6m to match typical avatar height """
 AudioClip150 = x3d.AudioClip()
 AudioClip150.description = "chimes"
 AudioClip150.url = ["chimes.wav","https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/chimes.wav"]
-#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d
+""" Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Sounds/AudioClip/default.x3d """
 
 Sound149.source = AudioClip150
 
 Scene35.children.append(Sound149)
 Sound151 = x3d.Sound()
 Sound151.location = [0,1.6,0]
-#set sound-ellipsoid location height at 1.6m to match typical avatar height
+""" set sound-ellipsoid location height at 1.6m to match typical avatar height """
 MovieTexture152 = x3d.MovieTexture()
 MovieTexture152.description = "mpgsys.mpg from ConformanceNist suite"
 MovieTexture152.url = ["mpgsys.mpg","https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpgsys.mpg"]
-#Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d
-#Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\"
+""" Scene example fragment from https://www.web3d.org/x3d/content/examples/ConformanceNist/Appearance/MovieTexture/mpeg1-systems.x3d """
+""" Expected containerField='source', allowed containerField values=\"texture\" \"source\" \"back\" \"bottom\" \"front\" \"left\" \"right\" \"top\" \"backTexture\" \"bottomTexture\" \"frontTexture\" \"leftTexture\" \"rightTexture\" \"topTexture\" \"watchList\" """
 
 Sound151.source = MovieTexture152
 
 Scene35.children.append(Sound151)
-#Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true
-#Test success: AnchorObject.isStatement()=false, siteAnchor.isStatement()=false
-#Test success: ROUTEObject.isNode()=false, orbitPositionROUTE.isNode()=false
-#Test success: ROUTEObject.isStatement()=true, orbitPositionROUTE.isStatement()=true
-#Test success: CommentsBlock.isNode()=false, testComments.isNode()=false
-#Test failure: CommentsBlock.isStatement()=true, testComments.isStatement()=true
+""" Test success: AnchorObject.isNode()=true, siteAnchor.isNode()=true """
+""" Test success: AnchorObject.isStatement()=false, siteAnchor.isStatement()=false """
+""" Test success: ROUTEObject.isNode()=false, orbitPositionROUTE.isNode()=false """
+""" Test success: ROUTEObject.isStatement()=true, orbitPositionROUTE.isStatement()=true """
+""" Test success: CommentsBlock.isNode()=false, testComments.isNode()=false """
+""" Test failure: CommentsBlock.isStatement()=true, testComments.isStatement()=true """
 Shape153 = x3d.Shape()
 Shape153.DEF = "ExtrusionShape"
-#ExampleExtrusion isCrossSectionClosed()=true, crossSection='[1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0]'
-#ExampleExtrusion isSpineClosed()=false, spine='[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]'
+""" ExampleExtrusion isCrossSectionClosed()=true, crossSection='[1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0]' """
+""" ExampleExtrusion isSpineClosed()=false, spine='[0.0, 0.0, 0.0, 0.0, 1.0, 0.0]' """
 Appearance154 = x3d.Appearance()
 Appearance154.DEF = "TransparentAppearance"
 Material155 = x3d.Material()
-Material155.transparency = 1
+Material155.transparency = 1.0
 
 Appearance154.material = Material155
 
@@ -865,7 +873,7 @@ Shape153.geometry = Extrusion156
 
 Scene35.children.append(Shape153)
 Group157 = x3d.Group()
-#Test MFNode children array as an ordered list consisting of comments, statements, ProtoInstance and nodes
+""" Test MFNode children array as an ordered list consisting of comments, statements, ProtoInstance and nodes """
 ProtoDeclare158 = x3d.ProtoDeclare()
 ProtoDeclare158.name = "NewWorldInfo"
 ProtoInterface159 = x3d.ProtoInterface()
@@ -887,15 +895,15 @@ ProtoDeclare158.ProtoBody = ProtoBody161
 Group157.children.append(ProtoDeclare158)
 Group163 = x3d.Group()
 Group163.DEF = "Node2"
-#intentionally empty
+""" intentionally empty """
 
 Group157.children.append(Group163)
 Transform164 = x3d.Transform()
 Transform164.DEF = "Node4"
-#intentionally empty
+""" intentionally empty """
 
 Group157.children.append(Transform164)
-#Test satisfactorily creates MFNode children array as an ordered list with mixed content
+""" Test satisfactorily creates MFNode children array as an ordered list with mixed content """
 
 Scene35.children.append(Group157)
 ProtoDeclare165 = x3d.ProtoDeclare()
@@ -910,27 +918,25 @@ ProtoDeclare165.ProtoBody = ProtoBody166
 Scene35.children.append(ProtoDeclare165)
 Shape168 = x3d.Shape()
 Appearance169 = x3d.Appearance()
-#Test MFNode shaders array as an ordered list consisting of comments, ProtoInstance and nodes
-#Test satisfactorily creates MFNode shaders array as an ordered list with mixed content
+""" Test MFNode shaders array as an ordered list consisting of comments, ProtoInstance and nodes """
+""" Test satisfactorily creates MFNode shaders array as an ordered list with mixed content """
 ProgramShader170 = x3d.ProgramShader()
 ProgramShader170.DEF = "TestShader1"
 ShaderProgram171 = x3d.ShaderProgram()
 ShaderProgram171.DEF = "TestShader2"
-ShaderProgram171.type = "VERTEX"
 
 ProgramShader170.programs.append(ShaderProgram171)
 
 Appearance169.shaders.append(ProgramShader170)
 ProtoInstance172 = x3d.ProtoInstance()
-ProtoInstance172.name = "ShaderProto"
 ProtoInstance172.DEF = "TestShader3"
+ProtoInstance172.name = "ShaderProto"
 
 Appearance169.shaders.append(ProtoInstance172)
 ComposedShader173 = x3d.ComposedShader()
 ComposedShader173.DEF = "TestShader4"
 ShaderPart174 = x3d.ShaderPart()
 ShaderPart174.DEF = "TestShader5"
-ShaderPart174.type = "VERTEX"
 
 ComposedShader173.parts.append(ShaderPart174)
 
@@ -954,15 +960,19 @@ CADLayer176.children.append(CADAssembly177)
 
 Transform175.children.append(CADLayer176)
 EspduTransform180 = x3d.EspduTransform()
+EspduTransform180.geoSystem = ["GD","WE"]
 
 Transform175.children.append(EspduTransform180)
 ReceiverPdu181 = x3d.ReceiverPdu()
+ReceiverPdu181.geoSystem = ["GD","WE"]
 
 Transform175.children.append(ReceiverPdu181)
 SignalPdu182 = x3d.SignalPdu()
+SignalPdu182.geoSystem = ["GD","WE"]
 
 Transform175.children.append(SignalPdu182)
 TransmitterPdu183 = x3d.TransmitterPdu()
+TransmitterPdu183.geoSystem = ["GD","WE"]
 
 Transform175.children.append(TransmitterPdu183)
 DISEntityManager184 = x3d.DISEntityManager()
@@ -975,6 +985,6 @@ Transform175.children.append(DISEntityManager184)
 Scene35.children.append(Transform175)
 
 X3D0.Scene = Scene35
-f = open("././Json_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Json_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

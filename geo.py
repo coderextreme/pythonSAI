@@ -72,7 +72,7 @@ Viewpoint15.DEF = "Tour"
 Viewpoint15.description = "Tour Views"
 
 Scene13.children.append(Viewpoint15)
-#Viewpoint position='0 0 4' description='sphere in road'/
+"""Viewpoint position='0 0 4' description='sphere in road'/"""
 Background16 = x3d.Background()
 Background16.backUrl = ["../resources/images/bBK.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBK.png"]
 Background16.bottomUrl = ["../resources/images/bBT.png","https://coderextreme.net/X3DJSONLD/src/main/resources/images/bBT.png"]
@@ -234,6 +234,6 @@ Transform17.children.append(Shape18)
 Scene13.children.append(Transform17)
 
 X3D0.Scene = Scene13
-f = open("././geo_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("geo_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -82,8 +82,8 @@ Transform16 = x3d.Transform()
 Shape17 = x3d.Shape()
 Appearance18 = x3d.Appearance()
 Material19 = x3d.Material()
-Material19.diffuseColor = [0.7,0.7,0.7]
-Material19.specularColor = [0.5,0.5,0.5]
+Material19.diffuseColor = [.7,.7,.7]
+Material19.specularColor = [.5,.5,.5]
 
 Appearance18.material = Material19
 ComposedCubeMapTexture20 = x3d.ComposedCubeMapTexture()
@@ -122,7 +122,7 @@ Appearance18.texture = ComposedCubeMapTexture20
 ComposedShader27 = x3d.ComposedShader()
 ComposedShader27.DEF = "x_ite"
 ComposedShader27.language = "GLSL"
-#http://hypertextbook.com/facts/2005/JustinChe.shtml
+"""http://hypertextbook.com/facts/2005/JustinChe.shtml"""
 field28 = x3d.field()
 field28.name = "chromaticDispertion"
 field28.accessType = "inputOutput"
@@ -323,7 +323,8 @@ field58.value = -1
 
 Script44.field.append(field58)
 
-Script44.sourceCode = '''ecmascript:\n"+
+Script44.sourceCode = '''\n"+
+"ecmascript:\n"+
 "        function set_fraction( f, tm ) {\n"+
 "	    var side = Math.floor(f*frontUrls.length);\n"+
 "	    if (side > frontUrls.length-1) {\n"+
@@ -339,7 +340,8 @@ Script44.sourceCode = '''ecmascript:\n"+
 "		    top_changed[0] = topUrls[side];\n"+
 "		    bottom_changed[0] = bottomUrls[side];\n"+
 "            }\n"+
-"        }'''
+"        }\n"+
+"'''
 
 Transform16.children.append(Script44)
 TimeSensor59 = x3d.TimeSensor()
@@ -443,6 +445,6 @@ Transform16.children.append(ROUTE72)
 Scene13.children.append(Transform16)
 
 X3D0.Scene = Scene13
-f = open("././mirror2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("mirror2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

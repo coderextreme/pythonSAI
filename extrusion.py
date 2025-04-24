@@ -74,14 +74,16 @@ field17.type = "MFVec3f"
 
 Script15.field.append(field17)
 
-Script15.sourceCode = '''ecmascript:\n"+
+Script15.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_cycle(value) {\n"+
 "                        Browser.print(value);\n"+
 "                        var endA = new SFVec3f(spine[0].x*Math.random()*2, spine[0].y*Math.random()*2, spine[0].z*Math.random()*2);\n"+
 "                        var endB = new SFVec3f(spine[1].x*Math.random()*2, spine[1].y*Math.random()*2, spine[1].z*Math.random()*2);\n"+
 "		        spine = new MFVec3f([endA, endB]);\n"+
-"                }'''
+"                }\n"+
+"'''
 
 Group9.children.append(Script15)
 ROUTE18 = x3d.ROUTE()
@@ -102,6 +104,6 @@ Group9.children.append(ROUTE19)
 Scene8.children.append(Group9)
 
 X3D0.Scene = Scene8
-f = open("././extrusion_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("extrusion_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

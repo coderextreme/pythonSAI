@@ -6,8 +6,8 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Scripting"
 component2.level = 1
+component2.name = "Scripting"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
@@ -34,15 +34,17 @@ head1.children.append(meta6)
 X3D0.head = head1
 Scene7 = x3d.Scene()
 NavigationInfo8 = x3d.NavigationInfo()
+NavigationInfo8.type = ["EXAMINE","ANY"]
 
 Scene7.children.append(NavigationInfo8)
 Transform9 = x3d.Transform()
 Transform9.DEF = "transform"
+Transform9.translation = [0,0,0]
 Shape10 = x3d.Shape()
 Appearance11 = x3d.Appearance()
 Material12 = x3d.Material()
-Material12.diffuseColor = [0.7,0.7,0.7]
-Material12.specularColor = [0.5,0.5,0.5]
+Material12.diffuseColor = [.7,.7,.7]
+Material12.specularColor = [.5,.5,.5]
 
 Appearance11.material = Material12
 
@@ -121,12 +123,14 @@ Script14.sourceCode = '''ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			     newBubble();\n"+
-"			}'''
+"			}\n"+
+"\n"+
+"'''
 
 Scene7.children.append(Script14)
 TimeSensor20 = x3d.TimeSensor()
 TimeSensor20.DEF = "TourTime"
-TimeSensor20.cycleInterval = 0.15
+TimeSensor20.cycleInterval = 0.150
 TimeSensor20.loop = True
 
 Scene7.children.append(TimeSensor20)
@@ -146,6 +150,6 @@ ROUTE22.toField = "set_translation"
 Scene7.children.append(ROUTE22)
 
 X3D0.Scene = Scene7
-f = open("././MyBounce_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("MyBounce_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

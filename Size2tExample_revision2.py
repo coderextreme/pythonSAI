@@ -5,70 +5,70 @@ X3D0 = x3d.X3D()
 X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
-#are units needed? looks like baby Dr. Manhattan... <unit category='length' conversionFactor='0.01' name='CentimetersToMeters'/>
+""" are units needed? looks like baby Dr. Manhattan... <unit category='length' conversionFactor='0.01' name='CentimetersToMeters'/> """
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Size2tExample_revision2.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Example Size 2T model showing conversion process from Cinema-4D to VRML to X3D."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Katy Schildmeyer"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Carol McDonald, Joe Williams and Don Brutzman"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "1 June 2023"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "1 June 2023"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "TODO"
 meta8.content = "lots! interesting example."
+meta8.name = "TODO"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "originals/Size2tExample_revision2.wrl"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Size2tExample_revision2.x3d"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "Cinema-4D https://www.maxon.net/en/cinema-4d"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "generator"
 meta13.content = "Rhino https://www.rhino3d.com"
+meta13.name = "generator"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "license"
 meta14.content = "../license.html"
+meta14.name = "license"
 
 head1.children.append(meta14)
 
@@ -76,34 +76,34 @@ X3D0.head = head1
 Scene15 = x3d.Scene()
 Transform16 = x3d.Transform()
 Transform16.DEF = "_T_Armature"
-Transform16.rotation = [0,0,-1,0.00894]
+Transform16.rotation = [0,0,-1,.00894]
 Transform17 = x3d.Transform()
 Transform17.DEF = "pelvis"
-Transform17.translation = [0.006716,4.48174715,0.00122]
+Transform17.translation = [.006716,4.48174715,.00122]
 Transform18 = x3d.Transform()
 Transform18.DEF = "spine1"
-Transform18.rotation = [0,0,-1,0.162138999]
-Transform18.translation = [0,0.540722013,0]
+Transform18.rotation = [0,0,-1,.162138999]
+Transform18.translation = [0,.540722013,0]
 Transform19 = x3d.Transform()
 Transform19.DEF = "spine2"
-Transform19.rotation = [0,0,1,0.078975998]
-Transform19.translation = [0,0.569326997,0]
+Transform19.rotation = [0,0,1,.078975998]
+Transform19.translation = [0,.569326997,0]
 Transform20 = x3d.Transform()
 Transform20.DEF = "spine3"
-Transform20.rotation = [0,0,-1,0.042451002]
-Transform20.translation = [0,0.68086803,0]
+Transform20.rotation = [0,0,-1,.042451002]
+Transform20.translation = [0,.68086803,0]
 Transform21 = x3d.Transform()
 Transform21.DEF = "neck"
-Transform21.rotation = [0.031470001,0.001852,0.999503016,0.510631025]
-Transform21.translation = [-0.250418007,0.806990027,0.001638]
+Transform21.rotation = [.031470001,.001852,.999503016,.510631025]
+Transform21.translation = [-.250418007,.806990027,.001638]
 Transform22 = x3d.Transform()
 Transform22.DEF = "head"
-Transform22.rotation = [-0.073432997,0.006217,-0.997281015,0.370815009]
-Transform22.translation = [0.191806003,0.918520987,-0.011636]
+Transform22.rotation = [-.073432997,.006217,-.997281015,.370815009]
+Transform22.translation = [.191806003,.918520987,-.011636]
 Transform23 = x3d.Transform()
 Transform23.DEF = "head_end"
-Transform23.rotation = [0.655158997,0.008223,-0.755446017,0.02523]
-Transform23.translation = [-0.076984003,1.512784004,-0.002723]
+Transform23.rotation = [.655158997,.008223,-.755446017,.02523]
+Transform23.translation = [-.076984003,1.512784004,-.002723]
 
 Transform22.children.append(Transform23)
 
@@ -112,35 +112,35 @@ Transform21.children.append(Transform22)
 Transform20.children.append(Transform21)
 Transform24 = x3d.Transform()
 Transform24.DEF = "collr_R"
-Transform24.rotation = [0.642076015,0.494848013,-0.585546017,3.851784945]
-Transform24.translation = [-0.010289,0.65554601,-0.297863007]
+Transform24.rotation = [.642076015,.494848013,-.585546017,3.851784945]
+Transform24.translation = [-.010289,.65554601,-.297863007]
 Transform25 = x3d.Transform()
 Transform25.DEF = "shldr_R"
-Transform25.rotation = [0.222562999,-0.369704008,0.902100027,0.558227003]
-Transform25.translation = [0,0.644935012,0]
+Transform25.rotation = [.222562999,-.369704008,.902100027,.558227003]
+Transform25.translation = [0,.644935012,0]
 Transform26 = x3d.Transform()
 Transform26.DEF = "elbow_R"
-Transform26.rotation = [0.852663994,0.058742002,-0.519147992,0.262160987]
-Transform26.translation = [-0.000001,1.605819941,0]
+Transform26.rotation = [.852663994,.058742002,-.519147992,.262160987]
+Transform26.translation = [-.000001,1.605819941,0]
 Transform27 = x3d.Transform()
 Transform27.DEF = "wrist_R"
-Transform27.rotation = [0.180851996,0.870432019,-0.457865,0.074731998]
-Transform27.translation = [-0.005968,1.499068022,0.049839001]
+Transform27.rotation = [.180851996,.870432019,-.457865,.074731998]
+Transform27.translation = [-.005968,1.499068022,.049839001]
 Transform28 = x3d.Transform()
 Transform28.DEF = "thumb_proximal_R"
-Transform28.rotation = [0.775272012,-0.137724996,0.616429985,0.49989599]
-Transform28.translation = [-0.081119999,0.149660006,0.161726996]
+Transform28.rotation = [.775272012,-.137724996,.616429985,.49989599]
+Transform28.translation = [-.081119999,.149660006,.161726996]
 Transform29 = x3d.Transform()
 Transform29.DEF = "thumb_middle_R"
-Transform29.rotation = [0.139771,-0.896151006,0.421162009,0.30032599]
-Transform29.translation = [0.005173,0.131263003,-0.018860999]
+Transform29.rotation = [.139771,-.896151006,.421162009,.30032599]
+Transform29.translation = [.005173,.131263003,-.018860999]
 Transform30 = x3d.Transform()
 Transform30.DEF = "thumb_distal_R"
-Transform30.rotation = [0.402693987,0.704303026,-0.584631979,0.604744017]
-Transform30.translation = [-0.006212,0.195717007,-0.034763999]
+Transform30.rotation = [.402693987,.704303026,-.584631979,.604744017]
+Transform30.translation = [-.006212,.195717007,-.034763999]
 Transform31 = x3d.Transform()
 Transform31.DEF = "thumb_distal_R_end"
-Transform31.translation = [-0.044222999,0.139449999,-0.060387999]
+Transform31.translation = [-.044222999,.139449999,-.060387999]
 
 Transform30.children.append(Transform31)
 
@@ -151,19 +151,19 @@ Transform28.children.append(Transform29)
 Transform27.children.append(Transform28)
 Transform32 = x3d.Transform()
 Transform32.DEF = "index_proximal_R"
-Transform32.rotation = [-0.162604004,0.986416996,0.023265,1.223634005]
-Transform32.translation = [-0.052072,0.569437981,0.057689998]
+Transform32.rotation = [-.162604004,.986416996,.023265,1.223634005]
+Transform32.translation = [-.052072,.569437981,.057689998]
 Transform33 = x3d.Transform()
 Transform33.DEF = "index_middle_R"
-Transform33.rotation = [-0.606171012,0.795176029,-0.015891001,0.404096991]
-Transform33.translation = [-0.003469,0.197294995,-0.01516]
+Transform33.rotation = [-.606171012,.795176029,-.015891001,.404096991]
+Transform33.translation = [-.003469,.197294995,-.01516]
 Transform34 = x3d.Transform()
 Transform34.DEF = "index_distal_R"
-Transform34.rotation = [0.955300987,-0.295614988,0.003269,0.40476501]
-Transform34.translation = [0.005758,0.109848,0.009239]
+Transform34.rotation = [.955300987,-.295614988,.003269,.40476501]
+Transform34.translation = [.005758,.109848,.009239]
 Transform35 = x3d.Transform()
 Transform35.DEF = "index_distal_R_end"
-Transform35.translation = [0,0.111161999,-0.025870999]
+Transform35.translation = [0,.111161999,-.025870999]
 
 Transform34.children.append(Transform35)
 
@@ -174,19 +174,19 @@ Transform32.children.append(Transform33)
 Transform27.children.append(Transform32)
 Transform36 = x3d.Transform()
 Transform36.DEF = "middle_proximal_R"
-Transform36.rotation = [-0.182076007,0.981993973,-0.050356001,1.611608028]
-Transform36.translation = [-0.079213001,0.539361,-0.061988998]
+Transform36.rotation = [-.182076007,.981993973,-.050356001,1.611608028]
+Transform36.translation = [-.079213001,.539361,-.061988998]
 Transform37 = x3d.Transform()
 Transform37.DEF = "middle_middle_R"
-Transform37.rotation = [0.248721004,-0.904012024,0.347707003,0.256547987]
-Transform37.translation = [0.000534,0.210649997,0.009595]
+Transform37.rotation = [.248721004,-.904012024,.347707003,.256547987]
+Transform37.translation = [.000534,.210649997,.009595]
 Transform38 = x3d.Transform()
 Transform38.DEF = "middle_distal_R"
-Transform38.rotation = [0.813790977,0.040777002,-0.579725981,0.023203]
-Transform38.translation = [0.024324,0.151319996,0.001813]
+Transform38.rotation = [.813790977,.040777002,-.579725981,.023203]
+Transform38.translation = [.024324,.151319996,.001813]
 Transform39 = x3d.Transform()
 Transform39.DEF = "middle_distal_R_end"
-Transform39.translation = [0.010982,0.101138003,-0.007089]
+Transform39.translation = [.010982,.101138003,-.007089]
 
 Transform38.children.append(Transform39)
 
@@ -197,19 +197,19 @@ Transform36.children.append(Transform37)
 Transform27.children.append(Transform36)
 Transform40 = x3d.Transform()
 Transform40.DEF = "ring_proximal_R"
-Transform40.rotation = [-0.180696994,0.981729984,-0.059618998,1.66911602]
-Transform40.translation = [-0.070433997,0.491874009,-0.172061995]
+Transform40.rotation = [-.180696994,.981729984,-.059618998,1.66911602]
+Transform40.translation = [-.070433997,.491874009,-.172061995]
 Transform41 = x3d.Transform()
 Transform41.DEF = "ring_middle_R"
-Transform41.rotation = [-0.238584995,0.608108997,-0.757152975,0.018069001]
-Transform41.translation = [0.014131,0.199184,-0.000195]
+Transform41.rotation = [-.238584995,.608108997,-.757152975,.018069001]
+Transform41.translation = [.014131,.199184,-.000195]
 Transform42 = x3d.Transform()
 Transform42.DEF = "ring_distal_R"
-Transform42.rotation = [-0.62579,0.515255988,-0.585574985,0.031463001]
-Transform42.translation = [0.009536,0.117852002,-0.000379]
+Transform42.rotation = [-.62579,.515255988,-.585574985,.031463001]
+Transform42.translation = [.009536,.117852002,-.000379]
 Transform43 = x3d.Transform()
 Transform43.DEF = "ring_distal_R_end"
-Transform43.translation = [0.011146,0.112296999,0]
+Transform43.translation = [.011146,.112296999,0]
 
 Transform42.children.append(Transform43)
 
@@ -220,19 +220,19 @@ Transform40.children.append(Transform41)
 Transform27.children.append(Transform40)
 Transform44 = x3d.Transform()
 Transform44.DEF = "small_proximal_R"
-Transform44.rotation = [-0.185778007,0.977105021,-0.103693999,1.769462943]
-Transform44.translation = [-0.093758002,0.41395399,-0.27787599]
+Transform44.rotation = [-.185778007,.977105021,-.103693999,1.769462943]
+Transform44.translation = [-.093758002,.41395399,-.27787599]
 Transform45 = x3d.Transform()
 Transform45.DEF = "small_middle_R"
-Transform45.rotation = [-0.419934988,-0.858533978,0.294236004,0.113173001]
-Transform45.translation = [0.004797,0.142899007,-0.001473]
+Transform45.rotation = [-.419934988,-.858533978,.294236004,.113173001]
+Transform45.translation = [.004797,.142899007,-.001473]
 Transform46 = x3d.Transform()
 Transform46.DEF = "small_distal_R"
-Transform46.rotation = [-0.135940999,0.819249988,-0.557090998,0.195966005]
-Transform46.translation = [0.016505999,0.087030001,-0.002659]
+Transform46.rotation = [-.135940999,.819249988,-.557090998,.195966005]
+Transform46.translation = [.016505999,.087030001,-.002659]
 Transform47 = x3d.Transform()
 Transform47.DEF = "small_distal_R_end"
-Transform47.translation = [-0.010003,0.086432002,0]
+Transform47.translation = [-.010003,.086432002,0]
 
 Transform46.children.append(Transform47)
 
@@ -251,37 +251,37 @@ Transform24.children.append(Transform25)
 Transform20.children.append(Transform24)
 Transform48 = x3d.Transform()
 Transform48.DEF = "collr_L"
-Transform48.rotation = [0.640914023,0.491567999,0.589568019,2.424139977]
-Transform48.translation = [0.000662,0.656929016,0.295423001]
+Transform48.rotation = [.640914023,.491567999,.589568019,2.424139977]
+Transform48.translation = [.000662,.656929016,.295423001]
 Transform49 = x3d.Transform()
 Transform49.DEF = "shldr_L"
-Transform49.rotation = [-0.25099501,0.350039989,0.902481973,0.559844971]
-Transform49.translation = [0,0.643907011,0]
+Transform49.rotation = [-.25099501,.350039989,.902481973,.559844971]
+Transform49.translation = [0,.643907011,0]
 Transform50 = x3d.Transform()
 Transform50.DEF = "elbow_L"
-Transform50.rotation = [-0.855984986,-0.054388002,-0.514132977,0.224243999]
+Transform50.rotation = [-.855984986,-.054388002,-.514132977,.224243999]
 Transform50.translation = [0,1.608029008,0]
 Transform51 = x3d.Transform()
 Transform51.DEF = "wrist_L"
-Transform51.rotation = [-0.408324987,-0.78134501,-0.471985996,0.204584002]
+Transform51.rotation = [-.408324987,-.78134501,-.471985996,.204584002]
 Transform51.translation = [0,1.398182988,0]
 Transform52 = x3d.Transform()
 Transform52.DEF = "thumb_proximal_L"
-Transform52.rotation = [-0.468194991,0.311928988,0.826736987,0.55379802]
-Transform52.translation = [-0.068130001,0.193644002,-0.146868005]
+Transform52.rotation = [-.468194991,.311928988,.826736987,.55379802]
+Transform52.translation = [-.068130001,.193644002,-.146868005]
 Transform53 = x3d.Transform()
 Transform53.DEF = "thumb_middle_L"
-Transform53.rotation = [-0.266966999,0.958718002,0.097921997,0.280476004]
-Transform53.translation = [0.000622,0.182098001,0.007539]
+Transform53.rotation = [-.266966999,.958718002,.097921997,.280476004]
+Transform53.translation = [.000622,.182098001,.007539]
 Transform54 = x3d.Transform()
 Transform54.DEF = "thumb_distal_L"
-Transform54.rotation = [0.044785,-0.922150016,-0.384229988,0.248251006]
-Transform54.translation = [-0.005793,0.155908003,0.024839001]
+Transform54.rotation = [.044785,-.922150016,-.384229988,.248251006]
+Transform54.translation = [-.005793,.155908003,.024839001]
 Transform55 = x3d.Transform()
 Transform55.DEF = "thumb_distal_L_end"
-Transform55.rotation = [-0.550592005,-0.627453029,0.550592005,2.020869017]
-Transform55.scale = [0.100000001,0.100000001,0.100000001]
-Transform55.translation = [0,0.149232998,0.019556001]
+Transform55.rotation = [-.550592005,-.627453029,.550592005,2.020869017]
+Transform55.scale = [.100000001,.100000001,.100000001]
+Transform55.translation = [0,.149232998,.019556001]
 
 Transform54.children.append(Transform55)
 
@@ -292,19 +292,19 @@ Transform52.children.append(Transform53)
 Transform51.children.append(Transform52)
 Transform56 = x3d.Transform()
 Transform56.DEF = "index_proximal_L"
-Transform56.rotation = [0.237600997,-0.971301019,0.011001,1.141055942]
-Transform56.translation = [-0.069909997,0.633965015,-0.02434]
+Transform56.rotation = [.237600997,-.971301019,.011001,1.141055942]
+Transform56.translation = [-.069909997,.633965015,-.02434]
 Transform57 = x3d.Transform()
 Transform57.DEF = "index_middle_L"
-Transform57.rotation = [0.535125971,-0.842010975,-0.068240002,0.375225991]
-Transform57.translation = [-0.002706,0.146568999,0.009127]
+Transform57.rotation = [.535125971,-.842010975,-.068240002,.375225991]
+Transform57.translation = [-.002706,.146568999,.009127]
 Transform58 = x3d.Transform()
 Transform58.DEF = "index_distal_L"
-Transform58.rotation = [-0.648295999,0.736550987,0.192883998,0.162027001]
-Transform58.translation = [-0.002117,0.119305998,-0.007499]
+Transform58.rotation = [-.648295999,.736550987,.192883998,.162027001]
+Transform58.translation = [-.002117,.119305998,-.007499]
 Transform59 = x3d.Transform()
 Transform59.DEF = "index_distal_L_end"
-Transform59.translation = [0,0.105131999,0]
+Transform59.translation = [0,.105131999,0]
 
 Transform58.children.append(Transform59)
 
@@ -315,19 +315,19 @@ Transform56.children.append(Transform57)
 Transform51.children.append(Transform56)
 Transform60 = x3d.Transform()
 Transform60.DEF = "middle_proximal_L"
-Transform60.rotation = [0.251486987,-0.967565,-0.023937,1.540828943]
-Transform60.translation = [-0.053575002,0.588241994,0.109347001]
+Transform60.rotation = [.251486987,-.967565,-.023937,1.540828943]
+Transform60.translation = [-.053575002,.588241994,.109347001]
 Transform61 = x3d.Transform()
 Transform61.DEF = "middle_middle_L"
-Transform61.rotation = [-0.153087005,0.981194973,0.117559999,0.240595996]
-Transform61.translation = [0.003352,0.191835001,-0.000789]
+Transform61.rotation = [-.153087005,.981194973,.117559999,.240595996]
+Transform61.translation = [.003352,.191835001,-.000789]
 Transform62 = x3d.Transform()
 Transform62.DEF = "middle_distal_L"
-Transform62.rotation = [0.992314994,-0.123672999,-0.00396,0.061510999]
-Transform62.translation = [0.007525,0.147204995,0.000057]
+Transform62.rotation = [.992314994,-.123672999,-.00396,.061510999]
+Transform62.translation = [.007525,.147204995,.000057]
 Transform63 = x3d.Transform()
 Transform63.DEF = "middle_distal_L_end"
-Transform63.translation = [0,0.114667997,0]
+Transform63.translation = [0,.114667997,0]
 
 Transform62.children.append(Transform63)
 
@@ -338,19 +338,19 @@ Transform60.children.append(Transform61)
 Transform51.children.append(Transform60)
 Transform64 = x3d.Transform()
 Transform64.DEF = "ring_proximal_L"
-Transform64.rotation = [0.222847998,-0.970731974,-0.089547999,1.580034971]
-Transform64.translation = [-0.034414999,0.529428005,0.213187993]
+Transform64.rotation = [.222847998,-.970731974,-.089547999,1.580034971]
+Transform64.translation = [-.034414999,.529428005,.213187993]
 Transform65 = x3d.Transform()
 Transform65.DEF = "ring_middle_L"
-Transform65.rotation = [0.986553013,-0.055140998,-0.153862,0.105366997]
-Transform65.translation = [0.007425,0.211962,0.003547]
+Transform65.rotation = [.986553013,-.055140998,-.153862,.105366997]
+Transform65.translation = [.007425,.211962,.003547]
 Transform66 = x3d.Transform()
 Transform66.DEF = "ring_distal_L"
-Transform66.rotation = [-0.573816001,-0.301775992,-0.761358023,0.076921001]
-Transform66.translation = [0,0.105237998,0]
+Transform66.rotation = [-.573816001,-.301775992,-.761358023,.076921001]
+Transform66.translation = [0,.105237998,0]
 Transform67 = x3d.Transform()
 Transform67.DEF = "ring_distal_L_end"
-Transform67.translation = [0,0.122203998,0]
+Transform67.translation = [0,.122203998,0]
 
 Transform66.children.append(Transform67)
 
@@ -361,19 +361,19 @@ Transform64.children.append(Transform65)
 Transform51.children.append(Transform64)
 Transform68 = x3d.Transform()
 Transform68.DEF = "small_proximal_L"
-Transform68.rotation = [0.317317009,-0.937008023,-0.146032006,1.711843014]
-Transform68.translation = [-0.048307002,0.454825014,0.287717998]
+Transform68.rotation = [.317317009,-.937008023,-.146032006,1.711843014]
+Transform68.translation = [-.048307002,.454825014,.287717998]
 Transform69 = x3d.Transform()
 Transform69.DEF = "small_middle_L"
-Transform69.rotation = [-0.268364012,0.962647021,0.035923999,0.114459001]
-Transform69.translation = [-0.000512,0.118807003,-0.004631]
+Transform69.rotation = [-.268364012,.962647021,.035923999,.114459001]
+Transform69.translation = [-.000512,.118807003,-.004631]
 Transform70 = x3d.Transform()
 Transform70.DEF = "small_distal_L"
-Transform70.rotation = [0.143960997,-0.948539972,0.28204,0.186326995]
-Transform70.translation = [-0.003104,0.083821997,-0.004904]
+Transform70.rotation = [.143960997,-.948539972,.28204,.186326995]
+Transform70.translation = [-.003104,.083821997,-.004904]
 Transform71 = x3d.Transform()
 Transform71.DEF = "small_distal_L_end"
-Transform71.translation = [0,0.099215001,0]
+Transform71.translation = [0,.099215001,0]
 
 Transform70.children.append(Transform71)
 
@@ -398,24 +398,24 @@ Transform18.children.append(Transform19)
 Transform17.children.append(Transform18)
 Transform72 = x3d.Transform()
 Transform72.DEF = "hip_L"
-Transform72.rotation = [0.999884009,0.01523,-0.000836,3.105660915]
+Transform72.rotation = [.999884009,.01523,-.000836,3.105660915]
 Transform72.scale = [1.000000954,1,1.000000954]
-Transform72.translation = [-0.005007,-0.282103986,0.478738993]
+Transform72.translation = [-.005007,-.282103986,.478738993]
 Transform73 = x3d.Transform()
 Transform73.DEF = "knee_L"
-Transform73.rotation = [-0.265009999,-0.039092999,-0.963452995,0.112438999]
-Transform73.translation = [-0.176870003,1.892480969,-0.001067]
+Transform73.rotation = [-.265009999,-.039092999,-.963452995,.112438999]
+Transform73.translation = [-.176870003,1.892480969,-.001067]
 Transform74 = x3d.Transform()
 Transform74.DEF = "ankle_L"
-Transform74.rotation = [-0.148344994,-0.098176003,0.984049976,1.382287979]
-Transform74.translation = [-0.073996,1.860281944,-0.007972]
+Transform74.rotation = [-.148344994,-.098176003,.984049976,1.382287979]
+Transform74.translation = [-.073996,1.860281944,-.007972]
 Transform75 = x3d.Transform()
 Transform75.DEF = "foot_L"
-Transform75.rotation = [-0.542261004,-0.806119025,0.236908004,0.238940001]
-Transform75.translation = [0.031746,0.842199028,-0.006074]
+Transform75.rotation = [-.542261004,-.806119025,.236908004,.238940001]
+Transform75.translation = [.031746,.842199028,-.006074]
 Transform76 = x3d.Transform()
 Transform76.DEF = "foot_L_end"
-Transform76.translation = [0,0.255441993,0]
+Transform76.translation = [0,.255441993,0]
 
 Transform75.children.append(Transform76)
 
@@ -428,24 +428,24 @@ Transform72.children.append(Transform73)
 Transform17.children.append(Transform72)
 Transform77 = x3d.Transform()
 Transform77.DEF = "hip_R"
-Transform77.rotation = [0.999884009,0.01523,0.000836,3.17752409]
+Transform77.rotation = [.999884009,.01523,.000836,3.17752409]
 Transform77.scale = [1.000000954,1,1.000000954]
-Transform77.translation = [-0.005007,-0.282103986,-0.481178999]
+Transform77.translation = [-.005007,-.282103986,-.481178999]
 Transform78 = x3d.Transform()
 Transform78.DEF = "knee_R"
-Transform78.rotation = [0.265009999,0.039092999,-0.963452995,0.112438999]
-Transform78.translation = [-0.173080996,1.892068982,0.001044]
+Transform78.rotation = [.265009999,.039092999,-.963452995,.112438999]
+Transform78.translation = [-.173080996,1.892068982,.001044]
 Transform79 = x3d.Transform()
 Transform79.DEF = "ankle_R"
-Transform79.rotation = [0.170120001,0.113301001,0.978887975,1.415300012]
-Transform79.translation = [-0.065779999,1.853299975,0.007351]
+Transform79.rotation = [.170120001,.113301001,.978887975,1.415300012]
+Transform79.translation = [-.065779999,1.853299975,.007351]
 Transform80 = x3d.Transform()
 Transform80.DEF = "foot_R"
-Transform80.rotation = [0.481923014,0.855453014,-0.189606994,0.231730998]
-Transform80.translation = [0.079714999,0.842014015,-0.040243]
+Transform80.rotation = [.481923014,.855453014,-.189606994,.231730998]
+Transform80.translation = [.079714999,.842014015,-.040243]
 Transform81 = x3d.Transform()
 Transform81.DEF = "foot_R_end"
-Transform81.translation = [-0.022128001,0.277112007,-0.016776999]
+Transform81.translation = [-.022128001,.277112007,-.016776999]
 
 Transform80.children.append(Transform81)
 
@@ -471,7 +471,7 @@ Appearance85 = x3d.Appearance()
 Appearance85.DEF = "MAT_Mat_003"
 Material86 = x3d.Material()
 Material86.shininess = 0.1
-Material86.specularColor = [0.050000001,0.050000001,0.050000001]
+Material86.specularColor = [.050000001,.050000001,.050000001]
 
 Appearance85.material = Material86
 
@@ -755,12 +755,12 @@ Transform139.children.append(Transform140)
 Scene15.children.append(Transform139)
 TimeSensor146 = x3d.TimeSensor()
 TimeSensor146.DEF = "Timer"
-TimeSensor146.cycleInterval = 3
+TimeSensor146.cycleInterval = 3.0
 TimeSensor146.loop = True
 
 Scene15.children.append(TimeSensor146)
 
 X3D0.Scene = Scene15
-f = open("././Size2tExample_revision2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Size2tExample_revision2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

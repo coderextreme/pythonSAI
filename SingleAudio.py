@@ -6,68 +6,68 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "SingleAudio.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "The first demo contains a concise X3D scene. The scenario here is the implementation of a single sound source, which is represented by a 3D object. The spatiality of the sound is expressed by a process, in which when the user approaching nearby to the sound source the volume is increased and accordingly when removed there from is reduced. In addition to this and depending on the side of the sound source that the user observes, the sound is emitted from the corresponding speaker. Apart from the 3D scene, we have also added an analyser slider. The analyser gives the possibility to receive real-time generated data, without any change from the input to output sound information. Through this process we achieved the audio visualization of the sound source."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "info"
 meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
+meta4.name = "info"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "28 October 2020"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "5 December 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CHANGELOG.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "where is AudioClip source?"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "TODO"
 meta10.content = "credit for audio files"
+meta10.name = "TODO"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "https://medialab.hmu.gr/minipages/x3domAudio"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "identifier"
 meta12.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/SingleAudio.x3d"
+meta12.name = "identifier"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "generator"
 meta13.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta13.name = "generator"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "license"
 meta14.content = "../license.html"
+meta14.name = "license"
 
 head1.children.append(meta14)
 
@@ -94,14 +94,14 @@ Viewpoint19 = x3d.Viewpoint()
 Viewpoint19.DEF = "Camera001"
 Viewpoint19.description = "Camera001"
 Viewpoint19.farDistance = 0
-Viewpoint19.nearDistance = 1
-Viewpoint19.orientation = [1,0,0,-0.523599]
-Viewpoint19.position = [0,2000,3500]
+Viewpoint19.nearDistance = 1.000000
+Viewpoint19.orientation = [1.000000,0.000000,-0.000000,-0.523599]
+Viewpoint19.position = [0.000000,2000.000000,3500.000000]
 
 Scene15.children.append(Viewpoint19)
 Transform20 = x3d.Transform()
 Transform20.DEF = "Floor"
-Transform20.translation = [1.241,0,0.358]
+Transform20.translation = [1.241,0.000,0.358]
 Shape21 = x3d.Shape()
 Appearance22 = x3d.Appearance()
 Appearance22.DEF = "WireColor"
@@ -170,7 +170,7 @@ Appearance37.material = Material38
 
 Shape36.appearance = Appearance37
 Text39 = x3d.Text()
-Text39.string = ["Sound Source"]
+Text39.string = ["ound Sourc"]
 FontStyle40 = x3d.FontStyle()
 FontStyle40.family = ["Times","SERIF"]
 FontStyle40.style = "BOLD"
@@ -187,14 +187,11 @@ Transform27.children.append(Billboard34)
 
 Scene15.children.append(Transform27)
 AudioDestination41 = x3d.AudioDestination()
-AudioDestination41.channelCountMode = "MAX"
-AudioDestination41.channelInterpretation = "SPEAKERS"
-#not allowed here <Transform USE='Audio1'/>
+""" not allowed here <Transform USE='Audio1'/> """
 SpatialSound42 = x3d.SpatialSound()
 SpatialSound42.coneInnerAngle = 6.283
 SpatialSound42.coneOuterAngle = 6.283
 SpatialSound42.enableHRTF = True
-SpatialSound42.distanceModel = "INVERSE"
 
 AudioDestination41.children.append(SpatialSound42)
 BufferAudioSource43 = x3d.BufferAudioSource()
@@ -203,14 +200,12 @@ BufferAudioSource43.pauseTime = -1
 BufferAudioSource43.resumeTime = -1
 BufferAudioSource43.stopTime = -1
 BufferAudioSource43.url = ["sound/saxophone.mp3","sound/saxophone.ogg"]
-BufferAudioSource43.channelCountMode = "MAX"
-BufferAudioSource43.channelInterpretation = "SPEAKERS"
 
 AudioDestination41.children.append(BufferAudioSource43)
 
 Scene15.children.append(AudioDestination41)
 
 X3D0.Scene = Scene15
-f = open("././SingleAudio_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("SingleAudio_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

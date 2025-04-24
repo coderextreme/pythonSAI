@@ -6,48 +6,48 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "AllAudioGraphNodesTest.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "List of all X3D4 audio graph nodes to test infrastructure and validation support. Absence of attributes means that checking and removal of default values is working."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Don Brutzman"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "25 October 2020"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "26 November 2021"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "warning"
 meta7.content = "Developmental test, no actual 3D model expected"
+meta7.name = "warning"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "identifier"
 meta8.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/AllAudioGraphNodesTest.x3d"
+meta8.name = "identifier"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "generator"
 meta9.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta9.name = "generator"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "license"
 meta10.content = "../license.html"
+meta10.name = "license"
 
 head1.children.append(meta10)
 
@@ -95,48 +95,20 @@ Sound20.source = MovieTexture21
 
 Scene11.children.append(Sound20)
 SpatialSound22 = x3d.SpatialSound()
-SpatialSound22.distanceModel = "INVERSE"
 Analyser23 = x3d.Analyser()
-Analyser23.channelCountMode = "MAX"
-Analyser23.channelInterpretation = "SPEAKERS"
 StreamAudioDestination24 = x3d.StreamAudioDestination()
-StreamAudioDestination24.channelCountMode = "MAX"
-StreamAudioDestination24.channelInterpretation = "SPEAKERS"
 BiquadFilter25 = x3d.BiquadFilter()
-BiquadFilter25.channelCountMode = "MAX"
-BiquadFilter25.channelInterpretation = "SPEAKERS"
-BiquadFilter25.type = "LOWPASS"
 ChannelMerger26 = x3d.ChannelMerger()
-ChannelMerger26.channelCountMode = "MAX"
-ChannelMerger26.channelInterpretation = "SPEAKERS"
 ChannelSelector27 = x3d.ChannelSelector()
-ChannelSelector27.channelCountMode = "MAX"
-ChannelSelector27.channelInterpretation = "SPEAKERS"
 ChannelSplitter28 = x3d.ChannelSplitter()
-ChannelSplitter28.channelCountMode = "MAX"
-ChannelSplitter28.channelInterpretation = "SPEAKERS"
 Convolver29 = x3d.Convolver()
-Convolver29.channelCountMode = "MAX"
-Convolver29.channelInterpretation = "SPEAKERS"
 Delay30 = x3d.Delay()
-Delay30.channelCountMode = "MAX"
-Delay30.channelInterpretation = "SPEAKERS"
 DynamicsCompressor31 = x3d.DynamicsCompressor()
-DynamicsCompressor31.channelCountMode = "MAX"
-DynamicsCompressor31.channelInterpretation = "SPEAKERS"
 Gain32 = x3d.Gain()
-Gain32.channelCountMode = "MAX"
-Gain32.channelInterpretation = "SPEAKERS"
 StreamAudioDestination33 = x3d.StreamAudioDestination()
-StreamAudioDestination33.channelCountMode = "MAX"
-StreamAudioDestination33.channelInterpretation = "SPEAKERS"
 WaveShaper34 = x3d.WaveShaper()
-WaveShaper34.channelCountMode = "MAX"
-WaveShaper34.channelInterpretation = "SPEAKERS"
-#The following X3DSoundSourceNode nodes have no audio-graph children
+""" The following X3DSoundSourceNode nodes have no audio-graph children """
 BufferAudioSource35 = x3d.BufferAudioSource()
-BufferAudioSource35.channelCountMode = "MAX"
-BufferAudioSource35.channelInterpretation = "SPEAKERS"
 
 WaveShaper34.children.append(BufferAudioSource35)
 ListenerPointSource36 = x3d.ListenerPointSource()
@@ -146,12 +118,9 @@ MicrophoneSource37 = x3d.MicrophoneSource()
 
 WaveShaper34.children.append(MicrophoneSource37)
 OscillatorSource38 = x3d.OscillatorSource()
-OscillatorSource38.frequency = 440
 
 WaveShaper34.children.append(OscillatorSource38)
 StreamAudioSource39 = x3d.StreamAudioSource()
-StreamAudioSource39.channelCountMode = "MAX"
-StreamAudioSource39.channelInterpretation = "SPEAKERS"
 
 WaveShaper34.children.append(StreamAudioSource39)
 
@@ -182,6 +151,6 @@ SpatialSound22.children.append(Analyser23)
 Scene11.children.append(SpatialSound22)
 
 X3D0.Scene = Scene11
-f = open("././AllAudioGraphNodesTest_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("AllAudioGraphNodesTest_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

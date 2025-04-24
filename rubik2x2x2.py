@@ -49,7 +49,7 @@ field12 = x3d.field()
 field12.name = "xtranslation"
 field12.accessType = "inputOutput"
 field12.type = "SFVec3f"
-field12.value = [0,0,0]
+field12.value = [0.0,0.0,0.0]
 
 ProtoInterface11.field.append(field12)
 field13 = x3d.field()
@@ -63,6 +63,7 @@ ProtoInterface11.field.append(field13)
 ProtoDeclare10.ProtoInterface = ProtoInterface11
 ProtoBody14 = x3d.ProtoBody()
 Transform15 = x3d.Transform()
+Transform15.translation = [0,0,0]
 IS16 = x3d.IS()
 connect17 = x3d.connect()
 connect17.nodeField = "translation"
@@ -105,7 +106,7 @@ field26 = x3d.field()
 field26.name = "ytranslation"
 field26.accessType = "inputOutput"
 field26.type = "SFVec3f"
-field26.value = [0,0,0]
+field26.value = [0.0,0.0,0.0]
 
 ProtoInterface25.field.append(field26)
 field27 = x3d.field()
@@ -119,6 +120,7 @@ ProtoInterface25.field.append(field27)
 ProtoDeclare24.ProtoInterface = ProtoInterface25
 ProtoBody28 = x3d.ProtoBody()
 Transform29 = x3d.Transform()
+Transform29.translation = [0,0,0]
 IS30 = x3d.IS()
 connect31 = x3d.connect()
 connect31.nodeField = "translation"
@@ -182,7 +184,7 @@ field44 = x3d.field()
 field44.name = "ztranslation"
 field44.accessType = "inputOutput"
 field44.type = "SFVec3f"
-field44.value = [0,0,0]
+field44.value = [0.0,0.0,0.0]
 
 ProtoInterface43.field.append(field44)
 field45 = x3d.field()
@@ -203,6 +205,7 @@ ProtoInterface43.field.append(field46)
 ProtoDeclare42.ProtoInterface = ProtoInterface43
 ProtoBody47 = x3d.ProtoBody()
 Transform48 = x3d.Transform()
+Transform48.translation = [0,0,0]
 IS49 = x3d.IS()
 connect50 = x3d.connect()
 connect50.nodeField = "translation"
@@ -266,13 +269,14 @@ field63 = x3d.field()
 field63.name = "ttranslation"
 field63.accessType = "inputOutput"
 field63.type = "SFVec3f"
-field63.value = [0,0,0]
+field63.value = [0.0,0.0,0.0]
 
 ProtoInterface62.field.append(field63)
 
 ProtoDeclare61.ProtoInterface = ProtoInterface62
 ProtoBody64 = x3d.ProtoBody()
 Transform65 = x3d.Transform()
+Transform65.translation = [0,0,0]
 IS66 = x3d.IS()
 connect67 = x3d.connect()
 connect67.nodeField = "translation"
@@ -336,6 +340,6 @@ ProtoInstance76.fieldValue.append(fieldValue77)
 Scene7.children.append(ProtoInstance76)
 
 X3D0.Scene = Scene7
-f = open("././rubik2x2x2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("rubik2x2x2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -34,6 +34,7 @@ head1.children.append(meta6)
 X3D0.head = head1
 Scene7 = x3d.Scene()
 NavigationInfo8 = x3d.NavigationInfo()
+NavigationInfo8.type = ["EXAMINE","ANY"]
 
 Scene7.children.append(NavigationInfo8)
 Background9 = x3d.Background()
@@ -50,14 +51,14 @@ ExternProtoDeclare11 = x3d.ExternProtoDeclare()
 ExternProtoDeclare11.name = "FlowerProto"
 ExternProtoDeclare11.url = ["../personal/flowerproto.json#FlowerProto","https://coderextreme.net/X3DJSONLD/src/main/personal/flowerproto.json#FlowerProto","https://localhost:3000/src/main/personal/flowerproto.json#FlowerProto"]
 field12 = x3d.field()
-field12.name = "vertex"
 field12.accessType = "inputOutput"
+field12.name = "vertex"
 field12.type = "MFString"
 
 ExternProtoDeclare11.field.append(field12)
 field13 = x3d.field()
-field13.name = "fragment"
 field13.accessType = "inputOutput"
+field13.name = "fragment"
 field13.type = "MFString"
 
 ExternProtoDeclare11.field.append(field13)
@@ -140,6 +141,6 @@ Group10.children.append(ROUTE29)
 Scene7.children.append(Group10)
 
 X3D0.Scene = Scene7
-f = open("././sphereflowers_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("sphereflowers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

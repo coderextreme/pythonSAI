@@ -6,58 +6,58 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "ArtDecoPrototypes.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Prototype declarations defining values for X3D/VRML materials, originally converted from SGI's Open Inventor material examples."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "David Roussel"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "James Harney, Don Brutzman NPS"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "7 April 2002"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "20 October 2019"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "http://vrmlstuff.free.fr/materials"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "subject"
 meta9.content = "Universal Media Material Library"
+meta9.name = "subject"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials/ArtDecoPrototypes.x3d"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "Vrml97ToX3dNist, http://ovrt.nist.gov/v2_x3d.html"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -68,9 +68,9 @@ WorldInfo14.title = "ArtDecoPrototypes.x3d"
 
 Scene13.children.append(WorldInfo14)
 ProtoDeclare15 = x3d.ProtoDeclare()
-ProtoDeclare15.name = "ArtDeco00"
 ProtoDeclare15.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare15.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare15.name = "ArtDeco00"
 ProtoBody16 = x3d.ProtoBody()
 Material17 = x3d.Material()
 Material17.ambientIntensity = 0.25
@@ -84,9 +84,9 @@ ProtoDeclare15.ProtoBody = ProtoBody16
 
 Scene13.children.append(ProtoDeclare15)
 ProtoDeclare18 = x3d.ProtoDeclare()
-ProtoDeclare18.name = "ArtDeco01"
 ProtoDeclare18.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare18.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare18.name = "ArtDeco01"
 ProtoBody19 = x3d.ProtoBody()
 Material20 = x3d.Material()
 Material20.ambientIntensity = 0.254777
@@ -100,13 +100,13 @@ ProtoDeclare18.ProtoBody = ProtoBody19
 
 Scene13.children.append(ProtoDeclare18)
 ProtoDeclare21 = x3d.ProtoDeclare()
-ProtoDeclare21.name = "ArtDeco02"
 ProtoDeclare21.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare21.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
-#computed conversion ambientIntensity=1.745282, normalized to 1.0
+ProtoDeclare21.name = "ArtDeco02"
+""" computed conversion ambientIntensity=1.745282, normalized to 1.0 """
 ProtoBody22 = x3d.ProtoBody()
 Material23 = x3d.Material()
-Material23.ambientIntensity = 1
+Material23.ambientIntensity = 1.0
 Material23.diffuseColor = [0.536861,0.0529,0.245479]
 Material23.shininess = 0.832432
 Material23.specularColor = [0.805292,0.765198,0.747416]
@@ -117,13 +117,13 @@ ProtoDeclare21.ProtoBody = ProtoBody22
 
 Scene13.children.append(ProtoDeclare21)
 ProtoDeclare24 = x3d.ProtoDeclare()
-ProtoDeclare24.name = "ArtDeco03"
 ProtoDeclare24.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare24.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare24.name = "ArtDeco03"
 ProtoBody25 = x3d.ProtoBody()
 Material26 = x3d.Material()
 Material26.ambientIntensity = 0.248649
-Material26.diffuseColor = [1,0.452381,0.40339]
+Material26.diffuseColor = [1.0,0.452381,0.40339]
 Material26.shininess = 0.902703
 Material26.specularColor = [0.686486,0.396903,0.419275]
 
@@ -133,9 +133,9 @@ ProtoDeclare24.ProtoBody = ProtoBody25
 
 Scene13.children.append(ProtoDeclare24)
 ProtoDeclare27 = x3d.ProtoDeclare()
-ProtoDeclare27.name = "ArtDeco04"
 ProtoDeclare27.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare27.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare27.name = "ArtDeco04"
 ProtoBody28 = x3d.ProtoBody()
 Material29 = x3d.Material()
 Material29.ambientIntensity = 0.25
@@ -149,9 +149,9 @@ ProtoDeclare27.ProtoBody = ProtoBody28
 
 Scene13.children.append(ProtoDeclare27)
 ProtoDeclare30 = x3d.ProtoDeclare()
-ProtoDeclare30.name = "ArtDeco05"
 ProtoDeclare30.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare30.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare30.name = "ArtDeco05"
 ProtoBody31 = x3d.ProtoBody()
 Material32 = x3d.Material()
 Material32.ambientIntensity = 0.24359
@@ -165,9 +165,9 @@ ProtoDeclare30.ProtoBody = ProtoBody31
 
 Scene13.children.append(ProtoDeclare30)
 ProtoDeclare33 = x3d.ProtoDeclare()
-ProtoDeclare33.name = "ArtDeco06"
 ProtoDeclare33.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare33.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare33.name = "ArtDeco06"
 ProtoBody34 = x3d.ProtoBody()
 Material35 = x3d.Material()
 Material35.ambientIntensity = 0.25946
@@ -181,9 +181,9 @@ ProtoDeclare33.ProtoBody = ProtoBody34
 
 Scene13.children.append(ProtoDeclare33)
 ProtoDeclare36 = x3d.ProtoDeclare()
-ProtoDeclare36.name = "ArtDeco07"
 ProtoDeclare36.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare36.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare36.name = "ArtDeco07"
 ProtoBody37 = x3d.ProtoBody()
 Material38 = x3d.Material()
 Material38.ambientIntensity = 0.333333
@@ -197,9 +197,9 @@ ProtoDeclare36.ProtoBody = ProtoBody37
 
 Scene13.children.append(ProtoDeclare36)
 ProtoDeclare39 = x3d.ProtoDeclare()
-ProtoDeclare39.name = "ArtDeco08"
 ProtoDeclare39.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare39.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare39.name = "ArtDeco08"
 ProtoBody40 = x3d.ProtoBody()
 Material41 = x3d.Material()
 Material41.ambientIntensity = 0.242424
@@ -213,9 +213,9 @@ ProtoDeclare39.ProtoBody = ProtoBody40
 
 Scene13.children.append(ProtoDeclare39)
 ProtoDeclare42 = x3d.ProtoDeclare()
-ProtoDeclare42.name = "ArtDeco09"
 ProtoDeclare42.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare42.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare42.name = "ArtDeco09"
 ProtoBody43 = x3d.ProtoBody()
 Material44 = x3d.Material()
 Material44.ambientIntensity = 0.333333
@@ -229,9 +229,9 @@ ProtoDeclare42.ProtoBody = ProtoBody43
 
 Scene13.children.append(ProtoDeclare42)
 ProtoDeclare45 = x3d.ProtoDeclare()
-ProtoDeclare45.name = "ArtDeco10"
 ProtoDeclare45.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare45.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare45.name = "ArtDeco10"
 ProtoBody46 = x3d.ProtoBody()
 Material47 = x3d.Material()
 Material47.ambientIntensity = 0.242425
@@ -245,9 +245,9 @@ ProtoDeclare45.ProtoBody = ProtoBody46
 
 Scene13.children.append(ProtoDeclare45)
 ProtoDeclare48 = x3d.ProtoDeclare()
-ProtoDeclare48.name = "ArtDeco11"
 ProtoDeclare48.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare48.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare48.name = "ArtDeco11"
 ProtoBody49 = x3d.ProtoBody()
 Material50 = x3d.Material()
 Material50.ambientIntensity = 0.258928
@@ -262,9 +262,9 @@ ProtoDeclare48.ProtoBody = ProtoBody49
 
 Scene13.children.append(ProtoDeclare48)
 ProtoDeclare51 = x3d.ProtoDeclare()
-ProtoDeclare51.name = "ArtDeco12"
 ProtoDeclare51.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare51.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare51.name = "ArtDeco12"
 ProtoBody52 = x3d.ProtoBody()
 Material53 = x3d.Material()
 Material53.ambientIntensity = 0.240838
@@ -278,13 +278,13 @@ ProtoDeclare51.ProtoBody = ProtoBody52
 
 Scene13.children.append(ProtoDeclare51)
 ProtoDeclare54 = x3d.ProtoDeclare()
-ProtoDeclare54.name = "ArtDeco13"
 ProtoDeclare54.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare54.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare54.name = "ArtDeco13"
 ProtoBody55 = x3d.ProtoBody()
 Material56 = x3d.Material()
 Material56.ambientIntensity = 0.25
-Material56.diffuseColor = [0.794445,0.249425,0]
+Material56.diffuseColor = [0.794445,0.249425,0.0]
 Material56.shininess = 0.551515
 Material56.specularColor = [0.62904,0.194211,0.033663]
 
@@ -294,9 +294,9 @@ ProtoDeclare54.ProtoBody = ProtoBody55
 
 Scene13.children.append(ProtoDeclare54)
 ProtoDeclare57 = x3d.ProtoDeclare()
-ProtoDeclare57.name = "ArtDeco14"
 ProtoDeclare57.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare57.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare57.name = "ArtDeco14"
 ProtoBody58 = x3d.ProtoBody()
 Material59 = x3d.Material()
 Material59.ambientIntensity = 0.25
@@ -310,15 +310,15 @@ ProtoDeclare57.ProtoBody = ProtoBody58
 
 Scene13.children.append(ProtoDeclare57)
 ProtoDeclare60 = x3d.ProtoDeclare()
-ProtoDeclare60.name = "ArtDeco15"
 ProtoDeclare60.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare60.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare60.name = "ArtDeco15"
 ProtoBody61 = x3d.ProtoBody()
 Material62 = x3d.Material()
 Material62.ambientIntensity = 0.255814
 Material62.diffuseColor = [0.914894,0.444404,0.348914]
 Material62.shininess = 0.12766
-Material62.specularColor = [0.345745,0.143066,0]
+Material62.specularColor = [0.345745,0.143066,0.0]
 
 ProtoBody61.children.append(Material62)
 
@@ -326,9 +326,9 @@ ProtoDeclare60.ProtoBody = ProtoBody61
 
 Scene13.children.append(ProtoDeclare60)
 ProtoDeclare63 = x3d.ProtoDeclare()
-ProtoDeclare63.name = "ArtDeco16"
 ProtoDeclare63.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare63.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare63.name = "ArtDeco16"
 ProtoBody64 = x3d.ProtoBody()
 Material65 = x3d.Material()
 Material65.ambientIntensity = 0.240838
@@ -342,9 +342,9 @@ ProtoDeclare63.ProtoBody = ProtoBody64
 
 Scene13.children.append(ProtoDeclare63)
 ProtoDeclare66 = x3d.ProtoDeclare()
-ProtoDeclare66.name = "ArtDeco17"
 ProtoDeclare66.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare66.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare66.name = "ArtDeco17"
 ProtoBody67 = x3d.ProtoBody()
 Material68 = x3d.Material()
 Material68.ambientIntensity = 0.242424
@@ -358,15 +358,15 @@ ProtoDeclare66.ProtoBody = ProtoBody67
 
 Scene13.children.append(ProtoDeclare66)
 ProtoDeclare69 = x3d.ProtoDeclare()
-ProtoDeclare69.name = "ArtDeco18"
 ProtoDeclare69.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare69.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare69.name = "ArtDeco18"
 ProtoBody70 = x3d.ProtoBody()
 Material71 = x3d.Material()
 Material71.ambientIntensity = 0.264706
-Material71.diffuseColor = [0,0.346939,0.253624]
+Material71.diffuseColor = [0.0,0.346939,0.253624]
 Material71.shininess = 0.316327
-Material71.specularColor = [0,0.311074,0.357143]
+Material71.specularColor = [0.0,0.311074,0.357143]
 
 ProtoBody70.children.append(Material71)
 
@@ -374,13 +374,13 @@ ProtoDeclare69.ProtoBody = ProtoBody70
 
 Scene13.children.append(ProtoDeclare69)
 ProtoDeclare72 = x3d.ProtoDeclare()
-ProtoDeclare72.name = "ArtDeco19"
 ProtoDeclare72.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare72.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare72.name = "ArtDeco19"
 ProtoBody73 = x3d.ProtoBody()
 Material74 = x3d.Material()
 Material74.ambientIntensity = 0.259259
-Material74.diffuseColor = [0,0.251004,0.239248]
+Material74.diffuseColor = [0.0,0.251004,0.239248]
 Material74.shininess = 0.060606
 Material74.specularColor = [0.177935,0.249369,0.229278]
 
@@ -390,9 +390,9 @@ ProtoDeclare72.ProtoBody = ProtoBody73
 
 Scene13.children.append(ProtoDeclare72)
 ProtoDeclare75 = x3d.ProtoDeclare()
-ProtoDeclare75.name = "ArtDeco20"
 ProtoDeclare75.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare75.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare75.name = "ArtDeco20"
 ProtoBody76 = x3d.ProtoBody()
 Material77 = x3d.Material()
 Material77.ambientIntensity = 0.24
@@ -406,9 +406,9 @@ ProtoDeclare75.ProtoBody = ProtoBody76
 
 Scene13.children.append(ProtoDeclare75)
 ProtoDeclare78 = x3d.ProtoDeclare()
-ProtoDeclare78.name = "ArtDeco21"
 ProtoDeclare78.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare78.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare78.name = "ArtDeco21"
 ProtoBody79 = x3d.ProtoBody()
 Material80 = x3d.Material()
 Material80.ambientIntensity = 0.25
@@ -422,9 +422,9 @@ ProtoDeclare78.ProtoBody = ProtoBody79
 
 Scene13.children.append(ProtoDeclare78)
 ProtoDeclare81 = x3d.ProtoDeclare()
-ProtoDeclare81.name = "ArtDeco22"
 ProtoDeclare81.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare81.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare81.name = "ArtDeco22"
 ProtoBody82 = x3d.ProtoBody()
 Material83 = x3d.Material()
 Material83.ambientIntensity = 0.246032
@@ -438,9 +438,9 @@ ProtoDeclare81.ProtoBody = ProtoBody82
 
 Scene13.children.append(ProtoDeclare81)
 ProtoDeclare84 = x3d.ProtoDeclare()
-ProtoDeclare84.name = "ArtDeco23"
 ProtoDeclare84.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare84.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare84.name = "ArtDeco23"
 ProtoBody85 = x3d.ProtoBody()
 Material86 = x3d.Material()
 Material86.ambientIntensity = 0.242424
@@ -454,14 +454,14 @@ ProtoDeclare84.ProtoBody = ProtoBody85
 
 Scene13.children.append(ProtoDeclare84)
 ProtoDeclare87 = x3d.ProtoDeclare()
-ProtoDeclare87.name = "ArtDeco24"
 ProtoDeclare87.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare87.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare87.name = "ArtDeco24"
 ProtoBody88 = x3d.ProtoBody()
 Material89 = x3d.Material()
 Material89.ambientIntensity = 0.253968
-Material89.diffuseColor = [1,0.854922,0]
-Material89.shininess = 1
+Material89.diffuseColor = [1.0,0.854922,0.0]
+Material89.shininess = 1.0
 Material89.specularColor = [0.872449,0.247119,0.254214]
 
 ProtoBody88.children.append(Material89)
@@ -470,9 +470,9 @@ ProtoDeclare87.ProtoBody = ProtoBody88
 
 Scene13.children.append(ProtoDeclare87)
 ProtoDeclare90 = x3d.ProtoDeclare()
-ProtoDeclare90.name = "ArtDeco25"
 ProtoDeclare90.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare90.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare90.name = "ArtDeco25"
 ProtoBody91 = x3d.ProtoBody()
 Material92 = x3d.Material()
 Material92.ambientIntensity = 0.25641
@@ -486,13 +486,13 @@ ProtoDeclare90.ProtoBody = ProtoBody91
 
 Scene13.children.append(ProtoDeclare90)
 ProtoDeclare93 = x3d.ProtoDeclare()
-ProtoDeclare93.name = "ArtDeco26"
 ProtoDeclare93.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare93.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
-#computed conversion ambientIntensity=2.226234, normalized to 1.0
+ProtoDeclare93.name = "ArtDeco26"
+""" computed conversion ambientIntensity=2.226234, normalized to 1.0 """
 ProtoBody94 = x3d.ProtoBody()
 Material95 = x3d.Material()
-Material95.ambientIntensity = 1
+Material95.ambientIntensity = 1.0
 Material95.diffuseColor = [0.331633,0.296582,0.279057]
 Material95.shininess = 0.096939
 Material95.specularColor = [0.311224,0.25183,0.133042]
@@ -503,15 +503,15 @@ ProtoDeclare93.ProtoBody = ProtoBody94
 
 Scene13.children.append(ProtoDeclare93)
 ProtoDeclare96 = x3d.ProtoDeclare()
-ProtoDeclare96.name = "ArtDeco27"
 ProtoDeclare96.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare96.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare96.name = "ArtDeco27"
 ProtoBody97 = x3d.ProtoBody()
 Material98 = x3d.Material()
 Material98.ambientIntensity = 0.263158
 Material98.diffuseColor = [0.345455,0.163262,0.122622]
 Material98.shininess = 0.048649
-Material98.specularColor = [0.212121,0.107475,0]
+Material98.specularColor = [0.212121,0.107475,0.0]
 
 ProtoBody97.children.append(Material98)
 
@@ -519,9 +519,9 @@ ProtoDeclare96.ProtoBody = ProtoBody97
 
 Scene13.children.append(ProtoDeclare96)
 ProtoDeclare99 = x3d.ProtoDeclare()
-ProtoDeclare99.name = "ArtDeco28"
 ProtoDeclare99.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare99.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare99.name = "ArtDeco28"
 ProtoBody100 = x3d.ProtoBody()
 Material101 = x3d.Material()
 Material101.ambientIntensity = 0.240506
@@ -535,13 +535,13 @@ ProtoDeclare99.ProtoBody = ProtoBody100
 
 Scene13.children.append(ProtoDeclare99)
 ProtoDeclare102 = x3d.ProtoDeclare()
-ProtoDeclare102.name = "ArtDeco29"
 ProtoDeclare102.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare102.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare102.name = "ArtDeco29"
 ProtoBody103 = x3d.ProtoBody()
 Material104 = x3d.Material()
 Material104.ambientIntensity = 0.215686
-Material104.diffuseColor = [0.087034,0.025888,0]
+Material104.diffuseColor = [0.087034,0.025888,0.0]
 Material104.shininess = 0.045918
 Material104.specularColor = [0.224138,0.104091,0.104091]
 
@@ -551,13 +551,13 @@ ProtoDeclare102.ProtoBody = ProtoBody103
 
 Scene13.children.append(ProtoDeclare102)
 ProtoDeclare105 = x3d.ProtoDeclare()
-ProtoDeclare105.name = "ArtDeco30"
 ProtoDeclare105.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare105.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare105.name = "ArtDeco30"
 ProtoBody106 = x3d.ProtoBody()
 Material107 = x3d.Material()
-Material107.ambientIntensity = 0
-Material107.diffuseColor = [0,0,0]
+Material107.ambientIntensity = 0.0
+Material107.diffuseColor = [0.0,0.0,0.0]
 Material107.shininess = 0.081633
 Material107.specularColor = [0.293243,0.297387,0.290421]
 
@@ -567,9 +567,9 @@ ProtoDeclare105.ProtoBody = ProtoBody106
 
 Scene13.children.append(ProtoDeclare105)
 ProtoDeclare108 = x3d.ProtoDeclare()
-ProtoDeclare108.name = "ArtDeco31"
 ProtoDeclare108.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare108.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare108.name = "ArtDeco31"
 ProtoBody109 = x3d.ProtoBody()
 Material110 = x3d.Material()
 Material110.ambientIntensity = 0.25641
@@ -583,9 +583,9 @@ ProtoDeclare108.ProtoBody = ProtoBody109
 
 Scene13.children.append(ProtoDeclare108)
 ProtoDeclare111 = x3d.ProtoDeclare()
-ProtoDeclare111.name = "ArtDeco32"
 ProtoDeclare111.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare111.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare111.name = "ArtDeco32"
 ProtoBody112 = x3d.ProtoBody()
 Material113 = x3d.Material()
 Material113.ambientIntensity = 0.242424
@@ -599,9 +599,9 @@ ProtoDeclare111.ProtoBody = ProtoBody112
 
 Scene13.children.append(ProtoDeclare111)
 ProtoDeclare114 = x3d.ProtoDeclare()
-ProtoDeclare114.name = "ArtDeco33"
 ProtoDeclare114.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare114.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare114.name = "ArtDeco33"
 ProtoBody115 = x3d.ProtoBody()
 Material116 = x3d.Material()
 Material116.ambientIntensity = 0.230089
@@ -615,13 +615,13 @@ ProtoDeclare114.ProtoBody = ProtoBody115
 
 Scene13.children.append(ProtoDeclare114)
 ProtoDeclare117 = x3d.ProtoDeclare()
-ProtoDeclare117.name = "ArtDeco34"
 ProtoDeclare117.appinfo = "UniversalMediaMaterials prototype"
 ProtoDeclare117.documentation = "https://www.web3d.org/x3d/content/examples/Basic/UniversalMediaMaterials"
+ProtoDeclare117.name = "ArtDeco34"
 ProtoBody118 = x3d.ProtoBody()
 Material119 = x3d.Material()
 Material119.ambientIntensity = 0.25
-Material119.shininess = 0
+Material119.shininess = 0.0
 Material119.specularColor = [0.2,0.2,0.2]
 
 ProtoBody118.children.append(Material119)
@@ -656,6 +656,6 @@ Anchor120.children.append(Shape121)
 Scene13.children.append(Anchor120)
 
 X3D0.Scene = Scene13
-f = open("././ArtDecoPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ArtDecoPrototypes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -6,78 +6,78 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Geospatial"
 component2.level = 1
+component2.name = "Geospatial"
 
 head1.children.append(component2)
 component3 = x3d.component()
-component3.name = "NURBS"
 component3.level = 2
+component3.name = "NURBS"
 
 head1.children.append(component3)
 component4 = x3d.component()
-component4.name = "Core"
 component4.level = 2
+component4.name = "Core"
 
 head1.children.append(component4)
 component5 = x3d.component()
-component5.name = "Navigation"
 component5.level = 1
+component5.name = "Navigation"
 
 head1.children.append(component5)
 component6 = x3d.component()
-component6.name = "Text"
 component6.level = 1
+component6.name = "Text"
 
 head1.children.append(component6)
 meta7 = x3d.meta()
-meta7.name = "title"
 meta7.content = "X3dHeaderPrototypeSyntaxExamples.x3d"
+meta7.name = "title"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "description"
 meta8.content = "X3D scene header and prototype syntax examples. This example header indicates that the content is XML encoded, follows the Interactive Profile and explicitly lists additional necessary components. The X3D header may also contain additional semantic information. Used for specification EXAMPLE excerpts in 19776:1 XML Encoding."
+meta8.name = "description"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "created"
 meta9.content = "14 October 2002"
+meta9.name = "created"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "modified"
 meta10.content = "27 May 2017"
+meta10.name = "modified"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "creator"
 meta11.content = "Don Brutzman"
+meta11.name = "creator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "specificationSection"
 meta12.content = "X3D encodings, ISO/IEC 19776-1.3, Part 1: XML encoding, 4.3 XML file syntax"
+meta12.name = "specificationSection"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "specificationUrl"
 meta13.content = "https://www.web3d.org/documents/specifications/19776-1/V3.3/Part01/concepts.html#XMLFileSyntax"
+meta13.name = "specificationUrl"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "identifier"
 meta14.content = "https://www.web3d.org/x3d/content/examples/Basic/X3dSpecifications/X3dHeaderPrototypeSyntaxExamples.x3d"
+meta14.name = "identifier"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "license"
 meta16.content = "../license.html"
+meta16.name = "license"
 
 head1.children.append(meta16)
 
@@ -87,38 +87,38 @@ ExternProtoDeclare18 = x3d.ExternProtoDeclare()
 ExternProtoDeclare18.name = "ViewPositionOrientation"
 ExternProtoDeclare18.url = ["../../Savage/Tools/Authoring/ViewPositionOrientationPrototype.x3d#ViewPositionOrientation","https://savage.nps.edu/Savage/Tools/Authoring/ViewPositionOrientationPrototype.x3d#ViewPositionOrientation","../../Savage/Tools/Authoring/ViewPositionOrientationPrototype.wrl#ViewPositionOrientation","https://savage.nps.edu/Savage/Tools/Authoring/ViewPositionOrientationPrototype.wrl#ViewPositionOrientation"]
 field19 = x3d.field()
-field19.name = "enabled"
 field19.accessType = "inputOutput"
+field19.name = "enabled"
 field19.type = "SFBool"
 
 ExternProtoDeclare18.field.append(field19)
 field20 = x3d.field()
-field20.name = "traceEnabled"
 field20.accessType = "initializeOnly"
+field20.name = "traceEnabled"
 field20.type = "SFBool"
 
 ExternProtoDeclare18.field.append(field20)
 field21 = x3d.field()
-field21.name = "set_traceEnabled"
 field21.accessType = "inputOnly"
+field21.name = "set_traceEnabled"
 field21.type = "SFBool"
 
 ExternProtoDeclare18.field.append(field21)
 field22 = x3d.field()
-field22.name = "position_changed"
 field22.accessType = "outputOnly"
+field22.name = "position_changed"
 field22.type = "SFVec3f"
 
 ExternProtoDeclare18.field.append(field22)
 field23 = x3d.field()
-field23.name = "orientation_changed"
 field23.accessType = "outputOnly"
+field23.name = "orientation_changed"
 field23.type = "SFRotation"
 
 ExternProtoDeclare18.field.append(field23)
 field24 = x3d.field()
-field24.name = "outputViewpointString"
 field24.accessType = "outputOnly"
+field24.name = "outputViewpointString"
 field24.type = "MFString"
 
 ExternProtoDeclare18.field.append(field24)
@@ -143,8 +143,8 @@ ProtoDeclare29 = x3d.ProtoDeclare()
 ProtoDeclare29.name = "EmissiveMaterial"
 ProtoInterface30 = x3d.ProtoInterface()
 field31 = x3d.field()
-field31.name = "onlyColor"
 field31.accessType = "inputOutput"
+field31.name = "onlyColor"
 field31.type = "SFColor"
 field31.value = [1,0,0]
 
@@ -152,10 +152,10 @@ ProtoInterface30.field.append(field31)
 
 ProtoDeclare29.ProtoInterface = ProtoInterface30
 ProtoBody32 = x3d.ProtoBody()
-#Override default diffuseColor value 0.8 0.8 0.8
+""" Override default diffuseColor value 0.8 0.8 0.8 """
 Material33 = x3d.Material()
 Material33.diffuseColor = [0,0,0]
-#Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare.
+""" Connect emissiveColor field of current node to onlyColor field of parent ProtoDeclare. """
 IS34 = x3d.IS()
 connect35 = x3d.connect()
 connect35.nodeField = "emissiveColor"
@@ -174,13 +174,13 @@ ProtoDeclare36 = x3d.ProtoDeclare()
 ProtoDeclare36.name = "ShiftGroupUp2m"
 ProtoInterface37 = x3d.ProtoInterface()
 field38 = x3d.field()
-field38.name = "children"
 field38.accessType = "inputOutput"
+field38.name = "children"
 field38.type = "MFNode"
 Group39 = x3d.Group()
 Group39.DEF = "DefaultNodeValue"
 Group39.bboxSize = [2,2,2]
-#Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\"
+""" Authors need to override this node when creating the ProtoInstance fieldValue name=\"children\" """
 
 field38.children.append(Group39)
 
@@ -211,7 +211,7 @@ ProtoInstance45 = x3d.ProtoInstance()
 ProtoInstance45.name = "ShiftGroupUp2m"
 
 Scene17.children.append(ProtoInstance45)
-#====================
+""" ==================== """
 Viewpoint46 = x3d.Viewpoint()
 Viewpoint46.DEF = "ExampleSingleElement"
 Viewpoint46.description = "Hello syntax"
@@ -246,7 +246,7 @@ Transform52.children.append(Group53)
 Scene17.children.append(Transform52)
 Collision54 = x3d.Collision()
 Shape55 = x3d.Shape()
-#note that Collision proxy Shape is not rendered
+""" note that Collision proxy Shape is not rendered """
 Sphere56 = x3d.Sphere()
 
 Shape55.geometry = Sphere56
@@ -358,6 +358,6 @@ ROUTE77.toNode = "someInlineRoot"
 Scene17.children.append(ROUTE77)
 
 X3D0.Scene = Scene17
-f = open("././X3dHeaderPrototypeSyntaxExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("X3dHeaderPrototypeSyntaxExamples_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -39,13 +39,15 @@ Script8.DEF = "Browser"
 Script8.sourceCode = '''ecmascript:\n"+
 "                function initialize() {\n"+
 "		    Browser.print('DUDES\\n'+'\"DUDETTES');\n"+
-"                }'''
+"                }\n"+
+"'''
 
 Scene7.children.append(Script8)
 Script9 = x3d.Script()
 Script9.DEF = "Clouds"
 
-Script9.sourceCode = '''ecmascript:\n"+
+Script9.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "\n"+
 "function cumulustranslation() // These values designate the boundary location of the cloud\n"+
@@ -54,11 +56,12 @@ Script9.sourceCode = '''ecmascript:\n"+
 "'	Transform		\\n'+\n"+
 "'    ' + '               	\\n';\n"+
 "\n"+
-"}'''
+"}\n"+
+"'''
 
 Scene7.children.append(Script9)
 
 X3D0.Scene = Scene7
-f = open("././browser_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("browser_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -43,6 +43,7 @@ Background9 = x3d.Background()
 Scene7.children.append(Background9)
 Transform10 = x3d.Transform()
 Transform10.DEF = "DECLpoint_G1_node"
+Transform10.translation = [0,0,0]
 Shape11 = x3d.Shape()
 Sphere12 = x3d.Sphere()
 Sphere12.radius = 0.1
@@ -97,7 +98,8 @@ Script16.sourceCode = '''ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}'''
+"		}\n"+
+"'''
 
 Transform10.children.append(Script16)
 TimeSensor21 = x3d.TimeSensor()
@@ -138,6 +140,7 @@ Transform10.children.append(ROUTE25)
 Scene7.children.append(Transform10)
 Transform26 = x3d.Transform()
 Transform26.DEF = "DECLpoint_G2_node"
+Transform26.translation = [0,0,0]
 Shape27 = x3d.Shape()
 Sphere28 = x3d.Sphere()
 Sphere28.radius = 0.1
@@ -192,7 +195,8 @@ Script32.sourceCode = '''ecmascript:\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(keyValue);\n"+
-"		}'''
+"		}\n"+
+"'''
 
 Transform26.children.append(Script32)
 TimeSensor37 = x3d.TimeSensor()
@@ -355,7 +359,8 @@ Script49.sourceCode = '''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val);\n"+
-"        }'''
+"        }\n"+
+"'''
 
 Group42.children.append(Script49)
 
@@ -376,6 +381,6 @@ ROUTE61.toField = "set_endpoint"
 Scene7.children.append(ROUTE61)
 
 X3D0.Scene = Scene7
-f = open("././arc3_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("arc3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

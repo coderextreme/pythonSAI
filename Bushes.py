@@ -6,58 +6,58 @@ X3D0.profile = "Interchange"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Bushes.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Bushes for HAnim scene Winter and Spring."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Carol McDonald"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "translator"
 meta5.content = "Joe Williams and Don Brutzman"
+meta5.name = "translator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "27 May 2023"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "27 May 2023"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "TODO"
 meta8.content = "DEF/USE for all duplicated nodes to ensure consistency"
+meta8.name = "TODO"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "originals/Bushes.x3dv"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/Bushes.x3d"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -70,9 +70,9 @@ Scene13.children.append(WorldInfo14)
 Shape15 = x3d.Shape()
 Appearance16 = x3d.Appearance()
 Material17 = x3d.Material()
-Material17.ambientIntensity = 0
+Material17.ambientIntensity = 0.0
 Material17.diffuseColor = [0,1,0]
-Material17.shininess = 1
+Material17.shininess = 1.0
 
 Appearance16.material = Material17
 
@@ -92,9 +92,9 @@ Scene13.children.append(Shape15)
 Shape20 = x3d.Shape()
 Appearance21 = x3d.Appearance()
 Material22 = x3d.Material()
-Material22.ambientIntensity = 0
+Material22.ambientIntensity = 0.0
 Material22.diffuseColor = [0,1,0]
-Material22.shininess = 1
+Material22.shininess = 1.0
 
 Appearance21.material = Material22
 
@@ -114,9 +114,9 @@ Scene13.children.append(Shape20)
 Shape25 = x3d.Shape()
 Appearance26 = x3d.Appearance()
 Material27 = x3d.Material()
-Material27.ambientIntensity = 0
+Material27.ambientIntensity = 0.0
 Material27.diffuseColor = [0,1,0]
-Material27.shininess = 1
+Material27.shininess = 1.0
 
 Appearance26.material = Material27
 
@@ -136,9 +136,9 @@ Scene13.children.append(Shape25)
 Shape30 = x3d.Shape()
 Appearance31 = x3d.Appearance()
 Material32 = x3d.Material()
-Material32.ambientIntensity = 0
+Material32.ambientIntensity = 0.0
 Material32.diffuseColor = [0,1,0]
-Material32.shininess = 1
+Material32.shininess = 1.0
 
 Appearance31.material = Material32
 
@@ -157,6 +157,6 @@ Shape30.geometry = IndexedFaceSet33
 Scene13.children.append(Shape30)
 
 X3D0.Scene = Scene13
-f = open("././Bushes_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Bushes_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

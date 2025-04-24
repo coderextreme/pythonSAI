@@ -6,78 +6,78 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "F16.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "F-16, The Fighting Falcon, Turkish Air Force (TUAF), Turkey"
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Murat ONDER, LTJG, Turkish Navy"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "The coordinates of the main body (Except landing gears, nose antenna, flag, weapons, missile holders, cockpit, cockpit seat and fuel tanks) are mostly similar to the model of Soji Yamakawa and used with permission."
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "13 July 2003"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "27 November 2015"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "http://www.fas.org/man/dod-101/sys/ac/f-16.htm"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "permission"
 meta9.content = "Here is a copy of the permission for the usage of the main hull; -----Original Message----- From: Soji Yamakawa [mailto:soji@andrew.cmu.edu] Sent: Tuesday, September 16, 2003 8:00 PM To: Onder, Murat TUR Subject: Re: VRML model points usage permission Sure. No problem. Soji ----- Original Message ----- From: \"Murat Onder\" <monder@nps.navy.mil> To: <Soji_Yamakawa@cmu.edu>; <PEB01130@nifty.ne.jp> Sent: Monday, September 15, 2003 3:50 PM Subject: VRML model points usage permission Hi Sir, I&apos;m a MS student in Naval Postgraduate School. I'm making a model of Turkish F-16 for my project in a VRML course. For the main hull of the F-16, I want to use the coordinate points of your VRML model since I think that model represents well enough F-16. This is going to be only a student project and will not be used for any commercial purposes. Of course I'll make the citation and put the reference links to your page in the meta files of x3d file. I'd like to know if you can give permission to use those points in my model. V/R, Murat Onder LTJG, TU NAVY"
+meta9.name = "permission"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "The landing gears are taken from the Savage Archive, from F18 Blue Angel, then modified and re-animated."
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "drawing"
 meta11.content = "\"Drawing.jpg\" \"../../../Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Drawing.jpg\" \"https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Drawing.jpg\""
+meta11.name = "drawing"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "Image"
 meta12.content = "\"FrontView.jpg\" \"FrontView2.jpg\" \"Missiles.jpg\" \"../../../Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontView.jpg\" \"https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontView.jpg\" \"../../../Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontView2.jpg\" \"https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontView2.jpg\" \"../../../Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Missiles.jpg\" \"https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/Missiles.jpg\""
+meta12.name = "Image"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "identifier"
 meta13.content = "https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/F16.x3d"
+meta13.name = "identifier"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "subject"
 meta14.content = "F16, F-16, Fighting Falcon"
+meta14.name = "subject"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "license"
 meta16.content = "../../license.html"
+meta16.name = "license"
 
 head1.children.append(meta16)
 
@@ -92,7 +92,7 @@ Shape20 = x3d.Shape()
 Shape20.DEF = "Nose"
 Appearance21 = x3d.Appearance()
 Material22 = x3d.Material()
-Material22.diffuseColor = [0.25,0.25,0.25]
+Material22.diffuseColor = [.25,.25,.25]
 
 Appearance21.material = Material22
 
@@ -118,7 +118,7 @@ Shape26 = x3d.Shape()
 Shape26.DEF = "Canopy"
 Appearance27 = x3d.Appearance()
 Material28 = x3d.Material()
-Material28.diffuseColor = [0.25,0.25,0.25]
+Material28.diffuseColor = [.25,.25,.25]
 Material28.transparency = 0.8
 
 Appearance27.material = Material28
@@ -145,7 +145,7 @@ Shape32 = x3d.Shape()
 Shape32.DEF = "MainBodyAndWingEdges"
 Appearance33 = x3d.Appearance()
 Material34 = x3d.Material()
-Material34.diffuseColor = [0.1796,0.1914,0.2382]
+Material34.diffuseColor = [.1796,.1914,.2382]
 
 Appearance33.material = Material34
 
@@ -171,7 +171,7 @@ Shape38 = x3d.Shape()
 Shape38.DEF = "ExhaustExitFlatPanel"
 Appearance39 = x3d.Appearance()
 Material40 = x3d.Material()
-Material40.diffuseColor = [0.5,0.5,0.5]
+Material40.diffuseColor = [.5,.5,.5]
 
 Appearance39.material = Material40
 
@@ -197,7 +197,7 @@ Shape44 = x3d.Shape()
 Shape44.DEF = "ExhaustEntranceFrontBottomPart"
 Appearance45 = x3d.Appearance()
 Material46 = x3d.Material()
-Material46.diffuseColor = [0.2304,0.2304,0.2304]
+Material46.diffuseColor = [.2304,.2304,.2304]
 
 Appearance45.material = Material46
 
@@ -223,7 +223,7 @@ Shape50 = x3d.Shape()
 Shape50.DEF = "ThirdPartFromNoseUnderCanopy"
 Appearance51 = x3d.Appearance()
 Material52 = x3d.Material()
-Material52.diffuseColor = [0.6,0.6,0.6]
+Material52.diffuseColor = [.6,.6,.6]
 
 Appearance51.material = Material52
 
@@ -249,8 +249,8 @@ Shape56 = x3d.Shape()
 Shape56.DEF = "RearExhaustExitPartLastPartOfMainBody"
 Appearance57 = x3d.Appearance()
 Material58 = x3d.Material()
-Material58.diffuseColor = [0.37,0.37,0.37]
-Material58.shininess = 0.5
+Material58.diffuseColor = [.37,.37,.37]
+Material58.shininess = .5
 
 Appearance57.material = Material58
 
@@ -276,7 +276,7 @@ Shape62 = x3d.Shape()
 Shape62.DEF = "WingsAndTail"
 Appearance63 = x3d.Appearance()
 Material64 = x3d.Material()
-Material64.emissiveColor = [0.1796,0.1914,0.2382]
+Material64.emissiveColor = [.1796,.1914,.2382]
 
 Appearance63.material = Material64
 
@@ -303,7 +303,7 @@ Shape68 = x3d.Shape()
 Shape68.DEF = "SecondPartAfterNose"
 Appearance69 = x3d.Appearance()
 Material70 = x3d.Material()
-Material70.diffuseColor = [0.6,0.6,0.6]
+Material70.diffuseColor = [.6,.6,.6]
 
 Appearance69.material = Material70
 
@@ -354,7 +354,7 @@ Transform78.DEF = "FrontWheelTransform"
 Transform78.center = [0,2.5,0]
 Transform78.rotation = [-1,0,0,1.92]
 Transform78.translation = [0.7,-5.2,-6.5]
-#Front wheel is taken from the Savage Library, modified and re-animated.(from F18 Blue Angel)
+""" Front wheel is taken from the Savage Library, modified and re-animated.(from F18 Blue Angel) """
 Inline79 = x3d.Inline()
 Inline79.url = ["FrontWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.x3d","FrontWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/FrontWheel.wrl"]
 
@@ -366,7 +366,7 @@ Transform80.DEF = "RearLeftWheelTransform"
 Transform80.center = [0,2.5,0]
 Transform80.rotation = [1,0,1,1.92]
 Transform80.translation = [-2.95,-5,7]
-#Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)
+""" Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel) """
 Inline81 = x3d.Inline()
 Inline81.url = ["RearLeftWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.x3d","RearLeftWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearLeftWheel.wrl"]
 
@@ -378,7 +378,7 @@ Transform82.DEF = "RearRightWheelTransform"
 Transform82.center = [0,2.5,0]
 Transform82.rotation = [-1,0,-1,1.92]
 Transform82.translation = [2.95,-5,7]
-#Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel)
+""" Rear wheels are taken from the Savage Library and re-animated (from F18 Blue Angel) """
 Inline83 = x3d.Inline()
 Inline83.url = ["RearRightWheel.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.x3d","RearRightWheel.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/RearRightWheel.wrl"]
 
@@ -390,7 +390,7 @@ Transform84.DEF = "CockpitButtonsTransform"
 Transform85 = x3d.Transform()
 Transform85.DEF = "UpButtonTransform"
 Transform85.rotation = [1,0,0,1.57]
-Transform85.scale = [0.008,0.008,0.008]
+Transform85.scale = [.008,.008,.008]
 Transform85.translation = [-0.95,1.05,-10]
 Shape86 = x3d.Shape()
 Cylinder87 = x3d.Cylinder()
@@ -401,7 +401,7 @@ Shape86.geometry = Cylinder87
 Appearance88 = x3d.Appearance()
 Material89 = x3d.Material()
 Material89.diffuseColor = [1,0,0]
-Material89.shininess = 0.8
+Material89.shininess = .8
 
 Appearance88.material = Material89
 
@@ -418,7 +418,7 @@ Transform84.children.append(Transform85)
 Transform91 = x3d.Transform()
 Transform91.DEF = "DownButtonTransform"
 Transform91.rotation = [1,0,0,1.57]
-Transform91.scale = [0.008,0.008,0.008]
+Transform91.scale = [.008,.008,.008]
 Transform91.translation = [-0.83,1.05,-10]
 Shape92 = x3d.Shape()
 Cylinder93 = x3d.Cylinder()
@@ -429,7 +429,7 @@ Shape92.geometry = Cylinder93
 Appearance94 = x3d.Appearance()
 Material95 = x3d.Material()
 Material95.diffuseColor = [1,1,0]
-Material95.shininess = 0.8
+Material95.shininess = .8
 
 Appearance94.material = Material95
 
@@ -445,8 +445,8 @@ Transform91.children.append(TouchSensor96)
 Transform84.children.append(Transform91)
 Transform97 = x3d.Transform()
 Transform97.DEF = "GearUpTextTransform"
-Transform97.scale = [0.06,0.06,0.06]
-Transform97.translation = [-0.65,1.55,-10]
+Transform97.scale = [.06,.06,.06]
+Transform97.translation = [-.65,1.55,-10]
 Shape98 = x3d.Shape()
 Text99 = x3d.Text()
 Text99.string = ["RED Button","Gear Up"]
@@ -465,8 +465,8 @@ Transform97.children.append(Shape98)
 Transform84.children.append(Transform97)
 Transform102 = x3d.Transform()
 Transform102.DEF = "GearDownTextTransform"
-Transform102.scale = [0.06,0.06,0.06]
-Transform102.translation = [-0.65,1.35,-10]
+Transform102.scale = [.06,.06,.06]
+Transform102.translation = [-.65,1.35,-10]
 Shape103 = x3d.Shape()
 Text104 = x3d.Text()
 Text104.length = [5.5]
@@ -487,8 +487,8 @@ Transform84.children.append(Transform102)
 Transform107 = x3d.Transform()
 Transform107.DEF = "FireButtonTransform"
 Transform107.rotation = [1,0,0,1.57]
-Transform107.scale = [0.008,0.008,0.008]
-Transform107.translation = [0.52,1.6,-10]
+Transform107.scale = [.008,.008,.008]
+Transform107.translation = [.52,1.6,-10]
 Shape108 = x3d.Shape()
 Cylinder109 = x3d.Cylinder()
 Cylinder109.height = 1
@@ -497,8 +497,8 @@ Cylinder109.radius = 4
 Shape108.geometry = Cylinder109
 Appearance110 = x3d.Appearance()
 Material111 = x3d.Material()
-Material111.diffuseColor = [0,0.75,0.18]
-Material111.shininess = 0.8
+Material111.diffuseColor = [0,.75,.18]
+Material111.shininess = .8
 
 Appearance110.material = Material111
 
@@ -514,16 +514,16 @@ Transform107.children.append(TouchSensor112)
 Transform84.children.append(Transform107)
 Transform113 = x3d.Transform()
 Transform113.DEF = "FireTextTransform"
-Transform113.scale = [0.06,0.06,0.06]
-Transform113.translation = [0.36,1.5,-10]
+Transform113.scale = [.06,.06,.06]
+Transform113.translation = [.36,1.5,-10]
 Shape114 = x3d.Shape()
 Text115 = x3d.Text()
-Text115.string = ["Target Locked"," FIRE!..","(Green Button)"]
+Text115.string = ["Target Locked","      FIRE!..","(Green Button)"]
 
 Shape114.geometry = Text115
 Appearance116 = x3d.Appearance()
 Material117 = x3d.Material()
-Material117.diffuseColor = [0,0.75,0.18]
+Material117.diffuseColor = [0,.75,.18]
 
 Appearance116.material = Material117
 
@@ -574,16 +574,16 @@ Transform18.children.append(Viewpoint123)
 Transform124 = x3d.Transform()
 Transform124.DEF = "NoseAntennaTransform"
 Transform124.rotation = [1,0,0,1.57]
-Transform124.translation = [0,-0.275,-21]
+Transform124.translation = [0,-.275,-21]
 Shape125 = x3d.Shape()
 Cylinder126 = x3d.Cylinder()
-Cylinder126.radius = 0.05
+Cylinder126.radius = .05
 
 Shape125.geometry = Cylinder126
 Appearance127 = x3d.Appearance()
 Material128 = x3d.Material()
-Material128.diffuseColor = [0.5,0.5,0.5]
-Material128.shininess = 0.5
+Material128.diffuseColor = [.5,.5,.5]
+Material128.shininess = .5
 
 Appearance127.material = Material128
 
@@ -601,7 +601,7 @@ TimeSensor129.cycleInterval = 8
 Scene17.children.append(TimeSensor129)
 OrientationInterpolator130 = x3d.OrientationInterpolator()
 OrientationInterpolator130.DEF = "GearUpInterpolator"
-OrientationInterpolator130.key = [0,0.5,1]
+OrientationInterpolator130.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator130)
 ROUTE131 = x3d.ROUTE()
@@ -632,7 +632,7 @@ TimeSensor134.cycleInterval = 8
 Scene17.children.append(TimeSensor134)
 OrientationInterpolator135 = x3d.OrientationInterpolator()
 OrientationInterpolator135.DEF = "GearDownInterpolator"
-OrientationInterpolator135.key = [0,0.5,1]
+OrientationInterpolator135.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator135)
 ROUTE136 = x3d.ROUTE()
@@ -656,7 +656,7 @@ ROUTE138.toField = "set_rotation"
 ROUTE138.toNode = "FrontWheelTransform"
 
 Scene17.children.append(ROUTE138)
-#Animation commands for Rear Right Wheel Starts
+""" Animation commands for Rear Right Wheel Starts """
 TimeSensor139 = x3d.TimeSensor()
 TimeSensor139.DEF = "RRearUp1"
 TimeSensor139.cycleInterval = 8
@@ -669,12 +669,12 @@ TimeSensor140.cycleInterval = 8
 Scene17.children.append(TimeSensor140)
 OrientationInterpolator141 = x3d.OrientationInterpolator()
 OrientationInterpolator141.DEF = "RRearInterUp1"
-OrientationInterpolator141.key = [0,0.5,1]
+OrientationInterpolator141.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator141)
 OrientationInterpolator142 = x3d.OrientationInterpolator()
 OrientationInterpolator142.DEF = "RRearInterDown1"
-OrientationInterpolator142.key = [0,0.5,1]
+OrientationInterpolator142.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator142)
 ROUTE143 = x3d.ROUTE()
@@ -719,7 +719,7 @@ ROUTE148.toField = "set_rotation"
 ROUTE148.toNode = "RearRightWheelTransform"
 
 Scene17.children.append(ROUTE148)
-#Animation commands for Rear Left Wheel
+""" Animation commands for Rear Left Wheel """
 TimeSensor149 = x3d.TimeSensor()
 TimeSensor149.DEF = "LRearUp1"
 TimeSensor149.cycleInterval = 8
@@ -732,12 +732,12 @@ TimeSensor150.cycleInterval = 8
 Scene17.children.append(TimeSensor150)
 OrientationInterpolator151 = x3d.OrientationInterpolator()
 OrientationInterpolator151.DEF = "LRearInterUp1"
-OrientationInterpolator151.key = [0,0.5,1]
+OrientationInterpolator151.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator151)
 OrientationInterpolator152 = x3d.OrientationInterpolator()
 OrientationInterpolator152.DEF = "LRearInterDown1"
-OrientationInterpolator152.key = [0,0.5,1]
+OrientationInterpolator152.key = [0,0.5,1.0]
 
 Scene17.children.append(OrientationInterpolator152)
 ROUTE153 = x3d.ROUTE()
@@ -836,8 +836,8 @@ Scene17.children.append(Transform166)
 Transform168 = x3d.Transform()
 Transform168.DEF = "TurkishFlagTransformLeft"
 Transform168.rotation = [0,-1,0,1.57]
-Transform168.scale = [0.3,0.25,0.3]
-Transform168.translation = [-0.01,8,19.5]
+Transform168.scale = [.3,.25,.3]
+Transform168.translation = [-.01,8,19.5]
 Inline169 = x3d.Inline()
 Inline169.url = ["TurkishFlagLeft.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/TurkishFlagLeft.x3d","TurkishFlagLeft.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/TurkishFlagLeft.wrl"]
 
@@ -847,8 +847,8 @@ Scene17.children.append(Transform168)
 Transform170 = x3d.Transform()
 Transform170.DEF = "TurkishFlagTransformRight"
 Transform170.rotation = [0,1,0,1.57]
-Transform170.scale = [0.3,0.25,0.3]
-Transform170.translation = [0.01,8,20.5]
+Transform170.scale = [.3,.25,.3]
+Transform170.translation = [.01,8,20.5]
 Inline171 = x3d.Inline()
 Inline171.url = ["TurkishFlagRight.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/TurkishFlagRight.x3d","TurkishFlagRight.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/TurkishFlagRight.wrl"]
 
@@ -857,7 +857,7 @@ Transform170.children.append(Inline171)
 Scene17.children.append(Transform170)
 Transform172 = x3d.Transform()
 Transform172.DEF = "AmraamHolderTransformLeft"
-Transform172.translation = [-12,-0.176,10.7]
+Transform172.translation = [-12,-.176,10.7]
 Inline173 = x3d.Inline()
 Inline173.DEF = "AmraamHolder"
 Inline173.url = ["AmraamHolder.x3d","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/AmraamHolder.x3d","AmraamHolder.wrl","https://savage.nps.edu/Savage/AircraftFixedWing/F16-FightingFalcon-Turkey/AmraamHolder.wrl"]
@@ -867,7 +867,7 @@ Transform172.children.append(Inline173)
 Scene17.children.append(Transform172)
 Transform174 = x3d.Transform()
 Transform174.DEF = "AmraamHolderTransformRight"
-Transform174.translation = [12,-0.176,10.7]
+Transform174.translation = [12,-.176,10.7]
 Inline175 = x3d.Inline()
 Inline175.USE = "AmraamHolder"
 
@@ -969,12 +969,12 @@ Transform192 = x3d.Transform()
 Transform192.DEF = "InlineCoverOfPlaneTansform"
 Shape193 = x3d.Shape()
 Box194 = x3d.Box()
-Box194.size = [4.15,0.1,20]
+Box194.size = [4.15,.1,20]
 
 Shape193.geometry = Box194
 Appearance195 = x3d.Appearance()
 Material196 = x3d.Material()
-Material196.diffuseColor = [0.25,0.25,0.25]
+Material196.diffuseColor = [.25,.25,.25]
 
 Appearance195.material = Material196
 
@@ -999,7 +999,7 @@ TimeSensor199.cycleInterval = 8
 Scene17.children.append(TimeSensor199)
 PositionInterpolator200 = x3d.PositionInterpolator()
 PositionInterpolator200.DEF = "MissilePath"
-PositionInterpolator200.key = [0,0.1,1]
+PositionInterpolator200.key = [0.0,.1,1.0]
 
 Scene17.children.append(PositionInterpolator200)
 ROUTE201 = x3d.ROUTE()
@@ -1037,9 +1037,9 @@ ROUTE205.toField = "set_bind"
 ROUTE205.toNode = "MissileLaunchView"
 
 Scene17.children.append(ROUTE205)
-#TODO fix type, add filter
+""" TODO fix type, add filter """
 
 X3D0.Scene = Scene17
-f = open("././F16_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("F16_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

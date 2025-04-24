@@ -80,6 +80,7 @@ Shape21 = x3d.Shape()
 Text22 = x3d.Text()
 Text22.string = ["Node"]
 FontStyle23 = x3d.FontStyle()
+FontStyle23.family = ["SERIF"]
 FontStyle23.justify = ["MIDDLE","MIDDLE"]
 FontStyle23.size = 5
 
@@ -133,13 +134,15 @@ field31.type = "MFVec3f"
 
 Script27.field.append(field31)
 
-Script27.sourceCode = '''ecmascript:\n"+
+Script27.sourceCode = '''\n"+
+"ecmascript:\n"+
 "					function set_cycle(value) {\n"+
 "                                                old = translation;\n"+
 "						translation = new SFVec3f(Math.random()*100-50, Math.random()*100-50, Math.random()*100-50);\n"+
 "                                                keyValue = new MFVec3f([old, translation]);\n"+
 "						// Browser.println(translation);\n"+
-"					}'''
+"					}\n"+
+"'''
 
 ProtoBody12.children.append(Script27)
 TimeSensor32 = x3d.TimeSensor()
@@ -247,7 +250,8 @@ IS50.connect.append(connect52)
 
 Script46.IS = IS50
 
-Script46.sourceCode = '''ecmascript:\n"+
+Script46.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "                function set_endA(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
@@ -256,7 +260,7 @@ Script46.sourceCode = '''ecmascript:\n"+
 "		        spine = new MFVec3f([value, spine[1]]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_endB(value) {\n"+
 "		    if (typeof spine === 'undefined') {\n"+
 "		        spine = new MFVec3f([value, value]);\n"+
@@ -264,10 +268,11 @@ Script46.sourceCode = '''ecmascript:\n"+
 "		        spine = new MFVec3f([spine[0], value]);\n"+
 "		    }\n"+
 "                }\n"+
-"\n"+
+"                \n"+
 "                function set_spine(value) {\n"+
 "                    spine = value;\n"+
-"                }'''
+"                }\n"+
+"'''
 
 ProtoBody41.children.append(Script46)
 ROUTE53 = x3d.ROUTE()
@@ -286,34 +291,35 @@ Transform54.DEF = "HoldsContent"
 Transform54.scale = [0.1,0.1,0.1]
 PlaneSensor55 = x3d.PlaneSensor()
 PlaneSensor55.DEF = "clickGenerator"
+PlaneSensor55.enabled = True
 PlaneSensor55.minPosition = [-50,-50]
 PlaneSensor55.maxPosition = [50,50]
 PlaneSensor55.description = "click on background to add nodes, click on nodes to add links"
 
 Transform54.children.append(PlaneSensor55)
 ProtoInstance56 = x3d.ProtoInstance()
-ProtoInstance56.name = "node"
 ProtoInstance56.DEF = "nodeA"
+ProtoInstance56.name = "node"
 fieldValue57 = x3d.fieldValue()
 fieldValue57.name = "position"
-fieldValue57.value = "0 0 0"
+fieldValue57.value = "0.0 0.0 0.0"
 
 ProtoInstance56.fieldValue.append(fieldValue57)
 
 Transform54.children.append(ProtoInstance56)
 ProtoInstance58 = x3d.ProtoInstance()
-ProtoInstance58.name = "node"
 ProtoInstance58.DEF = "nodeB"
+ProtoInstance58.name = "node"
 fieldValue59 = x3d.fieldValue()
 fieldValue59.name = "position"
-fieldValue59.value = "50 50 50"
+fieldValue59.value = "50.0 50.0 50.0"
 
 ProtoInstance58.fieldValue.append(fieldValue59)
 
 Transform54.children.append(ProtoInstance58)
 ProtoInstance60 = x3d.ProtoInstance()
-ProtoInstance60.name = "cylinder"
 ProtoInstance60.DEF = "linkA"
+ProtoInstance60.name = "cylinder"
 fieldValue61 = x3d.fieldValue()
 fieldValue61.name = "set_positionA"
 fieldValue61.value = "0 0 0"
@@ -344,6 +350,6 @@ ROUTE64.toField = "set_positionB"
 Scene8.children.append(ROUTE64)
 
 X3D0.Scene = Scene8
-f = open("././fors_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("fors_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

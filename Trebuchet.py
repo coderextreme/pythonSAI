@@ -6,78 +6,78 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "Trebuchet.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Working model of a 14th century Trebuchet Catapult."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "LT Joe Roth"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "20 June 2001"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "20 October 2019"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "version"
 meta7.content = "7.8"
+meta7.name = "version"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "identifier"
 meta8.content = "https://www.web3d.org/x3d/content/examples/Basic/StudentProjects/Trebuchet.x3d"
+meta8.name = "identifier"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "http://trebuchet.com"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "http://members.home.net/dimona"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "subject"
 meta11.content = "trebuchet catapult Monty Python"
+meta11.name = "subject"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "Permission granted for use of the VRML chicken I own a copy of Monty Python and the Holy Grail I have requested permission to use for non profit use. No response received. I will use the sound clips under \"Fair Use\" clause of the DMCA"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "https://www.web3d.org/WorkingGroups/media/textures/nature/leaves_5.jpg.htm"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "reference"
 meta14.content = "http://www.revemonde.net/UniversalMedia/textures/nature/leaves_5.jpg.htm"
+meta14.name = "reference"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "license"
 meta16.content = "../license.html"
+meta16.name = "license"
 
 head1.children.append(meta16)
 
@@ -126,7 +126,7 @@ Shape22.appearance = Appearance24
 Scene17.children.append(Shape22)
 Transform26 = x3d.Transform()
 Transform26.rotation = [0,1,0,1.57]
-Transform26.scale = [0.5,0.5,0.5]
+Transform26.scale = [.5,.5,.5]
 Transform26.translation = [10.5,6.5,4.5]
 Shape27 = x3d.Shape()
 Appearance28 = x3d.Appearance()
@@ -151,7 +151,7 @@ Transform26.children.append(Shape27)
 Scene17.children.append(Transform26)
 Transform32 = x3d.Transform()
 Transform32.rotation = [0,1,0,1.57]
-Transform32.scale = [0.5,0.5,0.5]
+Transform32.scale = [.5,.5,.5]
 Transform32.translation = [11,5.5,6]
 Switch33 = x3d.Switch()
 Switch33.DEF = "Weight"
@@ -241,7 +241,7 @@ Transform32.children.append(Transform51)
 Scene17.children.append(Transform32)
 Transform56 = x3d.Transform()
 Transform56.rotation = [0,1,0,1.57]
-Transform56.translation = [10,0.5,4.5]
+Transform56.translation = [10,.5,4.5]
 Transform57 = x3d.Transform()
 Transform57.DEF = "launch"
 Transform57.translation = [0,2,5]
@@ -264,7 +264,7 @@ Shape59.geometry = Text62
 
 Billboard58.children.append(Shape59)
 Transform64 = x3d.Transform()
-Transform64.translation = [2,0.3,0]
+Transform64.translation = [2,.3,0]
 Shape65 = x3d.Shape()
 Box66 = x3d.Box()
 Box66.size = [5,1,1]
@@ -336,7 +336,7 @@ Shape80.appearance = Appearance81
 Text82 = x3d.Text()
 Text82.string = ["Bowling Ball (10 lbs)"]
 FontStyle83 = x3d.FontStyle()
-FontStyle83.size = 0.5
+FontStyle83.size = .5
 
 Text82.fontStyle = FontStyle83
 
@@ -366,7 +366,7 @@ Shape87.appearance = Appearance88
 Text89 = x3d.Text()
 Text89.string = ["Cow (1000 lbs)"]
 FontStyle90 = x3d.FontStyle()
-FontStyle90.size = 0.5
+FontStyle90.size = .5
 
 Text89.fontStyle = FontStyle90
 
@@ -395,7 +395,7 @@ Shape94.appearance = Appearance95
 Text96 = x3d.Text()
 Text96.string = ["Chicken (5 lbs)"]
 FontStyle97 = x3d.FontStyle()
-FontStyle97.size = 0.5
+FontStyle97.size = .5
 
 Text96.fontStyle = FontStyle97
 
@@ -481,18 +481,18 @@ Transform104.children.append(Transform111)
 Transform113 = x3d.Transform()
 Transform113.DEF = "verticalsupport"
 Transform113.rotation = [0,0,1,1.57]
-Transform113.scale = [0.9,1,1]
+Transform113.scale = [.9,1,1]
 Transform113.translation = [0,11,0]
 Shape114 = x3d.Shape()
 Shape114.USE = "plank"
 
 Transform113.children.append(Shape114)
-#Main Verticle Support
+""" Main Verticle Support """
 
 Transform104.children.append(Transform113)
 Transform115 = x3d.Transform()
 Transform115.DEF = "horizontalsupport"
-Transform115.scale = [0.4,1,1]
+Transform115.scale = [.4,1,1]
 Transform115.translation = [0,10,0]
 Shape116 = x3d.Shape()
 Shape116.USE = "plank"
@@ -502,10 +502,10 @@ Transform115.children.append(Shape116)
 Transform104.children.append(Transform115)
 Transform117 = x3d.Transform()
 Transform117.rotation = [0,0,1,1.57]
-Transform117.scale = [0.6,1,1]
+Transform117.scale = [.6,1,1]
 Transform117.translation = [0,5,10]
 Transform118 = x3d.Transform()
-Transform118.rotation = [0,1,0,0.4]
+Transform118.rotation = [0,1,0,.4]
 Shape119 = x3d.Shape()
 Shape119.USE = "plank"
 
@@ -516,10 +516,10 @@ Transform117.children.append(Transform118)
 Transform104.children.append(Transform117)
 Transform120 = x3d.Transform()
 Transform120.DEF = "panel"
-Transform120.translation = [0,18.2,-0.3]
+Transform120.translation = [0,18.2,-.3]
 Shape121 = x3d.Shape()
 Box122 = x3d.Box()
-Box122.size = [5,5,0.5]
+Box122.size = [5,5,.5]
 
 Shape121.geometry = Box122
 Appearance123 = x3d.Appearance()
@@ -555,8 +555,8 @@ Transform104.children.append(Transform124)
 Transform129 = x3d.Transform()
 Transform129.DEF = "flinger"
 Transform129.center = [7,0,0]
-Transform129.rotation = [0,0,1,0.82]
-Transform129.scale = [0.9,1,1]
+Transform129.rotation = [0,0,1,.82]
+Transform129.scale = [.9,1,1]
 Transform129.translation = [-7,18,2.5]
 Transform130 = x3d.Transform()
 Shape131 = x3d.Shape()
@@ -589,7 +589,7 @@ Transform130.children.append(Transform134)
 Transform129.children.append(Transform130)
 Transform138 = x3d.Transform()
 Transform138.rotation = [1,0,0,1.57]
-Transform138.scale = [0.2,0.2,0.2]
+Transform138.scale = [.2,.2,.2]
 Transform138.translation = [-15,-1,0]
 Shape139 = x3d.Shape()
 Shape139.DEF = "Torus"
@@ -626,15 +626,15 @@ Sphere147.radius = 1.5
 Shape144.geometry = Sphere147
 
 Transform143.children.append(Shape144)
-#knott
+""" knott """
 
 Transform138.children.append(Transform143)
 
 Transform129.children.append(Transform138)
-#The Unicorn
+""" The Unicorn """
 Transform148 = x3d.Transform()
 Transform148.rotation = [0,0,1,1.2]
-Transform148.scale = [0.2,0.2,0.2]
+Transform148.scale = [.2,.2,.2]
 Transform148.translation = [-18.3,0.3,0]
 Shape149 = x3d.Shape()
 Cylinder150 = x3d.Cylinder()
@@ -656,9 +656,9 @@ Shape154 = x3d.Shape()
 Shape154.USE = "Torus"
 
 Transform153.children.append(Shape154)
-#The Unicorn
+""" The Unicorn """
 Transform155 = x3d.Transform()
-Transform155.translation = [-2,0,0]
+Transform155.translation = [-2,-0,0]
 Shape156 = x3d.Shape()
 Sphere157 = x3d.Sphere()
 Sphere157.radius = 1.5
@@ -670,7 +670,7 @@ Appearance158.USE = "rope"
 Shape156.appearance = Appearance158
 
 Transform155.children.append(Shape156)
-#Knott
+""" Knott """
 
 Transform153.children.append(Transform155)
 
@@ -704,10 +704,10 @@ Transform164 = x3d.Transform()
 Transform164.rotation = [1,0,0,-1.7]
 Transform164.translation = [-17,-4.5,0]
 Transform165 = x3d.Transform()
-Transform165.scale = [0.2,0.2,0.2]
+Transform165.scale = [.2,.2,.2]
 Shape166 = x3d.Shape()
 Shape166.USE = "Torus"
-#Knot
+""" Knot """
 
 Transform165.children.append(Shape166)
 Transform167 = x3d.Transform()
@@ -734,7 +734,7 @@ Transform171.DEF = "RnS"
 Transform172 = x3d.Transform()
 Transform172.DEF = "ropes"
 Transform173 = x3d.Transform()
-Transform173.rotation = [0,0,1,-0.82]
+Transform173.rotation = [0,0,1,-.82]
 Transform173.translation = [7,-26,-2.5]
 Shape174 = x3d.Shape()
 Appearance175 = x3d.Appearance()
@@ -770,23 +770,23 @@ Transform172.children.append(Transform173)
 Transform171.children.append(Transform172)
 Transform180 = x3d.Transform()
 Transform180.DEF = "sling"
-Transform180.rotation = [0,0,1,-0.82]
+Transform180.rotation = [0,0,1,-.82]
 Transform180.translation = [-4,-15.3,0]
 Transform181 = x3d.Transform()
 Transform182 = x3d.Transform()
 Transform182.rotation = [0,1,0,-1.57]
 Transform182.scale = [1,1.3,1]
-Transform182.translation = [0.5,0,-1]
+Transform182.translation = [.5,0,-1]
 Transform183 = x3d.Transform()
 Transform183.rotation = [0,0,1,1.57]
 Transform184 = x3d.Transform()
-Transform184.scale = [0.3,0.3,0.3]
+Transform184.scale = [.3,.3,.3]
 Shape185 = x3d.Shape()
 Shape185.DEF = "halfsling"
 Appearance186 = x3d.Appearance()
 Appearance186.DEF = "clear"
 Material187 = x3d.Material()
-Material187.transparency = 0.5
+Material187.transparency = .5
 
 Appearance186.material = Material187
 
@@ -797,7 +797,7 @@ Shape185.geometry = Extrusion188
 
 Transform184.children.append(Shape185)
 Transform189 = x3d.Transform()
-Transform189.scale = [0.3,0.3,0.3]
+Transform189.scale = [.3,.3,.3]
 Transform189.translation = [0,-3.5,11.5]
 Shape190 = x3d.Shape()
 Shape190.USE = "Torus"
@@ -823,14 +823,14 @@ Transform184.children.append(Transform189)
 
 Transform183.children.append(Transform184)
 Transform195 = x3d.Transform()
-Transform195.scale = [0.3,0.3,0.3]
+Transform195.scale = [.3,.3,.3]
 Transform195.translation = [2,0,0]
 Shape196 = x3d.Shape()
 Shape196.USE = "halfsling"
 
 Transform195.children.append(Shape196)
 Transform197 = x3d.Transform()
-Transform197.scale = [0.3,0.3,0.3]
+Transform197.scale = [.3,.3,.3]
 Transform197.translation = [0,-3.5,11.3]
 Shape198 = x3d.Shape()
 Shape198.USE = "Torus"
@@ -884,16 +884,16 @@ Transform182.children.append(TouchSensor207)
 Transform181.children.append(Transform182)
 Transform208 = x3d.Transform()
 Transform208.DEF = "projectiletransform"
-Transform208.scale = [0.01,0.01,0.01]
+Transform208.scale = [.01,.01,.01]
 Switch209 = x3d.Switch()
 Switch209.DEF = "projectile"
 Switch209.whichChoice = 0
 Group210 = x3d.Group()
 Transform211 = x3d.Transform()
-Transform211.translation = [0,0.7,0]
+Transform211.translation = [0,.7,0]
 Shape212 = x3d.Shape()
 Sphere213 = x3d.Sphere()
-Sphere213.radius = 0.7
+Sphere213.radius = .7
 
 Shape212.geometry = Sphere213
 Appearance214 = x3d.Appearance()
@@ -924,8 +924,8 @@ Switch209.children.append(Group216)
 Group219 = x3d.Group()
 Transform220 = x3d.Transform()
 Transform220.rotation = [0,1,0,1.57]
-Transform220.scale = [0.4,0.4,0.4]
-Transform220.translation = [0,0.7,0]
+Transform220.scale = [.4,.4,.4]
+Transform220.translation = [0,.7,0]
 Inline221 = x3d.Inline()
 Inline221.url = ["vrml_ginger.wrl","http://home.inreach.com/ntamura/vrml/vrml_ginger.wrl"]
 
@@ -952,7 +952,7 @@ Transform222.translation = [0,18,2.5]
 Shape223 = x3d.Shape()
 Cylinder224 = x3d.Cylinder()
 Cylinder224.height = 8
-Cylinder224.radius = 0.4
+Cylinder224.radius = .4
 
 Shape223.geometry = Cylinder224
 Appearance225 = x3d.Appearance()
@@ -965,7 +965,7 @@ Appearance225.material = Material226
 Shape223.appearance = Appearance225
 
 Transform222.children.append(Shape223)
-#Top Pivot
+""" Top Pivot """
 
 Transform104.children.append(Transform222)
 Transform227 = x3d.Transform()
@@ -974,7 +974,7 @@ Transform228 = x3d.Transform()
 Transform228.translation = [4,18,1.8]
 Shape229 = x3d.Shape()
 Box230 = x3d.Box()
-Box230.size = [1,10,0.5]
+Box230.size = [1,10,.5]
 
 Shape229.geometry = Box230
 Appearance231 = x3d.Appearance()
@@ -989,7 +989,7 @@ Transform232 = x3d.Transform()
 Transform232.translation = [4,18,3.2]
 Shape233 = x3d.Shape()
 Box234 = x3d.Box()
-Box234.size = [1,10,0.5]
+Box234.size = [1,10,.5]
 
 Shape233.geometry = Box234
 Appearance235 = x3d.Appearance()
@@ -1002,7 +1002,7 @@ Transform232.children.append(Shape233)
 Transform227.children.append(Transform232)
 Transform236 = x3d.Transform()
 Transform236.translation = [4,14,2.5]
-#CounterWeight
+""" CounterWeight """
 Shape237 = x3d.Shape()
 Cylinder238 = x3d.Cylinder()
 Cylinder238.height = 4
@@ -1027,7 +1027,7 @@ Transform241.translation = [4,22,2.5]
 Shape242 = x3d.Shape()
 Cylinder243 = x3d.Cylinder()
 Cylinder243.height = 2.5
-Cylinder243.radius = 0.3
+Cylinder243.radius = .3
 
 Shape242.geometry = Cylinder243
 Appearance244 = x3d.Appearance()
@@ -1046,7 +1046,7 @@ Transform227.children.append(Transform241)
 Transform104.children.append(Transform227)
 Transform246 = x3d.Transform()
 Transform246.rotation = [0,0,1,1.57]
-Transform246.scale = [0.2,0.2,0.2]
+Transform246.scale = [.2,.2,.2]
 Transform246.translation = [-11.5,-1,2]
 Transform247 = x3d.Transform()
 Transform247.DEF = "screw"
@@ -1061,7 +1061,7 @@ Transform249.translation = [0,0,7]
 Shape250 = x3d.Shape()
 Cylinder251 = x3d.Cylinder()
 Cylinder251.height = 10
-Cylinder251.radius = 0.7
+Cylinder251.radius = .7
 
 Shape250.geometry = Cylinder251
 Appearance252 = x3d.Appearance()
@@ -1085,7 +1085,7 @@ Transform255.USE = "screw"
 Transform254.children.append(Transform255)
 
 Transform246.children.append(Transform254)
-#Release Pin
+""" Release Pin """
 Transform256 = x3d.Transform()
 Transform256.DEF = "Pin"
 Transform256.rotation = [1,0,0,-1.57]
@@ -1122,7 +1122,7 @@ Transform263.USE = "horizontalsupport"
 Transform258.children.append(Transform263)
 Transform264 = x3d.Transform()
 Transform264.rotation = [0,1,0,1.57]
-Transform264.scale = [0.6,1,1]
+Transform264.scale = [.6,1,1]
 Transform264.translation = [0,-11,-2.5]
 Transform265 = x3d.Transform()
 Transform265.USE = "horizontalsupport"
@@ -1132,10 +1132,10 @@ Transform264.children.append(Transform265)
 Transform258.children.append(Transform264)
 Transform266 = x3d.Transform()
 Transform266.rotation = [0,0,1,-1.57]
-Transform266.scale = [0.6,1,1]
+Transform266.scale = [.6,1,1]
 Transform266.translation = [0,5,-10]
 Transform267 = x3d.Transform()
-Transform267.rotation = [0,1,0,0.4]
+Transform267.rotation = [0,1,0,.4]
 Shape268 = x3d.Shape()
 Shape268.USE = "plank"
 
@@ -1145,7 +1145,7 @@ Transform266.children.append(Transform267)
 
 Transform258.children.append(Transform266)
 Transform269 = x3d.Transform()
-Transform269.translation = [0,0,0.6]
+Transform269.translation = [0,0,.6]
 Transform270 = x3d.Transform()
 Transform270.USE = "panel"
 
@@ -1196,7 +1196,7 @@ Shape279.appearance = Appearance281
 
 Transform275.children.append(Shape279)
 Transform282 = x3d.Transform()
-Transform282.translation = [0,0.55,0]
+Transform282.translation = [0,.55,0]
 Shape283 = x3d.Shape()
 Shape283.DEF = "hub"
 Sphere284 = x3d.Sphere()
@@ -1225,7 +1225,7 @@ Shape288.USE = "tracks"
 
 Transform286.children.append(Shape288)
 Transform289 = x3d.Transform()
-Transform289.translation = [0,-0.55,0]
+Transform289.translation = [0,-.55,0]
 Shape290 = x3d.Shape()
 Shape290.USE = "hub"
 
@@ -1254,7 +1254,7 @@ Shape295.USE = "tracks"
 
 Transform293.children.append(Shape295)
 Transform296 = x3d.Transform()
-Transform296.translation = [0,0.55,0]
+Transform296.translation = [0,.55,0]
 Shape297 = x3d.Shape()
 Shape297.USE = "hub"
 
@@ -1275,7 +1275,7 @@ Shape300.USE = "tracks"
 
 Transform298.children.append(Shape300)
 Transform301 = x3d.Transform()
-Transform301.translation = [0,-0.55,0]
+Transform301.translation = [0,-.55,0]
 Shape302 = x3d.Shape()
 Shape302.USE = "hub"
 
@@ -1285,7 +1285,7 @@ Transform298.children.append(Transform301)
 
 Transform291.children.append(Transform298)
 Transform303 = x3d.Transform()
-Transform303.rotation = [0,1,0,-0.6]
+Transform303.rotation = [0,1,0,-.6]
 Transform303.translation = [0,100,400]
 Transform304 = x3d.Transform()
 Transform304.translation = [1,3,0]
@@ -1306,13 +1306,14 @@ TouchSensor308.USE = "LauncheeChoice"
 Transform307.children.append(TouchSensor308)
 Switch309 = x3d.Switch()
 Switch309.USE = "projectilename"
+Switch309.whichChoice = -1
 
 Transform307.children.append(Switch309)
 Transform310 = x3d.Transform()
 Transform310.translation = [2.5,0,0]
 Shape311 = x3d.Shape()
 Box312 = x3d.Box()
-Box312.size = [5,0.5,0.5]
+Box312.size = [5,.5,.5]
 
 Shape311.geometry = Box312
 Appearance313 = x3d.Appearance()
@@ -1329,7 +1330,7 @@ Transform307.children.append(Transform310)
 
 Transform303.children.append(Transform307)
 Transform315 = x3d.Transform()
-Transform315.scale = [0.5,0.5,0.5]
+Transform315.scale = [.5,.5,.5]
 Transform315.translation = [0,-1,0]
 TouchSensor316 = x3d.TouchSensor()
 TouchSensor316.USE = "weightselector"
@@ -1337,13 +1338,14 @@ TouchSensor316.USE = "weightselector"
 Transform315.children.append(TouchSensor316)
 Switch317 = x3d.Switch()
 Switch317.USE = "Weight"
+Switch317.whichChoice = -1
 
 Transform315.children.append(Switch317)
 Transform318 = x3d.Transform()
 Transform318.translation = [8,0,0]
 Shape319 = x3d.Shape()
 Box320 = x3d.Box()
-Box320.size = [17,1,0.5]
+Box320.size = [17,1,.5]
 
 Shape319.geometry = Box320
 Appearance321 = x3d.Appearance()
@@ -1366,6 +1368,7 @@ Transform323.DEF = "ProjectileTransform"
 Transform323.translation = [14.25,1.25,0]
 Switch324 = x3d.Switch()
 Switch324.USE = "projectile"
+Switch324.whichChoice = -1
 
 Transform323.children.append(Switch324)
 Transform325 = x3d.Transform()
@@ -1408,25 +1411,26 @@ Transform291.children.append(Transform330)
 Script333 = x3d.Script()
 Script333.DEF = "WeightScript"
 field334 = x3d.field()
-field334.name = "set_boolean"
 field334.accessType = "inputOnly"
+field334.name = "set_boolean"
 field334.type = "SFBool"
 
 Script333.field.append(field334)
 field335 = x3d.field()
-field335.name = "whichchoice"
 field335.accessType = "outputOnly"
+field335.name = "whichchoice"
 field335.type = "SFInt32"
 
 Script333.field.append(field335)
 field336 = x3d.field()
-field336.name = "CounterWeight"
 field336.accessType = "outputOnly"
+field336.name = "CounterWeight"
 field336.type = "SFFloat"
 
 Script333.field.append(field336)
 
-Script333.sourceCode = '''ecmascript:\n"+
+Script333.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "\n"+
 "function initialize ()\n"+
@@ -1448,31 +1452,33 @@ Script333.sourceCode = '''ecmascript:\n"+
 "\n"+
 "\n"+
 "        Browser.print ('CounterWeight ='+CounterWeight);\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform291.children.append(Script333)
 Script337 = x3d.Script()
 Script337.DEF = "LauncheeScript"
 field338 = x3d.field()
-field338.name = "set_boolean"
 field338.accessType = "inputOnly"
+field338.name = "set_boolean"
 field338.type = "SFBool"
 
 Script337.field.append(field338)
 field339 = x3d.field()
-field339.name = "whichchoice"
 field339.accessType = "outputOnly"
+field339.name = "whichchoice"
 field339.type = "SFInt32"
 
 Script337.field.append(field339)
 field340 = x3d.field()
-field340.name = "ProjectileWeight"
 field340.accessType = "outputOnly"
+field340.name = "ProjectileWeight"
 field340.type = "SFFloat"
 
 Script337.field.append(field340)
 
-Script337.sourceCode = '''ecmascript:\n"+
+Script337.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function set_boolean (boolean_input, eventTime)\n"+
 "{\n"+
@@ -1484,25 +1490,27 @@ Script337.sourceCode = '''ecmascript:\n"+
 "\n"+
 "	if ( whichchoice ==3 ) { whichchoice = 0; ProjectileWeight=10.00; }\n"+
 "	Browser.print ('Projectile Weight'+ProjectileWeight);\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform291.children.append(Script337)
 Script341 = x3d.Script()
 Script341.DEF = "PigdogMonkScript"
 field342 = x3d.field()
-field342.name = "set_boolean"
 field342.accessType = "inputOnly"
+field342.name = "set_boolean"
 field342.type = "SFBool"
 
 Script341.field.append(field342)
 field343 = x3d.field()
-field343.name = "whichchoice"
 field343.accessType = "outputOnly"
+field343.name = "whichchoice"
 field343.type = "SFInt32"
 
 Script341.field.append(field343)
 
-Script341.sourceCode = '''ecmascript:\n"+
+Script341.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function set_boolean (boolean_input, eventTime)\n"+
 "{\n"+
@@ -1513,57 +1521,59 @@ Script341.sourceCode = '''ecmascript:\n"+
 "        if ( whichchoice ==2 )  whichchoice = 0;\n"+
 "\n"+
 "\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform291.children.append(Script341)
 Script344 = x3d.Script()
 Script344.DEF = "Mover"
 field345 = x3d.field()
-field345.name = "set_fraction"
 field345.accessType = "inputOnly"
+field345.name = "set_fraction"
 field345.type = "SFFloat"
 
 Script344.field.append(field345)
 field346 = x3d.field()
-field346.name = "set_MassCounterWeight"
 field346.accessType = "inputOnly"
+field346.name = "set_MassCounterWeight"
 field346.type = "SFFloat"
 
 Script344.field.append(field346)
 field347 = x3d.field()
-field347.name = "set_MassProjectileWeight"
 field347.accessType = "inputOnly"
+field347.name = "set_MassProjectileWeight"
 field347.type = "SFFloat"
 
 Script344.field.append(field347)
 field348 = x3d.field()
-field348.name = "MassCounterWeight"
 field348.accessType = "initializeOnly"
+field348.name = "MassCounterWeight"
 field348.type = "SFFloat"
 field348.value = 1
 
 Script344.field.append(field348)
 field349 = x3d.field()
-field349.name = "MassProjectileWeight"
 field349.accessType = "initializeOnly"
+field349.name = "MassProjectileWeight"
 field349.type = "SFFloat"
 field349.value = 1
 
 Script344.field.append(field349)
 field350 = x3d.field()
-field350.name = "transparent"
 field350.accessType = "outputOnly"
+field350.name = "transparent"
 field350.type = "SFVec3f"
 
 Script344.field.append(field350)
 field351 = x3d.field()
-field351.name = "value_changed"
 field351.accessType = "outputOnly"
+field351.name = "value_changed"
 field351.type = "SFVec3f"
 
 Script344.field.append(field351)
 
-Script344.sourceCode = '''ecmascript:\n"+
+Script344.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "function initialize ()\n"+
 "{\n"+
@@ -1603,7 +1613,8 @@ Script344.sourceCode = '''ecmascript:\n"+
 "\n"+
 "	value_changed = new SFVec3f (x, y, z);\n"+
 "	Browser.print ('x=' + value_changed[0] + ' y=' + value_changed[1] + ' z=' + value_changed[2]);\n"+
-"}'''
+"}\n"+
+"'''
 
 Transform291.children.append(Script344)
 
@@ -1617,27 +1628,27 @@ TimeSensor352.cycleInterval = 10
 Scene17.children.append(TimeSensor352)
 PositionInterpolator353 = x3d.PositionInterpolator()
 PositionInterpolator353.DEF = "verticalweightpath"
-PositionInterpolator353.key = [0,0.1,0.2,0.2,0.3,0.9]
+PositionInterpolator353.key = [0,.1,.2,.2,.3,.9]
 
 Scene17.children.append(PositionInterpolator353)
 OrientationInterpolator354 = x3d.OrientationInterpolator()
 OrientationInterpolator354.DEF = "flingerangles"
-OrientationInterpolator354.key = [0,0.1,0.2,0.2,0.3,0.9]
+OrientationInterpolator354.key = [0,.1,.2,.2,.3,.9]
 
 Scene17.children.append(OrientationInterpolator354)
 PositionInterpolator355 = x3d.PositionInterpolator()
 PositionInterpolator355.DEF = "pinpath"
-PositionInterpolator355.key = [0,0.01,0.95,1]
+PositionInterpolator355.key = [0,.01,.95,1]
 
 Scene17.children.append(PositionInterpolator355)
 OrientationInterpolator356 = x3d.OrientationInterpolator()
 OrientationInterpolator356.DEF = "RnSAngels"
-OrientationInterpolator356.key = [0,0.7,1]
+OrientationInterpolator356.key = [0,.7,1]
 
 Scene17.children.append(OrientationInterpolator356)
 PositionInterpolator357 = x3d.PositionInterpolator()
 PositionInterpolator357.DEF = "invisiable"
-PositionInterpolator357.key = [0,0.2,0.98,0.99]
+PositionInterpolator357.key = [0,.2,.98,.99]
 
 Scene17.children.append(PositionInterpolator357)
 ROUTE358 = x3d.ROUTE()
@@ -1824,6 +1835,6 @@ ROUTE383.toNode = "Pin"
 Scene17.children.append(ROUTE383)
 
 X3D0.Scene = Scene17
-f = open("././Trebuchet_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("Trebuchet_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

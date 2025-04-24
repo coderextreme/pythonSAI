@@ -6,8 +6,8 @@ X3D0.profile = "Immersive"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "Scripting"
 component2.level = 1
+component2.name = "Scripting"
 
 head1.children.append(component2)
 component3 = x3d.component()
@@ -69,9 +69,10 @@ head1.children.append(meta13)
 X3D0.head = head1
 Scene14 = x3d.Scene()
 NavigationInfo15 = x3d.NavigationInfo()
+NavigationInfo15.type = ["EXAMINE","ANY"]
 
 Scene14.children.append(NavigationInfo15)
-#Images courtesy of Paul Debevec's Light Probe Image Gallery
+""" Images courtesy of Paul Debevec's Light Probe Image Gallery """
 Background16 = x3d.Background()
 Background16.backUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_back.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_back.png"]
 Background16.bottomUrl = ["../resources/images/all_probes/stpeters_cross/stpeters_bottom.png","https://coderextreme.net/X3DJSONLD/images/all_probes/stpeters_cross/stpeters_bottom.png"]
@@ -86,11 +87,12 @@ ProtoDeclare17.name = "flower"
 ProtoBody18 = x3d.ProtoBody()
 Transform19 = x3d.Transform()
 Transform19.DEF = "animate_transform"
+Transform19.translation = [0,0,0]
 Shape20 = x3d.Shape()
 Appearance21 = x3d.Appearance()
 Material22 = x3d.Material()
-Material22.diffuseColor = [0.7,0.7,0.7]
-Material22.specularColor = [0.5,0.5,0.5]
+Material22.diffuseColor = [.7,.7,.7]
+Material22.specularColor = [.5,.5,.5]
 
 Appearance21.material = Material22
 ComposedCubeMapTexture23 = x3d.ComposedCubeMapTexture()
@@ -131,11 +133,16 @@ field31.accessType = "inputOutput"
 field31.value = 0
 
 ComposedShader30.field.append(field31)
+""" 
+		       <field name='cube' type='SFNode' accessType=\"inputOutput\">
+			  <ComposedCubeMapTexture USE=\"texture\"/>
+		  </field>
+		  """
 field32 = x3d.field()
 field32.name = "chromaticDispertion"
 field32.accessType = "initializeOnly"
 field32.type = "SFVec3f"
-field32.value = [0.98,1,1.033]
+field32.value = [0.98,1.0,1.033]
 
 ComposedShader30.field.append(field32)
 field33 = x3d.field()
@@ -201,7 +208,6 @@ field41.accessType = "inputOutput"
 field41.value = 0
 
 ComposedShader30.field.append(field41)
-#<field name='cube' type='SFNode' accessType=\"inputOutput\"> <ComposedCubeMapTexture USE=\"texture\"/> </field>
 ShaderPart42 = x3d.ShaderPart()
 ShaderPart42.url = ["../shaders/x3dom_flowers_chromatic.vs","https://coderextreme.net/X3DJSONLD/src/main/shaders/x3dom_flowers_chromatic.vs"]
 ShaderPart42.type = "VERTEX"
@@ -231,7 +237,7 @@ field47 = x3d.field()
 field47.name = "chromaticDispertion"
 field47.accessType = "initializeOnly"
 field47.type = "SFVec3f"
-field47.value = [0.98,1,1.033]
+field47.value = [0.98,1.0,1.033]
 
 ComposedShader44.field.append(field47)
 field48 = x3d.field()
@@ -383,7 +389,8 @@ field69.value = 0.5
 
 Script60.field.append(field69)
 
-Script60.sourceCode = '''ecmascript:\n"+
+Script60.sourceCode = '''\n"+
+"ecmascript:\n"+
 "\n"+
 "			function initialize() {\n"+
 "			    translation = new SFVec3f(0, 0, 0);\n"+
@@ -449,7 +456,8 @@ Script60.sourceCode = '''ecmascript:\n"+
 "				if (d > 10) {\n"+
 "					d = 4;\n"+
 "				}\n"+
-"			}'''
+"			}\n"+
+"'''
 
 ProtoBody18.children.append(Script60)
 TimeSensor70 = x3d.TimeSensor()
@@ -574,6 +582,6 @@ ProtoInstance87.name = "flower"
 Scene14.children.append(ProtoInstance87)
 
 X3D0.Scene = Scene14
-f = open("././flowers_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flowers_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

@@ -6,78 +6,78 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.1"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "IcosahedronSubdivisionLevel5.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "reference"
 meta3.content = "IcosahedronSubdivisionLevel5.ply"
+meta3.name = "reference"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "description"
 meta4.content = "Icosahedron is a polyhedron with twenty faces, subdivided to level 5, where all 10242 vertices and 20480 faces produce regular (equilateral) triangles."
+meta4.name = "description"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "13 September 2014"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "27 September 2014"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "creator"
 meta7.content = "Don Brutzman"
+meta7.name = "creator"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "Icosahedron.x3d"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "https://en.wikipedia.org/wiki/Icosahedron"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://en.wiktionary.org/wiki/icosahedron"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "https://en.wikipedia.org/wiki/Platonic_solid"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "https://en.wikipedia.org/wiki/Geodesic_grid"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "identifier"
 meta13.content = "http://x3dGraphics.com/examples/X3dForAdvancedModeling/GeometricShapes/IcosahedronSubdivisionLevel5.x3d"
+meta13.name = "identifier"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "generator"
 meta14.content = "Meshlab X3D Exported, http://meshlab.sourceforge.net"
+meta14.name = "generator"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "generator"
 meta15.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta15.name = "generator"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "license"
 meta16.content = "../license.html"
+meta16.name = "license"
 
 head1.children.append(meta16)
 
@@ -112,6 +112,6 @@ Shape20.appearance = Appearance23
 Scene17.children.append(Shape20)
 
 X3D0.Scene = Scene17
-f = open("././IcosahedronSubdivisionLevel5_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("IcosahedronSubdivisionLevel5_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

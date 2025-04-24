@@ -58,16 +58,16 @@ ProtoDeclare11 = x3d.ProtoDeclare()
 ProtoDeclare11.name = "org"
 ProtoInterface12 = x3d.ProtoInterface()
 field13 = x3d.field()
-field13.name = "posi"
 field13.accessType = "initializeOnly"
 field13.type = "SFVec3f"
+field13.name = "posi"
 field13.value = [0,0,0]
 
 ProtoInterface12.field.append(field13)
 field14 = x3d.field()
-field14.name = "col"
 field14.accessType = "initializeOnly"
 field14.type = "SFColor"
+field14.name = "col"
 field14.value = [0,0,0]
 
 ProtoInterface12.field.append(field14)
@@ -115,9 +115,9 @@ ProtoDeclare25 = x3d.ProtoDeclare()
 ProtoDeclare25.name = "r"
 ProtoInterface26 = x3d.ProtoInterface()
 field27 = x3d.field()
-field27.name = "pos"
 field27.accessType = "initializeOnly"
 field27.type = "SFVec3f"
+field27.name = "pos"
 field27.value = [0,0,0]
 
 ProtoInterface26.field.append(field27)
@@ -165,6 +165,6 @@ Anchor34.children.append(ProtoInstance35)
 Scene5.children.append(Anchor34)
 
 X3D0.Scene = Scene5
-f = open("././t2_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("t2_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

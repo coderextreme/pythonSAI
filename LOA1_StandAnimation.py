@@ -6,83 +6,83 @@ X3D0.profile = "Immersive"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "LOA1_StandAnimation.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Humanoid animation prototype reusable by any Humanoid."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Cindy Ballreich cindy@ballreich.net 3Name3D, Joe Williams, Don Brutzman"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "rights"
 meta5.content = "1997 3Name3D / Yglesias, Wallock, Divekar, Inc., all rights reserved."
+meta5.name = "rights"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "translator"
 meta6.content = "Ozan APAYDIN"
+meta6.name = "translator"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "created"
 meta7.content = "1 December 2001"
+meta7.name = "created"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "modified"
 meta8.content = "23 May 2020"
+meta8.name = "modified"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "consider adding eyeball animation"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "http://www.ballreich.net/vrml/HAnim/nancy_HAnim.wrl"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "reference"
 meta11.content = "http://www.HAnim.org"
+meta11.name = "reference"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "reference"
 meta12.content = "http://HAnim.org/Models"
+meta12.name = "reference"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "reference"
 meta13.content = "http://HAnim.org/Nodes"
+meta13.name = "reference"
 
 head1.children.append(meta13)
 meta14 = x3d.meta()
-meta14.name = "subject"
 meta14.content = "Nancy Stand Animation HAnim 2001"
+meta14.name = "subject"
 
 head1.children.append(meta14)
 meta15 = x3d.meta()
-meta15.name = "identifier"
 meta15.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Prototypes/LOA1_StandAnimation.x3d"
+meta15.name = "identifier"
 
 head1.children.append(meta15)
 meta16 = x3d.meta()
-meta16.name = "generator"
 meta16.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta16.name = "generator"
 
 head1.children.append(meta16)
 meta17 = x3d.meta()
-meta17.name = "license"
 meta17.content = "../license.html"
+meta17.name = "license"
 
 head1.children.append(meta17)
 
@@ -96,163 +96,163 @@ ProtoDeclare20 = x3d.ProtoDeclare()
 ProtoDeclare20.name = "LOA1_StandAnimation"
 ProtoInterface21 = x3d.ProtoInterface()
 field22 = x3d.field()
-field22.name = "cycleInterval"
 field22.accessType = "inputOutput"
+field22.name = "cycleInterval"
 field22.type = "SFTime"
 field22.value = 0.009999999776482582
 
 ProtoInterface21.field.append(field22)
 field23 = x3d.field()
-field23.name = "enabled"
 field23.accessType = "inputOutput"
+field23.name = "enabled"
 field23.type = "SFBool"
 field23.value = True
 
 ProtoInterface21.field.append(field23)
 field24 = x3d.field()
-field24.name = "loop"
 field24.accessType = "inputOutput"
+field24.name = "loop"
 field24.type = "SFBool"
 field24.value = True
 
 ProtoInterface21.field.append(field24)
 field25 = x3d.field()
-field25.name = "startTime"
 field25.accessType = "inputOutput"
+field25.name = "startTime"
 field25.type = "SFTime"
 field25.value = 0
 
 ProtoInterface21.field.append(field25)
 field26 = x3d.field()
-field26.name = "stopTime"
 field26.accessType = "inputOutput"
+field26.name = "stopTime"
 field26.type = "SFTime"
 field26.value = -1
 
 ProtoInterface21.field.append(field26)
 field27 = x3d.field()
-field27.name = "fraction_changed"
 field27.accessType = "outputOnly"
+field27.name = "fraction_changed"
 field27.type = "SFFloat"
 
 ProtoInterface21.field.append(field27)
 field28 = x3d.field()
-field28.name = "isActive"
 field28.accessType = "outputOnly"
+field28.name = "isActive"
 field28.type = "SFBool"
 
 ProtoInterface21.field.append(field28)
 field29 = x3d.field()
-field29.name = "HumanoidRoot_translation_changed"
 field29.accessType = "outputOnly"
+field29.name = "HumanoidRoot_translation_changed"
 field29.type = "SFVec3f"
 
 ProtoInterface21.field.append(field29)
 field30 = x3d.field()
-field30.name = "HumanoidRoot_rotation_changed"
 field30.accessType = "outputOnly"
+field30.name = "HumanoidRoot_rotation_changed"
 field30.type = "SFRotation"
 
 ProtoInterface21.field.append(field30)
 field31 = x3d.field()
-field31.name = "lower_body_rotation_changed"
 field31.accessType = "outputOnly"
+field31.name = "lower_body_rotation_changed"
 field31.type = "SFRotation"
 
 ProtoInterface21.field.append(field31)
 field32 = x3d.field()
-field32.name = "l_hip_rotation_changed"
 field32.accessType = "outputOnly"
+field32.name = "l_hip_rotation_changed"
 field32.type = "SFRotation"
 
 ProtoInterface21.field.append(field32)
 field33 = x3d.field()
-field33.name = "l_knee_rotation_changed"
 field33.accessType = "outputOnly"
+field33.name = "l_knee_rotation_changed"
 field33.type = "SFRotation"
 
 ProtoInterface21.field.append(field33)
 field34 = x3d.field()
-field34.name = "l_ankle_rotation_changed"
 field34.accessType = "outputOnly"
+field34.name = "l_ankle_rotation_changed"
 field34.type = "SFRotation"
 
 ProtoInterface21.field.append(field34)
 field35 = x3d.field()
-field35.name = "l_midtarsal_rotation_changed"
 field35.accessType = "outputOnly"
+field35.name = "l_midtarsal_rotation_changed"
 field35.type = "SFRotation"
 
 ProtoInterface21.field.append(field35)
 field36 = x3d.field()
-field36.name = "r_hip_rotation_changed"
 field36.accessType = "outputOnly"
+field36.name = "r_hip_rotation_changed"
 field36.type = "SFRotation"
 
 ProtoInterface21.field.append(field36)
 field37 = x3d.field()
-field37.name = "r_knee_rotation_changed"
 field37.accessType = "outputOnly"
+field37.name = "r_knee_rotation_changed"
 field37.type = "SFRotation"
 
 ProtoInterface21.field.append(field37)
 field38 = x3d.field()
-field38.name = "r_ankle_rotation_changed"
 field38.accessType = "outputOnly"
+field38.name = "r_ankle_rotation_changed"
 field38.type = "SFRotation"
 
 ProtoInterface21.field.append(field38)
 field39 = x3d.field()
-field39.name = "r_midtarsal_rotation_changed"
 field39.accessType = "outputOnly"
+field39.name = "r_midtarsal_rotation_changed"
 field39.type = "SFRotation"
 
 ProtoInterface21.field.append(field39)
 field40 = x3d.field()
-field40.name = "vl5_rotation_changed"
 field40.accessType = "outputOnly"
+field40.name = "vl5_rotation_changed"
 field40.type = "SFRotation"
 
 ProtoInterface21.field.append(field40)
 field41 = x3d.field()
-field41.name = "skullbase_rotation_changed"
 field41.accessType = "outputOnly"
+field41.name = "skullbase_rotation_changed"
 field41.type = "SFRotation"
 
 ProtoInterface21.field.append(field41)
 field42 = x3d.field()
-field42.name = "l_shoulder_rotation_changed"
 field42.accessType = "outputOnly"
+field42.name = "l_shoulder_rotation_changed"
 field42.type = "SFRotation"
 
 ProtoInterface21.field.append(field42)
 field43 = x3d.field()
-field43.name = "l_elbow_rotation_changed"
 field43.accessType = "outputOnly"
+field43.name = "l_elbow_rotation_changed"
 field43.type = "SFRotation"
 
 ProtoInterface21.field.append(field43)
 field44 = x3d.field()
-field44.name = "l_wrist_rotation_changed"
 field44.accessType = "outputOnly"
+field44.name = "l_wrist_rotation_changed"
 field44.type = "SFRotation"
 
 ProtoInterface21.field.append(field44)
 field45 = x3d.field()
-field45.name = "r_shoulder_rotation_changed"
 field45.accessType = "outputOnly"
+field45.name = "r_shoulder_rotation_changed"
 field45.type = "SFRotation"
 
 ProtoInterface21.field.append(field45)
 field46 = x3d.field()
-field46.name = "r_elbow_rotation_changed"
 field46.accessType = "outputOnly"
+field46.name = "r_elbow_rotation_changed"
 field46.type = "SFRotation"
 
 ProtoInterface21.field.append(field46)
 field47 = x3d.field()
-field47.name = "r_wrist_rotation_changed"
 field47.accessType = "outputOnly"
+field47.name = "r_wrist_rotation_changed"
 field47.type = "SFRotation"
 
 ProtoInterface21.field.append(field47)
@@ -304,7 +304,7 @@ TimeSensor50.IS = IS51
 Group49.children.append(TimeSensor50)
 PositionInterpolator59 = x3d.PositionInterpolator()
 PositionInterpolator59.DEF = "HUMANOIDROOT_POSITION_ANIMATOR"
-PositionInterpolator59.key = [0,1]
+PositionInterpolator59.key = [0.0,1.0]
 IS60 = x3d.IS()
 connect61 = x3d.connect()
 connect61.nodeField = "value_changed"
@@ -317,7 +317,7 @@ PositionInterpolator59.IS = IS60
 Group49.children.append(PositionInterpolator59)
 OrientationInterpolator62 = x3d.OrientationInterpolator()
 OrientationInterpolator62.DEF = "HUMANOIDROOT_ANIMATOR"
-OrientationInterpolator62.key = [0,1]
+OrientationInterpolator62.key = [0.0,1.0]
 IS63 = x3d.IS()
 connect64 = x3d.connect()
 connect64.nodeField = "value_changed"
@@ -330,7 +330,7 @@ OrientationInterpolator62.IS = IS63
 Group49.children.append(OrientationInterpolator62)
 OrientationInterpolator65 = x3d.OrientationInterpolator()
 OrientationInterpolator65.DEF = "SACROILIAC_ANIMATOR"
-OrientationInterpolator65.key = [0,1]
+OrientationInterpolator65.key = [0.0,1.0]
 IS66 = x3d.IS()
 connect67 = x3d.connect()
 connect67.nodeField = "value_changed"
@@ -343,7 +343,7 @@ OrientationInterpolator65.IS = IS66
 Group49.children.append(OrientationInterpolator65)
 OrientationInterpolator68 = x3d.OrientationInterpolator()
 OrientationInterpolator68.DEF = "L_HIP_ANIMATOR"
-OrientationInterpolator68.key = [0,1]
+OrientationInterpolator68.key = [0.0,1.0]
 IS69 = x3d.IS()
 connect70 = x3d.connect()
 connect70.nodeField = "value_changed"
@@ -356,7 +356,7 @@ OrientationInterpolator68.IS = IS69
 Group49.children.append(OrientationInterpolator68)
 OrientationInterpolator71 = x3d.OrientationInterpolator()
 OrientationInterpolator71.DEF = "L_KNEE_ANIMATOR"
-OrientationInterpolator71.key = [0,1]
+OrientationInterpolator71.key = [0.0,1.0]
 IS72 = x3d.IS()
 connect73 = x3d.connect()
 connect73.nodeField = "value_changed"
@@ -369,7 +369,7 @@ OrientationInterpolator71.IS = IS72
 Group49.children.append(OrientationInterpolator71)
 OrientationInterpolator74 = x3d.OrientationInterpolator()
 OrientationInterpolator74.DEF = "L_ANKLE_ANIMATOR"
-OrientationInterpolator74.key = [0,1]
+OrientationInterpolator74.key = [0.0,1.0]
 IS75 = x3d.IS()
 connect76 = x3d.connect()
 connect76.nodeField = "value_changed"
@@ -382,7 +382,7 @@ OrientationInterpolator74.IS = IS75
 Group49.children.append(OrientationInterpolator74)
 OrientationInterpolator77 = x3d.OrientationInterpolator()
 OrientationInterpolator77.DEF = "L_MIDTARSAL_ANIMATOR"
-OrientationInterpolator77.key = [0,1]
+OrientationInterpolator77.key = [0.0,1.0]
 IS78 = x3d.IS()
 connect79 = x3d.connect()
 connect79.nodeField = "value_changed"
@@ -395,7 +395,7 @@ OrientationInterpolator77.IS = IS78
 Group49.children.append(OrientationInterpolator77)
 OrientationInterpolator80 = x3d.OrientationInterpolator()
 OrientationInterpolator80.DEF = "R_HIP_ANIMATOR"
-OrientationInterpolator80.key = [0,1]
+OrientationInterpolator80.key = [0.0,1.0]
 IS81 = x3d.IS()
 connect82 = x3d.connect()
 connect82.nodeField = "value_changed"
@@ -408,7 +408,7 @@ OrientationInterpolator80.IS = IS81
 Group49.children.append(OrientationInterpolator80)
 OrientationInterpolator83 = x3d.OrientationInterpolator()
 OrientationInterpolator83.DEF = "R_KNEE_ANIMATOR"
-OrientationInterpolator83.key = [0,1]
+OrientationInterpolator83.key = [0.0,1.0]
 IS84 = x3d.IS()
 connect85 = x3d.connect()
 connect85.nodeField = "value_changed"
@@ -421,7 +421,7 @@ OrientationInterpolator83.IS = IS84
 Group49.children.append(OrientationInterpolator83)
 OrientationInterpolator86 = x3d.OrientationInterpolator()
 OrientationInterpolator86.DEF = "R_ANKLE_ANIMATOR"
-OrientationInterpolator86.key = [0,1]
+OrientationInterpolator86.key = [0.0,1.0]
 IS87 = x3d.IS()
 connect88 = x3d.connect()
 connect88.nodeField = "value_changed"
@@ -434,7 +434,7 @@ OrientationInterpolator86.IS = IS87
 Group49.children.append(OrientationInterpolator86)
 OrientationInterpolator89 = x3d.OrientationInterpolator()
 OrientationInterpolator89.DEF = "R_MIDTARSAL_ANIMATOR"
-OrientationInterpolator89.key = [0,1]
+OrientationInterpolator89.key = [0.0,1.0]
 IS90 = x3d.IS()
 connect91 = x3d.connect()
 connect91.nodeField = "value_changed"
@@ -447,7 +447,7 @@ OrientationInterpolator89.IS = IS90
 Group49.children.append(OrientationInterpolator89)
 OrientationInterpolator92 = x3d.OrientationInterpolator()
 OrientationInterpolator92.DEF = "VL5_ANIMATOR"
-OrientationInterpolator92.key = [0,1]
+OrientationInterpolator92.key = [0.0,1.0]
 IS93 = x3d.IS()
 connect94 = x3d.connect()
 connect94.nodeField = "value_changed"
@@ -460,7 +460,7 @@ OrientationInterpolator92.IS = IS93
 Group49.children.append(OrientationInterpolator92)
 OrientationInterpolator95 = x3d.OrientationInterpolator()
 OrientationInterpolator95.DEF = "SKULLBASE_ANIMATOR"
-OrientationInterpolator95.key = [0,0.5,1]
+OrientationInterpolator95.key = [0.0,0.5,1.0]
 IS96 = x3d.IS()
 connect97 = x3d.connect()
 connect97.nodeField = "value_changed"
@@ -473,7 +473,7 @@ OrientationInterpolator95.IS = IS96
 Group49.children.append(OrientationInterpolator95)
 OrientationInterpolator98 = x3d.OrientationInterpolator()
 OrientationInterpolator98.DEF = "L_SHOULDER_ANIMATOR"
-OrientationInterpolator98.key = [0,1]
+OrientationInterpolator98.key = [0.0,1.0]
 IS99 = x3d.IS()
 connect100 = x3d.connect()
 connect100.nodeField = "value_changed"
@@ -486,7 +486,7 @@ OrientationInterpolator98.IS = IS99
 Group49.children.append(OrientationInterpolator98)
 OrientationInterpolator101 = x3d.OrientationInterpolator()
 OrientationInterpolator101.DEF = "L_ELBOW_ANIMATOR"
-OrientationInterpolator101.key = [0,1]
+OrientationInterpolator101.key = [0.0,1.0]
 IS102 = x3d.IS()
 connect103 = x3d.connect()
 connect103.nodeField = "value_changed"
@@ -499,7 +499,7 @@ OrientationInterpolator101.IS = IS102
 Group49.children.append(OrientationInterpolator101)
 OrientationInterpolator104 = x3d.OrientationInterpolator()
 OrientationInterpolator104.DEF = "L_WRIST_ANIMATOR"
-OrientationInterpolator104.key = [0,1]
+OrientationInterpolator104.key = [0.0,1.0]
 IS105 = x3d.IS()
 connect106 = x3d.connect()
 connect106.nodeField = "value_changed"
@@ -512,7 +512,7 @@ OrientationInterpolator104.IS = IS105
 Group49.children.append(OrientationInterpolator104)
 OrientationInterpolator107 = x3d.OrientationInterpolator()
 OrientationInterpolator107.DEF = "R_SHOULDER_ANIMATOR"
-OrientationInterpolator107.key = [0,1]
+OrientationInterpolator107.key = [0.0,1.0]
 IS108 = x3d.IS()
 connect109 = x3d.connect()
 connect109.nodeField = "value_changed"
@@ -525,7 +525,7 @@ OrientationInterpolator107.IS = IS108
 Group49.children.append(OrientationInterpolator107)
 OrientationInterpolator110 = x3d.OrientationInterpolator()
 OrientationInterpolator110.DEF = "R_ELBOW_ANIMATOR"
-OrientationInterpolator110.key = [0,1]
+OrientationInterpolator110.key = [0.0,1.0]
 IS111 = x3d.IS()
 connect112 = x3d.connect()
 connect112.nodeField = "value_changed"
@@ -538,7 +538,7 @@ OrientationInterpolator110.IS = IS111
 Group49.children.append(OrientationInterpolator110)
 OrientationInterpolator113 = x3d.OrientationInterpolator()
 OrientationInterpolator113.DEF = "R_WRIST_ANIMATOR"
-OrientationInterpolator113.key = [0,1]
+OrientationInterpolator113.key = [0.0,1.0]
 IS114 = x3d.IS()
 connect115 = x3d.connect()
 connect115.nodeField = "value_changed"
@@ -688,8 +688,8 @@ ProtoBody48.children.append(ROUTE134)
 ProtoDeclare20.ProtoBody = ProtoBody48
 
 Scene18.children.append(ProtoDeclare20)
-#======================================
-#Point to example use in case someone inspects this file
+""" ====================================== """
+""" Point to example use in case someone inspects this file """
 Anchor135 = x3d.Anchor()
 Anchor135.description = "InterchangableActorsViaDynamicRouting"
 Anchor135.parameter = ["target=_blank"]
@@ -717,6 +717,6 @@ Anchor135.children.append(Shape136)
 Scene18.children.append(Anchor135)
 
 X3D0.Scene = Scene18
-f = open("././LOA1_StandAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("LOA1_StandAnimation_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

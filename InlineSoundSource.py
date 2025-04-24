@@ -6,63 +6,63 @@ X3D0.profile = "Full"
 X3D0.version = "4.0"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "InlineSoundSource.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "This demo is the same with the Single Audio Demo, with the difference that it uses the Inline grouping node. Namely, the scene is an X3D file and all nodes are loaded by Inline node via the \"url\" of X3D file."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "info"
 meta4.content = "This work presents an innovative solution of the spatial sound in X3DOM framework, that based on a combinational methodology. Specifically, we suggested the enrichment of X3DOM with spatial sound features, using both the X3D sound nodes and the structure of Web Audio API."
+meta4.name = "info"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Efi Lakka, Athanasios Malamos, Dick Puk, Don Brutzman"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "created"
 meta6.content = "28 October 2020"
+meta6.name = "created"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "modified"
 meta7.content = "4 August 2021"
+meta7.name = "modified"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "reference"
 meta8.content = "CHANGELOG.txt"
+meta8.name = "reference"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "TODO"
 meta9.content = "credit for audio files"
+meta9.name = "TODO"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "reference"
 meta10.content = "https://medialab.hmu.gr/minipages/x3domAudio"
+meta10.name = "reference"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "identifier"
 meta11.content = "https://x3dgraphics.com/examples/X3dForAdvancedModeling/AudioSpatialSound/InlineSoundSource.x3d"
+meta11.name = "identifier"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "generator"
 meta12.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta12.name = "generator"
 
 head1.children.append(meta12)
 meta13 = x3d.meta()
-meta13.name = "license"
 meta13.content = "../license.html"
+meta13.name = "license"
 
 head1.children.append(meta13)
 
@@ -89,14 +89,14 @@ Viewpoint18 = x3d.Viewpoint()
 Viewpoint18.DEF = "Camera001"
 Viewpoint18.description = "Camera001"
 Viewpoint18.farDistance = 0
-Viewpoint18.nearDistance = 1
-Viewpoint18.orientation = [1,0,0,-0.523599]
-Viewpoint18.position = [0,2000,3500]
+Viewpoint18.nearDistance = 1.000000
+Viewpoint18.orientation = [1.000000,0.000000,-0.000000,-0.523599]
+Viewpoint18.position = [0.000000,2000.000000,3500.000000]
 
 Scene14.children.append(Viewpoint18)
 Transform19 = x3d.Transform()
 Transform19.DEF = "Floor"
-Transform19.translation = [1.241,0,0.358]
+Transform19.translation = [1.241,0.000,0.358]
 Shape20 = x3d.Shape()
 Appearance21 = x3d.Appearance()
 Appearance21.DEF = "WireColor"
@@ -133,6 +133,6 @@ Transform26.children.append(Inline27)
 Scene14.children.append(Transform26)
 
 X3D0.Scene = Scene14
-f = open("././InlineSoundSource_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("InlineSoundSource_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

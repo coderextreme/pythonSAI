@@ -49,13 +49,14 @@ field12 = x3d.field()
 field12.name = "xtranslation"
 field12.accessType = "inputOutput"
 field12.type = "SFVec3f"
-field12.value = [0,0,0]
+field12.value = [0.0,0.0,0.0]
 
 ProtoInterface11.field.append(field12)
 
 ProtoDeclare10.ProtoInterface = ProtoInterface11
 ProtoBody13 = x3d.ProtoBody()
 Transform14 = x3d.Transform()
+Transform14.translation = [0,0,0]
 IS15 = x3d.IS()
 connect16 = x3d.connect()
 connect16.nodeField = "translation"
@@ -90,13 +91,14 @@ field23 = x3d.field()
 field23.name = "ytranslation"
 field23.accessType = "inputOutput"
 field23.type = "SFVec3f"
-field23.value = [0,0,0]
+field23.value = [0.0,0.0,0.0]
 
 ProtoInterface22.field.append(field23)
 
 ProtoDeclare21.ProtoInterface = ProtoInterface22
 ProtoBody24 = x3d.ProtoBody()
 Transform25 = x3d.Transform()
+Transform25.translation = [0,0,0]
 IS26 = x3d.IS()
 connect27 = x3d.connect()
 connect27.nodeField = "translation"
@@ -145,13 +147,14 @@ field36 = x3d.field()
 field36.name = "ztranslation"
 field36.accessType = "inputOutput"
 field36.type = "SFVec3f"
-field36.value = [0,0,0]
+field36.value = [0.0,0.0,0.0]
 
 ProtoInterface35.field.append(field36)
 
 ProtoDeclare34.ProtoInterface = ProtoInterface35
 ProtoBody37 = x3d.ProtoBody()
 Transform38 = x3d.Transform()
+Transform38.translation = [0,0,0]
 IS39 = x3d.IS()
 connect40 = x3d.connect()
 connect40.nodeField = "translation"
@@ -200,13 +203,14 @@ field49 = x3d.field()
 field49.name = "ttranslation"
 field49.accessType = "inputOutput"
 field49.type = "SFVec3f"
-field49.value = [0,0,0]
+field49.value = [0.0,0.0,0.0]
 
 ProtoInterface48.field.append(field49)
 
 ProtoDeclare47.ProtoInterface = ProtoInterface48
 ProtoBody50 = x3d.ProtoBody()
 Transform51 = x3d.Transform()
+Transform51.translation = [0,0,0]
 IS52 = x3d.IS()
 connect53 = x3d.connect()
 connect53.nodeField = "translation"
@@ -259,6 +263,6 @@ ProtoInstance60.fieldValue.append(fieldValue61)
 Scene7.children.append(ProtoInstance60)
 
 X3D0.Scene = Scene7
-f = open("././ThreeDTexture_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ThreeDTexture_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

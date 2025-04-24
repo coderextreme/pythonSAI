@@ -26,8 +26,8 @@ meta5.content = "5 May 2015"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "23 Dec 2022"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
@@ -52,7 +52,7 @@ ProtoDeclare11 = x3d.ProtoDeclare()
 ProtoDeclare11.name = "Process"
 ProtoBody12 = x3d.ProtoBody()
 Group13 = x3d.Group()
-#left
+"""left"""
 Transform14 = x3d.Transform()
 Transform14.scale = [0.5,0.5,0.5]
 Shape15 = x3d.Shape()
@@ -70,10 +70,10 @@ Extrusion18.creaseAngle = 0.785
 Shape15.geometry = Extrusion18
 
 Transform14.children.append(Shape15)
-#<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>
+"""<Transform translation=\"-2.5 0 0\"> <Shape> <Text DEF=\"LeftString\" string='\"l\"'/> </Shape> </Transform> <StringSensor DEF=\"LeftSensor\" enabled=\"false\"/> <TouchSensor DEF=\"LeftTouch\" enabled=\"true\"/>"""
 
 Group13.children.append(Transform14)
-#right
+"""right"""
 Transform19 = x3d.Transform()
 Transform19.scale = [0.5,0.5,0.5]
 Shape20 = x3d.Shape()
@@ -114,6 +114,7 @@ Transform19.children.append(Transform24)
 StringSensor29 = x3d.StringSensor()
 StringSensor29.DEF = "RightSensor"
 StringSensor29.enabled = False
+StringSensor29.deletionAllowed = True
 
 Transform19.children.append(StringSensor29)
 TouchSensor30 = x3d.TouchSensor()
@@ -123,7 +124,7 @@ TouchSensor30.DEF = "RightTouch"
 Transform19.children.append(TouchSensor30)
 
 Group13.children.append(Transform19)
-#up
+"""up"""
 Transform31 = x3d.Transform()
 Transform31.scale = [0.5,0.5,0.5]
 Shape32 = x3d.Shape()
@@ -163,6 +164,7 @@ Transform31.children.append(Transform36)
 StringSensor41 = x3d.StringSensor()
 StringSensor41.DEF = "UpSensor"
 StringSensor41.enabled = False
+StringSensor41.deletionAllowed = True
 
 Transform31.children.append(StringSensor41)
 TouchSensor42 = x3d.TouchSensor()
@@ -172,7 +174,7 @@ TouchSensor42.DEF = "UpTouch"
 Transform31.children.append(TouchSensor42)
 
 Group13.children.append(Transform31)
-#down
+"""down"""
 Transform43 = x3d.Transform()
 Transform43.scale = [0.5,0.5,0.5]
 Shape44 = x3d.Shape()
@@ -190,10 +192,10 @@ Extrusion47.creaseAngle = 0.785
 Shape44.geometry = Extrusion47
 
 Transform43.children.append(Shape44)
-#<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>
+"""<Transform translation=\"-0.5 -2.5 0\"> <Shape> <Text DEF=\"DownString\" string='\"d\"'/> </Shape> </Transform> <StringSensor DEF=\"DownSensor\" enabled=\"false\"/> <TouchSensor description='touch to activate' DEF=\"DownTouch\" enabled=\"true\"/>"""
 
 Group13.children.append(Transform43)
-#center
+"""center"""
 Transform48 = x3d.Transform()
 Shape49 = x3d.Shape()
 Appearance50 = x3d.Appearance()
@@ -230,6 +232,7 @@ Transform48.children.append(Transform53)
 StringSensor58 = x3d.StringSensor()
 StringSensor58.DEF = "CenterSensor"
 StringSensor58.enabled = False
+StringSensor58.deletionAllowed = True
 
 Transform48.children.append(StringSensor58)
 TouchSensor59 = x3d.TouchSensor()
@@ -420,6 +423,6 @@ Transform84.children.append(ProtoInstance85)
 Scene10.children.append(Transform84)
 
 X3D0.Scene = Scene10
-f = open("././pp3_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("pp3_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

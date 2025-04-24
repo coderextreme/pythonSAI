@@ -6,58 +6,58 @@ X3D0.profile = "Interchange"
 X3D0.version = "4.0"
 head1 = x3d.head()
 component2 = x3d.component()
-component2.name = "HAnim"
 component2.level = 1
+component2.name = "HAnim"
 
 head1.children.append(component2)
 meta3 = x3d.meta()
-meta3.name = "title"
 meta3.content = "MainStage.x3d"
+meta3.name = "title"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "description"
 meta4.content = "Main stage for HAnim scene Winter and Spring."
+meta4.name = "description"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "creator"
 meta5.content = "Joe Williams"
+meta5.name = "creator"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "translator"
 meta6.content = "Joe Williams and Don Brutzman"
+meta6.name = "translator"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "created"
 meta7.content = "25 May 2023"
+meta7.name = "created"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "modified"
 meta8.content = "27 May 2023"
+meta8.name = "modified"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "reference"
 meta9.content = "originals/0MainStageScene0525.x3dv"
+meta9.name = "reference"
 
 head1.children.append(meta9)
 meta10 = x3d.meta()
-meta10.name = "identifier"
 meta10.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/WinterAndSpring/MainStage.x3d"
+meta10.name = "identifier"
 
 head1.children.append(meta10)
 meta11 = x3d.meta()
-meta11.name = "generator"
 meta11.content = "X3D-Edit 4.0, https://savage.nps.edu/X3D-Edit"
+meta11.name = "generator"
 
 head1.children.append(meta11)
 meta12 = x3d.meta()
-meta12.name = "license"
 meta12.content = "../license.html"
+meta12.name = "license"
 
 head1.children.append(meta12)
 
@@ -72,19 +72,19 @@ NavigationInfo15.headlight = False
 
 Scene13.children.append(NavigationInfo15)
 DirectionalLight16 = x3d.DirectionalLight()
-DirectionalLight16.ambientIntensity = 1
-DirectionalLight16.direction = [-0.5,-0.5,-0.5]
+DirectionalLight16.ambientIntensity = 1.0
+DirectionalLight16.direction = [-.5,-.5,-.5]
 DirectionalLight16.global = True
 
 Scene13.children.append(DirectionalLight16)
 DirectionalLight17 = x3d.DirectionalLight()
-DirectionalLight17.ambientIntensity = 1
+DirectionalLight17.ambientIntensity = 1.0
 DirectionalLight17.direction = [-1,-1,-1]
 DirectionalLight17.global = True
 
 Scene13.children.append(DirectionalLight17)
 DirectionalLight18 = x3d.DirectionalLight()
-DirectionalLight18.ambientIntensity = 1
+DirectionalLight18.ambientIntensity = 1.0
 DirectionalLight18.direction = [1,1,-1]
 DirectionalLight18.global = True
 DirectionalLight18.intensity = 0.5
@@ -93,14 +93,14 @@ Scene13.children.append(DirectionalLight18)
 Viewpoint19 = x3d.Viewpoint()
 Viewpoint19.DEF = "Scene_StageFrontViewFar"
 Viewpoint19.description = "hanim_Stage Front View"
-Viewpoint19.orientation = [1,0,0,-0.449999988]
+Viewpoint19.orientation = [1,0,0,-.449999988]
 Viewpoint19.position = [0,4,10]
 
 Scene13.children.append(Viewpoint19)
 Viewpoint20 = x3d.Viewpoint()
 Viewpoint20.DEF = "Scene_InclinedView"
 Viewpoint20.description = "hanim_Inclined View"
-Viewpoint20.orientation = [-0.112999998,0.992999971,0.034699999,0.671000004]
+Viewpoint20.orientation = [-.112999998,.992999971,.034699999,.671000004]
 Viewpoint20.position = [2.619999886,1.049999952,4.059999943]
 
 Scene13.children.append(Viewpoint20)
@@ -135,7 +135,7 @@ Group25 = x3d.Group()
 Group25.DEF = "HAnimStage"
 Transform26 = x3d.Transform()
 Transform26.DEF = "cordsysfloor"
-Transform26.scale = [0.174999997,0.174999997,0.174999997]
+Transform26.scale = [.174999997,.174999997,.174999997]
 Inline27 = x3d.Inline()
 Inline27.url = ["JointCoordinateAxes.x3dv"]
 
@@ -144,8 +144,8 @@ Transform26.children.append(Inline27)
 Group25.children.append(Transform26)
 Transform28 = x3d.Transform()
 Transform28.DEF = "StageGeometry"
-Transform28.scale = [1,0.01,1]
-Transform28.translation = [0,-0.01,0]
+Transform28.scale = [1,.01,1]
+Transform28.translation = [0,-.01,0]
 Shape29 = x3d.Shape()
 Appearance30 = x3d.Appearance()
 Material31 = x3d.Material()
@@ -166,10 +166,10 @@ Shape34 = x3d.Shape()
 Appearance35 = x3d.Appearance()
 Appearance35.DEF = "LineColor"
 Material36 = x3d.Material()
-Material36.ambientIntensity = 1
-Material36.diffuseColor = [0.699999988,0,0.899999976]
-Material36.emissiveColor = [0.449999988,0.449999988,1]
-Material36.shininess = 1
+Material36.ambientIntensity = 1.0
+Material36.diffuseColor = [.699999988,0,.899999976]
+Material36.emissiveColor = [.449999988,.449999988,1]
+Material36.shininess = 1.0
 Material36.specularColor = [0,0,1]
 
 Appearance35.material = Material36
@@ -189,7 +189,7 @@ Transform33.children.append(Shape34)
 Transform28.children.append(Transform33)
 Transform39 = x3d.Transform()
 Transform39.DEF = "Circle1"
-Transform39.scale = [0.5,1,0.5]
+Transform39.scale = [.5,1,.5]
 Shape40 = x3d.Shape()
 Appearance41 = x3d.Appearance()
 Appearance41.USE = "LineColor"
@@ -205,7 +205,7 @@ Transform39.children.append(Shape40)
 Transform28.children.append(Transform39)
 Transform43 = x3d.Transform()
 Transform43.DEF = "Circle2"
-Transform43.scale = [0.25,1,0.25]
+Transform43.scale = [.25,1,.25]
 Shape44 = x3d.Shape()
 Appearance45 = x3d.Appearance()
 Appearance45.USE = "LineColor"
@@ -257,6 +257,6 @@ Group25.children.append(Transform28)
 Scene13.children.append(Group25)
 
 X3D0.Scene = Scene13
-f = open("././MainStage_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("MainStage_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

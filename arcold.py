@@ -111,8 +111,8 @@ ProtoDeclare28 = x3d.ProtoDeclare()
 ProtoDeclare28.name = "point"
 ProtoInterface29 = x3d.ProtoInterface()
 field30 = x3d.field()
-field30.name = "translation"
 field30.accessType = "inputOutput"
+field30.name = "translation"
 field30.type = "SFVec3f"
 field30.value = [0,0,0]
 
@@ -178,13 +178,15 @@ field44.type = "MFVec3f"
 
 Script40.field.append(field44)
 
-Script40.sourceCode = '''ecmascript:\n"+
+Script40.sourceCode = '''\n"+
+"ecmascript:\n"+
 "		function set_location(value) {\n"+
 "                    old = translation;\n"+
 "		    translation = new SFVec3f(Math.random()*10-5, Math.random()*10-5, Math.random()*10-5);\n"+
 "                    keyValue = new MFVec3f([old, translation]);\n"+
 "		    // Browser.println(translation);\n"+
-"		}'''
+"		}\n"+
+"'''
 
 Transform32.children.append(Script40)
 TimeSensor45 = x3d.TimeSensor()
@@ -227,43 +229,43 @@ ProtoBody31.children.append(Transform32)
 ProtoDeclare28.ProtoBody = ProtoBody31
 
 Scene7.children.append(ProtoDeclare28)
-#from doug sanden
+""" from doug sanden """
 ProtoDeclare50 = x3d.ProtoDeclare()
 ProtoDeclare50.name = "x3dconnector"
 ProtoInterface51 = x3d.ProtoInterface()
 field52 = x3d.field()
-field52.name = "startnode"
 field52.accessType = "inputOutput"
+field52.name = "startnode"
 field52.type = "SFNode"
 
 ProtoInterface51.field.append(field52)
 field53 = x3d.field()
-field53.name = "endnode"
 field53.accessType = "inputOutput"
+field53.name = "endnode"
 field53.type = "SFNode"
 
 ProtoInterface51.field.append(field53)
 field54 = x3d.field()
-field54.name = "transnode"
 field54.accessType = "inputOutput"
+field54.name = "transnode"
 field54.type = "SFNode"
 
 ProtoInterface51.field.append(field54)
 field55 = x3d.field()
-field55.name = "rotscalenode"
 field55.accessType = "inputOutput"
+field55.name = "rotscalenode"
 field55.type = "SFNode"
 
 ProtoInterface51.field.append(field55)
 field56 = x3d.field()
-field56.name = "set_startpoint"
 field56.accessType = "inputOnly"
+field56.name = "set_startpoint"
 field56.type = "SFVec3f"
 
 ProtoInterface51.field.append(field56)
 field57 = x3d.field()
-field57.name = "set_endpoint"
 field57.accessType = "inputOnly"
+field57.name = "set_endpoint"
 field57.type = "SFVec3f"
 
 ProtoInterface51.field.append(field57)
@@ -273,38 +275,38 @@ ProtoBody58 = x3d.ProtoBody()
 Script59 = x3d.Script()
 Script59.DEF = "S1"
 field60 = x3d.field()
-field60.name = "startnode"
 field60.accessType = "inputOutput"
+field60.name = "startnode"
 field60.type = "SFNode"
 
 Script59.field.append(field60)
 field61 = x3d.field()
-field61.name = "endnode"
 field61.accessType = "inputOutput"
+field61.name = "endnode"
 field61.type = "SFNode"
 
 Script59.field.append(field61)
 field62 = x3d.field()
-field62.name = "transnode"
 field62.accessType = "inputOutput"
+field62.name = "transnode"
 field62.type = "SFNode"
 
 Script59.field.append(field62)
 field63 = x3d.field()
-field63.name = "rotscalenode"
 field63.accessType = "inputOutput"
+field63.name = "rotscalenode"
 field63.type = "SFNode"
 
 Script59.field.append(field63)
 field64 = x3d.field()
-field64.name = "set_startpoint"
 field64.accessType = "inputOnly"
+field64.name = "set_startpoint"
 field64.type = "SFVec3f"
 
 Script59.field.append(field64)
 field65 = x3d.field()
-field65.name = "set_endpoint"
 field65.accessType = "inputOnly"
+field65.name = "set_endpoint"
 field65.type = "SFVec3f"
 
 Script59.field.append(field65)
@@ -384,7 +386,8 @@ Script59.sourceCode = '''ecmascript:\n"+
 "        }\n"+
 "        function set_endpoint(val,t){\n"+
 "            recompute_and_route(startnode.translation,val || endnode.translation);\n"+
-"        }'''
+"        }\n"+
+"'''
 
 ProtoBody58.children.append(Script59)
 
@@ -392,23 +395,23 @@ ProtoDeclare50.ProtoBody = ProtoBody58
 
 Scene7.children.append(ProtoDeclare50)
 ProtoInstance73 = x3d.ProtoInstance()
-ProtoInstance73.name = "point"
 ProtoInstance73.DEF = "G1"
+ProtoInstance73.name = "point"
 
 Scene7.children.append(ProtoInstance73)
 ProtoInstance74 = x3d.ProtoInstance()
-ProtoInstance74.name = "point"
 ProtoInstance74.DEF = "G2"
+ProtoInstance74.name = "point"
 
 Scene7.children.append(ProtoInstance74)
 ProtoInstance75 = x3d.ProtoInstance()
-ProtoInstance75.name = "point"
 ProtoInstance75.DEF = "G3"
+ProtoInstance75.name = "point"
 
 Scene7.children.append(ProtoInstance75)
 ProtoInstance76 = x3d.ProtoInstance()
-ProtoInstance76.name = "point"
 ProtoInstance76.DEF = "G4"
+ProtoInstance76.name = "point"
 
 Scene7.children.append(ProtoInstance76)
 ProtoInstance77 = x3d.ProtoInstance()
@@ -566,6 +569,6 @@ ROUTE109.toField = "set_endpoint"
 Scene7.children.append(ROUTE109)
 
 X3D0.Scene = Scene7
-f = open("././arcold_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("arcold_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

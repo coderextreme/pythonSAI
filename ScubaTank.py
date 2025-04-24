@@ -6,43 +6,43 @@ X3D0.profile = "Interchange"
 X3D0.version = "3.3"
 head1 = x3d.head()
 meta2 = x3d.meta()
-meta2.name = "title"
 meta2.content = "ScubaTank.x3d"
+meta2.name = "title"
 
 head1.children.append(meta2)
 meta3 = x3d.meta()
-meta3.name = "description"
 meta3.content = "Scuba gear used by Nancy Diving example."
+meta3.name = "description"
 
 head1.children.append(meta3)
 meta4 = x3d.meta()
-meta4.name = "creator"
 meta4.content = "Etsuko Lippi"
+meta4.name = "creator"
 
 head1.children.append(meta4)
 meta5 = x3d.meta()
-meta5.name = "created"
 meta5.content = "24 January 2001"
+meta5.name = "created"
 
 head1.children.append(meta5)
 meta6 = x3d.meta()
-meta6.name = "modified"
 meta6.content = "23 May 2020"
+meta6.name = "modified"
 
 head1.children.append(meta6)
 meta7 = x3d.meta()
-meta7.name = "identifier"
 meta7.content = "https://www.web3d.org/x3d/content/examples/HumanoidAnimation/Legacy/ScubaTank.x3d"
+meta7.name = "identifier"
 
 head1.children.append(meta7)
 meta8 = x3d.meta()
-meta8.name = "generator"
 meta8.content = "X3D-Edit 3.3, https://savage.nps.edu/X3D-Edit"
+meta8.name = "generator"
 
 head1.children.append(meta8)
 meta9 = x3d.meta()
-meta9.name = "license"
 meta9.content = "../license.html"
+meta9.name = "license"
 
 head1.children.append(meta9)
 
@@ -61,7 +61,7 @@ Material16 = x3d.Material()
 Material16.DEF = "tank"
 Material16.ambientIntensity = 0.3
 Material16.diffuseColor = [0.3,0.3,0.5]
-Material16.shininess = 0.1
+Material16.shininess = 0.10
 Material16.specularColor = [0.7,0.7,0.8]
 
 Appearance15.material = Material16
@@ -129,7 +129,7 @@ Material33.DEF = "pressureColor"
 Material33.ambientIntensity = 0.4
 Material33.diffuseColor = [0.91,0.91,0.91]
 Material33.shininess = 0.16
-Material33.specularColor = [0.91,0.9,0.91]
+Material33.specularColor = [0.91,0.90,0.91]
 
 Appearance32.material = Material33
 
@@ -144,7 +144,7 @@ Transform30.children.append(Shape31)
 
 Transform29.children.append(Transform30)
 Transform35 = x3d.Transform()
-Transform35.translation = [0,0.5,0]
+Transform35.translation = [0,0.50,0]
 Shape36 = x3d.Shape()
 Shape36.DEF = "pressureTop"
 Appearance37 = x3d.Appearance()
@@ -238,6 +238,6 @@ Background56 = x3d.Background()
 Scene10.children.append(Background56)
 
 X3D0.Scene = Scene10
-f = open("././ScubaTank_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("ScubaTank_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

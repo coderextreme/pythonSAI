@@ -141,6 +141,6 @@ ROUTE27.toField = "set_fraction"
 Scene9.children.append(ROUTE27)
 
 X3D0.Scene = Scene9
-f = open("././flipp_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("flipp_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()

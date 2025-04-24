@@ -89,6 +89,6 @@ Group14.children.append(Shape15)
 Scene12.children.append(Group14)
 
 X3D0.Scene = Scene12
-f = open("././gears_RoundTrip.x3d", mode="w", encoding="utf-8")
+f = open("gears_RoundTrip.x3d", mode="w", encoding="utf-8")
 f.write(X3D0.XML())
 f.close()
