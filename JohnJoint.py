@@ -1622,7 +1622,6 @@ HAnimJoint322.USE = "hanim_r_carpal_distal_interphalangeal_5"
 
 HAnimHumanoid30.joints.append(HAnimJoint322)
 
-HAnimHumanoid30.skeleton.append(HAnimHumanoid30)
 
 X3D0.Scene = Scene10
 f = open("JohnJoint_RoundTrip.x3d", mode="w", encoding="utf-8")

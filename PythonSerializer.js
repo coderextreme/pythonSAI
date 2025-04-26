@@ -454,7 +454,9 @@ PythonSerializer.prototype = {
 						n = n.parent;
 					}
 					if (n) {
-						ch += n.nodeName+stack[0]+method+".append("+node.nodeName+stack[0]+")\n";
+						if (n.nodeName !== node.nodeName) {
+							ch += n.nodeName+stack[0]+method+".append("+node.nodeName+stack[0]+")\n";
+						}
 					} else {
 						ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
 					}
