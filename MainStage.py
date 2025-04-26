@@ -74,19 +74,19 @@ Scene13.children.append(NavigationInfo15)
 DirectionalLight16 = x3d.DirectionalLight()
 DirectionalLight16.ambientIntensity = 1.0
 DirectionalLight16.direction = [-.5,-.5,-.5]
-DirectionalLight16.global = True
+DirectionalLight16.global_ = True
 
 Scene13.children.append(DirectionalLight16)
 DirectionalLight17 = x3d.DirectionalLight()
 DirectionalLight17.ambientIntensity = 1.0
 DirectionalLight17.direction = [-1,-1,-1]
-DirectionalLight17.global = True
+DirectionalLight17.global_ = True
 
 Scene13.children.append(DirectionalLight17)
 DirectionalLight18 = x3d.DirectionalLight()
 DirectionalLight18.ambientIntensity = 1.0
 DirectionalLight18.direction = [1,1,-1]
-DirectionalLight18.global = True
+DirectionalLight18.global_ = True
 DirectionalLight18.intensity = 0.5
 
 Scene13.children.append(DirectionalLight18)

@@ -334,7 +334,7 @@ ProtoBody42.children.append(NavigationInfo52)
 """ this DirectionalLight replaces NavigationInfo headlight in order to add color capability """
 DirectionalLight57 = x3d.DirectionalLight()
 DirectionalLight57.DEF = "CameraDirectionalLight"
-DirectionalLight57.global = True
+DirectionalLight57.global_ = True
 """ TODO confirm other default field values match NavigationInfo spec """
 IS58 = x3d.IS()
 connect59 = x3d.connect()

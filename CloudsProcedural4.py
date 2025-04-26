@@ -81,7 +81,7 @@ Scene11.children.append(Background15)
 DirectionalLight16 = x3d.DirectionalLight()
 DirectionalLight16.ambientIntensity = 1
 DirectionalLight16.direction = [-1,0,0]
-DirectionalLight16.global = True
+DirectionalLight16.global_ = True
 
 Scene11.children.append(DirectionalLight16)
 Group17 = x3d.Group()
@@ -562,7 +562,7 @@ DirectionalLight38 = x3d.DirectionalLight()
 DirectionalLight38.ambientIntensity = 1
 DirectionalLight38.color = [1,0,0]
 DirectionalLight38.direction = [-1,-1,0]
-DirectionalLight38.global = True
+DirectionalLight38.global_ = True
 
 Group28.children.append(DirectionalLight38)
 

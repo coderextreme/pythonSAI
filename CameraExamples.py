@@ -547,7 +547,7 @@ Scene21.children.append(ExternProtoDeclare73)
 """ =============== Lights, camera, action! ============== """
 DirectionalLight85 = x3d.DirectionalLight()
 DirectionalLight85.direction = [0,-1,0]
-DirectionalLight85.global = True
+DirectionalLight85.global_ = True
 DirectionalLight85.intensity = 0.8
 
 Scene21.children.append(DirectionalLight85)

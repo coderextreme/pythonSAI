@@ -360,6 +360,9 @@ PythonSerializer.prototype = {
 					if (attr === "class") {
 						method = "cssClass";
 					}
+					if (attr === "global") {
+						method = "global_";
+					}
 					str += element.nodeName+stack[0];
 					str += '.'+method+" = "+strval+"\n";
 				}
@@ -451,7 +454,7 @@ PythonSerializer.prototype = {
 						n = n.parent;
 					}
 					if (n) {
-						ch += n.nodeName+stack[1]+method+".append("+node.nodeName+stack[1]+")\n";
+						ch += n.nodeName+stack[0]+method+".append("+node.nodeName+stack[0]+")\n";
 					} else {
 						ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
 					}
