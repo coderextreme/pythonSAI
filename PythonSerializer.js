@@ -387,7 +387,7 @@ PythonSerializer.prototype = {
 				let method = this.printParentChild(element, node, cn, mapToMethod, n);
 				if (method === ".global") {
 					method = ".global_";
-					print(f"Substituting {method}");
+					console.log("Substituting", method);
 				} else if (method === ".addMeta" || method === ".addComponent"|| method === ".addUnit") {
 					method = ".children";
 				} else if (method === ".setIS") {
@@ -445,7 +445,18 @@ PythonSerializer.prototype = {
 					ch += "if "+element.nodeName+stack[1]+method+" is None:\n";
 					ch += "    "+element.nodeName+stack[1]+method+" = []\n";
 					ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
+				} else if (method === ".skin" || method === ".skeleton") {
+					let n = node;
+					while (n && n.nodeName !== "HAnimHumanoid") {
+						n = n.parent;
+					}
+					if (n) {
+						ch += n.nodeName+stack[1]+method+".append("+node.nodeName+stack[1]+")\n";
+					} else {
+						ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
+					}
 				} else {
+
 					ch += element.nodeName+stack[1]+method+".append("+node.nodeName+stack[0]+")\n";
 				}
 				str += ch;
@@ -456,11 +467,9 @@ PythonSerializer.prototype = {
 					replace(/"/g, '\\"');
 				// str += ".addComments(CommentsBlock(\"\"\""+y+"\"\"\")) \\\n";
 				str += y.split("\r\n").map(function(x) {
-					return x.replace(/^/g, '#');
+					return x.replace(/^/g, '"""');
 					}).join("\r\n");
-				str += "\r\n";
-				if (y !== node.nodeValue) {
-				}
+				str += '"""\r\n';
 			} else if (element.childNodes.hasOwnProperty(cn) && node.nodeType == 4) {
 				str += "\n"+element.nodeName+stack[0];
 				str += ".sourceCode = '''"+node.nodeValue.split(/\r?\n/).map(function(x) {
