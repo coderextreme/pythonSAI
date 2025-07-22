@@ -1,6 +1,6 @@
 {
   "name": "pythonSAI",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "dependencies": {
     "underscore": "*",
@@ -14,6 +14,6 @@
     "@xmldom/xmldom": "*",
     "xslt3": "*",
     "saxon-js": "*",
-    "punycode": "^2.3.1"
+    "punycode": "^*"
   }
 }
