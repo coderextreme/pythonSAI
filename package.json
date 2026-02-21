@@ -1,0 +1,16 @@
+{
+  "name": "pythonSAI",
+  "version": "1.0.3",
+  "private": true,
+  "dependencies": {
+    "underscore": "*",
+    "ajv": "*",
+    "ajv-formats": "*",
+    "ajv-formats-draft2019": "*",
+    "ajv-i18n": "*",
+    "@xmldom/xmldom": "*",
+    "xslt3": "*",
+    "saxon-js": "*",
+    "punycode": "^*"
+  }
+}
