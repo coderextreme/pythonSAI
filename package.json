@@ -8,12 +8,7 @@
     "ajv-formats": "3.0.1",
     "ajv-formats-draft2019": "1.6.1",
     "ajv-i18n": "4.2.0",
-    "@xmldom/xmldom": "0.9.9",
-    "xslt3": "2.7.0",
-    "saxon-js": "2.7.0",
+    "@xmldom/xmldom": "0.9.10",
     "punycode": "2.3.1"
-  },
-  "overrides": {
-    "axios": "1.14.0"
   }
 }
